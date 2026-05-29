@@ -12,27 +12,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/T1483",
-                    "external_id": "T1483"
+                    "external_id": "T1483",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Cybereason Dissecting DGAs",
                     "description": "Sternfeld, U. (2016). Dissecting Domain Generation Algorithms: Eight Real World DGA Variants. Retrieved February 18, 2019.",
-                    "url": "http://go.cybereason.com/rs/996-YZT-709/images/Cybereason-Lab-Analysis-Dissecting-DGAs-Eight-Real-World-DGA-Variants.pdf"
+                    "url": "http://go.cybereason.com/rs/996-YZT-709/images/Cybereason-Lab-Analysis-Dissecting-DGAs-Eight-Real-World-DGA-Variants.pdf",
+                    "source_name_fa": "Cybereason Dissecting DGAs",
+                    "description_fa": "استرنفلد، U. 2016 Dissecting Domain Algorithms: هشت دنیای واقعی DGA بازیگران Retrieved 18 فوریه 2019"
                 },
                 {
                     "source_name": "Cisco Umbrella DGA Brute Force",
                     "description": "Kasza, A. (2015, February 18). Using Algorithms to Brute Force Algorithms. Retrieved February 18, 2019.",
-                    "url": "https://umbrella.cisco.com/blog/2015/02/18/at-high-noon-algorithms-do-battle/"
+                    "url": "https://umbrella.cisco.com/blog/2015/02/18/at-high-noon-algorithms-do-battle/",
+                    "source_name_fa": "سیسکو چتر DGA نیروی زمینی",
+                    "description_fa": "کاسزا، A. (2015، 18 فوریه) استفاده از الگوریتم ها برای Brute Force Algorithms Retrieved 18 فوریه 2019"
                 },
                 {
                     "source_name": "Akamai DGA Mitigation",
                     "description": "Liu, H. and Yuzifovich, Y. (2018, January 9). A Death Match of Domain Generation Algorithms. Retrieved February 18, 2019.",
-                    "url": "https://blogs.akamai.com/2018/01/a-death-match-of-domain-generation-algorithms.html"
+                    "url": "https://blogs.akamai.com/2018/01/a-death-match-of-domain-generation-algorithms.html",
+                    "source_name_fa": "Akamai DGA پذیرش",
+                    "description_fa": "لیو، H. و Yuzifovich، Y. (2018، ژانویه 9). بازی Death Match of Domain Algorithms Retrieved 18 فوریه 2019"
                 },
                 {
                     "source_name": "University of Birmingham C2",
                     "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
-                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf"
+                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf",
+                    "source_name_fa": "دانشگاه بیرمنگام C2",
+                    "description_fa": "گدار، J.، Cova، M.، Nagaraja، S. (2014، فوریه) فرمان و کنترل درک، انکار و انکار Retrieved 20 آوریل 2016"
                 }
             ],
             "object_marking_refs": [
@@ -47,7 +56,9 @@
                 "enterprise-attack"
             ],
             "x_mitre_version": "1.0",
-            "x_mitre_attack_spec_version": "3.2.0"
+            "x_mitre_attack_spec_version": "3.2.0",
+            "name_fa": "الگوریتم های Domain Generation Mitigation",
+            "description_fa": "این تکنیک ممکن است دشوار باشد زیرا دامنه ها می توانند درست قبل از استفاده ثبت شوند و مدت کوتاهی پس از آن دفع شوند. محققان بدافزار می توانند انواع مخرب را معکوس کنند که از DGA ها استفاده می کنند و دامنه های آینده را تعیین کنند که بدافزار تلاش می کند تا با آن تماس بگیرد، اما این یک تلاش فشرده زمان و منابع است.[۱۰] [CTI_PRESERVE_0] بدافزار همچنین به طور فزاینده ای از ارزش های بذر استفاده می کند که می تواند برای هر نمونه منحصر به فرد باشد و سپس باید مصمم به استخراج دامنه های تولید شده آینده باشد. در برخی موارد، بذری که یک نمونه خاص از آن استفاده می کند می تواند از ترافیک DNS استخراج شود.[۱۰] [CTI_PRESERVE_۲] با این حال، هزاران دامنه احتمالی وجود دارد که در روز تولید می شوند؛ این امر باعث می شود که مدافعان به دلیل هزینه، تمام دامنه های احتمالی C2 را ثبت کنند. در برخی موارد ممکن است از یک شکاف DNS محلی برای جلوگیری از دستور و کنترل DGA در هزینه های کاهش یافته استفاده شود.\n\nسیستم های تشخیص نفوذ شبکه و پیشگیری که از امضاهای شبکه برای شناسایی ترافیک برای بدافزار های دشمن خاص استفاده می کنند می توانند برای کاهش فعالیت در سطح شبکه استفاده شوند. امضاها اغلب برای شاخص های منحصر به فرد در پروتکل ها هستند و ممکن است بر اساس پروتکل خاصی باشد که توسط یک دشمن یا ابزار خاص مورد استفاده قرار می گیرد و احتمالا در خانواده ها و نسخه های مختلف بدافزار متفاوت خواهد بود. مخالفان به احتمال زیاد امضاهای ابزار C2 را در طول زمان یا پروتکل های ساخت به گونه ای تغییر خواهند داد که از شناسایی توسط ابزارهای دفاعی معمول جلوگیری کنند. [[ویرایش] (Citation: Cybereason Dissecting DGAs) (Citation: Cisco Umbrella DGA Brute Force) (Citation: Akamai DGA Mitigation) (Citation: University of Birmingham C2)"
         }
     ]
 }

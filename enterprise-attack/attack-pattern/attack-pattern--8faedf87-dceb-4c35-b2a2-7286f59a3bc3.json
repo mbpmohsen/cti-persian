@@ -12,17 +12,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1053/004",
-                    "external_id": "T1053.004"
+                    "external_id": "T1053.004",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AppleDocs Launch Agent Daemons",
                     "description": "Apple. (n.d.). Creating Launch Daemons and Agents. Retrieved July 10, 2017.",
-                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html"
+                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html",
+                    "source_name_fa": "AppleDocs Agent Daemons را راه اندازی کرد",
+                    "description_fa": "اپل (n.d.) ایجاد Daemons و Agents Retrieved 10 ژوئیه 2017"
                 },
                 {
                     "source_name": "Methods of Mac Malware Persistence",
                     "description": "Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "روش های Mac Malware Pertin",
+                    "description_fa": "پاتریک واردل (2014, سپتامبر) روش های بدافزار بر روی Mac OS X Retrieved 5 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -55,7 +60,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "راه اندازی شد",
+            "description_fa": "این تکنیک به دلیل استفاده نادرست از بین می رود. گزارش ذکر شده جزئیات فنی را ارائه نمی دهد که چگونه بدافزار به طور مستقیم با راه اندازی ارتباط برقرار می کند و نه از طریق خدمات شناخته شده. سایر خدمات سیستم برای تعامل با راه اندازی به جای استفاده از خود استفاده می شود.\n\nعوامل ممکن است از [CTI_PRESERVE_0] استفاده کنند تا برنامه ریزی برای اجرای اولیه یا تکراری کد مخرب را انجام دهند. [CTI_PRESERVE] daemon، بومی به macOS، مسئول بارگیری و نگهداری خدمات در سیستم عامل است. این فرآیند پارامترهایی را برای هر پرتاب در سطح تقاضا از فهرست اموال (Plist) که در [CTI_PRESERVE_2] یافت می شود و [CTI_PRESERVE_3] [[ویرایش] این فایل ها دارای فایل های لیست اموال هستند که به فایل های اجرا شده اشاره می کنند (CTI_PRESERVE_8).\n\nیک دشمن می تواند از آن استفاده کند. daemon در mac محیط های سیستم عامل برای برنامه ریزی اجرایی جدید برای اجرای در استارت آپ سیستم یا بر اساس برنامه ریزی شده برای پایداری. [CTI_PRESERVE_5] همچنین می تواند مورد سوء استفاده قرار گیرد برای اجرای یک فرایند تحت چارچوب یک حساب مشخص. در این میان، از جمله کسانی که در این زمینه حضور دارند، استفاده می کنند. <code>Launchd</code> <code>launchd</code> <code>/System/Library/LaunchDaemons</code> <code>/Library/LaunchDaemons</code> <code>launchd</code> <code>launchd</code> <code>launchd</code> (Citation: AppleDocs Launch Agent Daemons) (Citation: Methods of Mac Malware Persistence)"
         }
     ]
 }

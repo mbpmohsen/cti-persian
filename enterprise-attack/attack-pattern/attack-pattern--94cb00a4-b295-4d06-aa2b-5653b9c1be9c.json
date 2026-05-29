@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1606",
-                    "external_id": "T1606"
+                    "external_id": "T1606",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AWS Temporary Security Credentials",
                     "description": "AWS. (n.d.). Requesting temporary security credentials. Retrieved April 1, 2022.",
-                    "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html"
+                    "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_request.html",
+                    "source_name_fa": "AWS Temporary Security",
+                    "description_fa": "AWS (n.d.) درخواست مدارک امنیتی موقت Retrieved 1, 2022."
                 },
                 {
                     "source_name": "Unit 42 Mac Crypto Cookies January 2019",
-                    "description": "Chen, Y., Hu, W., Xu, Z., et. al. (2019, January 31). Mac Malware Steals Cryptocurrency Exchanges\u2019 Cookies. Retrieved October 14, 2019.",
-                    "url": "https://unit42.paloaltonetworks.com/mac-malware-steals-cryptocurrency-exchanges-cookies/"
+                    "description": "Chen, Y., Hu, W., Xu, Z., et. al. (2019, January 31). Mac Malware Steals Cryptocurrency Exchanges’ Cookies. Retrieved October 14, 2019.",
+                    "url": "https://unit42.paloaltonetworks.com/mac-malware-steals-cryptocurrency-exchanges-cookies/",
+                    "source_name_fa": "Unit 42 Mac Crypto cookies 2019",
+                    "description_fa": "چن، Y، Hu, W., Xu, Z., et al. (2019, 31 ژانویه). Mac Malware Steals Crypto Exchanges Retrieved 14 اکتبر 2019"
                 },
                 {
                     "source_name": "GitHub AWS-ADFS-Credential-Generator",
                     "description": "Damian Hickey. (2017, January 28). AWS-ADFS-Credential-Generator. Retrieved September 27, 2024.",
-                    "url": "https://github.com/pvanbuijtene/aws-adfs-credential-generator"
+                    "url": "https://github.com/pvanbuijtene/aws-adfs-credential-generator",
+                    "source_name_fa": "GitHub AWS-ADFS-Credential-Generator",
+                    "description_fa": "Damian Hickey (2017، 28 ژانویه) AWS-ADFS-Credential-Generator Retrieved ۲۷ سپتامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "Microsoft SolarWinds Customer Guidance",
                     "description": "MSRC. (2020, December 13). Customer Guidance on Recent Nation-State Cyber Attacks. Retrieved December 17, 2020.",
-                    "url": "https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+                    "url": "https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/",
+                    "source_name_fa": "راهنمای مشتری مایکروسافت SolarWinds",
+                    "description_fa": "MSRC (2020، 13 دسامبر) راهنمای مشتری در حملات سایبری اخیر کشور Retrieved 17 دسامبر 2020"
                 },
                 {
                     "source_name": "Pass The Cookie",
                     "description": "Rehberger, J. (2018, December). Pivot to the Cloud using Pass the Cookie. Retrieved April 5, 2019.",
-                    "url": "https://wunderwuzzi23.github.io/blog/passthecookie.html"
+                    "url": "https://wunderwuzzi23.github.io/blog/passthecookie.html",
+                    "source_name_fa": "Pass the Cookie",
+                    "description_fa": "Rehberger، J. (2018، دسامبر) تمرکز بر روی Cloud با استفاده از Pass Cookie Retrieved 5 آوریل 2019"
                 },
                 {
                     "source_name": "Zimbra Preauth",
                     "description": "Zimbra. (2023, March 16). Preauth. Retrieved May 31, 2023.",
-                    "url": "https://wiki.zimbra.com/wiki/Preauth"
+                    "url": "https://wiki.zimbra.com/wiki/Preauth",
+                    "source_name_fa": "Zimbra Preauth",
+                    "description_fa": "زیمبرا (۲۰۲۳، ۱۶ مارس) پیشین Retrieved 31 مه 2023"
                 }
             ],
             "object_marking_refs": [
@@ -77,7 +90,9 @@
                 "Office Suite",
                 "Identity Provider"
             ],
-            "x_mitre_version": "1.5"
+            "x_mitre_version": "1.5",
+            "name_fa": "Forge Web Credentials",
+            "description_fa": "مخالفان ممکن است مواد معتبر ایجاد کنند که می توانند برای دسترسی به برنامه های وب یا خدمات اینترنت استفاده شوند. برنامه ها و خدمات وب ( میزبان در محیط های ابری SaaS یا سرورهای On-premise) اغلب از کوکی های جلسه، توکن ها یا سایر مواد برای تأیید و تأیید دسترسی کاربر استفاده می کنند.\n\nمخالفان ممکن است این مواد معتبر را برای دسترسی به منابع وب تولید کنند. این تفاوت با [Steal Web Session Cookie] ([CTI_PRESERVE_6] متفاوت است، [Steal Application Access Token] ([[CTI_PRESERVE_7])، و دیگر رفتارهای مشابه در آن مدارک جدید و جعلی توسط دشمن، به جای سرقت رفته و یا از کاربران مشروع.\n\nنسل اعتبار وب اغلب نیاز به ارزش های مخفی مانند رمز عبور، [ کلیدهای خصوصی] ([[CTI_PRESERVE_8]، و یا دیگر ارزش های دانه های رمزنگاری [CTI_PRESERVE_0] دارد. همچنین ممکن است توکن ها را با استفاده از ویژگی هایی مانند AssumeRole و @ GetFederationToken APIs in AWS، که به کاربران اجازه می دهد تا مدارک امنیتی موقت (به عنوان مثال، [Temporary Elevated Cloud Access] ( [[CTI_PREE_9]) را درخواست کنند، یا توکن های کلیدی را تولید کنند. [[ویرایش]\n\nهنگامی که دشمنان جعلی می توانند از این اعتبارهای وب برای دسترسی به منابع استفاده کنند (به عبارت دیگر، [[edit] [[CTI_PRESERVE_10])، که ممکن است چندین عامل و دیگر مکانیسم های حفاظت از احراز هویت را دور بزنند.[۱۰] [CTI_PRESERV_E_۳][۱۰] (Citation: GitHub AWS-ADFS-Credential-Generator) (Citation: AWS Temporary Security Credentials) (Citation: Zimbra Preauth) (Citation: Pass The Cookie) (Citation: Unit 42 Mac Crypto Cookies January 2019) (Citation: Microsoft SolarWinds Customer Guidance) https://attack.mitre.org/techniques/T1539 https://attack.mitre.org/techniques/T1528 https://attack.mitre.org/techniques/T1552/004 https://attack.mitre.org/techniques/T1548/005 https://attack.mitre.org/techniques/T1550"
         }
     ]
 }

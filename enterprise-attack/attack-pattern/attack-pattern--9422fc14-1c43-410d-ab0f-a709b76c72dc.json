@@ -13,32 +13,42 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1060",
-                    "external_id": "T1060"
+                    "external_id": "T1060",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/270.html",
-                    "external_id": "CAPEC-270"
+                    "external_id": "CAPEC-270",
+                    "source_name_fa": "کلاه"
                 },
                 {
                     "source_name": "Microsoft Run Key",
                     "description": "Microsoft. (n.d.). Run and RunOnce Registry Keys. Retrieved November 12, 2014.",
-                    "url": "http://msdn.microsoft.com/en-us/library/aa376977"
+                    "url": "http://msdn.microsoft.com/en-us/library/aa376977",
+                    "source_name_fa": "Microsoft Run Key",
+                    "description_fa": "مایکروسافت (n.d.) Run and RunOnce Registry Keys Retrieved 12 نوامبر 2014"
                 },
                 {
                     "source_name": "Microsoft RunOnceEx APR 2018",
                     "description": "Microsoft. (2018, August 20). Description of the RunOnceEx Registry Key. Retrieved June 29, 2018.",
-                    "url": "https://support.microsoft.com/help/310593/description-of-the-runonceex-registry-key"
+                    "url": "https://support.microsoft.com/help/310593/description-of-the-runonceex-registry-key",
+                    "source_name_fa": "Microsoft RuntimeEx APR 2018",
+                    "description_fa": "مایکروسافت (2018, 20 آگوست) دانلود بازی RunOnceEx Registry Key Retrieved 29 ژوئن 2018"
                 },
                 {
                     "source_name": "Oddvar Moe RunOnceEx Mar 2018",
                     "description": "Moe, O. (2018, March 21). Persistence using RunOnceEx - Hidden from Autoruns.exe. Retrieved June 29, 2018.",
-                    "url": "https://oddvar.moe/2018/03/21/persistence-using-runonceex-hidden-from-autoruns-exe/"
+                    "url": "https://oddvar.moe/2018/03/21/persistence-using-runonceex-hidden-from-autoruns-exe/",
+                    "source_name_fa": "دانلود بازی Oddvar Moe RunOnceEx Mar 2018",
+                    "description_fa": "(اول، ۲۱ مارس) اصرار با استفاده از RunOnceEx - پنهان از Autoruns.exe. Retrieved 29 ژوئن 2018"
                 },
                 {
                     "source_name": "TechNet Autoruns",
                     "description": "Russinovich, M. (2016, January 4). Autoruns for Windows v13.51. Retrieved June 6, 2016.",
-                    "url": "https://technet.microsoft.com/en-us/sysinternals/bb963902"
+                    "url": "https://technet.microsoft.com/en-us/sysinternals/bb963902",
+                    "source_name_fa": "TechNet Autoruns",
+                    "description_fa": "Russinovich، M. (2016، 4) Autoruns برای ویندوز v13.51 Retrieved ۶ ژوئن ۲۰۱۶"
                 }
             ],
             "object_marking_refs": [
@@ -66,7 +76,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "دانلود بازی Run Keys / Startup Folder",
+            "description_fa": "مخالفان ممکن است با اضافه کردن یک برنامه به یک پوشه استارت آپ یا ارجاع آن با یک کلید اجرا ثبت نام کنند. اضافه کردن یک ورودی به “کلید های اجرایی” در پوشه ثبت یا راه اندازی باعث می شود که برنامه زمانی که یک کاربر وارد می شود اجرا شود. [[ویرایش] این برنامه ها تحت چارچوب کاربر اجرا می شوند و سطح مجوز های مرتبط با حساب را دارند.\n\nقرار دادن یک برنامه در یک پوشه استارت آپ باعث می شود که برنامه زمانی که یک کاربر وارد می شود اجرا شود. یک محل پوشه استارت آپ برای حساب های کاربری فردی و همچنین یک پوشه استارت آپ در سراسر سیستم وجود دارد که بدون توجه به اینکه کدام حساب کاربری وارد می شود، بررسی خواهد شد.\n\nمسیر پوشه راه اندازی برای کاربر فعلی:\n[[ویرایش]\nمسیر راه اندازی پوشه برای همه کاربران:\n[[ویرایش]\n\nکلید های اجرا زیر به طور پیش فرض در سیستم های ویندوز ایجاد می شوند:\n[[ویرایش]\n[[ویرایش]\n[[ویرایش]\n[[ویرایش]\n\nهمچنین در دسترس است اما به طور پیش فرض بر روی ویندوز ویستا و جدیدتر ایجاد نمی شود. ثبت نام کلید می تواند برنامه های مرجع را به طور مستقیم یا آنها را به عنوان یک وابستگی فهرست کند. [[ویرایش] به عنوان مثال، ممکن است یک DLL را با استفاده از کلید “Depend” با RunOnceEx بارگیری کنید: [CTI_PRESERVE_7] [[ویرایش]\n\nکلیدهای رجیستری زیر را می توان برای تنظیم آیتم های پوشه استارت آپ برای پایداری استفاده کرد:\n[[ویرایش]\n[[ویرایش]\n[[ویرایش]\n[[ویرایش]\n\nکلید های ثبت نام زیر می توانند راه اندازی اتوماتیک خدمات را در طول بوت کنترل کنند:\n[[ویرایش]\n[[ویرایش]\n[[ویرایش]\n[[ویرایش]\n\nاستفاده از تنظیمات سیاست برای مشخص کردن برنامه های استارت آپ، ارزش های مربوطه را در هر دو کلید ثبت نام ایجاد می کند:\n[[ویرایش]\n[[ویرایش]\n\nکلید Winlogon کنترل اقداماتی است که زمانی اتفاق می افتد که یک کاربر وارد کامپیوتر ویندوز 7 می شود. اکثر این اقدامات تحت کنترل سیستم عامل هستند، اما شما همچنین می توانید اقدامات سفارشی را در اینجا اضافه کنید. [[رده:رده:]] و [[رده]]\n\nبرنامه های ذکر شده در مقدار بارگذاری کلید رجیستری ([CTI_PRESERVE_20] هنگامی که هر کاربر وارد می شود اجرا می شود.\n\nبه طور پیش فرض، مقدار چند رشته BootExecute کلید رجیستری ([CTI_PRESERVE_21] برای Autocheck Autochk تنظیم شده است. این ارزش باعث می شود ویندوز، در راه اندازی، برای بررسی یکپارچگی فایل سیستم دیسک های سخت اگر سیستم به طور غیر طبیعی خاموش شده است. مخالفان می توانند برنامه ها یا فرایندهای دیگر را به این ارزش رجیستری اضافه کنند که به طور خودکار در بوت راه اندازی می شود.\n\nمخالفان می توانند از این مکان های پیکربندی برای اجرای بدافزار مانند ابزارهای دسترسی از راه دور برای حفظ پایداری از طریق راه اندازی مجدد سیستم استفاده کنند. همچنین می توان از آن استفاده کرد تا به نظر برسد که آنها با برنامه های قانونی مرتبط هستند. <code>C:\\Users\\[Username]\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup</code> <code>C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\StartUp</code> <code>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run</code> <code>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce</code> <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Run</code> <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce</code> <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx</code> <code>reg add HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\RunOnceEx\\0001\\Depend /v 1 /d \"C:\\temp\\evil[.]dll\"</code> <code>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders</code> <code>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders</code> <code>HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders</code> <code>HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders</code> <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce</code> <code>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServicesOnce</code> <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices</code> <code>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunServices</code> <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run</code> <code>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\Explorer\\Run</code> <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\Userinit</code> <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\Shell</code> <code>HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows</code> <code>HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager</code> (Citation: Microsoft Run Key) (Citation: Microsoft RunOnceEx APR 2018) (Citation: Oddvar Moe RunOnceEx Mar 2018) https://attack.mitre.org/techniques/T1036"
         }
     ]
 }

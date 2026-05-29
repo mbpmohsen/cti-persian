@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/009",
-                    "external_id": "T1055.009"
+                    "external_id": "T1055.009",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "DD Man",
                     "description": "Kerrisk, M. (2020, February 2). DD(1) User Commands. Retrieved February 21, 2020.",
-                    "url": "http://man7.org/linux/man-pages/man1/dd.1.html"
+                    "url": "http://man7.org/linux/man-pages/man1/dd.1.html",
+                    "source_name_fa": "DD DD مردی مرد",
+                    "description_fa": "Kerrisk، M. (2020، 2 فوریه) DD (1) User Commands Retrieved 21 فوریه 2020"
                 },
                 {
                     "source_name": "GDS Linux Injection",
                     "description": "McNamara, R. (2017, September 5). Linux Based Inter-Process Code Injection Without Ptrace(2). Retrieved February 21, 2020.",
-                    "url": "https://blog.gdssecurity.com/labs/2017/9/5/linux-based-inter-process-code-injection-without-ptrace2.html"
+                    "url": "https://blog.gdssecurity.com/labs/2017/9/5/linux-based-inter-process-code-injection-without-ptrace2.html",
+                    "source_name_fa": "GDS Linux injection",
+                    "description_fa": "McNamara، R. (2017، سپتامبر 5) کد تزریق مبتنی بر لینوکس بدون Ptrace (2) Retrieved 21 فوریه 2020"
                 },
                 {
                     "source_name": "Uninformed Needle",
                     "description": "skape. (2003, January 19). Linux x86 run-time process manipulation. Retrieved December 20, 2017.",
-                    "url": "http://hick.org/code/skape/papers/needle.txt"
+                    "url": "http://hick.org/code/skape/papers/needle.txt",
+                    "source_name_fa": "عدم اطلاع از سوزن",
+                    "description_fa": "skape (2003، 19 ژانویه) لینوکس x86 دستکاری فرآیند زمان اجرا Retrieved 20 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2026-05-12T15:12:00.717Z",
             "name": "Proc Memory",
-            "description": "Adversaries may inject malicious code into processes via the /proc filesystem in order to evade process-based defenses as well as possibly elevate privileges. Proc memory injection is a method of executing arbitrary code in the address space of a separate live process. \n\nProc memory injection involves enumerating the memory of a process via the /proc filesystem (<code>/proc/[pid]</code>) then crafting a return-oriented programming (ROP) payload with available gadgets/instructions. Each running process has its own directory, which includes memory mappings. Proc memory injection is commonly performed by overwriting the target processes\u2019 stack using memory mappings provided by the /proc filesystem. This information can be used to enumerate offsets (including the stack) and gadgets (or instructions within the program that can be used to build a malicious payload) otherwise hidden by process memory protections such as address space layout randomization (ASLR). Once enumerated, the target processes\u2019 memory map within <code>/proc/[pid]/maps</code> can be overwritten using dd.(Citation: Uninformed Needle)(Citation: GDS Linux Injection)(Citation: DD Man) \n\nOther techniques such as [Dynamic Linker Hijacking](https://attack.mitre.org/techniques/T1574/006) may be used to populate a target process with more available gadgets. Similar to [Process Hollowing](https://attack.mitre.org/techniques/T1055/012), proc memory injection may target child processes (such as a backgrounded copy of sleep).(Citation: GDS Linux Injection) \n\nRunning code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via proc memory injection may also evade detection from security products since the execution is masked under a legitimate process. ",
+            "description": "Adversaries may inject malicious code into processes via the /proc filesystem in order to evade process-based defenses as well as possibly elevate privileges. Proc memory injection is a method of executing arbitrary code in the address space of a separate live process. \n\nProc memory injection involves enumerating the memory of a process via the /proc filesystem (<code>/proc/[pid]</code>) then crafting a return-oriented programming (ROP) payload with available gadgets/instructions. Each running process has its own directory, which includes memory mappings. Proc memory injection is commonly performed by overwriting the target processes’ stack using memory mappings provided by the /proc filesystem. This information can be used to enumerate offsets (including the stack) and gadgets (or instructions within the program that can be used to build a malicious payload) otherwise hidden by process memory protections such as address space layout randomization (ASLR). Once enumerated, the target processes’ memory map within <code>/proc/[pid]/maps</code> can be overwritten using dd.(Citation: Uninformed Needle)(Citation: GDS Linux Injection)(Citation: DD Man) \n\nOther techniques such as [Dynamic Linker Hijacking](https://attack.mitre.org/techniques/T1574/006) may be used to populate a target process with more available gadgets. Similar to [Process Hollowing](https://attack.mitre.org/techniques/T1055/012), proc memory injection may target child processes (such as a backgrounded copy of sleep).(Citation: GDS Linux Injection) \n\nRunning code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via proc memory injection may also evade detection from security products since the execution is masked under a legitimate process. ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -57,7 +64,9 @@
             "x_mitre_platforms": [
                 "Linux"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "حافظه Proc Memory",
+            "description_fa": "مخالفان ممکن است کد مخرب را از طریق سیستم فایل /proc تزریق کنند تا از دفاع مبتنی بر فرآیند و همچنین احتمالا امتیازات بالا جلوگیری کنند. تزریق حافظه Proc روشی برای اجرای کد دلخواه در فضای آدرس یک فرآیند جداگانه زندگی است.\n\nتزریق حافظه Proc شامل جذب حافظه یک فرایند از طریق سیستم فایل /proc ([CTI_PRESERVE_0]) و سپس ایجاد یک برنامه نویسی بازگشتی (ROP) با ابزارهای موجود / دستورالعمل. هر فرآیند دویدن دایرکتوری خود را دارد که شامل نقشه برداری حافظه است. تزریق حافظه Proc معمولا با نوشتن پشته فرآیند هدف با استفاده از نقشه های حافظه ارائه شده توسط سیستم فایل /proc انجام می شود. این اطلاعات را می توان برای تنظیم جبران (از جمله پشته) و ابزار (یا دستورالعمل های درون برنامه که می تواند برای ساخت یک محموله مخرب استفاده شود) در غیر این صورت توسط حفاظت از حافظه فرایند مانند آدرس طرح بندی فضایی (ASLR) پنهان شده است. پس از ثبت نام، نقشه حافظه فرآیند هدف در داخل [CTI_PRESERVE] می تواند با استفاده از dd بازنویسی شود.[۱۰] [۱۰] [۱۰]\n\nتکنیک های دیگر مانند [Dynamic Linker Hijacking] ([CTI_PRESERVE_6] ممکن است برای تکمیل یک فرایند هدف با ابزارهای موجود بیشتر استفاده شود. مانند [Process Hollowing] [[[۱۰]] [[۱۰]]_PRESERVE_۷]]، تزریق حافظه ممکن است فرآیندهای کودک (مانند یک کپی پس زمینه از خواب) را هدف قرار دهد. [[ویرایش]\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق تزریق حافظه proc نیز ممکن است از تشخیص محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. <code>/proc/[pid]</code> <code>/proc/[pid]/maps</code> (Citation: Uninformed Needle) (Citation: GDS Linux Injection) (Citation: DD Man) (Citation: GDS Linux Injection) https://attack.mitre.org/techniques/T1574/006 https://attack.mitre.org/techniques/T1055/012"
         }
     ]
 }

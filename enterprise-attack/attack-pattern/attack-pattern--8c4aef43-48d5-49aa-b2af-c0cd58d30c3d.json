@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1564/002",
-                    "external_id": "T1564.002"
+                    "external_id": "T1564.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Cybereason OSX Pirrit",
                     "description": "Amit Serper. (2016). Cybereason Lab Analysis OSX.Pirrit. Retrieved December 10, 2021.",
-                    "url": "https://cdn2.hubspot.net/hubfs/3354902/Content%20PDFs/Cybereason-Lab-Analysis-OSX-Pirrit-4-6-16.pdf"
+                    "url": "https://cdn2.hubspot.net/hubfs/3354902/Content%20PDFs/Cybereason-Lab-Analysis-OSX-Pirrit-4-6-16.pdf",
+                    "source_name_fa": "Cybereason OSX Pirrit",
+                    "description_fa": "Amit Serper 2016 Cybereason Lab Analysis OSX دزدان دریایی Retrieved 10, 2021."
                 },
                 {
                     "source_name": "Apple Support Hide a User Account",
                     "description": "Apple. (2020, November 30). Hide a user account in macOS. Retrieved December 10, 2021.",
-                    "url": "https://support.apple.com/en-us/HT203998"
+                    "url": "https://support.apple.com/en-us/HT203998",
+                    "source_name_fa": "پشتیبانی اپل Hide a User Account",
+                    "description_fa": "اپل (2020، 30 نوامبر) یک حساب کاربری را در macOS پنهان کنید. Retrieved 10, 2021."
                 },
                 {
                     "source_name": "FireEye SMOKEDHAM June 2021",
-                    "description": "FireEye. (2021, June 16). Smoking Out a DARKSIDE Affiliate\u2019s Supply Chain Software Compromise. Retrieved September 22, 2021.",
-                    "url": "https://www.fireeye.com/blog/threat-research/2021/06/darkside-affiliate-supply-chain-software-compromise.html"
+                    "description": "FireEye. (2021, June 16). Smoking Out a DARKSIDE Affiliate’s Supply Chain Software Compromise. Retrieved September 22, 2021.",
+                    "url": "https://www.fireeye.com/blog/threat-research/2021/06/darkside-affiliate-supply-chain-software-compromise.html",
+                    "source_name_fa": "FireEye SMOKEDHAM ژوئن 2021",
+                    "description_fa": "FireEye Retrieved 22 سپتامبر 2021."
                 },
                 {
                     "source_name": "Hide GDM User Accounts",
                     "description": "Ji Mingkui. (2021, June 17). How to Hide All The User Accounts in Ubuntu 20.04, 21.04 Login Screen. Retrieved March 15, 2022.",
-                    "url": "https://ubuntuhandbook.org/index.php/2021/06/hide-user-accounts-ubuntu-20-04-login-screen/"
+                    "url": "https://ubuntuhandbook.org/index.php/2021/06/hide-user-accounts-ubuntu-20-04-login-screen/",
+                    "source_name_fa": "Hide GDM User Accounts",
+                    "description_fa": "جی مینگکوی (۲۰۲۱، ۱۷ ژوئن) چگونه تمام حساب های کاربری را در Ubuntu 20.04، 21.04 Login Screen پنهان کنیم. Retrieved 15 مارس 2022"
                 },
                 {
                     "source_name": "US-CERT TA18-074A",
                     "description": "US-CERT. (2018, March 16). Alert (TA18-074A): Russian Government Cyber Activity Targeting Energy and Other Critical Infrastructure Sectors. Retrieved June 6, 2018.",
-                    "url": "https://www.us-cert.gov/ncas/alerts/TA18-074A"
+                    "url": "https://www.us-cert.gov/ncas/alerts/TA18-074A",
+                    "source_name_fa": "US-CERT TA18-074A",
+                    "description_fa": "US-CERT (2018، 16 مارس) هشدار (TA18-074A): فعالیت سایبری دولت روسیه برای هدف قرار دادن انرژی و دیگر بخش های زیرساخت بحرانی Retrieved 6 ژوئن 2018"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.705Z",
             "name": "Hidden Users",
-            "description": "Adversaries may use hidden users to hide the presence of user accounts they create or modify. Administrators may want to hide users when there are many user accounts on a given system or if they want to hide their administrative or other management accounts from other users. \n\nIn macOS, adversaries can create or modify a user to be hidden through manipulating plist files, folder attributes, and user attributes. To prevent a user from being shown on the login screen and in System Preferences, adversaries can set the userID to be under 500 and set the key value <code>Hide500Users</code> to <code>TRUE</code> in the <code>/Library/Preferences/com.apple.loginwindow</code> plist file.(Citation: Cybereason OSX Pirrit) Every user has a userID associated with it. When the <code>Hide500Users</code> key value is set to <code>TRUE</code>, users with a userID under 500 do not appear on the login screen and in System Preferences. Using the command line, adversaries can use the <code>dscl</code> utility to create hidden user accounts by setting the <code>IsHidden</code> attribute to <code>1</code>. Adversaries can also hide a user\u2019s home folder by changing the <code>chflags</code> to hidden.(Citation: Apple Support Hide a User Account) \n\nAdversaries may similarly hide user accounts in Windows. Adversaries can set the <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList</code> Registry key value to <code>0</code> for a specific user to prevent that user from being listed on the logon screen.(Citation: FireEye SMOKEDHAM June 2021)(Citation: US-CERT TA18-074A)\n\nOn Linux systems, adversaries may hide user accounts from the login screen, also referred to as the greeter. The method an adversary may use depends on which Display Manager the distribution is currently using. For example, on an Ubuntu system using the GNOME Display Manger (GDM), accounts may be hidden from the greeter using the <code>gsettings</code> command (ex: <code>sudo -u gdm gsettings set org.gnome.login-screen disable-user-list true</code>).(Citation: Hide GDM User Accounts) Display Managers are not anchored to specific distributions and may be changed by a user or adversary.",
+            "description": "Adversaries may use hidden users to hide the presence of user accounts they create or modify. Administrators may want to hide users when there are many user accounts on a given system or if they want to hide their administrative or other management accounts from other users. \n\nIn macOS, adversaries can create or modify a user to be hidden through manipulating plist files, folder attributes, and user attributes. To prevent a user from being shown on the login screen and in System Preferences, adversaries can set the userID to be under 500 and set the key value <code>Hide500Users</code> to <code>TRUE</code> in the <code>/Library/Preferences/com.apple.loginwindow</code> plist file.(Citation: Cybereason OSX Pirrit) Every user has a userID associated with it. When the <code>Hide500Users</code> key value is set to <code>TRUE</code>, users with a userID under 500 do not appear on the login screen and in System Preferences. Using the command line, adversaries can use the <code>dscl</code> utility to create hidden user accounts by setting the <code>IsHidden</code> attribute to <code>1</code>. Adversaries can also hide a user’s home folder by changing the <code>chflags</code> to hidden.(Citation: Apple Support Hide a User Account) \n\nAdversaries may similarly hide user accounts in Windows. Adversaries can set the <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList</code> Registry key value to <code>0</code> for a specific user to prevent that user from being listed on the logon screen.(Citation: FireEye SMOKEDHAM June 2021)(Citation: US-CERT TA18-074A)\n\nOn Linux systems, adversaries may hide user accounts from the login screen, also referred to as the greeter. The method an adversary may use depends on which Display Manager the distribution is currently using. For example, on an Ubuntu system using the GNOME Display Manger (GDM), accounts may be hidden from the greeter using the <code>gsettings</code> command (ex: <code>sudo -u gdm gsettings set org.gnome.login-screen disable-user-list true</code>).(Citation: Hide GDM User Accounts) Display Managers are not anchored to specific distributions and may be changed by a user or adversary.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -68,7 +79,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "کاربران پنهان",
+            "description_fa": "مخالفان ممکن است از کاربران مخفی برای پنهان کردن حضور حساب های کاربری که ایجاد یا تغییر می کنند استفاده کنند. مدیران ممکن است بخواهند کاربران را پنهان کنند زمانی که حساب های کاربری زیادی در یک سیستم داده شده وجود دارد یا اگر می خواهند حساب های اداری یا مدیریتی خود را از سایر کاربران پنهان کنند.\n\nدر macOS، دشمنان می توانند یک کاربر را ایجاد یا اصلاح کنند تا از طریق دستکاری فایل های plist، ویژگی های پوشه و ویژگی های کاربر پنهان شوند. برای جلوگیری از نشان دادن کاربر در صفحه ورود و در System Preferences، دشمنان می توانند UserID را به زیر 500 تنظیم کنند و ارزش کلیدی (CTI_PRESERVE_0) را برای (CTI_PRESERVE) در [CTI_PRESERVE] تنظیم کنند. بایگانی برچسب ها[ویرایش] هر کاربر یک UserID مرتبط با آن دارد. و هنگامی که [[ویرایش] ارزش کلیدی برای [CTI_PRESERVE_4] تنظیم شده است، کاربران با کاربرID زیر 500 در صفحه ورود و در System Preferences ظاهر نمی شوند. با استفاده از خط فرمان، دشمنان می توانند از ابزار [CTI_PRESERVE_5] برای ایجاد حساب کاربری پنهان با تنظیم [CTI_PRESERVE_6] استفاده کنند. همچنین می تواند با تغییر دادن یک کاربر، یک پوشه خانگی را پنهان کند.\n\nکاربران ممکن است به طور مشابه حساب های کاربری را در ویندوز پنهان کنند. در این صورت می توان آن را به صورت زیر تنظیم کرد. ارزش کلیدی ثبت نام برای [CTI_PRESERVE_10] برای یک کاربر خاص برای جلوگیری از آن کاربر در صفحه نمایش آرمین ثبت شده است.[[۱۰] [CTI_PRESERVE_۱۵][۹][۱۰]\n\nدر سیستم های لینوکس، دشمنان ممکن است حساب های کاربری را از صفحه ورود پنهان کنند، همچنین به عنوان خوش آمدگویی نامیده می شوند. روش استفاده از یک دشمن ممکن است بستگی به این داشته باشد که مدیر نمایش در حال حاضر از آن استفاده می کند. به عنوان مثال، در یک سیستم اوبونتو با استفاده از دستور GNOME Display Manger (GDM)، حساب ها ممکن است از استقبال کننده با استفاده از دستور [CTI_PRESERVE_11] پنهان شوند. مدیران نمایش به توزیع های خاص متصل نیستند و ممکن است توسط یک کاربر یا دشمن تغییر یابد. <code>Hide500Users</code> <code>TRUE</code> <code>/Library/Preferences/com.apple.loginwindow</code> <code>Hide500Users</code> <code>TRUE</code> <code>dscl</code> <code>IsHidden</code> <code>1</code> <code>chflags</code> <code>HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList</code> <code>0</code> <code>gsettings</code> <code>sudo -u gdm gsettings set org.gnome.login-screen disable-user-list true</code> (Citation: Cybereason OSX Pirrit) (Citation: Apple Support Hide a User Account) (Citation: FireEye SMOKEDHAM June 2021) (Citation: US-CERT TA18-074A) (Citation: Hide GDM User Accounts)"
         }
     ]
 }

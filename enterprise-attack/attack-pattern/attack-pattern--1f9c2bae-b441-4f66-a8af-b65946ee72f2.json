@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1606/002",
-                    "external_id": "T1606.002"
+                    "external_id": "T1606.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Microsoft SolarWinds Steps",
                     "description": "Lambert, J. (2020, December 13). Important steps for customers to protect themselves from recent nation-state cyberattacks. Retrieved December 17, 2020.",
-                    "url": "https://blogs.microsoft.com/on-the-issues/2020/12/13/customers-protect-nation-state-cyberattacks/"
+                    "url": "https://blogs.microsoft.com/on-the-issues/2020/12/13/customers-protect-nation-state-cyberattacks/",
+                    "source_name_fa": "Microsoft SolarWinds",
+                    "description_fa": "لمبرت، J. (2020، 13 دسامبر) گام های مهم برای مشتریان برای محافظت از خود در برابر حملات سایبری اخیر کشور Retrieved 17 دسامبر 2020"
                 },
                 {
                     "source_name": "Microsoft SAML Token Lifetimes",
                     "description": "Microsoft. (2020, December 14). Configurable token lifetimes in Microsoft Identity Platform. Retrieved December 22, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-configurable-token-lifetimes"
+                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-configurable-token-lifetimes",
+                    "source_name_fa": "Microsoft SAML Token Lifetimes",
+                    "description_fa": "مایکروسافت (2020، 14 دسامبر) طول عمر توکن های قابل اعتماد در پلتفرم هویت مایکروسافت Retrieved 22 دسامبر 2020"
                 },
                 {
                     "source_name": "Microsoft SolarWinds Customer Guidance",
                     "description": "MSRC. (2020, December 13). Customer Guidance on Recent Nation-State Cyber Attacks. Retrieved December 17, 2020.",
-                    "url": "https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+                    "url": "https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/",
+                    "source_name_fa": "راهنمای مشتری مایکروسافت SolarWinds",
+                    "description_fa": "MSRC (2020، 13 دسامبر) راهنمای مشتری در حملات سایبری اخیر کشور Retrieved 17 دسامبر 2020"
                 },
                 {
                     "source_name": "Cyberark Golden SAML",
                     "description": "Reiner, S. (2017, November 21). Golden SAML: Newly Discovered Attack Technique Forges Authentication to Cloud Apps. Retrieved December 17, 2020.",
-                    "url": "https://www.cyberark.com/resources/threat-research-blog/golden-saml-newly-discovered-attack-technique-forges-authentication-to-cloud-apps"
+                    "url": "https://www.cyberark.com/resources/threat-research-blog/golden-saml-newly-discovered-attack-technique-forges-authentication-to-cloud-apps",
+                    "source_name_fa": "Cyberark Golden SAML",
+                    "description_fa": "رینر، S. (2017، 21 نوامبر) Sam GoldenL: کشف جدید تکنیک حمله برای ارائه اعتبار به Cloud Apps Retrieved 17 دسامبر 2020"
                 },
                 {
                     "source_name": "Sygnia Golden SAML",
                     "description": "Sygnia. (2020, December). Detection and Hunting of Golden SAML Attack. Retrieved November 17, 2024.",
-                    "url": "https://www.sygnia.co/threat-reports-and-advisories/golden-saml-attack/"
+                    "url": "https://www.sygnia.co/threat-reports-and-advisories/golden-saml-attack/",
+                    "source_name_fa": "Sygnia Golden SAML",
+                    "description_fa": "Sygnia (2020, دسامبر) کشف و شکار حمله طلایی SAML Retrieved ۱۷ نوامبر ۲۰۲۴"
                 }
             ],
             "object_marking_refs": [
@@ -72,7 +83,9 @@
                 "Office Suite",
                 "Identity Provider"
             ],
-            "x_mitre_version": "1.4"
+            "x_mitre_version": "1.4",
+            "name_fa": "توکن های SAML",
+            "description_fa": "یک دشمن ممکن است توکن های SAML را با هر گونه ادعای مجوز و طول عمر ایجاد کند اگر آنها دارای گواهینامه معتبر نشانه گذاری SAML هستند. [[ویرایش] عمر پیش فرض توکن SAML یک ساعت است، اما دوره اعتبار را می توان در [CTI_PRESERVE_0] مشخص کرد. در این میان، ارزش آن در یک عنصر است. این مقدار را می توان با استفاده از [CTI_PRESERVE_2] در یک [CTI_PRESERVE_3] تغییر داد. توکن های Forged SamL دشمنان را قادر می سازد تا در سراسر خدماتی که از SAML 2.0 به عنوان مکانیسم SSO (یک نشانه) استفاده می کنند، تأیید کنند.\n\nیک دشمن ممکن است از [ کلیدهای خصوصی] استفاده کند ([[۱۰] [[۱۰]]] [۹]]] برای به خطر انداختن گواهی ثبت نام سازمانی برای ایجاد توکن های جعلی SAML. اگر دشمن مجوز کافی برای ایجاد یک فدراسیون جدید با سرویس های فدراسیون Active Directory خود (AD FS) داشته باشد، ممکن است به جای آن گواهینامه قابل اعتماد نشانه گذاری خود را تولید کنند. [[ویرایش] این تفاوت با [Steal Application Access Token] ([[CTI_PRESERVE_10]) و سایر رفتارهای مشابه است که توکن ها توسط دشمن جدید و ساخته شده اند، نه به سرقت رفته یا از کاربران مشروع.\n\nیک دشمن ممکن است امتیازات ID اداری را به دست آورد اگر یک توکن SAML جعلی باشد که ادعا می کند یک حساب بسیار ممتاز را نشان می دهد. این امر ممکن است منجر به (استفاده از مواد تأیید اعتبار جایگزین) شود ([CTI_PRESERVE_11])، که ممکن است چندین عامل و سایر مکانیسم های محافظت از احراز هویت را دور بزند. [[ویرایش] <code>NotOnOrAfter</code> <code>conditions ...</code> <code>AccessTokenLifetime</code> <code>LifetimeTokenPolicy</code> (Citation: Microsoft SolarWinds Steps) (Citation: Microsoft SAML Token Lifetimes) (Citation: Cyberark Golden SAML) (Citation: Microsoft SolarWinds Customer Guidance) (Citation: Microsoft SolarWinds Customer Guidance) https://attack.mitre.org/techniques/T1552/004 https://attack.mitre.org/techniques/T1528 https://attack.mitre.org/techniques/T1550"
         }
     ]
 }

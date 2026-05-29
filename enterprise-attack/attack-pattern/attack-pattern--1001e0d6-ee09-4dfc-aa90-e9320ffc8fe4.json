@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1485/001",
-                    "external_id": "T1485.001"
+                    "external_id": "T1485.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AWS Storage Lifecycles",
                     "description": "AWS. (n.d.). Managing the lifecycle of objects. Retrieved September 25, 2024.",
-                    "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html"
+                    "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html",
+                    "source_name_fa": "AWS Storage Lifecycles",
+                    "description_fa": "AWS (n.d.) مدیریت چرخه عمر اشیاء 25 سپتامبر 2024"
                 },
                 {
                     "source_name": "GCP Storage Lifecycles",
                     "description": "Google Cloud. (n.d.). Object Lifecycle Management. Retrieved September 25, 2024.",
-                    "url": "https://cloud.google.com/storage/docs/lifecycle"
+                    "url": "https://cloud.google.com/storage/docs/lifecycle",
+                    "source_name_fa": "GCP چرخه های زندگی ذخیره سازی",
+                    "description_fa": "Google Cloud مدیریت چرخه زندگی اشیا 25 سپتامبر 2024"
                 },
                 {
                     "source_name": "Halcyon AWS Ransomware 2025",
                     "description": "Halcyon RISE Team. (2025, January 13). Abusing AWS Native Services: Ransomware Encrypting S3 Buckets with SSE-C. Retrieved March 18, 2025.",
-                    "url": "https://www.halcyon.ai/blog/abusing-aws-native-services-ransomware-encrypting-s3-buckets-with-sse-c"
+                    "url": "https://www.halcyon.ai/blog/abusing-aws-native-services-ransomware-encrypting-s3-buckets-with-sse-c",
+                    "source_name_fa": "Halcyon AWS Ransomware 2025",
+                    "description_fa": "Halcyon RISE Team (2025، 13 ژانویه) سرویس های بومی AWS: Ransomware رمزگذاری S3 با SSE-C. Retrieved 18 مارس 2025"
                 },
                 {
                     "source_name": "Azure Storage Lifecycles",
                     "description": "Microsoft Azure. (2024, July 3). Configure a lifecycle management policy. Retrieved September 25, 2024.",
-                    "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure?tabs=azure-portal"
+                    "url": "https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure?tabs=azure-portal",
+                    "source_name_fa": "Azure Storage Lifecycles",
+                    "description_fa": "Microsoft Azure ایجاد یک سیاست مدیریت چرخه عمر 25 سپتامبر 2024"
                 },
                 {
                     "source_name": "Palo Alto Cloud Ransomware",
                     "description": "Ofir Balassiano and Ofir Shaty. (2023, November 29). Ransomware in the Cloud: Breaking Down the Attack Vectors. Retrieved September 25, 2024.",
-                    "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/ransomware-data-protection-cloud/"
+                    "url": "https://www.paloaltonetworks.com/blog/prisma-cloud/ransomware-data-protection-cloud/",
+                    "source_name_fa": "پالو آلتو Cloud Ransomware",
+                    "description_fa": "از بالاستیانو و از شری (۲۰۲۳، ۲۹ نوامبر) Ransomware در Cloud: شکستن بردارهای حمله 25 سپتامبر 2024"
                 },
                 {
                     "source_name": "Datadog S3 Lifecycle CloudTrail Logs",
                     "description": "Stratus Red Team. (n.d.). CloudTrail Logs Impairment Through S3 Lifecycle Rule. Retrieved September 25, 2024.",
-                    "url": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.defense-evasion.cloudtrail-lifecycle-rule/"
+                    "url": "https://stratus-red-team.cloud/attack-techniques/AWS/aws.defense-evasion.cloudtrail-lifecycle-rule/",
+                    "source_name_fa": "Datadog S3 Lifecycle CloudTrail Logs",
+                    "description_fa": "Stratus Red Team (n.d) CloudTrail از طریق قانون چرخه زندگی S3 وارد می شود. 25 سپتامبر 2024"
                 }
             ],
             "object_marking_refs": [
@@ -71,7 +84,9 @@
             "x_mitre_version": "1.1",
             "x_mitre_impact_type": [
                 "Availability"
-            ]
+            ],
+            "name_fa": "بازی Lifecycle-Triggered Deletion",
+            "description_fa": "مخالفان ممکن است سیاست های چرخه عمر یک سطل ذخیره سازی ابری را تغییر دهند تا تمام اشیاء ذخیره شده در داخل را نابود کنند.\n\nسطل ذخیره سازی ابر اغلب به کاربران اجازه می دهد تا سیاست های چرخه عمر را برای خودکار سازی مهاجرت، بایگانی یا حذف اشیاء پس از یک دوره زمانی تنظیم کنند.[۱۰] [CTI_PRESERVE_0][۹][۱۰][۹][۵] اگر یک بازیگر تهدید مجوز کافی برای اصلاح این سیاست ها داشته باشد، ممکن است بتوانند تمام اشیاء را به صورت یک بار حذف کنند.\n\nبه عنوان مثال، در محیط های AWS، یک دشمن با اجازه \"PutLifecycleConfiguration\" ممکن است از \"PutBucketLifecycle\" استفاده کند. فراخوان API برای اعمال یک سیاست چرخه عمر به یک سطل S3 که تمام اشیاء را در سطل پس از یک روز حذف می کند. [CTI_PRESERVE_3] علاوه بر تخریب داده ها برای مقاصد اخاذی و [Financial theft] [[[۱۰]]] [[۱۰]]]، دشمنان نیز ممکن است این اقدام را بر روی سطل ها انجام دهند که حامل های ابری برای حذف [Indicator] هستند [[[۱۰] [[۱۰] (Citation: AWS Storage Lifecycles) (Citation: GCP Storage Lifecycles) (Citation: Azure Storage Lifecycles) (Citation: Palo Alto Cloud Ransomware) (Citation: Halcyon AWS Ransomware 2025) (Citation: Datadog S3 Lifecycle CloudTrail Logs) https://attack.mitre.org/techniques/T1657 https://attack.mitre.org/techniques/T1070"
         }
     ]
 }

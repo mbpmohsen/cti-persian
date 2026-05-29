@@ -13,42 +13,56 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1038",
-                    "external_id": "T1038"
+                    "external_id": "T1038",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/471.html",
-                    "external_id": "CAPEC-471"
+                    "external_id": "CAPEC-471",
+                    "source_name_fa": "کلاه"
                 },
                 {
                     "source_name": "Microsoft DLL Search",
                     "description": "Microsoft. (n.d.). Dynamic-Link Library Search Order. Retrieved November 30, 2014.",
-                    "url": "http://msdn.microsoft.com/en-US/library/ms682586"
+                    "url": "http://msdn.microsoft.com/en-US/library/ms682586",
+                    "source_name_fa": "Microsoft DLL جستجو جستجو",
+                    "description_fa": "مایکروسافت (n.d.) Dynamic-Link Library Search Order Retrieved ۳۰ نوامبر ۲۰۱۴"
                 },
                 {
                     "source_name": "OWASP Binary Planting",
                     "description": "OWASP. (2013, January 30). Binary planting. Retrieved June 7, 2016.",
-                    "url": "https://www.owasp.org/index.php/Binary_planting"
+                    "url": "https://www.owasp.org/index.php/Binary_planting",
+                    "source_name_fa": "OWASP بازی Binary Planting",
+                    "description_fa": "OWASP (2013، 30 ژانویه) کاشت دوگانه Retrieved 7 ژوئن 2016"
                 },
                 {
                     "source_name": "Microsoft 2269637",
                     "description": "Microsoft. (2010, August 22). Microsoft Security Advisory 2269637 Released. Retrieved December 5, 2014.",
-                    "url": "https://msrc-blog.microsoft.com/2010/08/21/microsoft-security-advisory-2269637-released/"
+                    "url": "https://msrc-blog.microsoft.com/2010/08/21/microsoft-security-advisory-2269637-released/",
+                    "source_name_fa": "مایکروسافت 22637",
+                    "description_fa": "مایکروسافت (۲۰۱۰، ۲۲ آگوست) مشاور امنیت مایکروسافت 22637 آزاد شده Retrieved 5 دسامبر 2014"
                 },
                 {
                     "source_name": "Microsoft DLL Redirection",
                     "description": "Microsoft. (n.d.). Dynamic-Link Library Redirection. Retrieved December 5, 2014.",
-                    "url": "http://msdn.microsoft.com/en-US/library/ms682600"
+                    "url": "http://msdn.microsoft.com/en-US/library/ms682600",
+                    "source_name_fa": "Microsoft DLL Redirection",
+                    "description_fa": "مایکروسافت (n.d.) Dynamic-Link Library Redirection Retrieved 5 دسامبر 2014"
                 },
                 {
                     "source_name": "Microsoft Manifests",
                     "description": "Microsoft. (n.d.). Manifests. Retrieved December 5, 2014.",
-                    "url": "https://msdn.microsoft.com/en-US/library/aa375365"
+                    "url": "https://msdn.microsoft.com/en-US/library/aa375365",
+                    "source_name_fa": "Microsoft Manifests",
+                    "description_fa": "مایکروسافت (n.d.) انسان ها Retrieved 5 دسامبر 2014"
                 },
                 {
                     "source_name": "Mandiant Search Order",
                     "description": "Mandiant. (2010, August 31). DLL Search Order Hijacking Revisited. Retrieved December 5, 2014.",
-                    "url": "https://www.mandiant.com/blog/dll-search-order-hijacking-revisited/"
+                    "url": "https://www.mandiant.com/blog/dll-search-order-hijacking-revisited/",
+                    "source_name_fa": "دانلود فیلم Mandiant Search Order",
+                    "description_fa": "Mandiant (۲۰۱۰، ۳۱ آگوست) دستور جستجوی DLL Hijacking Revisited Retrieved 5 دسامبر 2014"
                 }
             ],
             "object_marking_refs": [
@@ -85,7 +99,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "دستور جستجوی DLL Hijacking",
+            "description_fa": "سیستم های ویندوز از یک روش مشترک برای جستجوی DLL های مورد نیاز برای بارگذاری در یک برنامه استفاده می کنند. [[ویرایش] مخالفان ممکن است از سفارش جستجوی ویندوز DLL و برنامه هایی که به طور مبهم DLL ها را برای به دست آوردن افزایش امتیاز و پایداری مشخص می کنند، بهره مند شوند.\n\nمجرمان ممکن است پیش بارگذاری DLL را انجام دهند، همچنین حملات کاشت دودویی ([CTI_PRESERVE) را با قرار دادن یک DLL مخرب با همان نام به عنوان یک DLL مبهم مشخص شده در مکانی که ویندوز قبل از DLL قانونی جستجو می کند، انجام دهند. اغلب این مکان دایرکتوری فعلی برنامه است. حملات از راه دور DLL زمانی اتفاق می افتد که یک برنامه دایرکتوری فعلی خود را به یک مکان دور مانند یک اشتراک وب قبل از بارگیری DLL تنظیم می کند. [[ویرایش] مخالفان ممکن است از این رفتار برای ایجاد برنامه برای بارگیری DLL مخرب استفاده کنند.\n\nمخالفان همچنین ممکن است به طور مستقیم تغییر نحوه بارگذاری DLL برنامه با جایگزینی DLL موجود یا تغییر یک فایل .manifest یا .local Redirection file، دایرکتوری یا اتصال به منظور بارگیری یک DLL متفاوت برای حفظ پایداری یا افزایش امتیاز. [[ویرایش] [[ویرایش] [[ویرایش]\n\nاگر یک برنامه سفارش جستجو برای اجرای در سطح امتیاز بالاتر پیکربندی شود، سپس DLL تحت کنترل دشمن که بارگذاری می شود نیز در سطح بالاتر اجرا خواهد شد. در این مورد، این تکنیک می تواند برای افزایش امتیاز از کاربر به مدیر یا سیستم یا از مدیر به سیستم، بسته به برنامه مورد استفاده قرار گیرد.\n\nبه نظر می رسد برنامه هایی که قربانی مسیر ربودن هستند ممکن است به طور معمول رفتار کنند، زیرا DLL های مخرب ممکن است پیکربندی شوند تا DLL های قانونی را که قرار بود جایگزین شوند بارگیری کنند. (Citation: Microsoft DLL Search) (Citation: OWASP Binary Planting) (Citation: Microsoft 2269637) (Citation: Microsoft DLL Redirection) (Citation: Microsoft Manifests) (Citation: Mandiant Search Order)"
         }
     ]
 }

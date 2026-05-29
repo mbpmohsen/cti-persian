@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1555/001",
-                    "external_id": "T1555.001"
+                    "external_id": "T1555.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "External to DA, the OS X Way",
                     "description": "Alex Rymdeko-Harvey, Steve Borosh. (2016, May 14). External to DA, the OS X Way. Retrieved September 12, 2024.",
-                    "url": "https://www.slideshare.net/slideshow/external-to-da-the-os-x-way/62021418"
+                    "url": "https://www.slideshare.net/slideshow/external-to-da-the-os-x-way/62021418",
+                    "source_name_fa": "خارجی به DA، OS X Way",
+                    "description_fa": "Alex Rymdeko-Harvey، استیو بورش (2016، 14 می) خارج از DA، OS X Way Retrieved 12 سپتامبر 2024"
                 },
                 {
                     "source_name": "Keychain Services Apple",
                     "description": "Apple. (n.d.). Keychain Services. Retrieved April 11, 2022.",
-                    "url": "https://developer.apple.com/documentation/security/keychain_services"
+                    "url": "https://developer.apple.com/documentation/security/keychain_services",
+                    "source_name_fa": "خدمات Keychain Apple",
+                    "description_fa": "اپل (n.d.) خدمات Keychain Retrieved 11 آوریل 2022"
                 },
                 {
                     "source_name": "Empire Keychain Decrypt",
                     "description": "Empire. (2018, March 8). Empire keychaindump_decrypt Module. Retrieved April 14, 2022.",
-                    "url": "https://github.com/EmpireProject/Empire/blob/08cbd274bef78243d7a8ed6443b8364acd1fc48b/lib/modules/python/collection/osx/keychaindump_decrypt.py"
+                    "url": "https://github.com/EmpireProject/Empire/blob/08cbd274bef78243d7a8ed6443b8364acd1fc48b/lib/modules/python/collection/osx/keychaindump_decrypt.py",
+                    "source_name_fa": "دانلود بازی The Keychain Decrypt",
+                    "description_fa": "امپراتوری (2018, March 8) ماژول keychaindump_decrypt Retrieved 14 آوریل 2022"
                 },
                 {
                     "source_name": "OSX Keychain Schaumann",
                     "description": "Jan Schaumann. (2015, November 5). Using the OS X Keychain to store and retrieve passwords. Retrieved March 31, 2022.",
-                    "url": "https://www.netmeister.org/blog/keychain-passwords.html"
+                    "url": "https://www.netmeister.org/blog/keychain-passwords.html",
+                    "source_name_fa": "OSX Keychain Schaumann",
+                    "description_fa": "Jan Schaumann (2015، نوامبر 5) استفاده از OS X Keychain برای ذخیره و بازیابی رمز عبور. Retrieved 31 مارس 2022"
                 },
                 {
                     "source_name": "Keychain Decryption Passware",
                     "description": "Yana Gourenko. (n.d.). A Deep Dive into Apple Keychain Decryption. Retrieved April 13, 2022.",
-                    "url": "https://support.passware.com/hc/en-us/articles/4573379868567-A-Deep-Dive-into-Apple-Keychain-Decryption"
+                    "url": "https://support.passware.com/hc/en-us/articles/4573379868567-A-Deep-Dive-into-Apple-Keychain-Decryption",
+                    "source_name_fa": "Keychain Decryption Passware",
+                    "description_fa": "Yana Gourenko یک Dive در Apple Keychain Decryption Retrieved 13، 2022."
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.622Z",
             "name": "Keychain",
-            "description": "Adversaries may acquire credentials from Keychain. Keychain (or Keychain Services) is the macOS credential management system that stores account names, passwords, private keys, certificates, sensitive application data, payment data, and secure notes. There are three types of Keychains: Login Keychain, System Keychain, and Local Items (iCloud) Keychain. The default Keychain is the Login Keychain, which stores user passwords and information. The System Keychain stores items accessed by the operating system, such as items shared among users on a host. The Local Items (iCloud) Keychain is used for items synced with Apple\u2019s iCloud service. \n\nKeychains can be viewed and edited through the Keychain Access application or using the command-line utility <code>security</code>. Keychain files are located in <code>~/Library/Keychains/</code>, <code>/Library/Keychains/</code>, and <code>/Network/Library/Keychains/</code>.(Citation: Keychain Services Apple)(Citation: Keychain Decryption Passware)(Citation: OSX Keychain Schaumann)\n\nAdversaries may gather user credentials from Keychain storage/memory. For example, the command <code>security dump-keychain \u2013d</code> will dump all Login Keychain credentials from <code>~/Library/Keychains/login.keychain-db</code>. Adversaries may also directly read Login Keychain credentials from the <code>~/Library/Keychains/login.keychain</code> file. Both methods require a password, where the default password for the Login Keychain is the current user\u2019s password to login to the macOS host.(Citation: External to DA, the OS X Way)(Citation: Empire Keychain Decrypt)  ",
+            "description": "Adversaries may acquire credentials from Keychain. Keychain (or Keychain Services) is the macOS credential management system that stores account names, passwords, private keys, certificates, sensitive application data, payment data, and secure notes. There are three types of Keychains: Login Keychain, System Keychain, and Local Items (iCloud) Keychain. The default Keychain is the Login Keychain, which stores user passwords and information. The System Keychain stores items accessed by the operating system, such as items shared among users on a host. The Local Items (iCloud) Keychain is used for items synced with Apple’s iCloud service. \n\nKeychains can be viewed and edited through the Keychain Access application or using the command-line utility <code>security</code>. Keychain files are located in <code>~/Library/Keychains/</code>, <code>/Library/Keychains/</code>, and <code>/Network/Library/Keychains/</code>.(Citation: Keychain Services Apple)(Citation: Keychain Decryption Passware)(Citation: OSX Keychain Schaumann)\n\nAdversaries may gather user credentials from Keychain storage/memory. For example, the command <code>security dump-keychain –d</code> will dump all Login Keychain credentials from <code>~/Library/Keychains/login.keychain-db</code>. Adversaries may also directly read Login Keychain credentials from the <code>~/Library/Keychains/login.keychain</code> file. Both methods require a password, where the default password for the Login Keychain is the current user’s password to login to the macOS host.(Citation: External to DA, the OS X Way)(Citation: Empire Keychain Decrypt)  ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -63,7 +74,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "Keychain",
+            "description_fa": "مخالفان ممکن است از Keychain اعتبار بگیرند. Keychain (یا Keychain Services) سیستم مدیریت اعتبار macOS است که نام های حساب، رمز عبور، کلیدهای خصوصی، گواهینامه ها، داده های کاربردی حساس، داده های پرداخت و یادداشت های امن را ذخیره می کند. سه نوع زنجیره کلید وجود دارد: کلید ورود، زنجیره کلید سیستم و اقلام محلی (iCloud) Keychain. The پیش فرض Keychain کلید ورود است که رمز عبور و اطلاعات کاربر را ذخیره می کند. سیستم Keychain مواردی را که توسط سیستم عامل قابل دسترسی است ذخیره می کند، مانند مواردی که در میان کاربران در یک میزبان به اشتراک گذاشته می شوند. اقلام محلی (iCloud) Keychain برای اقلام همگام با سرویس iCloud اپل استفاده می شود.\n\nزنجیره های کلیدی را می توان از طریق برنامه دسترسی زنجیره کلید یا استفاده از ابزار خط فرمان (CTI_PRESERVE_0) مشاهده و ویرایش کرد. فایل های زنجیره ای کلیدی در [CTI_PRESERVE] قرار دارند. [[ویرایش] و [[[ویرایش] [[[ویرایش]] [[[ویرایش]]] ] [[ [[ ] ] ] [ ] ] [ ] ] [ ] ] ] ] [I_PRESERVE_8 [ ] [ [ ] [ ] ] [ ] ] ] [I_PRESERVE_9 ] [ [ ] [ ] [ ] [ [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] ] ] [ ] [ ] [ ] [ ] ] [ ] [ ] ] ] ] [ ] [ ] [ ] ] ] [ ] [ ] ] ] ] ] ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] ] ] [ ] [ ] ] ] ] [ ] [ ] [ ] ] [ ] ] ] ] ] ] ] ] ] ] ] [ ] [ ] [ ] [ ] [ ] ] ] [ ] [ ] [ ] ] ] [ ] [ ] ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] [ ] ] ] ] [ ] [ ] ] ] ] ] ] [ ] [ ] [\n\nمخالفان ممکن است اعتبار کاربر را از ذخیره سازی زنجیره کلید / حافظه جمع آوری کنند. به عنوان مثال، دستور [CTI_PRESERVE_4] تمام اعتبارهای زنجیره کلید ورود را از [CTI_PRESERVE_5] دفع می کند. همچنین ممکن است به طور مستقیم اسناد کلیدی ورود را از فایل [CTI_PRESERVE_6] بخوانید. هر دو روش نیاز به یک رمز عبور دارند، که در آن رمز عبور پیش فرض برای کلید ورود کاربر فعلی برای ورود به میزبان macOS است.[۱۰] [CTI_PRESERVE_۱۰][۹][۱۰] <code>security</code> <code>~/Library/Keychains/</code> <code>/Library/Keychains/</code> <code>/Network/Library/Keychains/</code> <code>security dump-keychain –d</code> <code>~/Library/Keychains/login.keychain-db</code> <code>~/Library/Keychains/login.keychain</code> (Citation: Keychain Services Apple) (Citation: Keychain Decryption Passware) (Citation: OSX Keychain Schaumann) (Citation: External to DA, the OS X Way) (Citation: Empire Keychain Decrypt)"
         }
     ]
 }

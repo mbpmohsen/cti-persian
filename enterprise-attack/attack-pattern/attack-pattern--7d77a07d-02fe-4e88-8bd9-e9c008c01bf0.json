@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1114/003",
-                    "external_id": "T1114.003"
+                    "external_id": "T1114.003",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Mac Forwarding Rules",
                     "description": "Apple. (n.d.). Reply to, forward, or redirect emails in Mail on Mac. Retrieved June 22, 2021.",
-                    "url": "https://support.apple.com/guide/mail/reply-to-forward-or-redirect-emails-mlhlp1010/mac"
+                    "url": "https://support.apple.com/guide/mail/reply-to-forward-or-redirect-emails-mlhlp1010/mac",
+                    "source_name_fa": "قوانین جلو گیری مک",
+                    "description_fa": "اپل (n.d.) پاسخ دادن به ایمیل های رو به جلو یا تغییر مسیر در Mail on Mac Retrieved 22 ژوئن 2021."
                 },
                 {
                     "source_name": "Pfammatter - Hidden Inbox Rules",
                     "description": "Damian Pfammatter. (2018, September 17). Hidden Inbox Rules in Microsoft Exchange. Retrieved October 12, 2021.",
-                    "url": "https://blog.compass-security.com/2018/09/hidden-inbox-rules-in-microsoft-exchange/"
+                    "url": "https://blog.compass-security.com/2018/09/hidden-inbox-rules-in-microsoft-exchange/",
+                    "source_name_fa": "Pfammatter - Hidden Inbox Rules",
+                    "description_fa": "Damian Pfammatter (2018, سپتامبر 17) قوانین صندوق مخفی در Microsoft Exchange Retrieved 12 اکتبر 2021."
                 },
                 {
                     "source_name": "Microsoft Tim McMichael Exchange Mail Forwarding 2",
                     "description": "McMichael, T.. (2015, June 8). Exchange and Office 365 Mail Forwarding. Retrieved October 8, 2019.",
-                    "url": "https://blogs.technet.microsoft.com/timmcmic/2015/06/08/exchange-and-office-365-mail-forwarding-2/"
+                    "url": "https://blogs.technet.microsoft.com/timmcmic/2015/06/08/exchange-and-office-365-mail-forwarding-2/",
+                    "source_name_fa": "مایکروسافت تیم مک مایکل Mail Forwarding 2",
+                    "description_fa": "مک مایکل، T. (2015، ژوئن 8) تبادل و Office 365 Mail Forwarding Retrieved 8 اکتبر 2019"
                 },
                 {
                     "source_name": "Microsoft Mail Flow Rules 2023",
                     "description": "Microsoft. (2023, February 22). Mail flow rules (transport rules) in Exchange Online. Retrieved March 13, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules"
+                    "url": "https://learn.microsoft.com/en-us/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules",
+                    "source_name_fa": "Microsoft Mail Flow Rules 2023",
+                    "description_fa": "مایکروسافت (2023، 22 فوریه) قوانین جریان ایمیل (قوانین حمل و نقل) در Exchange Online Retrieved 13 مارس 2023."
                 },
                 {
                     "source_name": "US-CERT TA18-068A 2018",
                     "description": "US-CERT. (2018, March 27). TA18-068A Brute Force Attacks Conducted by Cyber Actors. Retrieved October 2, 2019.",
-                    "url": "https://www.us-cert.gov/ncas/alerts/TA18-086A"
+                    "url": "https://www.us-cert.gov/ncas/alerts/TA18-086A",
+                    "source_name_fa": "US-CERT TA18-068A 2018",
+                    "description_fa": "US-CERT (2018، 27 مارس) 018-068A حمله های نیروی افراطی توسط بازیگران سایبری Retrieved 2 اکتبر 2019"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2025-10-24T17:49:00.920Z",
             "name": "Email Forwarding Rule",
-            "description": "Adversaries may setup email forwarding rules to collect sensitive information. Adversaries may abuse email forwarding rules to monitor the activities of a victim, steal information, and further gain intelligence on the victim or the victim\u2019s organization to use as part of further exploits or operations.(Citation: US-CERT TA18-068A 2018) Furthermore, email forwarding rules can allow adversaries to maintain persistent access to victim's emails even after compromised credentials are reset by administrators.(Citation: Pfammatter - Hidden Inbox Rules) Most email clients allow users to create inbox rules for various email functions, including forwarding to a different recipient. These rules may be created through a local email application, a web interface, or by command-line interface. Messages can be forwarded to internal or external recipients, and there are no restrictions limiting the extent of this rule. Administrators may also create forwarding rules for user accounts with the same considerations and outcomes.(Citation: Microsoft Tim McMichael Exchange Mail Forwarding 2)(Citation: Mac Forwarding Rules)\n\nAny user or administrator within the organization (or adversary with valid credentials) can create rules to automatically forward all received messages to another recipient, forward emails to different locations based on the sender, and more. Adversaries may also hide the rule by making use of the Microsoft Messaging API (MAPI) to modify the rule properties, making it hidden and not visible from Outlook, OWA or most Exchange Administration tools.(Citation: Pfammatter - Hidden Inbox Rules)\n\nIn some environments, administrators may be able to enable email forwarding rules that operate organization-wide rather than on individual inboxes. For example, Microsoft Exchange supports transport rules that evaluate all mail an organization receives against user-specified conditions, then performs a user-specified action on mail that adheres to those conditions.(Citation: Microsoft Mail Flow Rules 2023) Adversaries that abuse such features may be able to enable forwarding on all or specific mail an organization receives. ",
+            "description": "Adversaries may setup email forwarding rules to collect sensitive information. Adversaries may abuse email forwarding rules to monitor the activities of a victim, steal information, and further gain intelligence on the victim or the victim’s organization to use as part of further exploits or operations.(Citation: US-CERT TA18-068A 2018) Furthermore, email forwarding rules can allow adversaries to maintain persistent access to victim's emails even after compromised credentials are reset by administrators.(Citation: Pfammatter - Hidden Inbox Rules) Most email clients allow users to create inbox rules for various email functions, including forwarding to a different recipient. These rules may be created through a local email application, a web interface, or by command-line interface. Messages can be forwarded to internal or external recipients, and there are no restrictions limiting the extent of this rule. Administrators may also create forwarding rules for user accounts with the same considerations and outcomes.(Citation: Microsoft Tim McMichael Exchange Mail Forwarding 2)(Citation: Mac Forwarding Rules)\n\nAny user or administrator within the organization (or adversary with valid credentials) can create rules to automatically forward all received messages to another recipient, forward emails to different locations based on the sender, and more. Adversaries may also hide the rule by making use of the Microsoft Messaging API (MAPI) to modify the rule properties, making it hidden and not visible from Outlook, OWA or most Exchange Administration tools.(Citation: Pfammatter - Hidden Inbox Rules)\n\nIn some environments, administrators may be able to enable email forwarding rules that operate organization-wide rather than on individual inboxes. For example, Microsoft Exchange supports transport rules that evaluate all mail an organization receives against user-specified conditions, then performs a user-specified action on mail that adheres to those conditions.(Citation: Microsoft Mail Flow Rules 2023) Adversaries that abuse such features may be able to enable forwarding on all or specific mail an organization receives. ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -72,7 +83,9 @@
                 "Office Suite",
                 "Windows"
             ],
-            "x_mitre_version": "1.4"
+            "x_mitre_version": "1.4",
+            "name_fa": "ایمیل به جلو قانون",
+            "description_fa": "مخالفان ممکن است قوانین ارسال ایمیل را برای جمع آوری اطلاعات حساس تنظیم کنند. مخالفان ممکن است از قوانین ارسال ایمیل برای نظارت بر فعالیت های قربانی، سرقت اطلاعات و کسب اطلاعات بیشتر در مورد قربانی یا سازمان قربانی برای استفاده به عنوان بخشی از بهره برداری یا عملیات بیشتر استفاده کنند. [[ویرایش] علاوه بر این، قوانین ارسال ایمیل می تواند به دشمنان اجازه دهد تا دسترسی مداوم به ایمیل های قربانی را حفظ کنند، حتی پس از اینکه مدارک به خطر افتاده توسط مدیران تنظیم می شوند. [[ویرایش] اکثر مشتریان ایمیل به کاربران اجازه می دهند قوانین صندوق پستی را برای عملکردهای مختلف ایمیل ایجاد کنند، از جمله ارسال به گیرنده های مختلف. این قوانین ممکن است از طریق یک درخواست ایمیل محلی، یک رابط وب یا با رابط خط فرمان ایجاد شود. پیام ها می توانند به گیرندگان داخلی یا خارجی منتقل شوند و هیچ محدودیتی برای محدود کردن میزان این قانون وجود ندارد. مدیران همچنین ممکن است قوانین انتقال را برای حساب های کاربری با همان ملاحظات و نتایج ایجاد کنند. [[ویرایش]\n\nهر کاربر یا مدیر در سازمان (یا دشمن با مدارک معتبر) می تواند قوانینی را ایجاد کند تا به طور خودکار تمام پیام های دریافت شده را به گیرنده دیگری ارسال کند، ایمیل های پیش رو به مکان های مختلف بر اساس فرستنده و موارد دیگر. مخالفان همچنین ممکن است با استفاده از API پیام رسانی مایکروسافت (MAPI) برای تغییر خواص قانون، آن را پنهان و قابل مشاهده از Outlook، OWA یا اکثر ابزارهای مدیریت تبادل. [[ویرایش]\n\nدر برخی از محیط ها، مدیران ممکن است قادر به فعال کردن قوانین ارسال ایمیل باشند که به جای صندوق های شخصی در سراسر سازمان فعالیت می کنند. به عنوان مثال، Microsoft Exchange از قوانین حمل و نقل پشتیبانی می کند که تمام ایمیل هایی که یک سازمان در برابر شرایط کاربر پسند دریافت می کند را ارزیابی می کند، سپس یک اقدام کاربر پسند را در ایمیل انجام می دهد که به این شرایط پایبند است. [[ویرایش] مخالفانی که از چنین ویژگی هایی سوء استفاده می کنند ممکن است قادر به انتقال همه یا پست های خاصی باشند که یک سازمان دریافت می کند. (Citation: US-CERT TA18-068A 2018) (Citation: Pfammatter - Hidden Inbox Rules) (Citation: Microsoft Tim McMichael Exchange Mail Forwarding 2) (Citation: Mac Forwarding Rules) (Citation: Pfammatter - Hidden Inbox Rules) (Citation: Microsoft Mail Flow Rules 2023)"
         }
     ]
 }

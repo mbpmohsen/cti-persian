@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1546/017",
-                    "external_id": "T1546.017"
+                    "external_id": "T1546.017",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Ignacio Udev research 2024",
                     "description": "Eder P. Ignacio. (2024, February 21). Leveraging Linux udev for persistence. Retrieved September 26, 2024.",
-                    "url": "https://ch4ik0.github.io/en/posts/leveraging-Linux-udev-for-persistence/"
+                    "url": "https://ch4ik0.github.io/en/posts/leveraging-Linux-udev-for-persistence/",
+                    "source_name_fa": "تحقیقات Ignacio Udev 2024",
+                    "description_fa": "Eder P. Ignacio Leveraging Linux udev برای پایداری Retrieved ۲۶ سپتامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "Elastic Linux Persistence 2024",
                     "description": "Ruben Groenewoud. (2024, August 29). Linux Detection Engineering -  A Sequel on Persistence Mechanisms. Retrieved October 16, 2024.",
-                    "url": "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms"
+                    "url": "https://www.elastic.co/security-labs/sequel-on-persistence-mechanisms",
+                    "source_name_fa": "Elastic Linux Pertin 2024",
+                    "description_fa": "Ruben Groenewoud (2024، 29 آگوست) مهندسی تشخیص لینوکس - یک Sequel در مورد مکانیسم های پافشاری Retrieved 16 اکتبر 2024"
                 },
                 {
                     "source_name": "Reichert aon sedexp 2024",
                     "description": "Zachary Reichert. (2024, August 19). Unveiling \"sedexp\": A Stealthy Linux Malware Exploiting udev Rules. Retrieved September 26, 2024.",
-                    "url": "https://www.aon.com/en/insights/cyber-labs/unveiling-sedexp"
+                    "url": "https://www.aon.com/en/insights/cyber-labs/unveiling-sedexp",
+                    "source_name_fa": "دانلود بازی Rachelert Aon Pacificexp 2024",
+                    "description_fa": "زکریا (۲۰۲۴، ۱۹ آگوست) عدم استفاده از \"sedexp\" : A Stealthy Linux Exploiting udev Rules Retrieved ۲۶ سپتامبر ۲۰۲۴"
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2025-10-24T17:49:37.034Z",
             "name": "Udev Rules",
-            "description": "Adversaries may maintain persistence through executing malicious content triggered using udev rules. Udev is the Linux kernel device manager that dynamically manages device nodes, handles access to pseudo-device files in the `/dev` directory, and responds to hardware events, such as when external devices like hard drives or keyboards are plugged in or removed. Udev uses rule files with `match keys` to specify the conditions a hardware event must meet and `action keys` to define the actions that should follow. Root permissions are required to create, modify, or delete rule files located in `/etc/udev/rules.d/`, `/run/udev/rules.d/`, `/usr/lib/udev/rules.d/`, `/usr/local/lib/udev/rules.d/`, and `/lib/udev/rules.d/`. Rule priority is determined by both directory and by the digit prefix in the rule filename.(Citation: Ignacio Udev research 2024)(Citation: Elastic Linux Persistence 2024)\n\nAdversaries may abuse the udev subsystem by adding or modifying rules in udev rule files to execute malicious content. For example, an adversary may configure a rule to execute their binary each time the pseudo-device file, such as `/dev/random`, is accessed by an application. Although udev is limited to running short tasks and is restricted by systemd-udevd's sandbox (blocking network and filesystem access), attackers may use scripting commands under the action key `RUN+=` to detach and run the malicious content\u2019s process in the background to bypass these controls.(Citation: Reichert aon sedexp 2024)",
+            "description": "Adversaries may maintain persistence through executing malicious content triggered using udev rules. Udev is the Linux kernel device manager that dynamically manages device nodes, handles access to pseudo-device files in the `/dev` directory, and responds to hardware events, such as when external devices like hard drives or keyboards are plugged in or removed. Udev uses rule files with `match keys` to specify the conditions a hardware event must meet and `action keys` to define the actions that should follow. Root permissions are required to create, modify, or delete rule files located in `/etc/udev/rules.d/`, `/run/udev/rules.d/`, `/usr/lib/udev/rules.d/`, `/usr/local/lib/udev/rules.d/`, and `/lib/udev/rules.d/`. Rule priority is determined by both directory and by the digit prefix in the rule filename.(Citation: Ignacio Udev research 2024)(Citation: Elastic Linux Persistence 2024)\n\nAdversaries may abuse the udev subsystem by adding or modifying rules in udev rule files to execute malicious content. For example, an adversary may configure a rule to execute their binary each time the pseudo-device file, such as `/dev/random`, is accessed by an application. Although udev is limited to running short tasks and is restricted by systemd-udevd's sandbox (blocking network and filesystem access), attackers may use scripting commands under the action key `RUN+=` to detach and run the malicious content’s process in the background to bypass these controls.(Citation: Reichert aon sedexp 2024)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -49,8 +56,8 @@
             ],
             "x_mitre_attack_spec_version": "3.3.0",
             "x_mitre_contributors": [
-                "Eduardo Gonz\u00e1lez Hern\u00e1ndez (@codexlynx)",
-                "Eder P\u00e9rez Ignacio, @ch4ik0",
+                "Eduardo González Hernández (@codexlynx)",
+                "Eder Pérez Ignacio, @ch4ik0",
                 "Wirapong Petshagun",
                 "@grahamhelton3",
                 "Ruben Groenewoud (@RFGroenewoud)"
@@ -64,7 +71,9 @@
             "x_mitre_platforms": [
                 "Linux"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "قوانین Udev",
+            "description_fa": "مخالفان ممکن است از طریق اجرای محتوای مخرب با استفاده از قوانین udev ادامه دهند. Udev مدیر دستگاه کرنل لینوکس است که به طور پویا گره های دستگاه را مدیریت می کند، دسترسی به فایل های شبه دستگاه را در دایرکتوری \"/dev\" کنترل می کند و به رویدادهای سخت افزاری پاسخ می دهد، مانند زمانی که دستگاه های خارجی مانند هارد دیسک یا صفحه کلید در داخل یا حذف می شوند. Udev با استفاده از فایل های قانون با کلید های تطبیق \"برای مشخص کردن شرایط یک رویداد سخت افزاری باید با کلید های \"action\" برای تعریف اقدامات که باید دنبال کنید. مجوزهای ریشه برای ایجاد، اصلاح یا حذف فایل های قانون واقع در \"/etc/udev/rules.d/\"، \"/run/udev/rules.d/\"، \"/usr/lib//udev/rules/. اولویت قانون توسط هر دو دایرکتوری و پیشوند دیجیتال در نام فایل قانون تعیین می شود.[۱۰] [CTI_PRESERVE_0]\n\nمخالفان ممکن است با اضافه کردن یا اصلاح قوانین در فایل های قانون udev برای اجرای محتوای مخرب، از سیستم فرعی udev استفاده کنند. به عنوان مثال، یک دشمن ممکن است یک قاعده برای اجرای باینری خود را هر بار که فایل شبه دستگاه مانند @ /dev /random”، توسط یک برنامه قابل دسترسی است. اگر چه udev محدود به اجرای وظایف کوتاه است و توسط Sandbox systemd-udevd محدود می شود (با مسدود کردن شبکه و دسترسی به سیستم فایل)، مهاجمان ممکن است از دستورات اسکریپتینگ تحت کلید عمل استفاده کنند \"RUN+= \"برای تخریب و اجرای روند محتوای مخرب در پس زمینه برای دور زدن این کنترل ها. [[ویرایش] (Citation: Ignacio Udev research 2024) (Citation: Elastic Linux Persistence 2024) (Citation: Reichert aon sedexp 2024)"
         }
     ]
 }

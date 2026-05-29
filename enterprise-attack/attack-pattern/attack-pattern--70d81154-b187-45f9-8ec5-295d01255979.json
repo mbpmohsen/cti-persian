@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1574/005",
-                    "external_id": "T1574.005"
+                    "external_id": "T1574.005",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "mozilla_sec_adv_2012",
                     "description": "Robert Kugler. (2012, November 20). Mozilla Foundation Security Advisory 2012-98. Retrieved March 10, 2017.",
-                    "url": "https://www.mozilla.org/en-US/security/advisories/mfsa2012-98/"
+                    "url": "https://www.mozilla.org/en-US/security/advisories/mfsa2012-98/",
+                    "source_name_fa": "mozilla_sec_adv_2012",
+                    "description_fa": "Robert Kugler (2012، 20 نوامبر) مشاوره امنیت بنیاد موزیلا 2012-98 Retrieved 10 مارس 2017"
                 },
                 {
                     "source_name": "Executable Installers are Vulnerable",
                     "description": "Stefan Kanthak. (2015, December 8). Executable installers are vulnerable^WEVIL (case 7): 7z*.exe allows remote code execution with escalation of privilege. Retrieved December 4, 2014.",
-                    "url": "https://seclists.org/fulldisclosure/2015/Dec/34"
+                    "url": "https://seclists.org/fulldisclosure/2015/Dec/34",
+                    "source_name_fa": "نصب کنندگان آسیب پذیر هستند",
+                    "description_fa": "استفان کانتک (2015, دسامبر 8) نصب کنندگان قابل کنترل آسیب پذیر هستند ^WEVIL (case 7): 7z* exe اجازه می دهد تا اجرای کد از راه دور با افزایش امتیاز. Retrieved ۴ دسامبر ۲۰۱۴"
                 }
             ],
             "object_marking_refs": [
@@ -57,7 +62,9 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "دانلود زیرنویس فارسی فیلم Executable Installer File مجوزهای Weakness",
+            "description_fa": "مخالفان ممکن است محموله های مخرب خود را با ربودن باینری های مورد استفاده توسط نصب کننده اجرا کنند. این فرآیندها ممکن است به طور خودکار باینری های خاص را به عنوان بخشی از عملکرد خود یا انجام اقدامات دیگر اجرا کنند. اگر مجوزهای موجود در دایرکتوری سیستم فایل حاوی یک باینری هدف یا مجوز بر روی خود باینری، به درستی تنظیم شده باشد، آنگاه باینری هدف ممکن است با یک باینری دیگر با استفاده از مجوز سطح کاربر و اجرا شده توسط فرآیند اصلی بازنویسی شود. اگر فرآیند و رشته اصلی تحت سطح مجوز بالاتر اجرا شود، باینری جایگزین نیز تحت مجوز سطح بالاتر اجرا می شود که می تواند شامل سیستم باشد.\n\nتنوع دیگری از این تکنیک را می توان با استفاده از ضعفی که در نصب کننده های اجرایی و شخصی رایج است، انجام داد. در طول فرایند نصب، معمول است برای نصب کنندگان برای استفاده از یک زیر هدایت در داخل [CTI_PRESERVE_0] دایرکتوری به unpack Binaries مانند DLL، EXEs، یا سایر محموله ها. هنگامی که نصب کنندگان ایجاد زیر راهنمایی و فایل هایی که اغلب اجازه های مناسب برای محدود کردن دسترسی به نوشتن را تنظیم نمی کنند، که اجازه می دهد تا برای اجرای کد های غیر قابل اعتماد که در زیر پوشه ها یا بیش از حد نوشتن باینری های مورد استفاده در فرآیند نصب قرار می گیرند، اجرا شوند. این رفتار مربوط به آن است و می تواند از آن بهره مند شود.\n\nمخالفان ممکن است از این تکنیک برای جایگزینی باینری های قانونی با عوامل مخرب به عنوان وسیله ای برای اجرای کد در سطح مجوز بالاتر استفاده کنند. برخی از نصب کنندگان همچنین ممکن است نیاز به امتیازات بالا داشته باشند که منجر به افزایش امتیاز در هنگام اجرای کد کنترل شده دشمن می شود. این رفتار مربوط به [کنترل حساب کاربری] است ([[۱۰] [[۱۰]] چندین نمونه از این ضعف در نصب کنندگان مشترک موجود به فروشندگان نرم افزار گزارش شده است.[۱۰] [[ویرایش] اگر فرآیند اجرای در یک زمان خاص یا در یک رویداد خاص (به عنوان مثال بوت سیستم) اجرا شود، این تکنیک همچنین می تواند برای پایداری استفاده شود. <code>%TEMP%</code> (Citation: mozilla_sec_adv_2012) (Citation: Executable Installers are Vulnerable) https://attack.mitre.org/techniques/T1574/001 https://attack.mitre.org/techniques/T1548/002"
         }
     ]
 }

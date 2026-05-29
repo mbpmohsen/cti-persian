@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1207",
-                    "external_id": "T1207"
+                    "external_id": "T1207",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "DCShadow Blog",
                     "description": "Delpy, B. & LE TOUX, V. (n.d.). DCShadow. Retrieved March 20, 2018.",
-                    "url": "https://www.dcshadow.com/"
+                    "url": "https://www.dcshadow.com/",
+                    "source_name_fa": "وبلاگ DCShadow",
+                    "description_fa": "Delpy، B. & LE TOUX، V. (n.d.) DCShadow Retrieved ۲۰ مارس ۲۰۱۸"
                 },
                 {
                     "source_name": "Adsecurity Mimikatz Guide",
                     "description": "Metcalf, S. (2015, November 13). Unofficial Guide to Mimikatz & Command Reference. Retrieved December 23, 2015.",
-                    "url": "https://adsecurity.org/?page_id=1821"
+                    "url": "https://adsecurity.org/?page_id=1821",
+                    "source_name_fa": "راهنمای امنیت Mimikatz",
+                    "description_fa": "متcalf، S. (2015، 13 نوامبر) راهنمای رسمی برای Mimikatz و Command Reference Retrieved 23 دسامبر 2015"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +56,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "بازی Rogue Domain Controller",
+            "description_fa": "مخالفان ممکن است یک کنترل کننده دامنه سرکش را ثبت کنند تا دستکاری داده های Active Directory را فعال کنند. DCShadow ممکن است برای ایجاد یک کنترل کننده دامنه سرکش (DC) استفاده شود. DC Shadow یک روش دستکاری داده های Active Directory (AD) است، از جمله اشیاء و طرح ها، با ثبت نام (یا استفاده مجدد از ثبت نام غیر فعال) و شبیه سازی رفتار یک DC. [[ویرایش] پس از ثبت نام، یک DC سرکش ممکن است قادر به تزریق و تکرار تغییرات در زیرساخت AD برای هر شیء دامنه، از جمله اعتبار و کلید باشد.\n\nثبت یک DC سرکش شامل ایجاد یک سرور جدید و اشیاء nTDSDSA در پارتیشن پیکربندی طرح AD است که نیاز به امتیازات مدیر (یا دامنه یا محلی به DC) یا هش KRBTGT دارد. [[ویرایش]\n\nاین تکنیک ممکن است از ورود سیستم و نظارت های امنیتی مانند اطلاعات امنیتی و مدیریت رویداد (SIEM) محصولات (از آنجا که اقدامات انجام شده در یک DC سرکش ممکن است به این سنسورها گزارش نمی شود) دور بزند. [[ویرایش] این تکنیک همچنین ممکن است برای تغییر و حذف تکرار و سایر متاداده های مرتبط برای جلوگیری از تجزیه و تحلیل قانونی استفاده شود. همچنین ممکن است از این تکنیک برای انجام (SID-tory injection) ([CTI_PRESERVE_4] و / یا دستکاری اشیاء AD (مانند حساب ها، لیست های کنترل دسترسی، طرح ها) برای ایجاد درب های پشتی برای پر اصرار استفاده کنند. [[ویرایش] (Citation: DCShadow Blog) (Citation: Adsecurity Mimikatz Guide) (Citation: DCShadow Blog) (Citation: DCShadow Blog) https://attack.mitre.org/techniques/T1134/005"
         }
     ]
 }

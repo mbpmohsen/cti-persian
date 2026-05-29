@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1036/008",
-                    "external_id": "T1036.008"
+                    "external_id": "T1036.008",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "polygot_icedID",
                     "description": "Lim, M. (2022, September 27). More Than Meets the Eye: Exposing a Polyglot File That Delivers IcedID. Retrieved September 29, 2022.",
-                    "url": "https://unit42.paloaltonetworks.com/polyglot-file-icedid-payload"
+                    "url": "https://unit42.paloaltonetworks.com/polyglot-file-icedid-payload",
+                    "source_name_fa": "Polygot_icedID",
+                    "description_fa": "لیمو، M. (2022، 27 سپتامبر) بیش از ملاقات با چشم: افشای یک فایل Polyglot که IcedID را تحویل می دهد. Retrieved 29 سپتامبر 2022"
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +29,7 @@
             ],
             "modified": "2026-05-12T15:12:00.622Z",
             "name": "Masquerade File Type",
-            "description": "Adversaries may masquerade malicious payloads as legitimate files through changes to the payload's formatting, including the file\u2019s signature, extension, icon, and contents. Various file types have a typical standard format, including how they are encoded and organized. For example, a file\u2019s signature (also known as header or magic bytes) is the beginning bytes of a file and is often used to identify the file\u2019s type. For example, the header of a JPEG file,  is <code> 0xFF 0xD8</code> and the file extension is either `.JPE`, `.JPEG` or `.JPG`. \n\nAdversaries may edit the header\u2019s hex code and/or the file extension of a malicious payload in order to bypass file validation checks and/or input sanitization. This behavior is commonly used when payload files are transferred (e.g., [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)) and stored (e.g., [Upload Malware](https://attack.mitre.org/techniques/T1608/001)) so that adversaries may move their malware without triggering detections. \n\nCommon non-executable file types and extensions, such as text files (`.txt`) and image files (`.jpg`, `.gif`, etc.) may be typically treated as benign.  Based on this, adversaries may use a file extension to disguise malware, such as naming a PHP backdoor code with a file name of <code>test.gif</code>. A user may not know that a file is malicious due to the benign appearance and file extension.\n\nPolyglot files, which are files that have multiple different file types and that function differently based on the application that will execute them, may also be used to disguise malicious malware and capabilities.(Citation: polygot_icedID)",
+            "description": "Adversaries may masquerade malicious payloads as legitimate files through changes to the payload's formatting, including the file’s signature, extension, icon, and contents. Various file types have a typical standard format, including how they are encoded and organized. For example, a file’s signature (also known as header or magic bytes) is the beginning bytes of a file and is often used to identify the file’s type. For example, the header of a JPEG file,  is <code> 0xFF 0xD8</code> and the file extension is either `.JPE`, `.JPEG` or `.JPG`. \n\nAdversaries may edit the header’s hex code and/or the file extension of a malicious payload in order to bypass file validation checks and/or input sanitization. This behavior is commonly used when payload files are transferred (e.g., [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)) and stored (e.g., [Upload Malware](https://attack.mitre.org/techniques/T1608/001)) so that adversaries may move their malware without triggering detections. \n\nCommon non-executable file types and extensions, such as text files (`.txt`) and image files (`.jpg`, `.gif`, etc.) may be typically treated as benign.  Based on this, adversaries may use a file extension to disguise malware, such as naming a PHP backdoor code with a file name of <code>test.gif</code>. A user may not know that a file is malicious due to the benign appearance and file extension.\n\nPolyglot files, which are files that have multiple different file types and that function differently based on the application that will execute them, may also be used to disguise malicious malware and capabilities.(Citation: polygot_icedID)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -49,7 +52,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "نوع فایل Masquerade File Type",
+            "description_fa": "مخالفان ممکن است محموله های مخرب را به عنوان فایل های قانونی از طریق تغییرات در قالب بندی محموله، از جمله امضای فایل، پسوند، آیکون و محتویات. انواع فایل های مختلف دارای یک فرمت استاندارد معمولی هستند، از جمله اینکه چگونه آنها رمزگذاری و سازماندهی می شوند. به عنوان مثال، امضای فایل (همچنین به عنوان هدر یا بایت جادویی شناخته می شود) بایت های آغازین یک فایل است و اغلب برای شناسایی نوع فایل استفاده می شود. به عنوان مثال، هدر یک فایل JPEG (CTI_PRESERVE_0) و پسوند فایل هم “JPE”، “JPEG” یا “JPG” است.\n\nمخالفان ممکن است کد هگزا هدر و / یا پسوند فایل یک محموله مخرب را ویرایش کنند تا چک های اعتبار فایل و / یا چسبندگی ورودی را دور بزنند. این رفتار معمولاً زمانی استفاده می شود که فایل های باربری منتقل شوند (به عنوان مثال، [Ingress Tool Transfer] ([CTI_PRESERVE_3]) و ذخیره شده (به عنوان مثال، [Upload] ([CTI_PRESERVE_4]) بنابراین دشمنان ممکن است بدافزار خود را بدون تشخیص حرکت دهند.\n\nانواع فایل های غیر قابل اجرا و پسوندها، مانند فایل های متنی (@.txt) و فایل های تصویر ( \".jpg\"، \"gif\" و غیره) ممکن است به طور معمول به عنوان خوش خیم درمان شوند. بر اساس این، ممکن است از پسوند فایل برای پنهان کردن بدافزار استفاده کنید، مانند نام گذاری کد پشت در PHP با نام فایل [CTI_PRESERVE]. یک کاربر ممکن است نداند که یک فایل به دلیل ظاهر خوش خیم و پسوند فایل مخرب است.\n\nفایل های Polyglot، که فایل هایی هستند که چندین نوع فایل مختلف دارند و این تابع به طور متفاوتی بر اساس برنامه ای که آنها را اجرا می کند، ممکن است برای پنهان کردن بدافزار و قابلیت های مخرب استفاده شود. [[ویرایش] <code> 0xFF 0xD8</code> <code>test.gif</code> (Citation: polygot_icedID) https://attack.mitre.org/techniques/T1105 https://attack.mitre.org/techniques/T1608/001"
         }
     ]
 }

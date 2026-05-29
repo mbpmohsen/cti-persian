@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1556/001",
-                    "external_id": "T1556.001"
+                    "external_id": "T1556.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Dell Skeleton",
                     "description": "Dell SecureWorks. (2015, January 12). Skeleton Key Malware Analysis. Retrieved April 8, 2019.",
-                    "url": "https://www.secureworks.com/research/skeleton-key-malware-analysis"
+                    "url": "https://www.secureworks.com/research/skeleton-key-malware-analysis",
+                    "source_name_fa": "Dell Skeleton",
+                    "description_fa": "Dell SecureWorks (2015، 12 ژانویه) تجزیه و تحلیل کلیدی Skeleton Retrieved 8 آوریل 2019"
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +29,7 @@
             ],
             "modified": "2026-05-12T15:12:00.717Z",
             "name": "Domain Controller Authentication",
-            "description": "Adversaries may patch the authentication process on a domain controller to bypass the typical authentication mechanisms and enable access to accounts. \n\nMalware may be used to inject false credentials into the authentication process on a domain controller with the intent of creating a backdoor used to access any user\u2019s account and/or credentials (ex: [Skeleton Key](https://attack.mitre.org/software/S0007)). Skeleton key works through a patch on an enterprise domain controller authentication process (LSASS) with credentials that adversaries may use to bypass the standard authentication system. Once patched, an adversary can use the injected password to successfully authenticate as any domain user account (until the the skeleton key is erased from memory by a reboot of the domain controller). Authenticated access may enable unfettered access to hosts and/or resources within single-factor authentication environments.(Citation: Dell Skeleton)",
+            "description": "Adversaries may patch the authentication process on a domain controller to bypass the typical authentication mechanisms and enable access to accounts. \n\nMalware may be used to inject false credentials into the authentication process on a domain controller with the intent of creating a backdoor used to access any user’s account and/or credentials (ex: [Skeleton Key](https://attack.mitre.org/software/S0007)). Skeleton key works through a patch on an enterprise domain controller authentication process (LSASS) with credentials that adversaries may use to bypass the standard authentication system. Once patched, an adversary can use the injected password to successfully authenticate as any domain user account (until the the skeleton key is erased from memory by a reboot of the domain controller). Authenticated access may enable unfettered access to hosts and/or resources within single-factor authentication environments.(Citation: Dell Skeleton)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -51,7 +54,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "Domain Controller تایید اعتبار",
+            "description_fa": "مخالفان ممکن است فرآیند احراز هویت را در یک کنترل کننده دامنه برای دور زدن مکانیسم های احراز هویت معمولی و امکان دسترسی به حساب ها پچ کنند.\n\nبدافزار ممکن است برای تزریق اعتبار نادرست به فرآیند احراز هویت در یک کنترل کننده دامنه با هدف ایجاد یک درب پشتی مورد استفاده برای دسترسی به حساب کاربری و / یا اعتبار (به عنوان مثال: [Skeleton Key] ([[CTI_PRE clientE]). کلید Skeleton از طریق پچ در یک فرآیند احراز هویت دامنه شرکت (LSASS) با اعتبارهایی کار می کند که دشمنان ممکن است برای دور زدن سیستم احراز هویت استاندارد استفاده کنند. هنگامی که پچ، یک دشمن می تواند از رمز عبور تزریقی برای تأیید موفقیت به عنوان هر حساب کاربری دامنه استفاده کند (تا زمانی که کلید اسکلت از حافظه با راه اندازی مجدد کنترل کننده دامنه پاک شود). دسترسی معتبر ممکن است دسترسی بدون محدودیت به میزبان و / یا منابع در محیط های احراز هویت تک عاملی را فراهم کند. [[ویرایش] (Citation: Dell Skeleton) https://attack.mitre.org/software/S0007"
         }
     ]
 }

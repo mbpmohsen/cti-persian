@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1499/001",
-                    "external_id": "T1499.001"
+                    "external_id": "T1499.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Cisco DoSdetectNetflow",
                     "description": "Cisco. (n.d.). Detecting and Analyzing Network Threats With NetFlow. Retrieved April 25, 2019.",
-                    "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/netflow/configuration/15-mt/nf-15-mt-book/nf-detct-analy-thrts.pdf"
+                    "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/netflow/configuration/15-mt/nf-15-mt-book/nf-detct-analy-thrts.pdf",
+                    "source_name_fa": "Cisco DoSUXflow",
+                    "description_fa": "سیسکو (n.d.) شناسایی و تحلیل تهدیدات شبکه با NetFlow Retrieved 25 آوریل 2019"
                 },
                 {
                     "source_name": "Cloudflare SynFlood",
                     "description": "Cloudflare. (n.d.). What is a SYN flood attack?. Retrieved April 22, 2019.",
-                    "url": "https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/"
+                    "url": "https://www.cloudflare.com/learning/ddos/syn-flood-ddos-attack/",
+                    "source_name_fa": "Cloudflare SynFlood",
+                    "description_fa": "Cloudflare (n.d.) حمله سیل سیریزا چیست؟ Retrieved 22 آوریل 2019"
                 },
                 {
                     "source_name": "Corero SYN-ACKflood",
                     "description": "Corero. (n.d.). What is a SYN-ACK Flood Attack?. Retrieved November 17, 2024.",
-                    "url": "https://web.archive.org/web/20220119104451/https://www.corero.com/resource-hub/syn-ack-flood-attack/"
+                    "url": "https://web.archive.org/web/20220119104451/https://www.corero.com/resource-hub/syn-ack-flood-attack/",
+                    "source_name_fa": "دانلود بازی Corero SYN-ACKflood",
+                    "description_fa": "Corero (n.d.) یک حمله سیلی سوری چیست؟ Retrieved ۱۷ نوامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "Arbor AnnualDoSreport Jan 2018",
                     "description": "Philippe Alcoy, Steinthor Bjarnason, Paul Bowen, C.F. Chui, Kirill Kasavchnko, and Gary Sockrider of Netscout Arbor. (2018, January). Insight into the Global Threat Landscape - Netscout Arbor's 13th Annual Worldwide Infrastructure Security Report. Retrieved April 22, 2019.",
-                    "url": "https://pages.arbornetworks.com/rs/082-KNA-087/images/13th_Worldwide_Infrastructure_Security_Report.pdf"
+                    "url": "https://pages.arbornetworks.com/rs/082-KNA-087/images/13th_Worldwide_Infrastructure_Security_Report.pdf",
+                    "source_name_fa": "دانلود موسیقی متن فیلم سال 2018",
+                    "description_fa": "فیلیپ آلکوی، Steinthor Bjarnason، Paul Bowen، C.F. Chui، Kirill Kasavchnko و Gary Sockrider از Netscout Arbor (2018، ژانویه) پیش بینی چشم انداز تهدید جهانی - گزارش امنیت زیرساخت های سالانه 13th Netscout Arbor Retrieved 22 آوریل 2019"
                 }
             ],
             "object_marking_refs": [
@@ -63,7 +72,9 @@
             "x_mitre_version": "1.2",
             "x_mitre_impact_type": [
                 "Availability"
-            ]
+            ],
+            "name_fa": "تخلیه سیستم عامل",
+            "description_fa": "مخالفان ممکن است یک حمله سرویس (DoS) را با هدف قرار دادن یک سیستم عامل endpoint (OS) آغاز کنند. سیستم عامل سیستم مسئول مدیریت منابع محدود و همچنین جلوگیری از غرق شدن کل سیستم با تقاضای بیش از حد بر ظرفیت آن است. این حملات نیازی به تخلیه منابع واقعی در یک سیستم ندارند؛ حملات ممکن است به سادگی محدودیت ها و منابع موجود را که خود سیستم عامل وجود دارد، تخلیه کنند.\n\nراه های مختلف برای دستیابی به این واقعیت وجود دارد، از جمله حملات ایالتی-خروجی TCP مانند سیل های SYN و سیل های ACK. [[ویرایش] با سیل SYN، مقدار زیادی از بسته های SYN ارسال می شوند، اما دست دادن TCP 3 طرفه هرگز تکمیل نمی شود. از آنجا که هر سیستم عامل دارای حداکثر تعداد اتصالات TCP همزمان است که اجازه می دهد، این می تواند به سرعت توانایی سیستم را برای دریافت درخواست های جدید برای اتصالات TCP، بنابراین جلوگیری از دسترسی به هر سرویس TCP ارائه شده توسط سرور.\n\nسیل های ACK از طبیعت دولتی پروتکل TCP استفاده می کنند. سیل بسته های ACK به هدف ارسال می شود. این سیستم عامل را مجبور می کند تا میز دولتی خود را برای یک اتصال TCP مرتبط که قبلا تاسیس شده است جستجو کند. از آنجا که بسته های ACK برای اتصالاتی هستند که وجود ندارند، سیستم عامل باید کل جدول دولتی را جستجو کند تا تأیید کند که هیچ بازی ای وجود ندارد. هنگامی که لازم است این کار را برای یک سیل بزرگ از بسته ها انجام دهید، الزامات محاسباتی می تواند باعث شود سرور به دلیل کار لازم برای از بین بردن بسته های ACK سرکش، سست و / یا غیر پاسخگو شود. این امر به شدت منابع موجود برای ارائه خدمات هدفمند را کاهش می دهد. [[ویرایش] (Citation: Arbor AnnualDoSreport Jan 2018) (Citation: Cloudflare SynFlood) (Citation: Corero SYN-ACKflood)"
         }
     ]
 }

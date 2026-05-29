@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/005",
-                    "external_id": "T1055.005"
+                    "external_id": "T1055.005",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "FireEye TLS Nov 2017",
                     "description": "Vaish, A. & Nemes, S. (2017, November 28). Newly Observed Ursnif Variant Employs Malicious TLS Callback Technique to Achieve Process Injection. Retrieved December 18, 2017.",
-                    "url": "https://www.fireeye.com/blog/threat-research/2017/11/ursnif-variant-malicious-tls-callback-technique.html"
+                    "url": "https://www.fireeye.com/blog/threat-research/2017/11/ursnif-variant-malicious-tls-callback-technique.html",
+                    "source_name_fa": "FireEye TLS 2017",
+                    "description_fa": "Vaish، A. & Nemes، S. (2017، 28 نوامبر) Newly Seed Ursn Variant از تکنیک Malicious TLS Callback برای دستیابی به تزریق فرآیند استفاده می کند. Retrieved 18 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +29,7 @@
             ],
             "modified": "2026-05-12T15:12:00.723Z",
             "name": "Thread Local Storage",
-            "description": "Adversaries may inject malicious code into processes via thread local storage (TLS) callbacks in order to evade process-based defenses as well as possibly elevate privileges. TLS callback injection is a method of executing arbitrary code in the address space of a separate live process. \n\nTLS callback injection involves manipulating pointers inside a portable executable (PE) to redirect a process to malicious code before reaching the code's legitimate entry point. TLS callbacks are normally used by the OS to setup and/or cleanup data used by threads. Manipulating TLS callbacks may be performed by allocating and writing to specific offsets within a process\u2019 memory space using other [Process Injection](https://attack.mitre.org/techniques/T1055) techniques such as [Process Hollowing](https://attack.mitre.org/techniques/T1055/012).(Citation: FireEye TLS Nov 2017)\n\nRunning code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via TLS callback injection may also evade detection from security products since the execution is masked under a legitimate process. ",
+            "description": "Adversaries may inject malicious code into processes via thread local storage (TLS) callbacks in order to evade process-based defenses as well as possibly elevate privileges. TLS callback injection is a method of executing arbitrary code in the address space of a separate live process. \n\nTLS callback injection involves manipulating pointers inside a portable executable (PE) to redirect a process to malicious code before reaching the code's legitimate entry point. TLS callbacks are normally used by the OS to setup and/or cleanup data used by threads. Manipulating TLS callbacks may be performed by allocating and writing to specific offsets within a process’ memory space using other [Process Injection](https://attack.mitre.org/techniques/T1055) techniques such as [Process Hollowing](https://attack.mitre.org/techniques/T1055/012).(Citation: FireEye TLS Nov 2017)\n\nRunning code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via TLS callback injection may also evade detection from security products since the execution is masked under a legitimate process. ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -47,7 +50,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "فروشگاه محلی Thread Storage",
+            "description_fa": "مخالفان ممکن است کد مخرب را به فرآیندها از طریق ذخیره سازی محلی (TLS) تزریق کنند تا از دفاع مبتنی بر فرآیند و همچنین احتمالا امتیازات بالا ببرند. تزریق تماس TLS یک روش برای اجرای کد اختیاری در فضای آدرس یک فرآیند جداگانه زندگی است.\n\nتزریق تماس TLS شامل دستکاری نقاط عطف در داخل یک اجرایی قابل حمل (PE) برای هدایت یک فرآیند به کد مخرب قبل از رسیدن به نقطه ورود قانونی کد است. callbacks TLS به طور معمول توسط سیستم عامل برای تنظیم و / یا تمیز کردن داده های مورد استفاده توسط موضوعات استفاده می شود. به عبارت دیگر، می توان آن را با استفاده از آن، به طور خاص در فضای حافظه ی فرایندی با استفاده از دیگر [Process injection] ([[CTI_PRESERVE]) تکنیک هایی مانند [Process Hollowing] ([[CTI_REE_2]) انجام داد.\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق تزریق تماس با TLS نیز ممکن است از تشخیص از محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. (Citation: FireEye TLS Nov 2017) https://attack.mitre.org/techniques/T1055 https://attack.mitre.org/techniques/T1055/012"
         }
     ]
 }

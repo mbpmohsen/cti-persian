@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1651",
-                    "external_id": "T1651"
+                    "external_id": "T1651",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AWS Systems Manager Run Command",
                     "description": "AWS. (n.d.). AWS Systems Manager Run Command. Retrieved March 13, 2023.",
-                    "url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html"
+                    "url": "https://docs.aws.amazon.com/systems-manager/latest/userguide/run-command.html",
+                    "source_name_fa": "مدیریت سیستم های AWS Run Command",
+                    "description_fa": "AWS (n.d.) مدیر سیستم های AWS فرمان را اجرا می کند. Retrieved 13 مارس 2023."
                 },
                 {
                     "source_name": "MSTIC Nobelium Oct 2021",
                     "description": "Microsoft Threat Intelligence Center. (2021, October 25). NOBELIUM targeting delegated administrative privileges to facilitate broader attacks. Retrieved March 25, 2022.",
-                    "url": "https://www.microsoft.com/security/blog/2021/10/25/nobelium-targeting-delegated-administrative-privileges-to-facilitate-broader-attacks/"
+                    "url": "https://www.microsoft.com/security/blog/2021/10/25/nobelium-targeting-delegated-administrative-privileges-to-facilitate-broader-attacks/",
+                    "source_name_fa": "MSTIC Prizeium اکتبر 2021",
+                    "description_fa": "Microsoft Threat Intelligence Center (۲۰۲۱، ۲۵ اکتبر) هدف قرار دادن امتیازات اداری برای تسهیل حملات گسترده تر Retrieved 25 مارس 2022"
                 },
                 {
                     "source_name": "Microsoft Run Command",
                     "description": "Microsoft. (2023, March 10). Run scripts in your VM by using Run Command. Retrieved March 13, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/run-command-overview"
+                    "url": "https://learn.microsoft.com/en-us/azure/virtual-machines/run-command-overview",
+                    "source_name_fa": "Microsoft Run Command",
+                    "description_fa": "مایکروسافت (2023، 10 مارس) اجرای اسکریپت در VM با استفاده از Command Retrieved 13 مارس 2023."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2026-05-12T15:12:00.721Z",
             "name": "Cloud Administration Command",
-            "description": "Adversaries may abuse cloud management services to execute commands within virtual machines. Resources such as AWS Systems Manager, Azure RunCommand, and Runbooks allow users to remotely run scripts in virtual machines by leveraging installed virtual machine agents. (Citation: AWS Systems Manager Run Command)(Citation: Microsoft Run Command)\n\nIf an adversary gains administrative access to a cloud environment, they may be able to abuse cloud management services to execute commands in the environment\u2019s virtual machines. Additionally, an adversary that compromises a service provider or delegated administrator account may similarly be able to leverage a [Trusted Relationship](https://attack.mitre.org/techniques/T1199) to execute commands in connected virtual machines.(Citation: MSTIC Nobelium Oct 2021)",
+            "description": "Adversaries may abuse cloud management services to execute commands within virtual machines. Resources such as AWS Systems Manager, Azure RunCommand, and Runbooks allow users to remotely run scripts in virtual machines by leveraging installed virtual machine agents. (Citation: AWS Systems Manager Run Command)(Citation: Microsoft Run Command)\n\nIf an adversary gains administrative access to a cloud environment, they may be able to abuse cloud management services to execute commands in the environment’s virtual machines. Additionally, an adversary that compromises a service provider or delegated administrator account may similarly be able to leverage a [Trusted Relationship](https://attack.mitre.org/techniques/T1199) to execute commands in connected virtual machines.(Citation: MSTIC Nobelium Oct 2021)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -64,7 +71,9 @@
                 "IaaS"
             ],
             "x_mitre_version": "2.1",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "مدیریت ابر فرماندهی فرماندهی",
+            "description_fa": "مخالفان ممکن است از خدمات مدیریت ابر برای اجرای دستورات در دستگاه های مجازی استفاده کنند. منابعی مانند AWS Systems Manager، Azure RunCommand و Runbooks به کاربران اجازه می دهد تا اسکریپت ها را در دستگاه های مجازی با استفاده از دستگاه های مجازی نصب شده اجرا کنند. [[ویرایش]\n\nاگر یک دشمن دسترسی اداری به محیط ابری را به دست آورد، ممکن است بتوانند از سرویس های مدیریت ابر برای اجرای دستورات در دستگاه های مجازی محیط زیست استفاده کنند. علاوه بر این، یک دشمن که یک ارائه دهنده خدمات را به خطر می اندازد و یا حساب کاربری مدیر را به طور مشابه می تواند از یک [روابط قابل اعتماد] استفاده کند ([[CTI_PRESERVE_3] برای اجرای دستورات در دستگاه های مجازی متصل. (Citation: AWS Systems Manager Run Command) (Citation: Microsoft Run Command) (Citation: MSTIC Nobelium Oct 2021) https://attack.mitre.org/techniques/T1199"
         }
     ]
 }

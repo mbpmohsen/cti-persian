@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1144",
-                    "external_id": "T1144"
+                    "external_id": "T1144",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Methods of Mac Malware Persistence",
                     "description": "Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "روش های Mac Malware Pertin",
+                    "description_fa": "پاتریک واردل (2014, سپتامبر) روش های بدافزار بر روی Mac OS X Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "Clearing quarantine attribute",
                     "description": "Rich Trouton. (2012, November 20). Clearing the quarantine extended attribute from downloaded applications. Retrieved July 5, 2017.",
-                    "url": "https://derflounder.wordpress.com/2012/11/20/clearing-the-quarantine-extended-attribute-from-downloaded-applications/"
+                    "url": "https://derflounder.wordpress.com/2012/11/20/clearing-the-quarantine-extended-attribute-from-downloaded-applications/",
+                    "source_name_fa": "پاکسازی ویژگی های قرنطینه",
+                    "description_fa": "Trouton غنی (2012، 20 نوامبر) پاک کردن ویژگی های گسترش یافته از برنامه های دانلود شده Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "OceanLotus for OS X",
                     "description": "Eddie Lee. (2016, February 17). OceanLotus for OS X - an Application Bundle Pretending to be an Adobe Flash Update. Retrieved July 5, 2017.",
-                    "url": "https://www.alienvault.com/blogs/labs-research/oceanlotus-for-os-x-an-application-bundle-pretending-to-be-an-adobe-flash-update"
+                    "url": "https://www.alienvault.com/blogs/labs-research/oceanlotus-for-os-x-an-application-bundle-pretending-to-be-an-adobe-flash-update",
+                    "source_name_fa": "OceanLotus برای OS X",
+                    "description_fa": "ادی لی (۲۰۱۶، ۱۷ فوریه) OceanLotus برای OS X – یک Application Bundle بازگشت به Adobe Flash Update Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "Bypassing Gatekeeper",
                     "description": "Thomas Reed. (2016, March 31). Bypassing Apple's Gatekeeper. Retrieved July 5, 2017.",
-                    "url": "https://blog.malwarebytes.com/cybercrime/2015/10/bypassing-apples-gatekeeper/"
+                    "url": "https://blog.malwarebytes.com/cybercrime/2015/10/bypassing-apples-gatekeeper/",
+                    "source_name_fa": "سوگند به دروازه بان",
+                    "description_fa": "توماس رید (۲۰۱۶، ۳۱ مارس) با عبور از دروازه بان اپل Retrieved 5 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2026-04-14T22:53:15.705Z",
             "name": "Gatekeeper Bypass",
-            "description": "In macOS and OS X, when applications or programs are downloaded from the internet, there is a special attribute set on the file called <code>com.apple.quarantine</code>. This attribute is read by Apple's Gatekeeper defense program at execution time and provides a prompt to the user to allow or deny execution. \n\nApps loaded onto the system from USB flash drive, optical disk, external hard drive, or even from a drive shared over the local network won\u2019t set this flag. Additionally, other utilities or events like drive-by downloads don\u2019t necessarily set it either. This completely bypasses the built-in Gatekeeper check. (Citation: Methods of Mac Malware Persistence) The presence of the quarantine flag can be checked by the xattr command <code>xattr /path/to/MyApp.app</code> for <code>com.apple.quarantine</code>. Similarly, given sudo access or elevated permission, this attribute can be removed with xattr as well, <code>sudo xattr -r -d com.apple.quarantine /path/to/MyApp.app</code>. (Citation: Clearing quarantine attribute) (Citation: OceanLotus for OS X)\n \nIn typical operation, a file will be downloaded from the internet and given a quarantine flag before being saved to disk. When the user tries to open the file or application, macOS\u2019s gatekeeper will step in and check for the presence of this flag. If it exists, then macOS will then prompt the user to confirmation that they want to run the program and will even provide the URL where the application came from. However, this is all based on the file being downloaded from a quarantine-savvy application. (Citation: Bypassing Gatekeeper)",
+            "description": "In macOS and OS X, when applications or programs are downloaded from the internet, there is a special attribute set on the file called <code>com.apple.quarantine</code>. This attribute is read by Apple's Gatekeeper defense program at execution time and provides a prompt to the user to allow or deny execution. \n\nApps loaded onto the system from USB flash drive, optical disk, external hard drive, or even from a drive shared over the local network won’t set this flag. Additionally, other utilities or events like drive-by downloads don’t necessarily set it either. This completely bypasses the built-in Gatekeeper check. (Citation: Methods of Mac Malware Persistence) The presence of the quarantine flag can be checked by the xattr command <code>xattr /path/to/MyApp.app</code> for <code>com.apple.quarantine</code>. Similarly, given sudo access or elevated permission, this attribute can be removed with xattr as well, <code>sudo xattr -r -d com.apple.quarantine /path/to/MyApp.app</code>. (Citation: Clearing quarantine attribute) (Citation: OceanLotus for OS X)\n \nIn typical operation, a file will be downloaded from the internet and given a quarantine flag before being saved to disk. When the user tries to open the file or application, macOS’s gatekeeper will step in and check for the presence of this flag. If it exists, then macOS will then prompt the user to confirmation that they want to run the program and will even provide the URL where the application came from. However, this is all based on the file being downloaded from a quarantine-savvy application. (Citation: Bypassing Gatekeeper)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -58,7 +67,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "دروازه بان Bypass",
+            "description_fa": "در macOS و OS X، هنگامی که برنامه ها یا برنامه ها از اینترنت دانلود می شوند، یک ویژگی خاص بر روی فایل به نام [CTI_PRESERVE_0] وجود دارد. این ویژگی توسط برنامه دفاع دروازه بان اپل در زمان اجرا خوانده می شود و باعث می شود کاربر اجازه دهد یا اعدام را انکار کند.\n\nبرنامه های بارگذاری شده بر روی سیستم از درایو فلش USB، دیسک نوری، هارد دیسک خارجی یا حتی از یک درایو به اشتراک گذاشته شده در شبکه محلی این پرچم را تنظیم نخواهد کرد. علاوه بر این، سایر خدمات یا رویدادهایی مانند بارگیری رانندگی لزوما آن را تنظیم نمی کنند. این به طور کامل چک دروازه بان داخلی را دور می کند. [[ویرایش] از سوی دیگر، از سوی دیگر، می توان پرچم را در اختیار داشت. به طور مشابه، با توجه به دسترسی sudo یا مجوز بالا، این ویژگی را می توان با xattr نیز حذف کرد. [[ویرایش] [[ویرایش]\n\nدر عملیات معمول، یک فایل از اینترنت دانلود می شود و قبل از ذخیره شدن به دیسک، یک پرچم قرنطینه داده می شود. هنگامی که کاربر سعی می کند فایل یا برنامه را باز کند، دروازه بان macOS وارد خواهد شد و حضور این پرچم را بررسی خواهد کرد. اگر وجود داشته باشد، سپس macOS کاربر را ترغیب می کند تا تأیید کند که می خواهند برنامه را اجرا کنند و حتی URL را که درخواست از آن آمده است، ارائه دهند. با این حال، این همه بر اساس فایلی است که از یک برنامه ذخیره سازی قرنطینه دانلود می شود. [[ویرایش] <code>com.apple.quarantine</code> <code>xattr /path/to/MyApp.app</code> <code>com.apple.quarantine</code> <code>sudo xattr -r -d com.apple.quarantine /path/to/MyApp.app</code> (Citation: Methods of Mac Malware Persistence) (Citation: Clearing quarantine attribute) (Citation: OceanLotus for OS X) (Citation: Bypassing Gatekeeper)"
         }
     ]
 }

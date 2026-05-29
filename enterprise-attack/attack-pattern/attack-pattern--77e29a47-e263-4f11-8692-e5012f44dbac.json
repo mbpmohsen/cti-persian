@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1219/001",
-                    "external_id": "T1219.001"
+                    "external_id": "T1219.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "sentinelone operationDigitalEye Dec 2024",
                     "description": "Aleksandar Milenkoski, Luigi Martire. (2024, December 10). Operation Digital Eye | Chinese APT Compromises Critical Digital Infrastructure via Visual Studio Code Tunnels. Retrieved February 27, 2025.",
-                    "url": "https://www.sentinelone.com/labs/operation-digital-eye-chinese-apt-compromises-critical-digital-infrastructure-via-visual-studio-code-tunnels/"
+                    "url": "https://www.sentinelone.com/labs/operation-digital-eye-chinese-apt-compromises-critical-digital-infrastructure-via-visual-studio-code-tunnels/",
+                    "source_name_fa": "عملیات ارسالی دیجیتال دیجیتال دیجیتال چشم در سال ۲۰۲۴",
+                    "description_fa": "آلکساندرووسکی، Luigi Martire (2024، 10 دسامبر) عملیات چشم دیجیتال - APT Compromed زیرساخت های دیجیتال انتقادی از طریق تونل های ویژوال استودیو کد. Retrieved 27 فوریه 2025"
                 },
                 {
                     "source_name": "Unit42 Chinese VSCode 06 September 2024",
                     "description": "Tom Fakterman. (2024, September 6). Chinese APT Abuses VSCode to Target Government in Asia. Retrieved March 24, 2025.",
-                    "url": "https://unit42.paloaltonetworks.com/stately-taurus-abuses-vscode-southeast-asian-espionage/"
+                    "url": "https://unit42.paloaltonetworks.com/stately-taurus-abuses-vscode-southeast-asian-espionage/",
+                    "source_name_fa": "Unit42 Chinese VSCode 06 سپتامبر 2024",
+                    "description_fa": "تام فالمن (۲۰۲۴، ۶ سپتامبر) APT چین از VSCode برای هدف قرار دادن دولت در آسیا استفاده می کند. Retrieved 24 مارس 2025"
                 },
                 {
                     "source_name": "Thornton tutorial VSCode shell September 2023",
                     "description": "Truvis Thornton. (2023, September 25). Visual Studio Code: embedded reverse shell and how to block, create Sentinel Detection, and add Environment Prevention. Retrieved March 24, 2025.",
-                    "url": "https://medium.com/@truvis.thornton/visual-studio-code-embedded-reverse-shell-and-how-to-block-create-sentinel-detection-and-add-e864ebafaf6d"
+                    "url": "https://medium.com/@truvis.thornton/visual-studio-code-embedded-reverse-shell-and-how-to-block-create-sentinel-detection-and-add-e864ebafaf6d",
+                    "source_name_fa": "آموزش Thornton VSCode Shell سپتامبر 2023",
+                    "description_fa": "Truvis Thornton ویژوال استودیو کد: پوسته معکوس جاسازی شده و چگونگی مسدود کردن، ایجاد تشخیص سنتی و اضافه کردن پیشگیری از محیط زیست. Retrieved 24 مارس 2025"
                 }
             ],
             "object_marking_refs": [
@@ -58,7 +65,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "تونل",
+            "description_fa": "مخالفان ممکن است از نرم افزار توسعه یکپارچه (IDE) با ویژگی های توسعه از راه دور برای ایجاد یک دستور تعاملی و کنترل کانال در سیستم های هدف در یک شبکه استفاده کنند. تونل سازی IDE ترکیبی از SSH، حمل و نقل پورت، به اشتراک گذاری فایل و اشکال زدایی به یک اتصال امن واحد، اجازه می دهد توسعه دهندگان در سیستم های از راه دور به عنوان اگر آنها محلی بود کار می کنند. بر خلاف انتقال SSH و پورت، تونل سازی IDE یک جلسه کامل را شامل می شود و ممکن است از پروتکل های تونل سازی اختصاصی در کنار SSH استفاده کند و به دشمنان اجازه می دهد تا با جریان های کاری توسعه قانونی ترکیب شوند. برخی از IDE ها، مانند Visual Studio Code، ابزارهای CLI (به عنوان مثال، تونل کد) را ارائه می دهند که دشمنان ممکن است از آن برای ایجاد تونل ها و ایجاد URL های قابل دسترسی برای دسترسی از راه دور استفاده کنند. این تونل ها را می توان از طریق حساب هایی مانند GitHub تأیید کرد که این امکان را فراهم می کند تا دشمن بتواند سیستم آسیب دیده را از طریق یک پورتال توسعه دهنده قانونی کنترل کند. [[ویرایش] [[۱۰] [[۱۰]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰]]]] [[۱۰]]] [۹]\n\nعلاوه بر این، دشمنان ممکن است از تونل IDE برای پایداری استفاده کنند. برخی از IDE ها، مانند Visual Studio Code و JetBrains، از اتصال مجدد اتوماتیک پشتیبانی می کنند. مخالفان ممکن است IDE را به راه اندازی خودکار در استارت آپ پیکربندی کنند، تونل را پس از اعدام دوباره پر کنند. دستگاه های توسعه دهنده تکمیل شده نیز ممکن است به عنوان میزبان پرش برای حرکت بیشتر به شبکه مورد بهره برداری قرار گیرند.\n\nابزار تونل سازی IDE ممکن است ساخته شده و یا نصب شده به عنوان [IDE Extensions] ([CTI_PRESERVE_3] (Citation: sentinelone operationDigitalEye Dec 2024) (Citation: Unit42 Chinese VSCode 06 September 2024) (Citation: Thornton tutorial VSCode shell September 2023) https://attack.mitre.org/techniques/T1176/002"
         }
     ]
 }

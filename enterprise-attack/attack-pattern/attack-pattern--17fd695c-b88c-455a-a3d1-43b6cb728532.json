@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1596/001",
-                    "external_id": "T1596.001"
+                    "external_id": "T1596.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Circl Passive DNS",
                     "description": "CIRCL Computer Incident Response Center. (n.d.). Passive DNS. Retrieved October 20, 2020.",
-                    "url": "https://www.circl.lu/services/passive-dns/"
+                    "url": "https://www.circl.lu/services/passive-dns/",
+                    "source_name_fa": "DNS Passive DNS",
+                    "description_fa": "CIRCL مرکز واکنش به حوادث کامپیوتری (n.d) DNS Passive Retrieved ۲۰ اکتبر ۲۰۲۰"
                 },
                 {
                     "source_name": "DNS Dumpster",
                     "description": "Hacker Target. (n.d.). DNS Dumpster. Retrieved October 20, 2020.",
-                    "url": "https://dnsdumpster.com/"
+                    "url": "https://dnsdumpster.com/",
+                    "source_name_fa": "DNS Dumpster",
+                    "description_fa": "هکر هدف (n.d.) DNS Dumpster Retrieved ۲۰ اکتبر ۲۰۲۰"
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2025-10-24T17:48:27.172Z",
             "name": "DNS/Passive DNS",
-            "description": "Adversaries may search DNS data for information about victims that can be used during targeting. DNS information may include a variety of details, including registered name servers as well as records that outline addressing for a target\u2019s subdomains, mail servers, and other hosts.\n\nAdversaries may search DNS data to gather actionable information. Threat actors can query nameservers for a target organization directly, or search through centralized repositories of logged DNS query responses (known as passive DNS).(Citation: DNS Dumpster)(Citation: Circl Passive DNS) Adversaries may also seek and target DNS misconfigurations/leaks that reveal information about internal networks. Information from these sources may reveal opportunities for other forms of reconnaissance (ex: [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) or [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Trusted Relationship](https://attack.mitre.org/techniques/T1199)).",
+            "description": "Adversaries may search DNS data for information about victims that can be used during targeting. DNS information may include a variety of details, including registered name servers as well as records that outline addressing for a target’s subdomains, mail servers, and other hosts.\n\nAdversaries may search DNS data to gather actionable information. Threat actors can query nameservers for a target organization directly, or search through centralized repositories of logged DNS query responses (known as passive DNS).(Citation: DNS Dumpster)(Citation: Circl Passive DNS) Adversaries may also seek and target DNS misconfigurations/leaks that reveal information about internal networks. Information from these sources may reveal opportunities for other forms of reconnaissance (ex: [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594) or [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593)), establishing operational resources (ex: [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) or [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133) or [Trusted Relationship](https://attack.mitre.org/techniques/T1199)).",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -48,7 +53,9 @@
             "x_mitre_platforms": [
                 "PRE"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "DNS/Passive DNS",
+            "description_fa": "مخالفان ممکن است داده های DNS را برای اطلاعات مربوط به قربانیان جستجو کنند که می توانند در هنگام هدف گیری مورد استفاده قرار گیرند. اطلاعات DNS ممکن است شامل انواع جزئیات، از جمله سرورهای نام ثبت شده و همچنین سوابقی باشد که برای زیر دامنه های هدف، سرورهای ایمیل و سایر میزبان ها توضیح می دهند.\n\nمخالفان ممکن است داده های DNS را برای جمع آوری اطلاعات عملی جستجو کنند. بازیگران تهدید می توانند سرورهای نام برای یک سازمان هدف را به طور مستقیم جستجو کنند یا از طریق مخازن متمرکز از پاسخ های جستجوی DNS (شناخته شده به عنوان DNS منفعل) جستجو کنند. [[ویرایش] عوامل جانبی همچنین ممکن است به دنبال و هدف قرار دادن پیکربندی های غلط DNS / بیت هایی باشند که اطلاعات مربوط به شبکه های داخلی را نشان می دهند. اطلاعات از این منابع ممکن است فرصت هایی را برای دیگر اشکال شناسایی (ex) آشکار کند (به عبارت دیگر: [Search Open Websites/Domains] ([CTI_PRESERVE_SERV_3])، ایجاد منابع عملیاتی (exquire) یا زیرساخت های اولیه (IOT) (Citation: DNS Dumpster) (Citation: Circl Passive DNS) https://attack.mitre.org/techniques/T1594 https://attack.mitre.org/techniques/T1593 https://attack.mitre.org/techniques/T1583 https://attack.mitre.org/techniques/T1584 https://attack.mitre.org/techniques/T1133 https://attack.mitre.org/techniques/T1199"
         }
     ]
 }

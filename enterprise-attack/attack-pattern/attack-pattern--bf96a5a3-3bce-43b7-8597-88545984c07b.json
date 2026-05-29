@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1574/009",
-                    "external_id": "T1574.009"
+                    "external_id": "T1574.009",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Windows Privilege Escalation Guide",
                     "description": "absolomb. (2018, January 26). Windows Privilege Escalation Guide. Retrieved August 10, 2018.",
-                    "url": "https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/"
+                    "url": "https://www.absolomb.com/2018-01-26-Windows-Privilege-Escalation-Guide/",
+                    "source_name_fa": "Windows Privilege Escalation Guide",
+                    "description_fa": "Absolomb (2018، 26 ژانویه) Windows Privilege Escalation Guide Retrieved 10 آگوست 2018"
                 },
                 {
                     "source_name": "Windows Unquoted Services",
-                    "description": "HackHappy. (2018, April 23). Windows Privilege Escalation \u2013 Unquoted Services. Retrieved August 10, 2018.",
-                    "url": "https://securityboulevard.com/2018/04/windows-privilege-escalation-unquoted-services/"
+                    "description": "HackHappy. (2018, April 23). Windows Privilege Escalation – Unquoted Services. Retrieved August 10, 2018.",
+                    "url": "https://securityboulevard.com/2018/04/windows-privilege-escalation-unquoted-services/",
+                    "source_name_fa": "سرویس های بدون نقل قول",
+                    "description_fa": "هک مبارک (2018, 23 آوریل) Windows Privilege Escalation - سرویس های بدون نقل قول Retrieved 10 آگوست 2018"
                 },
                 {
                     "source_name": "Help eliminate unquoted path",
                     "description": "Mark Baggett. (2012, November 8). Help eliminate unquoted path vulnerabilities. Retrieved November 8, 2012.",
-                    "url": "https://isc.sans.edu/diary/Help+eliminate+unquoted+path+vulnerabilities/14464"
+                    "url": "https://isc.sans.edu/diary/Help+eliminate+unquoted+path+vulnerabilities/14464",
+                    "source_name_fa": "کمک به حذف مسیر بدون نقل قول",
+                    "description_fa": "مارک بات (2012، نوامبر 8) کمک به از بین بردن آسیب پذیری های مسیر ناخواسته Retrieved 8 نوامبر 2012"
                 },
                 {
                     "source_name": "Microsoft CurrentControlSet Services",
                     "description": "Microsoft. (2017, April 20). HKLM\\SYSTEM\\CurrentControlSet\\Services Registry Tree. Retrieved March 16, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/windows-hardware/drivers/install/hklm-system-currentcontrolset-services-registry-tree"
+                    "url": "https://docs.microsoft.com/en-us/windows-hardware/drivers/install/hklm-system-currentcontrolset-services-registry-tree",
+                    "source_name_fa": "Microsoft Current Control مجموعه خدمات",
+                    "description_fa": "مایکروسافت (2017، 20 آوریل) HKLM \\SYSTEM\\CurrentControlSet درخت ثبت نام Retrieved 16 مارس 2020"
                 }
             ],
             "object_marking_refs": [
@@ -66,7 +75,9 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "دانلود بازی Path Interception by Undefined Path",
+            "description_fa": "مخالفان ممکن است محموله های مخرب خود را با ربودن سیگنال های آسیب پذیر مسیر فایل اجرا کنند. مخالفان می توانند از مسیرهایی که فاقد نقل قول های اطراف با قرار دادن یک اجرایی در یک دایرکتوری سطح بالاتر در مسیر، استفاده کنند تا ویندوز اجرایی دشمن را برای راه اندازی انتخاب کند.\n\nدر صورتی که در این مسیر قرار داشته باشید، در صورتی که به صورت مستقیم یا بیشتر از آن استفاده کنید و یا به صورت مستقیم به آن دسترسی داشته باشید. [CTI_PRESERVE_5] (در کلید های ویندوز ثبت شده) یک دشمن می تواند یک فایل اجرایی را در یک دایرکتوری سطح بالاتر از مسیر قرار دهد و ویندوز به جای اجرای در نظر گرفته شده، آن را حل خواهد کرد. به عنوان مثال، اگر مسیر در کوتاه مدت [CTI_PRESERVE_2] باشد، یک دشمن ممکن است یک برنامه را در [CTI_PRESERVE_3] ایجاد کند که به جای برنامه مورد نظر اجرا خواهد شد. [[ویرایش] [[ویرایش]\n\nاین تکنیک می تواند برای پایداری مورد استفاده قرار گیرد اگر اجرایی به طور منظم نامیده می شود، و همچنین افزایش امتیاز در صورتی که اجراهای متوقف شده توسط یک فرآیند ممتاز بالاتر آغاز می شوند. <code>C:\\unsafe path with space\\program.exe</code> <code>\"C:\\safe path with space\\program.exe\"</code> <code>C:\\program files\\myapp.exe</code> <code>C:\\program.exe</code> (Citation: Microsoft CurrentControlSet Services) (Citation: Help eliminate unquoted path) (Citation: Windows Unquoted Services) (Citation: Windows Privilege Escalation Guide)"
         }
     ]
 }

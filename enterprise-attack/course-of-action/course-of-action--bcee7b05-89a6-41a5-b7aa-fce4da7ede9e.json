@@ -12,12 +12,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/T1075",
-                    "external_id": "T1075"
+                    "external_id": "T1075",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "GitHub IAD Secure Host Baseline UAC Filtering",
                     "description": "NSA IAD. (2017, January 24). MS Security Guide. Retrieved December 18, 2017.",
-                    "url": "https://github.com/iadgov/Secure-Host-Baseline/blob/master/Windows/Group%20Policy%20Templates/en-US/SecGuide.adml"
+                    "url": "https://github.com/iadgov/Secure-Host-Baseline/blob/master/Windows/Group%20Policy%20Templates/en-US/SecGuide.adml",
+                    "source_name_fa": "GitHub IAD Secure Host Baseline UAC فیلتر کردن",
+                    "description_fa": "NSA IAD (2017، 24 ژانویه) راهنمای امنیت MS Retrieved 18 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -32,7 +35,9 @@
                 "enterprise-attack"
             ],
             "x_mitre_version": "1.0",
-            "x_mitre_attack_spec_version": "3.2.0"
+            "x_mitre_attack_spec_version": "3.2.0",
+            "name_fa": "Pass the Hash Mitigation",
+            "description_fa": "سیستم های نظارت و ثبت دامنه برای فعالیت های لوگوی غیر معمول معتبر. از دسترسی به [حساب های معتبر] جلوگیری کنید ([[۱۰]] پچ KB2871997 را به ویندوز 7 و سیستم های بالاتر اعمال کنید تا دسترسی پیش فرض حساب ها را در گروه مدیریت محلی محدود کنید.\n\nفعال کردن کاهش هش برای اعمال محدودیت های UAC به حساب های محلی در آرمین شبکه. کلید ثبت نام (CTI_PRESERVE_0) از طریق GPO: computer Configuration > [Policies] > Administrative Templates SCM: عبور از Hash Mitigations: محدودیت های UAC را به حساب های محلی در آرم های شبکه اعمال کنید. [[ویرایش]\n\nمحدود کردن همپوشانی در سیستم ها برای جلوگیری از آسیب های سازش و کاهش توانایی دشمن برای انجام حرکت بعدی بین سیستم ها. اطمینان حاصل کنید که حساب های مدیر محلی ساخته شده و ایجاد شده، پسوردهای پیچیده و منحصر به فرد دارند. اجازه ندهید یک کاربر دامنه در گروه مدیر محلی در سیستم های مختلف باشد. <code>HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\LocalAccountTokenFilterPolicy</code> (Citation: GitHub IAD Secure Host Baseline UAC Filtering) https://attack.mitre.org/techniques/T1078"
         }
     ]
 }

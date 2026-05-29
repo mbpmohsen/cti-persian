@@ -13,32 +13,42 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1042",
-                    "external_id": "T1042"
+                    "external_id": "T1042",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/556.html",
-                    "external_id": "CAPEC-556"
+                    "external_id": "CAPEC-556",
+                    "source_name_fa": "کلاه"
                 },
                 {
                     "source_name": "Microsoft Change Default Programs",
                     "description": "Microsoft. (n.d.). Change which programs Windows 7 uses by default. Retrieved July 26, 2016.",
-                    "url": "https://support.microsoft.com/en-us/help/18539/windows-7-change-default-programs"
+                    "url": "https://support.microsoft.com/en-us/help/18539/windows-7-change-default-programs",
+                    "source_name_fa": "Microsoft تغییر برنامه های پیش فرض",
+                    "description_fa": "مایکروسافت (n.d.) تغییر کدام برنامه ویندوز 7 به طور پیش فرض استفاده می کند. Retrieved ۲۶ ژوئیه ۲۰۱۶"
                 },
                 {
                     "source_name": "Microsoft File Handlers",
                     "description": "Microsoft. (n.d.). Specifying File Handlers for File Name Extensions. Retrieved November 13, 2014.",
-                    "url": "http://msdn.microsoft.com/en-us/library/bb166549.aspx"
+                    "url": "http://msdn.microsoft.com/en-us/library/bb166549.aspx",
+                    "source_name_fa": "Microsoft File",
+                    "description_fa": "مایکروسافت (n.d.) ویژگی های File Handlers برای File Name Extensions Retrieved 13 نوامبر 2014"
                 },
                 {
                     "source_name": "Microsoft Assoc Oct 2017",
                     "description": "Plett, C. et al.. (2017, October 15). assoc. Retrieved August 7, 2018.",
-                    "url": "https://docs.microsoft.com/windows-server/administration/windows-commands/assoc"
+                    "url": "https://docs.microsoft.com/windows-server/administration/windows-commands/assoc",
+                    "source_name_fa": "Microsoft Assoc اکتبر 2017",
+                    "description_fa": "پلت، C. et al. (2017، 15 اکتبر) Assoc Retrieved 7 اوت 2018"
                 },
                 {
                     "source_name": "TrendMicro TROJ-FAKEAV OCT 2012",
                     "description": "Sioting, S. (2012, October 8). TROJ_FAKEAV.GZD. Retrieved August 8, 2018.",
-                    "url": "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/troj_fakeav.gzd"
+                    "url": "https://www.trendmicro.com/vinfo/us/threat-encyclopedia/malware/troj_fakeav.gzd",
+                    "source_name_fa": "دانلود بازی The Micro TROJ-FAKEAVOCT 2012",
+                    "description_fa": "Sioting، S. (2012، اکتبر 8) TROJ_FAKEAV.GZD. Retrieved 8 اوت 2018"
                 }
             ],
             "object_marking_refs": [
@@ -67,7 +77,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "تغییر پیش فرض انجمن فایل",
+            "description_fa": "هنگامی که یک فایل باز می شود، برنامه پیش فرض مورد استفاده برای باز کردن فایل (همچنین به نام انجمن فایل یا مسئول) بررسی می شود. انتخاب های انجمن فایل در Windows Registry ذخیره می شوند و می توانند توسط کاربران، مدیران یا برنامه هایی که دسترسی به رجال دارند ویرایش شوند. و یا با استفاده از استفاده از وسایل داخلی، [[ویرایش] برنامه های کاربردی می توانند ارتباط فایل را برای یک پسوند فایل داده شده تغییر دهند تا یک برنامه دلخواه را هنگامی که یک فایل با پسوند داده باز می شود، فراخوانی کنند.\n\nبه عنوان مثال، شبکه های فایل سیستم در زیر [CTI_PRESERVE_0] ذکر شده است، برای مثال [CTI_PRESERVE]. در این زمینه به عنوان یک مرجع در اختیار کاربر قرار داده شده است. پس از آن به عنوان زیر کلید در زیر کلید پوسته در [CTI_PRESERVE_3] ذکر شده است. برای مثال:\n[[ویرایش]\n[[ویرایش]\n[[ویرایش]\n\nارزش های کلید های ذکر شده دستوراتی هستند که هنگام باز کردن پسوند فایل اجرا می شوند. مخالفان می توانند این ارزش ها را تغییر دهند تا به طور مداوم دستورات دلخواه را اجرا کنند. [[ویرایش] <code>HKEY_CLASSES_ROOT\\.[extension]</code> <code>HKEY_CLASSES_ROOT\\.txt</code> <code>HKEY_CLASSES_ROOT\\[handler]</code> <code>HKEY_CLASSES_ROOT\\[handler]\\shell\\[action]\\command</code> <code>HKEY_CLASSES_ROOT\\txtfile\\shell\\open\\command</code> <code>HKEY_CLASSES_ROOT\\txtfile\\shell\\print\\command</code> <code>HKEY_CLASSES_ROOT\\txtfile\\shell\\printto\\command</code> (Citation: Microsoft Change Default Programs) (Citation: Microsoft File Handlers) (Citation: Microsoft Assoc Oct 2017) (Citation: TrendMicro TROJ-FAKEAV OCT 2012)"
         }
     ]
 }

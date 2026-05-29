@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/M1024",
-                    "external_id": "M1024"
+                    "external_id": "M1024",
+                    "source_name_fa": "حمله mitre"
                 }
             ],
             "object_marking_refs": [
@@ -28,7 +29,9 @@
                 "enterprise-attack"
             ],
             "x_mitre_version": "1.2",
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "name_fa": "مجوز ثبت نام محدود",
+            "description_fa": "محدود کردن اجازه های رجیستری شامل پیکربندی تنظیمات کنترل دسترسی برای کلید های رجیستری حساس و راویان است تا اطمینان حاصل شود که تنها کاربران مجاز یا فرآیندها می توانند تغییرات ایجاد کنند. با محدود کردن دسترسی، سازمان ها می توانند از تغییرات غیر مجاز که دشمنان ممکن است برای پایداری، افزایش امتیاز یا فرار از دفاع استفاده کنند، جلوگیری کنند. این کاهش را می توان از طریق اقدامات زیر اجرا کرد:\n\nبررسی و مجوز در مورد کلیدهای بحرانی\n\n- به طور منظم بررسی مجوز در کلید هایی مانند \"Run\"، \"RunOnce\" و \"Services\" برای اطمینان از تنها کاربران مجاز دسترسی به نوشتن.\nاز ابزارهایی مانند “icacls” یا “PowerShell” برای خودکارسازی تنظیمات مجوز استفاده کنید.\n\nگزینه Registry Auditing\n\n- امکان حسابرسی در کلید های حساس برای ورود به تلاش های دسترسی\nاستفاده از Event Viewer یا SIEM راه حل برای تجزیه و تحلیل log ها و شناسایی فعالیت های مشکوک.\nمثال سیاست حسابرسی: \"auditpol /set / زیرمجموعه: Registry\" / موفقیت: قابل اعتماد / شکست: قابل اعتماد ` `\n\nمحافظت از Hive های دارای مجوز\n\nمحدود کردن دسترسی به راویان مانند \"SAM\"، \"SECURITY\" و \"SYSTEM\" برای جلوگیری از تخلیه معتبر یا سایر دسترسی های غیر مجاز.\nاستفاده از LSA Protection برای اضافه کردن یک لایه امنیتی اضافی برای ذخیره سازی.\n\nمحدود کردن استفاده از Registry Editor\n\nاستفاده از سیاست گروه برای محدود کردن دسترسی به regedit.exe برای کاربران غیر مدیریتی.\n- اجرای ابزارهای ویرایش رجیستری در نقاط پایانی که غیر ضروری هستند.\n\nDeploy Baseline Configuration Tools\n\n- استفاده از ابزارهایی مانند Microsoft Security Configuration یا CIS Benchmarks برای اعمال و حفظ تنظیمات رجیستری امن.\n\n*Tools for Execution*\n\nمجوز ثبت ابزار:\n\nRegistry Editor (regedit): ابزار داخلی برای مدیریت مجوزهای رجیستری\nقدرت Shell: مجوزهای خودکار و مدیریت کلیدها \\Software\\Microsoft\\Windows\\CurrentVersion\\Run\" - نام \"KeyName\" -Value \"Value\"\nicacls: ابزار خط فرمان برای اصلاح ACL.\n\nنظارت بر ابزار:\n\nSysmon: Monitor and log Registry Events\nEvent Viewer : مشاهده دسترسی به ثبت نام\n\nمدیریت سیاست ابزار:\n\nکنسول مدیریت سیاست گروه (GPMC): مجوز ثبت نام از طریق GPOs\nMicrosoft Endpoint Manager: پایه های پیکربندی Deploy برای مجوزهای ثبت نام"
         }
     ]
 }

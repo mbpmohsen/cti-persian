@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1003/007",
-                    "external_id": "T1003.007"
+                    "external_id": "T1003.007",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "atomic-red proc file system",
                     "description": "Atomic Red Team. (2023, November). T1003.007 - OS Credential Dumping: Proc Filesystem. Retrieved March 28, 2024.",
-                    "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.md"
+                    "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.md",
+                    "source_name_fa": "سیستم فایل هسته ای",
+                    "description_fa": "تیم سرخ اتمی (2023، نوامبر) [[ویرایش] سیستم عامل تخلیه: Proc Filesystem Retrieved 28 مارس 2024 T1003.007"
                 },
                 {
                     "source_name": "baeldung Linux proc map 2022",
                     "description": "baeldung. (2022, April 8). Understanding the Linux /proc/id/maps File. Retrieved March 31, 2023.",
-                    "url": "https://www.baeldung.com/linux/proc-id-maps"
+                    "url": "https://www.baeldung.com/linux/proc-id-maps",
+                    "source_name_fa": "Beldung Linux Proc نقشه 2022",
+                    "description_fa": "بیلینگونگ (2022، آوریل 8) درک فایل لینوکس /proc/id/maps Retrieved 31 مارس 2023."
                 },
                 {
                     "source_name": "Polop Linux PrivEsc Gitbook",
                     "description": "Carlos Polop. (2023, March 5). Linux Privilege Escalation. Retrieved March 31, 2023.",
-                    "url": "https://book.hacktricks.xyz/linux-hardening/privilege-escalation#proc-usdpid-maps-and-proc-usdpid-mem"
+                    "url": "https://book.hacktricks.xyz/linux-hardening/privilege-escalation#proc-usdpid-maps-and-proc-usdpid-mem",
+                    "source_name_fa": "Polop Linux PrivEsc Gitbook",
+                    "description_fa": "کارلوس پولپ (۲۰۲۳، مارس ۵) Linux Privilege Escalation Retrieved 31 مارس 2023."
                 },
                 {
                     "source_name": "MimiPenguin GitHub May 2017",
                     "description": "Gregal, H. (2017, May 12). MimiPenguin. Retrieved December 5, 2017.",
-                    "url": "https://github.com/huntergregal/mimipenguin"
+                    "url": "https://github.com/huntergregal/mimipenguin",
+                    "source_name_fa": "MimiPenguin GitHub 2017",
+                    "description_fa": "Gregal, H. (2017, May 12) MimiPenguin Retrieved 5 دسامبر 2017"
                 },
                 {
                     "source_name": "Picus Labs Proc cump 2022",
                     "description": "Huseyin Can YUCEEL & Picus Labs. (2022, March 22). Retrieved March 31, 2023.",
-                    "url": "https://www.picussecurity.com/resource/the-mitre-attck-t1003-os-credential-dumping-technique-and-its-adversary-use"
+                    "url": "https://www.picussecurity.com/resource/the-mitre-attck-t1003-os-credential-dumping-technique-and-its-adversary-use",
+                    "source_name_fa": "Picus Labs Procump 2022",
+                    "description_fa": "Huseyin می تواند YUCEEL و Picus Labs (2022، 22 مارس) Retrieved 31 مارس 2023."
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2025-10-24T17:48:36.165Z",
             "name": "Proc Filesystem",
-            "description": "Adversaries may gather credentials from the proc filesystem or `/proc`. The proc filesystem is a pseudo-filesystem used as an interface to kernel data structures for Linux based systems managing virtual memory. For each process, the `/proc/<PID>/maps` file shows how memory is mapped within the process\u2019s virtual address space. And `/proc/<PID>/mem`, exposed for debugging purposes, provides access to the process\u2019s virtual address space.(Citation: Picus Labs Proc cump 2022)(Citation: baeldung Linux proc map 2022)\n\nWhen executing with root privileges, adversaries can search these memory locations for all processes on a system that contain patterns indicative of credentials. Adversaries may use regex patterns, such as <code>grep -E \"^[0-9a-f-]* r\" /proc/\"$pid\"/maps | cut -d' ' -f 1</code>, to look for fixed strings in memory structures or cached hashes.(Citation: atomic-red proc file system) When running without privileged access, processes can still view their own virtual memory locations. Some services or programs may save credentials in clear text inside the process\u2019s memory.(Citation: MimiPenguin GitHub May 2017)(Citation: Polop Linux PrivEsc Gitbook)\n\nIf running as or with the permissions of a web browser, a process can search the `/maps` & `/mem` locations for common website credential patterns (that can also be used to find adjacent memory within the same structure) in which hashes or cleartext credentials may be located.",
+            "description": "Adversaries may gather credentials from the proc filesystem or `/proc`. The proc filesystem is a pseudo-filesystem used as an interface to kernel data structures for Linux based systems managing virtual memory. For each process, the `/proc/<PID>/maps` file shows how memory is mapped within the process’s virtual address space. And `/proc/<PID>/mem`, exposed for debugging purposes, provides access to the process’s virtual address space.(Citation: Picus Labs Proc cump 2022)(Citation: baeldung Linux proc map 2022)\n\nWhen executing with root privileges, adversaries can search these memory locations for all processes on a system that contain patterns indicative of credentials. Adversaries may use regex patterns, such as <code>grep -E \"^[0-9a-f-]* r\" /proc/\"$pid\"/maps | cut -d' ' -f 1</code>, to look for fixed strings in memory structures or cached hashes.(Citation: atomic-red proc file system) When running without privileged access, processes can still view their own virtual memory locations. Some services or programs may save credentials in clear text inside the process’s memory.(Citation: MimiPenguin GitHub May 2017)(Citation: Polop Linux PrivEsc Gitbook)\n\nIf running as or with the permissions of a web browser, a process can search the `/maps` & `/mem` locations for common website credential patterns (that can also be used to find adjacent memory within the same structure) in which hashes or cleartext credentials may be located.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -66,7 +77,9 @@
             "x_mitre_platforms": [
                 "Linux"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "Proc Filesystem",
+            "description_fa": "مخالفان ممکن است مدارک را از سیستم پرونده Proc یا ‘/proc’ جمع آوری کنند. سیستم فایل proc یک سیستم شبه فایل است که به عنوان یک رابط برای ساختارهای داده هسته برای سیستم های مبتنی بر لینوکس برای مدیریت حافظه مجازی استفاده می شود. برای هر فرآیند، فایل ‘/proc/<PID>/maps’ نشان می دهد که چگونه حافظه در فضای آدرس مجازی فرآیند نقشه برداری می شود. و <PID>/mem> که در معرض اهداف اشکال زدایی قرار دارد، دسترسی به فضای آدرس مجازی فرایند را فراهم می کند.\n\nهنگام اجرای امتیازات ریشه، دشمنان می توانند این مکان های حافظه را برای تمام فرآیندها در یک سیستم که حاوی الگوهای نشان دهنده اعتبار است جستجو کنند. همچنین می توان از الگوهای regex مانند [CTI_PRESERVE_0] استفاده کرد تا به دنبال رشته های ثابت در ساختارهای حافظه و یا هش های کش شده باشد. هنگام دویدن بدون دسترسی ممتاز، فرآیندها هنوز می توانند مکان های حافظه مجازی خود را ببینند. برخی از خدمات یا برنامه ها ممکن است اعتبار در متن روشن در حافظه فرآیند را ذخیره کنند. [[ویرایش]\n\nاگر در حال اجرا به عنوان یا با مجوز یک مرورگر وب، یک فرایند می تواند مکان های \"/maps\" و \"/mem\" را برای الگوهای معتبر وب سایت مشترک جستجو کند (که همچنین می تواند برای پیدا کردن حافظه مجاور در همان ساختار مورد استفاده قرار گیرد) که در آن هش یا اعتبار متن روشن ممکن است قرار گیرد. <code>grep -E \"^[0-9a-f-]* r\" /proc/\"$pid\"/maps | cut -d' ' -f 1</code> (Citation: Picus Labs Proc cump 2022) (Citation: baeldung Linux proc map 2022) (Citation: atomic-red proc file system) (Citation: MimiPenguin GitHub May 2017) (Citation: Polop Linux PrivEsc Gitbook)"
         }
     ]
 }

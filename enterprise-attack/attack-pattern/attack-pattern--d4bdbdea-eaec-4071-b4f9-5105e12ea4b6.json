@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1537",
-                    "external_id": "T1537"
+                    "external_id": "T1537",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AWS EBS Snapshot Sharing",
                     "description": "Amazon Web Services. (n.d.). Share an Amazon EBS snapshot. Retrieved March 2, 2022.",
-                    "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html"
+                    "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-modifying-snapshot-permissions.html",
+                    "source_name_fa": "AWS EBS به اشتراک گذاری",
+                    "description_fa": "خدمات وب آمازون (n.d.) عکس آمازون EBS را به اشتراک بگذارید. Retrieved 2, 2022"
                 },
                 {
                     "source_name": "TLDRSec AWS Attacks",
                     "description": "Clint Gibler and Scott Piper. (2021, January 4). Lesser Known Techniques for Attacking AWS Environments. Retrieved March 4, 2024.",
-                    "url": "https://tldrsec.com/p/blog-lesser-known-aws-attacks"
+                    "url": "https://tldrsec.com/p/blog-lesser-known-aws-attacks",
+                    "source_name_fa": "TLDRSec AWS حمله",
+                    "description_fa": "Clint Gibler و Scott Piper (2021، ژانویه 4) تکنیک های کمتر شناخته شده برای حمله به محیط زیست AWS Retrieved ۴ مارس ۲۰۲۴"
                 },
                 {
                     "source_name": "Azure Shared Access Signature",
                     "description": "Delegate access with a shared access signature. (2019, December 18). Delegate access with a shared access signature. Retrieved March 2, 2022.",
-                    "url": "https://docs.microsoft.com/en-us/rest/api/storageservices/delegate-access-with-shared-access-signature"
+                    "url": "https://docs.microsoft.com/en-us/rest/api/storageservices/delegate-access-with-shared-access-signature",
+                    "source_name_fa": "Azure Shared Access Signature",
+                    "description_fa": "دسترسی به یک امضای دسترسی مشترک (2019، 18 دسامبر) دسترسی به یک امضای دسترسی مشترک Retrieved 2, 2022"
                 },
                 {
                     "source_name": "Azure Blob Snapshots",
                     "description": "Microsoft Azure. (2021, December 29). Blob snapshots. Retrieved March 2, 2022.",
-                    "url": "https://docs.microsoft.com/en-us/azure/storage/blobs/snapshots-overview"
+                    "url": "https://docs.microsoft.com/en-us/azure/storage/blobs/snapshots-overview",
+                    "source_name_fa": "Azure Blob Snapshots",
+                    "description_fa": "Microsoft Azure عکس های Blub Retrieved 2, 2022"
                 },
                 {
                     "source_name": "Microsoft Azure Storage Shared Access Signature",
                     "description": "Microsoft. (2023, June 7). Grant limited access to Azure Storage resources using shared access signatures (SAS). Retrieved March 4, 2024.",
-                    "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview"
+                    "url": "https://learn.microsoft.com/en-us/azure/storage/common/storage-sas-overview",
+                    "source_name_fa": "Microsoft Azure Storage Shared Access Award",
+                    "description_fa": "مایکروسافت (2023, June 7) دسترسی محدود به منابع ذخیره سازی Azure با استفاده از امضاهای دسترسی مشترک (SAS) Retrieved ۴ مارس ۲۰۲۴"
                 },
                 {
                     "source_name": "DOJ GRU Indictment Jul 2018",
                     "description": "Mueller, R. (2018, July 13). Indictment - United States of America vs. VIKTOR BORISOVICH NETYKSHO, et al. Retrieved November 17, 2024.",
-                    "url": "https://cdn.cnn.com/cnn/2018/images/07/13/gru.indictment.pdf"
+                    "url": "https://cdn.cnn.com/cnn/2018/images/07/13/gru.indictment.pdf",
+                    "source_name_fa": "DOJ GRU Indictment جول 2018",
+                    "description_fa": "مولر، R. (2018، 13 ژوئیه) Indictment - ایالات متحده آمریکا در مقابل VIKTOR BORISOVICH NETYSHO، و غیره. Retrieved ۱۷ نوامبر ۲۰۲۴"
                 }
             ],
             "object_marking_refs": [
@@ -76,7 +89,9 @@
                 "Office Suite",
                 "SaaS"
             ],
-            "x_mitre_version": "1.5"
+            "x_mitre_version": "1.5",
+            "name_fa": "انتقال داده ها به Cloud Account",
+            "description_fa": "عوامل جانبی ممکن است داده ها را با انتقال داده ها، از جمله از طریق به اشتراک گذاری / ترکیب و ایجاد پشتیبان از محیط های ابر، به یک حساب ابر دیگر که آنها کنترل بر همان سرویس.\n\nیک مدافع که نظارت بر انتقال های بزرگ به خارج از محیط ابر از طریق انتقال فایل های عادی یا بیش از دستور و کانال های کنترل ممکن است برای انتقال داده ها به حساب دیگر در همان ارائه دهنده ابر نگاه نمی کند. چنین انتقال هایی ممکن است از API های ارائه دهنده ابر موجود و فضای آدرس داخلی ارائه دهنده ابر برای ترکیب به ترافیک عادی و یا جلوگیری از انتقال داده ها در رابط های شبکه خارجی استفاده کنند. [[ویرایش]\n\nمخالفان همچنین ممکن است از مکانیزم های ابری برای به اشتراک گذاری اطلاعات قربانی با حساب های ابر تحت کنترل دشمن استفاده کنند، مانند ایجاد لینک های اشتراک گذاری فایل ناشناس یا در Azure، یک امضای دسترسی مشترک (SAS) URI[CTI_PRESERVE]\n\nحوادث مشاهده شده است که در آن دشمنان پشتیبان گیری از نمونه های ابر ایجاد کرده اند و آنها را به حساب های جداگانه منتقل کرده اند. [[ویرایش] (Citation: TLDRSec AWS Attacks) (Citation: Microsoft Azure Storage Shared Access Signature) (Citation: DOJ GRU Indictment Jul 2018)"
         }
     ]
 }

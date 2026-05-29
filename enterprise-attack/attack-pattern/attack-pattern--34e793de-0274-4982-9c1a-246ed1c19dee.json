@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1222/001",
-                    "external_id": "T1222.001"
+                    "external_id": "T1222.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Hybrid Analysis Icacls1 June 2018",
                     "description": "Hybrid Analysis. (2018, June 12). c9b65b764985dfd7a11d3faf599c56b8.exe. Retrieved August 19, 2018.",
-                    "url": "https://www.hybrid-analysis.com/sample/ef0d2628823e8e0a0de3b08b8eacaf41cf284c086a948bdfd67f4e4373c14e4d?environmentId=100"
+                    "url": "https://www.hybrid-analysis.com/sample/ef0d2628823e8e0a0de3b08b8eacaf41cf284c086a948bdfd67f4e4373c14e4d?environmentId=100",
+                    "source_name_fa": "تجزیه و تحلیل ترکیبی Icacls1 ژوئن 2018",
+                    "description_fa": "تجزیه و تحلیل ترکیبی (2018، 12 ژوئن) c9b65b764985dfd7a11d3fa599c56b8.exe. Retrieved 19 اوت 2018"
                 },
                 {
                     "source_name": "Hybrid Analysis Icacls2 May 2018",
                     "description": "Hybrid Analysis. (2018, May 30). 2a8efbfadd798f6111340f7c1c956bee.dll. Retrieved August 19, 2018.",
-                    "url": "https://www.hybrid-analysis.com/sample/22dab012c3e20e3d9291bce14a2bfc448036d3b966c6e78167f4626f5f9e38d6?environmentId=110"
+                    "url": "https://www.hybrid-analysis.com/sample/22dab012c3e20e3d9291bce14a2bfc448036d3b966c6e78167f4626f5f9e38d6?environmentId=110",
+                    "source_name_fa": "تجزیه و تحلیل ترکیبی Icacls2 مه 2018",
+                    "description_fa": "تجزیه و تحلیل ترکیبی (2018, May 30) 2a8efbfadd798f6140f7c956bee.dll. Retrieved 19 اوت 2018"
                 },
                 {
                     "source_name": "Microsoft Access Control Lists May 2018",
                     "description": "M. Satran, M. Jacobs. (2018, May 30). Access Control Lists. Retrieved February 4, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/windows/win32/secauthz/access-control-lists"
+                    "url": "https://docs.microsoft.com/en-us/windows/win32/secauthz/access-control-lists",
+                    "source_name_fa": "Microsoft Access Control Lists 2018",
+                    "description_fa": "M. Satran, M. Jacobs (2018, May 30) لیست های کنترل دسترسی Retrieved 4 فوریه 2020"
                 },
                 {
                     "source_name": "Microsoft DACL May 2018",
                     "description": "Microsoft. (2018, May 30). DACLs and ACEs. Retrieved August 19, 2018.",
-                    "url": "https://docs.microsoft.com/windows/desktop/secauthz/dacls-and-aces"
+                    "url": "https://docs.microsoft.com/windows/desktop/secauthz/dacls-and-aces",
+                    "source_name_fa": "Microsoft DACL می 2018",
+                    "description_fa": "مایکروسافت (2018, May 30) DACL ها و ACE ها Retrieved 19 اوت 2018"
                 }
             ],
             "object_marking_refs": [
@@ -58,7 +67,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "مجوزهای ویندوز",
+            "description_fa": "مخالفان ممکن است مجوزهای فایل یا دایرکتوری را برای جلوگیری از لیست های کنترل دسترسی (ACLs) و دسترسی به فایل های محافظت شده تغییر دهند. [[ویرایش] مجوزهای فایل و دایرکتوری معمولا توسط ACL های پیکربندی شده توسط مالک فایل یا دایرکتوری یا کاربران با مجوز مناسب مدیریت می شوند. پیاده سازی فایل و دایرکتوری ACL با پلتفرم متفاوت است، اما به طور کلی مشخص می کند که کاربران یا گروه ها می توانند چه اقداماتی را انجام دهند (خواندن، نوشتن، اجرا و غیره).\n\nویندوز فایل ها و ACL دایرکتوری را به عنوان لیست های کنترل دسترسی اجباری (DACLs) پیاده سازی می کند. [[ویرایش] همانند ACL استاندارد، DACL ها حساب هایی را شناسایی می کنند که اجازه دارند یا از دسترسی به یک شیء امن محروم هستند. هنگامی که یک تلاش برای دسترسی به یک شی امن انجام می شود، سیستم کنترل دسترسی را در DACL بررسی می کند. اگر یک ورودی مطابقت پیدا شود، دسترسی به جسم اعطا می شود. در غیر این صورت دسترسی رد می شود. [[ویرایش]\n\nمخالفان می توانند با DACL ها با استفاده از دستورات داخلی ویندوز تعامل کنند، مانند 'icacls'،'، 'Ccls'، '، ' takeown' و'trib'، که می تواند اجازه های بالاتر را در فایل ها و پوشه های خاص به دشمنان بدهد. علاوه بر این، [PowerShell] [[[۱۰]] [[۱۰]]] [[۲]]]] [۲]]] [۲]]] [۲]] [۲]]] [۲]]] [۲]]] [۶]]] [۲]]] [۲]]] [۲]] [۲]]] [۲]]] [۲]] [۲]]] [۲] [۲]] [۲] [۲]] [۲]]]]] [۲]] [۲]]]]]] [۲]] [۲]] [۲] [۲]]]]]]]]]]]]] [۲] [۲] [۲] [۲] [۲] [۲] [۲]]]] [۲]]] [۲] [۲]]]] [۲] [۲] [۲]] [۲]]]]]] [۲]]]] [۲] [۲] [۲] [۲] [۲] [۲] [۲]] [۲]]] [۲] [۲]] [۲] [۲] تغییرات فایل و پوشه خاص ممکن است یک گام لازم برای بسیاری از تکنیک ها باشد، مانند ایجاد اصرار از طریق [ویژگی های دسترسی] ([[CTI_PRESERVE_5])، [Boot or Logon Earlyization Scripts] ([CTI_PRESERVE_6])، یا tain/jacking/jacking فایل های دودویی یا فایل های دودویی (Transconfigi_E) (Citation: Hybrid Analysis Icacls1 June 2018) (Citation: Hybrid Analysis Icacls2 May 2018) (Citation: Microsoft DACL May 2018) (Citation: Microsoft Access Control Lists May 2018) https://attack.mitre.org/techniques/T1059/001 https://attack.mitre.org/techniques/T1546/008 https://attack.mitre.org/techniques/T1037 https://attack.mitre.org/techniques/T1574"
         }
     ]
 }

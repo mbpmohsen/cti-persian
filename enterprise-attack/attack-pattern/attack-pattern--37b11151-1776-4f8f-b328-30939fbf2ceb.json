@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1059/002",
-                    "external_id": "T1059.002"
+                    "external_id": "T1059.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Apple AppleScript",
                     "description": "Apple. (2016, January 25). Introduction to AppleScript Language Guide. Retrieved March 28, 2020.",
-                    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html"
+                    "url": "https://developer.apple.com/library/archive/documentation/AppleScript/Conceptual/AppleScriptLangGuide/introduction/ASLR_intro.html",
+                    "source_name_fa": "AppleScript",
+                    "description_fa": "اپل (2016، 25 ژانویه) معرفی راهنمای زبان AppleScript Retrieved 28 مارس 2020"
                 },
                 {
                     "source_name": "SentinelOne macOS Red Team",
                     "description": "Phil Stokes. (2019, December 5). macOS Red Team: Calling Apple APIs Without Building Binaries. Retrieved July 17, 2020.",
-                    "url": "https://www.sentinelone.com/blog/macos-red-team-calling-apple-apis-without-building-binaries/"
+                    "url": "https://www.sentinelone.com/blog/macos-red-team-calling-apple-apis-without-building-binaries/",
+                    "source_name_fa": "Sentinel One macOS تیم سرخ",
+                    "description_fa": "فیل Stokes (2019, دسامبر 5) macOS تیم قرمز: تماس با API های اپل بدون ساختمان Binaries Retrieved 17 July 2020"
                 },
                 {
                     "source_name": "SentinelOne AppleScript",
                     "description": "Phil Stokes. (2020, March 16). How Offensive Actors Use AppleScript For Attacking macOS. Retrieved July 17, 2020.",
-                    "url": "https://www.sentinelone.com/blog/how-offensive-actors-use-applescript-for-attacking-macos/"
+                    "url": "https://www.sentinelone.com/blog/how-offensive-actors-use-applescript-for-attacking-macos/",
+                    "source_name_fa": "AppleScript",
+                    "description_fa": "فیل Stokes (2020, 16 مارس) چگونه بازیگران مهاجم از AppleScript برای حمله به macOS استفاده می کنند. Retrieved 17 July 2020"
                 },
                 {
                     "source_name": "Macro Malware Targets Macs",
                     "description": "Yerko Grbic. (2017, February 14). Macro Malware Targets Macs. Retrieved July 8, 2017.",
-                    "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/macro-malware-targets-macs/"
+                    "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/macro-malware-targets-macs/",
+                    "source_name_fa": "Macro Malware Targets Macs",
+                    "description_fa": "Yerko Grobic (2017، 14 فوریه) Macro Malware Targets Macs Retrieved 8 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2026-05-12T15:12:00.626Z",
             "name": "AppleScript",
-            "description": "Adversaries may abuse AppleScript for execution. AppleScript is a macOS scripting language designed to control applications and parts of the OS via inter-application messages called AppleEvents.(Citation: Apple AppleScript) These AppleEvent messages can be sent independently or easily scripted with AppleScript. These events can locate open windows, send keystrokes, and interact with almost any open application locally or remotely.\n\nScripts can be run from the command-line via <code>osascript /path/to/script</code> or <code>osascript -e \"script here\"</code>. Aside from the command line, scripts can be executed in numerous ways including Mail rules, Calendar.app alarms, and Automator workflows. AppleScripts can also be executed as plain text shell scripts by adding <code>#!/usr/bin/osascript</code> to the start of the script file.(Citation: SentinelOne AppleScript)\n\nAppleScripts do not need to call <code>osascript</code> to execute. However, they may be executed from within mach-O binaries by using the macOS [Native API](https://attack.mitre.org/techniques/T1106)s\u00a0<code>NSAppleScript</code>\u00a0or\u00a0<code>OSAScript</code>, both of which execute code independent of the <code>/usr/bin/osascript</code> command line utility.\n\nAdversaries may abuse AppleScript to execute various behaviors, such as interacting with an open SSH connection, moving to remote machines, and even presenting users with fake dialog boxes. These events cannot start applications remotely (they can start them locally), but they can interact with applications if they're already running remotely. On macOS 10.10 Yosemite and higher, AppleScript has the ability to execute [Native API](https://attack.mitre.org/techniques/T1106)s, which otherwise would require compilation and execution in a mach-O binary file format.(Citation: SentinelOne macOS Red Team) Since this is a scripting language, it can be used to launch more common techniques as well such as a reverse shell via [Python](https://attack.mitre.org/techniques/T1059/006).(Citation: Macro Malware Targets Macs)",
+            "description": "Adversaries may abuse AppleScript for execution. AppleScript is a macOS scripting language designed to control applications and parts of the OS via inter-application messages called AppleEvents.(Citation: Apple AppleScript) These AppleEvent messages can be sent independently or easily scripted with AppleScript. These events can locate open windows, send keystrokes, and interact with almost any open application locally or remotely.\n\nScripts can be run from the command-line via <code>osascript /path/to/script</code> or <code>osascript -e \"script here\"</code>. Aside from the command line, scripts can be executed in numerous ways including Mail rules, Calendar.app alarms, and Automator workflows. AppleScripts can also be executed as plain text shell scripts by adding <code>#!/usr/bin/osascript</code> to the start of the script file.(Citation: SentinelOne AppleScript)\n\nAppleScripts do not need to call <code>osascript</code> to execute. However, they may be executed from within mach-O binaries by using the macOS [Native API](https://attack.mitre.org/techniques/T1106)s <code>NSAppleScript</code> or <code>OSAScript</code>, both of which execute code independent of the <code>/usr/bin/osascript</code> command line utility.\n\nAdversaries may abuse AppleScript to execute various behaviors, such as interacting with an open SSH connection, moving to remote machines, and even presenting users with fake dialog boxes. These events cannot start applications remotely (they can start them locally), but they can interact with applications if they're already running remotely. On macOS 10.10 Yosemite and higher, AppleScript has the ability to execute [Native API](https://attack.mitre.org/techniques/T1106)s, which otherwise would require compilation and execution in a mach-O binary file format.(Citation: SentinelOne macOS Red Team) Since this is a scripting language, it can be used to launch more common techniques as well such as a reverse shell via [Python](https://attack.mitre.org/techniques/T1059/006).(Citation: Macro Malware Targets Macs)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -62,7 +71,9 @@
                 "macOS"
             ],
             "x_mitre_version": "1.3",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "AppleScript",
+            "description_fa": "مجرمان ممکن است از AppleScript برای اجرای استفاده کنند. AppleScript یک زبان اسکریپت نویسی macOS است که برای کنترل برنامه ها و بخش های سیستم عامل از طریق پیام های کاربردی متقابل به نام AppleEvents طراحی شده است. [[ویرایش] این پیام های AppleEvent را می توان به طور مستقل یا به راحتی با AppleScript ارسال کرد. این رویدادها می توانند پنجره های باز را پیدا کنند، کلیدها را ارسال کنند و تقریبا با هر برنامه باز به صورت محلی یا از راه دور ارتباط برقرار کنند.\n\nاز طریق [[رده:رده ها]] یا [[رده شده اند. علاوه بر خط فرمان، اسکریپت ها می توانند به روش های مختلفی از جمله قوانین ایمیل، زنگ تقویم و جریان های کار خودکار اجرا شوند. اپل اسکریپت ها همچنین می توانند به عنوان اسکریپت های متنی ساده با اضافه کردن [CTI_PRESERVE_2] به شروع فایل اسکریپت اجرا شوند.\n\nاپل اسکریپت ها نیازی به تماس با آن ندارند ([۱۰] در این صورت می توان آن ها را با استفاده از برنامه های کاربردی (Native API) و یا [[[[۵]] ([[[۱۰]]] اجرا کرد که هر دو کد مستقل را اجرا می کنند.[۱۰] ابزار خط فرمان\n\nمخالفان ممکن است از اپل اسکریپت برای اجرای رفتارهای مختلف مانند تعامل با اتصال SSH باز، حرکت به دستگاه های دور و حتی ارائه کاربران با جعبه های گفتگوی جعلی استفاده کنند. این رویدادها نمی توانند برنامه های کاربردی را از راه دور شروع کنند (آنها می توانند آنها را به صورت محلی شروع کنند)، اما اگر از راه دور اجرا شوند، می توانند با برنامه های کاربردی ارتباط برقرار کنند. در macOS 10.10 Yosemite و بالاتر، AppleScript توانایی اجرای (Native API) را دارد ([CTI_PRESERVE_12] که در غیر این صورت نیاز به جمع آوری و اجرای در فرمت فایل دودویی mach-O دارد. [[ویرایش] از آنجا که این یک زبان اسکریپت نویسی است، می توان از آن برای راه اندازی تکنیک های رایج تر و همچنین یک پوسته معکوس از طریق [Python] استفاده کرد ([[۱۰] [CTI_PRESERVE_۱۳]). <code>osascript /path/to/script</code> <code>osascript -e \"script here\"</code> <code>#!/usr/bin/osascript</code> <code>osascript</code> <code>NSAppleScript</code> <code>OSAScript</code> <code>/usr/bin/osascript</code> (Citation: Apple AppleScript) (Citation: SentinelOne AppleScript) (Citation: SentinelOne macOS Red Team) (Citation: Macro Malware Targets Macs) https://attack.mitre.org/techniques/T1106 https://attack.mitre.org/techniques/T1106 https://attack.mitre.org/techniques/T1059/006"
         }
     ]
 }

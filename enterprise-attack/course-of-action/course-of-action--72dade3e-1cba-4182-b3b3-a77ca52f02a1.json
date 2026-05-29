@@ -21,14 +21,17 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/M1025",
-                    "external_id": "M1025"
+                    "external_id": "M1025",
+                    "source_name_fa": "حمله mitre"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "x_mitre_attack_spec_version": "3.2.0",
-            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "name_fa": "بهینه سازی فرایند",
+            "description_fa": "یکپارچگی فرآیند خصوصی بر دفاع از فرآیندهای بسیار ممتاز (به عنوان مثال، خدمات سیستم، آنتی ویروس یا فرآیندهای احراز هویت) از دستکاری، تزریق یا سازش توسط دشمنان تمرکز دارد. این فرآیندها اغلب با اجزای بحرانی ارتباط برقرار می کنند و آنها را برای تکنیک هایی مانند تزریق کد، افزایش امتیاز و دستکاری فرآیند هدف قرار می دهند. این کاهش را می توان از طریق اقدامات زیر اجرا کرد:\n\nمکانیسم های فرایند حفاظت شده:\n\n- فعال کردن RunAsPPL در سیستم های ویندوز برای محافظت از LSASS و سایر فرآیندهای حیاتی.\nاستفاده از تغییرات رجیستری برای اجرای تنظیمات فرایند محافظت شده: HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\RunasPPL\\RunasPPL ` `\n\nپیشگیری و حفاظت از حافظه:\n\n- فعال کردن گارد جریان کنترل (CFG)، DEP و ASLR برای محافظت در برابر دستکاری حافظه فرآیند.\n- ابزارهای حفاظت از نقطه انتهایی که به طور فعال تلاش های تزریق فرآیند را مسدود می کنند.\n\nکد ثبت اعتبار:\n\n- پیاده سازی سیاست ها برای کنترل نرم افزار ویندوز Defender (WDAC) یا AppLocker برای اجرای اجرای باینری امضا شده.\nاطمینان حاصل کنید که فرایندهای بحرانی با گواهینامه های معتبر امضا شده اند.\n\nکنترل دسترسی:\n\nاستفاده از DACLs و MIC برای محدود کردن اینکه کاربران و فرآیندها می توانند با فرآیندهای ممتاز ارتباط برقرار کنند.\n- قابلیت های غیر ضروری اشکال زدایی برای فرآیندهای با نقص بالا.\n\nحمایت های هسته ای:\n\nاطمینان حاصل کنید که حفاظت از پچ هسته (PatchGuard) در سیستم های ویندوز فعال می شود.\n- استفاده از SE Linux یا AppArmor در لینوکس برای اجرای سیاست های امنیتی سطح کرنل.\n\n*Tools for Execution*\n\nنور فرآیند محافظت شده (PPL):\n\nRunAsPPL (Windows)\nWindows Defender Credential Guard\n\nCode Integrity و Signing:\n\nWindows Defender Application Control (WDAC)\nAppLocker\nSELinux/AppArmor (لینوکس)\n\nحفاظت از حافظه:\n\nکنترل جریان گارد (CFG)، پیشگیری از اعدام داده (DEP)، ASLR\n\nفرآیند حل و فصل:\n\nFirejail (لینوکس)\nWindows Sandbox\nانزوای مبتنی بر QEMU/KVM\n\nحفاظت از سرطان:\n\n– PatchGuard (Windows Kernel Protection)\nSELinux (کنترل دسترسی اجباری برای لینوکس)\nAppArmor"
         }
     ]
 }

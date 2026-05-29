@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1047",
-                    "external_id": "T1047"
+                    "external_id": "T1047",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "FireEye WMI 2015",
                     "description": "Ballenthin, W., et al. (2015). Windows Management Instrumentation (WMI) Offense, Defense, and Forensics. Retrieved March 30, 2016.",
-                    "url": "https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf"
+                    "url": "https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/wp-windows-management-instrumentation.pdf",
+                    "source_name_fa": "FireEye WMI 2015",
+                    "description_fa": "Ballenthin, W., et al. (2015) ابزار مدیریت ویندوز (WMI) Offense، دفاع و قانونی. Retrieved ۳۰ مارس ۲۰۱۶"
                 },
                 {
                     "source_name": "Mandiant WMI",
                     "description": "Mandiant. (n.d.). Retrieved February 13, 2024.",
-                    "url": "https://www.mandiant.com/resources/reports"
+                    "url": "https://www.mandiant.com/resources/reports",
+                    "source_name_fa": "Mandiant WMI",
+                    "description_fa": "Mandiant Retrieved 13، 2024"
                 },
                 {
                     "source_name": "WMI 6",
                     "description": "Microsoft. (2022, June 13). BlackCat. Retrieved February 13, 2024.",
-                    "url": "https://www.microsoft.com/en-us/security/blog/2022/06/13/the-many-lives-of-blackcat-ransomware/"
+                    "url": "https://www.microsoft.com/en-us/security/blog/2022/06/13/the-many-lives-of-blackcat-ransomware/",
+                    "source_name_fa": "WMI 6",
+                    "description_fa": "مایکروسافت (2022، 13 ژوئن) BlackCat. Retrieved 13، 2024"
                 },
                 {
                     "source_name": "WMI 1-3",
                     "description": "Microsoft. (2023, March 7). Retrieved February 13, 2024.",
-                    "url": "https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page?redirectedfrom=MSDN"
+                    "url": "https://learn.microsoft.com/en-us/windows/win32/wmisdk/wmi-start-page?redirectedfrom=MSDN",
+                    "source_name_fa": "WMI 1",
+                    "description_fa": "مایکروسافت (2023, March 7) Retrieved 13، 2024"
                 },
                 {
                     "source_name": "WMI 7,8",
                     "description": "Microsoft. (2024, January 26). WMIC Deprecation. Retrieved February 13, 2024.",
-                    "url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/wmi-command-line-wmic-utility-deprecation-next-steps/ba-p/4039242"
+                    "url": "https://techcommunity.microsoft.com/t5/windows-it-pro-blog/wmi-command-line-wmic-utility-deprecation-next-steps/ba-p/4039242",
+                    "source_name_fa": "WMI 78",
+                    "description_fa": "مایکروسافت (2024، 26 ژانویه) WMIC Deprecation Retrieved 13، 2024"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.619Z",
             "name": "Windows Management Instrumentation",
-            "description": "Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads. WMI is designed for programmers and is the infrastructure for management data and operations on Windows systems.(Citation: WMI 1-3) WMI is an administration feature that provides a uniform environment to access Windows system components.\n\nThe WMI service enables both local and remote access, though the latter is facilitated by [Remote Services](https://attack.mitre.org/techniques/T1021) such as [Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003) and [Windows Remote Management](https://attack.mitre.org/techniques/T1021/006).(Citation: WMI 1-3) Remote WMI over DCOM operates using port 135, whereas WMI over WinRM operates over port 5985 when using HTTP and 5986 for HTTPS.(Citation: WMI 1-3) (Citation: Mandiant WMI)\n\nAn adversary can use WMI to interact with local and remote systems and use it as a means to execute various behaviors, such as gathering information for [Discovery](https://attack.mitre.org/tactics/TA0007) as well as [Execution](https://attack.mitre.org/tactics/TA0002) of commands and payloads.(Citation: Mandiant WMI) For example, `wmic.exe` can be abused by an adversary to delete shadow copies with the command `wmic.exe Shadowcopy Delete` (i.e., [Inhibit System Recovery](https://attack.mitre.org/techniques/T1490)).(Citation: WMI 6)\n\n**Note:** `wmic.exe` is deprecated as of January of 2024, with the WMIC feature being \u201cdisabled by default\u201d on Windows 11+. WMIC will be removed from subsequent Windows releases and replaced by [PowerShell](https://attack.mitre.org/techniques/T1059/001) as the primary WMI interface.(Citation: WMI 7,8) In addition to PowerShell and tools like `wbemtool.exe`, COM APIs can also be used to programmatically interact with WMI via C++, .NET, VBScript, etc.(Citation: WMI 7,8)",
+            "description": "Adversaries may abuse Windows Management Instrumentation (WMI) to execute malicious commands and payloads. WMI is designed for programmers and is the infrastructure for management data and operations on Windows systems.(Citation: WMI 1-3) WMI is an administration feature that provides a uniform environment to access Windows system components.\n\nThe WMI service enables both local and remote access, though the latter is facilitated by [Remote Services](https://attack.mitre.org/techniques/T1021) such as [Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003) and [Windows Remote Management](https://attack.mitre.org/techniques/T1021/006).(Citation: WMI 1-3) Remote WMI over DCOM operates using port 135, whereas WMI over WinRM operates over port 5985 when using HTTP and 5986 for HTTPS.(Citation: WMI 1-3) (Citation: Mandiant WMI)\n\nAn adversary can use WMI to interact with local and remote systems and use it as a means to execute various behaviors, such as gathering information for [Discovery](https://attack.mitre.org/tactics/TA0007) as well as [Execution](https://attack.mitre.org/tactics/TA0002) of commands and payloads.(Citation: Mandiant WMI) For example, `wmic.exe` can be abused by an adversary to delete shadow copies with the command `wmic.exe Shadowcopy Delete` (i.e., [Inhibit System Recovery](https://attack.mitre.org/techniques/T1490)).(Citation: WMI 6)\n\n**Note:** `wmic.exe` is deprecated as of January of 2024, with the WMIC feature being “disabled by default” on Windows 11+. WMIC will be removed from subsequent Windows releases and replaced by [PowerShell](https://attack.mitre.org/techniques/T1059/001) as the primary WMI interface.(Citation: WMI 7,8) In addition to PowerShell and tools like `wbemtool.exe`, COM APIs can also be used to programmatically interact with WMI via C++, .NET, VBScript, etc.(Citation: WMI 7,8)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -69,7 +80,9 @@
                 "Windows"
             ],
             "x_mitre_version": "1.6",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "ابزار مدیریت ویندوز",
+            "description_fa": "مخالفان ممکن است از ابزار مدیریت ویندوز (WMI) برای اجرای دستورات و محموله های مخرب استفاده کنند. WMI برای برنامه نویسان طراحی شده است و زیرساخت داده های مدیریت و عملیات در سیستم های ویندوز است. [CTI_PRESERVE_0] WMI یک ویژگی مدیریت است که یک محیط یکنواخت برای دسترسی به اجزای سیستم ویندوز فراهم می کند.\n\nدر این میان، هر دو به صورت محلی و دور از دسترس قرار می گیرند، هر چند که از طریق (Remote Services) ([[editI_PRESERVE_8] و (Windows Remote Management) ([ICT_E] = [ICT_ERE_SERV_E_9] و [Windows Remote Management] ([ICT_E_SERV_E] از راه دور WMI بیش از DCOM با استفاده از پورت 135 عمل می کند، در حالی که WMI بیش از WinRM در پورت 5985 در هنگام استفاده از HTTP و 5986 برای HTTPS کار می کند. [[ویرایش]\n\nیک دشمن می تواند از WMI برای تعامل با سیستم های محلی و از راه دور استفاده کند و از آن به عنوان وسیله ای برای اجرای رفتارهای مختلف استفاده کند، مانند جمع آوری اطلاعات برای [Discovery] ([[[CTI_PRESERVE_11] و همچنین [Execution] ([CTI_SERVE_E_12] به عنوان مثال، \"wmic.exe\" می تواند توسط یک دشمن مورد سوء استفاده قرار گیرد تا نسخه های سایه را با دستور \"wmic.exe Shadow copy Delete\" (به عنوان مثال، [Inhibit System Recovery) حذف کند.\n\nتوجه: ** \"wmic.exe\" از ژانویه سال ۲۰۲۴ با ویژگی WMIC \"به طور پیش فرض\" در ویندوز 11 + حذف شده است. WMIC از نسخه های بعدی ویندوز حذف می شود و با [PowerShell] جایگزین می شود ([CTI_PRESERVE_14] به عنوان رابط اصلی WMI. [[ویرایش] علاوه بر PowerShell و ابزارهایی مانند “wbemtool.exe”، API های COM نیز می توانند برای تعامل با WMI از طریق ++C، .NET، VBScript و غیره استفاده شوند. (Citation: WMI 1-3) (Citation: WMI 1-3) (Citation: WMI 1-3) (Citation: Mandiant WMI) (Citation: Mandiant WMI) (Citation: WMI 6) (Citation: WMI 7,8) (Citation: WMI 7,8) https://attack.mitre.org/techniques/T1021 https://attack.mitre.org/techniques/T1021/003 https://attack.mitre.org/techniques/T1021/006 https://attack.mitre.org/tactics/TA0007 https://attack.mitre.org/tactics/TA0002 https://attack.mitre.org/techniques/T1490 https://attack.mitre.org/techniques/T1059/001"
         }
     ]
 }

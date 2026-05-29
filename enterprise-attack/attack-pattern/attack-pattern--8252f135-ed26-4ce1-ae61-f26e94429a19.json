@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1559/003",
-                    "external_id": "T1559.003"
+                    "external_id": "T1559.003",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "creatingXPCservices",
                     "description": "Apple. (2016, September 9). Creating XPC Services. Retrieved April 19, 2022.",
-                    "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingXPCServices.html#//apple_ref/doc/uid/10000172i-SW6-SW1"
+                    "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingXPCServices.html#//apple_ref/doc/uid/10000172i-SW6-SW1",
+                    "source_name_fa": "ایجاد XPCservices",
+                    "description_fa": "اپل (2016، 9) ایجاد خدمات XPC Retrieved ۱۹۲۲."
                 },
                 {
                     "source_name": "Designing Daemons Apple Dev",
                     "description": "Apple. (n.d.). Retrieved October 12, 2021.",
-                    "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/DesigningDaemons.html"
+                    "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/DesigningDaemons.html",
+                    "source_name_fa": "طراحی Daemons Apple Dev",
+                    "description_fa": "اپل (n.d.) Retrieved 12 اکتبر 2021."
                 },
                 {
                     "source_name": "CVMServer Vuln",
                     "description": "Mickey Jin. (2021, June 3). CVE-2021-30724: CVMServer Vulnerability in macOS and iOS. Retrieved October 12, 2021.",
-                    "url": "https://www.trendmicro.com/en_us/research/21/f/CVE-2021-30724_CVMServer_Vulnerability_in_macOS_and_iOS.html"
+                    "url": "https://www.trendmicro.com/en_us/research/21/f/CVE-2021-30724_CVMServer_Vulnerability_in_macOS_and_iOS.html",
+                    "source_name_fa": "CVMServer Vuln",
+                    "description_fa": "میکی جین (۲۰۲۱)، ژوئن ۳) CVE-2021-12424: CVM آسیب پذیری سرور در macOS و iOS Retrieved 12 اکتبر 2021."
                 },
                 {
                     "source_name": "Learn XPC Exploitation",
-                    "description": "Wojciech Regu\u0142a. (2020, June 29). Learn XPC exploitation. Retrieved October 12, 2021.",
-                    "url": "https://wojciechregula.blog/post/learn-xpc-exploitation-part-3-code-injections/"
+                    "description": "Wojciech Reguła. (2020, June 29). Learn XPC exploitation. Retrieved October 12, 2021.",
+                    "url": "https://wojciechregula.blog/post/learn-xpc-exploitation-part-3-code-injections/",
+                    "source_name_fa": "یادگیری XPC Exploitation",
+                    "description_fa": "Wojciech Reguła یادگیری بهره برداری XPC Retrieved 12 اکتبر 2021."
                 }
             ],
             "object_marking_refs": [
@@ -61,7 +70,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "خدمات XPC",
+            "description_fa": "مخالفان می توانند محتوای مخرب را به سرویس XPC برای اجرای کد محلی ارائه دهند. macOS از سرویس های XPC برای ارتباطات بین فرآیند اساسی بین فرآیندهای مختلف استفاده می کند، مانند بین سرویس XPC daemon و ابزار کمکی ممتاز شخص ثالث. برنامه ها می توانند پیام ها را به سرویس XPC daemon ارسال کنند که به عنوان ریشه اجرا می شود، با استفاده از سرویس XPC سطح پایین (CTI_PRESERVE_0) یا سطح بالا (CTI_PRESERVE) برای رسیدگی به وظایفی که نیاز به امتیازات بالا (مانند اتصالات شبکه) دارند. برنامه های کاربردی مسئول ارائه تعریف پروتکل هستند که به عنوان یک طرح از خدمات XPC عمل می کند. توسعه دهندگان به طور معمول از خدمات XPC برای ارائه ثبات برنامه ها و جدایی امتیاز بین مشتری برنامه و daemon استفاده می کنند.[۱۰] [CTI_PRESERVE_۳]\n\nمخالفان می توانند از خدمات XPC برای اجرای محتوای مخرب استفاده کنند. درخواست برای اجرای مخرب را می توان از طریق سرویس های XPC درخواست کرد.[۱۰] [CTI_PRESERVE_۴] این همچنین ممکن است شامل شناسایی و سوء استفاده از اعتبار مشتری XPC نامناسب و / یا عدم اطمینان از پارامترهای ورودی برای انجام (Exploitation for Privilege Escalation) ([CTI_PRESERVE_6] باشد. <code>C API</code> <code>NSXPCConnection API</code> (Citation: creatingXPCservices) (Citation: Designing Daemons Apple Dev) (Citation: CVMServer Vuln) (Citation: Learn XPC Exploitation) https://attack.mitre.org/techniques/T1068"
         }
     ]
 }

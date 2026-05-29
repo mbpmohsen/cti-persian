@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1165",
-                    "external_id": "T1165"
+                    "external_id": "T1165",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Startup Items",
                     "description": "Apple. (2016, September 13). Startup Items. Retrieved July 11, 2017.",
-                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/StartupItems.html"
+                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/StartupItems.html",
+                    "source_name_fa": "گزینه های Startup",
+                    "description_fa": "اپل (2016، 13 سپتامبر) آیتم های راه اندازی Retrieved 11 ژوئیه 2017"
                 },
                 {
                     "source_name": "Methods of Mac Malware Persistence",
                     "description": "Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "روش های Mac Malware Pertin",
+                    "description_fa": "پاتریک واردل (2014, سپتامبر) روش های بدافزار بر روی Mac OS X Retrieved 5 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2025-10-24T17:48:34.254Z",
             "name": "Startup Items",
-            "description": "Per Apple\u2019s documentation, startup items execute during the final phase of the boot process and contain shell scripts or other executable files along with configuration information used by the system to determine the execution order for all startup items (Citation: Startup Items). This is technically a deprecated version (superseded by Launch Daemons), and thus the appropriate folder, <code>/Library/StartupItems</code> isn\u2019t guaranteed to exist on the system by default, but does appear to exist by default on macOS Sierra. A startup item is a directory whose executable and configuration property list (plist), <code>StartupParameters.plist</code>, reside in the top-level directory. \n\nAn adversary can create the appropriate folders/files in the StartupItems directory to register their own persistence mechanism (Citation: Methods of Mac Malware Persistence). Additionally, since StartupItems run during the bootup phase of macOS, they will run as root. If an adversary is able to modify an existing Startup Item, then they will be able to Privilege Escalate as well.",
+            "description": "Per Apple’s documentation, startup items execute during the final phase of the boot process and contain shell scripts or other executable files along with configuration information used by the system to determine the execution order for all startup items (Citation: Startup Items). This is technically a deprecated version (superseded by Launch Daemons), and thus the appropriate folder, <code>/Library/StartupItems</code> isn’t guaranteed to exist on the system by default, but does appear to exist by default on macOS Sierra. A startup item is a directory whose executable and configuration property list (plist), <code>StartupParameters.plist</code>, reside in the top-level directory. \n\nAn adversary can create the appropriate folders/files in the StartupItems directory to register their own persistence mechanism (Citation: Methods of Mac Malware Persistence). Additionally, since StartupItems run during the bootup phase of macOS, they will run as root. If an adversary is able to modify an existing Startup Item, then they will be able to Privilege Escalate as well.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -52,7 +57,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "گزینه های Startup",
+            "description_fa": "بر اساس مستندات اپل، اقلام استارت آپ در مرحله نهایی فرآیند بوت اجرا می شوند و شامل اسکریپت های پوسته یا سایر فایل های اجرایی همراه با اطلاعات پیکربندی مورد استفاده توسط سیستم برای تعیین سفارش اعدام برای همه اقلام استارت آپ (CTI_PRESERVE_2) هستند. این نسخه از نظر فنی یک نسخه غیر قابل پیش بینی است (بر اساس راه اندازی Daemons)، و در نتیجه پوشه مناسب، [CTI_PRESERVE_0] به طور پیش فرض بر روی سیستم وجود ندارد، اما به نظر می رسد به طور پیش فرض در macOS Sierra وجود دارد. یک آیتم استارت آپ یک دایرکتوری است که لیست مالکیت اجرایی و پیکربندی آن (plist)، [CTI_PRESERVE] است، در دایرکتوری سطح بالا قرار دارد.\n\nیک دشمن می تواند پوشه ها و فایل های مناسب را در دایرکتوری StartupItems ایجاد کند تا مکانیسم پایداری خود را ثبت کند. [CTI_PRESERVE_3] علاوه بر این، از زمانی که StartupItems در طول فاز بوت شدن macOS اجرا می شود، آنها به عنوان ریشه اجرا می شوند. اگر یک دشمن بتواند یک آیتم استارت آپ موجود را تغییر دهد، آن ها نیز قادر خواهند بود که به صورت خصوصی بالا بروند. <code>/Library/StartupItems</code> <code>StartupParameters.plist</code> (Citation: Startup Items) (Citation: Methods of Mac Malware Persistence)"
         }
     ]
 }

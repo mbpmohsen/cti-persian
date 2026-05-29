@@ -21,14 +21,17 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/M1034",
-                    "external_id": "M1034"
+                    "external_id": "M1034",
+                    "source_name_fa": "حمله mitre"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "x_mitre_attack_spec_version": "3.2.0",
-            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "name_fa": "محدودیت نصب سخت افزار",
+            "description_fa": "جلوگیری از کاربران یا گروه های غیر مجاز از نصب یا استفاده از سخت افزار، مانند درایوهای خارجی، دستگاه های محیطی و یا اجزای سخت افزار داخلی تایید نشده، با اجرای سیاست های استفاده از سخت افزار و کنترل های فنی. این شامل پورت های USB، محدود کردن نصب راننده و پیاده سازی ابزار امنیتی endpoint برای نظارت و مسدود کردن دستگاه های تایید نشده است. این کاهش را می توان از طریق اقدامات زیر اجرا کرد:\n\nپورت های USB و سیاست های نصب سخت افزار:\n\n– استفاده از اشیاء خط مشی گروه (GPO) برای غیرفعال کردن دستگاه های ذخیره سازی انبوه USB:\n- به پیکربندی کامپیوتر > قالب های اداری > سیستم > دسترسی ذخیره سازی قابل دسترس\n- Deny نوشتن و خواندن دسترسی به دستگاه های USB\nدستگاه های تایید شده با استفاده از شماره های سریال منحصر به فرد از طریق سیاست های نصب دستگاه ویندوز\n\nگزینه های Endpoint Protection و Device Control Solutions\n\nاستفاده از ابزار مانند Microsoft Defender برای Endpoint، Symantec Endpoint Protection یا Tanium برای نظارت و مسدود کردن سخت افزار غیر مجاز.\n- پیاده سازی سیستم کنترل دستگاه برای اجازه دادن به انواع سخت افزار خاص (به عنوان مثال، صفحه کلید، موش) و مسدود کردن دیگران.\n\nHarden BIOS/UEFI و System Platform\n\n– پسوردهای قوی برای دسترسی به BIOS/UEFI تنظیم کنید.\n- فعال کردن بوت امن برای جلوگیری از اجزای سخت افزاری سرکش از بارگیری سیستم عامل های غیر مجاز.\n\nمحدود کردن دستگاه ها و رانندگان:\n\nاستفاده از سیستم های Windows Device Manager برای مسدود کردن نصب رانندگان تایید نشده\n- نظارت بر تلاش های نصب سخت افزار از طریق ابزار نظارت بر نقطه نهایی\n\nبلوتوث و سخت افزار بی سیم:\n\nاستفاده از ابزار GPO یا MDM برای غیرفعال کردن بلوتوث و رابط های Wi-Fi در سراسر سیستم.\nمحدود کردن جفت سخت افزار فقط به دستگاه های تایید شده.\n\nورود و نظارت:\n\n- ورود به رویدادهای نصب سخت افزار در Windows Event Logs (حتی ID 20001 برای Device Setup Manager)\nاستفاده از راه حل SIEM (به عنوان مثال Splunk، Elastic Stack) برای شناسایی فعالیت های نصب سخت افزار غیر مجاز.\n\n*Tools for Execution*\n\nUSB و Device Control :\n\nMicrosoft Group Policy Objects (GPO)\nMicrosoft Defender برای Endpoint\nSymantec Endpoint Protection\nکنترل دستگاه McAfee\n\nنظارت نهایی:\n\nEDRs\nOSSEC (Open Source Host-based IDS)\n\nسخت افزار Whitelisting:\n\n- BitLocker برای درایوهای خارجی (Windows)\nسیستم های نصب دستگاه ویندوز\nکنترل دستگاه\n\nBIOS/UEFI امنیت:\n\nامن بوت (Windows/ Linux)\nابزار مدیریت سیستم عامل مانند Dell Command Update یا HP مطمئنا استارت"
         }
     ]
 }

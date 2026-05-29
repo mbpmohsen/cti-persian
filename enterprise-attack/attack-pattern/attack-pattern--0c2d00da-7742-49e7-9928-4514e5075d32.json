@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1574/007",
-                    "external_id": "T1574.007"
+                    "external_id": "T1574.007",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Elastic Rules macOS launchctl 2022",
                     "description": "Elastic Security 7.17. (2022, February 1). Modification of Environment Variable via Launchctl. Retrieved September 28, 2023.",
-                    "url": "https://www.elastic.co/guide/en/security/7.17/prebuilt-rule-7-16-4-modification-of-environment-variable-via-launchctl.html"
+                    "url": "https://www.elastic.co/guide/en/security/7.17/prebuilt-rule-7-16-4-modification-of-environment-variable-via-launchctl.html",
+                    "source_name_fa": "Elastic Rules macOS Launchctl 2022",
+                    "description_fa": "Elastic Security 7.17. (2022, فوریه 1) تغییرات محیط زیست از طریق Launchctl Retrieved 28 سپتامبر 2023."
                 },
                 {
                     "source_name": "ExpressVPN PATH env Windows 2021",
                     "description": "ExpressVPN Security Team. (2021, November 16). Cybersecurity lessons: A PATH vulnerability in Windows. Retrieved September 28, 2023.",
-                    "url": "https://www.expressvpn.com/blog/cybersecurity-lessons-a-path-vulnerability-in-windows/"
+                    "url": "https://www.expressvpn.com/blog/cybersecurity-lessons-a-path-vulnerability-in-windows/",
+                    "source_name_fa": "ExpressVPN PATH Inv Windows 2021",
+                    "description_fa": "ExpressVPN تیم امنیتی (۲۰۲۱، ۱۶ نوامبر) درس های امنیت سایبری: آسیب پذیری PATH در ویندوز Retrieved 28 سپتامبر 2023."
                 },
                 {
                     "source_name": "uptycs Fake POC linux malware 2023",
                     "description": "Nischay Hegde and Siddartha Malladi. (2023, July 12). PoC Exploit: Fake Proof of Concept with Backdoor Malware. Retrieved September 28, 2023.",
-                    "url": "https://www.uptycs.com/blog/new-poc-exploit-backdoor-malware"
+                    "url": "https://www.uptycs.com/blog/new-poc-exploit-backdoor-malware",
+                    "source_name_fa": "سیستم عامل های جعلی POC linux 2023",
+                    "description_fa": "Nischay Hegde و Siddartha Malladi (2023، 12 ژوئیه) PoC Exploit: اثبات جعلی مفهوم با بدافزار Backdoor Retrieved 28 سپتامبر 2023."
                 },
                 {
                     "source_name": "nixCraft macOS PATH variables",
-                    "description": "Vivek Gite. (2023, August 22). MacOS \u2013 Set / Change $PATH Variable Command. Retrieved September 28, 2023.",
-                    "url": "https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/"
+                    "description": "Vivek Gite. (2023, August 22). MacOS – Set / Change $PATH Variable Command. Retrieved September 28, 2023.",
+                    "url": "https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/",
+                    "source_name_fa": "متغیرهای macOS PATH",
+                    "description_fa": "Vivek Gite (2023، 22 آگوست) MacOS – Set / Change $PATH Variable Command Retrieved 28 سپتامبر 2023."
                 }
             ],
             "object_marking_refs": [
@@ -68,7 +77,9 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "دانلود بازی Path Interception از PATH Environment Variable",
+            "description_fa": "مخالفان ممکن است محموله های مخرب خود را با ربودن متغیرهای محیط زیست مورد استفاده برای بارگذاری کتابخانه ها اجرا کنند. متغیر محیط PATH شامل لیستی از دایرکتوری ها (کاربر و سیستم) است که سیستم عامل به طور پیوسته در جستجوی باینری که از یک اسکریپت یا خط فرمان نامیده می شود جستجو می کند.\n\nمخالفان می توانند یک برنامه مخرب را در یک ورودی قبلی در فهرست دایرکتوری های ذخیره شده در متغیر محیط PATH قرار دهند، که منجر به اجرای سیستم عامل در اجرای باینری مخرب به جای باینری مشروع زمانی که آن را به طور متوالی از طریق لیست PATH جستجو می کند.\n\nبه عنوان مثال، در ویندوز اگر یک دشمن یک برنامه مخرب به نام \"net.exe\" را در \"C:\\example Path\" قرار دهد، که به طور پیش فرض پیش فرض \"C:\\Windows\\system32\\net.exe\" را در متغیر محیط زیست PATH اجرا می کند، زمانی که \"net\" از خط فرمان اجرا می شود: \"example\" مسیر به جای سیستم قانونی \"Cexe\" سیستم اجرایی \". برخی از روش های اجرای یک برنامه به متغیر محیط زیست PATH متکی است تا مکان هایی را که در مسیر برنامه جستجو می شوند، مانند اجرای برنامه ها از یک [Command and Scripting Interpreter] ([CTI_PRESERVE_4] مورد بررسی قرار دهد.\n\nهمچنین ممکن است به طور مستقیم متغیرPATH $ را تغییر دهد که دایرکتوری ها را برای جستجو مشخص می کند. یک دشمن می تواند متغیر \"PATH\" $ را تغییر دهد تا به یک دایرکتوری که آنها دسترسی به نوشتن. هنگامی که یک برنامه با استفاده از متغیرPATH $ نامیده می شود، سیستم عامل دایرکتوری مشخص را جستجو می کند و باینری مخرب را اجرا می کند. در macOS نیز می توان این کار را با تغییر متغیر HOME $ انجام داد. این متغیر ها را می توان با استفاده از خط فرمان اصلاح کرد، پرتاب (Unix Shell Configuration Modification) ([CTI_PRESERVE_5] یا اصلاح محتوای پوشه @/etc/etc/paths.d. (Citation: ExpressVPN PATH env Windows 2021) (Citation: uptycs Fake POC linux malware 2023) (Citation: nixCraft macOS PATH variables) (Citation: Elastic Rules macOS launchctl 2022) https://attack.mitre.org/techniques/T1059 https://attack.mitre.org/techniques/T1546/004"
         }
     ]
 }

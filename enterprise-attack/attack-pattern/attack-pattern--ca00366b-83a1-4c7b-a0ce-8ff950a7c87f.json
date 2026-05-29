@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1578/005",
-                    "external_id": "T1578.005"
+                    "external_id": "T1578.005",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Microsoft Cryptojacking 2023",
                     "description": "Microsoft Threat Intelligence. (2023, July 25). Cryptojacking: Understanding and defending against cloud compute resource abuse. Retrieved September 5, 2023.",
-                    "url": "https://www.microsoft.com/en-us/security/blog/2023/07/25/cryptojacking-understanding-and-defending-against-cloud-compute-resource-abuse/"
+                    "url": "https://www.microsoft.com/en-us/security/blog/2023/07/25/cryptojacking-understanding-and-defending-against-cloud-compute-resource-abuse/",
+                    "source_name_fa": "Microsoft Cryptojacking 2023",
+                    "description_fa": "Microsoft Threat Intelligence (۲۰۲۳، ۲۵ ژوئیه) Cryptojacking: درک و دفاع از سوء استفاده از منابع ابری Retrieved 5، 2023."
                 },
                 {
                     "source_name": "Microsoft Azure Policy",
                     "description": "Microsoft. (2023, August 30). Azure Policy built-in policy definitions. Retrieved September 5, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/azure/governance/policy/samples/built-in-policies#compute"
+                    "url": "https://learn.microsoft.com/en-us/azure/governance/policy/samples/built-in-policies#compute",
+                    "source_name_fa": "Microsoft Azure Policy",
+                    "description_fa": "مایکروسافت (2023، 30 آگوست) سیاست های ساخت و ساز در تعاریف سیاست Retrieved 5، 2023."
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2026-05-12T15:12:00.716Z",
             "name": "Modify Cloud Compute Configurations",
-            "description": "Adversaries may modify settings that directly affect the size, locations, and resources available to cloud compute infrastructure in order to evade defenses. These settings may include service quotas, subscription associations, tenant-wide policies, or other configurations that impact available compute. Such modifications may allow adversaries to abuse the victim\u2019s compute resources to achieve their goals, potentially without affecting the execution of running instances and/or revealing their activities to the victim.\n\nFor example, cloud providers often limit customer usage of compute resources via quotas. Customers may request adjustments to these quotas to support increased computing needs, though these adjustments may require approval from the cloud provider. Adversaries who compromise a cloud environment may similarly request quota adjustments in order to support their activities, such as enabling additional [Resource Hijacking](https://attack.mitre.org/techniques/T1496) without raising suspicion by using up a victim\u2019s entire quota.(Citation: Microsoft Cryptojacking 2023) Adversaries may also increase allowed resource usage by modifying any tenant-wide policies that limit the sizes of deployed virtual machines.(Citation: Microsoft Azure Policy)\n\nAdversaries may also modify settings that affect where cloud resources can be deployed, such as enabling [Unused/Unsupported Cloud Regions](https://attack.mitre.org/techniques/T1535). ",
+            "description": "Adversaries may modify settings that directly affect the size, locations, and resources available to cloud compute infrastructure in order to evade defenses. These settings may include service quotas, subscription associations, tenant-wide policies, or other configurations that impact available compute. Such modifications may allow adversaries to abuse the victim’s compute resources to achieve their goals, potentially without affecting the execution of running instances and/or revealing their activities to the victim.\n\nFor example, cloud providers often limit customer usage of compute resources via quotas. Customers may request adjustments to these quotas to support increased computing needs, though these adjustments may require approval from the cloud provider. Adversaries who compromise a cloud environment may similarly request quota adjustments in order to support their activities, such as enabling additional [Resource Hijacking](https://attack.mitre.org/techniques/T1496) without raising suspicion by using up a victim’s entire quota.(Citation: Microsoft Cryptojacking 2023) Adversaries may also increase allowed resource usage by modifying any tenant-wide policies that limit the sizes of deployed virtual machines.(Citation: Microsoft Azure Policy)\n\nAdversaries may also modify settings that affect where cloud resources can be deployed, such as enabling [Unused/Unsupported Cloud Regions](https://attack.mitre.org/techniques/T1535). ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -52,7 +57,9 @@
             "x_mitre_platforms": [
                 "IaaS"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "تغییرات Cloud Compute Configuration",
+            "description_fa": "مخالفان ممکن است تنظیماتی را تغییر دهند که به طور مستقیم بر اندازه، مکان ها و منابع موجود در زیرساخت های محاسبه ابری تأثیر می گذارد تا از دفاع جلوگیری کنند. این تنظیمات ممکن است شامل سهمیه خدمات، انجمن های اشتراک، سیاست های گسترده مستاجر یا تنظیمات دیگر باشد که بر محاسبات موجود تاثیر می گذارد. چنین تغییراتی ممکن است به دشمنان اجازه دهد تا از منابع محاسباتی قربانی برای دستیابی به اهداف خود سوء استفاده کنند، به طور بالقوه بدون تاثیر بر اجرای پرونده های اجرا و یا افشای فعالیت های خود به قربانی.\n\nبه عنوان مثال، ارائه دهندگان ابر اغلب استفاده مشتری از منابع محاسبه را از طریق سهمیه محدود می کنند. مشتریان ممکن است تغییراتی را برای حمایت از نیازهای محاسباتی افزایش دهند، اگرچه این تنظیمات ممکن است نیاز به تایید از ارائه دهنده ابر داشته باشد. کسانی که یک محیط ابری را به خطر می اندازند ممکن است به طور مشابه تغییرات سهمیه ای را برای حمایت از فعالیت های خود درخواست کنند، مانند امکان استفاده از کل سهمیه قربانی ([I_PRESERVE_2] بدون استفاده از سوء ظن و تردید. مخالفان همچنین ممکن است استفاده از منابع مجاز را با تغییر هر گونه سیاست در سراسر کشور که اندازه دستگاه های مجازی مستقر را محدود می کند، افزایش دهند.\n\nهمچنین ممکن است تنظیماتی را تغییر دهند که بر منابع ابری تأثیر می گذارد، مانند فعال کردن مناطق ابر پشتیبانی نشده ([CTI_PRESERVE_3]. (Citation: Microsoft Cryptojacking 2023) (Citation: Microsoft Azure Policy) https://attack.mitre.org/techniques/T1496 https://attack.mitre.org/techniques/T1535"
         }
     ]
 }

@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1134",
-                    "external_id": "T1134"
+                    "external_id": "T1134",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Pentestlab Token Manipulation",
                     "description": "netbiosX. (2017, April 3). Token Manipulation. Retrieved April 21, 2017.",
-                    "url": "https://pentestlab.blog/2017/04/03/token-manipulation/"
+                    "url": "https://pentestlab.blog/2017/04/03/token-manipulation/",
+                    "source_name_fa": "Pentestlab Token Manipulation",
+                    "description_fa": "NetbiosX (2017، آوریل 3) برچسب ها: Token Manipulation Retrieved 21 آوریل 2017"
                 }
             ],
             "object_marking_refs": [
@@ -53,7 +56,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "دسترسی به Token Manipulation",
+            "description_fa": "مخالفان ممکن است توکن های دسترسی را تغییر دهند تا تحت یک زمینه امنیتی کاربر یا سیستم مختلف برای انجام اقدامات و دور زدن کنترل دسترسی کار کنند. ویندوز از توکن های دسترسی برای تعیین مالکیت یک فرآیند دویدن استفاده می کند. یک کاربر می تواند توکن های دسترسی را دستکاری کند تا یک فرآیند دویدن به نظر برسد که کودک یک فرآیند متفاوت است یا متعلق به کسی غیر از کاربر است که فرآیند را آغاز کرده است. هنگامی که این اتفاق می افتد، فرآیند نیز در زمینه امنیتی مرتبط با توکن جدید انجام می شود.\n\nیک دشمن می تواند از توابع Windows API برای کپی کردن توکن های دسترسی از فرآیندهای موجود استفاده کند؛ این به عنوان سرقت توکن شناخته می شود. این نشانه ها را می توان به یک فرایند موجود (به عنوان مثال، [معجزه] / سرقت ([[CTI_PRESERVE_2]) اعمال کرد و یا برای ایجاد یک فرایند جدید (به عنوان مثال [Create Process with Token] ([CTI_PREE_3] استفاده کرد. یک دشمن باید در حال حاضر در یک زمینه کاربر ممتاز (به عنوان مثال مدیر) برای سرقت یک توکن باشد. با این حال، دشمنان معمولا از سرقت توکن استفاده می کنند تا زمینه امنیتی خود را از سطح مدیر تا سطح سیستم بالا ببرند. سپس یک دشمن می تواند از یک توکن برای تأیید سیستم از راه دور به عنوان حساب برای آن توکن استفاده کند اگر حساب دارای مجوز مناسب در سیستم از راه دور باشد. [[ویرایش]\n\nهر کاربر استاندارد می تواند از دستور [CTI_PRESERVE_0] و توابع Windows API برای ایجاد توکن های غیر شخصی استفاده کند؛ نیازی به دسترسی به حساب مدیر ندارد. همچنین مکانیسم های دیگری مانند Active Directory وجود دارد که می تواند برای تغییر توکن های دسترسی استفاده شود. <code>runas</code> (Citation: Pentestlab Token Manipulation) https://attack.mitre.org/techniques/T1134/001 https://attack.mitre.org/techniques/T1134/002"
         }
     ]
 }

@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1505/001",
-                    "external_id": "T1505.001"
+                    "external_id": "T1505.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Microsoft CLR Integration 2017",
                     "description": "Microsoft. (2017, June 19). Common Language Runtime Integration. Retrieved July 8, 2019.",
-                    "url": "https://docs.microsoft.com/en-us/sql/relational-databases/clr-integration/common-language-runtime-integration-overview?view=sql-server-2017"
+                    "url": "https://docs.microsoft.com/en-us/sql/relational-databases/clr-integration/common-language-runtime-integration-overview?view=sql-server-2017",
+                    "source_name_fa": "Microsoft CLR Integration 2017",
+                    "description_fa": "مایکروسافت (2017، 19 ژوئن) ادغام مشترک زبان زمان Retrieved 8 ژوئیه 2019"
                 },
                 {
                     "source_name": "Microsoft xp_cmdshell 2017",
                     "description": "Microsoft. (2017, March 15). xp_cmdshell (Transact-SQL). Retrieved September 9, 2019.",
-                    "url": "https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql?view=sql-server-2017"
+                    "url": "https://docs.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql?view=sql-server-2017",
+                    "source_name_fa": "Microsoft xp_cmdshell 2017",
+                    "description_fa": "مایکروسافت (2017، 15 مارس) xp_cmdshell (Transact-SQL) Retrieved 9 سپتامبر 2019"
                 },
                 {
                     "source_name": "Kaspersky MSSQL Aug 2019",
                     "description": "Plakhov, A., Sitchikhin, D. (2019, August 22). Agent 1433: remote attack on Microsoft SQL Server. Retrieved September 4, 2019.",
-                    "url": "https://securelist.com/malicious-tasks-in-ms-sql-server/92167/"
+                    "url": "https://securelist.com/malicious-tasks-in-ms-sql-server/92167/",
+                    "source_name_fa": "Kaspersky MSSQL آگوست 2019",
+                    "description_fa": "Plakov، A.، Cychikhin، D. (2019، 22 آگوست) عامل 1433: حمله از راه دور به Microsoft SQL Server Retrieved 4 سپتامبر 2019"
                 },
                 {
                     "source_name": "NetSPI Startup Stored Procedures",
-                    "description": "Sutherland, S. (2016, March 7). Maintaining Persistence via SQL Server \u2013 Part 1: Startup Stored Procedures. Retrieved September 12, 2024.",
-                    "url": "https://www.netspi.com/blog/technical-blog/network-penetration-testing/sql-server-persistence-part-1-startup-stored-procedures/"
+                    "description": "Sutherland, S. (2016, March 7). Maintaining Persistence via SQL Server – Part 1: Startup Stored Procedures. Retrieved September 12, 2024.",
+                    "url": "https://www.netspi.com/blog/technical-blog/network-penetration-testing/sql-server-persistence-part-1-startup-stored-procedures/",
+                    "source_name_fa": "NetSPI Startup Stored Methods",
+                    "description_fa": "Sutherland، S. 2016، مارس 7) حفظ تعهد از طریق SQL Server - بخش 1: راه اندازی راه اندازی روش های ذخیره سازی. Retrieved 12 سپتامبر 2024"
                 },
                 {
                     "source_name": "NetSPI SQL Server CLR",
                     "description": "Sutherland, S. (2017, July 13). Attacking SQL Server CLR Assemblies. Retrieved September 12, 2024.",
-                    "url": "https://www.netspi.com/blog/technical-blog/adversary-simulation/attacking-sql-server-clr-assemblies/"
+                    "url": "https://www.netspi.com/blog/technical-blog/adversary-simulation/attacking-sql-server-clr-assemblies/",
+                    "source_name_fa": "NetSPI SQL Server CLR",
+                    "description_fa": "Sutherland، S. (2017، 13 ژوئیه) حمله به SQL Server CLRAssemblies Retrieved 12 سپتامبر 2024"
                 }
             ],
             "object_marking_refs": [
@@ -69,7 +80,9 @@
                 "Windows",
                 "Linux"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "روش های SQL Stored",
+            "description_fa": "مخالفان ممکن است از روش های ذخیره شده SQL برای ایجاد دسترسی مداوم به سیستم ها استفاده کنند. روش های ذخیره سازی SQL کدی هستند که می توانند ذخیره شوند و دوباره استفاده شوند تا کاربران پایگاه داده وقت خود را برای بازنویسی اغلب از SQL Ques استفاده نکنند. روش های ذخیره شده را می توان از طریق اظهارات SQL به پایگاه داده با استفاده از نام روش یا از طریق رویدادهای تعریف شده (به عنوان مثال هنگامی که یک برنامه سرور SQL شروع / شروع می شود) استفاده کرد.\n\nمجرمان ممکن است روش های ذخیره سازی مخرب را ایجاد کنند که می توانند مکانیسم پایداری را در سرورهای پایگاه داده SQL ارائه دهند.[۱۰] [CTI_PRESERVE] برای اجرای دستورات سیستم عامل از طریق سینتکس SQL ممکن است لازم باشد که قابلیت های اضافی مانند xp_cmdshell for MSSQL Server را فعال کند.[۱۰] [CTI_PRESERVE_۲][۱۰]\n\nMicrosoft SQL سرور می تواند ادغام زبان رایج (CLR) را فعال کند. با فعال سازی CLR، توسعه دهندگان برنامه می توانند روش های ذخیره شده را با استفاده از هر گونه. NET Framework Language (به عنوان مثال VB.NET، C# و غیره)[[CTI_PRESERVE_5] مخالفان ممکن است مجموعه های CLR را ایجاد یا اصلاح کنند که با روش های ذخیره شده مرتبط هستند زیرا این مجموعه های CLR می توانند برای اجرای دستورات دلخواه ساخته شوند. [[ویرایش] (Citation: NetSPI Startup Stored Procedures) (Citation: Kaspersky MSSQL Aug 2019) (Citation: NetSPI Startup Stored Procedures) (Citation: Kaspersky MSSQL Aug 2019) (Citation: Microsoft xp_cmdshell 2017) (Citation: Microsoft CLR Integration 2017) (Citation: NetSPI SQL Server CLR)"
         }
     ]
 }

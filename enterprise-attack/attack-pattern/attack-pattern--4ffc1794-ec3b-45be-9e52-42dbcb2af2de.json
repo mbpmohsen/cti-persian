@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1599/001",
-                    "external_id": "T1599.001"
+                    "external_id": "T1599.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "RFC1918",
                     "description": "IETF Network Working Group. (1996, February). Address Allocation for Private Internets. Retrieved October 20, 2020.",
-                    "url": "https://tools.ietf.org/html/rfc1918"
+                    "url": "https://tools.ietf.org/html/rfc1918",
+                    "source_name_fa": "RFC1918",
+                    "description_fa": "IETF Network Working Group (1996، فوریه) آدرس Allocation for Private Internets Retrieved ۲۰ اکتبر ۲۰۲۰"
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +29,7 @@
             ],
             "modified": "2026-05-12T15:12:00.632Z",
             "name": "Network Address Translation Traversal",
-            "description": "Adversaries may bridge network boundaries by modifying a network device\u2019s Network Address Translation (NAT) configuration. Malicious modifications to NAT may enable an adversary to bypass restrictions on traffic routing that otherwise separate trusted and untrusted networks.\n\nNetwork devices such as routers and firewalls that connect multiple networks together may implement NAT during the process of passing packets between networks. When performing NAT, the network device will rewrite the source and/or destination addresses of the IP address header. Some network designs require NAT for the packets to cross the border device.  A typical example of this is environments where internal networks make use of non-Internet routable addresses.(Citation: RFC1918)\n\nWhen an adversary gains control of a network boundary device, they may modify NAT configurations to send traffic between two separated networks, or to obscure their activities.  In network designs that require NAT to function, such modifications enable the adversary to overcome inherent routing limitations that would normally prevent them from accessing protected systems behind the border device.  In network designs that do not require NAT, adversaries may use address translation to further obscure their activities, as changing the addresses of packets that traverse a network boundary device can make monitoring data transmissions more challenging for defenders.  \n\nAdversaries may use [Patch System Image](https://attack.mitre.org/techniques/T1601/001) to change the operating system of a network device, implementing their own custom NAT mechanisms to further obscure their activities.",
+            "description": "Adversaries may bridge network boundaries by modifying a network device’s Network Address Translation (NAT) configuration. Malicious modifications to NAT may enable an adversary to bypass restrictions on traffic routing that otherwise separate trusted and untrusted networks.\n\nNetwork devices such as routers and firewalls that connect multiple networks together may implement NAT during the process of passing packets between networks. When performing NAT, the network device will rewrite the source and/or destination addresses of the IP address header. Some network designs require NAT for the packets to cross the border device.  A typical example of this is environments where internal networks make use of non-Internet routable addresses.(Citation: RFC1918)\n\nWhen an adversary gains control of a network boundary device, they may modify NAT configurations to send traffic between two separated networks, or to obscure their activities.  In network designs that require NAT to function, such modifications enable the adversary to overcome inherent routing limitations that would normally prevent them from accessing protected systems behind the border device.  In network designs that do not require NAT, adversaries may use address translation to further obscure their activities, as changing the addresses of packets that traverse a network boundary device can make monitoring data transmissions more challenging for defenders.  \n\nAdversaries may use [Patch System Image](https://attack.mitre.org/techniques/T1601/001) to change the operating system of a network device, implementing their own custom NAT mechanisms to further obscure their activities.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -43,7 +46,9 @@
             "x_mitre_platforms": [
                 "Network Devices"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "Network Address Translation Traversal",
+            "description_fa": "مخالفان ممکن است مرزهای شبکه را با تغییر تنظیمات آدرس شبکه (NAT) تغییر دهند. تغییرات شدید در NAT ممکن است یک دشمن را قادر سازد تا محدودیت های مسیریابی ترافیک را که در غیر این صورت شبکه های قابل اعتماد و غیر قابل اعتماد را جدا می کند، دور بزند.\n\nدستگاه های شبکه مانند روترها و فایروال هایی که چندین شبکه را به هم متصل می کنند ممکن است در طول فرآیند انتقال بسته های بین شبکه ها، NAT را پیاده سازی کنند. هنگام اجرای NAT، دستگاه منبع و / یا آدرس های مقصد هدر آدرس IP را بازنویسی می کند. برخی از طرح های شبکه نیاز به NAT برای بسته ها برای عبور از دستگاه مرزی دارند. یک مثال معمولی از این محیط هایی است که شبکه های داخلی از آدرس های غیر انعطاف پذیر اینترنت استفاده می کنند. [[ویرایش]\n\nهنگامی که یک دشمن کنترل یک دستگاه مرزی شبکه را به دست می آورد، ممکن است تنظیمات NAT را برای ارسال ترافیک بین دو شبکه جدا شده یا فعالیت های آنها تغییر دهند. در طرح های شبکه ای که نیاز به عملکرد NAT دارند، چنین تغییراتی دشمن را قادر می سازد تا بر محدودیت های مسیریابی ذاتی غلبه کند که به طور معمول مانع دسترسی به سیستم های محافظت شده در پشت دستگاه مرزی می شود. در طرح های شبکه ای که به NAT نیاز ندارند، دشمنان ممکن است از ترجمه آدرس استفاده کنند تا فعالیت های خود را مبهم تر کنند، زیرا تغییر آدرس بسته هایی که از یک دستگاه مرزی شبکه عبور می کنند می تواند انتقال داده ها را برای مدافعان به چالش بکشد.\n\nعوامل ممکن است از [Patch System Image] ([[CTI_PRESERVE] استفاده کنند تا سیستم عامل یک دستگاه شبکه را تغییر دهند و مکانیزم های سفارشی NAT خود را برای پنهان کردن فعالیت های خود پیاده سازی کنند. (Citation: RFC1918) https://attack.mitre.org/techniques/T1601/001"
         }
     ]
 }

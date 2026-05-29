@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1564/009",
-                    "external_id": "T1564.009"
+                    "external_id": "T1564.009",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "tau bundlore erika noerenberg 2020",
                     "description": "Erika Noerenberg. (2020, June 29). TAU Threat Analysis: Bundlore (macOS) mm-install-macos. Retrieved October 12, 2021.",
-                    "url": "https://blogs.vmware.com/security/2020/06/tau-threat-analysis-bundlore-macos-mm-install-macos.html"
+                    "url": "https://blogs.vmware.com/security/2020/06/tau-threat-analysis-bundlore-macos-mm-install-macos.html",
+                    "source_name_fa": "دانلود زیرنویس فارسی فیلم tdlore erika noerenberg 2020",
+                    "description_fa": "اریکا نورنبرگ (2020, 29 ژوئن) تجزیه و تحلیل تهدیدات TAU: Bundlore (macOS)mm-install-macos. Retrieved 12 اکتبر 2021."
                 },
                 {
                     "source_name": "Resource and Data Forks",
                     "description": "Flylib. (n.d.). Identifying Resource and Data Forks. Retrieved October 12, 2021.",
-                    "url": "https://flylib.com/books/en/4.395.1.192/1/"
+                    "url": "https://flylib.com/books/en/4.395.1.192/1/",
+                    "source_name_fa": "منبع و Data Forks",
+                    "description_fa": "Flylib (n.d.) شناسایی منابع و چنگال های داده Retrieved 12 اکتبر 2021."
                 },
                 {
                     "source_name": "ELC Extended Attributes",
                     "description": "Howard Oakley. (2020, October 24). There's more to files than data: Extended Attributes. Retrieved October 12, 2021.",
-                    "url": "https://eclecticlight.co/2020/10/24/theres-more-to-files-than-data-extended-attributes/"
+                    "url": "https://eclecticlight.co/2020/10/24/theres-more-to-files-than-data-extended-attributes/",
+                    "source_name_fa": "ELC ویژگی های گسترده",
+                    "description_fa": "هاوارد اوکل (2020، 24 اکتبر) بیشتر به فایل ها نسبت به داده ها: ویژگی های گسترده Retrieved 12 اکتبر 2021."
                 },
                 {
                     "source_name": "sentinellabs resource named fork 2020",
                     "description": "Phil Stokes. (2020, November 5). Resourceful macOS Malware Hides in Named Fork. Retrieved October 12, 2021.",
-                    "url": "https://www.sentinelone.com/labs/resourceful-macos-malware-hides-in-named-fork/"
+                    "url": "https://www.sentinelone.com/labs/resourceful-macos-malware-hides-in-named-fork/",
+                    "source_name_fa": "منبع ارسال شده به نام Fork 2020",
+                    "description_fa": "فیل Stokes (2020, نوامبر 5) macOS Hides در Named Fork Retrieved 12 اکتبر 2021."
                 },
                 {
                     "source_name": "macOS Hierarchical File System Overview",
                     "description": "Tenon. (n.d.). Retrieved October 12, 2021.",
-                    "url": "http://tenon.com/products/codebuilder/User_Guide/6_File_Systems.html#anchor520553"
+                    "url": "http://tenon.com/products/codebuilder/User_Guide/6_File_Systems.html#anchor520553",
+                    "source_name_fa": "macOS Hierarchical File System",
+                    "description_fa": "(n.d.) Retrieved 12 اکتبر 2021."
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.708Z",
             "name": "Resource Forking",
-            "description": "Adversaries may abuse resource forks to hide malicious code or executables to evade detection and bypass security applications. A resource fork provides applications a structured way to store resources such as thumbnail images, menu definitions, icons, dialog boxes, and code.(Citation: macOS Hierarchical File System Overview) Usage of a resource fork is identifiable when displaying a file\u2019s extended attributes, using <code>ls -l@</code> or <code>xattr -l</code> commands. Resource forks have been deprecated and replaced with the application bundle structure. Non-localized resources are placed at the top level directory of an application bundle, while localized resources are placed in the <code>/Resources</code> folder.(Citation: Resource and Data Forks)(Citation: ELC Extended Attributes)\n\nAdversaries can use resource forks to hide malicious data that may otherwise be stored directly in files. Adversaries can execute content with an attached resource fork, at a specified offset, that is moved to an executable location then invoked. Resource fork content may also be obfuscated/encrypted until execution.(Citation: sentinellabs resource named fork 2020)(Citation: tau bundlore erika noerenberg 2020)",
+            "description": "Adversaries may abuse resource forks to hide malicious code or executables to evade detection and bypass security applications. A resource fork provides applications a structured way to store resources such as thumbnail images, menu definitions, icons, dialog boxes, and code.(Citation: macOS Hierarchical File System Overview) Usage of a resource fork is identifiable when displaying a file’s extended attributes, using <code>ls -l@</code> or <code>xattr -l</code> commands. Resource forks have been deprecated and replaced with the application bundle structure. Non-localized resources are placed at the top level directory of an application bundle, while localized resources are placed in the <code>/Resources</code> folder.(Citation: Resource and Data Forks)(Citation: ELC Extended Attributes)\n\nAdversaries can use resource forks to hide malicious data that may otherwise be stored directly in files. Adversaries can execute content with an attached resource fork, at a specified offset, that is moved to an executable location then invoked. Resource fork content may also be obfuscated/encrypted until execution.(Citation: sentinellabs resource named fork 2020)(Citation: tau bundlore erika noerenberg 2020)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -67,7 +78,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "منبع: Forking",
+            "description_fa": "مخالفان ممکن است از چنگال منابع برای پنهان کردن کد مخرب یا اجرایی برای جلوگیری از تشخیص و دور زدن برنامه های امنیتی استفاده کنند. یک منبع چنگال ارائه می دهد برنامه های یک راه ساختار یافته برای ذخیره منابع مانند تصاویر کوچک، تعاریف منو، آیکون ها، جعبه های گفتگو و کد. [CTI_PRESERVE_3] استفاده از یک منبع در هنگام نمایش ویژگی های گسترده فایل، با استفاده از [CTI_PRESERVE_0] و یا [[CTI_PRESERVE] دستورات. چنگال منابع حذف شده و با ساختار بسته نرم افزار جایگزین شده اند. منابع غیر محلی در دایرکتوری سطح بالا از یک بسته نرم افزاری قرار می گیرند، در حالی که منابع محلی در پوشه [CTI_PRESERVE_2] قرار می گیرند.\n\nمخالفان می توانند از چنگال منابع برای پنهان کردن داده های مخرب استفاده کنند که ممکن است به طور مستقیم در فایل ها ذخیره شوند. مخالفان می توانند محتوا را با یک چنگال منابع متصل، در یک جبران مشخص، که به یک مکان اجرایی منتقل می شود، اجرا کنند. همچنین ممکن است تا زمانی که اجرا شود، محتوای پاک شده و رمزگشایی شود.[۱۰] <code>ls -l@</code> <code>xattr -l</code> <code>/Resources</code> (Citation: macOS Hierarchical File System Overview) (Citation: Resource and Data Forks) (Citation: ELC Extended Attributes) (Citation: sentinellabs resource named fork 2020) (Citation: tau bundlore erika noerenberg 2020)"
         }
     ]
 }

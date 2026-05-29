@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1191",
-                    "external_id": "T1191"
+                    "external_id": "T1191",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Microsoft Connection Manager Oct 2009",
                     "description": "Microsoft. (2009, October 8). How Connection Manager Works. Retrieved April 11, 2018.",
-                    "url": "https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786431(v=ws.10)"
+                    "url": "https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786431(v=ws.10)",
+                    "source_name_fa": "Microsoft Connection Manager در اکتبر 2009",
+                    "description_fa": "مایکروسافت (2009, اکتبر 8) چگونه مدیریت اتصال کار می کند Retrieved 11 آوریل 2018"
                 },
                 {
                     "source_name": "Twitter CMSTP Usage Jan 2018",
                     "description": "Carr, N. (2018, January 31). Here is some early bad cmstp.exe... Retrieved April 11, 2018.",
-                    "url": "https://twitter.com/ItsReallyNick/status/958789644165894146"
+                    "url": "https://twitter.com/ItsReallyNick/status/958789644165894146",
+                    "source_name_fa": "CMS TwitterTP استفاده از ژانویه 2018",
+                    "description_fa": "کار، N. (2018، 31 ژانویه) در اینجا برخی از سایت های بد و بد است.exe Retrieved 11 آوریل 2018"
                 },
                 {
                     "source_name": "MSitPros CMSTP Aug 2017",
                     "description": "Moe, O. (2017, August 15). Research on CMSTP.exe. Retrieved April 11, 2018.",
-                    "url": "https://msitpros.com/?p=3960"
+                    "url": "https://msitpros.com/?p=3960",
+                    "source_name_fa": "MSitPros CMSTP اوت 2017",
+                    "description_fa": "مو، O. (2017، 15 آگوست) تحقیقات در CMSTP.exe Retrieved 11 آوریل 2018"
                 },
                 {
                     "source_name": "Twitter CMSTP Jan 2018",
                     "description": "Tyrer, N. (2018, January 30). CMSTP.exe - remote .sct execution applocker bypass. Retrieved April 11, 2018.",
-                    "url": "https://twitter.com/NickTyrer/status/958450014111633408"
+                    "url": "https://twitter.com/NickTyrer/status/958450014111633408",
+                    "source_name_fa": "CMS TwitterTP ژانویه 2018",
+                    "description_fa": "تایرر، N. (2018، 30 ژانویه) CMSTP.exe – Remote.sct Execution applocker Retrieved 11 آوریل 2018"
                 },
                 {
                     "source_name": "GitHub Ultimate AppLocker Bypass List",
                     "description": "Moe, O. (2018, March 1). Ultimate AppLocker Bypass List. Retrieved April 10, 2018.",
-                    "url": "https://github.com/api0cradle/UltimateAppLockerByPassList"
+                    "url": "https://github.com/api0cradle/UltimateAppLockerByPassList",
+                    "source_name_fa": "GitHub Ultimate App Locker Bypass list",
+                    "description_fa": "(اول، اول مارس) لیست نهایی AppLocker Bypass Retrieved 10, 2018"
                 },
                 {
                     "source_name": "Endurant CMSTP July 2018",
                     "description": "Seetharaman, N. (2018, July 7). Detecting CMSTP-Enabled Code Execution and UAC Bypass With Sysmon.. Retrieved August 6, 2018.",
-                    "url": "http://www.endurant.io/cmstp/detecting-cmstp-enabled-code-execution-and-uac-bypass-with-sysmon/"
+                    "url": "http://www.endurant.io/cmstp/detecting-cmstp-enabled-code-execution-and-uac-bypass-with-sysmon/",
+                    "source_name_fa": "پایان دهنده CMSTP جولای 2018",
+                    "description_fa": "| | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | شناسایی کد قابل اعتماد CMSTP و UAC Bypass با Sysmon Retrieved 6 اوت 2018"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2026-04-14T22:53:15.848Z",
             "name": "CMSTP",
-            "description": "The Microsoft Connection Manager Profile Installer (CMSTP.exe) is a command-line program used to install Connection Manager service profiles. (Citation: Microsoft Connection Manager Oct 2009) CMSTP.exe accepts an installation information file (INF) as a parameter and installs a service profile leveraged for remote access connections.\n\nAdversaries may supply CMSTP.exe with INF files infected with malicious commands. (Citation: Twitter CMSTP Usage Jan 2018) Similar to [Regsvr32](https://attack.mitre.org/techniques/T1117) / \u201dSquiblydoo\u201d, CMSTP.exe may be abused to load and execute DLLs (Citation: MSitPros CMSTP Aug 2017)  and/or COM scriptlets (SCT) from remote servers. (Citation: Twitter CMSTP Jan 2018) (Citation: GitHub Ultimate AppLocker Bypass List) (Citation: Endurant CMSTP July 2018) This execution may also bypass AppLocker and other whitelisting defenses since CMSTP.exe is a legitimate, signed Microsoft application.\n\nCMSTP.exe can also be abused to [Bypass User Account Control](https://attack.mitre.org/techniques/T1088) and execute arbitrary commands from a malicious INF through an auto-elevated COM interface. (Citation: MSitPros CMSTP Aug 2017) (Citation: GitHub Ultimate AppLocker Bypass List) (Citation: Endurant CMSTP July 2018)",
+            "description": "The Microsoft Connection Manager Profile Installer (CMSTP.exe) is a command-line program used to install Connection Manager service profiles. (Citation: Microsoft Connection Manager Oct 2009) CMSTP.exe accepts an installation information file (INF) as a parameter and installs a service profile leveraged for remote access connections.\n\nAdversaries may supply CMSTP.exe with INF files infected with malicious commands. (Citation: Twitter CMSTP Usage Jan 2018) Similar to [Regsvr32](https://attack.mitre.org/techniques/T1117) / ”Squiblydoo”, CMSTP.exe may be abused to load and execute DLLs (Citation: MSitPros CMSTP Aug 2017)  and/or COM scriptlets (SCT) from remote servers. (Citation: Twitter CMSTP Jan 2018) (Citation: GitHub Ultimate AppLocker Bypass List) (Citation: Endurant CMSTP July 2018) This execution may also bypass AppLocker and other whitelisting defenses since CMSTP.exe is a legitimate, signed Microsoft application.\n\nCMSTP.exe can also be abused to [Bypass User Account Control](https://attack.mitre.org/techniques/T1088) and execute arbitrary commands from a malicious INF through an auto-elevated COM interface. (Citation: MSitPros CMSTP Aug 2017) (Citation: GitHub Ultimate AppLocker Bypass List) (Citation: Endurant CMSTP July 2018)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -76,7 +89,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "CMSTP",
+            "description_fa": "Microsoft Connection Manager Profile Installer (CMSTP.exe) یک برنامه خط فرمان است که برای نصب پروفایل های سرویس Link Manager استفاده می شود. [[ویرایش] CMSTP.exe یک فایل اطلاعات نصب (INF) را به عنوان یک پارامتر می پذیرد و یک پروفایل خدماتی را که برای اتصالات دسترسی از راه دور استفاده می شود نصب می کند.\n\nمخالفان ممکن است CMSTP.exe را با فایل های آلوده به دستورات مخرب ارائه دهند. [[ویرایش] همانند (Regsvr32) / \"Squallydoo\"، CMSTP.exe ممکن است برای بارگیری و اجرای DLLها ([CTI_PRESERVE_2] و / یا اسکریپت های COM (SCT) از سرورهای دور مورد سوء استفاده قرار گیرد. [[ویرایش] [[ویرایش] [[ویرایش] این اعدام همچنین ممکن است از AppLocker و دیگر دفاع های سفید کننده از CMSTP دور بزند. exe یک برنامه قانونی و امضا شده مایکروسافت است.\n\nCMSTP.exe همچنین می تواند مورد سوء استفاده قرار گیرد ([CTI_PRESERVE_10] و اجرای دستورات دلخواه از یک INF مخرب از طریق یک رابط کاربری خودکار. [[ویرایش] [[ویرایش] [[ویرایش] (Citation: Microsoft Connection Manager Oct 2009) (Citation: Twitter CMSTP Usage Jan 2018) (Citation: MSitPros CMSTP Aug 2017) (Citation: Twitter CMSTP Jan 2018) (Citation: GitHub Ultimate AppLocker Bypass List) (Citation: Endurant CMSTP July 2018) (Citation: MSitPros CMSTP Aug 2017) (Citation: GitHub Ultimate AppLocker Bypass List) (Citation: Endurant CMSTP July 2018) https://attack.mitre.org/techniques/T1117 https://attack.mitre.org/techniques/T1088"
         }
     ]
 }

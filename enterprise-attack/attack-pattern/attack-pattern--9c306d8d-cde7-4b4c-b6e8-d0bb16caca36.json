@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1212",
-                    "external_id": "T1212"
+                    "external_id": "T1212",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Bugcrowd Replay Attack",
                     "description": "Bugcrowd. (n.d.). Replay Attack. Retrieved September 27, 2023.",
-                    "url": "https://www.bugcrowd.com/glossary/replay-attack/"
+                    "url": "https://www.bugcrowd.com/glossary/replay-attack/",
+                    "source_name_fa": "Bugcrowd Replay",
+                    "description_fa": "باگد (n.d) حمله مجدد Retrieved ۲۷ سپتامبر ۲۰۲۳"
                 },
                 {
                     "source_name": "Comparitech Replay Attack",
                     "description": "Justin Schamotta. (2022, October 28). What is a replay attack?. Retrieved September 27, 2023.",
-                    "url": "https://www.comparitech.com/blog/information-security/what-is-a-replay-attack/"
+                    "url": "https://www.comparitech.com/blog/information-security/what-is-a-replay-attack/",
+                    "source_name_fa": "حمله Replay",
+                    "description_fa": "جاستین شوتا (۲۰۲۲، ۲۸ اکتبر) حمله مجدد چیست؟ Retrieved ۲۷ سپتامبر ۲۰۲۳"
                 },
                 {
                     "source_name": "ADSecurity Detecting Forged Tickets",
                     "description": "Metcalf, S. (2015, May 03). Detecting Forged Kerberos Ticket (Golden Ticket & Silver Ticket) Use in Active Directory. Retrieved December 23, 2015.",
-                    "url": "https://adsecurity.org/?p=1515"
+                    "url": "https://adsecurity.org/?p=1515",
+                    "source_name_fa": "کشف بلیط های Forged",
+                    "description_fa": "Metcalf، S. (2015، May 03) Detecting Forged Kerberos Ticket و Silver Ticket در Active Directory استفاده می شود. Retrieved 23 دسامبر 2015"
                 },
                 {
                     "source_name": "Storm-0558 techniques for unauthorized email access",
                     "description": "Microsoft Threat Intelligence. (2023, July 14). Analysis of Storm-0558 techniques for unauthorized email access. Retrieved September 18, 2023.",
-                    "url": "https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/"
+                    "url": "https://www.microsoft.com/en-us/security/blog/2023/07/14/analysis-of-storm-0558-techniques-for-unauthorized-email-access/",
+                    "source_name_fa": "تکنیک های Storm-0558 برای دسترسی غیرمجاز به ایمیل",
+                    "description_fa": "Microsoft Threat Intelligence (۲۰۲۳، ۱۴ ژوئیه) تجزیه و تحلیل تکنیک های Storm-0558 برای دسترسی ایمیل غیر مجاز Retrieved 1823"
                 },
                 {
                     "source_name": "Microsoft Midnight Blizzard Replay Attack",
                     "description": "Microsoft Threat Intelligence. (2023, June 21). Credential Attacks. Retrieved September 12, 2024.",
-                    "url": "https://x.com/MsftSecIntel/status/1671579359994343425"
+                    "url": "https://x.com/MsftSecIntel/status/1671579359994343425",
+                    "source_name_fa": "Microsoft Midnight Blizzard Replay Attack",
+                    "description_fa": "Microsoft Threat Intelligence (۲۰۲۳، ۲۱ ژوئن) حملات هوایی Retrieved 12 سپتامبر 2024"
                 },
                 {
                     "source_name": "Technet MS14-068",
                     "description": "Microsoft. (2014, November 18). Vulnerability in Kerberos Could Allow Elevation of Privilege (3011780). Retrieved December 23, 2015.",
-                    "url": "https://technet.microsoft.com/en-us/library/security/ms14-068.aspx"
+                    "url": "https://technet.microsoft.com/en-us/library/security/ms14-068.aspx",
+                    "source_name_fa": "تکنولوژی MS14-068",
+                    "description_fa": "مایکروسافت (2014, 18 نوامبر) آسیب پذیری در Kerberos می تواند اجازه دهد تا Elevation of Privilege (3011780) Retrieved 23 دسامبر 2015"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2025-10-24T17:49:08.674Z",
             "name": "Exploitation for Credential Access",
-            "description": "Adversaries may exploit software vulnerabilities in an attempt to collect credentials. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code.\u00a0\n\nCredentialing and authentication mechanisms may be targeted for exploitation by adversaries as a means to gain access to useful credentials or circumvent the process to gain authenticated access to systems. One example of this is `MS14-068`, which targets Kerberos and can be used to forge Kerberos tickets using domain user permissions.(Citation: Technet MS14-068)(Citation: ADSecurity Detecting Forged Tickets) Another example of this is replay attacks, in which the adversary intercepts data packets sent between parties and then later replays these packets. If services don't properly validate authentication requests, these replayed packets may allow an adversary to impersonate one of the parties and gain unauthorized access or privileges.(Citation: Bugcrowd Replay Attack)(Citation: Comparitech Replay Attack)(Citation: Microsoft Midnight Blizzard Replay Attack)\n\nSuch exploitation has been demonstrated in cloud environments as well. For example, adversaries have exploited vulnerabilities in public cloud infrastructure that allowed for unintended authentication token creation and renewal.(Citation: Storm-0558 techniques for unauthorized email access)\n\nExploitation for credential access may also result in Privilege Escalation depending on the process targeted or credentials obtained.",
+            "description": "Adversaries may exploit software vulnerabilities in an attempt to collect credentials. Exploitation of a software vulnerability occurs when an adversary takes advantage of a programming error in a program, service, or within the operating system software or kernel itself to execute adversary-controlled code. \n\nCredentialing and authentication mechanisms may be targeted for exploitation by adversaries as a means to gain access to useful credentials or circumvent the process to gain authenticated access to systems. One example of this is `MS14-068`, which targets Kerberos and can be used to forge Kerberos tickets using domain user permissions.(Citation: Technet MS14-068)(Citation: ADSecurity Detecting Forged Tickets) Another example of this is replay attacks, in which the adversary intercepts data packets sent between parties and then later replays these packets. If services don't properly validate authentication requests, these replayed packets may allow an adversary to impersonate one of the parties and gain unauthorized access or privileges.(Citation: Bugcrowd Replay Attack)(Citation: Comparitech Replay Attack)(Citation: Microsoft Midnight Blizzard Replay Attack)\n\nSuch exploitation has been demonstrated in cloud environments as well. For example, adversaries have exploited vulnerabilities in public cloud infrastructure that allowed for unintended authentication token creation and renewal.(Citation: Storm-0558 techniques for unauthorized email access)\n\nExploitation for credential access may also result in Privilege Escalation depending on the process targeted or credentials obtained.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -75,7 +88,9 @@
                 "macOS",
                 "Identity Provider"
             ],
-            "x_mitre_version": "1.6"
+            "x_mitre_version": "1.6",
+            "name_fa": "استفاده از Credential Access",
+            "description_fa": "مخالفان ممکن است از آسیب پذیری های نرم افزار در تلاش برای جمع آوری اعتبار استفاده کنند. بهره برداری از یک آسیب پذیری نرم افزار زمانی اتفاق می افتد که یک دشمن از خطای برنامه نویسی در یک برنامه، سرویس یا درون نرم افزار سیستم عامل یا خود کرنل برای اجرای کد کنترل شده توسط دشمن استفاده کند.\n\nمکانیسم های احراز هویت و احراز هویت ممکن است برای بهره برداری توسط دشمنان به عنوان وسیله ای برای دسترسی به اعتبارات مفید یا دور زدن روند برای به دست آوردن دسترسی معتبر به سیستم ها هدف قرار گیرد. یک مثال از این است: \"MS14-068\"، که Kerberos را هدف قرار می دهد و می تواند برای ساخت بلیط های Kerberos با استفاده از مجوز کاربر دامنه استفاده شود. [[ویرایش] نمونه دیگری از این حملات مجدد است که در آن دشمن بسته های داده ارسال شده بین احزاب را قطع می کند و سپس این بسته ها را دوباره پخش می کند. اگر خدمات به درستی درخواست های احراز هویت را تأیید نمی کنند، این بسته های دوباره پخش شده ممکن است به یک دشمن اجازه دهند تا یکی از طرفین را از بین ببرد و دسترسی یا امتیازات غیر مجاز به دست آورد. [[ویرایش] [[[ویرایش] [[۱۰]] [[۱۰]] [[۱۰]]]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [۵] [۶] [۷]] [۱۰] [۹]\n\nاین بهره برداری نیز در محیط های ابری نشان داده شده است. به عنوان مثال، دشمنان از آسیب پذیری ها در زیرساخت های ابر عمومی بهره برداری کرده اند که اجازه ایجاد و بازسازی توکن های ناخواسته را دارند. [[ویرایش]\n\nبهره برداری از دسترسی به اعتبار نیز ممکن است منجر به افزایش اعتبار بسته به روند هدفمند یا اعتبار به دست آمده باشد. (Citation: Technet MS14-068) (Citation: ADSecurity Detecting Forged Tickets) (Citation: Bugcrowd Replay Attack) (Citation: Comparitech Replay Attack) (Citation: Microsoft Midnight Blizzard Replay Attack) (Citation: Storm-0558 techniques for unauthorized email access)"
         }
     ]
 }

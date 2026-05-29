@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1555/006",
-                    "external_id": "T1555.006"
+                    "external_id": "T1555.006",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Sysdig ScarletEel 2.0 2023",
                     "description": "Alessandro Brucato. (2023, July 11). SCARLETEEL 2.0: Fargate, Kubernetes, and Crypto. Retrieved September 25, 2023.",
-                    "url": "https://sysdig.com/blog/scarleteel-2-0/"
+                    "url": "https://sysdig.com/blog/scarleteel-2-0/",
+                    "source_name_fa": "Sysdig ScarletEel 2.0 2023",
+                    "description_fa": "Alessandro Brucato SCARLETEEL 2.0: Fargate، Kubernetes و Crypto Retrieved 25 سپتامبر 2023."
                 },
                 {
                     "source_name": "AWS Secrets Manager",
                     "description": "AWS. (n.d.). Retrieve secrets from AWS Secrets Manager. Retrieved September 25, 2023.",
-                    "url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html"
+                    "url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html",
+                    "source_name_fa": "مدیریت اسرار AWS",
+                    "description_fa": "AWS (n.d.) رازهایی از مدیر اسرار AWS Retrieved 25 سپتامبر 2023."
                 },
                 {
                     "source_name": "Google Cloud Secrets",
                     "description": "Google Cloud. (n.d.). List secrets and view secret details. Retrieved September 25, 2023.",
-                    "url": "https://cloud.google.com/secret-manager/docs/view-secret-details"
+                    "url": "https://cloud.google.com/secret-manager/docs/view-secret-details",
+                    "source_name_fa": "Google Cloud Secrets",
+                    "description_fa": "Google Cloud رازهای لیست و جزئیات محرمانه را مشاهده کنید. Retrieved 25 سپتامبر 2023."
                 },
                 {
                     "source_name": "Permiso Scattered Spider 2023",
                     "description": "Ian Ahl. (2023, September 20). LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD. Retrieved September 25, 2023.",
-                    "url": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud"
+                    "url": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud",
+                    "source_name_fa": "Permiso Scattered Spider 2023",
+                    "description_fa": "ایان پست (۲۰۲۳)، ۲۰ سپتامبر LUCR-3: SCATTERED SPIDER SAAS-Y در CLOUD Retrieved 25 سپتامبر 2023."
                 },
                 {
                     "source_name": "Microsoft Azure Key Vault",
                     "description": "Microsoft. (2023, January 13). Quickstart: Set and retrieve a secret from Azure Key Vault using Azure CLI. Retrieved September 25, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli"
+                    "url": "https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli",
+                    "source_name_fa": "Microsoft Azure Key Vault",
+                    "description_fa": "مایکروسافت (2023، 13 ژانویه) Quickstart: Set و بازیابی یک راز از Azure Key Vault با استفاده از Azure CLI Retrieved 25 سپتامبر 2023."
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.717Z",
             "name": "Cloud Secrets Management Stores",
-            "description": "Adversaries may acquire credentials from cloud-native secret management solutions such as AWS Secrets Manager, GCP Secret Manager, Azure Key Vault, and Terraform Vault.  \n\nSecrets managers support the secure centralized management of passwords, API keys, and other credential material. Where secrets managers are in use, cloud services can dynamically acquire credentials via API requests rather than accessing secrets insecurely stored in plain text files or environment variables.  \n\nIf an adversary is able to gain sufficient privileges in a cloud environment \u2013 for example, by obtaining the credentials of high-privileged [Cloud Accounts](https://attack.mitre.org/techniques/T1078/004) or compromising a service that has permission to retrieve secrets \u2013 they may be able to request secrets from the secrets manager. This can be accomplished via commands such as `get-secret-value` in AWS, `gcloud secrets describe` in GCP, and `az key vault secret show` in Azure.(Citation: Permiso Scattered Spider 2023)(Citation: Sysdig ScarletEel 2.0 2023)(Citation: AWS Secrets Manager)(Citation: Google Cloud Secrets)(Citation: Microsoft Azure Key Vault)\n\n**Note:** this technique is distinct from [Cloud Instance Metadata API](https://attack.mitre.org/techniques/T1552/005) in that the credentials are being directly requested from the cloud secrets manager, rather than through the medium of the instance metadata API.",
+            "description": "Adversaries may acquire credentials from cloud-native secret management solutions such as AWS Secrets Manager, GCP Secret Manager, Azure Key Vault, and Terraform Vault.  \n\nSecrets managers support the secure centralized management of passwords, API keys, and other credential material. Where secrets managers are in use, cloud services can dynamically acquire credentials via API requests rather than accessing secrets insecurely stored in plain text files or environment variables.  \n\nIf an adversary is able to gain sufficient privileges in a cloud environment – for example, by obtaining the credentials of high-privileged [Cloud Accounts](https://attack.mitre.org/techniques/T1078/004) or compromising a service that has permission to retrieve secrets – they may be able to request secrets from the secrets manager. This can be accomplished via commands such as `get-secret-value` in AWS, `gcloud secrets describe` in GCP, and `az key vault secret show` in Azure.(Citation: Permiso Scattered Spider 2023)(Citation: Sysdig ScarletEel 2.0 2023)(Citation: AWS Secrets Manager)(Citation: Google Cloud Secrets)(Citation: Microsoft Azure Key Vault)\n\n**Note:** this technique is distinct from [Cloud Instance Metadata API](https://attack.mitre.org/techniques/T1552/005) in that the credentials are being directly requested from the cloud secrets manager, rather than through the medium of the instance metadata API.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -66,7 +77,9 @@
             "x_mitre_platforms": [
                 "IaaS"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "فروشگاه های Cloud Secrets Management",
+            "description_fa": "مخالفان ممکن است از راه حل های مدیریت مخفی ابری مانند AWS Secrets Manager، GCP Secret Manager، Azure Key Vault و Terraform Vault اعتبار کسب کنند.\n\nمدیران اسرار از مدیریت متمرکز امن کلمات عبور، کلید های API و سایر مواد معتبر پشتیبانی می کنند. در جایی که مدیران اسرار در حال استفاده هستند، سرویس های ابری می توانند به طور پویا از طریق درخواست های API به جای دسترسی به اسرار ذخیره شده در فایل های متنی ساده یا متغیرهای محیطی، اعتبار کسب کنند.\n\nاگر یک دشمن بتواند امتیازات کافی در یک محیط ابری به دست آورد، مثلاً با به دست آوردن اعتبارهای بالا (حسابهای ابری) ([[[۱۰]_PRESERVE_۵]) یا به خطر انداختن خدماتی که اجازه بازیابی اسرار را دارند، ممکن است بتوانند اسرار را از مدیر اسرار درخواست کنند. این کار را می توان از طریق دستوراتی مانند “get Secret-value” در AWS انجام داد، “رازهای ابری” در GCP توضیح می دهند و “نمایشگاه مخفی کلیدی” در Azure ([CTI_PRESERVE_0][۱۰] [CTI_PRESERVE_SERVE] تلفظ می شود.\n\n* توجه: این تکنیک از [Cloud Instance Metadata API] متمایز است ([[CTI_PRESERVE_6]) که در آن مدارک به طور مستقیم از مدیر اسرار ابر درخواست می شود، به جای از طریق رسانه از مثال meta API. (Citation: Permiso Scattered Spider 2023) (Citation: Sysdig ScarletEel 2.0 2023) (Citation: AWS Secrets Manager) (Citation: Google Cloud Secrets) (Citation: Microsoft Azure Key Vault) https://attack.mitre.org/techniques/T1078/004 https://attack.mitre.org/techniques/T1552/005"
         }
     ]
 }

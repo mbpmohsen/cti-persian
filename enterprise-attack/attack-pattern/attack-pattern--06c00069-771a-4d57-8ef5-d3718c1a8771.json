@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1556/003",
-                    "external_id": "T1556.003"
+                    "external_id": "T1556.003",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Apple PAM",
                     "description": "Apple. (2011, May 11). PAM - Pluggable Authentication Modules. Retrieved June 25, 2020.",
-                    "url": "https://opensource.apple.com/source/dovecot/dovecot-239/dovecot/doc/wiki/PasswordDatabase.PAM.txt"
+                    "url": "https://opensource.apple.com/source/dovecot/dovecot-239/dovecot/doc/wiki/PasswordDatabase.PAM.txt",
+                    "source_name_fa": "Apple PAM",
+                    "description_fa": "اپل (2011, May 11) PAM - ماژول های تأیید اعتبار پلاگین Retrieved 25 ژوئن 2020"
                 },
                 {
                     "source_name": "Man Pam_Unix",
                     "description": "die.net. (n.d.). pam_unix(8) - Linux man page. Retrieved June 25, 2020.",
-                    "url": "https://linux.die.net/man/8/pam_unix"
+                    "url": "https://linux.die.net/man/8/pam_unix",
+                    "source_name_fa": "Man Pam_Unix",
+                    "description_fa": "می میرند.net pam_unix (8) - صفحه مرد لینوکس Retrieved 25 ژوئن 2020"
                 },
                 {
                     "source_name": "PAM Creds",
-                    "description": "Fern\u00e1ndez, J. M. (2018, June 27). Exfiltrating credentials via PAM backdoors & DNS requests. Retrieved November 17, 2024.",
-                    "url": "https://web.archive.org/web/20240303094335/https://x-c3ll.github.io/posts/PAM-backdoor-DNS/"
+                    "description": "Fernández, J. M. (2018, June 27). Exfiltrating credentials via PAM backdoors & DNS requests. Retrieved November 17, 2024.",
+                    "url": "https://web.archive.org/web/20240303094335/https://x-c3ll.github.io/posts/PAM-backdoor-DNS/",
+                    "source_name_fa": "PAM مطالبات",
+                    "description_fa": "فرناندز، جی ام (2018، 27 ژوئن) مدارک اضافی از طریق PAM Backdoors و DNS درخواست ها Retrieved ۱۷ نوامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "Red Hat PAM",
                     "description": "Red Hat. (n.d.). CHAPTER 2. USING PLUGGABLE AUTHENTICATION MODULES (PAM). Retrieved June 25, 2020.",
-                    "url": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/pluggable_authentication_modules"
+                    "url": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/managing_smart_cards/pluggable_authentication_modules",
+                    "source_name_fa": "Red Hat PAM",
+                    "description_fa": "کلاه قرمز (n.d.) 2. ایالات متحده (PAM) Retrieved 25 ژوئن 2020"
                 },
                 {
                     "source_name": "PAM Backdoor",
                     "description": "zephrax. (2018, August 3). linux-pam-backdoor. Retrieved June 25, 2020.",
-                    "url": "https://github.com/zephrax/linux-pam-backdoor"
+                    "url": "https://github.com/zephrax/linux-pam-backdoor",
+                    "source_name_fa": "PAM Backdoor",
+                    "description_fa": "zephrax (2018, August 3) linux-pam-backdoor Retrieved 25 ژوئن 2020"
                 }
             ],
             "object_marking_refs": [
@@ -76,7 +87,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "ماژول های اعتباری پلاگین",
+            "description_fa": "مخالفان ممکن است ماژول های احراز هویت پلاگین (PAM) را برای دسترسی به اعتبار کاربر تغییر دهند یا در غیر این صورت دسترسی غیر قابل تمدید به حساب ها را فعال کنند. PAM یک سیستم مدولار از فایل های پیکربندی، کتابخانه ها و فایل های اجرایی است که احراز هویت را برای بسیاری از خدمات هدایت می کند. در این میان رایج ترین ویژگی های آن عبارتند از:[۱۰] [[۵]] [[۱۰]]]، که اطلاعات تأیید کننده را بازیابی می کند، و اطلاعات تأیید کننده حساب را تأیید می کند [[۱۰] و [[۱۰] [[۱۰] [I_PRE]\n\nعوامل ممکن است اجزای سیستم PAM را برای ایجاد درب پشتی تغییر دهند. اجزای PAM، مانند [CTI_PRESERVE_3]، می توانند برای پذیرش ارزش های دشمن دلخواه ارائه شده به عنوان اعتبار قانونی وصل شوند. [[ویرایش]\n\nتغییرات شدید در سیستم PAM نیز ممکن است برای سرقت اعتبار مورد سوء استفاده قرار گیرد. عوامل جانبی ممکن است منابع PAM را با کد برای برداشت اعتبار کاربر آلوده کنند، زیرا ارزش های مبادله شده با اجزای PAM ممکن است متن ساده باشد زیرا PAM رمز عبور را ذخیره نمی کند. <code>pam_unix.so</code> <code>/etc/passwd</code> <code>/etc/shadow</code> <code>pam_unix.so</code> (Citation: Apple PAM) (Citation: Man Pam_Unix) (Citation: Red Hat PAM) (Citation: PAM Backdoor) (Citation: PAM Creds) (Citation: Apple PAM)"
         }
     ]
 }

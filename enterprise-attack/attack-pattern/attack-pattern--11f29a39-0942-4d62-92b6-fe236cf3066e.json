@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1036/007",
-                    "external_id": "T1036.007"
+                    "external_id": "T1036.007",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "SOCPrime DoubleExtension",
                     "description": "Eugene Tkachenko. (2020, May 1). Rule of the Week: Possible Malicious File Double Extension. Retrieved July 27, 2021.",
-                    "url": "https://socprime.com/blog/rule-of-the-week-possible-malicious-file-double-extension/"
+                    "url": "https://socprime.com/blog/rule-of-the-week-possible-malicious-file-double-extension/",
+                    "source_name_fa": "SOCPrime DoubleExtension",
+                    "description_fa": "یوجین Tkachenko (2020, May 1) قانون هفته: امکان تمدید فایل دو جانبه Retrieved ۲۷ ژوئیه ۲۰۲۱"
                 },
                 {
                     "source_name": "PCMag DoubleExtension",
                     "description": "PCMag. (n.d.). Encyclopedia: double extension. Retrieved August 4, 2021.",
-                    "url": "https://www.pcmag.com/encyclopedia/term/double-extension"
+                    "url": "https://www.pcmag.com/encyclopedia/term/double-extension",
+                    "source_name_fa": "PCMag DoubleExtension",
+                    "description_fa": "PCMag دایره المعارف: دو گسترش Retrieved 4، 2021."
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2026-05-12T15:12:00.621Z",
             "name": "Double File Extension",
-            "description": "Adversaries may abuse a double extension in the filename as a means of masquerading the true file type. A file name may include a secondary file type extension that may cause only the first extension to be displayed (ex: <code>File.txt.exe</code> may render in some views as just <code>File.txt</code>). However, the second extension is the true file type that determines how the file is opened and executed. The real file extension may be hidden by the operating system in the file browser (ex: explorer.exe), as well as in any software configured using or similar to the system\u2019s policies.(Citation: PCMag DoubleExtension)(Citation: SOCPrime DoubleExtension) \n\nAdversaries may abuse double extensions to attempt to conceal dangerous file types of payloads. A very common usage involves tricking a user into opening what they think is a benign file type but is actually executable code. Such files often pose as email attachments and allow an adversary to gain [Initial Access](https://attack.mitre.org/tactics/TA0001) into a user\u2019s system via [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001) then [User Execution](https://attack.mitre.org/techniques/T1204). For example, an executable file attachment named <code>Evil.txt.exe</code> may display as <code>Evil.txt</code> to a user. The user may then view it as a benign text file and open it, inadvertently executing the hidden malware.(Citation: SOCPrime DoubleExtension)\n\nCommon file types, such as text files (.txt, .doc, etc.) and image files (.jpg, .gif, etc.) are typically used as the first extension to appear benign. Executable extensions commonly regarded as dangerous, such as .exe, .lnk, .hta, and .scr, often appear as the second extension and true file type.",
+            "description": "Adversaries may abuse a double extension in the filename as a means of masquerading the true file type. A file name may include a secondary file type extension that may cause only the first extension to be displayed (ex: <code>File.txt.exe</code> may render in some views as just <code>File.txt</code>). However, the second extension is the true file type that determines how the file is opened and executed. The real file extension may be hidden by the operating system in the file browser (ex: explorer.exe), as well as in any software configured using or similar to the system’s policies.(Citation: PCMag DoubleExtension)(Citation: SOCPrime DoubleExtension) \n\nAdversaries may abuse double extensions to attempt to conceal dangerous file types of payloads. A very common usage involves tricking a user into opening what they think is a benign file type but is actually executable code. Such files often pose as email attachments and allow an adversary to gain [Initial Access](https://attack.mitre.org/tactics/TA0001) into a user’s system via [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001) then [User Execution](https://attack.mitre.org/techniques/T1204). For example, an executable file attachment named <code>Evil.txt.exe</code> may display as <code>Evil.txt</code> to a user. The user may then view it as a benign text file and open it, inadvertently executing the hidden malware.(Citation: SOCPrime DoubleExtension)\n\nCommon file types, such as text files (.txt, .doc, etc.) and image files (.jpg, .gif, etc.) are typically used as the first extension to appear benign. Executable extensions commonly regarded as dangerous, such as .exe, .lnk, .hta, and .scr, often appear as the second extension and true file type.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -48,7 +53,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "Double File Extension",
+            "description_fa": "مخالفان ممکن است از یک پسوند دوگانه در نام فایل به عنوان وسیله ای برای استخراج نوع فایل واقعی استفاده کنند. یک نام فایل ممکن است شامل یک فرمت فایل ثانویه باشد که تنها باعث می شود اولین پسوند نمایش داده شود (ex: [CTI_PRESERVE_0] ممکن است در برخی از دیدگاه ها به عنوان (CTI_PRESERVE). با این حال، افزونه دوم نوع فایل واقعی است که تعیین می کند که چگونه فایل باز و اجرا می شود. پسوند فایل واقعی ممکن است توسط سیستم عامل در مرورگر فایل (ex: Explorer.exe) و همچنین در هر نرم افزار پیکربندی شده با استفاده یا شبیه به سیاست های سیستم پنهان شود. [[ویرایش]\n\nمخالفان ممکن است از افزونه های دوگانه برای تلاش برای پنهان کردن انواع فایل های خطرناک استفاده کنند. یک استفاده بسیار رایج شامل فریب دادن کاربر به باز کردن آنچه که فکر می کنند یک نوع فایل خوش خیم است اما در واقع کد اجرایی است. این فایل ها اغلب به عنوان پیوست های ایمیل ایجاد می شوند و اجازه می دهند که یک دشمن به دست آورد ([۱۰] [[۱۰]] [[۱۰]]] [۷]]] به سیستم کاربر از طریق [Spearphishing Attachment] ([۱۰] به عنوان مثال، یک فایل اجرایی به نام [CTI_PRESERVE_2] ممکن است به عنوان [CTI_PRESERVE_3] به یک کاربر نمایش داده شود. کاربر ممکن است آن را به عنوان یک فایل متن خوش خیم مشاهده کند و آن را باز کند، به طور ناخواسته اجرای بدافزار پنهان. [[ویرایش]\n\nانواع فایل های رایج، مانند فایل های متنی (.txt، .doc و غیره) و فایل های تصویری (.jpg، .gif و غیره) به طور معمول به عنوان اولین پسوند برای ظاهر خوش خیم استفاده می شوند. افزونه های حذف شده معمولا به عنوان خطرناک شناخته می شوند، مانند .exe، .lnk، .hta و .scr اغلب به عنوان دومین پسوند و نوع فایل واقعی ظاهر می شوند. <code>File.txt.exe</code> <code>File.txt</code> <code>Evil.txt.exe</code> <code>Evil.txt</code> (Citation: PCMag DoubleExtension) (Citation: SOCPrime DoubleExtension) (Citation: SOCPrime DoubleExtension) https://attack.mitre.org/tactics/TA0001 https://attack.mitre.org/techniques/T1566/001 https://attack.mitre.org/techniques/T1204"
         }
     ]
 }

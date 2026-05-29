@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1556/008",
-                    "external_id": "T1556.008"
+                    "external_id": "T1556.008",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "NPPSPY - Huntress",
                     "description": " Dray Agha. (2022, August 16). Cleartext Shenanigans: Gifting User Passwords to Adversaries With NPPSPY. Retrieved March 30, 2023.",
-                    "url": "https://www.huntress.com/blog/cleartext-shenanigans-gifting-user-passwords-to-adversaries-with-nppspy"
+                    "url": "https://www.huntress.com/blog/cleartext-shenanigans-gifting-user-passwords-to-adversaries-with-nppspy",
+                    "source_name_fa": "NPPSPYPY - Huntress",
+                    "description_fa": "Dray Mr. (2022، 16 آگوست) Cleartext Shenanigans: هدیه دادن رمز عبور کاربر به مخالفان با NPPSPYPYPYPYPYPY. Retrieved ۳۰ مارس ۲۰۲۳"
                 },
                 {
                     "source_name": "NPPSPY Video",
                     "description": "Grzegorz Tworek. (2021, December 14). How winlogon.exe shares the cleartext password with custom DLLs. Retrieved March 30, 2023.",
-                    "url": "https://www.youtube.com/watch?v=ggY3srD9dYs"
+                    "url": "https://www.youtube.com/watch?v=ggY3srD9dYs",
+                    "source_name_fa": "NPPSPYPY ویدئو ویدئویی",
+                    "description_fa": "Grzegorz Tworek (2021, دسامبر 14) چگونه برنده exe رمز عبور متن روشن را با DLL های سفارشی به اشتراک می گذارد. Retrieved ۳۰ مارس ۲۰۲۳"
                 },
                 {
                     "source_name": "NPPSPY",
                     "description": "Grzegorz Tworek. (2021, December 15). NPPSpy. Retrieved March 30, 2023.",
-                    "url": "https://github.com/gtworek/PSBits/tree/master/PasswordStealing/NPPSpy"
+                    "url": "https://github.com/gtworek/PSBits/tree/master/PasswordStealing/NPPSpy",
+                    "source_name_fa": "NPPSPYPY",
+                    "description_fa": "Grzegorz Tworek (2021, دسامبر 15) NPPSpy Retrieved ۳۰ مارس ۲۰۲۳"
                 },
                 {
                     "source_name": "Network Provider API",
                     "description": "Microsoft. (2021, January 7). Network Provider API. Retrieved March 30, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/windows/win32/secauthn/network-provider-api"
+                    "url": "https://learn.microsoft.com/en-us/windows/win32/secauthn/network-provider-api",
+                    "source_name_fa": "Network API",
+                    "description_fa": "مایکروسافت (2021, ژانویه 7) Network Provider API Retrieved ۳۰ مارس ۲۰۲۳"
                 },
                 {
                     "source_name": "NPLogonNotify",
                     "description": "Microsoft. (2021, October 21). NPLogonNotify function (npapi.h). Retrieved March 30, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/windows/win32/api/npapi/nf-npapi-nplogonnotify"
+                    "url": "https://learn.microsoft.com/en-us/windows/win32/api/npapi/nf-npapi-nplogonnotify",
+                    "source_name_fa": "NPLogon Notify",
+                    "description_fa": "مایکروسافت (2021، 21 اکتبر) تابع NPLogonnotify (npapi.h) Retrieved ۳۰ مارس ۲۰۲۳"
                 }
             ],
             "object_marking_refs": [
@@ -75,7 +86,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "Network Provider",
+            "description_fa": "ناراضیان ممکن است کتابخانه های لینک پویا ارائه دهنده شبکه های مخرب (DLLs) را برای ثبت اعتبار کاربران متن روشن در طول فرایند تأیید ثبت نام کنند. DLL های ارائه دهنده شبکه به ویندوز اجازه می دهد تا با پروتکل های شبکه خاص ارتباط برقرار کند و همچنین می تواند از توابع مدیریت اعتبار اضافی پشتیبانی کند. [[ویرایش] در طول فرآیند لوگو، Winlogon ( ماژول آرمین تعاملی) اعتبار را به \"mpnotify محلی ارسال می کند. فرآیند exe از طریق RPC فرآیند mpnotify.exe پس از آن اعتبار در متن روشن با مدیران معتبر ثبت شده در هنگام اطلاع از اینکه یک رویداد آرم رخ می دهد، به اشتراک می گذارد. [[ویرایش] [[۱۰]] [[[۱۰]] [[۱۰]]]] [[۱۰]]] [[۱۰]]] [[۱۰]]]] [[۱۰]]] [[۱۰]]] [[۱۰]] [۹]\n\nمخالفان می توانند یک ارائه دهنده شبکه مخرب DLL را برای دریافت اعتبار از \"mpnotify\" پیکربندی کنند. [[ویرایش] هنگامی که به عنوان یک مدیر معتبر (از طریق رجیستری) نصب شد، DLL مخرب می تواند هر بار که یک کاربر بر روی یک ایستگاه کاری ویندوز یا دامنه از طریق تابع \"NPLogonnotify()\" دریافت و ذخیره کند.\n\nمجرمان ممکن است ارائه دهندگان شبکه های مخرب را در سیستم هایی که فعالیت آرمین را افزایش داده اند و / یا فعالیت آرمان مدیر، مانند سرورها و کنترل کننده های دامنه، هدف قرار دهند. (Citation: Network Provider API) (Citation: NPPSPY - Huntress) (Citation: NPPSPY Video) (Citation: NPLogonNotify) (Citation: NPPSPY) (Citation: NPLogonNotify) (Citation: NPPSPY - Huntress)"
         }
     ]
 }

@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1172",
-                    "external_id": "T1172"
+                    "external_id": "T1172",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Fifield Blocking Resistent Communication through domain fronting 2015",
                     "description": "David Fifield, Chang Lan, Rod Hynes, Percy Wegmann, and Vern Paxson. (2015). Blocking-resistant communication through domain fronting. Retrieved November 20, 2017.",
-                    "url": "http://www.icir.org/vern/papers/meek-PETS-2015.pdf"
+                    "url": "http://www.icir.org/vern/papers/meek-PETS-2015.pdf",
+                    "source_name_fa": "Fifield Blocking Againstent Communication از طریق Domain Fronting 2015",
+                    "description_fa": "David Fifield، Chang Lan، Rod Hynes، Percy Wegmann و Vern Paxson (2015). مسدود کردن ارتباطات مقاومتی از طریق جبهه بندی دامنه Retrieved 20 نوامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -48,7 +51,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "Domain Fronting",
+            "description_fa": "Domain Fronting از طرح های مسیریابی در شبکه های تحویل محتوا (CDNs) و سایر خدمات استفاده می کند که میزبان دامنه های متعدد برای جذب مقصد مورد نظر ترافیک HTTPS یا تونل ترافیک از طریق HTTPS است. [[ویرایش] این تکنیک شامل استفاده از نام دامنه های مختلف در زمینه SNI هدر TLS و زمینه میزبان هدر HTTP است. اگر هر دو دامنه از همان CDN خدمت می کنند، ممکن است CDN به آدرس مشخص شده در هدر HTTP پس از باز کردن هدر TLS برسد. تنوع این تکنیک، \"بدون دامنه\" جلو، از یک میدان SNI استفاده می کند که خالی شده است؛ این ممکن است اجازه دهد تا جلو کار کند حتی زمانی که تلاش های CDN برای اعتباربخشی به بازی SNI و HTTP میزبان (اگر زمینه های SNI سفید نادیده گرفته شود).\n\nبه عنوان مثال، اگر Domain-x و Domain-y مشتریان همان CDN هستند، ممکن است دامنه-x را در هدر TLS و دامنه در هدر HTTP قرار دهید. به نظر می رسد که ترافیک به Domain-x می رود، اما ممکن است CDN آن را به Domain-y هدایت کند. (Citation: Fifield Blocking Resistent Communication through domain fronting 2015)"
         }
     ]
 }

@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1036/010",
-                    "external_id": "T1036.010"
+                    "external_id": "T1036.010",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Elastic CUBA Ransomware 2022",
                     "description": "Daniel Stepanic, Derek Ditch, Seth Goodwin, Salim Bitam, Andrew Pease. (2022, September 7). CUBA Ransomware Campaign Analysis. Retrieved August 5, 2024.",
-                    "url": "https://www.elastic.co/security-labs/cuba-ransomware-campaign-analysis"
+                    "url": "https://www.elastic.co/security-labs/cuba-ransomware-campaign-analysis",
+                    "source_name_fa": "Elastic CUBA Ransomware 2022",
+                    "description_fa": "دانیل گامچین، درک Ditch، Seth Goodwin، Common Bitam، Andrew Pease (۲۰۲۲، سپتامبر ۷) CUBA Ransomware Campaign Analysis Retrieved 5، 2024."
                 },
                 {
                     "source_name": "Invictus IR Cloud Ransomware 2024",
                     "description": "Invictus IR. (2024, January 11). Ransomware in the cloud. Retrieved August 5, 2024.",
-                    "url": "https://www.invictus-ir.com/news/ransomware-in-the-cloud"
+                    "url": "https://www.invictus-ir.com/news/ransomware-in-the-cloud",
+                    "source_name_fa": "Invictus IR Cloud Ransomware 2024",
+                    "description_fa": "Invictus IR (2024، 11 ژانویه) Ransomware در ابر Retrieved 5، 2024."
                 },
                 {
                     "source_name": "Huntress MOVEit 2023",
                     "description": "John Hammond. (2023, June 1). MOVEit Transfer Critical Vulnerability CVE-2023-34362 Rapid Response. Retrieved August 5, 2024.",
-                    "url": "https://www.huntress.com/blog/moveit-transfer-critical-vulnerability-rapid-response"
+                    "url": "https://www.huntress.com/blog/moveit-transfer-critical-vulnerability-rapid-response",
+                    "source_name_fa": "دانلود فیلم Huntress MoVEit 2023",
+                    "description_fa": "جان هاموند انتقال آسیب پذیری بحرانی CVE-2023-34362 پاسخ سریع Retrieved 5، 2024."
                 },
                 {
                     "source_name": "Aquasec Kubernetes Attack 2023",
                     "description": "Michael Katchinskiy, Assaf Morag. (2023, April 21). First-Ever Attack Leveraging Kubernetes RBAC to Backdoor Clusters. Retrieved July 14, 2023.",
-                    "url": "https://blog.aquasec.com/leveraging-kubernetes-rbac-to-backdoor-clusters"
+                    "url": "https://blog.aquasec.com/leveraging-kubernetes-rbac-to-backdoor-clusters",
+                    "source_name_fa": "حمله Aquasec Kubernetes 2023",
+                    "description_fa": "مایکل Katchinskiy، Assaf Morag (2023، 21 آوریل) حمله اول به Leveraging Kubernetes RBAC به backdoor Clusters Retrieved 14 ژوئیه 2023."
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2026-05-12T15:12:00.717Z",
             "name": "Masquerade Account Name",
-            "description": "Adversaries may match or approximate the names of legitimate accounts to make newly created ones appear benign. This will typically occur during [Create Account](https://attack.mitre.org/techniques/T1136), although accounts may also be renamed at a later date. This may also coincide with [Account Access Removal](https://attack.mitre.org/techniques/T1531) if the actor first deletes an account before re-creating one with the same name.(Citation: Huntress MOVEit 2023)\n\nOften, adversaries will attempt to masquerade as service accounts, such as those associated with legitimate software, data backups, or container cluster management.(Citation: Elastic CUBA Ransomware 2022)(Citation: Aquasec Kubernetes Attack 2023) They may also give accounts generic, trustworthy names, such as \u201cadmin\u201d, \u201chelp\u201d, or \u201croot.\u201d(Citation: Invictus IR Cloud Ransomware 2024) Sometimes adversaries may model account names off of those already existing in the system, as a follow-on behavior to [Account Discovery](https://attack.mitre.org/techniques/T1087).  \n\nNote that this is distinct from [Impersonation](https://attack.mitre.org/techniques/T1684/001), which describes impersonating specific trusted individuals or organizations, rather than user or service account names.  ",
+            "description": "Adversaries may match or approximate the names of legitimate accounts to make newly created ones appear benign. This will typically occur during [Create Account](https://attack.mitre.org/techniques/T1136), although accounts may also be renamed at a later date. This may also coincide with [Account Access Removal](https://attack.mitre.org/techniques/T1531) if the actor first deletes an account before re-creating one with the same name.(Citation: Huntress MOVEit 2023)\n\nOften, adversaries will attempt to masquerade as service accounts, such as those associated with legitimate software, data backups, or container cluster management.(Citation: Elastic CUBA Ransomware 2022)(Citation: Aquasec Kubernetes Attack 2023) They may also give accounts generic, trustworthy names, such as “admin”, “help”, or “root.”(Citation: Invictus IR Cloud Ransomware 2024) Sometimes adversaries may model account names off of those already existing in the system, as a follow-on behavior to [Account Discovery](https://attack.mitre.org/techniques/T1087).  \n\nNote that this is distinct from [Impersonation](https://attack.mitre.org/techniques/T1684/001), which describes impersonating specific trusted individuals or organizations, rather than user or service account names.  ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -68,7 +77,9 @@
                 "SaaS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "نام کاربری Masquerade Account Name",
+            "description_fa": "مخالفان ممکن است با نام حساب های قانونی مطابقت داشته باشند یا به طور تقریبی نام حساب های قانونی را برای ایجاد حساب های تازه ایجاد شده به نظر می رسد خوش خیم. این امر به طور معمول در طول (ایجاد حساب) رخ می دهد ([۱۰] [[۱۰]] [۷]]، اگرچه حساب ها ممکن است در تاریخ بعد تغییر نام داده شوند. این امر همچنین می تواند با استفاده از (Account Access Removal) همزمان شود ([CTI_PRESERVE_5] اگر اولین بازیگر یک حساب را قبل از ایجاد مجدد یکی با همان نام حذف کند. [[ویرایش]\n\nاغلب، دشمنان تلاش می کنند تا به عنوان حساب های خدمات، مانند کسانی که با نرم افزار مشروع، پشتیبان گیری داده ها یا مدیریت خوشه container مرتبط هستند، به ما بپیوندند. [[ویرایش] آنها همچنین ممکن است نام های عمومی و قابل اعتماد مانند \"admin\"، \"کمک\" یا \" root\" را ارائه دهند. گاهی اوقات دشمنان می توانند اسامی کسانی را که در حال حاضر در سیستم وجود دارند، به عنوان یک رفتار پیگیری برای [Account Discovery] ([[CTI_PRESERVE_6]) مدل کنند.\n\nتوجه داشته باشید که این امر از (Im personation) متمایز است ([CTI_PRESERVE_7] که توصیف افراد یا سازمان های مورد اعتماد خاص، به جای نام کاربری یا حساب کاربری. (Citation: Huntress MOVEit 2023) (Citation: Elastic CUBA Ransomware 2022) (Citation: Aquasec Kubernetes Attack 2023) (Citation: Invictus IR Cloud Ransomware 2024) https://attack.mitre.org/techniques/T1136 https://attack.mitre.org/techniques/T1531 https://attack.mitre.org/techniques/T1087 https://attack.mitre.org/techniques/T1684/001"
         }
     ]
 }

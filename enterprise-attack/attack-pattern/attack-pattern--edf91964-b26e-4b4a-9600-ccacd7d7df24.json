@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1003/003",
-                    "external_id": "T1003.003"
+                    "external_id": "T1003.003",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Metcalf 2015",
                     "description": "Metcalf, S. (2015, January 19). Attackers Can Now Use Mimikatz to Implant Skeleton Key on Domain Controllers & BackDoor Your Active Directory Forest. Retrieved February 3, 2015.",
-                    "url": "http://adsecurity.org/?p=1275"
+                    "url": "http://adsecurity.org/?p=1275",
+                    "source_name_fa": "Metcalf 2015",
+                    "description_fa": "Metcalf، S. (2015، 19 ژانویه) مهاجمان اکنون می توانند از Mimikatz برای کاشت Skeleton Key در Domain Controllers و BackDoor جنگل Active Directory شما استفاده کنند. Retrieved 3 فوریه 2015"
                 },
                 {
                     "source_name": "Wikipedia Active Directory",
                     "description": "Wikipedia. (2018, March 10). Active Directory. Retrieved April 11, 2018.",
-                    "url": "https://en.wikipedia.org/wiki/Active_Directory"
+                    "url": "https://en.wikipedia.org/wiki/Active_Directory",
+                    "source_name_fa": "ویکی پدیا Active Directory",
+                    "description_fa": "ویکی پدیا (2018, 10 مارس) Active Directory Retrieved 11 آوریل 2018"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +56,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.3"
+            "x_mitre_version": "1.3",
+            "name_fa": "NTDS",
+            "description_fa": "مخالفان ممکن است تلاش برای دسترسی یا ایجاد یک کپی از پایگاه داده دامنه Active Directory برای سرقت اطلاعات معتبر و همچنین به دست آوردن اطلاعات دیگر در مورد اعضای دامنه مانند دستگاه ها، کاربران و حقوق دسترسی. به طور پیش فرض، فایل NTDS (NTDS.dit) در [CTI_PRESERVE_0] از یک کنترل کننده دامنه قرار دارد.\n\nعلاوه بر جستجوی فایل های NTDS در کنترل کننده های فعال دامنه، دشمنان ممکن است به دنبال پشتیبان هایی باشند که حاوی اطلاعات مشابه یا مشابه هستند. [[ویرایش]\n\nابزار و تکنیک های زیر می توانند برای ثبت نام فایل NTDS و محتویات کل هش Active Directory استفاده شوند.\n\n* Volume Shadow Copy\n* اسرار\n* استفاده از ابزار داخلی ویندوز، ntdsutil.exe\nInvoke-NinjaCopy <code>%SystemRoot%\\NTDS\\Ntds.dit</code> (Citation: Wikipedia Active Directory) (Citation: Metcalf 2015)"
         }
     ]
 }

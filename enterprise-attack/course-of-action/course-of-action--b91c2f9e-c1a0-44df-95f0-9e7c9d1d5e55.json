@@ -12,27 +12,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/T1178",
-                    "external_id": "T1178"
+                    "external_id": "T1178",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Microsoft Trust Considerations Nov 2014",
                     "description": "Microsoft. (2014, November 19). Security Considerations for Trusts. Retrieved November 30, 2017.",
-                    "url": "https://technet.microsoft.com/library/cc755321.aspx"
+                    "url": "https://technet.microsoft.com/library/cc755321.aspx",
+                    "source_name_fa": "Microsoft Trust در نوامبر 2014",
+                    "description_fa": "مایکروسافت (2014, 19 نوامبر) ملاحظات امنیتی برای اعتمادها Retrieved ۳۰ نوامبر ۲۰۱۷"
                 },
                 {
                     "source_name": "Microsoft SID Filtering Quarantining Jan 2009",
                     "description": "Microsoft. (n.d.). Configuring SID Filter Quarantining on External Trusts. Retrieved November 30, 2017.",
-                    "url": "https://technet.microsoft.com/library/cc794757.aspx"
+                    "url": "https://technet.microsoft.com/library/cc794757.aspx",
+                    "source_name_fa": "Microsoft SID Filtering Quarantining ژانویه 2009",
+                    "description_fa": "مایکروسافت (n.d.) پیکربندی SID Filter Quarantining در اعتماد خارجی Retrieved ۳۰ نوامبر ۲۰۱۷"
                 },
                 {
                     "source_name": "Microsoft Netdom Trust Sept 2012",
                     "description": "Microsoft. (2012, September 11). Command-Line Reference - Netdom Trust. Retrieved November 30, 2017.",
-                    "url": "https://technet.microsoft.com/library/cc835085.aspx"
+                    "url": "https://technet.microsoft.com/library/cc835085.aspx",
+                    "source_name_fa": "Microsoft Netdom Trust سپتامبر 2012",
+                    "description_fa": "مایکروسافت (2012, 11 سپتامبر) مرجع Command-Line – Netdom Trust Retrieved ۳۰ نوامبر ۲۰۱۷"
                 },
                 {
                     "source_name": "AdSecurity Kerberos GT Aug 2015",
                     "description": "Metcalf, S. (2015, August 7). Kerberos Golden Tickets are Now More Golden. Retrieved December 1, 2017.",
-                    "url": "https://adsecurity.org/?p=1640"
+                    "url": "https://adsecurity.org/?p=1640",
+                    "source_name_fa": "AdSecurity Kerberos GT 2015",
+                    "description_fa": "Metcalf، S. (2015، اوت 7) بلیط های طلایی Kerberos اکنون طلایی تر هستند. Retrieved 1 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -47,7 +56,9 @@
                 "enterprise-attack"
             ],
             "x_mitre_version": "1.0",
-            "x_mitre_attack_spec_version": "3.2.0"
+            "x_mitre_attack_spec_version": "3.2.0",
+            "name_fa": "SID-تاریخ تزریق",
+            "description_fa": "تمیز کردن ویژگی های SID-تاریخ پس از مهاجرت حساب قانونی کامل است.\n\nاستفاده از SID فیلتر کردن اعتماد متقابل، مانند اعتماد جنگل و اعتماد خارجی، برای حذف SID-تاریخ از درخواست ها برای دسترسی به منابع دامنه. SID فیلتر کردن تضمین می کند که هر گونه درخواست احراز هویت در مورد اعتماد فقط شامل SID از مدیران امنیتی از دامنه قابل اعتماد (به عنوان مثال جلوگیری از دامنه قابل اعتماد از ادعای یک کاربر عضویت در گروه های خارج از دامنه).\n\nSID فیلتر کردن اعتماد جنگل به طور پیش فرض امکان پذیر است، اما ممکن است در برخی موارد غیرفعال شده باشد تا اجازه دهد یک دامنه کودک به طور گذرا به اعتماد جنگل دسترسی داشته باشد. SID فیلتر کردن اعتماد خارجی به طور خودکار بر روی تمام اعتماد های خارجی ایجاد شده با استفاده از سرور ۲۰۰۳ یا کنترل کننده های دامنه بعدی فعال می شود. [[ویرایش] [[ویرایش] با این حال توجه داشته باشید که فیلتر کردن SID به طور خودکار برای اعتماد به میراث اعمال نمی شود یا ممکن است عمدا غیرفعال شده باشد تا امکان دسترسی به منابع را فراهم کند.\n\nSID استفاده از آن می تواند به صورت زیر باشد:\n\n* عدم اطمینان در مورد اعتماد جنگل با استفاده از ابزار خالص ([CTI_PRESERVE_0] در کنترل کننده دامنه.\n* استفاده از SID Filter Quarantining به اعتماد خارجی با استفاده از ابزار Netdom ([CTI_PRESERVE) بر روی کنترل کننده دامنه)\nاستفاده از SID فیلتر کردن اعتماد به دامنه در یک جنگل توصیه نمی شود زیرا یک پیکربندی بدون پشتیبانی است و می تواند باعث تغییرات شکستن شود. [[ویرایش] [[ویرایش] اگر یک دامنه در یک جنگل غیر قابل اعتماد باشد، نباید عضو جنگل باشد. در این شرایط لازم است که ابتدا دامنه های قابل اعتماد و غیر قابل اعتماد را به جنگل های جداگانه تقسیم کنیم که در آن SID Filtering می تواند به یک اعتماد متقابل اعمال شود. <code>netdom trust <TrustingDomainName> /domain:<TrustedDomainName> /EnableSIDHistory:no</code> <code>netdom trust <TrustingDomainName> /domain:<TrustedDomainName> /quarantine:yes</code> (Citation: Microsoft Trust Considerations Nov 2014) (Citation: Microsoft SID Filtering Quarantining Jan 2009) (Citation: Microsoft Netdom Trust Sept 2012) (Citation: Microsoft Netdom Trust Sept 2012) (Citation: AdSecurity Kerberos GT Aug 2015)"
         }
     ]
 }

@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1592",
-                    "external_id": "T1592"
+                    "external_id": "T1592",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "ATT ScanBox",
                     "description": "Blasco, J. (2014, August 28). Scanbox: A Reconnaissance Framework Used with Watering Hole Attacks. Retrieved October 19, 2020.",
-                    "url": "https://cybersecurity.att.com/blogs/labs-research/scanbox-a-reconnaissance-framework-used-on-watering-hole-attacks"
+                    "url": "https://cybersecurity.att.com/blogs/labs-research/scanbox-a-reconnaissance-framework-used-on-watering-hole-attacks",
+                    "source_name_fa": "ATT ScanBox",
+                    "description_fa": "Blasco، J. (2014، 28 آگوست) Scanbox : چارچوب سازگاری استفاده شده با حملات حفره آب Retrieved 19 اکتبر 2020"
                 },
                 {
                     "source_name": "TrellixQakbot",
                     "description": "Pham Duy Phuc, John Fokker J.E., Alejandro Houspanossian and Mathanraj Thangaraju. (2023, March 7). Qakbot Evolves to OneNote Malware Distribution. Retrieved August 1, 2024.",
-                    "url": "https://www.trellix.com/blogs/research/qakbot-evolves-to-onenote-malware-distribution/"
+                    "url": "https://www.trellix.com/blogs/research/qakbot-evolves-to-onenote-malware-distribution/",
+                    "source_name_fa": "TrellixQakbot",
+                    "description_fa": "Pham Duy Phuc جان افکر J.E.، آلخاندرو هودوسیان و Mathanraj Thangaraju Qakbot Evolves به یک توزیع MalwareNote. Retrieved 1, 2024."
                 },
                 {
                     "source_name": "ThreatConnect Infrastructure Dec 2020",
                     "description": "ThreatConnect. (2020, December 15). Infrastructure Research and Hunting: Boiling the Domain Ocean. Retrieved October 12, 2021.",
-                    "url": "https://threatconnect.com/blog/infrastructure-research-hunting/"
+                    "url": "https://threatconnect.com/blog/infrastructure-research-hunting/",
+                    "source_name_fa": "تهدید زیرساخت 2020",
+                    "description_fa": "ThreatConnect (2020، 15 دسامبر) تحقیقات زیرساختی و شکار: هماهنگی اقیانوس های دامنه Retrieved 12 اکتبر 2021."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2025-10-24T17:48:21.583Z",
             "name": "Gather Victim Host Information",
-            "description": "Adversaries may gather information about the victim's hosts that can be used during targeting. Information about hosts may include a variety of details, including administrative data (ex: name, assigned IP, functionality, etc.) as well as specifics regarding its configuration (ex: operating system, language, etc.).\n\nAdversaries may gather this information in various ways, such as direct collection actions via [Active Scanning](https://attack.mitre.org/techniques/T1595) or [Phishing for Information](https://attack.mitre.org/techniques/T1598). Adversaries may also compromise sites then include malicious content designed to collect host information from visitors.(Citation: ATT ScanBox) Information about hosts may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)). Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)), establishing operational resources (ex: [Develop Capabilities](https://attack.mitre.org/techniques/T1587) or [Obtain Capabilities](https://attack.mitre.org/techniques/T1588)), and/or initial access (ex: [Supply Chain Compromise](https://attack.mitre.org/techniques/T1195) or [External Remote Services](https://attack.mitre.org/techniques/T1133)).\n\nAdversaries may also gather victim host information via User-Agent HTTP headers, which are sent to a server to identify the application, operating system, vendor, and/or version of the requesting user agent. This can be used to inform the adversary\u2019s follow-on action. For example, adversaries may check user agents for the requesting operating system, then only serve malware for target operating systems while ignoring others.(Citation: TrellixQakbot)",
+            "description": "Adversaries may gather information about the victim's hosts that can be used during targeting. Information about hosts may include a variety of details, including administrative data (ex: name, assigned IP, functionality, etc.) as well as specifics regarding its configuration (ex: operating system, language, etc.).\n\nAdversaries may gather this information in various ways, such as direct collection actions via [Active Scanning](https://attack.mitre.org/techniques/T1595) or [Phishing for Information](https://attack.mitre.org/techniques/T1598). Adversaries may also compromise sites then include malicious content designed to collect host information from visitors.(Citation: ATT ScanBox) Information about hosts may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)). Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)), establishing operational resources (ex: [Develop Capabilities](https://attack.mitre.org/techniques/T1587) or [Obtain Capabilities](https://attack.mitre.org/techniques/T1588)), and/or initial access (ex: [Supply Chain Compromise](https://attack.mitre.org/techniques/T1195) or [External Remote Services](https://attack.mitre.org/techniques/T1133)).\n\nAdversaries may also gather victim host information via User-Agent HTTP headers, which are sent to a server to identify the application, operating system, vendor, and/or version of the requesting user agent. This can be used to inform the adversary’s follow-on action. For example, adversaries may check user agents for the requesting operating system, then only serve malware for target operating systems while ignoring others.(Citation: TrellixQakbot)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -56,7 +63,9 @@
             "x_mitre_platforms": [
                 "PRE"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "جمع آوری اطلاعات قربانیان",
+            "description_fa": "مخالفان ممکن است اطلاعات مربوط به میزبان قربانی را جمع آوری کنند که می تواند در هنگام هدف گیری مورد استفاده قرار گیرد. اطلاعات مربوط به میزبان ها ممکن است شامل انواع جزئیات، از جمله داده های اداری (ex: نام، اختصاص داده شده IP، عملکرد و غیره) و همچنین جزئیات مربوط به پیکربندی آن (به عنوان مثال: سیستم عامل، زبان و غیره).\n\nعوامل ممکن است این اطلاعات را به روش های مختلف جمع آوری کنند، مانند اقدامات جمع آوری مستقیم از طریق اسکن فعال ([CTI_PRESERVE_2] و یا [Phishing for Information] [[[۱۰] [۹] همچنین ممکن است سایت ها را به خطر بیاندازند و سپس محتوای مخربی را که برای جمع آوری اطلاعات میزبان از بازدید کنندگان طراحی شده است، شامل شوند. [[ویرایش] اطلاعات مربوط به میزبان نیز ممکن است از طریق آنلاین یا سایر مجموعه های داده قابل دسترس (ex: Social Media) در معرض دشمنان قرار گیرد ([CTI_PRESERVE_4] و یا [جستجوی وب سایت های قربانی-Owned] ([CTI_PRESERV_E_5]). جمع آوری این اطلاعات ممکن است فرصت هایی را برای دیگر اشکال شناسایی (ex) آشکار کند (SEO Open Websites/Domains) ([CTI_PRESERVE_6] و یا [url] پایگاه داده های فنی باز (CTIREI_SERVE_SERV_E_7])، ایجاد منابع عملیاتی (exvelopability)\n\nمخالفان همچنین ممکن است اطلاعات میزبان قربانی را از طریق هدرهای HTTP User-Agent جمع آوری کنند که به یک سرور فرستاده می شوند تا برنامه، سیستم عامل، فروشنده و / یا نسخه عامل کاربر درخواست کننده را شناسایی کنند. این می تواند مورد استفاده قرار گیرد برای اطلاع از اقدامات پیگیری دشمن. به عنوان مثال، دشمنان ممکن است عامل های کاربر را برای درخواست سیستم عامل بررسی کنند، سپس فقط برای سیستم عامل های هدف در حالی که دیگران را نادیده می گیرند، از بدافزار استفاده کنند. (Citation: ATT ScanBox) (Citation: TrellixQakbot) https://attack.mitre.org/techniques/T1595 https://attack.mitre.org/techniques/T1598 https://attack.mitre.org/techniques/T1593/001 https://attack.mitre.org/techniques/T1594 https://attack.mitre.org/techniques/T1593 https://attack.mitre.org/techniques/T1596 https://attack.mitre.org/techniques/T1587 https://attack.mitre.org/techniques/T1588 https://attack.mitre.org/techniques/T1195 https://attack.mitre.org/techniques/T1133"
         }
     ]
 }

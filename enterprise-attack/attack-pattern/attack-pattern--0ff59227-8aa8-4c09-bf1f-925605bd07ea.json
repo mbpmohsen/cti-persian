@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1590/002",
-                    "external_id": "T1590.002"
+                    "external_id": "T1590.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Circl Passive DNS",
                     "description": "CIRCL Computer Incident Response Center. (n.d.). Passive DNS. Retrieved October 20, 2020.",
-                    "url": "https://www.circl.lu/services/passive-dns/"
+                    "url": "https://www.circl.lu/services/passive-dns/",
+                    "source_name_fa": "DNS Passive DNS",
+                    "description_fa": "CIRCL مرکز واکنش به حوادث کامپیوتری (n.d) DNS Passive Retrieved ۲۰ اکتبر ۲۰۲۰"
                 },
                 {
                     "source_name": "DNS-CISA",
                     "description": "CISA. (2016, September 29). DNS Zone Transfer AXFR Requests May Leak Domain Information. Retrieved June 5, 2024.",
-                    "url": "https://www.cisa.gov/news-events/alerts/2015/04/13/dns-zone-transfer-axfr-requests-may-leak-domain-information"
+                    "url": "https://www.cisa.gov/news-events/alerts/2015/04/13/dns-zone-transfer-axfr-requests-may-leak-domain-information",
+                    "source_name_fa": "DNS-CISA",
+                    "description_fa": "CISA (2016، 29 سپتامبر) DNS Zone Transfer AXFR Requests می تواند اطلاعات دامنه را فاش کند. Retrieved 5 ژوئن 2024"
                 },
                 {
                     "source_name": "DNS Dumpster",
                     "description": "Hacker Target. (n.d.). DNS Dumpster. Retrieved October 20, 2020.",
-                    "url": "https://dnsdumpster.com/"
+                    "url": "https://dnsdumpster.com/",
+                    "source_name_fa": "DNS Dumpster",
+                    "description_fa": "هکر هدف (n.d.) DNS Dumpster Retrieved ۲۰ اکتبر ۲۰۲۰"
                 },
                 {
                     "source_name": "Alexa-dns",
                     "description": "Scanning Alexa's Top 1M for AXFR. (2015, March 29). Retrieved June 5, 2024.",
-                    "url": "https://en.internetwache.org/scanning-alexas-top-1m-for-axfr-29-03-2015/"
+                    "url": "https://en.internetwache.org/scanning-alexas-top-1m-for-axfr-29-03-2015/",
+                    "source_name_fa": "Alexa-dns",
+                    "description_fa": "اسکن 1M برتر الکسا برای AXFR (2015، 29 مارس) Retrieved 5 ژوئن 2024"
                 },
                 {
                     "source_name": "Sean Metcalf Twitter DNS Records",
                     "description": "Sean Metcalf. (2019, May 9). Sean Metcalf Twitter. Retrieved September 12, 2024.",
-                    "url": "https://x.com/PyroTek3/status/1126487227712921600"
+                    "url": "https://x.com/PyroTek3/status/1126487227712921600",
+                    "source_name_fa": "اشتراک های DNS Twitter",
+                    "description_fa": "شان متcalf (2019، مه 9) شان متcalf Twitter Retrieved 12 سپتامبر 2024"
                 },
                 {
                     "source_name": "Trails-DNS",
                     "description": "SecurityTrails. (2018, March 14). Wrong Bind Configuration Exposes the Complete List of Russian TLD's to the Internet. Retrieved June 5, 2024.",
-                    "url": "https://web.archive.org/web/20180615055527/https://securitytrails.com/blog/russian-tlds"
+                    "url": "https://web.archive.org/web/20180615055527/https://securitytrails.com/blog/russian-tlds",
+                    "source_name_fa": "دانلود بازی Trails-DNS",
+                    "description_fa": "ایمنی (2018، 14 مارس) تنظیمات اشتباه بند لیست کامل TLD های روسی را به اینترنت نشان می دهد. Retrieved 5 ژوئن 2024"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2025-10-24T17:48:24.404Z",
             "name": "DNS",
-            "description": "Adversaries may gather information about the victim's DNS that can be used during targeting. DNS information may include a variety of details, including registered name servers as well as records that outline addressing for a target\u2019s subdomains, mail servers, and other hosts. DNS MX, TXT, and SPF records may also reveal the use of third party cloud and SaaS providers, such as Office 365, G Suite, Salesforce, or Zendesk.(Citation: Sean Metcalf Twitter DNS Records)\n\nAdversaries may gather this information in various ways, such as querying or otherwise collecting details via [DNS/Passive DNS](https://attack.mitre.org/techniques/T1596/001). DNS information may also be exposed to adversaries via online or other accessible data sets (ex: [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)).(Citation: DNS Dumpster)(Citation: Circl Passive DNS) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596), [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593), or [Active Scanning](https://attack.mitre.org/techniques/T1595)), establishing operational resources (ex: [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) or [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133)).\n\nAdversaries may also use DNS zone transfer (DNS query type AXFR) to collect all records from a misconfigured DNS server.(Citation: Trails-DNS)(Citation: DNS-CISA)(Citation: Alexa-dns)",
+            "description": "Adversaries may gather information about the victim's DNS that can be used during targeting. DNS information may include a variety of details, including registered name servers as well as records that outline addressing for a target’s subdomains, mail servers, and other hosts. DNS MX, TXT, and SPF records may also reveal the use of third party cloud and SaaS providers, such as Office 365, G Suite, Salesforce, or Zendesk.(Citation: Sean Metcalf Twitter DNS Records)\n\nAdversaries may gather this information in various ways, such as querying or otherwise collecting details via [DNS/Passive DNS](https://attack.mitre.org/techniques/T1596/001). DNS information may also be exposed to adversaries via online or other accessible data sets (ex: [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596)).(Citation: DNS Dumpster)(Citation: Circl Passive DNS) Gathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Technical Databases](https://attack.mitre.org/techniques/T1596), [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593), or [Active Scanning](https://attack.mitre.org/techniques/T1595)), establishing operational resources (ex: [Acquire Infrastructure](https://attack.mitre.org/techniques/T1583) or [Compromise Infrastructure](https://attack.mitre.org/techniques/T1584)), and/or initial access (ex: [External Remote Services](https://attack.mitre.org/techniques/T1133)).\n\nAdversaries may also use DNS zone transfer (DNS query type AXFR) to collect all records from a misconfigured DNS server.(Citation: Trails-DNS)(Citation: DNS-CISA)(Citation: Alexa-dns)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -60,7 +73,7 @@
             ],
             "x_mitre_attack_spec_version": "3.2.0",
             "x_mitre_contributors": [
-                "Jannie Li, Microsoft Threat Intelligence\u202fCenter\u202f(MSTIC)"
+                "Jannie Li, Microsoft Threat Intelligence Center (MSTIC)"
             ],
             "x_mitre_deprecated": false,
             "x_mitre_domains": [
@@ -71,7 +84,9 @@
             "x_mitre_platforms": [
                 "PRE"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "DNS DNS",
+            "description_fa": "مخالفان ممکن است اطلاعات مربوط به DNS قربانی را جمع آوری کنند که می تواند در هنگام هدف گیری مورد استفاده قرار گیرد. اطلاعات DNS ممکن است شامل انواع جزئیات، از جمله سرورهای نام ثبت شده و همچنین سوابقی باشد که برای زیر دامنه های هدف، سرورهای ایمیل و سایر میزبان ها توضیح می دهند. DNS MX، TXT و سوابق SPF نیز ممکن است استفاده از ابر شخص ثالث و ارائه دهندگان SaaS مانند Office 365، G Suite، Salesforce یا Zendesk را نشان دهد.\n\nعوامل ممکن است این اطلاعات را به روش های مختلف جمع آوری کنند، مانند جستجو یا جمع آوری جزئیات از طریق [DNS / DNS پیشگیرانه] ([CTI_PRESERVE_6]). اطلاعات DNS همچنین ممکن است از طریق آنلاین یا سایر مجموعه های داده های قابل دسترس (ex: Search Open Technical Databases) ([CTI_PRESERVE_7] در معرض دشمنان قرار گیرد. جمع آوری این اطلاعات ممکن است فرصت هایی را برای دیگر اشکال شناسایی (ex;Search Open Databases) ([CTI_PRESERVE_8] آشکار کند، [جستجو Open Websites/Domains] (REIDNI_PSERVE_SERV_E_9)، یا [آزمون فعال] ([ICT_PRE]_SERV_E10)\n\nهمچنین ممکن است از انتقال محدوده DNS (DNS پرس و جو نوع AXFR) برای جمع آوری تمام سوابق از یک سرور DNS پیکربندی شده استفاده کند.[۱۰] [CTI_PRESERVE_۳][۱۰] (Citation: Sean Metcalf Twitter DNS Records) (Citation: DNS Dumpster) (Citation: Circl Passive DNS) (Citation: Trails-DNS) (Citation: DNS-CISA) (Citation: Alexa-dns) https://attack.mitre.org/techniques/T1596/001 https://attack.mitre.org/techniques/T1596 https://attack.mitre.org/techniques/T1596 https://attack.mitre.org/techniques/T1593 https://attack.mitre.org/techniques/T1595 https://attack.mitre.org/techniques/T1583 https://attack.mitre.org/techniques/T1584 https://attack.mitre.org/techniques/T1133"
         }
     ]
 }

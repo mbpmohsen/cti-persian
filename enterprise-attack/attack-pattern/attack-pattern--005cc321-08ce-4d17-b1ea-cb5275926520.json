@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1205/002",
-                    "external_id": "T1205.002"
+                    "external_id": "T1205.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "exatrack bpf filters passive backdoors",
                     "description": "ExaTrack. (2022, May 11). Tricephalic Hellkeeper: a tale of a passive backdoor. Retrieved October 18, 2022.",
-                    "url": "https://exatrack.com/public/Tricephalic_Hellkeeper.pdf"
+                    "url": "https://exatrack.com/public/Tricephalic_Hellkeeper.pdf",
+                    "source_name_fa": "فیلترهای BPF منفعل Backdoors",
+                    "description_fa": "ExaTrack. (2022, May 11) Triسفالی آتش نشانی: داستان یک درب پشتی منفعل Retrieved 18، 2022."
                 },
                 {
                     "source_name": "Leonardo Turla Penquin May 2020",
-                    "description": "Leonardo. (2020, May 29). MALWARE TECHNICAL INSIGHT TURLA \u201cPenquin_x64\u201d. Retrieved March 11, 2021.",
-                    "url": "https://www.leonardo.com/documents/20142/10868623/Malware+Technical+Insight+_Turla+%E2%80%9CPenquin_x64%E2%80%9D.pdf"
+                    "description": "Leonardo. (2020, May 29). MALWARE TECHNICAL INSIGHT TURLA “Penquin_x64”. Retrieved March 11, 2021.",
+                    "url": "https://www.leonardo.com/documents/20142/10868623/Malware+Technical+Insight+_Turla+%E2%80%9CPenquin_x64%E2%80%9D.pdf",
+                    "source_name_fa": "لئوناردو لئوناردو Turla Penquin May 2020",
+                    "description_fa": "لئوناردو (2020، 29 می) MALWARE TECHNical INSURLA \"Penquin_x64\" Retrieved 11 مارس 2021."
                 },
                 {
                     "source_name": "haking9 libpcap network sniffing",
                     "description": "Luis Martin Garcia. (2008, February 1). Hakin9 Issue 2/2008 Vol 3 No.2 VoIP Abuse: Storming SIP Security. Retrieved October 18, 2022.",
-                    "url": "http://recursos.aldabaknocking.com/libpcapHakin9LuisMartinGarcia.pdf"
+                    "url": "http://recursos.aldabaknocking.com/libpcapHakin9LuisMartinGarcia.pdf",
+                    "source_name_fa": "شبکه هک کردن9",
+                    "description_fa": "لویی مارتین گارسیا (2008، 1 فوریه) Hakin9 مسئله 2 / 2008 Vol 3 No.2 VoIP: Storming SIP Security Retrieved 18، 2022."
                 }
             ],
             "object_marking_refs": [
@@ -67,7 +74,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "فیلترهای سوکت",
+            "description_fa": "مخالفان ممکن است فیلترها را به یک سوکت شبکه متصل کنند تا سپس درب های پشتی را فعال کنند که برای پایداری یا فرماندهی و کنترل استفاده می شوند. با اجازه های بالا، می تواند از ویژگی هایی مانند کتابخانه “libpcap” برای باز کردن سوکت ها و فیلترهای نصب استفاده کند تا اجازه دهد یا انواع خاصی از داده ها را از طریق سوکت خارج کند. فیلتر ممکن است برای تمام ترافیک عبور از رابط شبکه مشخص (یا هر رابط اگر مشخص نشود) اعمال شود. هنگامی که رابط شبکه یک بسته را مطابق با معیارهای فیلتر دریافت می کند، اقدامات اضافی می تواند در میزبان ایجاد شود، مانند فعال سازی یک پوسته معکوس.\n\nبرای ایجاد یک اتصال، یک دشمن یک بسته ساخته شده را به میزبان هدف که مطابق با معیارهای فیلتر نصب شده است ارسال می کند. مخالفان از این فیلترهای سوکت استفاده کرده اند تا نصب ایمپلنت ها را تحریک کنند، پشت های پینگ را انجام دهند و پوسته های فرمان را فراخوانی کنند. با استفاده از این فیلترها نیز می توان از آن استفاده کرد.[۱۰]\n\nفیلترها را می توان بر روی هر پلت فرم مانند یونیکس با \"libpcap\" نصب شده یا بر روی ویندوز میزبان با استفاده از \"Winpcap\" نصب کرد. مخالفان ممکن است از \"libpcap\" با \"pcap_set Filter\" یا تابع کتابخانه استاندارد \"setsockopt\" با گزینه های \"SO_ATTACH_FILTER\" استفاده کنند. از آنجا که اتصال سوکت فعال نیست تا زمانی که بسته دریافت شود، این رفتار ممکن است به دلیل عدم فعالیت در یک میزبان، سربار CPU پایین و دید محدود به استفاده از سوکت خام دشوار باشد. (Citation: haking9 libpcap network sniffing) (Citation: exatrack bpf filters passive backdoors) (Citation: Leonardo Turla Penquin May 2020) https://attack.mitre.org/techniques/T1572"
         }
     ]
 }

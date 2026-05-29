@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1556/007",
-                    "external_id": "T1556.007"
+                    "external_id": "T1556.007",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Azure AD Connect for Read Teamers",
                     "description": "Adam Chester. (2019, February 18). Azure AD Connect for Red Teamers. Retrieved September 28, 2022.",
-                    "url": "https://blog.xpnsec.com/azuread-connect-for-redteam/"
+                    "url": "https://blog.xpnsec.com/azuread-connect-for-redteam/",
+                    "source_name_fa": "Azure AD Connect for Read Teamers",
+                    "description_fa": "آدام چستر (2019، 18 فوریه) Azure AD Connect for Red Teamers Retrieved 28 سپتامبر 2022"
                 },
                 {
                     "source_name": "AADInternals Azure AD On-Prem to Cloud",
                     "description": "Dr. Nestori Syynimaa. (2020, July 13). Unnoticed sidekick: Getting access to cloud as an on-prem admin. Retrieved September 28, 2022.",
-                    "url": "https://o365blog.com/post/on-prem_admin/"
+                    "url": "https://o365blog.com/post/on-prem_admin/",
+                    "source_name_fa": "AAD Internals Azure AD On-Prem به Cloud",
+                    "description_fa": "دکتر نستله (2020، 13 ژوئیه) نام انگلیسی: Unnoticed sidekick: دسترسی به ابر به عنوان یک مدیر On-prem Retrieved 28 سپتامبر 2022"
                 },
                 {
                     "source_name": "MagicWeb",
-                    "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM\u2019s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
-                    "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+                    "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM’s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
+                    "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/",
+                    "source_name_fa": "سحر و جادو",
+                    "description_fa": "Microsoft Threat Intelligence Center، Microsoft Recognition and Answer Team، Microsoft 365 Defender Research Team (۲۰۲۲، ۲۴ آگوست) جادوی وب: ترفند پس از توافق نامه NOBELIUM برای تأیید به عنوان هر کسی. Retrieved 28 سپتامبر 2022"
                 },
                 {
                     "source_name": "Azure AD Hybrid Identity",
                     "description": "Microsoft. (2022, August 26). Choose the right authentication method for your Azure Active Directory hybrid identity solution. Retrieved September 28, 2022.",
-                    "url": "https://learn.microsoft.com/en-us/azure/active-directory/hybrid/choose-ad-authn"
+                    "url": "https://learn.microsoft.com/en-us/azure/active-directory/hybrid/choose-ad-authn",
+                    "source_name_fa": "Azure AD Hybrid Identity",
+                    "description_fa": "مایکروسافت (2022، 26 آگوست) روش احراز هویت مناسب برای راه حل هویت ترکیبی Azure Active Directory را انتخاب کنید. Retrieved 28 سپتامبر 2022"
                 },
                 {
                     "source_name": "Mandiant Azure AD Backdoors",
                     "description": "Mike Burns. (2020, September 30). Detecting Microsoft 365 and Azure Active Directory Backdoors. Retrieved September 28, 2022.",
-                    "url": "https://www.mandiant.com/resources/detecting-microsoft-365-azure-active-directory-backdoors"
+                    "url": "https://www.mandiant.com/resources/detecting-microsoft-365-azure-active-directory-backdoors",
+                    "source_name_fa": "Mandiant Azure AD Backdoors",
+                    "description_fa": "مایک برنز (2020، 30 سپتامبر) تشخیص Microsoft 365 و Azure Active Directory Backdoors Retrieved 28 سپتامبر 2022"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.633Z",
             "name": "Hybrid Identity",
-            "description": "Adversaries may patch, modify, or otherwise backdoor cloud authentication processes that are tied to on-premises user identities in order to bypass typical authentication mechanisms, access credentials, and enable persistent access to accounts.  \n\nMany organizations maintain hybrid user and device identities that are shared between on-premises and cloud-based environments. These can be maintained in a number of ways. For example, Microsoft Entra ID includes three options for synchronizing identities between Active Directory and Entra ID(Citation: Azure AD Hybrid Identity):\n\n* Password Hash Synchronization (PHS), in which a privileged on-premises account synchronizes user password hashes between Active Directory and Entra ID, allowing authentication to Entra ID to take place entirely in the cloud \n* Pass Through Authentication (PTA), in which Entra ID authentication attempts are forwarded to an on-premises PTA agent, which validates the credentials against Active Directory \n* Active Directory Federation Services (AD FS), in which a trust relationship is established between Active Directory and Entra ID \n\nAD FS can also be used with other SaaS and cloud platforms such as AWS and GCP, which will hand off the authentication process to AD FS and receive a token containing the hybrid users\u2019 identity and privileges. \n\nBy modifying authentication processes tied to hybrid identities, an adversary may be able to establish persistent privileged access to cloud resources. For example, adversaries who compromise an on-premises server running a PTA agent may inject a malicious DLL into the `AzureADConnectAuthenticationAgentService` process that authorizes all attempts to authenticate to Entra ID, as well as records user credentials.(Citation: Azure AD Connect for Read Teamers)(Citation: AADInternals Azure AD On-Prem to Cloud) In environments using AD FS, an adversary may edit the `Microsoft.IdentityServer.Servicehost` configuration file to load a malicious DLL that generates authentication tokens for any user with any set of claims, thereby bypassing multi-factor authentication and defined AD FS policies.(Citation: MagicWeb)\n\nIn some cases, adversaries may be able to modify the hybrid identity authentication process from the cloud. For example, adversaries who compromise a Global Administrator account in an Entra ID tenant may be able to register a new PTA agent via the web console, similarly allowing them to harvest credentials and log into the Entra ID environment as any user.(Citation: Mandiant Azure AD Backdoors)",
+            "description": "Adversaries may patch, modify, or otherwise backdoor cloud authentication processes that are tied to on-premises user identities in order to bypass typical authentication mechanisms, access credentials, and enable persistent access to accounts.  \n\nMany organizations maintain hybrid user and device identities that are shared between on-premises and cloud-based environments. These can be maintained in a number of ways. For example, Microsoft Entra ID includes three options for synchronizing identities between Active Directory and Entra ID(Citation: Azure AD Hybrid Identity):\n\n* Password Hash Synchronization (PHS), in which a privileged on-premises account synchronizes user password hashes between Active Directory and Entra ID, allowing authentication to Entra ID to take place entirely in the cloud \n* Pass Through Authentication (PTA), in which Entra ID authentication attempts are forwarded to an on-premises PTA agent, which validates the credentials against Active Directory \n* Active Directory Federation Services (AD FS), in which a trust relationship is established between Active Directory and Entra ID \n\nAD FS can also be used with other SaaS and cloud platforms such as AWS and GCP, which will hand off the authentication process to AD FS and receive a token containing the hybrid users’ identity and privileges. \n\nBy modifying authentication processes tied to hybrid identities, an adversary may be able to establish persistent privileged access to cloud resources. For example, adversaries who compromise an on-premises server running a PTA agent may inject a malicious DLL into the `AzureADConnectAuthenticationAgentService` process that authorizes all attempts to authenticate to Entra ID, as well as records user credentials.(Citation: Azure AD Connect for Read Teamers)(Citation: AADInternals Azure AD On-Prem to Cloud) In environments using AD FS, an adversary may edit the `Microsoft.IdentityServer.Servicehost` configuration file to load a malicious DLL that generates authentication tokens for any user with any set of claims, thereby bypassing multi-factor authentication and defined AD FS policies.(Citation: MagicWeb)\n\nIn some cases, adversaries may be able to modify the hybrid identity authentication process from the cloud. For example, adversaries who compromise a Global Administrator account in an Entra ID tenant may be able to register a new PTA agent via the web console, similarly allowing them to harvest credentials and log into the Entra ID environment as any user.(Citation: Mandiant Azure AD Backdoors)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -78,7 +89,9 @@
                 "SaaS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "هویت ترکیبی",
+            "description_fa": "مخالفان ممکن است پچ، اصلاح، یا در غیر این صورت فرآیندهای تأیید ابر پشت درب که به هویت کاربر در پیش بینی شده گره خورده اند تا مکانیسم های احراز هویت معمولی، اعتبار دسترسی و دسترسی مداوم به حساب ها را دور بزنند.\n\nبسیاری از سازمان ها هویت های کاربری و دستگاه ترکیبی را حفظ می کنند که بین محیط های مبتنی بر ابر به اشتراک گذاشته می شوند. این را می توان در چند راه حفظ کرد. به عنوان مثال، Microsoft Entra ID شامل سه گزینه برای همگام سازی هویت بین Active Directory و Entra ID [[CTI_PRESERVE_0] است:\n\nPassword Hash Synchronization (PHS)، که در آن یک حساب کاربری ممتاز در پیش بینی همگام سازی هش رمز عبور کاربر بین Active Directory و Entra ID، اجازه می دهد احراز هویت به Entra ID به طور کامل در ابر انجام شود\n* از طریق تأیید اعتبار (PTA) که در آن تلاش های احراز هویت Entra ID به سمت یک عامل PTA پیش بینی می شود، که اعتبار اعتبار در برابر Active Directory را تأیید می کند.\n* Active Directory Federation Services (AD FS) که در آن یک رابطه اعتماد بین Active Directory و Entra ID برقرار می شود\n\nAD FS همچنین می تواند با دیگر سیستم عامل های SaaS و ابر مانند AWS و GCP مورد استفاده قرار گیرد که فرآیند احراز هویت را برای AD FS رها می کند و یک توکن حاوی هویت و امتیازات کاربران هیبریدی دریافت می کند.\n\nبا اصلاح فرآیندهای احراز هویت مرتبط با هویت های ترکیبی، یک دشمن ممکن است قادر به ایجاد دسترسی پایدار به منابع ابر باشد. به عنوان مثال، دشمنانی که یک سرور در حال اجرا در PTA را به خطر می اندازند، ممکن است یک DLL مخرب را به فرآیند “AzureADConnectAuthenticationAgentService” تزریق کنند که تمام تلاش ها را برای تأیید اعتبار به Entra ID، و همچنین سوابق اعتبار کاربر مجاز می کند. [[ویرایش] در محیط هایی که از AD FS استفاده می کنند، یک دشمن ممکن است «Microsoft» را ویرایش کند. IdentityServer فایل پیکربندی سرویسhost برای بارگذاری یک DLL مخرب که توکن های احراز هویت را برای هر کاربر با هر مجموعه ای از ادعاهای ایجاد می کند، بنابراین با استفاده از احراز هویت چند عاملی و سیاست های AD FS تعریف می شود. [[ویرایش]\n\nدر برخی موارد، دشمنان ممکن است قادر به تغییر روند احراز هویت ترکیبی از ابر باشند. به عنوان مثال، دشمنانی که یک حساب مدیر جهانی را در یک مستاجر Entra ID قرار می دهند، ممکن است قادر به ثبت یک عامل جدید PTA از طریق کنسول وب باشند، به طور مشابه به آنها اجازه می دهد تا اعتبار برداشت و ورود به محیط Entra ID به عنوان هر کاربر. (Citation: Azure AD Hybrid Identity) (Citation: Azure AD Connect for Read Teamers) (Citation: AADInternals Azure AD On-Prem to Cloud) (Citation: MagicWeb) (Citation: Mandiant Azure AD Backdoors)"
         }
     ]
 }

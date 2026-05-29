@@ -13,37 +13,49 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1076",
-                    "external_id": "T1076"
+                    "external_id": "T1076",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/555.html",
-                    "external_id": "CAPEC-555"
+                    "external_id": "CAPEC-555",
+                    "source_name_fa": "کلاه"
                 },
                 {
                     "source_name": "TechNet Remote Desktop Services",
                     "description": "Microsoft. (n.d.). Remote Desktop Services. Retrieved June 1, 2016.",
-                    "url": "https://technet.microsoft.com/en-us/windowsserver/ee236407.aspx"
+                    "url": "https://technet.microsoft.com/en-us/windowsserver/ee236407.aspx",
+                    "source_name_fa": "TechNet Remote Desktop Services",
+                    "description_fa": "مایکروسافت (n.d.) Remote Desktop Services Retrieved 1 ژوئن 2016"
                 },
                 {
                     "source_name": "Alperovitch Malware",
                     "description": "Alperovitch, D. (2014, October 31). Malware-Free Intrusions. Retrieved November 4, 2014.",
-                    "url": "http://blog.crowdstrike.com/adversary-tricks-crowdstrike-treats/"
+                    "url": "http://blog.crowdstrike.com/adversary-tricks-crowdstrike-treats/",
+                    "source_name_fa": "Alper Malware",
+                    "description_fa": "Alperovich، D. (2014، 31 اکتبر) Retrieved ۴ نوامبر ۲۰۱۴"
                 },
                 {
                     "source_name": "RDP Hijacking Korznikov",
                     "description": "Korznikov, A. (2017, March 17). Passwordless RDP Session Hijacking Feature All Windows versions. Retrieved December 11, 2017.",
-                    "url": "http://www.korznikov.com/2017/03/0-day-or-feature-privilege-escalation.html"
+                    "url": "http://www.korznikov.com/2017/03/0-day-or-feature-privilege-escalation.html",
+                    "source_name_fa": "RDP ربودن کورزیکوف",
+                    "description_fa": "کورزیکوف، A. (2017، 17 مارس) Passwordless RDP Session Hijacking همه نسخه های ویندوز Retrieved 11 دسامبر 2017"
                 },
                 {
                     "source_name": "RDP Hijacking Medium",
-                    "description": "Beaumont, K. (2017, March 19). RDP hijacking\u200a\u2014\u200ahow to hijack RDS and RemoteApp sessions transparently to move through an organisation. Retrieved December 11, 2017.",
-                    "url": "https://medium.com/@networksecurity/rdp-hijacking-how-to-hijack-rds-and-remoteapp-sessions-transparently-to-move-through-an-da2a1e73a5f6"
+                    "description": "Beaumont, K. (2017, March 19). RDP hijacking — how to hijack RDS and RemoteApp sessions transparently to move through an organisation. Retrieved December 11, 2017.",
+                    "url": "https://medium.com/@networksecurity/rdp-hijacking-how-to-hijack-rds-and-remoteapp-sessions-transparently-to-move-through-an-da2a1e73a5f6",
+                    "source_name_fa": "RDP دانلود بازی Hijacking Medium",
+                    "description_fa": "Beaumont، K. (2017، 19 مارس) ربوده شدن RDP - چگونه به ربودن RDS و RemoteApp جلسات شفاف برای حرکت از طریق یک سازمان. Retrieved 11 دسامبر 2017"
                 },
                 {
                     "source_name": "Kali Redsnarf",
                     "description": "NCC Group PLC. (2016, November 1). Kali Redsnarf. Retrieved December 11, 2017.",
-                    "url": "https://github.com/nccgroup/redsnarf"
+                    "url": "https://github.com/nccgroup/redsnarf",
+                    "source_name_fa": "کالی قرمز",
+                    "description_fa": "NCC Group PLC (2016، 1 نوامبر) کالی قرمز Retrieved 11 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -71,7 +83,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "Remote Desktop Protocol",
+            "description_fa": "Remote Desktop یک ویژگی مشترک در سیستم عامل است. این اجازه می دهد تا یک کاربر به یک جلسه تعاملی با یک رابط کاربری گرافیکی سیستم در یک سیستم از راه دور وارد شود. مایکروسافت به اجرای پروتکل Remote Desktop Protocol (RDP) به عنوان Remote Desktop Services (RDS) اشاره دارد. [[ویرایش] سایر ابزارها و ابزارهای شخص ثالث وجود دارد که دسترسی گرافیکی (Remote Services) را فراهم می کنند ([CTI_PRESERVE_6] مشابه RDS.\n\nمخالفان ممکن است به یک سیستم از راه دور بیش از RDP /RDS متصل شوند تا دسترسی را گسترش دهند در صورتی که سرویس فعال باشد و اجازه دسترسی به حساب ها با اعتبار شناخته شده را بدهد. مخالفان احتمالا از تکنیک های دسترسی Credential برای به دست آوردن اعتبار برای استفاده با RDP استفاده می کنند. همچنین ممکن است از RDP در ارتباط با ویژگی های دسترسی ([CTI_PRESERVE_7] استفاده کند. [[ویرایش]\n\nمخالفان همچنین ممکن است ربودن جلسه RDP را انجام دهند که شامل سرقت یک جلسه از راه دور کاربر قانونی است. به طور معمول، یک کاربر زمانی مطلع می شود که شخص دیگری سعی دارد جلسه خود را سرقت کند و با یک سوال مطرح شود. با اجازه های سیستم و استفاده از کنسول خدمات ترمینال ([CTI_PRESERVE_0]، یک دشمن می تواند بدون نیاز به مدارک و یا درخواست به کاربر یک جلسه را به سرقت ببرد. [[ویرایش] این می تواند از راه دور یا محلی و با جلسات فعال یا قطع شده انجام شود. [[ویرایش] همچنین می تواند منجر به (Remote System Discovery) شود ([CTI_PRESERVE_8]) و افزایش وزن با سرقت Domain Admin یا بالاتر حساب کاربری ممتاز. همه این کارها را می توان با استفاده از دستورات ویندوز بومی انجام داد، اما همچنین به عنوان یک ویژگی در RedSnarf اضافه شده است. [[ویرایش] <code>c:\\windows\\system32\\tscon.exe [session number to be stolen]</code> (Citation: TechNet Remote Desktop Services) (Citation: Alperovitch Malware) (Citation: RDP Hijacking Korznikov) (Citation: RDP Hijacking Medium) (Citation: Kali Redsnarf) https://attack.mitre.org/techniques/T1021 https://attack.mitre.org/techniques/T1015 https://attack.mitre.org/techniques/T1018"
         }
     ]
 }

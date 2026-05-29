@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/011",
-                    "external_id": "T1055.011"
+                    "external_id": "T1055.011",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Elastic Process Injection July 2017",
                     "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017.",
-                    "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
+                    "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process",
+                    "source_name_fa": "Elastic Process injection جولای 2017",
+                    "description_fa": "حسینی، A. (2017، 18 ژوئیه) ده تکنیک تزریق فرایند: یک بررسی فنی از تکنیک های تزریق معمول و روندی. Retrieved 7 دسامبر 2017"
                 },
                 {
                     "source_name": "MalwareTech Power Loader Aug 2013",
-                    "description": "MalwareTech. (2013, August 13). PowerLoader Injection \u2013 Something truly amazing. Retrieved December 16, 2017.",
-                    "url": "https://www.malwaretech.com/2013/08/powerloader-injection-something-truly.html"
+                    "description": "MalwareTech. (2013, August 13). PowerLoader Injection – Something truly amazing. Retrieved December 16, 2017.",
+                    "url": "https://www.malwaretech.com/2013/08/powerloader-injection-something-truly.html",
+                    "source_name_fa": "MalwareTech Power در آگوست 2013",
+                    "description_fa": "MalwareTech (2013، 13 آگوست) PowerLoader injection – چیزی واقعا شگفت انگیز است. Retrieved 16 دسامبر 2017"
                 },
                 {
                     "source_name": "WeLiveSecurity Gapz and Redyms Mar 2013",
                     "description": "Matrosov, A. (2013, March 19). Gapz and Redyms droppers based on Power Loader code. Retrieved December 16, 2017.",
-                    "url": "https://www.welivesecurity.com/2013/03/19/gapz-and-redyms-droppers-based-on-power-loader-code/"
+                    "url": "https://www.welivesecurity.com/2013/03/19/gapz-and-redyms-droppers-based-on-power-loader-code/",
+                    "source_name_fa": "WeLive Gapz و Redyms Mar 2013",
+                    "description_fa": "Matrosov، A. (2013، 19 مارس) Gapz و Redyms Droppers بر اساس کد کالیبراسیون برق. Retrieved 16 دسامبر 2017"
                 },
                 {
                     "source_name": "Microsoft Window Classes",
                     "description": "Microsoft. (n.d.). About Window Classes. Retrieved December 16, 2017.",
-                    "url": "https://msdn.microsoft.com/library/windows/desktop/ms633574.aspx"
+                    "url": "https://msdn.microsoft.com/library/windows/desktop/ms633574.aspx",
+                    "source_name_fa": "کلاس های پنجره مایکروسافت",
+                    "description_fa": "مایکروسافت (n.d.) درباره کلاس های پنجره Retrieved 16 دسامبر 2017"
                 },
                 {
                     "source_name": "Microsoft GetWindowLong function",
                     "description": "Microsoft. (n.d.). GetWindowLong function. Retrieved December 16, 2017.",
-                    "url": "https://msdn.microsoft.com/library/windows/desktop/ms633584.aspx"
+                    "url": "https://msdn.microsoft.com/library/windows/desktop/ms633584.aspx",
+                    "source_name_fa": "Microsoft GetWindowLong",
+                    "description_fa": "مایکروسافت (n.d.) عملکرد طولانی را دریافت کنید. Retrieved 16 دسامبر 2017"
                 },
                 {
                     "source_name": "Microsoft SetWindowLong function",
                     "description": "Microsoft. (n.d.). SetWindowLong function. Retrieved December 16, 2017.",
-                    "url": "https://msdn.microsoft.com/library/windows/desktop/ms633591.aspx"
+                    "url": "https://msdn.microsoft.com/library/windows/desktop/ms633591.aspx",
+                    "source_name_fa": "Microsoft SetWindow",
+                    "description_fa": "مایکروسافت (n.d.) تابع SetWindow Long Retrieved 16 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2026-05-12T15:12:00.617Z",
             "name": "Extra Window Memory Injection",
-            "description": "Adversaries may inject malicious code into process via Extra Window Memory (EWM) in order to evade process-based defenses as well as possibly elevate privileges. EWM injection is a method of executing arbitrary code in the address space of a separate live process. \n\nBefore creating a window, graphical Windows-based processes must prescribe to or register a windows class, which stipulate appearance and behavior (via windows procedures, which are functions that handle input/output of data).(Citation: Microsoft Window Classes) Registration of new windows classes can include a request for up to 40 bytes of EWM to be appended to the allocated memory of each instance of that class. This EWM is intended to store data specific to that window and has specific application programming interface (API) functions to set and get its value. (Citation: Microsoft GetWindowLong function) (Citation: Microsoft SetWindowLong function)\n\nAlthough small, the EWM is large enough to store a 32-bit pointer and is often used to point to a windows procedure. Malware may possibly utilize this memory location in part of an attack chain that includes writing code to shared sections of the process\u2019s memory, placing a pointer to the code in EWM, then invoking execution by returning execution control to the address in the process\u2019s EWM.\n\nExecution granted through EWM injection may allow access to both the target process's memory and possibly elevated privileges. Writing payloads to shared sections also avoids the use of highly monitored API calls such as <code>WriteProcessMemory</code> and <code>CreateRemoteThread</code>.(Citation: Elastic Process Injection July 2017) More sophisticated malware samples may also potentially bypass protection mechanisms such as data execution prevention (DEP) by triggering a combination of windows procedures and other system functions that will rewrite the malicious payload inside an executable portion of the target process.  (Citation: MalwareTech Power Loader Aug 2013) (Citation: WeLiveSecurity Gapz and Redyms Mar 2013)\n\nRunning code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via EWM injection may also evade detection from security products since the execution is masked under a legitimate process. ",
+            "description": "Adversaries may inject malicious code into process via Extra Window Memory (EWM) in order to evade process-based defenses as well as possibly elevate privileges. EWM injection is a method of executing arbitrary code in the address space of a separate live process. \n\nBefore creating a window, graphical Windows-based processes must prescribe to or register a windows class, which stipulate appearance and behavior (via windows procedures, which are functions that handle input/output of data).(Citation: Microsoft Window Classes) Registration of new windows classes can include a request for up to 40 bytes of EWM to be appended to the allocated memory of each instance of that class. This EWM is intended to store data specific to that window and has specific application programming interface (API) functions to set and get its value. (Citation: Microsoft GetWindowLong function) (Citation: Microsoft SetWindowLong function)\n\nAlthough small, the EWM is large enough to store a 32-bit pointer and is often used to point to a windows procedure. Malware may possibly utilize this memory location in part of an attack chain that includes writing code to shared sections of the process’s memory, placing a pointer to the code in EWM, then invoking execution by returning execution control to the address in the process’s EWM.\n\nExecution granted through EWM injection may allow access to both the target process's memory and possibly elevated privileges. Writing payloads to shared sections also avoids the use of highly monitored API calls such as <code>WriteProcessMemory</code> and <code>CreateRemoteThread</code>.(Citation: Elastic Process Injection July 2017) More sophisticated malware samples may also potentially bypass protection mechanisms such as data execution prevention (DEP) by triggering a combination of windows procedures and other system functions that will rewrite the malicious payload inside an executable portion of the target process.  (Citation: MalwareTech Power Loader Aug 2013) (Citation: WeLiveSecurity Gapz and Redyms Mar 2013)\n\nRunning code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via EWM injection may also evade detection from security products since the execution is masked under a legitimate process. ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -72,7 +85,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "تزریق حافظه پنجره اضافی",
+            "description_fa": "مخالفان ممکن است کد مخرب را از طریق حافظه پنجره اضافی (EWM) تزریق کنند تا از دفاع مبتنی بر فرآیند و همچنین احتمالا امتیازات بالا جلوگیری کنند. تزریق EWM یک روش برای اجرای کد خودسرانه در فضای آدرس یک فرآیند جداگانه زندگی است.\n\nقبل از ایجاد یک پنجره، فرآیندهای مبتنی بر ویندوز گرافیک باید برای ثبت یا ثبت یک کلاس پنجره، که تعیین ظاهر و رفتار (از طریق روش پنجره، که توابع است که پردازش ورودی / خروجی داده ها). [[ویرایش] ثبت نام کلاس های پنجره های جدید می تواند شامل درخواست 40 بایت EWM باشد تا به حافظه اختصاص داده شده از هر نمونه از کلاس اضافه شود. این EWM قصد دارد داده های خاص را به آن پنجره ذخیره کند و دارای رابط برنامه نویسی خاص (API) برای تنظیم و دریافت ارزش آن است. [[ویرایش] [[ویرایش]\n\nاگر چه کوچک، EWM به اندازه کافی بزرگ است تا یک نقطه عطف 32 بیتی را ذخیره کند و اغلب برای اشاره به روش پنجره استفاده می شود. بدافزار ممکن است از این مکان حافظه در بخشی از زنجیره حمله استفاده کند که شامل نوشتن کد برای بخش های مشترک حافظه فرآیند است، قرار دادن یک اشاره کننده به کد در EWM، سپس با بازگرداندن کنترل اعدام به آدرس EWM فرآیند، می شود.\n\nاعدام اعطا شده از طریق تزریق EWM ممکن است اجازه دسترسی به حافظه فرآیند هدف و احتمالا امتیازات بالا را بدهد. همچنین استفاده از برنامه های کاربردی و کاربردی را به صورت زیر انجام می دهد. نمونه های پیچیده تر بدافزار نیز ممکن است به طور بالقوه مکانیسم های محافظت مانند پیشگیری از اجرای داده ها (DEP) را با ایجاد ترکیبی از روش های پنجره ها و سایر عملکردهای سیستم که بار مخرب را در بخش اجرایی فرآیند هدف بازنویسی می کنند، دور بزنند. [[ویرایش] [[ویرایش]\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق تزریق EWM نیز ممکن است از تشخیص محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. <code>WriteProcessMemory</code> <code>CreateRemoteThread</code> (Citation: Microsoft Window Classes) (Citation: Microsoft GetWindowLong function) (Citation: Microsoft SetWindowLong function) (Citation: Elastic Process Injection July 2017) (Citation: MalwareTech Power Loader Aug 2013) (Citation: WeLiveSecurity Gapz and Redyms Mar 2013)"
         }
     ]
 }

@@ -21,14 +21,17 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/M1033",
-                    "external_id": "M1033"
+                    "external_id": "M1033",
+                    "source_name_fa": "حمله mitre"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "x_mitre_attack_spec_version": "3.2.0",
-            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "name_fa": "محدودیت نصب نرم افزار",
+            "description_fa": "جلوگیری از کاربران یا گروه ها از نصب نرم افزار غیر مجاز یا تایید نشده برای کاهش خطر معرفی برنامه های مخرب یا آسیب پذیر. این می تواند از طریق اجازه لیست ها، سیاست های محدودیت نرم افزار، ابزار مدیریت نقطه نهایی و حداقل اصول دسترسی امتیاز به دست آورد. این کاهش را می توان از طریق اقدامات زیر اجرا کرد:\n\nدرخواست Whitelisting\n\n– پیاده سازی Microsoft App Locker یا Windows Defender Application Control (WDAC) برای ایجاد و اجرای اجازه لیست برای نرم افزار تایید شده.\nبرنامه های لیست سفید بر اساس هش فایل، مسیر یا امضاهای دیجیتال.\n\nمحدود کردن مجوزهای کاربر\n\n- حذف حقوق مدیریت محلی برای همه کاربران غیرIT\nاستفاده از کنترل دسترسی مبتنی بر نقش (RBAC) برای محدود کردن مجوز نصب به حساب های ممتاز.\n\nسیاست های محدودیت نرم افزار (SRP)\n\nاز GPO برای پیکربندی SRP برای انکار اعدام از دفاتر مانند “%AppData%”، “%Temp%” و درایوهای خارجی استفاده کنید.\n• محدود کردن انواع فایل های خاص ( '.exe'، 'bat'، 'msi'،'، 'js'، 'vbs') به دایرکتوری های قابل اعتماد تنها.\n\nEndpoint Management Solutions\n\nابزارهای Deploy مانند Microsoft Intune، SCCM یا Jamf برای مدیریت نرم افزار متمرکز.\n- لیستی از نرم افزار تایید شده، نسخه ها و به روز رسانی ها را در سراسر شرکت نگه دارید.\n\nنظارت بر رویدادهای نصب نرم افزار\n\n- ورود به رویدادهای نصب نرم افزار و نظارت بر ویندوز Event ID 4688 و Event ID 11707 برای نصب نرم افزار.\nاستفاده از ابزار SIEM یا EDR برای هشدار در تلاش برای نصب نرم افزار تایید نشده.\n\nپیاده سازی نرم افزار مدیریت موجودی\n\nاستفاده از ابزارهایی مانند OSQuery یا Wazuh برای اسکن نرم افزار غیر مجاز در نقاط پایانی و سرورهای.\n- انجام ممیزی های منظم برای شناسایی و حذف نرم افزار تایید نشده.\n\n*Tools for Execution*\n\nدرخواست فهرست بندی:\n\nMicrosoft App Locker\nWindows Defender Application Control (WDAC)\n\nپایان مدیریت:\n\nMicrosoft Intune\nSCCM (مدیر پیکربندی سیستم)\nJamf Pro (macOS)\nPuppet یا Ansible برای اتوماسیون\n\nمحدودیت نرم افزار سیاست ها:\n\nگروه سیاست Object (GPO)\nسیاست های محدودیت نرم افزار مایکروسافت (SRP)\n\nنظارت و ورود:\n\nSplunk\nOSQuery\nمنبع باز SIEM و XDR\nEDRs\n\nمدیریت موجودی و حسابرسی:\n\nOSQuery\nWazuh"
         }
     ]
 }

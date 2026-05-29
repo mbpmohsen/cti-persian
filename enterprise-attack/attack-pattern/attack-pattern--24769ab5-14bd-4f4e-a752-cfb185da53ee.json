@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1484/002",
-                    "external_id": "T1484.002"
+                    "external_id": "T1484.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AWS re Inforce Trust Mod",
                     "description": "AWS re Inforce. (2024, June). Retrieved April 15, 2026.",
-                    "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/events/approved/reinforce-2025/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf"
+                    "url": "https://d1.awsstatic.com/onedam/marketing-channels/website/aws/en_US/events/approved/reinforce-2025/reinforce/2024/slides/TDR432_New-tactics-and-techniques-for-proactive-threat-detection.pdf",
+                    "source_name_fa": "AWS Re Inforce Trust Mod",
+                    "description_fa": "AWS Re Inforce (2024, June) Retrieved 15, 2026."
                 },
                 {
                     "source_name": "AADInternals zure AD Federated Domain",
                     "description": "Dr. Nestori Syynimaa. (2017, November 16). Security vulnerability in Azure AD & Office 365 identity federation. Retrieved September 28, 2022.",
-                    "url": "https://o365blog.com/post/federation-vulnerability/"
+                    "url": "https://o365blog.com/post/federation-vulnerability/",
+                    "source_name_fa": "AAD Internals zure AD Federated Domain",
+                    "description_fa": "دکتر نستله (2017، 16 نوامبر) آسیب پذیری امنیتی در Azure AD & Office 365 Identity Federation Retrieved 28 سپتامبر 2022"
                 },
                 {
                     "source_name": "Microsoft - Azure AD Federation",
                     "description": "Microsoft. (2018, November 28). What is federation with Azure AD?. Retrieved December 30, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-fed"
+                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/hybrid/whatis-fed",
+                    "source_name_fa": "Microsoft - Azure AD Federation",
+                    "description_fa": "مایکروسافت (2018, 28 نوامبر) فدراسیون با Azure AD چیست؟ Retrieved ۳۰ دسامبر ۲۰۲۰"
                 },
                 {
                     "source_name": "Okta Cross-Tenant Impersonation 2023",
                     "description": "Okta Defensive Cyber Operations. (2023, August 31). Cross-Tenant Impersonation: Prevention and Detection. Retrieved February 15, 2024.",
-                    "url": "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection"
+                    "url": "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection",
+                    "source_name_fa": "Okta Cross-Tenant Impersonation 2023",
+                    "description_fa": "Okta Defensive Cyber Operations (۲۰۲۳، ۳۱ آگوست) عدم موفقیت: پیشگیری و تشخیص بازبینی شده در ۱۵ فوریه ۲۰۲۴"
                 }
             ],
             "object_marking_refs": [
@@ -68,7 +77,9 @@
                 "Identity Provider",
                 "Windows"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "اعتماد به اصلاح",
+            "description_fa": "مخالفان ممکن است اعتماد دامنه جدید را اضافه کنند، خواص اعتماد دامنه موجود را تغییر دهند یا در غیر این صورت پیکربندی روابط اعتماد بین دامنه ها و مستاجران را برای جلوگیری از دفاع و / یا افزایش امتیازات تغییر دهند. جزئیات اعتماد، مانند اینکه آیا هویت کاربر تغذیه می شود یا خیر، اجازه می دهد تا احراز هویت و مالکیت مجوز بین دامنه ها یا مستاجر ها برای دسترسی به منابع مشترک اعمال شود. [[ویرایش] این اشیاء اعتماد ممکن است شامل حساب ها، اعتبارها و سایر مواد تأییدیه اعمال شده در سرورهای، توکن ها و دامنه ها باشد.\n\nدستکاری این اعتمادها ممکن است به یک دشمن اجازه دهد تا امتیازات را افزایش دهد و / یا از دفاع با تغییر تنظیمات برای اضافه کردن اشیاء که آنها کنترل می کنند، جلوگیری کند. به عنوان مثال، در محیط های Microsoft Active Directory (AD) ، این ممکن است برای ایجاد توکن های UML ([CTI_PRESERVE_4] بدون نیاز به سازش گواهی ثبت نام برای ایجاد اعتبار جدید استفاده شود. در عوض، یک دشمن می تواند اعتماد دامنه را دستکاری کند تا گواهینامه امضای خود را اضافه کند. یک دشمن همچنین ممکن است یک دامنه AD را به یک دامنه تغذیه شده با استفاده از خدمات فدراسیون Active Directory (AD FS) تبدیل کند که ممکن است تغییرات اعتماد مخرب مانند تغییر قوانین صدور ادعا برای ورود به هر مجموعه معتبر از اعتبار به عنوان یک کاربر مشخص را فعال کند.\n\nیک دشمن همچنین ممکن است یک ارائه دهنده هویت جدید را به یک مستاجر هویت مانند Okta یا AWS IAM اضافه کند که ممکن است دشمن را به عنوان هر کاربر مستاجر معتبر کند. [[ویرایش] این ممکن است بازیگر تهدید را قادر سازد تا دسترسی گسترده ای به انواع سرویس های مبتنی بر ابر داشته باشد که از هویت مستاجر استفاده می کنند. به عنوان مثال، در محیط های AWS، یک دشمن که یک ارائه دهنده هویت جدید برای یک سازمان AWS ایجاد می کند، قادر خواهد بود تمام حساب های عضو سازمان AWS را بدون ایجاد هویت برای هر یک از حساب های عضو تغذیه کند. [[ویرایش] (Citation: Microsoft - Azure AD Federation) (Citation: AADInternals zure AD Federated Domain) (Citation: Okta Cross-Tenant Impersonation 2023) (Citation: AWS re Inforce Trust Mod) https://attack.mitre.org/techniques/T1606/002"
         }
     ]
 }

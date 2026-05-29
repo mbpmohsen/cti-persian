@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1546/008",
-                    "external_id": "T1546.008"
+                    "external_id": "T1546.008",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Narrator Accessibility Abuse",
                     "description": "Comi, G. (2019, October 19). Abusing Windows 10 Narrator's 'Feedback-Hub' URI for Fileless Persistence. Retrieved April 28, 2020.",
-                    "url": "https://giuliocomi.blogspot.com/2019/10/abusing-windows-10-narrators-feedback.html"
+                    "url": "https://giuliocomi.blogspot.com/2019/10/abusing-windows-10-narrators-feedback.html",
+                    "source_name_fa": "قابلیت دسترسی سوء استفاده",
+                    "description_fa": "Comi، G. (2019، 19 اکتبر) URI’sing Windows 10 Novelor's “Feedback-Hub” URI for Fileless Perstop Retrieved 28 آوریل 2020"
                 },
                 {
                     "source_name": "FireEye Hikit Rootkit",
-                    "description": "Glyer, C., Kazanciyan, R. (2012, August 20). The \u201cHikit\u201d Rootkit: Advanced and Persistent Attack Techniques (Part 1). Retrieved November 17, 2024.",
-                    "url": "https://web.archive.org/web/20190216180458/https://www.fireeye.com/blog/threat-research/2012/08/hikit-rootkit-advanced-persistent-attack-techniques-part-1.html"
+                    "description": "Glyer, C., Kazanciyan, R. (2012, August 20). The “Hikit” Rootkit: Advanced and Persistent Attack Techniques (Part 1). Retrieved November 17, 2024.",
+                    "url": "https://web.archive.org/web/20190216180458/https://www.fireeye.com/blog/threat-research/2012/08/hikit-rootkit-advanced-persistent-attack-techniques-part-1.html",
+                    "source_name_fa": "FireEye Hikit Rootkit",
+                    "description_fa": "Glyer، C.، کازسییان، R. (2012، 20 آگوست) \"Hikit\" Rootkit: تکنیک های پیشرفته و مداوم حمله (قسمت 1) Retrieved ۱۷ نوامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "DEFCON2016 Sticky Keys",
                     "description": "Maldonado, D., McGuffin, T. (2016, August 6). Sticky Keys to the Kingdom. Retrieved July 5, 2017.",
-                    "url": "https://www.slideshare.net/DennisMaldonado5/sticky-keys-to-the-kingdom"
+                    "url": "https://www.slideshare.net/DennisMaldonado5/sticky-keys-to-the-kingdom",
+                    "source_name_fa": "DEFCON 2016 Sticky Keys",
+                    "description_fa": "Maldonado، D.، McGuffin، T. (2016، 6 آگوست) کلید های چسبنده به پادشاهی Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "Tilbury 2014",
                     "description": "Tilbury, C. (2014, August 28). Registry Analysis with CrowdResponse. Retrieved November 17, 2024.",
-                    "url": "https://web.archive.org/web/20200730053039/https://www.crowdstrike.com/blog/registry-analysis-with-crowdresponse/"
+                    "url": "https://web.archive.org/web/20200730053039/https://www.crowdstrike.com/blog/registry-analysis-with-crowdresponse/",
+                    "source_name_fa": "Tilbury 2014",
+                    "description_fa": "Tilbury، C. (2014، 28 آگوست) تحلیل ثبت نام با CrowdResponse Retrieved ۱۷ نوامبر ۲۰۲۴"
                 }
             ],
             "object_marking_refs": [
@@ -65,7 +74,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "قابلیت دسترسی",
+            "description_fa": "مخالفان ممکن است با اجرای محتوای مخرب ناشی از قابلیت های دسترسی، امتیازات پایداری و / یا ارتقاء را ایجاد کنند. ویندوز شامل قابلیت های دسترسی است که ممکن است با یک ترکیب کلیدی قبل از اینکه یک کاربر وارد شده باشد (ex: هنگامی که کاربر روی صفحه نمایش Windows Logon قرار دارد). یک دشمن می تواند نحوه راه اندازی این برنامه ها را تغییر دهد تا بدون ورود به سیستم، یک درب فرمان یا درب پشتی دریافت کند.\n\nدو برنامه دسترسی مشترک [CTI_PRESERVE_0] هستند، زمانی که کلید تغییر پنج بار فشار داده می شود و [CTI_PRESERVE] هنگامی که ترکیب کلید ویندوز + U فشرده می شود، راه اندازی می شود. برنامه sethc.exe اغلب به عنوان \"کلید های گرافیکی\" نامیده می شود و توسط دشمنان برای دسترسی بدون وقفه از طریق صفحه نمایش ورود دسکتاپ از راه دور استفاده می شود. [[ویرایش]\n\nبسته به نسخه ویندوز، یک دشمن ممکن است از این ویژگی ها به روش های مختلف استفاده کند. روش های رایج استفاده شده توسط دشمنان شامل جایگزین کردن قابلیت دسترسی باینری یا اشاره کننده / مرجع به این دو پست در رجیستری است. در نسخه های جدیدتر ویندوز، باینری جایگزین باید به صورت دیجیتالی برای سیستم های x64 امضا شود، باینری باید در [CTI_PRESERVE_2] اقامت داشته باشد و باید توسط ویندوز File یا منابع محافظت شود (WFP /WRP). [[ویرایش] [Image File Execution Options injection] [[[CTI_PRESERVE_14]] احتمالا به عنوان یک کار بالقوه کشف شده است، زیرا نیازی به جایگزینی دودویی قابلیت دسترسی مربوطه ندارد.\n\nبرای جایگزینی دودویی ساده در ویندوز XP و بعد و همچنین ویندوز سرور 2003 / R2 و بعد، به عنوان مثال، برنامه (به عنوان مثال، [CTI_PRESERVE_3] ممکن است با \"cmd.exe\" جایگزین شود (یا برنامه دیگری که دسترسی به درب پشتی را فراهم می کند). پس از آن، فشار دادن ترکیب کلیدی مناسب در صفحه کلید و یا هنگامی که بر روی [Remote Desktop Protocol] متصل می شود ([CTI_PRESERVE_15]) باعث می شود فایل جایگزین با امتیازات سیستم اجرا شود. [[ویرایش]\n\nدیگر قابلیت های دسترسی وجود دارد که ممکن است در یک روش مشابه استفاده شود ([۱۰] [CTI_PRESERVE_۱۲] [[۱۰] [[۱۰] [۵]\n\nصفحه کلید: [[ویرایش]\n * : :\n* روایت: [[ویرایش]\n· سوئیچ های نمایش: [CTI_PRESERVE_7]\nApp Switcher : [[ویرایش] <code>C:\\Windows\\System32\\sethc.exe</code> <code>C:\\Windows\\System32\\utilman.exe</code> <code>%systemdir%\\</code> <code>C:\\Windows\\System32\\utilman.exe</code> <code>C:\\Windows\\System32\\osk.exe</code> <code>C:\\Windows\\System32\\Magnify.exe</code> <code>C:\\Windows\\System32\\Narrator.exe</code> <code>C:\\Windows\\System32\\DisplaySwitch.exe</code> <code>C:\\Windows\\System32\\AtBroker.exe</code> (Citation: FireEye Hikit Rootkit) (Citation: DEFCON2016 Sticky Keys) (Citation: Tilbury 2014) (Citation: DEFCON2016 Sticky Keys) (Citation: Narrator Accessibility Abuse) https://attack.mitre.org/techniques/T1546/012 https://attack.mitre.org/techniques/T1021/001"
         }
     ]
 }

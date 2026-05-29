@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1684/001",
-                    "external_id": "T1684.001"
+                    "external_id": "T1684.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Crowdstrike BEC",
                     "description": "Bart Lenaerts-Bergmans. (2023, August 8). What is Business Email Compromise?. Retrieved April 15, 2026.",
-                    "url": "https://www.crowdstrike.com/en-us/cybersecurity-101/threat-intelligence/business-email-compromise-bec/"
+                    "url": "https://www.crowdstrike.com/en-us/cybersecurity-101/threat-intelligence/business-email-compromise-bec/",
+                    "source_name_fa": "اعتصاب جمعیت BEC",
+                    "description_fa": "Bart Lenaerts-Bergmans (2023, August 8) ایمیل تجارت چیست؟ Retrieved 15, 2026."
                 },
                 {
                     "source_name": "VEC",
                     "description": "CloudFlare. (n.d.). What is vendor email compromise (VEC)?. Retrieved September 12, 2023.",
-                    "url": "https://www.cloudflare.com/learning/email-security/what-is-vendor-email-compromise/#:~:text=Vendor%20email%20compromise%2C%20also%20referred,steal%20from%20that%20vendor%27s%20customers."
+                    "url": "https://www.cloudflare.com/learning/email-security/what-is-vendor-email-compromise/#:~:text=Vendor%20email%20compromise%2C%20also%20referred,steal%20from%20that%20vendor%27s%20customers.",
+                    "source_name_fa": "VEC",
+                    "description_fa": "CloudFlare معامله ایمیل فروشنده (VEC) چیست؟ Retrieved 12 سپتامبر 2023."
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2026-05-12T15:12:00.717Z",
             "name": "Impersonation",
-            "description": "Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicate with victims (via [Phishing for Information](https://attack.mitre.org/techniques/T1598), [Phishing](https://attack.mitre.org/techniques/T1566), or [Internal Spearphishing](https://attack.mitre.org/techniques/T1534)) while impersonating a known sender such as an executive, colleague, or third-party vendor. Established trust can then be leveraged to accomplish an adversary\u2019s ultimate goals, possibly against multiple victims.\n\nIn many cases of business email compromise or email fraud campaigns, adversaries use impersonation to defraud victims -- deceiving them into sending money or divulging information that ultimately enables [Financial Theft](https://attack.mitre.org/techniques/T1657).\n\nAdversaries will often also use social engineering techniques such as manipulative and persuasive language in email subject lines and body text such as `payment`, `request`, or `urgent` to push the victim to act quickly before malicious activity is detected. These campaigns are often specifically targeted against people who, due to job roles and/or accesses, can carry out the adversary\u2019s goal.\u202f\u202f\n\nImpersonation is typically preceded by reconnaissance techniques such as [Gather Victim Identity Information](https://attack.mitre.org/techniques/T1589) and [Gather Victim Org Information](https://attack.mitre.org/techniques/T1591) as well as acquiring infrastructure such as email domains (i.e. [Domains](https://attack.mitre.org/techniques/T1583/001)) to substantiate their false identity.(Citation: Crowdstrike BEC)\n\nThere is the potential for multiple victims in campaigns involving impersonation. For example, an adversary may Compromise Accounts targeting one organization which can then be used to support impersonation against other entities.(Citation: VEC)",
+            "description": "Adversaries may impersonate a trusted person or organization in order to persuade and trick a target into performing some action on their behalf. For example, adversaries may communicate with victims (via [Phishing for Information](https://attack.mitre.org/techniques/T1598), [Phishing](https://attack.mitre.org/techniques/T1566), or [Internal Spearphishing](https://attack.mitre.org/techniques/T1534)) while impersonating a known sender such as an executive, colleague, or third-party vendor. Established trust can then be leveraged to accomplish an adversary’s ultimate goals, possibly against multiple victims.\n\nIn many cases of business email compromise or email fraud campaigns, adversaries use impersonation to defraud victims -- deceiving them into sending money or divulging information that ultimately enables [Financial Theft](https://attack.mitre.org/techniques/T1657).\n\nAdversaries will often also use social engineering techniques such as manipulative and persuasive language in email subject lines and body text such as `payment`, `request`, or `urgent` to push the victim to act quickly before malicious activity is detected. These campaigns are often specifically targeted against people who, due to job roles and/or accesses, can carry out the adversary’s goal.  \n\nImpersonation is typically preceded by reconnaissance techniques such as [Gather Victim Identity Information](https://attack.mitre.org/techniques/T1589) and [Gather Victim Org Information](https://attack.mitre.org/techniques/T1591) as well as acquiring infrastructure such as email domains (i.e. [Domains](https://attack.mitre.org/techniques/T1583/001)) to substantiate their false identity.(Citation: Crowdstrike BEC)\n\nThere is the potential for multiple victims in campaigns involving impersonation. For example, an adversary may Compromise Accounts targeting one organization which can then be used to support impersonation against other entities.(Citation: VEC)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -56,7 +61,9 @@
                 "SaaS",
                 "Windows"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "قضاوت",
+            "description_fa": "مخالفان ممکن است یک فرد یا سازمان قابل اعتماد را به منظور متقاعد کردن و فریب دادن یک هدف به انجام برخی از اقدامات به نمایندگی از طرف خود گمراه کنند. به عنوان مثال، دشمنان ممکن است با قربانیان (از طریق فیزیکی برای اطلاع رسانی) ارتباط برقرار کنند ([[۱۰]] [[۱۰]]]؛ [[[۱۰]]] [[۱۰]]] [[۲]]]]] [[۲]]] [[[۲]]]]] [[۲]]]]] [[۲]] [۲]]]]]] [که یک فروشنده شناخته شده است، یا یک همکار ثالث. سپس اعتماد ایجاد شده می تواند برای دستیابی به اهداف نهایی یک دشمن، احتمالا علیه چندین قربانی، مورد استفاده قرار گیرد.\n\nدر بسیاری از موارد توافق نامه کسب و کار یا کمپین های تقلب ایمیل، دشمنان از خیانت به قربانیان فریب استفاده می کنند - آنها را فریب می دهند تا پول ارسال کنند یا اطلاعاتی را که در نهایت [Financial Theft] را فعال می کند ([[۱۰]\n\nمخالفان اغلب از تکنیک های مهندسی اجتماعی مانند زبان دستکاری و متقاعد کننده در خطوط موضوع ایمیل و متن بدن مانند \"پرداخت\"، \"درخواست\" یا \"سرور\" استفاده می کنند تا قربانی را به سرعت قبل از شناسایی فعالیت های مخرب تحت فشار قرار دهند. این کمپین ها اغلب به طور خاص علیه افرادی هدف قرار می گیرند که به دلیل نقش های شغلی و یا دسترسی ها می توانند هدف دشمن را انجام دهند.\n\nبه طور معمول پیش از تکنیک های شناسایی مانند [اطلاعات هویت قربانی ] ( [[[I_PRESERVE_6]) و [اطلاعات قربانی Org] ( [[[CTI_PRESERVE_7]) و همچنین به دست آوردن زیرساخت هایی مانند دامنه های ایمیل (i.] [[ویرایش]\n\nپتانسیل چندین قربانی در کمپین هایی وجود دارد که شامل زندانی شدن هستند. به عنوان مثال، یک دشمن ممکن است حساب هایی را که یک سازمان را هدف قرار می دهند، تکمیل کند که سپس می تواند برای حمایت از خیانت علیه سایر نهادهای مورد استفاده قرار گیرد. [[ویرایش] (Citation: Crowdstrike BEC) (Citation: VEC) https://attack.mitre.org/techniques/T1598 https://attack.mitre.org/techniques/T1566 https://attack.mitre.org/techniques/T1534 https://attack.mitre.org/techniques/T1657 https://attack.mitre.org/techniques/T1589 https://attack.mitre.org/techniques/T1591 https://attack.mitre.org/techniques/T1583/001"
         }
     ]
 }

@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1548/003",
-                    "external_id": "T1548.003"
+                    "external_id": "T1548.003",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "cybereason osx proton",
                     "description": "Amit Serper. (2018, May 10). ProtonB What this Mac Malware Actually Does. Retrieved March 19, 2018.",
-                    "url": "https://www.cybereason.com/blog/labs-proton-b-what-this-mac-malware-actually-does"
+                    "url": "https://www.cybereason.com/blog/labs-proton-b-what-this-mac-malware-actually-does",
+                    "source_name_fa": "Cybereason osx Proton",
+                    "description_fa": "Amit Serper (2018, May 10) ProtonB در واقع چه کار می کند. Retrieved 19 مارس 2018"
                 },
                 {
                     "source_name": "OSX.Dok Malware",
                     "description": "Thomas Reed. (2017, July 7). New OSX.Dok malware intercepts web traffic. Retrieved July 10, 2017.",
-                    "url": "https://blog.malwarebytes.com/threat-analysis/2017/04/new-osx-dok-malware-intercepts-web-traffic/"
+                    "url": "https://blog.malwarebytes.com/threat-analysis/2017/04/new-osx-dok-malware-intercepts-web-traffic/",
+                    "source_name_fa": "OSX Dok Malware",
+                    "description_fa": "توماس رید (2017, July 7) OSX جدید بدافزار Dok ترافیک وب را از بین می برد. Retrieved 10 ژوئیه 2017"
                 },
                 {
                     "source_name": "sudo man page 2018",
                     "description": "Todd C. Miller. (2018). Sudo Man Page. Retrieved March 19, 2018.",
-                    "url": "https://www.sudo.ws/"
+                    "url": "https://www.sudo.ws/",
+                    "source_name_fa": "صفحه فیلم sudo Man 2018",
+                    "description_fa": "تاد سی میلر Sudo Man Page Retrieved 19 مارس 2018"
                 }
             ],
             "object_marking_refs": [
@@ -54,7 +61,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "Sudo و Sudo Caching",
+            "description_fa": "مخالفان ممکن است ساکدو را انجام دهند و یا از فایل sudoers برای ارتقاء امتیازات استفاده کنند. مخالفان ممکن است این کار را برای اجرای دستورات به عنوان کاربران دیگر یا فرآیندهای تولید با امتیازات بالاتر انجام دهند.\n\nدر سیستم های لینوکس و MacOS، sudo (که گاهی اوقات به عنوان “Superuser do” نامیده می شود) به کاربران اجازه می دهد تا دستورات را از ترمینال ها با امتیازات بالا اجرا کنند و کنترل کنند که چه کسی می تواند این دستورات را بر روی سیستم اجرا کند. [[ویرایش] فرمان \"به یک مدیر سیستم اجازه می دهد تا به کاربران خاص (یا گروه های کاربران) اجازه دهد تا برخی از دستورات (یا همه) را به عنوان ریشه یا کاربر دیگر در حالی که ارائه یک پیگیری حسابرسی از دستورات و استدلال های خود را.\" از آنجا که سودو برای مدیر سیستم ساخته شده است، دارای برخی از ویژگی های پیکربندی مفید مانند [CTI_PRESERVE] است که مقدار زمان در دقیقه بین موارد [CTI_PRESERVE_2] قبل از آن دوباره برای رمز عبور آماده می شود. این به این دلیل است که [CTI_PRESERVE_3] توانایی ذخیره اعتبار برای یک دوره زمانی را دارد. پس از آن، فایلی را در اختیار خود قرار می دهد که در آن زمان برای تعیین این زمان اجرا شده است. علاوه بر این، یک ([۵] وجود دارد. متغیری که با هر تیتی جدید (جلسه) در انزوا رفتار می کند. این بدان معنی است که برای مثال، زمان بندی sudo از یک tty دیگر را تحت تاثیر قرار نخواهد داد (شما باید دوباره رمز عبور را تایپ کنید).\n\nفایل sudoers، [CTI_PRESERVE_6]، توضیح می دهد که کاربران می توانند کدام دستورات را اجرا کنند و از کدام ترمینال ها عبور کنند. این همچنین توضیح می دهد که کاربران می توانند به عنوان کاربران یا گروه های دیگر اجرا شوند. این امر اصل حداقل امتیاز را فراهم می کند که کاربران در پایین ترین مجوزهای ممکن خود برای اکثر اوقات اجرا می کنند و تنها به سایر کاربران یا مجوزهای مورد نیاز ارتقا می یابند، به طور معمول با ایجاد یک رمز عبور. با این حال، فایل sudoers همچنین می تواند مشخص کند که چه زمانی کاربران را برای عبور از کلمات عبور با خط مانند [CTI_PRESERVE_7] ارسال نکنید. امتیازات مرتبط برای ویرایش این فایل لازم است.\n\nمخالفان همچنین می توانند از تنظیمات ضعیف این مکانیسم ها برای افزایش امتیازات بدون نیاز به رمز عبور کاربر استفاده کنند. به عنوان مثال، [CTI_PRESERVE_8] زمان بندی را می توان برای دیدن اینکه آیا آن را در محدوده [CTI_PRESERVE_9] قرار می گیرد، بررسی کرد. اگر این کار را انجام دهد، بدافزار می تواند دستورات sudo را بدون نیاز به ارسال رمز عبور کاربر اجرا کند. علاوه بر این، اگر [CTI_PRESERVE_10] غیر فعال باشد، دشمنان می توانند این کار را از هر سختی برای کاربر انجام دهند.\n\nدر طبیعت، بدافزار ([۱۰]) از کار افتاده است.[۱۰] برای اینکه این تغییر منعکس شود، بدافزار نیز صادر شده است. از طریق macOS Sierra، فایل sudoers به صورت پیش فرض فعال شده است. <code>sudo</code> <code>timestamp_timeout</code> <code>sudo</code> <code>sudo</code> <code>/var/db/sudo</code> <code>tty_tickets</code> <code>/etc/sudoers</code> <code>user1 ALL=(ALL) NOPASSWD: ALL</code> <code>/var/db/sudo</code> <code>timestamp_timeout</code> <code>tty_tickets</code> <code>tty_tickets</code> <code>echo \\'Defaults !tty_tickets\\' >> /etc/sudoers</code> <code>killall Terminal</code> <code>tty_tickets</code> (Citation: sudo man page 2018) (Citation: OSX.Dok Malware) (Citation: cybereason osx proton)"
         }
     ]
 }

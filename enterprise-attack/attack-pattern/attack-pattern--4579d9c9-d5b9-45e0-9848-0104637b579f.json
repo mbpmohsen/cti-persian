@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1503",
-                    "external_id": "T1503"
+                    "external_id": "T1503",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Talos Olympic Destroyer 2018",
                     "description": "Mercer, W. and Rascagneres, P. (2018, February 12). Olympic Destroyer Takes Aim At Winter Olympics. Retrieved March 14, 2019.",
-                    "url": "https://blog.talosintelligence.com/2018/02/olympic-destroyer.html"
+                    "url": "https://blog.talosintelligence.com/2018/02/olympic-destroyer.html",
+                    "source_name_fa": "تخریب المپیک Talos 2018",
+                    "description_fa": "Mercer، W. و Rascagneres، P. (2018، 12 فوریه) نابودکننده المپیک هدف را در المپیک زمستانی می گیرد. Retrieved 14 مارس 2019"
                 },
                 {
                     "source_name": "Microsoft CryptUnprotectData April 2018",
                     "description": "Microsoft. (2018, April 12). CryptUnprotectData function. Retrieved June 18, 2019.",
-                    "url": "https://docs.microsoft.com/en-us/windows/desktop/api/dpapi/nf-dpapi-cryptunprotectdata"
+                    "url": "https://docs.microsoft.com/en-us/windows/desktop/api/dpapi/nf-dpapi-cryptunprotectdata",
+                    "source_name_fa": "Microsoft CryptUn Protection اطلاعات آوریل 2018",
+                    "description_fa": "مایکروسافت (2018, 12 آوریل) CryptUn Protection تابع داده ها Retrieved 18 ژوئن 2019"
                 },
                 {
                     "source_name": "Proofpoint Vega Credential Stealer May 2018",
                     "description": "Proofpoint. (2018, May 10). New Vega Stealer shines brightly in targeted campaign . Retrieved June 18, 2019.",
-                    "url": "https://www.proofpoint.com/us/threat-insight/post/new-vega-stealer-shines-brightly-targeted-campaign"
+                    "url": "https://www.proofpoint.com/us/threat-insight/post/new-vega-stealer-shines-brightly-targeted-campaign",
+                    "source_name_fa": "گواهی Vegacredential Stealer 2018",
+                    "description_fa": "گواهی (2018, May 10) Vega جدید Stealer به وضوح در کمپین هدفمند می درخشد. Retrieved 18 ژوئن 2019"
                 },
                 {
                     "source_name": "FireEye HawkEye Malware July 2017",
                     "description": "Swapnil Patil, Yogesh Londhe. (2017, July 25). HawkEye Credential Theft Malware Distributed in Recent Phishing Campaign. Retrieved June 18, 2019.",
-                    "url": "https://www.fireeye.com/blog/threat-research/2017/07/hawkeye-malware-distributed-in-phishing-campaign.html"
+                    "url": "https://www.fireeye.com/blog/threat-research/2017/07/hawkeye-malware-distributed-in-phishing-campaign.html",
+                    "source_name_fa": "FireEye HawkEye Malware 2017",
+                    "description_fa": "پاتریل پاتریل، Yogesh Londhe (2017، 25 ژوئیه) Hawk Eye Credential Theft در کمپین فیشینگ اخیر توزیع شده است. Retrieved 18 ژوئن 2019"
                 },
                 {
                     "source_name": "GitHub Mimikittenz July 2016",
                     "description": "Jamieson O'Reilly (putterpanda). (2016, July 4). mimikittenz. Retrieved June 20, 2019.",
-                    "url": "https://github.com/putterpanda/mimikittenz"
+                    "url": "https://github.com/putterpanda/mimikittenz",
+                    "source_name_fa": "GitHub Mimikittenz ژوئیه 2016",
+                    "description_fa": "Jamieson O'Reilly (putterpanda) (2016 ژوئیه 4). mimikittenz Retrieved 20 ژوئن 2019"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2025-10-24T17:48:43.314Z",
             "name": "Credentials from Web Browsers",
-            "description": "Adversaries may acquire credentials from web browsers by reading files specific to the target browser.  (Citation: Talos Olympic Destroyer 2018) \n\nWeb browsers commonly save credentials such as website usernames and passwords so that they do not need to be entered manually in the future. Web browsers typically store the credentials in an encrypted format within a credential store; however, methods exist to extract plaintext credentials from web browsers.\n\nFor example, on Windows systems, encrypted credentials may be obtained from Google Chrome by reading a database file, <code>AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data</code> and executing a SQL query: <code>SELECT action_url, username_value, password_value FROM logins;</code>. The plaintext password can then be obtained by passing the encrypted credentials to the Windows API function <code>CryptUnprotectData</code>, which uses the victim\u2019s cached logon credentials as the decryption key. (Citation: Microsoft CryptUnprotectData April 2018)\n \nAdversaries have executed similar procedures for common web browsers such as FireFox, Safari, Edge, etc. (Citation: Proofpoint Vega Credential Stealer May 2018)(Citation: FireEye HawkEye Malware July 2017)\n\nAdversaries may also acquire credentials by searching web browser process memory for patterns that commonly match credentials.(Citation: GitHub Mimikittenz July 2016)\n\nAfter acquiring credentials from web browsers, adversaries may attempt to recycle the credentials across different systems and/or accounts in order to expand access. This can result in significantly furthering an adversary's objective in cases where credentials gained from web browsers overlap with privileged accounts (e.g. domain administrator).",
+            "description": "Adversaries may acquire credentials from web browsers by reading files specific to the target browser.  (Citation: Talos Olympic Destroyer 2018) \n\nWeb browsers commonly save credentials such as website usernames and passwords so that they do not need to be entered manually in the future. Web browsers typically store the credentials in an encrypted format within a credential store; however, methods exist to extract plaintext credentials from web browsers.\n\nFor example, on Windows systems, encrypted credentials may be obtained from Google Chrome by reading a database file, <code>AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data</code> and executing a SQL query: <code>SELECT action_url, username_value, password_value FROM logins;</code>. The plaintext password can then be obtained by passing the encrypted credentials to the Windows API function <code>CryptUnprotectData</code>, which uses the victim’s cached logon credentials as the decryption key. (Citation: Microsoft CryptUnprotectData April 2018)\n \nAdversaries have executed similar procedures for common web browsers such as FireFox, Safari, Edge, etc. (Citation: Proofpoint Vega Credential Stealer May 2018)(Citation: FireEye HawkEye Malware July 2017)\n\nAdversaries may also acquire credentials by searching web browser process memory for patterns that commonly match credentials.(Citation: GitHub Mimikittenz July 2016)\n\nAfter acquiring credentials from web browsers, adversaries may attempt to recycle the credentials across different systems and/or accounts in order to expand access. This can result in significantly furthering an adversary's objective in cases where credentials gained from web browsers overlap with privileged accounts (e.g. domain administrator).",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -71,7 +82,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "Credentials از Web Browsers",
+            "description_fa": "مخالفان ممکن است اعتبار از مرورگرهای وب را با خواندن فایل های خاص به مرورگر هدف به دست آورند. [[ویرایش]\n\nمرورگرهای وب معمولاً اعتبارنامه هایی مانند نام کاربری وب سایت و رمز عبور را ذخیره می کنند تا نیازی به ورود به صورت دستی در آینده نداشته باشند. مرورگرهای وب به طور معمول مدارک را در یک فرمت رمزگذاری شده در یک فروشگاه معتبر ذخیره می کنند؛ با این حال، روش ها برای استخراج اعتبار متن ساده از مرورگرهای وب وجود دارد.\n\nبه عنوان مثال، در سیستم های ویندوز، اعتبار رمزگذاری شده ممکن است از Google Chrome با خواندن یک فایل پایگاه داده (CTI_PRESERVE_0) و اجرای یک جستجوی SQL به دست آید. سپس رمز عبور ساده متن را می توان با انتقال اعتبار رمزگذاری شده به تابع Windows API ([CTI_PRESERVE_2] به دست آورد، که از اعتبارهای پنهان شده قربانی به عنوان کلید رمزگشایی استفاده می کند. [[ویرایش]\n\nمخالفان روش های مشابهی را برای مرورگرهای وب رایج مانند FireFox، Safari، Edge و غیره اجرا کرده اند. [[ویرایش]\n\nعوامل جانبی همچنین ممکن است با جستجوی حافظه فرآیند مرورگر وب برای الگوهایی که به طور معمول مطابقت با اعتبار. [[ویرایش]\n\nپس از کسب اعتبار از مرورگرهای وب، دشمنان ممکن است تلاش کنند تا اعتبارات را در سراسر سیستم های مختلف و / یا حساب ها بازیافت کنند تا دسترسی را گسترش دهند. این می تواند به طور قابل توجهی هدف یک دشمن را در مواردی که اعتبارات حاصل از مرورگرهای وب با حساب های ممتاز همپوشانی دارند (به عنوان مثال مدیر دامنه). <code>AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data</code> <code>SELECT action_url, username_value, password_value FROM logins;</code> <code>CryptUnprotectData</code> (Citation: Talos Olympic Destroyer 2018) (Citation: Microsoft CryptUnprotectData April 2018) (Citation: Proofpoint Vega Credential Stealer May 2018) (Citation: FireEye HawkEye Malware July 2017) (Citation: GitHub Mimikittenz July 2016)"
         }
     ]
 }

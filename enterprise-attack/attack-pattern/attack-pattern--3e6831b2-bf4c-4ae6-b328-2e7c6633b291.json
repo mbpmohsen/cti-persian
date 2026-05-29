@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1098/007",
-                    "external_id": "T1098.007"
+                    "external_id": "T1098.007",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Cyber Security News",
                     "description": "Kaaviya. (n.d.). SuperBlack Actors Exploiting Two Fortinet Vulnerabilities to Deploy Ransomware. Retrieved September 22, 2025.",
-                    "url": "https://cybersecuritynews.com/superblack-actors-exploiting-two-fortinet-vulnerabilities/"
+                    "url": "https://cybersecuritynews.com/superblack-actors-exploiting-two-fortinet-vulnerabilities/",
+                    "source_name_fa": "اخبار امنیت سایبری",
+                    "description_fa": "کواوییا (n.d.) بازیگران سوپر سیاه دو آسیب پذیری Fortinet را به Deploy Ransomware تبدیل کردند. Retrieved 22 سپتامبر 2025"
                 },
                 {
                     "source_name": "Linux Usermod",
                     "description": "Man7. (n.d.). Usermod. Retrieved August 5, 2024.",
-                    "url": "https://www.man7.org/linux/man-pages/man8/usermod.8.html"
+                    "url": "https://www.man7.org/linux/man-pages/man8/usermod.8.html",
+                    "source_name_fa": "لینوکس Usermod",
+                    "description_fa": "Man7 (n.d.) Usermod Retrieved 5، 2024."
                 },
                 {
                     "source_name": "Microsoft Net Group",
                     "description": "Microsoft. (2016, August 31). Net group. Retrieved August 5, 2024.",
-                    "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754051(v=ws.11)"
+                    "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc754051(v=ws.11)",
+                    "source_name_fa": "Microsoft Net Group",
+                    "description_fa": "مایکروسافت (2016، 31 آگوست) گروه خالص Retrieved 5، 2024."
                 },
                 {
                     "source_name": "Microsoft Net Localgroup",
                     "description": "Microsoft. (2016, August 31). Net Localgroup. Retrieved August 5, 2024.",
-                    "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc725622(v=ws.11)"
+                    "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc725622(v=ws.11)",
+                    "source_name_fa": "Microsoft Net Localgroup",
+                    "description_fa": "مایکروسافت (2016، 31 آگوست) Net Localgroup Retrieved 5، 2024."
                 },
                 {
                     "source_name": "Microsoft RDP Logons",
                     "description": "Microsoft. (2017, April 9). Allow log on through Remote Desktop Services. Retrieved August 5, 2024.",
-                    "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/allow-log-on-through-remote-desktop-services"
+                    "url": "https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/allow-log-on-through-remote-desktop-services",
+                    "source_name_fa": "Microsoft RDP Logons",
+                    "description_fa": "مایکروسافت (2017, آوریل 9) اجازه دهید از طریق Remote Desktop Services وارد شوید. Retrieved 5، 2024."
                 },
                 {
                     "source_name": "RootDSE AD Detection 2022",
                     "description": "Scarred Monk. (2022, May 6). Real-time detection scenarios in Active Directory environments. Retrieved August 5, 2024.",
-                    "url": "https://rootdse.org/posts/monitoring-realtime-activedirectory-domain-scenarios"
+                    "url": "https://rootdse.org/posts/monitoring-realtime-activedirectory-domain-scenarios",
+                    "source_name_fa": "RootDSE AD 2022",
+                    "description_fa": "دانلود زیرنویس فارسی فیلم Scarred Monk سناریوهای تشخیص زمان واقعی در محیط های Active Directory Retrieved 5، 2024."
                 }
             ],
             "object_marking_refs": [
@@ -77,7 +90,9 @@
                 "macOS",
                 "Linux"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "گروه های محلی یا Domain",
+            "description_fa": "یک دشمن ممکن است گروه های محلی یا دامنه اضافی را به یک حساب تحت کنترل دشمن اضافه کند تا دسترسی مداوم به یک سیستم یا دامنه را حفظ کند.\n\nدر ویندوز، حساب ها ممکن است از دستورات “net Localgroup” و “net Group” برای اضافه کردن کاربران موجود به گروه های محلی و دامنه استفاده کنند. [[ویرایش] در لینوکس، دشمنان ممکن است از دستور \"usermod\" برای یک هدف استفاده کنند.\n\nبه عنوان مثال، حساب ها ممکن است به گروه مدیران محلی در دستگاه های ویندوز اضافه شوند تا امتیازات بالا را حفظ کنند. آنها همچنین ممکن است به گروه کاربران Remote Desktop اضافه شوند که به آنها اجازه می دهد تا از (Remote Desktop Protocol) استفاده کنند ([CTI_PRESERVE_6] برای ورود به نقاط انتهایی در آینده. مخالفان همچنین ممکن است حساب ها را به گروه های کاربر VPN اضافه کنند تا پایداری آینده در شبکه را به دست آورند. [[ویرایش] در لینوکس، حساب ها ممکن است به گروه sudoers اضافه شود و به آنها اجازه می دهد تا به طور مداوم از (Sudo و Sudo Caching) استفاده کنند.\n\nدر محیط های ویندوز، حساب های ماشین نیز ممکن است به گروه های دامنه اضافه شوند. این اجازه می دهد تا حساب سیستم محلی برای به دست آوردن امتیازات در دامنه. [[ویرایش] (Citation: Microsoft Net Localgroup) (Citation: Microsoft Net Group) (Citation: Linux Usermod) (Citation: Microsoft RDP Logons) (Citation: Cyber Security News) (Citation: RootDSE AD Detection 2022) https://attack.mitre.org/techniques/T1021/001 https://attack.mitre.org/techniques/T1548/003"
         }
     ]
 }

@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1027/013",
-                    "external_id": "T1027.013"
+                    "external_id": "T1027.013",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "File obfuscation",
                     "description": "Aspen Lindblom, Joseph Goodwin, and Chris Sheldon. (2021, July 19). Shlayer Malvertising Campaigns Still Using Flash Update Disguise. Retrieved March 29, 2024.",
-                    "url": "https://www.crowdstrike.com/blog/shlayer-malvertising-campaigns-still-using-flash-update-disguise/"
+                    "url": "https://www.crowdstrike.com/blog/shlayer-malvertising-campaigns-still-using-flash-update-disguise/",
+                    "source_name_fa": "فایل obfuscation",
+                    "description_fa": "Aspen Lindblom، جوزف گودوین و کریس شلدون Shlayer Malvertising Campaigns هنوز هم با استفاده از فلش به روز رسانی Disguise. Retrieved 29 مارس 2024"
                 },
                 {
                     "source_name": "SFX - Encrypted/Encoded File",
                     "description": "Jai Minton. (2023, March 31). How Falcon OverWatch Investigates Malicious Self-Extracting Archives, Decoy Files and Their Hidden Payloads. Retrieved March 29, 2024.",
-                    "url": "https://www.crowdstrike.com/blog/self-extracting-archives-decoy-files-and-their-hidden-payloads/"
+                    "url": "https://www.crowdstrike.com/blog/self-extracting-archives-decoy-files-and-their-hidden-payloads/",
+                    "source_name_fa": "SFX – رمزگذاری شده/Encoded File",
+                    "description_fa": "Jai Minton چگونه فالکون OverWatch، آرشیو های خودخواهانه، فایل های پاک و کیف پول پنهان خود را بررسی می کند. Retrieved 29 مارس 2024"
                 }
             ],
             "object_marking_refs": [
@@ -55,7 +60,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "فایل رمزگذاری شده/Encoded File",
+            "description_fa": "مجرمان ممکن است فایل ها را به رشته ها، بایت ها و سایر الگوهای خاص برای جلوگیری از تشخیص رمزگذاری یا رمزگذاری کنند. رمزگذاری و / یا رمزگذاری محتوای فایل با هدف پنهان کردن مصنوعات مخرب در یک فایل مورد استفاده در یک نفوذ است. بسیاری از تکنیک های دیگر، مانند بسته بندی نرم افزار ([CTI_PRESERVE_2]، [Steganography] [[[۱۰]]]، و [Embededded Payloads] [[[۱۰]] [[[۱۰]]، این هدف را به اشتراک می گذارند. رمزگذاری و / یا رمزگذاری فایل ها می تواند منجر به توقف در تشخیص امضاهای استاتیک شود، فقط برای این محتوای مخرب (به عنوان مثال، [Deobfuscate/Decode Files یا اطلاعات] ([CTI_PRE_SERVE_5]) در زمان اجرای / استفاده.\n\nاین نوع از فایل obfuscation را می توان برای بسیاری از مصنوعات فایل موجود در میزبان قربانی مانند log/configuration و فایل های بارگیری اعمال کرد. [[ویرایش] فایل ها را می توان با یک کلید سخت کد شده یا کاربر رمزگذاری کرد، و همچنین در غیر این صورت با استفاده از طرح های رمزگذاری استاندارد مانند Base64.\n\nکل محتوای یک فایل ممکن است مبهم یا فقط توابع یا ارزش های خاص (مانند آدرس های C2) باشد. رمزگذاری و رمزگذاری نیز ممکن است در لایه های اضافی برای محافظت اضافی اعمال شود.\n\nبه عنوان مثال، دشمنان ممکن است از رمز عبور محافظت کنند اسناد Word یا خود ردیابی (SFX) به عنوان یک روش رمزگذاری / رمزگذاری یک فایل مانند [Phishing] ([[۱۰]] این فایل ها به طور معمول با اتصال محتوای بایگانی شده در نظر گرفته شده به a decompressor stub که هنگامی که فایل فراخوانی می شود اجرا می شوند (به عنوان مثال، [User Execution] ([CTI_PRESERVE_7]).\n\nمخالفان همچنین ممکن است از فایل های خاص و همچنین طرح های رمزگذاری سفارشی استفاده کنند. به عنوان مثال، هدرهای بایت سفارش مارک (BOM) در فایل های متنی ممکن است برای دستکاری و محتوای فایل obfuscate مورد سوء استفاده قرار گیرد تا [Command and Scripting Interpreter] ([CTI_PRESERVE_8] اجرا شود. (Citation: File obfuscation) (Citation: SFX - Encrypted/Encoded File) https://attack.mitre.org/techniques/T1027/002 https://attack.mitre.org/techniques/T1027/003 https://attack.mitre.org/techniques/T1027/009 https://attack.mitre.org/techniques/T1140 https://attack.mitre.org/techniques/T1566 https://attack.mitre.org/techniques/T1204 https://attack.mitre.org/techniques/T1059"
         }
     ]
 }

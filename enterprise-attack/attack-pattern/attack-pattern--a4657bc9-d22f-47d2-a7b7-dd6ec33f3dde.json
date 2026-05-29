@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1574/013",
-                    "external_id": "T1574.013"
+                    "external_id": "T1574.013",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "FinFisher exposed ",
-                    "description": "Microsoft Defender Security Research Team. (2018, March 1). FinFisher exposed: A researcher\u2019s tale of defeating traps, tricks, and complex virtual machines. Retrieved January 27, 2022.",
-                    "url": "https://www.microsoft.com/security/blog/2018/03/01/finfisher-exposed-a-researchers-tale-of-defeating-traps-tricks-and-complex-virtual-machines/"
+                    "description": "Microsoft Defender Security Research Team. (2018, March 1). FinFisher exposed: A researcher’s tale of defeating traps, tricks, and complex virtual machines. Retrieved January 27, 2022.",
+                    "url": "https://www.microsoft.com/security/blog/2018/03/01/finfisher-exposed-a-researchers-tale-of-defeating-traps-tricks-and-complex-virtual-machines/",
+                    "source_name_fa": "FinFisher در معرض",
+                    "description_fa": "Microsoft Defender Security Research Team (2018, March 1) FinFisher در معرض: داستان یک محقق از شکست تله ها، ترفندهای و ماشین های مجازی پیچیده Retrieved ۲۷ ژانویه ۲۰۲۲"
                 },
                 {
                     "source_name": "NtQueryInformationProcess",
                     "description": "Microsoft. (2021, November 23). NtQueryInformationProcess function (winternl.h). Retrieved February 4, 2022.",
-                    "url": "https://docs.microsoft.com/en-us/windows/win32/api/winternl/nf-winternl-ntqueryinformationprocess"
+                    "url": "https://docs.microsoft.com/en-us/windows/win32/api/winternl/nf-winternl-ntqueryinformationprocess",
+                    "source_name_fa": "NtQuery Information فرآیند پردازش",
+                    "description_fa": "مایکروسافت (2021، 23 نوامبر) NtQuery Information تابع فرآیند (winternl.h) Retrieved 4, 2022."
                 },
                 {
                     "source_name": "Windows Process Injection KernelCallbackTable",
                     "description": "odzhan. (2019, May 25). Windows Process Injection: KernelCallbackTable used by FinFisher / FinSpy. Retrieved February 4, 2022.",
-                    "url": "https://modexp.wordpress.com/2019/05/25/windows-injection-finspy/"
+                    "url": "https://modexp.wordpress.com/2019/05/25/windows-injection-finspy/",
+                    "source_name_fa": "Windows Process injection Kernelback Table Table",
+                    "description_fa": "odzhan (2019، 25 می) تزریق پردازش ویندوز: KernelCallback جدول استفاده شده توسط FinFisher / FinSpy Retrieved 4, 2022."
                 },
                 {
                     "source_name": "Lazarus APT January 2022",
-                    "description": "Saini, A. and Hossein, J. (2022, January 27). North Korea\u2019s Lazarus APT leverages Windows Update client, GitHub in latest campaign. Retrieved January 27, 2022.",
-                    "url": "https://blog.malwarebytes.com/threat-intelligence/2022/01/north-koreas-lazarus-apt-leverages-windows-update-client-github-in-latest-campaign/"
+                    "description": "Saini, A. and Hossein, J. (2022, January 27). North Korea’s Lazarus APT leverages Windows Update client, GitHub in latest campaign. Retrieved January 27, 2022.",
+                    "url": "https://blog.malwarebytes.com/threat-intelligence/2022/01/north-koreas-lazarus-apt-leverages-windows-update-client-github-in-latest-campaign/",
+                    "source_name_fa": "ایلازیا APT 2022",
+                    "description_fa": "Saini، A و حسین، J. (2022، 27 ژانویه) لازاروس APT کره شمالی از ویندوز به روز رسانی، GitHub در آخرین کمپین استفاده می کند. Retrieved ۲۷ ژانویه ۲۰۲۲"
                 }
             ],
             "object_marking_refs": [
@@ -63,7 +72,9 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "دانلود بازی CallbackTable",
+            "description_fa": "در صورتی که از آن استفاده کنید، می توانید از آن استفاده کنید. [[ویرایش] [CTI_PRESERVE] را می توان در بلوک محیط فرایند (PEB) یافت و به مجموعه ای از توابع گرافیکی موجود در یک فرآیند GUI (CTI_PRESERVE_2) بارگذاری شده است.[۱۰]\n\nیک دشمن ممکن است جریان اجرای یک فرآیند را با استفاده از [CTI_PRESERVE_3] با جایگزینی یک تابع اصلی callback با یک محموله مخرب به سرقت ببرد. به شیوه های مختلفی از جمله رفتار های مرتبط با آن ها مانند [تغییرمسیر از کد] ([CTI_PRESERVE_17]) یا [Process injection] ([CTI_PRESERVE_18]) به فرآیند دیگری دست می یابند.\n\nنکته ای در مورد حافظه ([I_PRESERVE_4] می توان با استفاده از PEB (از طریق تماس با [CTI_PRESERVE_5] [[ویرایش] [[[ویرایش]] [[۱۰]]] [[۹]]]]] [[۱۰]]]]] [[۱۰]]]]] [[۱۰]] و هنگامی که در آن قرار می گیرد، آن را می سازد. می توان آن را تکرار کرد و یک تابع در جدول (به عنوان مثال، [CTI_PRESERVE_7] به آدرس یک محموله مخرب (ex) تنظیم کرد. سپس PEB با آدرس جدید جدول به روز می شود. هنگامی که تابع دستکاری شده فراخوانی شود، محموله مخرب ایجاد خواهد شد. [[ویرایش]\n\nتابع دستکاری شده به طور معمول با استفاده از یک پیام ویندوز استفاده می شود. پس از اینکه این فرآیند به صورت ربوده شده و کد مخرب اجرا می شود، [CTI_PRESERVE_9] ممکن است توسط بقیه محموله های مخرب به حالت اصلی خود بازگردانده شود. [[ویرایش] استفاده از [CTI_PRESERVE_10] برای تخلیه جریان اعدام ممکن است از تشخیص از محصولات امنیتی جلوگیری کند زیرا اعدام می تواند تحت یک فرآیند قانونی پوشیده شود. <code>KernelCallbackTable</code> <code>KernelCallbackTable</code> <code>user32.dll</code> <code>KernelCallbackTable</code> <code>KernelCallbackTable</code> <code>NtQueryInformationProcess()</code> <code>KernelCallbackTable</code> <code>fnCOPYDATA</code> <code>WriteProcessMemory()</code> <code>KernelCallbackTable</code> <code>KernelCallbackTable</code> (Citation: Lazarus APT January 2022) (Citation: FinFisher exposed ) (Citation: Windows Process Injection KernelCallbackTable) (Citation: NtQueryInformationProcess) (Citation: Lazarus APT January 2022) (Citation: Lazarus APT January 2022) https://attack.mitre.org/techniques/T1620 https://attack.mitre.org/techniques/T1055 https://attack.mitre.org/techniques/T1106"
         }
     ]
 }

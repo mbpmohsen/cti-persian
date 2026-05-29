@@ -13,32 +13,42 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1097",
-                    "external_id": "T1097"
+                    "external_id": "T1097",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/645.html",
-                    "external_id": "CAPEC-645"
+                    "external_id": "CAPEC-645",
+                    "source_name_fa": "کلاه"
                 },
                 {
                     "source_name": "ADSecurity AD Kerberos Attacks",
                     "description": "Metcalf, S. (2014, November 22). Mimikatz and Active Directory Kerberos Attacks. Retrieved June 2, 2016.",
-                    "url": "https://adsecurity.org/?p=556"
+                    "url": "https://adsecurity.org/?p=556",
+                    "source_name_fa": "امنیت AD Kerberos حمله",
+                    "description_fa": "متcalf، S. (2014، 22 نوامبر) Mimikatz و Active Directory Kerberos Attacks Retrieved 2 ژوئن 2016"
                 },
                 {
                     "source_name": "GentilKiwi Pass the Ticket",
                     "description": "Deply, B. (2014, January 13). Pass the ticket. Retrieved June 2, 2016.",
-                    "url": "http://blog.gentilkiwi.com/securite/mimikatz/pass-the-ticket-kerberos"
+                    "url": "http://blog.gentilkiwi.com/securite/mimikatz/pass-the-ticket-kerberos",
+                    "source_name_fa": "GentilKiwi Pass بلیط",
+                    "description_fa": "B. (2014، 13 ژانویه) بلیط را رد کنید. Retrieved 2 ژوئن 2016"
                 },
                 {
                     "source_name": "Campbell 2014",
                     "description": "Campbell, C. (2014). The Secret Life of Krbtgt. Retrieved December 4, 2014.",
-                    "url": "http://defcon.org/images/defcon-22/dc-22-presentations/Campbell/DEFCON-22-Christopher-Campbell-The-Secret-Life-of-Krbtgt.pdf"
+                    "url": "http://defcon.org/images/defcon-22/dc-22-presentations/Campbell/DEFCON-22-Christopher-Campbell-The-Secret-Life-of-Krbtgt.pdf",
+                    "source_name_fa": "کمپبل 2014",
+                    "description_fa": "کمپبل، C. (2014) راز زندگی Krbtgt Retrieved 4 دسامبر 2014"
                 },
                 {
                     "source_name": "CERT-EU Golden Ticket Protection",
                     "description": "Abolins, D., Boldea, C., Socha, K., Soria-Machado, M. (2016, April 26). Kerberos Golden Ticket Protection. Retrieved July 13, 2017.",
-                    "url": "https://cert.europa.eu/static/WhitePapers/UPDATED%20-%20CERT-EU_Security_Whitepaper_2014-007_Kerberos_Golden_Ticket_Protection_v1_4.pdf"
+                    "url": "https://cert.europa.eu/static/WhitePapers/UPDATED%20-%20CERT-EU_Security_Whitepaper_2014-007_Kerberos_Golden_Ticket_Protection_v1_4.pdf",
+                    "source_name_fa": "پشتیبانی بلیط طلایی اتحادیه اروپا",
+                    "description_fa": "Abolins، D.، Boldea، C.، Socha، K.، Soria-Machado، M. (2016، 26 آوریل) حفاظت از بلیط طلایی Kerberos Retrieved 13 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -67,7 +77,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "ارسال بلیط",
+            "description_fa": "بلیط (PtT) یک روش معتبر بودن به سیستم با استفاده از بلیط های Kerberos بدون دسترسی به رمز عبور حساب است. احراز هویت Kerberos را می توان به عنوان اولین گام برای حرکت بعدی به یک سیستم از راه دور استفاده کرد.\n\nدر این تکنیک، بلیط های معتبر Kerberos برای [حساب های معتبر] [[[[۱۰]]] [[[۱۰]]]) توسط [OS Credential Dumping] ([[۱۰]] [[۱۰]] [[۱۰]]) گرفته شده است. بلیط خدمات کاربر یا بلیط اعطای بلیط (TGT) ممکن است بسته به سطح دسترسی به دست آید. یک بلیط خدمات اجازه دسترسی به یک منبع خاص را می دهد، در حالی که TGT می تواند برای درخواست بلیط خدمات از سرویس اعطای بلیط (TGS) برای دسترسی به هر منبع کاربر امتیازات برای دسترسی استفاده شود. [[ویرایش] [[ویرایش]\n\nبلیط های نقره ای را می توان برای خدماتی که از Kerberos به عنوان یک مکانیسم احراز هویت استفاده می کنند به دست آورد و برای تولید بلیط برای دسترسی به آن منبع خاص و سیستم که میزبان منبع (به عنوان مثال، SharePoint). [[ویرایش]\n\nبلیط طلایی را می توان برای دامنه با استفاده از حساب سرویس توزیع کلیدی KRBTGT به حساب NTLM، که نسل TGTs را برای هر حساب در Active Directory فراهم می کند. [[ویرایش] (Citation: ADSecurity AD Kerberos Attacks) (Citation: GentilKiwi Pass the Ticket) (Citation: ADSecurity AD Kerberos Attacks) (Citation: Campbell 2014) https://attack.mitre.org/techniques/T1078 https://attack.mitre.org/techniques/T1003"
         }
     ]
 }

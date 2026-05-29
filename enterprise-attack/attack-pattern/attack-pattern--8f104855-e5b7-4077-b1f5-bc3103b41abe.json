@@ -13,42 +13,57 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1087/004",
-                    "external_id": "T1087.004"
+                    "external_id": "T1087.004",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AWS List Roles",
                     "description": "Amazon. (n.d.). List Roles. Retrieved August 11, 2020.",
-                    "url": "https://docs.aws.amazon.com/cli/latest/reference/iam/list-roles.html"
+                    "url": "https://docs.aws.amazon.com/cli/latest/reference/iam/list-roles.html",
+                    "source_name_fa": "نقش های فهرست AWS",
+                    "description_fa": "آمازون (n.d.) نقش های لیست Retrieved 11 اوت 2020"
                 },
                 {
                     "source_name": "AWS List Users",
                     "description": "Amazon. (n.d.). List Users. Retrieved August 11, 2020.",
-                    "url": "https://docs.aws.amazon.com/cli/latest/reference/iam/list-users.html"
+                    "url": "https://docs.aws.amazon.com/cli/latest/reference/iam/list-users.html",
+                    "source_name_fa": "کاربران لیست AWS",
+                    "description_fa": "آمازون (n.d.) لیست کاربران Retrieved 11 اوت 2020"
                 },
                 {
                     "source_name": "Black Hills Red Teaming MS AD Azure, 2018",
                     "description": "Felch, M.. (2018, August 31). Red Teaming Microsoft Part 1 Active Directory Leaks via Azure. Retrieved October 6, 2019.",
-                    "url": "https://www.blackhillsinfosec.com/red-teaming-microsoft-part-1-active-directory-leaks-via-azure/"
+                    "url": "https://www.blackhillsinfosec.com/red-teaming-microsoft-part-1-active-directory-leaks-via-azure/",
+                    "source_name_fa": "Black Hills Red Teaming MS AD، 2018",
+                    "description_fa": "Felch، M. (2018، 31 آگوست) Red Teaming Microsoft Part 1 Active Directory از طریق Azure منتشر می شود. Retrieved 6 اکتبر 2019"
                 },
                 {
                     "source_name": "Google Cloud - IAM Servie Accounts List API",
                     "description": "Google. (2020, June 23). gcloud iam service-accounts list. Retrieved August 4, 2020.",
-                    "url": "https://cloud.google.com/sdk/gcloud/reference/iam/service-accounts/list"
+                    "url": "https://cloud.google.com/sdk/gcloud/reference/iam/service-accounts/list",
+                    "source_name_fa": "Google Cloud IAMServe Accounts List API",
+                    "description_fa": "گوگل (2020، 23 ژوئن) Gcloud iam Service-accounts list Retrieved 4 اوت 2020"
                 },
                 {
                     "source_name": "Microsoft AZ CLI",
                     "description": "Microsoft. (n.d.). az ad user. Retrieved October 6, 2019.",
-                    "url": "https://docs.microsoft.com/en-us/cli/azure/ad/user?view=azure-cli-latest"
+                    "url": "https://docs.microsoft.com/en-us/cli/azure/ad/user?view=azure-cli-latest",
+                    "source_name_fa": "Microsoft RAW CLI",
+                    "description_fa": "مایکروسافت (n.d.) کاربر آگهی Az Retrieved 6 اکتبر 2019"
                 },
                 {
                     "source_name": "Microsoft msolrolemember",
                     "description": "Microsoft. (n.d.). Get-MsolRoleMember. Retrieved October 6, 2019.",
-                    "url": "https://docs.microsoft.com/en-us/powershell/module/msonline/get-msolrolemember?view=azureadps-1.0"
+                    "url": "https://docs.microsoft.com/en-us/powershell/module/msonline/get-msolrolemember?view=azureadps-1.0",
+                    "source_name_fa": "Microsoft msolrole",
+                    "description_fa": "مایکروسافت (n.d.) Get-MsolleMember Retrieved 6 اکتبر 2019"
                 },
                 {
                     "source_name": "GitHub Raindance",
                     "description": "Stringer, M.. (2018, November 21). RainDance. Retrieved October 6, 2019.",
-                    "url": "https://github.com/True-Demon/raindance"
+                    "url": "https://github.com/True-Demon/raindance",
+                    "source_name_fa": "GitHub Raindance",
+                    "description_fa": "رشته، M. (2018، 21 نوامبر) باران Retrieved 6 اکتبر 2019"
                 }
             ],
             "object_marking_refs": [
@@ -79,7 +94,9 @@
                 "Office Suite",
                 "SaaS"
             ],
-            "x_mitre_version": "1.3"
+            "x_mitre_version": "1.3",
+            "name_fa": "Cloud Account",
+            "description_fa": "مخالفان ممکن است تلاش کنند تا لیستی از حساب های ابری را دریافت کنند. حساب های ابری کسانی هستند که توسط یک سازمان برای استفاده توسط کاربران، پشتیبانی از راه دور، خدمات یا برای مدیریت منابع در یک ارائه دهنده خدمات ابری یا برنامه SaaS ایجاد و پیکربندی شده اند.\n\nبا دسترسی معتبر چندین ابزار وجود دارد که می تواند برای پیدا کردن حساب ها استفاده شود. [[ویرایش] قدرت قدرت شل cmdlet را می توان برای به دست آوردن نام حساب کاربری داده شده در گروه یا مجوز در Office 365 استفاده کرد.[۱۰][۱۰] Azure CLI همچنین یک رابط برای به دست آوردن حساب کاربری با دسترسی معتبر به یک دامنه فراهم می کند. در این میان، همه ی کاربران را در یک حوزه قرار می دهند. [[ویرایش]\n\nفرمان AWS [CTI_PRESERVE_2] ممکن است برای به دست آوردن یک لیست از کاربران در حساب فعلی استفاده شود در حالی که [CTI_PRESERVE_3] می تواند نقش های IAM را به دست آورد که دارای پیشوند مشخصی است.[۱۰] در GCP، [CTI_PRESERVE_4] و [[ویرایش] ممکن است برای به دست آوردن لیستی از حساب های خدمات و کاربران در یک پروژه استفاده شود. [[ویرایش] <code>Get-MsolRoleMember</code> <code>az ad user list</code> <code>aws iam list-users</code> <code>aws iam list-roles</code> <code>gcloud iam service-accounts list</code> <code>gcloud projects get-iam-policy</code> (Citation: Microsoft msolrolemember) (Citation: GitHub Raindance) (Citation: Microsoft AZ CLI) (Citation: Black Hills Red Teaming MS AD Azure, 2018) (Citation: AWS List Roles) (Citation: AWS List Users) (Citation: Google Cloud - IAM Servie Accounts List API)"
         }
     ]
 }

@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1160",
-                    "external_id": "T1160"
+                    "external_id": "T1160",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AppleDocs Launch Agent Daemons",
                     "description": "Apple. (n.d.). Creating Launch Daemons and Agents. Retrieved July 10, 2017.",
-                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html"
+                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html",
+                    "source_name_fa": "AppleDocs Agent Daemons را راه اندازی کرد",
+                    "description_fa": "اپل (n.d.) ایجاد Daemons و Agents Retrieved 10 ژوئیه 2017"
                 },
                 {
                     "source_name": "Methods of Mac Malware Persistence",
                     "description": "Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "روش های Mac Malware Pertin",
+                    "description_fa": "پاتریک واردل (2014, سپتامبر) روش های بدافزار بر روی Mac OS X Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "OSX Malware Detection",
                     "description": "Patrick Wardle. (2016, February 29). Let's Play Doctor: Practical OS X Malware Detection & Analysis. Retrieved July 10, 2017.",
-                    "url": "https://www.synack.com/wp-content/uploads/2016/03/RSA_OSX_Malware.pdf"
+                    "url": "https://www.synack.com/wp-content/uploads/2016/03/RSA_OSX_Malware.pdf",
+                    "source_name_fa": "OSX تشخیص بدافزار",
+                    "description_fa": "پاتریک واردل (2016، 29 فوریه) اجازه دهید دکتر را بازی کنیم: سیستم عامل X تشخیص و تجزیه و تحلیل. Retrieved 10 ژوئیه 2017"
                 },
                 {
                     "source_name": "WireLurker",
                     "description": "Claud Xiao. (n.d.). WireLurker: A New Era in iOS and OS X Malware. Retrieved July 10, 2017.",
-                    "url": "https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/reports/Unit_42/unit42-wirelurker.pdf"
+                    "url": "https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/reports/Unit_42/unit42-wirelurker.pdf",
+                    "source_name_fa": "WireLurker",
+                    "description_fa": "Claud Xiao (n.d.) WireLurker: یک دوره جدید در iOS و OS X Malware Retrieved 10 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2025-10-24T17:49:33.254Z",
             "name": "Launch Daemon",
-            "description": "Per Apple\u2019s developer documentation, when macOS and OS X boot up, launchd is run to finish system initialization. This process loads the parameters for each launch-on-demand system-level daemon from the property list (plist) files found in <code>/System/Library/LaunchDaemons</code> and <code>/Library/LaunchDaemons</code> (Citation: AppleDocs Launch Agent Daemons). These LaunchDaemons have property list files which point to the executables that will be launched (Citation: Methods of Mac Malware Persistence).\n \nAdversaries may install a new launch daemon that can be configured to execute at startup by using launchd or launchctl to load a plist into the appropriate directories (Citation: OSX Malware Detection). The daemon name may be disguised by using a name from a related operating system or benign software  (Citation: WireLurker). Launch Daemons may be created with administrator privileges, but are executed under root privileges, so an adversary may also use a service to escalate privileges from administrator to root.\n \nThe plist file permissions must be root:wheel, but the script or program that it points to has no such requirement. So, it is possible for poor configurations to allow an adversary to modify a current Launch Daemon\u2019s executable and gain persistence or Privilege Escalation.",
+            "description": "Per Apple’s developer documentation, when macOS and OS X boot up, launchd is run to finish system initialization. This process loads the parameters for each launch-on-demand system-level daemon from the property list (plist) files found in <code>/System/Library/LaunchDaemons</code> and <code>/Library/LaunchDaemons</code> (Citation: AppleDocs Launch Agent Daemons). These LaunchDaemons have property list files which point to the executables that will be launched (Citation: Methods of Mac Malware Persistence).\n \nAdversaries may install a new launch daemon that can be configured to execute at startup by using launchd or launchctl to load a plist into the appropriate directories (Citation: OSX Malware Detection). The daemon name may be disguised by using a name from a related operating system or benign software  (Citation: WireLurker). Launch Daemons may be created with administrator privileges, but are executed under root privileges, so an adversary may also use a service to escalate privileges from administrator to root.\n \nThe plist file permissions must be root:wheel, but the script or program that it points to has no such requirement. So, it is possible for poor configurations to allow an adversary to modify a current Launch Daemon’s executable and gain persistence or Privilege Escalation.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -62,7 +71,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "راه اندازی Daemon",
+            "description_fa": "بر اساس مستندات توسعه دهنده اپل، هنگامی که macOS و OS X بوت می شوند، راه اندازی برای تکمیل سیستم های اولیه اجرا می شود. این فرآیند پارامترهایی را برای هر پرتاب در سطح تقاضا از فهرست اموال (Plist) که در [CTI_PRESERVE_0] یافت می شود و [CTI_PRESERVE] یافت می شود، بارگذاری می کند. [[ویرایش] این فایل ها دارای فایل های لیست اموال هستند که به فایل های اجرا شده اشاره می کنند. [CTI_PRESERVE_3]\n\nمخالفان ممکن است یک استارت آپ جدید را نصب کنند که می تواند با استفاده از راه اندازی یا راه اندازی برای بارگیری یک لیست به دایرکتوری های مناسب ([CTI_PRESERVE_4] پیکربندی شود. نام daemon را می توان با استفاده از یک نام از یک سیستم عامل مرتبط یا نرم افزار خوش خیم ([CTI_PRESERVE_5] پنهان کرد. پرتاب Daemons ممکن است با امتیازات مدیر ایجاد شود، اما تحت امتیازات ریشه اجرا می شود، بنابراین یک دشمن همچنین ممکن است از یک سرویس برای افزایش امتیازات از مدیر به ریشه استفاده کند.\n\nمجوز فایل plist باید ریشه داشته باشد: چرخ، اما اسکریپت یا برنامه که اشاره می کند که هیچ چنین نیازی ندارد. بنابراین، ممکن است پیکربندی های ضعیف برای اجازه دادن به یک دشمن برای تغییر یک پرتاب فعلی Daemon’s Executive و به دست آوردن پایداری و یا افزایش شیب خصوصی. <code>/System/Library/LaunchDaemons</code> <code>/Library/LaunchDaemons</code> (Citation: AppleDocs Launch Agent Daemons) (Citation: Methods of Mac Malware Persistence) (Citation: OSX Malware Detection) (Citation: WireLurker)"
         }
     ]
 }

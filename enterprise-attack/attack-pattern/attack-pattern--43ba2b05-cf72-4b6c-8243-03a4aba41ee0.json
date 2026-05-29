@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1037/002",
-                    "external_id": "T1037.002"
+                    "external_id": "T1037.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Login Scripts Apple Dev",
                     "description": "Apple. (2016, September 13). Customizing Login and Logout. Retrieved April 1, 2022.",
-                    "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CustomLogin.html"
+                    "url": "https://developer.apple.com/library/archive/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CustomLogin.html",
+                    "source_name_fa": "Apple Dev",
+                    "description_fa": "اپل (2016، 13 سپتامبر) سفارشی کردن Login و logout Retrieved 1, 2022."
                 },
                 {
                     "source_name": "LoginWindowScripts Apple Dev",
                     "description": "Apple. (n.d.). LoginWindowScripts. Retrieved April 1, 2022.",
-                    "url": "https://developer.apple.com/documentation/devicemanagement/loginwindowscripts"
+                    "url": "https://developer.apple.com/documentation/devicemanagement/loginwindowscripts",
+                    "source_name_fa": "Apple Dev",
+                    "description_fa": "اپل (n.d.) LoginWindowScripts Retrieved 1, 2022."
                 },
                 {
                     "source_name": "Wardle Persistence Chapter",
                     "description": "Patrick Wardle. (n.d.). Chapter 0x2: Persistence. Retrieved April 13, 2022.",
-                    "url": "https://taomm.org/PDFs/vol1/CH%200x02%20Persistence.pdf"
+                    "url": "https://taomm.org/PDFs/vol1/CH%200x02%20Persistence.pdf",
+                    "source_name_fa": "فصل اجباری",
+                    "description_fa": "پاتریک واردل فصل 0x2: پر اصرار Retrieved 13، 2022."
                 },
                 {
                     "source_name": "S1 macOs Persistence",
                     "description": "Stokes, P. (2019, July 17). How Malware Persists on macOS. Retrieved March 27, 2020.",
-                    "url": "https://www.sentinelone.com/blog/how-malware-persists-on-macos/"
+                    "url": "https://www.sentinelone.com/blog/how-malware-persists-on-macos/",
+                    "source_name_fa": "S1 macOs Perwan",
+                    "description_fa": "P. (2019، 17 ژوئیه) چگونه بدافزار بر روی macOS Retrieved 27 مارس 2020"
                 }
             ],
             "object_marking_refs": [
@@ -62,7 +71,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "ورود هوک",
+            "description_fa": "مخالفان ممکن است از یک وارد هوک برای ایجاد پایداری اجرا شده بر روی آرمان کاربر استفاده کنند. قلاب ورود یک فایل لیست است که به یک اسکریپت خاص برای اجرای با امتیازات ریشه بر روی آرم کاربر اشاره می کند. این فایل در داخل صفحه نمایش داده می شود و می تواند با استفاده از فایل [CTI_PRESERVE] اصلاح شود. این رفتار برای قلاب های logout یکسان است که در آن یک اسکریپت می تواند بر روی logout کاربر اجرا شود. تمام قلاب ها نیاز به اجازه های مدیر برای تغییر یا ایجاد قلاب دارند. [[ویرایش]\n\nو یا از آن استفاده کنید و یا از آن استفاده کنید. اسکریپت مخرب بر روی ورود کاربر بعدی اجرا می شود. اگر یک قلاب ورود وجود داشته باشد، دشمنان می توانند دستورات اضافی را به یک قلاب ورودی موجود اضافه کنند. تنها یک قلاب ورود و ورود به سیستم در یک زمان وجود دارد. [[ویرایش]\n\n[یادداشت:] قلاب های ورود در نسخه 10.11 از macOS به نفع [Launch Daemon] [[[[CTI_PRESERVE_9] و [Launch] Agent [[[[[CTI_PRESERVE_10]]) <code>/Library/Preferences/com.apple.loginwindow.plist</code> <code>defaults</code> <code>com.apple.loginwindow.plist</code> <code>LoginHook</code> <code>LogoutHook</code> (Citation: Login Scripts Apple Dev) (Citation: LoginWindowScripts Apple Dev) (Citation: S1 macOs Persistence) (Citation: Wardle Persistence Chapter) https://attack.mitre.org/techniques/T1543/004 https://attack.mitre.org/techniques/T1543/001"
         }
     ]
 }

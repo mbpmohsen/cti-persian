@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1552/002",
-                    "external_id": "T1552.002"
+                    "external_id": "T1552.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Pentestlab Stored Credentials",
                     "description": "netbiosX. (2017, April 19). Stored Credentials. Retrieved April 6, 2018.",
-                    "url": "https://pentestlab.blog/2017/04/19/stored-credentials/"
+                    "url": "https://pentestlab.blog/2017/04/19/stored-credentials/",
+                    "source_name_fa": "Pentestlab Stored Credentials",
+                    "description_fa": "NetbiosX (2017، 19 آوریل) فروشگاه Credentials Retrieved 6 آوریل 2018"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +49,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "ثبت نام در Registry",
+            "description_fa": "مجرمان ممکن است رجیستری را در سیستم های به خطر افتاده برای اسناد ذخیره شده ناامن جستجو کنند. Windows Registry اطلاعات پیکربندی را ذخیره می کند که می تواند توسط سیستم یا سایر برنامه ها استفاده شود. مخالفان ممکن است ثبت نام را به دنبال اعتبار و رمز عبور که برای استفاده توسط سایر برنامه ها یا خدمات ذخیره شده است، جستجو کنند. گاهی اوقات این مدارک برای لوگوهای خودکار استفاده می شود.\n\nدستورالعمل های نمونه برای پیدا کردن کلید های ثبت مربوط به اطلاعات رمز عبور: [CTI_PRESERVE_2]\n\nماشین محلی [[ویرایش]\nکاربر فعلی Hive: [CTI_PRESERVE] <code>reg query HKLM /f password /t REG_SZ /s</code> <code>reg query HKCU /f password /t REG_SZ /s</code> (Citation: Pentestlab Stored Credentials)"
         }
     ]
 }

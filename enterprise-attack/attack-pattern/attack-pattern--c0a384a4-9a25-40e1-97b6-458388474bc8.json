@@ -13,42 +13,57 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1168",
-                    "external_id": "T1168"
+                    "external_id": "T1168",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Die.net Linux crontab Man Page",
                     "description": "Paul Vixie. (n.d.). crontab(5) - Linux man page. Retrieved December 19, 2017.",
-                    "url": "https://linux.die.net/man/5/crontab"
+                    "url": "https://linux.die.net/man/5/crontab",
+                    "source_name_fa": "Dead.net Linux crontab Man Page",
+                    "description_fa": "Paul Vixie (n.d.) crontab (5) - صفحه مرد لینوکس Retrieved 19 دسامبر 2017"
                 },
                 {
                     "source_name": "Die.net Linux at Man Page",
                     "description": "Thomas Koenig. (n.d.). at(1) - Linux man page. Retrieved December 19, 2017.",
-                    "url": "https://linux.die.net/man/1/at"
+                    "url": "https://linux.die.net/man/1/at",
+                    "source_name_fa": "Die.net Linux در Man Page",
+                    "description_fa": "Thomas Koenig Retrieved 19 دسامبر 2017"
                 },
                 {
                     "source_name": "AppleDocs Scheduling Timed Jobs",
                     "description": "Apple. (n.d.). Retrieved July 17, 2017.",
-                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/ScheduledJobs.html"
+                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/ScheduledJobs.html",
+                    "source_name_fa": "AppleDocs Scheduling Timed Jobs",
+                    "description_fa": "اپل (n.d.) Retrieved ۱۷ ژوئیه ۲۰۱۷"
                 },
                 {
                     "source_name": "Janicab",
                     "description": "Thomas. (2013, July 15). New signed malware called Janicab. Retrieved July 17, 2017.",
-                    "url": "http://www.thesafemac.com/new-signed-malware-called-janicab/"
+                    "url": "http://www.thesafemac.com/new-signed-malware-called-janicab/",
+                    "source_name_fa": "Janicab",
+                    "description_fa": "توماس (2013، 15 ژوئیه) بدافزار جدید امضا شده به نام Janicab Retrieved ۱۷ ژوئیه ۲۰۱۷"
                 },
                 {
                     "source_name": "Methods of Mac Malware Persistence",
                     "description": "Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "روش های Mac Malware Pertin",
+                    "description_fa": "پاتریک واردل (2014, سپتامبر) روش های بدافزار بر روی Mac OS X Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "Malware Persistence on OS X",
                     "description": "Patrick Wardle. (2015). Malware Persistence on OS X Yosemite. Retrieved July 10, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "بدافزاری که بر OS X پافشاری می کند",
+                    "description_fa": "پاتریک واردل (2015) بدافزار با اصرار بر OS X Yosemite Retrieved 10 ژوئیه 2017"
                 },
                 {
                     "source_name": "Avast Linux Trojan Cron Persistence",
                     "description": "Threat Intelligence Team. (2015, January 6). Linux DDoS Trojan hiding itself with an embedded rootkit. Retrieved January 8, 2018.",
-                    "url": "https://blog.avast.com/2015/01/06/linux-ddos-trojan-hiding-itself-with-an-embedded-rootkit/"
+                    "url": "https://blog.avast.com/2015/01/06/linux-ddos-trojan-hiding-itself-with-an-embedded-rootkit/",
+                    "source_name_fa": "Avast Linux تروجان Cron",
+                    "description_fa": "تیم اطلاعات تهدید (2015، 6 ژانویه) تروجان DDoS خود را با یک روتاتور جاسازی شده پنهان می کند. Retrieved 8 ژانویه 2018"
                 }
             ],
             "object_marking_refs": [
@@ -81,7 +96,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "شغل محلی Scheduling",
+            "description_fa": "در سیستم های لینوکس و macOS، چندین روش برای ایجاد مشاغل پس زمینه ای از پیش تعیین شده و دوره ای پشتیبانی می شود: cron، [CTI_PRESERVE_3] در، [CTI_PRESERVE_4] و راه اندازی. [[ویرایش] بر خلاف [Scheduled Task/Job] ([CTI_PRESERVE_12] در سیستم های ویندوز، برنامه ریزی شغلی در سیستم های مبتنی بر لینوکس را نمی توان از راه دور انجام داد مگر اینکه در یک جلسه راه دور ثابت مانند پوسته امن (SSH) استفاده شود.\n\n## cron\n\nمشاغل cron در سراسر سیستم با تغییر [CTI_PRESERVE_0] فایل نصب شده است، [CTI_PRESERVE] دایرکتوری یا مکان های دیگر پشتیبانی شده توسط Cron daemon، در حالی که مشاغل cron هر کاربر با استفاده از crontab به طور خاص فرمت فایل crontab نصب شده است. [[ویرایش] این کار بر روی سیستم های macOS و Linux انجام می شود.\n\nاین روش ها اجازه می دهد تا دستورات یا اسکریپت ها در فواصل خاص و دوره ای در پس زمینه بدون تعامل کاربر اجرا شوند. یک دشمن ممکن است از برنامه های شغلی برای اجرای برنامه ها در استارت آپ سیستم یا بر اساس برنامه ریزی شده برای پر اصرار استفاده کند. [CTI_PRESERVE_7] [[ویرایش] [[ویرایش] [CTI_PRESERVE_10] برای اجرای اعدام به عنوان بخشی از جنبش جانبی، برای به دست آوردن امتیازات ریشه، و یا اجرای یک فرایند تحت چارچوب یک حساب خاص.\n\n## در ##\n\nبرنامه در سیستم های مبتنی بر POSIX، از جمله macOS و Linux، برای برنامه ریزی یک برنامه یا کار اسکریپت برای اجرای در یک تاریخ و / یا زمان، که همچنین می تواند برای اهداف مشابه استفاده شود.\n\n## راه اندازی شد\n\nهر کار راه اندازی شده توسط یک فایل پیکربندی مختلف (Plist) شبیه به [Launch Daemon] توصیف شده است ([CTI_PRESERVE_13] و یا [Launch Agent] ([[CTI_PREE_14])، به جز یک کلید اضافی (I_CT_PRE_E2) وجود دارد. [[ویرایش] این تنها در macOS و OS X کار می کند. <code>/etc/crontab</code> <code>/etc/cron.d/</code> <code>StartCalendarInterval</code> (Citation: Die.net Linux crontab Man Page) (Citation: Die.net Linux at Man Page) (Citation: AppleDocs Scheduling Timed Jobs) (Citation: AppleDocs Scheduling Timed Jobs) (Citation: Janicab) (Citation: Methods of Mac Malware Persistence) (Citation: Malware Persistence on OS X) (Citation: Avast Linux Trojan Cron Persistence) (Citation: AppleDocs Scheduling Timed Jobs) https://attack.mitre.org/techniques/T1053 https://attack.mitre.org/techniques/T1160 https://attack.mitre.org/techniques/T1159"
         }
     ]
 }

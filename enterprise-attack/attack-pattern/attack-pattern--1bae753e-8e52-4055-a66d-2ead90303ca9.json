@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1218/013",
-                    "external_id": "T1218.013"
+                    "external_id": "T1218.013",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "ATT Lazarus TTP Evolution",
                     "description": "Fernando Martinez. (2021, July 6). Lazarus campaign TTPs and evolution. Retrieved September 22, 2021.",
-                    "url": "https://cybersecurity.att.com/blogs/labs-research/lazarus-campaign-ttps-and-evolution"
+                    "url": "https://cybersecurity.att.com/blogs/labs-research/lazarus-campaign-ttps-and-evolution",
+                    "source_name_fa": "دانلود بازی ATT Alps TTP Evolution",
+                    "description_fa": "فرناندو مارتینز (۲۰۲۱)، ۶ ژوئیه کمپین لازاروس TTPs و تکامل Retrieved ۲۲ سپتامبر ۲۰۲۱."
                 },
                 {
                     "source_name": "LOLBAS Mavinject",
                     "description": "LOLBAS. (n.d.). Mavinject.exe. Retrieved September 22, 2021.",
-                    "url": "https://lolbas-project.github.io/lolbas/Binaries/Mavinject/"
+                    "url": "https://lolbas-project.github.io/lolbas/Binaries/Mavinject/",
+                    "source_name_fa": "دانلود بازی The Mavinject",
+                    "description_fa": "LOLBAS Mavinject.exe Retrieved ۲۲ سپتامبر ۲۰۲۱."
                 },
                 {
                     "source_name": "Mavinject Functionality Deconstructed",
                     "description": "Matt Graeber. (2018, May 29). mavinject.exe Functionality Deconstructed. Retrieved September 22, 2021.",
-                    "url": "https://posts.specterops.io/mavinject-exe-functionality-deconstructed-c29ab2cf5c0e"
+                    "url": "https://posts.specterops.io/mavinject-exe-functionality-deconstructed-c29ab2cf5c0e",
+                    "source_name_fa": "ویژگی های Mavinject بازسازی",
+                    "description_fa": "Matt Graeber (2018, May 29) Mavinject کارکردی ساختار یافته است. Retrieved ۲۲ سپتامبر ۲۰۲۱."
                 },
                 {
                     "source_name": "Reaqta Mavinject",
                     "description": "Reaqta. (2017, December 16). From False Positive to True Positive: the story of Mavinject.exe, the Microsoft Injector. Retrieved September 22, 2021.",
-                    "url": "https://reaqta.com/2017/12/mavinject-microsoft-injector/"
+                    "url": "https://reaqta.com/2017/12/mavinject-microsoft-injector/",
+                    "source_name_fa": "Reaqta Mavinject",
+                    "description_fa": "Reaqta (2017, 16 دسامبر) از مثبت کاذب تا مثبت واقعی: داستان Mavinject.exe، آداپتور مایکروسافت. Retrieved 22 سپتامبر 2021."
                 }
             ],
             "object_marking_refs": [
@@ -58,7 +67,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "Mavinject",
+            "description_fa": "مخالفان ممکن است از mavinject.exe برای اجرای پروکسی کد مخرب سوء استفاده کنند. Mavinject.exe Microsoft Application Virtualization، یک ابزار ویندوز است که می تواند کد را به فرایندهای خارجی به عنوان بخشی از Virtualization برنامه مایکروسافت (App-V) تزریق کند.\n\n[[رده ها]] می توانند از [[رده ها]] استفاده کنند. از آنجا که ماوینجیک exe ممکن است به صورت دیجیتال توسط مایکروسافت امضا شود، اجرای پروکسی از طریق این روش ممکن است از تشخیص توسط محصولات امنیتی جلوگیری کند، زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است.\n\nعلاوه بر [Dynamic-link Library injection] ([CTI_PRESERVE_8])، Mavinject. همچنین می توان از طریق استفاده از تزریق سفارش دهنده واردات ([CTI_PRESERVE] استفاده کرد. این دستور یک ورودی جدول واردات را شامل DLL مشخص شده در ماژول در آدرس پایه داده شده تزریق می کند. [[ویرایش] <code>C:\\Windows\\system32\\mavinject.exe PID /INJECTRUNNING PATH_DLL</code> <code>/HMODULE</code> <code>mavinject.exe PID /HMODULE=BASE_ADDRESS PATH_DLL ORDINAL_NUMBER</code> (Citation: LOLBAS Mavinject) (Citation: ATT Lazarus TTP Evolution) (Citation: Reaqta Mavinject) (Citation: Mavinject Functionality Deconstructed) https://attack.mitre.org/techniques/T1055/001 https://attack.mitre.org/techniques/T1055/001"
         }
     ]
 }

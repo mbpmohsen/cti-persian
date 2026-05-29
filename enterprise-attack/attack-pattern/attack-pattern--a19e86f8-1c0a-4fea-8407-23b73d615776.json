@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1048",
-                    "external_id": "T1048"
+                    "external_id": "T1048",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "University of Birmingham C2",
                     "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
-                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf"
+                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf",
+                    "source_name_fa": "دانشگاه بیرمنگام C2",
+                    "description_fa": "گدار، J.، Cova، M.، Nagaraja، S. (2014، فوریه) فرمان و کنترل درک، انکار و انکار Retrieved 20 آوریل 2016"
                 },
                 {
                     "source_name": "Palo Alto OilRig Oct 2016",
                     "description": "Grunzweig, J. and Falcone, R.. (2016, October 4). OilRig Malware Campaign Updates Toolset and Expands Targets. Retrieved May 3, 2017.",
-                    "url": "http://researchcenter.paloaltonetworks.com/2016/10/unit42-oilrig-malware-campaign-updates-toolset-and-expands-targets/"
+                    "url": "http://researchcenter.paloaltonetworks.com/2016/10/unit42-oilrig-malware-campaign-updates-toolset-and-expands-targets/",
+                    "source_name_fa": "Palo Alto OilRig اکتبر 2016",
+                    "description_fa": "Grunzweig، J. و Falcone، R. (2016، 4) OilRig Malware Campaign به روز رسانی ابزار و گسترش اهداف. Retrieved 3 مه 2017"
                 },
                 {
                     "source_name": "20 macOS Common Tools and Techniques",
                     "description": "Phil Stokes. (2021, February 16). 20 Common Tools & Techniques Used by macOS Threat Actors & Malware. Retrieved August 23, 2021.",
-                    "url": "https://labs.sentinelone.com/20-common-tools-techniques-used-by-macos-threat-actors-malware/"
+                    "url": "https://labs.sentinelone.com/20-common-tools-techniques-used-by-macos-threat-actors-malware/",
+                    "source_name_fa": "20 ابزار و تکنیک های مشترک macOS",
+                    "description_fa": "فیل (۲۰۲۱، ۱۶ فوریه) 20 ابزار و تکنیک های مشترک استفاده از macOS Threat Agents و Malware Retrieved 23 اوت 2021."
                 }
             ],
             "object_marking_refs": [
@@ -64,7 +71,9 @@
                 "SaaS",
                 "Windows"
             ],
-            "x_mitre_version": "1.6"
+            "x_mitre_version": "1.6",
+            "name_fa": "گسترش بیش از پروتکل جایگزین",
+            "description_fa": "مخالفان ممکن است داده ها را با استفاده از آن بر روی یک پروتکل متفاوت از کانال فرماندهی و کنترل موجود سرقت کنند. داده ها همچنین ممکن است به یک مکان شبکه جایگزین از دستور اصلی و سرور کنترل ارسال شوند.\n\nپروتکل های جایگزین شامل FTP، SMTP، HTTP/S، DNS، SMB یا هر پروتکل شبکه دیگر است که به عنوان کانال اصلی فرمان و کنترل استفاده نمی شود. مخالفان همچنین ممکن است تصمیم بگیرند که این کانال های جایگزین را رمزگذاری و / یا مسدود کنند.\n\n[Exfiltration over Alternative Protocol] ([[CTI_PRESERVE_3]) را می توان با استفاده از سیستم عامل های مختلف مانند [Net] ([[CTI_PRESERVE_4]) / SMB یا FTP انجام داد. در macOS و Linux [CTI_PRESERVE_0] ممکن است برای استفاده از پروتکل هایی مانند HTTP/S یا FTP/S برای استخراج اطلاعات از یک سیستم استفاده شود. [[ویرایش]\n\nبسیاری از سیستم عامل های IaaS و SaaS (مانند Microsoft Exchange، Microsoft SharePoint، GitHub و AWS S3) از دانلود مستقیم فایل ها، ایمیل ها، کد منبع و سایر اطلاعات حساس از طریق کنسول وب یا [Cloud API] پشتیبانی می کنند. <code>curl</code> (Citation: Palo Alto OilRig Oct 2016) (Citation: 20 macOS Common Tools and Techniques) https://attack.mitre.org/techniques/T1048 https://attack.mitre.org/software/S0039 https://attack.mitre.org/techniques/T1059/009"
         }
     ]
 }

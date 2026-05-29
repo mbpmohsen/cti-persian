@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/001",
-                    "external_id": "T1055.001"
+                    "external_id": "T1055.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Hiding Malicious Code with Module Stomping",
                     "description": "Aliz Hammond. (2019, August 15). Hiding Malicious Code with \"Module Stomping\": Part 1. Retrieved July 14, 2022.",
-                    "url": "https://blog.f-secure.com/hiding-malicious-code-with-module-stomping/"
+                    "url": "https://blog.f-secure.com/hiding-malicious-code-with-module-stomping/",
+                    "source_name_fa": "بازی Malicious Code with Module Stomping",
+                    "description_fa": "علیز هاموند (2019، 15 آگوست) اجرای کد Malicious با “Module Stomping”: بخش Retrieved 14 ژوئیه 2022"
                 },
                 {
                     "source_name": "Elastic HuntingNMemory June 2017",
                     "description": "Desimone, J. (2017, June 13). Hunting in Memory. Retrieved December 7, 2017.",
-                    "url": "https://www.endgame.com/blog/technical-blog/hunting-memory"
+                    "url": "https://www.endgame.com/blog/technical-blog/hunting-memory",
+                    "source_name_fa": "شکار Elastic NMemory ژوئن 2017",
+                    "description_fa": "Desimone، J. (2017، 13 ژوئن) شکار در حافظه. Retrieved 7 دسامبر 2017"
                 },
                 {
                     "source_name": "Elastic Process Injection July 2017",
                     "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017.",
-                    "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
+                    "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process",
+                    "source_name_fa": "Elastic Process injection جولای 2017",
+                    "description_fa": "حسینی، A. (2017، 18 ژوئیه) ده تکنیک تزریق فرایند: یک بررسی فنی از تکنیک های تزریق معمول و روندی. Retrieved 7 دسامبر 2017"
                 },
                 {
                     "source_name": "Module Stomping for Shellcode Injection",
                     "description": "Red Teaming Experiments. (n.d.). Module Stomping for Shellcode Injection. Retrieved July 14, 2022.",
-                    "url": "https://www.ired.team/offensive-security/code-injection-process-injection/modulestomping-dll-hollowing-shellcode-injection"
+                    "url": "https://www.ired.team/offensive-security/code-injection-process-injection/modulestomping-dll-hollowing-shellcode-injection",
+                    "source_name_fa": "ماژول برای Shellcode injection",
+                    "description_fa": "آزمایش های تیمی قرمز (n.d) ماژول برای تزریق Shellcode Retrieved 14 ژوئیه 2022"
                 }
             ],
             "object_marking_refs": [
@@ -65,7 +74,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "Dynamic-link Library injection",
+            "description_fa": "مخالفان ممکن است کتابخانه های لینک پویا (DLLs) را به فرآیندها تزریق کنند تا از دفاع مبتنی بر فرآیند و همچنین احتمالا امتیازات بالا جلوگیری کنند. تزریق DLL روشی برای اجرای کد دلخواه در فضای آدرس یک فرآیند جداگانه زندگی است.\n\nتزریق DLL معمولاً با نوشتن مسیر به DLL در فضای آدرس مجازی فرآیند هدف قبل از بارگیری DLL توسط داخل کردن یک رشته جدید انجام می شود. این کتاب را می توان با نام های بومی ویندوز API مانند [CTI_PRESERVE_0] و [[CTI_PRESERVE] اجرا کرد و سپس با استفاده از [CTI_PRESERVE_2] (که آن را می نامند) API مسئول بارگیری DLL [[ویرایش]\n\nتغییراتی از این روش مانند تزریق DLL انعکاسی (نوشتن خودکار) به یک فرایند) و ماژول حافظه (map DLL هنگام نوشتن به فرآیند) بر مسئله انتقال آدرس و همچنین API های اضافی برای اجرای (از آنجا که این روش ها بارگیری و اجرای فایل ها در حافظه با استفاده از عملکرد دستی (ICT_RE_E4) غلبه می کند.[۸]\n\nتنوع دیگری از این روش، که اغلب به عنوان ماژول Stomping / Overload یا DLL Hollowing نامیده می شود، ممکن است برای پنهان کردن کد تزریقی در یک فرآیند استفاده شود. این روش شامل بارگذاری یک DLL قانونی در یک فرآیند از راه دور پس از آن به صورت دستی بازنویسی ماژول [CTI_PRESERVE_5] قبل از شروع یک موضوع جدید در فرایند هدف است. [[ویرایش] این تغییر به مهاجمان اجازه می دهد تا کد تزریق شده مخرب را با پشتیبانی بالقوه از اجرای آن با یک فایل DLL قانونی بر روی دیسک پنهان کنند. [[ویرایش]\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق تزریق DLL نیز ممکن است از تشخیص محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. <code>VirtualAllocEx</code> <code>WriteProcessMemory</code> <code>CreateRemoteThread</code> <code>LoadLibrary</code> <code>LoadLibrary</code> <code>AddressOfEntryPoint</code> (Citation: Elastic Process Injection July 2017) (Citation: Elastic HuntingNMemory June 2017) (Citation: Elastic Process Injection July 2017) (Citation: Module Stomping for Shellcode Injection) (Citation: Hiding Malicious Code with Module Stomping)"
         }
     ]
 }

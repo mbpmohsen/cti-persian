@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1480",
-                    "external_id": "T1480"
+                    "external_id": "T1480",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "FireEye Outlook Dec 2019",
                     "description": "McWhirt, M., Carr, N., Bienstock, D. (2019, December 4). Breaking the Rules: A Tough Outlook for Home Page Attacks (CVE-2017-11774). Retrieved June 23, 2020.",
-                    "url": "https://www.fireeye.com/blog/threat-research/2019/12/breaking-the-rules-tough-outlook-for-home-page-attacks.html"
+                    "url": "https://www.fireeye.com/blog/threat-research/2019/12/breaking-the-rules-tough-outlook-for-home-page-attacks.html",
+                    "source_name_fa": "FireEye Outlook 2019",
+                    "description_fa": "McWhirt، M.، Carr، N.، Bienstock، D. (2019، دسامبر 4). شکستن قوانین: چشم انداز سخت برای حملات صفحه اصلی (CVE-2017-11774) Retrieved 23 ژوئن 2020"
                 },
                 {
                     "source_name": "Trellix-Qakbot",
                     "description": "Pham Duy Phuc, John Fokker J.E., Alejandro Houspanossian and Mathanraj Thangaraju. (2023, March 7). Qakbot Evolves to OneNote Malware Distribution. Retrieved June 7, 2024.",
-                    "url": "https://www.trellix.com/blogs/research/qakbot-evolves-to-onenote-malware-distribution/"
+                    "url": "https://www.trellix.com/blogs/research/qakbot-evolves-to-onenote-malware-distribution/",
+                    "source_name_fa": "Trellix-Qakbot",
+                    "description_fa": "Pham Duy Phuc جان افکر J.E.، آلخاندرو هودوسیان و Mathanraj Thangaraju Qakbot Evolves به یک توزیع MalwareNote. Retrieved 7 ژوئن 2024"
                 },
                 {
                     "source_name": "FireEye Kevin Mandia Guardrails",
                     "description": "Shoorbajee, Z. (2018, June 1). Playing nice? FireEye CEO says U.S. malware is more restrained than adversaries'. Retrieved January 17, 2019.",
-                    "url": "https://www.cyberscoop.com/kevin-mandia-fireeye-u-s-malware-nice/"
+                    "url": "https://www.cyberscoop.com/kevin-mandia-fireeye-u-s-malware-nice/",
+                    "source_name_fa": "FireEye Kevin Mandia Guardrails",
+                    "description_fa": "Shuorbajee، Z. (2018، 1 ژوئن) بازی خوب؟ آتش مدیر عامل چشم می گوید که بدافزار ایالات متحده بیشتر از دشمنان محدود شده است. Retrieved 17 ژانویه 2019"
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2026-05-12T15:12:00.685Z",
             "name": "Execution Guardrails",
-            "description": "Adversaries may use execution guardrails to constrain execution or actions based on adversary supplied and environment specific conditions that are expected to be present on the target. Guardrails ensure that a payload only executes against an intended target and reduces collateral damage from an adversary\u2019s campaign.(Citation: FireEye Kevin Mandia Guardrails) Values an adversary can provide about a target system or environment to use as guardrails may include specific network share names, attached physical devices, files, joined Active Directory (AD) domains, and local/external IP addresses.(Citation: FireEye Outlook Dec 2019)\n\nGuardrails can be used to prevent exposure of capabilities in environments that are not intended to be compromised or operated within. This use of guardrails is distinct from typical [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497). While use of [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497) may involve checking for known sandbox values and continuing with execution only if there is no match, the use of guardrails will involve checking for an expected target-specific value and only continuing with execution if there is such a match.\n\nAdversaries may identify and block certain user-agents to evade defenses and narrow the scope of their attack to victims and platforms on which it will be most effective. A user-agent self-identifies data such as a user's software application, operating system, vendor, and version. Adversaries may check user-agents for operating system identification and then only serve malware for the exploitable software while ignoring all other operating systems.(Citation: Trellix-Qakbot)",
+            "description": "Adversaries may use execution guardrails to constrain execution or actions based on adversary supplied and environment specific conditions that are expected to be present on the target. Guardrails ensure that a payload only executes against an intended target and reduces collateral damage from an adversary’s campaign.(Citation: FireEye Kevin Mandia Guardrails) Values an adversary can provide about a target system or environment to use as guardrails may include specific network share names, attached physical devices, files, joined Active Directory (AD) domains, and local/external IP addresses.(Citation: FireEye Outlook Dec 2019)\n\nGuardrails can be used to prevent exposure of capabilities in environments that are not intended to be compromised or operated within. This use of guardrails is distinct from typical [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497). While use of [Virtualization/Sandbox Evasion](https://attack.mitre.org/techniques/T1497) may involve checking for known sandbox values and continuing with execution only if there is no match, the use of guardrails will involve checking for an expected target-specific value and only continuing with execution if there is such a match.\n\nAdversaries may identify and block certain user-agents to evade defenses and narrow the scope of their attack to victims and platforms on which it will be most effective. A user-agent self-identifies data such as a user's software application, operating system, vendor, and version. Adversaries may check user-agents for operating system identification and then only serve malware for the exploitable software while ignoring all other operating systems.(Citation: Trellix-Qakbot)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -59,7 +66,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "آرشیوهای برچسب: Execution Guardrails",
+            "description_fa": "مخالفان ممکن است از محافظان اعدام برای محدود کردن اجرای یا اقدامات بر اساس شرایط خاص و محیطی که انتظار می رود در هدف وجود داشته باشد، استفاده کنند. Guardrails اطمینان حاصل می کند که یک محموله تنها علیه یک هدف در نظر گرفته شده اجرا می شود و آسیب های جانبی کمپین یک دشمن را کاهش می دهد. [[ویرایش] ارزش های یک دشمن می تواند در مورد یک سیستم هدف یا محیط برای استفاده به عنوان محافظ ممکن است شامل نام های شبکه خاص، دستگاه های فیزیکی متصل، فایل ها، به دامنه Active Directory (AD) و آدرس های IP محلی / خارجی باشد. [[ویرایش]\n\nنرده ها می توانند برای جلوگیری از قرار گرفتن در معرض قابلیت ها در محیط هایی که قرار نیست در معرض خطر قرار گیرند یا در داخل عمل کنند، استفاده شوند. این استفاده از محافظان از نوع معمول (Virtualization/Sandbox Evasion) متمایز است ([CTI_PRESERVE_3]). در حالی که استفاده از [Virtualization/Sandbox Evasion] ([CTI_PRESERVE_4] ممکن است شامل چک کردن ارزش های شناخته شده ساندویچ و ادامه اجرای تنها در صورتی باشد که هیچ مطابقتی وجود نداشته باشد، استفاده از محافظان شامل چک کردن برای یک ارزش خاص مورد انتظار و تنها ادامه اجرای اگر چنین بازی وجود داشته باشد.\n\nمخالفان ممکن است شناسایی و مسدود کردن برخی از عوامل کاربر برای فرار از دفاع و محدود کردن دامنه حمله آنها به قربانیان و سیستم عامل که در آن موثر خواهد بود. یک کاربر-agent داده هایی مانند نرم افزار کاربر، سیستم عامل، فروشنده و نسخه را شناسایی می کند. مجرمان ممکن است عامل های کاربر را برای شناسایی سیستم عامل بررسی کنند و سپس فقط به بدافزار برای نرم افزار بهره برداری شده در حالی که نادیده گرفتن تمام سیستم عامل های دیگر کمک می کنند. (Citation: FireEye Kevin Mandia Guardrails) (Citation: FireEye Outlook Dec 2019) (Citation: Trellix-Qakbot) https://attack.mitre.org/techniques/T1497 https://attack.mitre.org/techniques/T1497"
         }
     ]
 }

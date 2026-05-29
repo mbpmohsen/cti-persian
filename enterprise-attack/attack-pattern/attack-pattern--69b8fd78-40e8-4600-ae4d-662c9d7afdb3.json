@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1090/002",
-                    "external_id": "T1090.002"
+                    "external_id": "T1090.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "University of Birmingham C2",
                     "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
-                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf"
+                    "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf",
+                    "source_name_fa": "دانشگاه بیرمنگام C2",
+                    "description_fa": "گدار، J.، Cova، M.، Nagaraja، S. (2014، فوریه) فرمان و کنترل درک، انکار و انکار Retrieved 20 آوریل 2016"
                 },
                 {
                     "source_name": "Trend Micro APT Attack Tools",
                     "description": "Wilhoit, K. (2013, March 4). In-Depth Look: APT Attack Tools of the Trade. Retrieved December 2, 2015.",
-                    "url": "http://blog.trendmicro.com/trendlabs-security-intelligence/in-depth-look-apt-attack-tools-of-the-trade/"
+                    "url": "http://blog.trendmicro.com/trendlabs-security-intelligence/in-depth-look-apt-attack-tools-of-the-trade/",
+                    "source_name_fa": "Micro APT Attack Tools",
+                    "description_fa": "ویلهویت، K. (2013، 4 مارس) In-Depth Look: ابزار حمله APT Retrieved 2 دسامبر 2015"
                 }
             ],
             "object_marking_refs": [
@@ -52,7 +57,9 @@
                 "Network Devices",
                 "Windows"
             ],
-            "x_mitre_version": "1.3"
+            "x_mitre_version": "1.3",
+            "name_fa": "خارجی Proxy",
+            "description_fa": "مخالفان ممکن است از یک پروکسی خارجی برای عمل به عنوان یک واسطه برای ارتباطات شبکه به یک دستور و کنترل سرور برای جلوگیری از اتصال مستقیم به زیرساخت خود استفاده کنند. بسیاری از ابزارهایی وجود دارند که هدایت ترافیک را از طریق پروکسی یا پورت هدایت می کنند، از جمله [HTRAN] ([[CTI_PRESERVE])، xProxy و xPortMap [CTI_PRESERVE_0] مخالفان از این نوع از پروکسی ها برای مدیریت ارتباطات فرمان و کنترل استفاده می کنند تا در مواجهه با از دست دادن ارتباط یا عبور از مسیرهای ارتباطی قابل اعتماد موجود برای جلوگیری از سوء ظن، انعطاف پذیری ایجاد کنند.\n\nپروکسی های اتصال خارجی برای پوشاندن مقصد ترافیک C2 استفاده می شوند و به طور معمول با هدایت کننده پورت اجرا می شوند. سیستم های تصفیه شده خارج از محیط قربانی ممکن است برای این اهداف و همچنین زیرساخت های خریداری شده مانند منابع مبتنی بر ابر یا سرورهای خصوصی مجازی استفاده شود. Proxies ممکن است بر اساس احتمال پایین انتخاب شود که ارتباط با آنها از یک سیستم به خطر افتاده مورد بررسی قرار گیرد. سیستم های قربانی به طور مستقیم با پروکسی خارجی در اینترنت ارتباط برقرار می کنند و سپس پروکسی ارتباطات را به سرور C2 ارسال می کند. (Citation: Trend Micro APT Attack Tools) https://attack.mitre.org/software/S0040"
         }
     ]
 }

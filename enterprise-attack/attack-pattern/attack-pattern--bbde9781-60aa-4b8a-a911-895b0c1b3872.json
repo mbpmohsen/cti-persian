@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1685",
-                    "external_id": "T1685"
+                    "external_id": "T1685",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Cocomazzi FIN7 Reboot",
                     "description": "Cocomazzi, Antonio. (2024, July 17). FIN7 Reboot | Cybercrime Gang Enhances Ops with New EDR Bypasses and Automated Attacks. Retrieved September 24, 2025.",
-                    "url": "https://www.sentinelone.com/labs/fin7-reboot-cybercrime-gang-enhances-ops-with-new-edr-bypasses-and-automated-attacks/"
+                    "url": "https://www.sentinelone.com/labs/fin7-reboot-cybercrime-gang-enhances-ops-with-new-edr-bypasses-and-automated-attacks/",
+                    "source_name_fa": "Cocomazzi FIN7 Reboot",
+                    "description_fa": "Cocomazzi، آنتونیو (۲۰۲۴، ۱۷ ژوئیه) FIN7 Reboot | Cyber Crimegang Enhances Ops با EDR Bypasses و حملات خودکار Retrieved 24 سپتامبر 2025"
                 },
                 {
                     "source_name": "Microsoft Lamin Sept 2017",
                     "description": "Microsoft. (2009, May 17). Backdoor:Win32/Lamin.A. Retrieved September 6, 2018.",
-                    "url": "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?name=Backdoor:Win32/Lamin.A"
+                    "url": "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?name=Backdoor:Win32/Lamin.A",
+                    "source_name_fa": "Microsoft Lamin سپتامبر 2017",
+                    "description_fa": "مایکروسافت (2009, May 17) Backdoor:Win32/Lamin.A. Retrieved 6 سپتامبر 2018"
                 },
                 {
                     "source_name": "ETW Palantir",
                     "description": "Palantir. (2018, December 24). Tampering with Windows Event Tracing: Background, Offense, and Defense. Retrieved April 15, 2026.",
-                    "url": "https://blog.palantir.com/tampering-with-windows-event-tracing-background-offense-and-defense-4be7ac62ac63"
+                    "url": "https://blog.palantir.com/tampering-with-windows-event-tracing-background-offense-and-defense-4be7ac62ac63",
+                    "source_name_fa": "ETW Palantir",
+                    "description_fa": "پالر (2018,24 دسامبر) تعامل با Windows Event Tracing: background، Offense و Defence Retrieved 15, 2026."
                 },
                 {
                     "source_name": "SCADAfence_ransomware",
                     "description": "Shaked, O. (2020, January 20). Anatomy of a Targeted Ransomware Attack. Retrieved June 18, 2022.",
-                    "url": "https://cdn.logic-control.com/docs/scadafence/Anatomy-Of-A-Targeted-Ransomware-Attack-WP.pdf"
+                    "url": "https://cdn.logic-control.com/docs/scadafence/Anatomy-Of-A-Targeted-Ransomware-Attack-WP.pdf",
+                    "source_name_fa": "ویژگی های بازی SCADAfence_ransomware",
+                    "description_fa": "او (2020، 20 ژانویه) آناتومی یک حمله هدفمند Ransomware Retrieved 18 ژوئن 2022"
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2026-05-12T15:12:00.712Z",
             "name": "Disable or Modify Tools",
-            "description": "Adversaries may disable, degrade, or tamper with security tools or applications (e.g., endpoint detection and response (EDR) tools, intrusion detection systems (IDS), antivirus, logging agents, sensors, etc.) to impair or reduce visibility of defensive capabilities. This may include stopping specific services, killing processes, modifying or deleting tool configuration files and Registry keys, or preventing tools from updating. This may also include impairing defenses more broadly by disrupting preventative, detection, and response mechanisms across host, network, and cloud environments.(Citation: SCADAfence_ransomware) \n\nIn addition to directly targeting tools, adversaries may block or manipulate indicators and telemetry used for detection. This includes maliciously disabling or redirecting sensors such as Event Tracing for Windows (ETW), modifying event log configurations (e.g., redirecting Security logs), or interfering with logging pipelines and forwarding mechanisms (e.g., SIEM ingestion).(Citation: Microsoft Lamin Sept 2017)(Citation: ETW Palantir)\n\nMore advanced techniques include leveraging legitimate drivers or debugging mechanisms to render tools non-functional, bypassing anti-tampering protections, and targeting specific defenses such as Sysmon or cloud monitoring agents. Adversaries may also disrupt broader defensive operations, including update mechanisms, logging infrastructure (e.g., syslog), or event aggregation, further degrading an organization\u2019s ability to detect and respond to malicious activity.(Citation: Cocomazzi FIN7 Reboot)",
+            "description": "Adversaries may disable, degrade, or tamper with security tools or applications (e.g., endpoint detection and response (EDR) tools, intrusion detection systems (IDS), antivirus, logging agents, sensors, etc.) to impair or reduce visibility of defensive capabilities. This may include stopping specific services, killing processes, modifying or deleting tool configuration files and Registry keys, or preventing tools from updating. This may also include impairing defenses more broadly by disrupting preventative, detection, and response mechanisms across host, network, and cloud environments.(Citation: SCADAfence_ransomware) \n\nIn addition to directly targeting tools, adversaries may block or manipulate indicators and telemetry used for detection. This includes maliciously disabling or redirecting sensors such as Event Tracing for Windows (ETW), modifying event log configurations (e.g., redirecting Security logs), or interfering with logging pipelines and forwarding mechanisms (e.g., SIEM ingestion).(Citation: Microsoft Lamin Sept 2017)(Citation: ETW Palantir)\n\nMore advanced techniques include leveraging legitimate drivers or debugging mechanisms to render tools non-functional, bypassing anti-tampering protections, and targeting specific defenses such as Sysmon or cloud monitoring agents. Adversaries may also disrupt broader defensive operations, including update mechanisms, logging infrastructure (e.g., syslog), or event aggregation, further degrading an organization’s ability to detect and respond to malicious activity.(Citation: Cocomazzi FIN7 Reboot)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -78,7 +87,9 @@
                 "Network Devices",
                 "Windows"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "ابزارهای Disable یا Modify",
+            "description_fa": "مخالفان ممکن است ابزارهای امنیتی یا برنامه های امنیتی (به عنوان مثال، شناسایی نقطه پایانی و پاسخ (EDR)، سیستم های تشخیص نفوذ (IDS)، آنتی ویروس، عوامل ورود، سنسورها و غیره) را برای آسیب رساندن یا کاهش دید از قابلیت های دفاعی. این ممکن است شامل توقف خدمات خاص، کشتن فرآیندها، اصلاح یا حذف فایل های پیکربندی ابزار و کلید های رجیستری یا جلوگیری از ابزارهای به روز رسانی باشد. این همچنین ممکن است شامل آسیب پذیری بیشتر با مختل کردن مکانیسم های پیشگیری، تشخیص و پاسخ در سراسر میزبان، شبکه و محیط های ابر باشد. [[ویرایش]\n\nعلاوه بر هدف قرار دادن مستقیم ابزار، دشمنان ممکن است شاخص ها را مسدود یا دستکاری کنند و تله عدم تقارن مورد استفاده برای تشخیص. این شامل سنسورهای گمراه کننده یا هدایت کننده مانند Event Tracing برای ویندوز (ETW)، تغییر پیکربندی های لاگین رویداد (به عنوان مثال، هدایت کننده ورودی های امنیتی)، یا دخالت در خط لوله های ورود و مکانیسم های انتقال (به عنوان مثال، SIEM) است.[۹] [CTI_PSERVE]\n\nتکنیک های پیشرفته تر شامل استفاده از رانندگان قانونی یا مکانیسم های اشکال زدایی برای ارائه ابزارهای غیر عملکردی، دور زدن حفاظت از ضد انعقاد و هدف قرار دادن دفاع های خاص مانند Sysmon یا نظارت بر ابر است. مخالفان همچنین ممکن است عملیات دفاعی گسترده تر را مختل کنند، از جمله مکانیسم های به روز رسانی، زیرساخت های ورود (به عنوان مثال، syslog)، یا تجمع رویداد، بیشتر توانایی سازمان برای تشخیص و پاسخ به فعالیت های مخرب را کاهش دهند. [[ویرایش] (Citation: SCADAfence_ransomware) (Citation: Microsoft Lamin Sept 2017) (Citation: ETW Palantir) (Citation: Cocomazzi FIN7 Reboot)"
         }
     ]
 }

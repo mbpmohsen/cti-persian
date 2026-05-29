@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1134/003",
-                    "external_id": "T1134.003"
+                    "external_id": "T1134.003",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "LogonUserW function",
                     "description": "Microsoft. (2023, March 10). LogonUserW function (winbase.h). Retrieved January 8, 2024.",
-                    "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-logonuserw"
+                    "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-logonuserw",
+                    "source_name_fa": "Logon User User عملکرد W",
+                    "description_fa": "مایکروسافت (2023، 10 مارس) Logon تابع UserW (winbase.h) Retrieved 8، 2024."
                 }
             ],
             "object_marking_refs": [
@@ -50,7 +53,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "ایجاد و عیب یابی",
+            "description_fa": "مخالفان ممکن است توکن های جدید و کاربران را برای افزایش امتیازات و دور زدن کنترل دسترسی ایجاد کنند. به عنوان مثال، اگر یک دشمن یک نام کاربری و رمز عبور داشته باشد، اما کاربر بر روی سیستم وارد نمی شود، دشمن می تواند یک جلسه لوگو برای کاربر با استفاده از تابع \"LogonUser\" ایجاد کند. تابع یک کپی از توکن دسترسی جلسه جدید را برمی گرداند و دشمن می تواند از “SetThread” برای اختصاص توکن به یک رشته استفاده کند.\n\nاین رفتار متمایز از آن است که به جای سرقت یا جعل یک کاربر جدید ایجاد شود. (Citation: LogonUserW function) https://attack.mitre.org/techniques/T1134/001"
         }
     ]
 }

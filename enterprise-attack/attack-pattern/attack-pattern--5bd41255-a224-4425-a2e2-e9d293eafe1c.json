@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1564/013",
-                    "external_id": "T1564.013"
+                    "external_id": "T1564.013",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Ahn Lab CoinMiner 2023",
                     "description": "Ahn Lab. (2023, April 24). CoinMiner (KONO DIO DA) Distributed to Linux SSH Servers. Retrieved April 4, 2025.",
-                    "url": "https://asec.ahnlab.com/en/51908/"
+                    "url": "https://asec.ahnlab.com/en/51908/",
+                    "source_name_fa": "Ahn Lab CoinMiner 2023",
+                    "description_fa": "آزمایشگاه Ahn (2023، 24 آوریل) CoinMiner (KONO DIO DA) به سرورهای SSH لینوکس توزیع شده است. Retrieved 4, 2025."
                 },
                 {
                     "source_name": "Cado Security Commando Cat 2024",
                     "description": "Nate Bill & Matt Muir. (2024, February 1). The Nine Lives of Commando Cat: Analysing a Novel Malware Campaign Targeting Docker. Retrieved April 4, 2025.",
-                    "url": "https://www.cadosecurity.com/blog/the-nine-lives-of-commando-cat-analysing-a-novel-malware-campaign-targeting-docker"
+                    "url": "https://www.cadosecurity.com/blog/the-nine-lives-of-commando-cat-analysing-a-novel-malware-campaign-targeting-docker",
+                    "source_name_fa": "Cado Security Commando Cat 2024",
+                    "description_fa": "Nate Bill & Matt Muir (2024, فوریه 1) The Nine Lives of Commando Cat: Analysing a Novel Malware Targeting Docker Retrieved 4, 2025."
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2026-05-12T15:12:00.635Z",
             "name": "Bind Mounts",
-            "description": "Adversaries may abuse bind mounts on file structures to hide their activity and artifacts from native utilities. A bind mount maps a directory or file from one location on the filesystem to another, similar to a shortcut on Windows. It\u2019s commonly used to provide access to specific files or directories across different environments, such as inside containers or chroot environments, and requires sudo access. \n\nAdversaries may use bind mounts to map either an empty directory or a benign `/proc` directory to a malicious process\u2019s `/proc` directory. Using the commands `mount \u2013o bind /proc/benign-process /proc/malicious-process` (or `mount \u2013B`), the malicious process's `/proc` directory is overlayed with the contents of a benign process's `/proc` directory. When system utilities query process activity, such as `ps` and `top`, the kernel follows the bind mount and presents the benign directory\u2019s contents instead of the malicious process's actual `/proc` directory. As a result, these utilities display information that appears to come from the benign process, effectively hiding the malicious process's metadata, executable, or other artifacts from detection.(Citation: Cado Security Commando Cat 2024)(Citation: Ahn Lab CoinMiner 2023)",
+            "description": "Adversaries may abuse bind mounts on file structures to hide their activity and artifacts from native utilities. A bind mount maps a directory or file from one location on the filesystem to another, similar to a shortcut on Windows. It’s commonly used to provide access to specific files or directories across different environments, such as inside containers or chroot environments, and requires sudo access. \n\nAdversaries may use bind mounts to map either an empty directory or a benign `/proc` directory to a malicious process’s `/proc` directory. Using the commands `mount –o bind /proc/benign-process /proc/malicious-process` (or `mount –B`), the malicious process's `/proc` directory is overlayed with the contents of a benign process's `/proc` directory. When system utilities query process activity, such as `ps` and `top`, the kernel follows the bind mount and presents the benign directory’s contents instead of the malicious process's actual `/proc` directory. As a result, these utilities display information that appears to come from the benign process, effectively hiding the malicious process's metadata, executable, or other artifacts from detection.(Citation: Cado Security Commando Cat 2024)(Citation: Ahn Lab CoinMiner 2023)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -40,7 +45,7 @@
             ],
             "x_mitre_attack_spec_version": "3.3.0",
             "x_mitre_contributors": [
-                "L\u00ea Ph\u01b0\u01a1ng Nam, Group-IB"
+                "Lê Phương Nam, Group-IB"
             ],
             "x_mitre_deprecated": false,
             "x_mitre_domains": [
@@ -51,7 +56,9 @@
             "x_mitre_platforms": [
                 "Linux"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "کوه های سرخ",
+            "description_fa": "مخالفان ممکن است از پیوند بر روی ساختارهای فایل استفاده کنند تا فعالیت و مصنوعات خود را از خدمات بومی پنهان کنند. یک کوه اتصال یک دایرکتوری یا فایل را از یک مکان در سیستم فایل به دیگری، شبیه به یک میانبر بر روی ویندوز نقشه می کند. معمولا برای دسترسی به فایل ها یا دایرکتوری های خاص در محیط های مختلف مانند داخل ظروف یا محیط های chroot استفاده می شود و نیاز به دسترسی sudo دارد.\n\nمخالفان ممکن است از کوه های متصل برای نقشه برداری یک دایرکتوری خالی یا یک دایرکتوری خوش خیم \"/proc\" به یک دایرکتوری \"/proc\" فرایند مخرب استفاده کنند. با استفاده از دستورات \"mount-oconnect /proc/benign- Process /proc/malicious- Process\" (یا \"mount -B\")، دایرکتوری فرایند مخرب \"/proc\" با محتویات یک دایرکتوری خوش خیم \"/proc\" پر شده است. هنگامی که فعالیت فرآیند جستجوی سیستم، مانند \"ps\" و \"top\"، هسته به دنبال کوه اتصال و ارائه محتوای دایرکتوری خوش خیم به جای دایرکتوری واقعی فرایند مخرب است. در نتیجه، این اطلاعات نشان می دهد که به نظر می رسد از فرایند خوش خیم آمده است، به طور موثر پنهان کردن متاداده فرایند مخرب، اجرایی، و یا سایر مصنوعات از تشخیص.[۹][۵] (Citation: Cado Security Commando Cat 2024) (Citation: Ahn Lab CoinMiner 2023)"
         }
     ]
 }

@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1070/006",
-                    "external_id": "T1070.006"
+                    "external_id": "T1070.006",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Juniper Networks ESXi Backdoor 2022",
                     "description": "Asher Langton. (2022, December 9). A Custom Python Backdoor for VMWare ESXi Servers. Retrieved March 26, 2025.",
-                    "url": "https://blogs.juniper.net/en-us/threat-research/a-custom-python-backdoor-for-vmware-esxi-servers"
+                    "url": "https://blogs.juniper.net/en-us/threat-research/a-custom-python-backdoor-for-vmware-esxi-servers",
+                    "source_name_fa": "Juniper networks ESXi Backdoor 2022",
+                    "description_fa": "Asher Langton یک درب پشتی سفارشی پایتون برای VMWare ESXi Servers. Retrieved 26 مارس 2025"
                 },
                 {
                     "source_name": "WindowsIR Anti-Forensic Techniques",
                     "description": "Carvey, H. (2013, July 23). HowTo: Determine/Detect the use of Anti-Forensics Techniques. Retrieved June 3, 2016.",
-                    "url": "http://windowsir.blogspot.com/2013/07/howto-determinedetect-use-of-anti.html"
+                    "url": "http://windowsir.blogspot.com/2013/07/howto-determinedetect-use-of-anti.html",
+                    "source_name_fa": "WindowsIR Anti-Forensic تکنیک ها",
+                    "description_fa": "Carvey، H. 2013، 23 ژوئیه چگونگی استفاده از تکنیک های ضد افسردگی Retrieved 3 ژوئن 2016"
                 },
                 {
                     "source_name": "Inversecos Linux Timestomping",
                     "description": "inversecos. (2022, August 4). Detecting Linux Anti-Forensics: Timestomping. Retrieved March 26, 2025.",
-                    "url": "https://www.inversecos.com/2022/08/detecting-linux-anti-forensics.html"
+                    "url": "https://www.inversecos.com/2022/08/detecting-linux-anti-forensics.html",
+                    "source_name_fa": "Inversecos Linux Timestomping",
+                    "description_fa": "Inversecos (2022, August 4) شناسایی آنتی ویروس های لینوکس: زمان بندی Retrieved 26 مارس 2025"
                 },
                 {
                     "source_name": "Inversecos Timestomping 2022",
-                    "description": "Lina Lau. (2022, April 28). Defence Evasion Technique: Timestomping Detection \u2013 NTFS Forensics. Retrieved September 30, 2024.",
-                    "url": "https://www.inversecos.com/2022/04/defence-evasion-technique-timestomping.html"
+                    "description": "Lina Lau. (2022, April 28). Defence Evasion Technique: Timestomping Detection – NTFS Forensics. Retrieved September 30, 2024.",
+                    "url": "https://www.inversecos.com/2022/04/defence-evasion-technique-timestomping.html",
+                    "source_name_fa": "دانلود فیلم Inversecos Timestomping 2022",
+                    "description_fa": "لینا لا (۲۰۲۲، ۲۸ آوریل) تکنیک دفاع از اوازion: Timestomping Trials - NTFS Retrieved ۳۰ سپتامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "Magnet Forensics",
                     "description": "Magnet Forensics. (2020, August 24). Expose Evidence of Timestomping with the NTFS Timestamp Mismatch Artifact. Retrieved June 20, 2024.",
-                    "url": "https://www.magnetforensics.com/blog/expose-evidence-of-timestomping-with-the-ntfs-timestamp-mismatch-artifact-in-magnet-axiom-4-4/"
+                    "url": "https://www.magnetforensics.com/blog/expose-evidence-of-timestomping-with-the-ntfs-timestamp-mismatch-artifact-in-magnet-axiom-4-4/",
+                    "source_name_fa": "لایحه های قانونی",
+                    "description_fa": "لایحه های مغناطیسی (2020، 24 آگوست) افشای شواهد از Timestomping با NTFS Timestamp Mismatch Artifact. Retrieved 20 ژوئن 2024"
                 },
                 {
                     "source_name": "Double Timestomping",
                     "description": "Matthew Dunwoody. (2022, April 28). I have seen double-timestomping ITW, including by APT29. Stay sharp out there.. Retrieved June 20, 2024.",
-                    "url": "https://x.com/matthewdunwoody/status/1519846657646604289"
+                    "url": "https://x.com/matthewdunwoody/status/1519846657646604289",
+                    "source_name_fa": "Double Timestomping",
+                    "description_fa": "متیو دانوودی (۲۰۲۲، ۲۸ آوریل) من دو بار آن را دیدم، از جمله APT29. بیرون بروید. Retrieved 20 ژوئن 2024"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2026-05-12T15:12:00.630Z",
             "name": "Timestomp",
-            "description": "Adversaries may modify file time attributes to hide new files or changes to existing files. Timestomping is a technique that modifies the timestamps of a file (the modify, access, create, and change times), often to mimic files that are in the same folder and blend malicious files with legitimate files.\n\nIn Windows systems, both the `$STANDARD_INFORMATION` (`$SI`) and `$FILE_NAME` (`$FN`) attributes record times in a Master File Table (MFT) file.(Citation: Inversecos Timestomping 2022) `$SI` (dates/time stamps) is displayed to the end user, including in the File System view, while `$FN` is dealt with by the kernel.(Citation: Magnet Forensics)\n\nModifying the `$SI` attribute is the most common method of timestomping because it can be modified at the user level using API calls. `$FN` timestomping, however, typically requires interacting with the system kernel or moving or renaming a file.(Citation: Inversecos Timestomping 2022)\n\nAdversaries modify timestamps on files so that they do not appear conspicuous to forensic investigators or file analysis tools. In order to evade detections that rely on identifying discrepancies between the `$SI` and `$FN` attributes, adversaries may also engage in \u201cdouble timestomping\u201d by modifying times on both attributes simultaneously.(Citation: Double Timestomping)\n\nIn Linux systems and on ESXi servers, threat actors may attempt to perform timestomping using commands such as `touch -a -m -t <timestamp> <filename>` (which sets access and modification times to a specific value) or `touch -r <filename> <filename>` (which sets access and modification times to match those of another file).(Citation: Inversecos Linux Timestomping)(Citation: Juniper Networks ESXi Backdoor 2022)\n\nTimestomping may be used along with file name [Masquerading](https://attack.mitre.org/techniques/T1036) to hide malware and tools.(Citation: WindowsIR Anti-Forensic Techniques)",
+            "description": "Adversaries may modify file time attributes to hide new files or changes to existing files. Timestomping is a technique that modifies the timestamps of a file (the modify, access, create, and change times), often to mimic files that are in the same folder and blend malicious files with legitimate files.\n\nIn Windows systems, both the `$STANDARD_INFORMATION` (`$SI`) and `$FILE_NAME` (`$FN`) attributes record times in a Master File Table (MFT) file.(Citation: Inversecos Timestomping 2022) `$SI` (dates/time stamps) is displayed to the end user, including in the File System view, while `$FN` is dealt with by the kernel.(Citation: Magnet Forensics)\n\nModifying the `$SI` attribute is the most common method of timestomping because it can be modified at the user level using API calls. `$FN` timestomping, however, typically requires interacting with the system kernel or moving or renaming a file.(Citation: Inversecos Timestomping 2022)\n\nAdversaries modify timestamps on files so that they do not appear conspicuous to forensic investigators or file analysis tools. In order to evade detections that rely on identifying discrepancies between the `$SI` and `$FN` attributes, adversaries may also engage in “double timestomping” by modifying times on both attributes simultaneously.(Citation: Double Timestomping)\n\nIn Linux systems and on ESXi servers, threat actors may attempt to perform timestomping using commands such as `touch -a -m -t <timestamp> <filename>` (which sets access and modification times to a specific value) or `touch -r <filename> <filename>` (which sets access and modification times to match those of another file).(Citation: Inversecos Linux Timestomping)(Citation: Juniper Networks ESXi Backdoor 2022)\n\nTimestomping may be used along with file name [Masquerading](https://attack.mitre.org/techniques/T1036) to hide malware and tools.(Citation: WindowsIR Anti-Forensic Techniques)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -75,7 +88,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "Timestomp",
+            "description_fa": "مجرمان ممکن است ویژگی های زمان فایل را برای پنهان کردن فایل های جدید یا تغییرات در فایل های موجود تغییر دهند. Timestomping یک تکنیک است که زمان بندی یک فایل را اصلاح می کند (تغییر، دسترسی، ایجاد و زمان تغییر)، اغلب برای تقلید فایل هایی که در همان پوشه هستند و فایل های مخرب را با فایل های قانونی ترکیب می کنند.\n\nدر سیستم های ویندوز، هر دو ویژگی های \"STAND_INFORMATION\" (SI $) و \"FILE_NAME\" ($FN') زمان ثبت در یک فایل Master File Table (MFT) را ثبت می کنند.[۹] [CTI_PRESERVE_0] \\\"$SI'date (تاریخ / زمان) با برچسب گذاری شده است، در حالی که کاربر در پایان سیستم مشاهده می کند. [[ویرایش]\n\nاصلاح ویژگی \"$SI\" رایج ترین روش زمان بندی است زیرا می تواند در سطح کاربر با استفاده از تماس های API اصلاح شود. با این حال، زمان بندی FN به طور معمول نیاز به تعامل با هسته سیستم یا حرکت یا تغییر نام یک فایل دارد.\n\nپست ها زمان بندی ها را بر روی فایل ها تغییر می دهند تا به نظر نمی رسد که آنها نسبت به محققان قانونی یا ابزارهای تجزیه و تحلیل فایل ها حساس هستند. به منظور جلوگیری از تشخیص هایی که به تفاوت های شناسایی بین ویژگی های \"SI\" و \"FN\" متکی هستند، دشمنان نیز ممکن است با تغییر زمان در هر دو ویژگی به طور همزمان درگیر \"دو بار\" شوند. [[ویرایش]\n\nدر سیستم های لینوکس و سرورهای ESXi، بازیگران تهدید ممکن است تلاش کنند تا با استفاده از دستورات مانند \"touch -a -m -t <timestamp> <filename> (که زمان دسترسی و اصلاح را به یک ارزش خاص تنظیم می کند) یا \"touch -r <filename> <filename> (که دسترسی و اصلاح فایل را تنظیم می کند)\n\nگاهی اوقات به همراه نام فایل (Masquerading) استفاده می شود ([CTI_PRESERVE_7] برای پنهان کردن بدافزار و ابزار. [[ویرایش] (Citation: Inversecos Timestomping 2022) (Citation: Magnet Forensics) (Citation: Inversecos Timestomping 2022) (Citation: Double Timestomping) (Citation: Inversecos Linux Timestomping) (Citation: Juniper Networks ESXi Backdoor 2022) (Citation: WindowsIR Anti-Forensic Techniques) https://attack.mitre.org/techniques/T1036"
         }
     ]
 }

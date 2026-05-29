@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1078/001",
-                    "external_id": "T1078.001"
+                    "external_id": "T1078.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023",
                     "description": "Alexander Marvi, Brad Slaybaugh, Ron Craft, and Rufus Brown. (2023, June 13). VMware ESXi Zero-Day Used by Chinese Espionage Actor to Perform Privileged Guest Operations on Compromised Hypervisors. Retrieved March 26, 2025.",
-                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/vmware-esxi-zero-day-bypass/"
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/vmware-esxi-zero-day-bypass/",
+                    "source_name_fa": "Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023",
+                    "description_fa": "Alexander Marvi، Brad Slaybaugh، Ron Craft و Rufus Brown (2023، 13 ژوئن) VMware ESXi Zero-Day توسط بازیگر چینی Espionage برای انجام عملیات مهمان خصوصی در Hypervisors Compromed استفاده می شود. Retrieved 26 مارس 2025"
                 },
                 {
                     "source_name": "AWS Root User",
                     "description": "Amazon. (n.d.). AWS Account Root User. Retrieved April 5, 2021.",
-                    "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html"
+                    "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_root-user.html",
+                    "source_name_fa": "AWS Root User",
+                    "description_fa": "آمازون (n.d.) AWS Account Root User Retrieved 5، 2021."
                 },
                 {
                     "source_name": "Microsoft Local Accounts Feb 2019",
                     "description": "Microsoft. (2018, December 9). Local Accounts. Retrieved February 11, 2019.",
-                    "url": "https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/local-accounts"
+                    "url": "https://docs.microsoft.com/en-us/windows/security/identity-protection/access-control/local-accounts",
+                    "source_name_fa": "Microsoft Local Accounts 2019",
+                    "description_fa": "مایکروسافت (2018, دسامبر 9) حساب های محلی Retrieved 11 فوریه 2019"
                 },
                 {
                     "source_name": "Metasploit SSH Module",
                     "description": "undefined. (n.d.). Retrieved April 12, 2019.",
-                    "url": "https://github.com/rapid7/metasploit-framework/tree/master/modules/exploits/linux/ssh"
+                    "url": "https://github.com/rapid7/metasploit-framework/tree/master/modules/exploits/linux/ssh",
+                    "source_name_fa": "Metasploit SSH ماژول ماژول ماژول",
+                    "description_fa": "تعریف نشده (n.d.) Retrieved 12 آوریل 2019"
                 },
                 {
                     "source_name": "Threat Matrix for Kubernetes",
                     "description": "Weizman, Y. (2020, April 2). Threat Matrix for Kubernetes. Retrieved March 30, 2021.",
-                    "url": "https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/"
+                    "url": "https://www.microsoft.com/security/blog/2020/04/02/attack-matrix-kubernetes/",
+                    "source_name_fa": "ماتریس تهدید برای Kubernetes",
+                    "description_fa": "Weizman، Y. (2020، آوریل 2) ماتریس تهدید برای Kubernetes Retrieved ۳۰ مارس ۲۰۲۱"
                 },
                 {
                     "source_name": "Pentera vCenter Information Disclosure",
                     "description": "Yuval Lazar. (2022, March 29). Mitigating VMware vCenter Information Disclosure. Retrieved March 26, 2025.",
-                    "url": "https://pentera.io/blog/information-disclosure-in-vmware-vcenter/"
+                    "url": "https://pentera.io/blog/information-disclosure-in-vmware-vcenter/",
+                    "source_name_fa": "Pentera vCenter Information Disclosure",
+                    "description_fa": "یووال لازار (۲۰۲۲، ۲۹ مارس) پذیرش VMware vCenter Information Disclosure Retrieved 26 مارس 2025"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2026-05-12T15:12:00.636Z",
             "name": "Default Accounts",
-            "description": "Adversaries may obtain and abuse credentials of a default account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Default accounts are those that are built-into an OS, such as the Guest or Administrator accounts on Windows systems. Default accounts also include default factory/provider set accounts on other types of systems, software, or devices, including the root user account in AWS, the root user account in ESXi, and the default service account in Kubernetes.(Citation: Microsoft Local Accounts Feb 2019)(Citation: AWS Root User)(Citation: Threat Matrix for Kubernetes)\n\nDefault accounts are not limited to client machines; rather, they also include accounts that are preset for equipment such as network devices and computer applications, whether they are internal, open source, or commercial. Appliances that come preset with a username and password combination pose a serious threat to organizations that do not change it post installation, as they are easy targets for an adversary. Similarly, adversaries may also utilize publicly disclosed or stolen [Private Keys](https://attack.mitre.org/techniques/T1552/004) or credential materials to legitimately connect to remote environments via [Remote Services](https://attack.mitre.org/techniques/T1021).(Citation: Metasploit SSH Module)\n\nDefault accounts may be created on a system after initial setup by connecting or integrating it with another application. For example, when an ESXi server is connected to a vCenter server, a default privileged account called `vpxuser` is created on the ESXi server. If a threat actor is able to compromise this account\u2019s credentials (for example, via [Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212) on the vCenter host), they will then have access to the ESXi server.(Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023)(Citation: Pentera vCenter Information Disclosure)",
+            "description": "Adversaries may obtain and abuse credentials of a default account as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion. Default accounts are those that are built-into an OS, such as the Guest or Administrator accounts on Windows systems. Default accounts also include default factory/provider set accounts on other types of systems, software, or devices, including the root user account in AWS, the root user account in ESXi, and the default service account in Kubernetes.(Citation: Microsoft Local Accounts Feb 2019)(Citation: AWS Root User)(Citation: Threat Matrix for Kubernetes)\n\nDefault accounts are not limited to client machines; rather, they also include accounts that are preset for equipment such as network devices and computer applications, whether they are internal, open source, or commercial. Appliances that come preset with a username and password combination pose a serious threat to organizations that do not change it post installation, as they are easy targets for an adversary. Similarly, adversaries may also utilize publicly disclosed or stolen [Private Keys](https://attack.mitre.org/techniques/T1552/004) or credential materials to legitimately connect to remote environments via [Remote Services](https://attack.mitre.org/techniques/T1021).(Citation: Metasploit SSH Module)\n\nDefault accounts may be created on a system after initial setup by connecting or integrating it with another application. For example, when an ESXi server is connected to a vCenter server, a default privileged account called `vpxuser` is created on the ESXi server. If a threat actor is able to compromise this account’s credentials (for example, via [Exploitation for Credential Access](https://attack.mitre.org/techniques/T1212) on the vCenter host), they will then have access to the ESXi server.(Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023)(Citation: Pentera vCenter Information Disclosure)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -92,7 +105,9 @@
                 "SaaS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "حساب های پیش فرض",
+            "description_fa": "مخالفان ممکن است اعتبار حساب های پیش فرض را به عنوان وسیله ای برای به دست آوردن دسترسی اولیه، اصرار، افزایش خصوصی یا دفاع از اواسیون به دست آورند. حساب های پیش فرض کسانی هستند که به یک سیستم عامل ساخته شده اند، مانند حساب مهمان یا مدیر در سیستم های ویندوز. حساب های پیش فرض همچنین شامل حساب های پیش فرض کارخانه / ارائه دهنده بر روی انواع دیگر سیستم ها، نرم افزار یا دستگاه ها، از جمله حساب کاربری ریشه در AWS، حساب کاربری ریشه در ESXi و حساب خدمات پیش فرض در Kubernetes است.[۹] [CTI_PRE_SERVE_0 [CTI_SERVE]\n\nحساب های پیش فرض محدود به ماشین های مشتری نیستند؛ بلکه شامل حساب هایی هستند که برای تجهیزاتی مانند دستگاه های شبکه و برنامه های کامپیوتری، چه داخلی، منبع باز و چه تجاری هستند. لوازمی که با یک نام کاربری و ترکیب رمز عبور پیش تعیین می شوند، یک تهدید جدی برای سازمان هایی هستند که آن را تغییر نمی دهند، زیرا آنها اهداف آسان برای یک دشمن هستند. به همین ترتیب، دشمنان نیز ممکن است به صورت عمومی افشا شده یا به سرقت رفته ([۱۰] [[۱۰]] [[۱۰]] [[۱۰]]] یا مواد معتبر برای اتصال به محیط های از راه دور از طریق [Remote Services Services] ([[[۹] [CTI_PREE_۷]) استفاده کنند.\n\nحساب های پیش فرض ممکن است در یک سیستم پس از تنظیم اولیه با اتصال یا ادغام آن با یک برنامه دیگر ایجاد شود. به عنوان مثال، هنگامی که یک سرور ESXi به یک سرور vCenter متصل می شود، یک حساب پیش فرض به نام vpxuser در سرور ESXi ایجاد می شود. اگر یک عامل تهدید قادر به سازش با اعتبار این حساب (به عنوان مثال، از طریق [Exploitation for Credential Access] باشد، آنها به سرور ESXi دسترسی خواهند داشت.[۱۰] (Citation: Microsoft Local Accounts Feb 2019) (Citation: AWS Root User) (Citation: Threat Matrix for Kubernetes) (Citation: Metasploit SSH Module) (Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023) (Citation: Pentera vCenter Information Disclosure) https://attack.mitre.org/techniques/T1552/004 https://attack.mitre.org/techniques/T1021 https://attack.mitre.org/techniques/T1212"
         }
     ]
 }

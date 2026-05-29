@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1522",
-                    "external_id": "T1522"
+                    "external_id": "T1522",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AWS Instance Metadata API",
                     "description": "AWS. (n.d.). Instance Metadata and User Data. Retrieved July 18, 2019.",
-                    "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html"
+                    "url": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html",
+                    "source_name_fa": "AWS Instance Metadata API API",
+                    "description_fa": "AWS (n.d.) Instance Metadata و User Data Retrieved ۱۸ ژوئیه ۲۰۱۹"
                 },
                 {
                     "source_name": "RedLock Instance Metadata API 2018",
                     "description": "Higashi, Michael. (2018, May 15). Instance Metadata API: A Modern Day Trojan Horse. Retrieved July 16, 2019.",
-                    "url": "https://redlock.io/blog/instance-metadata-api-a-modern-day-trojan-horse"
+                    "url": "https://redlock.io/blog/instance-metadata-api-a-modern-day-trojan-horse",
+                    "source_name_fa": "RedLock Instance Metadata API 2018",
+                    "description_fa": "Higashi، مایکل (2018، 15 می) Instance Metadata API: A Modern Day تروجان Horse Retrieved 16 ژوئیه 2019"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +56,9 @@
             "x_mitre_platforms": [
                 "IaaS"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "Cloud Instance Metadata API API",
+            "description_fa": "مخالفان ممکن است تلاش کنند به Cloud Instance Metadata API برای جمع آوری اعتبار و سایر داده های حساس دسترسی پیدا کنند.\n\nاکثر ارائه دهندگان خدمات ابری از Cloud Instance Metadata API پشتیبانی می کنند که خدماتی است که برای اجرای موارد مجازی ارائه شده است که به برنامه ها اجازه می دهد تا به اطلاعات مربوط به نمونه مجازی در حال اجرا دسترسی پیدا کنند. اطلاعات موجود به طور کلی شامل نام، گروه امنیتی و داده های اضافی از جمله داده های حساس مانند اعتبار و اسکریپت های UserData است که ممکن است حاوی اسرار اضافی باشد. Instance Metadata API به عنوان راحتی برای کمک به مدیریت برنامه ها ارائه می شود و توسط هر کسی که می تواند به نمونه دسترسی داشته باشد قابل دسترسی است. [[ویرایش]\n\nاگر دشمنان یک حضور در نمونه مجازی اجرا داشته باشند، ممکن است به طور مستقیم از Instance Metadata API برای شناسایی اعتبارهایی که دسترسی به منابع اضافی را فراهم می کند، استفاده کنند. علاوه بر این، مهاجمان ممکن است از آسیب پذیری درخواست سرور-Side Forgery (SSRF) در یک پروکسی وب عمومی استفاده کنند که به مهاجم اجازه می دهد به اطلاعات حساس از طریق درخواست به Instance Metadata API دسترسی پیدا کند.\n\nاستاندارد de facto در سراسر ارائه دهندگان خدمات ابری میزبانی از Instance Metadata API در [CTI_PRESERVE_0] است. <code>http[:]//169.254.169.254</code> (Citation: AWS Instance Metadata API) (Citation: RedLock Instance Metadata API 2018)"
         }
     ]
 }

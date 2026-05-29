@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1505/005",
-                    "external_id": "T1505.005"
+                    "external_id": "T1505.005",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "James TermServ DLL",
                     "description": "James. (2019, July 14). @James_inthe_box. Retrieved September 12, 2024.",
-                    "url": "https://x.com/james_inthe_box/status/1150495335812177920"
+                    "url": "https://x.com/james_inthe_box/status/1150495335812177920",
+                    "source_name_fa": "JamesServ DLL",
+                    "description_fa": "جیمز (2019، 14 ژوئیه) جیمز_inthe_box Retrieved 12 سپتامبر 2024"
                 },
                 {
                     "source_name": "Microsoft System Services Fundamentals",
                     "description": "Microsoft. (2018, February 17). Windows System Services Fundamentals. Retrieved March 28, 2022.",
-                    "url": "https://social.technet.microsoft.com/wiki/contents/articles/12229.windows-system-services-fundamentals.aspx"
+                    "url": "https://social.technet.microsoft.com/wiki/contents/articles/12229.windows-system-services-fundamentals.aspx",
+                    "source_name_fa": "Microsoft System Services Foundations",
+                    "description_fa": "مایکروسافت (2018, فوریه 17) Windows System Services Foundations Retrieved 28 مارس 2022"
                 },
                 {
                     "source_name": "Microsoft Remote Desktop Services",
                     "description": "Microsoft. (2019, August 23). About Remote Desktop Services. Retrieved March 28, 2022.",
-                    "url": "https://docs.microsoft.com/windows/win32/termserv/about-terminal-services"
+                    "url": "https://docs.microsoft.com/windows/win32/termserv/about-terminal-services",
+                    "source_name_fa": "Microsoft Remote Desktop Services",
+                    "description_fa": "مایکروسافت (2019، 23 آگوست) خدمات Remote Desktop Retrieved 28 مارس 2022"
                 },
                 {
                     "source_name": "RDPWrap Github",
                     "description": "Stas'M Corp. (2014, October 22). RDP Wrapper Library by Stas'M. Retrieved March 28, 2022.",
-                    "url": "https://github.com/stascorp/rdpwrap"
+                    "url": "https://github.com/stascorp/rdpwrap",
+                    "source_name_fa": "RDPWrap Github",
+                    "description_fa": "Stas'M Corp. (2014, 22 اکتبر) کتابخانه RDP Addper توسط Stas'M. Retrieved 28 مارس 2022."
                 },
                 {
                     "source_name": "Windows OS Hub RDP",
                     "description": "Windows OS Hub. (2021, November 10). How to Allow Multiple RDP Sessions in Windows 10 and 11?. Retrieved March 28, 2022.",
-                    "url": "http://woshub.com/how-to-allow-multiple-rdp-sessions-in-windows-10/"
+                    "url": "http://woshub.com/how-to-allow-multiple-rdp-sessions-in-windows-10/",
+                    "source_name_fa": "Windows OS Hub RDP",
+                    "description_fa": "Windows OS Hub (۲۰۲۱، ۱۰ نوامبر) چگونه به چندین جلسه RDP در ویندوز 10 و 11 اجازه دهید؟ Retrieved 28 مارس 2022"
                 }
             ],
             "object_marking_refs": [
@@ -63,7 +74,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "خدمات ترمینال DLL",
+            "description_fa": "مخالفان ممکن است از اجزای خدمات ترمینال استفاده کنند تا دسترسی مداوم به سیستم ها را فعال کنند. خدمات ترمینال مایکروسافت، به سرویس های Remote Desktop در برخی از سیستم عامل های ویندوز سرور تا سال 2022 تغییر نام داد و اتصالات ترمینال از راه دور را به میزبان ها فعال کرد. خدمات ترمینال به سرورها اجازه می دهد تا یک رابط کاربری کامل، تعاملی و گرافیکی را به مشتریان از طریق RDP منتقل کنند. [CTI_PRESERVE_7]\n\n[[ویرایش] [[[ویرایش]] [[۱۰]]] [[۱۰]]]] [۱]] [۱]]] [[۱۰]]]]]]) فایل DLL سرویس را بارگذاری می کنند، مکان که در یک ورودی ثبت نام به نام [CT_P_SERVE] ذخیره می شود.[۹] فایل [CTI_PRESERVE_2]، به طور معمول در @ SystemRoot%\\System32 ذخیره می شود، پیش فرض ([I_PRESERVE_3] است. ارزش خدمات ترمینال در \"HKLM\\system\\CurrentControlSets\\TermServices\\Parameters\\`.\n\nمخالفان ممکن است تغییر کنند و یا جایگزین DLL خدمات ترمینال شوند تا دسترسی مداوم به میزبان های قربانی شده را فعال کنند. [CTI_PRESERVE_9] تغییرات در این DLL می تواند برای اجرای محموله های خودسرانه (در حالی که به طور بالقوه حفظ عادی [CTI_PRESERVE_4] عملکرد) و همچنین به سادگی قادر به ایجاد ویژگی های قابل حمل از خدمات ترمینال. به عنوان مثال، یک دشمن ممکن است ویژگی هایی مانند پروتکل (Remote Desktop Protocol) ([CTI_PRESERVE_13] را با پچ کردن فایل (CTI_PRESERVE_5) یا تغییر دادن [CTI_PRESERVE_6] ارزش DLL به نقطه ای که قابلیت های RDP را افزایش می دهد، فراهم کند. [[ویرایش] در یک سیستم عامل غیر سرور ویندوز این قابلیت افزایش یافته همچنین ممکن است یک دشمن را قادر سازد تا از سرویس های ترمینال که کاربران را از یک سیستم هشدار می دهند، جلوگیری کند، زمانی که یک جلسه جدید RDP ایجاد می شود. <code>svchost.exe</code> <code>ServiceDll</code> <code>termsrv.dll</code> <code>ServiceDll</code> <code>termsrv.dll</code> <code>termsrv.dll</code> <code>ServiceDll</code> (Citation: Microsoft Remote Desktop Services) (Citation: Microsoft System Services Fundamentals) (Citation: James TermServ DLL) (Citation: Windows OS Hub RDP) (Citation: RDPWrap Github) https://attack.mitre.org/techniques/T1543/003 https://attack.mitre.org/techniques/T1021/001"
         }
     ]
 }

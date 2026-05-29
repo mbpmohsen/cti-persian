@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1685/004",
-                    "external_id": "T1685.004"
+                    "external_id": "T1685.004",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "IzyKnows auditd threat detection 2022",
                     "description": "IzySec. (2022, January 26). Linux auditd for Threat Detection. Retrieved September 29, 2023.",
-                    "url": "https://izyknows.medium.com/linux-auditd-for-threat-detection-d06c8b941505"
+                    "url": "https://izyknows.medium.com/linux-auditd-for-threat-detection-d06c8b941505",
+                    "source_name_fa": "Izy Knows تشخیص تهدید حسابرسی شده 2022",
+                    "description_fa": "IzySec (۲۰۲۲، ۲۶ ژانویه) لینوکس برای تشخیص تهدید مورد حسابرسی قرار گرفت. Retrieved 29 سپتامبر 2023."
                 },
                 {
                     "source_name": "ESET Ebury Feb 2014",
-                    "description": "M.L\u00e9veill\u00e9, M.. (2014, February 21). An In-depth Analysis of Linux/Ebury. Retrieved April 19, 2019.",
-                    "url": "https://www.welivesecurity.com/2014/02/21/an-in-depth-analysis-of-linuxebury/"
+                    "description": "M.Léveillé, M.. (2014, February 21). An In-depth Analysis of Linux/Ebury. Retrieved April 19, 2019.",
+                    "url": "https://www.welivesecurity.com/2014/02/21/an-in-depth-analysis-of-linuxebury/",
+                    "source_name_fa": "ESET Ebury فوریه 2014",
+                    "description_fa": "M.Léveillé، M. (2014، 21 فوریه) تجزیه و تحلیل عمیق لینوکس / Ebury Retrieved 19 آوریل 2019"
                 },
                 {
                     "source_name": "Red Hat Linux Disable or Mod",
                     "description": "Red Hat. (n.d.). Retrieved April 15, 2026.",
-                    "url": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/security_guide/chap-system_auditing"
+                    "url": "https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/security_guide/chap-system_auditing",
+                    "source_name_fa": "Red Hat Linux Disable یا Mod",
+                    "description_fa": "کلاه قرمز (n.d.) Retrieved 15, 2026."
                 }
             ],
             "object_marking_refs": [
@@ -56,7 +63,9 @@
             "x_mitre_platforms": [
                 "Linux"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "Disable یا Modify Linux Audit System Log",
+            "description_fa": "مخالفان ممکن است سیستم حسابرسی لینوکس را غیرفعال یا اصلاح کنند تا فعالیت های مخرب را پنهان کنند و از تشخیص اجتناب کنند. مدیران لینوکس از سیستم حسابرسی لینوکس برای ردیابی اطلاعات مربوط به امنیت در یک سیستم استفاده می کنند. سیستم حسابرسی لینوکس در سطح کرنل فعالیت می کند و ثبت های رویداد را در فعالیت های کاربردی و سیستم مانند فرآیند، شبکه، فایل و رویدادهای ورود بر اساس قوانین پیش از پیکربندی حفظ می کند.\n\nاغلب به عنوان \"auditd\" نامیده می شود، این نام از daemon مورد استفاده برای نوشتن رویدادها به دیسک است و توسط پارامترهای تنظیم شده در فایل پیکربندی \"audit\" اداره می شود. دو روش اولیه برای پیکربندی قوانین نسل ثبت شده از طریق خط فرمان \"auditctl\" و فایل \"/etc/audit/audit.rules\" است که شامل یک توالی از دستورات \"auditctl\" است که در زمان بوت بارگذاری شده است.[۱۰][۱۰][۱۰][۱۰][۹][۱۰][۱۰][۱۰][۹][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۲][۱۰]\n\nبا امتیازات ریشه، ممکن است قادر به اطمینان از فعالیت خود را از طریق جدا کردن سرویس سیستم حسابرسی، ویرایش فایل های پیکربندی / قانون، و یا با قلاب کردن توابع کتابخانه سیستم حسابرسی. با استفاده از خط فرمان، دشمنان می توانند خدمات سیستم حسابرسی را از طریق فرآیند های کشتار مرتبط با \"auditd' daemon\" یا \"systemctl\" برای متوقف کردن سرویس حسابرسی، غیرفعال کنند. مخالفان همچنین می توانند توابع سیستم حسابرسی را برای غیرفعال کردن ورود یا اصلاح قوانین موجود در \"/etc/audit/audit.rules\" یا \"audit.conf\" برای نادیده گرفتن فعالیت های مخرب، قلاب کنند. [[ویرایش] (Citation: IzyKnows auditd threat detection 2022) (Citation: Red Hat Linux Disable or Mod) (Citation: ESET Ebury Feb 2014)"
         }
     ]
 }

@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/014",
-                    "external_id": "T1055.014"
+                    "external_id": "T1055.014",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Backtrace VDSO",
                     "description": "backtrace. (2016, April 22). ELF SHARED LIBRARY INJECTION FORENSICS. Retrieved November 17, 2024.",
-                    "url": "https://web.archive.org/web/20210205211142/https://backtrace.io/blog/backtrace/elf-shared-library-injection-forensics/"
+                    "url": "https://web.archive.org/web/20210205211142/https://backtrace.io/blog/backtrace/elf-shared-library-injection-forensics/",
+                    "source_name_fa": "Backtrace VDSO",
+                    "description_fa": "Backtrace (2016، 22 آوریل) ELF LED INJECTION FORENSICS Retrieved ۱۷ نوامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "Syscall 2014",
                     "description": "Drysdale, D. (2014, July 16). Anatomy of a system call, part 2. Retrieved June 16, 2020.",
-                    "url": "https://lwn.net/Articles/604515/"
+                    "url": "https://lwn.net/Articles/604515/",
+                    "source_name_fa": "Syscall 2014",
+                    "description_fa": "Drysdale، D. (2014، 16 ژوئیه) آناتومی یک تماس سیستم، بخشی 2. Retrieved 16 ژوئن 2020"
                 },
                 {
                     "source_name": "ELF Injection May 2009",
                     "description": "O'Neill, R. (2009, May). Modern Day ELF Runtime infection via GOT poisoning. Retrieved March 15, 2020.",
-                    "url": "https://web.archive.org/web/20150711051625/http://vxer.org/lib/vrn00.html"
+                    "url": "https://web.archive.org/web/20150711051625/http://vxer.org/lib/vrn00.html",
+                    "source_name_fa": "تزریق ELF می 2009",
+                    "description_fa": "O'Neill, R. (2009, May) روز مدرن ELF عفونت از طریق مسمومیت GOT Retrieved 15 مارس 2020"
                 },
                 {
                     "source_name": "VDSO Aug 2005",
                     "description": "Petersson, J. (2005, August 14). What is linux-gate.so.1?. Retrieved June 16, 2020.",
-                    "url": "https://web.archive.org/web/20051013084246/http://www.trilithium.com/johan/2005/08/linux-gate/"
+                    "url": "https://web.archive.org/web/20051013084246/http://www.trilithium.com/johan/2005/08/linux-gate/",
+                    "source_name_fa": "VDSO آگوست 2005",
+                    "description_fa": "پیترسون، جی (۲۰۰۵، ۱۴ آگوست) linux-gate.so Retrieved 16 ژوئن 2020"
                 }
             ],
             "object_marking_refs": [
@@ -62,7 +71,9 @@
             "x_mitre_platforms": [
                 "Linux"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "VDSO دزدی",
+            "description_fa": "مخالفان ممکن است کد مخرب را از طریق ربودن VDSO تزریق کنند تا از دفاع مبتنی بر فرآیند و همچنین احتمالا امتیازات بالا جلوگیری کنند. شی مشترک مجازی (vdso) ربودن یک روش اجرای کد اختیاری در فضای آدرس یک فرآیند جداگانه زنده است.\n\nربودن VDSO شامل تماس های هدایت شده به کتابخانه های مشترک پویا است. محافظت از حافظه ممکن است از نوشتن کد اجرایی به یک فرآیند از طریق [سیستم های رقابتی] ([[CTI_PRESERVE_4] جلوگیری کند. با این حال، یک دشمن ممکن است کد رابط syscall را به یک فرایند از شی به اشتراک گذاشته شده vdso برای اجرای syscalls برای باز کردن و نقشه برداری یک شی مشترک مخرب به سرقت ببرد. این کد را می توان با هدایت جریان اجرای فرایند ([ویرایش] از طریق ارجاعات آدرس حافظه ذخیره شده در یک جدول جبران جهانی (که آدرس های مطلق از توابع کتابخانه نقشه برداری را ذخیره می کند) فراخوانی کرد.[[۵] [CTI_PRESERVE_0] [CTI_PRESERVE]\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق ربودن VDSO نیز ممکن است از تشخیص از محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. (Citation: ELF Injection May 2009) (Citation: Backtrace VDSO) (Citation: VDSO Aug 2005) (Citation: Syscall 2014) https://attack.mitre.org/techniques/T1055/008"
         }
     ]
 }

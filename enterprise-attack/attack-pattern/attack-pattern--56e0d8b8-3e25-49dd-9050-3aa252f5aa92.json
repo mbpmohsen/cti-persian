@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1610",
-                    "external_id": "T1610"
+                    "external_id": "T1610",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AppSecco Kubernetes Namespace Breakout 2020",
-                    "description": "Abhisek Datta. (2020, March 18). Kubernetes Namespace Breakout using Insecure Host Path Volume \u2014 Part 1. Retrieved January 16, 2024.",
-                    "url": "https://blog.appsecco.com/kubernetes-namespace-breakout-using-insecure-host-path-volume-part-1-b382f2a6e216"
+                    "description": "Abhisek Datta. (2020, March 18). Kubernetes Namespace Breakout using Insecure Host Path Volume — Part 1. Retrieved January 16, 2024.",
+                    "url": "https://blog.appsecco.com/kubernetes-namespace-breakout-using-insecure-host-path-volume-part-1-b382f2a6e216",
+                    "source_name_fa": "AppSecco Kubernetes Namespace Breakout 2020",
+                    "description_fa": "Abhisek Datta (2020، 18 مارس) Kubernets Namespace Breakout با استفاده از Insecure Host Path Volume – قسمت Retrieved 16 ژانویه 2024"
                 },
                 {
                     "source_name": "Aqua Build Images on Hosts",
                     "description": "Assaf Morag. (2020, July 15). Threat Alert: Attackers Building Malicious Images on Your Hosts. Retrieved March 29, 2021.",
-                    "url": "https://blog.aquasec.com/malicious-container-image-docker-container-host"
+                    "url": "https://blog.aquasec.com/malicious-container-image-docker-container-host",
+                    "source_name_fa": "Aqua ساخت تصاویر در میزبان",
+                    "description_fa": "Assaf Morag (2020، 15 ژوئیه) هشدار تهدید: حمله کنندگان تصاویر خطرناکی را در میزبان های شما ایجاد می کنند. Retrieved 29 مارس 2021"
                 },
                 {
                     "source_name": "Docker Container",
                     "description": "DockerDocs. (n.d.). Retrieved December 8, 2025.",
-                    "url": "https://docs.docker.com/reference/cli/docker/container/create/"
+                    "url": "https://docs.docker.com/reference/cli/docker/container/create/",
+                    "source_name_fa": "Docker Container",
+                    "description_fa": "DockerDocs Retrieved 8 دسامبر 2025"
                 },
                 {
                     "source_name": "Kubernetes Workload Management",
                     "description": "Kubernetes. (n.d.). Workload Management. Retrieved March 28, 2024.",
-                    "url": "https://kubernetes.io/docs/concepts/workloads/controllers/"
+                    "url": "https://kubernetes.io/docs/concepts/workloads/controllers/",
+                    "source_name_fa": "Cobernets Workload Management",
+                    "description_fa": "Kubernetes مدیریت بارگذاری کار Retrieved 28 مارس 2024"
                 },
                 {
                     "source_name": "Kubeflow Pipelines",
                     "description": "The Kubeflow Authors. (n.d.). Overview of Kubeflow Pipelines. Retrieved March 29, 2021.",
-                    "url": "https://www.kubeflow.org/docs/components/pipelines/overview/pipelines-overview/"
+                    "url": "https://www.kubeflow.org/docs/components/pipelines/overview/pipelines-overview/",
+                    "source_name_fa": "خطوط لوله Kubeflow",
+                    "description_fa": "نویسندگان جریان کوی (n.d.) بررسی خط لوله های Kubeflow Retrieved 29 مارس 2021"
                 },
                 {
                     "source_name": "Kubernetes Dashboard",
                     "description": "The Kubernetes Authors. (n.d.). Kubernetes Web UI (Dashboard). Retrieved March 29, 2021.",
-                    "url": "https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/"
+                    "url": "https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/",
+                    "source_name_fa": "داشبورد Kubernetes",
+                    "description_fa": "نویسندگان Kubernetes Kubernetes Web UI (Dashboard) Retrieved 29 مارس 2021"
                 }
             ],
             "object_marking_refs": [
@@ -80,7 +93,9 @@
                 "Containers"
             ],
             "x_mitre_version": "2.0",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "Deploy Container",
+            "description_fa": "مخالفان ممکن است یک ظرف را به یک محیط برای تسهیل اجرای یا فرار از دفاع اعزام کنند. در برخی موارد، دشمنان ممکن است یک ظرف جدید برای اجرای فرآیندهای مرتبط با یک تصویر یا استقرار خاص، مانند فرایندهایی که اجرای یا دانلود بدافزار را انجام می دهند، به کار گیرند. در برخی دیگر، یک دشمن ممکن است یک ظرف جدید را بدون قوانین شبکه، محدودیت های کاربر و غیره برای دور زدن دفاع موجود در محیط زیست به کار گیرد. در محیط های Kubernetes، یک دشمن ممکن است تلاش کند تا یک ظرف ممتاز یا آسیب پذیر را به یک گره خاص تبدیل کند تا [Escape to Host] ([[CTI_PRESERVE_8] و دسترسی به ظروف دیگر که بر روی گره کار می کنند. [[ویرایش]\n\nکانتینرها را می توان با روش های مختلف مانند Docker’s [CTI_PRESERVE_0] و [CTI_PRESERVE] مستقر کرد. API ها یا از طریق یک برنامه وب مانند داشبورد Kubernetes یا Kubeflow. [[ویرایش] [[۵] [[۱۰]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰]]]] [[[۱۰]]]] [۹] در محیط های Kubernetes، ظروف ممکن است از طریق کارهایی مانند ReplicaSets یا DaemonSets مستقر شوند که می تواند به کانتینرها اجازه دهد در چندین گره مستقر شوند. [[ویرایش] عوامل جانبی ممکن است ظروف را بر اساس تصاویر بازیابی شده یا ساخته شده مخرب یا از تصاویر خوش خیم که بارگیری و اجرای محموله های مخرب در زمان اجرا استفاده می کنند. [[ویرایش] <code>create</code> <code>start</code> (Citation: AppSecco Kubernetes Namespace Breakout 2020) (Citation: Docker Container) (Citation: Kubernetes Dashboard) (Citation: Kubeflow Pipelines) (Citation: Kubernetes Workload Management) (Citation: Aqua Build Images on Hosts) https://attack.mitre.org/techniques/T1611"
         }
     ]
 }

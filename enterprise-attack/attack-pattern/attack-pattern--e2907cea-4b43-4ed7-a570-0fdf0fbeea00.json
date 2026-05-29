@@ -13,17 +13,21 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1151",
-                    "external_id": "T1151"
+                    "external_id": "T1151",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/649.html",
-                    "external_id": "CAPEC-649"
+                    "external_id": "CAPEC-649",
+                    "source_name_fa": "کلاه"
                 },
                 {
                     "source_name": "Mac Backdoors are back",
                     "description": "Dan Goodin. (2016, July 6). After hiatus, in-the-wild Mac backdoors are suddenly back. Retrieved July 8, 2017.",
-                    "url": "https://arstechnica.com/security/2016/07/after-hiatus-in-the-wild-mac-backdoors-are-suddenly-back/"
+                    "url": "https://arstechnica.com/security/2016/07/after-hiatus-in-the-wild-mac-backdoors-are-suddenly-back/",
+                    "source_name_fa": "Mac Backdoors بازگشته است",
+                    "description_fa": "دان گودین (2016، 6 ژوئیه) پس از وقفه، در درب های پشتی مک به طور ناگهانی بازگشته اند. Retrieved 8 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -56,7 +60,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "فضا بعد از Filename",
+            "description_fa": "مخالفان می توانند فایل های واقعی برنامه را با تغییر گسترش یک فایل پنهان کنند. با انواع فایل های خاص (به طور خاص این کار را با پسوندهای .app انجام نمی دهد)، ارسال یک فضا به انتهای یک نام فایل تغییر خواهد کرد که چگونه فایل توسط سیستم عامل پردازش می شود. به عنوان مثال، اگر یک فایل اجرایی Mach-O به نام Evil.bin وجود داشته باشد، زمانی که دو بار توسط یک کاربر کلیک می شود، ترمینال را راه اندازی می کند. برنامه و اجرا اگر این فایل به شر.txt تغییر نام داده شود، آنگاه که دو بار توسط یک کاربر کلیک شود، با درخواست ویرایش متن پیش فرض (نه اجرای باینری) راه اندازی می شود. با این حال، اگر فایل به “evil.txt” تغییر نام داده شود (توجه کنید که فضا در پایان است)، سپس هنگامی که دو بار توسط کاربر کلیک می شود، نوع فایل واقعی توسط سیستم عامل تعیین می شود و به طور مناسب اداره می شود و باینری اجرا خواهد شد (CTI_PRESERVE_0).\n\nمخالفان می توانند از این ویژگی برای فریب دادن کاربران به دو برابر کردن فایل های خوش خیم از هر فرمت و در نهایت اجرای چیزی مخرب استفاده کنند. (Citation: Mac Backdoors are back)"
         }
     ]
 }

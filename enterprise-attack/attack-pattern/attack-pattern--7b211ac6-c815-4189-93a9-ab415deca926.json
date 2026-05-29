@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1550/003",
-                    "external_id": "T1550.003"
+                    "external_id": "T1550.003",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Campbell 2014",
                     "description": "Campbell, C. (2014). The Secret Life of Krbtgt. Retrieved November 17, 2024.",
-                    "url": "https://defcon.org/images/defcon-22/dc-22-presentations/Campbell/DEFCON-22-Christopher-Campbell-The-Secret-Life-of-Krbtgt.pdf"
+                    "url": "https://defcon.org/images/defcon-22/dc-22-presentations/Campbell/DEFCON-22-Christopher-Campbell-The-Secret-Life-of-Krbtgt.pdf",
+                    "source_name_fa": "کمپبل 2014",
+                    "description_fa": "کمپبل، C. (2014) راز زندگی Krbtgt Retrieved ۱۷ نوامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "GentilKiwi Pass the Ticket",
                     "description": "Deply, B. (2014, January 13). Pass the ticket. Retrieved September 12, 2024.",
-                    "url": "https://web.archive.org/web/20210515214027/https://blog.gentilkiwi.com/securite/mimikatz/pass-the-ticket-kerberos"
+                    "url": "https://web.archive.org/web/20210515214027/https://blog.gentilkiwi.com/securite/mimikatz/pass-the-ticket-kerberos",
+                    "source_name_fa": "GentilKiwi Pass بلیط",
+                    "description_fa": "B. (2014، 13 ژانویه) بلیط را رد کنید. Retrieved 12 سپتامبر 2024"
                 },
                 {
                     "source_name": "ADSecurity AD Kerberos Attacks",
                     "description": "Metcalf, S. (2014, November 22). Mimikatz and Active Directory Kerberos Attacks. Retrieved June 2, 2016.",
-                    "url": "https://adsecurity.org/?p=556"
+                    "url": "https://adsecurity.org/?p=556",
+                    "source_name_fa": "امنیت AD Kerberos حمله",
+                    "description_fa": "متcalf، S. (2014، 22 نوامبر) Mimikatz و Active Directory Kerberos Attacks Retrieved 2 ژوئن 2016"
                 },
                 {
                     "source_name": "Stealthbits Overpass-the-Hash",
                     "description": "Warren, J. (2019, February 26). How to Detect Overpass-the-Hash Attacks. Retrieved February 4, 2021.",
-                    "url": "https://stealthbits.com/blog/how-to-detect-overpass-the-hash-attacks/"
+                    "url": "https://stealthbits.com/blog/how-to-detect-overpass-the-hash-attacks/",
+                    "source_name_fa": "دانلود زیرنویس فارسی فیلم Stealthbits Overpass",
+                    "description_fa": "وارن، جی (2019، 26 فوریه) چگونه حملات بیش از حد را خنثی کنیم Retrieved 4، 2021."
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2026-05-12T15:12:00.643Z",
             "name": "Pass the Ticket",
-            "description": "Adversaries may \u201cpass the ticket\u201d using stolen Kerberos tickets to move laterally within an environment, bypassing normal system access controls. Pass the ticket (PtT) is a method of authenticating to a system using Kerberos tickets without having access to an account's password. Kerberos authentication can be used as the first step to lateral movement to a remote system.\n\nWhen preforming PtT, valid Kerberos tickets for [Valid Accounts](https://attack.mitre.org/techniques/T1078) are captured by [OS Credential Dumping](https://attack.mitre.org/techniques/T1003). A user's service tickets or ticket granting ticket (TGT) may be obtained, depending on the level of access. A service ticket allows for access to a particular resource, whereas a TGT can be used to request service tickets from the Ticket Granting Service (TGS) to access any resource the user has privileges to access.(Citation: ADSecurity AD Kerberos Attacks)(Citation: GentilKiwi Pass the Ticket)\n\nA [Silver Ticket](https://attack.mitre.org/techniques/T1558/002) can be obtained for services that use Kerberos as an authentication mechanism and are used to generate tickets to access that particular resource and the system that hosts the resource (e.g., SharePoint).(Citation: ADSecurity AD Kerberos Attacks)\n\nA [Golden Ticket](https://attack.mitre.org/techniques/T1558/001) can be obtained for the domain using the Key Distribution Service account KRBTGT account NTLM hash, which enables generation of TGTs for any account in Active Directory.(Citation: Campbell 2014)\n\nAdversaries may also create a valid Kerberos ticket using other user information, such as stolen password hashes or AES keys. For example, \"overpassing the hash\" involves using a NTLM password hash to authenticate as a user (i.e. [Pass the Hash](https://attack.mitre.org/techniques/T1550/002)) while also using the password hash to create a valid Kerberos ticket.(Citation: Stealthbits Overpass-the-Hash)",
+            "description": "Adversaries may “pass the ticket” using stolen Kerberos tickets to move laterally within an environment, bypassing normal system access controls. Pass the ticket (PtT) is a method of authenticating to a system using Kerberos tickets without having access to an account's password. Kerberos authentication can be used as the first step to lateral movement to a remote system.\n\nWhen preforming PtT, valid Kerberos tickets for [Valid Accounts](https://attack.mitre.org/techniques/T1078) are captured by [OS Credential Dumping](https://attack.mitre.org/techniques/T1003). A user's service tickets or ticket granting ticket (TGT) may be obtained, depending on the level of access. A service ticket allows for access to a particular resource, whereas a TGT can be used to request service tickets from the Ticket Granting Service (TGS) to access any resource the user has privileges to access.(Citation: ADSecurity AD Kerberos Attacks)(Citation: GentilKiwi Pass the Ticket)\n\nA [Silver Ticket](https://attack.mitre.org/techniques/T1558/002) can be obtained for services that use Kerberos as an authentication mechanism and are used to generate tickets to access that particular resource and the system that hosts the resource (e.g., SharePoint).(Citation: ADSecurity AD Kerberos Attacks)\n\nA [Golden Ticket](https://attack.mitre.org/techniques/T1558/001) can be obtained for the domain using the Key Distribution Service account KRBTGT account NTLM hash, which enables generation of TGTs for any account in Active Directory.(Citation: Campbell 2014)\n\nAdversaries may also create a valid Kerberos ticket using other user information, such as stolen password hashes or AES keys. For example, \"overpassing the hash\" involves using a NTLM password hash to authenticate as a user (i.e. [Pass the Hash](https://attack.mitre.org/techniques/T1550/002)) while also using the password hash to create a valid Kerberos ticket.(Citation: Stealthbits Overpass-the-Hash)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -62,7 +71,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "ارسال بلیط",
+            "description_fa": "مخالفان ممکن است با استفاده از بلیط های به سرقت رفته Kerberos برای حرکت بعدا در یک محیط، دور زدن کنترل دسترسی به سیستم طبیعی. بلیط (PtT) یک روش معتبر بودن به سیستم با استفاده از بلیط های Kerberos بدون دسترسی به رمز عبور حساب است. احراز هویت Kerberos را می توان به عنوان اولین گام برای حرکت بعدی به یک سیستم از راه دور استفاده کرد.\n\nهنگامی که از پیش تعیین شده است، بلیط های معتبر Kerberos برای [حساب های معتبر] [[[۱۰]] [[۱۰]]] ([[۱۰]]]) توسط [OS Credential Dumping] ([[[۱۰] [[۱۰]]) گرفته شده است. بلیط خدمات کاربر یا بلیط اعطای بلیط (TGT) ممکن است بسته به سطح دسترسی به دست آید. یک بلیط خدمات اجازه دسترسی به یک منبع خاص را می دهد، در حالی که TGT می تواند برای درخواست بلیط خدمات از سرویس اعطای بلیط (TGS) برای دسترسی به هر منبع کاربر امتیازاتی برای دسترسی داشته باشد.[۷] [CTI_PRESERVE_0] [CTI_PRESERVE]\n\n[Silver Ticket] ([[I_PRESERVE_7] می تواند برای خدماتی که از Kerberos به عنوان یک مکانیسم احراز هویت استفاده می کنند و برای تولید بلیط برای دسترسی به آن منبع خاص و سیستم میزبان منابع (به عنوان مثال، SharePoint) استفاده می شوند.\n\n(یک بلیط طلایی) [[[۱۰]] [[۱۰]]_PRESERVE_۸] می تواند برای دامنه با استفاده از حساب سرویس توزیع کلیدی KRBTGT NTLM، که نسل TGTs را برای هر حساب در Active Directory فعال می کند، به دست آورد.\n\nمخالفان همچنین ممکن است یک بلیط معتبر Kerberos با استفاده از سایر اطلاعات کاربر مانند هش رمز عبور سرقت شده یا کلیدهای AES ایجاد کنند. به عنوان مثال، “بیش از هش” شامل استفاده از هش رمز عبور NTLM برای تأیید به عنوان یک کاربر (به عنوان مثال [Pass the Hash] ([CTI_PRESERVE_9]) و همچنین استفاده از هش رمز عبور برای ایجاد یک بلیط معتبر Kerberos است. [[ویرایش] (Citation: ADSecurity AD Kerberos Attacks) (Citation: GentilKiwi Pass the Ticket) (Citation: ADSecurity AD Kerberos Attacks) (Citation: Campbell 2014) (Citation: Stealthbits Overpass-the-Hash) https://attack.mitre.org/techniques/T1078 https://attack.mitre.org/techniques/T1003 https://attack.mitre.org/techniques/T1558/002 https://attack.mitre.org/techniques/T1558/001 https://attack.mitre.org/techniques/T1550/002"
         }
     ]
 }

@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1552/006",
-                    "external_id": "T1552.006"
+                    "external_id": "T1552.006",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Obscuresecurity Get-GPPPassword",
                     "description": "Campbell, C. (2012, May 24). GPP Password Retrieval with PowerShell. Retrieved April 11, 2018.",
-                    "url": "https://obscuresecurity.blogspot.co.uk/2012/05/gpp-password-retrieval-with-powershell.html"
+                    "url": "https://obscuresecurity.blogspot.co.uk/2012/05/gpp-password-retrieval-with-powershell.html",
+                    "source_name_fa": "امنیت Get-GPPPassword",
+                    "description_fa": "کمپبل، C. (2012، 24 مه) GPP Password Retrieval با PowerShell Retrieved 11 آوریل 2018"
                 },
                 {
                     "source_name": "Microsoft GPP 2016",
                     "description": "Microsoft. (2016, August 31). Group Policy Preferences. Retrieved March 9, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v%3Dws.11)"
+                    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn581922(v%3Dws.11)",
+                    "source_name_fa": "Microsoft GPP 2016",
+                    "description_fa": "مایکروسافت (2016، 31 آگوست) Group Policy Preferences Retrieved 9 مارس 2020"
                 },
                 {
                     "source_name": "Microsoft GPP Key",
                     "description": "Microsoft. (n.d.). 2.2.1.1.4 Password Encryption. Retrieved April 11, 2018.",
-                    "url": "https://msdn.microsoft.com/library/cc422924.aspx"
+                    "url": "https://msdn.microsoft.com/library/cc422924.aspx",
+                    "source_name_fa": "Microsoft GPP کلید کلیدی",
+                    "description_fa": "مایکروسافت (n.d.) 2.2.1.1.4 رمزگذاری رمز عبور Retrieved 11 آوریل 2018"
                 },
                 {
                     "source_name": "ADSecurity Finding Passwords in SYSVOL",
                     "description": "Sean Metcalf. (2015, December 28). Finding Passwords in SYSVOL & Exploiting Group Policy Preferences. Retrieved February 17, 2020.",
-                    "url": "https://adsecurity.org/?p=2288"
+                    "url": "https://adsecurity.org/?p=2288",
+                    "source_name_fa": "کشف رمز عبور در SYSVOL",
+                    "description_fa": "شان متcalf (2015، 28 دسامبر) پیدا کردن رمز عبور در SYSVOL و Exploiting Group Policy Preferences Retrieved ۱۷ فوریه ۲۰۲۰"
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2026-05-12T15:12:00.705Z",
             "name": "Group Policy Preferences",
-            "description": "Adversaries may attempt to find unsecured credentials in Group Policy Preferences (GPP). GPP are tools that allow administrators to create domain policies with embedded credentials. These policies allow administrators to set local accounts.(Citation: Microsoft GPP 2016)\n\nThese group policies are stored in SYSVOL on a domain controller. This means that any domain user can view the SYSVOL share and decrypt the password (using the AES key that has been made public).(Citation: Microsoft GPP Key)\n\nThe following tools and scripts can be used to gather and decrypt the password file from Group Policy Preference XML files:\n\n* Metasploit\u2019s post exploitation module: <code>post/windows/gather/credentials/gpp</code>\n* Get-GPPPassword(Citation: Obscuresecurity Get-GPPPassword)\n* gpprefdecrypt.py\n\nOn the SYSVOL share, adversaries may use the following command to enumerate potential GPP XML files: <code>dir /s * .xml</code>\n",
+            "description": "Adversaries may attempt to find unsecured credentials in Group Policy Preferences (GPP). GPP are tools that allow administrators to create domain policies with embedded credentials. These policies allow administrators to set local accounts.(Citation: Microsoft GPP 2016)\n\nThese group policies are stored in SYSVOL on a domain controller. This means that any domain user can view the SYSVOL share and decrypt the password (using the AES key that has been made public).(Citation: Microsoft GPP Key)\n\nThe following tools and scripts can be used to gather and decrypt the password file from Group Policy Preference XML files:\n\n* Metasploit’s post exploitation module: <code>post/windows/gather/credentials/gpp</code>\n* Get-GPPPassword(Citation: Obscuresecurity Get-GPPPassword)\n* gpprefdecrypt.py\n\nOn the SYSVOL share, adversaries may use the following command to enumerate potential GPP XML files: <code>dir /s * .xml</code>\n",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -58,7 +67,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "Group Policy Preferences",
+            "description_fa": "مخالفان ممکن است تلاش کنند تا اعتبار نامه های ناامن در تنظیمات سیاست گروه (GPP) پیدا کنند. GPP ابزارهایی هستند که به مدیران اجازه می دهد سیاست های دامنه را با اعتبار های جاسازی شده ایجاد کنند. این سیاست ها به مدیران اجازه می دهد تا حساب های محلی را تنظیم کنند. [[ویرایش]\n\nاین سیاست های گروهی در SYSVOL در یک کنترل کننده دامنه ذخیره می شوند. این بدان معنی است که هر کاربر دامنه می تواند سهم SYSVOL را مشاهده کند و رمز عبور را رمزگشایی کند (با استفاده از کلید AES که عمومی شده است). [[ویرایش]\n\nابزار و اسکریپت های زیر می توانند برای جمع آوری و رمزگشایی فایل رمز عبور از فایل های XML Group Policy استفاده شوند:\n\n* ماژول بهره برداری پس از متااسپلویت: [CTI_PRESERVE_0]\n· Get-GPPPassword [[۱۰] [[۱۰] [۱۰]\ngpprefdecrypt.py\n\nدر سهم SYSVOL، دشمنان ممکن است از دستور زیر برای استفاده از فایل های بالقوه GPP XML استفاده کنند: [[ویرایش] <code>post/windows/gather/credentials/gpp</code> <code>dir /s * .xml</code> (Citation: Microsoft GPP 2016) (Citation: Microsoft GPP Key) (Citation: Obscuresecurity Get-GPPPassword)"
         }
     ]
 }

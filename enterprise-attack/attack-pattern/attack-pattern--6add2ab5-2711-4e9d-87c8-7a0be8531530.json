@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1003/005",
-                    "external_id": "T1003.005"
+                    "external_id": "T1003.005",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "PassLib mscache",
                     "description": "Eli Collins. (2016, November 25). Windows' Domain Cached Credentials v2. Retrieved February 21, 2020.",
-                    "url": "https://passlib.readthedocs.io/en/stable/lib/passlib.hash.msdcc2.html"
+                    "url": "https://passlib.readthedocs.io/en/stable/lib/passlib.hash.msdcc2.html",
+                    "source_name_fa": "PassLib mscache",
+                    "description_fa": "الی کالینز (2016، 25 نوامبر) Windows' Domain cached Credentials v2 Retrieved 21 فوریه 2020"
                 },
                 {
                     "source_name": "ired mscache",
                     "description": "Mantvydas Baranauskas. (2019, November 16). Dumping and Cracking mscash - Cached Domain Credentials. Retrieved February 21, 2020.",
-                    "url": "https://ired.team/offensive-security/credential-access-and-credential-dumping/dumping-and-cracking-mscash-cached-domain-credentials"
+                    "url": "https://ired.team/offensive-security/credential-access-and-credential-dumping/dumping-and-cracking-mscash-cached-domain-credentials",
+                    "source_name_fa": "● mscache",
+                    "description_fa": "Mantvydas Baranauskas (2019، 16 نوامبر) Dumping and Cracking mscash – پنهان کردن Domain Credentials Retrieved 21 فوریه 2020"
                 },
                 {
                     "source_name": "Microsoft - Cached Creds",
                     "description": "Microsoft. (2016, August 21). Cached and Stored Credentials Technical Overview. Retrieved February 21, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994565(v%3Dws.11)"
+                    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994565(v%3Dws.11)",
+                    "source_name_fa": "Microsoft - cached Creds",
+                    "description_fa": "مایکروسافت (2016، 21 آگوست) پنهان و ذخیره Credentials بررسی فنی. Retrieved 21 فوریه 2020"
                 },
                 {
                     "source_name": "Powersploit",
                     "description": "PowerSploit. (n.d.). Retrieved December 4, 2014.",
-                    "url": "https://github.com/mattifestation/PowerSploit"
+                    "url": "https://github.com/mattifestation/PowerSploit",
+                    "source_name_fa": "Powersploit",
+                    "description_fa": "قدرت (n.d.) Retrieved 4 دسامبر 2014"
                 },
                 {
                     "source_name": "Brining MimiKatz to Unix",
                     "description": "Tim Wadhwa-Brown. (2018, November). Where 2 worlds collide Bringing Mimikatz et al to UNIX. Retrieved October 13, 2021.",
-                    "url": "https://labs.portcullis.co.uk/download/eu-18-Wadhwa-Brown-Where-2-worlds-collide-Bringing-Mimikatz-et-al-to-UNIX.pdf"
+                    "url": "https://labs.portcullis.co.uk/download/eu-18-Wadhwa-Brown-Where-2-worlds-collide-Bringing-Mimikatz-et-al-to-UNIX.pdf",
+                    "source_name_fa": "Brining MimiKatz به یونیکس",
+                    "description_fa": "Tim Wadhwa-Brown (2018، نوامبر) در جایی که دو جهان با آوردن Mimikatz et al به UNIX برخورد می کنند. Retrieved 13 اکتبر 2021."
                 }
             ],
             "object_marking_refs": [
@@ -69,7 +80,9 @@
                 "Windows",
                 "Linux"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "پنهان کردن Domain Credentials",
+            "description_fa": "مخالفان ممکن است تلاش کنند تا به اعتبار دامنه های ذخیره شده که برای اجازه دادن به تأیید هویت در صورتی که کنترل کننده دامنه در دسترس نباشد، دسترسی پیدا کنند. [[ویرایش]\n\nدر ویندوز ویستا و جدیدتر، فرمت هش DCC2 است (Domain cached Credentials version 2) هش، همچنین به عنوان MS-Cache v2 هش شناخته شده است. تعداد اعتبارهای ذخیره سازی پیش فرض متفاوت است و می تواند در هر سیستم تغییر کند. این پیوند اجازه نمی دهد که حملات سبک عبوری صورت گیرد و به جای آن به [Password Cracking] نیاز دارد ([۱۰] [[۱۰]_PRESERVE_۶] برای بازیابی رمز عبور متن ساده [[۱۰]\n\nدر سیستم های لینوکس، اعتبار Active Directory را می توان از طریق caches حفظ شده توسط نرم افزار مانند سرویس های امنیتی سیستم Daemon (SSSD) یا خدمات تأییدیه Quest (قبلا VAS) به دست آورد. هش های اعتباری پنهان به طور معمول در \"/var/lib/sss/db/cache\" واقع شده اند.[۷] کاربران می توانند از خدمات مانند {tdbdump} در این فایل های پایگاه داده استفاده کنند تا هش های ذخیره شده را تخلیه کرده و از [Password Cracking] استفاده کنند ([[CTI_PRESERVE_7] برای به دست آوردن رمز عبور ساده.\n\nبا دسترسی به سیستم یا sudo، ابزار / مزایایی مانند [Mimikatz] ([[CTI_PRESERVE_8])، [Reg] [[CTI_PRESERVE_9]، و اسرار مصرف برای ویندوز یا Linikatz برای لینوکس می تواند برای استخراج اعتبار استفاده شود. [[ویرایش]\n\nتوجه: رزرو اعتبار برای ویندوز ویستا با استفاده از PBKDF2 مشتق شده است. [CTI_PRESERVE_5] (Citation: Microsoft - Cached Creds) (Citation: PassLib mscache) (Citation: ired mscache) (Citation: Brining MimiKatz to Unix) (Citation: Brining MimiKatz to Unix) (Citation: PassLib mscache) https://attack.mitre.org/techniques/T1110/002 https://attack.mitre.org/techniques/T1110/002 https://attack.mitre.org/software/S0002 https://attack.mitre.org/software/S0075"
         }
     ]
 }

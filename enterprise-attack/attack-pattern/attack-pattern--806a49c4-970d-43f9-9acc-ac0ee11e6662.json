@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/002",
-                    "external_id": "T1055.002"
+                    "external_id": "T1055.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Elastic Process Injection July 2017",
                     "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017.",
-                    "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
+                    "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process",
+                    "source_name_fa": "Elastic Process injection جولای 2017",
+                    "description_fa": "حسینی، A. (2017، 18 ژوئیه) ده تکنیک تزریق فرایند: یک بررسی فنی از تکنیک های تزریق معمول و روندی. Retrieved 7 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -47,7 +50,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "قابل حمل Executable تزریقی",
+            "description_fa": "مخالفان ممکن است عملیات های قابل حمل (PE) را به منظور جلوگیری از عملیات مبتنی بر فرآیند و همچنین احتمالا امتیازات بالا تزریق کنند. تزریق PE یک روش برای اجرای کد خودسرانه در فضای آدرس یک فرآیند جداگانه زندگی است.\n\nتزریق PE معمولا با کپی کردن کد (شاید بدون فایل روی دیسک) به فضای آدرس مجازی فرآیند هدف قبل از اینکه آن را از طریق یک رشته جدید وارد کنید، انجام می شود. این نوشتار می تواند با درخواست های ویندوز بومی مانند [CTI_PRESERVE_0] و [CTI_PRESERVE] اجرا شود، سپس با [CTI_PRESERVE_2] یا کد اضافی (ex: Shellcode) استفاده شود. جابجایی کد تزریق، نیاز اضافی را برای عملکرد برای بازگرداندن ارجاعات حافظه را معرفی می کند. [[ویرایش]\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق تزریق PE نیز ممکن است از تشخیص محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. <code>VirtualAllocEx</code> <code>WriteProcessMemory</code> <code>CreateRemoteThread</code> (Citation: Elastic Process Injection July 2017)"
         }
     ]
 }

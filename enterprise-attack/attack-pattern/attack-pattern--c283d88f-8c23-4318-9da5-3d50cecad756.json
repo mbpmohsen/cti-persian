@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1059/013",
-                    "external_id": "T1059.013"
+                    "external_id": "T1059.013",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Docker Desktop CLI",
                     "description": "dockerdocs. (n.d.). Use the Docker Desktop CLI. Retrieved October 21, 2025.",
-                    "url": "https://docs.docker.com/desktop/features/desktop-cli/"
+                    "url": "https://docs.docker.com/desktop/features/desktop-cli/",
+                    "source_name_fa": "Docker Desktop CLI",
+                    "description_fa": "dockerdocs استفاده از Docker Desktop CLI Retrieved 21 اکتبر 2025"
                 },
                 {
                     "source_name": "Cisco Talos Blog",
                     "description": "Jaeson Schultz, Darin Smith. (2022, April 21). TeamTNT Targeting AWS, Alibaba. Retrieved June 15, 2025.",
-                    "url": "https://blog.talosintelligence.com/teamtnt-targeting-aws-alibaba-2/"
+                    "url": "https://blog.talosintelligence.com/teamtnt-targeting-aws-alibaba-2/",
+                    "source_name_fa": "سیسکو Talos Blog",
+                    "description_fa": "Jaeson Schultz، Darin Smith (۲۰۲۲، ۲۱ آوریل) تیمTNT هدف قرار دادن AWS، علی بابا Retrieved 15 ژوئن 2025"
                 },
                 {
                     "source_name": "Intezer",
                     "description": "Nicole Fishbein. (2020, July 28). Watch Your Containers: Doki Infecting Docker Servers in the Cloud. Retrieved June 15, 2025.",
-                    "url": "https://intezer.com/blog/watch-your-containers-doki-infecting-docker-servers-in-the-cloud/"
+                    "url": "https://intezer.com/blog/watch-your-containers-doki-infecting-docker-servers-in-the-cloud/",
+                    "source_name_fa": "Intezer",
+                    "description_fa": "نیکول فیشین (2020، 28 ژوئیه) مراقب خود باشید Containers: Doki Ininf Docker Servers در Cloud Retrieved 15 ژوئن 2025"
                 },
                 {
                     "source_name": "aquasec",
                     "description": "Ofek Itach, Assaf Morag. (2023, July 13). TeamTNT Reemerged with New Aggressive Cloud Campaign. Retrieved June 15, 2025.",
-                    "url": "https://www.aquasec.com/blog/teamtnt-reemerged-with-new-aggressive-cloud-campaign/"
+                    "url": "https://www.aquasec.com/blog/teamtnt-reemerged-with-new-aggressive-cloud-campaign/",
+                    "source_name_fa": "آب نبات",
+                    "description_fa": "Assaf Morag (۲۰۲۳، ۱۳ ژوئیه) تیمTNT بازگشت به کمپین جدید Cloud Retrieved 15 ژوئن 2025"
                 }
             ],
             "object_marking_refs": [
@@ -62,7 +71,9 @@
                 "Containers"
             ],
             "x_mitre_version": "1.0",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "Container/API CLI",
+            "description_fa": "مخالفان ممکن است از ابزارهای داخلی CLI یا API برای اجرای دستورات مخرب در محیط های containerized سوء استفاده کنند.\n\nDocker CLI برای مدیریت ظروف از طریق یک نقطه API در معرض از \"dockerd' daemon استفاده می شود. برخی از نمونه های رایج Docker Desktop و Docker Compose را شامل می شوند، اما کاربران می توانند از SDK ها برای تعامل با API استفاده کنند. به عنوان مثال، Docker SDK برای پایتون می تواند برای اجرای دستورات در یک برنامه پایتون استفاده شود. [[ویرایش]\n\n[[رده:رده ها]]، [[رده:]]، [[رده]]، [[رده:رده:]]، [[رده:رده:]]، [[رده:رده:رده:رده:]]، [[رده:رده: [[رده:رده:رده:رده:رده:رده: [[رده:رده:رده:رده:رده:رده:رده:رده:رده:رده:رده:رده:رده:رده: [[رده:رده:رده:رده:رده ها]] در برخی موارد، بازیگران تهدید ممکن است تصاویر قانونی را که شامل اسکریپت ها یا ابزارهایی است که می توانند از آن استفاده کنند، به عنوان مثال، با استفاده از یک تصویر که شامل دستور ‘curl’ برای بارگیری محموله ها می شود. همچنین ممکن است از «تأکّر» و «وَهُ» استفاده کند تا متغیرهای محیط ابری و دیگر ظروف در حال اجرا را اسکن کند (به عنوان مثال، [Container and source Discovery] [[[CTI_PRESERVE_9].\n\nKubernetes مسئول مدیریت و ارکستر ظروف در سراسر خوشه ها است. هواپیمای کنترل Kubernetes که حالت خوشه را مدیریت می کند و مسئول برنامه ریزی، ارتباطات و نظارت بر منابع است، می تواند به طور مستقیم از طریق API یا به طور غیرمستقیم از طریق ابزارهایی مانند kubectl استفاده شود. همچنین ممکن است در کتابخانه های مشتری مانند Go یا Python قابل دسترسی باشد. با استفاده از API، مدیران می توانند با منابع درون خوشه مانند لیست یا ایجاد پدها، که یک گروه از یک یا چند ظروف است، ارتباط برقرار کنند. کلمات کلیدی سرور API را از طریق \"curl\" یا ابزارهای دیگر می نامند و به آنها اجازه می دهد تا اطلاعات بیشتری در مورد محیط مانند pods، استقرار، daemonsets، namespaces یا sysvars بدست آورند. آنها همچنین ممکن است دستورات مختلفی را در مورد مدیریت منابع اجرا کنند. (Citation: Docker Desktop CLI) (Citation: Intezer) (Citation: Cisco Talos Blog) (Citation: aquasec) (Citation: aquasec) https://attack.mitre.org/techniques/T1105 https://attack.mitre.org/techniques/T1612 https://attack.mitre.org/techniques/T1610 https://attack.mitre.org/techniques/T1609 https://attack.mitre.org/techniques/T1613"
         }
     ]
 }

@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1547/007",
-                    "external_id": "T1547.007"
+                    "external_id": "T1547.007",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Re-Open windows on Mac",
                     "description": "Apple. (2016, December 6). Automatically re-open windows, apps, and documents on your Mac. Retrieved July 11, 2017.",
-                    "url": "https://support.apple.com/en-us/HT204005"
+                    "url": "https://support.apple.com/en-us/HT204005",
+                    "source_name_fa": "پنجره های باز روی مک",
+                    "description_fa": "اپل (2016، 6 دسامبر) به طور خودکار پنجره ها، برنامه ها و اسناد را بر روی مک خود باز کنید. Retrieved 11 ژوئیه 2017"
                 },
                 {
                     "source_name": "Methods of Mac Malware Persistence",
                     "description": "Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "روش های Mac Malware Pertin",
+                    "description_fa": "پاتریک واردل (2014, سپتامبر) روش های بدافزار بر روی Mac OS X Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "Wardle Persistence Chapter",
                     "description": "Patrick Wardle. (n.d.). Chapter 0x2: Persistence. Retrieved April 13, 2022.",
-                    "url": "https://taomm.org/PDFs/vol1/CH%200x02%20Persistence.pdf"
+                    "url": "https://taomm.org/PDFs/vol1/CH%200x02%20Persistence.pdf",
+                    "source_name_fa": "فصل اجباری",
+                    "description_fa": "پاتریک واردل فصل 0x2: پر اصرار Retrieved 13، 2022."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2025-10-24T17:49:32.375Z",
             "name": "Re-opened Applications",
-            "description": "Adversaries may modify plist files to automatically run an application when a user logs in. When a user logs out or restarts via the macOS Graphical User Interface (GUI), a prompt is provided to the user with a checkbox to \"Reopen windows when logging back in\".(Citation: Re-Open windows on Mac) When selected, all applications currently open are added to a property list file named <code>com.apple.loginwindow.[UUID].plist</code> within the <code>~/Library/Preferences/ByHost</code> directory.(Citation: Methods of Mac Malware Persistence)(Citation: Wardle Persistence Chapter) Applications listed in this file are automatically reopened upon the user\u2019s next logon.\n\nAdversaries can establish [Persistence](https://attack.mitre.org/tactics/TA0003) by adding a malicious application path to the <code>com.apple.loginwindow.[UUID].plist</code> file to execute payloads when a user logs in.",
+            "description": "Adversaries may modify plist files to automatically run an application when a user logs in. When a user logs out or restarts via the macOS Graphical User Interface (GUI), a prompt is provided to the user with a checkbox to \"Reopen windows when logging back in\".(Citation: Re-Open windows on Mac) When selected, all applications currently open are added to a property list file named <code>com.apple.loginwindow.[UUID].plist</code> within the <code>~/Library/Preferences/ByHost</code> directory.(Citation: Methods of Mac Malware Persistence)(Citation: Wardle Persistence Chapter) Applications listed in this file are automatically reopened upon the user’s next logon.\n\nAdversaries can establish [Persistence](https://attack.mitre.org/tactics/TA0003) by adding a malicious application path to the <code>com.apple.loginwindow.[UUID].plist</code> file to execute payloads when a user logs in.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -57,7 +64,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "درخواست های باز",
+            "description_fa": "مجرمان ممکن است فایل های لیست را تغییر دهند تا به طور خودکار یک برنامه را اجرا کنند زمانی که یک کاربر وارد می شود. هنگامی که یک کاربر از طریق رابط کاربری گرافیکی macOS (GUI) شروع به کار می کند، یک بار به کاربر با یک چک باکس برای \"باز کردن پنجره ها در هنگام ورود به داخل\" ارائه می شود. هنگامی که انتخاب می شود، همه برنامه ها در حال حاضر به یک فایل لیست اموال به نام [CTI_PRESERVE_0] در داخل پوشه [CTI_PRESERVE] اضافه می شوند. برنامه های ذکر شده در این فایل به طور خودکار بر روی آرم بعدی کاربر باز می شوند.\n\nهمچنین می تواند با اضافه کردن یک مسیر نرم افزاری ([۱۰] ([۲]]) برای اجرای محموله هایی که کاربر وارد آن می شود، اجرا کند. <code>com.apple.loginwindow.[UUID].plist</code> <code>~/Library/Preferences/ByHost</code> <code>com.apple.loginwindow.[UUID].plist</code> (Citation: Re-Open windows on Mac) (Citation: Methods of Mac Malware Persistence) (Citation: Wardle Persistence Chapter) https://attack.mitre.org/tactics/TA0003"
         }
     ]
 }

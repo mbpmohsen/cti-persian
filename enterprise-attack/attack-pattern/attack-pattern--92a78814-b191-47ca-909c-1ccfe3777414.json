@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1072",
-                    "external_id": "T1072"
+                    "external_id": "T1072",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Fortinet Zero-Day and Custom Malware Used by Suspected Chinese Actor in Espionage Operation",
                     "description": "ALEXANDER MARVI, BRAD SLAYBAUGH, DAN EBREO, TUFAIL AHMED, MUHAMMAD UMAIR, TINA JOHNSON. (2023, March 16). Fortinet Zero-Day and Custom Malware Used by Suspected Chinese Actor in Espionage Operation. Retrieved May 15, 2023.",
-                    "url": "https://www.mandiant.com/resources/blog/fortinet-malware-ecosystem"
+                    "url": "https://www.mandiant.com/resources/blog/fortinet-malware-ecosystem",
+                    "source_name_fa": "Fortinet Zero-Day و Custom Malware استفاده شده توسط یک بازیگر چینی مشکوک در عملیات جاسوسی",
+                    "description_fa": "ALEXANDER MARVI، BRAD SLAYBAUGH، DAN EBREO، TUFAIL AHMED، MUHAMMAD UMAIR، TINAJ (2023، 16 مارس). Fortinet Zero-Day و Custom Malware استفاده شده توسط بازیگر چینی مشکوک در عملیات جاسوسی. Retrieved 15، 2023."
                 },
                 {
                     "source_name": "SpecterOps Lateral Movement from Azure to On-Prem AD 2020",
                     "description": "Andy Robbins. (2020, August 17). Death from Above: Lateral Movement from Azure to On-Prem AD. Retrieved March 13, 2023.",
-                    "url": "https://posts.specterops.io/death-from-above-lateral-movement-from-azure-to-on-prem-ad-d18cb3959d4d"
+                    "url": "https://posts.specterops.io/death-from-above-lateral-movement-from-azure-to-on-prem-ad-d18cb3959d4d",
+                    "source_name_fa": "SpecterOps Lateral Movement از Azure به On-Prem AD 2020",
+                    "description_fa": "اندی رابینز (2020, 17 آگوست) مرگ از بالا: حرکت بعدی از Azure به On-Prem AD Retrieved 13 مارس 2023."
                 },
                 {
                     "source_name": "Mitiga Security Advisory: SSM Agent as Remote Access Trojan",
                     "description": "Ariel Szarf, Or Aspir. (n.d.). Mitiga Security Advisory: Abusing the SSM Agent as a Remote Access Trojan. Retrieved January 31, 2024.",
-                    "url": "https://www.mitiga.io/blog/mitiga-security-advisory-abusing-the-ssm-agent-as-a-remote-access-trojan"
+                    "url": "https://www.mitiga.io/blog/mitiga-security-advisory-abusing-the-ssm-agent-as-a-remote-access-trojan",
+                    "source_name_fa": "امنیت میگا توصیه: SSM Agent به عنوان Remote Access تروجان",
+                    "description_fa": "آری آری، یا آسپرین. امنیت میگا مشاوره: اخراج مامور اس ام به عنوان یک تروجان دسترسی از راه دور. Retrieved 31 ژانویه 2024"
                 }
             ],
             "object_marking_refs": [
@@ -67,7 +74,9 @@
                 "Windows"
             ],
             "x_mitre_version": "3.2",
-            "x_mitre_remote_support": false
+            "x_mitre_remote_support": false,
+            "name_fa": "نرم افزار Deployment Tools",
+            "description_fa": "مخالفان ممکن است دسترسی به و استفاده از سوئیت های نرم افزاری متمرکز نصب شده در داخل یک شرکت برای اجرای دستورات و حرکت به طور بعدی از طریق شبکه به دست آورند. برنامه های مدیریت پیکربندی و استقرار نرم افزار ممکن است در یک شبکه سازمانی یا محیط ابری برای اهداف مدیریت روزمره استفاده شود. این سیستم ها همچنین ممکن است به خطوط لوله CI/CD متصل شوند. نمونه هایی از این راه حل ها عبارتند از: SCCM، HBSS، Altiris، AWS Systems Manager، Microsoft Intune، Azure Arc و GCP Deployment Manager.\n\nدسترسی به نرم افزار مدیریت endpoint در سراسر شبکه یا شرکت ممکن است یک دشمن را برای دستیابی به اجرای کد از راه دور در تمام سیستم های متصل فعال کند. این دسترسی ممکن است برای حرکت به سیستم های دیگر، جمع آوری اطلاعات یا ایجاد یک اثر خاص، مانند پاک کردن هارد دیسک در تمام نقاط انتهایی استفاده شود.\n\nخدمات مدیریت پیکربندی مبتنی بر SaaS ممکن است به طور گسترده (فرماندهی مدیریت ابری) ([CTI_PRESERVE_3] در موارد میزبان ابر و همچنین اجرای دستورات خودسرانه در نقاط پایانی پیش بینی شده اجازه دهد. به عنوان مثال، Microsoft Configuration Manager به مدیران Global یا Intune اجازه می دهد تا اسکریپت ها را به عنوان سیستم در دستگاه های On-premise به Entra ID اجرا کنند. این سرویس ها همچنین می توانند از [پروتکل های وب] استفاده کنند ([CTI_PRESERVE_4] تا به زیرساخت های متعلق به دشمن ارتباط برقرار کنند.\n\nدستگاه های زیرساخت شبکه همچنین ممکن است ابزارهای مدیریت پیکربندی داشته باشند که می توانند به طور مشابه توسط دشمنان مورد سوء استفاده قرار گیرند. [[ویرایش]\n\nمجوز های مورد نیاز برای این عمل با پیکربندی سیستم متفاوت است؛ مدارک محلی ممکن است با دسترسی مستقیم به سیستم شخص ثالث یا مدارک دامنه خاص مورد نیاز باشد. با این حال، سیستم ممکن است نیاز به یک حساب اداری برای ورود یا دسترسی به قابلیت های خاص داشته باشد. (Citation: SpecterOps Lateral Movement from Azure to On-Prem AD 2020) (Citation: Mitiga Security Advisory: SSM Agent as Remote Access Trojan) (Citation: Fortinet Zero-Day and Custom Malware Used by Suspected Chinese Actor in Espionage Operation) https://attack.mitre.org/techniques/T1651 https://attack.mitre.org/techniques/T1071/001"
         }
     ]
 }

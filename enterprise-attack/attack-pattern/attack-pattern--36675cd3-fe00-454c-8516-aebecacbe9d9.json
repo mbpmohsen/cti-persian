@@ -13,32 +13,42 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1162",
-                    "external_id": "T1162"
+                    "external_id": "T1162",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Adding Login Items",
                     "description": "Apple. (2016, September 13). Adding Login Items. Retrieved July 11, 2017.",
-                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html"
+                    "url": "https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html",
+                    "source_name_fa": "اضافه کردن موارد ورود",
+                    "description_fa": "اپل (2016، 13 سپتامبر) اضافه کردن آیتم های ورود Retrieved 11 ژوئیه 2017"
                 },
                 {
                     "source_name": "Methods of Mac Malware Persistence",
                     "description": "Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "روش های Mac Malware Pertin",
+                    "description_fa": "پاتریک واردل (2014, سپتامبر) روش های بدافزار بر روی Mac OS X Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "Malware Persistence on OS X",
                     "description": "Patrick Wardle. (2015). Malware Persistence on OS X Yosemite. Retrieved July 10, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "بدافزاری که بر OS X پافشاری می کند",
+                    "description_fa": "پاتریک واردل (2015) بدافزار با اصرار بر OS X Yosemite Retrieved 10 ژوئیه 2017"
                 },
                 {
                     "source_name": "OSX.Dok Malware",
                     "description": "Thomas Reed. (2017, July 7). New OSX.Dok malware intercepts web traffic. Retrieved July 10, 2017.",
-                    "url": "https://blog.malwarebytes.com/threat-analysis/2017/04/new-osx-dok-malware-intercepts-web-traffic/"
+                    "url": "https://blog.malwarebytes.com/threat-analysis/2017/04/new-osx-dok-malware-intercepts-web-traffic/",
+                    "source_name_fa": "OSX Dok Malware",
+                    "description_fa": "توماس رید (2017, July 7) OSX جدید بدافزار Dok ترافیک وب را از بین می برد. Retrieved 10 ژوئیه 2017"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/564.html",
-                    "external_id": "CAPEC-564"
+                    "external_id": "CAPEC-564",
+                    "source_name_fa": "کلاه"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +56,7 @@
             ],
             "modified": "2025-10-24T17:48:38.718Z",
             "name": "Login Item",
-            "description": "MacOS provides the option to list specific applications to run when a user logs in. These applications run under the logged in user's context, and will be started every time the user logs in. Login items installed using the Service Management Framework are not visible in the System Preferences and can only be removed by the application that created them (Citation: Adding Login Items). Users have direct control over login items installed using a shared file list which are also visible in System Preferences (Citation: Adding Login Items). These login items are stored in the user's <code>~/Library/Preferences/</code> directory in a plist file called <code>com.apple.loginitems.plist</code> (Citation: Methods of Mac Malware Persistence). Some of these applications can open visible dialogs to the user, but they don\u2019t all have to since there is an option to \u2018Hide\u2019 the window. If an adversary can register their own login item or modified an existing one, then they can use it to execute their code for a persistence mechanism each time the user logs in (Citation: Malware Persistence on OS X) (Citation: OSX.Dok Malware). The API method <code> SMLoginItemSetEnabled </code> can be used to set Login Items, but scripting languages like [AppleScript](https://attack.mitre.org/techniques/T1155) can do this as well  (Citation: Adding Login Items).",
+            "description": "MacOS provides the option to list specific applications to run when a user logs in. These applications run under the logged in user's context, and will be started every time the user logs in. Login items installed using the Service Management Framework are not visible in the System Preferences and can only be removed by the application that created them (Citation: Adding Login Items). Users have direct control over login items installed using a shared file list which are also visible in System Preferences (Citation: Adding Login Items). These login items are stored in the user's <code>~/Library/Preferences/</code> directory in a plist file called <code>com.apple.loginitems.plist</code> (Citation: Methods of Mac Malware Persistence). Some of these applications can open visible dialogs to the user, but they don’t all have to since there is an option to ‘Hide’ the window. If an adversary can register their own login item or modified an existing one, then they can use it to execute their code for a persistence mechanism each time the user logs in (Citation: Malware Persistence on OS X) (Citation: OSX.Dok Malware). The API method <code> SMLoginItemSetEnabled </code> can be used to set Login Items, but scripting languages like [AppleScript](https://attack.mitre.org/techniques/T1155) can do this as well  (Citation: Adding Login Items).",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -63,7 +73,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "برگه ورود",
+            "description_fa": "MacOS گزینه ای را برای لیست برنامه های خاص برای اجرا در هنگام ورود کاربر فراهم می کند. این برنامه ها تحت چارچوب کاربر اجرا می شوند و هر بار که کاربر وارد می شود شروع می شوند. موارد ورود نصب شده با استفاده از چارچوب مدیریت خدمات در تنظیمات سیستم قابل مشاهده نیست و تنها می تواند توسط برنامه ای که آنها را ایجاد کرده است حذف شود. کاربران کنترل مستقیم بر اقلام ورود نصب شده با استفاده از یک لیست فایل مشترک که همچنین در System Preferences قابل مشاهده است. [CTI_PRESERVE_4] این آیتم های ورودی در پوشه کاربر ذخیره می شوند [CTI_PRESERVE_0] [[ویرایش] برخی از این برنامه ها می توانند مکالمات قابل مشاهده را به کاربر باز کنند، اما همه آنها مجبور نیستند از آنجا که گزینه ای برای “Hide” پنجره وجود دارد. اگر یک دشمن بتواند آیتم ورود خود را ثبت کند یا یک مورد موجود را اصلاح کند، می تواند از آن برای اجرای کد خود برای یک مکانیسم پایدار استفاده کند. [[ویرایش] روش API [CTI_PRESERVE_2] می توان از آن ها استفاده کرد، اما زبان های اسکریپت نویسی مانند [AppleScript] [[۱۰]] [[۱۰]] همچنین می تواند این کار را انجام دهد. <code>~/Library/Preferences/</code> <code>com.apple.loginitems.plist</code> <code> SMLoginItemSetEnabled </code> (Citation: Adding Login Items) (Citation: Adding Login Items) (Citation: Methods of Mac Malware Persistence) (Citation: Malware Persistence on OS X) (Citation: OSX.Dok Malware) (Citation: Adding Login Items) https://attack.mitre.org/techniques/T1155"
         }
     ]
 }

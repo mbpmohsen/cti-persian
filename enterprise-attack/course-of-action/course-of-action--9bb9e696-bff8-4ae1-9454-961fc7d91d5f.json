@@ -21,14 +21,17 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/M1026",
-                    "external_id": "M1026"
+                    "external_id": "M1026",
+                    "source_name_fa": "حمله mitre"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "x_mitre_attack_spec_version": "3.2.0",
-            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "name_fa": "مدیریت حساب خصوصی",
+            "description_fa": "مدیریت حساب خصوصی بر اجرای سیاست ها، کنترل ها و ابزار برای مدیریت ایمن حساب های ممتاز (به عنوان مثال، سیستم، ریشه یا حساب های اداری) تمرکز دارد. این شامل محدود کردن دسترسی، محدود کردن دامنه مجوز، نظارت بر استفاده از حساب ممتاز و اطمینان از پاسخگویی از طریق ورود و حسابرسی است. این کاهش را می توان از طریق اقدامات زیر اجرا کرد:\n\nمجوز حساب و نقش:\n\n- پیاده سازی RBAC و حداقل اصول امتیاز برای تخصیص مجوز به طور ایمن.\nاستفاده از ابزارهایی مانند Active Directory Group Policy برای اعمال محدودیت های دسترسی\n\nامنیت مدنی:\n\n- ابزار ذخیره سازی رمز عبور مانند CyberArk، HashiCorp Vault یا KeePass برای ذخیره سازی امن و چرخش اعتبار.\nسیاست های رمز عبور Enforce برای پیچیدگی، منحصر به فرد بودن و انقضای با استفاده از ابزار مانند Microsoft Group Policy Objects (GPO)\n\nMultiFactor Authentication (MFA):\n\nEnforce MFA برای تمام حساب های ممتاز با استفاده از Duo Security، Okta یا Microsoft Azure AD MFA.\n\nمدیریت دسترسی خصوصی (PAM):\n\nاستفاده از راه حل های PAM مانند CyberArk، BeyondTrust یا Thycotic برای مدیریت، نظارت و حسابرسی دسترسی ممتاز.\n\nحسابرسی و نظارت:\n\n- نظارت بر فعالیت خود را در SIEM (به عنوان مثال، Splunk یا QRadar) برای شناسایی و هشدار در استفاده از حساب کاربری منحصر به فرد.\n\nدر زمان دسترسی:\n\n- راه حل های Deploy JIT مانند Azure Privileged Identity Management (PIM) یا پیکربندی نقش های زودگذر در AWS و GCP برای اعطای مجوز زمان محدود.\n\n*Tools for Execution*\n\nمدیریت دسترسی خصوصی (PAM):\n\nCyberArk، BeyondTrust، Thycotic، HashiCorp Vault\n\nمدیریت صلاحیت:\n\nMicrosoft LAPS (Local Admin Password Solution)، Password Safe، HashiCorp Vault، KeePass\n\nMultiFactor Authentication:\n\nDuo Security، Okta، Microsoft Azure MFA، Google Authenticator\n\nمدیریت خصوصی لینوکس:\n\nپیکربندی sudo، SE Linux، AppArmor\n\nدر زمان دسترسی:\n\nAzure Privileged Identity Management (PIM)، AWS IAM نقش با محدودیت های جلسه، GCP Identity-Aware Proxy"
         }
     ]
 }

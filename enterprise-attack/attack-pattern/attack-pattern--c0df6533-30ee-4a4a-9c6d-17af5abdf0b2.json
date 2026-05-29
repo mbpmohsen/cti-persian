@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1166",
-                    "external_id": "T1166"
+                    "external_id": "T1166",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "setuid man page",
                     "description": "Michael Kerrisk. (2017, September 15). Linux Programmer's Manual. Retrieved September 21, 2018.",
-                    "url": "http://man7.org/linux/man-pages/man2/setuid.2.html"
+                    "url": "http://man7.org/linux/man-pages/man2/setuid.2.html",
+                    "source_name_fa": "صفحه ی Man",
+                    "description_fa": "مایکل کر خطر (2017، 15 سپتامبر) راهنمای برنامه نویس لینوکس Retrieved ۲۱ سپتامبر ۲۰۱۸"
                 },
                 {
                     "source_name": "OSX Keydnap malware",
                     "description": "Marc-Etienne M.Leveille. (2016, July 6). New OSX/Keydnap malware is hungry for credentials. Retrieved July 3, 2017.",
-                    "url": "https://www.welivesecurity.com/2016/07/06/new-osxkeydnap-malware-hungry-credentials/"
+                    "url": "https://www.welivesecurity.com/2016/07/06/new-osxkeydnap-malware-hungry-credentials/",
+                    "source_name_fa": "OSX بدافزار Keydnap",
+                    "description_fa": "Marc-Etienne M.Leveille بدافزار جدید OSX / Keydnap برای اعتبارها گرسنه است. Retrieved 3 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2025-10-24T17:49:19.596Z",
             "name": "Setuid and Setgid",
-            "description": "When the setuid or setgid bits are set on Linux or macOS for an application, this means that the application will run with the privileges of the owning user or group respectively  (Citation: setuid man page). Normally an application is run in the current user\u2019s context, regardless of which user or group owns the application. There are instances where programs need to be executed in an elevated context to function properly, but the user running them doesn\u2019t need the elevated privileges. Instead of creating an entry in the sudoers file, which must be done by root, any user can specify the setuid or setgid flag to be set for their own applications. These bits are indicated with an \"s\" instead of an \"x\" when viewing a file's attributes via <code>ls -l</code>. The <code>chmod</code> program can set these bits with via bitmasking, <code>chmod 4777 [file]</code> or via shorthand naming, <code>chmod u+s [file]</code>.\n\nAn adversary can take advantage of this to either do a shell escape or exploit a vulnerability in an application with the setsuid or setgid bits to get code running in a different user\u2019s context. Additionally, adversaries can use this mechanism on their own malware to make sure they're able to execute in elevated contexts in the future  (Citation: OSX Keydnap malware).",
+            "description": "When the setuid or setgid bits are set on Linux or macOS for an application, this means that the application will run with the privileges of the owning user or group respectively  (Citation: setuid man page). Normally an application is run in the current user’s context, regardless of which user or group owns the application. There are instances where programs need to be executed in an elevated context to function properly, but the user running them doesn’t need the elevated privileges. Instead of creating an entry in the sudoers file, which must be done by root, any user can specify the setuid or setgid flag to be set for their own applications. These bits are indicated with an \"s\" instead of an \"x\" when viewing a file's attributes via <code>ls -l</code>. The <code>chmod</code> program can set these bits with via bitmasking, <code>chmod 4777 [file]</code> or via shorthand naming, <code>chmod u+s [file]</code>.\n\nAn adversary can take advantage of this to either do a shell escape or exploit a vulnerability in an application with the setsuid or setgid bits to get code running in a different user’s context. Additionally, adversaries can use this mechanism on their own malware to make sure they're able to execute in elevated contexts in the future  (Citation: OSX Keydnap malware).",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -53,7 +58,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "تنظیم و تنظیم",
+            "description_fa": "هنگامی که بیت های تنظیم شده یا تنظیم شده در لینوکس یا macOS برای یک برنامه تنظیم می شوند، این بدان معنی است که برنامه با امتیازات کاربر یا گروه خود اجرا می شود. به طور معمول یک برنامه در زمینه کاربر فعلی اجرا می شود، صرف نظر از اینکه کاربر یا گروه دارای برنامه هستند. مواردی وجود دارد که برنامه ها باید در یک زمینه بالا اجرا شوند تا به درستی عمل کنند، اما کاربر در حال اجرا آنها به امتیازات بالا نیاز ندارد. به جای ایجاد یک ورودی در فایل sudoers، که باید توسط ریشه انجام شود، هر کاربر می تواند پرچم setuid یا setgid را برای برنامه های خود مشخص کند. این بیت ها به جای \"x\" در هنگام مشاهده ویژگی های فایل از طریق [CTI_PRESERVE_0] نشان داده می شوند. [[ویرایش] برنامه می تواند این بیت ها را از طریق bitmasking تنظیم کند. [CTI_PRESERVE_2] یا از طریق نام کوتاه، [[ویرایش]\n\nیک دشمن می تواند از این امر برای فرار از پوسته یا بهره برداری از آسیب پذیری در یک برنامه با تکه های پاک شده یا تنظیم شده برای دریافت کد در متن کاربر مختلف استفاده کند. علاوه بر این، دشمنان می توانند از این مکانیسم بر روی بدافزار خود استفاده کنند تا اطمینان حاصل کنند که قادر به اجرای آنها در زمینه های بالا در آینده هستند. <code>ls -l</code> <code>chmod</code> <code>chmod 4777 [file]</code> <code>chmod u+s [file]</code> (Citation: setuid man page) (Citation: OSX Keydnap malware)"
         }
     ]
 }

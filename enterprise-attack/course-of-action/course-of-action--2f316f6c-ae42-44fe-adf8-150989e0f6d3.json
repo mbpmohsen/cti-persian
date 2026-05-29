@@ -21,14 +21,17 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/M1028",
-                    "external_id": "M1028"
+                    "external_id": "M1028",
+                    "source_name_fa": "حمله mitre"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "x_mitre_attack_spec_version": "3.2.0",
-            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "name_fa": "سیستم پیکربندی System Configuration",
+            "description_fa": "پیکربندی سیستم عامل شامل تنظیم تنظیمات سیستم و سخت کردن تنظیمات پیش فرض یک سیستم عامل (OS) برای کاهش بهره برداری دشمن و جلوگیری از سوء استفاده از عملکرد سیستم است. تنظیمات سیستم عامل مناسب به آسیب پذیری های امنیتی، محدود کردن سطوح حمله و اطمینان از دفاع قوی در برابر طیف وسیعی از تکنیک ها می پردازد. این کاهش را می توان از طریق اقدامات زیر اجرا کرد:\n\nویژگی های غیر قابل استفاده:\n\nتبدیل SMBv1، LLMNR و NetBIOS که نیازی به آن نیست.\n- ثبت نام از راه دور و خدمات غیر ضروری\n\nEnforce OS سطح حفاظت:\n\n- امکان دسترسی به Data Execution Prevention (DEP)، Address Space Setization (ASLR)، و Control Flow Guard (CFG) در ویندوز.\nاستفاده از AppArmor یا SE Linux برای کنترل دسترسی اجباری\n\nتنظیمات دسترسی امن:\n\n- فعال کردن User Account Control (UAC) برای ویندوز\n- محدود کردن ریشه / دسترسی به لینوکس / macOS و اجرای مجوزهای قوی با استفاده از فایل های sudoers.\n\nسیستم فایل سخت کننده:\n\n- پیاده سازی حداقل دسترسی به فایل های بحرانی و دایرکتوری های سیستم.\nمجوز حسابرسی به طور منظم با استفاده از ابزارهایی مانند icacls (Windows) یا getfacl/chmod (لینوکس/مکOS)\n\nدسترسی امن از راه دور:\n\nمحدود کردن RDP، SSH و VNC برای IP های مجاز با استفاده از قوانین فایروال.\n- فعال کردن NLA برای RDP و اجرای سیاست های قوی رمز عبور / توقف\n\nHarden Boot Configurations:\n\n- فعال کردن بوت امن و اجرای حفاظت از رمز عبور UEFI/BIOS\nاز BitLocker یا LUKS برای رمزگذاری درایوهای بوت استفاده کنید.\n\nحسابرسی منظم:\n\n- پیکربندی های سیستم عامل حسابرسی دوره ای با استفاده از ابزارهایی مانند معیارهای CIS یا ابزارهای SCAP.\n\n*Tools for Execution*\n\nویندوز:\n\nMicrosoft Group Policy Objects (GPO): به طور مرکزی تنظیمات امنیتی سیستم عامل را اجرا کنید.\nWindows Defender Exploit Guard: حفاظت از سیستم عامل داخلی در برابر بهره برداری\nCIS-CAT Pro: تنظیمات امنیتی ویندوز را بر اساس معیارهای CIS بررسی کنید.\n\nLinux/macOS :\n\nAppArmor/SE Linux: کنترل دسترسی اجباری\nLynis: انجام ممیزی های امنیتی جامع\nSCAP راهنمای امنیت: تنظیمات خودکار با استفاده از پروتکل اتوماسیون محتوا امنیتی سخت می شود.\n\nCross-Platform:\n\nAnsible یا Chef/Puppet: تنظیمات خودکار در مقیاس سخت می شود.\nOpenSCAP: بررسی های انطباق و پیکربندی را انجام دهید."
         }
     ]
 }

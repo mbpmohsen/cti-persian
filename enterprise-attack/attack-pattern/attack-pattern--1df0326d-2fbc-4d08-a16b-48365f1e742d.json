@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1178",
-                    "external_id": "T1178"
+                    "external_id": "T1178",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Microsoft SID",
                     "description": "Microsoft. (n.d.). Security Identifiers. Retrieved November 30, 2017.",
-                    "url": "https://msdn.microsoft.com/library/windows/desktop/aa379571.aspx"
+                    "url": "https://msdn.microsoft.com/library/windows/desktop/aa379571.aspx",
+                    "source_name_fa": "Microsoft SID",
+                    "description_fa": "مایکروسافت (n.d.) شناسه های امنیتی Retrieved ۳۰ نوامبر ۲۰۱۷"
                 },
                 {
                     "source_name": "Microsoft SID-History Attribute",
                     "description": "Microsoft. (n.d.). Active Directory Schema - SID-History attribute. Retrieved November 30, 2017.",
-                    "url": "https://msdn.microsoft.com/library/ms679833.aspx"
+                    "url": "https://msdn.microsoft.com/library/ms679833.aspx",
+                    "source_name_fa": "Microsoft SID-تاریخ ویژگی",
+                    "description_fa": "مایکروسافت (n.d.) Active Directory Schema - ویژگی SID-تاریخ Retrieved ۳۰ نوامبر ۲۰۱۷"
                 },
                 {
                     "source_name": "Microsoft Well Known SIDs Jun 2017",
                     "description": "Microsoft. (2017, June 23). Well-known security identifiers in Windows operating systems. Retrieved November 30, 2017.",
-                    "url": "https://support.microsoft.com/help/243330/well-known-security-identifiers-in-windows-operating-systems"
+                    "url": "https://support.microsoft.com/help/243330/well-known-security-identifiers-in-windows-operating-systems",
+                    "source_name_fa": "Microsoft Well Known SIDs Jun 2017",
+                    "description_fa": "مایکروسافت (2017، 23 ژوئن) شناسه های امنیتی شناخته شده در سیستم عامل ویندوز Retrieved ۳۰ نوامبر ۲۰۱۷"
                 },
                 {
                     "source_name": "Microsoft Get-ADUser",
                     "description": "Microsoft. (n.d.). Active Directory Cmdlets - Get-ADUser. Retrieved November 30, 2017.",
-                    "url": "https://technet.microsoft.com/library/ee617241.aspx"
+                    "url": "https://technet.microsoft.com/library/ee617241.aspx",
+                    "source_name_fa": "Microsoft Get-ADUser",
+                    "description_fa": "مایکروسافت (n.d.) Active Directory Cmdlets – Get-ADUser Retrieved ۳۰ نوامبر ۲۰۱۷"
                 },
                 {
                     "source_name": "AdSecurity SID History Sept 2015",
                     "description": "Metcalf, S. (2015, September 19). Sneaky Active Directory Persistence #14: SID History. Retrieved November 30, 2017.",
-                    "url": "https://adsecurity.org/?p=1772"
+                    "url": "https://adsecurity.org/?p=1772",
+                    "source_name_fa": "AdSecurity SID History 2015",
+                    "description_fa": "Metcalf، S. (2015، 19 سپتامبر) Sneaky Active Directory Pertin 1: 4: SID history Retrieved ۳۰ نوامبر ۲۰۱۷"
                 },
                 {
                     "source_name": "Microsoft DsAddSidHistory",
                     "description": "Microsoft. (n.d.). Using DsAddSidHistory. Retrieved November 30, 2017.",
-                    "url": "https://msdn.microsoft.com/library/ms677982.aspx"
+                    "url": "https://msdn.microsoft.com/library/ms677982.aspx",
+                    "source_name_fa": "Microsoft Ds AddSidtory",
+                    "description_fa": "مایکروسافت (n.d.) استفاده از Ds AddSidtory Retrieved ۳۰ نوامبر ۲۰۱۷"
                 }
             ],
             "object_marking_refs": [
@@ -72,7 +85,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "تزریق SID-تاریخ",
+            "description_fa": "شناسه امنیتی ویندوز (SID) یک ارزش منحصر به فرد است که یک حساب کاربری یا گروهی را مشخص می کند. SID ها توسط امنیت ویندوز در هر دو نسخه امنیتی و توکن های دسترسی استفاده می شوند. [[ویرایش] یک حساب می تواند SID های اضافی را در ویژگی Active Directory SID-تاریخی ([CTI_PRESERVE) نگه دارد، که اجازه می دهد مهاجرت حساب بین دامنه ها (به عنوان مثال، تمام ارزش های SID-تاریخ در توکن های دسترسی گنجانده شده است).\n\nمخالفان ممکن است از این مکانیسم برای افزایش امتیاز استفاده کنند. با حقوق Domain Administrator (یا معادل آن) ، مقادیر SID یا به خوبی شناخته شده ([CTI_PRESERVE_2] ممکن است در SID-تاریخ قرار داده شود تا امکان جذب کاربران و گروه های دلخواه مانند مدیران شرکت را فراهم کند. این دستکاری ممکن است منجر به دسترسی بالا به منابع محلی و / یا دسترسی به دامنه های غیر قابل دسترس از طریق تکنیک های حرکت جانبی مانند [Remote Services] ([[CTI_PRESERVE_3])، [Windows Admin Shares] ([CTI_PRESERVE_4])، یا [Windows Remote Management] ([ICT]_E_E5_SERV5]. (Citation: Microsoft SID) (Citation: Microsoft SID-History Attribute) (Citation: Microsoft Well Known SIDs Jun 2017) https://attack.mitre.org/techniques/T1021 https://attack.mitre.org/techniques/T1077 https://attack.mitre.org/techniques/T1028"
         }
     ]
 }

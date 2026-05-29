@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1563/002",
-                    "external_id": "T1563.002"
+                    "external_id": "T1563.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "RDP Hijacking Medium",
-                    "description": "Beaumont, K. (2017, March 19). RDP hijacking\u200a\u2014\u200ahow to hijack RDS and RemoteApp sessions transparently to move through an organisation. Retrieved December 11, 2017.",
-                    "url": "https://medium.com/@networksecurity/rdp-hijacking-how-to-hijack-rds-and-remoteapp-sessions-transparently-to-move-through-an-da2a1e73a5f6"
+                    "description": "Beaumont, K. (2017, March 19). RDP hijacking — how to hijack RDS and RemoteApp sessions transparently to move through an organisation. Retrieved December 11, 2017.",
+                    "url": "https://medium.com/@networksecurity/rdp-hijacking-how-to-hijack-rds-and-remoteapp-sessions-transparently-to-move-through-an-da2a1e73a5f6",
+                    "source_name_fa": "RDP دانلود بازی Hijacking Medium",
+                    "description_fa": "Beaumont، K. (2017، 19 مارس) ربوده شدن RDP - چگونه به ربودن RDS و RemoteApp جلسات شفاف برای حرکت از طریق یک سازمان. Retrieved 11 دسامبر 2017"
                 },
                 {
                     "source_name": "RDP Hijacking Korznikov",
                     "description": "Korznikov, A. (2017, March 17). Passwordless RDP Session Hijacking Feature All Windows versions. Retrieved December 11, 2017.",
-                    "url": "http://www.korznikov.com/2017/03/0-day-or-feature-privilege-escalation.html"
+                    "url": "http://www.korznikov.com/2017/03/0-day-or-feature-privilege-escalation.html",
+                    "source_name_fa": "RDP ربودن کورزیکوف",
+                    "description_fa": "کورزیکوف، A. (2017، 17 مارس) Passwordless RDP Session Hijacking همه نسخه های ویندوز Retrieved 11 دسامبر 2017"
                 },
                 {
                     "source_name": "TechNet Remote Desktop Services",
                     "description": "Microsoft. (n.d.). Remote Desktop Services. Retrieved June 1, 2016.",
-                    "url": "https://technet.microsoft.com/en-us/windowsserver/ee236407.aspx"
+                    "url": "https://technet.microsoft.com/en-us/windowsserver/ee236407.aspx",
+                    "source_name_fa": "TechNet Remote Desktop Services",
+                    "description_fa": "مایکروسافت (n.d.) Remote Desktop Services Retrieved 1 ژوئن 2016"
                 },
                 {
                     "source_name": "Kali Redsnarf",
                     "description": "NCC Group PLC. (2016, November 1). Kali Redsnarf. Retrieved December 11, 2017.",
-                    "url": "https://github.com/nccgroup/redsnarf"
+                    "url": "https://github.com/nccgroup/redsnarf",
+                    "source_name_fa": "کالی قرمز",
+                    "description_fa": "NCC Group PLC (2016، 1 نوامبر) کالی قرمز Retrieved 11 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2025-10-24T17:49:30.049Z",
             "name": "RDP Hijacking",
-            "description": "Adversaries may hijack a legitimate user\u2019s remote desktop session to move laterally within an environment. Remote desktop is a common feature in operating systems. It allows a user to log into an interactive session with a system desktop graphical user interface on a remote system. Microsoft refers to its implementation of the Remote Desktop Protocol (RDP) as Remote Desktop Services (RDS).(Citation: TechNet Remote Desktop Services)\n\nAdversaries may perform RDP session hijacking which involves stealing a legitimate user's remote session. Typically, a user is notified when someone else is trying to steal their session. With System permissions and using Terminal Services Console, `c:\\windows\\system32\\tscon.exe [session number to be stolen]`, an adversary can hijack a session without the need for credentials or prompts to the user.(Citation: RDP Hijacking Korznikov) This can be done remotely or locally and with active or disconnected sessions.(Citation: RDP Hijacking Medium) It can also lead to [Remote System Discovery](https://attack.mitre.org/techniques/T1018) and Privilege Escalation by stealing a Domain Admin or higher privileged account session. All of this can be done by using native Windows commands, but it has also been added as a feature in red teaming tools.(Citation: Kali Redsnarf)",
+            "description": "Adversaries may hijack a legitimate user’s remote desktop session to move laterally within an environment. Remote desktop is a common feature in operating systems. It allows a user to log into an interactive session with a system desktop graphical user interface on a remote system. Microsoft refers to its implementation of the Remote Desktop Protocol (RDP) as Remote Desktop Services (RDS).(Citation: TechNet Remote Desktop Services)\n\nAdversaries may perform RDP session hijacking which involves stealing a legitimate user's remote session. Typically, a user is notified when someone else is trying to steal their session. With System permissions and using Terminal Services Console, `c:\\windows\\system32\\tscon.exe [session number to be stolen]`, an adversary can hijack a session without the need for credentials or prompts to the user.(Citation: RDP Hijacking Korznikov) This can be done remotely or locally and with active or disconnected sessions.(Citation: RDP Hijacking Medium) It can also lead to [Remote System Discovery](https://attack.mitre.org/techniques/T1018) and Privilege Escalation by stealing a Domain Admin or higher privileged account session. All of this can be done by using native Windows commands, but it has also been added as a feature in red teaming tools.(Citation: Kali Redsnarf)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -58,7 +67,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "RDP دزدی",
+            "description_fa": "مخالفان ممکن است یک جلسه دسکتاپ کاربر قانونی را برای حرکت بعدا در یک محیط به سرقت ببرند. Remote Desktop یک ویژگی مشترک در سیستم عامل است. این اجازه می دهد تا یک کاربر به یک جلسه تعاملی با یک رابط کاربری گرافیکی سیستم در یک سیستم از راه دور وارد شود. مایکروسافت به اجرای پروتکل Remote Desktop Protocol (RDP) به عنوان Remote Desktop Services (RDS) اشاره دارد. [[ویرایش]\n\nمخالفان ممکن است ربودن جلسه RDP را انجام دهند که شامل سرقت یک جلسه از راه دور کاربر قانونی است. به طور معمول، یک کاربر زمانی مطلع می شود که شخص دیگری سعی دارد جلسه خود را سرقت کند. با اجازه های سیستم و استفاده از ترمینال خدمات کنسول، \"c: پنجره های \\system32\\tscon.exe [شماره جلسه به سرقت رفته]، یک دشمن می تواند یک جلسه بدون نیاز به اعتبار و یا ماشه به کاربر ارسال کند. این می تواند از راه دور یا محلی و با جلسات فعال یا قطع شده انجام شود. [[ویرایش] همچنین می تواند منجر به (Remote System Discovery) شود ([CTI_PRESERVE_4]) و افزایش سرعت با سرقت Domain Admin یا بالاتر حساب کاربری ممتاز. همه این کارها را می توان با استفاده از دستورات ویندوز بومی انجام داد، اما همچنین به عنوان یک ویژگی در ابزارهای تیم سازی قرمز اضافه شده است. [[ویرایش] (Citation: TechNet Remote Desktop Services) (Citation: RDP Hijacking Korznikov) (Citation: RDP Hijacking Medium) (Citation: Kali Redsnarf) https://attack.mitre.org/techniques/T1018"
         }
     ]
 }

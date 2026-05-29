@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1547/011",
-                    "external_id": "T1547.011"
+                    "external_id": "T1547.011",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "fileinfo plist file description",
                     "description": "FileInfo.com team. (2019, November 26). .PLIST File Extension. Retrieved October 12, 2021.",
-                    "url": "https://fileinfo.com/extension/plist"
+                    "url": "https://fileinfo.com/extension/plist",
+                    "source_name_fa": "فایلinfo plist",
+                    "description_fa": "گروه Fileinfo.com (2019، 26 نوامبر) پسوند File Extension Retrieved 12 اکتبر 2021."
                 },
                 {
                     "source_name": "wardle artofmalware volume1",
                     "description": "Patrick Wardle. (2020, August 5). The Art of Mac Malware Volume 0x1: Analysis. Retrieved March 19, 2021.",
-                    "url": "https://taomm.org/vol1/pdfs.html"
+                    "url": "https://taomm.org/vol1/pdfs.html",
+                    "source_name_fa": "دانلود موسیقی متن موسیقی متن موسیقی متن موسیقی متن موسیقی متن موسیقی متن متن فیلم",
+                    "description_fa": "پاتریک واردل (2020, August 5) The Art of Mac Malware Volume 0x1: Analysis Retrieved 19 مارس 2021."
                 }
             ],
             "object_marking_refs": [
@@ -52,7 +57,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "Plist Modification",
+            "description_fa": "عوامل جانبی می توانند فایل های لیست اموال (فایل های لیستی) را برای اجرای کد خود به عنوان بخشی از ایجاد پایداری تغییر دهند. فایل های Plist توسط برنامه های macOS برای ذخیره خواص و تنظیمات پیکربندی برای برنامه ها و خدمات استفاده می شود. برنامه های کاربردی از فایل های لیست اطلاعات استفاده می کنند، ([CTI_PRESERVE_0]، برای گفتن سیستم عامل چگونگی رسیدگی به برنامه در زمان اجرا با استفاده از متاداده ساختاری در قالب کلید ها و ارزش ها. فایل های Plist در XML و بر اساس بنیاد Core اپل DTD فرمت شده اند و می توانند در متن یا فرمت باینری ذخیره شوند. [[ویرایش]\n\nمخالفان می توانند مسیرهای اجرای باینری را تغییر دهند، استدلال های خط فرمان را اضافه کنند و ارزش های کلیدی / ضعیف را به فایل های لیست شده در مکان های خودکار که بر اساس استارت آپ آرم یا سیستم کاربر اجرا می شوند، وارد کنند. از طریق تغییر فایل های پی لیست در این مکان ها، دشمنان همچنین می توانند یک کتابخانه پویا مخرب (dylib) را با اضافه کردن یک فرهنگ لغت حاوی [CTI_PRESERVE] کلید همراه با یک مسیر به یک dylib مخرب تحت [CTI_PRESERVE_2] اجرا کنند. کلید در فایل plist پس از آرمین کاربر، plist برای اعدام نامیده می شود و dylib مخرب در فضای فرآیند اجرا می شود. همچنین می توان از طریق تغییر فایل (CTI_PRESERVE_3) کلید در برنامه ([CTI_PRESERVE_4] استفاده کرد. <code>Info.plist</code> <code>DYLD_INSERT_LIBRARIES</code> <code>EnvironmentVariables</code> <code>LSEnvironment</code> <code>Info.plist</code> (Citation: fileinfo plist file description) (Citation: wardle artofmalware volume1)"
         }
     ]
 }

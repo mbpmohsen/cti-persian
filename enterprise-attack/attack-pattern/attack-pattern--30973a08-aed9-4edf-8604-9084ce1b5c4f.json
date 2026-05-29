@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1115",
-                    "external_id": "T1115"
+                    "external_id": "T1115",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "CISA_AA21_200B",
                     "description": "CISA. (2021, August 20). Alert (AA21-200B) Chinese State-Sponsored Cyber Operations: Observed TTPs. Retrieved June 21, 2022.",
-                    "url": "https://www.cisa.gov/uscert/ncas/alerts/aa21-200b"
+                    "url": "https://www.cisa.gov/uscert/ncas/alerts/aa21-200b",
+                    "source_name_fa": "CISA_AA21_200B",
+                    "description_fa": "CISA (2021، 20 آگوست) هشدار (AA21-200B) عملیات سایبری دولتی چین TTPs را مشاهده کنید. Retrieved ۲۱ ژوئن ۲۰۲۲."
                 },
                 {
                     "source_name": "mining_ruby_reversinglabs",
                     "description": "Maljic, T. (2020, April 16). Mining for malicious Ruby gems. Retrieved October 15, 2022.",
-                    "url": "https://blog.reversinglabs.com/blog/mining-for-malicious-ruby-gems"
+                    "url": "https://blog.reversinglabs.com/blog/mining-for-malicious-ruby-gems",
+                    "source_name_fa": "معدن_ruby_reversinglabs",
+                    "description_fa": "Maljic، T. (2020، 16 آوریل) معدن برای جواهرات مخرب Ruby Retrieved 15، 2022."
                 },
                 {
                     "source_name": "clip_win_server",
                     "description": "Microsoft, JasonGerend, et al. (2023, February 3). clip. Retrieved June 21, 2022.",
-                    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/clip"
+                    "url": "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/clip",
+                    "source_name_fa": "کلیپ_win_server",
+                    "description_fa": "مایکروسافت، جیسون Gerend، et al. (2023، فوریه 3) کلیپ Retrieved 21 ژوئن 2022"
                 },
                 {
                     "source_name": "MSDN Clipboard",
                     "description": "Microsoft. (n.d.). About the Clipboard. Retrieved March 29, 2016.",
-                    "url": "https://msdn.microsoft.com/en-us/library/ms649012"
+                    "url": "https://msdn.microsoft.com/en-us/library/ms649012",
+                    "source_name_fa": "MSDN Clipboard",
+                    "description_fa": "مایکروسافت (n.d.) درباره Clipboard Retrieved 29 مارس 2016"
                 },
                 {
                     "source_name": "Operating with EmPyre",
                     "description": "rvrsh3ll. (2016, May 18). Operating with EmPyre. Retrieved July 12, 2017.",
-                    "url": "https://medium.com/rvrsh3ll/operating-with-empyre-ea764eda3363"
+                    "url": "https://medium.com/rvrsh3ll/operating-with-empyre-ea764eda3363",
+                    "source_name_fa": "عملیات با EmPyre",
+                    "description_fa": "rvrsh3ll (2016، مه 18) عملیات با EmPyre Retrieved 12 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.624Z",
             "name": "Clipboard Data",
-            "description": "Adversaries may collect data stored in the clipboard from users copying information within or between applications. \n\nFor example, on Windows adversaries can access clipboard data by using <code>clip.exe</code> or <code>Get-Clipboard</code>.(Citation: MSDN Clipboard)(Citation: clip_win_server)(Citation: CISA_AA21_200B) Additionally, adversaries may monitor then replace users\u2019 clipboard with their data (e.g., [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002)).(Citation: mining_ruby_reversinglabs)\n\nmacOS and Linux also have commands, such as <code>pbpaste</code>, to grab clipboard contents.(Citation: Operating with EmPyre)",
+            "description": "Adversaries may collect data stored in the clipboard from users copying information within or between applications. \n\nFor example, on Windows adversaries can access clipboard data by using <code>clip.exe</code> or <code>Get-Clipboard</code>.(Citation: MSDN Clipboard)(Citation: clip_win_server)(Citation: CISA_AA21_200B) Additionally, adversaries may monitor then replace users’ clipboard with their data (e.g., [Transmitted Data Manipulation](https://attack.mitre.org/techniques/T1565/002)).(Citation: mining_ruby_reversinglabs)\n\nmacOS and Linux also have commands, such as <code>pbpaste</code>, to grab clipboard contents.(Citation: Operating with EmPyre)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -65,7 +76,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "Clipboard Data",
+            "description_fa": "مخالفان ممکن است داده های ذخیره شده در کلیپ بورد را از کاربران کپی کردن اطلاعات در داخل یا بین برنامه ها جمع آوری کنند.\n\nبه عنوان مثال، در ویندوز کاربران می توانند از طریق استفاده از [CTI_PRESERVE_0] یا [CTI_PRESERVE] به داده های Clipboard دسترسی داشته باشند.[۱۰] علاوه بر این، دشمنان ممکن است بسته بندی کاربران را با داده های خود جایگزین کنند (به عنوان مثال، [Transmised Data Manipulation] [[CTI_PRESERVE_8].\n\nmacOS و Linux نیز دارای دستوراتی مانند [CTI_PRESERVE_2] هستند تا محتوای Clipboard را دریافت کنند. [[ویرایش] <code>clip.exe</code> <code>Get-Clipboard</code> <code>pbpaste</code> (Citation: MSDN Clipboard) (Citation: clip_win_server) (Citation: CISA_AA21_200B) (Citation: mining_ruby_reversinglabs) (Citation: Operating with EmPyre) https://attack.mitre.org/techniques/T1565/002"
         }
     ]
 }

@@ -12,17 +12,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1149",
-                    "external_id": "T1149"
+                    "external_id": "T1149",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Prolific OSX Malware History",
                     "description": "Bit9 + Carbon Black Threat Research Team. (2015). 2015: The Most Prolific Year in History for OS X Malware. Retrieved July 8, 2017.",
-                    "url": "https://assets.documentcloud.org/documents/2459197/bit9-carbon-black-threat-research-report-2015.pdf"
+                    "url": "https://assets.documentcloud.org/documents/2459197/bit9-carbon-black-threat-research-report-2015.pdf",
+                    "source_name_fa": "OSX تاریخ بدافزار",
+                    "description_fa": "Bit9 + Carbon Black Threat Research Team (2015) 2015: محبوب ترین سال در تاریخ برای OS X Malware Retrieved 8 ژوئیه 2017"
                 },
                 {
                     "source_name": "Methods of Mac Malware Persistence",
                     "description": "Patrick Wardle. (2014, September). Methods of Malware Persistence on Mac OS X. Retrieved July 5, 2017.",
-                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf"
+                    "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+                    "source_name_fa": "روش های Mac Malware Pertin",
+                    "description_fa": "پاتریک واردل (2014, سپتامبر) روش های بدافزار بر روی Mac OS X Retrieved 5 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -30,7 +35,7 @@
             ],
             "modified": "2026-04-14T22:53:15.104Z",
             "name": "LC_MAIN Hijacking",
-            "description": "**This technique has been deprecated and should no longer be used.**\n\nAs of OS X 10.8, mach-O binaries introduced a new header called LC_MAIN that points to the binary\u2019s entry point for execution. Previously, there were two headers to achieve this same effect: LC_THREAD and LC_UNIXTHREAD  (Citation: Prolific OSX Malware History). The entry point for a binary can be hijacked so that initial execution flows to a malicious addition (either another section or a code cave) and then goes back to the initial entry point so that the victim doesn\u2019t know anything was different  (Citation: Methods of Mac Malware Persistence). By modifying a binary in this way, application whitelisting can be bypassed because the file name or application path is still the same.",
+            "description": "**This technique has been deprecated and should no longer be used.**\n\nAs of OS X 10.8, mach-O binaries introduced a new header called LC_MAIN that points to the binary’s entry point for execution. Previously, there were two headers to achieve this same effect: LC_THREAD and LC_UNIXTHREAD  (Citation: Prolific OSX Malware History). The entry point for a binary can be hijacked so that initial execution flows to a malicious addition (either another section or a code cave) and then goes back to the initial entry point so that the victim doesn’t know anything was different  (Citation: Methods of Mac Malware Persistence). By modifying a binary in this way, application whitelisting can be bypassed because the file name or application path is still the same.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -47,7 +52,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "2.1"
+            "x_mitre_version": "2.1",
+            "name_fa": "LC_MAIN دزدی",
+            "description_fa": "** این تکنیک از بین رفته و دیگر نباید استفاده شود. ** **\n\nاز OS X 10.8، mach-O binaries یک هدر جدید به نام LC_ معرفی کرد. MAIN که اشاره به نقطه ورود باینری برای اعدام. پیش از این، دو هدر برای دستیابی به این اثر وجود داشت: LC_THREAD و LC_UNIXTHREAD [CTI_PRESERVE_0]. نقطه ورود برای دودویی می تواند به طوری که اعدام اولیه به اضافه مخرب (یا بخش دیگری یا غار کد) جریان می یابد و سپس به نقطه ورود اولیه باز می گردد تا قربانی هیچ چیز دیگری را نمی داند. با تغییر یک باینری به این ترتیب، درخواست سفید لیست می تواند دور بزند زیرا نام فایل یا مسیر درخواست هنوز یکسان است. (Citation: Prolific OSX Malware History) (Citation: Methods of Mac Malware Persistence)"
         }
     ]
 }

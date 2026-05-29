@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1552/004",
-                    "external_id": "T1552.004"
+                    "external_id": "T1552.004",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Palo Alto Prince of Persia",
-                    "description": "Bar, T., Conant, S., Efraim, L. (2016, June 28). Prince of Persia \u2013 Game Over. Retrieved July 5, 2017.",
-                    "url": "https://researchcenter.paloaltonetworks.com/2016/06/unit42-prince-of-persia-game-over/"
+                    "description": "Bar, T., Conant, S., Efraim, L. (2016, June 28). Prince of Persia – Game Over. Retrieved July 5, 2017.",
+                    "url": "https://researchcenter.paloaltonetworks.com/2016/06/unit42-prince-of-persia-game-over/",
+                    "source_name_fa": "پالو آلتو شاهزاده ایران",
+                    "description_fa": "بار، T.، Conant، S.، Efraim، L. (2016، 28 ژوئن) Prince of Persia - Game Over. Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "cisco_deploy_rsa_keys",
                     "description": "Cisco. (2023, February 17). Chapter: Deploying RSA Keys Within a PKI . Retrieved March 27, 2023.",
-                    "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_conn_pki/configuration/xe-17/sec-pki-xe-17-book/sec-deploy-rsa-pki.html#GUID-1CB802D8-9DE3-447F-BECE-CF22F5E11436"
+                    "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_conn_pki/configuration/xe-17/sec-pki-xe-17-book/sec-deploy-rsa-pki.html#GUID-1CB802D8-9DE3-447F-BECE-CF22F5E11436",
+                    "source_name_fa": "cisco_deploy_rsa_keys",
+                    "description_fa": "سیسکو (2023, فوریه 17) فصل: استقرار RSA کلیدهای درون یک PKI Retrieved 27 مارس 2023."
                 },
                 {
                     "source_name": "AADInternals Azure AD Device Identities",
                     "description": "Dr. Nestori Syynimaa. (2022, February 15). Stealing and faking Azure AD device identities. Retrieved February 21, 2023.",
-                    "url": "https://aadinternals.com/post/deviceidentity/"
+                    "url": "https://aadinternals.com/post/deviceidentity/",
+                    "source_name_fa": "ویژگی های بازی AAD Internals Azure AD Device Identities",
+                    "description_fa": "دکتر نستله (2022، 15 فوریه) سرقت و جعل هویت دستگاه Azure AD Retrieved 21، 2023."
                 },
                 {
                     "source_name": "Kaspersky Careto",
-                    "description": "Kaspersky Labs. (2014, February 11). Unveiling \u201cCareto\u201d - The Masked APT. Retrieved July 5, 2017.",
-                    "url": "https://web.archive.org/web/20141031134104/http://kasperskycontenthub.com/wp-content/uploads/sites/43/vlpdfs/unveilingthemask_v1.0.pdf"
+                    "description": "Kaspersky Labs. (2014, February 11). Unveiling “Careto” - The Masked APT. Retrieved July 5, 2017.",
+                    "url": "https://web.archive.org/web/20141031134104/http://kasperskycontenthub.com/wp-content/uploads/sites/43/vlpdfs/unveilingthemask_v1.0.pdf",
+                    "source_name_fa": "Kaspersky Careto",
+                    "description_fa": "آزمایشگاه های کسپرسکی (2014, 11 فوریه) دانلود زیرنویس فارسی فیلم The Masked APT Retrieved 5 ژوئیه 2017"
                 },
                 {
                     "source_name": "Microsoft Primary Refresh Token",
                     "description": "Microsoft. (2022, September 9). What is a Primary Refresh Token?. Retrieved February 21, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-primary-refresh-token"
+                    "url": "https://learn.microsoft.com/en-us/azure/active-directory/devices/concept-primary-refresh-token",
+                    "source_name_fa": "Microsoft Primary Refresh Token",
+                    "description_fa": "مایکروسافت (2022, سپتامبر 9) یک توکن بازسازی اولیه چیست؟ Retrieved 21، 2023."
                 },
                 {
                     "source_name": "Wikipedia Public Key Crypto",
                     "description": "Wikipedia. (2017, June 29). Public-key cryptography. Retrieved July 5, 2017.",
-                    "url": "https://en.wikipedia.org/wiki/Public-key_cryptography"
+                    "url": "https://en.wikipedia.org/wiki/Public-key_cryptography",
+                    "source_name_fa": "ویکی پدیا کلید عمومی Crypto",
+                    "description_fa": "ویکی پدیا (2017, 29 ژوئن) رمزنگاری کلید عمومی Retrieved 5 ژوئیه 2017"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2026-05-12T15:12:00.635Z",
             "name": "Private Keys",
-            "description": "Adversaries may search for private key certificate files on compromised systems for insecurely stored credentials. Private cryptographic keys and certificates are used for authentication, encryption/decryption, and digital signatures.(Citation: Wikipedia Public Key Crypto) Common key and certificate file extensions include: .key, .pgp, .gpg, .ppk., .p12, .pem, .pfx, .cer, .p7b, .asc. \n\nAdversaries may also look in common key directories, such as <code>~/.ssh</code> for SSH keys on * nix-based systems or <code>C:&#92;Users&#92;(username)&#92;.ssh&#92;</code> on Windows. Adversary tools may also search compromised systems for file extensions relating to cryptographic keys and certificates.(Citation: Kaspersky Careto)(Citation: Palo Alto Prince of Persia)\n\nWhen a device is registered to Entra ID, a device key and a transport key are generated and used to verify the device\u2019s identity.(Citation: Microsoft Primary Refresh Token) An adversary with access to the device may be able to export the keys in order to impersonate the device.(Citation: AADInternals Azure AD Device Identities)\n\nOn network devices, private keys may be exported via [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `crypto pki export`.(Citation: cisco_deploy_rsa_keys) \n\nSome private keys require a password or passphrase for operation, so an adversary may also use [Input Capture](https://attack.mitre.org/techniques/T1056) for keylogging or attempt to [Brute Force](https://attack.mitre.org/techniques/T1110) the passphrase off-line. These private keys can be used to authenticate to [Remote Services](https://attack.mitre.org/techniques/T1021) like SSH or for use in decrypting other collected files such as email.",
+            "description": "Adversaries may search for private key certificate files on compromised systems for insecurely stored credentials. Private cryptographic keys and certificates are used for authentication, encryption/decryption, and digital signatures.(Citation: Wikipedia Public Key Crypto) Common key and certificate file extensions include: .key, .pgp, .gpg, .ppk., .p12, .pem, .pfx, .cer, .p7b, .asc. \n\nAdversaries may also look in common key directories, such as <code>~/.ssh</code> for SSH keys on * nix-based systems or <code>C:&#92;Users&#92;(username)&#92;.ssh&#92;</code> on Windows. Adversary tools may also search compromised systems for file extensions relating to cryptographic keys and certificates.(Citation: Kaspersky Careto)(Citation: Palo Alto Prince of Persia)\n\nWhen a device is registered to Entra ID, a device key and a transport key are generated and used to verify the device’s identity.(Citation: Microsoft Primary Refresh Token) An adversary with access to the device may be able to export the keys in order to impersonate the device.(Citation: AADInternals Azure AD Device Identities)\n\nOn network devices, private keys may be exported via [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) commands such as `crypto pki export`.(Citation: cisco_deploy_rsa_keys) \n\nSome private keys require a password or passphrase for operation, so an adversary may also use [Input Capture](https://attack.mitre.org/techniques/T1056) for keylogging or attempt to [Brute Force](https://attack.mitre.org/techniques/T1110) the passphrase off-line. These private keys can be used to authenticate to [Remote Services](https://attack.mitre.org/techniques/T1021) like SSH or for use in decrypting other collected files such as email.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -75,7 +88,9 @@
                 "Network Devices",
                 "Windows"
             ],
-            "x_mitre_version": "1.3"
+            "x_mitre_version": "1.3",
+            "name_fa": "کلیدهای خصوصی",
+            "description_fa": "مخالفان ممکن است به دنبال فایل های گواهی کلید خصوصی در سیستم های به خطر افتاده برای مدارک ذخیره نشده باشند. کلیدهای رمزنگاری خصوصی و گواهینامه ها برای احراز هویت، رمزگذاری / رمزگشایی و امضاهای دیجیتال استفاده می شوند.[۱۰] [CTI_PRESERVE_۲] افزونه های فایل کلید و گواهی شامل:.key، .pgpg، .pgpg، .p12، .pem، .PFx، .cer، .p7b، .asc.\n\nهمچنین ممکن است به دایرکتوری های کلیدی مشترک مانند [CTI_PRESERVE_0] برای کلیدهای SSH در سیستم های مبتنی بر nix یا [CTI_PRESERVE] در ویندوز نگاه کنید. ابزارهای جانبی همچنین ممکن است سیستم های به خطر افتاده را برای پسوند فایل های مربوط به کلیدهای رمزنگاری و گواهینامه ها جستجو کنند. [[ویرایش]\n\nهنگامی که یک دستگاه به Entra ID ثبت می شود، یک کلید دستگاه و یک کلید حمل و نقل برای تأیید هویت دستگاه تولید و استفاده می شود. [[ویرایش] یک دشمن با دسترسی به دستگاه ممکن است قادر به صادرات کلیدها به منظور جعل دستگاه باشد. [[ویرایش]\n\nدر دستگاه های شبکه، کلیدهای خصوصی را می توان از طریق [Network Device CLI] صادر کرد ([CTI_PRESERVE_8] فرمان هایی مانند صادرات رمزنگاری (crypto pki)\n\nبرخی از کلید های خصوصی نیاز به یک رمز عبور و یا passphrase برای عملیات دارند، بنابراین یک دشمن ممکن است از [Input Capture] استفاده کند ([CTI_PRESERVE_9] برای کلید زدن یا تلاش برای [Brute Force] ([CTI_PRESERVE_10]). این کلید های خصوصی را می توان برای تایید (Remote Services) استفاده کرد ([CTI_PRESERVE_11] مانند SSH یا برای رمزگشایی سایر فایل های جمع آوری شده مانند ایمیل. <code>~/.ssh</code> <code>C:&#92;Users&#92;(username)&#92;.ssh&#92;</code> (Citation: Wikipedia Public Key Crypto) (Citation: Kaspersky Careto) (Citation: Palo Alto Prince of Persia) (Citation: Microsoft Primary Refresh Token) (Citation: AADInternals Azure AD Device Identities) (Citation: cisco_deploy_rsa_keys) https://attack.mitre.org/techniques/T1059/008 https://attack.mitre.org/techniques/T1056 https://attack.mitre.org/techniques/T1110 https://attack.mitre.org/techniques/T1021"
         }
     ]
 }

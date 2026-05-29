@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1033",
-                    "external_id": "T1033"
+                    "external_id": "T1033",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "show_ssh_users_cmd_cisco",
                     "description": "Cisco. (2023, March 7). Cisco IOS Security Command Reference: Commands S to Z . Retrieved July 13, 2022.",
-                    "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/security/s1/sec-s1-cr-book/sec-cr-s5.html"
+                    "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/security/s1/sec-s1-cr-book/sec-cr-s5.html",
+                    "source_name_fa": "Show_ssh_users_cmd_cisco",
+                    "description_fa": "سیسکو (2023, March 7) راهنمای امنیت سیسکو: دستورات S به Z Retrieved 13 July 2022"
                 },
                 {
                     "source_name": "US-CERT TA18-106A Network Infrastructure Devices 2018",
                     "description": "US-CERT. (2018, April 20). Russian State-Sponsored Cyber Actors Targeting Network Infrastructure Devices. Retrieved October 19, 2020.",
-                    "url": "https://us-cert.cisa.gov/ncas/alerts/TA18-106A"
+                    "url": "https://us-cert.cisa.gov/ncas/alerts/TA18-106A",
+                    "source_name_fa": "تجهیزات زیرساخت های شبکه US-CERT TA18-106A 2018",
+                    "description_fa": "US-CERT (2018، 20 آوریل) بازیگران سایبری تحت رهبری روسیه، تجهیزات زیرساخت شبکه را هدف قرار می دهند. Retrieved 19 اکتبر 2020"
                 }
             ],
             "object_marking_refs": [
@@ -54,7 +59,9 @@
                 "Network Devices",
                 "Windows"
             ],
-            "x_mitre_version": "1.6"
+            "x_mitre_version": "1.6",
+            "name_fa": "سیستم مالک/User Discovery",
+            "description_fa": "مخالفان ممکن است تلاش کنند تا کاربر اولیه را شناسایی کنند که در حال حاضر در کاربر ثبت شده است، مجموعه ای از کاربران که معمولا از یک سیستم استفاده می کنند یا اینکه آیا کاربر به طور فعال از سیستم استفاده می کند. این کار را می توان با استفاده از نام کاربری یا استفاده از [OS Credential Dumping] انجام داد. این اطلاعات ممکن است در تعدادی از روش های مختلف با استفاده از تکنیک های کشف دیگر جمع آوری شود، زیرا جزئیات کاربر و نام کاربری در سراسر یک سیستم شایع هستند و شامل مالکیت فرآیند اجرا، مالکیت فایل / هدایت، اطلاعات جلسه و log های سیستم هستند. مخالفان ممکن است از اطلاعات [ملک سیستم / اکتشاف کاربر] استفاده کنند ([[CTI_PRESERVE_9] در طول کشف خودکار برای شکل دادن به رفتارهای پیگیری، از جمله اینکه آیا دشمن به طور کامل هدف و / یا تلاش برای اقدامات خاص را آلوده می کند.\n\nانواع مختلف خدمات و دستورات ممکن است این اطلاعات را از جمله [CTI_PRESERVE_0] به دست آورند. در macOS و Linux، کاربران در حال حاضر می توانند با [CTI_PRESERVE] شناسایی شوند و [CTI_PRESERVE_2]. بر روی سیستم عامل (CTI_PRESERVE_3) همچنین می توان از دستور برای ثبت حساب کاربری استفاده کرد. متغیرهای محیط زیست مانند [CTI_PRESERVE_4] و [CTI_PRESERVE_5] نیز ممکن است برای دسترسی به این اطلاعات استفاده شود.\n\nدر دستگاه های شبکه، [Network Device CLI] [[[۱۰]] [[۱۰]]] دستوراتی مانند “نشان دادن کاربران” و “نشان دادن ssh” را می توان برای نمایش کاربران در حال حاضر به دستگاه استفاده کرد. [[ویرایش] <code>whoami</code> <code>w</code> <code>who</code> <code>dscl . list /Users | grep -v '_'</code> <code>%USERNAME%</code> <code>$USER</code> (Citation: show_ssh_users_cmd_cisco) (Citation: US-CERT TA18-106A Network Infrastructure Devices 2018) https://attack.mitre.org/techniques/T1003 https://attack.mitre.org/techniques/T1033 https://attack.mitre.org/techniques/T1059/008"
         }
     ]
 }

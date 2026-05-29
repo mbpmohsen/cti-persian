@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1070/009",
-                    "external_id": "T1070.009"
+                    "external_id": "T1070.009",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Cylance Dust Storm",
                     "description": "Gross, J. (2016, February 23). Operation Dust Storm. Retrieved December 22, 2021.",
-                    "url": "https://s7d2.scene7.com/is/content/cylance/prod/cylance-web/en-us/resources/knowledge-center/resource-library/reports/Op_Dust_Storm_Report.pdf"
+                    "url": "https://s7d2.scene7.com/is/content/cylance/prod/cylance-web/en-us/resources/knowledge-center/resource-library/reports/Op_Dust_Storm_Report.pdf",
+                    "source_name_fa": "طوفان گرد و غبار",
+                    "description_fa": "Gross، J. 2016، 23 فوریه عملیات طوفان گرد و غبار Retrieved 22 دسامبر 2021."
                 },
                 {
                     "source_name": "Talos - Cisco Attack 2022",
                     "description": "Nick Biasini. (2022, August 10). Cisco Talos shares insights related to recent cyber attack on Cisco. Retrieved March 9, 2023.",
-                    "url": "https://blog.talosintelligence.com/recent-cyber-attack/"
+                    "url": "https://blog.talosintelligence.com/recent-cyber-attack/",
+                    "source_name_fa": "Talos - حمله سیسکو 2022",
+                    "description_fa": "Nick Biasini سیسکو Talos بینش مربوط به حمله سایبری اخیر به سیسکو را به اشتراک می گذارد. Retrieved 9 مارس 2023."
                 },
                 {
                     "source_name": "NCC Group Team9 June 2020",
                     "description": "Pantazopoulos, N. (2020, June 2). In-depth analysis of the new Team9 malware family. Retrieved December 1, 2020.",
-                    "url": "https://research.nccgroup.com/2020/06/02/in-depth-analysis-of-the-new-team9-malware-family/"
+                    "url": "https://research.nccgroup.com/2020/06/02/in-depth-analysis-of-the-new-team9-malware-family/",
+                    "source_name_fa": "NCC گروه تیم 9 ژوئن 2020",
+                    "description_fa": "Pantazopoulos، N. (2020، ژوئن 2) تجزیه و تحلیل عمیق از خانواده جدید بدافزار Team9 Retrieved 1 دسامبر 2020"
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2026-05-12T15:12:00.717Z",
             "name": "Clear Persistence",
-            "description": "Adversaries may clear artifacts associated with previously established persistence on a host system to remove evidence of their activity. This may involve various actions, such as removing services, deleting executables, [Modify Registry](https://attack.mitre.org/techniques/T1112), [Plist File Modification](https://attack.mitre.org/techniques/T1647), or other methods of cleanup to prevent defenders from collecting evidence of their persistent presence.(Citation: Cylance Dust Storm) Adversaries may also delete accounts previously created to maintain persistence (i.e. [Create Account](https://attack.mitre.org/techniques/T1136)).(Citation: Talos - Cisco Attack 2022)\n\nIn some instances, artifacts of persistence may also be removed once an adversary\u2019s persistence is executed in order to prevent errors with the new instance of the malware.(Citation: NCC Group Team9 June 2020)",
+            "description": "Adversaries may clear artifacts associated with previously established persistence on a host system to remove evidence of their activity. This may involve various actions, such as removing services, deleting executables, [Modify Registry](https://attack.mitre.org/techniques/T1112), [Plist File Modification](https://attack.mitre.org/techniques/T1647), or other methods of cleanup to prevent defenders from collecting evidence of their persistent presence.(Citation: Cylance Dust Storm) Adversaries may also delete accounts previously created to maintain persistence (i.e. [Create Account](https://attack.mitre.org/techniques/T1136)).(Citation: Talos - Cisco Attack 2022)\n\nIn some instances, artifacts of persistence may also be removed once an adversary’s persistence is executed in order to prevent errors with the new instance of the malware.(Citation: NCC Group Team9 June 2020)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -59,7 +66,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "شفاف سازی:",
+            "description_fa": "مخالفان ممکن است مصنوعات روشن مربوط به پایداری قبلا در یک سیستم میزبان برای حذف شواهد فعالیت خود را. این ممکن است شامل اعمال مختلفی مانند حذف خدمات، حذف اجرایی، [Modify Registry Registry Registry] ([[CTI_PRESERVE_3])، [Plist File Modification] ([[[CTI_PRESERVE_4])، یا سایر روش های تمیز کردن برای جلوگیری از جمع آوری شواهد از حضور مداوم آنها باشد. [[ویرایش] همچنین می توان حساب هایی را که قبلاً ایجاد شده اند حذف کرد (برای مثال حساب کاربری ایجاد شده است).\n\nدر برخی موارد، مصنوعات پایداری نیز ممکن است زمانی برداشته شود که پایداری یک دشمن به منظور جلوگیری از خطا با نمونه جدید بدافزار اجرا شود. (Citation: Cylance Dust Storm) (Citation: Talos - Cisco Attack 2022) (Citation: NCC Group Team9 June 2020) https://attack.mitre.org/techniques/T1112 https://attack.mitre.org/techniques/T1647 https://attack.mitre.org/techniques/T1136"
         }
     ]
 }

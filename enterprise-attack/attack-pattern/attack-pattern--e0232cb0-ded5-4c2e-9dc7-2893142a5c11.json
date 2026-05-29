@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1547/013",
-                    "external_id": "T1547.013"
+                    "external_id": "T1547.013",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Free Desktop Application Autostart Feb 2006",
                     "description": "Free Desktop. (2006, February 13). Desktop Application Autostart Specification. Retrieved September 12, 2019.",
-                    "url": "https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html"
+                    "url": "https://specifications.freedesktop.org/autostart-spec/autostart-spec-latest.html",
+                    "source_name_fa": "Free Desktop Application Autostart فوریه 2006",
+                    "description_fa": "Free Desktop (2006, 13 فوریه) مشخصات Desktop Application Autostart Retrieved 12 سپتامبر 2019"
                 },
                 {
                     "source_name": "Free Desktop Entry Keys",
                     "description": "Free Desktop. (2017, December 24). Recognized Desktop Entry Keys. Retrieved November 17, 2024.",
-                    "url": "https://specifications.freedesktop.org/desktop-entry-spec/latest/recognized-keys.html"
+                    "url": "https://specifications.freedesktop.org/desktop-entry-spec/latest/recognized-keys.html",
+                    "source_name_fa": "کلیدهای ورودی Free Desktop Entry Keys",
+                    "description_fa": "Free Desktop (2017,24 دسامبر) کلیدهای ورودی Desktop را بشناسید. Retrieved ۱۷ نوامبر ۲۰۲۴"
                 },
                 {
                     "source_name": "Red Canary Netwire Linux 2022",
                     "description": "TONY LAMBERT. (2022, June 7). Trapping the Netwire RAT on Linux. Retrieved September 28, 2023.",
-                    "url": "https://redcanary.com/blog/netwire-remote-access-trojan-on-linux/"
+                    "url": "https://redcanary.com/blog/netwire-remote-access-trojan-on-linux/",
+                    "source_name_fa": "Red Canary Netwire Linux 2022",
+                    "description_fa": "Tick LAMBERT (2022, June 7) تله گذاری Netwire RAT در لینوکس Retrieved 28 سپتامبر 2023."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2025-10-24T17:49:30.252Z",
             "name": "XDG Autostart Entries",
-            "description": "Adversaries may add or modify XDG Autostart Entries to execute malicious programs or commands when a user\u2019s desktop environment is loaded at login. XDG Autostart entries are available for any XDG-compliant Linux system. XDG Autostart entries use Desktop Entry files (`.desktop`) to configure the user\u2019s desktop environment upon user login. These configuration files determine what applications launch upon user login, define associated applications to open specific file types, and define applications used to open removable media.(Citation: Free Desktop Application Autostart Feb 2006)(Citation: Free Desktop Entry Keys)\n\nAdversaries may abuse this feature to establish persistence by adding a path to a malicious binary or command to the `Exec` directive in the `.desktop` configuration file. When the user\u2019s desktop environment is loaded at user login, the `.desktop` files located in the XDG Autostart directories are automatically executed. System-wide Autostart entries are located in the `/etc/xdg/autostart` directory while the user entries are located in the `~/.config/autostart` directory.\n\nAdversaries may combine this technique with [Masquerading](https://attack.mitre.org/techniques/T1036) to blend malicious Autostart entries with legitimate programs.(Citation: Red Canary Netwire Linux 2022)",
+            "description": "Adversaries may add or modify XDG Autostart Entries to execute malicious programs or commands when a user’s desktop environment is loaded at login. XDG Autostart entries are available for any XDG-compliant Linux system. XDG Autostart entries use Desktop Entry files (`.desktop`) to configure the user’s desktop environment upon user login. These configuration files determine what applications launch upon user login, define associated applications to open specific file types, and define applications used to open removable media.(Citation: Free Desktop Application Autostart Feb 2006)(Citation: Free Desktop Entry Keys)\n\nAdversaries may abuse this feature to establish persistence by adding a path to a malicious binary or command to the `Exec` directive in the `.desktop` configuration file. When the user’s desktop environment is loaded at user login, the `.desktop` files located in the XDG Autostart directories are automatically executed. System-wide Autostart entries are located in the `/etc/xdg/autostart` directory while the user entries are located in the `~/.config/autostart` directory.\n\nAdversaries may combine this technique with [Masquerading](https://attack.mitre.org/techniques/T1036) to blend malicious Autostart entries with legitimate programs.(Citation: Red Canary Netwire Linux 2022)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -60,7 +67,9 @@
             "x_mitre_platforms": [
                 "Linux"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "XDG Autostart",
+            "description_fa": "مخالفان ممکن است ورودی های XDG Autostart را برای اجرای برنامه های مخرب یا دستورات زمانی که محیط دسکتاپ کاربر در ورود بارگذاری می شود، اضافه یا اصلاح کنند. XDG ورودی های خودکار برای هر سیستم لینوکس سازگار با XDG در دسترس هستند. XDG ورودی های خودکار از فایل های ورودی دسکتاپ (@desktop) برای پیکربندی محیط دسکتاپ کاربر بر روی ورود کاربر استفاده می کنند. این فایل های پیکربندی تعیین می کنند که چه برنامه هایی بر روی ورود کاربر راه اندازی می شوند، برنامه های مرتبط را برای باز کردن انواع فایل های خاص تعریف می کنند و برنامه های مورد استفاده برای باز کردن رسانه های قابل جابجایی را تعریف می کنند. [CTI_PRESERVE_0]\n\nمخالفان ممکن است از این ویژگی برای ایجاد پایداری با اضافه کردن یک مسیر به یک باینری مخرب یا دستور به دستورالعمل “Exec” در فایل پیکربندی “.desktop” استفاده کنند. هنگامی که محیط دسکتاپ کاربر در ورود کاربر بارگذاری می شود، فایل های \"desktop\" واقع در دایرکتوری های XDG Autostart به طور خودکار اجرا می شوند. ورودی های Autostart در دایرکتوری “/etc/xdg/autostart” واقع شده اند در حالی که ورودی های کاربر در دایرکتوری `~/.config/start قرار دارند.\n\nهمکاران ممکن است این تکنیک را با [Masquerading] ترکیب کنند ([[CTI_PRESERVE_3] برای ترکیب ورودی های مخرب خودکار با برنامه های قانونی. [[ویرایش] (Citation: Free Desktop Application Autostart Feb 2006) (Citation: Free Desktop Entry Keys) (Citation: Red Canary Netwire Linux 2022) https://attack.mitre.org/techniques/T1036"
         }
     ]
 }

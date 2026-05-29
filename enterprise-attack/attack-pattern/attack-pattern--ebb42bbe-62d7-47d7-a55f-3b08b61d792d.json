@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1484",
-                    "external_id": "T1484"
+                    "external_id": "T1484",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "ADSecurity GPO Persistence 2016",
                     "description": "Metcalf, S. (2016, March 14). Sneaky Active Directory Persistence #17: Group Policy. Retrieved March 5, 2019.",
-                    "url": "https://adsecurity.org/?p=2716"
+                    "url": "https://adsecurity.org/?p=2716",
+                    "source_name_fa": "امنیت GPO سال 2016",
+                    "description_fa": "Metcalf، S. 2016، 14 مارس Sneaky Active Directory Percing #17: Group Policy Retrieved 5 مارس 2019"
                 },
                 {
                     "source_name": "Microsoft - Customer Guidance on Recent Nation-State Cyber Attacks",
                     "description": "MSRC. (2020, December 13). Customer Guidance on Recent Nation-State Cyber Attacks. Retrieved December 30, 2020.",
-                    "url": "https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/"
+                    "url": "https://msrc-blog.microsoft.com/2020/12/13/customer-guidance-on-recent-nation-state-cyber-attacks/",
+                    "source_name_fa": "مایکروسافت – راهنمای مشتری در حملات سایبری اخیر",
+                    "description_fa": "MSRC (2020، 13 دسامبر) راهنمای مشتری در حملات سایبری اخیر کشور Retrieved ۳۰ دسامبر ۲۰۲۰"
                 },
                 {
                     "source_name": "Okta Cross-Tenant Impersonation 2023",
                     "description": "Okta Defensive Cyber Operations. (2023, August 31). Cross-Tenant Impersonation: Prevention and Detection. Retrieved February 15, 2024.",
-                    "url": "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection"
+                    "url": "https://sec.okta.com/articles/2023/08/cross-tenant-impersonation-prevention-and-detection",
+                    "source_name_fa": "Okta Cross-Tenant Impersonation 2023",
+                    "description_fa": "Okta Defensive Cyber Operations (۲۰۲۳، ۳۱ آگوست) عدم موفقیت: پیشگیری و تشخیص بازبینی شده در ۱۵ فوریه ۲۰۲۴"
                 },
                 {
                     "source_name": "Wald0 Guide to GPOs",
-                    "description": "Robbins, A. (2018, April 2). A Red Teamer\u2019s Guide to GPOs and OUs. Retrieved March 5, 2019.",
-                    "url": "https://wald0.com/?p=179"
+                    "description": "Robbins, A. (2018, April 2). A Red Teamer’s Guide to GPOs and OUs. Retrieved March 5, 2019.",
+                    "url": "https://wald0.com/?p=179",
+                    "source_name_fa": "راهنمای والد0 برای GPOs",
+                    "description_fa": "رابینز، A. (2018، 2 آوریل) راهنمای تیم قرمز برای GPOs و OUs Retrieved 5 مارس 2019"
                 },
                 {
                     "source_name": "Harmj0y Abusing GPO Permissions",
                     "description": "Schroeder, W. (2016, March 17). Abusing GPO Permissions. Retrieved September 23, 2024.",
-                    "url": "https://blog.harmj0y.net/redteaming/abusing-gpo-permissions/"
+                    "url": "https://blog.harmj0y.net/redteaming/abusing-gpo-permissions/",
+                    "source_name_fa": "Harmj0y Abusing GPO",
+                    "description_fa": "Schroeder، W. (2016، 17 مارس) مجوز GPO Retrieved 23 سپتامبر 2024"
                 }
             ],
             "object_marking_refs": [
@@ -71,7 +82,9 @@
                 "Windows",
                 "Identity Provider"
             ],
-            "x_mitre_version": "4.0"
+            "x_mitre_version": "4.0",
+            "name_fa": "Domain یا Tenant Policy Reification",
+            "description_fa": "مخالفان ممکن است تنظیمات پیکربندی یک دامنه یا مستاجر هویت را برای جلوگیری از دفاع و / یا افزایش امتیازات در محیط های مرکزی مدیریت تغییر دهند. این خدمات یک ابزار متمرکز برای مدیریت منابع هویت مانند دستگاه ها و حساب ها فراهم می کند و اغلب شامل تنظیمات پیکربندی است که ممکن است بین دامنه ها یا مستاجران مانند روابط اعتماد، همگام سازی هویت یا فدراسیون هویت اعمال شود.\n\nتغییرات در دامنه یا تنظیمات مستاجر ممکن است شامل تغییر اشیاء خط مشی (GPOs) در Microsoft Active Directory (AD) یا تغییر تنظیمات اعتماد برای دامنه ها، از جمله اعتماد فدراسیون بین دامنه ها یا مستاجر ها باشد.\n\nبا اجازه های کافی، دشمنان می توانند تنظیمات دامنه یا سیاست مستاجر را تغییر دهند. از آنجایی که تنظیمات پیکربندی برای این سرویس ها به تعداد زیادی از منابع هویت اعمال می شود، تعداد زیادی از حملات بالقوه نتایج مخرب وجود دارد که می تواند از این سوء استفاده ناشی شود. نمونه هایی از این سوء استفاده عبارتند از:\n\n(تغییرمسیر از GPOs برای فشار دادن یک کار مخرب) [[۱۰] [[۱۰]] [[۱۰]]] برای رایانه ها در سراسر محیط دامنه [[۱۰] [۹] [CTI_PRESERVE_۰][۱۰]\n* اصلاح اعتماد دامنه برای شامل یک دامنه تحت کنترل دشمن، اجازه می دهد تا دشمنان برای ایجاد توکن های دسترسی که متعاقباً توسط منابع دامنه قربانی پذیرفته می شوند [[CTI_PRESERVE_3]\n• تغییر تنظیمات در محیط AD برای پیاده سازی (Rogue Domain Controller)\n* اضافه کردن ارائه دهندگان هویت جدید و تحت کنترل دشمن برای مستاجران هویت، اجازه می دهد تا دشمنان به عنوان هر کاربر مدیریت شده توسط قربانی ([CTI_PRESERVE_4]\n\nمخالفان ممکن است به طور موقت دامنه یا سیاست مستاجر را تغییر دهند، یک اقدام مخرب (بازدید کنندگان) را انجام دهند و سپس تغییر را برای حذف شاخص های مشکوک بازگردانید. (Citation: ADSecurity GPO Persistence 2016) (Citation: Wald0 Guide to GPOs) (Citation: Harmj0y Abusing GPO Permissions) (Citation: Microsoft - Customer Guidance on Recent Nation-State Cyber Attacks) (Citation: Okta Cross-Tenant Impersonation 2023) https://attack.mitre.org/techniques/T1053/005 https://attack.mitre.org/techniques/T1207"
         }
     ]
 }

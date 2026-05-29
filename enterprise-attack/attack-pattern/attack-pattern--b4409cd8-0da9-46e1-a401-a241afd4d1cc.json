@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1556/006",
-                    "external_id": "T1556.006"
+                    "external_id": "T1556.006",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Russians Exploit Default MFA Protocol - CISA March 2022",
-                    "description": "Cyber Security Infrastructure Agency. (2022, March 15). Russian State-Sponsored Cyber Actors Gain Network Access by Exploiting Default Multifactor Authentication Protocols and \u201cPrintNightmare\u201d Vulnerability. Retrieved May 31, 2022.",
-                    "url": "https://www.cisa.gov/uscert/ncas/alerts/aa22-074a"
+                    "description": "Cyber Security Infrastructure Agency. (2022, March 15). Russian State-Sponsored Cyber Actors Gain Network Access by Exploiting Default Multifactor Authentication Protocols and “PrintNightmare” Vulnerability. Retrieved May 31, 2022.",
+                    "url": "https://www.cisa.gov/uscert/ncas/alerts/aa22-074a",
+                    "source_name_fa": "روسیه پروتکل MFA را شکست داد CISA مارس 2022",
+                    "description_fa": "آژانس امنیت سایبری (۲۰۲۲، ۱۵ مارس) بازیگران سایبری تحت حمایت روسیه دسترسی شبکه را با استفاده از پروتکل های احراز هویت چند منظوره و آسیب پذیری \"Print Nightmare\" به دست می آورند. Retrieved 31 مه 2022"
                 },
                 {
                     "source_name": "Mandiant APT42",
                     "description": "Mandiant. (n.d.). APT42: Crooked Charms, Cons and Compromise. Retrieved September 16, 2022.",
-                    "url": "https://www.mandiant.com/media/17826"
+                    "url": "https://www.mandiant.com/media/17826",
+                    "source_name_fa": "Mandiant APT42",
+                    "description_fa": "Mandiant APT42: Crookeds، Cons و Compromise Retrieved 16 سپتامبر 2022."
                 },
                 {
                     "source_name": "Azure AD Conditional Access Exclusions",
                     "description": "Microsoft. (2022, August 26). Use Azure AD access reviews to manage users excluded from Conditional Access policies. Retrieved August 30, 2022.",
-                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/governance/conditional-access-exclusion"
+                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/governance/conditional-access-exclusion",
+                    "source_name_fa": "Azure AD Conditional Access Exclusions",
+                    "description_fa": "مایکروسافت (2022، 26 آگوست) از Azure AD برای مدیریت کاربران غیر مجاز از سیاست های دسترسی مشروط استفاده کنید. Retrieved ۳۰ اوت ۲۰۲۲"
                 }
             ],
             "object_marking_refs": [
@@ -72,7 +79,9 @@
                 "SaaS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "MultiFactor Authentication",
+            "description_fa": "مخالفان ممکن است مکانیسم های احراز هویت چند عاملی (MFA) را برای دسترسی مداوم به حساب های به خطر افتاده غیرفعال یا اصلاح کنند.\n\nهنگامی که دشمنان دسترسی به یک شبکه را با به خطر انداختن یک حساب فاقد MFA یا با استفاده از روش دور زدن MFA مانند [Multi-Factor Authentication Request Generation] ([[CTI_PRESERVE_4]) به دست آورده اند، دشمنان ممکن است از دسترسی خود برای اصلاح یا کاملاً غیر فعال کردن دفاع از MFA استفاده کنند. این را می توان با سوء استفاده از ویژگی های قانونی، مانند به استثنای کاربران از Azure AD سیاست های دسترسی مشروط، ثبت نام یک روش جدید اما آسیب پذیر / پیشرفته MFA کنترل شده، و یا با وصل کردن دستی برنامه های MFA و فایل های پیکربندی برای دور زدن قابلیت های مورد انتظار. [[ویرایش]\n\nبه عنوان مثال، تغییر فایل میزبان ویندوز (C:\\Windowss\\system32\\drivers\\etc\\hosts\\) برای هدایت MFA تماس به localhost به جای سرور MFA ممکن است باعث شکست فرآیند MFA شود. اگر یک سیاست \"شکست باز\" وجود داشته باشد، هر گونه تلاش احراز هویت موفق ممکن است بدون اجرای MFA به دسترسی داده شود. [[ویرایش]\n\nبسته به دامنه، اهداف و امتیازات دشمن، دفاع MFA ممکن است برای حساب های فردی یا برای تمام حساب های مرتبط با یک گروه بزرگتر، مانند تمام حساب های دامنه در محیط شبکه قربانی غیرفعال شود. [[ویرایش] (Citation: Mandiant APT42) (Citation: Azure AD Conditional Access Exclusions) (Citation: Russians Exploit Default MFA Protocol - CISA March 2022) (Citation: Russians Exploit Default MFA Protocol - CISA March 2022) https://attack.mitre.org/techniques/T1621"
         }
     ]
 }

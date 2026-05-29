@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/003",
-                    "external_id": "T1055.003"
+                    "external_id": "T1055.003",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Elastic Process Injection July 2017",
                     "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017.",
-                    "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
+                    "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process",
+                    "source_name_fa": "Elastic Process injection جولای 2017",
+                    "description_fa": "حسینی، A. (2017، 18 ژوئیه) ده تکنیک تزریق فرایند: یک بررسی فنی از تکنیک های تزریق معمول و روندی. Retrieved 7 دسامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -47,7 +50,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "دانلود بازی The Execution Hijacking",
+            "description_fa": "مخالفان ممکن است کد مخرب را به فرآیندهای ربوده شده تزریق کنند تا از دفاع مبتنی بر فرآیند و همچنین احتمالا امتیازات بالا جلوگیری کنند. اعدام Thread Hijacking یک روش برای اجرای کد دلخواه در فضای آدرس یک فرآیند جداگانه زندگی است.\n\nاعدام Thread Hijacking معمولا با تعلیق یک فرایند موجود انجام می شود و سپس بدون نقشه برداری / کاهش حافظه آن، که می تواند با کد مخرب یا مسیر به DLL جایگزین شود. دسته ای از فرایند قربانی موجود برای اولین بار با تماس های ویندوزی بومی مانند [CTI_PRESERVE_0] ایجاد شده است. در این مرحله می توان این فرایند را به حالت تعلیق درآورد و سپس به کد تزریق شده امضا کرد و از طریق [CTI_PRESERVE] از سر گرفته شد. [[ویرایش] [[ویرایش] [[۵]] [[[۱۰]]] [[۱۰]]]] [[۱۰]]]]] [[۱۰]]]]] [[۱۰]]]] [[۱۰]]]]]] [[۱۰]]]] [۹]\n\nاین بسیار شبیه به [Process Hollowing] است ([[CTI_PRESERVE_7]) اما یک فرایند موجود را به جای ایجاد یک فرایند در حالت معلق هدف قرار می دهد.\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق Thread Execution سرقت همچنین ممکن است از تشخیص محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. <code>OpenThread</code> <code>SuspendThread </code> <code>VirtualAllocEx</code> <code>WriteProcessMemory</code> <code>SetThreadContext</code> <code>ResumeThread</code> (Citation: Elastic Process Injection July 2017) https://attack.mitre.org/techniques/T1055/012"
         }
     ]
 }

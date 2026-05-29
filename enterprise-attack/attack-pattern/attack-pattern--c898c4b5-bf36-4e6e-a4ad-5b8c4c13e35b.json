@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1564/007",
-                    "external_id": "T1564.007"
+                    "external_id": "T1564.007",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "pcodedmp Bontchev",
                     "description": "Bontchev, V. (2019, July 30). pcodedmp.py - A VBA p-code disassembler. Retrieved September 17, 2020.",
-                    "url": "https://github.com/bontchev/pcodedmp"
+                    "url": "https://github.com/bontchev/pcodedmp",
+                    "source_name_fa": "pcodedmp Bontchev",
+                    "description_fa": "Bontchev، V. (2019، 30 ژوئیه) pcodedmp.py - A VBA p-code disassembler. Retrieved ۱۷ سپتامبر ۲۰۲۰"
                 },
                 {
                     "source_name": "FireEye VBA stomp Feb 2020",
                     "description": "Cole, R., Moore, A., Stark, G., Stancill, B. (2020, February 5). STOMP 2 DIS: Brilliance in the (Visual) Basics. Retrieved September 17, 2020.",
-                    "url": "https://www.fireeye.com/blog/threat-research/2020/01/stomp-2-dis-brilliance-in-the-visual-basics.html"
+                    "url": "https://www.fireeye.com/blog/threat-research/2020/01/stomp-2-dis-brilliance-in-the-visual-basics.html",
+                    "source_name_fa": "FireEye VBA 2020",
+                    "description_fa": "کول، R.، مور، A.، استارک، G.، Stancill، B. (2020، فوریه 5). STOMP 2 DIS: Brilliance در پایه های (Visual) Retrieved ۱۷ سپتامبر ۲۰۲۰"
                 },
                 {
                     "source_name": "Evil Clippy May 2019",
                     "description": "Hegt, S. (2019, May 5). Evil Clippy: MS Office maldoc assistant. Retrieved September 17, 2020.",
-                    "url": "https://outflank.nl/blog/2019/05/05/evil-clippy-ms-office-maldoc-assistant/"
+                    "url": "https://outflank.nl/blog/2019/05/05/evil-clippy-ms-office-maldoc-assistant/",
+                    "source_name_fa": "دانلود فیلم Evil Clippy May 2019",
+                    "description_fa": "Hegt، S. (2019، May 5) شر Clippy: دستیار MS Office Retrieved ۱۷ سپتامبر ۲۰۲۰"
                 },
                 {
                     "source_name": "Microsoft _VBA_PROJECT Stream",
                     "description": "Microsoft. (2020, February 19). 2.3.4.1 _VBA_PROJECT Stream: Version Dependent Project Information. Retrieved September 18, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-ovba/ef7087ac-3974-4452-aab2-7dba2214d239"
+                    "url": "https://docs.microsoft.com/en-us/openspecs/office_file_formats/ms-ovba/ef7087ac-3974-4452-aab2-7dba2214d239",
+                    "source_name_fa": "Microsoft-VBA_PROJECT Stream Stream",
+                    "description_fa": "مایکروسافت (2020، 19 فوریه) 2.3.4.1 -VBA_PROJECT جریان: اطلاعات مربوط به پروژه Retrieved 18 سپتامبر 2020"
                 },
                 {
                     "source_name": "Walmart Roberts Oct 2018",
-                    "description": "Sayre, K., Ogden, H., Roberts, C. (2018, October 10). VBA Stomping \u2014 Advanced Maldoc Techniques. Retrieved September 17, 2020.",
-                    "url": "https://medium.com/walmartglobaltech/vba-stomping-advanced-maldoc-techniques-612c484ab278"
+                    "description": "Sayre, K., Ogden, H., Roberts, C. (2018, October 10). VBA Stomping — Advanced Maldoc Techniques. Retrieved September 17, 2020.",
+                    "url": "https://medium.com/walmartglobaltech/vba-stomping-advanced-maldoc-techniques-612c484ab278",
+                    "source_name_fa": "Walmart Roberts 2018",
+                    "description_fa": "می گوید: K., Ogden, H., Roberts, C. (2018, 10 اکتبر) VBA Stomping - تکنیک های پیشرفته Maldoc Retrieved ۱۷ سپتامبر ۲۰۲۰"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.716Z",
             "name": "VBA Stomping",
-            "description": "Adversaries may hide malicious Visual Basic for Applications (VBA) payloads embedded within MS Office documents by replacing the VBA source code with benign data.(Citation: FireEye VBA stomp Feb 2020)\n\nMS Office documents with embedded VBA content store source code inside of module streams. Each module stream has a <code>PerformanceCache</code> that stores a separate compiled version of the VBA source code known as p-code. The p-code is executed when the MS Office version specified in the <code>_VBA_PROJECT</code> stream (which contains the version-dependent description of the VBA project) matches the version of the host MS Office application.(Citation: Evil Clippy May 2019)(Citation: Microsoft _VBA_PROJECT Stream)\n\nAn adversary may hide malicious VBA code by overwriting the VBA source code location with zero\u2019s, benign code, or random bytes while leaving the previously compiled malicious p-code. Tools that scan for malicious VBA source code may be bypassed as the unwanted code is hidden in the compiled p-code. If the VBA source code is removed, some tools might even think that there are no macros present. If there is a version match between the <code>_VBA_PROJECT</code> stream and host MS Office application, the p-code will be executed, otherwise the benign VBA source code will be decompressed and recompiled to p-code, thus removing malicious p-code and potentially bypassing dynamic analysis.(Citation: Walmart Roberts Oct 2018)(Citation: FireEye VBA stomp Feb 2020)(Citation: pcodedmp Bontchev)",
+            "description": "Adversaries may hide malicious Visual Basic for Applications (VBA) payloads embedded within MS Office documents by replacing the VBA source code with benign data.(Citation: FireEye VBA stomp Feb 2020)\n\nMS Office documents with embedded VBA content store source code inside of module streams. Each module stream has a <code>PerformanceCache</code> that stores a separate compiled version of the VBA source code known as p-code. The p-code is executed when the MS Office version specified in the <code>_VBA_PROJECT</code> stream (which contains the version-dependent description of the VBA project) matches the version of the host MS Office application.(Citation: Evil Clippy May 2019)(Citation: Microsoft _VBA_PROJECT Stream)\n\nAn adversary may hide malicious VBA code by overwriting the VBA source code location with zero’s, benign code, or random bytes while leaving the previously compiled malicious p-code. Tools that scan for malicious VBA source code may be bypassed as the unwanted code is hidden in the compiled p-code. If the VBA source code is removed, some tools might even think that there are no macros present. If there is a version match between the <code>_VBA_PROJECT</code> stream and host MS Office application, the p-code will be executed, otherwise the benign VBA source code will be decompressed and recompiled to p-code, thus removing malicious p-code and potentially bypassing dynamic analysis.(Citation: Walmart Roberts Oct 2018)(Citation: FireEye VBA stomp Feb 2020)(Citation: pcodedmp Bontchev)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -68,7 +79,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "VBA دانلود فیلم Stomping",
+            "description_fa": "مخالفان ممکن است تصاویر مخرب برای برنامه های کاربردی (VBA) را که در اسناد MS Office جاسازی شده اند با جایگزینی کد منبع VBA با داده های خوش خیم پنهان کنند.\n\nاسناد MS Office با کد منبع محتوای VBA جاسازی شده در داخل جریان ماژول. هر جریان ماژول دارای یک [CTI_PRESERVE_0] است که یک نسخه جداگانه از کد منبع VBA به نام p-code را ذخیره می کند. کد زیر زمانی اجرا می شود که نسخه MS Office مشخص شده در [CTI_PRESERVE] جریان (که شامل شرح وابسته به نسخه از پروژه VBA است) با نسخه ای از برنامه MS Office میزبان مطابقت دارد.[۱۰] [CTI_PRESERVE_۴] [[۱۰] [CTI_PRESERVE_۵]\n\nیک دشمن ممکن است کد مخرب VBA را با بازنویسی مکان کد منبع VBA با کد خوش خیم صفر، یا بایت های تصادفی پنهان کند در حالی که پیش از این کد p-code مخرب را منتشر کرده است. ابزارهایی که کد منبع مخرب VBA را اسکن می کنند ممکن است از بین بروند زیرا کد ناخواسته در کد کامپایل شده پنهان است. اگر کد منبع VBA حذف شود، برخی از ابزارها حتی ممکن است فکر کنند که ماکرو وجود ندارد. اگر یک نسخه بین آن ها وجود داشته باشد. جریان و میزبان MS Office Application، کد p-code اجرا خواهد شد، در غیر این صورت کد منبع خوش خیم VBA فشرده خواهد شد و دوباره به کد p-E7 هدایت می شود، بنابراین کد مخرب را حذف می کند و به طور بالقوه تجزیه و تحلیل پویا را دور می کند.[۱۰] [CTII_PRE_SERV_E_S] <code>PerformanceCache</code> <code>_VBA_PROJECT</code> <code>_VBA_PROJECT</code> (Citation: FireEye VBA stomp Feb 2020) (Citation: Evil Clippy May 2019) (Citation: Microsoft _VBA_PROJECT Stream) (Citation: Walmart Roberts Oct 2018) (Citation: FireEye VBA stomp Feb 2020) (Citation: pcodedmp Bontchev)"
         }
     ]
 }

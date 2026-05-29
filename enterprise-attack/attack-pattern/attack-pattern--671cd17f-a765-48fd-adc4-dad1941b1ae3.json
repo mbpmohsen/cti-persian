@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1027/016",
-                    "external_id": "T1027.016"
+                    "external_id": "T1027.016",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "ReasonLabs",
                     "description": "ReasonLabs. (n.d.). What is Dead code insertion?. Retrieved March 4, 2025.",
-                    "url": "https://cyberpedia.reasonlabs.com/EN/dead%20code%20insertion.html"
+                    "url": "https://cyberpedia.reasonlabs.com/EN/dead%20code%20insertion.html",
+                    "source_name_fa": "دلیل آزمایشگاه ها",
+                    "description_fa": "دلایلی (n.d.) کدگذاری مرده چیست؟ Retrieved 4 مارس 2025"
                 },
                 {
                     "source_name": "ReasonLabs Cyberpedia Junk Code",
                     "description": "What is Junk Code?. (n.d.). ReasonLabs. Retrieved April 4, 2025.",
-                    "url": "https://cyberpedia.reasonlabs.com/EN/junk%20code.html"
+                    "url": "https://cyberpedia.reasonlabs.com/EN/junk%20code.html",
+                    "source_name_fa": "دلیل:Labs Cyberpedia کد خارجی",
+                    "description_fa": "کد زباله چیست؟ (n.d.) دلیل آزمایشگاه ها Retrieved ۴ آوریل ۲۰۲۵"
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2026-05-12T15:12:00.639Z",
             "name": "Junk Code Insertion",
-            "description": "Adversaries may use junk code / dead code to obfuscate a malware\u2019s functionality. Junk code is code that either does not execute, or if it does execute, does not change the functionality of the code. Junk code makes analysis more difficult and time-consuming, as the analyst steps through non-functional code instead of analyzing the main code. It also may hinder detections that rely on static code analysis due to the use of benign functionality, especially when combined with [Compression](https://attack.mitre.org/techniques/T1027/015) or [Software Packing](https://attack.mitre.org/techniques/T1027/002).(Citation: ReasonLabs)(Citation: ReasonLabs Cyberpedia Junk Code)\n\nNo-Operation (NOP) instructions are an example of dead code commonly used in x86 assembly language. They are commonly used as the 0x90 opcode. When NOPs are added to malware, the disassembler may show the NOP instructions, leading to the analyst needing to step through them.(Citation: ReasonLabs)\n\nThe use of junk / dead code insertion is distinct from [Binary Padding](https://attack.mitre.org/techniques/T1027/001) because the purpose is to obfuscate the functionality of the code, rather than simply to change the malware\u2019s signature.   ",
+            "description": "Adversaries may use junk code / dead code to obfuscate a malware’s functionality. Junk code is code that either does not execute, or if it does execute, does not change the functionality of the code. Junk code makes analysis more difficult and time-consuming, as the analyst steps through non-functional code instead of analyzing the main code. It also may hinder detections that rely on static code analysis due to the use of benign functionality, especially when combined with [Compression](https://attack.mitre.org/techniques/T1027/015) or [Software Packing](https://attack.mitre.org/techniques/T1027/002).(Citation: ReasonLabs)(Citation: ReasonLabs Cyberpedia Junk Code)\n\nNo-Operation (NOP) instructions are an example of dead code commonly used in x86 assembly language. They are commonly used as the 0x90 opcode. When NOPs are added to malware, the disassembler may show the NOP instructions, leading to the analyst needing to step through them.(Citation: ReasonLabs)\n\nThe use of junk / dead code insertion is distinct from [Binary Padding](https://attack.mitre.org/techniques/T1027/001) because the purpose is to obfuscate the functionality of the code, rather than simply to change the malware’s signature.   ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -53,7 +58,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "آرشیو برچسب ها",
+            "description_fa": "مخالفان ممکن است از کد زباله / کد مرده استفاده کنند تا عملکرد یک بدافزار را خنثی کنند. کد فوم کدی است که اجرا نمی کند یا اگر اجرا شود، عملکرد کد را تغییر نمی دهد. کد زباله تجزیه و تحلیل را سخت تر و زمان بر می کند، زیرا تحلیلگران به جای تجزیه و تحلیل کد اصلی، از طریق کد غیر عملکردی گام می گذارند. همچنین ممکن است از تشخیص هایی که به تجزیه و تحلیل کد استاتیک متکی هستند، به دلیل استفاده از قابلیت های خوش خیم، به ویژه هنگامی که همراه با [Compression] ([CTI_PRESERVE_3] یا [Software بسته بندی] ([CTI_PRESERVE_4]) [CT_I_PRE_E_SERV0]\n\nدستورالعمل های No-Operation (NOP) نمونه ای از کد مرده است که معمولا در زبان مونتاژ x86 استفاده می شود. آنها معمولا به عنوان کد 0x90 استفاده می شوند. هنگامی که NOP ها به بدافزار اضافه می شوند، ممکن است disassembler دستورالعمل های NOP را نشان دهد که منجر به تحلیلگری می شود که نیاز به قدم زدن دارد. [[ویرایش]\n\nاستفاده از کدگذاری زباله / مرده از [Binary Padding] متمایز است ( [[CTI_PRESERVE_5] زیرا هدف این است که عملکرد کد را به جای تغییر امضای بدافزار، خنثی کند. (Citation: ReasonLabs) (Citation: ReasonLabs Cyberpedia Junk Code) (Citation: ReasonLabs) https://attack.mitre.org/techniques/T1027/015 https://attack.mitre.org/techniques/T1027/002 https://attack.mitre.org/techniques/T1027/001"
         }
     ]
 }

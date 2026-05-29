@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1548/006",
-                    "external_id": "T1548.006"
+                    "external_id": "T1548.006",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "welivesecurity TCC",
-                    "description": "Marc-Etienne M.L\u00e9veill\u00e9. (2022, July 19). I see what you did there: A look at the CloudMensis macOS spyware. Retrieved March 21, 2024.",
-                    "url": "https://www.welivesecurity.com/2022/07/19/i-see-what-you-did-there-look-cloudmensis-macos-spyware/"
+                    "description": "Marc-Etienne M.Léveillé. (2022, July 19). I see what you did there: A look at the CloudMensis macOS spyware. Retrieved March 21, 2024.",
+                    "url": "https://www.welivesecurity.com/2022/07/19/i-see-what-you-did-there-look-cloudmensis-macos-spyware/",
+                    "source_name_fa": "امنیت TCC",
+                    "description_fa": "Marc-Etienne M.Léveillé می بینم که شما چه کردید: نگاهی به CloudMensis macOS Spyware Retrieved 21 مارس 2024"
                 },
                 {
                     "source_name": "TCC Database",
                     "description": "Marina Liang. (2024, April 23). Return of the mac(OS): Transparency, Consent, and Control (TCC) Database Manipulation. Retrieved March 28, 2024.",
-                    "url": "https://web.archive.org/web/20240411112413/https://interpressecurity.com/resources/return-of-the-macos-tcc/"
+                    "url": "https://web.archive.org/web/20240411112413/https://interpressecurity.com/resources/return-of-the-macos-tcc/",
+                    "source_name_fa": "TCC پایگاه داده",
+                    "description_fa": "مارینا لیانگ (۲۰۲۴، ۲۳ آوریل) بازگشت مک (OS): شفافیت، توافق و کنترل (TCC) پایگاه داده Manipulation. Retrieved 28 مارس 2024"
                 },
                 {
                     "source_name": "TCC macOS bypass",
                     "description": "Phil Stokes. (2021, July 1). Bypassing macOS TCC User Privacy Protections By Accident and Design. Retrieved March 21, 2024.",
-                    "url": "https://www.sentinelone.com/labs/bypassing-macos-tcc-user-privacy-protections-by-accident-and-design/"
+                    "url": "https://www.sentinelone.com/labs/bypassing-macos-tcc-user-privacy-protections-by-accident-and-design/",
+                    "source_name_fa": "TCC macOS Away",
+                    "description_fa": "فیل (۲۰۲۱، ۱ ژوئیه) پشتیبانی از macOS TCC User Privacy Protection با تصادف و طراحی Retrieved 21 مارس 2024"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +53,7 @@
             "x_mitre_attack_spec_version": "3.3.0",
             "x_mitre_contributors": [
                 "Marina Liang",
-                "Wojciech Regu\u0142a @_r3ggi",
+                "Wojciech Reguła @_r3ggi",
                 "Csaba Fitzl @theevilbit of Kandji"
             ],
             "x_mitre_deprecated": false,
@@ -58,7 +65,9 @@
             "x_mitre_platforms": [
                 "macOS"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "TCC Manipulation",
+            "description_fa": "مخالفان می توانند سرویس شفافیت، توافق، و کنترل (TCC) یا پایگاه داده را دستکاری یا سوء استفاده کنند تا مجوز های بالا را صادر کنند. TCC یک مکانیسم کنترل حریم خصوصی و امنیت macOS است که برای تعیین اینکه آیا فرآیند دویدن اجازه دسترسی به داده ها یا خدمات محافظت شده توسط TCC، مانند به اشتراک گذاری صفحه نمایش، دوربین، میکروفون یا دسترسی کامل دیسک (FDA) را دارد.\n\nهنگامی که یک درخواست برای دسترسی به داده ها یا خدماتی که توسط TCC محافظت می شود، TCC daemon (tccd) پایگاه داده TCC را بررسی می کند که در پایگاه داده TCC / پشتیبانی کتابخانه / برنامه / پشتیبانی / پشتیبانی / IP.TCC.db (و `~ / معادل آن)، و یک فایل اضافی (در صورت اتصال به یک مجوز MDM) موجود است. اگر مجوز وجود نداشته باشد، کاربر درخواست مجوز می کند. هنگامی که مجوز داده می شود، پایگاه داده اجازه های درخواست را ذخیره می کند و کاربر را دوباره تحریک نمی کند مگر اینکه مجددا تنظیم شود. به عنوان مثال، هنگامی که یک مرورگر وب درخواست مجوز به وب سایت کاربر را می دهد، یک بار به مرورگر وب اجازه نمی دهد دوباره کاربر را تحریک کند. [[ویرایش]\n\nمجرمان ممکن است به داده ها یا خدمات محدود محافظت شده توسط TCC از طریق برنامه های سوء استفاده که قبلا مجوز از طریق [Process injection] ([CTI_PRESERVE_3]) و یا اجرای یک باینری مخرب با استفاده از یک برنامه دیگر. به عنوان مثال، دشمنان می توانند از Finder، یک برنامه بومی macOS با مجوز FDA استفاده کنند تا یک برنامه مخرب (AppleScript) را اجرا کنند. هنگامی که در برنامه Finder اجرا می شود، مخرب [AppleScript] ([CTI_PRESERVE_5] دسترسی به تمام فایل های موجود در سیستم را بدون نیاز به یک کاربر سریع به ارث می برد. هنگامی که سیستم حفاظت از صداقت (SIP) غیرفعال است، حفاظت از TCC نیز غیرفعال می شود. برای یک سیستم بدون SIP فعال، دشمنان می توانند پایگاه داده TCC را دستکاری کنند تا مجوز های مخرب خود را از طریق بارگیری یک پایگاه داده TCC کنترل شده با استفاده از متغیرهای محیط زیست و [Launchctl] ([CTI_PRESERVE_6] اضافه کنند. [CTI_PRESERVE] (Citation: welivesecurity TCC) (Citation: TCC macOS bypass) (Citation: TCC Database) https://attack.mitre.org/techniques/T1055 https://attack.mitre.org/techniques/T1059/002 https://attack.mitre.org/techniques/T1059/002 https://attack.mitre.org/techniques/T1569/001"
         }
     ]
 }

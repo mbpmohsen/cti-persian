@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1174",
-                    "external_id": "T1174"
+                    "external_id": "T1174",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Carnal Ownage Password Filters Sept 2013",
                     "description": "Fuller, R. (2013, September 11). Stealing passwords every time they change. Retrieved November 21, 2017.",
-                    "url": "http://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-every-time-they.html"
+                    "url": "http://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-every-time-they.html",
+                    "source_name_fa": "فیلتر رمز عبور Carnalselfage در سپتامبر 2013",
+                    "description_fa": "فولر، R. (2013، 11 سپتامبر) رمز عبور هر بار که تغییر می کنند Retrieved 21 نوامبر 2017"
                 },
                 {
                     "source_name": "Clymb3r Function Hook Passwords Sept 2013",
                     "description": "Bialek, J. (2013, September 15). Intercepting Password Changes With Function Hooking. Retrieved November 21, 2017.",
-                    "url": "https://clymb3r.wordpress.com/2013/09/15/intercepting-password-changes-with-function-hooking/"
+                    "url": "https://clymb3r.wordpress.com/2013/09/15/intercepting-password-changes-with-function-hooking/",
+                    "source_name_fa": "Clymb3r Performance Hooks 2013",
+                    "description_fa": "Bialek، J. (2013، 15 سپتامبر) بررسی تغییرات رمز عبور با عملکرد هوکینگ Retrieved 21 نوامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +56,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "Password Filter DLL",
+            "description_fa": "فیلترهای رمز عبور ویندوز مکانیسم های اجرای سیاست رمز عبور برای هر دو دامنه و حساب های محلی هستند. فیلترها به عنوان کتابخانه های لینک پویا (DLLs) اجرا می شوند که شامل یک روش برای تأیید رمز عبور بالقوه در برابر سیاست های رمز عبور است. DLL های فیلتر را می توان در رایانه های محلی برای حساب های محلی و / یا کنترل کننده های دامنه برای حساب های دامنه قرار داد.\n\nقبل از ثبت نام رمز عبور جدید در مدیر حساب های امنیتی (SAM)، اداره امنیت محلی (LSA) از هر فیلتر ثبت شده درخواست اعتبار می کند. هر گونه تغییر بالقوه نمی تواند اثر را تا زمانی که هر فیلتر ثبت شده تایید اعتبار.\n\nمخالفان می توانند فیلترهای رمز عبور مخرب را برای دریافت اعتبار از رایانه های محلی و / یا کل دامنه ها ثبت کنند. برای انجام اعتبار مناسب، فیلترها باید اعتبار متن ساده را از LSA دریافت کنند. یک فیلتر رمز عبور مخرب هر بار که یک درخواست رمز عبور ساخته می شود، این اعتبار متن ساده را دریافت می کند. [[ویرایش] (Citation: Carnal Ownage Password Filters Sept 2013)"
         }
     ]
 }

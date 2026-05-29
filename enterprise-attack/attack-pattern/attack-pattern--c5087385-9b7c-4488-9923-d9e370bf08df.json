@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1546/018",
-                    "external_id": "T1546.018"
+                    "external_id": "T1546.018",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Python Site Configuration Hook",
-                    "description": "Python. (n.d.). site \u2014 Site-specific configuration hook. Retrieved May 22, 2025.",
-                    "url": "https://docs.python.org/3/library/site.html"
+                    "description": "Python. (n.d.). site — Site-specific configuration hook. Retrieved May 22, 2025.",
+                    "url": "https://docs.python.org/3/library/site.html",
+                    "source_name_fa": "سایت Python Site Configuration Hook",
+                    "description_fa": "پایتون (n.d.) سایت – Site- Special Configuration Hook Retrieved ۲۲ مه ۲۰۲۵"
                 },
                 {
                     "source_name": "DFIR Python Persistence 2025",
                     "description": "Stephan Berger. (2025, January 14). Analysis of Python's .pth files as a persistence mechanism. Retrieved May 22, 2025.",
-                    "url": "https://dfir.ch/posts/publish_python_pth_extension/"
+                    "url": "https://dfir.ch/posts/publish_python_pth_extension/",
+                    "source_name_fa": "DFIR Python Pertin 2025",
+                    "description_fa": "استفان برسر (۲۰۲۵، ۱۴ ژانویه) تجزیه و تحلیل فایل های .pth پایتون به عنوان یک مکانیسم ثابت. Retrieved ۲۲ مه ۲۰۲۵"
                 },
                 {
                     "source_name": "Volexity GlobalProtect CVE 2024",
                     "description": "Volexity Threat Research. (2024, April 12). Zero-Day Exploitation of Unauthenticated Remote Code Execution Vulnerability in GlobalProtect (CVE-2024-3400). Retrieved May 22, 2025.",
-                    "url": "https://www.volexity.com/blog/2024/04/12/zero-day-exploitation-of-unauthenticated-remote-code-execution-vulnerability-in-globalprotect-cve-2024-3400/"
+                    "url": "https://www.volexity.com/blog/2024/04/12/zero-day-exploitation-of-unauthenticated-remote-code-execution-vulnerability-in-globalprotect-cve-2024-3400/",
+                    "source_name_fa": "جهانی بودن محافظت از CVE 2024",
+                    "description_fa": "تحقیقات تهدید متقابل (۲۰۲۴، ۱۲ آوریل) Zero-Day Exploitation of Unauthenticated Code Vulnerability در حفاظت جهانی (CVE-2024-3400) Retrieved ۲۲ مه ۲۰۲۵"
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2025-10-21T02:35:20.850Z",
             "name": "Python Startup Hooks",
-            "description": "Adversaries may achieve persistence by leveraging Python\u2019s startup mechanisms, including path configuration (`.pth`) files and the `sitecustomize.py` or `usercustomize.py` modules. These files are automatically processed during the initialization of the Python interpreter, allowing for the execution of arbitrary code whenever Python is invoked.(Citation: Volexity GlobalProtect CVE 2024)\n\nPath configuration files are designed to extend Python\u2019s module search paths through the use of import statements. If a `.pth` file is placed in Python's `site-packages` or `dist-packages` directories, any lines beginning with `import` will be executed automatically on Python invocation.(Citation: DFIR Python Persistence 2025) Similarly, if `sitecustomize.py` or `usercustomize.py` is present in the Python path, these files will be imported during interpreter startup, and any code they contain will be executed.(Citation: Python Site Configuration Hook)\n\nAdversaries may abuse these mechanisms to establish persistence on systems where Python is widely used (e.g., for automation or scripting in production environments).  ",
+            "description": "Adversaries may achieve persistence by leveraging Python’s startup mechanisms, including path configuration (`.pth`) files and the `sitecustomize.py` or `usercustomize.py` modules. These files are automatically processed during the initialization of the Python interpreter, allowing for the execution of arbitrary code whenever Python is invoked.(Citation: Volexity GlobalProtect CVE 2024)\n\nPath configuration files are designed to extend Python’s module search paths through the use of import statements. If a `.pth` file is placed in Python's `site-packages` or `dist-packages` directories, any lines beginning with `import` will be executed automatically on Python invocation.(Citation: DFIR Python Persistence 2025) Similarly, if `sitecustomize.py` or `usercustomize.py` is present in the Python path, these files will be imported during interpreter startup, and any code they contain will be executed.(Citation: Python Site Configuration Hook)\n\nAdversaries may abuse these mechanisms to establish persistence on systems where Python is widely used (e.g., for automation or scripting in production environments).  ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -63,7 +70,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "پایتون Startup Hooks",
+            "description_fa": "مخالفان ممکن است با استفاده از مکانیسم های استارت آپ پایتون، از جمله پیکربندی مسیر («.pth») فایل ها و ماژول های سفارشی سازی سایت.py یا “user سفارشی سازی.py”، به پایداری برسند. این فایل ها به طور خودکار در طول ابتدایی سازی مترجم پایتون پردازش می شوند و اجازه اجرای کد دلخواه را هر زمان که پایتون فراخوانی شود می دهند. [[ویرایش]\n\nفایل های پیکربندی مسیر برای گسترش مسیر جستجوی ماژول پایتون از طریق استفاده از بیانیه های واردات طراحی شده اند. اگر یک فایل “.pth” در دایرکتوری “site-package” پایتون یا “dist-packages” قرار داده شود، هر خط با “import” به طور خودکار در پایتون اجرا خواهد شد. [[ویرایش] به طور مشابه، اگر \"site سفارشی سازی.py\" یا \"user سفارشی سازی.py\" در مسیر پایتون وجود دارد، این فایل ها در طول استارت آپ مترجم وارد می شوند و هر کدی که حاوی آن هستند اجرا خواهد شد. [[ویرایش]\n\nمخالفان ممکن است از این مکانیسم ها برای ایجاد پایداری در سیستم هایی که پایتون به طور گسترده ای مورد استفاده قرار می گیرد استفاده کنند (به عنوان مثال برای اتوماسیون یا اسکریپت در محیط های تولید). (Citation: Volexity GlobalProtect CVE 2024) (Citation: DFIR Python Persistence 2025) (Citation: Python Site Configuration Hook)"
         }
     ]
 }

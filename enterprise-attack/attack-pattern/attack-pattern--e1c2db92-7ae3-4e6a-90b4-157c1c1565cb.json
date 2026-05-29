@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1672",
-                    "external_id": "T1672"
+                    "external_id": "T1672",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Cloudflare DMARC, DKIM, and SPF",
                     "description": "Cloudflare. (n.d.). What are DMARC, DKIM, and SPF?. Retrieved April 8, 2025.",
-                    "url": "https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf/"
+                    "url": "https://www.cloudflare.com/learning/email-security/dmarc-dkim-spf/",
+                    "source_name_fa": "Cloudflare DMARC، DKIM و SPF",
+                    "description_fa": "Cloudflare (n.d.) DMARC، DKIM و SPF چیست؟ Retrieved 8 آوریل 2025"
                 },
                 {
                     "source_name": "DMARC-overview",
                     "description": "DMARC. (n.d.). Retrieved March 24, 2025.",
-                    "url": "https://dmarc.org/overview"
+                    "url": "https://dmarc.org/overview",
+                    "source_name_fa": "DMARC-overview",
+                    "description_fa": "DMARC (n.d.) Retrieved 24 مارس 2025"
                 },
                 {
                     "source_name": "ic3-dprk",
                     "description": "FBI, State Department, NSA. (2024, May 2). North Korean Actors Exploit Weak DMARC Security Policies to Mask Spearphishing Efforts. Retrieved April 2, 2025.",
-                    "url": "https://www.ic3.gov/CSA/2024/240502.pdf"
+                    "url": "https://www.ic3.gov/CSA/2024/240502.pdf",
+                    "source_name_fa": "ic3dprk",
+                    "description_fa": "FBI، وزارت امور خارجه، NSA (2024، May 2) بازیگران کره شمالی Exploit Weak DMARC سیاست های امنیتی برای ماسک زدن تلاش ها Retrieved 2, 2025."
                 },
                 {
                     "source_name": "Proofpoint TA427 April 2024",
-                    "description": "Lesnewich, G. et al. (2024, April 16). From Social Engineering to DMARC Abuse: TA427\u2019s Art of Information Gathering. Retrieved May 3, 2024.",
-                    "url": "https://www.proofpoint.com/us/blog/threat-insight/social-engineering-dmarc-abuse-ta427s-art-information-gathering"
+                    "description": "Lesnewich, G. et al. (2024, April 16). From Social Engineering to DMARC Abuse: TA427’s Art of Information Gathering. Retrieved May 3, 2024.",
+                    "url": "https://www.proofpoint.com/us/blog/threat-insight/social-engineering-dmarc-abuse-ta427s-art-information-gathering",
+                    "source_name_fa": "گواهی ([۱۰] آوریل 2024 TA427",
+                    "description_fa": "لسنوویچ، G. et al. (2024، 16 آوریل) از مهندسی اجتماعی گرفته تا DMARC سوء استفاده: [CTI_PRESERVE_0] هنر جمع آوری اطلاعات Retrieved 3، 2024 TA427"
                 },
                 {
                     "source_name": "Proofpoint-DMARC",
                     "description": "Proofpoint. (n.d.). Retrieved March 24, 2025.",
-                    "url": "https://www.proofpoint.com/us/threat-reference/dmarc"
+                    "url": "https://www.proofpoint.com/us/threat-reference/dmarc",
+                    "source_name_fa": "DMARC",
+                    "description_fa": "گواهی (n.d.) Retrieved 24 مارس 2025"
                 },
                 {
                     "source_name": "Barnea DirectSend",
-                    "description": "Tom Barnea. (2025, September 9). Ongoing Campaign Abuses Microsoft 365\u2019s Direct Send to Deliver Phishing Emails. Retrieved September 24, 2025.",
-                    "url": "https://www.varonis.com/blog/direct-send-exploit"
+                    "description": "Tom Barnea. (2025, September 9). Ongoing Campaign Abuses Microsoft 365’s Direct Send to Deliver Phishing Emails. Retrieved September 24, 2025.",
+                    "url": "https://www.varonis.com/blog/direct-send-exploit",
+                    "source_name_fa": "Barnea DirectSend",
+                    "description_fa": "تام بارنه (۲۰۲۵، ۹ سپتامبر) سوء استفاده از کمپین مایکروسافت 365 برای تحویل ایمیل های فیشینگ Retrieved 24 سپتامبر 2025"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2026-04-14T22:54:37.081Z",
             "name": "Email Spoofing",
-            "description": "Adversaries may fake, or spoof, a sender\u2019s identity by modifying the value of relevant email headers in order to establish contact with victims under false pretenses.(Citation: Proofpoint TA427 April 2024) In addition to actual email content, email headers (such as the FROM header, which contains the email address of the sender) may also be modified. Email clients display these headers when emails appear in a victim's inbox, which may cause modified emails to appear as if they were from the spoofed entity. \n\nThis behavior may succeed when the spoofed entity either does not enable or enforce identity authentication tools such as Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and/or Domain-based Message Authentication, Reporting and Conformance (DMARC).(Citation: Cloudflare DMARC, DKIM, and SPF)(Citation: DMARC-overview)(Citation: Proofpoint-DMARC) Even if SPF and DKIM are configured properly, spoofing may still succeed when a domain sets a weak DMARC policy such as `v=DMARC1; p=none; fo=1;`. This means that while DMARC is technically present, email servers are not instructed to take any filtering action when emails fail authentication checks.(Citation: Proofpoint TA427 April 2024)(Citation: ic3-dprk)\n\nAdversaries may abuse Microsoft 365\u2019s Direct Send functionality to spoof internal users by using internal devices like printers to send emails without authentication.(Citation: Barnea DirectSend) Adversaries may also abuse absent or weakly configured SPF, SKIM, and/or DMARC policies to conceal social engineering attempts(Citation: ic3-dprk) such as [Phishing](https://attack.mitre.org/techniques/T1566). They may also leverage email spoofing for [Impersonation](https://attack.mitre.org/techniques/T1656) of legitimate external individuals and organizations, such as journalists and academics.(Citation: ic3-dprk)",
+            "description": "Adversaries may fake, or spoof, a sender’s identity by modifying the value of relevant email headers in order to establish contact with victims under false pretenses.(Citation: Proofpoint TA427 April 2024) In addition to actual email content, email headers (such as the FROM header, which contains the email address of the sender) may also be modified. Email clients display these headers when emails appear in a victim's inbox, which may cause modified emails to appear as if they were from the spoofed entity. \n\nThis behavior may succeed when the spoofed entity either does not enable or enforce identity authentication tools such as Sender Policy Framework (SPF), DomainKeys Identified Mail (DKIM), and/or Domain-based Message Authentication, Reporting and Conformance (DMARC).(Citation: Cloudflare DMARC, DKIM, and SPF)(Citation: DMARC-overview)(Citation: Proofpoint-DMARC) Even if SPF and DKIM are configured properly, spoofing may still succeed when a domain sets a weak DMARC policy such as `v=DMARC1; p=none; fo=1;`. This means that while DMARC is technically present, email servers are not instructed to take any filtering action when emails fail authentication checks.(Citation: Proofpoint TA427 April 2024)(Citation: ic3-dprk)\n\nAdversaries may abuse Microsoft 365’s Direct Send functionality to spoof internal users by using internal devices like printers to send emails without authentication.(Citation: Barnea DirectSend) Adversaries may also abuse absent or weakly configured SPF, SKIM, and/or DMARC policies to conceal social engineering attempts(Citation: ic3-dprk) such as [Phishing](https://attack.mitre.org/techniques/T1566). They may also leverage email spoofing for [Impersonation](https://attack.mitre.org/techniques/T1656) of legitimate external individuals and organizations, such as journalists and academics.(Citation: ic3-dprk)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -71,7 +84,9 @@
                 "macOS",
                 "Linux"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "ایمیل Spoofing",
+            "description_fa": "مخالفان ممکن است جعلی یا جعلی باشند، هویت فرستنده با تغییر ارزش هدرهای ایمیل مربوطه به منظور برقراری ارتباط با قربانیان تحت pretenses کاذب. [[ویرایش] علاوه بر محتوای ایمیل واقعی، هدرهای ایمیل (مانند هدر ایمیل که شامل آدرس ایمیل فرستنده است) نیز ممکن است اصلاح شوند. مشتریان ایمیل این هدرها را هنگامی که ایمیل ها در صندوق پستی قربانی ظاهر می شوند، نشان می دهند که ممکن است باعث ایجاد ایمیل های اصلاح شده شوند، به نظر می رسد که آنها از نهاد جعلی هستند.\n\nاین رفتار ممکن است زمانی موفق شود که واحد تغذیه شده یا ابزار تأیید هویت مانند چارچوب سیاست ارسال کننده (SPF)، DomainKeys Identified Mail (DKIM)، و / یا احراز هویت پیام مبتنی بر دامنه، گزارش و انطباق (DMARC) را فعال یا اجرا نکند. [[ویرایش] [[۱۰]] [[[۱۰]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰]]]] [[۱۰]]] [[۱۰]]] [[۱۰]] [[۱۰]] حتی اگر SPF و DKIM به درستی پیکربندی شوند، ممکن است spoofing هنوز هم موفق شود زمانی که یک دامنه یک سیاست DMARC ضعیف مانند v=DMARC1 را تنظیم می کند؛ p=no؛ Fo=1؛ این بدان معنی است که در حالی که DMARC از نظر فنی وجود دارد، سرورهای ایمیل دستور نمی دهند که هنگام شکست ایمیل، هرگونه اقدام فیلترینگ را انجام دهند. [[ویرایش]\n\nمخالفان ممکن است از قابلیت ارسال مستقیم Microsoft 365 برای استفاده از دستگاه های داخلی مانند پرینتر برای ارسال ایمیل بدون تأیید استفاده کنند. [[ویرایش] همچنین ممکن است سوء استفاده از SPF، SKIM و / یا سیاست های DMARC برای پنهان کردن تلاش های مهندسی اجتماعی [[CTI_PRESERVE_7] مانند [Phishinging] ([[CTI_PREE_9]) باشد. آنها همچنین ممکن است از طریق ایمیل برای [Im personation] استفاده کنند ([[CTI_PRESERVE_10]) از افراد و سازمان های خارجی قانونی مانند روزنامه نگاران و دانشگاهیان. [[ویرایش] (Citation: Proofpoint TA427 April 2024) (Citation: Cloudflare DMARC, DKIM, and SPF) (Citation: DMARC-overview) (Citation: Proofpoint-DMARC) (Citation: Proofpoint TA427 April 2024) (Citation: ic3-dprk) (Citation: Barnea DirectSend) (Citation: ic3-dprk) (Citation: ic3-dprk) https://attack.mitre.org/techniques/T1566 https://attack.mitre.org/techniques/T1656"
         }
     ]
 }

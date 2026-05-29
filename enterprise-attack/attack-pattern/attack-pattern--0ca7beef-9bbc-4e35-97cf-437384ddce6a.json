@@ -13,22 +13,28 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1044",
-                    "external_id": "T1044"
+                    "external_id": "T1044",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/17.html",
-                    "external_id": "CAPEC-17"
+                    "external_id": "CAPEC-17",
+                    "source_name_fa": "کلاه"
                 },
                 {
                     "source_name": "Mozilla Firefox Installer DLL Hijack",
                     "description": "Kugler, R. (2012, November 20). Mozilla Foundation Security Advisory 2012-98. Retrieved March 10, 2017.",
-                    "url": "https://www.mozilla.org/en-US/security/advisories/mfsa2012-98/"
+                    "url": "https://www.mozilla.org/en-US/security/advisories/mfsa2012-98/",
+                    "source_name_fa": "Mozilla Firefox Installer DLL دانلود بازی Hijack",
+                    "description_fa": "Kugler، R. (2012، 20 نوامبر) مشاوره امنیت بنیاد موزیلا 2012-98 Retrieved 10 مارس 2017"
                 },
                 {
                     "source_name": "Seclists Kanthak 7zip Installer",
                     "description": "Kanthak, S. (2015, December 8). Executable installers are vulnerable^WEVIL (case 7): 7z*.exe\tallows remote code execution with escalation of privilege. Retrieved March 10, 2017.",
-                    "url": "http://seclists.org/fulldisclosure/2015/Dec/34"
+                    "url": "http://seclists.org/fulldisclosure/2015/Dec/34",
+                    "source_name_fa": "دانلود بازی Seclists Kanthak 7zip Installer",
+                    "description_fa": "کانتک، S. (2015، دسامبر 8) نصب کنندگان قابل کنترل آسیب پذیر هستند ^WEVIL (case 7): 7z* exe اجازه می دهد تا اجرای کد از راه دور با افزایش امتیاز. Retrieved 10 مارس 2017"
                 }
             ],
             "object_marking_refs": [
@@ -63,7 +69,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "1.2"
+            "x_mitre_version": "1.2",
+            "name_fa": "سیستم فایل مجوزهای Weakness",
+            "description_fa": "فرآیندها ممکن است به طور خودکار باینری های خاص را به عنوان بخشی از عملکرد خود یا انجام اقدامات دیگر اجرا کنند. اگر مجوزهای موجود در دایرکتوری سیستم فایل حاوی یک باینری هدف یا مجوز بر روی خود باینری، به درستی تنظیم شده باشد، آنگاه باینری هدف ممکن است با یک باینری دیگر با استفاده از مجوز سطح کاربر و اجرا شده توسط فرآیند اصلی بازنویسی شود. اگر فرآیند و رشته اصلی تحت سطح مجوز بالاتر اجرا شود، باینری جایگزین نیز تحت مجوز سطح بالاتر اجرا می شود که می تواند شامل سیستم باشد.\n\nمخالفان ممکن است از این تکنیک برای جایگزینی باینری های قانونی با عوامل مخرب به عنوان وسیله ای برای اجرای کد در سطح مجوز بالاتر استفاده کنند. اگر فرآیند اجرای در یک زمان خاص یا در یک رویداد خاص (به عنوان مثال بوت سیستم) اجرا شود، این تکنیک همچنین می تواند برای پایداری استفاده شود.\n\n## خدمات ##\n\nManipulation of Windows Service Binaries یکی از تغییرات این تکنیک است. مخالفان ممکن است جایگزین یک سرویس اجرایی قانونی با اجرایی خود برای به دست آوردن پایداری و / یا افزایش امتیاز به زمینه حساب خدمات تنظیم شده است به اجرا در زیر (حساب محلی / دامنه، سیستم، خدمات محلی یا شبکه خدمات). هنگامی که سرویس شروع می شود، یا به طور مستقیم توسط کاربر (اگر دسترسی مناسب در دسترس باشد) یا از طریق برخی از وسایل دیگر، مانند یک سیستم راه اندازی مجدد اگر سرویس شروع به بوت شدن کند، جایگزین اجرایی به جای خدمات اصلی اجرا می شود.\n\n# #Executable installers\n\nتنوع دیگری از این تکنیک را می توان با استفاده از ضعفی که در نصب کننده های اجرایی و شخصی رایج است، انجام داد. در طول فرایند نصب، معمول است برای نصب کنندگان برای استفاده از یک زیر هدایت در داخل [CTI_PRESERVE_0] دایرکتوری به unpack Binaries مانند DLL، EXEs، یا سایر محموله ها. هنگامی که نصب کنندگان ایجاد زیر راهنمایی و فایل هایی که اغلب اجازه های مناسب برای محدود کردن دسترسی به نوشتن را تنظیم نمی کنند، که اجازه می دهد تا برای اجرای کد های غیر قابل اعتماد که در زیر پوشه ها یا بیش از حد نوشتن باینری های مورد استفاده در فرآیند نصب قرار می گیرند، اجرا شوند. این رفتار مربوط به آن است و می تواند از آن بهره مند شود. برخی از نصب کنندگان همچنین ممکن است نیاز به امتیازات بالا داشته باشند که منجر به افزایش امتیاز در هنگام اجرای کد کنترل شده دشمن می شود. این رفتار مربوط به [کنترل حساب کاربری] است ([[۱۰] [[۱۰]] چندین نمونه از این ضعف در نصب کنندگان مشترک موجود به فروشندگان نرم افزار گزارش شده است. [[ویرایش] [[ویرایش] <code>%TEMP%</code> (Citation: Mozilla Firefox Installer DLL Hijack) (Citation: Seclists Kanthak 7zip Installer) https://attack.mitre.org/techniques/T1038 https://attack.mitre.org/techniques/T1088"
         }
     ]
 }

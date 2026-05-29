@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1496/002",
-                    "external_id": "T1496.002"
+                    "external_id": "T1496.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Sysdig Proxyjacking",
                     "description": "Crystal Morin. (2023, April 4). Proxyjacking has Entered the Chat. Retrieved July 6, 2023.",
-                    "url": "https://sysdig.com/blog/proxyjacking-attackers-log4j-exploited/"
+                    "url": "https://sysdig.com/blog/proxyjacking-attackers-log4j-exploited/",
+                    "source_name_fa": "Sysdig Proxyjacking",
+                    "description_fa": "Crystal Morin Proxyjacking وارد چت شده است. Retrieved 6، 2023."
                 },
                 {
                     "source_name": "Unit 42 Leaked Environment Variables 2024",
                     "description": "Margaret Kelley, Sean Johnstone, William Gamazo, and Nathaniel Quist. (2024, August 15). Leaked Environment Variables Allow Large-Scale Extortion Operation in Cloud Environments. Retrieved September 25, 2024.",
-                    "url": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/"
+                    "url": "https://unit42.paloaltonetworks.com/large-scale-cloud-extortion-operation/",
+                    "source_name_fa": "واحد 42 متغیرهای محیط زیست در سال 2024",
+                    "description_fa": "مارگارت کللی، شان جانستون، ویلیام گلزو و ناتانیل کوئیست (2024، 15 آگوست) متغیرهای محیط زیست نشتی اجازه می دهد عملیات Extortion بزرگ در محیط های ابری. 25 سپتامبر 2024"
                 },
                 {
                     "source_name": "GoBotKR",
-                    "description": "Zuzana Hromcov\u00e1. (2019, July 8). Malicious campaign targets South Korean users with backdoor\u2011laced torrents. Retrieved March 31, 2022.",
-                    "url": "https://www.welivesecurity.com/2019/07/08/south-korean-users-backdoor-torrents/"
+                    "description": "Zuzana Hromcová. (2019, July 8). Malicious campaign targets South Korean users with backdoor‑laced torrents. Retrieved March 31, 2022.",
+                    "url": "https://www.welivesecurity.com/2019/07/08/south-korean-users-backdoor-torrents/",
+                    "source_name_fa": "GoBotKR",
+                    "description_fa": "Zuzana Hromcová (2019، ژوئیه 8) کمپین Malicious کاربران کره جنوبی را با تورنت های پشت درب هدف قرار می دهد. Retrieved 31 مارس 2022"
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2025-04-15T21:52:31.979Z",
             "name": "Bandwidth Hijacking",
-            "description": "Adversaries may leverage the network bandwidth resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. \n\nAdversaries may also use malware that leverages a system's network bandwidth as part of a botnet in order to facilitate [Network Denial of Service](https://attack.mitre.org/techniques/T1498) campaigns and/or to seed malicious torrents.(Citation: GoBotKR) Alternatively, they may engage in proxyjacking by selling use of the victims' network bandwidth and IP address to proxyware services.(Citation: Sysdig Proxyjacking) Finally, they may engage in internet-wide scanning in order to identify additional targets for compromise.(Citation: Unit 42 Leaked Environment Variables 2024)\n\nIn addition to incurring potential financial costs or availability disruptions, this technique may cause reputational damage if a victim\u2019s bandwidth is used for illegal activities.(Citation: Sysdig Proxyjacking)",
+            "description": "Adversaries may leverage the network bandwidth resources of co-opted systems to complete resource-intensive tasks, which may impact system and/or hosted service availability. \n\nAdversaries may also use malware that leverages a system's network bandwidth as part of a botnet in order to facilitate [Network Denial of Service](https://attack.mitre.org/techniques/T1498) campaigns and/or to seed malicious torrents.(Citation: GoBotKR) Alternatively, they may engage in proxyjacking by selling use of the victims' network bandwidth and IP address to proxyware services.(Citation: Sysdig Proxyjacking) Finally, they may engage in internet-wide scanning in order to identify additional targets for compromise.(Citation: Unit 42 Leaked Environment Variables 2024)\n\nIn addition to incurring potential financial costs or availability disruptions, this technique may cause reputational damage if a victim’s bandwidth is used for illegal activities.(Citation: Sysdig Proxyjacking)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -60,7 +67,9 @@
             "x_mitre_version": "1.0",
             "x_mitre_impact_type": [
                 "Availability"
-            ]
+            ],
+            "name_fa": "دانلود بازی Bandwidth Hijacking",
+            "description_fa": "مخالفان ممکن است از منابع پهنای باند شبکه سیستم های تعاونی برای تکمیل وظایف منابع فشرده استفاده کنند که ممکن است بر سیستم و / یا ارائه خدمات میزبانی شده تأثیر بگذارد.\n\nمخالفان همچنین ممکن است از بدافزار استفاده کنند که از پهنای باند شبکه یک سیستم به عنوان بخشی از یک botnet استفاده می کند تا [شبکه انکار سرویس] ([[CTI_PRESERVE_4] کمپین ها و / یا تورنت های مخرب را تسهیل کند. [[ویرایش] در عوض، آنها ممکن است با فروش استفاده از پهنای باند شبکه قربانیان و آدرس IP به خدمات پروکسیware درگیر شوند. [[ویرایش] در نهایت، آنها ممکن است در اسکن اینترنتی شرکت کنند تا اهداف اضافی را برای سازش شناسایی کنند. [CTI_PRESERVE_2]\n\nعلاوه بر کاهش هزینه های بالقوه مالی یا اختلالات در دسترس بودن، این تکنیک ممکن است باعث آسیب قابل توجهی شود اگر پهنای باند قربانی برای فعالیت های غیرقانونی استفاده شود. [[ویرایش] (Citation: GoBotKR) (Citation: Sysdig Proxyjacking) (Citation: Unit 42 Leaked Environment Variables 2024) (Citation: Sysdig Proxyjacking) https://attack.mitre.org/techniques/T1498"
         }
     ]
 }

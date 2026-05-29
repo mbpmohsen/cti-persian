@@ -21,14 +21,17 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/M1052",
-                    "external_id": "M1052"
+                    "external_id": "M1052",
+                    "source_name_fa": "حمله mitre"
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "x_mitre_attack_spec_version": "3.2.0",
-            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5"
+            "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+            "name_fa": "User Account Control",
+            "description_fa": "User Account Control (UAC) یک ویژگی امنیتی در ویندوز مایکروسافت است که از تغییرات غیر مجاز در سیستم عامل جلوگیری می کند. UAC کاربران را تشویق می کند تا اعتبارهای مدیر را تأیید یا ارائه دهند، زمانی که یک عمل نیاز به امتیازات بالا دارد. پیکربندی مناسب UAC خطر حملات افزایش امتیاز را کاهش می دهد. این کاهش را می توان از طریق اقدامات زیر اجرا کرد:\n\nقابلیت UAC جهانی:\n\nاطمینان حاصل کنید که UAC از طریق سیاست گروه با تنظیم \"کنترل حساب کاربری: اجرای همه مدیران در حالت تأیید مدیریت\" به \"Enabled\" فعال می شود.\n\nنیاز به Credential Prompt:\n\nاستفاده از خط مشی گروه برای پیکربندی UAC به جای تأیید فقط برای اعتبار اداری (کنترل حساب کاربری: رفتار سریع ارتفاع).\n\nمحدود کردن داخلی-in Administrator حساب:\n\nگزینه “admin Authentication Mode” را برای حساب کاربری داخلی در بخش Group Policy تنظیم کنید.\n\nUAC Prompt امن:\n\nConfigure UAC باعث می شود تا روی دسکتاپ امن (کنترل حساب کاربری: سوئیچ به دسکتاپ امن هنگام بارگذاری برای ارتفاع) نمایش داده شود.\n\nجلوگیری از UAC سوگند:\n\n- مسدود کردن برنامه های غیر قابل اعتماد از ماشه UAC با پیکربندی کنترل حساب کاربری کاربر: فقط اجراهایی را که امضا و تایید شده اند، بالا ببرید.\nاستفاده از ابزارهای EDR برای شناسایی و مسدود کردن تکنیک های شناخته شده UAC دور.\n\nنظارت بر حوادث UAC-Related:\n\n- از Windows Event Viewer برای نظارت بر شناسه رویداد 4688 (ایجاد فرآیند) استفاده کنید و به دنبال فرآیندهای مشکوکی باشید که تلاش می کنند تا از ارتفاع UAC استفاده کنند.\n\n*Tools for Execution*\n\nساخته شده در ویندوز ابزار:\n\nGroup Policy Editor: Configure UAC تنظیمات مرکزی برای محیط های سازمانی\nRegistry Editor: تنظیمات مربوط به UAC را به طور مستقیم تنظیم کنید، مانند \"EnableLUA\" و \"ConsentPromptBehaviorAdmin\".\n\nامنیت نهایی راه حل:\n\nMicrosoft Defender برای Endpoint: Detects و بلاک کردن تکنیک های UAC دور زدن.\nSysmon : مراحل ایجاد و نظارت بر تلاش های افزایش UAC برای فعالیت های مشکوک.\n\nامنیت شخص ثالث ابزار:\n\nپردازش مانیتور (Sysinternals): پیگیری فرآیندهای زمان واقعی تعامل با UAC\nEventSentry: Windows Event را برای هشدار های مرتبط با UAC نظارت می کند."
         }
     ]
 }

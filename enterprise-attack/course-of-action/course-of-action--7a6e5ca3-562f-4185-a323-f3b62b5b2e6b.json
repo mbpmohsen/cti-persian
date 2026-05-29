@@ -12,27 +12,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/T1177",
-                    "external_id": "T1177"
+                    "external_id": "T1177",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Microsoft LSA Protection Mar 2014",
                     "description": "Microsoft. (2014, March 12). Configuring Additional LSA Protection. Retrieved November 27, 2017.",
-                    "url": "https://technet.microsoft.com/library/dn408187.aspx"
+                    "url": "https://technet.microsoft.com/library/dn408187.aspx",
+                    "source_name_fa": "Microsoft LSA Protection Mar 2014",
+                    "description_fa": "مایکروسافت (2014, 12 مارس) آشنایی با حفاظت اضافی LSA Retrieved 27 نوامبر 2017"
                 },
                 {
                     "source_name": "Microsoft Enable Cred Guard April 2017",
                     "description": "Lich, B., Tobin, J., Hall, J. (2017, April 5). Manage Windows Defender Credential Guard. Retrieved November 27, 2017.",
-                    "url": "https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard-manage"
+                    "url": "https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard-manage",
+                    "source_name_fa": "Microsoft Disced Guard 2017",
+                    "description_fa": "Lich, B., Tobin, J., Hall, J. (2017, آوریل 5). مدیریت Windows Defender Credential Guard Retrieved 27 نوامبر 2017"
                 },
                 {
                     "source_name": "Microsoft Credential Guard April 2017",
                     "description": "Lich, B., Tobin, J. (2017, April 5). How Windows Defender Credential Guard works. Retrieved November 27, 2017.",
-                    "url": "https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard-how-it-works"
+                    "url": "https://docs.microsoft.com/windows/access-protection/credential-guard/credential-guard-how-it-works",
+                    "source_name_fa": "Microsoft Credential Guard آوریل 2017",
+                    "description_fa": "Lich، B.، Tobin، J. (2017، آوریل 5) چگونه Windows Defender Credential Guard کار می کند Retrieved 27 نوامبر 2017"
                 },
                 {
                     "source_name": "Microsoft DLL Security",
                     "description": "Microsoft. (n.d.). Dynamic-Link Library Security. Retrieved November 27, 2017.",
-                    "url": "https://msdn.microsoft.com/library/windows/desktop/ff919712.aspx"
+                    "url": "https://msdn.microsoft.com/library/windows/desktop/ff919712.aspx",
+                    "source_name_fa": "Microsoft DLL امنیت امنیتی",
+                    "description_fa": "مایکروسافت (n.d.) Dynamic-Link Library Security Retrieved 27 نوامبر 2017"
                 }
             ],
             "object_marking_refs": [
@@ -47,7 +56,9 @@
                 "enterprise-attack"
             ],
             "x_mitre_version": "1.0",
-            "x_mitre_attack_spec_version": "3.2.0"
+            "x_mitre_attack_spec_version": "3.2.0",
+            "name_fa": "راننده LSASS Mitigation",
+            "description_fa": "در ویندوز 8.1 و سرور 2012 R2، LSA را فعال کنید از طریق استفاده از کلید ثبت نام (CTI_PRESERVE_0) برای ([I_PRESERVE] استفاده کنید. [[ویرایش] حفاظت از LSA تضمین می کند که پلاگین های LSA و رانندگان تنها در صورتی بارگذاری می شوند که به صورت دیجیتالی با امضای مایکروسافت امضا شده و به راهنمای فرآیند توسعه امنیت مایکروسافت (SDL) پایبند باشند.\n\nدر ویندوز 10 و سرور 2016، محافظ Windows Defender Credential Guard را قادر می سازد تا lsass را اجرا کند. اجرا در یک محیط مجازی جدا شده بدون هیچ راننده دستگاه. [[ویرایش]\n\nاطمینان حاصل کنید که حالت جستجوی DLL امن ([CTI_PRESERVE_2] برای کاهش خطر است. exe یک کتابخانه کد مخرب را بارگذاری می کند. [[ویرایش] <code>HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\RunAsPPL</code> <code>dword:00000001</code> <code>HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\SafeDllSearchMode</code> (Citation: Microsoft LSA Protection Mar 2014) (Citation: Microsoft Enable Cred Guard April 2017) (Citation: Microsoft Credential Guard April 2017) (Citation: Microsoft DLL Security)"
         }
     ]
 }

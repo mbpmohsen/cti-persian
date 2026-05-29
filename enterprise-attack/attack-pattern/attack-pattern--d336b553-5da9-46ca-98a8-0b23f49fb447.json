@@ -13,37 +13,50 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1555/004",
-                    "external_id": "T1555.004"
+                    "external_id": "T1555.004",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Malwarebytes The Windows Vault",
                     "description": "Arntz, P. (2016, March 30). The Windows Vault . Retrieved November 23, 2020.",
-                    "url": "https://blog.malwarebytes.com/101/2016/01/the-windows-vaults/"
+                    "url": "https://blog.malwarebytes.com/101/2016/01/the-windows-vaults/",
+                    "source_name_fa": "بدافزار Windows Vault",
+                    "description_fa": "Arntz، P. 2016، 30 مارس Windows Vault Retrieved 23 نوامبر 2020"
                 },
                 {
                     "source_name": "Delpy Mimikatz Crendential Manager",
                     "description": "Delpy, B. (2017, December 12). howto ~ credential manager saved credentials. Retrieved November 23, 2020.",
-                    "url": "https://github.com/gentilkiwi/mimikatz/wiki/howto-~-credential-manager-saved-credentials"
+                    "url": "https://github.com/gentilkiwi/mimikatz/wiki/howto-~-credential-manager-saved-credentials",
+                    "source_name_fa": "Delpy Mimikatz Crendential Manager",
+                    "description_fa": "Delpy، B. (2017، 12 دسامبر) چگونه می توان اعتبارنامه ها را ذخیره کرد. Retrieved 23 نوامبر 2020"
                 },
                 {
                     "source_name": "Microsoft Credential Locker",
                     "description": "Microsoft. (2013, October 23). Credential Locker Overview. Retrieved November 24, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/jj554668(v=ws.11)?redirectedfrom=MSDN"
+                    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/jj554668(v=ws.11)?redirectedfrom=MSDN",
+                    "source_name_fa": "Microsoft Credential Lock",
+                    "description_fa": "مایکروسافت (2013، 23 اکتبر) Credential Locker Retrieved 24 نوامبر 2020"
                 },
                 {
                     "source_name": "Microsoft Credential Manager store",
                     "description": "Microsoft. (2016, August 31). Cached and Stored Credentials Technical Overview. Retrieved November 24, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994565(v=ws.11)#credential-manager-store"
+                    "url": "https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh994565(v=ws.11)#credential-manager-store",
+                    "source_name_fa": "Microsoft Credential Manager",
+                    "description_fa": "مایکروسافت (2016، 31 آگوست) پنهان و ذخیره Credentials بررسی فنی. Retrieved 24 نوامبر 2020"
                 },
                 {
                     "source_name": "Microsoft CredEnumerate",
                     "description": "Microsoft. (2018, December 5). CredEnumarateA function (wincred.h). Retrieved November 24, 2020.",
-                    "url": "https://docs.microsoft.com/en-us/windows/win32/api/wincred/nf-wincred-credenumeratea"
+                    "url": "https://docs.microsoft.com/en-us/windows/win32/api/wincred/nf-wincred-credenumeratea",
+                    "source_name_fa": "Microsoft Cred Enumerate",
+                    "description_fa": "مایکروسافت (2018, دسامبر 5) نقد و بررسی مقدماتی یک تابع (برنده) Retrieved 24 نوامبر 2020"
                 },
                 {
                     "source_name": "passcape Windows Vault",
                     "description": "Passcape. (n.d.). Windows Password Recovery - Vault Explorer and Decoder. Retrieved November 24, 2020.",
-                    "url": "https://www.passcape.com/windows_password_recovery_vault_explorer"
+                    "url": "https://www.passcape.com/windows_password_recovery_vault_explorer",
+                    "source_name_fa": "ویندوز Vault",
+                    "description_fa": "(ن.د) Windows Password Recovery – Vault Explorer و Decoder Retrieved 24 نوامبر 2020"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +64,7 @@
             ],
             "modified": "2025-10-24T17:49:26.444Z",
             "name": "Windows Credential Manager",
-            "description": "Adversaries may acquire credentials from the Windows Credential Manager. The Credential Manager stores credentials for signing into websites, applications, and/or devices that request authentication through NTLM or Kerberos in Credential Lockers (previously known as Windows Vaults).(Citation: Microsoft Credential Manager store)(Citation: Microsoft Credential Locker)\n\nThe Windows Credential Manager separates website credentials from application or network credentials in two lockers. As part of [Credentials from Web Browsers](https://attack.mitre.org/techniques/T1555/003), Internet Explorer and Microsoft Edge website credentials are managed by the Credential Manager and are stored in the Web Credentials locker. Application and network credentials are stored in the Windows Credentials locker.\n\nCredential Lockers store credentials in encrypted `.vcrd` files, located under `%Systemdrive%\\Users\\\\[Username]\\AppData\\Local\\Microsoft\\\\[Vault/Credentials]\\`. The encryption key can be found in a file named <code>Policy.vpol</code>, typically located in the same folder as the credentials.(Citation: passcape Windows Vault)(Citation: Malwarebytes The Windows Vault)\n\nAdversaries may list credentials managed by the Windows Credential Manager through several mechanisms. <code>vaultcmd.exe</code> is a native Windows executable that can be used to enumerate credentials stored in the Credential Locker through a command-line interface. Adversaries may also gather credentials by directly reading files located inside of the Credential Lockers. Windows APIs, such as <code>CredEnumerateA</code>, may also be absued to list credentials managed by the Credential Manager.(Citation: Microsoft CredEnumerate)(Citation: Delpy Mimikatz Crendential Manager)\n\nAdversaries may also obtain credentials from credential backups. Credential backups and restorations may be performed by running <code>rundll32.exe keymgr.dll KRShowKeyMgr</code> then selecting the \u201cBack up...\u201d button on the \u201cStored User Names and Passwords\u201d GUI.\n\nPassword recovery tools may also obtain plain text passwords from the Credential Manager.(Citation: Malwarebytes The Windows Vault)",
+            "description": "Adversaries may acquire credentials from the Windows Credential Manager. The Credential Manager stores credentials for signing into websites, applications, and/or devices that request authentication through NTLM or Kerberos in Credential Lockers (previously known as Windows Vaults).(Citation: Microsoft Credential Manager store)(Citation: Microsoft Credential Locker)\n\nThe Windows Credential Manager separates website credentials from application or network credentials in two lockers. As part of [Credentials from Web Browsers](https://attack.mitre.org/techniques/T1555/003), Internet Explorer and Microsoft Edge website credentials are managed by the Credential Manager and are stored in the Web Credentials locker. Application and network credentials are stored in the Windows Credentials locker.\n\nCredential Lockers store credentials in encrypted `.vcrd` files, located under `%Systemdrive%\\Users\\\\[Username]\\AppData\\Local\\Microsoft\\\\[Vault/Credentials]\\`. The encryption key can be found in a file named <code>Policy.vpol</code>, typically located in the same folder as the credentials.(Citation: passcape Windows Vault)(Citation: Malwarebytes The Windows Vault)\n\nAdversaries may list credentials managed by the Windows Credential Manager through several mechanisms. <code>vaultcmd.exe</code> is a native Windows executable that can be used to enumerate credentials stored in the Credential Locker through a command-line interface. Adversaries may also gather credentials by directly reading files located inside of the Credential Lockers. Windows APIs, such as <code>CredEnumerateA</code>, may also be absued to list credentials managed by the Credential Manager.(Citation: Microsoft CredEnumerate)(Citation: Delpy Mimikatz Crendential Manager)\n\nAdversaries may also obtain credentials from credential backups. Credential backups and restorations may be performed by running <code>rundll32.exe keymgr.dll KRShowKeyMgr</code> then selecting the “Back up...” button on the “Stored User Names and Passwords” GUI.\n\nPassword recovery tools may also obtain plain text passwords from the Credential Manager.(Citation: Malwarebytes The Windows Vault)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -74,7 +87,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "Windows Credential Manager",
+            "description_fa": "مخالفان ممکن است اعتبار از Windows Credential Manager را به دست آورند. مدیر Credential برای ثبت نام در وب سایت ها، برنامه ها و / یا دستگاه هایی که مجوز تأیید را از طریق NTLM یا Kerberos در Credential Locks (که قبلا به عنوان Windows Vaults شناخته می شود) ذخیره می کند.\n\nWindows Credential Manager اعتبار وب سایت را از نرم افزار یا اعتبار شبکه در دو قفسه جدا می کند. به عنوان بخشی از [Credentials from Web Browsers] ([CTI_PRESERVE_11])، Internet Explorer و Microsoft Edge اعتبار وب سایت توسط مدیر Credential Manager مدیریت می شوند و در Web Credentials Lock ذخیره می شوند. مدارک کاربردی و شبکه در قفل های ویندوز Credential ذخیره می شوند.\n\nCredential Locks در فایل های رمزگذاری شده “.vcrd”، که در زیر “%systemdrive%\\Users” قرار دارد، ذخیره می کند. [Username] [Vault/Credentials] کلید رمزگذاری را می توان در یک فایل به نام [CTI_PRESERVE_0] یافت، به طور معمول در همان پوشه به عنوان اعتبار نامه قرار دارد. [[ویرایش]\n\nمخالفان ممکن است مدارک مدیریت شده توسط Windows Credential Manager را از طریق چندین مکانیسم فهرست کنند. [CTI_PRESERVE] یک سیستم عامل ویندوز بومی است که می تواند برای ثبت اعتبار ذخیره شده در Credential Lock از طریق یک رابط خط فرمان استفاده شود. عوامل جانبی همچنین ممکن است با خواندن فایل های مستقیم در داخل قفسه های Credential، اعتبار جمع آوری کنند. سیستم های ویندوز، مانند [CTI_PRESERVE_2]، همچنین ممکن است برای فهرست اعتبارهایی که توسط مدیر Credential مدیریت شده اند، مفید باشند.[۱۰][۱۰]\n\nمخالفان همچنین ممکن است اعتبار از پشتیبان گیری های معتبر دریافت کنند. پشتیبان گیری ها و ترمیم های Credential را می توان با اجرای [CTI_PRESERVE_3] انجام داد و سپس دکمه \"Back up\" را بر روی GUI \"Stored User Names and Passwords\" انتخاب کرد.\n\nابزار بازیابی رمز عبور همچنین می تواند پسوردهای متنی ساده را از مدیر Credential دریافت کند.[۱۰] [CTI_PRESERVE_۱۰] <code>Policy.vpol</code> <code>vaultcmd.exe</code> <code>CredEnumerateA</code> <code>rundll32.exe keymgr.dll KRShowKeyMgr</code> (Citation: Microsoft Credential Manager store) (Citation: Microsoft Credential Locker) (Citation: passcape Windows Vault) (Citation: Malwarebytes The Windows Vault) (Citation: Microsoft CredEnumerate) (Citation: Delpy Mimikatz Crendential Manager) (Citation: Malwarebytes The Windows Vault) https://attack.mitre.org/techniques/T1555/003"
         }
     ]
 }

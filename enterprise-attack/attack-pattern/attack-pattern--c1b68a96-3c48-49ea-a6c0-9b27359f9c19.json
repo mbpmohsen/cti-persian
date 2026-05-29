@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1614/001",
-                    "external_id": "T1614.001"
+                    "external_id": "T1614.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Darkside Ransomware Cybereason",
                     "description": "Cybereason Nocturnus. (2021, April 1). Cybereason vs. Darkside Ransomware. Retrieved August 18, 2021.",
-                    "url": "https://www.cybereason.com/blog/cybereason-vs-darkside-ransomware"
+                    "url": "https://www.cybereason.com/blog/cybereason-vs-darkside-ransomware",
+                    "source_name_fa": "Darkside Ransomware Cybereason",
+                    "description_fa": "Cybereason Nocturnus Cybereason در مقابل Darkside Ransomware Retrieved ۱۸ اوت ۲۰۲۱"
                 },
                 {
                     "source_name": "Securelist JSWorm",
                     "description": "Fedor Sinitsyn. (2021, May 25). Evolution of JSWorm Ransomware. Retrieved August 18, 2021.",
-                    "url": "https://securelist.com/evolution-of-jsworm-ransomware/102428/"
+                    "url": "https://securelist.com/evolution-of-jsworm-ransomware/102428/",
+                    "source_name_fa": "Securelist JSWorm",
+                    "description_fa": "فدورا Sinitsyn تکامل JSWorm Ransomware Retrieved ۱۸ اوت ۲۰۲۱"
                 },
                 {
                     "source_name": "CrowdStrike Ryuk January 2019",
                     "description": "Hanel, A. (2019, January 10). Big Game Hunting with Ryuk: Another Lucrative Targeted Ransomware. Retrieved May 12, 2020.",
-                    "url": "https://www.crowdstrike.com/blog/big-game-hunting-with-ryuk-another-lucrative-targeted-ransomware/"
+                    "url": "https://www.crowdstrike.com/blog/big-game-hunting-with-ryuk-another-lucrative-targeted-ransomware/",
+                    "source_name_fa": "CrowdStrike Ryuk ژانویه 2019",
+                    "description_fa": "هانل، A. (2019، 10 ژانویه) شکار بزرگ بازی با Ryuk: یکی دیگر از Lucrative Targeted Ransomware. Retrieved May 12 2020"
                 },
                 {
-                    "source_name": "SecureList SynAck Doppelg\u00e4nging May 2018",
-                    "description": "Ivanov, A. et al. (2018, May 7). SynAck targeted ransomware uses the Doppelg\u00e4nging technique. Retrieved May 22, 2018.",
-                    "url": "https://securelist.com/synack-targeted-ransomware-uses-the-doppelganging-technique/85431/"
+                    "source_name": "SecureList SynAck Doppelgänging May 2018",
+                    "description": "Ivanov, A. et al. (2018, May 7). SynAck targeted ransomware uses the Doppelgänging technique. Retrieved May 22, 2018.",
+                    "url": "https://securelist.com/synack-targeted-ransomware-uses-the-doppelganging-technique/85431/",
+                    "source_name_fa": "SecureList SynAck Doppelgänging May 2018",
+                    "description_fa": "ایوانوف، A. et al. (2018، May 7) باج افزار هدفمند SynAck از تکنیک Doppelgänging استفاده می کند. Retrieved ۲۲ مه ۲۰۱۸"
                 },
                 {
                     "source_name": "Malware System Language Check",
                     "description": "Pierre-Marc Bureau. (2009, January 15). Malware Trying to Avoid Some Countries. Retrieved August 18, 2021.",
-                    "url": "https://www.welivesecurity.com/2009/01/15/malware-trying-to-avoid-some-countries/"
+                    "url": "https://www.welivesecurity.com/2009/01/15/malware-trying-to-avoid-some-countries/",
+                    "source_name_fa": "دانلود بازی Malware System Language Check",
+                    "description_fa": "Pierre-Marc Bureau (2009, 15 ژانویه) بدافزار سعی می کند از برخی کشورها اجتناب کند. Retrieved ۱۸ اوت ۲۰۲۱"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2026-05-12T15:12:00.713Z",
             "name": "System Language Discovery",
-            "description": "Adversaries may attempt to gather information about the system language of a victim in order to infer the geographical location of that host. This information may be used to shape follow-on behaviors, including whether the adversary infects the target and/or attempts specific actions. This decision may be employed by malware developers and operators to reduce their risk of attracting the attention of specific law enforcement agencies or prosecution/scrutiny from other entities.(Citation: Malware System Language Check)\n\nThere are various sources of data an adversary could use to infer system language, such as system defaults and keyboard layouts. Specific checks will vary based on the target and/or adversary, but may involve behaviors such as [Query Registry](https://attack.mitre.org/techniques/T1012) and calls to [Native API](https://attack.mitre.org/techniques/T1106) functions.(Citation: CrowdStrike Ryuk January 2019) \n\nFor example, on a Windows system adversaries may attempt to infer the language of a system by querying the registry key <code>HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\Language</code> or parsing the outputs of Windows API functions <code>GetUserDefaultUILanguage</code>, <code>GetSystemDefaultUILanguage</code>, <code>GetKeyboardLayoutList</code> and <code>GetUserDefaultLangID</code>.(Citation: Darkside Ransomware Cybereason)(Citation: Securelist JSWorm)(Citation: SecureList SynAck Doppelg\u00e4nging May 2018)\n\nOn a macOS or Linux system, adversaries may query <code>locale</code> to retrieve the value of the <code>$LANG</code> environment variable.",
+            "description": "Adversaries may attempt to gather information about the system language of a victim in order to infer the geographical location of that host. This information may be used to shape follow-on behaviors, including whether the adversary infects the target and/or attempts specific actions. This decision may be employed by malware developers and operators to reduce their risk of attracting the attention of specific law enforcement agencies or prosecution/scrutiny from other entities.(Citation: Malware System Language Check)\n\nThere are various sources of data an adversary could use to infer system language, such as system defaults and keyboard layouts. Specific checks will vary based on the target and/or adversary, but may involve behaviors such as [Query Registry](https://attack.mitre.org/techniques/T1012) and calls to [Native API](https://attack.mitre.org/techniques/T1106) functions.(Citation: CrowdStrike Ryuk January 2019) \n\nFor example, on a Windows system adversaries may attempt to infer the language of a system by querying the registry key <code>HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\Language</code> or parsing the outputs of Windows API functions <code>GetUserDefaultUILanguage</code>, <code>GetSystemDefaultUILanguage</code>, <code>GetKeyboardLayoutList</code> and <code>GetUserDefaultLangID</code>.(Citation: Darkside Ransomware Cybereason)(Citation: Securelist JSWorm)(Citation: SecureList SynAck Doppelgänging May 2018)\n\nOn a macOS or Linux system, adversaries may query <code>locale</code> to retrieve the value of the <code>$LANG</code> environment variable.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -68,7 +79,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "System Language Discovery",
+            "description_fa": "مخالفان ممکن است تلاش کنند تا اطلاعات مربوط به زبان سیستم قربانی را جمع آوری کنند تا مکان جغرافیایی آن میزبان را بررسی کنند. این اطلاعات ممکن است برای شکل دادن به رفتارهای پیگیری استفاده شود، از جمله اینکه آیا دشمن هدف را آلوده می کند و یا اقدامات خاصی را انجام می دهد. این تصمیم ممکن است توسط توسعه دهندگان و اپراتورهای مخرب برای کاهش خطر جذب توجه سازمان های اجرای قانون خاص یا تعقیب و پیگرد قانونی از سایر نهادها به کار گرفته شود. [[ویرایش]\n\nمنابع مختلفی از داده ها وجود دارد که یک دشمن می تواند برای استنتاج زبان سیستم مانند پیش فرض های سیستم و طرح های صفحه کلید استفاده کند. بررسی های خاص بر اساس هدف و / یا دشمن متفاوت خواهد بود، اما ممکن است شامل رفتارهایی مانند [Query Registry] ([CTI_PRESERVE_12] و فراخوانی [Native API] باشد.\n\nبه عنوان مثال، در یک سیستم ویندوز دشمنان ممکن است تلاش کنند تا زبان یک سیستم را با جستجوی کلید رجیستری (CTI_PRESERVE_0) پردازش کنند. یا از طریق استفاده از اپلیکیشن های ویندوز ([۱۰] [[ویرایش] [[ویرایش] و [[[ویرایش] [[[ویرایش]] [[۱۰]]]] [[۱۰]]]] [[۱۰]]]] [[۱۰]]] [[۱۰]]] [[۱۰]]] [[۱۰] [[۱۰]]\n\nدر یک سیستم macOS یا Linux، دشمنان ممکن است به دنبال [CTI_PRESERVE_5] برای بازیابی ارزش [CTI_PRESERVE_6] متغیر محیط زیست باشند. <code>HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Nls\\Language</code> <code>GetUserDefaultUILanguage</code> <code>GetSystemDefaultUILanguage</code> <code>GetKeyboardLayoutList</code> <code>GetUserDefaultLangID</code> <code>locale</code> <code>$LANG</code> (Citation: Malware System Language Check) (Citation: CrowdStrike Ryuk January 2019) (Citation: Darkside Ransomware Cybereason) (Citation: Securelist JSWorm) (Citation: SecureList SynAck Doppelgänging May 2018) https://attack.mitre.org/techniques/T1012 https://attack.mitre.org/techniques/T1106"
         }
     ]
 }

@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1548/001",
-                    "external_id": "T1548.001"
+                    "external_id": "T1548.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "GTFOBins Suid",
                     "description": "Emilio Pinna, Andrea Cardaci. (n.d.). GTFOBins. Retrieved January 28, 2022.",
-                    "url": "https://gtfobins.github.io/#+suid"
+                    "url": "https://gtfobins.github.io/#+suid",
+                    "source_name_fa": "GTFOBins Suid",
+                    "description_fa": "امیلیو پیننا، آندری کارتیک (n.d.) GTFOBins"
                 },
                 {
                     "source_name": "OSX Keydnap malware",
                     "description": "Marc-Etienne M.Leveille. (2016, July 6). New OSX/Keydnap malware is hungry for credentials. Retrieved July 3, 2017.",
-                    "url": "https://www.welivesecurity.com/2016/07/06/new-osxkeydnap-malware-hungry-credentials/"
+                    "url": "https://www.welivesecurity.com/2016/07/06/new-osxkeydnap-malware-hungry-credentials/",
+                    "source_name_fa": "OSX بدافزار Keydnap",
+                    "description_fa": "Marc-Etienne M.Leveille بدافزار جدید OSX / Keydnap برای اعتبارها گرسنه است. Retrieved 3 ژوئیه 2017"
                 },
                 {
                     "source_name": "setuid man page",
                     "description": "Michael Kerrisk. (2017, September 15). Linux Programmer's Manual. Retrieved September 21, 2018.",
-                    "url": "http://man7.org/linux/man-pages/man2/setuid.2.html"
+                    "url": "http://man7.org/linux/man-pages/man2/setuid.2.html",
+                    "source_name_fa": "صفحه ی Man",
+                    "description_fa": "مایکل کر خطر (2017، 15 سپتامبر) راهنمای برنامه نویس لینوکس Retrieved ۲۱ سپتامبر ۲۰۱۸"
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2026-05-12T15:12:00.639Z",
             "name": "Setuid and Setgid",
-            "description": "An adversary may abuse configurations where an application has the setuid or setgid bits set in order to get code running in a different (and possibly more privileged) user\u2019s context. On Linux or macOS, when the setuid or setgid bits are set for an application binary, the application will run with the privileges of the owning user or group respectively.(Citation: setuid man page) Normally an application is run in the current user\u2019s context, regardless of which user or group owns the application. However, there are instances where programs need to be executed in an elevated context to function properly, but the user running them may not have the specific required privileges.\n\nInstead of creating an entry in the sudoers file, which must be done by root, any user can specify the setuid or setgid flag to be set for their own applications (i.e. [Linux and Mac Permissions](https://attack.mitre.org/techniques/T1222/002)). The <code>chmod</code> command can set these bits with bitmasking, <code>chmod 4777 [file]</code> or via shorthand naming, <code>chmod u+s [file]</code>. This will enable the setuid bit. To enable the setgid bit, <code>chmod 2775</code> and <code>chmod g+s</code> can be used.\n\nAdversaries can use this mechanism on their own malware to make sure they're able to execute in elevated contexts in the future.(Citation: OSX Keydnap malware) This abuse is often part of a \"shell escape\" or other actions to bypass an execution environment with restricted permissions.\n\nAlternatively, adversaries may choose to find and target vulnerable binaries with the setuid or setgid bits already enabled (i.e. [File and Directory Discovery](https://attack.mitre.org/techniques/T1083)). The setuid and setguid bits are indicated with an \"s\" instead of an \"x\" when viewing a file's attributes via <code>ls -l</code>. The <code>find</code> command can also be used to search for such files. For example, <code>find / -perm +4000 2>/dev/null</code> can be used to find files with setuid set and <code>find / -perm +2000 2>/dev/null</code> may be used for setgid. Binaries that have these bits set may then be abused by adversaries.(Citation: GTFOBins Suid)",
+            "description": "An adversary may abuse configurations where an application has the setuid or setgid bits set in order to get code running in a different (and possibly more privileged) user’s context. On Linux or macOS, when the setuid or setgid bits are set for an application binary, the application will run with the privileges of the owning user or group respectively.(Citation: setuid man page) Normally an application is run in the current user’s context, regardless of which user or group owns the application. However, there are instances where programs need to be executed in an elevated context to function properly, but the user running them may not have the specific required privileges.\n\nInstead of creating an entry in the sudoers file, which must be done by root, any user can specify the setuid or setgid flag to be set for their own applications (i.e. [Linux and Mac Permissions](https://attack.mitre.org/techniques/T1222/002)). The <code>chmod</code> command can set these bits with bitmasking, <code>chmod 4777 [file]</code> or via shorthand naming, <code>chmod u+s [file]</code>. This will enable the setuid bit. To enable the setgid bit, <code>chmod 2775</code> and <code>chmod g+s</code> can be used.\n\nAdversaries can use this mechanism on their own malware to make sure they're able to execute in elevated contexts in the future.(Citation: OSX Keydnap malware) This abuse is often part of a \"shell escape\" or other actions to bypass an execution environment with restricted permissions.\n\nAlternatively, adversaries may choose to find and target vulnerable binaries with the setuid or setgid bits already enabled (i.e. [File and Directory Discovery](https://attack.mitre.org/techniques/T1083)). The setuid and setguid bits are indicated with an \"s\" instead of an \"x\" when viewing a file's attributes via <code>ls -l</code>. The <code>find</code> command can also be used to search for such files. For example, <code>find / -perm +4000 2>/dev/null</code> can be used to find files with setuid set and <code>find / -perm +2000 2>/dev/null</code> may be used for setgid. Binaries that have these bits set may then be abused by adversaries.(Citation: GTFOBins Suid)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -54,7 +61,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "تنظیم و تنظیم",
+            "description_fa": "یک دشمن ممکن است از تنظیمات سوء استفاده کند که در آن یک برنامه دارای بیت های تنظیم شده یا تنظیم شده است تا کد را در یک زمینه مختلف (و احتمالا ممتاز تر) کاربر اجرا کند. در لینوکس یا macOS، هنگامی که بیت های تنظیم شده یا تنظیم شده برای یک باینری برنامه تنظیم می شوند، برنامه با امتیازات کاربر یا گروه خود اجرا می شود. [[ویرایش] به طور معمول یک برنامه در زمینه کاربر فعلی اجرا می شود، صرف نظر از اینکه کاربر یا گروه دارای برنامه هستند. با این حال، مواردی وجود دارد که برنامه ها باید در یک زمینه بالا برای عملکرد صحیح اجرا شوند، اما کاربر در حال اجرا آنها ممکن است امتیازات خاصی را نداشته باشد.\n\nبه جای ایجاد یک ورودی در فایل sudoers، که باید توسط ریشه انجام شود، هر کاربر می تواند پرچم تنظیم شده یا تنظیم شده را برای برنامه های خود تعیین کند (به عنوان مثال [لینوکس و مجوز مک] ([CTI_PRESERVE_12]). [[ویرایش] می تواند این بیت ها را با استفاده از بیت کوین تنظیم کند. یا از طریق نام کوتاه، [[ویرایش] این کار باعث می شود که کمی مشخص شود. و در این صورت، آن را به کار می برد. می توان استفاده کرد.\n\nمخالفان می توانند از این مکانیسم در بدافزار خود استفاده کنند تا اطمینان حاصل کنند که قادر به اجرای آن در زمینه های بالا در آینده هستند. [[ویرایش] این سوء استفاده اغلب بخشی از \" فرار پوسته\" یا اقدامات دیگر برای دور زدن یک محیط اعدام با مجوز محدود است.\n\nاز طرف دیگر، دشمنان ممکن است تصمیم به پیدا کردن و هدف قرار دادن بن بست های آسیب پذیر با بیت های مشخص شده و یا تنظیم شده در حال حاضر فعال (به عنوان مثال [فایل و کشف دایرکتوری] ([[۵] [CTI_PRESERVE_۱۳]). به جای یک \"x\" در هنگام مشاهده ویژگی های فایل از طریق [CTI_PRESERVE_5] با یک \"x\" نشان داده شده است. [[ویرایش] همچنین می تواند برای جستجوی چنین فایل هایی استفاده شود. به عنوان مثال، [CTI_PRESERVE_7] می تواند برای پیدا کردن فایل های تنظیم شده استفاده شود و [CTI_PRESERVE_8] ممکن است برای آرایش استفاده شود. پس از آن ممکن است از سوی دشمنان سوء استفاده شود. [[ویرایش] <code>chmod</code> <code>chmod 4777 [file]</code> <code>chmod u+s [file]</code> <code>chmod 2775</code> <code>chmod g+s</code> <code>ls -l</code> <code>find</code> <code>find / -perm +4000 2>/dev/null</code> <code>find / -perm +2000 2>/dev/null</code> (Citation: setuid man page) (Citation: OSX Keydnap malware) (Citation: GTFOBins Suid) https://attack.mitre.org/techniques/T1222/002 https://attack.mitre.org/techniques/T1083"
         }
     ]
 }

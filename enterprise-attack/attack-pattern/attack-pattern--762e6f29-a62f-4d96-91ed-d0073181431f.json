@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1564/014",
-                    "external_id": "T1564.014"
+                    "external_id": "T1564.014",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Establishing persistence using extended attributes on Linux",
                     "description": "Irem Kuyucu. (2024, August 6). Establishing persistence using extended  attributes on Linux. Retrieved March 27, 2025.",
-                    "url": "https://kernal.eu/posts/linux-xattr-persistence/"
+                    "url": "https://kernal.eu/posts/linux-xattr-persistence/",
+                    "source_name_fa": "ایجاد پایداری با استفاده از ویژگی های گسترده در لینوکس",
+                    "description_fa": "Irem Kuyucu ایجاد پایداری با استفاده از ویژگی های گسترده در لینوکس Retrieved 27 مارس 2025"
                 },
                 {
                     "source_name": "Low GroupIB xattrs nov 2024",
                     "description": "Sharmine Low. (2024, November 13). Stealthy Attributes of Lazarus APT Group: Evading Detection with Extended Attributes. Retrieved March 27, 2025.",
-                    "url": "https://www.group-ib.com/blog/stealthy-attributes-of-apt-lazarus/"
+                    "url": "https://www.group-ib.com/blog/stealthy-attributes-of-apt-lazarus/",
+                    "source_name_fa": "گروه پایین xattrs Nov 2024",
+                    "description_fa": "Shamine Low (۲۰۲۴، ۱۳ نوامبر) ویژگی های Stealthy از گروه APT: تشخیص اوزون با ویژگی های گسترده Retrieved 27 مارس 2025"
                 }
             ],
             "object_marking_refs": [
@@ -54,7 +59,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "ویژگی های گسترده",
+            "description_fa": "مخالفان ممکن است از ویژگی های گسترده (xattrs) در macOS و Linux برای پنهان کردن داده های مخرب خود برای جلوگیری از تشخیص استفاده کنند. ویژگی های گسترده، جفت های ارزش کلیدی فایل و متاداده دایرکتوری است که توسط هر دو macOS و Linux استفاده می شود. آنها از طریق ابزارهای استاندارد مانند \"Finder\"، \"ls\" یا \"cat\" قابل مشاهده نیستند و نیاز به خدمات مانند \"xattr\" (macOS) یا \"getfattr\" (لینوکس) برای بازرسی دارند. سیستم های عملیاتی و برنامه های کاربردی از xattrs برای تگ کردن، بررسی یکپارچگی و کنترل دسترسی استفاده می کنند. در لینوکس، xattrs به فضاهای نام مانند \"user\" (اجازه های کاربر)، \"اعتماد\" (اجازه های ریشه)، \"امنیت\" و \"سیستم\"، هر کدام با مجوز های خاص سازماندهی شده است. در macOS، xattrs رشته های مسطح بدون پیشوند فضای (معمولاً با @com.apple.apple.) است. * (به عنوان مثال، ‘com.apple.quarantine’، @com.apple.metadata:_kMDItemUser') و توسط ویژگی های سیستم مانند دروازه بان و استفاده می شود.[۱۰]\n\nیک دشمن ممکن است از xattrs با جاسازی یک محموله مرحله دوم به ویژگی گسترده یک فایل مشروع استفاده کند. در macOS، یک محموله را می توان به یک ویژگی سفارشی با استفاده از دستور “xattr” جاسازی کرد. یک لودر جداگانه می تواند ویژگی را با \"xattr -p\" بازیابی کند، محتوا را رمزگشایی کند و آن را با استفاده از یک مترجم اسکریپت اجرا کند. در لینوکس، یک دشمن ممکن است از “setfattr” برای نوشتن یک محموله به “user” استفاده کند. یک اسکریپت Loader بعدا می تواند محموله را با \"getfattr - فقط ارزش\" استخراج کند، آن را رمزگشایی کند و آن را با استفاده از bash یا مترجم دیگر اجرا کند. در هر دو مورد، از آنجا که محتوای فایل اصلی بدون تغییر باقی مانده است، ابزار امنیتی و چک های یکپارچگی که ویژگی های طولانی را بررسی نمی کنند، هش فایل اصلی را مشاهده می کنند و اجازه می دهند تا محموله مخرب برای جلوگیری از تشخیص از بین برود. [[ویرایش] (Citation: Establishing persistence using extended attributes on Linux) (Citation: Low GroupIB xattrs nov 2024)"
         }
     ]
 }

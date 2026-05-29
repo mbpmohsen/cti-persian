@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1556/005",
-                    "external_id": "T1556.005"
+                    "external_id": "T1556.005",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "dump_pwd_dcsync",
                     "description": "Metcalf, S. (2015, November 22). Dump Clear-Text Passwords for All Admins in the Domain Using Mimikatz DCSync. Retrieved November 15, 2021.",
-                    "url": "https://adsecurity.org/?p=2053"
+                    "url": "https://adsecurity.org/?p=2053",
+                    "source_name_fa": "Leave_pwd_dcsync",
+                    "description_fa": "متcalf، S. (2015، 22 نوامبر) Container Clear-Text Password برای All Admins در Domain با استفاده از Mimikatz DCSync Retrieved 15، 2021."
                 },
                 {
                     "source_name": "store_pwd_rev_enc",
                     "description": "Microsoft. (2021, October 28). Store passwords using reversible encryption. Retrieved January 3, 2022.",
-                    "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/store-passwords-using-reversible-encryption"
+                    "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/store-passwords-using-reversible-encryption",
+                    "source_name_fa": "فروشگاه_pwd_rev_enc",
+                    "description_fa": "مایکروسافت (2021، 28 اکتبر) ذخیره کلمات عبور با استفاده از رمزگذاری برگشت پذیر Retrieved 3، 2022."
                 },
                 {
                     "source_name": "how_pwd_rev_enc_1",
                     "description": "Teusink, N. (2009, August 25). Passwords stored using reversible encryption: how it works (part 1). Retrieved November 17, 2021.",
-                    "url": "http://blog.teusink.net/2009/08/passwords-stored-using-reversible.html"
+                    "url": "http://blog.teusink.net/2009/08/passwords-stored-using-reversible.html",
+                    "source_name_fa": "How_pwd_rev_enc",
+                    "description_fa": "Teusink، N. (2009، 25 آگوست) رمز عبور ذخیره شده با استفاده از رمزگذاری برگشت پذیر: چگونه کار می کند (part 1) Retrieved 17 2021."
                 },
                 {
                     "source_name": "how_pwd_rev_enc_2",
                     "description": "Teusink, N. (2009, August 26). Passwords stored using reversible encryption: how it works (part 2). Retrieved November 17, 2021.",
-                    "url": "http://blog.teusink.net/2009/08/passwords-stored-using-reversible_26.html"
+                    "url": "http://blog.teusink.net/2009/08/passwords-stored-using-reversible_26.html",
+                    "source_name_fa": "چگونه_pwd_rev_enc_2",
+                    "description_fa": "Teusink، N. (2009، 26 آگوست) رمز عبور ذخیره شده با استفاده از رمزگذاری برگشت پذیر: چگونه کار می کند (part 2). Retrieved 17 2021."
                 }
             ],
             "object_marking_refs": [
@@ -66,7 +75,9 @@
             "x_mitre_platforms": [
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "بایگانی برچسب ها",
+            "description_fa": "یک دشمن ممکن است از خواص رمزگذاری Active Directory برای دسترسی به اعتبار در سیستم های ویندوز استفاده کند. [CTI_PRESERVE_0] اموال مشخص می کند که آیا رمزگذاری رمز عبور برگشت پذیر برای یک حساب فعال یا غیرفعال است. به طور پیش فرض این اموال غیرفعال است (به جای ذخیره اعتبار کاربر به عنوان خروجی از توابع هش یک طرفه) و نباید فعال شود مگر اینکه میراث یا سایر نرم افزار نیاز به آن داشته باشد.\n\nاگر ملک فعال شود و یا کاربر پس از فعال شدن رمز عبور خود را تغییر دهد، ممکن است یک دشمن بتواند متن ساده ای از کلمات عبور ایجاد شده / تغییر پس از اینکه ملک فعال شد را به دست آورد. برای رمزگشایی کلمات عبور، یک دشمن به چهار جزء نیاز دارد:\n\n1. رمز عبور رمزگذاری شده ([CTI_PRESERVE] از Active Directory User-structure [CTI_PRESERVE_2]\n۱۶ ارزش تولید شده تصادفی ([۱۰] [[۱۰] از سوی دیگر،\n۳- راز جهانی LSA ([۱۰]\n4. کلید استاتیک در Remote Access Subauthentication DLL ([CTI_PRESERVE_6])\n\nبا این اطلاعات، ممکن است یک دشمن بتواند کلید رمزگذاری را بازتولید کند و متعاقباً ارزش رمز عبور رمزگذاری شده را رمزگشایی کند.[۱۰] [CTI_PRESERVE_۱۰]\n\nیک دشمن ممکن است این ملک را در محدوده های مختلف از طریق ویرایشگر سیاست محلی، ویژگی های کاربر، سیاست رمز عبور زیبا (FGPP)، یا از طریق ActiveDirectory [PowerShell] ([[CTI_PRESERVE_12] ماژول. به عنوان مثال، یک دشمن ممکن است یک FGPP را به کاربران یا گروه ها اعمال کند اگر سطح عملکرد دامنه به \"Windows Server 2008\" یا بالاتر تنظیم شود. [[ویرایش] [CTI_PRESERVE_11] در PowerShell، یک دشمن ممکن است تغییرات مربوط به تنظیمات کاربر را با استفاده از دستورات مشابه [CTI_PRESERVE_7] ایجاد کند. <code>AllowReversiblePasswordEncryption</code> <code>G$RADIUSCHAP</code> <code>userParameters</code> <code>G$RADIUSCHAPKEY</code> <code>userParameters</code> <code>G$MSRADIUSCHAPKEY</code> <code>RASSFM.DLL</code> <code>Set-ADUser -AllowReversiblePasswordEncryption $true</code> (Citation: store_pwd_rev_enc) (Citation: how_pwd_rev_enc_1) (Citation: how_pwd_rev_enc_2) (Citation: dump_pwd_dcsync) https://attack.mitre.org/techniques/T1059/001"
         }
     ]
 }

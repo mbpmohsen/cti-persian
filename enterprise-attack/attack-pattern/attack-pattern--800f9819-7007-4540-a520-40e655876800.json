@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1612",
-                    "external_id": "T1612"
+                    "external_id": "T1612",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Aqua Build Images on Hosts",
                     "description": "Assaf Morag. (2020, July 15). Threat Alert: Attackers Building Malicious Images on Your Hosts. Retrieved March 29, 2021.",
-                    "url": "https://blog.aquasec.com/malicious-container-image-docker-container-host"
+                    "url": "https://blog.aquasec.com/malicious-container-image-docker-container-host",
+                    "source_name_fa": "Aqua ساخت تصاویر در میزبان",
+                    "description_fa": "Assaf Morag (2020، 15 ژوئیه) هشدار تهدید: حمله کنندگان تصاویر خطرناکی را در میزبان های شما ایجاد می کنند. Retrieved 29 مارس 2021"
                 },
                 {
                     "source_name": "Docker Build Image",
                     "description": "Docker. ( null). Docker Engine API v1.41 Reference - Build an Image. Retrieved March 30, 2021.",
-                    "url": "https://docs.docker.com/engine/api/v1.41/#operation/ImageBuild"
+                    "url": "https://docs.docker.com/engine/api/v1.41/#operation/ImageBuild",
+                    "source_name_fa": "Docker Build Image",
+                    "description_fa": "Docker Docker Engine API v1.41 مرجع - ساخت یک تصویر Retrieved ۳۰ مارس ۲۰۲۱"
                 },
                 {
                     "source_name": "Aqua Security Cloud Native Threat Report June 2021",
                     "description": "Team Nautilus. (2021, June). Attacks in the Wild on the Container Supply Chain and Infrastructure. Retrieved August 26, 2021.",
-                    "url": "https://info.aquasec.com/hubfs/Threat%20reports/AquaSecurity_Cloud_Native_Threat_Report_2021.pdf?utm_campaign=WP%20-%20Jun2021%20Nautilus%202021%20Threat%20Research%20Report&utm_medium=email&_hsmi=132931006&_hsenc=p2ANqtz-_8oopT5Uhqab8B7kE0l3iFo1koirxtyfTehxF7N-EdGYrwk30gfiwp5SiNlW3G0TNKZxUcDkYOtwQ9S6nNVNyEO-Dgrw&utm_content=132931006&utm_source=hs_automation"
+                    "url": "https://info.aquasec.com/hubfs/Threat%20reports/AquaSecurity_Cloud_Native_Threat_Report_2021.pdf?utm_campaign=WP%20-%20Jun2021%20Nautilus%202021%20Threat%20Research%20Report&utm_medium=email&_hsmi=132931006&_hsenc=p2ANqtz-_8oopT5Uhqab8B7kE0l3iFo1koirxtyfTehxF7N-EdGYrwk30gfiwp5SiNlW3G0TNKZxUcDkYOtwQ9S6nNVNyEO-Dgrw&utm_content=132931006&utm_source=hs_automation",
+                    "source_name_fa": "Aqua Security Cloud Native Threat Report 2021",
+                    "description_fa": "تیم Nautilus (2021، ژوئن) حملات در وحشی در زنجیره تامین کانتینر و زیرساخت Retrieved 26 اوت 2021."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2026-05-12T15:12:00.662Z",
             "name": "Build Image on Host",
-            "description": "Adversaries may build a container image directly on a host to bypass defenses that monitor for the retrieval of malicious images from a public registry. A remote <code>build</code> request may be sent to the Docker API that includes a Dockerfile that pulls a vanilla base image, such as alpine, from a public or local registry and then builds a custom image upon it.(Citation: Docker Build Image)\n\nAn adversary may take advantage of that <code>build</code> API to build a custom image on the host that includes malware downloaded from their C2 server, and then they may utilize [Deploy Container](https://attack.mitre.org/techniques/T1610) using that custom image.(Citation: Aqua Build Images on Hosts)(Citation: Aqua Security Cloud Native Threat Report June 2021) If the base image is pulled from a public registry, defenses will likely not detect the image as malicious since it\u2019s a vanilla image. If the base image already resides in a local registry, the pull may be considered even less suspicious since the image is already in the environment. ",
+            "description": "Adversaries may build a container image directly on a host to bypass defenses that monitor for the retrieval of malicious images from a public registry. A remote <code>build</code> request may be sent to the Docker API that includes a Dockerfile that pulls a vanilla base image, such as alpine, from a public or local registry and then builds a custom image upon it.(Citation: Docker Build Image)\n\nAn adversary may take advantage of that <code>build</code> API to build a custom image on the host that includes malware downloaded from their C2 server, and then they may utilize [Deploy Container](https://attack.mitre.org/techniques/T1610) using that custom image.(Citation: Aqua Build Images on Hosts)(Citation: Aqua Security Cloud Native Threat Report June 2021) If the base image is pulled from a public registry, defenses will likely not detect the image as malicious since it’s a vanilla image. If the base image already resides in a local registry, the pull may be considered even less suspicious since the image is already in the environment. ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -59,7 +66,9 @@
             "x_mitre_platforms": [
                 "Containers"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "ساخت تصویر در Host",
+            "description_fa": "مخالفان ممکن است یک تصویر container را به طور مستقیم بر روی یک میزبان ایجاد کنند تا از عملیات دفاعی که برای بازیابی تصاویر مخرب از یک رجیستری عمومی نظارت می کند، جلوگیری کنند. یک درخواست از راه دور [CTI_PRESERVE_0] ممکن است به Docker API ارسال شود که شامل یک Dockerfile است که یک تصویر پایه وانیل مانند آلپین را از یک رجیست عمومی یا محلی جذب می کند و سپس یک تصویر سفارشی بر روی آن ایجاد می کند.\n\nیک دشمن ممکن است از آن بهره مند شود. برای ساخت یک تصویر سفارشی بر روی میزبان که شامل بدافزاری است که از سرور C2 خود بارگیری شده است و سپس ممکن است از [Deploy Container] استفاده کنند ([CTI_PRESERVE_5] با استفاده از این تصویر سفارشی.[۱۰] [CTI_PRESERV_E_۳][۱۰] اگر تصویر پایه از یک رجیستری عمومی کشیده شود، دفاع احتمالا تصویر را به عنوان مخرب تشخیص نمی دهد زیرا یک تصویر وانیل است. اگر تصویر پایه در حال حاضر در یک رجیستری محلی قرار دارد، ممکن است کشش حتی کمتر مشکوک به نظر برسد زیرا تصویر در حال حاضر در محیط زیست است. <code>build</code> <code>build</code> (Citation: Docker Build Image) (Citation: Aqua Build Images on Hosts) (Citation: Aqua Security Cloud Native Threat Report June 2021) https://attack.mitre.org/techniques/T1610"
         }
     ]
 }

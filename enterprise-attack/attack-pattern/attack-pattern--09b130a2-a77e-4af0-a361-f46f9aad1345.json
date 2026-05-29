@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1222/002",
-                    "external_id": "T1222.002"
+                    "external_id": "T1222.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Hybrid Analysis Icacls1 June 2018",
                     "description": "Hybrid Analysis. (2018, June 12). c9b65b764985dfd7a11d3faf599c56b8.exe. Retrieved August 19, 2018.",
-                    "url": "https://www.hybrid-analysis.com/sample/ef0d2628823e8e0a0de3b08b8eacaf41cf284c086a948bdfd67f4e4373c14e4d?environmentId=100"
+                    "url": "https://www.hybrid-analysis.com/sample/ef0d2628823e8e0a0de3b08b8eacaf41cf284c086a948bdfd67f4e4373c14e4d?environmentId=100",
+                    "source_name_fa": "تجزیه و تحلیل ترکیبی Icacls1 ژوئن 2018",
+                    "description_fa": "تجزیه و تحلیل ترکیبی (2018، 12 ژوئن) c9b65b764985dfd7a11d3fa599c56b8.exe. Retrieved 19 اوت 2018"
                 },
                 {
                     "source_name": "Hybrid Analysis Icacls2 May 2018",
                     "description": "Hybrid Analysis. (2018, May 30). 2a8efbfadd798f6111340f7c1c956bee.dll. Retrieved August 19, 2018.",
-                    "url": "https://www.hybrid-analysis.com/sample/22dab012c3e20e3d9291bce14a2bfc448036d3b966c6e78167f4626f5f9e38d6?environmentId=110"
+                    "url": "https://www.hybrid-analysis.com/sample/22dab012c3e20e3d9291bce14a2bfc448036d3b966c6e78167f4626f5f9e38d6?environmentId=110",
+                    "source_name_fa": "تجزیه و تحلیل ترکیبی Icacls2 مه 2018",
+                    "description_fa": "تجزیه و تحلیل ترکیبی (2018, May 30) 2a8efbfadd798f6140f7c956bee.dll. Retrieved 19 اوت 2018"
                 },
                 {
                     "source_name": "20 macOS Common Tools and Techniques",
                     "description": "Phil Stokes. (2021, February 16). 20 Common Tools & Techniques Used by macOS Threat Actors & Malware. Retrieved August 23, 2021.",
-                    "url": "https://labs.sentinelone.com/20-common-tools-techniques-used-by-macos-threat-actors-malware/"
+                    "url": "https://labs.sentinelone.com/20-common-tools-techniques-used-by-macos-threat-actors-malware/",
+                    "source_name_fa": "20 ابزار و تکنیک های مشترک macOS",
+                    "description_fa": "فیل (۲۰۲۱، ۱۶ فوریه) 20 ابزار و تکنیک های مشترک استفاده از macOS Threat Agents و Malware Retrieved 23 اوت 2021."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2026-05-12T15:12:00.620Z",
             "name": "Linux and Mac Permissions",
-            "description": "Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs) and access protected files.(Citation: Hybrid Analysis Icacls1 June 2018)(Citation: Hybrid Analysis Icacls2 May 2018) File and directory permissions are commonly managed by ACLs configured by the file or directory owner, or users with the appropriate permissions. File and directory ACL implementations vary by platform, but generally explicitly designate which users or groups can perform which actions (read, write, execute, etc.).\n\nMost Linux and Linux-based platforms provide a standard set of permission groups (user, group, and other) and a standard set of permissions (read, write, and execute) that are applied to each group. While nuances of each platform\u2019s permissions implementation may vary, most of the platforms provide two primary commands used to manipulate file and directory ACLs: <code>chown</code> (short for change owner), and <code>chmod</code> (short for change mode).\n\nAdversarial may use these commands to make themselves the owner of files and directories or change the mode if current permissions allow it. They could subsequently lock others out of the file. Specific file and directory modifications may be a required step for many techniques, such as establishing Persistence via [Unix Shell Configuration Modification](https://attack.mitre.org/techniques/T1546/004) or tainting/hijacking other instrumental binary/configuration files via [Hijack Execution Flow](https://attack.mitre.org/techniques/T1574).(Citation: 20 macOS Common Tools and Techniques) ",
+            "description": "Adversaries may modify file or directory permissions/attributes to evade access control lists (ACLs) and access protected files.(Citation: Hybrid Analysis Icacls1 June 2018)(Citation: Hybrid Analysis Icacls2 May 2018) File and directory permissions are commonly managed by ACLs configured by the file or directory owner, or users with the appropriate permissions. File and directory ACL implementations vary by platform, but generally explicitly designate which users or groups can perform which actions (read, write, execute, etc.).\n\nMost Linux and Linux-based platforms provide a standard set of permission groups (user, group, and other) and a standard set of permissions (read, write, and execute) that are applied to each group. While nuances of each platform’s permissions implementation may vary, most of the platforms provide two primary commands used to manipulate file and directory ACLs: <code>chown</code> (short for change owner), and <code>chmod</code> (short for change mode).\n\nAdversarial may use these commands to make themselves the owner of files and directories or change the mode if current permissions allow it. They could subsequently lock others out of the file. Specific file and directory modifications may be a required step for many techniques, such as establishing Persistence via [Unix Shell Configuration Modification](https://attack.mitre.org/techniques/T1546/004) or tainting/hijacking other instrumental binary/configuration files via [Hijack Execution Flow](https://attack.mitre.org/techniques/T1574).(Citation: 20 macOS Common Tools and Techniques) ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -54,7 +61,9 @@
                 "Linux",
                 "macOS"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "لینوکس و مجوزهای مک",
+            "description_fa": "مخالفان ممکن است مجوزهای فایل یا دایرکتوری را برای جلوگیری از لیست های کنترل دسترسی (ACLs) و دسترسی به فایل های محافظت شده تغییر دهند. [[ویرایش] مجوزهای فایل و دایرکتوری معمولا توسط ACL های پیکربندی شده توسط مالک فایل یا دایرکتوری یا کاربران با مجوز مناسب مدیریت می شوند. پیاده سازی فایل و دایرکتوری ACL با پلتفرم متفاوت است، اما به طور کلی مشخص می کند که کاربران یا گروه ها می توانند چه اقداماتی را انجام دهند (خواندن، نوشتن، اجرا و غیره).\n\nاکثر سیستم عامل های مبتنی بر لینوکس یک مجموعه استاندارد از گروه های مجوز (کاربر، گروه و دیگر) و یک مجموعه استاندارد از مجوزها (خواندن، نوشتن و اجرای) را ارائه می دهند که برای هر گروه اعمال می شود. در حالی که محدودیت های اجرای مجوز هر پلت فرم ممکن است متفاوت باشد، اکثر سیستم عامل ها دو فرمان اولیه را برای دستکاری فایل و دایرکتوری ACL ارائه می دهند: [CTI_PRESERVE_0] (کوتاه برای مالک تغییر) و [CTI_PRESERVE] (برای حالت تغییر کوتاه).\n\nنافرمانی ممکن است از این دستورات برای ایجاد مالک فایل ها و دایرکتوری ها یا تغییر حالت در صورت اجازه فعلی آن استفاده کند. آنها می توانند دیگران را از فایل خارج کنند. تغییرات فایل و دایرکتوری خاص ممکن است یک گام لازم برای بسیاری از تکنیک ها باشد، مانند ایجاد اصرار از طریق [Unix Shell Configuration Modification] ([CTI_PRESERVE_5] یا نگه داشتن / ربودن سایر فایل های باینری / پیکربندی از طریق [Hijack Execution Flow] ([CT_IP]_SERV_E6] <code>chown</code> <code>chmod</code> (Citation: Hybrid Analysis Icacls1 June 2018) (Citation: Hybrid Analysis Icacls2 May 2018) (Citation: 20 macOS Common Tools and Techniques) https://attack.mitre.org/techniques/T1546/004 https://attack.mitre.org/techniques/T1574"
         }
     ]
 }

@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1027/015",
-                    "external_id": "T1027.015"
+                    "external_id": "T1027.015",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Perception Point",
                     "description": "Arthur Vaiselbuh, Peleg Cabra. (2024, November 7). Evasive ZIP Concatenation: Trojan Targets Windows Users. Retrieved March 3, 2025.",
-                    "url": "https://perception-point.io/blog/evasive-concatenated-zip-trojan-targets-windows-users/"
+                    "url": "https://perception-point.io/blog/evasive-concatenated-zip-trojan-targets-windows-users/",
+                    "source_name_fa": "دیدگاه Point",
+                    "description_fa": "آرتور Vaiselbuh، پلگ کابرا (۲۰۲۴، نوامبر) تبدیل شدن به Zip Concatenation: تروجان Targets Windows users Retrieved 3 مارس 2025"
                 },
                 {
                     "source_name": "NTT Security Flagpro new December 2021",
                     "description": "Hada, H. (2021, December 28).  Flagpro The new malware used by BlackTech. Retrieved March 25, 2022.",
-                    "url": "https://insight-jp.nttsecurity.com/post/102hf3q/flagpro-the-new-malware-used-by-blacktech"
+                    "url": "https://insight-jp.nttsecurity.com/post/102hf3q/flagpro-the-new-malware-used-by-blacktech",
+                    "source_name_fa": "پرچم امنیتی NTT در دسامبر 2021 جدید شد",
+                    "description_fa": "هاتا، H. (2021، 28 دسامبر) پرچم بدافزار جدید استفاده شده توسط BlackTech Retrieved 25 مارس 2022"
                 },
                 {
                     "source_name": "The Hacker News",
                     "description": "Ravie Lakshmanan. (2023, April 5). Hackers Using Self-Extracting Archives Exploit for Stealthy Backdoor Attacks. Retrieved March 3, 2025.",
-                    "url": "https://thehackernews.com/2023/04/hackers-using-self-extracting-archives.html"
+                    "url": "https://thehackernews.com/2023/04/hackers-using-self-extracting-archives.html",
+                    "source_name_fa": "اخبار هکرها",
+                    "description_fa": "Ravie Lakshmanan (2023, آوریل 5) هکرها با استفاده از Self-Extracloit برای Stealthy Backdoor حمله ها Retrieved 3 مارس 2025"
                 },
                 {
                     "source_name": "Trustwave Pillowmint June 2020",
-                    "description": "Trustwave SpiderLabs. (2020, June 22). Pillowmint: FIN7\u2019s Monkey Thief . Retrieved July 27, 2020.",
-                    "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/pillowmint-fin7s-monkey-thief/"
+                    "description": "Trustwave SpiderLabs. (2020, June 22). Pillowmint: FIN7’s Monkey Thief . Retrieved July 27, 2020.",
+                    "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/pillowmint-fin7s-monkey-thief/",
+                    "source_name_fa": "Trustwave flexmint ژوئن 2020",
+                    "description_fa": "Trustwave SpiderLabs (2020، 22 ژوئن) بالشت: دزد میمون FIN7 Retrieved ۲۷ ژوئیه ۲۰۲۰"
                 }
             ],
             "object_marking_refs": [
@@ -63,7 +72,9 @@
                 "macOS",
                 "Windows"
             ],
-            "x_mitre_version": "2.0"
+            "x_mitre_version": "2.0",
+            "name_fa": "فشرده سازی",
+            "description_fa": "مخالفان ممکن است از فشرده سازی برای دفع محموله ها یا فایل های خود استفاده کنند. فرمت های فایل فشرده مانند Zip، gzip، 7z و RAR می توانند چندین فایل را با هم فشرده کرده و بایگانی کنند تا انتقال فایل ها آسان تر و سریع تر شود. علاوه بر فشرده سازی فایل ها، دشمنان نیز ممکن است کد پوسته را به طور مستقیم فشرده کنند – به عنوان مثال، برای ذخیره آن در یک کلید ثبت ویندوز (به عنوان مثال، [ Fileless Storage] ([[CTI_PRESERVE_4]).\n\nبه منظور جلوگیری از تشخیص، دشمنان ممکن است چندین فایل پستی را به یک آرشیو ترکیب کنند. این فرایند تخصیص یک آرشیو ایجاد می کند که به نظر می رسد یک آرشیو واحد است اما در واقع شامل دایرکتوری های مرکزی آرشیو های جاسازی شده است. برخی از خوانندگان پستی، مانند 7zip، ممکن است قادر به شناسایی فایل های پستی آلوده نباشند و حضور محموله مخرب را از دست بدهند. [[ویرایش]\n\nفایل ها را می توان به عنوان یک (Spearphishing) ارسال کرد ([۱۰] [۱۰] کاربران محموله های مخرب را به عنوان فایل های بایگانی شده ارسال کرده اند تا کاربر را تشویق به تعامل و استخراج محموله های مخرب بر روی سیستم خود کنند (به عنوان مثال، [فایل مالی] ([CTI_PRESERVE_6]). با این حال، برخی از ابزارهای فشرده سازی فایل، مانند 7zip، می توانند برای تولید آرشیو های خود ردیابی استفاده شوند. مجرمان ممکن است آرشیو های خود را برای پنهان کردن عملکرد محموله خود ارسال کنند و بدون نیاز به اقدامات متعدد از کاربر آن را راه اندازی کنند.\n\n[[[ویرایش] [[[۱۰]]]] [[۱۰]]]] [[۱۰]]]] [[۱۰]]]] [[۱۰]]]]] [[۱۰]]]]]]]] [۷]]]] [[۱۰]]]]]]] [که فایل های فشرده رمزگذاری شده و رمز عبور محافظت می شوند. (Citation: Trustwave Pillowmint June 2020) (Citation: Perception Point) (Citation: NTT Security Flagpro new December 2021) (Citation: The Hacker News) https://attack.mitre.org/techniques/T1027/011 https://attack.mitre.org/techniques/T1566/001 https://attack.mitre.org/techniques/T1204/002 https://attack.mitre.org/techniques/T1027/015 https://attack.mitre.org/techniques/T1027/013"
         }
     ]
 }

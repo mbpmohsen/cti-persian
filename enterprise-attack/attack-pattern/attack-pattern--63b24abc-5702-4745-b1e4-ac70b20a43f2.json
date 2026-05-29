@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1681",
-                    "external_id": "T1681"
+                    "external_id": "T1681",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Sentinel One Contagious Interview ClickFix September 2025",
                     "description": "Aleksandar Milenkoski, Sreekar Madabushi, Kenneth Kinion. (2025, September 4). Contagious Interview | North Korean Threat Actors Reveal Plans and Ops by Abusing Cyber Intel Platforms. Retrieved October 20, 2025.",
-                    "url": "https://www.sentinelone.com/labs/contagious-interview-threat-actors-scout-cyber-intel-platforms-reveal-plans-and-ops/"
+                    "url": "https://www.sentinelone.com/labs/contagious-interview-threat-actors-scout-cyber-intel-platforms-reveal-plans-and-ops/",
+                    "source_name_fa": "Sentinel One Contagious Interview ClickFix سپتامبر 2025",
+                    "description_fa": "الکساندر میلنکوسکی، Sreekar Madabushi، کنت Kinion (2025، سپتامبر 4). مصاحبه گیج کننده - بازیگران تهدید کره شمالی برنامه های بازسازی و عملیاتی توسط Abusing Cyber اینتل Platforms 20 اکتبر 2025"
                 },
                 {
                     "source_name": "Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023",
                     "description": "Alexander Marvi, Brad Slaybaugh, Ron Craft, and Rufus Brown. (2023, June 13). VMware ESXi Zero-Day Used by Chinese Espionage Actor to Perform Privileged Guest Operations on Compromised Hypervisors. Retrieved March 26, 2025.",
-                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/vmware-esxi-zero-day-bypass/"
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/vmware-esxi-zero-day-bypass/",
+                    "source_name_fa": "Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023",
+                    "description_fa": "Alexander Marvi، Brad Slaybaugh، Ron Craft و Rufus Brown (2023، 13 ژوئن) VMware ESXi Zero-Day توسط بازیگر چینی Espionage برای انجام عملیات مهمان خصوصی در Hypervisors Compromed استفاده می شود. Retrieved 26 مارس 2025"
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2025-10-24T17:48:51.996Z",
             "name": "Search Threat Vendor Data",
-            "description": "Threat actors may seek information/indicators from closed or open threat intelligence sources gathered about their own campaigns, as well as those conducted by other adversaries that may align with their target industries, capabilities/objectives, or other operational concerns. These reports may include descriptions of behavior, detailed breakdowns of attacks, atomic indicators such as malware hashes or IP addresses, timelines of a group\u2019s activity, and more. Adversaries may change their behavior when planning their future operations. \n\nAdversaries have been observed replacing atomic indicators mentioned in blog posts in under a week.(Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023) Adversaries have also been seen searching for their own domain names in threat vendor data and then taking them down, likely to avoid seizure or further investigation.(Citation: Sentinel One Contagious Interview ClickFix September 2025)\n\nThis technique is distinct from [Threat Intel Vendors](https://attack.mitre.org/techniques/T1597/001) in that it describes threat actors performing reconnaissance on their own activity, not in search of victim information. ",
+            "description": "Threat actors may seek information/indicators from closed or open threat intelligence sources gathered about their own campaigns, as well as those conducted by other adversaries that may align with their target industries, capabilities/objectives, or other operational concerns. These reports may include descriptions of behavior, detailed breakdowns of attacks, atomic indicators such as malware hashes or IP addresses, timelines of a group’s activity, and more. Adversaries may change their behavior when planning their future operations. \n\nAdversaries have been observed replacing atomic indicators mentioned in blog posts in under a week.(Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023) Adversaries have also been seen searching for their own domain names in threat vendor data and then taking them down, likely to avoid seizure or further investigation.(Citation: Sentinel One Contagious Interview ClickFix September 2025)\n\nThis technique is distinct from [Threat Intel Vendors](https://attack.mitre.org/techniques/T1597/001) in that it describes threat actors performing reconnaissance on their own activity, not in search of victim information. ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -48,7 +53,9 @@
             "x_mitre_platforms": [
                 "PRE"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "جستجو برای Threat Vendor Data",
+            "description_fa": "بازیگران تهدید ممکن است به دنبال اطلاعات / گزارشگران از منابع اطلاعاتی تهدید بسته یا باز جمع آوری شده در مورد کمپین های خود، و همچنین کسانی که توسط دیگر دشمنان انجام می شود که ممکن است با صنایع هدف خود، قابلیت ها و اهداف و یا سایر نگرانی های عملیاتی هماهنگ شوند. این گزارش ها ممکن است شامل توصیف رفتار، تجزیه و تحلیل دقیق حملات، شاخص های اتمی مانند هش بدافزار یا آدرس های IP، جدول زمانی فعالیت یک گروه و موارد دیگر باشد. مخالفان ممکن است رفتار خود را هنگام برنامه ریزی عملیات آینده خود تغییر دهند.\n\nمخالفان جایگزین شاخص های اتمی ذکر شده در پست های وبلاگ در کمتر از یک هفته مشاهده شده اند. [[ویرایش] همچنین دیده شده است که مخالفان به دنبال نام دامنه خود در داده های فروشنده تهدید هستند و سپس آنها را پایین می آورند، به احتمال زیاد از تشنج یا تحقیقات بیشتر جلوگیری می کنند. [[ویرایش]\n\nاین تکنیک از فروشندگان اینتل ([CTI_PRESERVE_2] متمایز است که بازیگران تهدید را توصیف می کند که در فعالیت خود شناسایی می کنند، نه در جستجوی اطلاعات قربانی. (Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023) (Citation: Sentinel One Contagious Interview ClickFix September 2025) https://attack.mitre.org/techniques/T1597/001"
         }
     ]
 }

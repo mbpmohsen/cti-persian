@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1110/001",
-                    "external_id": "T1110.001"
+                    "external_id": "T1110.001",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "Trend Micro Emotet 2020",
                     "description": "Cybercrime & Digital Threat Team. (2020, February 13). Emotet Now Spreads via Wi-Fi. Retrieved February 16, 2022.",
-                    "url": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/emotet-now-spreads-via-wi-fi"
+                    "url": "https://www.trendmicro.com/vinfo/us/security/news/cybercrime-and-digital-threats/emotet-now-spreads-via-wi-fi",
+                    "source_name_fa": "دانلود بازی Micro Emotet 2020",
+                    "description_fa": "گروه تهدید سایبری و دیجیتال (2020، 13 فوریه) Emotet Now از طریق Wi-Fi Retrieved 16 فوریه 2022 گسترش می یابد."
                 },
                 {
                     "source_name": "Cylance Cleaver",
                     "description": "Cylance. (2014, December). Operation Cleaver. Retrieved September 14, 2017.",
-                    "url": "https://web.archive.org/web/20200302085133/https://www.cylance.com/content/dam/cylance/pages/operation-cleaver/Cylance_Operation_Cleaver_Report.pdf"
+                    "url": "https://web.archive.org/web/20200302085133/https://www.cylance.com/content/dam/cylance/pages/operation-cleaver/Cylance_Operation_Cleaver_Report.pdf",
+                    "source_name_fa": "Cylance Cawr",
+                    "description_fa": "Cylance (2014, دسامبر) عملیات Cawr Retrieved 14 سپتامبر 2017"
                 },
                 {
                     "source_name": "US-CERT TA18-068A 2018",
                     "description": "US-CERT. (2018, March 27). TA18-068A Brute Force Attacks Conducted by Cyber Actors. Retrieved October 2, 2019.",
-                    "url": "https://www.us-cert.gov/ncas/alerts/TA18-086A"
+                    "url": "https://www.us-cert.gov/ncas/alerts/TA18-086A",
+                    "source_name_fa": "US-CERT TA18-068A 2018",
+                    "description_fa": "US-CERT (2018، 27 مارس) 018-068A حمله های نیروی افراطی توسط بازیگران سایبری Retrieved 2 اکتبر 2019"
                 }
             ],
             "object_marking_refs": [
@@ -66,7 +73,9 @@
                 "SaaS",
                 "Windows"
             ],
-            "x_mitre_version": "1.7"
+            "x_mitre_version": "1.7",
+            "name_fa": "Password حدس زدن",
+            "description_fa": "مخالفان بدون اطلاع قبلی از اعتبار قانونی در سیستم یا محیط ممکن است رمز عبور را برای تلاش برای دسترسی به حساب ها حدس بزنند. بدون اطلاع از رمز عبور برای یک حساب، یک دشمن ممکن است به طور سیستماتیک رمز عبور را با استفاده از یک مکانیسم تکراری یا تکراری حدس بزند. یک دشمن ممکن است بدون اطلاع قبلی از سیستم یا رمز عبور محیط در طول عملیات با استفاده از یک لیست از کلمات عبور مشترک، اعتبار ورود را حدس بزند. حدس زدن رمز عبور ممکن است یا ممکن است سیاست های هدف را در مورد پیچیدگی رمز عبور یا سیاست های استفاده که ممکن است پس از تعدادی از تلاش های شکست خورده قفل حساب.\n\nحدس زدن کلمات عبور می تواند یک گزینه خطرناک باشد زیرا می تواند منجر به شکست های متعدد احراز هویت و قفل حساب، بسته به سیاست های شکست ورود سازمان شود. [[ویرایش]\n\nبه طور معمول، خدمات مدیریت بیش از پورت های معمول مورد استفاده در هنگام حدس زدن کلمات عبور استفاده می شود. خدمات مشترک هدفمند شامل موارد زیر است:\n\nSSH (22/TCP)\nTelnet (23/TCP)\nFTP (21/TCP)\nNetBIOS / SMB / Samba (139/TCP و 445/TCP)\nLDAP (389/TCP)\nKerberos (88/TCP)\nRDP / Terminal Services (3389/TCP)\nخدمات مدیریت HTTP/HTTP (80/TCP و 443/TCP)\nMSSQL (1433/TCP)\nOracle (1521/TCP)\nMySQL (330/TCP)\nVNC (5900/TCP)\nSNMP (161/UDP و 162/TCP/UDP)\n\nعلاوه بر سرویس های مدیریت، ممکن است دشمنان \"SSO\" و برنامه های مبتنی بر ابر را با استفاده از پروتکل های احراز هویت تغذیه شده\" و همچنین به صورت خارجی با برنامه های ایمیل مانند Office 365 مقابله کنند. علاوه بر این، دشمنان ممکن است از رابط های دستگاه شبکه (مانند @wlanAPI) برای brute force استفاده کنند تا از طریق پروتکل های احراز هویت بی سیم قابل دسترسی باشند. [[ویرایش]\n\nدر محیط های پیش فرض، تلاش های اتصال LDAP و Kerberos کمتر احتمال دارد که حوادث را بر روی SMB ایجاد کند، که رویداد ویندوز \"شکست\" را ایجاد می کند. (Citation: Cylance Cleaver) (Citation: US-CERT TA18-068A 2018) (Citation: Trend Micro Emotet 2020)"
         }
     ]
 }

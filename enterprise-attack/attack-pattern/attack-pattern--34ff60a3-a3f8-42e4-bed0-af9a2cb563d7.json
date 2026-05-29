@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1685/002",
-                    "external_id": "T1685.002"
+                    "external_id": "T1685.002",
+                    "source_name_fa": "حمله mitre"
                 },
                 {
                     "source_name": "AWS Cloud Trail",
                     "description": "AWS. (n.d.). update-trail. Retrieved April 15, 2026.",
-                    "url": "https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/update-trail.html"
+                    "url": "https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/update-trail.html",
+                    "source_name_fa": "AWS Cloud Trail",
+                    "description_fa": "AWS Retrieved 15, 2026."
                 },
                 {
                     "source_name": "Dark Reading",
                     "description": "Kelly Sheridan. (2021, August 5). Retrieved April 15, 2026.",
-                    "url": "https://www.darkreading.com/threat-intelligence/incident-responders-explore-microsoft-365-attacks-in-the-wild"
+                    "url": "https://www.darkreading.com/threat-intelligence/incident-responders-explore-microsoft-365-attacks-in-the-wild",
+                    "source_name_fa": "خواندن تاریک",
+                    "description_fa": "Kelly Sheridan Retrieved 15, 2026."
                 },
                 {
                     "source_name": "Pacu Detection Disruption Module",
                     "description": "Rhino Security Labs. (2021, April 29). Pacu Detection Disruption Module. Retrieved August 4, 2023.",
-                    "url": "https://github.com/RhinoSecurityLabs/pacu/blob/master/pacu/modules/detection__disruption/main.py"
+                    "url": "https://github.com/RhinoSecurityLabs/pacu/blob/master/pacu/modules/detection__disruption/main.py",
+                    "source_name_fa": "دانلود بازی Pacu Trial",
+                    "description_fa": "آزمایشگاه های امنیتی Rhino (2021، 29 آوریل) ماژول تشخیص تشخیصی Pacument Disruption Retrieved 4، 2023."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2026-05-12T15:12:00.625Z",
             "name": "Disable or Modify Cloud Log",
-            "description": "An adversary may disable or modify cloud logging capabilities and integrations to limit what data is collected on their activities and avoid detection. Cloud environments allow for collection and analysis of audit and application logs that provide insight into what activities a user does within the environment. If an adversary has sufficient permissions, they can disable or modify logging to avoid detection of their activities. \n\nFor example, in AWS an adversary may disable CloudWatch/CloudTrail integrations prior to conducting further malicious activity. They may alternatively tamper with logging functionality, for example, by removing any associated SNS topics, disabling multi-region logging, or disabling settings that validate and/or encrypt log files.(Citation: AWS Cloud Trail)(Citation: Pacu Detection Disruption Module) In Office 365, an adversary may disable logging on mail collection activities for specific users by using the Set-MailboxAuditBypassAssociation cmdlet, by disabling M365 Advanced Auditing for the user, or by downgrading the user\u2019s license from an Enterprise E5 to an Enterprise E3 license.(Citation: Dark Reading)",
+            "description": "An adversary may disable or modify cloud logging capabilities and integrations to limit what data is collected on their activities and avoid detection. Cloud environments allow for collection and analysis of audit and application logs that provide insight into what activities a user does within the environment. If an adversary has sufficient permissions, they can disable or modify logging to avoid detection of their activities. \n\nFor example, in AWS an adversary may disable CloudWatch/CloudTrail integrations prior to conducting further malicious activity. They may alternatively tamper with logging functionality, for example, by removing any associated SNS topics, disabling multi-region logging, or disabling settings that validate and/or encrypt log files.(Citation: AWS Cloud Trail)(Citation: Pacu Detection Disruption Module) In Office 365, an adversary may disable logging on mail collection activities for specific users by using the Set-MailboxAuditBypassAssociation cmdlet, by disabling M365 Advanced Auditing for the user, or by downgrading the user’s license from an Enterprise E5 to an Enterprise E3 license.(Citation: Dark Reading)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-attack",
@@ -67,7 +74,9 @@
                 "Identity Provider",
                 "Office Suite"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "Disable یا Modify Cloud Log",
+            "description_fa": "یک دشمن ممکن است قابلیت ها و ادغام های ابری را غیرفعال یا اصلاح کند تا داده ها را در فعالیت های خود جمع آوری کند و از تشخیص آن اجتناب کند. محیط های ابر اجازه می دهد تا جمع آوری و تجزیه و تحلیل از ممیزی و log های نرم افزاری که بینش در مورد فعالیت های کاربر در محیط زیست ارائه می دهد. اگر یک دشمن دارای مجوز کافی باشد، می تواند ورود را برای جلوگیری از تشخیص فعالیت های خود غیرفعال یا اصلاح کند.\n\nبه عنوان مثال، در AWS یک دشمن ممکن است ادغام CloudWatch/CloudTrail را قبل از انجام فعالیت های مخرب بیشتر غیرفعال کند. آنها ممکن است به طور جایگزین با قابلیت های ورود به سیستم دستکاری کنند، به عنوان مثال، با حذف هر گونه موضوعات مرتبط با SNS، جدا کردن ورود چند منطقه ای یا تنظیمات تخفیف که معتبر و / یا رمزگذاری فایل های log. [[ویرایش] در Office 365 ، یک دشمن ممکن است با استفاده از Set-Audit Bypasssociation ، فعالیت های جمع آوری ایمیل را برای کاربران خاص غیرفعال کند. بررسی پیشرفته برای کاربر یا با پایین آوردن مجوز کاربر از یک شرکت E5 به یک مجوز E3 شرکت؛ [CTI_PRESERVE_2] (Citation: AWS Cloud Trail) (Citation: Pacu Detection Disruption Module) (Citation: Dark Reading) M365"
         }
     ]
 }
