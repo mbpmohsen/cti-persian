@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0231#AN0645",
-                    "external_id": "AN0645"
+                    "external_id": "AN0645",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimerIntervalThreshold",
-                    "description": "The interval threshold used to determine if a newly created timer is unusually frequent or immediate (e.g., < 5 minutes)."
+                    "description": "The interval threshold used to determine if a newly created timer is unusually frequent or immediate (e.g., < 5 minutes).",
+                    "description_fa": "آستانه بازه زمانی مورد استفاده برای تعیین اینکه آیا یک تایمر جدید ایجاد شده به طور غیرعادی مکرر یا فوری است (به عنوان مثال، < 5 دقیقه)."
                 },
                 {
                     "field": "ParentProcessID",
-                    "description": "Whether the child process has a parent PID of 1, indicating systemd as the invoker. Can be tuned to include known benign cases."
+                    "description": "Whether the child process has a parent PID of 1, indicating systemd as the invoker. Can be tuned to include known benign cases.",
+                    "description_fa": "آیا پردازش فرزند دارای یک PID والد 1 است که نشان دهنده systemd به عنوان فراخوان است. می توان آن را تنظیم کرد که شامل موارد خوش خیم شناخته شده باشد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "User under which the timer/service is created or executed (e.g., root vs. non-root)."
+                    "description": "User under which the timer/service is created or executed (e.g., root vs. non-root).",
+                    "description_fa": "کاربری که تحت آن تایمر/سرویس ایجاد یا اجرا شده است (به عنوان مثال، ریشه در مقابل غیر ریشه)."
                 },
                 {
                     "field": "TimerCreationPath",
-                    "description": "The path where the timer or service file is created; system-wide vs. user space can be scoped."
+                    "description": "The path where the timer or service file is created; system-wide vs. user space can be scoped.",
+                    "description_fa": "مسیری که فایل تایمر یا سرویس ایجاد می شود. فضای کل سیستم در مقابل کاربر را می توان محدوده کرد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0645",
+            "description_fa": "سوء استفاده خصمانه از تایمرهای systemd را با ارتباط ایجاد/تغییر فایل تایمر و واحدهای سرویس در فهرست‌های سیستم با اجرای فرآیندهای فرزند غیرعادی که توسط 'systemd' (PID 1) راه‌اندازی شده‌اند، به‌ویژه به‌عنوان ریشه شناسایی می‌کند."
         }
     ]
 }

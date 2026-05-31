@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0015#AN0046",
-                    "external_id": "AN0046"
+                    "external_id": "AN0046",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CriticalProcessList",
-                    "description": "Defines specific Linux daemons and processes that should not be terminated outside maintenance windows."
+                    "description": "Defines specific Linux daemons and processes that should not be terminated outside maintenance windows.",
+                    "description_fa": "شیاطین و فرآیندهای خاص لینوکس را تعریف می کند که نباید خارج از پنجره های تعمیر و نگهداری خاتمه داده شوند."
                 },
                 {
                     "field": "AdminUserContext",
-                    "description": "Defines expected accounts permitted to execute service stop commands; deviations may be suspicious."
+                    "description": "Defines expected accounts permitted to execute service stop commands; deviations may be suspicious.",
+                    "description_fa": "حساب های مورد انتظار مجاز برای اجرای دستورات توقف سرویس را تعریف می کند. انحرافات ممکن است مشکوک باشند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0046",
+            "description_fa": "تلاش‌های دشمن برای انحصار کنترل سیستم‌های در معرض خطر را با صدور دستورات توقف سرویس، تخلیه ماژول‌های آسیب‌پذیر یا کشتن اجباری فرآیندهای رقیب شناسایی می‌کند. مدافعان باید گزارش های حسابرسی و syslog را برای ابزارهای مدیریتی (systemctl، سرویس، kill) که خارج از مدیریت تغییر عادی فراخوانی می شوند، نظارت کنند."
         }
     ]
 }

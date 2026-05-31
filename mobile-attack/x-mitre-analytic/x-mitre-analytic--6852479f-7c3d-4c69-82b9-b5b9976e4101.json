@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0630#AN1701",
-                    "external_id": "AN1701"
+                    "external_id": "AN1701",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.378Z",
             "name": "Analytic 1701",
-            "description": "Correlates (1) activation of Device Administrator privileges by an application, (2) absence or mismatch of legitimate user interaction during the approval flow, and (3) immediate execution of administrator-level control actions (e.g., password reset, device lock, policy enforcement, prevention of uninstall). The defender observes a causal chain where an application transitions into a privileged device control role and rapidly exercises those capabilities outside expected user-driven patterns.\n\nApplication vetting services can check for the string `BIND_DEVICE_ADMIN` in the application\u2019s manifest. ",
+            "description": "Correlates (1) activation of Device Administrator privileges by an application, (2) absence or mismatch of legitimate user interaction during the approval flow, and (3) immediate execution of administrator-level control actions (e.g., password reset, device lock, policy enforcement, prevention of uninstall). The defender observes a causal chain where an application transitions into a privileged device control role and rapidly exercises those capabilities outside expected user-driven patterns.\n\nApplication vetting services can check for the string `BIND_DEVICE_ADMIN` in the application’s manifest. ",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -47,21 +48,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window between Device Admin activation and subsequent privileged actions"
+                    "description": "Defines correlation window between Device Admin activation and subsequent privileged actions",
+                    "description_fa": "پنجره همبستگی بین فعال سازی Device Admin و اقدامات ممتاز بعدی را تعریف می کند"
                 },
                 {
                     "field": "AllowedAdminApps",
-                    "description": "Baseline of legitimate applications expected to request Device Administrator privileges (e.g., enterprise MDM agents)"
+                    "description": "Baseline of legitimate applications expected to request Device Administrator privileges (e.g., enterprise MDM agents)",
+                    "description_fa": "پایه برنامه‌های قانونی مورد انتظار برای درخواست امتیازات سرپرست دستگاه (به عنوان مثال، عوامل MDM سازمانی)"
                 },
                 {
                     "field": "UserInteractionThreshold",
-                    "description": "Defines acceptable timing between user interaction and admin activation"
+                    "description": "Defines acceptable timing between user interaction and admin activation",
+                    "description_fa": "زمان قابل قبولی را بین تعامل کاربر و فعال سازی مدیر تعریف می کند"
                 },
                 {
                     "field": "PrivilegedActionSet",
-                    "description": "List of high-risk DevicePolicyManager API actions monitored for abuse"
+                    "description": "List of high-risk DevicePolicyManager API actions monitored for abuse",
+                    "description_fa": "فهرستی از اقدامات پرخطر DevicePolicyManager API که برای سوء استفاده نظارت شده است"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1701",
+            "description_fa": "مربوط به (1) فعال شدن امتیازات سرپرست دستگاه توسط یک برنامه، (2) عدم وجود یا عدم تطابق تعامل قانونی کاربر در طول جریان تأیید، و (3) اجرای فوری اقدامات کنترلی در سطح سرپرست (مانند بازنشانی رمز عبور، قفل دستگاه، اجرای خط مشی، جلوگیری از حذف نصب). مدافع یک زنجیره علّی را مشاهده می کند که در آن یک برنامه کاربردی به نقش کنترل دستگاه ممتاز تبدیل می شود و به سرعت آن قابلیت ها را خارج از الگوهای مورد انتظار کاربر محور اعمال می کند.\n\nسرویس‌های بررسی برنامه می‌توانند رشته «BIND_DEVICE_ADMIN» را در مانیفست برنامه بررسی کنند."
         }
     ]
 }

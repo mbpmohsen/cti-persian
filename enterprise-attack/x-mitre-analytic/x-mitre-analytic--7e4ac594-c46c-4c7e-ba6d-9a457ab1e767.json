@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0418#AN1177",
-                    "external_id": "AN1177"
+                    "external_id": "AN1177",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -66,37 +67,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TemporalCorrelationWindow",
-                    "description": "Time window for correlating process creation (4688/sysmon 1) with DACL changes (4670) and subsequent access (4663) - default 300 seconds, adjust based on system performance and network latency"
+                    "description": "Time window for correlating process creation (4688/sysmon 1) with DACL changes (4670) and subsequent access (4663) - default 300 seconds, adjust based on system performance and network latency",
+                    "description_fa": "پنجره زمانی برای ارتباط ایجاد فرآیند (4688/sysmon 1) با تغییرات DACL (4670) و دسترسی های بعدی (4663) - پیش فرض 300 ثانیه، تنظیم بر اساس عملکرد سیستم و تأخیر شبکه"
                 },
                 {
                     "field": "SensitivePathWhitelist",
-                    "description": "Environment-specific critical directories requiring enhanced monitoring (e.g., C:\\Windows\\System32, C:\\Program Files, %USERPROFILE%\\AppData) - customize per organizational security requirements"
+                    "description": "Environment-specific critical directories requiring enhanced monitoring (e.g., C:\\Windows\\System32, C:\\Program Files, %USERPROFILE%\\AppData) - customize per organizational security requirements",
+                    "description_fa": "دایرکتوری های حیاتی خاص محیطی که به نظارت پیشرفته نیاز دارند (به عنوان مثال، C:\\Windows\\System32، C:\\Program Files، %USERPROFILE%\\AppData) - بر اساس الزامات امنیتی سازمانی سفارشی کنید"
                 },
                 {
                     "field": "AuthorizedAdministratorAccounts",
-                    "description": "User accounts and service accounts authorized to perform legitimate DACL modifications - update to reflect current administrative staff and automated processes"
+                    "description": "User accounts and service accounts authorized to perform legitimate DACL modifications - update to reflect current administrative staff and automated processes",
+                    "description_fa": "حساب‌های کاربری و حساب‌های خدمات مجاز به انجام اصلاحات قانونی DACL - به‌روزرسانی برای منعکس کردن کارکنان اداری فعلی و فرآیندهای خودکار"
                 },
                 {
                     "field": "SuspiciousCommandLinePatterns",
-                    "description": "Regex patterns for detecting malicious intent in permission modification commands - tune to reduce false positives while maintaining detection efficacy"
+                    "description": "Regex patterns for detecting malicious intent in permission modification commands - tune to reduce false positives while maintaining detection efficacy",
+                    "description_fa": "الگوهای Regex برای تشخیص هدف مخرب در دستورات اصلاح مجوز - تنظیم برای کاهش مثبت کاذب در حالی که کارایی تشخیص را حفظ می کند"
                 },
                 {
                     "field": "BusinessHoursThreshold",
-                    "description": "Time-based risk scoring modifier for permission changes occurring outside standard business hours - adjust based on organizational work patterns"
+                    "description": "Time-based risk scoring modifier for permission changes occurring outside standard business hours - adjust based on organizational work patterns",
+                    "description_fa": "اصلاح کننده امتیازدهی ریسک مبتنی بر زمان برای تغییرات مجوزی که خارج از ساعات کاری استاندارد رخ می دهد - بر اساس الگوهای کاری سازمانی تنظیم کنید"
                 },
                 {
                     "field": "PowerShellScriptBlockSizeThreshold",
-                    "description": "Minimum PowerShell script block size for ACL-related content analysis - balance between detection coverage and log volume"
+                    "description": "Minimum PowerShell script block size for ACL-related content analysis - balance between detection coverage and log volume",
+                    "description_fa": "حداقل اندازه بلوک اسکریپت PowerShell برای تجزیه و تحلیل محتوای مرتبط با ACL - تعادل بین پوشش شناسایی و حجم گزارش"
                 },
                 {
                     "field": "FileAccessFrequencyBaseline",
-                    "description": "Statistical baseline for normal file access patterns post-permission change - establish through historical analysis and update periodically"
+                    "description": "Statistical baseline for normal file access patterns post-permission change - establish through historical analysis and update periodically",
+                    "description_fa": "پایه آماری برای الگوهای دسترسی عادی به فایل پس از تغییر مجوز - از طریق تجزیه و تحلیل تاریخی ایجاد و به طور دوره ای به روز رسانی شود"
                 },
                 {
                     "field": "WMIMethodInvocationWhitelist",
-                    "description": "Approved WMI classes and methods for legitimate permission operations (e.g., Win32_SecurityDescriptor) - maintain based on authorized management tools"
+                    "description": "Approved WMI classes and methods for legitimate permission operations (e.g., Win32_SecurityDescriptor) - maintain based on authorized management tools",
+                    "description_fa": "کلاس‌ها و روش‌های WMI تایید شده برای عملیات مجوز قانونی (مانند Win32_SecurityDescriptor) - بر اساس ابزارهای مدیریت مجاز نگهداری می‌شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1177",
+            "description_fa": "زنجیره رفتاری دستکاری ویندوز DACL چند مرحله‌ای: (1) فرآیند ایجاد ابزارهای اصلاح کننده مجوز (icacls.exe، takeown.exe، attrib.exe، cacls.exe) یا cmdlet‌های PowerShell ACL، (2) تجزیه و تحلیل خط فرمان که قصد افزایش امتیاز را از طریق (//,parameters مشکوک/,,T,//,,T/////////////////// / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / ، تجزیه و تحلیل) Set-Acl)، (3) رویدادهای اصلاح DACL (4670) مرتبط با اجرای فرآیند، (4) تلاش‌های بعدی برای دسترسی به فایل (4663) نشان‌دهنده موفقیت‌آمیز دور زدن مجوز، (5) فعالیت‌های بالقوه ادامه‌دار یا حرکت جانبی"
         }
     ]
 }

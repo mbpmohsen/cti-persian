@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0040#AN0114",
-                    "external_id": "AN0114"
+                    "external_id": "AN0114",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServicePathMatch",
-                    "description": "Targets suspicious or orphaned unit files in /etc/systemd/system/"
+                    "description": "Targets suspicious or orphaned unit files in /etc/systemd/system/",
+                    "description_fa": "فایل های واحد مشکوک یا یتیم را در /etc/systemd/system/ هدف قرار می دهد"
                 },
                 {
                     "field": "CronUserScope",
-                    "description": "Focus on crontab activity from root or uncommon users"
+                    "description": "Focus on crontab activity from root or uncommon users",
+                    "description_fa": "روی فعالیت crontab از کاربران ریشه یا غیر معمول تمرکز کنید"
                 },
                 {
                     "field": "UserDeletionActivity",
-                    "description": "Looks for userdel or passwd deletion"
+                    "description": "Looks for userdel or passwd deletion",
+                    "description_fa": "به دنبال حذف userdel یا passwd می گردد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0114",
+            "description_fa": "حذف مصنوعات ماندگار مانند ورودی‌های crontab، واحدهای سرویس سیستم، و حساب‌های کاربری مخرب را از طریق دستوراتی مانند «crontab -r»، «rm /etc/systemd/system/*.service» یا «userdel» تشخیص می‌دهد."
         }
     ]
 }

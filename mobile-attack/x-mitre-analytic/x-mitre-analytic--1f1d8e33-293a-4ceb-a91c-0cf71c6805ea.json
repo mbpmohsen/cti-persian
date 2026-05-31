@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0700#AN1816",
-                    "external_id": "AN1816"
+                    "external_id": "AN1816",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -82,37 +83,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between retrieval and outbound write over the same web-service class."
+                    "description": "Correlation window between retrieval and outbound write over the same web-service class.",
+                    "description_fa": "پنجره همبستگی بین بازیابی و نوشتن خروجی روی همان کلاس وب سرویس."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved app identities vary by organization, business unit, and device group."
+                    "description": "Approved app identities vary by organization, business unit, and device group.",
+                    "description_fa": "هویت برنامه های تأیید شده بر اساس سازمان، واحد تجاری و گروه دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedServiceClasses",
-                    "description": "Some apps legitimately perform read/write operations against collaboration, storage, or messaging services."
+                    "description": "Some apps legitimately perform read/write operations against collaboration, storage, or messaging services.",
+                    "description_fa": "برخی از برنامه‌ها به طور قانونی عملیات خواندن/نوشتن را در برابر سرویس‌های همکاری، ذخیره‌سازی یا پیام‌رسانی انجام می‌دهند."
                 },
                 {
                     "field": "AllowedReadWriteMappings",
-                    "description": "Defines which apps are expected to both retrieve and submit content to a given public service class."
+                    "description": "Defines which apps are expected to both retrieve and submit content to a given public service class.",
+                    "description_fa": "مشخص می‌کند که کدام برنامه‌ها قرار است محتوا را هم بازیابی کنند و هم به یک کلاس خدمات عمومی ارائه کنند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close the bidirectional exchange must be to user activity to be considered expected."
+                    "description": "Defines how close the bidirectional exchange must be to user activity to be considered expected.",
+                    "description_fa": "مشخص می کند که تبادل دوطرفه باید چقدر به فعالیت کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "BeaconIntervalTolerance",
-                    "description": "Allowed recurrence interval for repeated bidirectional exchanges varies by app type."
+                    "description": "Allowed recurrence interval for repeated bidirectional exchanges varies by app type.",
+                    "description_fa": "فاصله مجاز تکرار برای تبادلات دو طرفه مکرر بر اساس نوع برنامه متفاوت است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Some apps should only perform read/write web interactions while foregrounded."
+                    "description": "Some apps should only perform read/write web interactions while foregrounded.",
+                    "description_fa": "برخی از برنامه‌ها فقط باید در حالت پیش‌زمینه، تعاملات خواندن/نوشتن وب را انجام دهند."
                 },
                 {
                     "field": "InboundOutboundRatioThreshold",
-                    "description": "Expected ratio of response size to outbound write size varies by legitimate app workflow."
+                    "description": "Expected ratio of response size to outbound write size varies by legitimate app workflow.",
+                    "description_fa": "نسبت مورد انتظار اندازه پاسخ به اندازه نوشتن خروجی بر اساس گردش کار قانونی برنامه متفاوت است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1816",
+            "description_fa": "مدافع بازیابی ورودی مکرر و فعالیت ارسال خروجی توسط همان هویت برنامه Android را به همان کلاس خدمات وب عمومی قانونی در یک پنجره عملیاتی کوتاه مرتبط می‌کند، جایی که تبادل دو طرفه با نقش تأیید شده برنامه، مدل تعامل یا خط پایه رفتار پس‌زمینه ناسازگار است. قوی‌ترین شواهد اندروید، ارتباطات منتسب به برنامه‌ها برای همکاری، اجتماعی، فضای ذخیره‌سازی ابری، میزبانی کد، پیام‌رسانی یا پلت‌فرم‌های HTTPS عمومی است که در آن درخواست‌های بازیابی محتوا با پست‌های منتسب به برنامه، آپلودها، به‌روزرسانی‌های سند، نوشتن‌های API یا مبادلات کوچک دوسویه‌ای مکرر دنبال می‌شوند، به ویژه زمانی که این درخواست‌ها در حالی که اخیراً برنامه پس‌زمینه قفل شده یا پس‌زمینه‌ای کوتاه شده است یا زمانی که دستگاه در پس‌زمینه است، رخ می‌دهد. یا دسترسی به منابع محافظت شده"
         }
     ]
 }

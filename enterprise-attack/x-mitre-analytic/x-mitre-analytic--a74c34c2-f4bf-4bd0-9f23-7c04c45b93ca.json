@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0570#AN1571",
-                    "external_id": "AN1571"
+                    "external_id": "AN1571",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CloudStorageDomains",
-                    "description": "List of monitored domains for cloud services (dropbox.com, drive.google.com, onedrive.live.com)."
+                    "description": "List of monitored domains for cloud services (dropbox.com, drive.google.com, onedrive.live.com).",
+                    "description_fa": "فهرست دامنه های نظارت شده برای خدمات ابری (dropbox.com، drive.google.com، onedrive.live.com)."
                 },
                 {
                     "field": "ExfilVolumeThreshold",
-                    "description": "Data volume threshold (e.g., >10MB in single session) used to flag abnormal transfers."
+                    "description": "Data volume threshold (e.g., >10MB in single session) used to flag abnormal transfers.",
+                    "description_fa": "آستانه حجم داده (به عنوان مثال، بیش از 10 مگابایت در یک جلسه) برای پرچم‌گذاری انتقال‌های غیرعادی استفاده می‌شود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "User accounts permitted to use sanctioned cloud services versus unexpected accounts."
+                    "description": "User accounts permitted to use sanctioned cloud services versus unexpected accounts.",
+                    "description_fa": "حساب‌های کاربری مجاز به استفاده از سرویس‌های ابری تحریم‌شده در مقابل حساب‌های غیرمنتظره هستند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1571",
+            "description_fa": "فرآیندهای غیرمعمول (مانند powershell.exe، excel.exe) دسترسی به فایل‌های محلی بزرگ و متعاقباً شروع درخواست‌های HTTPS POST به دامنه‌های مرتبط با خدمات ذخیره‌سازی ابری (مانند dropbox.com، drive.google.com، box.com). دیدگاه مدافع: همبستگی بین خواندن فایل ها در دایرکتوری های حساس و حجم بالای ترافیک خروجی به API های ذخیره سازی شناخته شده."
         }
     ]
 }

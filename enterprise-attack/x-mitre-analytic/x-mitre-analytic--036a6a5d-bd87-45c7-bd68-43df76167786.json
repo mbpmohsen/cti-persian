@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0539#AN1488",
-                    "external_id": "AN1488"
+                    "external_id": "AN1488",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AppWhitelist",
-                    "description": "Defines approved SaaS integrations for the enterprise; deviations indicate suspicious persistence."
+                    "description": "Defines approved SaaS integrations for the enterprise; deviations indicate suspicious persistence.",
+                    "description_fa": "ادغام های تایید شده SaaS را برای شرکت تعریف می کند. انحرافات نشان دهنده تداوم مشکوک است."
                 },
                 {
                     "field": "ConsentDelegationPolicy",
-                    "description": "Threshold for which users can self-consent integrations; lowering this may reduce false positives."
+                    "description": "Threshold for which users can self-consent integrations; lowering this may reduce false positives.",
+                    "description_fa": "آستانه ای که کاربران می توانند برای ادغام ها رضایت خود را اعلام کنند. کاهش این ممکن است مثبت کاذب را کاهش دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1488",
+            "description_fa": "فعالیت غیرعادی یکپارچه سازی برنامه SaaS را در محیط هایی مانند Slack، Salesforce یا سایر سرویس های SaaS سازمانی تشخیص می دهد. تمرکز روی افزودن‌های غیرمجاز برنامه، اعطای مجوز غیرمعمول، و تداوم از طریق توکن‌های اصلی سرویس است."
         }
     ]
 }

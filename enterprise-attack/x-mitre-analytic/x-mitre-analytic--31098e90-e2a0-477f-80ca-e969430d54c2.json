@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0314#AN0877",
-                    "external_id": "AN0877"
+                    "external_id": "AN0877",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedTools",
-                    "description": "Whitelist Apple-native tools used by IT admins and mobile device management (MDM)."
+                    "description": "Whitelist Apple-native tools used by IT admins and mobile device management (MDM).",
+                    "description_fa": "لیست سفید ابزارهای بومی اپل مورد استفاده توسط مدیران فناوری اطلاعات و مدیریت دستگاه تلفن همراه (MDM)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Prioritize detections from non-admin or low-privilege users performing packet captures."
+                    "description": "Prioritize detections from non-admin or low-privilege users performing packet captures.",
+                    "description_fa": "شناسایی‌های کاربران غیر سرپرست یا با امتیاز پایین که ضبط بسته‌ها را انجام می‌دهند، اولویت‌بندی کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0877",
+            "description_fa": "شناسایی فعال کردن sniffing رابط از طریق ابزارهای ضبط بسته یا AppleScript که «tcpdump» را راه‌اندازی می‌کند. برای شناسایی استفاده مشکوک از کتابخانه‌های «pfctl»، «tcpdump»، یا «libpcap» از گزارش‌های یکپارچه و خط پردازش استفاده می‌کند."
         }
     ]
 }

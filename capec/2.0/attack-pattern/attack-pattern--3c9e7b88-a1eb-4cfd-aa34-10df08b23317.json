@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-186",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/186.html"
+                    "url": "https://capec.mitre.org/data/definitions/186.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-494",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/494.html"
+                    "url": "http://cwe.mitre.org/data/definitions/494.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Supply Chain",
                     "external_id": "T1195.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین نرم افزار به خطر افتاده",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Microsoft Defender Security Research Team, New ransomware, old techniques: Petya adds worm capabilities, 2017, Microsoft",
                     "external_id": "REF-697",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.microsoft.com/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/"
+                    "url": "https://www.microsoft.com/security/blog/2017/06/27/new-ransomware-old-techniques-petya-adds-worm-capabilities/",
+                    "description_fa": "تیم تحقیقاتی امنیتی Microsoft Defender، باج افزار جدید، تکنیک های قدیمی: پتیا قابلیت های کرم را اضافه می کند، 2017، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3c9e7b88-a1eb-4cfd-aa34-10df08b23317",
@@ -49,6 +55,15 @@
                 ],
                 "Confidentiality": [
                     "Execute Unauthorized Commands (Utilize the built-in software update mechanisms of the commercial components to deliver software that could compromise security credentials, enable a denial-of-service attack, or enable tracking.)"
+                ],
+                "Access_Control_fa": [
+                    "اجرای دستورات غیرمجاز (از مکانیسم‌های به‌روزرسانی نرم‌افزار داخلی اجزای تجاری برای ارائه نرم‌افزاری استفاده کنید که می‌تواند اعتبار امنیتی را به خطر بیندازد، حمله انکار سرویس را فعال کند یا ردیابی را فعال کند.)"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (از مکانیسم‌های به‌روزرسانی نرم‌افزار داخلی اجزای تجاری برای ارائه نرم‌افزاری استفاده کنید که می‌تواند اعتبار امنیتی را به خطر بیندازد، حمله انکار سرویس را فعال کند یا ردیابی را فعال کند.)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (از مکانیسم‌های به‌روزرسانی نرم‌افزار داخلی اجزای تجاری برای ارائه نرم‌افزاری استفاده کنید که می‌تواند اعتبار امنیتی را به خطر بیندازد، حمله انکار سرویس را فعال کند یا ردیابی را فعال کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -71,11 +86,22 @@
                 "Manual or user-assisted attacks require deceptive mechanisms to trick the user into clicking a link or downloading and installing software. Automated update attacks require the adversary to host a payload and then trigger the installation of the payload code."
             ],
             "x_capec_skills_required": {
-                "High": "This attack requires advanced cyber capabilities"
+                "High": "This attack requires advanced cyber capabilities",
+                "High_fa": "این حمله به قابلیت های سایبری پیشرفته نیاز دارد"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف از روش‌های فریبنده استفاده می‌کند تا کاربر یا یک فرآیند خودکار را وادار به دانلود و نصب کد خطرناکی کند که گمان می‌رود به‌روزرسانی معتبری است که از منبع کنترل شده توسط دشمن نشات می‌گیرد.",
+            "name_fa": "به روز رسانی نرم افزار مخرب",
+            "x_capec_example_instances_fa": [
+                "استفاده از یک فرآیند خودکار برای دانلود و نصب کدهای خطرناک، بخش مهمی از حمله NotPeyta بود [REF-697]"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تشخیص هدف: </b>دشمن ابتدا باید مشخص کند که می‌خواهد هدفش چیست. از آنجایی که به‌روزرسانی‌های نرم‌افزار مخرب را می‌توان به روش‌های مختلفی انجام داد، دشمن ابتدا نه تنها یک برنامه هدف را شناسایی می‌کند، بلکه کاربرانی را که می‌خواهند هدف قرار دهند نیز شناسایی می‌کند. این حمله می‌تواند هدفمند (یک کاربر یا گروهی از کاربران خاص) یا بدون هدف (بسیاری از کاربران مختلف) باشد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>یک مکانیزم استقرار را بر اساس هدف ایجاد کنید: </b>دشمن باید یک مکانیسم استقرار مخرب برای به‌روزرسانی نرم‌افزار ایجاد کند. این مکانیسم بر اساس هدفمند یا غیر هدفمند بودن حمله متفاوت خواهد بود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>حمله هدفمند: میزبانی چیزی که به نظر می‌رسد یک به‌روزرسانی نرم‌افزاری است، سپس جمع‌آوری آدرس‌های ایمیل واقعی برای یک سازمان، یا تولید آدرس‌های ایمیل رایج مورد استفاده، و سپس ارسال ایمیل‌های spph-ar، spamphish. کاربران سازمان درخواست می‌کنند که به‌روزرسانی نرم‌افزار مخرب را به‌طور دستی دانلود و نصب کنند.</td></tr><tr><td>حمله هدف‌مند: بار ویروس پیام‌رسانی فوری، که نام‌ها را از فهرست مخاطبین کاربر جمع‌آوری می‌کند و پیام‌های فوری را برای آن کاربران ارسال می‌کند تا به‌روزرسانی را دانلود و اعمال کنند</td></tr><tr><td>به‌روزرسانی به‌روزرسانی‌های غیرمجاز از طریق ایمیل‌های غیرمجاز، غیر هدفمند به عنوان بسیاری از کاربران مخرب. پیام‌های فوری یا پیام‌های رسانه‌های اجتماعی.</td></tr><tr><td>حمله بدون هدف: ایمیل‌های فیشینگ را تا حد امکان به کاربران ارسال کنید و وانمود کنید که منبعی قانونی هستید که پیشنهاد می‌کند یک به‌روزرسانی نرم‌افزار مهم را دانلود کنید.</td></tr><tr><td>حمله بدون هدف: از تروجان‌ها/بات‌نت‌های بدون هدف استفاده کنید تا به هر یک از آنها کمک کنید. حملات.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>استقرار به‌روزرسانی نرم‌افزار مخرب: </b>با استفاده از مکانیسم استقرار در مرحله قبل، دشمن کاربر را برای نصب به‌روزرسانی نرم‌افزار مخرب دریافت می‌کند.</p></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>اگرچه انواع مختلفی از این استراتژی حمله وجود دارد، روش‌های حمله از این نظر متحد می‌شوند که همگی به توانایی دشمن در موقعیت‌یابی و پنهان کردن محتوای مخرب تکیه می‌کنند، به طوری که به عنوان یک به‌روزرسانی نرم‌افزار قانونی ظاهر می‌شود که سپس توسط یک برنامه پردازش می‌شود و یکپارچگی برنامه را تضعیف می‌کند.</xhtml:p>\n            <xhtml:p>به این ترتیب، این حمله از تکنیک‌های «جعل» استفاده می‌کند که توسط مکانیسم‌های روان‌شناختی یا تکنولوژیکی تقویت شده‌اند تا به‌روزرسانی و/یا منبع آن را پنهان کنند. تقریباً همه نرم‌افزارها به به‌روزرسانی‌ها یا وصله‌های مکرر نیاز دارند که به دشمن در هنگام ساختاردهی حمله و همچنین اهداف فرصت فراوانی می‌دهد. حملات خودکاری که شامل به‌روزرسانی‌های نرم‌افزار مخرب هستند، نیازی به فعالیت کمتر یا بدون نیاز به فعالیت کاربر دارند و بنابراین سودمند هستند، زیرا از مراحل تنظیم اولیه پیچیده حملات دستی جلوگیری می‌کنند، که باید به طور مؤثری کاربران را «قلاب» کند و در عین حال از اقدامات متقابلی مانند فیلترهای هرزنامه یا فیلترهای امنیتی وب اجتناب شود.</xhtml:p>",
+            "x_capec_resources_required_fa": [
+                "حملات دستی یا به کمک کاربر نیازمند مکانیزم‌های فریبنده هستند تا کاربر را فریب دهد تا روی پیوند کلیک کند یا نرم‌افزار را دانلود و نصب کند. حملات به‌روزرسانی خودکار، مستلزم آن است که دشمن یک بار را میزبانی کند و سپس کد پی‌بار را نصب کند."
+            ]
         }
     ],
     "spec_version": "2.0",

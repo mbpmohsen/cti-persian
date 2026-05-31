@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0469#AN1293",
-                    "external_id": "AN1293"
+                    "external_id": "AN1293",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApprovedFirmwareVersions",
-                    "description": "Whitelist of validated vendor OS versions; deviations may indicate tampering."
+                    "description": "Whitelist of validated vendor OS versions; deviations may indicate tampering.",
+                    "description_fa": "لیست سفید نسخه های سیستم عامل فروشنده معتبر؛ انحرافات ممکن است نشان دهنده دستکاری باشد."
                 },
                 {
                     "field": "AuthorizedAdminAccounts",
-                    "description": "Trusted admin accounts permitted to update images; anomalies suggest compromise."
+                    "description": "Trusted admin accounts permitted to update images; anomalies suggest compromise.",
+                    "description_fa": "حساب‌های مدیریت قابل اعتماد مجاز به به‌روزرسانی تصاویر. ناهنجاری ها نشان دهنده سازش است."
                 },
                 {
                     "field": "ChecksumBaseline",
-                    "description": "Baseline hash of approved images; used for detecting file tampering."
+                    "description": "Baseline hash of approved images; used for detecting file tampering.",
+                    "description_fa": "هش پایه تصاویر تایید شده؛ برای تشخیص دستکاری فایل استفاده می شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period for detecting chained behaviors (file upload \u2192 boot config change \u2192 reboot)."
+                    "description": "Correlation period for detecting chained behaviors (file upload → boot config change → reboot).",
+                    "description_fa": "دوره همبستگی برای تشخیص رفتارهای زنجیره ای (آپلود فایل → تغییر تنظیمات بوت → راه اندازی مجدد)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1293",
+            "description_fa": "مدافعان ممکن است از طریق نظارت بر انتقال غیرعادی فایل (TFTP، SCP، FTP) فایل‌های تصویری، دستورات غیرمجاز CLI که متغیرهای سیستم بوت را تغییر می‌دهند، عدم تطابق بررسی یکپارچگی بین تصاویر در حال اجرا و سیستم عامل پایه و تلاش‌های دستکاری حافظه در زمان اجرا، تلاش‌های دشمن را برای اصلاح تصاویر سیستم مشاهده کنند. توالی های مشکوک شامل آپلود یک تصویر جدید، تغییر پارامترهای بوت و بارگذاری مجدد/راه اندازی مجدد دستگاه بعدی است. تلاش‌های وصله‌ای در حافظه ممکن است به‌عنوان دستورهای اشکال‌زدایی یا دستکاری بوت‌لودر مغایر با فعالیت‌های اداری عادی ظاهر شوند."
         }
     ]
 }

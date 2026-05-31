@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0294#AN0821",
-                    "external_id": "AN0821"
+                    "external_id": "AN0821",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for audit events (e.g., \u22645m)."
+                    "description": "Correlation window for audit events (e.g., ≤5m).",
+                    "description_fa": "پنجره همبستگی برای رویدادهای حسابرسی (به عنوان مثال، ≤5m)."
                 },
                 {
                     "field": "DesktopParentMap",
-                    "description": "Map common desktop apps (libreoffice, evince, firefox, chromium) for lineage anchoring."
+                    "description": "Map common desktop apps (libreoffice, evince, firefox, chromium) for lineage anchoring.",
+                    "description_fa": "برنامه های معمول دسکتاپ (libreoffice، evince، فایرفاکس، کروم) را برای لنگر انداختن خط و نسب نقشه برداری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0821",
+            "description_fa": "کاربر یا برنامه دسکتاپ یک فایل جدید در ~/Downloads، /tmp، یا رسانه‌های قابل جابجایی نصب شده می‌نویسد و سپس یک مفسر/لودر مخاطره‌آمیز اجرا می‌کند (bash، sh، python، perl، php، node، curl|wget piping به sh، ld.so، rdesktop، xdg-open - با args غیر معمول). از PATH+SYSCALL ممیزی شده (باز کردن/ایجاد/نوشتن/تغییر نام) با پیوند رویداد execve استفاده می کند."
         }
     ]
 }

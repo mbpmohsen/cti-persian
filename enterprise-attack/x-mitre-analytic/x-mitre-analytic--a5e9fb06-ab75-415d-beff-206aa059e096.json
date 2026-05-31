@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0361#AN1028",
-                    "external_id": "AN1028"
+                    "external_id": "AN1028",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 1028",
-            "description": "Abuse of Regsvcs.exe or Regasm.exe to execute arbitrary code embedded in .NET assemblies via [ComRegisterFunction]/[ComUnregisterFunction]. Behavioral chain: (1) Process creation of regsvcs/regasm with suspicious assembly paths/flags \u2192 (2) Assembly/DLL load inside regsvcs/regasm \u2192 (3) Registry writes to HKCR\\CLSID/ProgID during COM registration \u2192 (4) Optional child process or network activity spawned by installer/registration code.",
+            "description": "Abuse of Regsvcs.exe or Regasm.exe to execute arbitrary code embedded in .NET assemblies via [ComRegisterFunction]/[ComUnregisterFunction]. Behavioral chain: (1) Process creation of regsvcs/regasm with suspicious assembly paths/flags → (2) Assembly/DLL load inside regsvcs/regasm → (3) Registry writes to HKCR\\CLSID/ProgID during COM registration → (4) Optional child process or network activity spawned by installer/registration code.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -71,33 +72,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AssemblyPathRegex",
-                    "description": "Environment-specific paths to flag (e.g., %TEMP%, Downloads, OneDrive, SMB shares). Helps suppress known-good installers."
+                    "description": "Environment-specific paths to flag (e.g., %TEMP%, Downloads, OneDrive, SMB shares). Helps suppress known-good installers.",
+                    "description_fa": "مسیرهای مخصوص محیط برای پرچم‌گذاری (مانند %TEMP٪، دانلودها، OneDrive، اشتراک‌گذاری SMB). به سرکوب نصب کنندگان خوب شناخته شده کمک می کند."
                 },
                 {
                     "field": "SuspiciousFlags",
-                    "description": "Arguments like /unregister (/u), /codebase, /regfile which may indicate abuse. Tune per enterprise use of regasm/regsvcs."
+                    "description": "Arguments like /unregister (/u), /codebase, /regfile which may indicate abuse. Tune per enterprise use of regasm/regsvcs.",
+                    "description_fa": "آرگومان هایی مانند /unregister (/u)، /codebase، /regfile که ممکن است نشان دهنده سوء استفاده باشد. برای استفاده سازمانی از regasm/regsvcs تنظیم کنید."
                 },
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Legitimate parents (e.g., setup.exe, msiexec.exe). Analyst can prune false positives from Office or script hosts."
+                    "description": "Legitimate parents (e.g., setup.exe, msiexec.exe). Analyst can prune false positives from Office or script hosts.",
+                    "description_fa": "والدین قانونی (مانند setup.exe، msiexec.exe). تحلیلگر می تواند موارد مثبت کاذب را از میزبان های Office یا اسکریپت حذف کند."
                 },
                 {
                     "field": "KnownGoodAssemblies",
-                    "description": "Hashes or publisher info for approved assemblies commonly registered in the environment."
+                    "description": "Hashes or publisher info for approved assemblies commonly registered in the environment.",
+                    "description_fa": "اطلاعات هش یا ناشر برای مجامع تایید شده که معمولاً در محیط ثبت می شوند."
                 },
                 {
                     "field": "RegistryKeyAllowList",
-                    "description": "Approved CLSIDs/ProgIDs written during sanctioned software installs."
+                    "description": "Approved CLSIDs/ProgIDs written during sanctioned software installs.",
+                    "description_fa": "CLSID/ProgIDهای تایید شده که در طول نصب نرم افزارهای تحریم شده نوشته شده اند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., 5\u201310 min) between file drop \u2192 regasm/regsvcs exec \u2192 registry writes \u2192 child activity."
+                    "description": "Correlation window (e.g., 5–10 min) between file drop → regasm/regsvcs exec → registry writes → child activity.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، 5 تا 10 دقیقه) بین رها کردن فایل → regasm/regsvcs exec → رجیستری نوشتن → فعالیت فرزند."
                 },
                 {
                     "field": "SignedToUnsignedTransition",
-                    "description": "Alert if Microsoft-signed regasm/regsvcs loads or triggers unsigned assemblies/children."
+                    "description": "Alert if Microsoft-signed regasm/regsvcs loads or triggers unsigned assemblies/children.",
+                    "description_fa": "در صورتی که regasm/regsvcs امضا شده توسط مایکروسافت، مجموعه‌ها/کودکان بدون امضا را بارگیری یا راه‌اندازی کند، هشدار دهید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1028",
+            "description_fa": "سوء استفاده از Regsvcs.exe یا Regasm.exe برای اجرای کد دلخواه تعبیه شده در مجموعه های NET از طریق [ComRegisterFunction]/[ComUnregisterFunction]. زنجیره رفتاری: (1) فرآیند ایجاد regsvcs/regasm با مسیرهای مونتاژ/پرچم های مشکوک → (2) بارگذاری اسمبلی/DLL در داخل regsvcs/regasm → (3) رجیستری در طول ثبت نام COM به HKCR\\CLSID/ProgID می نویسد."
         }
     ]
 }

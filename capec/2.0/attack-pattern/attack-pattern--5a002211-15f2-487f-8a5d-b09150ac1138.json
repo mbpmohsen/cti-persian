@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-589",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/589.html"
+                    "url": "https://capec.mitre.org/data/definitions/589.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-300",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/300.html"
+                    "url": "http://cwe.mitre.org/data/definitions/300.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Censorship in the Wild: Analyzing Internet Filtering in Syria, 2014, Sigcomm",
                     "external_id": "REF-473",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://conferences2.sigcomm.org/imc/2014/papers/p285.pdf"
+                    "url": "http://conferences2.sigcomm.org/imc/2014/papers/p285.pdf",
+                    "description_fa": "سانسور در طبیعت: تجزیه و تحلیل فیلترینگ اینترنت در سوریه، 2014، Sigcomm",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5a002211-15f2-487f-8a5d-b09150ac1138",
@@ -37,6 +41,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Other (Preventing DNS from resolving a request denies the availability of a target site or service for the user.)"
+                ],
+                "Availability_fa": [
+                    "سایر موارد (جلوگیری از DNS از حل یک درخواست، در دسترس بودن سایت یا سرویس هدف را برای کاربر رد می کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -50,7 +57,15 @@
                 "This attack requires the ability to conduct deep packet inspection with an In-Path device that can drop the targeted traffic and/or connection."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف ترافیک را رهگیری می کند و عمداً درخواست های DNS را بر اساس محتوای درخواست حذف می کند. به این ترتیب، حریف می تواند حتی در صورت تغییر آدرس IP، دسترسی به خدمات یا محتوای خاصی را برای کاربر انکار کند.",
+            "name_fa": "مسدود کردن DNS",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>فیلترسازی مبتنی بر URL کامل: فیلتر کردن بر اساس URL درخواستی.</xhtml:p>\n               <xhtml:p>فیلترسازی مبتنی بر رشته URL: فیلتر بر اساس استفاده از رشته های خاص موجود در URL درخواستی.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "این حمله به توانایی انجام بازرسی بسته عمیق با یک دستگاه In-Path نیاز دارد که می تواند ترافیک و/یا اتصال مورد نظر را حذف کند."
+            ]
         }
     ],
     "spec_version": "2.0",

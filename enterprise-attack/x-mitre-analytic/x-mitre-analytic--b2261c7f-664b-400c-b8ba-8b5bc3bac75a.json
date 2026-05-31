@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0004#AN0011",
-                    "external_id": "AN0011"
+                    "external_id": "AN0011",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedPathsDirs",
-                    "description": "Monitor /etc/paths.d and $HOME for unauthorized entries."
+                    "description": "Monitor /etc/paths.d and $HOME for unauthorized entries.",
+                    "description_fa": "/etc/paths.d و $HOME را برای ورودهای غیرمجاز نظارت کنید."
                 },
                 {
                     "field": "TrustedExecutables",
-                    "description": "Baseline applications expected in user PATH directories."
+                    "description": "Baseline applications expected in user PATH directories.",
+                    "description_fa": "برنامه های پایه مورد انتظار در فهرست های مسیر کاربر."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0011",
+            "description_fa": "تغییر متغیرهای محیط PATH یا HOME از طریق فایل‌های پیکربندی پوسته، ورودی‌های launchctl یا /etc/paths.d، همراه با اجرای فرآیند از دایرکتوری‌های کنترل‌شده توسط مهاجم. Defender تغییرات فایل در /etc/paths.d را با اجرای فرآیند به باینری های مخرب مرتبط می کند."
         }
     ]
 }

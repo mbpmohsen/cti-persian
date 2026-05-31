@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0176#AN0498",
-                    "external_id": "AN0498"
+                    "external_id": "AN0498",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -71,21 +72,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation time window between suspicious network fetch and subsequent process/file events. Tweak for environment latency and caching; default 2 minutes."
+                    "description": "Correlation time window between suspicious network fetch and subsequent process/file events. Tweak for environment latency and caching; default 2 minutes.",
+                    "description_fa": "پنجره زمانی همبستگی بین واکشی مشکوک شبکه و رویدادهای فرآیند/فایل بعدی. نیشگون گرفتن و کشیدن برای تأخیر محیط و حافظه پنهان. پیش فرض 2 دقیقه"
                 },
                 {
                     "field": "KnownGoodDomainsList",
-                    "description": "Allowlist of high-volume, benign domains used by corporate sites or CDNs to reduce false positives."
+                    "description": "Allowlist of high-volume, benign domains used by corporate sites or CDNs to reduce false positives.",
+                    "description_fa": "فهرست مجاز دامنه‌های خوش‌خیم و پرحجم که توسط سایت‌های شرکتی یا CDN برای کاهش موارد مثبت کاذب استفاده می‌شوند."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Entropy threshold for downloaded script/binary content to surface likely obfuscated/packed payloads."
+                    "description": "Entropy threshold for downloaded script/binary content to surface likely obfuscated/packed payloads.",
+                    "description_fa": "آستانه آنتروپی برای اسکریپت بارگیری شده/محتوای باینری به ظاهر محموله های محتمل مبهم/ بسته بندی شده."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Exclude or treat differently known administrative service accounts or build machines versus end-user contexts."
+                    "description": "Exclude or treat differently known administrative service accounts or build machines versus end-user contexts.",
+                    "description_fa": "حساب‌های خدمات اداری شناخته‌شده متفاوت را حذف یا رفتار کنید یا ماشین‌ها را در مقابل زمینه‌های کاربر نهایی بسازید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0498",
+            "description_fa": "شواهد مرتبط از رفتار ناهنجار مرورگر/شبکه ​​(واکشی منابع خارجی مشکوک و الگوهای تزریق اسکریپت) به دنبال فرآیندهای فرزند غیر معمول، زمینه‌های اجرای زودگذر، اصلاح حافظه یا تزریق فرآیند، و افت غیرمنتظره فایل. Defender درخواست‌های شبکه به دامنه‌ها یا منابع قبلی/مشکوک + فرآیند مرورگر که بچه‌های غیرعادی ایجاد می‌کند یا ماژول‌های بدون امضا بارگیری می‌شود + نوشتن فایل یا تغییرات رجیستری در مدت کوتاهی پس از آن درخواست‌ها را می‌بیند."
         }
     ]
 }

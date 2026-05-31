@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0515#AN1423",
-                    "external_id": "AN1423"
+                    "external_id": "AN1423",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust based on how quickly tokens are expected to be used post-access"
+                    "description": "Adjust based on how quickly tokens are expected to be used post-access",
+                    "description_fa": "بر اساس سرعت مورد انتظار برای استفاده از توکن ها پس از دسترسی، تنظیم کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tuning for known service accounts that legitimately access the API"
+                    "description": "Tuning for known service accounts that legitimately access the API",
+                    "description_fa": "تنظیم برای حساب های سرویس شناخته شده که به طور قانونی به API دسترسی دارند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1423",
+            "description_fa": "دسترسی و بازیابی رمزهای حساب سرویس کانتینر و به دنبال آن درخواست‌های API غیرمجاز با استفاده از آن نشانه‌ها برای تعامل با سرور Kubernetes API یا سرویس‌های داخلی."
         }
     ]
 }

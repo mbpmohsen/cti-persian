@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0162#AN0464",
-                    "external_id": "AN0464"
+                    "external_id": "AN0464",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -44,20 +45,24 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
                     "name": "NSM:Flow",
-                    "channel": "Inbound one-off packet to uncommon port \u2192 outbound SF to same src_ip within TimeWindow."
+                    "channel": "Inbound one-off packet to uncommon port → outbound SF to same src_ip within TimeWindow."
                 }
             ],
             "x_mitre_mutable_elements": [
                 {
                     "field": "BPFDevicePath",
-                    "description": "Alternate BPF device paths if customized (default /dev/bpf*)."
+                    "description": "Alternate BPF device paths if customized (default /dev/bpf*).",
+                    "description_fa": "مسیرهای دستگاه BPF را در صورت سفارشی کردن (پیش‌فرض /dev/bpf*) جایگزین کنید."
                 },
                 {
                     "field": "DeveloperMode",
-                    "description": "Relax thresholds on known developer tooling hosts (Xcode, instrumenting tools)."
+                    "description": "Relax thresholds on known developer tooling hosts (Xcode, instrumenting tools).",
+                    "description_fa": "آستانه‌ها را روی میزبان‌های ابزار توسعه‌دهنده شناخته‌شده (Xcode، ابزارهای ابزار دقیق) آرام کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0464",
+            "description_fa": "فرآیند /dev/bpf* (libpcap) را باز می‌کند یا فیلتر NetworkExtension را بارگیری می‌کند، سپس پس از یک بسته ورودی دستکاری شده، همان فرآیند یک اتصال خروجی را به مبدا ماشه آغاز می‌کند."
         }
     ]
 }

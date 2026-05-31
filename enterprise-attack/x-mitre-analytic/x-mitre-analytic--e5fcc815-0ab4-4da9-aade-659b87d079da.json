@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0228#AN0638",
-                    "external_id": "AN0638"
+                    "external_id": "AN0638",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BinaryPath",
-                    "description": "Tune for suspicious binaries like curl, wget, python, netcat"
+                    "description": "Tune for suspicious binaries like curl, wget, python, netcat",
+                    "description_fa": "برای باینری های مشکوک مانند curl، wget، python، netcat تنظیم کنید"
                 },
                 {
                     "field": "IPDistance",
-                    "description": "Detect multiple different external IPs contacted within short timeframe"
+                    "description": "Detect multiple different external IPs contacted within short timeframe",
+                    "description_fa": "شناسایی چندین IP خارجی مختلف که در بازه زمانی کوتاهی با آنها تماس گرفته شده است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0638",
+            "description_fa": "اسکریپت شل یا باینری درخواست curl/wget را به دامنه مرحله‌بندی آغاز می‌کند، خروجی را روی دیسک یا حافظه می‌نویسد، و اندکی بعد فرآیند دیگری را راه‌اندازی می‌کند که اتصال خروجی جدید به IP یا نام میزبان متفاوت برقرار می‌کند."
         }
     ]
 }

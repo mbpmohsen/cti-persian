@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0234#AN0650",
-                    "external_id": "AN0650"
+                    "external_id": "AN0650",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KeychainAccessPath",
-                    "description": "Path to watch for abnormal access, e.g., /Library/Keychains/"
+                    "description": "Path to watch for abnormal access, e.g., /Library/Keychains/",
+                    "description_fa": "مسیری برای مشاهده دسترسی غیرعادی، به عنوان مثال، /Library/Keychains/"
                 },
                 {
                     "field": "SignedBinaryStatus",
-                    "description": "Filter out signed/trusted binaries."
+                    "description": "Filter out signed/trusted binaries.",
+                    "description_fa": "باینری های امضا شده/اعتماد را فیلتر کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0650",
+            "description_fa": "فرآیندهای بدون امضا برای دسترسی به حافظه سیستم یا راه‌اندازی ابزارهای شناسایی اعتبار شناخته شده (به عنوان مثال، osascript، تزریق dylib) برای دسترسی به Keychain یا مناطق حساس حافظه."
         }
     ]
 }

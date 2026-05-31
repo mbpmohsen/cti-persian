@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0354#AN1007",
-                    "external_id": "AN1007"
+                    "external_id": "AN1007",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1007",
-            "description": "Connections to exposed container services (e.g., Docker API, Kubernetes API server) from unauthorized external IPs \u2192 abnormal container creation/start \u2192 lateral activity within cluster nodes.",
+            "description": "Connections to exposed container services (e.g., Docker API, Kubernetes API server) from unauthorized external IPs → abnormal container creation/start → lateral activity within cluster nodes.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedCIDRs",
-                    "description": "Approved external IP ranges for container APIs."
+                    "description": "Approved external IP ranges for container APIs.",
+                    "description_fa": "محدوده IP خارجی تأیید شده برای APIهای کانتینری."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for API calls and container starts."
+                    "description": "Correlation window for API calls and container starts.",
+                    "description_fa": "پنجره همبستگی برای تماس‌های API و ظرف شروع می‌شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1007",
+            "description_fa": "اتصالات به سرویس‌های کانتینر در معرض (مانند Docker API، سرور Kubernetes API) از IPهای خارجی غیرمجاز → ایجاد/شروع غیرعادی کانتینر → فعالیت جانبی در گره‌های خوشه."
         }
     ]
 }

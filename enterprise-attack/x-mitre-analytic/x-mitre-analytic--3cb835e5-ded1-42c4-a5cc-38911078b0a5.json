@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0148#AN0418",
-                    "external_id": "AN0418"
+                    "external_id": "AN0418",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TokenLifetimeThreshold",
-                    "description": "Defines the maximum expected lifetime of a SAML token (e.g., >1 hour considered anomalous)."
+                    "description": "Defines the maximum expected lifetime of a SAML token (e.g., >1 hour considered anomalous).",
+                    "description_fa": "حداکثر طول عمر مورد انتظار یک توکن SAML را تعریف می کند (به عنوان مثال، بیش از 1 ساعت غیرعادی در نظر گرفته می شود)."
                 },
                 {
                     "field": "TrustedIssuerList",
-                    "description": "List of approved SAML issuers and certificate thumbprints."
+                    "description": "List of approved SAML issuers and certificate thumbprints.",
+                    "description_fa": "فهرست صادرکنندگان SAML تایید شده و اثر انگشت گواهی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0418",
+            "description_fa": "توکن‌های SAML جعلی را می‌توان به‌عنوان تلاش‌های احراز هویت با امضای معتبر اما فاقد Kerberos یا رویدادهای احراز هویت مورد انتظار قبلی مشاهده کرد. مدافعان ممکن است اظهارات SAML را با شناسه‌های رویداد غایب 4769، 1200، یا 1202 یا توکن‌های صادر شده با طول عمر، صادرکنندگان یا ادعاهای غیرعادی در مقایسه با خط پایه مرتبط کنند."
         }
     ]
 }

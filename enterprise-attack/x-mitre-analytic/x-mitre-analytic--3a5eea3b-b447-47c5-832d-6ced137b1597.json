@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0585#AN1610",
-                    "external_id": "AN1610"
+                    "external_id": "AN1610",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation time window (e.g., 0\u201330 minutes) for JamPlus.exe execution, child processes, and file/network events."
+                    "description": "Correlation time window (e.g., 0–30 minutes) for JamPlus.exe execution, child processes, and file/network events.",
+                    "description_fa": "پنجره زمان همبستگی (به عنوان مثال 0-30 دقیقه) برای اجرای JamPlus.exe، پردازش های فرزند و رویدادهای فایل/شبکه."
                 },
                 {
                     "field": "AllowedBuildHosts",
-                    "description": "Known developer systems where JamPlus.exe usage is expected; alerts are raised if executed elsewhere."
+                    "description": "Known developer systems where JamPlus.exe usage is expected; alerts are raised if executed elsewhere.",
+                    "description_fa": "سیستم‌های توسعه‌دهنده شناخته شده که در آن‌ها استفاده از JamPlus.exe مورد انتظار است. هشدارها در صورت اجرا در جای دیگر مطرح می شوند."
                 },
                 {
                     "field": "SuspiciousChildList",
-                    "description": "Child processes considered anomalous (e.g., PowerShell, cmd, wscript) when spawned by JamPlus.exe."
+                    "description": "Child processes considered anomalous (e.g., PowerShell, cmd, wscript) when spawned by JamPlus.exe.",
+                    "description_fa": "هنگامی که توسط JamPlus.exe ایجاد می شود، فرآیندهای کودک غیرعادی در نظر گرفته می شوند (به عنوان مثال، PowerShell، cmd، wscript)."
                 },
                 {
                     "field": "RarePathRegex",
-                    "description": "Regex patterns for non-standard or user-writable paths where JamPlus.exe drops artifacts."
+                    "description": "Regex patterns for non-standard or user-writable paths where JamPlus.exe drops artifacts.",
+                    "description_fa": "الگوهای Regex برای مسیرهای غیر استاندارد یا قابل نوشتن توسط کاربر که در آن JamPlus.exe مصنوعات را رها می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1610",
+            "description_fa": "سوء استفاده از JamPlus.exe برای راه‌اندازی بارهای مخرب از طریق فایل‌های .jam ساخته‌شده، که منجر به ایجاد فرآیند غیرعادی، اجرای دستور، یا تولید مصنوع خارج از جریان‌های کاری توسعه استاندارد می‌شود."
         }
     ]
 }

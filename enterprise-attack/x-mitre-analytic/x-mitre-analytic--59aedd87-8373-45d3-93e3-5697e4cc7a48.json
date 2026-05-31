@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0034#AN0096",
-                    "external_id": "AN0096"
+                    "external_id": "AN0096",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccessedPath",
-                    "description": "Filter based on suspicious /proc directory enumeration or high-volume ls/readlink usage"
+                    "description": "Filter based on suspicious /proc directory enumeration or high-volume ls/readlink usage",
+                    "description_fa": "فیلتر بر اساس شمارش دایرکتوری مشکوک /proc یا استفاده از ls/readlink با حجم بالا"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Helps tune for root vs. low-priv users during interactive vs. scripted activity"
+                    "description": "Helps tune for root vs. low-priv users during interactive vs. scripted activity",
+                    "description_fa": "در طول فعالیت تعاملی در مقابل اسکریپت، برای کاربران ریشه در مقابل کاربران با خصوصی پایین کمک می کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0096",
+            "description_fa": "اجرای ابزارهای شمارش فرآیند رایج (مانند ps، top، htop) یا دسترسی به /proc با اصل و نسب مشکوک را تشخیص می‌دهد. استفاده از فرمان را با زمینه پوسته تعاملی و نقش کاربر مرتبط می کند."
         }
     ]
 }

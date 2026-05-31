@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0449#AN1242",
-                    "external_id": "AN1242"
+                    "external_id": "AN1242",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 1242",
-            "description": "Detection focuses on abnormal or unauthorized cloud instance creation events. From a defender\u2019s perspective, suspicious behavior includes VM/instance creation by rarely used or newly created accounts, creation events from unusual geolocations, or rapid sequences of snapshot creation followed by instance creation and mounting. Unexpected network or IAM policy changes applied to new instances can indicate adversarial use rather than legitimate provisioning.",
+            "description": "Detection focuses on abnormal or unauthorized cloud instance creation events. From a defender’s perspective, suspicious behavior includes VM/instance creation by rarely used or newly created accounts, creation events from unusual geolocations, or rapid sequences of snapshot creation followed by instance creation and mounting. Unexpected network or IAM policy changes applied to new instances can indicate adversarial use rather than legitimate provisioning.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "IAM user, service account, or role creating the instance. Tuned to allowlist known automation services."
+                    "description": "IAM user, service account, or role creating the instance. Tuned to allowlist known automation services.",
+                    "description_fa": "کاربر IAM، حساب سرویس، یا نقش ایجاد کننده نمونه. در لیست مجاز خدمات اتوماسیون شناخته شده تنظیم شده است."
                 },
                 {
                     "field": "GeoLocation",
-                    "description": "Region or source IP where the creation request originates. Helps detect cross-region or unusual location abuse."
+                    "description": "Region or source IP where the creation request originates. Helps detect cross-region or unusual location abuse.",
+                    "description_fa": "منطقه یا IP منبع که در آن درخواست ایجاد منشا می گیرد. به شناسایی سوء استفاده از موقعیت مکانی متقابل یا غیرمعمول کمک می کند."
                 },
                 {
                     "field": "RateThreshold",
-                    "description": "Number of instances created per user or account in a time window. Tuned for environments with elastic scaling."
+                    "description": "Number of instances created per user or account in a time window. Tuned for environments with elastic scaling.",
+                    "description_fa": "تعداد نمونه های ایجاد شده به ازای هر کاربر یا حساب در یک پنجره زمانی. برای محیط هایی با پوسته پوسته شدن الاستیک تنظیم شده است."
                 },
                 {
                     "field": "TaggingPolicy",
-                    "description": "Expected tags (e.g., owner, purpose, cost center) for new instances. Deviations may indicate adversarial creation."
+                    "description": "Expected tags (e.g., owner, purpose, cost center) for new instances. Deviations may indicate adversarial creation.",
+                    "description_fa": "برچسب های مورد انتظار (به عنوان مثال، مالک، هدف، مرکز هزینه) برای نمونه های جدید. انحرافات ممکن است نشان دهنده ایجاد خصمانه باشد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1242",
+            "description_fa": "تشخیص روی رویدادهای ایجاد نمونه ابری غیرعادی یا غیرمجاز متمرکز است. از دیدگاه مدافع، رفتار مشکوک شامل ایجاد VM/نمونه توسط حساب‌های به ندرت استفاده شده یا ایجاد شده جدید، رویدادهای ایجاد از موقعیت‌های جغرافیایی غیرمعمول، یا توالی‌های سریع ایجاد عکس فوری و به دنبال آن ایجاد و نصب نمونه است. تغییرات غیرمنتظره خط مشی شبکه یا IAM اعمال شده در نمونه های جدید می تواند نشان دهنده استفاده متخاصم به جای تأمین قانونی باشد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0029#AN0086",
-                    "external_id": "AN0086"
+                    "external_id": "AN0086",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuditPolicyScope",
-                    "description": "Not all tenants may enable audit logs of custom form activity or COM component usage in Office"
+                    "description": "Not all tenants may enable audit logs of custom form activity or COM component usage in Office",
+                    "description_fa": "همه مستاجران نمی توانند گزارش های حسابرسی فعالیت فرم سفارشی یا استفاده از مؤلفه COM را در Office فعال کنند"
                 },
                 {
                     "field": "MessageSenderAnomalyThreshold",
-                    "description": "Ruler-style delivery may come from external accounts with forged headers or low reputation"
+                    "description": "Ruler-style delivery may come from external accounts with forged headers or low reputation",
+                    "description_fa": "تحویل به سبک خط کش ممکن است از حساب های خارجی با سرصفحه های جعلی یا شهرت کم باشد"
                 },
                 {
                     "field": "FormExecutionRate",
-                    "description": "Frequency of form triggers may be anomalously high compared to baseline Outlook usage"
+                    "description": "Frequency of form triggers may be anomalously high compared to baseline Outlook usage",
+                    "description_fa": "فرکانس محرک‌های فرم ممکن است به طور غیرعادی در مقایسه با استفاده از Outlook پایه بالا باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0086",
+            "description_fa": "اجرای فرم Outlook پس از دریافت پیام یا راه‌اندازی مشتری منجر به اجرای خودکار کد در جلسه کاربر می‌شود. تعاریف فرم ها از قالب های استاندارد منحرف می شوند و شامل منطق اسکریپت یا فراخوانی های شی COM تعبیه شده در فیلدهای فرم هستند."
         }
     ]
 }

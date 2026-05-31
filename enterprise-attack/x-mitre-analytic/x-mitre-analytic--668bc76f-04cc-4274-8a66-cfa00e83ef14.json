@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0076#AN0210",
-                    "external_id": "AN0210"
+                    "external_id": "AN0210",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptLocation",
-                    "description": "Script run from ~/Downloads, ~/Library, or /tmp/"
+                    "description": "Script run from ~/Downloads, ~/Library, or /tmp/",
+                    "description_fa": "اسکریپت از ~/Downloads، ~/Library یا /tmp/ اجرا می شود"
                 },
                 {
                     "field": "EmulationContext",
-                    "description": "Wine or CrossOver launching legacy Windows scripting engines."
+                    "description": "Wine or CrossOver launching legacy Windows scripting engines.",
+                    "description_fa": "Wine یا CrossOver موتورهای اسکریپت نویسی قدیمی ویندوز را راه اندازی می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "VB execution from non-standard or shared users on endpoint."
+                    "description": "VB execution from non-standard or shared users on endpoint.",
+                    "description_fa": "اجرای VB از کاربران غیر استاندارد یا مشترک در نقطه پایانی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0210",
+            "description_fa": "اجرای VBScript/VBA تعبیه‌شده یا شبیه‌سازی‌شده را از طریق برنامه‌های مبتنی بر Wine، Office for Mac که از ویژگی‌های دات‌نت چند پلتفرمی سوءاستفاده می‌کند، یا ماکروهایی که از طریق AppleScript یا ابزارهای اتوماسیون شخص ثالث حذف شده و فراخوانی شده‌اند، شناسایی می‌کند."
         }
     ]
 }

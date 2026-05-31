@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-618",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/618.html"
+                    "url": "https://capec.mitre.org/data/definitions/618.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-201",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/201.html"
+                    "url": "http://cwe.mitre.org/data/definitions/201.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Denis Foo Kune, John Koelndorfer, Nicholas Hopper, Yongdae Kim, Location Leaks on the GSM Air Interface, University of Minnesota",
                     "external_id": "REF-487",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www-users.cs.umn.edu/~hoppernj/celluloc.pdf"
+                    "url": "https://www-users.cs.umn.edu/~hoppernj/celluloc.pdf",
+                    "description_fa": "دنیس فو کون، جان کولندورفر، نیکلاس هاپر، یونگدای کیم، نشت مکان در رابط هوایی GSM، دانشگاه مینه سوتا",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3b775ca7-4c1d-4078-bc7b-29907b9596f7",
@@ -38,6 +42,9 @@
             "x_capec_consequences": {
                 "Other": [
                     "Other (An attacker could verify that the target is in (or not in) a given location.)"
+                ],
+                "Other_fa": [
+                    "دیگر (یک مهاجم می تواند تأیید کند که هدف در یک مکان مشخص (یا نه) است.)"
                 ]
             },
             "x_capec_domains": [
@@ -48,11 +55,17 @@
                 "The attacker must have knowledge of the target’s mobile phone number."
             ],
             "x_capec_skills_required": {
-                "Low": "Open source and commercial tools are available for this attack."
+                "Low": "Open source and commercial tools are available for this attack.",
+                "Low_fa": "منبع باز و ابزارهای تجاری برای این حمله در دسترس هستند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این سناریوی حمله، مهاجم از دانش شماره تلفن همراه هدف (یعنی شماره مرتبط با سیم‌کارت مورد استفاده در دستگاه ارسال مجدد) استفاده می‌کند تا باعث شود شبکه سلولی پیام‌های پخشی را برای هشدار به دستگاه تلفن همراه ارسال کند. از آنجایی که شبکه می‌داند دستگاه تلفن همراه هدف به کدام برج سلولی متصل است، پیام‌های پخش فقط در کد منطقه (LAC) جایی که هدف در حال حاضر در آن قرار دارد، ارسال می‌شود. با راه اندازی پیام پخش سلولی و سپس گوش دادن به وجود یا عدم وجود آن پیام، مهاجم می تواند تأیید کند که هدف در یک مکان مشخص (یا نه) است.",
+            "name_fa": "درخواست پیام پخش تلفن همراه",
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید از شماره تلفن همراه هدف اطلاع داشته باشد."
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0299#AN0836",
-                    "external_id": "AN0836"
+                    "external_id": "AN0836",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SIPProtectedPaths",
-                    "description": "macOS system paths protected by SIP that should never have permission modifications"
+                    "description": "macOS system paths protected by SIP that should never have permission modifications",
+                    "description_fa": "مسیرهای سیستم macOS محافظت شده توسط SIP که هرگز نباید تغییرات مجوز داشته باشند"
                 },
                 {
                     "field": "SuspiciousFlagCombinations",
-                    "description": "chflags parameter combinations indicating evasive behavior (uchg, schg, hidden)"
+                    "description": "chflags parameter combinations indicating evasive behavior (uchg, schg, hidden)",
+                    "description_fa": "ترکیبات پارامترهای chflags نشان دهنده رفتار گریزان (uchg، schg، hidden)"
                 },
                 {
                     "field": "XattrMonitoringScope",
-                    "description": "Extended attributes to monitor for unauthorized modifications"
+                    "description": "Extended attributes to monitor for unauthorized modifications",
+                    "description_fa": "ویژگی های توسعه یافته برای نظارت بر تغییرات غیرمجاز"
                 },
                 {
                     "field": "UnifiedLogRetention",
-                    "description": "Log retention period for correlating permission changes with subsequent access"
+                    "description": "Log retention period for correlating permission changes with subsequent access",
+                    "description_fa": "دوره نگهداری گزارش برای مرتبط کردن تغییرات مجوز با دسترسی بعدی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0836",
+            "description_fa": "زنجیره رفتاری اصلاح مجوز ویژه macOS: (1) اجرای فرآیند chmod/chown/chflags، (2) تلاش‌های دور زدن حفاظت از یکپارچگی سیستم (SIP)، (3) تغییرات ویژگی (xattr) توسعه‌یافته، (4) ارتباط یکپارچه گزارش با رویدادهای سیستم فایل، (5) دسترسی محدود به منابع قبلی"
         }
     ]
 }

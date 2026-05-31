@@ -14,21 +14,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1505/006",
                     "external_id": "T1505.006",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Google Cloud Threat Intelligence ESXi VIBs 2022",
                     "description": "Alexander Marvi, Jeremy Koppen, Tufail Ahmed, and Jonathan Lepore. (2022, September 29). Bad VIB(E)s Part One: Investigating Novel Malware Persistence Within ESXi Hypervisors. Retrieved March 26, 2025.",
                     "url": "https://cloud.google.com/blog/topics/threat-intelligence/esxi-hypervisors-malware-persistence",
                     "source_name_fa": "Google Cloud Threat Intelligence ESXi VIBs 2022",
-                    "description_fa": "الکساندر Marvi، جرمی Koppen، Tufail احمد و جاناتان لیر (۲۰۲۲، ۲۹ سپتامبر) Bad VIB (E) بخش اول: بررسی بدافزار جدید در ESXi Hypervisors Retrieved 26 مارس 2025"
+                    "description_fa": "الکساندر مروی، جرمی کوپن، طفیل احمد و جاناتان لپور. (29 سپتامبر 2022). Bad VIB(E) قسمت اول: بررسی تداوم بدافزار جدید در Hypervisors ESXi. بازبینی شده در 26 مارس 2025."
                 },
                 {
                     "source_name": "VMware VIBs",
                     "description": "Kyle Gleed. (2011, September 13). What's in a VIB?. Retrieved March 27, 2025.",
                     "url": "https://blogs.vmware.com/vsphere/2011/09/whats-in-a-vib.html",
-                    "source_name_fa": "VMware VIB",
-                    "description_fa": "کایل گیلد (2011، 13 سپتامبر) در VIB چیست؟ Retrieved 27 مارس 2025"
+                    "source_name_fa": "VMware VIBs",
+                    "description_fa": "کایل گلید. (2011، 13 سپتامبر). در یک VIB چیست؟ بازبینی شده در 27 مارس 2025."
                 }
             ],
             "object_marking_refs": [
@@ -57,8 +57,8 @@
                 "ESXi"
             ],
             "x_mitre_version": "1.0",
-            "name_fa": "نصب vSphere دانلود آهنگ The Bundles",
-            "description_fa": "مخالفان ممکن است برای ایجاد دسترسی مداوم به Hypervisors ESXi استفاده کنند. VIB مجموعه ای از فایل های مورد استفاده برای توزیع نرم افزار و مدیریت سیستم مجازی در محیط های VMware است. از آنجایی که ESXi از یک سیستم فایل درون حافظه استفاده می کند که در آن تغییراتی که در اکثر فایل ها ایجاد می شود به جای ذخیره سازی مداوم در رم ذخیره می شوند، این تغییرات پس از راه اندازی مجدد از بین می روند. با این حال، VIB ها می توانند برای ایجاد وظایف استارت آپ، اعمال قوانین فایروال سفارشی یا استقرار Binaries که در راه اندازی مجدد ادامه دارد، استفاده شوند. به طور معمول، مدیران از VIB برای به روز رسانی و تعمیر و نگهداری سیستم استفاده می کنند.\n\nدر این میان می توان به سه دسته تقسیم کرد: [[۱۰]\n\nمحموله VIB: یک آرشیو @vgz حاوی دایرکتوری ها و فایل ها برای ایجاد و اجرا در بوت زمانی که VIB بارگذاری می شود.\n• فایل امضا: سطح پذیرش میزبان یک VIB را تأیید می کند و نشان می دهد که تست و اعتبار توسط VMware یا شرکای آن قبل از انتشار VIB انجام شده است. به طور پیش فرض، میزبان ESXi نیاز به حداقل سطح پذیرش شریک برای نصب VIB دارد، به این معنی که VIB توسط یک شریک قابل اعتماد VMware منتشر شده است. با این حال، کاربران ممتاز می توانند سطح پذیرش پیش فرض را با استفاده از رابط خط فرمان esxcli تغییر دهند. علاوه بر این، VIB ها می توانند بدون در نظر گرفتن سطح پذیرش با استفاده از دستور [CTI_PRESERVE_0] نصب شوند.\n* فایل scriptor XML: یک فایل پیکربندی حاوی VIB متداده مرتبط، مانند نام VIB و وابستگی آن.\n\nمخالفان ممکن است از بسته های مخرب VIB برای حفظ دسترسی مداوم به Hypervisors ESXi استفاده کنند، اجازه می دهند که تغییرات سیستم بر روی هر بوت ESXi اجرا شود - مانند استفاده از esxcli برای فعال کردن قوانین فایروال برای ترافیک درب پشتی، ایجاد شنوندگان در پورت های سخت کد شده و اجرای درب های پشتی. همچنین ممکن است فایل های مخرب VIB خود را به عنوان شریک پشتیبانی شده با تغییر فایل توزیع کننده XML ([CTI_PRESERVE_3] <code> esxcli software vib install --force</code> (Citation: VMware VIBs) (Citation: Google Cloud Threat Intelligence ESXi VIBs 2022) (Citation: Google Cloud Threat Intelligence ESXi VIBs 2022)"
+            "name_fa": "بسته های نصب vSphere",
+            "description_fa": "دشمنان ممکن است از بسته‌های نصب vSphere (VIBs) برای ایجاد دسترسی دائمی به هایپروایزر ESXi سوء استفاده کنند. VIB ها مجموعه ای از فایل ها هستند که برای توزیع نرم افزار و مدیریت سیستم مجازی در محیط های VMware استفاده می شوند. از آنجایی که ESXi از یک فایل سیستم در حافظه استفاده می کند که در آن تغییرات ایجاد شده در اکثر فایل ها به جای ذخیره سازی دائمی در RAM ذخیره می شوند، این تغییرات پس از راه اندازی مجدد از بین می روند. با این حال، VIB ها را می توان برای ایجاد وظایف راه اندازی، اعمال قوانین فایروال سفارشی، یا استقرار باینری هایی که در طول راه اندازی مجدد باقی می مانند، استفاده کرد. به طور معمول، مدیران از VIB ها برای به روز رسانی و نگهداری سیستم استفاده می کنند.\n\nVIB ها را می توان به سه جزء تقسیم کرد:(Citation: VMware VIBs)\n\n* بارگذاری VIB: یک بایگانی «.vgz» حاوی دایرکتوری‌ها و فایل‌هایی که قرار است در هنگام بارگیری VIB ایجاد و اجرا شوند.  \n* فایل امضا: سطح پذیرش میزبان یک VIB را تأیید می کند، که نشان می دهد چه آزمایش و اعتبارسنجی توسط VMware یا شرکای آن قبل از انتشار VIB انجام شده است. به‌طور پیش‌فرض، میزبان‌های ESXi برای نصب VIB به حداقل سطح پذیرش PartnerSupported نیاز دارند، به این معنی که VIB توسط یک شریک قابل اعتماد VMware منتشر می‌شود. با این حال، کاربران ممتاز می توانند سطح پذیرش پیش فرض را با استفاده از رابط خط فرمان «esxcli» تغییر دهند. علاوه بر این، با استفاده از فرمان <code> esxcli software vib install --force</code> می‌توان VIB‌ها را بدون توجه به سطح پذیرش نصب کرد. \n* فایل توصیفگر XML: یک فایل پیکربندی حاوی فراداده VIB مرتبط، مانند نام VIB و وابستگی های آن.  \n\nدشمنان ممکن است از بسته‌های مخرب VIB برای حفظ دسترسی دائمی به هایپروایزرهای ESXi استفاده کنند، که اجازه می‌دهند تغییرات سیستمی در هر بار راه‌اندازی ESXi اجرا شوند – مانند استفاده از «esxcli» برای فعال کردن قوانین دیوار آتش برای ترافیک درب‌پشتی، ایجاد شنوندگان در پورت‌های کدگذاری‌شده سخت، و همچنین اجرای درب‌های پشتی2RES_PRIES[ER_TI. با تغییر فایل توصیفگر XML، فایل‌های VIB مخرب خود را به عنوان PartnerSupported تغییر دهید.(Citation: Google Cloud Threat Intelligence ESXi VIBs 2022) (Citation: Google Cloud Threat Intelligence ESXi VIBs 2022)"
         }
     ]
 }

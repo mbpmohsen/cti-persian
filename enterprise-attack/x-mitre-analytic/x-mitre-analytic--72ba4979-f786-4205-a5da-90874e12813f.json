@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0410#AN1145",
-                    "external_id": "AN1145"
+                    "external_id": "AN1145",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ShareName",
-                    "description": "Organizations may use custom share paths outside of default C$, Admin$, etc."
+                    "description": "Organizations may use custom share paths outside of default C$, Admin$, etc.",
+                    "description_fa": "سازمان ها ممکن است از مسیرهای اشتراک گذاری سفارشی خارج از C$، Admin$ و غیره پیش فرض استفاده کنند."
                 },
                 {
                     "field": "ProcessName",
-                    "description": "Common toolsets vary; defenders should tailor to unusual processes for their environment."
+                    "description": "Common toolsets vary; defenders should tailor to unusual processes for their environment.",
+                    "description_fa": "مجموعه ابزارهای رایج متفاوت است. مدافعان باید فرآیندهای غیرعادی را برای محیط خود تنظیم کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time of day and access duration may need to be tuned to reduce false positives."
+                    "description": "Time of day and access duration may need to be tuned to reduce false positives.",
+                    "description_fa": "زمان روز و مدت زمان دسترسی ممکن است نیاز به تنظیم داشته باشد تا مثبت کاذب کاهش یابد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1145",
+            "description_fa": "نظارت بر دسترسی فایل به اشتراک‌گذاری‌های شبکه (مانند C$، Admin$) و به دنبال آن عملیات خواندن یا کپی غیرمعمول توسط فرآیندهایی که معمولاً با چنین فعالیت‌هایی مرتبط نیستند (مانند PowerShell، certutil)."
         }
     ]
 }

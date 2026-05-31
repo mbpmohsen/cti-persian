@@ -12,19 +12,26 @@
                 {
                     "source_name": "mitre-pre-attack",
                     "url": "https://attack.mitre.org/techniques/T1389",
-                    "external_id": "T1389"
+                    "external_id": "T1389",
+                    "source_name_fa": "میتر قبل از حمله"
                 },
                 {
                     "source_name": "Flexera News Vulnerabilities",
-                    "description": "John Lipsey. (2015, March 25). 15,435 Vulnerabilities in Close to 4,000 Applications in 2014. Retrieved April 12, 2017."
+                    "description": "John Lipsey. (2015, March 25). 15,435 Vulnerabilities in Close to 4,000 Applications in 2014. Retrieved April 12, 2017.",
+                    "source_name_fa": "آسیب پذیری های Flexera News",
+                    "description_fa": "جان لیپسی. (25 مارس 2015). 15,435 آسیب پذیری در نزدیک به 4,000 برنامه در سال 2014. بازیابی شده در 12 آوریل 2017."
                 },
                 {
                     "source_name": "Android Security Review 2015",
-                    "description": "Google. (2016, April). Android Security 2015 Year In Review. Retrieved April 12, 2017."
+                    "description": "Google. (2016, April). Android Security 2015 Year In Review. Retrieved April 12, 2017.",
+                    "source_name_fa": "بررسی امنیت اندروید 2015",
+                    "description_fa": "گوگل. (2016، آوریل). Android Security 2015 سال در حال بررسی. بازبینی شده در 12 آوریل 2017."
                 },
                 {
                     "source_name": "Android Multidex RCE",
-                    "description": "Ryan Welton. (2015, June 15). A Pattern for Remote Code Execution using Arbitrary File Writes and MultiDex Applications. Retrieved April 12, 2017."
+                    "description": "Ryan Welton. (2015, June 15). A Pattern for Remote Code Execution using Arbitrary File Writes and MultiDex Applications. Retrieved April 12, 2017.",
+                    "source_name_fa": "اندروید Multidex RCE",
+                    "description_fa": "رایان ولتون (2015، 15 ژوئن). الگویی برای اجرای کد از راه دور با استفاده از نوشتن فایل دلخواه و برنامه های MultiDex. بازبینی شده در 12 آوریل 2017."
                 }
             ],
             "object_marking_refs": [
@@ -45,7 +52,11 @@
             ],
             "modified": "2020-10-26T13:42:49.342Z",
             "created": "2017-12-14T16:46:06.044Z",
-            "x_mitre_deprecated": true
+            "x_mitre_deprecated": true,
+            "name_fa": "آسیب پذیری های موجود در کتابخانه های نرم افزاری شخص ثالث را شناسایی کنید",
+            "description_fa": "این شی منسوخ شده است زیرا محتوای آن در دامنه سازمانی ادغام شده است. لطفاً ماتریس [PRE](http://attack.mitre.org/matrices/enterprise/pre/) را برای جایگزینی آن ببینید. محتوای قبلی این صفحه [اینجا] (https://attack.mitre.org/versions/v7/techniques/T1389) حفظ شده است.\n\nبسیاری از برنامه‌ها از کتابخانه‌های نرم‌افزار شخص ثالث، اغلب بدون آگاهی کامل از رفتار کتابخانه‌ها توسط توسعه‌دهنده برنامه، استفاده می‌کنند. به عنوان مثال، برنامه های کاربردی تلفن همراه اغلب کتابخانه های تبلیغاتی را برای ایجاد درآمد برای توسعه دهنده برنامه ترکیب می کنند. آسیب‌پذیری‌ها در این کتابخانه‌های شخص ثالث می‌توانند به طور بالقوه در هر برنامه‌ای که از کتابخانه استفاده می‌کند مورد سوء استفاده قرار گیرد، و حتی اگر آسیب‌پذیری‌ها برطرف شوند، بسیاری از برنامه‌ها ممکن است همچنان از نسخه‌های آسیب‌پذیر و قدیمی‌تر کتابخانه استفاده کنند. (Citation: Flexera News Vulnerabilities) (Citation: Android Security Review 2015) (Citation: Android Multidex RCE)",
+            "x_mitre_detectable_by_common_defenses_explanation_fa": "نرم افزار متن باز بیشتر به دلیل صرفه جویی در زمان و رایگان بودن جذابیت بالایی دارد.  با این حال، استفاده از این کد بدون ارزیابی امنیت آن شبیه به اجرای کورکورانه نرم افزار شخص ثالث است.  شرکت ها اغلب زمانی را برای شناسایی و اسکن مناسب آسیب پذیری ها اختصاص نمی دهند. جریان اصلی برنامه موبایل، برنامه ها را برای برخی از آسیب پذیری های شناخته شده اسکن می کند. به عنوان مثال، برنامه بهبود امنیت برنامه اندروید Google، آسیب‌پذیری‌های موجود در برنامه‌هایشان را از استفاده از کتابخانه‌های شخص ثالث Vungle، Apache Cordova، WebView SSL، GnuTLS و Vitamio شناسایی کرده و به آنها هشدار می‌دهد. با این حال، این اسکن‌ها احتمالاً همه کتابخانه‌های آسیب‌پذیر را پوشش نمی‌دهند، توسعه‌دهندگان ممکن است همیشه بر اساس نتایج عمل نکنند، و نتایج ممکن است در دسترس کاربران نهایی برنامه‌ها قرار نگیرد.",
+            "x_mitre_difficulty_for_adversary_explanation_fa": "توسعه‌دهندگان معمولاً از کتابخانه‌های منبع باز استفاده می‌کنند تا جایی که حریف به راحتی می‌تواند آسیب‌پذیری‌های شناخته‌شده را کشف کند و اکسپلویت ایجاد کند.  همچنین به طور کلی آسان است که برنامه های کاربردی تلفن همراه دلخواه را از بین ببرید تا مشخص شود از چه کتابخانه هایی استفاده می کنند، و به طور مشابه از این اطلاعات برای ارتباط با CVE های شناخته شده و بسته های بهره برداری استفاده کنید."
         }
     ]
 }

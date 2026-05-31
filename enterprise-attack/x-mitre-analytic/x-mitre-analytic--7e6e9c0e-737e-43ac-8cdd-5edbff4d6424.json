@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0485#AN1331",
-                    "external_id": "AN1331"
+                    "external_id": "AN1331",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,13 +48,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DNSQueryBurstThreshold",
-                    "description": "Number of unique IPs returned per domain in a short window"
+                    "description": "Number of unique IPs returned per domain in a short window",
+                    "description_fa": "تعداد IP های منحصر به فرد بازگردانده شده به ازای هر دامنه در یک پنجره کوتاه"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust correlation timeframe for fast flux detection (e.g., 5\u201310 minutes)"
+                    "description": "Adjust correlation timeframe for fast flux detection (e.g., 5–10 minutes)",
+                    "description_fa": "بازه زمانی همبستگی را برای تشخیص شار سریع تنظیم کنید (به عنوان مثال، 5 تا 10 دقیقه)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1331",
+            "description_fa": "رزولوشن‌های مکرر DNS را شناسایی کنید که در آن یک نام دامنه، چندین IP را پشت سر هم باز می‌گرداند، همراه با مقادیر کم TTL و حجم درخواست بالا از فرآیندهای غیرعادی. با اصل و نسب فرآیند (به عنوان مثال، برنامه‌های Office که جستجوهای غیرعادی DNS را ایجاد می‌کنند) مرتبط باشد."
         }
     ]
 }

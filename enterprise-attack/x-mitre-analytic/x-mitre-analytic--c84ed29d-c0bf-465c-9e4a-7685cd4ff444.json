@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0458#AN1259",
-                    "external_id": "AN1259"
+                    "external_id": "AN1259",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,21 +53,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ObjectType",
-                    "description": "Focus on `trustedDomain` or `foreignSecurityPrincipal` AD objects in trust containers."
+                    "description": "Focus on `trustedDomain` or `foreignSecurityPrincipal` AD objects in trust containers.",
+                    "description_fa": "روی اشیاء AD «trustedDomain» یا «foreignSecurityPrincipal» در کانتینرهای اعتماد تمرکز کنید."
                 },
                 {
                     "field": "AttributeModified",
-                    "description": "Monitor attributes like `trustPartner`, `trustDirection`, `trustType`, `msDS-TrustForestTrustInfo`."
+                    "description": "Monitor attributes like `trustPartner`, `trustDirection`, `trustType`, `msDS-TrustForestTrustInfo`.",
+                    "description_fa": "مانیتور ویژگی‌هایی مانند «trustPartner»، «trustDirection»، «trustType»، «msDS-TrustForestTrustInfo»."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate trust creation with unusual logon events or certificate modifications."
+                    "description": "Correlate trust creation with unusual logon events or certificate modifications.",
+                    "description_fa": "ایجاد اعتماد را با رویدادهای غیرمعمول ورود به سیستم یا تغییرات گواهی مرتبط کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Flag rare accounts or non-standard admin users performing trust changes."
+                    "description": "Flag rare accounts or non-standard admin users performing trust changes.",
+                    "description_fa": "حساب‌های کمیاب یا کاربران غیراستاندارد سرپرست را که تغییرات اعتماد را انجام می‌دهند پرچم‌گذاری کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1259",
+            "description_fa": "Adversary تنظیمات اعتماد دامنه اکتیو دایرکتوری را از طریق «netdom»، «nltest» یا PowerShell تغییر می‌دهد تا اعتماد دامنه جدید اضافه کند یا فدراسیون را تغییر دهد. تغییرات در ویژگی های شی AD مانند trustDirection، trustType، trustAttributes، که اغلب با SeEnableDelegationPrivilege یا تزریق گواهی جفت می شوند، رخ می دهد."
         }
     ]
 }

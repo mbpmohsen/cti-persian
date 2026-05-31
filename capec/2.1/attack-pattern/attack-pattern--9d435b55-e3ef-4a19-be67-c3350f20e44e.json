@@ -9,41 +9,52 @@
                 {
                     "external_id": "CAPEC-676",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/676.html"
+                    "url": "https://capec.mitre.org/data/definitions/676.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-943",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/943.html"
+                    "url": "http://cwe.mitre.org/data/definitions/943.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1286",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1286.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1286.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Testing for NoSQL Injection, The OWASP Foundation",
                     "external_id": "REF-668",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.6-Testing_for_NoSQL_Injection",
+                    "description_fa": "تست NoSQL Injection، بنیاد OWASP",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Charlie Belmer, NoSql Injection Cheatsheet, 2021--06---07, Null Sweep",
                     "external_id": "REF-669",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://nullsweep.com/nosql-injection-cheatsheet/"
+                    "url": "https://nullsweep.com/nosql-injection-cheatsheet/",
+                    "description_fa": "چارلی بلمر، NoSql Injection Cheatsheet، 2021--06---07، Null Sweep",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Patrick Spiegel, NoSql Injection: Fun with Objects and Arrays, The OWASP Foundation",
                     "external_id": "REF-670",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-pdf-archive/GOD16-NOSQL.pdf"
+                    "url": "https://owasp.org/www-pdf-archive/GOD16-NOSQL.pdf",
+                    "description_fa": "پاتریک اشپیگل، NoSql Injection: Fun with Objects and Arrays، The OWASP Foundation",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "NoSql Injection: Fun with Objects and ArraysNoSQL Injection Attacks and Prevention Techniques, 2019--06, WebOrion",
                     "external_id": "REF-671",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.theweborion.com/wp-content/uploads/2019/06/NoSQL-Injection-Attacks-and-Prevention-Techniques.pdf"
+                    "url": "https://www.theweborion.com/wp-content/uploads/2019/06/NoSQL-Injection-Attacks-and-Prevention-Techniques.pdf",
+                    "description_fa": "NoSql Injection: سرگرمی با اشیاء و آرایه ها NoSQL Injection Attacks and Prevention Techniques, 2019--06, WebOrion",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--9d435b55-e3ef-4a19-be67-c3350f20e44e",
@@ -79,6 +90,24 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -103,11 +132,31 @@
             ],
             "x_capec_skills_required": {
                 "Low": "For keyword and JavaScript injection attacks, it is fairly simple for someone with basic NoSQL knowledge to perform NoSQL injection, once the target's technology stack has been determined.",
-                "Medium": "For operator replacement attacks, the adversary must also have knowledge of HTTP Parameter Pollution attacks and how to conduct them."
+                "Medium": "For operator replacement attacks, the adversary must also have knowledge of HTTP Parameter Pollution attacks and how to conduct them.",
+                "Low_fa": "برای حملات تزریق کلیدواژه و جاوا اسکریپت، زمانی که پشته فناوری هدف مشخص شد، برای افرادی که دانش اولیه NoSQL دارند، انجام تزریق NoSQL بسیار ساده است.",
+                "Medium_fa": "برای حملات جایگزین اپراتور، حریف همچنین باید از حملات آلودگی پارامتر HTTP و نحوه انجام آنها آگاهی داشته باشد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک حریف نرم‌افزاری را هدف قرار می‌دهد که عبارات NoSQL را بر اساس ورودی کاربر یا با پارامترهای آسیب‌پذیر در برابر جایگزینی اپراتور می‌سازد تا به انواع اثرات فنی مانند افزایش امتیازات، دور زدن احراز هویت، و/یا اجرای کد دست یابد.</xhtml:p>",
+            "name_fa": "NoSQL Injection",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>نمونه‌های زیر عمدتاً حملات MongoDB، PHP و NodeJS را به دلیل برجستگی و محبوبیت آنها ذکر می‌کنند. با این حال، لطفاً توجه داشته باشید که این حملات منحصر به این نمونه NoSQL، زبان برنامه‌نویسی یا چارچوب زمان اجرا نیستند.</xhtml:p>\n               <xhtml:p>در NodeJS، حملات بای پس ورود به سیستم از طریق MongoDB امکان پذیر است اگر ورودی کاربر به درستی تایید و پاکسازی نشده باشد [REF-670].</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"bad\">//NodeJS با Express.js<xhtml:div style=\"margin-left:1em;\">db.collection('users')\n               </xhtml:div>\n               \n               <xhtml:p>اگر کاربر درخواستی مانند زیر ارسال کند، کد بالا به خوبی کار می کند:</xhtml:p>\n               <xhtml:p>https://example.org/login?user=patrick&password=1234</xhtml:p>\n               \n               <xhtml:p>اما یک حریف می‌تواند پرس و جوی مخربی مانند زیر ارسال کند که توسط کد به صورت زیر تفسیر می‌شود:</xhtml:p>\n               <xhtml:p>https://example.org/login?user=patrick&password[$ne]=</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">//NodeJS با Express.js<xhtml:div style=\"margin-left:1em;\">db.collection('users').find({<xhtml:div style=\"margin-left:1em;\">\"user\": bob,\"password\": {\"&ne\": \"v:\">html);\n               </xhtml:div>\n               <xhtml:p>این امر منجر به یک حمله بای پس ورود به سیستم می شود، زیرا پرس و جو برای همه مقادیری که رمز عبور Bob یک رشته خالی نیست، موفقیت آمیز خواهد بود.</xhtml:p>",
+                "<xhtml:p>نمونه‌های MongoDB نیز در برابر حملات تزریق جاوا اسکریپت آسیب‌پذیر هستند، زمانی که ورودی کاربر به‌درستی اعتبارسنجی و پاکسازی نشده باشد.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"bad\">//PHP با MongoDB<xhtml:div style=\"margin-left:1em;\">db.collection.find({$where: function() {<xhtml:div style=\"margin-left:1em;\">return (this.username == $username) } } v);></xhtml\n                  </xhtml:div>\n               </xhtml:div>\n               \n               <xhtml:p>اگر کاربر یک نام کاربری را به درستی مشخص کند، این کد همانطور که در نظر گرفته شده اجرا می شود. با این حال، یک دشمن می‌تواند جاوا اسکریپت را به متغیر \"$username\" تزریق کند تا به حمله NoSQL Injection دست یابد:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">//PHP با MongoDB<xhtml:div style=\"margin-left:1em;\">db.collection.find({$where:function() {<xhtml:div style=\"margin-left:1em;\">return (this.username == 'foo'; sleep(50}x:html)v\n                  </xhtml:div>\n               </xhtml:div>\n               <xhtml:p> در صورت موفقیت آمیز بودن حمله، سرور به مدت 5 ثانیه در حالت خواب قرار می گیرد. یک حریف می‌تواند مقدار بیشتری را برای رد سرویس به برنامه ارائه دهد.</xhtml:p>",
+                "<xhtml:p> در صورت استفاده از PHP با MongoDB، حملات جایگزینی اپراتور در صورتی امکان پذیر است که عملگرهای پرس و جوی خاص به درستی آدرس دهی نشده باشند. مثال زیر از OWASP \"Test for NoSQL Injection\" یک مورد ساده از چگونگی این اتفاق را نشان می دهد.[REF-668]</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"bad\">db.myCollection.find({$where: function() {<xhtml:div style=\"margin-left:1em;\">return obj.credits - obj.debits < 0; } } );</xhtml:div>\n               </xhtml:div>\n               \n               <xhtml:p> حتی اگر پرس و جو فوق به هیچ ورودی کاربر بستگی ندارد، در برابر حمله تزریق NoSQL از طریق جایگزینی اپراتور روی کلمه کلیدی \"$where\" آسیب پذیر است. در این حالت، حریف می تواند از MongoDB به روش زیر سوء استفاده کند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">$where: function() { //جاوا اسکریپت دلخواه اینجا }</xhtml:div>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3> کاوش</h3><ol><li> <p> <b>برنامه هدف نظرسنجی: </b>با توجه به تعداد پایگاه‌های داده NoSQL موجود و ترکیب‌های زبان/API متعدد هر کدام، حریف ابتدا باید برنامه مورد نظر را بررسی کند تا بداند چه فناوری‌هایی با کاربر تحت تأثیر قرار می‌گیرند. داده‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>پشته فناوری استفاده‌شده توسط برنامه مورد نظر، مانند سرور برنامه، درایورها، چارچوب‌ها، APIها و پایگاه‌های داده مورد استفاده را تعیین کنید.</td></tr><tr><td>شناسایی بخش‌هایی از برنامه کاربردی که ممکن است با کاربر در ارتباط با QL ارتباط نداشته باشد. پرس و جوها.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>شناسایی ورودی قابل کنترل توسط کاربر که مستعد تزریق هستند: </b>پس از شناسایی پشته فناوری مورد استفاده و جایی که ورودی کاربر-محور از طریق user-driven رول ورودی قابل استفاده است را تعیین کنید. مانند احراز هویت یا فرم های جستجو. برای هر ورودی قابل کنترل توسط کاربر که دشمن مشکوک به تزریق NoSQL است، سعی کنید کاراکترها یا کلمات کلیدی را وارد کنید که در پایگاه داده یا زبان NoSQL معانی خاصی دارند (مثلاً \"$ne\" برای MongoDB یا \"$exists\" برای PHP/MongoDB) یا جاوا اسکریپت که می تواند در برنامه کاربردی باشد. هدف، ایجاد یک پرس و جو NoSQL با نحو نامعتبر است.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از مرورگر وب برای تزریق ورودی از طریق فیلدهای متنی یا از طریق پارامترهای HTTP GET استفاده کنید.</td></tr><tr><td>از ابزارهای TamperIE، Tampered,Cample Tampere،Cample Debugging استفاده کنید. برای تغییر پارامترهای HTTP POST، فیلدهای مخفی، فیلدهای غیر آزاد و غیره.</td></tr><tr><td>از ابزارهای تزریق بسته در سطح شبکه مانند netcat برای تزریق ورودی استفاده کنید</td></tr><tr><td>استفاده از کلاینت تغییر یافته (تغییر شده توسط مهندسی معکوس.><tli><tr><tli>tdlied) <p> <b>آزمایش با آسیب‌پذیری‌های NoSQL Injection: </b>پس از تعیین آسیب‌پذیری یک ورودی داده‌شده در برابر NoSQL Injection، فرضیه‌ای را مطرح کنید که پرس و جوی زیربنایی چگونه است. به طور مکرر سعی کنید منطق را به پرس و جو اضافه کنید تا اطلاعات را از پایگاه داده استخراج کنید، اطلاعات را در پایگاه داده تغییر دهید/حذف کنید، یا دستورات را روی سرور اجرا کنید. Injection Cheatsheet\" [REF-669] و روش های مختلفی را برای افزودن منطق به جستارهای NoSQL امتحان کنید.</td></tr><tr><td>به طور مکرر منطق را به جستار NoSQL اضافه کنید و از پیام های خطای دقیق از سرور برای اشکال زدایی پرس و جو استفاده کنید.</td></tr><tr><td>Atd></tr><tr><td>Atd></tr><tr><td>Atd></tr><tr><td>Atd></tr><tr><td>Atd></tr><tr><td>Atd></tr><tr><td>Atd></tr><tr><td>Atd></tr><tr><td>Atd></tr><tr> \"where\" در PHP [CAPEC-460].</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Exploit از آسیب‌پذیری NoSQL Injection: </b>پس از پالایش و اضافه کردن NoSQL، زیرنویس‌های مختلف و execuit‌های مختلف craft را به آن اضافه کرد. پرس و جو NoSQL که برای حمله به سیستم هدف مورد استفاده قرار می گیرد.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>ساخت و اجرای پرس و جو زیربنایی NoSQL</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> فراخوانی های پایگاه داده NoSQL به زبان برنامه نویسی یک برنامه، از طریق یک فراخوانی API سفارشی نوشته می شوند، یا در یک قرارداد مشترک (مانند JSON، XML، و غیره) قالب بندی می شوند، که حریف می تواند از هر یک از آنها برای دستیابی به اهداف فوق استفاده کند. حملات NoSQL معمولاً ناشی از پاکسازی و اعتبارسنجی نادرست داده‌هایی است که از یک کاربر نشات می‌گیرد، چه از طریق کاراکتر خاص یا تزریق جاوا اسکریپت. در هر دو مورد، دشمن رشته‌های ورودی را ایجاد می‌کند تا زمانی که نرم‌افزار هدف، دستورات NoSQL را بر اساس ورودی می‌سازد، دستور NoSQL به‌دست‌آمده اعمالی غیر از آنچه برنامه در نظر گرفته شده است، انجام می‌دهد. با این حال، برخلاف حملات SQL Injection سنتی، حملات تزریق NoSQL همچنین می‌تواند در مواردی رخ دهد که برنامه به ورودی کاربر متکی نیست، همانطور که در جایگزینی اپراتورها وجود دارد. این مستلزم آن است که حریف نام متغیرهای رزرو شده NoSQL را با نام‌هایی که با عملکرد مخرب اصلاح شده‌اند، نادیده بگیرد (مانند $where در MongoDB). در همه موارد، بسته به NoSQL API و مدل داده استفاده شده، تزریق موفقیت آمیز می تواند باعث افشای اطلاعات، اصلاح داده ها و اجرای کد در سطح برنامه شود.</xhtml:p>\n            <xhtml:p>توجه: حملات NoSQL Injection در یک زبان رویه ای (مانند C، C++، Perl) بر خلاف خود زبان SQL اعلانی اجرا می شوند. در نتیجه، حملات تزریق NoSQL به طور بالقوه می تواند تأثیرات بیشتری نسبت به حملات تزریق SQL سنتی [REF-668] داشته باشد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "آگاهی از پشته فناوری که توسط برنامه هدف مورد استفاده قرار می گیرد.",
+                "درخواست های NoSQL که توسط برنامه برای ذخیره، بازیابی یا اصلاح داده ها استفاده می شود.",
+                "ورودی قابل کنترل توسط کاربر که به‌عنوان بخشی از کوئری‌های NoSQL توسط برنامه به درستی تأیید نشده است.",
+                "هدف به طور بالقوه مستعد حملات جایگزین اپراتور است."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0655#AN1742",
-                    "external_id": "AN1742"
+                    "external_id": "AN1742",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,29 +48,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between command-execution indication, process effects, and follow-on file or network behavior"
+                    "description": "Correlation window between command-execution indication, process effects, and follow-on file or network behavior",
+                    "description_fa": "پنجره همبستگی بین نشانه اجرای فرمان، اثرات فرآیند، و فایل بعدی یا رفتار شبکه"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Managed apps legitimately expected to perform debugging, remote support, or enterprise automation tasks"
+                    "description": "Managed apps legitimately expected to perform debugging, remote support, or enterprise automation tasks",
+                    "description_fa": "برنامه های مدیریت شده به طور قانونی انتظار می رود که اشکال زدایی، پشتیبانی از راه دور یا وظایف اتوماسیون سازمانی را انجام دهند."
                 },
                 {
                     "field": "AllowedProcessPatterns",
-                    "description": "Expected process-launch or helper-execution patterns for approved managed apps"
+                    "description": "Expected process-launch or helper-execution patterns for approved managed apps",
+                    "description_fa": "الگوهای راه‌اندازی فرآیند یا اجرای کمکی مورد انتظار برای برنامه‌های مدیریت‌شده تأییدشده"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether command-execution behavior should occur only during active user-driven workflows"
+                    "description": "Whether command-execution behavior should occur only during active user-driven workflows",
+                    "description_fa": "آیا رفتار اجرای فرمان باید فقط در جریان‌های کاری فعال کاربر محور رخ دهد یا خیر"
                 },
                 {
                     "field": "ArtifactPathPatterns",
-                    "description": "Expected temporary or output file locations for approved app behavior"
+                    "description": "Expected temporary or output file locations for approved app behavior",
+                    "description_fa": "محل‌های فایل موقت یا خروجی مورد انتظار برای رفتار برنامه تأیید شده"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume after command execution to treat network behavior as meaningful"
+                    "description": "Minimum outbound volume after command execution to treat network behavior as meaningful",
+                    "description_fa": "حداقل حجم خروجی پس از اجرای دستور برای تلقی رفتار شبکه معنادار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1742",
+            "description_fa": "مدافع رفتار زمان اجرای برنامه مدیریت‌شده را که نشان‌دهنده فراخوانی فرمان یا پوسته است، با فرآیند ایجاد شده بعدی یا اثرات اجرایی پوسته‌مانند مرتبط می‌کند، سپس زمانی که فعالیت به‌دست‌آمده، مصنوعات محلی یا ارتباطات شبکه را خارج از زمینه مورد انتظار کاربر تولید می‌کند، اطمینان را افزایش می‌دهد. از آنجایی که دید مستقیم پوسته فرآیند می‌تواند در iOS در بسیاری از استقرارهای سازمانی ضعیف‌تر باشد، تحلیلی ابتدا بر روی ایجاد فرآیند یا اثرات API سیستم‌عامل سطح پایین‌تر، جایی که تله‌متری موبایل می‌تواند آنها را مشاهده کند، و سپس بر روی بافت چرخه عمر و رفتار شبکه یا فایل پس از اجرا، لنگر می‌دهد. هنگامی که همان برنامه فراخوانی فرمان و به دنبال آن اجرای فرآیند و اثرات بعدی فوری را نشان می دهد، اعتماد به نفس قوی تر است."
         }
     ]
 }

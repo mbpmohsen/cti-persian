@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0084#AN0234",
-                    "external_id": "AN0234"
+                    "external_id": "AN0234",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0234",
-            "description": "Defenders can detect suspicious cloud instance deletions by correlating events across authentication, instance lifecycle, and account activity. From a defender\u2019s perspective, behaviors of interest include instances deleted shortly after creation, deletions initiated by new or rarely used accounts, deletions following snapshot creation, and deletions originating from anomalous geolocations or access keys. These may indicate adversarial attempts to destroy forensic evidence or evade detection.",
+            "description": "Defenders can detect suspicious cloud instance deletions by correlating events across authentication, instance lifecycle, and account activity. From a defender’s perspective, behaviors of interest include instances deleted shortly after creation, deletions initiated by new or rarely used accounts, deletions following snapshot creation, and deletions originating from anomalous geolocations or access keys. These may indicate adversarial attempts to destroy forensic evidence or evade detection.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Identity of the user/service account performing deletions; tuned to exclude automation or known administrative workflows."
+                    "description": "Identity of the user/service account performing deletions; tuned to exclude automation or known administrative workflows.",
+                    "description_fa": "هویت کاربر/حساب سرویسی که حذف را انجام می دهد. تنظیم شده تا اتوماسیون یا گردش کار اداری شناخته شده را حذف کند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for detecting rapid instance lifecycle events (e.g., creation and deletion within minutes)."
+                    "description": "Threshold for detecting rapid instance lifecycle events (e.g., creation and deletion within minutes).",
+                    "description_fa": "آستانه برای تشخیص سریع رویدادهای چرخه حیات (به عنوان مثال، ایجاد و حذف در عرض چند دقیقه)."
                 },
                 {
                     "field": "GeoLocation",
-                    "description": "Region or source IP where the delete request originated; can be tuned to align with enterprise cloud geography."
+                    "description": "Region or source IP where the delete request originated; can be tuned to align with enterprise cloud geography.",
+                    "description_fa": "منطقه یا آی پی منبع منبع درخواست حذف؛ می توان آن را تنظیم کرد تا با جغرافیای ابری سازمانی هماهنگ شود."
                 },
                 {
                     "field": "RateThreshold",
-                    "description": "Number of deletions per user/account in a defined window; tuned for organizations with high elasticity."
+                    "description": "Number of deletions per user/account in a defined window; tuned for organizations with high elasticity.",
+                    "description_fa": "تعداد حذف به ازای هر کاربر/حساب در یک پنجره تعریف شده؛ برای سازمان هایی با کشش بالا تنظیم شده است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0234",
+            "description_fa": "مدافعان می‌توانند با مرتبط کردن رویدادها در سراسر احراز هویت، چرخه عمر نمونه و فعالیت حساب، حذف‌های نمونه ابری مشکوک را شناسایی کنند. از دیدگاه مدافع، رفتارهای مورد علاقه شامل مواردی است که مدت کوتاهی پس از ایجاد حذف می‌شوند، حذف‌هایی که توسط حساب‌های جدید یا به ندرت استفاده می‌شوند، حذف‌های پس از ایجاد عکس فوری، و حذف‌های ناشی از موقعیت‌های جغرافیایی غیرعادی یا کلیدهای دسترسی هستند. اینها ممکن است نشان دهنده تلاش های متخاصم برای از بین بردن شواهد پزشکی قانونی یا فرار از کشف باشد."
         }
     ]
 }

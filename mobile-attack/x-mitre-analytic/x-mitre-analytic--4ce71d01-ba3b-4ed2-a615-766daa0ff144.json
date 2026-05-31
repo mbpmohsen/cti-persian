@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0658#AN1748",
-                    "external_id": "AN1748"
+                    "external_id": "AN1748",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.377Z",
             "name": "Analytic 1748",
-            "description": "A defender correlates an unexpected change in cellular subscription state (eSIM/SIM profile change, carrier/operator change, or sudden persistent loss of cellular service) with near-term disruption signals and a rapid increase in authentication-related network activity consistent with SMS verification or account recovery flows, suggesting the user\u2019s number has been ported to an adversary-controlled SIM/device (SIM swap impact).",
+            "description": "A defender correlates an unexpected change in cellular subscription state (eSIM/SIM profile change, carrier/operator change, or sudden persistent loss of cellular service) with near-term disruption signals and a rapid increase in authentication-related network activity consistent with SMS verification or account recovery flows, suggesting the user’s number has been ported to an adversary-controlled SIM/device (SIM swap impact).",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -36,7 +37,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--56c2b384-77f8-461f-a71a-76f7888ebfb6",
                     "name": "MobileEDR:telemetry",
-                    "channel": "Cellular service state transitions (in-service\u2192no-service), SIM state change, carrier/operator identifier change, or baseband/telephony stack state change observed by agent telemetry"
+                    "channel": "Cellular service state transitions (in-service→no-service), SIM state change, carrier/operator identifier change, or baseband/telephony stack state change observed by agent telemetry"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
@@ -62,29 +63,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SupervisedInventoryAvailability",
-                    "description": "Tuning based on whether supervised iOS + MDM provides sufficient subscription/eSIM visibility; otherwise rely on agent + network signals."
+                    "description": "Tuning based on whether supervised iOS + MDM provides sufficient subscription/eSIM visibility; otherwise rely on agent + network signals.",
+                    "description_fa": "تنظیم بر اساس اینکه آیا iOS + MDM نظارت شده قابلیت مشاهده اشتراک/eSIM کافی را فراهم می کند یا خیر. در غیر این صورت به سیگنال های عامل + شبکه تکیه کنید."
                 },
                 {
                     "field": "ServiceLossDurationThreshold",
-                    "description": "Minimum persistent no-service duration required to reduce false positives from normal carrier fluctuations."
+                    "description": "Minimum persistent no-service duration required to reduce false positives from normal carrier fluctuations.",
+                    "description_fa": "حداقل مدت زمان بدون سرویس مداوم مورد نیاز برای کاهش مثبت کاذب از نوسانات عادی حامل."
                 },
                 {
                     "field": "SwapCorrelationWindow",
-                    "description": "Time window to link subscription disruption with identity/auth network anomalies."
+                    "description": "Time window to link subscription disruption with identity/auth network anomalies.",
+                    "description_fa": "پنجره زمانی برای پیوند اختلال اشتراک با ناهنجاری‌های شبکه هویت/احراز هویت."
                 },
                 {
                     "field": "AuthTrafficSpikeThreshold",
-                    "description": "Threshold for suspicious increase in OTP/MFA/account recovery traffic relative to device/user baseline."
+                    "description": "Threshold for suspicious increase in OTP/MFA/account recovery traffic relative to device/user baseline.",
+                    "description_fa": "آستانه افزایش مشکوک در ترافیک بازیابی OTP/MFA/حساب نسبت به خط پایه دستگاه/کاربر."
                 },
                 {
                     "field": "RoamingExpectedRegions",
-                    "description": "Tuning to reduce false positives when the user is traveling or roaming across carrier networks."
+                    "description": "Tuning to reduce false positives when the user is traveling or roaming across carrier networks.",
+                    "description_fa": "تنظیم برای کاهش مثبت کاذب هنگامی که کاربر در حال سفر یا رومینگ در سراسر شبکه های حامل است."
                 },
                 {
                     "field": "IdentityEndpointAllowList",
-                    "description": "Baseline list of expected identity endpoints (IdP, banking, crypto) for the device/user population"
+                    "description": "Baseline list of expected identity endpoints (IdP, banking, crypto) for the device/user population",
+                    "description_fa": "فهرست پایه از نقاط پایانی هویت مورد انتظار (IdP، بانکداری، رمزنگاری) برای دستگاه/جمعیت کاربر"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1748",
+            "description_fa": "مدافع یک تغییر غیرمنتظره در وضعیت اشتراک تلفن همراه (تغییر نمایه سیم‌کارت/سیم‌کارت، تغییر حامل/اپراتور، یا از دست دادن ناگهانی سرویس تلفن همراه) را با سیگنال‌های قطعی کوتاه‌مدت و افزایش سریع فعالیت شبکه مرتبط با احراز هویت مطابق با تأیید پیامک یا جریان‌های بازیابی حساب کاربر به شماره‌ای مرتبط می‌سازد. سیم/دستگاه (تأثیر تعویض سیم کارت)."
         }
     ]
 }

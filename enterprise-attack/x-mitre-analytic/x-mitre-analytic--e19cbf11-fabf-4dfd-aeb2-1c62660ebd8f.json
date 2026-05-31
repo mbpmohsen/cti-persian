@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0488#AN1345",
-                    "external_id": "AN1345"
+                    "external_id": "AN1345",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ThirdPartyUsers",
-                    "description": "POSIX accounts assigned to vendors/partners."
+                    "description": "POSIX accounts assigned to vendors/partners.",
+                    "description_fa": "حساب های POSIX به فروشندگان / شرکا اختصاص داده شده است."
                 },
                 {
                     "field": "AllowedJumpHosts",
-                    "description": "Bastion hosts permitted for third-party access."
+                    "description": "Bastion hosts permitted for third-party access.",
+                    "description_fa": "میزبان های Bastion برای دسترسی شخص ثالث مجاز هستند."
                 },
                 {
                     "field": "MFAExpected",
-                    "description": "Flag indicating whether PAM/MFA should be present; used to score risk."
+                    "description": "Flag indicating whether PAM/MFA should be present; used to score risk.",
+                    "description_fa": "پرچمی که نشان می دهد PAM/MFA باید وجود داشته باشد یا خیر. برای امتیاز دادن به ریسک استفاده می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1345",
+            "description_fa": "زنجیره رفتاری: (1) ورودهای sshd یا فدرال SSO از شبکه‌ها یا هویت‌های شخص ثالث. (2) بالا بردن امتیاز سریع sudo/su. (3) دسترسی به مسیرهای حساس یا شرق به غرب SSH. لاگ های احراز هویت، اجرای فرآیند و جریان های شبکه را به هم مرتبط کنید."
         }
     ]
 }

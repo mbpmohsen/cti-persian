@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0560#AN1547",
-                    "external_id": "AN1547"
+                    "external_id": "AN1547",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceAccountScope",
-                    "description": "Validate access from expected namespaces only."
+                    "description": "Validate access from expected namespaces only.",
+                    "description_fa": "دسترسی را فقط از فضای نام مورد انتظار تأیید کنید."
                 },
                 {
                     "field": "ClusterIPWhitelist",
-                    "description": "Permit kubeconfig usage from a limited set of IPs."
+                    "description": "Permit kubeconfig usage from a limited set of IPs.",
+                    "description_fa": "اجازه استفاده از kubeconfig از مجموعه محدودی از IPها را بدهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1547",
+            "description_fa": "شناسایی حساب‌های سرویس کانتینری یا پیکربندی‌های kube به خطر افتاده که برای دسترسی خوشه‌ای از گره‌ها یا IPهای غیرمنتظره استفاده می‌شوند."
         }
     ]
 }

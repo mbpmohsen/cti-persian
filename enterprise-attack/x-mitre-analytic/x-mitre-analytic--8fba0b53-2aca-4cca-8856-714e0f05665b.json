@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0324#AN0921",
-                    "external_id": "AN0921"
+                    "external_id": "AN0921",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0921",
-            "description": "Tracks modification of executables or interpreter payloads (e.g., Mach-O, dylib) that mutate across runs\u2014using scripting engines, JIT compilers, or side-loaded plugins.",
+            "description": "Tracks modification of executables or interpreter payloads (e.g., Mach-O, dylib) that mutate across runs—using scripting engines, JIT compilers, or side-loaded plugins.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptEnginePatterns",
-                    "description": "Detection may vary based on whether Python/Swift/AppleScript is used to mutate payloads."
+                    "description": "Detection may vary based on whether Python/Swift/AppleScript is used to mutate payloads.",
+                    "description_fa": "تشخیص ممکن است بر اساس اینکه آیا پایتون/سوئیفت/اپل اسکریپت برای جهش بارهای پرداختی استفاده می‌شود متفاوت باشد."
                 },
                 {
                     "field": "MachOEntropyThreshold",
-                    "description": "Entropy tuning based on expected baseline for system vs user binaries."
+                    "description": "Entropy tuning based on expected baseline for system vs user binaries.",
+                    "description_fa": "تنظیم آنتروپی بر اساس خط پایه مورد انتظار برای باینری های سیستم در مقابل کاربر."
                 },
                 {
                     "field": "SignedBinaryChangeRate",
-                    "description": "Helps flag apps that change but maintain signed status across invocations."
+                    "description": "Helps flag apps that change but maintain signed status across invocations.",
+                    "description_fa": "به پرچم‌گذاری برنامه‌هایی که تغییر می‌کنند اما وضعیت امضا شده را در فراخوان‌ها حفظ می‌کنند، کمک می‌کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0921",
+            "description_fa": "تغییرات اجرایی یا بارهای مفسر (مانند Mach-O، dylib) را که در طول اجراها جهش می‌یابند - با استفاده از موتورهای برنامه‌نویسی، کامپایلرهای JIT، یا افزونه‌های بارگذاری‌شده جانبی، ردیابی می‌کند."
         }
     ]
 }

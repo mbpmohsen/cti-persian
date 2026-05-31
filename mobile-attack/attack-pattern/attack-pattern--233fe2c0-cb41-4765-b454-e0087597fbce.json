@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1635",
-                    "external_id": "T1635"
+                    "external_id": "T1635",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android-AppLinks",
                     "description": "Android. (n.d.). Handling App Links. Retrieved December 21, 2016.",
-                    "url": "https://developer.android.com/training/app-links/index.html"
+                    "url": "https://developer.android.com/training/app-links/index.html",
+                    "source_name_fa": "Android-AppLinks",
+                    "description_fa": "اندروید. (n.d.). مدیریت لینک های برنامه بازبینی شده در 21 دسامبر 2016."
                 },
                 {
                     "source_name": "Auth0 - Why You Should Always Use Access Tokens to Secure APIs Sept 2019",
                     "description": "Auth0. (n.d.). Why You Should Always Use Access Tokens to Secure APIs. Retrieved September 12, 2019.",
-                    "url": "https://auth0.com/blog/why-should-use-accesstokens-to-secure-an-api/"
+                    "url": "https://auth0.com/blog/why-should-use-accesstokens-to-secure-an-api/",
+                    "source_name_fa": "Auth0 - چرا باید همیشه از نشانه های دسترسی برای ایمن کردن API ها در سپتامبر 2019 استفاده کنید",
+                    "description_fa": "Auth0. (n.d.). چرا باید همیشه از نشانه های دسترسی برای ایمن سازی API ها استفاده کنید؟ بازبینی شده در 12 سپتامبر 2019."
                 },
                 {
                     "source_name": "Microsoft - OAuth Code Authorization flow - June 2019",
                     "description": "Microsoft. (n.d.). Microsoft identity platform and OAuth 2.0 authorization code flow. Retrieved September 12, 2019.",
-                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow"
+                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow",
+                    "source_name_fa": "مایکروسافت - جریان مجوز کد OAuth - ژوئن 2019",
+                    "description_fa": "مایکروسافت. (n.d.). پلت فرم هویت مایکروسافت و جریان کد مجوز OAuth 2.0. بازبینی شده در 12 سپتامبر 2019."
                 },
                 {
                     "source_name": "Microsoft Identity Platform Protocols May 2019",
                     "description": "Microsoft. (n.d.). Retrieved September 12, 2019.",
-                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols"
+                    "url": "https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-v2-protocols",
+                    "source_name_fa": "پروتکل های پلتفرم هویت مایکروسافت می 2019",
+                    "description_fa": "مایکروسافت. (n.d.). بازبینی شده در 12 سپتامبر 2019."
                 },
                 {
                     "source_name": "IETF-OAuthNativeApps",
                     "description": "W. Denniss and J. Bradley. (2017, October). IETF RFC 8252: OAuth 2.0 for Native Apps. Retrieved November 30, 2018.",
-                    "url": "https://tools.ietf.org/html/rfc8252"
+                    "url": "https://tools.ietf.org/html/rfc8252",
+                    "source_name_fa": "IETF-OAuthNativeApps",
+                    "description_fa": "W. Denniss و J. Bradley. (2017، اکتبر). IETF RFC 8252: OAuth 2.0 برای برنامه های بومی. بازبینی شده در 30 نوامبر 2018."
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2025-10-24T17:48:31.876Z",
             "name": "Steal Application Access Token",
-            "description": "Adversaries can steal user application access tokens as a means of acquiring credentials to access remote systems and resources. This can occur through social engineering or URI hijacking and typically requires user action to grant access, such as through a system \u201cOpen With\u201d dialogue.  \n\nApplication access tokens are used to make authorized API requests on behalf of a user and are commonly used as a way to access resources in cloud-based applications and software-as-a-service (SaaS).(Citation: Auth0 - Why You Should Always Use Access Tokens to Secure APIs Sept 2019) OAuth is one commonly implemented framework used to issue tokens to users for access to systems. An application desiring access to cloud-based services or protected APIs can gain entry through OAuth 2.0 using a variety of authorization protocols. An example of a commonly-used sequence is Microsoft's Authorization Code Grant flow.(Citation: Microsoft Identity Platform Protocols May 2019)(Citation: Microsoft - OAuth Code Authorization flow - June 2019) An OAuth access token enables a third-party application to interact with resources containing user data in the ways requested without requiring user credentials.",
+            "description": "Adversaries can steal user application access tokens as a means of acquiring credentials to access remote systems and resources. This can occur through social engineering or URI hijacking and typically requires user action to grant access, such as through a system “Open With” dialogue.  \n\nApplication access tokens are used to make authorized API requests on behalf of a user and are commonly used as a way to access resources in cloud-based applications and software-as-a-service (SaaS).(Citation: Auth0 - Why You Should Always Use Access Tokens to Secure APIs Sept 2019) OAuth is one commonly implemented framework used to issue tokens to users for access to systems. An application desiring access to cloud-based services or protected APIs can gain entry through OAuth 2.0 using a variety of authorization protocols. An example of a commonly-used sequence is Microsoft's Authorization Code Grant flow.(Citation: Microsoft Identity Platform Protocols May 2019)(Citation: Microsoft - OAuth Code Authorization flow - June 2019) An OAuth access token enables a third-party application to interact with resources containing user data in the ways requested without requiring user credentials.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -67,7 +78,9 @@
             "x_mitre_version": "1.2",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "رمز دسترسی برنامه را سرقت کنید",
+            "description_fa": "دشمنان می توانند توکن های دسترسی برنامه های کاربر را به عنوان ابزاری برای به دست آوردن اعتبار برای دسترسی به سیستم ها و منابع راه دور بدزدند. این می تواند از طریق مهندسی اجتماعی یا ربودن URI رخ دهد و معمولاً نیاز به اقدام کاربر برای اعطای دسترسی دارد، مانند از طریق یک گفتگوی سیستم \"Open With\".  \n\nنشانه‌های دسترسی برنامه برای ایجاد درخواست‌های مجاز API از طرف یک کاربر استفاده می‌شوند و معمولاً به عنوان راهی برای دسترسی به منابع در برنامه‌های مبتنی بر ابر و نرم‌افزار به‌عنوان سرویس (SaaS) استفاده می‌شوند. برنامه‌ای که مایل به دسترسی به سرویس‌های مبتنی بر ابر یا APIهای محافظت‌شده است، می‌تواند از طریق OAuth 2.0 با استفاده از انواع پروتکل‌های مجوز وارد شود. نمونه‌ای از دنباله‌ای که معمولاً مورد استفاده قرار می‌گیرد، جریان اعطای کد مجوز مایکروسافت است.(Citation: Microsoft Identity Platform Protocols May 2019)(Citation: Microsoft - OAuth Code Authorization flow - June 2019) یک نشانه دسترسی OAuth به برنامه شخص ثالث امکان می‌دهد تا با منابع حاوی داده‌های کاربر به روش‌های درخواستی بدون نیاز به اعتبار کاربر تعامل داشته باشد. (Citation: Auth0 - Why You Should Always Use Access Tokens to Secure APIs Sept 2019)"
         }
     ]
 }

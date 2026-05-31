@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0508#AN1400",
-                    "external_id": "AN1400"
+                    "external_id": "AN1400",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetPIDThreshold",
-                    "description": "Limit to sensitive or unexpected processes being targeted (e.g., sshd, init)"
+                    "description": "Limit to sensitive or unexpected processes being targeted (e.g., sshd, init)",
+                    "description_fa": "محدود کردن فرآیندهای حساس یا غیرمنتظره که هدف قرار می‌گیرند (مانند sshd، init)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate mmap or writev usage to process access within a short timeframe"
+                    "description": "Correlate mmap or writev usage to process access within a short timeframe",
+                    "description_fa": "استفاده از mmap یا writev را برای پردازش دسترسی در یک بازه زمانی کوتاه به هم مرتبط کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1400",
+            "description_fa": "تزریق فرآیند مبتنی بر ptrace یا memfd را از طریق گزارش‌های حسابرسی که فراخوانی‌های سیستم را ضبط می‌کند (به عنوان مثال، ptrace، mmap) شناسایی می‌کند که فرآیندهای در حال اجرا را به همراه توصیف‌گرهای فایل مشکوک یا نوشتن حافظه هدف قرار می‌دهند."
         }
     ]
 }

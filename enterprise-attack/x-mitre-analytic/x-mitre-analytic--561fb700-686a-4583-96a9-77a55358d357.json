@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0261#AN0724",
-                    "external_id": "AN0724"
+                    "external_id": "AN0724",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StagingDirList",
-                    "description": "Paths such as C:\\Temp, C:\\Windows\\Tasks, etc."
+                    "description": "Paths such as C:\\Temp, C:\\Windows\\Tasks, etc.",
+                    "description_fa": "مسیرهایی مانند C:\\Temp، C:\\Windows\\Tasks و غیره."
                 },
                 {
                     "field": "ArchivingToolPatterns",
-                    "description": "Matches to 7z.exe, rar.exe, zip.exe, or custom scripts."
+                    "description": "Matches to 7z.exe, rar.exe, zip.exe, or custom scripts.",
+                    "description_fa": "با اسکریپت های 7z.exe، rar.exe، zip.exe یا سفارشی مطابقت دارد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "How long to correlate file reads followed by compression."
+                    "description": "How long to correlate file reads followed by compression.",
+                    "description_fa": "مدت زمان ارتباط خواندن فایل و سپس فشرده سازی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0724",
+            "description_fa": "خواندن فایل‌ها را در مکان‌ها شناسایی می‌کند و به دنبال آن نوشتن در فهرست‌های موقت یا مرحله‌بندی، اغلب فشرده یا رمزگذاری‌شده، نشان‌دهنده رفتار مرحله‌بندی محلی است."
         }
     ]
 }

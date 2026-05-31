@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0209#AN0589",
-                    "external_id": "AN0589"
+                    "external_id": "AN0589",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetRegistryPath",
-                    "description": "Focus detection on registry hives or keys likely to reveal environment info (e.g., HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion)."
+                    "description": "Focus detection on registry hives or keys likely to reveal environment info (e.g., HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion).",
+                    "description_fa": "تمرکز تشخیص روی رجیستری یا کلیدهایی که احتمالاً اطلاعات محیط را نشان می‌دهند (مانند HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion)."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "May tune for suspicious parent processes such as cmd.exe, wscript.exe, or mshta.exe."
+                    "description": "May tune for suspicious parent processes such as cmd.exe, wscript.exe, or mshta.exe.",
+                    "description_fa": "ممکن است فرآیندهای والد مشکوک مانند cmd.exe، wscript.exe یا mshta.exe را تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Controls how closely registry access must follow process creation for correlation."
+                    "description": "Controls how closely registry access must follow process creation for correlation.",
+                    "description_fa": "کنترل می کند که دسترسی به رجیستری چقدر باید از ایجاد فرآیند برای همبستگی پیروی کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0589",
+            "description_fa": "دسترسی خواندن رجیستری مرتبط با فرآیندهای مشکوک یا غیرتعاملی که پیکربندی سیستم، نرم افزار نصب شده یا تنظیمات امنیتی را جستجو می کند."
         }
     ]
 }

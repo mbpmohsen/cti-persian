@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0574#AN1583",
-                    "external_id": "AN1583"
+                    "external_id": "AN1583",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Define bursty execution patterns of enumeration commands (e.g., <30s)"
+                    "description": "Define bursty execution patterns of enumeration commands (e.g., <30s)",
+                    "description_fa": "الگوهای اجرای انفجاری دستورات شمارش را تعریف کنید (به عنوان مثال، کمتر از 30 ثانیه)"
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Tunable per org\u2019s scripting/IT tools (e.g., exclude SCCM, PsExec)"
+                    "description": "Tunable per org’s scripting/IT tools (e.g., exclude SCCM, PsExec)",
+                    "description_fa": "قابل تنظیم در هر ابزار اسکریپت/IT سازمان (به عنوان مثال، استثناء SCCM، PsExec)"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Flag suspicious process ancestry (e.g., Word.exe spawning net.exe)"
+                    "description": "Flag suspicious process ancestry (e.g., Word.exe spawning net.exe)",
+                    "description_fa": "پرچم گذاری اصل و نسب فرآیند مشکوک (به عنوان مثال، Word.exe spawning net.exe)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1583",
+            "description_fa": "اجرای ابزارهای شمارش شبکه (به عنوان مثال، net.exe، ping.exe، tracert.exe) به صورت متوالی، اغلب با ابزارهای حرکت جانبی یا دستورات شمارش سیستم زنجیره ای می شوند."
         }
     ]
 }

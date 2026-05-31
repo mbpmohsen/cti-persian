@@ -9,29 +9,36 @@
                 {
                     "external_id": "CAPEC-469",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/469.html"
+                    "url": "https://capec.mitre.org/data/definitions/469.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-772",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/772.html"
+                    "url": "http://cwe.mitre.org/data/definitions/772.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Endpoint Denial of Service: Service Exhaustion Flood",
                     "external_id": "T1499.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1499/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1499/002",
+                    "description_fa": "انکار سرویس نقطه پایانی: سیل خستگی سرویس",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Robert Hansen, Slowris HTTP DoS, 2009--06---17",
                     "external_id": "REF-406",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://ha.ckers.org/blog/20090617/slowloris-http-dos/"
+                    "url": "http://ha.ckers.org/blog/20090617/slowloris-http-dos/",
+                    "description_fa": "رابرت هانسن، Slowris HTTP DoS، 2009--06---17",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--aa92a904-ed9d-4dc3-a01f-c965521e9934",
@@ -57,7 +64,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم سیل در سطح HTTP انجام می دهد تا فقط یک برنامه وب خاص را به جای هر چیزی که در اتصال TCP/IP گوش می دهد، پایین بیاورد. این حمله انکار سرویس مستلزم ارسال بسته های بسیار کمتری است که تشخیص DoS را سخت تر می کند. این معادل سیل SYN در HTTP است. ایده این است که جلسه HTTP را به طور نامحدود زنده نگه دارید و سپس آن را صدها بار تکرار کنید. این حمله نقاط ضعف کاهش منابع در نرم افزار وب سرور را هدف قرار می دهد. سرور وب منتظر پاسخ های مهاجم در جلسات HTTP آغاز شده در حالی که رشته های اتصال در حال اتمام هستند، می ماند.",
+            "name_fa": "HTTP DoS",
+            "x_capec_prerequisites_fa": [
+                "پروتکل HTTP استفاده می شود وب سرور مورد استفاده در برابر انکار سرویس از طریق سیل HTTP آسیب پذیر است"
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان صدور صدها درخواست HTTP"
+            ]
         }
     ],
     "type": "bundle"

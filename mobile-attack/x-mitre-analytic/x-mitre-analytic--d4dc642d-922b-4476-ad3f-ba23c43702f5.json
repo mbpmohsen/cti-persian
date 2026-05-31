@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0644#AN1722",
-                    "external_id": "AN1722"
+                    "external_id": "AN1722",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.382Z",
             "name": "Analytic 1722",
-            "description": "From the defender view: a sandboxed app handles a high-entropy executable blob, performs rapid decode/decrypt in memory (often with RW\u2192RX or execmem friction), optionally emits a transient .dex/.so into app-writable paths, then immediately loads/executes it (DexClassLoader/dlopen) or spawns a helper. We correlate: (1) opaque blob write/arrival \u2192 (2) decode/unpack or memory protection change \u2192 (3) new code artifact or byte[] class definition \u2192 (4) dynamic load/exec within a tight window.",
+            "description": "From the defender view: a sandboxed app handles a high-entropy executable blob, performs rapid decode/decrypt in memory (often with RW→RX or execmem friction), optionally emits a transient .dex/.so into app-writable paths, then immediately loads/executes it (DexClassLoader/dlopen) or spawns a helper. We correlate: (1) opaque blob write/arrival → (2) decode/unpack or memory protection change → (3) new code artifact or byte[] class definition → (4) dynamic load/exec within a tight window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,29 +58,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window from write\u2192unpack\u2192load (e.g., 5\u201345s; device-dependent)."
+                    "description": "Correlation window from write→unpack→load (e.g., 5–45s; device-dependent).",
+                    "description_fa": "پنجره همبستگی از write→unpack→load (به عنوان مثال، 5-45s؛ وابسته به دستگاه)."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Entropy to flag packed blobs (e.g., \u2265 7.2)."
+                    "description": "Entropy to flag packed blobs (e.g., ≥ 7.2).",
+                    "description_fa": "آنتروپی برای پرچم گذاری حباب های بسته بندی شده (به عنوان مثال، 7.2 ≥)."
                 },
                 {
                     "field": "RWXPageMinKB",
-                    "description": "Minimum RWX allocation size to reduce noise (e.g., \u2265 32KB)."
+                    "description": "Minimum RWX allocation size to reduce noise (e.g., ≥ 32KB).",
+                    "description_fa": "حداقل اندازه تخصیص RWX برای کاهش نویز (به عنوان مثال، ≥ 32 کیلوبایت)."
                 },
                 {
                     "field": "ExecPathRegex",
-                    "description": "Regex for suspicious .dex/.so/.jar/temp paths under app container."
+                    "description": "Regex for suspicious .dex/.so/.jar/temp paths under app container.",
+                    "description_fa": "Regex برای مسیرهای .dex/.so/.jar/temp مشکوک در زیر ظرف برنامه."
                 },
                 {
                     "field": "KnownGoodLoadersAllowlist",
-                    "description": "Legit libraries/bundles expected to load from writable paths (test/dev builds)."
+                    "description": "Legit libraries/bundles expected to load from writable paths (test/dev builds).",
+                    "description_fa": "کتابخانه‌ها/بسته‌های قانونی که انتظار می‌رود از مسیرهای قابل نوشتن بارگیری شوند (تست/سازمان توسعه‌دهنده)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground/background, Work Profile, developer mode to scope alerts."
+                    "description": "Foreground/background, Work Profile, developer mode to scope alerts.",
+                    "description_fa": "پیش‌زمینه/پس‌زمینه، نمایه کاری، حالت توسعه‌دهنده برای هشدارهای دامنه."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1722",
+            "description_fa": "از دیدگاه مدافع: یک برنامه sandboxed یک حباب اجرایی با آنتروپی بالا را کنترل می‌کند، رمزگشایی/رمزگشایی سریع در حافظه انجام می‌دهد (اغلب با RW→RX یا اصطکاک execmem)، به صورت اختیاری یک .dex/.so گذرا را در مسیرهای قابل نوشتن برنامه منتشر می‌کند، سپس بلافاصله آن را بارگیری/اجرا می‌کند (Dexlopen help/Dexlopen. ما همبستگی را انجام می دهیم: (1) نوشتن/رسیدن لکه های مات → (2) رمزگشایی/باز کردن بسته بندی یا تغییر حفاظت از حافظه → (3) مصنوع کد جدید یا بایت[] تعریف کلاس → (4) بارگذاری/اجرای دینامیک در یک پنجره تنگ."
         }
     ]
 }

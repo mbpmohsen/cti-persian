@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0213#AN0596",
-                    "external_id": "AN0596"
+                    "external_id": "AN0596",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PacketSizeThreshold",
-                    "description": "Minimum repetitive size in bytes to consider as anomalous behavior (e.g., 512B or 1024B)"
+                    "description": "Minimum repetitive size in bytes to consider as anomalous behavior (e.g., 512B or 1024B)",
+                    "description_fa": "حداقل اندازه تکراری در بایت برای در نظر گرفتن رفتار غیرعادی (به عنوان مثال، 512B یا 1024B)"
                 },
                 {
                     "field": "IntervalRepeatWindow",
-                    "description": "Timeframe over which repeated, evenly spaced transfers are flagged"
+                    "description": "Timeframe over which repeated, evenly spaced transfers are flagged",
+                    "description_fa": "بازه زمانی که در آن انتقال‌های مکرر و با فواصل مساوی علامت‌گذاری می‌شوند"
                 },
                 {
                     "field": "KnownServicePorts",
-                    "description": "Common ports expected to exhibit protocol behavior; outliers flagged if not matching expected usage"
+                    "description": "Common ports expected to exhibit protocol behavior; outliers flagged if not matching expected usage",
+                    "description_fa": "پورت های معمولی که انتظار می رود رفتار پروتکلی را نشان دهند. در صورت عدم تطابق با استفاده مورد انتظار، نقاط پرت پرچم گذاری می شوند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0596",
+            "description_fa": "دشمن از فرآیندی برای ایجاد اتصالات خروجی استفاده می کند که اندازه بسته های یکنواخت را در یک بازه زمانی ثابت ارسال می کند و از هشدارهای شبکه مبتنی بر آستانه اجتناب می کند."
         }
     ]
 }

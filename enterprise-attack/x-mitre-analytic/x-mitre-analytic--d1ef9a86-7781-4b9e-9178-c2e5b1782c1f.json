@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0573#AN1582",
-                    "external_id": "AN1582"
+                    "external_id": "AN1582",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Whether the user is in a high-privileged or VIP group"
+                    "description": "Whether the user is in a high-privileged or VIP group",
+                    "description_fa": "چه کاربر در یک گروه با امتیاز بالا باشد یا گروه VIP"
                 },
                 {
                     "field": "DomainReputationList",
-                    "description": "Allowlist or blocklist of external SaaS domains"
+                    "description": "Allowlist or blocklist of external SaaS domains",
+                    "description_fa": "لیست مجاز یا مسدود کردن دامنه های SaaS خارجی"
                 },
                 {
                     "field": "PayloadVolumeThreshold",
-                    "description": "Size or number of shared files triggering alert"
+                    "description": "Size or number of shared files triggering alert",
+                    "description_fa": "اندازه یا تعداد فایل‌های اشتراک‌گذاری شده هشدار را راه‌اندازی می‌کنند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1582",
+            "description_fa": "استفاده از مکانیسم‌های اشتراک‌گذاری داخلی SaaS را برای انتقال مالکیت یا اشتراک‌گذاری دسترسی به داده‌های حیاتی به مستاجران خارجی یا کاربران غیرقابل اعتماد از طریق تماس‌های API یا ویژگی‌های تولید پیوند تشخیص می‌دهد."
         }
     ]
 }

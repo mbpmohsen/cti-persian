@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0491#AN1355",
-                    "external_id": "AN1355"
+                    "external_id": "AN1355",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BinaryList",
-                    "description": "Commands like 'system_profiler SPUSBDataType', 'ioreg -p IOUSB' that may indicate enumeration"
+                    "description": "Commands like 'system_profiler SPUSBDataType', 'ioreg -p IOUSB' that may indicate enumeration",
+                    "description_fa": "دستوراتی مانند 'system_profiler SPUSBDataType'، 'ioreg -p IOUSB' که ممکن است شمارش را نشان دهد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal grouping of enumeration with follow-on activity (e.g., clipboard capture, exfiltration)"
+                    "description": "Temporal grouping of enumeration with follow-on activity (e.g., clipboard capture, exfiltration)",
+                    "description_fa": "گروه‌بندی موقت شمارش با فعالیت‌های بعدی (به عنوان مثال، ضبط کلیپ‌بورد، استخراج)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1355",
+            "description_fa": "اجرای ابزارهای سیستمی مانند 'system_profiler' و 'ioreg' برای برشمردن اجزای سخت افزاری یا دستگاه های USB، به ویژه اگر با کلیپ بورد، فایل یا فعالیت شبکه دنبال شود."
         }
     ]
 }

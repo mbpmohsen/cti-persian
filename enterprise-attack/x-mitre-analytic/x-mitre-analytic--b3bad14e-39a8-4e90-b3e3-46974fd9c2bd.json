@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0128#AN0360",
-                    "external_id": "AN0360"
+                    "external_id": "AN0360",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HiddenProcessScope",
-                    "description": "Restrict to processes where hidden execution is unexpected (e.g., PowerShell, cmd, wscript)."
+                    "description": "Restrict to processes where hidden execution is unexpected (e.g., PowerShell, cmd, wscript).",
+                    "description_fa": "محدود به فرآیندهایی که در آنها اجرای پنهان غیرمنتظره است (مانند PowerShell، cmd، wscript)."
                 },
                 {
                     "field": "ParentProcessCorrelation",
-                    "description": "Correlate hidden execution with suspicious parent processes to reduce false positives."
+                    "description": "Correlate hidden execution with suspicious parent processes to reduce false positives.",
+                    "description_fa": "اجرای پنهان را با فرآیندهای مشکوک والد مرتبط کنید تا موارد مثبت کاذب را کاهش دهید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0360",
+            "description_fa": "استفاده مشکوک از پارامترهای اسکریپت یا ویرایش‌های رجیستری برای پنهان کردن پنجره‌های فرآیند (مانند powershell.exe -WindowStyle Hidden، یا تغییرات رجیستری که موقعیت‌های پنجره را از صفحه خارج می‌کنند). نمای مدافع: همبستگی اجرای پنهان با خط تولید غیرعادی فرآیند یا فراخوانی های CreateDesktop مانند hVNC."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0568#AN1567",
-                    "external_id": "AN1567"
+                    "external_id": "AN1567",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,17 +53,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedUSBDevices",
-                    "description": "List of known, legitimate USB vendor/product IDs authorized for use in the enterprise."
+                    "description": "List of known, legitimate USB vendor/product IDs authorized for use in the enterprise.",
+                    "description_fa": "فهرست شناسه‌های فروشنده/محصول USB شناخته شده و قانونی مجاز برای استفاده در شرکت."
                 },
                 {
                     "field": "ExecutionTimeWindow",
-                    "description": "Restrict detection to times when no user is logged in or activity is outside business hours."
+                    "description": "Restrict detection to times when no user is logged in or activity is outside business hours.",
+                    "description_fa": "شناسایی را محدود به مواقعی کنید که هیچ کاربری وارد نشده است یا فعالیت خارج از ساعات کاری است."
                 },
                 {
                     "field": "ParentProcessWhitelist",
-                    "description": "List of legitimate parent processes expected to spawn PowerShell or scripting engines."
+                    "description": "List of legitimate parent processes expected to spawn PowerShell or scripting engines.",
+                    "description_fa": "فهرستی از فرآیندهای والد قانونی که انتظار می رود موتورهای PowerShell یا اسکریپت نویسی را ایجاد کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1567",
+            "description_fa": "شمارش دستگاه USB HID مشکوک و الگوهای تزریق ضربه کلید، مانند توالی های سریع ورودی بدون زمینه کاربر، اسکریپت های اجرا شده از طریق ضربه های کلید شبیه سازی شده، یا دستگاه های سرکشی که خود را به عنوان صفحه کلید نشان می دهند، شناسایی می کند."
         }
     ]
 }

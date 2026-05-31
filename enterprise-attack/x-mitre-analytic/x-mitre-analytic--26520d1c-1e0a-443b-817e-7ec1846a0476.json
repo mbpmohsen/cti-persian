@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0264#AN0735",
-                    "external_id": "AN0735"
+                    "external_id": "AN0735",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptPath",
-                    "description": "Script launched from /tmp, /var/tmp, or hidden dot directories."
+                    "description": "Script launched from /tmp, /var/tmp, or hidden dot directories.",
+                    "description_fa": "اسکریپت از /tmp، /var/tmp یا دایرکتوری های نقطه پنهان راه اندازی شده است."
                 },
                 {
                     "field": "BinaryName",
-                    "description": "Custom compiled JS binaries like node_shell or interpreter disguises."
+                    "description": "Custom compiled JS binaries like node_shell or interpreter disguises.",
+                    "description_fa": "باینری های JS کامپایل شده سفارشی مانند node_shell یا مبدل های مفسر."
                 },
                 {
                     "field": "UserExecutionContext",
-                    "description": "Execution by service accounts or low-privilege users running cron scripts."
+                    "description": "Execution by service accounts or low-privilege users running cron scripts.",
+                    "description_fa": "اجرا توسط حساب‌های سرویس یا کاربران با امتیاز پایین که اسکریپت‌های cron را اجرا می‌کنند."
                 },
                 {
                     "field": "NetworkFollowUp",
-                    "description": "Connection attempts to C2 post-node.js execution."
+                    "description": "Connection attempts to C2 post-node.js execution.",
+                    "description_fa": "اتصال برای اجرای C2 post-node.js تلاش می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0735",
+            "description_fa": "اجرای مفسر Node.js یا جاوا اسکریپت را از پوسته های وب، cron job یا کاربران محلی تشخیص می دهد. اجرا را با رفتار پوسته معکوس، اصلاحات فایل یا اتصالات خروجی غیرعادی مرتبط می کند."
         }
     ]
 }

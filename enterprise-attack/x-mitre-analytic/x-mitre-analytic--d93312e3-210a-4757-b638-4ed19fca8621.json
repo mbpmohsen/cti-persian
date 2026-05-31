@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0161#AN0461",
-                    "external_id": "AN0461"
+                    "external_id": "AN0461",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApprovedNOCSources",
-                    "description": "Jump hosts permitted to run show commands."
+                    "description": "Jump hosts permitted to run show commands.",
+                    "description_fa": "میزبان های پرش مجاز به اجرای دستورات نمایش هستند."
                 },
                 {
                     "field": "DeviceTier",
-                    "description": "Higher risk weight on edge/critical devices."
+                    "description": "Higher risk weight on edge/critical devices.",
+                    "description_fa": "وزن خطر بالاتر در لبه / دستگاه های بحرانی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0461",
+            "description_fa": "زنجیره: (1) جلسات CLI ممتاز دستورات فقط خواندنی را اجرا می‌کنند که خط‌مشی‌های AAA/رمز عبور را حذف می‌کنند (مانند «show aaa»، «show password-policy»). (2) همین حساب کمی بعد AAA یا DB کاربر تغییر می کند. از دستگاه شبکه AAA/command accounting یا syslog استفاده کنید."
         }
     ]
 }

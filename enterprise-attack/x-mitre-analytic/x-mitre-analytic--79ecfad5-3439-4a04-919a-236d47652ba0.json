@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0380#AN1070",
-                    "external_id": "AN1070"
+                    "external_id": "AN1070",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetFilePathRegex",
-                    "description": "Allows tuning for file extensions or paths of sensitive data (e.g., *.xls, *.db, *.pdf)."
+                    "description": "Allows tuning for file extensions or paths of sensitive data (e.g., *.xls, *.db, *.pdf).",
+                    "description_fa": "به تنظیم پسوند فایل یا مسیرهای داده های حساس (مانند *.xls، *.db، *.pdf) اجازه می دهد."
                 },
                 {
                     "field": "ParentProcessFilter",
-                    "description": "Used to scope monitoring to suspicious parent/child process trees like PowerShell or WMI spawning file reads."
+                    "description": "Used to scope monitoring to suspicious parent/child process trees like PowerShell or WMI spawning file reads.",
+                    "description_fa": "برای نظارت بر روی درختان پردازش مشکوک والدین/فرزند مانند PowerShell یا WMI استفاده می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1070",
+            "description_fa": "دشمنانی که فایل‌های محلی را از طریق PowerShell، WMI یا تماس‌های API مستقیم فایل جمع‌آوری می‌کنند، اغلب شامل فهرست‌بندی فایل‌های بازگشتی، خواندن فایل‌های هدفمند و مرحله‌بندی موقت فایل هستند."
         }
     ]
 }

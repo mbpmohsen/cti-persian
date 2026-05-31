@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0405#AN1134",
-                    "external_id": "AN1134"
+                    "external_id": "AN1134",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Can be tuned to focus on common launcher processes like explorer.exe or winword.exe."
+                    "description": "Can be tuned to focus on common launcher processes like explorer.exe or winword.exe.",
+                    "description_fa": "می توان آن را تنظیم کرد تا روی فرآیندهای پرتاب کننده رایج مانند explorer.exe یا winword.exe تمرکز کند."
                 },
                 {
                     "field": "DestinationIP",
-                    "description": "Filtered to exclude known good domains and internal IPs to reduce false positives."
+                    "description": "Filtered to exclude known good domains and internal IPs to reduce false positives.",
+                    "description_fa": "فیلتر شده برای حذف دامنه های خوب شناخته شده و IP های داخلی برای کاهش مثبت کاذب."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time between LNK execution and subsequent suspicious activity may vary based on adversary delay."
+                    "description": "Time between LNK execution and subsequent suspicious activity may vary based on adversary delay.",
+                    "description_fa": "زمان بین اجرای LNK و فعالیت مشکوک بعدی ممکن است بر اساس تاخیر دشمن متفاوت باشد."
                 },
                 {
                     "field": "FileExtension",
-                    "description": "Could be used to focus on .lnk files only or track associated dropped payloads like .dat, .exe, etc."
+                    "description": "Could be used to focus on .lnk files only or track associated dropped payloads like .dat, .exe, etc.",
+                    "description_fa": "می تواند فقط برای تمرکز روی فایل های .lnk یا ردیابی بارهای کاهش یافته مرتبط مانند .dat، .exe و غیره استفاده شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1134",
+            "description_fa": "اجرای فایل LNK را با استخراج منابع جاسازی شده یا فعالیت مشکوک شبکه پس از راه‌اندازی اولیه مرتبط می‌کند، که اغلب منجر به تحویل بار از طریق نمادهای مبدل می‌شود."
         }
     ]
 }

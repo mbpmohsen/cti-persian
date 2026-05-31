@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0618#AN1678",
-                    "external_id": "AN1678"
+                    "external_id": "AN1678",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.381Z",
             "name": "Analytic 1678",
-            "description": "From the defender\u2019s view: a sandboxed app retrieves code-like content (JS/Mach-O/bundles), writes it to container tmp/Caches, performs memory permission changes (RW\u2192RX/RWX) or directly loads via dyld/dlopen from writable paths, sometimes preceded by 3rd-party hotpatch frameworks (e.g., JSPatch-like behavior) or script engine evaluation. The analytic correlates Network Content \u2192 File Creation \u2192 OS API Execution (memory permission change) \u2192 Module Load (dyld/dlopen) and/or Process Access (codesign validation touches), with optional scripting engine events.",
+            "description": "From the defender’s view: a sandboxed app retrieves code-like content (JS/Mach-O/bundles), writes it to container tmp/Caches, performs memory permission changes (RW→RX/RWX) or directly loads via dyld/dlopen from writable paths, sometimes preceded by 3rd-party hotpatch frameworks (e.g., JSPatch-like behavior) or script engine evaluation. The analytic correlates Network Content → File Creation → OS API Execution (memory permission change) → Module Load (dyld/dlopen) and/or Process Access (codesign validation touches), with optional scripting engine events.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,37 +58,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max correlation window between download \u2192 write \u2192 load (e.g., 15\u201360s)."
+                    "description": "Max correlation window between download → write → load (e.g., 15–60s).",
+                    "description_fa": "حداکثر پنجره همبستگی بین دانلود → نوشتن → بارگذاری (به عنوان مثال، 15-60s)."
                 },
                 {
                     "field": "ContentTypeList",
-                    "description": "MIME list treated as code-like (octet-stream, zip, javascript, x-mach-o)."
+                    "description": "MIME list treated as code-like (octet-stream, zip, javascript, x-mach-o).",
+                    "description_fa": "لیست MIME به صورت کد مانند (octet-stream، zip، javascript، x-mach-o) در نظر گرفته می شود."
                 },
                 {
                     "field": "WritablePathRegex",
-                    "description": "Regex for app container tmp/Caches writable paths."
+                    "description": "Regex for app container tmp/Caches writable paths.",
+                    "description_fa": "Regex برای مسیرهای قابل نوشتن tmp/Caches کانتینر برنامه."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Entropy cutoff to flag code blobs (e.g., \u2265 7.3)."
+                    "description": "Entropy cutoff to flag code blobs (e.g., ≥ 7.3).",
+                    "description_fa": "قطع آنتروپی برای پرچم گذاری حباب های کد (به عنوان مثال، ≥ 7.3)."
                 },
                 {
                     "field": "KnownJITAllowlist",
-                    "description": "Bundles that legitimately do JIT/script eval to reduce RWX noise."
+                    "description": "Bundles that legitimately do JIT/script eval to reduce RWX noise.",
+                    "description_fa": "بسته هایی که به طور قانونی JIT/script eval را برای کاهش نویز RWX انجام می دهند."
                 },
                 {
                     "field": "WritableLoadPathRegex",
-                    "description": "Regex for loads from writable paths only (exclude app bundle)."
+                    "description": "Regex for loads from writable paths only (exclude app bundle).",
+                    "description_fa": "Regex برای بارهای فقط از مسیرهای قابل نوشتن (به استثنای بسته نرم افزاری)."
                 },
                 {
                     "field": "UnsignedExecPolicy",
-                    "description": "Handle enterprise/dev-provisioned unsigned execution contexts."
+                    "description": "Handle enterprise/dev-provisioned unsigned execution contexts.",
+                    "description_fa": "زمینه های اجرایی بدون امضای تدارک دیده شده توسط شرکت/dev را مدیریت کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground/background or Work Profile state to filter noise."
+                    "description": "Foreground/background or Work Profile state to filter noise.",
+                    "description_fa": "حالت پیش زمینه/پس زمینه یا نمایه کاری برای فیلتر کردن نویز."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1678",
+            "description_fa": "از دید مدافع: یک برنامه sandboxed محتوای کد مانند (JS/Mach-O/Bundles) را بازیابی می‌کند، آن را در کانتینر tmp/Caches می‌نویسد، تغییرات مجوز حافظه را انجام می‌دهد (RW→RX/RWX) یا مستقیماً از طریق dyld/dlopen از مسیرهای قابل نوشتن بارگیری می‌شود، که گاهی اوقات قبل از آن عبارت‌ها مانند فریمورک 3rd-script، یا Hotpatch-script-party هستند. ارزیابی موتور تجزیه و تحلیل محتوای شبکه → ایجاد فایل → اجرای API OS (تغییر مجوز حافظه) → بار ماژول (dyld/dlopen) و/یا دسترسی به فرآیند (لمس تأیید اعتبار طراحی)، با رویدادهای موتور اسکریپت اختیاری مرتبط است."
         }
     ]
 }

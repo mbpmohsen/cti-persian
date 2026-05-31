@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0093#AN0255",
-                    "external_id": "AN0255"
+                    "external_id": "AN0255",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineRegex",
-                    "description": "Tune detection based on argument presence (e.g., `cat /etc/passwd` vs. `cat` alone)"
+                    "description": "Tune detection based on argument presence (e.g., `cat /etc/passwd` vs. `cat` alone)",
+                    "description_fa": "شناسایی کوک بر اساس حضور آرگومان (به عنوان مثال، «cat /etc/passwd» در مقابل «cat» به تنهایی)"
                 },
                 {
                     "field": "ShellContext",
-                    "description": "Identify if command issued via cron, systemd, or reverse shell"
+                    "description": "Identify if command issued via cron, systemd, or reverse shell",
+                    "description_fa": "مشخص کنید که آیا دستور از طریق cron، systemd یا پوسته معکوس صادر شده است"
                 },
                 {
                     "field": "AccessFrequency",
-                    "description": "Define how often user/account commands are expected on endpoint"
+                    "description": "Define how often user/account commands are expected on endpoint",
+                    "description_fa": "تعیین کنید که چند بار دستورات کاربر/حساب در نقطه پایانی مورد انتظار است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0255",
+            "description_fa": "دشمن دستوراتی مانند «whoami»، «id»، «w»، یا «cat /etc/passwd» را از زمینه‌های غیر تعاملی یا اسکریپت‌نویسی برای برشمردن جزئیات کاربر سیستم اجرا می‌کند."
         }
     ]
 }

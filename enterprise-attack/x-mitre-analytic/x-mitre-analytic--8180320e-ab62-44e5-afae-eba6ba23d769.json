@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0246#AN0687",
-                    "external_id": "AN0687"
+                    "external_id": "AN0687",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccessMask",
-                    "description": "Tunable based on what memory-level access the keylogger uses (e.g., 0x10 for read)"
+                    "description": "Tunable based on what memory-level access the keylogger uses (e.g., 0x10 for read)",
+                    "description_fa": "قابل تنظیم بر اساس نوع دسترسی در سطح حافظه که کی لاگر استفاده می کند (به عنوان مثال، 0x10 برای خواندن)"
                 },
                 {
                     "field": "ProcessNameExclusions",
-                    "description": "Legitimate accessibility tools may use similar API calls (e.g., Magnifier.exe)"
+                    "description": "Legitimate accessibility tools may use similar API calls (e.g., Magnifier.exe)",
+                    "description_fa": "ابزارهای دسترسی قانونی ممکن است از تماس‌های API مشابه استفاده کنند (مانند Magnifier.exe)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Define how quickly access + registry mod + smart card use must co-occur"
+                    "description": "Define how quickly access + registry mod + smart card use must co-occur",
+                    "description_fa": "تعیین کنید که دسترسی + مد رجیستری + استفاده از کارت هوشمند چقدر باید همزمان اتفاق بیفتد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0687",
+            "description_fa": "زنجیره رفتار شامل تماس‌های غیرمنتظره API برای ضبط ورودی صفحه‌کلید، بارگیری درایور برای کیلاگرها یا استفاده از راه دور از احراز هویت کارت هوشمند از طریق جلسات ورود به سیستم که با تعامل کاربر محلی آغاز نشده است."
         }
     ]
 }

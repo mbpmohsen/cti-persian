@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0048",
-                    "external_id": "DC0048"
+                    "external_id": "DC0048",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -38,7 +39,9 @@
                     "name": "macos:unifiedlog",
                     "channel": "XPC messages requesting privileged actions from untrusted or unsigned clients"
                 }
-            ]
+            ],
+            "name_fa": "فراداده لوله نام دارد",
+            "description_fa": "داده های متنی در مورد یک لوله نامگذاری شده در یک سیستم، از جمله نام لوله و فرآیند ایجاد (مثلاً: Sysmon EIDs 17-18)\n\n*اقدامات جمع آوری داده ها:*\n\n- ویندوز:\n    - Sysmon Event ID 17: ایجاد یک لوله با نام را ثبت می کند.\n    - Sysmon Event ID 18: تلاش برای اتصال لاگ به یک لوله نامگذاری شده.\n    - شناسه رویداد امنیتی ویندوز 5145: تلاش برای دسترسی لاگ به لوله های نامگذاری شده از طریق اشتراک های SMB.\n    - ETW (ردیابی رویداد برای ویندوز): تله متری عمیق را در تعاملات لوله نامگذاری شده ارائه می دهد.\n- Linux/macOS:\n    - AuditD ('mkfifo'، 'باز'، 'خواندن'، 'نوشتن' syscalls): ایجاد و استفاده از FIFO (لوله نامگذاری شده) را دنبال می کند.\n    - Lsof (`lsof -p <PID>` یا \"lsof | grep PIPE\"): لوله‌های نام‌گذاری شده فعال و فرآیندهای مرتبط را فهرست می‌کند.\n    - Strace (`strace -e open <process>`): مانیتورهایی که نام تعاملات لوله را دارند.\n- تشخیص و پاسخ نقطه پایانی (EDR):\n    - رویدادهای لوله نامگذاری شده را به عنوان بخشی از ردیابی فرآیند ضبط کنید.\n- پزشکی قانونی حافظه:\n    - افزونه فرار (`pipescan`): لوله های نامگذاری شده را در حافظه سیستم برمی شمارد.\n    - Rekall Framework: لوله های فعال با نام و فرآیندهای مرتبط را شناسایی می کند."
         }
     ]
 }

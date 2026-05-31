@@ -9,29 +9,36 @@
                 {
                     "external_id": "CAPEC-538",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/538.html"
+                    "url": "https://capec.mitre.org/data/definitions/538.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-494",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/494.html"
+                    "url": "http://cwe.mitre.org/data/definitions/494.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Supply Chain Compromise: Software Dependencies and Development Tools",
                     "external_id": "T1195.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001",
+                    "description_fa": "مصالحه با زنجیره تامین: وابستگی های نرم افزاری و ابزارهای توسعه",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ca626464-877a-4f42-83b7-7451cfe71a38",
@@ -58,11 +65,21 @@
                 "Access to the open source code base being used by the manufacturer in a system being developed or currently deployed at a victim location."
             ],
             "x_capec_skills_required": {
-                "High": "Advanced knowledge about the inclusion and specific usage of an open source code project within system being targeted for infiltration."
+                "High": "Advanced knowledge about the inclusion and specific usage of an open source code project within system being targeted for infiltration.",
+                "High_fa": "دانش پیشرفته در مورد گنجاندن و استفاده خاص از پروژه کد منبع باز در سیستمی که برای نفوذ هدف گذاری شده است."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمنان کدهای مخرب را در کتابخانه های نرم افزار منبع باز (OSS) کاشت می کنند تا آن را به طور گسترده توزیع کنند، زیرا OSS معمولاً توسط توسعه دهندگان و سایر کاربران دانلود می شود تا در پروژه های توسعه نرم افزار گنجانده شود. دشمن می تواند سیستم خاصی را برای هدف قرار دادن در ذهن داشته باشد، یا کاشت می تواند اولین مرحله از حملات بعدی به بسیاری از سیستم ها باشد.",
+            "name_fa": "دستکاری کتابخانه منبع باز",
+            "x_capec_example_instances_fa": [
+                "یک حریف با دسترسی به پروژه کد منبع باز، یک اشکال سخت پیدا کردن را در نرم افزار معرفی می کند که در شرایط بسیار خاص اجازه می دهد تا رمزگذاری در جریان داده غیرفعال شود. حریف تغییر کدی را که توسط سازنده ای که نرم افزار VPN را توسعه می دهد انتخاب می کند، انجام می دهد. در نهایت در محل قربانی مستقر می شود، جایی که شرایط بسیار خاص وجود دارد و به دشمن این امکان را می دهد که ترافیک متن ساده را که تصور می شود رمزگذاری شده است، شناسایی کند. این می تواند دسترسی دشمن را به داده های حساس قربانی فراهم کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین پروژه کد منبع باز مربوطه برای هدف: </b> حریف انتخاب را بر اساس معیارهای مختلف انجام خواهد داد:<xhtml:ul></p></li></ol></div><div><h3>axol></div><div><h3>axol برای مشارکت مخرب: </b> دشمن با در نظر گرفتن موارد زیر، طرحی را برای مشارکت کد مخرب ایجاد می‌کند:<xhtml:ul></p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>طرح را برای مشارکت مخرب اجرا کنید: </b>بر اساس کد، برنامه را بنویسید تا ارسال شود. ارتکاب های متعدد، احتمالاً با استفاده از چندین هویت، به پنهان کردن حمله کمک می کند. برای تعیین اینکه آیا کد در سیستم هدف آپلود شده است، سایت مشارکت را زیر نظر بگیرید.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "دسترسی به پایگاه کد منبع باز که توسط سازنده در سیستمی که در حال توسعه است یا در حال حاضر در مکان قربانی مستقر شده است استفاده می کند."
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0058#AN0159",
-                    "external_id": "AN0159"
+                    "external_id": "AN0159",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetDomain",
-                    "description": "Dead drop hosting domain (e.g., GitHub, Google Docs)"
+                    "description": "Dead drop hosting domain (e.g., GitHub, Google Docs)",
+                    "description_fa": "دامنه میزبانی مرده (به عنوان مثال، GitHub، Google Docs)"
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Detects high entropy in payloads signaling obfuscation"
+                    "description": "Detects high entropy in payloads signaling obfuscation",
+                    "description_fa": "آنتروپی بالا را در محموله‌ها تشخیص می‌دهد که مبهم‌سازی سیگنال را نشان می‌دهد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Causal proximity between access to resolver and follow-up connections"
+                    "description": "Causal proximity between access to resolver and follow-up connections",
+                    "description_fa": "نزدیکی علّی بین دسترسی به حل‌کننده و اتصالات پیگیری"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0159",
+            "description_fa": "شناسایی یک فرآیند یا اسکریپت که به یک وب سرویس مشترک برای بازیابی محتوای حاوی نشانگرهای مبهم یک سرور C2 ثانویه (رفتار حل کننده قطره مرده) دسترسی دارد."
         }
     ]
 }

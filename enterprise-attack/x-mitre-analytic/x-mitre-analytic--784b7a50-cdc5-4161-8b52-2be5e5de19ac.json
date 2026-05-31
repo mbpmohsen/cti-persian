@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0135#AN0382",
-                    "external_id": "AN0382"
+                    "external_id": "AN0382",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExternalMailRelayFilter",
-                    "description": "Dest IPs not matching sanctioned SMTP/IMAP relays"
+                    "description": "Dest IPs not matching sanctioned SMTP/IMAP relays",
+                    "description_fa": "IP های مقصد با رله های SMTP/IMAP تایید شده مطابقت ندارند"
                 },
                 {
                     "field": "OutflowToInflowRatio",
-                    "description": "Outbound email bytes vastly exceed response"
+                    "description": "Outbound email bytes vastly exceed response",
+                    "description_fa": "بایت های ایمیل خروجی بسیار بیشتر از پاسخ است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0382",
+            "description_fa": "میزبان هایی را که حجم زیادی از ترافیک SMTP، IMAP، یا POP3 را به IP های خارجی یا رله هایی که با زیرساخت ایمیل سازمانی مرتبط نیستند، منتقل می کند، شناسایی می کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0412#AN1154",
-                    "external_id": "AN1154"
+                    "external_id": "AN1154",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SensitivePaths",
-                    "description": "Paths to credential files such as /etc/shadow or ~/.bash_history"
+                    "description": "Paths to credential files such as /etc/shadow or ~/.bash_history",
+                    "description_fa": "مسیرهای دسترسی به فایل های اعتباری مانند /etc/shadow یا ~/.bash_history"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Whether the process runs under a privileged or non-interactive session"
+                    "description": "Whether the process runs under a privileged or non-interactive session",
+                    "description_fa": "این که آیا فرآیند تحت یک جلسه ممتاز یا غیر تعاملی اجرا می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1154",
+            "description_fa": "خواندن فایل‌های حساس مانند .bash_history، /etc/shadow یا دایرکتوری‌های کلید خصوصی توسط کاربران غیرمجاز یا فرآیندهای غیرمعمول."
         }
     ]
 }

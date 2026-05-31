@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0173#AN0489",
-                    "external_id": "AN0489"
+                    "external_id": "AN0489",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines burst threshold (e.g., 1 min, 5 min) for connection spikes"
+                    "description": "Defines burst threshold (e.g., 1 min, 5 min) for connection spikes",
+                    "description_fa": "آستانه پشت سر هم (به عنوان مثال، 1 دقیقه، 5 دقیقه) را برای نوک اتصال تعریف می کند"
                 },
                 {
                     "field": "TargetServicePort",
-                    "description": "Specific ports/services likely to be abused (e.g., 80, 443, 8080)"
+                    "description": "Specific ports/services likely to be abused (e.g., 80, 443, 8080)",
+                    "description_fa": "پورت‌ها/خدمات خاصی که احتمالاً مورد سوء استفاده قرار می‌گیرند (مانند 80، 443، 8080)"
                 },
                 {
                     "field": "CPUThreshold",
-                    "description": "Level of sustained CPU usage considered anomalous for a given service"
+                    "description": "Level of sustained CPU usage considered anomalous for a given service",
+                    "description_fa": "سطح استفاده پایدار از CPU برای یک سرویس خاص غیرعادی در نظر گرفته می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0489",
+            "description_fa": "درخواست‌های سرویس با فرکانس بالا و تکراری (مانند مذاکره مجدد HTTP، TLS) که از مجموعه‌ای منفرد یا کوچک از IPهای منبع که سرویس‌های وب نقطه پایانی یا پورت‌های برنامه را هدف قرار می‌دهند، سرچشمه می‌گیرد، که منجر به فرسودگی CPU یا حافظه در سرویس‌های هدفمند ویندوز می‌شود."
         }
     ]
 }

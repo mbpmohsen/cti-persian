@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0529#AN1465",
-                    "external_id": "AN1465"
+                    "external_id": "AN1465",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DllName",
-                    "description": "May tune DLL filters to focus on low-level API providers (e.g., ntdll.dll)"
+                    "description": "May tune DLL filters to focus on low-level API providers (e.g., ntdll.dll)",
+                    "description_fa": "ممکن است فیلترهای DLL را برای تمرکز بر ارائه دهندگان API سطح پایین تنظیم کنید (مانند ntdll.dll)"
                 },
                 {
                     "field": "Image",
-                    "description": "Tune for expected parent processes (e.g., explorer.exe, winlogon.exe)"
+                    "description": "Tune for expected parent processes (e.g., explorer.exe, winlogon.exe)",
+                    "description_fa": "برای فرآیندهای والد مورد انتظار (مانند explorer.exe، winlogon.exe) تنظیم کنید."
                 },
                 {
                     "field": "TargetProcess",
-                    "description": "Scope to suspicious targets like LSASS, csrss, etc."
+                    "description": "Scope to suspicious targets like LSASS, csrss, etc.",
+                    "description_fa": "دامنه دسترسی به اهداف مشکوک مانند LSASS، csrss و غیره."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1465",
+            "description_fa": "فرآیندهای غیرمعمول یا مشکوک بارگیری DLLهای مهم API بومی (مانند ntdll.dll، kernel32.dll) و به دنبال آن رفتار مستقیم syscall، دستکاری حافظه یا خالی کردن."
         }
     ]
 }

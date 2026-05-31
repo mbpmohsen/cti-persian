@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0019#AN0055",
-                    "external_id": "AN0055"
+                    "external_id": "AN0055",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyThreshold",
-                    "description": "Payloads with extremely low string entropy may indicate stripped or obfuscated binaries"
+                    "description": "Payloads with extremely low string entropy may indicate stripped or obfuscated binaries",
+                    "description_fa": "بارهای با آنتروپی رشته بسیار کم ممکن است نشان دهنده باینری های حذف شده یا مبهم باشد"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Used to scope or whitelist common system builders, compilers, or admin tools"
+                    "description": "Used to scope or whitelist common system builders, compilers, or admin tools",
+                    "description_fa": "برای ایجاد دامنه یا لیست سفید سازندگان سیستم، کامپایلرها یا ابزارهای مدیریتی رایج استفاده می شود"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates file creation and process spawning within a short timeframe"
+                    "description": "Correlates file creation and process spawning within a short timeframe",
+                    "description_fa": "ایجاد فایل و تخم ریزی فرآیند را در یک بازه زمانی کوتاه به هم مرتبط می کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0055",
+            "description_fa": "محموله های اجرایی یا اسکریپتی فاقد اطلاعات نماد و رشته های قابل خواندن هستند که توسط فرآیندهای غیرمعمول یا کوتاه مدت ایجاد یا حذف می شوند."
         }
     ]
 }

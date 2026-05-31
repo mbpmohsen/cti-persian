@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T0894",
-                    "external_id": "T0894"
+                    "external_id": "T0894",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "GTFO split",
                     "description": "GTFOBins. (2020, November 13). split. Retrieved April 18, 2022.",
-                    "url": "https://gtfobins.github.io/gtfobins/split/"
+                    "url": "https://gtfobins.github.io/gtfobins/split/",
+                    "source_name_fa": "تقسیم GTFO",
+                    "description_fa": "GTFOBins. (2020، 13 نوامبر). تقسیم بازبینی شده در 18 آوریل 2022."
                 },
                 {
                     "source_name": "LOLBAS Project",
                     "description": "Oddvar Moe et al. (2022, February).  Living Off The Land Binaries, Scripts and Libraries. Retrieved March 7, 2022.",
-                    "url": "https://github.com/LOLBAS-Project/LOLBAS#criteria"
+                    "url": "https://github.com/LOLBAS-Project/LOLBAS#criteria",
+                    "source_name_fa": "پروژه LOLBAS",
+                    "description_fa": "اودوار مو و همکاران (2022، فوریه).  زندگی کردن از سرزمین باینری ها، اسکریپت ها و کتابخانه ها. بازبینی شده در ۷ مارس ۲۰۲۲."
                 },
                 {
                     "source_name": "split man page",
-                    "description": "Torbjorn Granlund, Richard M. Stallman. (2020, March null). split(1) \u2014 Linux manual page. Retrieved March 25, 2022.",
-                    "url": "https://man7.org/linux/man-pages/man1/split.1.html"
+                    "description": "Torbjorn Granlund, Richard M. Stallman. (2020, March null). split(1) — Linux manual page. Retrieved March 25, 2022.",
+                    "url": "https://man7.org/linux/man-pages/man1/split.1.html",
+                    "source_name_fa": "صفحه مرد تقسیم شده",
+                    "description_fa": "توربیورن گرانلوند، ریچارد ام. استالمن. (2020، مارس صفر). split(1) - صفحه راهنمای لینوکس. بازبینی شده در ۲۵ مارس ۲۰۲۲."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2025-04-15T19:58:11.559Z",
             "name": "System Binary Proxy Execution",
-            "description": "Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries. Binaries used in this technique are often Microsoft-signed files, indicating that they have been either downloaded from Microsoft or are already native in the operating system. (Citation: LOLBAS Project) Binaries signed with trusted digital certificates can typically execute on Windows systems protected by digital signature validation. Several Microsoft signed binaries that are default on Windows installations can be used to proxy execution of other files or commands. Similarly, on Linux systems adversaries may abuse trusted binaries such as split to proxy execution of malicious commands. (Citation: split man page)(Citation: GTFO split)\n\nAdversaries may abuse application binaries installed on a system for proxy execution of malicious code or domain-specific commands. These commands could be used to target local resources on the device or networked devices within the environment through defined APIs ([Execution through API](https://attack.mitre.org/techniques/T0871)) or application-specific programming languages (e.g., MicroSCADA SCIL). Application binaries may be signed by the developer or generally trusted by the operators, analysts, and monitoring tools accustomed to the environment. These applications may be developed and/or directly provided by the device vendor to enable configuration, management, and operation of their devices without many alternatives. \n\nAdversaries may seek to target these trusted application binaries to execute or send commands without the development of custom malware. For example, adversaries may target a SCADA server binary which has the existing ability to send commands to substation devices, such as through IEC 104 command messages. Proxy execution may still require the development of custom tools to hook into the application binary\u2019s execution.\n\n",
+            "description": "Adversaries may bypass process and/or signature-based defenses by proxying execution of malicious content with signed, or otherwise trusted, binaries. Binaries used in this technique are often Microsoft-signed files, indicating that they have been either downloaded from Microsoft or are already native in the operating system. (Citation: LOLBAS Project) Binaries signed with trusted digital certificates can typically execute on Windows systems protected by digital signature validation. Several Microsoft signed binaries that are default on Windows installations can be used to proxy execution of other files or commands. Similarly, on Linux systems adversaries may abuse trusted binaries such as split to proxy execution of malicious commands. (Citation: split man page)(Citation: GTFO split)\n\nAdversaries may abuse application binaries installed on a system for proxy execution of malicious code or domain-specific commands. These commands could be used to target local resources on the device or networked devices within the environment through defined APIs ([Execution through API](https://attack.mitre.org/techniques/T0871)) or application-specific programming languages (e.g., MicroSCADA SCIL). Application binaries may be signed by the developer or generally trusted by the operators, analysts, and monitoring tools accustomed to the environment. These applications may be developed and/or directly provided by the device vendor to enable configuration, management, and operation of their devices without many alternatives. \n\nAdversaries may seek to target these trusted application binaries to execute or send commands without the development of custom malware. For example, adversaries may target a SCADA server binary which has the existing ability to send commands to substation devices, such as through IEC 104 command messages. Proxy execution may still require the development of custom tools to hook into the application binary’s execution.\n\n",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-ics-attack",
@@ -53,7 +60,9 @@
             "x_mitre_platforms": [
                 "None"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "اجرای پروکسی باینری سیستم",
+            "description_fa": "دشمنان ممکن است فرآیند و/یا دفاع مبتنی بر امضا را با پروکسی اجرای محتوای مخرب با باینری های امضا شده یا قابل اعتماد دور بزنند. باینری‌های مورد استفاده در این تکنیک اغلب فایل‌هایی با امضای مایکروسافت هستند، که نشان می‌دهد یا از مایکروسافت دانلود شده‌اند یا از قبل در سیستم عامل بومی هستند. [[[CTI_PRESERVE_0]] باینری‌های امضا شده با گواهی‌های دیجیتال قابل اعتماد معمولاً می‌توانند در سیستم‌های Windows محافظت شده توسط تأیید امضای دیجیتال اجرا شوند. چندین باینری امضا شده مایکروسافت که به طور پیش فرض در نصب ویندوز هستند، می توانند برای اجرای پروکسی فایل ها یا دستورات دیگر استفاده شوند. به طور مشابه، در سیستم های لینوکس، دشمنان ممکن است از باینری های قابل اعتماد مانند تقسیم به پروکسی اجرای دستورات مخرب سوء استفاده کنند. (Citation: split man page)(Citation: GTFO split)\n\nدشمنان ممکن است از باینری های برنامه نصب شده بر روی یک سیستم برای اجرای پروکسی کدهای مخرب یا دستورات خاص دامنه سوء استفاده کنند. این دستورات می توانند برای هدف قرار دادن منابع محلی روی دستگاه یا دستگاه های شبکه شده در محیط از طریق API های تعریف شده ([اجرا از طریق API](https://attack.mitre.org/techniques/T0871) یا زبان های برنامه نویسی خاص برنامه (مانند MicroSCADA SCIL) استفاده شوند. باینری های برنامه ممکن است توسط توسعه دهنده امضا شوند یا عموماً توسط اپراتورها، تحلیلگران و ابزارهای نظارتی که به محیط عادت دارند مورد اعتماد قرار گیرند. این برنامه‌ها ممکن است توسعه داده شوند و/یا مستقیماً توسط فروشنده دستگاه ارائه شوند تا پیکربندی، مدیریت و عملکرد دستگاه‌های خود را بدون جایگزین‌های زیادی فعال کنند. \n\nدشمنان ممکن است به دنبال هدف قرار دادن این باینری های برنامه قابل اعتماد برای اجرا یا ارسال دستورات بدون توسعه بدافزار سفارشی باشند. به عنوان مثال، دشمنان ممکن است یک باینری سرور SCADA را هدف قرار دهند که توانایی موجود برای ارسال دستورات به دستگاه های پست، مانند پیام های فرمان IEC 104 را دارد. اجرای پروکسی ممکن است همچنان نیاز به توسعه ابزارهای سفارشی برای اتصال به اجرای باینری برنامه داشته باشد. (Citation: LOLBAS Project)"
         }
     ]
 }

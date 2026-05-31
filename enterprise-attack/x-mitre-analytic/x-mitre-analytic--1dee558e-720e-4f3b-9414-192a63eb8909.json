@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0378#AN1064",
-                    "external_id": "AN1064"
+                    "external_id": "AN1064",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,17 +53,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Tune entropy threshold to distinguish obfuscation from legitimate compression"
+                    "description": "Tune entropy threshold to distinguish obfuscation from legitimate compression",
+                    "description_fa": "آستانه آنتروپی را تنظیم کنید تا مبهم سازی را از فشرده سازی قانونی تشخیص دهید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust correlation window between script execution and encoded file creation"
+                    "description": "Adjust correlation window between script execution and encoded file creation",
+                    "description_fa": "پنجره همبستگی بین اجرای اسکریپت و ایجاد فایل کدگذاری شده را تنظیم کنید"
                 },
                 {
                     "field": "SuspiciousParentProcessList",
-                    "description": "Customize based on environment to include LOLBins or admin tools misused for obfuscation"
+                    "description": "Customize based on environment to include LOLBins or admin tools misused for obfuscation",
+                    "description_fa": "بر اساس محیط سفارشی کنید تا شامل LOLBins یا ابزارهای مدیریتی شود که برای مبهم سازی سوء استفاده می شوند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1064",
+            "description_fa": "اجرای اسکریپت یا فرآیندهای مشکوک والد را با ایجاد یا تغییر قالب‌های فایل رمزگذاری‌شده، فشرده یا رمزگذاری‌شده (مانند .zip، .7z، .enc) و نحو خط فرمان غیرعادی یا مبهم‌سازی PowerShell مرتبط می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0281#AN0782",
-                    "external_id": "AN0782"
+                    "external_id": "AN0782",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CompressedFileType",
-                    "description": "Zip, .rar, .cab, .gz \u2013 tune based on expected legitimate use of compression in environment"
+                    "description": "Zip, .rar, .cab, .gz – tune based on expected legitimate use of compression in environment",
+                    "description_fa": "Zip، .rar، .cab، .gz - تنظیم بر اساس استفاده قانونی مورد انتظار از فشرده سازی در محیط"
                 },
                 {
                     "field": "SFXExecutionDelay",
-                    "description": "Expected time between archive unpacking and first execution \u2013 short delays are suspicious"
+                    "description": "Expected time between archive unpacking and first execution – short delays are suspicious",
+                    "description_fa": "زمان مورد انتظار بین باز کردن بایگانی و اولین اجرا - تاخیرهای کوتاه مشکوک هستند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Restrict detection to non-admin or interactive users if excessive FPs from sys admin activity"
+                    "description": "Restrict detection to non-admin or interactive users if excessive FPs from sys admin activity",
+                    "description_fa": "محدود کردن شناسایی به کاربران غیر سرپرست یا تعاملی در صورت FP های بیش از حد از فعالیت سرپرست سیستم"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0782",
+            "description_fa": "مانیتورهایی برای استفاده از ابزار فشرده سازی (مانند 7zip، WinRAR، MakeCab) که به دنبال یا قبل از اصلاح فایل انجام می شود، انواع فایل های مشکوک (مانند exe.، dll.) فشرده می شوند، یا از بایگانی های خود استخراج و به دنبال آن اجرای فوری حذف می شوند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0460#AN1262",
-                    "external_id": "AN1262"
+                    "external_id": "AN1262",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UsernameUniquenessThreshold",
-                    "description": "Minimum number of unique usernames in failed login attempts before triggering alert"
+                    "description": "Minimum number of unique usernames in failed login attempts before triggering alert",
+                    "description_fa": "حداقل تعداد نام‌های کاربری منحصربه‌فرد در تلاش‌های ناموفق برای ورود قبل از شروع هشدار"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Duration (e.g., 5 minutes) to observe the behavior chain of rapid login attempts"
+                    "description": "Duration (e.g., 5 minutes) to observe the behavior chain of rapid login attempts",
+                    "description_fa": "مدت زمان (به عنوان مثال، 5 دقیقه) برای مشاهده زنجیره رفتار تلاش های سریع برای ورود به سیستم"
                 },
                 {
                     "field": "SourceIPScope",
-                    "description": "Whether to group by full IP or CIDR block for bursty behavior from botnets"
+                    "description": "Whether to group by full IP or CIDR block for bursty behavior from botnets",
+                    "description_fa": "گروه بندی بر اساس IP کامل یا بلوک CIDR برای رفتار انفجاری از بات نت ها"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1262",
+            "description_fa": "چندین تلاش برای احراز هویت ناموفق با استفاده از جفت‌های نام کاربری/رمز عبور مجزا از یک آدرس IP یا جلسه در یک پنجره زمانی کوتاه، با هدف قرار دادن سرویس‌های رایج مانند RDP یا SMB"
         }
     ]
 }

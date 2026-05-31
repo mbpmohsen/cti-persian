@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T0892",
-                    "external_id": "T0892"
+                    "external_id": "T0892",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "German BAS Lockout Dec 2021",
                     "description": "Kelly Jackson Higgins. (2021, December 20). Lights Out: Cyberattacks Shut Down Building Automation Systems. Retrieved March 30, 2023.",
-                    "url": "https://www.darkreading.com/attacks-breaches/lights-out-cyberattacks-shut-down-building-automation-systems"
+                    "url": "https://www.darkreading.com/attacks-breaches/lights-out-cyberattacks-shut-down-building-automation-systems",
+                    "source_name_fa": "قفل BAS آلمان دسامبر 2021",
+                    "description_fa": "کلی جکسون هیگینز. (20 دسامبر 2021). چراغ خاموش: حملات سایبری سیستم های اتوماسیون ساختمان را خاموش می کند. بازبینی شده در 30 مارس 2023."
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +29,7 @@
             ],
             "modified": "2026-05-12T15:12:00.726Z",
             "name": "Change Credential",
-            "description": "Adversaries may modify software and device credentials to prevent operator and responder access. Depending on the device, the modification or addition of this password could prevent any device configuration actions from being accomplished and may require a factory reset or replacement of hardware. These credentials are often built-in features provided by the device vendors as a means to restrict access to management interfaces.\n\nAn adversary with access to valid or hardcoded credentials could change the credential to prevent future authorized device access. Change Credential may be especially damaging when paired with other techniques such as Modify Program, Data Destruction, or Modify Controller Tasking. In these cases, a device\u2019s configuration may be destroyed or include malicious actions for the process environment, which cannot not be removed through normal device configuration actions. \n\nAdditionally, recovery of the device and original configuration may be difficult depending on the features provided by the device. In some cases, these passwords cannot be removed onsite and may require that the device be sent back to the vendor for additional recovery steps.\n\n\nA chain of incidents occurred in Germany, where adversaries locked operators out of their building automation system (BAS) controllers by enabling a previously unset BCU key. (Citation: German BAS Lockout Dec 2021) \n",
+            "description": "Adversaries may modify software and device credentials to prevent operator and responder access. Depending on the device, the modification or addition of this password could prevent any device configuration actions from being accomplished and may require a factory reset or replacement of hardware. These credentials are often built-in features provided by the device vendors as a means to restrict access to management interfaces.\n\nAn adversary with access to valid or hardcoded credentials could change the credential to prevent future authorized device access. Change Credential may be especially damaging when paired with other techniques such as Modify Program, Data Destruction, or Modify Controller Tasking. In these cases, a device’s configuration may be destroyed or include malicious actions for the process environment, which cannot not be removed through normal device configuration actions. \n\nAdditionally, recovery of the device and original configuration may be difficult depending on the features provided by the device. In some cases, these passwords cannot be removed onsite and may require that the device be sent back to the vendor for additional recovery steps.\n\n\nA chain of incidents occurred in Germany, where adversaries locked operators out of their building automation system (BAS) controllers by enabling a previously unset BCU key. (Citation: German BAS Lockout Dec 2021) \n",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-ics-attack",
@@ -46,7 +49,9 @@
             "x_mitre_platforms": [
                 "None"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "تغییر اعتبار",
+            "description_fa": "دشمنان ممکن است اعتبار نرم افزار و دستگاه را برای جلوگیری از دسترسی اپراتور و پاسخگو تغییر دهند. بسته به دستگاه، اصلاح یا اضافه کردن این رمز عبور می‌تواند از انجام هرگونه عملیات پیکربندی دستگاه جلوگیری کند و ممکن است نیاز به بازنشانی کارخانه یا تعویض سخت‌افزار داشته باشد. این اعتبارنامه ها اغلب ویژگی های داخلی هستند که توسط فروشندگان دستگاه به عنوان وسیله ای برای محدود کردن دسترسی به رابط های مدیریتی ارائه می شوند.\n\nدشمنی که به اعتبارنامه‌های معتبر یا سخت‌کد دسترسی دارد، می‌تواند اعتبارنامه را تغییر دهد تا از دسترسی مجاز دستگاه در آینده جلوگیری کند. Change Credential ممکن است زمانی که با تکنیک های دیگری مانند Modify Program، Data Destruction یا Modify Controller Tasking جفت شود، آسیب زا باشد. در این موارد، پیکربندی دستگاه ممکن است از بین برود یا شامل اقدامات مخرب برای محیط فرآیند باشد، که از طریق اقدامات پیکربندی معمولی دستگاه قابل حذف نیست. \n\nبعلاوه، بسته به ویژگی های ارائه شده توسط دستگاه، بازیابی دستگاه و پیکربندی اصلی ممکن است دشوار باشد. در برخی موارد، این گذرواژه‌ها را نمی‌توان در محل حذف کرد و ممکن است نیاز باشد که دستگاه برای مراحل بازیابی بیشتر به فروشنده بازگردانده شود.\n\n\nزنجیره ای از حوادث در آلمان رخ داد، جایی که دشمنان با فعال کردن کلید BCU که قبلاً تنظیم نشده بود، اپراتورها را از کنترل کننده های سیستم اتوماسیون ساختمان (BAS) خود قفل کردند. (Citation: German BAS Lockout Dec 2021)"
         }
     ]
 }

@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-178",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/178.html"
+                    "url": "https://capec.mitre.org/data/definitions/178.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-601",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/601.html"
+                    "url": "http://cwe.mitre.org/data/definitions/601.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stefano Di Paola, Testing Flash Applications, 2007",
                     "external_id": "REF-41",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.wisec.it/en/Docs/flash_App_testing_Owasp07.pdf"
+                    "url": "http://www.wisec.it/en/Docs/flash_App_testing_Owasp07.pdf",
+                    "description_fa": "استفانو دی پائولا، تست برنامه های فلش، 2007",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-42",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/08-Testing_for_Cross_Site_Flashing.html"
+                    "url": "https://www.owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/08-Testing_for_Cross_Site_Flashing.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Cross-Site Flashing, Trustwave",
                     "external_id": "REF-561",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://doc.cenzic.com/sadoc9x14ba847/CPL0001509.htm"
+                    "url": "http://doc.cenzic.com/sadoc9x14ba847/CPL0001509.htm",
+                    "description_fa": "Cross-Site Flashing، Trustwave",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--4ce65b20-6d2c-4217-b08a-e87b36c22353",
@@ -72,6 +80,29 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -87,11 +118,21 @@
                 "The targeted Flash application must reference external URLs and the locations thus referenced must be controllable through parameters. The Flash application must fail to sanitize such parameters against malicious manipulation. The victim must follow a crafted link created by the attacker."
             ],
             "x_capec_skills_required": {
-                "Medium": "knowledge of Flash internals, parameters and remote referencing."
+                "Medium": "knowledge of Flash internals, parameters and remote referencing.",
+                "Medium_fa": "دانش داخلی فلش، پارامترها و ارجاع از راه دور."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم می‌تواند قربانی را فریب دهد تا یک سند فلش را اجرا کند که دستورات یا تماس‌هایی را به پلاگین مرورگر Flash Player ارسال می‌کند و به مهاجم اجازه می‌دهد از عملکرد بومی Flash در مرورگر مشتری سوء استفاده کند. این الگوی حمله زمانی اتفاق می‌افتد که مهاجم می‌تواند یک پیوند دستکاری شده به یک سند فلش (فایل SWF) ارائه دهد که در صورت پیروی از آن، دستورالعمل‌های مخرب اضافی اجرا می‌شوند. مهاجم نیازی به سرویس یا کنترل سند فلش ندارد. این حمله از این واقعیت استفاده می کند که فایل های Flash می توانند به URL های خارجی ارجاع دهند. اگر متغیرهایی که به عنوان URLهایی عمل می کنند که برنامه Flash به آنها ارجاع می دهد را بتوان از طریق پارامترها کنترل کرد، پس با ایجاد پیوندی که شامل مقادیر آن پارامترها است، مهاجم می تواند باعث شود که محتوای دلخواه ارجاع داده شود و احتمالاً توسط برنامه فلش مورد نظر اجرا شود.",
+            "name_fa": "فلش بین سایتی",
+            "x_capec_example_instances_fa": [
+                "مهاجم سعی می کند فیلم فلش مخرب خود را در برنامه فلش هدفمند اجرا کند. فایل مخرب در دامنه attacker.com میزبانی می شود و برنامه فلش هدفمند در example.com میزبانی می شود فایل crossdomain.xml در ریشه example.com به همه دامنه ها اجازه می دهد و محدودیت خاصی در برنامه فلش مورد نظر مشخص نشده است. هنگامی که مهاجم فایل مخرب خود را در فیلم فلش آسیب پذیر تزریق می کند، برنامه rogue flash می تواند به متغیرهای داخلی و پارامتر فیلم فلش دسترسی پیدا کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، مهاجم تمام نمونه‌های URL (یا URL جزئی مانند دامنه) را که به یک فایل فلش ارسال می‌شود، ثبت می‌کند. (SWF).</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از یک ابزار خودکار برای ضبط متغیرهای ارسال شده به فایل فلش استفاده کنید.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب سایت و تجزیه و تحلیل نحوه دریافت متغیرهای فایل فلش استفاده کنید، به عنوان مثال. جاوا اسکریپت با استفاده از SetVariable/GetVariable، تگ پارامتر HTML FlashVars و غیره.</td></tr><tr><td>از دیکامپایلرها برای بازیابی کد منبع فلش و ضبط همه متغیرهای قابل کنترل توسط کاربر ارسال شده به loadMovie استفاده کنید* دستورالعمل.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تلاش برای تزریق یک فایل فلش راه دور: </b>مهاجم از یک فایل فلش از راه دور (SWF) استفاده می‌کند که یک فایل فلش با قابلیت شناسایی منحصربه‌فرد تولید می‌کند. فایل.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>متغییر فایل SWF را که حاوی URL فیلم راه دور است را به فایل فلش کنترل‌شده مهاجم تغییر دهید.</td></tr></tbody></table></ol></div><div><h3>Exploit <div><h3>Exploit <b>Ocploit</h3>Flash متغیرهای برنامه: </b>از آنجایی که مهاجم موفق می شود از آسیب پذیری سوء استفاده کند، محتوای برنامه فلش را برای سرقت محتوای متغیر، رمز عبور و غیره هدف قرار می دهد. پلاگین flash و اطلاعات سند را برای مهاجم ارسال می کند.</td></tr><tr><td>برنامه مخرب Flash را ایجاد کنید که از طریق بردارهای شناسایی شده در مرحله آزمایشی تزریق می شود و دستورات را از سرور مهاجم دریافت می کند و سپس باعث می شود که برنامه فلش به طور مناسب اجرا شود. مهاجم برنامه فلش فعلی را هدف قرار می دهد، آنها می توانند انتخاب کنند که جاوا اسکریپت را در DOM مشتری تزریق کنند و بنابراین حمله اسکریپت بین سایتی را اجرا کنند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>جاوا اسکریپت مخربی را ایجاد کنید که از طریق برنامه فلش سرکش از طریق فیلم فلش بارگذاری شده توسط برنامه فلش مورد هدف، از طریق برنامه فلش بارگذاری شده توسط برنامه فلش مورد هدف شناسایی شده است. مرورگر قربانی.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه فلش مورد نظر باید به URLهای خارجی ارجاع دهد و مکانهایی که به این ترتیب ارجاع داده می شوند باید از طریق پارامترها قابل کنترل باشند. برنامه فلش باید چنین پارامترهایی را در برابر دستکاری های مخرب پاک نکند. قربانی باید یک پیوند ساخته شده توسط مهاجم را دنبال کند."
+            ]
         }
     ],
     "spec_version": "2.0",

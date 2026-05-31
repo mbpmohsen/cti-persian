@@ -14,21 +14,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1570",
                     "external_id": "T1570",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Dropbox Malware Sync",
                     "description": "David Talbot. (2013, August 21). Dropbox and Similar Services Can Sync Malware. Retrieved May 31, 2023.",
                     "url": "https://www.technologyreview.com/2013/08/21/83143/dropbox-and-similar-services-can-sync-malware/",
-                    "source_name_fa": "Dropbox Malware Sync",
-                    "description_fa": "دیوید Talbot (2013، 21 آگوست) Dropbox و خدمات مشابه می توانند Sync Malware Retrieved 31 مه 2023"
+                    "source_name_fa": "همگام سازی بدافزار Dropbox",
+                    "description_fa": "دیوید تالبوت (21 اوت 2013). Dropbox و سرویس‌های مشابه می‌توانند بدافزار را همگام‌سازی کنند. بازبینی شده در 31 مه 2023."
                 },
                 {
                     "source_name": "Unit42 LockerGoga 2019",
                     "description": "Harbison, M. (2019, March 26). Born This Way? Origins of LockerGoga. Retrieved April 16, 2019.",
                     "url": "https://unit42.paloaltonetworks.com/born-this-way-origins-of-lockergoga/",
                     "source_name_fa": "Unit42 LockerGoga 2019",
-                    "description_fa": "Harbison، M. (2019، 26 مارس) تولد این راه؟ ریشه های لاکگوگا Retrieved 16 آوریل 2019"
+                    "description_fa": "هاربیسون، ام (2019، 26 مارس). اینجوری متولد شده؟ خاستگاه LockerGoga. بازبینی شده در 16 آوریل 2019."
                 }
             ],
             "object_marking_refs": [
@@ -60,8 +60,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.4",
-            "name_fa": "انتقال ابزار بعدی",
-            "description_fa": "عوامل جانبی ممکن است ابزار یا فایل های دیگر بین سیستم ها را در یک محیط خطرناک انتقال دهند. هنگامی که وارد محیط قربانی شد (به عنوان مثال، [انتقال ابزار تهاجمی] ([CTI_PRESERVE_2]) فایل ها ممکن است از یک سیستم به یک سیستم دیگر به ابزار دشمن مرحله یا سایر فایل ها در طول دوره عملیات کپی شوند.\n\nعوامل ممکن است فایل های بین سیستم های قربانی داخلی را برای حمایت از حرکت جانبی با استفاده از پروتکل های اشتراک گذاری فایل ذاتی مانند اشتراک فایل بر روی [SMB/Windows Admin Shares] ([[CTI_PRESERVE_3]) برای اشتراک گذاری شبکه های متصل یا با اتصالات معتبر از طریق [Remote Protocol] ([CTI_P_SERV_E4]\n\nفایل ها همچنین می توانند با استفاده از ابزارهای بومی یا در غیر این صورت موجود در سیستم قربانی، مانند اسپ، rsync، sftp و [ftp] ([[CTI_PRESERVE_5] منتقل شوند. در برخی موارد، دشمنان ممکن است قادر به استفاده از [Web Service] باشند ([[CTI_PRESERVE_6])، مانند Dropbox یا OneDrive برای کپی کردن فایل ها از یک ماشین به دیگری از طریق پوشه های به اشتراک گذاشته شده، به طور خودکار همگام سازی شده است.[۱۰] [CTI_PRESERVE] (Citation: Unit42 LockerGoga 2019) (Citation: Dropbox Malware Sync) https://attack.mitre.org/techniques/T1105 https://attack.mitre.org/techniques/T1021/002 https://attack.mitre.org/techniques/T1021/001 https://attack.mitre.org/software/S0095 https://attack.mitre.org/techniques/T1102"
+            "name_fa": "انتقال ابزار جانبی",
+            "description_fa": "دشمنان ممکن است ابزارها یا فایل های دیگر را بین سیستم ها در یک محیط در معرض خطر انتقال دهند. پس از وارد شدن به محیط قربانی (به عنوان مثال، [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105) فایل‌ها ممکن است از یک سیستم به سیستم دیگر کپی شوند تا ابزارهای دشمن یا فایل‌های دیگر در طول یک عملیات به مرحله اجرا درآیند.\n\nدشمنان ممکن است فایل‌ها را بین سیستم‌های قربانی داخلی برای پشتیبانی از حرکت جانبی با استفاده از پروتکل‌های اشتراک‌گذاری فایل ذاتی مانند اشتراک‌گذاری فایل از طریق [SMB/Windows Admin Shares](https://attack.mitre.org/techniques/T1021/002) به اشتراک‌های شبکه متصل یا با اتصالات احراز هویت شده از طریق [Remote Desktop کپی کنند. پروتکل](https://attack.mitre.org/techniques/T1021/001).(Citation: Unit42 LockerGoga 2019)\n\nفایل‌ها همچنین می‌توانند با استفاده از ابزارهای بومی یا موجود در سیستم قربانی، مانند scp، rsync، curl، sftp، و [ftp](https://attack.mitre.org/software/S0095) منتقل شوند. در برخی موارد، ممکن است دشمنان بتوانند از [Web Service](https://attack.mitre.org/techniques/T1102) مانند Dropbox یا OneDrive برای کپی کردن فایل‌ها از یک دستگاه به دستگاه دیگر از طریق پوشه‌های مشترک و همگام‌سازی شده خودکار استفاده کنند.(Citation: Dropbox Malware Sync)"
         }
     ]
 }

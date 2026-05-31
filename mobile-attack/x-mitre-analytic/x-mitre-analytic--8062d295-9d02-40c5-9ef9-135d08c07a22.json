@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0676#AN1779",
-                    "external_id": "AN1779"
+                    "external_id": "AN1779",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.379Z",
             "name": "Analytic 1779",
-            "description": "Defender correlates a look-alike prompt inside an app (e.g., faux Apple ID password view, webview of brand login) with timing against scene/foreground activation, optional push notification bait, then local form cache writes and/or small egress. Chain: scene activation around sensitive UI \u2192 suspicious prompt creation (UIKit events without expected auth controller) or webview navigated to look-alike domain \u2192 local cache write \u2192 near-term egress",
+            "description": "Defender correlates a look-alike prompt inside an app (e.g., faux Apple ID password view, webview of brand login) with timing against scene/foreground activation, optional push notification bait, then local form cache writes and/or small egress. Chain: scene activation around sensitive UI → suspicious prompt creation (UIKit events without expected auth controller) or webview navigated to look-alike domain → local cache write → near-term egress",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,25 +58,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time from prompt to persist/exfil (e.g., 5\u201360s)."
+                    "description": "Max time from prompt to persist/exfil (e.g., 5–60s).",
+                    "description_fa": "حداکثر زمان از درخواست تا تداوم/برداشت (به عنوان مثال، 5 تا 60 ثانیه)."
                 },
                 {
                     "field": "LookalikeDomainScore",
-                    "description": "Threshold for domain visual similarity (e.g., \u22650.85)."
+                    "description": "Threshold for domain visual similarity (e.g., ≥0.85).",
+                    "description_fa": "آستانه شباهت بصری دامنه (به عنوان مثال، ≥0.85)."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for credential/form cache artifacts in container."
+                    "description": "Regex for credential/form cache artifacts in container.",
+                    "description_fa": "Regex برای مصنوعات حافظه پنهان اعتبار/فرم در ظرف."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Enterprise/analytics endpoints to suppress FPs"
+                    "description": "Enterprise/analytics endpoints to suppress FPs",
+                    "description_fa": "نقاط پایانی سازمانی/تحلیلی برای سرکوب FP ها"
                 },
                 {
                     "field": "UserContext",
-                    "description": "MDM policy, Focus mode, foreground requirement."
+                    "description": "MDM policy, Focus mode, foreground requirement.",
+                    "description_fa": "خط مشی MDM، حالت فوکوس، نیاز پیش زمینه."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1779",
+            "description_fa": "Defender یک درخواست شبیه به هم را در داخل یک برنامه (به عنوان مثال، نمایش رمز عبور تقلبی Apple ID، نمای وب ورود به نام تجاری) با زمان‌بندی در مقابل فعال‌سازی صحنه/پیش‌زمینه، طعمه اعلان فشار اختیاری، سپس نوشتن حافظه پنهان فرم محلی و/یا خروجی کوچک مرتبط می‌کند. زنجیره: فعال‌سازی صحنه در اطراف رابط کاربری حساس ← ایجاد اعلان مشکوک (رویدادهای UIKit بدون کنترل‌کننده تأیید اعتبار مورد انتظار) یا نمای وب که به دامنه مشابه هدایت می‌شود ← نوشتن حافظه پنهان محلی → خروج کوتاه مدت"
         }
     ]
 }

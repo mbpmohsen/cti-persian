@@ -9,41 +9,53 @@
                 {
                     "external_id": "CAPEC-268",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/268.html"
+                    "url": "https://capec.mitre.org/data/definitions/268.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-117",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/117.html"
+                    "url": "http://cwe.mitre.org/data/definitions/117.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Indicator Removal on Host",
                     "external_id": "T1070",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1070"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1070",
+                    "description_fa": "حذف نشانگر در هاست",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Disable Windows Event Logging",
                     "external_id": "T1562.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/002",
+                    "description_fa": "Ipair Defenses: غیرفعال کردن گزارش رویدادهای ویندوز",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Impair Command History Logging",
                     "external_id": "T1562.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/003",
+                    "description_fa": "نقص دفاع: اختلال در ثبت تاریخچه فرمان",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Disable Cloud Logs",
                     "external_id": "T1562.008",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/008"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/008",
+                    "description_fa": "نقص دفاع: غیرفعال کردن گزارش‌های ابری",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Log Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Log_Injection"
+                    "url": "https://owasp.org/www-community/attacks/Log_Injection",
+                    "description_fa": "تزریق لاگ",
+                    "source_name_fa": "حملات OWASP"
                 }
             ],
             "id": "attack-pattern--b3eaa7aa-9601-406c-ae82-0a0e2ea16116",
@@ -72,7 +84,16 @@
                 "\n               <xhtml:p>The attacker must understand how the logging mechanism works.</xhtml:p>\n               <xhtml:p>Optionally, the attacker must know the location and the format of individual entries of the log files.</xhtml:p>\n            "
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم ورودی‌های گزارش مخرب را در فایل گزارش تزریق، دستکاری، حذف یا جعل می‌کند تا ممیزی فایل گزارش را گمراه کند یا مسیرهای حمله را پوشش دهد. به دلیل ناکافی بودن کنترل های دسترسی فایل های گزارش و یا مکانیسم ورود به سیستم، مهاجم قادر به انجام چنین اقداماتی است.",
+            "name_fa": "دستکاری گزارش حسابرسی",
+            "x_capec_prerequisites_fa": [
+                "میزبان هدف، اقدام و داده های کاربر را ثبت می کند.",
+                "میزبان هدف به اندازه کافی از دسترسی به گزارش‌ها یا مکانیسم‌های گزارش‌گیری محافظت نمی‌کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p> مهاجم باید نحوه عملکرد مکانیسم گزارش را بداند.</xhtml:p>\n               <xhtml:p>در صورت تمایل، مهاجم باید مکان و قالب ورودی‌های جداگانه فایل‌های گزارش را بداند.</xhtml:p>"
+            ]
         }
     ],
     "spec_version": "2.0",

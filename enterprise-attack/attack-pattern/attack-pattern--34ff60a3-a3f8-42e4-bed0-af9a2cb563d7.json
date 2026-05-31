@@ -14,28 +14,28 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1685/002",
                     "external_id": "T1685.002",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "AWS Cloud Trail",
                     "description": "AWS. (n.d.). update-trail. Retrieved April 15, 2026.",
                     "url": "https://docs.aws.amazon.com/cli/latest/reference/cloudtrail/update-trail.html",
                     "source_name_fa": "AWS Cloud Trail",
-                    "description_fa": "AWS Retrieved 15, 2026."
+                    "description_fa": "AWS. (n.d.). به روز رسانی دنباله. بازبینی شده در 15 آوریل 2026."
                 },
                 {
                     "source_name": "Dark Reading",
                     "description": "Kelly Sheridan. (2021, August 5). Retrieved April 15, 2026.",
                     "url": "https://www.darkreading.com/threat-intelligence/incident-responders-explore-microsoft-365-attacks-in-the-wild",
-                    "source_name_fa": "خواندن تاریک",
-                    "description_fa": "Kelly Sheridan Retrieved 15, 2026."
+                    "source_name_fa": "تاریک خواندن",
+                    "description_fa": "کلی شریدان. (2021، 5 اوت). بازبینی شده در 15 آوریل 2026."
                 },
                 {
                     "source_name": "Pacu Detection Disruption Module",
                     "description": "Rhino Security Labs. (2021, April 29). Pacu Detection Disruption Module. Retrieved August 4, 2023.",
                     "url": "https://github.com/RhinoSecurityLabs/pacu/blob/master/pacu/modules/detection__disruption/main.py",
-                    "source_name_fa": "دانلود بازی Pacu Trial",
-                    "description_fa": "آزمایشگاه های امنیتی Rhino (2021، 29 آوریل) ماژول تشخیص تشخیصی Pacument Disruption Retrieved 4، 2023."
+                    "source_name_fa": "ماژول اختلال تشخیص Pacu",
+                    "description_fa": "آزمایشگاه امنیت راینو (29 آوریل 2021). ماژول اختلال تشخیص Pacu. بازبینی شده در ۴ اوت ۲۰۲۳."
                 }
             ],
             "object_marking_refs": [
@@ -75,8 +75,8 @@
                 "Office Suite"
             ],
             "x_mitre_version": "1.0",
-            "name_fa": "Disable یا Modify Cloud Log",
-            "description_fa": "یک دشمن ممکن است قابلیت ها و ادغام های ابری را غیرفعال یا اصلاح کند تا داده ها را در فعالیت های خود جمع آوری کند و از تشخیص آن اجتناب کند. محیط های ابر اجازه می دهد تا جمع آوری و تجزیه و تحلیل از ممیزی و log های نرم افزاری که بینش در مورد فعالیت های کاربر در محیط زیست ارائه می دهد. اگر یک دشمن دارای مجوز کافی باشد، می تواند ورود را برای جلوگیری از تشخیص فعالیت های خود غیرفعال یا اصلاح کند.\n\nبه عنوان مثال، در AWS یک دشمن ممکن است ادغام CloudWatch/CloudTrail را قبل از انجام فعالیت های مخرب بیشتر غیرفعال کند. آنها ممکن است به طور جایگزین با قابلیت های ورود به سیستم دستکاری کنند، به عنوان مثال، با حذف هر گونه موضوعات مرتبط با SNS، جدا کردن ورود چند منطقه ای یا تنظیمات تخفیف که معتبر و / یا رمزگذاری فایل های log. [[ویرایش] در Office 365 ، یک دشمن ممکن است با استفاده از Set-Audit Bypasssociation ، فعالیت های جمع آوری ایمیل را برای کاربران خاص غیرفعال کند. بررسی پیشرفته برای کاربر یا با پایین آوردن مجوز کاربر از یک شرکت E5 به یک مجوز E3 شرکت؛ [CTI_PRESERVE_2] (Citation: AWS Cloud Trail) (Citation: Pacu Detection Disruption Module) (Citation: Dark Reading) M365"
+            "name_fa": "غیرفعال کردن یا اصلاح Cloud Log",
+            "description_fa": "یک دشمن ممکن است قابلیت‌ها و ادغام‌های گزارش ابری را غیرفعال یا تغییر دهد تا داده‌های جمع‌آوری‌شده در فعالیت‌های خود را محدود کند و از شناسایی جلوگیری کند. محیط‌های ابری امکان جمع‌آوری و تجزیه و تحلیل گزارش‌های حسابرسی و برنامه‌ها را فراهم می‌کنند که بینشی در مورد فعالیت‌هایی که کاربر در محیط انجام می‌دهد را ارائه می‌دهد. اگر حریف مجوزهای کافی داشته باشد، می‌تواند گزارش‌گیری را غیرفعال یا تغییر دهد تا از شناسایی فعالیت‌های خود جلوگیری کند. \n\nبه عنوان مثال، در AWS یک دشمن ممکن است قبل از انجام فعالیت های مخرب بیشتر، ادغام های CloudWatch/CloudTrail را غیرفعال کند. آنها ممکن است به طور متناوب عملکرد گزارش‌گیری را دستکاری کنند، برای مثال، با حذف موضوعات مرتبط SNS، غیرفعال کردن گزارش‌گیری چند منطقه‌ای، یا غیرفعال کردن تنظیماتی که فایل‌های گزارش را اعتبارسنجی و/یا رمزگذاری می‌کنند. Set-MailboxAuditBypassAssociation cmdlet، با غیرفعال کردن [[CTI_PRESERVE_3]]] Advanced Auditing برای کاربر، یا با تنزل دادن مجوز کاربر از Enterprise E5 به Enterprise E3 License.[[[CTI_PRESERVE_2]] (Citation: AWS Cloud Trail) (Citation: Pacu Detection Disruption Module) (Citation: Dark Reading) M365"
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0651#AN1733",
-                    "external_id": "AN1733"
+                    "external_id": "AN1733",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,29 +48,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between artifact disappearance, posture change, and continued activity"
+                    "description": "Correlation window between artifact disappearance, posture change, and continued activity",
+                    "description_fa": "پنجره همبستگی بین ناپدید شدن مصنوع، تغییر وضعیت بدن و ادامه فعالیت"
                 },
                 {
                     "field": "ArtifactTypeSet",
-                    "description": "Host artifacts and state indicators monitored for suspicious removal, alteration, or disappearance"
+                    "description": "Host artifacts and state indicators monitored for suspicious removal, alteration, or disappearance",
+                    "description_fa": "مصنوعات میزبان و نشانگرهای وضعیت برای حذف، تغییر یا ناپدید شدن مشکوک نظارت می‌شوند"
                 },
                 {
                     "field": "ExpectedTelemetrySources",
-                    "description": "Baseline sources expected to continue exposing artifact presence or compromise-relevant state"
+                    "description": "Baseline sources expected to continue exposing artifact presence or compromise-relevant state",
+                    "description_fa": "انتظار می رود منابع پایه به افشای حضور مصنوع یا وضعیت مربوط به سازش ادامه دهند"
                 },
                 {
                     "field": "TelemetryGapThreshold",
-                    "description": "Threshold defining abnormal loss of artifact visibility or managed-state continuity"
+                    "description": "Threshold defining abnormal loss of artifact visibility or managed-state continuity",
+                    "description_fa": "آستانه تعیین کننده از دست دادن غیر طبیعی دید مصنوع یا تداوم حالت مدیریت شده"
                 },
                 {
                     "field": "ExpectedManagementChanges",
-                    "description": "Known legitimate posture or inventory changes that may remove or update artifacts"
+                    "description": "Known legitimate posture or inventory changes that may remove or update artifacts",
+                    "description_fa": "وضعیت نامشروع شناخته شده یا تغییرات موجودی که ممکن است مصنوعات را حذف یا به روز کند"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Outbound traffic threshold used to confirm meaningful continued activity after indicator removal"
+                    "description": "Outbound traffic threshold used to confirm meaningful continued activity after indicator removal",
+                    "description_fa": "آستانه ترافیک خروجی برای تأیید ادامه فعالیت معنادار پس از حذف نشانگر استفاده می‌شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1733",
+            "description_fa": "شواهد غیرمستقیم حذف نشانگر سمت میزبان را با همبستگی (1) ایجاد مصنوع محلی یا فعالیت مرتبط با وضعیت سازش، (2) ناپدید شدن، تغییر یا گزارش از دست دادن بعدی برای آن مصنوعات یا نشانگرهای وضعیت، و (3) ادامه فعالیت برنامه یا دستگاه تحت دید کاهش یافته شناسایی می کند. از آنجایی که iOS دید مستقیم ضعیف تری را در برخی از الگوهای دستکاری آرتیفکت و نشانگر جیلبریک به سبک اندروید ارائه می دهد، مدافع بیشتر به تغییرات چرخه عمر مصنوع برنامه-خصوصی، تغییر وضعیت مدیریت شده و ادامه زمان اجرا یا فعالیت شبکه پس از ناپدید شدن شواهد مورد انتظار متکی است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0028#AN0082",
-                    "external_id": "AN0082"
+                    "external_id": "AN0082",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessSignedStatus",
-                    "description": "Non-signed or non-Apple signed binaries can raise confidence levels."
+                    "description": "Non-signed or non-Apple signed binaries can raise confidence levels.",
+                    "description_fa": "باینری های بدون امضا یا بدون امضای اپل می توانند سطح اطمینان را افزایش دهند."
                 },
                 {
                     "field": "DataRateThreshold",
-                    "description": "Observed data rate per process over time (e.g., MB/s)."
+                    "description": "Observed data rate per process over time (e.g., MB/s).",
+                    "description_fa": "نرخ داده مشاهده شده در هر فرآیند در طول زمان (به عنوان مثال، مگابایت بر ثانیه)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0082",
+            "description_fa": "اتصالات مشکوک طولانی مدت یا با توان عملیاتی بالا توسط برنامه ها یا فرآیندهایی که با امضای اپل امضا نشده اند و معمولاً با آپلودهای شبکه مرتبط نیستند. شناسایی فرآیندهای پس زمینه با استفاده از سوکت های باز برای خروج داده ها."
         }
     ]
 }

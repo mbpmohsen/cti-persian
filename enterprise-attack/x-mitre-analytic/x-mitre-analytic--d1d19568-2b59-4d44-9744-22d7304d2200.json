@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0369#AN1038",
-                    "external_id": "AN1038"
+                    "external_id": "AN1038",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetShellFilePath",
-                    "description": "The path to user profile scripts (e.g., ~/.bashrc, ~/.zshrc); may differ by distro or shell type."
+                    "description": "The path to user profile scripts (e.g., ~/.bashrc, ~/.zshrc); may differ by distro or shell type.",
+                    "description_fa": "مسیر اسکریپت های نمایه کاربر (به عنوان مثال، ~/.bashrc، ~/.zshrc)؛ ممکن است بر اساس نوع توزیع یا پوسته متفاوت باشد."
                 },
                 {
                     "field": "SignalTrapName",
-                    "description": "Trap signal (e.g., INT, HUP, TERM) can be environment-specific or attacker-tuned to evade."
+                    "description": "Trap signal (e.g., INT, HUP, TERM) can be environment-specific or attacker-tuned to evade.",
+                    "description_fa": "سیگنال تله (به عنوان مثال، INT، HUP، TERM) می تواند مختص محیط باشد یا توسط مهاجم تنظیم شود تا فرار کند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal threshold to correlate trap insertion and process execution (e.g., 10s-5min)"
+                    "description": "Temporal threshold to correlate trap insertion and process execution (e.g., 10s-5min)",
+                    "description_fa": "آستانه زمانی برای مرتبط کردن درج تله و اجرای فرآیند (به عنوان مثال، 10 ثانیه تا 5 دقیقه)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1038",
+            "description_fa": "تغییرات فایل در اسکریپت‌های راه‌اندازی پوسته (مانند .bashrc، .profile) را با دستورات «trap» تعبیه‌شده مرتبط کنید و مشاهده کنید که آیا این تغییرات با اجرای غیرمنتظره فرآیندهای فرزند در هنگام راه‌اندازی سیگنال‌های ترمینال (مانند SIGINT) دنبال می‌شوند یا خیر. از پیوند متنی با فعالیت جلسه کاربر برای شناسایی سوء استفاده از امتیاز استفاده کنید."
         }
     ]
 }

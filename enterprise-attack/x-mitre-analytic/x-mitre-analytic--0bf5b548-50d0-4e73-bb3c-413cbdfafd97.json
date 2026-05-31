@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0054#AN0147",
-                    "external_id": "AN0147"
+                    "external_id": "AN0147",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,17 +62,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Expected time between internal email and link execution or file dropper"
+                    "description": "Expected time between internal email and link execution or file dropper",
+                    "description_fa": "زمان مورد انتظار بین ایمیل داخلی و اجرای لینک یا دراپ فایل"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Baseline logon locations and device usage for sender accounts"
+                    "description": "Baseline logon locations and device usage for sender accounts",
+                    "description_fa": "مکان‌های ورود به سیستم و استفاده از دستگاه برای حساب‌های فرستنده"
                 },
                 {
                     "field": "AttachmentEntropyThreshold",
-                    "description": "Entropy value over which attachment is considered suspicious"
+                    "description": "Entropy value over which attachment is considered suspicious",
+                    "description_fa": "مقدار آنتروپی که پیوست مشکوک در نظر گرفته می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0147",
+            "description_fa": "دنباله ای از ایمیل های داخلی ارسال شده از یک حساب کاربری اخیراً در معرض خطر (که قبل از ورود غیرعادی به سیستم یا فعالیت دستگاه) همراه با پیوست ها یا پیوندهایی که منجر به اجرا یا برداشت اعتبار می شود. Defender توجه می کند: تحویل نامه داخلی به همتایان با پیوست های آنتروپی بالا، به دنبال رویدادهای کلیک، شروع فرآیند یا درخواست های اعتبار."
         }
     ]
 }

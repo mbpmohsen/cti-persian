@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0579#AN1595",
-                    "external_id": "AN1595"
+                    "external_id": "AN1595",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedUtilities",
-                    "description": "Whitelist expected administrative usage of driverquery.exe or other enumeration utilities."
+                    "description": "Whitelist expected administrative usage of driverquery.exe or other enumeration utilities.",
+                    "description_fa": "استفاده اداری مورد انتظار از driverquery.exe یا سایر ابزارهای شمارش را در لیست سفید قرار دهید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between process creation and registry queries to identify suspicious chaining of events."
+                    "description": "Correlation window between process creation and registry queries to identify suspicious chaining of events.",
+                    "description_fa": "پنجره همبستگی بین ایجاد فرآیند و پرس و جوهای رجیستری برای شناسایی زنجیره مشکوک رویدادها."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1595",
+            "description_fa": "استفاده مشکوک از ابزارهای شمارش درایورها (driverquery.exe) یا تماس‌های API مانند EnumDeviceDrivers() را بررسی کنید. جستارهای رجیستری در برابر HKLM\\SYSTEM\\CurrentControlSet\\Services و HardwareProfiles غیرعادی نیز ممکن است نشان دهنده تلاش برای کشف درایورها و سرویس های نصب شده باشد. اجرای دستور، ایجاد فرآیند و دسترسی به رجیستری را برای ایجاد یک زنجیره رفتاری از کشف درایور به هم مرتبط کنید."
         }
     ]
 }

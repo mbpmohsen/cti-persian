@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0399#AN1120",
-                    "external_id": "AN1120"
+                    "external_id": "AN1120",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AgentPathPatterns",
-                    "description": "Regex for job locations like ~/Library/LaunchAgents/"
+                    "description": "Regex for job locations like ~/Library/LaunchAgents/",
+                    "description_fa": "Regex برای مکان های شغلی مانند ~/Library/LaunchAgents/"
                 },
                 {
                     "field": "RepeatIntervalDelta",
-                    "description": "Time-based logic to determine schedule (e.g., ~24h \u00b1 5m)"
+                    "description": "Time-based logic to determine schedule (e.g., ~24h ± 5m)",
+                    "description_fa": "منطق مبتنی بر زمان برای تعیین برنامه (به عنوان مثال، ~ 24 ساعت ± 5 متر)"
                 },
                 {
                     "field": "UserHomeJobs",
-                    "description": "Transfers originating from non-admin user context"
+                    "description": "Transfers originating from non-admin user context",
+                    "description_fa": "نقل و انتقالات ناشی از زمینه کاربر غیر سرپرست"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1120",
+            "description_fa": "LaunchAgent یا کارهای تکرارشونده راه اندازی شد که انتقال داده ها را به IP های خارجی یا دامنه های سازگار با امضای زمان بندی تکراری آغاز می کند."
         }
     ]
 }

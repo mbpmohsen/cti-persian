@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0018#AN0052",
-                    "external_id": "AN0052"
+                    "external_id": "AN0052",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,26 +61,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between file write \u2192 module load \u2192 network (e.g., 0\u201320 minutes)."
+                    "description": "Correlation window between file write → module load → network (e.g., 0–20 minutes).",
+                    "description_fa": "پنجره همبستگی بین نوشتن فایل → بار ماژول → شبکه (به عنوان مثال، 0-20 دقیقه)."
                 },
                 {
                     "field": "SuspiciousPathRegex",
-                    "description": "Regex for user-writable/UNC/temp paths to flag (e.g., %TEMP%, %APPDATA%, \\\\*\\share\\)."
+                    "description": "Regex for user-writable/UNC/temp paths to flag (e.g., %TEMP%, %APPDATA%, \\\\*\\share\\).",
+                    "description_fa": "Regex برای مسیرهای قابل نوشتن توسط کاربر/UNC/temp برای پرچم‌گذاری (مثلاً %TEMP%, %APPDATA%, \\\\*\\share\\)."
                 },
                 {
                     "field": "UnsignedOnly",
-                    "description": "Alert only when SignatureStatus != Valid to reduce noise."
+                    "description": "Alert only when SignatureStatus != Valid to reduce noise.",
+                    "description_fa": "هشدار فقط زمانی که SignatureStatus != برای کاهش نویز معتبر است."
                 },
                 {
                     "field": "RareSignerThreshold",
-                    "description": "Frequency threshold for unseen/rare signers in last N days."
+                    "description": "Frequency threshold for unseen/rare signers in last N days.",
+                    "description_fa": "آستانه فرکانس برای امضاکنندگان نادیده/نادر در N روز گذشته."
                 },
                 {
                     "field": "MinFileSizeKB",
-                    "description": "Ignore tiny DLL stubs to cut noise."
+                    "description": "Ignore tiny DLL stubs to cut noise.",
+                    "description_fa": "برای کاهش نویز، قطعات کوچک DLL را نادیده بگیرید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0052",
+            "description_fa": "یک فرآیند (اغلب LOLBin یا برنامه راه‌اندازی شده توسط کاربر) یک DLL را از یک مسیر قابل نوشتن توسط کاربر/UNC/Temp یا امضاکننده بدون امضا/نامعتبر بارگیری می‌کند. در یک پنجره کوتاه، DLL (الف) به تازگی روی دیسک نوشته می شود، (ب) به عنوان اجرای بعدی (rundll32/regsvr32)، یا (ج) C2 خروجی را ایجاد می کند."
         }
     ]
 }

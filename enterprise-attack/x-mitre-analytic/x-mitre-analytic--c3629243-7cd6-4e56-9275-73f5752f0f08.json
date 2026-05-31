@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0507#AN1398",
-                    "external_id": "AN1398"
+                    "external_id": "AN1398",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -71,33 +72,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BrowserList",
-                    "description": "Set of monitored browsers (chrome.exe, msedge.exe, firefox.exe, iexplore.exe). Adjust per fleet."
+                    "description": "Set of monitored browsers (chrome.exe, msedge.exe, firefox.exe, iexplore.exe). Adjust per fleet.",
+                    "description_fa": "مجموعه ای از مرورگرهای نظارت شده (chrome.exe، msedge.exe، firefox.exe، iexplore.exe). برای هر ناوگان تنظیم کنید."
                 },
                 {
                     "field": "AccessMaskSet",
-                    "description": "Access rights implying injection (e.g., 0x1FFFFF, 0x1F3FF, VM_WRITE, VM_OPERATION, CREATE_THREAD). Tune by EDR mapping."
+                    "description": "Access rights implying injection (e.g., 0x1FFFFF, 0x1F3FF, VM_WRITE, VM_OPERATION, CREATE_THREAD). Tune by EDR mapping.",
+                    "description_fa": "حقوق دسترسی مستلزم تزریق (به عنوان مثال، 0x1FFFFF، 0x1F3FF، VM_WRITE، VM_OPERATION، CREATE_THREAD). تنظیم با نقشه برداری EDR."
                 },
                 {
                     "field": "SignerAllowList",
-                    "description": "Allowed module signers within browser processes (e.g., Microsoft, Google). Helps flag unsigned/unknown ImageLoad into browsers."
+                    "description": "Allowed module signers within browser processes (e.g., Microsoft, Google). Helps flag unsigned/unknown ImageLoad into browsers.",
+                    "description_fa": "امضاکنندگان ماژول مجاز در فرآیندهای مرورگر (به عنوان مثال، مایکروسافت، گوگل). به پرچم گذاری ImageLoad بدون امضا/ناشناخته در مرورگرها کمک می کند."
                 },
                 {
                     "field": "InternalCIDR",
-                    "description": "Enterprise internal ranges or DNS suffixes to identify intranet pivoting via the browser."
+                    "description": "Enterprise internal ranges or DNS suffixes to identify intranet pivoting via the browser.",
+                    "description_fa": "محدوده های داخلی سازمانی یا پسوندهای DNS برای شناسایی چرخش اینترانت از طریق مرورگر."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval (e.g., 10\u201320 minutes) linking privilege gain \u2192 access \u2192 modification \u2192 network usage."
+                    "description": "Correlation interval (e.g., 10–20 minutes) linking privilege gain → access → modification → network usage.",
+                    "description_fa": "فاصله همبستگی (به عنوان مثال، 10 تا 20 دقیقه) پیوند دادن امتیاز → دسترسی → اصلاح → استفاده از شبکه."
                 },
                 {
                     "field": "ParentAllowList",
-                    "description": "Legitimate tools that may automate browsers (e.g., Selenium drivers). Reduce FPs by allowlisting."
+                    "description": "Legitimate tools that may automate browsers (e.g., Selenium drivers). Reduce FPs by allowlisting.",
+                    "description_fa": "ابزارهای قانونی که ممکن است مرورگرها را خودکار کند (به عنوان مثال، درایورهای سلنیوم). FP ها را با فهرست مجاز کاهش دهید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope analytics to high-value users, admin workstations, or servers where browsers shouldn\u2019t be automated."
+                    "description": "Scope analytics to high-value users, admin workstations, or servers where browsers shouldn’t be automated.",
+                    "description_fa": "تجزیه و تحلیل دامنه به کاربران با ارزش بالا، ایستگاه های کاری سرپرست یا سرورهایی که مرورگرها نباید خودکار شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1398",
+            "description_fa": "دشمن یکپارچگی بالا یا امتیازات ویژه (مانند SeDebugPrivilege) به دست می‌آورد، یک فرآیند مرورگر در حال اجرا را مکان‌یابی می‌کند، آن را با حقوق نوشتن/تزریق باز می‌کند و آن را تغییر می‌دهد (مثلاً CreateRemoteThread / بار DLL) تا کوکی‌ها/توکن‌ها را به ارث ببرد یا یک محور مرورگر ایجاد کند. مرحله اختیاری: یک جلسه ورود جدید ایجاد کنید یا از اعتبارنامه های صریح استفاده کنید، سپس مرورگر قربانی را به منابع اینترانت هدایت کنید."
         }
     ]
 }

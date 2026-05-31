@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0019#AN0058",
-                    "external_id": "AN0058"
+                    "external_id": "AN0058",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MIMEType",
-                    "description": "Tune for octet-stream or mismatched Content-Type headers"
+                    "description": "Tune for octet-stream or mismatched Content-Type headers",
+                    "description_fa": "برای سرصفحه‌های جریان هشت‌گانه یا ناهماهنگ نوع محتوا تنظیم کنید"
                 },
                 {
                     "field": "PayloadSize",
-                    "description": "Payload threshold for executable-sized artifacts"
+                    "description": "Payload threshold for executable-sized artifacts",
+                    "description_fa": "آستانه بار برای مصنوعات با اندازه قابل اجرا"
                 },
                 {
                     "field": "TransferEncoding",
-                    "description": "Suspicious base64 or chunked encoding not matching normal app behavior"
+                    "description": "Suspicious base64 or chunked encoding not matching normal app behavior",
+                    "description_fa": "base64 مشکوک یا رمزگذاری تکه تکه شده با رفتار نرمال برنامه مطابقت ندارد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0058",
+            "description_fa": "بارهای باینری ورودی از طریق HTTP/S با هدرهای فشرده یا کدگذاری شده، فاقد نشانگرهای امضا یا ابرداده نشان دهنده کامپایلر/زنجیره ابزار منتقل می شوند."
         }
     ]
 }

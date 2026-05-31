@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0516#AN1428",
-                    "external_id": "AN1428"
+                    "external_id": "AN1428",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Tunable to match encoded or uncommon script execution patterns specific to the environment."
+                    "description": "Tunable to match encoded or uncommon script execution patterns specific to the environment.",
+                    "description_fa": "قابل تنظیم برای مطابقت با الگوهای اجرای اسکریپت کدگذاری شده یا غیر معمول خاص برای محیط."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "May vary across managed/unmanaged workstations or user-driven script activity."
+                    "description": "May vary across managed/unmanaged workstations or user-driven script activity.",
+                    "description_fa": "ممکن است در ایستگاه های کاری مدیریت شده/ مدیریت نشده یا فعالیت اسکریپت کاربر محور متفاوت باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Used to restrict analysis to work hours or known admin maintenance windows."
+                    "description": "Used to restrict analysis to work hours or known admin maintenance windows.",
+                    "description_fa": "برای محدود کردن تجزیه و تحلیل به ساعات کاری یا پنجره های تعمیر و نگهداری مدیر شناخته شده استفاده می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1428",
+            "description_fa": "اجرای اسکریپت‌نویسی یا مفسرهای فرمان (مانند powershell.exe، cmd.exe، wscript.exe) را در خارج از پنجره‌های زمانی مدیریتی مورد انتظار یا از بافت‌های غیرعادی کاربر، که اغلب با آرگومان‌های کدگذاری/مبهم یا رویدادهای اجرایی ثانویه دنبال می‌شوند، تشخیص می‌دهد."
         }
     ]
 }

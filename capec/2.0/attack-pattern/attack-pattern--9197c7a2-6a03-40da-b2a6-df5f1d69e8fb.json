@@ -9,66 +9,82 @@
                 {
                     "external_id": "CAPEC-509",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/509.html"
+                    "url": "https://capec.mitre.org/data/definitions/509.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-522",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/522.html"
+                    "url": "http://cwe.mitre.org/data/definitions/522.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-308",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/308.html"
+                    "url": "http://cwe.mitre.org/data/definitions/308.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-309",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/309.html"
+                    "url": "http://cwe.mitre.org/data/definitions/309.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-294",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/294.html"
+                    "url": "http://cwe.mitre.org/data/definitions/294.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-263",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/263.html"
+                    "url": "http://cwe.mitre.org/data/definitions/263.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-262",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/262.html"
+                    "url": "http://cwe.mitre.org/data/definitions/262.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-521",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/521.html"
+                    "url": "http://cwe.mitre.org/data/definitions/521.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Steal or Forge Kerberos Tickets:Kerberoasting",
                     "external_id": "T1558.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1558/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1558/003",
+                    "description_fa": "دزدی یا جعل بلیط Kerberos: Kerberoasting",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Jeff Warren, Extracting Service Account Passwords with Kerberoasting, 2017--05---09",
                     "external_id": "REF-559",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://blog.stealthbits.com/extracting-service-account-passwords-with-kerberoasting/"
+                    "url": "https://blog.stealthbits.com/extracting-service-account-passwords-with-kerberoasting/",
+                    "description_fa": "جف وارن، استخراج رمزهای عبور حساب خدمات با Kerberoasting، 2017--05---09",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Kerberoasting Without Mimikatz, 2016--11---01",
                     "external_id": "REF-585",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.harmj0y.net/blog/powershell/kerberoasting-without-mimikatz/"
+                    "url": "https://www.harmj0y.net/blog/powershell/kerberoasting-without-mimikatz/",
+                    "description_fa": "Kerberoasting Without Mimikatz، 2016--11---01",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Invoke-Kerberoast",
                     "external_id": "REF-586",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://powersploit.readthedocs.io/en/latest/Recon/Invoke-Kerberoast/"
+                    "url": "https://powersploit.readthedocs.io/en/latest/Recon/Invoke-Kerberoast/",
+                    "description_fa": "فراخوانی-Kerberoast",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--9197c7a2-6a03-40da-b2a6-df5f1d69e8fb",
@@ -88,6 +104,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -107,7 +126,18 @@
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "از طریق بهره‌برداری از اینکه چگونه حساب‌های سرویس از احراز هویت Kerberos با نام‌های اصلی سرویس (SPN) استفاده می‌کنند، حریف اعتبار هش‌شده یک هدف حساب سرویس را برای بهره‌برداری از امتیازات آن به دست می‌آورد و متعاقبا آن را می‌شکند. پروتکل احراز هویت Kerberos حول یک سیستم بلیط است که برای درخواست/اعطای دسترسی به خدمات و سپس دسترسی به خدمات درخواستی استفاده می‌شود. به عنوان یک کاربر احراز هویت شده، حریف ممکن است اکتیو دایرکتوری را درخواست کند و یک بلیط سرویس با بخش هایی از رمزگذاری شده از طریق RC4 با کلید خصوصی حساب تأیید شده دریافت کند. با استخراج بلیط محلی و ذخیره آن در دیسک، حریف می تواند ارزش هش شده را برای افشای اعتبار حساب مورد نظر به زور اعمال کند.",
+            "name_fa": "کربرواستینگ",
+            "x_capec_example_instances_fa": [
+                "ماژول Invoke-Kerberoast PowerSploit را می توان برای درخواست بلیط های خدمات اعطای بلیط (TGS) و بازگرداندن هش های بلیط قابل کرک استفاده کرد. [REF-585] [REF-586]"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>اسکن حساب‌های کاربری با مقادیر SPN تنظیم شده</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>این‌ها را می‌توانید از طریق Powershell یا نام‌های راه‌اندازی و سایر نام‌های LDAP پیدا کنید. معنی دارد.</td></tr></tbody></table><li> <p>درخواست بلیط خدمات</p></li><table><tbody><tr><th>تکنیک</th></tr><tr><td>با استفاده از مقدار SPN حساب کاربری، بلیط‌های خدمات دیگر را از Active درخواست کنید دایرکتوری</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p>استخراج بلیط و ذخیره در دیسک</p></li><table><tbody><tr><th>تکنیک</th></tr><tr><td>برخی از ابزارها مانند Mimiskatz می توانند آنها را استخراج کرده و آنها را ذخیره کنند. حافظه/دیسک.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p>بلیت رمزگذاری شده را برای برداشت اعتبارنامه متن ساده شکست دهید</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><tr></td>برنامه را به زور خارج کند ترک خورده هرچه رمز عبور کوتاه تر باشد، شکستن آن آسان تر است.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "حریف نیاز به دسترسی به عنوان یک کاربر تایید شده در سیستم دارد. این الگوی حمله به افزایش امتیازات مربوط می شود.",
+                "دشمن نیاز به استفاده از ابزار جمع آوری اعتبار شخص ثالث (مانند Mimikatz) دارد.",
+                "دشمن به یک ابزار بی رحم نیاز دارد."
+            ]
         }
     ],
     "spec_version": "2.0",

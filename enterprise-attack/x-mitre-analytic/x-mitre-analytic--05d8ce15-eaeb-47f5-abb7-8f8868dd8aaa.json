@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0468#AN1291",
-                    "external_id": "AN1291"
+                    "external_id": "AN1291",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedDHCPMACs",
-                    "description": "Expected MAC addresses of DHCP servers on subnet."
+                    "description": "Expected MAC addresses of DHCP servers on subnet.",
+                    "description_fa": "آدرس های MAC مورد انتظار سرورهای DHCP در زیر شبکه."
                 },
                 {
                     "field": "DHCPLeaseChangeThreshold",
-                    "description": "Number of suspicious DHCP leases before raising an alert."
+                    "description": "Number of suspicious DHCP leases before raising an alert.",
+                    "description_fa": "تعداد اجاره های مشکوک DHCP قبل از اعلام هشدار."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1291",
+            "description_fa": "با نظارت بر syslog برای پیام‌های dhclient که مقادیر DNS/gateway غیرمجاز را تخصیص می‌دهند، فعالیت DHCP سرکش را شناسایی می‌کند. ضبط بسته یا IDS می تواند چندین پیشنهاد DHCP رقیب را از سرورهای غیرمجاز شناسایی کند."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0123",
-                    "external_id": "DC0123"
+                    "external_id": "DC0123",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -92,7 +93,7 @@
                 },
                 {
                     "name": "MobileEDR:telemetry",
-                    "channel": "DeviceLockState=locked or BackgroundRefresh active during resolver\u2192pivot sequence"
+                    "channel": "DeviceLockState=locked or BackgroundRefresh active during resolver→pivot sequence"
                 },
                 {
                     "name": "MobileEDR:telemetry",
@@ -234,7 +235,9 @@
                     "name": "MobileEDR:telemetry",
                     "channel": "ecurity or monitoring application transitions to disabled, inactive, or non-reporting state while other applications remain active"
                 }
-            ]
+            ],
+            "name_fa": "وضعیت برنامه",
+            "description_fa": "Application State وضعیت عملیاتی و بافت چرخه عمر یک برنامه تلفن همراه را در یک نقطه زمانی معین نشان می دهد. این شامل این است که آیا برنامه در پیش زمینه یا پس‌زمینه اجرا می‌شود، وضعیت فعالیت آن، تعامل اخیر کاربر، و انتقال بین حالت‌های چرخه حیات.\n\nنظارت بر وضعیت برنامه به مدافعان کمک می کند تا رفتارهای مشکوک را شناسایی کنند که در آن برنامه در حالت غیرفعال، در پس زمینه یا بدون تعامل اخیر با کاربر، اقدامات حساسی را انجام می دهد.\n\nوضعیت برنامه به ویژه هنگام شناسایی فعالیت های مخربی که خارج از جریان های کاری عادی کاربر محور رخ می دهد مفید است.\n\nنمونه ها\nاندروید\n\n- انتقال برنامه از پیش زمینه به پس زمینه\n- برنامه در حال اجرا به عنوان یک سرویس پس زمینه\n- برنامه از طریق گیرنده پخش شروع شد\n- برنامه به طور خودکار پس از بوت شدن دستگاه راه اندازی می شود\n\niOS\n\n- برنامه وارد حالت فعال، غیرفعال یا پس زمینه می شود\n- اجرای کار پس زمینه\n- فعالیت واکشی پس‌زمینه\n- رویدادهای بیدار برنامه توسط اعلان‌های فشار یا خدمات سیستمی ایجاد می‌شوند\n\nاقدامات جمع آوری داده ها\n- نظارت بر زمان اجرا EDR / MTD موبایل\n- تله متری رویداد چرخه حیات سیستم عامل\n- ابزار دقیق زمان اجرا برنامه\n- نظارت بر رفتار پلت فرم امنیتی موبایل"
         }
     ]
 }

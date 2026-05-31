@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0372#AN1049",
-                    "external_id": "AN1049"
+                    "external_id": "AN1049",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineRegex",
-                    "description": "Environment-specific delay scripts may vary (sleep 300, ping -n 60, etc.)."
+                    "description": "Environment-specific delay scripts may vary (sleep 300, ping -n 60, etc.).",
+                    "description_fa": "اسکریپت های تاخیر خاص محیط ممکن است متفاوت باشد (خواب 300، ping -n 60، و غیره)."
                 },
                 {
                     "field": "TimeBetweenSyscalls",
-                    "description": "Threshold for determining if delay is artificially extended."
+                    "description": "Threshold for determining if delay is artificially extended.",
+                    "description_fa": "آستانه برای تعیین اینکه آیا تاخیر به طور مصنوعی تمدید شده است."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Root vs. service user context alters risk profile."
+                    "description": "Root vs. service user context alters risk profile.",
+                    "description_fa": "زمینه کاربر ریشه در مقابل سرویس، نمایه ریسک را تغییر می دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1049",
+            "description_fa": "اسکریپت‌های پوسته یا باینری‌هایی که مکرر «خواب»، «پینگ» یا سیستم‌های سیستمی سطح پایین (مثلاً نانواسلیپ) را در زنجیره‌های اجرایی کوتاه‌مدت و بدون تعامل کاربر یا سیستم فراخوانی می‌کنند. اغلب در مشاغل مخرب cron یا payload stagers دیده می شود."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0103#AN0286",
-                    "external_id": "AN0286"
+                    "external_id": "AN0286",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Adjustable window to correlate CLI disconnection command with SMB session teardown (e.g., 5 mins)"
+                    "description": "Adjustable window to correlate CLI disconnection command with SMB session teardown (e.g., 5 mins)",
+                    "description_fa": "پنجره قابل تنظیم برای همبستگی دستور قطع اتصال CLI با حذف جلسه SMB (به عنوان مثال، 5 دقیقه)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Used to filter on non-interactive users or highly privileged accounts"
+                    "description": "Used to filter on non-interactive users or highly privileged accounts",
+                    "description_fa": "برای فیلتر کردن کاربران غیر تعاملی یا حساب های دارای امتیاز بالا استفاده می شود"
                 },
                 {
                     "field": "ProcessCommandLineRegex",
-                    "description": "Patterns to match `net use \\\\host\\share /delete`, `Remove-SmbMapping`, or suspicious batched disconnections"
+                    "description": "Patterns to match `net use \\\\host\\share /delete`, `Remove-SmbMapping`, or suspicious batched disconnections",
+                    "description_fa": "الگوهایی برای مطابقت با «استفاده خالص \\\\ میزبان\\ اشتراک‌گذاری / حذف»، «حذف-SmbMapping» یا قطع‌های دسته‌ای مشکوک"
                 },
                 {
                     "field": "NetworkShareNamePattern",
-                    "description": "Tunable list of shares likely targeted (e.g., ADMIN$, C$, IPC$)"
+                    "description": "Tunable list of shares likely targeted (e.g., ADMIN$, C$, IPC$)",
+                    "description_fa": "فهرست قابل تنظیم از سهام هایی که احتمالاً هدف قرار گرفته اند (به عنوان مثال، ADMIN$، C$، IPC$)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0286",
+            "description_fa": "تلاش‌های قطع ارتباط اشتراک‌گذاری شبکه را با استفاده از ابزارهای خط فرمان مانند «استفاده از شبکه / حذف»، «حذف-SmbMapping» PowerShell، و همبستگی با اصل و نسب فرآیند و فعالیت حذف جلسه SMB شناسایی می‌کند."
         }
     ]
 }

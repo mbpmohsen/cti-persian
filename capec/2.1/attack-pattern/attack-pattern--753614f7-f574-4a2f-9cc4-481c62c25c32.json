@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-494",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/494.html"
+                    "url": "https://capec.mitre.org/data/definitions/494.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-404",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/404.html"
+                    "url": "http://cwe.mitre.org/data/definitions/404.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Security Considerations - IP Fragment Filtering",
                     "external_id": "REF-423",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.rfc-editor.org/rfc/rfc1858.txt"
+                    "url": "https://www.rfc-editor.org/rfc/rfc1858.txt",
+                    "description_fa": "ملاحظات امنیتی - فیلتر قطعه IP",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--753614f7-f574-4a2f-9cc4-481c62c25c32",
@@ -49,7 +54,13 @@
                 "This type of an attack requires the target system to be running a vulnerable implementation of IP, and the adversary needs to ability to send TCP packets of arbitrary size with crafted data."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف ممکن است با تلاش برای تکه تکه کردن بسته TCP به گونه‌ای که فیلد پرچم هدر به قطعه دومی که معمولاً فیلتر نمی‌شود، فشار داده شود، یک حمله تقسیم‌بندی TCP را علیه یک هدف با هدف اجتناب از قوانین فیلتر کردن کنترل‌های شبکه اجرا کند.",
+            "name_fa": "تکه تکه شدن TCP",
+            "x_capec_extended_description_fa": "<xhtml:p>در مقایسه، تقسیم IP زمانی اتفاق می‌افتد که یک دیتاگرام IP بزرگتر از MTU مسیری باشد که دیتاگرام باید طی کند. این رفتار تکه تکه شدن برخی از فیلترهای IPS و فایروال را که معمولاً FLAGS ها را در هدر بسته اول بررسی می کنند، از بین می برد، زیرا حذف این بسته از پردازش و مونتاژ قطعات زیر جلوگیری می کند.</xhtml:p>\n            <xhtml:p> یکی دیگر از تغییرات همپوشانی قطعات است، بنابراین یک بخش اول بی ضرر از فیلتر عبور می کند و بخش دوم داده های هدر TCP را با بار واقعی که ماهیت مخرب دارد، بازنویسی می کند. بار مخرب که به درستی دستکاری شده است ممکن است به دلیل مصرف منابع یا خرابی هسته منجر به DoS شود. علاوه بر این، تکه تکه‌سازی می‌تواند همراه با ارسال قطعات با سرعت کمی کمتر از زمان‌بندی برای ایجاد یک وضعیت DoS با وادار کردن منابعی که بسته را جمع‌آوری می‌کنند تا مدت زمان زیادی برای تکمیل کار منتظر بمانند، استفاده شود. اعداد شناسایی تکه تکه شدن نیز می توانند به راحتی تکرار شوند زیرا فقط 16 بیت در IPv4 وجود دارد بنابراین فقط 65536 بسته مورد نیاز است.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "این نوع حمله مستلزم آن است که سیستم هدف یک پیاده سازی آسیب پذیر IP را اجرا کند و حریف به توانایی ارسال بسته های TCP با اندازه دلخواه با داده های دستکاری شده نیاز دارد."
+            ]
         }
     ],
     "type": "bundle"

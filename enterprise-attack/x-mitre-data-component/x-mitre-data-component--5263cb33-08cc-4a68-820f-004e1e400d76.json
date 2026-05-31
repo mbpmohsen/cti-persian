@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0019",
-                    "external_id": "DC0019"
+                    "external_id": "DC0019",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -38,7 +39,9 @@
                     "name": "kubernetes:audit",
                     "channel": "create"
                 }
-            ]
+            ],
+            "name_fa": "ایجاد غلاف",
+            "description_fa": "استقرار اولیه یا نمونه سازی یک غلاف جدید در یک محیط کانتینری. این شامل ایجاد یک پاد به صورت دستی، از طریق ابزارهای ارکستراسیون (Kubernetes)، یا از طریق تنظیمات زیرساخت به عنوان کد (IaC) است. Pod کوچکترین واحد قابل استقرار در Kubernetes است که معمولاً شامل یک یا چند کانتینر است. روش های ایجاد عبارتند از:\n- استقرار غلاف مستقیم (\"kubectl run\"، \"kubectl application\")\n- استقرار خودکار از طریق خطوط لوله CI/CD (به عنوان مثال، ArgoCD، Jenkins، GitOps)\n- الگوهای زیرساخت به عنوان کد (IaC) (به عنوان مثال، Terraform، Helm Charts)\n- استقرارهای مبتنی بر API از طریق صفحه کنترل Kubernetes (Create_pod API calls)\n- Pods می تواند زودگذر (کوتاه عمر) یا پایدار (بخشی از StatefulSet یا Deployment) باشد.\n\n*اقدامات جمع آوری داده ها:*\n\n- سیاهههای حسابرسی Kubernetes\n    - تمام درخواست های API، از جمله رویدادهای \"ایجاد\" غلاف را ضبط می کند.\n- سیاهههای مربوط به سرور Kube-api\t\n    - تماس های API مربوط به استقرار و تغییرات پاد را نظارت می کند. رویدادهای مرتبط: «PodSandboxChanged»، «SyncLoop»، «Created pod»\n- سیاهههای مربوط به زمان اجرا کانتینر\t\n    - گزارش‌های مربوط به CRI-O، کانتینر، یا Docker رویدادهای ایجاد غلاف را ضبط می‌کنند. رویدادهای مرتبط: «شروع کانتینر»، «ایجاد کانتینر».\n- سیاهههای مربوط به ارائه دهنده ابر\t\n    - گزارش‌های GKE، EKS، AKS بینش‌هایی را در مورد تعاملات API Kubernetes ارائه می‌کنند.\n- SIEM & Log Aggregation\t\n    - لاگ های Kubernetes را در راه حل های SIEM ادغام می کند.\n- راه حل های EDR/XDR\t\n    - فعالیت های مبتنی بر کانتینر را برای ایجاد غلاف های غیرعادی نظارت می کند."
         }
     ]
 }

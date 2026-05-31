@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0127#AN0358",
-                    "external_id": "AN0358"
+                    "external_id": "AN0358",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ImageLabelMismatch",
-                    "description": "Tune detection based on mismatch between image name and labels"
+                    "description": "Tune detection based on mismatch between image name and labels",
+                    "description_fa": "تشخیص را بر اساس عدم تطابق بین نام تصویر و برچسب‌ها تنظیم کنید"
                 },
                 {
                     "field": "StartupScriptLocation",
-                    "description": "Detect binaries added or modified in startup path (e.g., /entrypoint.sh)"
+                    "description": "Detect binaries added or modified in startup path (e.g., /entrypoint.sh)",
+                    "description_fa": "شناسایی باینری های اضافه شده یا اصلاح شده در مسیر راه اندازی (به عنوان مثال، /entrypoint.sh)"
                 },
                 {
                     "field": "ProcessNamePattern",
-                    "description": "Allow tuning based on suspicious binary naming inside containers"
+                    "description": "Allow tuning based on suspicious binary naming inside containers",
+                    "description_fa": "تنظیم بر اساس نامگذاری مشکوک باینری در داخل کانتینرها مجاز است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0358",
+            "description_fa": "دشمن از تصاویر کانتینر تغییر نام داده شده استفاده می‌کند، فایل‌ها را با نام‌ها یا ابرداده‌های گمراه‌کننده (مثلاً باینری‌های سیستم تغییر نام‌داده‌شده) وارد کانتینر می‌کند و آنها را در هنگام راه‌اندازی یا کارهای برنامه‌ریزی‌شده اجرا می‌کند."
         }
     ]
 }

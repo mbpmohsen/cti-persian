@@ -9,36 +9,46 @@
                 {
                     "external_id": "CAPEC-697",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/697.html"
+                    "url": "https://capec.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-923",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/923.html"
+                    "url": "http://cwe.mitre.org/data/definitions/923.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Adversary-in-the-Middle: DHCP Spoofing",
                     "external_id": "T1557.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1557/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1557/003",
+                    "description_fa": "دشمن در وسط: جعل DHCP",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Yuval Lazar, DHCP Spoofing 101, 2021--11---03, Pentera",
                     "external_id": "REF-737",
                     "source_name": "reference_from_CAPEC",
-                    "url": " https://pentera.io/blog/dhcp-spoofing-101"
+                    "url": " https://pentera.io/blog/dhcp-spoofing-101",
+                    "description_fa": "Yuval Lazar، DHCP Spoofing 101، 2021--11---03، Pentera",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "T. Melsen, S. Blake, Ericsson, DHCP Spoofing 101, 2006--06, The Internet Society",
                     "external_id": "REF-738",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.rfc-editor.org/rfc/rfc4562.html"
+                    "url": "https://www.rfc-editor.org/rfc/rfc4562.html",
+                    "description_fa": "T. Melsen, S. Blake, Ericsson, DHCP Spoofing 101, 2006--06, The Internet Society",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Bosco Sebastian, DHCP Spoofing 101, 2019--08---02, McAfee",
                     "external_id": "REF-739",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/dhcp-client-remote-code-execution-vulnerability-demystified/"
+                    "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/dhcp-client-remote-code-execution-vulnerability-demystified/",
+                    "description_fa": "Bosco Sebastian، DHCP Spoofing 101، 2019--08---02، McAfee",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--67cf8bc2-3d17-4ecf-b52e-febdb7804a37",
@@ -70,6 +80,20 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands"
+                ],
+                "Access_Control_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -90,11 +114,25 @@
                 "The adversary requires access to a machine within the target LAN on a network which does not secure its DHCP traffic through MAC-Forced Forwarding, port security, etc."
             ],
             "x_capec_skills_required": {
-                "Medium": "The adversary must identify potential targets for DHCP Spoofing and craft network configurations to obtain the desired results."
+                "Medium": "The adversary must identify potential targets for DHCP Spoofing and craft network configurations to obtain the desired results.",
+                "Medium_fa": "حریف باید اهداف بالقوه برای جعل DHCP و پیکربندی های شبکه craft را برای به دست آوردن نتایج مورد نظر شناسایی کند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن با جعل ترافیک DHCP، با هدف هدایت ترافیک شبکه یا انکار سرویس به DHCP، به عنوان یک سرور قانونی پیکربندی میزبان پویا (DHCP) ظاهر می‌شود.</xhtml:p>",
+            "name_fa": "جعل DHCP",
+            "x_capec_example_instances_fa": [
+                "در اوایل سال 2019، مایکروسافت یک آسیب‌پذیری مهم (CVE-2019-0547) را در سرویس گیرنده DHCP Windows اصلاح کرد که اجرای کد از راه دور از طریق بسته‌های DHCP OFFER ساخته شده را امکان‌پذیر می‌کرد. [REF-739]"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین اجاره DHCP موجود: </b>یک حریف ترافیک شبکه را مشاهده می‌کند و منتظر می‌ماند تا اجاره DHCP موجود در ماشین مورد نظر منقضی شود. LAN.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن ترافیک شبکه LAN را برای درخواست‌های DHCP مشاهده می‌کند</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p>DHCP پیام DHCP: پیام های \"DISCOVER\" را می گیرد و پاسخ های \"OFFER\" را برای آدرس MAC هدف شناسایی شده ایجاد می کند. موفقیت این حمله بر دریافت و پاسخ به این پیام‌های «DISCOVER» متمرکز است.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن پیام‌های DHCP «DISCOVER» متناسب با هدف را می‌گیرد و به آنها پاسخ می‌دهد. زیرشبکه.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>به خطر انداختن دسترسی به شبکه و جمع آوری فعالیت شبکه: </b>یک دشمن با هدایت مجدد درخواست های DHCP قانونی به عنوان یک سرور DHCP با موفقیت عمل می کند. خودش.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن پیام‌های مکرر DHCP \"REQUEST\" را ارسال می‌کند تا به سرعت تمام آدرس‌های موجود در استخر DHCP شبکه را اجاره کند و درخواست‌های جدید DHCP را مجبور می‌کند توسط سرور DHCP سرکش رسیدگی شود.</tdol></tr></tdol></tr",
+            "x_capec_extended_description_fa": "<xhtml:p>DHCP به کل شبکه محلی (LAN) پخش می شود و به طور پیش فرض هیچ گونه احراز هویتی ندارد. بنابراین، مستعد جعل است.</xhtml:p>\n            <xhtml:p>یک دشمن با دسترسی به LAN هدف می تواند پیام های DHCP را دریافت کند. به دست آوردن اطلاعات توپولوژی مورد نیاز برای دستکاری بالقوه تنظیمات شبکه میزبان های دیگر.</xhtml:p>\n            <xhtml:p>برای بهبود احتمال سرویس‌دهی درخواست DHCP توسط سرور Rogue، یک دشمن می‌تواند ابتدا استخر DHCP را از بین ببرد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "حریف باید به ماشینی در LAN هدف دسترسی داشته باشد که بتواند پیشنهادات DHCP را به هدف ارسال کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف نیاز به دسترسی به ماشینی در داخل LAN هدف در شبکه ای دارد که ترافیک DHCP خود را از طریق MAC-Forced Forwarding، امنیت پورت و غیره ایمن نمی کند."
+            ]
         }
     ],
     "spec_version": "2.0",

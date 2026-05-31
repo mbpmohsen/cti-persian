@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0340#AN0963",
-                    "external_id": "AN0963"
+                    "external_id": "AN0963",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0963",
-            "description": "User pastes a multi-line or one-liner into a terminal (bash/zsh) that downloads/decodes and executes content. Chain: terminal exec of curl/wget/bash/sh with pipe to interpreter or base64-decode \u2192 transient file under /tmp|~/.cache \u2192 immediate outbound egress.",
+            "description": "User pastes a multi-line or one-liner into a terminal (bash/zsh) that downloads/decodes and executes content. Chain: terminal exec of curl/wget/bash/sh with pipe to interpreter or base64-decode → transient file under /tmp|~/.cache → immediate outbound egress.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TerminalProcessNames",
-                    "description": "Gui/tty terminals to monitor (gnome-terminal, konsole, iTerm2, tmux)."
+                    "description": "Gui/tty terminals to monitor (gnome-terminal, konsole, iTerm2, tmux).",
+                    "description_fa": "پایانه‌های Gui/tty برای نظارت (gnome-terminal، konsole، iTerm2، tmux)."
                 },
                 {
                     "field": "RiskyFilePaths",
-                    "description": "Temp/cache paths to watch for first-stage drops."
+                    "description": "Temp/cache paths to watch for first-stage drops.",
+                    "description_fa": "مسیرهای Temp/cache برای تماشای افت مرحله اول."
                 },
                 {
                     "field": "AnomalousUserSet",
-                    "description": "Users who should never run curl/wget or compilers."
+                    "description": "Users who should never run curl/wget or compilers.",
+                    "description_fa": "کاربرانی که هرگز نباید curl/wget یا کامپایلرها را اجرا کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Exec\u2192file\u2192egress correlation window (e.g., 10 minutes)."
+                    "description": "Exec→file→egress correlation window (e.g., 10 minutes).",
+                    "description_fa": "Exec → فایل → پنجره همبستگی خروجی (به عنوان مثال، 10 دقیقه)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0963",
+            "description_fa": "کاربر یک خط چند خطی یا یک خطی را در یک ترمینال (bash/zsh) که محتوا را دانلود/رمزگشایی و اجرا می‌کند، قرار می‌دهد. زنجیره: exec ترمینال curl/wget/bash/sh با لوله به مفسر یا base64-decode → فایل گذرا در /tmp|~/.cache → خروج فوری خروجی."
         }
     ]
 }

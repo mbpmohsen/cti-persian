@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0280#AN0781",
-                    "external_id": "AN0781"
+                    "external_id": "AN0781",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,21 +48,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegistryKeyPathPatterns",
-                    "description": "Environment-specific list of monitored or critical registry keys, e.g., Run, Services, Security Settings, LSASS"
+                    "description": "Environment-specific list of monitored or critical registry keys, e.g., Run, Services, Security Settings, LSASS",
+                    "description_fa": "فهرست ویژه محیطی از کلیدهای رجیستری نظارت شده یا حیاتی، به عنوان مثال، اجرا، خدمات، تنظیمات امنیتی، LSASS"
                 },
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Allowlist of legitimate registry tools (e.g., regedit.exe, msiexec.exe); used to filter known safe writes"
+                    "description": "Allowlist of legitimate registry tools (e.g., regedit.exe, msiexec.exe); used to filter known safe writes",
+                    "description_fa": "فهرست مجاز ابزارهای رجیستری قانونی (مانند regedit.exe، msiexec.exe)؛ برای فیلتر کردن نوشته های امن شناخته شده استفاده می شود"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate registry change with nearby process/service execution within a defined timeframe"
+                    "description": "Correlate registry change with nearby process/service execution within a defined timeframe",
+                    "description_fa": "تغییرات رجیستری را با اجرای فرآیند/سرویس نزدیک در یک بازه زمانی مشخص مرتبط کنید"
                 },
                 {
                     "field": "SignatureCheck",
-                    "description": "Flag unsigned executables or abnormal parent-child lineage performing registry modification"
+                    "description": "Flag unsigned executables or abnormal parent-child lineage performing registry modification",
+                    "description_fa": "پرچم‌گذاری فایل‌های اجرایی بدون امضا یا دودمان غیرعادی والدین فرزند در حال انجام اصلاحات رجیستری"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0781",
+            "description_fa": "زنجیره رفتار شامل تغییرات غیرعادی رجیستری از طریق CLI، PowerShell، WMI یا تماس‌های مستقیم API، به‌ویژه هدف قرار دادن کلیدهای تداوم، افزایش امتیاز، یا فرار از دفاع، که احتمالاً با راه‌اندازی مجدد سرویس یا اجرای فرآیند دنبال می‌شود. مانند ویرایش کلیدهای Notify/Userinit/Startup یا غیرفعال کردن SafeDllSearchMode."
         }
     ]
 }

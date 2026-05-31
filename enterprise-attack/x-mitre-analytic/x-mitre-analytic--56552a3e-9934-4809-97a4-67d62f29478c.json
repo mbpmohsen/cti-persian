@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0060#AN0167",
-                    "external_id": "AN0167"
+                    "external_id": "AN0167",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DirectoryTargeted",
-                    "description": "Restrict to high-risk directories like /Users/Shared, /tmp/"
+                    "description": "Restrict to high-risk directories like /Users/Shared, /tmp/",
+                    "description_fa": "محدود به دایرکتوری های پرخطر مانند /Users/Shared، /tmp/"
                 },
                 {
                     "field": "ProcessPath",
-                    "description": "May tune based on custom tooling or MDM activity"
+                    "description": "May tune based on custom tooling or MDM activity",
+                    "description_fa": "ممکن است بر اساس ابزار سفارشی یا فعالیت MDM تنظیم شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0167",
+            "description_fa": "اجرای فرآیند curl یا wget به دنبال یک اتصال شبکه و یک فایل ایجاد شده در دایرکتوری های موقت یا خاص کاربر."
         }
     ]
 }

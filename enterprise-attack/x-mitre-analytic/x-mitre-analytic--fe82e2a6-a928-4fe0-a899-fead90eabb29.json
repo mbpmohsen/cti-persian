@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0302#AN0845",
-                    "external_id": "AN0845"
+                    "external_id": "AN0845",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MgmtPortSet",
-                    "description": "Mgmt ports to focus on: 22,23,2323,80,443,161,4786."
+                    "description": "Mgmt ports to focus on: 22,23,2323,80,443,161,4786.",
+                    "description_fa": "پورت های Mgmt برای تمرکز: 22,23,2323,80,443,161,4786."
                 },
                 {
                     "field": "DeviceRole",
-                    "description": "Tighten thresholds on edge/internet-facing devices."
+                    "description": "Tighten thresholds on edge/internet-facing devices.",
+                    "description_fa": "آستانه ها را در دستگاه های لبه/رو به اینترنت سفت کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0845",
+            "description_fa": "روتر/سوئیچ یک الگوی ضربه ای دریافت می کند (همان src دستگاه تک پخش، پخش و آدرس شبکه را در پورت های یکسان یا پله ای لمس می کند) و سپس ACL/line-vty/service enable و اولین جلسه mgmt موفقیت آمیز دریافت می کند."
         }
     ]
 }

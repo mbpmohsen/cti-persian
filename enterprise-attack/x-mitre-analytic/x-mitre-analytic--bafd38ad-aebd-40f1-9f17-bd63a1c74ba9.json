@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0111#AN0310",
-                    "external_id": "AN0310"
+                    "external_id": "AN0310",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IntegrationScope",
-                    "description": "Tune to ignore known enterprise bots with message-read access (e.g., DLP scanners)"
+                    "description": "Tune to ignore known enterprise bots with message-read access (e.g., DLP scanners)",
+                    "description_fa": "برای نادیده گرفتن ربات‌های سازمانی شناخته شده با دسترسی خواندن پیام (مانند اسکنرهای DLP) تنظیم کنید."
                 },
                 {
                     "field": "RegexPatterns",
-                    "description": "Customizable regex for detecting secret formats (JWT, OAuth tokens, SSH keys)"
+                    "description": "Customizable regex for detecting secret formats (JWT, OAuth tokens, SSH keys)",
+                    "description_fa": "Regex قابل تنظیم برای تشخیص فرمت های مخفی (JWT، نشانه های OAuth، کلیدهای SSH)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Correlate with user role to filter developers vs standard users"
+                    "description": "Correlate with user role to filter developers vs standard users",
+                    "description_fa": "برای فیلتر کردن توسعه دهندگان در مقابل کاربران استاندارد، با نقش کاربر ارتباط برقرار کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0310",
+            "description_fa": "Detection ابزارهای همکاری SaaS (مانند Slack، Zoom، Jira) را برای پیام‌ها یا فایل‌های حاوی الگوهای اعتبار مانند یا تماس‌های مشکوک API برای بازیابی سوابق چت انبوه توسط کاربران غیر سرپرست نظارت می‌کند. زنجیره‌های رفتار دشمن را شناسایی می‌کند که در آن گزارش‌های چت از طریق API یا ربات‌های یکپارچه‌سازی برای استخراج سیستماتیک مطالب حساس جستجو می‌شوند."
         }
     ]
 }

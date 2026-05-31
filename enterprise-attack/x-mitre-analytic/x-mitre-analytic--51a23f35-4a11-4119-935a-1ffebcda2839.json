@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0117#AN0324",
-                    "external_id": "AN0324"
+                    "external_id": "AN0324",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TaskNameSimilarityThreshold",
-                    "description": "Similarity threshold for comparing new task/service names to known legitimate names (e.g., Levenshtein distance)"
+                    "description": "Similarity threshold for comparing new task/service names to known legitimate names (e.g., Levenshtein distance)",
+                    "description_fa": "آستانه تشابه برای مقایسه نام‌های کار/خدمات جدید با نام‌های قانونی شناخته شده (مانند فاصله لونشتاین)"
                 },
                 {
                     "field": "BinaryReputationScore",
-                    "description": "Confidence level required for allowing a binary, often from unsigned or untrusted source"
+                    "description": "Confidence level required for allowing a binary, often from unsigned or untrusted source",
+                    "description_fa": "سطح اطمینان مورد نیاز برای اجازه دادن به یک باینری، اغلب از منبع بدون امضا یا نامعتبر"
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Whether the execution came from SYSTEM, service accounts, or user contexts"
+                    "description": "Whether the execution came from SYSTEM, service accounts, or user contexts",
+                    "description_fa": "این که آیا اجرا از SYSTEM، حساب‌های سرویس یا زمینه‌های کاربر انجام شده است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0324",
+            "description_fa": "ایجاد یا اصلاح سرویس‌های ویندوز یا کارهای برنامه‌ریزی‌شده با نام‌ها یا توضیحاتی که ورودی‌های قانونی را تقلید می‌کنند، و به دنبال آن اجرای غیرعادی باینری‌های غیرقابل اعتماد یا LOLBAS."
         }
     ]
 }

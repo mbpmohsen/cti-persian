@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-622",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/622.html"
+                    "url": "https://capec.mitre.org/data/definitions/622.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-201",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/201.html"
+                    "url": "http://cwe.mitre.org/data/definitions/201.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--8a2c6c50-26ad-4f1a-a938-25293372f75a",
@@ -32,6 +34,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (Derive sensitive information about encrypted data. For mobile devices, depending on which keys are compromised, the attacker may be able to decrypt VOIP communications, impersonate the targeted caller, or access the enterprise VPN server.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (اطلاعات حساس در مورد داده های رمزگذاری شده بدست آورید. برای دستگاه های تلفن همراه، بسته به اینکه کدام کلیدها در معرض خطر هستند، مهاجم ممکن است بتواند ارتباطات VOIP را رمزگشایی کند، هویت تماس گیرنده هدف را جعل کند، یا به سرور VPN سازمانی دسترسی پیدا کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -43,11 +48,17 @@
                 "Proximal access to the device."
             ],
             "x_capec_skills_required": {
-                "Medium": "Sophisticated attack, but detailed techniques published in the open literature."
+                "Medium": "Sophisticated attack, but detailed techniques published in the open literature.",
+                "Medium_fa": "حمله پیچیده، اما تکنیک های دقیق منتشر شده در ادبیات باز."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این سناریوی حمله، مهاجم به صورت غیرفعال تابش های الکترومغناطیسی تولید شده توسط دستگاه الکترونیکی هدف را به عنوان یک عارضه جانبی غیرعمدی از پردازش آن نظارت می کند. از این انتشارات، مهاجم اطلاعاتی در مورد داده‌هایی که در حال پردازش هستند به دست می‌آورد (به عنوان مثال مهاجم می‌تواند کلیدهای رمزنگاری را با نظارت بر انتشارات مرتبط با پردازش رمزنگاری بازیابی کند). این سبک از حمله مستلزم دسترسی نزدیک به دستگاه است، با این حال حملات در کنفرانس های عمومی که در فواصل 10-15 فوت کار می کنند نشان داده شده است. هیچ مطالعه قابل توجهی برای تعیین حداکثر فاصله عملی برای چنین حملاتی انجام نشده است. از آنجایی که حمله غیرفعال است، تشخیص آن تقریبا غیرممکن است و دستگاه مورد نظر پس از یک حمله موفقیت آمیز به کار عادی خود ادامه می دهد.",
+            "name_fa": "حمله کانال جانبی الکترومغناطیسی",
+            "x_capec_prerequisites_fa": [
+                "دسترسی پروگزیمال به دستگاه"
+            ]
         }
     ],
     "type": "bundle"

@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1070/001",
                     "external_id": "T1070.001",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "disable_win_evt_logging",
                     "description": "Heiligenstein, L. (n.d.). REP-25: Disable Windows Event Logging. Retrieved April 7, 2022.",
                     "url": "https://ptylu.github.io/content/report/report.html?report=25",
-                    "source_name_fa": "غیرفعال کردن_win_evt_logging",
-                    "description_fa": "Heiligenstein، L. (n.d.) REP-25: Disable Windows Eventing Retrieved 7، 2022."
+                    "source_name_fa": "disable_win_evt_logging",
+                    "description_fa": "Heiligenstein, L. (n.d.). REP-25: غیرفعال کردن گزارش رویدادهای ویندوز. بازبینی شده در ۷ آوریل ۲۰۲۲."
                 },
                 {
                     "source_name": "Microsoft Clear-EventLog",
                     "description": "Microsoft. (n.d.). Clear-EventLog. Retrieved July 2, 2018.",
                     "url": "https://docs.microsoft.com/powershell/module/microsoft.powershell.management/clear-eventlog",
                     "source_name_fa": "Microsoft Clear-EventLog",
-                    "description_fa": "مایکروسافت (n.d.) Clear-EventLog Retrieved ۲ ژوئیه ۲۰۱۸"
+                    "description_fa": "مایکروسافت. (n.d.). Clear-EventLog. بازبینی شده در ۲ جولای ۲۰۱۸."
                 },
                 {
                     "source_name": "Microsoft EventLog.Clear",
                     "description": "Microsoft. (n.d.). EventLog.Clear Method (). Retrieved July 2, 2018.",
                     "url": "https://msdn.microsoft.com/library/system.diagnostics.eventlog.clear.aspx",
-                    "source_name_fa": "Microsoft EventLog",
-                    "description_fa": "مایکروسافت (n.d.) EventLog. Clear Method Retrieved ۲ ژوئیه ۲۰۱۸"
+                    "source_name_fa": "Microsoft EventLog.Clear",
+                    "description_fa": "مایکروسافت. (n.d.). EventLog.Clear Method (). بازبینی شده در ۲ جولای ۲۰۱۸."
                 },
                 {
                     "source_name": "Microsoft wevtutil Oct 2017",
                     "description": "Plett, C. et al.. (2017, October 16). wevtutil. Retrieved July 2, 2018.",
                     "url": "https://docs.microsoft.com/windows-server/administration/windows-commands/wevtutil",
-                    "source_name_fa": "Microsoft Wevtutil اکتبر 2017",
-                    "description_fa": "پلت، C. et al. (2017، 16 اکتبر) Wevtutil Retrieved ۲ ژوئیه ۲۰۱۸"
+                    "source_name_fa": "Microsoft wevtutil اکتبر 2017",
+                    "description_fa": "پلت، سی و همکاران (2017، 16 اکتبر). wevtutil. بازبینی شده در ۲ جولای ۲۰۱۸."
                 }
             ],
             "object_marking_refs": [
@@ -71,8 +71,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.5",
-            "name_fa": "Clear Windows Event Logs",
-            "description_fa": "مخالفان ممکن است لاگین های Windows Event را برای پنهان کردن فعالیت یک نفوذ مشخص کنند. Windows Event Logs یک رکورد از هشدارها و اعلان های کامپیوتر است. سه منبع تعریف شده سیستم وجود دارد: سیستم، برنامه و امنیت، با پنج نوع رویداد: خطا، هشدار، اطلاعات، حسابرسی موفقیت و حسابرسی شکست.\n\n\nبا امتیازات مدیر، ثبت رویداد را می توان با دستورات ابزار زیر پاک کرد:\n\n[[ویرایش]\n[[ویرایش]\n[[ویرایش]\n\nهمچنین ممکن است از طریق مکانیسم های دیگر مانند GUI بیننده رویداد یا [PowerShell] ([CTI_PRESERVE_5] پاک شود. به عنوان مثال، دشمنان ممکن است از فرمان PowerShell ([I_PRESERVE_3] برای حذف رویداد امنیتی استفاده کنند و پس از راه اندازی مجدد، ورود به آینده را غیرفعال کنند. توجه: حوادث هنوز هم ممکن است در فایل .evtx بین زمان اجرا و راه اندازی مجدد تولید و وارد شوند. [[ویرایش]\n\nمخالفان همچنین ممکن است تلاش کنند تا با حذف مستقیم فایل های log ذخیره شده در C:Windows\\System32\\winevt\\logs \\`، به طور مستقیم ثبت نام کنند. <code>wevtutil cl system</code> <code>wevtutil cl application</code> <code>wevtutil cl security</code> <code>Remove-EventLog -LogName Security</code> (Citation: disable_win_evt_logging) https://attack.mitre.org/techniques/T1059/001"
+            "name_fa": "گزارش رویدادهای ویندوز را پاک کنید",
+            "description_fa": "دشمنان ممکن است گزارش رویدادهای ویندوز را برای پنهان کردن فعالیت یک نفوذ پاک کنند. گزارش رویدادهای ویندوز یک رکورد از هشدارها و اعلان‌های رایانه است. سه منبع رویدادهای تعریف شده توسط سیستم وجود دارد: سیستم، برنامه و امنیت، با پنج نوع رویداد: خطا، هشدار، اطلاعات، ممیزی موفقیت آمیز و حسابرسی شکست.\n\n\nبا امتیازات مدیر، گزارش رویدادها را می توان با دستورات ابزار زیر پاک کرد:\n\n* <code>wevtutil cl system</code>\n* <code>wevtutil cl application</code>\n* <code>wevtutil cl security</code>\n\nاین گزارش‌ها ممکن است از طریق مکانیسم‌های دیگری مانند رابط کاربری گرافیکی نمایشگر رویداد یا [PowerShell](https://attack.mitre.org/techniques/T1059/001 نیز پاک شوند. به عنوان مثال، دشمنان ممکن است از فرمان PowerShell <code>Remove-EventLog -LogName Security</code> برای حذف رویداد امنیتی و پس از راه‌اندازی مجدد، گزارش‌گیری در آینده را غیرفعال کنند.  توجه: ممکن است بین زمان اجرای دستور و راه‌اندازی مجدد، رویدادها همچنان تولید و در فایل .evtx ثبت شوند.(Citation: disable_win_evt_logging)\n\nهمچنین ممکن است دشمنان با حذف مستقیم فایل‌های گزارش ذخیره‌شده در «C:\\Windows\\System32\\winevt\\logs\\» لاگ‌ها را پاک کنند."
         }
     ]
 }

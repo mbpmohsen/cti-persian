@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0278#AN0774",
-                    "external_id": "AN0774"
+                    "external_id": "AN0774",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedFirmwareUpdateTools",
-                    "description": "Legitimate vendor tools or processes authorized to modify firmware or boot records."
+                    "description": "Legitimate vendor tools or processes authorized to modify firmware or boot records.",
+                    "description_fa": "ابزارها یا فرآیندهای فروشنده قانونی مجاز برای اصلاح سیستم عامل یا سوابق بوت."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlating boot-sector modification with subsequent reboot events."
+                    "description": "Correlating boot-sector modification with subsequent reboot events.",
+                    "description_fa": "ارتباط اصلاح بخش راه‌اندازی با رویدادهای راه‌اندازی مجدد بعدی."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Heuristic threshold for detecting obfuscated/packed boot code."
+                    "description": "Heuristic threshold for detecting obfuscated/packed boot code.",
+                    "description_fa": "آستانه اکتشافی برای تشخیص کد بوت مبهم/ بسته بندی شده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0774",
+            "description_fa": "اصلاح غیرمعمول سوابق بوت (MBR، VBR) یا پارتیشن‌های EFI که با چرخه‌های وصله قانونی یا ارتقاء سیستم‌عامل مرتبط نیستند. رویدادهای رجیستری یا WMI مرتبط با ابزارهای به‌روزرسانی میان‌افزار که از فرآیندهای والد غیرمنتظره اجرا می‌شوند. API فراخوانی می کند (به عنوان مثال، DeviceIoControl) که مستقیماً به بخش های دیسک خام می نویسد. تغییرات غیرعادی پیکربندی بوت بعدی و به دنبال آن بارهای راننده بدون علامت."
         }
     ]
 }

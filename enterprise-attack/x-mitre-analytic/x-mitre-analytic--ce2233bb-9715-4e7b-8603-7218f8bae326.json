@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0464#AN1282",
-                    "external_id": "AN1282"
+                    "external_id": "AN1282",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WiFiNetworkFilter",
-                    "description": "Match suspicious SSIDs being queried via `security find-generic-password -wa`"
+                    "description": "Match suspicious SSIDs being queried via `security find-generic-password -wa`",
+                    "description_fa": "مطابقت با SSID های مشکوک که از طریق `security find-generic-password -wa` پرس و جو می شوند"
                 },
                 {
                     "field": "ExecutionUser",
-                    "description": "Monitor root/admin usage of credential tools not linked to UI/system processes"
+                    "description": "Monitor root/admin usage of credential tools not linked to UI/system processes",
+                    "description_fa": "استفاده ریشه/ادمین از ابزارهای اعتباری که به فرآیندهای UI/سیستم مرتبط نیستند را نظارت کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1282",
+            "description_fa": "استفاده از فرمان «امنیت» یا Keychain API برای استخراج رمزهای عبور شناخته شده Wi-Fi برای SSIDهای هدف."
         }
     ]
 }

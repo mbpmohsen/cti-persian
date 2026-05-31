@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0120#AN0335",
-                    "external_id": "AN0335"
+                    "external_id": "AN0335",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecPath",
-                    "description": "Binary path for passwd or userdel, which may vary by distro"
+                    "description": "Binary path for passwd or userdel, which may vary by distro",
+                    "description_fa": "مسیر باینری برای passwd یا userdel که ممکن است بر اساس توزیع متفاوت باشد"
                 },
                 {
                     "field": "NonRootUIDThreshold",
-                    "description": "Alert only if auid != root or expected service account"
+                    "description": "Alert only if auid != root or expected service account",
+                    "description_fa": "هشدار فقط در صورتی که auid != حساب کاربری ریشه یا مورد انتظار سرویس باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0335",
+            "description_fa": "تغییر رمز عبور یا حذف حساب از طریق «passwd»، «userdel» یا «chage» که قبل از اجرای دستورات از راه دور یا پوسته تعاملی از حساب‌های غیرمجاز انجام می‌شود."
         }
     ]
 }

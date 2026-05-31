@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0569#AN1570",
-                    "external_id": "AN1570"
+                    "external_id": "AN1570",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApprovedFirmwareVersions",
-                    "description": "Whitelist of supported and validated OS versions for devices; helps reduce false positives."
+                    "description": "Whitelist of supported and validated OS versions for devices; helps reduce false positives.",
+                    "description_fa": "لیست سفید نسخه های سیستم عامل پشتیبانی شده و تایید شده برای دستگاه ها؛ به کاهش مثبت کاذب کمک می کند."
                 },
                 {
                     "field": "ChecksumBaseline",
-                    "description": "Baseline cryptographic hashes of valid OS images; deviations indicate possible downgrade or tampering."
+                    "description": "Baseline cryptographic hashes of valid OS images; deviations indicate possible downgrade or tampering.",
+                    "description_fa": "هش رمزنگاری پایه تصاویر سیستم عامل معتبر. انحرافات نشان دهنده کاهش یا دستکاری احتمالی است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period to detect the chain of file transfer \u2192 boot config change \u2192 reboot event."
+                    "description": "Correlation period to detect the chain of file transfer → boot config change → reboot event.",
+                    "description_fa": "دوره همبستگی برای شناسایی زنجیره انتقال فایل → تغییر پیکربندی بوت → رویداد راه اندازی مجدد."
                 },
                 {
                     "field": "AuthorizedAdminAccounts",
-                    "description": "Accounts authorized to perform OS upgrades/downgrades; anomalies suggest misuse or compromise."
+                    "description": "Accounts authorized to perform OS upgrades/downgrades; anomalies suggest misuse or compromise.",
+                    "description_fa": "حساب‌هایی که مجاز به انجام ارتقا/کاهش سیستم عامل هستند. ناهنجاری ها حاکی از سوء استفاده یا مصالحه است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1570",
+            "description_fa": "مدافعان ممکن است با نظارت بر انتقال غیرعادی فایل فایل‌های تصویری سیستم‌عامل (از طریق TFTP، FTP، SCP)، تغییرات پیکربندی که متغیرهای سیستم بوت را به فایل‌های تصویری قدیمی‌تر نشان می‌دهد، رشته‌های نسخه غیرمنتظره سیستم‌عامل پس از راه‌اندازی مجدد، و عدم تطابق جمع کنترلی در برابر تصاویر پایه تایید شده، تلاش‌های دشمن را برای کاهش رتبه تصاویر سیستم مشاهده کنند. زنجیره های مشکوک شامل انتقال تصویر قدیمی تر، تغییر پیکربندی بوت و راه اندازی مجدد/بارگذاری مجدد دستگاه است. دشمنان همچنین ممکن است خروجی CLI را دستکاری کنند تا تلاش‌های کاهش رتبه را پنهان کنند، که نیاز به تأیید مستقل نسخه و یکپارچگی سیستم عامل دارد."
         }
     ]
 }

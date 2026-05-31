@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0443#AN1223",
-                    "external_id": "AN1223"
+                    "external_id": "AN1223",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum time between parent and child process creation and parent process termination"
+                    "description": "Maximum time between parent and child process creation and parent process termination",
+                    "description_fa": "حداکثر زمان بین ایجاد فرآیند والد و فرزند و پایان فرآیند والد"
                 },
                 {
                     "field": "ReparentingDetectionScope",
-                    "description": "Scope for detecting unexpected re-parenting to init/systemd"
+                    "description": "Scope for detecting unexpected re-parenting to init/systemd",
+                    "description_fa": "محدوده برای شناسایی دوباره والدین غیرمنتظره به init/systemd"
                 },
                 {
                     "field": "ExecutableScope",
-                    "description": "Subset of monitored executables or services likely to abuse double-fork"
+                    "description": "Subset of monitored executables or services likely to abuse double-fork",
+                    "description_fa": "زیرمجموعه ای از فایل های اجرایی نظارت شده یا سرویس هایی که احتمالاً از دابل فورک سوء استفاده می کنند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1223",
+            "description_fa": "الگوهای اجرای غیرعادی فرآیند را در جایی که والد یک فرآیند پس از ایجاد فرآیند به سرعت خاتمه می‌یابد یا دوباره به 'init' (PID 1) تبدیل می‌شود، شناسایی می‌کند، که اغلب نشان‌دهنده جدا شدن دو فورک یا دیمون است. این رفتارها رابطه والد-فرزند را قطع می‌کند و منشأ اجرا را در تحلیل درخت فرآیند مبهم می‌سازد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0241#AN0675",
-                    "external_id": "AN0675"
+                    "external_id": "AN0675",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceAccountScope",
-                    "description": "Expected mapping of service accounts to specific resources; deviations may indicate Silver Ticket use."
+                    "description": "Expected mapping of service accounts to specific resources; deviations may indicate Silver Ticket use.",
+                    "description_fa": "نگاشت مورد انتظار حساب های خدمات به منابع خاص. انحرافات ممکن است نشان دهنده استفاده از بلیط نقره ای باشد."
                 },
                 {
                     "field": "TicketValidationBaseline",
-                    "description": "Expected TGS issuance patterns including KDC validation; anomalies may signal forged tickets."
+                    "description": "Expected TGS issuance patterns including KDC validation; anomalies may signal forged tickets.",
+                    "description_fa": "الگوهای صدور TGS مورد انتظار از جمله اعتبار سنجی KDC. ناهنجاری ها ممکن است نشان دهنده بلیط های جعلی باشد."
                 },
                 {
                     "field": "ProcessAllowlist",
-                    "description": "Known processes that legitimately interact with LSASS; others may indicate dumping attempts."
+                    "description": "Known processes that legitimately interact with LSASS; others may indicate dumping attempts.",
+                    "description_fa": "فرآیندهای شناخته شده ای که به طور قانونی با LSASS تعامل دارند. دیگران ممکن است نشان دهنده تلاش برای دامپینگ باشند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate Kerberos requests within a tunable timeframe to reduce false positives."
+                    "description": "Correlate Kerberos requests within a tunable timeframe to reduce false positives.",
+                    "description_fa": "درخواست‌های Kerberos را در یک بازه زمانی قابل تنظیم برای کاهش موارد مثبت کاذب مرتبط کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0675",
+            "description_fa": "با شناسایی فعالیت بلیط خدمات غیرعادی Kerberos مانند فیلدهای نادرست در رویدادهای ورود به سیستم، درخواست‌های TGS بدون تعامل با KDC و تلاش‌های دسترسی با استفاده از حساب‌های سرویس خارج از میزبان/منابع مورد انتظار، بلیط‌های جعلی Kerberos Silver را شناسایی می‌کند. همچنین فرآیندهای مشکوک دسترسی به حافظه LSASS را برای تخلیه اعتبار نظارت می کند."
         }
     ]
 }

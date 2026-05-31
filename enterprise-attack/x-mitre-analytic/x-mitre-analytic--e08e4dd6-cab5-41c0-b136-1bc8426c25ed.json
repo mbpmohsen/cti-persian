@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0107#AN0299",
-                    "external_id": "AN0299"
+                    "external_id": "AN0299",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0299",
-            "description": "Detection of spearphishing links through mail logs and browser activity. Behavior includes email with suspicious URLs \u2192 user click recorded in mail/web proxy logs \u2192 shell or interpreter launched from browser process.",
+            "description": "Detection of spearphishing links through mail logs and browser activity. Behavior includes email with suspicious URLs → user click recorded in mail/web proxy logs → shell or interpreter launched from browser process.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredBrowsers",
-                    "description": "List of browser processes to monitor (e.g., firefox, chrome, chromium)."
+                    "description": "List of browser processes to monitor (e.g., firefox, chrome, chromium).",
+                    "description_fa": "فهرستی از فرآیندهای مرورگر برای نظارت (به عنوان مثال، فایرفاکس، کروم، کروم)."
                 },
                 {
                     "field": "PhishingIndicators",
-                    "description": "Custom regex patterns for detecting obfuscated or IDN homograph URLs."
+                    "description": "Custom regex patterns for detecting obfuscated or IDN homograph URLs.",
+                    "description_fa": "الگوهای regex سفارشی برای تشخیص URLهای مبهم یا هموگراف IDN."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0299",
+            "description_fa": "شناسایی پیوندهای spearphishing از طریق گزارش های ایمیل و فعالیت مرورگر. رفتار شامل ایمیل با URL های مشکوک ← کلیک کاربر ثبت شده در گزارش های ایمیل/پراکسی وب ← پوسته یا مترجم راه اندازی شده از فرآیند مرورگر است."
         }
     ]
 }

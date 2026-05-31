@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0110#AN0308",
-                    "external_id": "AN0308"
+                    "external_id": "AN0308",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -34,7 +35,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
                     "name": "macos:unifiedlog",
-                    "channel": "chmod command with arguments including '+s', 'u+s', or numeric values 4000\u20136777"
+                    "channel": "chmod command with arguments including '+s', 'u+s', or numeric values 4000–6777"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Monitor execution chains where UID != EUID or child process inherits root without known sudo context"
+                    "description": "Monitor execution chains where UID != EUID or child process inherits root without known sudo context",
+                    "description_fa": "نظارت بر زنجیره های اجرایی که در آن UID != EUID یا فرآیند فرزند بدون زمینه sudo شناخته شده ریشه را به ارث می برد."
                 },
                 {
                     "field": "ExecutionPath",
-                    "description": "Focus on binaries in user-writable locations or abnormal directories"
+                    "description": "Focus on binaries in user-writable locations or abnormal directories",
+                    "description_fa": "روی باینری ها در مکان های قابل نوشتن توسط کاربر یا دایرکتوری های غیرعادی تمرکز کنید"
                 },
                 {
                     "field": "ChmodPattern",
-                    "description": "Tailor detection to chmod commands that imply privilege elevation via numeric mode or symbolic mode"
+                    "description": "Tailor detection to chmod commands that imply privilege elevation via numeric mode or symbolic mode",
+                    "description_fa": "تشخیص متناسب با دستورات chmod که دلالت بر افزایش امتیاز از طریق حالت عددی یا حالت نمادین دارند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0308",
+            "description_fa": "مشاهده دستورات chmod که بیت‌های setuid/setgid را تنظیم می‌کنند، همراه با راه‌اندازی باینری‌ها در زمینه اجرای بالا (به عنوان مثال، باینری‌های متعلق به ریشه که توسط کاربران غیرمجاز راه‌اندازی می‌شوند)."
         }
     ]
 }

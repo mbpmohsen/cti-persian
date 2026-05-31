@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0455#AN1252",
-                    "external_id": "AN1252"
+                    "external_id": "AN1252",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Regex pattern for encoded, obfuscated, or hidden PowerShell arguments (e.g., '-enc', '-nop')."
+                    "description": "Regex pattern for encoded, obfuscated, or hidden PowerShell arguments (e.g., '-enc', '-nop').",
+                    "description_fa": "الگوی Regex برای آرگومان‌های PowerShell کدگذاری‌شده، مبهم یا پنهان (مانند '-enc'، '-nop')."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Filter based on abnormal parents like Excel, WinWord, or mshta spawning PowerShell."
+                    "description": "Filter based on abnormal parents like Excel, WinWord, or mshta spawning PowerShell.",
+                    "description_fa": "فیلتر بر اساس والدین غیرعادی مانند Excel، WinWord، یا mshta spawning PowerShell."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Scope detection to off-hours, lateral movement timeframes, or non-maintenance windows."
+                    "description": "Scope detection to off-hours, lateral movement timeframes, or non-maintenance windows.",
+                    "description_fa": "تشخیص محدوده برای ساعات غیرفعال، بازه‌های زمانی حرکت جانبی، یا پنجره‌های غیر تعمیر و نگهداری."
                 },
                 {
                     "field": "LoadedModuleList",
-                    "description": "Tuneable to monitor rare or never-before-seen .NET assemblies tied to PowerShell abuse."
+                    "description": "Tuneable to monitor rare or never-before-seen .NET assemblies tied to PowerShell abuse.",
+                    "description_fa": "قابل تنظیم برای نظارت بر مجموعه‌های .NET کمیاب یا هرگز دیده نشده مرتبط با سوء استفاده از PowerShell."
                 },
                 {
                     "field": "ScriptBlockLengthThreshold",
-                    "description": "Adjustable threshold for length of script blocks logged by Event ID 4104 (useful for filtering noise)."
+                    "description": "Adjustable threshold for length of script blocks logged by Event ID 4104 (useful for filtering noise).",
+                    "description_fa": "آستانه قابل تنظیم برای طول بلوک های اسکریپت ثبت شده توسط Event ID 4104 (مفید برای فیلتر کردن نویز)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1252",
+            "description_fa": "زنجیره‌های رفتاری را که در آن PowerShell با دستورات رمزگذاری‌شده، فرآیندهای والد غیرمعمول، یا ماژول‌های مشکوک بارگذاری شده راه‌اندازی می‌شود، شناسایی می‌کند، که احتمالاً به دنبال آن اتصالات شبکه یا ایجاد فرآیند فرزند ایجاد می‌شود. از تشخیص فراخوان مستقیم (powershell.exe) و غیر مستقیم (اتوماسیون NET) پشتیبانی می کند."
         }
     ]
 }

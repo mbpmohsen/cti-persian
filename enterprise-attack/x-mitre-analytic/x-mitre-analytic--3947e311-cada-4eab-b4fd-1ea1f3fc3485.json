@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0490#AN1352",
-                    "external_id": "AN1352"
+                    "external_id": "AN1352",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserAllowList",
-                    "description": "Defines which service accounts and admin roles are expected to perform discovery actions. Activity by non-allowlisted identities may indicate adversary discovery."
+                    "description": "Defines which service accounts and admin roles are expected to perform discovery actions. Activity by non-allowlisted identities may indicate adversary discovery.",
+                    "description_fa": "تعریف می‌کند که کدام حساب‌های سرویس و نقش‌های سرپرست انتظار می‌رود اقدامات اکتشافی را انجام دهند. فعالیت توسط هویت های غیر مجاز ممکن است نشان دهنده کشف دشمن باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Specifies correlation period (e.g., 10m) for linking multiple discovery attempts across API and daemon logs."
+                    "description": "Specifies correlation period (e.g., 10m) for linking multiple discovery attempts across API and daemon logs.",
+                    "description_fa": "دوره همبستگی (مثلاً 10 متر) را برای پیوند دادن چندین تلاش برای کشف در میان API و گزارش‌های شبح مشخص می‌کند."
                 },
                 {
                     "field": "PodQueryThreshold",
-                    "description": "Defines threshold for number of pod/node enumeration requests by a single user. Excessive queries may indicate scanning activity."
+                    "description": "Defines threshold for number of pod/node enumeration requests by a single user. Excessive queries may indicate scanning activity.",
+                    "description_fa": "آستانه ای را برای تعداد درخواست های شمارش غلاف/گره توسط یک کاربر مشخص می کند. پرس و جوهای بیش از حد ممکن است نشان دهنده فعالیت اسکن باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1352",
+            "description_fa": "شناسایی تلاش های دشمن برای شمارش کانتینرها، غلاف ها، گره ها و منابع مرتبط در محیط های کانتینری. مدافعان ممکن است تماس‌های API غیرعادی به Docker یا Kubernetes را مشاهده کنند (به عنوان مثال، 'docker ps'، 'kubectl get pods'، 'kubectl get nodes')، فعالیت غیرمعمول حساب در مقابل داشبورد Kubernetes، یا درخواست‌های غیرمنتظره در برابر نقاط پایانی فراداده کانتینر. این رویدادها باید با زمینه کاربر و فعالیت شبکه در ارتباط باشد تا تلاش‌های کشف منبع را آشکار کند."
         }
     ]
 }

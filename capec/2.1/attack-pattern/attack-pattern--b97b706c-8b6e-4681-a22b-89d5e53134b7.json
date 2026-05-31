@@ -9,48 +9,59 @@
                 {
                     "external_id": "CAPEC-6",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/6.html"
+                    "url": "https://capec.mitre.org/data/definitions/6.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-146",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/146.html"
+                    "url": "http://cwe.mitre.org/data/definitions/146.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-184",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/184.html"
+                    "url": "http://cwe.mitre.org/data/definitions/184.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-78",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/78.html"
+                    "url": "http://cwe.mitre.org/data/definitions/78.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-185",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/185.html"
+                    "url": "http://cwe.mitre.org/data/definitions/185.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jouko Pynnonen, Java Web Start argument injection vulnerability",
                     "external_id": "REF-482",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.securityfocus.com/archive/1/393696"
+                    "url": "http://www.securityfocus.com/archive/1/393696",
+                    "description_fa": "Jouko Pynnonen، آسیب پذیری تزریق آرگومان Java Web Start",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--b97b706c-8b6e-4681-a22b-89d5e53134b7",
@@ -78,6 +89,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -96,11 +120,25 @@
                 "Ability to communicate synchronously or asynchronously with server. Optionally, ability to capture output directly through synchronous communication or other method such as FTP."
             ],
             "x_capec_skills_required": {
-                "Medium": "The attacker has to identify injection vector, identify the operating system-specific commands, and optionally collect the output."
+                "Medium": "The attacker has to identify injection vector, identify the operating system-specific commands, and optionally collect the output.",
+                "Medium_fa": "مهاجم باید بردار تزریق را شناسایی کند، دستورات خاص سیستم عامل را شناسایی کند و به صورت اختیاری خروجی را جمع آوری کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم رفتار یا وضعیت یک برنامه هدفمند را از طریق تزریق داده یا دستور دستور از طریق استفاده از آرگومان‌های غیر معتبر و فیلتر نشده سرویس‌ها یا روش‌های در معرض دید تغییر می‌دهد.",
+            "name_fa": "تزریق آرگومنت",
+            "x_capec_example_instances_fa": [
+                "نمونه اخیری از تزریق آرگومان در برابر فناوری Java Web Start رخ داد که استقرار سمت کلاینت را برای برنامه های جاوا آسان می کند. فایل های JNLP که برای توصیف ویژگی های برنامه استفاده می شوند. زمان اجرای جاوا سمت سرویس گیرنده از آرگومان‌ها در تنظیمات ویژگی برای تعریف پارامترهای اجرا استفاده می‌کند، اما اگر مهاجم دستورات را به فایل خاصیت قانونی اضافه کند، این دستورات به پوسته فرمان مشتری ارسال می‌شوند. [REF-482]"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کشف بردارهای تزریق بالقوه: </b>با استفاده از یک ابزار خودکار یا کشف دستی، مهاجم سرویس‌ها یا روش‌هایی را با آرگومان‌هایی شناسایی می‌کند که به طور بالقوه می‌توانند به‌عنوان بردارهای تزریق، SQL استفاده شوند (OSL). و غیره).</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>به‌صورت دستی برنامه را پوشش داده و مکان‌های احتمالی را که می‌توان آرگومان‌ها را به سیستم‌های خارجی منتقل کرد، ثبت کرد.</td></tr><tr><td>از یک عنکبوت، برای برنامه‌های کاربردی وب، برای ایجاد فهرستی از URLها و مرتبط با آن استفاده کنید. ورودی ها.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>1. تلاش برای تغییرات محتوای آرگومان: </b>احتمالاً با استفاده از یک ابزار خودکار، مهاجم تغییرات تزریق آرگومان‌ها را انجام می‌دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از فهرست بسیار بزرگی از رشته‌های کاوشگر استفاده کنید تا تشخیص دهید که آیا یک نوع سیستم مورد نظر وجود دارد یا نه مبهم).</td></tr><tr><td>از یک ابزار پراکسی برای ضبط نتایج، پیام‌های خطا و/یا ورود به سیستم در صورت دسترسی استفاده کنید.</td></tr></tbody></table></ol></div><div><h3>استفاده از</h3><ol><li> <p> <b>سوء استفاده از برنامه خاص برای حمله‌کننده به منظور inject a inb> اثر مخرب در برنامه مورد نظر.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>به صورت دستی بار خاصی را به آرگومان هدفمند تزریق کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار هدف نمی تواند تمام ورودی های ارائه شده توسط کاربر را از هر محتوایی که می تواند باعث شود پوسته اقدامات غیرمنتظره ای انجام دهد، حذف نمی کند.",
+                "نرم افزار باید اجازه دهد تا ورودی های تایید نشده یا فیلتر نشده بر روی پوسته سیستم عامل اجرا شود، و به صورت اختیاری، پیکربندی سیستم باید اجازه دهد تا خروجی به مشتری ارسال شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان برقراری ارتباط همزمان یا ناهمزمان با سرور. به صورت اختیاری، امکان گرفتن خروجی مستقیم از طریق ارتباط همزمان یا روش های دیگر مانند FTP."
+            ]
         }
     ],
     "type": "bundle"

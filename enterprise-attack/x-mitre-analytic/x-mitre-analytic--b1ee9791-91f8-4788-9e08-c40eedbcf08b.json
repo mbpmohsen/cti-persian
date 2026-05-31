@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0140#AN0392",
-                    "external_id": "AN0392"
+                    "external_id": "AN0392",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window after suspicious binary execution or login session."
+                    "description": "Defines correlation window after suspicious binary execution or login session.",
+                    "description_fa": "پنجره همبستگی را بعد از اجرای مشکوک باینری یا جلسه ورود تعریف می کند."
                 },
                 {
                     "field": "FilePathPattern",
-                    "description": "Focuses on deletion of temp files, malware staging dirs, or known indicators."
+                    "description": "Focuses on deletion of temp files, malware staging dirs, or known indicators.",
+                    "description_fa": "بر حذف فایل‌های موقت، بدافزارهای مرحله‌بندی، یا نشانگرهای شناخته شده تمرکز می‌کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Privilege level or impersonated user deleting sensitive files."
+                    "description": "Privilege level or impersonated user deleting sensitive files.",
+                    "description_fa": "سطح امتیاز یا کاربر جعل هویت در حال حذف فایل های حساس."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0392",
+            "description_fa": "با استفاده از ابزارهای بومی یا خارجی (مانند del، erase، SDelete) رفتار دشمن را شناسایی می کند که مصنوعات را حذف می کند (به عنوان مثال، بارهای کاهش یافته، فایل های شواهد). رویدادهای حذف مرتبط با اصل و نسب فرآیند غیر معمول یا زمان بندی پس از اجرا را تشخیص می دهد."
         }
     ]
 }

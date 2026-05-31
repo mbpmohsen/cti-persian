@@ -9,33 +9,40 @@
                 {
                     "external_id": "CAPEC-468",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/468.html"
+                    "url": "https://capec.mitre.org/data/definitions/468.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-707",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/707.html"
+                    "url": "http://cwe.mitre.org/data/definitions/707.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-149",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/149.html"
+                    "url": "http://cwe.mitre.org/data/definitions/149.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-177",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/177.html"
+                    "url": "http://cwe.mitre.org/data/definitions/177.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-838",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/838.html"
+                    "url": "http://cwe.mitre.org/data/definitions/838.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Chris Evans, Generic cross-browser cross-domain theft, 2009--12---28",
                     "external_id": "REF-405",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html"
+                    "url": "http://scarybeastsecurity.blogspot.com/2009/12/generic-cross-browser-cross-domain.html",
+                    "description_fa": "کریس ایوانز، سرقت دامنه های متقابل مرورگرهای عمومی، 2009--12---28",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--581433c0-1d73-4975-80f1-6dcee4761bbc",
@@ -60,11 +67,21 @@
                 "Attacker controlled site/page to render a page referencing the injected CSS string"
             ],
             "x_capec_skills_required": {
-                "High": "Ability to craft a CSS injection"
+                "High": "Ability to craft a CSS injection",
+                "High_fa": "توانایی ایجاد یک تزریق CSS"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم از تزریق Cascading Style Sheets (CSS) برای سرقت دامنه متقاطع داده ها از مرورگر قربانی استفاده می کند. این حمله با سوء استفاده از استانداردهای مربوط به بارگیری CSS کار می کند: 1. ارسال کوکی ها بر روی هر باری از CSS (از جمله دامنه های متقابل) 2. هنگام تجزیه CSS بازگشتی، تمام داده هایی را که قبل از یافتن یک توصیفگر معتبر CSS توسط تجزیه کننده CSS پیدا نمی شود، نادیده بگیرید.",
+            "name_fa": "سرقت دامنه های متقابل مرورگرهای عمومی",
+            "x_capec_extended_description_fa": "<xhtml:p> با کنترل برخی از متن ها در دامنه قربانی، مهاجم می تواند یک رشته به ظاهر معتبر CSS را تزریق کند. مهم نیست که قبل از این رشته CSS داده های دیگری وجود داشته باشد. تجزیه کننده CSS همچنان رشته CSS را پیدا می کند. اگر مهاجم بتواند دو نقطه تزریق را کنترل کند، یکی قبل از داده های متقاطع که مهاجم به دریافت آن علاقه مند است و دیگری بعد از آن، مهاجم می تواند از این حمله برای سرقت تمام داده های بین این دو نقطه تزریق CSS هنگام ارجاع به CSS تزریق شده در حین انجام رندر در سایتی که مهاجم کنترل می کند استفاده کند. هنگام رندر کردن، تجزیه‌کننده CSS رشته معتبر CSS را برای تجزیه تشخیص می‌دهد و داده‌هایی را که «معنی ندارند» نادیده می‌گیرد. این داده ها به سادگی ارائه خواهند شد. این داده ها در واقع همان داده هایی هستند که مهاجم فقط دامنه های متقابل را به سرقت برده است. داده‌های دزدیده شده ممکن است حاوی اطلاعات حساسی باشند، مانند نشانه‌های حفاظتی CSRF.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "هیچ خط جدیدی نمی تواند در رشته CSS تزریق شده وجود داشته باشد. HTML یا URL مناسبی که از کاراکترهای \"و ​​\" فرار می کند، وجود ندارد. مهاجم کنترل دو نقطه تزریق را دارد: رشته قبل و بعد رشته"
+            ],
+            "x_capec_resources_required_fa": [
+                "سایت/صفحه توسط مهاجم کنترل می شود تا صفحه ای را که به رشته CSS تزریق شده ارجاع می دهد ارائه دهد"
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -9,18 +9,23 @@
                 {
                     "external_id": "CAPEC-672",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/672.html"
+                    "url": "https://capec.mitre.org/data/definitions/672.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Jeremy Muldavin, Assuring Microelectronics Innovation for National Security & Economic Competitiveness (MINSEC), 2017--11, Office of the Deputy Assistant Secretary of Defense for Systems Engineering",
                     "external_id": "REF-662",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "جرمی مولداوین، اطمینان از نوآوری میکروالکترونیک برای امنیت ملی و رقابت اقتصادی (MINSEC)، 2017--11، دفتر معاون معاون وزیر دفاع در مهندسی سیستم ها",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2150c989-e9a0-4aef-8019-8d60f6fcaeeb",
@@ -38,6 +43,9 @@
             "x_capec_consequences": {
                 "Integrity": [
                     "Alter Execution Logic"
+                ],
+                "Integrity_fa": [
+                    "تغییر منطق اجرا"
                 ]
             },
             "x_capec_domains": [
@@ -53,11 +61,20 @@
                 "An adversary would need to have access to a foundry’s or chip maker’s development/production environment where programs for specific chips are developed, managed and uploaded into targeted chips prior to distribution or sale."
             ],
             "x_capec_skills_required": {
-                "Medium": "An adversary needs to be skilled in microprogramming, manipulation of configuration management systems, and in the operation of tools used for the uploading of programs into chips during manufacture. Uploading can be for individual chips or performed on a large scale basis."
+                "Medium": "An adversary needs to be skilled in microprogramming, manipulation of configuration management systems, and in the operation of tools used for the uploading of programs into chips during manufacture. Uploading can be for individual chips or performed on a large scale basis.",
+                "Medium_fa": "یک حریف باید در ریزبرنامه‌نویسی، دستکاری سیستم‌های مدیریت پیکربندی، و در عملیات ابزارهای مورد استفاده برای آپلود برنامه‌ها در تراشه‌ها در حین ساخت مهارت داشته باشد. آپلود می تواند برای تراشه های فردی باشد یا در مقیاس بزرگ انجام شود."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p> در طول مرحله برنامه‌نویسی ساخت تراشه، یک حریف با دسترسی و مهارت‌های فنی لازم، به طور مخرب منطق برنامه مورد نظر تراشه را تغییر می‌دهد تا زمانی که تراشه کاملاً ساخته شده مستقر شده و در حال استفاده عملیاتی است، اثر مورد نظر دشمن را ایجاد کند. اثرات مورد نظر می تواند شامل توانایی دشمن برای کنترل از راه دور یک سیستم میزبان برای انجام اعمال مخرب باشد.</xhtml:p>",
+            "name_fa": "کد مخرب در طول برنامه نویسی تراشه کاشته شد",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> پس از مراحل فرآیند تولید تراشه برای آزمایش و تأیید و اعتبار مداری تراشه، یک دشمن درگیر در تولید میکروکد که عملکرد(های) تراشه را تعریف می کند، دستورالعمل مخربی را وارد می کند که بخشی از برنامه تراشه خواهد شد. هنگامی که تراشه در یک سیستم یکپارچه می شود، یک اثر مورد نظر دشمن را ایجاد می کند.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "یک حریف باید به محیط توسعه/تولید یک کارخانه ریخته گری یا سازنده تراشه دسترسی داشته باشد که در آن برنامه های تراشه های خاص قبل از توزیع یا فروش، توسعه، مدیریت و بارگذاری می شوند."
+            ]
         }
     ],
     "type": "bundle"

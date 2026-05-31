@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0509#AN1402",
-                    "external_id": "AN1402"
+                    "external_id": "AN1402",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1402",
-            "description": "Detects suspicious access to browser session cookie storage (e.g., Chrome\u2019s `Cookies` SQLite DB) or memory reads of browser processes. Anomalous injection or memory dump utilities targeting browser processes such as `chrome.exe`, `firefox.exe`, or `msedge.exe`.",
+            "description": "Detects suspicious access to browser session cookie storage (e.g., Chrome’s `Cookies` SQLite DB) or memory reads of browser processes. Anomalous injection or memory dump utilities targeting browser processes such as `chrome.exe`, `firefox.exe`, or `msedge.exe`.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcessList",
-                    "description": "Monitored browsers (e.g., chrome.exe, firefox.exe)"
+                    "description": "Monitored browsers (e.g., chrome.exe, firefox.exe)",
+                    "description_fa": "مرورگرهای نظارت شده (مانند chrome.exe، firefox.exe)"
                 },
                 {
                     "field": "AccessToolList",
-                    "description": "Suspicious tools used for injection or memory access (e.g., mimikatz, procdump)"
+                    "description": "Suspicious tools used for injection or memory access (e.g., mimikatz, procdump)",
+                    "description_fa": "ابزارهای مشکوک مورد استفاده برای تزریق یا دسترسی به حافظه (مانند mimikatz، procdump)"
                 },
                 {
                     "field": "TargetCookiePaths",
-                    "description": "Locations of cookie stores like `AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies`"
+                    "description": "Locations of cookie stores like `AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies`",
+                    "description_fa": "مکان‌های فروشگاه‌های کوکی مانند «AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies»"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1402",
+            "description_fa": "دسترسی مشکوک به ذخیره‌سازی کوکی جلسه مرورگر (به عنوان مثال، «کوکی‌های» کروم SQLite DB) یا خواندن حافظه فرآیندهای مرورگر را تشخیص می‌دهد. ابزارهای تزریق غیرعادی یا تخلیه حافظه که فرآیندهای مرورگر مانند «chrome.exe»، «firefox.exe» یا «msedge.exe» را هدف قرار می‌دهند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0549#AN1519",
-                    "external_id": "AN1519"
+                    "external_id": "AN1519",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CLICommandMatch",
-                    "description": "Regex for export commands (e.g., crypto pki export, export ssh-key)"
+                    "description": "Regex for export commands (e.g., crypto pki export, export ssh-key)",
+                    "description_fa": "Regex برای دستورات صادرات (به عنوان مثال، صادرات رمزنگاری pki، صادرات ssh-key)"
                 },
                 {
                     "field": "AAAUserContext",
-                    "description": "Source username or role performing export \u2014 may tune for known admins"
+                    "description": "Source username or role performing export — may tune for known admins",
+                    "description_fa": "نام کاربری منبع یا صادر کردن نقش - ممکن است برای مدیران شناخته شده تنظیم شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1519",
+            "description_fa": "صادرات مواد کلید خصوصی مبتنی بر CLI (به عنوان مثال، «صادرات pki رمزنگاری») با جلسه کاربر غیرعادی یا تشدید نقش AAA."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0473#AN1304",
-                    "external_id": "AN1304"
+                    "external_id": "AN1304",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,26 +56,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "restartPolicy",
-                    "description": "Tune for environments that legitimately use 'always' or 'unless-stopped' in trusted containers"
+                    "description": "Tune for environments that legitimately use 'always' or 'unless-stopped' in trusted containers",
+                    "description_fa": "برای محیط‌هایی تنظیم کنید که به طور قانونی از «همیشه» یا «مستقیم» در کانتینرهای مطمئن استفاده می‌کنند"
                 },
                 {
                     "field": "targetNamespace",
-                    "description": "Scope detection to high-risk namespaces (e.g., kube-system)"
+                    "description": "Scope detection to high-risk namespaces (e.g., kube-system)",
+                    "description_fa": "تشخیص محدوده به فضاهای نام پرخطر (به عنوان مثال، سیستم kube)"
                 },
                 {
                     "field": "nodeSelector|nodeName",
-                    "description": "Adjust if targeting known cluster configurations or test environments"
+                    "description": "Adjust if targeting known cluster configurations or test environments",
+                    "description_fa": "اگر پیکربندی های خوشه شناخته شده یا محیط های آزمایشی را هدف قرار می دهد، تنظیم کنید"
                 },
                 {
                     "field": "unitFilePath",
-                    "description": "Adapt to your OS/systemd hierarchy and container binary references"
+                    "description": "Adapt to your OS/systemd hierarchy and container binary references",
+                    "description_fa": "با سلسله مراتب سیستم عامل/سیستم و مراجع باینری کانتینر خود سازگار شوید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust temporal correlation (e.g., container launch \u2192 privilege escalation)"
+                    "description": "Adjust temporal correlation (e.g., container launch → privilege escalation)",
+                    "description_fa": "تنظیم همبستگی زمانی (به عنوان مثال، راه اندازی کانتینر → افزایش امتیاز)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1304",
+            "description_fa": "ایجاد یا اصلاح کانتینرها را با استفاده از خط‌مشی‌های راه‌اندازی مجدد (مثلاً «همیشه») یا DaemonSets با افزایش دسترسی میزبان، سوءاستفاده از حساب سرویس یا زمینه‌های کانتینر ممتاز مرتبط کنید. مراقب دستکاری واحدهای سیستمی که شامل کانتینرها یا زمان‌بندی غلاف با هدف قرار دادن گره‌ها یا فضاهای نام خاص هستند، باشید."
         }
     ]
 }

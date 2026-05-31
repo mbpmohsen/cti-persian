@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0094#AN0259",
-                    "external_id": "AN0259"
+                    "external_id": "AN0259",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CronSchedulePattern",
-                    "description": "Look for high-frequency or off-hour scheduling patterns."
+                    "description": "Look for high-frequency or off-hour scheduling patterns.",
+                    "description_fa": "به دنبال الگوهای برنامه ریزی با فرکانس بالا یا خارج از ساعت باشید."
                 },
                 {
                     "field": "ServiceUser",
-                    "description": "Unusual users scheduling jobs (e.g., www-data, nobody)."
+                    "description": "Unusual users scheduling jobs (e.g., www-data, nobody).",
+                    "description_fa": "کاربران غیرمعمولی که کارها را برنامه ریزی می کنند (به عنوان مثال، www-data، هیچ کس)."
                 },
                 {
                     "field": "BinaryEntropy",
-                    "description": "Abnormal scripts or binaries tied to the scheduled job."
+                    "description": "Abnormal scripts or binaries tied to the scheduled job.",
+                    "description_fa": "اسکریپت های غیرعادی یا باینری های مرتبط با کار برنامه ریزی شده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0259",
+            "description_fa": "ایجاد یا اصلاح مشاغل cron را از طریق دایرکتوری‌های crontab، /etc/cron.* یا واحدهای تایمر systemd با اجرا توسط کاربران غیرمعمول یا فواصل غیر استاندارد تشخیص می‌دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0421#AN1185",
-                    "external_id": "AN1185"
+                    "external_id": "AN1185",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceBinaryAllowlist",
-                    "description": "Known binaries/services expected to be invoked via services.exe"
+                    "description": "Known binaries/services expected to be invoked via services.exe",
+                    "description_fa": "باینری ها/سرویس های شناخته شده انتظار می رود از طریق services.exe فراخوانی شوند"
                 },
                 {
                     "field": "ParentProcessCorrelationWindow",
-                    "description": "Time window for correlating service creation with execution events"
+                    "description": "Time window for correlating service creation with execution events",
+                    "description_fa": "پنجره زمانی برای ارتباط ایجاد سرویس با رویدادهای اجرا"
                 },
                 {
                     "field": "RemoteExecutionHosts",
-                    "description": "Approved remote hosts that may trigger service execution (e.g., via PsExec)"
+                    "description": "Approved remote hosts that may trigger service execution (e.g., via PsExec)",
+                    "description_fa": "میزبان های راه دور تایید شده که ممکن است اجرای سرویس را راه اندازی کنند (به عنوان مثال، از طریق PsExec)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1185",
+            "description_fa": "تشخیص روی اجرای غیرعادی سرویس که از طریق APIهای مدیریت کنترل سرویس، sc.exe، net.exe یا PsExec که سرویس‌های موقتی ایجاد می‌کنند، شروع می‌شود، تمرکز دارد. مدافعان ایجاد فرآیند services.exe را مشاهده می کنند که باینری های غیر استاندارد ایجاد می کند، تغییرات رجیستری در کلیدهای سرویس و به دنبال آن اجرای سریع، و اتصالات شبکه ناشی از فرآیندهای مرتبط با سرویس های گذرا. همبستگی بین نسل فرآیند، فعالیت رجیستری و گزارش‌های سرویس سیگنال‌های قوی از اجرای سرویس مخرب را ارائه می‌دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0064#AN0176",
-                    "external_id": "AN0176"
+                    "external_id": "AN0176",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredServices",
-                    "description": "List of critical services to check for unquoted paths in ImagePath registry keys."
+                    "description": "List of critical services to check for unquoted paths in ImagePath registry keys.",
+                    "description_fa": "فهرست خدمات مهم برای بررسی مسیرهای نقل قول نشده در کلیدهای رجیستری ImagePath."
                 },
                 {
                     "field": "SuspiciousBinaryList",
-                    "description": "Executables with names matching potential interception targets (e.g., program.exe, net.exe)."
+                    "description": "Executables with names matching potential interception targets (e.g., program.exe, net.exe).",
+                    "description_fa": "فایل های اجرایی با نام های مطابق با اهداف رهگیری احتمالی (مانند program.exe، net.exe)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval between file creation in parent directories and execution of unquoted path process."
+                    "description": "Correlation interval between file creation in parent directories and execution of unquoted path process.",
+                    "description_fa": "فاصله همبستگی بین ایجاد فایل در دایرکتوری های والد و اجرای فرآیند مسیر نقل قول نشده."
                 },
                 {
                     "field": "BaselineServiceConfig",
-                    "description": "Known good service paths for comparison against modified or unquoted values."
+                    "description": "Known good service paths for comparison against modified or unquoted values.",
+                    "description_fa": "مسیرهای خدمات خوب شناخته شده برای مقایسه در برابر مقادیر اصلاح شده یا نقل قول نشده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0176",
+            "description_fa": "سرویس‌های نقل‌نشده یا مسیرهای میان‌بر که حاوی فاصله‌ها هستند و امکان رهگیری مسیر توسط فایل‌های اجرایی سطح بالاتر را فراهم می‌کنند. Defender پیکربندی های سرویس رجیستری را با مسیرهای نقل قول نشده، ایجاد فایل های اجرایی در دایرکتوری های والد مسیرهای نقل قول نشده، و اجرای فرآیند بعدی از مکان های غیرمنتظره مشاهده می کند."
         }
     ]
 }

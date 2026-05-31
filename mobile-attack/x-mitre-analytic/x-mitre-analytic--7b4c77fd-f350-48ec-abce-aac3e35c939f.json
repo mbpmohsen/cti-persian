@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0618#AN1677",
-                    "external_id": "AN1677"
+                    "external_id": "AN1677",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.379Z",
             "name": "Analytic 1677",
-            "description": "From the defender\u2019s view: an app retrieves opaque code (DEX/SO/JAR/JS) over the network or IPC, writes it into an app-writable path, optionally performs verification-bypass behaviors (reflection, addJavascriptInterface exposure, or execmem friction), and then loads/executes that code via DexClassLoader/PathClassLoader, dlopen, or WebView bridge invocation within a short window. The analytic correlates Network Content \u2192 File Creation/Modification \u2192 OS API Execution (loader/syscall/SELinux friction) \u2192 Module Load (DexClassLoader/dlopen) and, for WebView paths, Application Log signals of JavaScript interface attachment.",
+            "description": "From the defender’s view: an app retrieves opaque code (DEX/SO/JAR/JS) over the network or IPC, writes it into an app-writable path, optionally performs verification-bypass behaviors (reflection, addJavascriptInterface exposure, or execmem friction), and then loads/executes that code via DexClassLoader/PathClassLoader, dlopen, or WebView bridge invocation within a short window. The analytic correlates Network Content → File Creation/Modification → OS API Execution (loader/syscall/SELinux friction) → Module Load (DexClassLoader/dlopen) and, for WebView paths, Application Log signals of JavaScript interface attachment.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,37 +58,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max correlation window between download \u2192 write \u2192 load (e.g., 10\u201360s depending on device/workload)."
+                    "description": "Max correlation window between download → write → load (e.g., 10–60s depending on device/workload).",
+                    "description_fa": "حداکثر پنجره همبستگی بین بارگیری → نوشتن → بارگیری (به عنوان مثال، 10 تا 60 ثانیه بسته به دستگاه/بار کاری)."
                 },
                 {
                     "field": "ContentTypeList",
-                    "description": "List of MIME types considered \u2018code-like\u2019 (octet-stream, zip, java-archive, x-dex, x-sharedlib, javascript)."
+                    "description": "List of MIME types considered ‘code-like’ (octet-stream, zip, java-archive, x-dex, x-sharedlib, javascript).",
+                    "description_fa": "فهرستی از انواع MIME که «شبیه کد» در نظر گرفته می‌شوند (octet-stream، zip، java-archive، x-dex، x-sharedlib، javascript)."
                 },
                 {
                     "field": "WritablePathRegex",
-                    "description": "Regex for app-writable destinations to watch (/data/data/<pkg>/(files|cache)/, /storage/emulated/0/...)."
+                    "description": "Regex for app-writable destinations to watch (/data/data/<pkg>/(files|cache)/, /storage/emulated/0/...).",
+                    "description_fa": "Regex برای مقصدهای قابل نوشتن برنامه برای تماشا (/data/data/<pkg>/(files|cache)/, /storage/emulated/0/...)."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Entropy cutoff to flag likely code blobs (e.g., \u2265 7.2)."
+                    "description": "Entropy cutoff to flag likely code blobs (e.g., ≥ 7.2).",
+                    "description_fa": "قطع آنتروپی برای پرچم‌گذاری حباب‌های کد احتمالی (مثلاً 7.2 ≥)."
                 },
                 {
                     "field": "KnownGoodCDNAllowlist",
-                    "description": "CDNs/domains expected for legitimate updates to reduce FPs."
+                    "description": "CDNs/domains expected for legitimate updates to reduce FPs.",
+                    "description_fa": "CDN ها/دامنه ها برای به روز رسانی های قانونی برای کاهش FP ها مورد انتظار هستند."
                 },
                 {
                     "field": "KnownGoodLoaderAllowlist",
-                    "description": "Bundles/libs known to legitimately load from writable paths (dev/test apps)."
+                    "description": "Bundles/libs known to legitimately load from writable paths (dev/test apps).",
+                    "description_fa": "بسته‌ها/برنامه‌های شناخته شده برای بارگیری قانونی از مسیرهای قابل نوشتن (برنامه‌های توسعه/تست)"
                 },
                 {
                     "field": "JSInterfaceNameList",
-                    "description": "Names of allowed WebView JS interfaces for the org (e.g., analytics only)."
+                    "description": "Names of allowed WebView JS interfaces for the org (e.g., analytics only).",
+                    "description_fa": "نام رابط های WebView JS مجاز برای سازمان (به عنوان مثال، فقط تجزیه و تحلیل)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground/background, Work Profile, dev mode to scope alerts."
+                    "description": "Foreground/background, Work Profile, dev mode to scope alerts.",
+                    "description_fa": "پیش‌زمینه/پس‌زمینه، نمایه کاری، حالت توسعه‌دهنده برای هشدارهای دامنه."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1677",
+            "description_fa": "از دید مدافع: یک برنامه کد مات (DEX/SO/JAR/JS) را از طریق شبکه یا IPC بازیابی می‌کند، آن را در یک مسیر قابل نوشتن برنامه می‌نویسد، به‌صورت اختیاری رفتارهای گذر از تأیید را انجام می‌دهد (انعکاس، قرار گرفتن در معرض JavascriptInterface، یا اصطکاک execmem)، و سپس کدهای viderader,Lox را بارگیری می‌کند. dlopen یا فراخوانی پل WebView در یک پنجره کوتاه. تجزیه و تحلیل محتوای شبکه → ایجاد/تغییر فایل → اجرای API OS (اصطکاک بارگذار/sycall/SELinux) → بار ماژول (DexClassLoader/dlopen) و برای مسیرهای WebView، سیگنال های Application Log پیوست رابط جاوا اسکریپت را به هم مرتبط می کند."
         }
     ]
 }

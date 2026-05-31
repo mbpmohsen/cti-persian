@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0444#AN1225",
-                    "external_id": "AN1225"
+                    "external_id": "AN1225",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProtocolList",
-                    "description": "Limit detection to app-layer protocols of interest: HTTP, DNS, SSL, SMB, RDP"
+                    "description": "Limit detection to app-layer protocols of interest: HTTP, DNS, SSL, SMB, RDP",
+                    "description_fa": "شناسایی محدود به پروتکل های لایه برنامه مورد علاقه: HTTP، DNS، SSL، SMB، RDP"
                 },
                 {
                     "field": "DataVolumeThreshold",
-                    "description": "Detects asymmetric communication volume (e.g., >90% outbound)"
+                    "description": "Detects asymmetric communication volume (e.g., >90% outbound)",
+                    "description_fa": "حجم ارتباط نامتقارن را تشخیص می دهد (به عنوان مثال، بیش از 90٪ خروجی)"
                 },
                 {
                     "field": "UnusualProcessList",
-                    "description": "Track processes not normally associated with network activity"
+                    "description": "Track processes not normally associated with network activity",
+                    "description_fa": "ردیابی فرآیندهایی که معمولاً با فعالیت شبکه مرتبط نیستند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1225",
+            "description_fa": "استفاده مشکوک از پروتکل‌های لایه کاربردی رایج (مانند HTTP، HTTPS، DNS، SMB) را توسط فرآیندهای غیرعادی، با تعداد بایت‌های خروجی بالا یا پورت‌های نامنظم شناسایی می‌کند، که احتمالاً نشان‌دهنده فرمان و کنترل یا خروج داده‌ها است."
         }
     ]
 }

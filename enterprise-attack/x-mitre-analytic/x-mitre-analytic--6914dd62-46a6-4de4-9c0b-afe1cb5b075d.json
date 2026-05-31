@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0348#AN0989",
-                    "external_id": "AN0989"
+                    "external_id": "AN0989",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,14 +56,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "OutboundEntropyScore",
-                    "description": "Threshold for high-entropy payloads indicative of encoded or encrypted exfil data."
+                    "description": "Threshold for high-entropy payloads indicative of encoded or encrypted exfil data.",
+                    "description_fa": "آستانه برای بارهای با آنتروپی بالا که نشان دهنده داده های exfil کدگذاری شده یا رمزگذاری شده است."
                 },
                 {
                     "field": "ConnectionDuration",
-                    "description": "Defines length of time over which transfer size must be aggregated to trigger detection."
+                    "description": "Defines length of time over which transfer size must be aggregated to trigger detection.",
+                    "description_fa": "مدت زمانی را مشخص می کند که در آن اندازه انتقال باید جمع شود تا شناسایی راه اندازی شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0989",
+            "description_fa": "نظارت بر فرآیندهایی که فایل‌های حساس را می‌خوانند، سپس بلافاصله اتصالات خروجی غیرمعمول یا جلسات انتقال انبوه را از طریق سوکت‌های دائمی، به‌ویژه با بارهای رمزگذاری‌شده یا باینری آغاز می‌کنند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0591#AN1626",
-                    "external_id": "AN1626"
+                    "external_id": "AN1626",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate timestamp change with preceding file creation or suspicious access"
+                    "description": "Correlate timestamp change with preceding file creation or suspicious access",
+                    "description_fa": "تغییر مهر زمانی را با ایجاد فایل قبلی یا دسترسی مشکوک مرتبط کنید"
                 },
                 {
                     "field": "APINamePattern",
-                    "description": "Include SetFileTime, NtSetInformationFile, or other timestamp APIs"
+                    "description": "Include SetFileTime, NtSetInformationFile, or other timestamp APIs",
+                    "description_fa": "شامل SetFileTime، NtSetInformationFile، یا دیگر APIهای برچسب زمانی"
                 },
                 {
                     "field": "TimestampDeltaThreshold",
-                    "description": "Trigger on excessive backdating (e.g., >90 days)"
+                    "description": "Trigger on excessive backdating (e.g., >90 days)",
+                    "description_fa": "راه‌اندازی در تاریخ‌نگاری بیش از حد (به عنوان مثال، بیش از ۹۰ روز)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1626",
+            "description_fa": "تلاش‌ها برای اصلاح مُهرهای زمانی فایل را از طریق استفاده از API (مانند «SetFileTime»)، ابزارهای CLI (مانند «w32tm»، PowerShell) یا رفتار دوبار استمپ زمانی که مُهرهای زمانی $SI و $FN با هم مطابقت ندارند یا برگردانده می‌شوند، شناسایی می‌کند."
         }
     ]
 }

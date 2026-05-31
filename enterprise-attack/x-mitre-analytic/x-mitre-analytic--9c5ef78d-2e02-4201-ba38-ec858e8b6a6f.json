@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0416#AN1173",
-                    "external_id": "AN1173"
+                    "external_id": "AN1173",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AppLayerProtocolMatch",
-                    "description": "e.g., FTP/SMB observed over uncommon ports"
+                    "description": "e.g., FTP/SMB observed over uncommon ports",
+                    "description_fa": "به عنوان مثال، FTP/SMB روی پورت های غیر معمول مشاهده شده است"
                 },
                 {
                     "field": "OutboundDataRateThreshold",
-                    "description": "Bytes transferred outside trusted subnets >100MB"
+                    "description": "Bytes transferred outside trusted subnets >100MB",
+                    "description_fa": "بایت های منتقل شده به خارج از زیرشبکه های قابل اعتماد > 100 مگابایت"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1173",
+            "description_fa": "میزبان‌های داخلی را که جلسات بزرگ خروجی FTP/TFTP/SMB را به IPهای خارجی ایجاد می‌کنند، یا با استفاده از پورت‌های غیر استاندارد و عدم تطابق برنامه‌ها (مانند FTP روی پورت 80) انتقال فایل‌ها را شناسایی می‌کند."
         }
     ]
 }

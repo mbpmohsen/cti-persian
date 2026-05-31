@@ -9,19 +9,24 @@
                 {
                     "external_id": "CAPEC-524",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/524.html"
+                    "url": "https://capec.mitre.org/data/definitions/524.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Daniel Simpson, Dani Halfin, Andrews Mariano Gorzelany, Beth Woodbury, Supply chain attacks, 2021--10---28, Microsoft",
                     "external_id": "REF-716",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/intelligence/supply-chain-malware"
+                    "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/intelligence/supply-chain-malware",
+                    "description_fa": "دنیل سیمپسون، دنی هالفین، اندروز ماریانو گورزلانی، بت وودبری، حملات زنجیره تامین، 2021--10---28، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--f17dd173-6fcf-4f43-8f72-0f274dde5fc5",
@@ -46,11 +51,20 @@
                 "Physical access to an integration facility that prepares the system before it is deployed at the victim location."
             ],
             "x_capec_skills_required": {
-                "High": "Hardware creation and manufacture of replacement components."
+                "High": "Hardware creation and manufacture of replacement components.",
+                "High_fa": "ایجاد سخت افزار و ساخت قطعات جایگزین."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم فرآیندهای سرکش را در یک مرکز یکپارچه سازی تغییر می دهد یا ایجاد می کند تا اجزای تغییر یافته به طور مخرب را در سیستم وارد کند. سپس مهاجم اجزای مخرب را تامین می کند. این امکان ایجاد اختلال مخرب یا خطرات اضافی را در هنگام استقرار سیستم فراهم می کند.",
+            "name_fa": "رویه های یکپارچه سازی سرکش",
+            "x_capec_example_instances_fa": [
+                "مهاجم برای آماده سازی سیستم های خریداری شده که برای استقرار در محل قربانی تعیین شده اند، به اسناد یکپارچه ساز سیستم دسترسی پیدا می کند. به عنوان بخشی از آماده سازی، کارت شبکه 100 مگابیت ارائه شده با یک کارت شبکه 1 گیگابیتی جایگزین می شود. اسناد به گونه ای تغییر می کنند که نوع کارت شبکه 1 گیگابیتی مورد استفاده را منعکس کند و مهاجم اطمینان حاصل می کند که این نوع کارت شبکه توسط منبع خود مهاجم ارائه می شود. این کارت دارای عملکردهای مخرب اضافی است که به محض استقرار سیستم اجازه می دهد تا مهاجم در محل قربانی در معرض خطر قرار گیرد."
+            ],
+            "x_capec_prerequisites_fa": [
+                "دسترسی فیزیکی به تسهیلات یکپارچه سازی که سیستم را قبل از استقرار در محل قربانی آماده می کند."
+            ]
         }
     ],
     "spec_version": "2.0",

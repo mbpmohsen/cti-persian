@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0275#AN0767",
-                    "external_id": "AN0767"
+                    "external_id": "AN0767",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ToolName",
-                    "description": "May vary across environments (e.g., certutil, powershell, copy, expand, 7zip)"
+                    "description": "May vary across environments (e.g., certutil, powershell, copy, expand, 7zip)",
+                    "description_fa": "ممکن است در محیط‌ها متفاوت باشد (مانند certutil، powershell، کپی، گسترش، 7zip)"
                 },
                 {
                     "field": "FileExtensionFilter",
-                    "description": "Targets may use .txt, .cer, .enc, .b64, .zip, etc. to disguise payloads"
+                    "description": "Targets may use .txt, .cer, .enc, .b64, .zip, etc. to disguise payloads",
+                    "description_fa": "اهداف ممکن است از txt.، .cer، .enc، .b64، .zip، و غیره برای پنهان کردن بارهای مفید استفاده کنند."
                 },
                 {
                     "field": "CommandLineRegex",
-                    "description": "Command syntax varies between base64 decoding, copy /b, and expand switches"
+                    "description": "Command syntax varies between base64 decoding, copy /b, and expand switches",
+                    "description_fa": "دستور دستور بین سوئیچ های رمزگشایی base64، کپی /b و گسترش متفاوت است"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Deobfuscation typically follows staging/download within a short timeframe"
+                    "description": "Deobfuscation typically follows staging/download within a short timeframe",
+                    "description_fa": "Deobfuscation معمولاً به دنبال مرحله بندی/دانلود در یک بازه زمانی کوتاه است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0767",
+            "description_fa": "دشمن از ابزارهای داخلی مانند certutil.exe، powershell.exe یا copy.exe برای رمزگشایی، جمع‌آوری مجدد یا استخراج محتوای مخرب پنهان از ظروف مبهم یا قالب‌های کدگذاری شده استفاده می‌کند. ابزار رمزگشایی معمولاً مدت کوتاهی پس از مرحله بندی یا دانلود فایل ایجاد می شود و ممکن است با مفسرهای اسکریپت یا اجرای بارهای بیشتر زنجیره شود."
         }
     ]
 }

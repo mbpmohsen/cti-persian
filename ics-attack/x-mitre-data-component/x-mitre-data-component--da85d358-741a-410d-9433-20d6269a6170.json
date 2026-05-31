@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0063",
-                    "external_id": "DC0063"
+                    "external_id": "DC0063",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -67,7 +68,9 @@
                     "name": "WinEventLog:Sysmon",
                     "channel": "Autoruns reports DLLs in AppInit_DLLs key"
                 }
-            ]
+            ],
+            "name_fa": "اصلاح کلید رجیستری ویندوز",
+            "description_fa": "تغییرات ایجاد شده در یک کلید رجیستری موجود یا مقادیر آن. این تغییرات می تواند شامل تغییر مجوزها، تغییر داده های ذخیره شده یا به روز رسانی تنظیمات پیکربندی باشد.\n\n*اقدامات جمع آوری داده ها:*\n\n- گزارش رویدادهای ویندوز\n    - Event ID 4657 - Registry Value Modified: تغییرات در مقادیر رجیستری، از جمله تغییرات در ورودی های راه اندازی، تنظیمات امنیتی یا پیکربندی های سیستم را ثبت می کند.\n- Sysmon (سیستم مانیتور) برای ویندوز\n    - Sysmon Event ID 13 - Registry Value Set: تغییرات مربوط به مقادیر خاص رجیستری را ثبت می کند.\n    - Sysmon Event ID 14 - Registry Key & Value Renamed: تغییر نام کلیدهای رجیستری را ثبت می کند که ممکن است نشان دهنده تلاش برای فرار باشد.\n- راه حل های تشخیص و پاسخ نقطه پایانی (EDR).\n    - نظارت بر تغییرات رجیستری برای رفتار مشکوک."
         }
     ]
 }

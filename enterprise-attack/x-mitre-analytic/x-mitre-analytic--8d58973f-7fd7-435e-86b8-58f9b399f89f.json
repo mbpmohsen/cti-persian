@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0464#AN1280",
-                    "external_id": "AN1280"
+                    "external_id": "AN1280",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WiFiProfileName",
-                    "description": "Filter by known saved SSID names to reduce benign usage of network diagnostics"
+                    "description": "Filter by known saved SSID names to reduce benign usage of network diagnostics",
+                    "description_fa": "با نام‌های SSID ذخیره شده شناخته شده فیلتر کنید تا استفاده بی‌خطر از تشخیص شبکه را کاهش دهید"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Anomalous parent-child relationships may be used to spot abuse (e.g., Office \u2192 netsh)"
+                    "description": "Anomalous parent-child relationships may be used to spot abuse (e.g., Office → netsh)",
+                    "description_fa": "ممکن است از روابط ناهنجار والدین و فرزند برای شناسایی سوء استفاده استفاده شود (به عنوان مثال، Office → netsh)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate profile enumeration and password dumping within short timeframe (e.g., 60 seconds)"
+                    "description": "Correlate profile enumeration and password dumping within short timeframe (e.g., 60 seconds)",
+                    "description_fa": "مرتبط کردن شمارش نمایه و حذف رمز عبور در بازه زمانی کوتاه (مثلاً 60 ثانیه)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1280",
+            "description_fa": "شمارش نمایه‌های Wi-Fi ذخیره‌شده و بازیابی رمز عبور متن شفاف با استفاده از «netsh wlan» یا دسترسی در سطح API به «wlanAPI.dll»."
         }
     ]
 }

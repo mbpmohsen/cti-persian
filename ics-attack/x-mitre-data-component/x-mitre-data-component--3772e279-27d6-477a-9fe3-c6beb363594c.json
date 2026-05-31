@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0085",
-                    "external_id": "DC0085"
+                    "external_id": "DC0085",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T15:12:00.771Z",
             "name": "Network Traffic Content",
-            "description": "The full packet capture (PCAP) or session data that logs both protocol headers and payload content. This allows analysts to inspect command and control (C2) traffic, exfiltration, and other suspicious activity within network communications. Unlike metadata-based logs, full content analysis enables deeper protocol inspection, payload decoding, and forensic investigations.\n\n*Data Collection Measures:*\n\n- Network Packet Capture (Full Content Logging)\n    - Wireshark / tcpdump / tshark\n        - Full packet captures (PCAP files) for manual analysis or IDS correlation. `tcpdump -i eth0 -w capture.pcap`\n    - Zeek (formerly Bro)\n        - Extracts protocol headers and payload details into structured logs. `echo \"redef Log::default_store = Log::ASCII;\" > local.zeek | zeek -Cr capture.pcap local.zeek`\n    - Suricata / Snort (IDS/IPS with PCAP Logging)\n        - Deep packet inspection (DPI) with signature-based and behavioral analysis. `suricata -c /etc/suricata/suricata.yaml -i eth0 -l /var/log/suricata`\n- Host-Based Collection\n    - Sysmon Event ID 22 \u2013 DNS Query Logging, Captures DNS requests made by processes, useful for detecting C2 domains.\n    - Sysmon Event ID 3 \u2013 Network Connection Initiated, Logs process-to-network connection relationships.\n    - AuditD (Linux) \u2013 syscall=connect, Monitors outbound network requests from processes. `auditctl -a always,exit -F arch=b64 -S connect -k network_activity`\n- Cloud & SaaS Traffic Collection\n    - AWS VPC Flow Logs / Azure NSG Flow Logs / Google VPC Flow Logs, Captures metadata about inbound/outbound network traffic.\n    - Cloud IDS (AWS GuardDuty, Azure Sentinel, Google Chronicle), Detects malicious activity in cloud environments by analyzing network traffic patterns.",
+            "description": "The full packet capture (PCAP) or session data that logs both protocol headers and payload content. This allows analysts to inspect command and control (C2) traffic, exfiltration, and other suspicious activity within network communications. Unlike metadata-based logs, full content analysis enables deeper protocol inspection, payload decoding, and forensic investigations.\n\n*Data Collection Measures:*\n\n- Network Packet Capture (Full Content Logging)\n    - Wireshark / tcpdump / tshark\n        - Full packet captures (PCAP files) for manual analysis or IDS correlation. `tcpdump -i eth0 -w capture.pcap`\n    - Zeek (formerly Bro)\n        - Extracts protocol headers and payload details into structured logs. `echo \"redef Log::default_store = Log::ASCII;\" > local.zeek | zeek -Cr capture.pcap local.zeek`\n    - Suricata / Snort (IDS/IPS with PCAP Logging)\n        - Deep packet inspection (DPI) with signature-based and behavioral analysis. `suricata -c /etc/suricata/suricata.yaml -i eth0 -l /var/log/suricata`\n- Host-Based Collection\n    - Sysmon Event ID 22 – DNS Query Logging, Captures DNS requests made by processes, useful for detecting C2 domains.\n    - Sysmon Event ID 3 – Network Connection Initiated, Logs process-to-network connection relationships.\n    - AuditD (Linux) – syscall=connect, Monitors outbound network requests from processes. `auditctl -a always,exit -F arch=b64 -S connect -k network_activity`\n- Cloud & SaaS Traffic Collection\n    - AWS VPC Flow Logs / Azure NSG Flow Logs / Google VPC Flow Logs, Captures metadata about inbound/outbound network traffic.\n    - Cloud IDS (AWS GuardDuty, Azure Sentinel, Google Chronicle), Detects malicious activity in cloud environments by analyzing network traffic patterns.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_domains": [
@@ -654,11 +655,11 @@
                 },
                 {
                     "name": "NSM:Flow",
-                    "channel": "Rare inbound packet characteristics (ICMP/UDP/TCP to uncommon port) from src_ip followed \u2264TimeWindow by outbound SF from same host to src_ip."
+                    "channel": "Rare inbound packet characteristics (ICMP/UDP/TCP to uncommon port) from src_ip followed ≤TimeWindow by outbound SF from same host to src_ip."
                 },
                 {
                     "name": "NSM:Flow",
-                    "channel": "Inbound one-off packet to uncommon port \u2192 outbound SF to same src_ip within TimeWindow."
+                    "channel": "Inbound one-off packet to uncommon port → outbound SF to same src_ip within TimeWindow."
                 },
                 {
                     "name": "NSM:Flow",
@@ -970,7 +971,7 @@
                 },
                 {
                     "name": "NSM:Flow",
-                    "channel": "Packets with unusual flags or payloads outside established flows (e.g., WoL magic FF\u00d76 + 16\u00d7MAC)"
+                    "channel": "Packets with unusual flags or payloads outside established flows (e.g., WoL magic FF×6 + 16×MAC)"
                 },
                 {
                     "name": "NSM:Flow",
@@ -1148,7 +1149,9 @@
                     "name": "WinEventLog:System",
                     "channel": "EventCode=5005 (WLAN), EventCode=302 (Bluetooth)"
                 }
-            ]
+            ],
+            "name_fa": "محتوای ترافیک شبکه",
+            "description_fa": "ضبط کامل بسته (PCAP) یا داده های جلسه که هم سرصفحه های پروتکل و هم محتوای بارگذاری را ثبت می کند. این به تحلیلگران اجازه می دهد تا کنترل و کنترل (C2) ترافیک، نفوذ و سایر فعالیت های مشکوک را در ارتباطات شبکه بررسی کنند. برخلاف گزارش‌های مبتنی بر ابرداده، تجزیه و تحلیل محتوای کامل بازرسی پروتکل عمیق‌تر، رمزگشایی بار و تحقیقات قانونی را امکان‌پذیر می‌سازد.\n\n*اقدامات جمع آوری داده ها:*\n\n- ضبط بسته های شبکه (گزارش کامل محتوا)\n    - Wireshark / tcpdump / tshark\n        - ضبط کامل بسته (فایل های PCAP) برای تجزیه و تحلیل دستی یا ارتباط IDS. `tcpdump -i eth0 -w capture.pcap`\n    - زیک (برادر سابق)\n        - سرصفحه های پروتکل و جزئیات محموله را در لاگ های ساخت یافته استخراج می کند. `echo \"redef Log::default_store = Log::ASCII;\" > local.zeek | zeek -Cr capture.pcap local.zeek`\n    - Suricata / Snort (IDS/IPS با ثبت PCAP)\n        - بازرسی بسته عمیق (DPI) با تجزیه و تحلیل مبتنی بر امضا و رفتار. `suricata -c /etc/suricata/suricata.yaml -i eth0 -l /var/log/suricata`\n- مجموعه مبتنی بر میزبان\n    - Sysmon Event ID 22 - DNS Query Logging، درخواست‌های DNS ساخته شده توسط فرآیندها را ضبط می‌کند و برای شناسایی دامنه‌های C2 مفید است.\n    - Sysmon Event ID 3 - اتصال شبکه آغاز شد، روابط اتصال فرآیند به شبکه را ثبت می کند.\n    - AuditD (لینوکس) - syscall=connect، درخواست‌های شبکه خروجی را از فرآیندها نظارت می‌کند. \"auditctl -a همیشه، خروج -F arch=b64 -S connect -k network_activity\"\n- Cloud & SaaS Traffic Collection\n    - گزارش‌های جریان VPC AWS / گزارش‌های جریان Azure NSG / گزارش‌های جریان VPC Google، ابرداده‌ها را در مورد ترافیک شبکه ورودی/خروجی ضبط می‌کند.\n    - Cloud IDS (AWS GuardDuty، Azure Sentinel، Google Chronicle)، با تجزیه و تحلیل الگوهای ترافیک شبکه، فعالیت های مخرب در محیط های ابری را شناسایی می کند."
         }
     ]
 }

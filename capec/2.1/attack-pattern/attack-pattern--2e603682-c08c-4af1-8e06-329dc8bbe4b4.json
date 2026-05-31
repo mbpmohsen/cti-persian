@@ -9,34 +9,43 @@
                 {
                     "external_id": "CAPEC-38",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/38.html"
+                    "url": "https://capec.mitre.org/data/definitions/38.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-426",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/426.html"
+                    "url": "http://cwe.mitre.org/data/definitions/426.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-427",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/427.html"
+                    "url": "http://cwe.mitre.org/data/definitions/427.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Hijack Execution Flow: Path Interception by PATH Environment Variable",
                     "external_id": "T1574.007",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/007"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/007",
+                    "description_fa": "Hijack Execution Flow: Path Interception by PATH Environment Variable",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Hijack Execution Flow: Path Interception by Unquoted Path",
                     "external_id": "T1574.009",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/009"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/009",
+                    "description_fa": "Hijack Execution Flow: Path Interception by Unquoted Path",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2e603682-c08c-4af1-8e06-329dc8bbe4b4",
@@ -67,6 +76,22 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -81,11 +106,21 @@
                 "The attacker must be able to write to redirect search paths on the victim host."
             ],
             "x_capec_skills_required": {
-                "Low": "To identify and execute against an over-privileged system interface"
+                "Low": "To identify and execute against an over-privileged system interface",
+                "Low_fa": "برای شناسایی و اجرا در برابر یک رابط سیستم بیش از حد مجاز"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این الگوی حمله می بیند که یک دشمن یک منبع مخرب را در مسیر استاندارد یک برنامه بارگذاری می کند، به طوری که وقتی یک دستور شناخته شده اجرا می شود، سیستم در عوض جزء مخرب را اجرا می کند. حریف می تواند مسیر جستجوی مورد استفاده برنامه را تغییر دهد، مانند متغیر PATH یا مسیر کلاس، یا می تواند منابع موجود در مسیر را دستکاری کند تا به اجزای مخرب خود اشاره کند. برنامه های کاربردی J2EE و سایر برنامه های کاربردی مبتنی بر مؤلفه که از چندین باینری ساخته شده اند، می توانند فهرست بسیار طولانی از وابستگی ها برای اجرا داشته باشند. اگر یکی از این کتابخانه ها و/یا مراجع توسط مهاجم قابل کنترل باشد، کنترل های برنامه را می توان توسط مهاجم دور زد.",
+            "name_fa": "استفاده از/دستکاری مسیرهای جستجوی فایل پیکربندی",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>روش دیگر این است که دستورات را با نام مستعار یک دستور قانونی به دستور دیگر برای ایجاد نتایج غیرمنتظره هدایت کنید. فرمان یونیکس \"rm\" را می‌توان با نام مستعار \"mv\" نامید و تمام فایل‌هایی را که قربانی فکر می‌کند در حال حذف هستند به فهرستی که مهاجم کنترل می‌کند منتقل کند. در یک پوسته یونیکس تنظیمات پروفایل</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">نام مستعار rm=mv /usr/home/attacker</xhtml:div>\n               <xhtml:p>در این مورد، مهاجم یک کپی از تمام فایل‌هایی را که قربانی تلاش می‌کند حذف کند، نگه می‌دارد.</xhtml:p>",
+                "<xhtml:p>یک مسیر استاندارد یونیکس شبیه به این است</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">/bin:/sbin:/usr/bin:/usr/local/bin:/usr/sbin</xhtml:div>\n               <xhtml:p>اگر مهاجم متغیر مسیر را تغییر دهد تا به محلی که شامل منابع مخرب است اشاره کند، کاربر ناخواسته می تواند دستورات را از طرف مهاجمان اجرا کند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">/evildir/bin:/sbin:/usr/bin:/usr/local/bin:/usr/sbin</xhtml:div>\n               <xhtml:p> این نوعی کنترل غاصب برنامه است و حمله می تواند بر روی مسیر کلاس، منابع پایگاه داده یا هر منبع دیگری که از قطعات ترکیبی ساخته شده است انجام شود. در زمان اجرا، شناسایی و مسدود کردن این حمله تقریبا غیرممکن است، زیرا پیکربندی اجازه اجرا را می دهد.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید بتواند برای تغییر مسیرهای جستجو در میزبان قربانی بنویسد."
+            ]
         }
     ],
     "type": "bundle"

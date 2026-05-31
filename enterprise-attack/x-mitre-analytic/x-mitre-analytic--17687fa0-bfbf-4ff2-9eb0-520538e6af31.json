@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0364#AN1031",
-                    "external_id": "AN1031"
+                    "external_id": "AN1031",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,25 +52,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WMIQueryScope",
-                    "description": "Restrict detection scope to suspicious WMI namespaces like `\\root\\cimv2`, `\\root\\subscription`."
+                    "description": "Restrict detection scope to suspicious WMI namespaces like `\\root\\cimv2`, `\\root\\subscription`.",
+                    "description_fa": "محدوده تشخیص را به فضاهای نام WMI مشکوک مانند `\\root\\cimv2`، `\\root\\subscription` محدود کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Set maximum allowable time window to correlate WMI process creation and remote connections."
+                    "description": "Set maximum allowable time window to correlate WMI process creation and remote connections.",
+                    "description_fa": "حداکثر پنجره زمانی مجاز را برای ارتباط ایجاد فرآیند WMI و اتصالات راه دور تنظیم کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune based on interactive vs. system-level execution (e.g., via SYSTEM or low-privileged users)."
+                    "description": "Tune based on interactive vs. system-level execution (e.g., via SYSTEM or low-privileged users).",
+                    "description_fa": "بر اساس اجرای تعاملی در مقابل اجرای سطح سیستم (به عنوان مثال، از طریق SYSTEM یا کاربران با امتیاز پایین) تنظیم کنید."
                 },
                 {
                     "field": "RemoteDestinationThreshold",
-                    "description": "Number of unique remote hosts contacted using WMI within a time window."
+                    "description": "Number of unique remote hosts contacted using WMI within a time window.",
+                    "description_fa": "تعداد میزبان های راه دور منحصر به فرد با استفاده از WMI در یک پنجره زمانی تماس گرفته شده است."
                 },
                 {
                     "field": "SuspiciousCommandPatterns",
-                    "description": "Regex patterns to identify adversary-like usage (e.g., `wmic process call`, `powershell Invoke-WmiMethod`)."
+                    "description": "Regex patterns to identify adversary-like usage (e.g., `wmic process call`, `powershell Invoke-WmiMethod`).",
+                    "description_fa": "الگوهای Regex برای شناسایی کاربردهای دشمن مانند (به عنوان مثال، «تماس فرآیند wmic»، «powershell Invoke-WmiMethod»)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1031",
+            "description_fa": "سوء استفاده متخاصم از WMI را برای اجرای دستورات محلی یا راه دور از طریق WMIC، PowerShell یا COM API از طریق یک زنجیره چند رویدادی شناسایی می‌کند: ایجاد فرآیند، اجرای فرمان، و اتصال شبکه مربوطه اگر از راه دور باشد."
         }
     ]
 }

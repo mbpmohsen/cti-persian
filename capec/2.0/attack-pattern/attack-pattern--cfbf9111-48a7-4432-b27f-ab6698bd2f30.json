@@ -9,7 +9,8 @@
                 {
                     "external_id": "CAPEC-690",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/690.html"
+                    "url": "https://capec.mitre.org/data/definitions/690.html",
+                    "source_name_fa": "capec"
                 }
             ],
             "id": "attack-pattern--cfbf9111-48a7-4432-b27f-ab6698bd2f30",
@@ -32,6 +33,18 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Accountability_fa": [
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -48,11 +61,18 @@
                 "Identification of a resource whose metadata is to be spoofed"
             ],
             "x_capec_skills_required": {
-                "Medium": "Ability to spoof a variety of metadata to convince victims the source is trusted"
+                "Medium": "Ability to spoof a variety of metadata to convince victims the source is trusted",
+                "Medium_fa": "امکان جعل انواع متادیتا برای متقاعد کردن قربانیان به منبع قابل اعتماد"
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک حریف ابرداده یک منبع (مانند فایل، دایرکتوری، مخزن و غیره) را تغییر می‌دهد تا یک منبع مخرب را به عنوان قانونی/معتبر معرفی کند.</xhtml:p>",
+            "name_fa": "جعل ابرداده",
+            "x_capec_extended_description_fa": "<xhtml:p>یکی از رویکردها برای این حمله مستلزم تغییر متادیتای یک منبع اصلاح شده توسط دشمن است تا فعالیت مخرب خود را پنهان کند. رویکرد دیگر شامل تغییر ابرداده یک منبع ایجاد شده توسط دشمن است تا منبع معتبرتر به نظر برسد. دشمنان ممکن است انواع متادیتا را در تعدادی از منابع جعل کنند، مانند موارد زیر:</xhtml:p>\n            <xhtml:ul>\n               <xhtml:li>نویسندگان مخزن سیستم کنترل نسخه (VCS) متعهد می شوند</xhtml:li>\n               <xhtml:li>آمار بسته منبع باز</xhtml:li>\n               <xhtml:li>ویژگی های فایل، مانند آخرین به روز رسانی فایل</xhtml:li>\n            </xhtml:ul>\n            <xhtml:p>هدف نهایی یک حمله جعل ابرداده فریب دادن قربانیان است تا تصور کنند منبع مخرب ارائه شده از یک منبع معتبر سرچشمه می گیرد. با این حال، قربانی در عوض از منبع مخرب استفاده می‌کند که می‌تواند منجر به تعدادی تأثیرات فنی منفی شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "شناسایی منبعی که ابرداده آن باید جعل شود"
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0246#AN0688",
-                    "external_id": "AN0688"
+                    "external_id": "AN0688",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PathTarget",
-                    "description": "Can tune based on device paths accessed for keyboard input (e.g., /dev/input/event0)"
+                    "description": "Can tune based on device paths accessed for keyboard input (e.g., /dev/input/event0)",
+                    "description_fa": "می‌تواند بر اساس مسیرهای دستگاهی که برای ورودی صفحه‌کلید به آن‌ها دسترسی دارد تنظیم شود (به عنوان مثال، /dev/input/event0)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Exclude root or admin-auth shell sessions if needed"
+                    "description": "Exclude root or admin-auth shell sessions if needed",
+                    "description_fa": "در صورت نیاز جلسات روت یا admin-ath shell را حذف کنید"
                 },
                 {
                     "field": "ModuleWhitelist",
-                    "description": "Set a known list of allowed kernel modules"
+                    "description": "Set a known list of allowed kernel modules",
+                    "description_fa": "یک لیست شناخته شده از ماژول های هسته مجاز را تنظیم کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0688",
+            "description_fa": "تشخیص رفتار کی لاگر غیرمجاز از طریق دسترسی به «/dev/input»، بارگیری ماژول‌های هسته (به عنوان مثال، از طریق insmod)، یا نظرسنجی دستگاه‌های ورودی کاربر از پوسته‌های غیر کاربر"
         }
     ]
 }

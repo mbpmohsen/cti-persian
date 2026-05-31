@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0294#AN0819",
-                    "external_id": "AN0819"
+                    "external_id": "AN0819",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0819",
-            "description": "User opens a file delivered by email, web, chat, or share. The handler application (Word/PDF reader/archiver) creates a file in user-controlled paths (Downloads, Temp, Desktop) and then spawns a new or unusual child process (e.g., powershell.exe, wscript.exe, cmd.exe, regsvr32.exe, rundll32.exe, msiexec.exe). Optional precursors include FileStreamCreated (URL/UNC) and Office \u2192 system32 batch writes.",
+            "description": "User opens a file delivered by email, web, chat, or share. The handler application (Word/PDF reader/archiver) creates a file in user-controlled paths (Downloads, Temp, Desktop) and then spawns a new or unusual child process (e.g., powershell.exe, wscript.exe, cmd.exe, regsvr32.exe, rundll32.exe, msiexec.exe). Optional precursors include FileStreamCreated (URL/UNC) and Office → system32 batch writes.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Seconds/minutes to correlate file write to child spawn (e.g., 0\u20135m)."
+                    "description": "Seconds/minutes to correlate file write to child spawn (e.g., 0–5m).",
+                    "description_fa": "ثانیه/دقیقه برای مرتبط کردن نوشتن فایل به تخم ریزی فرزند (مثلاً 0 تا 5 متر)."
                 },
                 {
                     "field": "SuspiciousExtensions",
-                    "description": "Extensions and double-extension patterns to flag (exe,scr,lnk,pif,cpl,js,vbs,bat,cmd,ps1,hta,iso,lnk->cmd,docm,xlsm,pdf->exe, etc.)."
+                    "description": "Extensions and double-extension patterns to flag (exe,scr,lnk,pif,cpl,js,vbs,bat,cmd,ps1,hta,iso,lnk->cmd,docm,xlsm,pdf->exe, etc.).",
+                    "description_fa": "برنامه های افزودنی و الگوهای پسوند دوگانه برای پرچم گذاری (exe، scr، lnk، pif، cpl، js، vbs، bat، cmd، ps1، hta، iso، lnk->cmd، docm، xlsm، pdf->exe، و غیره)."
                 },
                 {
                     "field": "UserPaths",
-                    "description": "Paths considered user-controlled (Downloads, Temp, Desktop, profile AppData staging)."
+                    "description": "Paths considered user-controlled (Downloads, Temp, Desktop, profile AppData staging).",
+                    "description_fa": "مسیرهایی که توسط کاربر کنترل می شوند (دانلودها، دما، دسکتاپ، مرحله بندی AppData نمایه)."
                 },
                 {
                     "field": "ParentApps",
-                    "description": "List of user-facing apps that commonly open attachments for your org (reduce FPs or add weight)."
+                    "description": "List of user-facing apps that commonly open attachments for your org (reduce FPs or add weight).",
+                    "description_fa": "فهرستی از برنامه‌های روبه‌روی کاربر که معمولاً پیوست‌ها را برای سازمان شما باز می‌کنند (FPs را کاهش می‌دهند یا وزن اضافه می‌کنند)."
                 },
                 {
                     "field": "SignerAllowList",
-                    "description": "Trusted code signers/publishers to suppress benign admin tools."
+                    "description": "Trusted code signers/publishers to suppress benign admin tools.",
+                    "description_fa": "امضاکنندگان/ناشران کد مورد اعتماد برای سرکوب ابزارهای مدیریت بدخیم."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0819",
+            "description_fa": "کاربر فایلی را باز می کند که از طریق ایمیل، وب، چت یا اشتراک گذاری تحویل داده شده است. برنامه کنترل کننده (Word/PDF Reader/Archiver) فایلی را در مسیرهای کنترل شده توسط کاربر (دانلود، Temp، Desktop) ایجاد می کند و سپس یک فرآیند فرزند جدید یا غیرعادی ایجاد می کند (مانند powershell.exe، wscript.exe، cmd.exe، regsvr32.exe، rundll32.exe، msiexec.exe). پیش سازهای اختیاری عبارتند از FileStreamCreated (URL/UNC) و Office → system32 batch writes."
         }
     ]
 }

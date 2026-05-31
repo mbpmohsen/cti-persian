@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0920#AN2064",
-                    "external_id": "AN2064"
+                    "external_id": "AN2064",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,13 +48,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DecodeUtility",
-                    "description": "May include base64"
+                    "description": "May include base64",
+                    "description_fa": "ممکن است شامل base64 باشد"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Useful for tuning sections containing high entropy indicative of Unicode sequences"
+                    "description": "Useful for tuning sections containing high entropy indicative of Unicode sequences",
+                    "description_fa": "برای تنظیم بخش هایی که حاوی آنتروپی بالا نشان دهنده دنباله های یونیکد هستند مفید است"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 2064",
+            "description_fa": "تشخیص اجرای اسکریپت‌های حاوی غلظت بالایی از کاراکترهای نامرئی یونیکد و به دنبال آن رفتارهای رمزگشایی یا تفسیری (مانند رمزگشایی base64، eval) و فرآیند یا فعالیت شبکه بعدی را شناسایی می‌کند. تاکید بر عدم تطابق بین آنتروپی/ساختار فایل و خروجی اجرا شده است."
         }
     ]
 }

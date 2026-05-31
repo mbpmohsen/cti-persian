@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0008#AN0020",
-                    "external_id": "AN0020"
+                    "external_id": "AN0020",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "OAuthTokenAge",
-                    "description": "Older tokens issued before password change may indicate compromise"
+                    "description": "Older tokens issued before password change may indicate compromise",
+                    "description_fa": "نشانه‌های قدیمی‌تر صادر شده قبل از تغییر رمز عبور ممکن است نشان دهنده سازش باشد"
                 },
                 {
                     "field": "AppScope",
-                    "description": "Restrict detection to high-value or regulated SaaS apps"
+                    "description": "Restrict detection to high-value or regulated SaaS apps",
+                    "description_fa": "شناسایی را به برنامه‌های SaaS با ارزش یا تنظیم‌شده محدود کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0020",
+            "description_fa": "دسترسی از راه دور به SaaS شخص ثالث با توکن های OAuth یا API پس از به خطر افتادن اولیه، به دنبال آن دسترسی حساس به داده یا تغییرات پیکربندی"
         }
     ]
 }

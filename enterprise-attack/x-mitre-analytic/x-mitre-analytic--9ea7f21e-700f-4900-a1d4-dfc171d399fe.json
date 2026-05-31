@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0227#AN0633",
-                    "external_id": "AN0633"
+                    "external_id": "AN0633",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PortThresholds",
-                    "description": "Define what constitutes a 'non-standard port' based on organizational baselines (e.g., allow 443/80/22 but flag 8088/587/3389 changes)."
+                    "description": "Define what constitutes a 'non-standard port' based on organizational baselines (e.g., allow 443/80/22 but flag 8088/587/3389 changes).",
+                    "description_fa": "بر اساس خطوط پایه سازمانی، «پورت غیر استاندارد» را تعریف کنید (به عنوان مثال، اجازه دهید 443/80/22 اما پرچم 8088/587/3389 را تغییر دهید)."
                 },
                 {
                     "field": "ProcessAllowList",
-                    "description": "Processes normally allowed to use non-standard ports (e.g., custom apps)."
+                    "description": "Processes normally allowed to use non-standard ports (e.g., custom apps).",
+                    "description_fa": "فرآیندهایی که معمولاً مجاز به استفاده از پورت‌های غیر استاندارد (مانند برنامه‌های سفارشی) هستند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate process creation and network activity within N seconds."
+                    "description": "Correlate process creation and network activity within N seconds.",
+                    "description_fa": "ایجاد فرآیند و فعالیت شبکه را در N ثانیه به هم مرتبط کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0633",
+            "description_fa": "فرآیندهایی که اتصالات خروجی را در پورت‌های غیر معمول شروع می‌کنند یا از پروتکل‌های مغایر با پورت اختصاص داده شده استفاده می‌کنند. ارتباط ایجاد فرآیند با اتصالات شبکه بعدی، ناهنجاری هایی مانند svchost.exe یا برنامه های آفیس را با استفاده از پورت های بالا و غیر معمول نشان می دهد."
         }
     ]
 }

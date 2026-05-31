@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0298#AN0831",
-                    "external_id": "AN0831"
+                    "external_id": "AN0831",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousExtensions",
-                    "description": "List of archive extensions considered high risk (.cab, .zip, .7z, .rar)."
+                    "description": "List of archive extensions considered high risk (.cab, .zip, .7z, .rar).",
+                    "description_fa": "فهرست پسوندهای آرشیو در نظر گرفته شده با ریسک بالا (.cab، .zip، .7z، .rar)."
                 },
                 {
                     "field": "ProcessAllowlist",
-                    "description": "Known business utilities allowed to create archives without alerting."
+                    "description": "Known business utilities allowed to create archives without alerting.",
+                    "description_fa": "ابزارهای تجاری شناخته شده مجاز به ایجاد بایگانی بدون هشدار هستند."
                 },
                 {
                     "field": "FileSizeThresholdMB",
-                    "description": "Minimum archive size threshold to filter out benign small compressions."
+                    "description": "Minimum archive size threshold to filter out benign small compressions.",
+                    "description_fa": "حداقل آستانه اندازه بایگانی برای فیلتر کردن فشارهای کوچک خوش خیم."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0831",
+            "description_fa": "بایگانی دشمن را با استفاده از ابزارهای داخلی یا شخص ثالث (makecab، diantz، xcopy، certutil، 7z، WinRAR، WinZip) تشخیص می‌دهد. رویدادهای ایجاد فرآیند مشکوک را با آرگومان‌های خط فرمان برای فشرده‌سازی/رمزگذاری، و به دنبال آن ایجاد فایل‌های بایگانی (cab، .zip، .7z، .rar) مرتبط می‌کند. بارگیری غیرعادی crypt32.dll را برای عملیات رمزگذاری یا اجرای diantz.exe برای فشرده سازی فایل های مرحله بندی شده از راه دور شناسایی می کند."
         }
     ]
 }

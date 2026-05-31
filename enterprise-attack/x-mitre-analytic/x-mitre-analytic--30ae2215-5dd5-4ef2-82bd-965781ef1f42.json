@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0313#AN0873",
-                    "external_id": "AN0873"
+                    "external_id": "AN0873",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DownloadPathRegex",
-                    "description": "Regular expressions for common download paths (e.g., /tmp/, ~/Downloads/)"
+                    "description": "Regular expressions for common download paths (e.g., /tmp/, ~/Downloads/)",
+                    "description_fa": "عبارات منظم برای مسیرهای دانلود رایج (به عنوان مثال، /tmp/، ~/Downloads/)"
                 },
                 {
                     "field": "ExecutableTriggerWindow",
-                    "description": "Tunable range for follow-up process execution from dropped file (e.g., 5\u201315 minutes)"
+                    "description": "Tunable range for follow-up process execution from dropped file (e.g., 5–15 minutes)",
+                    "description_fa": "محدوده قابل تنظیم برای اجرای فرآیند پیگیری از فایل حذف شده (به عنوان مثال، 5 تا 15 دقیقه)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0873",
+            "description_fa": "شناسایی دانلودهای مبتنی بر مرورگر از منابع HTML که باعث ایجاد فایل در دایرکتوری‌های موقت یا کاربر و سپس اجرای فایل‌های جدید در بازه‌های زمانی کوتاه و دودمان مشکوک والدین-فرزند می‌شود."
         }
     ]
 }

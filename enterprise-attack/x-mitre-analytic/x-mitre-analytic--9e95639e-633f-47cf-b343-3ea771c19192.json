@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0009#AN0022",
-                    "external_id": "AN0022"
+                    "external_id": "AN0022",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApprovedRepos",
-                    "description": "Allowed APT/YUM repos and GPG keys for build tools."
+                    "description": "Allowed APT/YUM repos and GPG keys for build tools.",
+                    "description_fa": "مخازن APT/YUM و کلیدهای GPG برای ابزارهای ساخت مجاز است."
                 },
                 {
                     "field": "PathScope",
-                    "description": "Monitor /usr/local/bin, /usr/bin, /opt/*/bin, ~/.local/bin, node_modules/.bin, .venv/bin, .cargo/bin, .gradle, .m2."
+                    "description": "Monitor /usr/local/bin, /usr/bin, /opt/*/bin, ~/.local/bin, node_modules/.bin, .venv/bin, .cargo/bin, .gradle, .m2.",
+                    "description_fa": "مانیتور /usr/local/bin، /usr/bin، /opt/*/bin، ~/.local/bin، node_modules/.bin، .venv/bin، .cargo/bin، .gradle، .m2."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Default 90 minutes for write\u2192exec\u2192egress linkage."
+                    "description": "Default 90 minutes for write→exec→egress linkage.",
+                    "description_fa": "90 دقیقه پیش فرض برای نوشتن → exec → پیوند خروج."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0022",
+            "description_fa": "توسعه‌دهنده یا CI از مدیران/کامپایلرهای بسته فراخوانی می‌کند (apt/yum + build-ssential، npm/yarn/pnpm، pip/pip3، gem، cargo، go، maven/gradle). این فایل‌ها فایل‌های اجرایی یا اسکریپت را در مسیرهای PATH یا پروژه می‌نویسند و فوراً قلاب‌های چرخه حیات تعبیه‌شده (پیش نصب/پست نصب، setup.py، اسکریپت‌های npm) را اجرا می‌کنند که پوسته‌ها یا curl/wget را ایجاد می‌کنند و به دنبال آن به ثبت‌ها یا دامنه‌های ناآشنا می‌روند."
         }
     ]
 }

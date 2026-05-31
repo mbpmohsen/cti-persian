@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0571#AN1577",
-                    "external_id": "AN1577"
+                    "external_id": "AN1577",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PlistPathList",
-                    "description": "Watched directories for LaunchDaemons and LaunchAgents"
+                    "description": "Watched directories for LaunchDaemons and LaunchAgents",
+                    "description_fa": "دایرکتوری های LaunchDaemons و LaunchAgents را تماشا کرد"
                 },
                 {
                     "field": "PlistKeyMonitor",
-                    "description": "Monitored keys such as `RunAtLoad`, `KeepAlive`, or `ProgramArguments`"
+                    "description": "Monitored keys such as `RunAtLoad`, `KeepAlive`, or `ProgramArguments`",
+                    "description_fa": "کلیدهای نظارت شده مانند «RunAtLoad»، «KeepAlive» یا «ProgramArguments»"
                 },
                 {
                     "field": "UnsignedBinaryAlert",
-                    "description": "Flag execution of unsigned or non-Apple-signed binaries within plist"
+                    "description": "Flag execution of unsigned or non-Apple-signed binaries within plist",
+                    "description_fa": "پرچم اجرای باینری های بدون علامت یا بدون امضای اپل در داخل plist"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1577",
+            "description_fa": "ایجاد یا اصلاح فایل‌های فهرست «LaunchDaemon» یا «LaunchAgent» را در زیر «/Library/LaunchDaemons/»، «~/Library/LaunchAgents/» یا موارد مشابه تشخیص می‌دهد. اجرای «launchctl»، ویرایش‌های فهرست دارایی و تغییرات مجوز فایل را نظارت می‌کند."
         }
     ]
 }

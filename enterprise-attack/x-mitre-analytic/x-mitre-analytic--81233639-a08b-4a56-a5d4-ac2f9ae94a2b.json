@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0273#AN0759",
-                    "external_id": "AN0759"
+                    "external_id": "AN0759",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedEncryptedProcesses",
-                    "description": "Whitelist processes expected to use TLS (e.g., browsers, mail clients)."
+                    "description": "Whitelist processes expected to use TLS (e.g., browsers, mail clients).",
+                    "description_fa": "فرآیندهای لیست سفید انتظار می رود از TLS استفاده کنند (به عنوان مثال، مرورگرها، مشتریان ایمیل)."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Payload randomness threshold to distinguish C2 encryption from legitimate traffic."
+                    "description": "Payload randomness threshold to distinguish C2 encryption from legitimate traffic.",
+                    "description_fa": "آستانه تصادفی بار برای تشخیص رمزگذاری C2 از ترافیک قانونی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between process creation, module load, and encrypted connection."
+                    "description": "Correlation window between process creation, module load, and encrypted connection.",
+                    "description_fa": "پنجره همبستگی بین ایجاد فرآیند، بارگذاری ماژول و اتصال رمزگذاری شده."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0759",
+            "description_fa": "فرآیندهایی که معمولاً اتصالات شبکه را آغاز نمی کنند و جلسات TLS/SSL رمزگذاری شده خروجی را ایجاد می کنند، به ویژه با حجم ترافیک نامتقارن (ارسال مشتری بیشتر از دریافت) یا زنجیره های گواهی غیر استاندارد. مشاهدات مدافع ایجاد فرآیند را با بارگیری کتابخانه های رمزگذاری شبکه غیرمنتظره مرتبط می کند."
         }
     ]
 }

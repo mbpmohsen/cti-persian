@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0043#AN0119",
-                    "external_id": "AN0119"
+                    "external_id": "AN0119",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Defines trusted processes expected to call locale APIs. Deviations may indicate adversarial activity."
+                    "description": "Defines trusted processes expected to call locale APIs. Deviations may indicate adversarial activity.",
+                    "description_fa": "فرآیندهای قابل اعتمادی را که انتظار می رود APIهای محلی را فراخوانی کنند، تعریف می کند. انحرافات ممکن است نشان دهنده فعالیت خصمانه باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Specifies correlation window for API calls and suspicious process execution (e.g., 2m)."
+                    "description": "Specifies correlation window for API calls and suspicious process execution (e.g., 2m).",
+                    "description_fa": "پنجره همبستگی را برای فراخوانی های API و اجرای فرآیند مشکوک (مثلاً 2 متر) مشخص می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0119",
+            "description_fa": "فرآیند غیرمعمول یا استفاده از API در تلاش برای پرس‌وجو از محل سیستم، منطقه زمانی، یا طرح‌بندی صفحه‌کلید (مثلاً تماس با GetLocaleInfoW، GetTimeZoneInformation). تشخیص را می توان با ارتباط با فرآیندهایی که معمولاً با پرس و جوهای پیکربندی سیستم مرتبط نیستند، مانند باینری ها یا اسکریپت های ناشناخته، افزایش داد."
         }
     ]
 }

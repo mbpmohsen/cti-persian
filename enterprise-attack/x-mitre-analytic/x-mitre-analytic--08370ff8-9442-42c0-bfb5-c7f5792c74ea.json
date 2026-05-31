@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0359#AN1023",
-                    "external_id": "AN1023"
+                    "external_id": "AN1023",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HopCount",
-                    "description": "Threshold on number of IPs contacted in sequence without DNS resolution."
+                    "description": "Threshold on number of IPs contacted in sequence without DNS resolution.",
+                    "description_fa": "آستانه تعداد IPهایی که به ترتیب بدون وضوح DNS با آنها تماس گرفته شده است."
                 },
                 {
                     "field": "ShellAccess",
-                    "description": "Flag if relay communication initiated by ESXi shell or unknown VM agent."
+                    "description": "Flag if relay communication initiated by ESXi shell or unknown VM agent.",
+                    "description_fa": "اگر ارتباط رله ای توسط پوسته ESXi یا عامل VM ناشناخته آغاز شده است، علامت گذاری کنید."
                 },
                 {
                     "field": "VPSIPRange",
-                    "description": "Filter for known Tor/VPS egress networks."
+                    "description": "Filter for known Tor/VPS egress networks.",
+                    "description_fa": "فیلتر برای شبکه های خروجی شناخته شده Tor/VPS."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1023",
+            "description_fa": "ترافیک رمزگذاری شده خروجی از پوسته هایپروایزر یا از طریق مکانیسم های درپشتی VM به رله ها در زیرساخت VPS آغاز می شود، به خصوص اگر قبل از رسیدن به مقصد اینترنت از چندین گره عبور می کند. ضبط بسته ها یا گزارش های فایروال مسیرهای ارتباطی غیر VM را نشان می دهد."
         }
     ]
 }

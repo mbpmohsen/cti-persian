@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0332#AN0942",
-                    "external_id": "AN0942"
+                    "external_id": "AN0942",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Tuning this helps identify automation behavior outside expected user work hours."
+                    "description": "Tuning this helps identify automation behavior outside expected user work hours.",
+                    "description_fa": "تنظیم این به شناسایی رفتار اتوماسیون خارج از ساعات کاری مورد انتظار کاربر کمک می کند."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Used to isolate cases where AHK or AutoIT scripts are spawned by suspicious or unusual processes."
+                    "description": "Used to isolate cases where AHK or AutoIT scripts are spawned by suspicious or unusual processes.",
+                    "description_fa": "برای جداسازی مواردی که اسکریپت‌های AHK یا AutoIT توسط فرآیندهای مشکوک یا غیرعادی ایجاد می‌شوند استفاده می‌شود."
                 },
                 {
                     "field": "ScriptExtension",
-                    "description": "Extensions such as .ahk, .au3, or unknown .exe names compiled from these."
+                    "description": "Extensions such as .ahk, .au3, or unknown .exe names compiled from these.",
+                    "description_fa": "برنامه های افزودنی مانند ahk.، .au3، یا نام های exe. ناشناخته که از این ها کامپایل شده اند."
                 },
                 {
                     "field": "ChildProcessCount",
-                    "description": "Threshold for number of spawned children to detect automation or modular malware behavior."
+                    "description": "Threshold for number of spawned children to detect automation or modular malware behavior.",
+                    "description_fa": "آستانه تعداد فرزندان تخم ریزی شده برای تشخیص اتوماسیون یا رفتار بدافزار مدولار."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0942",
+            "description_fa": "اجرای مفسرهای AutoHotKey یا AutoIT یا اسکریپت های کامپایل شده مورد استفاده برای اتوماسیون غیرمجاز، اجرای فرمان، یا تحویل بار، مرتبط با خط تولید غیرعادی فرآیند، آرگومان های خط فرمان، یا رویدادهای ایجاد اسکریپت را تشخیص می دهد."
         }
     ]
 }

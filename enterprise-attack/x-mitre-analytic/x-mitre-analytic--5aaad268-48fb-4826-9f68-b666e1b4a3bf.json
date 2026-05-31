@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0221#AN0619",
-                    "external_id": "AN0619"
+                    "external_id": "AN0619",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time span in which the process accesses audio APIs and writes files, to reduce false positives."
+                    "description": "Time span in which the process accesses audio APIs and writes files, to reduce false positives.",
+                    "description_fa": "بازه زمانی که در آن فرآیند به API های صوتی دسترسی پیدا می کند و فایل ها را می نویسد تا نتایج مثبت کاذب را کاهش دهد."
                 },
                 {
                     "field": "TargetProcess",
-                    "description": "Set of approved processes known to legitimately use microphone (e.g., Zoom, Teams)."
+                    "description": "Set of approved processes known to legitimately use microphone (e.g., Zoom, Teams).",
+                    "description_fa": "مجموعه ای از فرآیندهای تایید شده که به طور قانونی از میکروفون استفاده می کنند (به عنوان مثال، زوم، تیم ها)."
                 },
                 {
                     "field": "WriteDirectory",
-                    "description": "Allowlist of paths where legitimate apps store audio (e.g., user media folders)."
+                    "description": "Allowlist of paths where legitimate apps store audio (e.g., user media folders).",
+                    "description_fa": "فهرست مجاز مسیرهایی که در آن برنامه‌های قانونی صدا را ذخیره می‌کنند (مانند پوشه‌های رسانه کاربر)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0619",
+            "description_fa": "فرآیندهای غیرمعمول یا غیرمجاز دسترسی به APIهای میکروفون (مانند winmm.dll، avrt.dll) و به دنبال آن فایل صوتی در فهرست‌های قابل دسترس کاربر یا موقت می‌نویسد."
         }
     ]
 }

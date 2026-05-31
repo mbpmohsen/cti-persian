@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0319#AN0899",
-                    "external_id": "AN0899"
+                    "external_id": "AN0899",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IPAddress",
-                    "description": "Filter on IPs outside known admin networks or geographies"
+                    "description": "Filter on IPs outside known admin networks or geographies",
+                    "description_fa": "در IP های خارج از شبکه های مدیریت شناخته شده یا مناطق جغرافیایی فیلتر کنید"
                 },
                 {
                     "field": "RoleThreshold",
-                    "description": "Raise alert if total admins exceeds historical baseline"
+                    "description": "Raise alert if total admins exceeds historical baseline",
+                    "description_fa": "اگر مجموع ادمین ها از پایه تاریخی فراتر رفت، هشدار را افزایش دهید"
                 },
                 {
                     "field": "ServicePrincipalFlag",
-                    "description": "Differentiate between user and service principal creation"
+                    "description": "Differentiate between user and service principal creation",
+                    "description_fa": "بین ایجاد کاربر و سرویس اصلی تفاوت قائل شوید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0899",
+            "description_fa": "دشمنان از طریق APIهای ارائه‌دهنده هویت یا پورتال‌های مدیریت (مانند Azure AD، Okta) حساب‌های کاربری ایجاد می‌کنند. به این حساب ها ممکن است امتیازات بالاتری نسبت داده شود یا در احراز هویت زنجیره ای استفاده شود. مانیتورهای تشخیص فعالیت کاربر را از IPهای مشکوک یا منابع اتوماسیون اضافه می کنند و به دنبال آن افزایش نقش/مجوز."
         }
     ]
 }

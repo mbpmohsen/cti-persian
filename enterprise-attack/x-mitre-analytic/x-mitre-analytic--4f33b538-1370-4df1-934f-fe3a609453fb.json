@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0480#AN1321",
-                    "external_id": "AN1321"
+                    "external_id": "AN1321",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilePath",
-                    "description": "Define path to monitored IIS web root (e.g., C:\\inetpub\\wwwroot\\login.aspx)"
+                    "description": "Define path to monitored IIS web root (e.g., C:\\inetpub\\wwwroot\\login.aspx)",
+                    "description_fa": "تعیین مسیر به ریشه وب نظارت شده IIS (به عنوان مثال، C:\\inetpub\\wwwroot\\login.aspx)"
                 },
                 {
                     "field": "ProcessName",
-                    "description": "Exclude legitimate updates (e.g., msdeploy.exe) and alert on suspicious editors (e.g., notepad.exe, certutil.exe)"
+                    "description": "Exclude legitimate updates (e.g., msdeploy.exe) and alert on suspicious editors (e.g., notepad.exe, certutil.exe)",
+                    "description_fa": "حذف به‌روزرسانی‌های قانونی (مانند msdeploy.exe) و هشدار در مورد ویرایشگرهای مشکوک (مانند notepad.exe، certutil.exe)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1321",
+            "description_fa": "دستکاری صفحات لاگین مبتنی بر IIS (به عنوان مثال default.aspx، login.aspx) مرتبط با VPN، OWA یا SharePoint را از طریق تزریق اسکریپت یا فرآیندهای ویرایشگر غیرمنتظره که ریشه های وب را تغییر می دهند، تشخیص می دهد."
         }
     ]
 }

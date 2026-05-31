@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0596#AN1640",
-                    "external_id": "AN1640"
+                    "external_id": "AN1640",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedUsers",
-                    "description": "Legitimate SSH users to this host"
+                    "description": "Legitimate SSH users to this host",
+                    "description_fa": "کاربران قانونی SSH به این میزبان"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate SSH login and unauthorized commands or shell access"
+                    "description": "Correlate SSH login and unauthorized commands or shell access",
+                    "description_fa": "ارتباط ورود به سیستم SSH و دستورات غیرمجاز یا دسترسی پوسته"
                 },
                 {
                     "field": "CommandList",
-                    "description": "Flag commands like esxcli, rm, chmod post-login"
+                    "description": "Flag commands like esxcli, rm, chmod post-login",
+                    "description_fa": "فرمان هایی مانند esxcli، rm، chmod post-login را علامت گذاری کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1640",
+            "description_fa": "ورود به سیستم SSH از طریق میزبان یا «/var/log/auth.log» و به دنبال آن دسترسی CLI به پوسته میزبان یا دستکاری فایل در مناطق محدود."
         }
     ]
 }

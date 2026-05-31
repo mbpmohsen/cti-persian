@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-207",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/207.html"
+                    "url": "https://capec.mitre.org/data/definitions/207.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-602",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/602.html"
+                    "url": "http://cwe.mitre.org/data/definitions/602.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-75",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Greasemonkey"
+                    "url": "http://en.wikipedia.org/wiki/Greasemonkey",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Firebug",
                     "external_id": "REF-76",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://getfirebug.com/"
+                    "url": "http://getfirebug.com/",
+                    "description_fa": "آتش سوزی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Mozilla Firefox Add-ons",
                     "external_id": "REF-77",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/"
+                    "url": "https://addons.mozilla.org/en-US/firefox/addon/greasemonkey/",
+                    "description_fa": "افزونه های موزیلا فایرفاکس",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3c404955-b160-423f-b148-d4fa4727e3a9",
@@ -69,6 +77,29 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "سایر موارد (نشت اطلاعات)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -93,11 +124,27 @@
             ],
             "x_capec_skills_required": {
                 "High": "To reverse engineer the client-side code to disable/remove the functionality on the client that the server relies on.",
-                "Low": "The adversary installs a web tool that allows scripts or the DOM model of web-based applications to be modified before they are executed in a browser. GreaseMonkey and Firebug are two examples of such tools."
+                "Low": "The adversary installs a web tool that allows scripts or the DOM model of web-based applications to be modified before they are executed in a browser. GreaseMonkey and Firebug are two examples of such tools.",
+                "High_fa": "برای مهندسی معکوس کد سمت کلاینت برای غیرفعال کردن/حذف عملکرد روی کلاینت که سرور به آن متکی است.",
+                "Low_fa": "حریف یک ابزار وب را نصب می کند که به اسکریپت ها یا مدل DOM برنامه های مبتنی بر وب اجازه می دهد تا قبل از اجرا در مرورگر، اصلاح شوند. GreaseMonkey و Firebug دو نمونه از این ابزارها هستند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف عملکردی را که سرور وجود و قابل اعتماد فرض می‌کند روی کلاینت حذف یا غیرفعال می‌کند.",
+            "name_fa": "حذف عملکرد مهم مشتری",
+            "x_capec_example_instances_fa": [
+                "حریف یک باینری جاوا را مهندسی معکوس می کند (با دیکامپایل کردن آن) و محل وجود کد مدیریت مجوز را شناسایی می کند. با توجه به اینکه مدیر مجوز در مورد اینکه آیا کاربر دارای مجوز است یا خیر، TRUE یا FALSE را برمی‌گرداند، دشمن به سادگی هر دو هدف شعبه را بازنویسی می‌کند تا TRUE را بازگرداند، دوباره کامپایل می‌کند و در نهایت باینری را مجدداً مستقر می‌کند.",
+                "حریف از کاوش کلیک از طریق یک وب‌سایت مبتنی بر Servlet برای ترسیم عملکرد آن استفاده می‌کند و به قراردادهای نام‌گذاری URL و نگاشت‌های Servlet توجه می‌کند. با استفاده از این دانش و حدس زدن نام Servlet از عملکردی که مجاز به استفاده از آن نیستند، حریف مستقیماً به عملکرد ممتاز اطراف کنترل کننده تک جلویی مجاز (اجرای بررسی های مجوز برنامه ریزی شده) می رود."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3> کاوش</h3><ol><li> <p> <b>کاوش: </b>دشمن، از طریق brute-forcing، مهندسی معکوس یا دیگر ابزارهای مشابه، عملکرد مشتری را که سرور فرض می کند وجود دارد و قابل اعتماد است.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن با کاوش در عملکرد یک برنامه کاربردی و نگاشت زیربنایی آن به اجزای سمت سرور، کاوش می‌کند.</td></tr><tr><td>دشمن، کد سمت کلاینت را مهندسی معکوس می‌کند تا عملکرد حرفه‌ای سرور را مجدداً یا ایمن کند. عملیات.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین کنید کدام عملکرد را غیرفعال یا حذف کنید: </b>دشمن سعی می کند از طریق مهندسی معکوس از لیست عملکردهای شناسایی شده Explore مشخص کند کدام عملکرد را غیرفعال یا حذف کند. فاز.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>رقیب کد سمت کلاینت را مهندسی معکوس می‌کند تا مشخص کند کدام عملکرد را غیرفعال یا حذف کند.</td></tr></tbody></table></ol></div><div><h3>بهره‌برداری می‌کند. </b>هنگامی که عملکرد مشخص شد، حریف برای انجام اقدامات مخربی که سرور معتقد است ممنوع هستند، عملکرد حیاتی کد کلاینت را غیرفعال یا حذف می‌کند. (مانند اسکریپت ها) به سرور.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> در برخی موارد، دشمنان می‌توانند منطقی را که برای «محافظت» از عملکرد یا داده‌های حساس ایجاد شده است، دور بزنند. برنامه های سرویس گیرنده ممکن است شامل عملکردی باشند که سرور برای عملکرد صحیح و ایمن به آن متکی است. این عملکرد می تواند شامل فیلترهایی برای جلوگیری از ارسال محتوای خطرناک به سرور، عملکرد منطقی مانند محاسبات قیمت و منطق احراز هویت باشد تا اطمینان حاصل شود که فقط کاربران مجاز از مشتری استفاده می کنند. اگر حریف بتواند این عملکرد را در کلاینت غیرفعال کند، می تواند اقداماتی را انجام دهد که سرور معتقد است ممنوع است. این می تواند منجر به رفتار مشتری شود که فرضیات سرور را نقض می کند و منجر به انواع حملات احتمالی می شود. در مثال‌های بالا، این می‌تواند شامل ارسال محتوای خطرناک (مانند اسکریپت‌ها) به سرور، محاسبات نادرست قیمت، یا دسترسی غیرمجاز به منابع سرور باشد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "سرور هدف باید فرض کند که کلاینت اقدامات مهمی را برای محافظت از سرور یا عملکرد سرور انجام می دهد. به عنوان مثال، سرور ممکن است فرض کند مشتری ترافیک خروجی را فیلتر می کند یا اینکه کلاینت تمام محاسبات قیمت را به درستی انجام می دهد. علاوه بر این، سرور باید نتواند تشخیص دهد که این مفروضات توسط یک کلاینت نقض می شوند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید به مشتری دسترسی داشته باشد و بتواند رفتار مشتری را اغلب از طریق مهندسی معکوس تغییر دهد. اگر سرور عملکرد مشتری خاصی را فرض می کند، این معمولاً به این معنی است که سرور فقط یک برنامه مشتری خاص را تشخیص می دهد، نه یک کلاس گسترده از برنامه های مشتری. ابزارهای مهندسی معکوس احتمالاً ضروری خواهند بود."
+            ]
         }
     ],
     "spec_version": "2.0",

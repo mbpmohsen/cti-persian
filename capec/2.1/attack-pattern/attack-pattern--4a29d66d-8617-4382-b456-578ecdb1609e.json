@@ -9,73 +9,90 @@
                 {
                     "external_id": "CAPEC-10",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/10.html"
+                    "url": "https://capec.mitre.org/data/definitions/10.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-302",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/302.html"
+                    "url": "http://cwe.mitre.org/data/definitions/302.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-118",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/118.html"
+                    "url": "http://cwe.mitre.org/data/definitions/118.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-99",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/99.html"
+                    "url": "http://cwe.mitre.org/data/definitions/99.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-733",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/733.html"
+                    "url": "http://cwe.mitre.org/data/definitions/733.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Buffer Overflow via Environment Variables",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Buffer_Overflow_via_Environment_Variables"
+                    "url": "https://owasp.org/www-community/attacks/Buffer_Overflow_via_Environment_Variables",
+                    "description_fa": "سرریز بافر از طریق متغیرهای محیطی",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Sharefuzz",
                     "external_id": "REF-2",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://sharefuzz.sourceforge.net"
+                    "url": "http://sharefuzz.sourceforge.net",
+                    "description_fa": "Sharefuzz",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--4a29d66d-8617-4382-b456-578ecdb1609e",
@@ -112,6 +129,25 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -132,11 +168,27 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a buffer overflow to inject malicious code into the stack of a software system or even the heap can require a higher skill level.",
-                "Low": "An attacker can simply overflow a buffer by inserting a long string into an attacker-modifiable injection vector. The result can be a DoS."
+                "Low": "An attacker can simply overflow a buffer by inserting a long string into an attacker-modifiable injection vector. The result can be a DoS.",
+                "High_fa": "بهره برداری از سرریز بافر برای تزریق کد مخرب به پشته یک سیستم نرم افزاری یا حتی پشته می تواند به سطح مهارت بالاتری نیاز داشته باشد.",
+                "Low_fa": "یک مهاجم به سادگی می تواند با وارد کردن یک رشته طولانی در یک بردار تزریق قابل تغییر توسط مهاجم، یک بافر را سرریز کند. نتیجه می تواند یک DoS باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این الگوی حمله شامل ایجاد سرریز بافر از طریق دستکاری متغیرهای محیطی است. هنگامی که دشمن متوجه شد که می تواند یک متغیر محیطی را تغییر دهد، ممکن است سعی کند بافرهای مرتبط را سرریز کند. این حمله از اعتماد ضمنی که اغلب در متغیرهای محیطی قرار می گیرد، استفاده می کند.",
+            "name_fa": "سرریز بافر از طریق متغیرهای محیطی",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>سرریز بافر در sccw به کاربران محلی اجازه می دهد تا از طریق متغیر محیطی $HOME دسترسی ریشه داشته باشند. همچنین ببینید: CVE-1999-0906</xhtml:p>",
+                "<xhtml:p> یک سرریز بافر در برنامه rlogin شامل مصرف متغیر محیطی $TERM است. همچنین ببینید: CVE-1999-0046</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه هدف: </b> دشمن برنامه یا برنامه هدف را برای اجرای سرریز بافر در آن شناسایی می کند. در این حمله، دشمن به دنبال برنامه‌ای می‌گردد که محتوای یک متغیر محیطی را در یک بافر بارگذاری می‌کند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>پیدا کردن بردار تزریق: </b> دشمن یک بردار تزریق را برای ارائه محتوای مورد نظر شناسایی می‌کند. بافر.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>مقادیر متغیرهای محیطی که تصور می شود توسط برنامه مورد استفاده قرار می گیرند را تغییر دهید تا حاوی داده های بیش از حد باشد. اگر برنامه در حال بارگیری مقدار متغیر محیطی در یک بافر باشد، ممکن است باعث خرابی شود و بردار حمله پیدا شود.</td></tr></tbody></table><li> <p> <b>محتوای سرریز کاردستی: </b>دشمن محتوایی را که باید تزریق شود ایجاد می‌کند. اگر هدف این است که به سادگی باعث از کار افتادن نرم افزار شود، محتوا فقط باید از مقدار بیش از حد داده های تصادفی تشکیل شود. اگر قصد استفاده از سرریز برای اجرای کد دلخواه باشد، حریف محموله را به گونه‌ای طراحی می‌کند که آدرس بازگشتی رونویسی شده با یکی از گزینه‌های دشمن جایگزین می‌شود. آن را.</td></tr><tr><td>از یک سورتمه NOP در محتوای سرریز استفاده کنید تا راحت‌تر به کد مخرب \"اسلاید\" کنید. این کار به این دلیل انجام می شود که آدرس برگشتی دقیق لازم نباشد درست باشد، فقط در محدوده همه NOP ها</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز از بافر: </b>با استفاده از بردار تزریق، محتوای دشمن را بیش از حد وارد می کند. بافر.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "اگرچه تمرکز این حمله قرار دادن محتوای بیش از حد در یک متغیر محیطی است که در یک بافر بارگذاری می شود، متغیرهای محیطی می توانند برای کمک به حمله سرریز بافر کلاسیک نیز استفاده شوند. در مواردی که بافر مورد استفاده در یک حمله سرریز بافر سنتی به اندازه کافی بزرگ نباشد که بتواند کد پوسته دشمن را ذخیره کند، آنها کد پوسته را در یک متغیر محیطی ذخیره می‌کنند و سعی می‌کنند به آدرس خود بازگردند، نه به داده‌هایی که در بافر نوشته‌اند.",
+            "x_capec_prerequisites_fa": [
+                "برنامه از متغیرهای محیطی استفاده می کند.",
+                "یک متغیر محیطی که در معرض کاربر قرار می گیرد در برابر سرریز بافر آسیب پذیر است.",
+                "متغیر محیط آسیب پذیر از داده های نامعتبر استفاده می کند.",
+                "داده های آلوده استفاده شده در متغیرهای محیطی به درستی تایید نشده اند. برای مثال بررسی مرز قبل از کپی کردن داده های ورودی در بافر انجام نمی شود."
+            ]
         }
     ],
     "type": "bundle"

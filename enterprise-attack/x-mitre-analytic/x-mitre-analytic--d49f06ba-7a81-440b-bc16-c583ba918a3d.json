@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0581#AN1601",
-                    "external_id": "AN1601"
+                    "external_id": "AN1601",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Flag unexpected outbound activity from non-admin or system users"
+                    "description": "Flag unexpected outbound activity from non-admin or system users",
+                    "description_fa": "فعالیت‌های خروجی غیرمنتظره از کاربران غیر سرپرست یا سیستم را پرچم‌گذاری کنید"
                 },
                 {
                     "field": "EntropyScore",
-                    "description": "Optional if script-based obfuscation is seen in web requests"
+                    "description": "Optional if script-based obfuscation is seen in web requests",
+                    "description_fa": "اگر مبهم سازی مبتنی بر اسکریپت در درخواست های وب مشاهده شود، اختیاری است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1601",
+            "description_fa": "پردازش با استفاده از URLSession یا API مشابه برای واکشی از سرویس های وب بدون هیچ گونه رسیدگی به پاسخ، که نشان دهنده کانال های C2 یک طرفه است."
         }
     ]
 }

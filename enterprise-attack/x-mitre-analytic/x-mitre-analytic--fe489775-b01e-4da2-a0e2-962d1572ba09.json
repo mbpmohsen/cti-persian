@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0576#AN1589",
-                    "external_id": "AN1589"
+                    "external_id": "AN1589",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Certain service accounts or admin contexts may be expected to run these rules."
+                    "description": "Certain service accounts or admin contexts may be expected to run these rules.",
+                    "description_fa": "برخی از حساب‌های سرویس یا زمینه‌های سرپرست ممکن است انتظار داشته باشد که این قوانین را اجرا کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate between rule creation and follow-on message forwarding within this timeframe."
+                    "description": "Correlate between rule creation and follow-on message forwarding within this timeframe.",
+                    "description_fa": "بین ایجاد قانون و ارسال پیام بعدی در این بازه زمانی ارتباط برقرار کنید."
                 },
                 {
                     "field": "TargetMailbox",
-                    "description": "Whitelisted or trusted destination addresses may be tuned per org policy."
+                    "description": "Whitelisted or trusted destination addresses may be tuned per org policy.",
+                    "description_fa": "آدرس‌های مقصد در لیست سفید یا مورد اعتماد ممکن است بر اساس خط‌مشی سازمان تنظیم شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1589",
+            "description_fa": "ایجاد قوانین صندوق ورودی از طریق PowerShell (New-InboxRule) یا قوانین انتقال با استفاده از cmdlet های Exchange. رفتار کاربر، استفاده از cmdlet و ویژگی های قانون را به هم مرتبط می کند."
         }
     ]
 }

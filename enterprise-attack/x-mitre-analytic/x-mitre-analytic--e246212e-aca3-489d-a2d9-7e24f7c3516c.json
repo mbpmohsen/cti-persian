@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0155#AN0442",
-                    "external_id": "AN0442"
+                    "external_id": "AN0442",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for correlating role elevation with hierarchy modification events."
+                    "description": "Threshold for correlating role elevation with hierarchy modification events.",
+                    "description_fa": "آستانه برای همبستگی ارتقای نقش با رویدادهای اصلاح سلسله مراتب."
                 },
                 {
                     "field": "PrivilegedRoleList",
-                    "description": "List of high-privilege roles (e.g., Global Administrator, OrganizationAccountAccessRole) used to monitor sensitive modifications."
+                    "description": "List of high-privilege roles (e.g., Global Administrator, OrganizationAccountAccessRole) used to monitor sensitive modifications.",
+                    "description_fa": "فهرستی از نقش‌های دارای امتیاز بالا (به عنوان مثال، مدیر جهانی، OrganizationAccountAccessRole) که برای نظارت بر تغییرات حساس استفاده می‌شود."
                 },
                 {
                     "field": "SubscriptionTransferPatterns",
-                    "description": "Patterns of subscription changes that may indicate hijacking or unauthorized tenant transfers."
+                    "description": "Patterns of subscription changes that may indicate hijacking or unauthorized tenant transfers.",
+                    "description_fa": "الگوهای تغییرات اشتراک که ممکن است نشان دهنده هواپیماربایی یا نقل و انتقالات غیرمجاز مستاجر باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0442",
+            "description_fa": "تغییرات غیرمجاز یا غیرمعمول در سلسله مراتب منابع ابری مانند سازمان‌های AWS یا گروه‌های مدیریت Azure را بررسی کنید. مدافعان ممکن است تماس‌های غیرعادی به APIهایی مانند «LeaveOrganization»، «CreateAccount»، «MoveAccount» یا انتقال اشتراک Azure مشاهده کنند. فعالیت حساب را با تخصیص نقش های اداری، انتقال مستاجر، یا ایجاد اشتراک جدید که از خطوط پایه سازمانی منحرف می شود، مرتبط کنید. همبستگی چند رویدادی باید ارتقای نقش و به دنبال آن تغییرات سلسله مراتبی را در یک پنجره زمانی کوتاه دنبال کند."
         }
     ]
 }

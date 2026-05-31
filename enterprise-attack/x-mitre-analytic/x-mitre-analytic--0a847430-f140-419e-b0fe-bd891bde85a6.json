@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0436#AN1211",
-                    "external_id": "AN1211"
+                    "external_id": "AN1211",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredServices",
-                    "description": "List of critical services and their expected executable paths for integrity checking."
+                    "description": "List of critical services and their expected executable paths for integrity checking.",
+                    "description_fa": "فهرست سرویس های حیاتی و مسیرهای اجرایی مورد انتظار آنها برای بررسی یکپارچگی."
                 },
                 {
                     "field": "HashBaseline",
-                    "description": "Baseline hashes of legitimate service executables for tamper detection."
+                    "description": "Baseline hashes of legitimate service executables for tamper detection.",
+                    "description_fa": "هش‌های پایه اجرایی سرویس‌های قانونی برای تشخیص دستکاری."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval between file modification of service executables and service execution."
+                    "description": "Correlation interval between file modification of service executables and service execution.",
+                    "description_fa": "فاصله همبستگی بین اصلاح فایل های اجرایی سرویس و اجرای سرویس."
                 },
                 {
                     "field": "PrivilegedAccounts",
-                    "description": "Accounts allowed to legitimately modify service executables."
+                    "description": "Accounts allowed to legitimately modify service executables.",
+                    "description_fa": "حساب‌ها مجاز به تغییر قانونی فایل‌های اجرایی سرویس هستند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1211",
+            "description_fa": "تغییر یا جایگزینی فایل های اجرایی سرویس به دلیل مجوزهای ضعیف فایل یا دایرکتوری. Defender نوشتن فایل در مسیرهای باینری سرویس، تغییرات غیرمنتظره فایل‌های اجرایی مرتبط با سرویس‌های ثبت‌شده، و اجرای خدمات بعدی باینری‌های ارائه‌شده توسط مهاجم تحت مجوزهای بالا را مشاهده می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0466#AN1288",
-                    "external_id": "AN1288"
+                    "external_id": "AN1288",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,21 +62,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Environment-specific paths to script interpreters like wscript.exe, cscript.exe, pubprn.vbs, or installutil.exe."
+                    "description": "Environment-specific paths to script interpreters like wscript.exe, cscript.exe, pubprn.vbs, or installutil.exe.",
+                    "description_fa": "مسیرهای محیطی خاص به مفسرهای اسکریپت مانند wscript.exe، cscript.exe، pubprn.vbs، یا installutil.exe."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time delta between signed script execution and suspicious child process creation."
+                    "description": "Time delta between signed script execution and suspicious child process creation.",
+                    "description_fa": "دلتای زمانی بین اجرای اسکریپت امضا شده و ایجاد فرآیند فرزند مشکوک."
                 },
                 {
                     "field": "ChildCommandLineRegex",
-                    "description": "Regex pattern used to detect malicious payload execution (e.g., download cradle, PowerShell decode)."
+                    "description": "Regex pattern used to detect malicious payload execution (e.g., download cradle, PowerShell decode).",
+                    "description_fa": "الگوی Regex مورد استفاده برای تشخیص اجرای بار مخرب (به عنوان مثال، پایه دانلود، رمزگشایی PowerShell)."
                 },
                 {
                     "field": "SignedToUnsignedTransition",
-                    "description": "Indicates whether the parent is signed by Microsoft but child is unsigned or unknown."
+                    "description": "Indicates whether the parent is signed by Microsoft but child is unsigned or unknown.",
+                    "description_fa": "نشان می دهد که والد توسط مایکروسافت امضا شده است اما فرزند بدون امضا یا ناشناخته است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1288",
+            "description_fa": "اجرای اسکریپت های امضا شده توسط مایکروسافت (مانند pubprn.vbs، installutil.exe، wscript.exe، cscript.exe) که برای اجرای پروکسی باینری های غیرقابل اعتماد یا خارجی استفاده می شود. رفتار از طریق خط فرمان خط فرآیند، تخم ریزی فرآیند فرزند، و اجرای بار بدون علامت از والد امضا شده شناسایی می شود."
         }
     ]
 }

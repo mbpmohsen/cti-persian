@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0279#AN0778",
-                    "external_id": "AN0778"
+                    "external_id": "AN0778",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,13 +52,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceAllowlist",
-                    "description": "Known good services and installers that regularly modify or create services"
+                    "description": "Known good services and installers that regularly modify or create services",
+                    "description_fa": "سرویس ها و نصب کننده های خوب شناخته شده ای که به طور مرتب سرویس ها را تغییر می دهند یا ایجاد می کنند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for correlating service creation with unusual process execution"
+                    "description": "Threshold for correlating service creation with unusual process execution",
+                    "description_fa": "آستانه برای ارتباط ایجاد سرویس با اجرای فرآیند غیرمعمول"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0778",
+            "description_fa": "برای ایجاد یا اصلاح غیرعادی سرویس‌های Windows (مانند از طریق sc.exe، PowerShell یا فراخوان‌های API) که فایل‌های اجرایی غیراستاندارد را بارگیری می‌کنند، نظارت کنید. تغییرات رجیستری در کلیدهای سرویس را با رویدادهای ایجاد سرویس و اجرای فرآیند برای شناسایی سوء استفاده از سرویس برای تداوم یا اجرا مرتبط کنید."
         }
     ]
 }

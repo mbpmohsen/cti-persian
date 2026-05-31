@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0063#AN0173",
-                    "external_id": "AN0173"
+                    "external_id": "AN0173",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutionPath",
-                    "description": "Detects python scripts from ~/Downloads/, /Volumes/, or /tmp/."
+                    "description": "Detects python scripts from ~/Downloads/, /Volumes/, or /tmp/.",
+                    "description_fa": "اسکریپت های پایتون را از ~/Downloads/، /Volumes/ یا /tmp/ شناسایی می کند."
                 },
                 {
                     "field": "ScriptName",
-                    "description": "Obfuscated or high entropy script names."
+                    "description": "Obfuscated or high entropy script names.",
+                    "description_fa": "نام های اسکریپت مبهم یا آنتروپی بالا."
                 },
                 {
                     "field": "SpawnChain",
-                    "description": "Chained behavior: Python \u2192 bash \u2192 curl or Python \u2192 osascript."
+                    "description": "Chained behavior: Python → bash → curl or Python → osascript.",
+                    "description_fa": "رفتار زنجیره ای: Python → bash → curl یا Python → osascript."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0173",
+            "description_fa": "اجرای بومی پایتون یا مبتنی بر چارچوب را از ترمینال، برنامه‌های جاسازی شده یا کارهای راه‌اندازی شناسایی می‌کند. تماس‌های شبکه، نوشتن مداوم یا شمارش سیستم را پس از راه‌اندازی پایتون پرچم‌گذاری می‌کند."
         }
     ]
 }

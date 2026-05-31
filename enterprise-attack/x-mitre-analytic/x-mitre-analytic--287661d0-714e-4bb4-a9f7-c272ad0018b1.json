@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0376#AN1058",
-                    "external_id": "AN1058"
+                    "external_id": "AN1058",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PortScanThreshold",
-                    "description": "Defines number of ports targeted per host within a short period."
+                    "description": "Defines number of ports targeted per host within a short period.",
+                    "description_fa": "تعداد پورت هایی را که به ازای هر هاست در یک دوره کوتاه هدف قرار می گیرند، تعریف می کند."
                 },
                 {
                     "field": "ToolPatternRegex",
-                    "description": "Regex to match common scanner arguments (e.g., `nmap -sS`, `nc -zv`)."
+                    "description": "Regex to match common scanner arguments (e.g., `nmap -sS`, `nc -zv`).",
+                    "description_fa": "Regex برای مطابقت با آرگومان‌های رایج اسکنر (مانند «nmap -sS»، «nc -zv»)."
                 },
                 {
                     "field": "ExpectedScanSources",
-                    "description": "Trusted IPs or systems performing routine discovery."
+                    "description": "Trusted IPs or systems performing routine discovery.",
+                    "description_fa": "IP های قابل اعتماد یا سیستم هایی که کشف معمولی را انجام می دهند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1058",
+            "description_fa": "استفاده از ابزارهای اسکن شبکه یا اسکریپت هایی را که با استفاده از تله متری ممیزی شده و netflow/pcap اتصال سریع به چندین سرویس یا میزبان انجام می دهند، شناسایی می کند."
         }
     ]
 }

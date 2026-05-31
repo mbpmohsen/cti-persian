@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-290",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/290.html"
+                    "url": "https://capec.mitre.org/data/definitions/290.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--e6c6d5fb-33e8-43ec-bff5-c0ade9d51304",
@@ -46,6 +50,19 @@
                     "Other",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -59,7 +76,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف رکوردهای MX را برای یک داده از طریق یک پرس و جو DNS برمی شمارد. این نوع جمع آوری اطلاعات نام سرورهای پست الکترونیکی را در شبکه برمی گرداند. سرورهای ایمیل اغلب در معرض اینترنت نیستند، اما در داخل DMZ شبکه ای قرار دارند که توسط یک فایروال محافظت می شود. یکی از عوارض جانبی این پیکربندی این است که با برشمردن رکوردهای MX برای یک سازمان، آدرس IP فایروال یا احتمالاً سایر سیستم‌های داخلی آشکار می‌شود. هنگامی که انتقال منطقه DNS امکان پذیر نیست، مهاجمان اغلب به شمارش رکورد MX متوسل می شوند.",
+            "name_fa": "رکوردهای تبادل ایمیل (MX) را برشمارید",
+            "x_capec_prerequisites_fa": [
+                "حریف نیاز به دسترسی به سرور DNS دارد که رکوردهای MX را برای یک شبکه برمی گرداند."
+            ],
+            "x_capec_resources_required_fa": [
+                "یک ابزار خط فرمان یا برنامه کاربردی دیگری که قادر به ارسال درخواست به سرور DNS باشد، ضروری است."
+            ]
         }
     ],
     "spec_version": "2.0",

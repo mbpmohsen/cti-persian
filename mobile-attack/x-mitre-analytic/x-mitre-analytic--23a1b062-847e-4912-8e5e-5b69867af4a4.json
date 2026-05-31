@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0598#AN1644",
-                    "external_id": "AN1644"
+                    "external_id": "AN1644",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between uninstall UI entry, interference event, and continued install state"
+                    "description": "Correlation window between uninstall UI entry, interference event, and continued install state",
+                    "description_fa": "پنجره همبستگی بین حذف ورودی UI، رویداد تداخل و ادامه وضعیت نصب"
                 },
                 {
                     "field": "ProtectedRoleSet",
-                    "description": "Set of elevated roles considered removal-resistant (device admin, owner modes, accessibility)"
+                    "description": "Set of elevated roles considered removal-resistant (device admin, owner modes, accessibility)",
+                    "description_fa": "مجموعه ای از نقش های بالا که در برابر حذف مقاوم هستند (سرپرست دستگاه، حالت های مالک، دسترسی)"
                 },
                 {
                     "field": "GlobalActionSet",
-                    "description": "UI actions considered suspicious during uninstall flows (BACK, HOME, RECENTS)"
+                    "description": "UI actions considered suspicious during uninstall flows (BACK, HOME, RECENTS)",
+                    "description_fa": "اقدامات رابط کاربری مشکوک در جریان حذف نصب (BACK، HOME، Recents)"
                 },
                 {
                     "field": "AllowedAccessibilityApps",
-                    "description": "Known legitimate accessibility services expected to use global actions"
+                    "description": "Known legitimate accessibility services expected to use global actions",
+                    "description_fa": "خدمات دسترسی قانونی شناخته شده که انتظار می رود از اقدامات جهانی استفاده کنند"
                 },
                 {
                     "field": "UninstallRetryThreshold",
-                    "description": "Number of repeated uninstall attempts before escalation"
+                    "description": "Number of repeated uninstall attempts before escalation",
+                    "description_fa": "تعداد دفعات تکرار حذف نصب قبل از تشدید"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Outbound traffic threshold confirming continued meaningful activity after failed removal"
+                    "description": "Outbound traffic threshold confirming continued meaningful activity after failed removal",
+                    "description_fa": "آستانه ترافیک خروجی که ادامه فعالیت معنی دار را پس از حذف ناموفق تأیید می کند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1644",
+            "description_fa": "همبستگی (1) برنامه‌ای که مکانیسم‌های کنترلی بالا را به دست می‌آورد یا حفظ می‌کند که قادر به مقاومت در برابر حذف (مدیر دستگاه، کنترل دسترسی، وضعیت مدیریت شده مالک)، (2) پیمایش کاربر در جریان‌های حذف نصب یا مدیریت برنامه، و (3) تغییر مسیر فوری UI، تزریق ناوبری برگشتی، حذف مودال با حذف ادامه یا عدم وجود برنامه. Defender یک زنجیره علّی را مشاهده می کند که در آن تلاش حذف به طور فعال مختل می شود و برنامه هدف نصب شده باقی می ماند."
         }
     ]
 }

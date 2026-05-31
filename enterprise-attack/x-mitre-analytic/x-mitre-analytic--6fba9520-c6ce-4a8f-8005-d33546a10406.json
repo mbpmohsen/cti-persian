@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0098#AN0274",
-                    "external_id": "AN0274"
+                    "external_id": "AN0274",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,33 +57,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking job creation, transfer, and notify execution (e.g., 30m\u201324h depending on environment and BITS retry behavior)."
+                    "description": "Correlation window linking job creation, transfer, and notify execution (e.g., 30m–24h depending on environment and BITS retry behavior).",
+                    "description_fa": "پنجره همبستگی ایجاد شغل، انتقال، و اجرای اعلان را به هم مرتبط می کند (به عنوان مثال، 30 تا 24 ساعت بسته به محیط و رفتار تلاش مجدد BITS)."
                 },
                 {
                     "field": "ExpectedUpdateHosts",
-                    "description": "Allow-list of corporate update/CDN endpoints that legitimately use BITS (WSUS, MEMCM, vendor updaters)."
+                    "description": "Allow-list of corporate update/CDN endpoints that legitimately use BITS (WSUS, MEMCM, vendor updaters).",
+                    "description_fa": "لیستی از نقاط پایانی به‌روزرسانی شرکت/CDN که به طور قانونی از BITS استفاده می‌کنند (WSUS، MEMCM، به‌روزرسانی‌کننده‌های فروشنده)."
                 },
                 {
                     "field": "SuspiciousCliSwitches",
-                    "description": "BITSAdmin flags of interest (/transfer, /addfile, /SetNotifyCmdLine, /resume, /setcustomheaders, /setminretrydelay)."
+                    "description": "BITSAdmin flags of interest (/transfer, /addfile, /SetNotifyCmdLine, /resume, /setcustomheaders, /setminretrydelay).",
+                    "description_fa": "پرچم های مورد علاقه BITSAdmin (/transfer، /addfile، /SetNotifyCmdLine، /رزومه، /setcustomheaders، /setminretrydelay)."
                 },
                 {
                     "field": "NotifyCmdBlockList",
-                    "description": "Known risky binaries or folders (e.g., %TEMP%\\*.exe, powershell.exe, cmd.exe) used as BITS notify commands."
+                    "description": "Known risky binaries or folders (e.g., %TEMP%\\*.exe, powershell.exe, cmd.exe) used as BITS notify commands.",
+                    "description_fa": "باینری ها یا پوشه های خطرناک شناخته شده (مانند %TEMP%\\*.exe، powershell.exe، cmd.exe) که به عنوان دستورات اطلاع رسانی BITS استفاده می شوند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope by interactive users, service accounts, or high-value targets (admins/servers) to reduce benign noise."
+                    "description": "Scope by interactive users, service accounts, or high-value targets (admins/servers) to reduce benign noise.",
+                    "description_fa": "دامنه توسط کاربران تعاملی، حساب‌های خدمات یا اهداف با ارزش بالا (ادمین/سرور) برای کاهش نویز خوش‌خیم."
                 },
                 {
                     "field": "ExternalNetCIDRs",
-                    "description": "Definition of external/non-corp destinations for network correlation."
+                    "description": "Definition of external/non-corp destinations for network correlation.",
+                    "description_fa": "تعریف مقاصد خارجی/غیر سازمانی برای همبستگی شبکه."
                 },
                 {
                     "field": "JobLifetimeThreshold",
-                    "description": "Maximum age or retry count for benign jobs before flagging persistence (e.g., >3 days or retry>20)."
+                    "description": "Maximum age or retry count for benign jobs before flagging persistence (e.g., >3 days or retry>20).",
+                    "description_fa": "حداکثر سن یا تعداد تلاش مجدد برای مشاغل خوش خیم قبل از علامت گذاری تداوم (به عنوان مثال، بیش از 3 روز یا تلاش مجدد> 20)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0274",
+            "description_fa": "زنجیره رفتاری: (1) یک بازیگر یک کار BITS را از طریق bitsadmin.exe، PowerShell BITS cmdlets یا COM ایجاد یا تغییر می‌دهد. (2) کار انتقال شبکه HTTP(S)/SMB را در حالی که کاربر مالک وارد شده است انجام می دهد. (3) پس از اتمام کار/خطا، BITS یک فرمان اطلاع رسانی (SetNotifyCmdLine) را از svchost.exe -k netsvcs -s BITS راه اندازی می کند، که اغلب با حفظ مشاغل طولانی مدت، پایداری را ایجاد می کند. این استراتژی ایجاد فرآیند، تله متری فرمان/اسکریپت، رویدادهای عملیاتی BITS-Client و اتصالات شبکه آغاز شده توسط BITS را به هم مرتبط می کند."
         }
     ]
 }

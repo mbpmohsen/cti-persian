@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0133#AN0376",
-                    "external_id": "AN0376"
+                    "external_id": "AN0376",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PathRegex",
-                    "description": "Regex patterns for user home directory file paths may vary by distro or user."
+                    "description": "Regex patterns for user home directory file paths may vary by distro or user.",
+                    "description_fa": "الگوهای Regex برای مسیرهای فایل فهرست اصلی کاربر ممکن است بسته به توزیع یا کاربر متفاوت باشد."
                 },
                 {
                     "field": "TunnelCLIFlags",
-                    "description": "Tunnel flags used by CLI tools can be customized or obfuscated by adversaries."
+                    "description": "Tunnel flags used by CLI tools can be customized or obfuscated by adversaries.",
+                    "description_fa": "پرچم های تونل استفاده شده توسط ابزارهای CLI می توانند توسط دشمنان سفارشی یا مبهم شوند."
                 },
                 {
                     "field": "Username",
-                    "description": "The Linux user account associated with tunnel initiation; may vary across developer environments"
+                    "description": "The Linux user account associated with tunnel initiation; may vary across developer environments",
+                    "description_fa": "حساب کاربری لینوکس مرتبط با راه اندازی تونل. ممکن است در محیط های توسعه دهنده متفاوت باشد"
                 },
                 {
                     "field": "TunnelArtifactPath",
-                    "description": "The filepath to the .vscode-cli/code_tunnel.json file may vary by distribution or IDE version"
+                    "description": "The filepath to the .vscode-cli/code_tunnel.json file may vary by distribution or IDE version",
+                    "description_fa": "مسیر فایل به فایل .vscode-cli/code_tunnel.json ممکن است بسته به توزیع یا نسخه IDE متفاوت باشد"
                 },
                 {
                     "field": "CommandLineFlags",
-                    "description": "Different IDEs or wrapper scripts may launch with different tunnel-related CLI options (e.g., --remote, --host)"
+                    "description": "Different IDEs or wrapper scripts may launch with different tunnel-related CLI options (e.g., --remote, --host)",
+                    "description_fa": "IDE های مختلف یا اسکریپت های بسته بندی ممکن است با گزینه های مختلف CLI مرتبط با تونل راه اندازی شوند (به عنوان مثال، -- راه دور، -- میزبان)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0376",
+            "description_fa": "ایجاد فایل پیکربندی تونل VSCode همراه با جلسه از راه دور تعاملی از طریق کد CLI یا ssh با دروازه JetBrains."
         }
     ]
 }

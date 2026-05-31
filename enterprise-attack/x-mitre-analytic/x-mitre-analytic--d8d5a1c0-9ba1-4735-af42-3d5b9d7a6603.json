@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0545#AN1502",
-                    "external_id": "AN1502"
+                    "external_id": "AN1502",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Differentiate between known admin/service accounts and non-administrative users triggering RunCommand or SSM."
+                    "description": "Differentiate between known admin/service accounts and non-administrative users triggering RunCommand or SSM.",
+                    "description_fa": "بین حساب‌های مدیریت/سرویس شناخته‌شده و کاربران غیرمدیری که RunCommand یا SSM را راه‌اندازی می‌کنند، تفاوت قائل شوید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate cloud control-plane API calls with host-side execution events within a bounded timeframe (e.g., 5 minutes)."
+                    "description": "Correlate cloud control-plane API calls with host-side execution events within a bounded timeframe (e.g., 5 minutes).",
+                    "description_fa": "تماس‌های API کنترل صفحه ابری را با رویدادهای اجرای سمت میزبان در یک بازه زمانی محدود (مثلاً 5 دقیقه) مرتبط کنید."
                 },
                 {
                     "field": "AllowedScripts",
-                    "description": "Whitelist approved scripts or automation invoked via RunCommand to reduce false positives."
+                    "description": "Whitelist approved scripts or automation invoked via RunCommand to reduce false positives.",
+                    "description_fa": "اسکریپت‌های تایید شده یا اتوماسیونی که از طریق RunCommand برای کاهش موارد مثبت کاذب استفاده می‌شوند، لیست سفید کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1502",
+            "description_fa": "نظارت بر استفاده مشکوک از سرویس‌های فرمان اداری بومی ابری (به عنوان مثال، AWS Systems Manager Run Command، Azure RunCommand، GCP OS Config) برای اجرای کد در داخل ماشین‌های مجازی. تشخیص ناهنجاری‌هایی مانند دستورات/اسکریپت‌های اجرا شده توسط کاربران غیرمنتظره، اجرای خارج از پنجره‌های تعمیر و نگهداری، یا دستورات آغاز شده توسط حساب‌های سرویس که معمولاً به مدیریت مرتبط نیستند. گزارش‌های فعالیت صفحه کنترل ابری را با اجرای سطح میزبان (ایجاد فرآیند، اجرای اسکریپت) مرتبط کنید تا در صورت تحقق دستورات در سیستم‌عامل مهمان اعتبارسنجی کنید."
         }
     ]
 }

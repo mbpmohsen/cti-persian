@@ -9,27 +9,33 @@
                 {
                     "external_id": "CAPEC-41",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/41.html"
+                    "url": "https://capec.mitre.org/data/definitions/41.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-150",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/150.html"
+                    "url": "http://cwe.mitre.org/data/definitions/150.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-88",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/88.html"
+                    "url": "http://cwe.mitre.org/data/definitions/88.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--30047c4f-cbf1-48ff-906c-3c6d58feb1a1",
@@ -53,6 +59,15 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -69,11 +84,22 @@
                 "This attack targets most widely deployed feature rich email applications, including web based email programs."
             ],
             "x_capec_skills_required": {
-                "Low": "To distribute email"
+                "Low": "To distribute email",
+                "Low_fa": "برای توزیع ایمیل"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این نوع حمله شامل یک مهاجم است که از متا کاراکترها در هدرهای ایمیل استفاده می کند تا رفتار نامناسب را به برنامه های ایمیل تزریق کند. نرم افزار ایمیل به طور فزاینده ای پیچیده و دارای ویژگی های غنی شده است. علاوه بر این، برنامه های ایمیل همه جا حاضر هستند و مستقیماً به وب متصل هستند و آنها را به اهداف ایده آلی برای راه اندازی و انتشار حملات تبدیل می کند. همانطور که تقاضای کاربر برای عملکردهای جدید در برنامه های ایمیل افزایش می یابد، آنها بیشتر شبیه مرورگرهایی با رندر پیچیده و وصل کردن روتین می شوند. از آنجایی که قابلیت های ایمیل بیشتری گنجانده شده و از کاربر انتزاع می شود، این فرصت هایی را برای مهاجمان ایجاد می کند. تقریباً همه برنامه‌های ایمیل اطلاعات هدر ایمیل را به‌طور پیش‌فرض فهرست نمی‌کنند، با این حال هدر ایمیل حاوی بردارهای مهاجم ارزشمندی است که مهاجم می‌تواند از آنها بهره‌برداری کند، به‌ویژه اگر رفتار برنامه مشتری ایمیل شناخته شده باشد. متا کاراکترها از کاربر پنهان هستند، اما می توانند حاوی اسکریپت ها، شمارش ها، کاوشگرها و سایر حملات علیه سیستم کاربر باشند.",
+            "name_fa": "استفاده از متا کاراکترها در هدرهای ایمیل برای تزریق بارهای مخرب",
+            "x_capec_example_instances_fa": [
+                "<xhtml:div style=\"margin-left:1em;\" class=\"informative\">به:<someone@example.com>از:<badguy@example.com>Header<SCRIPT>payme</SCRIPT>def: whatever</xhtml:div>",
+                "<xhtml:p>کاراکترهای متا یکی از ارزشمندترین ابزارهایی هستند که مهاجمان برای فریب کاربران برای انجام برخی اقدامات از جانب آنها دارند. شاید ایمیل کارآمدترین و مقرون به صرفه ترین ابزار توزیع حملات موجود باشد، این امر به همه گیری فیشینگ منجر شده است.</xhtml:p>\n               <xhtml:p>کاراکترهای متا مانند \\w \\s \\d ^ می‌توانند به مهاجم اجازه دهند تا از رفتار مورد انتظار برای اجرای دستورات اضافی فرار کند. فرار از فرآیند (مانند سرویس گیرنده ایمیل) به مهاجم اجازه می دهد کد دلخواه را در فرآیند کاربر اجرا کند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>آزمایش</h3><ol><li> <p> <b>شناسایی و مشخص کردن آسیب‌پذیری‌های پردازش متاکاراکتر در سرصفحه‌های ایمیل: </b>یک مهاجم ایمیل‌هایی را با سرصفحه‌هایی ایجاد می‌کند که حاوی انواع متاکاراکترها در پردازش‌های مخرب برنامه‌های مخرب است یا نه. روشی که این کار را انجام می‌دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از یک ابزار خودکار (fuzzer) برای ایجاد سرصفحه‌های ایمیل‌های مخرب حاوی بارهای مبتنی بر متاکاراکتر استفاده کنید.</td></tr><tr><td>دستکاری دستی سرصفحه‌های ایمیل مبتنی بر mecharacter به منظور تزریق محتوای مخرب. آنها.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p>یک مهاجم از آسیب‌پذیری‌های شناسایی شده در مرحله آزمایش برای تزریق سرصفحه‌های ایمیل مخرب استفاده می‌کند و باعث می‌شود برنامه ایمیل هدف رفتاری خارج از حد انتظار خود نشان دهد. محدودیت‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>ارسال ایمیل‌هایی با بارهای مخرب مبتنی بر فراکاراکتر خاص در سرصفحه‌های ایمیل به سیستم‌های هدفمندی که برنامه‌های پردازش ایمیل را اجرا می‌کنند که در مرحله آزمایشی به عنوان آسیب‌پذیر شناسایی شده‌اند.</tdol/></><tr></tdol/></><tr></tdol/></><tr>",
+            "x_capec_prerequisites_fa": [
+                "این حمله بیشتر برنامه های کاربردی ایمیل با ویژگی های غنی از جمله برنامه های ایمیل مبتنی بر وب را هدف قرار می دهد."
+            ]
         }
     ],
     "spec_version": "2.0",

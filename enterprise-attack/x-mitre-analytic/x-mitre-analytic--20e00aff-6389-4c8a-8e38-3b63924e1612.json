@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0346#AN0980",
-                    "external_id": "AN0980"
+                    "external_id": "AN0980",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Depends on allowed parent process behaviors in the environment (e.g., explorer.exe vs powershell.exe)"
+                    "description": "Depends on allowed parent process behaviors in the environment (e.g., explorer.exe vs powershell.exe)",
+                    "description_fa": "به رفتارهای مجاز فرآیند والد در محیط بستگی دارد (مانند explorer.exe در مقابل powershell.exe)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Can tune alert thresholds for rapid or scheduled screenshots (e.g., interval-based screen capture)"
+                    "description": "Can tune alert thresholds for rapid or scheduled screenshots (e.g., interval-based screen capture)",
+                    "description_fa": "می‌تواند آستانه‌های هشدار را برای اسکرین‌شات‌های سریع یا برنامه‌ریزی‌شده تنظیم کند (به‌عنوان مثال، عکس‌برداری از صفحه بر اساس فاصله زمانی)"
                 },
                 {
                     "field": "ImageExtension",
-                    "description": "To detect file writes (e.g., .bmp, .png) that deviate from typical user activity"
+                    "description": "To detect file writes (e.g., .bmp, .png) that deviate from typical user activity",
+                    "description_fa": "برای شناسایی فایل‌هایی که می‌نویسد (به‌عنوان مثال، bmp.، .png) که از فعالیت معمول کاربر منحرف می‌شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0980",
+            "description_fa": "استفاده غیرمعمول از APIهای ضبط صفحه (مانند CopyFromScreen) یا ابزارهای خط فرمان برای نوشتن فایل های تصویری روی دیسک."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0285#AN0791",
-                    "external_id": "AN0791"
+                    "external_id": "AN0791",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate RPC activity with remote process creation within a configurable time window (e.g., 300s)"
+                    "description": "Correlate RPC activity with remote process creation within a configurable time window (e.g., 300s)",
+                    "description_fa": "ارتباط فعالیت RPC با ایجاد فرآیند از راه دور در یک پنجره زمانی قابل تنظیم (به عنوان مثال، 300s)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Identify rare or first-time DCOM invocations by specific accounts"
+                    "description": "Identify rare or first-time DCOM invocations by specific accounts",
+                    "description_fa": "فراخوان های نادر یا برای اولین بار DCOM را با حساب های خاص شناسایی کنید"
                 },
                 {
                     "field": "ProcessName",
-                    "description": "List of suspicious executables commonly abused via DCOM (e.g., excel.exe, wmiprvse.exe)"
+                    "description": "List of suspicious executables commonly abused via DCOM (e.g., excel.exe, wmiprvse.exe)",
+                    "description_fa": "فهرستی از فایل های اجرایی مشکوک که معمولاً از طریق DCOM مورد سوء استفاده قرار می گیرند (مانند excel.exe، wmiprvse.exe)"
                 },
                 {
                     "field": "RemoteHostList",
-                    "description": "Known set of systems that should or should not be invoking DCOM activity"
+                    "description": "Known set of systems that should or should not be invoking DCOM activity",
+                    "description_fa": "مجموعه شناخته شده ای از سیستم هایی که باید یا نباید فعالیت DCOM را فراخوانی کنند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0791",
+            "description_fa": "یک فراخوانی از راه دور DCOM توسط یک حساب ممتاز با استفاده از RPC (پورت 135)، به دنبال آن نمونه سازی غیرعادی فرآیند یا بارگذاری ماژول در سیستم راه دور که نشان دهنده اجرای کد است."
         }
     ]
 }

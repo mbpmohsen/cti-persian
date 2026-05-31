@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0651#AN1734",
-                    "external_id": "AN1734"
+                    "external_id": "AN1734",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between artifact change, visibility degradation, and continued execution or network activity"
+                    "description": "Correlation window between artifact change, visibility degradation, and continued execution or network activity",
+                    "description_fa": "پنجره همبستگی بین تغییر مصنوع، کاهش دید، و ادامه اجرا یا فعالیت شبکه"
                 },
                 {
                     "field": "ArtifactTypeSet",
-                    "description": "Types of host artifacts monitored for suspicious removal or alteration, such as files, installed-app presence, hidden media, or compromise markers"
+                    "description": "Types of host artifacts monitored for suspicious removal or alteration, such as files, installed-app presence, hidden media, or compromise markers",
+                    "description_fa": "انواع مصنوعات میزبان که برای حذف یا تغییر مشکوک نظارت می‌شوند، مانند فایل‌ها، حضور برنامه‌های نصب‌شده، رسانه‌های پنهان یا نشانگرهای در معرض خطر"
                 },
                 {
                     "field": "ExpectedTelemetrySources",
-                    "description": "Baseline sources expected to continue reflecting artifacts or compromise state"
+                    "description": "Baseline sources expected to continue reflecting artifacts or compromise state",
+                    "description_fa": "انتظار می رود منابع پایه به بازتاب مصنوعات یا وضعیت سازش ادامه دهند"
                 },
                 {
                     "field": "TelemetryGapThreshold",
-                    "description": "Threshold defining abnormal loss of artifact visibility or reporting continuity"
+                    "description": "Threshold defining abnormal loss of artifact visibility or reporting continuity",
+                    "description_fa": "آستانه تعیین کننده از دست دادن غیر طبیعی دید مصنوع یا تداوم گزارش"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Legitimate apps expected to delete or alter artifacts as part of normal lifecycle or cleanup behavior"
+                    "description": "Legitimate apps expected to delete or alter artifacts as part of normal lifecycle or cleanup behavior",
+                    "description_fa": "انتظار می رود برنامه های قانونی به عنوان بخشی از چرخه زندگی عادی یا رفتار پاکسازی، مصنوعات را حذف یا تغییر دهند"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Outbound traffic threshold used to confirm meaningful activity after indicator removal"
+                    "description": "Outbound traffic threshold used to confirm meaningful activity after indicator removal",
+                    "description_fa": "آستانه ترافیک خروجی برای تأیید فعالیت معنی دار پس از حذف نشانگر استفاده می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1734",
+            "description_fa": "مرتبط است (1) فعالیت برنامه‌ای که مصنوعات محلی مرتبط با تشخیص یا وضعیت به خطر افتادن دستگاه را ایجاد می‌کند، تغییر می‌دهد یا به آن دسترسی پیدا می‌کند، (2) حذف، تغییر، تغییر نام، جابجایی بعدی، یا از بین بردن نمایان بودن آن مصنوع‌ها، از جمله فایل‌ها، حضور برنامه، رسانه، یا نشانگرهای روت exeound کاهش یافته کیفیت برنامه، و (3) تغییر حالت مصنوع مدافع یک زنجیره علّی را مشاهده می‌کند که در آن شواهد سمت میزبان ابتدا دستکاری می‌شوند و در حالی که برنامه آغازگر فعال باقی می‌ماند، دید یا گزارش مورد انتظار کاهش می‌یابد."
         }
     ]
 }

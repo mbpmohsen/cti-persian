@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0269#AN0750",
-                    "external_id": "AN0750"
+                    "external_id": "AN0750",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between remote login and post-access activity"
+                    "description": "Correlation window between remote login and post-access activity",
+                    "description_fa": "پنجره همبستگی بین ورود از راه دور و فعالیت پس از دسترسی"
                 },
                 {
                     "field": "LogonUser",
-                    "description": "Limit to service accounts or privileged users for higher fidelity"
+                    "description": "Limit to service accounts or privileged users for higher fidelity",
+                    "description_fa": "برای وفاداری بیشتر به حساب‌های سرویس یا کاربران ممتاز محدود کنید"
                 },
                 {
                     "field": "RemoteHostList",
-                    "description": "Allowlisting known admin jumpboxes or deployment tools"
+                    "description": "Allowlisting known admin jumpboxes or deployment tools",
+                    "description_fa": "فهرست مجاز کردن جعبه‌های پرش ادمین یا ابزارهای استقرار شناخته شده"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0750",
+            "description_fa": "از طریق RDP یا WMI توسط یک حساب کاربری وارد سیستم شوید و به دنبال آن اجرای فرمان غیر معمول، دستکاری فایل یا اتصالات جانبی شبکه انجام می شود."
         }
     ]
 }

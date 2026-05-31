@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0400#AN1121",
-                    "external_id": "AN1121"
+                    "external_id": "AN1121",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "QueryLengthThreshold",
-                    "description": "Subdomain length for detecting base32/base64-encoded payloads"
+                    "description": "Subdomain length for detecting base32/base64-encoded payloads",
+                    "description_fa": "طول زیردامنه برای شناسایی بارهای با کد base32/base64"
                 },
                 {
                     "field": "ProcessImageFilter",
-                    "description": "Flag non-standard executables making DNS queries"
+                    "description": "Flag non-standard executables making DNS queries",
+                    "description_fa": "پرچم‌گذاری فایل‌های اجرایی غیراستاندارد که جستارهای DNS را ایجاد می‌کنند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Rate of queries in short interval per process"
+                    "description": "Rate of queries in short interval per process",
+                    "description_fa": "نرخ پرس و جو در بازه زمانی کوتاه در هر فرآیند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1121",
+            "description_fa": "جستارهای DNS با فرکانس بالا یا غیرعادی را شناسایی می کند که توسط فرآیندهای غیر مرورگر و غیر سیستمی (به عنوان مثال، PowerShell، rundll32، python.exe) برای ایجاد فرمان و کنترل از طریق تونل DNS آغاز شده اند."
         }
     ]
 }

@@ -14,21 +14,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1036/011",
                     "external_id": "T1036.011",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Microsoft XorDdos Linux Stealth 2022",
                     "description": "Ratnesh Pandey, Yevgeny Kulakov, and Jonathan Bar Or with Saurabh Swaroop. (2022, May 19). Rise in XorDdos: A deeper look at the stealthy DDoS malware targeting Linux devices. Retrieved September 27, 2023.",
                     "url": "https://www.microsoft.com/en-us/security/blog/2022/05/19/rise-in-xorddos-a-deeper-look-at-the-stealthy-ddos-malware-targeting-linux-devices/",
-                    "source_name_fa": "Microsoft Xor Ddos Linux Stealth 2022",
-                    "description_fa": "Ratnesh Pandey، Yevgeny Kulakov، و جاناتان بار یا با سائوrabh Swaroop (2022، May 19). افزایش در XorDdos: نگاهی عمیق تر به بدافزار مخفی DDoS که دستگاه های لینوکس را هدف قرار می دهد. Retrieved ۲۷ سپتامبر ۲۰۲۳"
+                    "source_name_fa": "Microsoft XorDdos Linux Stealth 2022",
+                    "description_fa": "راتنش پاندی، یوگنی کولاکوف، و جاناتان بار یا با ساوراب سواروپ. (2022، 19 مه). ظهور در XorDdos: نگاهی عمیق تر به بدافزار مخفی DDoS که دستگاه های لینوکس را هدف قرار می دهد. بازبینی شده در 27 سپتامبر 2023."
                 },
                 {
                     "source_name": "Sandfly BPFDoor 2022",
                     "description": "The Sandfly Security Team. (2022, May 11). BPFDoor - An Evasive Linux Backdoor Technical Analysis. Retrieved September 29, 2023.",
                     "url": "https://sandflysecurity.com/blog/bpfdoor-an-evasive-linux-backdoor-technical-analysis/",
                     "source_name_fa": "Sandfly BPFDoor 2022",
-                    "description_fa": "تیم امنیتی Sandfly (2022, May 11) BPFDoor - یک تجزیه و تحلیل فنی لینوکس Backdoor. Retrieved 29 سپتامبر 2023."
+                    "description_fa": "تیم امنیتی سندفلای (2022، 11 مه). BPFDoor - تجزیه و تحلیل فنی درب پشتی لینوکس گریزان. بازبینی شده در 29 سپتامبر 2023."
                 }
             ],
             "object_marking_refs": [
@@ -54,8 +54,8 @@
                 "Linux"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "Overwrite Process Arguments",
-            "description_fa": "مخالفان ممکن است استدلال های درونی فرایند را تغییر دهند تا نام خود را تغییر دهند تا به عنوان یک فرایند مشروع یا خوش خیم ظاهر شوند. در لینوکس، سیستم عامل استدلال های خط فرمان را در پشته فرآیند ذخیره می کند و آنها را به تابع \"main()\" به عنوان آرایه \"argv\" منتقل می کند. عنصر اول، \"argv [0]، به طور معمول شامل نام فرایند یا مسیر است - به طور پیش فرض، دستور مورد استفاده در واقع شروع فرایند (به عنوان مثال، \"cat /etc/passwd\"). به طور پیش فرض، سیستم فایل لینوکس از این ارزش برای نشان دادن نام فرآیند استفاده می کند. فایل ‘/proc/<PID>/cmdline’ محتوای این حافظه را نشان می دهد و ابزارهایی مانند ps از آن برای نمایش اطلاعات فرآیند استفاده می کنند. از آنجایی که استدلال ها در حافظه ی فضایی کاربر ذخیره می شوند، این اصلاح می تواند بدون امتیازات بالا انجام شود.\n\nدر طول زمان، دشمنان می توانند حافظه مورد استفاده توسط تمام استدلال های خط فرمان برای یک فرآیند را از بین ببرند و هر رشته استدلال را با بایت های null بازنویسی کنند. این امر شواهدی را از چگونگی راه اندازی فرآیند حذف می کند. سپس می توانند رشته ای را به منطقه حافظه ای که قبلا توسط \"argv [0] اشغال شده است، بنویسند. برای تقلید از یک دستور خوش خیم، مانند \" حل و فصل گربه\". رشته خط فرمان جدید در \"/proc/<PID>/cmdline\" منعکس شده و توسط ابزارهایی مانند \"ps\" نمایش داده می شود.[۱۰] [CTI_PRESERVE_0][۹][۹][۱۰] (Citation: Sandfly BPFDoor 2022) (Citation: Microsoft XorDdos Linux Stealth 2022)"
+            "name_fa": "بازنویسی آرگومان های فرآیند",
+            "description_fa": "دشمنان ممکن است آرگومان های درون حافظه یک فرآیند را تغییر دهند تا نام آن را تغییر دهند تا به عنوان یک فرآیند مشروع یا خوش خیم ظاهر شوند. در لینوکس، سیستم عامل آرگومان های خط فرمان را در پشته فرآیند ذخیره می کند و آنها را به تابع \"main()\" به عنوان آرایه \"argv\" ارسال می کند. اولین عنصر، «argv[0]»، معمولاً حاوی نام یا مسیر فرآیند است - به طور پیش‌فرض، دستوری که برای شروع واقعی فرآیند استفاده می‌شود (به عنوان مثال، «cat /etc/passwd»). به طور پیش‌فرض، سیستم فایل لینوکس «/proc» از این مقدار برای نمایش نام فرآیند استفاده می‌کند. فایل «/proc/<PID>/cmdline» محتویات این حافظه را منعکس می‌کند و ابزارهایی مانند «ps» از آن برای نمایش اطلاعات پردازش استفاده می‌کنند. از آنجایی که آرگومان‌ها در هنگام راه‌اندازی در حافظه فضای کاربر ذخیره می‌شوند، این اصلاح می‌تواند بدون امتیازات بالا انجام شود. \n\nدر طول زمان اجرا، دشمنان می توانند حافظه استفاده شده توسط همه آرگومان های خط فرمان را برای یک فرآیند پاک کنند و هر رشته آرگومان را با بایت های تهی بازنویسی کنند. این شواهدی را از نحوه راه‌اندازی این فرآیند حذف می‌کند. سپس آنها می توانند یک رشته جعلی را در ناحیه حافظه که قبلاً توسط «argv[0]» اشغال شده بود بنویسند تا یک فرمان خوش خیم مانند «cat resolv.conf» را تقلید کنند. رشته جدید خط فرمان در «/proc/<PID>/cmdline» منعکس می‌شود و با ابزارهایی مانند «ps» نمایش داده می‌شود.(Citation: Sandfly BPFDoor 2022)[[[CTI_PRESERVE_1]] (Citation: Microsoft XorDdos Linux Stealth 2022)"
         }
     ]
 }

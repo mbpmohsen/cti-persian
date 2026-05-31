@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0451#AN1245",
-                    "external_id": "AN1245"
+                    "external_id": "AN1245",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProfilePathList",
-                    "description": "Custom PowerShell host profiles or redirection to alternate profile paths"
+                    "description": "Custom PowerShell host profiles or redirection to alternate profile paths",
+                    "description_fa": "نمایه های میزبان PowerShell سفارشی یا هدایت مجدد به مسیرهای نمایه جایگزین"
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Whether profile execution occurs under elevated user (e.g., Administrator, SYSTEM)"
+                    "description": "Whether profile execution occurs under elevated user (e.g., Administrator, SYSTEM)",
+                    "description_fa": "آیا اجرای نمایه در زیر کاربر بالا (به عنوان مثال، Administrator، SYSTEM) انجام می شود"
                 },
                 {
                     "field": "ModuleOrScriptName",
-                    "description": "Specific modules or external programs loaded within profile"
+                    "description": "Specific modules or external programs loaded within profile",
+                    "description_fa": "ماژول های خاص یا برنامه های خارجی بارگذاری شده در نمایه"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation time between profile modification and PowerShell process start"
+                    "description": "Correlation time between profile modification and PowerShell process start",
+                    "description_fa": "زمان همبستگی بین اصلاح نمایه و شروع فرآیند PowerShell"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1245",
+            "description_fa": "مدافعان می‌توانند پایداری مبتنی بر نمایه PowerShell را با ارتباط ایجاد یا اصلاح فایل در مکان‌های نمایه شناخته‌شده با راه‌اندازی‌های بعدی فرآیند PowerShell که از پرچم «-NoProfile» استفاده نمی‌کنند، شناسایی کنند. اسکریپت‌های نمایه‌ای که ماژول‌های غیرمعمول را بارگیری می‌کنند یا برنامه‌های خارجی را راه‌اندازی می‌کنند، به ویژه در زمینه‌های بالا، مشکوک هستند و ممکن است نشان دهنده تداوم یا افزایش امتیازات دشمن باشند."
         }
     ]
 }

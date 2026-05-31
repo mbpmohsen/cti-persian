@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0146#AN0414",
-                    "external_id": "AN0414"
+                    "external_id": "AN0414",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "OperationType",
-                    "description": "Correlate multiple destructive API calls over short intervals."
+                    "description": "Correlate multiple destructive API calls over short intervals.",
+                    "description_fa": "چندین تماس مخرب API را در فواصل زمانی کوتاه به هم مرتبط کنید."
                 },
                 {
                     "field": "UserAgent",
-                    "description": "Flag non-console/API clients initiating destructive behavior."
+                    "description": "Flag non-console/API clients initiating destructive behavior.",
+                    "description_fa": "مشتریان غیر کنسول/API را که رفتار مخرب را آغاز می کنند، علامت گذاری کنید."
                 },
                 {
                     "field": "RegionScope",
-                    "description": "Observe whether deletions span multiple regions or org accounts."
+                    "description": "Observe whether deletions span multiple regions or org accounts.",
+                    "description_fa": "مشاهده کنید که آیا حذف‌ها شامل چندین منطقه یا حساب‌های سازمانی می‌شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0414",
+            "description_fa": "دشمن زیرساخت‌های حیاتی را حذف می‌کند: نمونه‌های EC2، سطل‌های S3، عکس‌های فوری یا حجم‌ها با استفاده از اعتبار IAM بالا. اغلب شامل تماس‌های دسته‌ای API با «حذف*» یا «TerminateInstances»."
         }
     ]
 }

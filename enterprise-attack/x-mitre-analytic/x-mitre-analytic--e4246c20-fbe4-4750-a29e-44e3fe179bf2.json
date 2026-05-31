@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0286#AN0792",
-                    "external_id": "AN0792"
+                    "external_id": "AN0792",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KeywordList",
-                    "description": "Adjust impersonation detection keywords based on local business risk terms (e.g., 'ACH', 'Invoice')."
+                    "description": "Adjust impersonation detection keywords based on local business risk terms (e.g., 'ACH', 'Invoice').",
+                    "description_fa": "کلمات کلیدی شناسایی جعل هویت را بر اساس شرایط ریسک کسب و کار محلی (مانند «ACH»، «فاکتور») تنظیم کنید."
                 },
                 {
                     "field": "GeoLocationBaseline",
-                    "description": "Define trusted geographic regions for normal user email activity."
+                    "description": "Define trusted geographic regions for normal user email activity.",
+                    "description_fa": "مناطق جغرافیایی قابل اعتماد را برای فعالیت عادی ایمیل کاربر تعریف کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0792",
+            "description_fa": "فعالیت ایمیل غیرعادی را که از برنامه‌های میزبانی شده ویندوز (مانند Outlook) منشأ می‌گیرد، نظارت کنید، جایی که نام حساب ارسالی یا نام نمایشی با آدرس SMTP اصلی مطابقت ندارد. حجم غیرعادی پیام‌های خروجی حاوی کلمات کلیدی حساس (مانند «پرداخت»، «انتقال سیمی») یا مکان‌های ورود غیرعادی برای حساب‌های مرتبط با فعالیت ارسال ایمیل را شناسایی کنید."
         }
     ]
 }

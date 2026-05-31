@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0189#AN0542",
-                    "external_id": "AN0542"
+                    "external_id": "AN0542",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BinaryChangeThreshold",
-                    "description": "File hash delta or binary string diff score to tolerate renamed/mutated variants."
+                    "description": "File hash delta or binary string diff score to tolerate renamed/mutated variants.",
+                    "description_fa": "فایل هش دلتا یا امتیاز تفاوت رشته باینری برای تحمل انواع تغییر نام/جهش یافته."
                 },
                 {
                     "field": "UserContext",
-                    "description": "User or group expected to use dev tools; reduce false positives from legitimate repacking."
+                    "description": "User or group expected to use dev tools; reduce false positives from legitimate repacking.",
+                    "description_fa": "کاربر یا گروهی که انتظار می رود از ابزارهای توسعه دهنده استفاده کند. کاهش مثبت کاذب از بسته بندی مجدد قانونی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0542",
+            "description_fa": "شناسایی XProtect یا AV قرنطینه کردن یک ابزار شناخته شده، به دنبال آن اصلاح (اندازه فایل، هش، رشته) و سپس اجرای مجدد توسط همان کاربر یا کاربر مرتبط."
         }
     ]
 }

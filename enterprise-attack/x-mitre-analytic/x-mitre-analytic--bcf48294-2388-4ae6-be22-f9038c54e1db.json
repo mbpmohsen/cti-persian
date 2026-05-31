@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0470#AN1294",
-                    "external_id": "AN1294"
+                    "external_id": "AN1294",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IssuerOrgFilter",
-                    "description": "Organizations in certificate issuer fields to allowlist or monitor."
+                    "description": "Organizations in certificate issuer fields to allowlist or monitor.",
+                    "description_fa": "سازمان‌ها در زمینه‌های صادرکننده گواهی برای فهرست مجوز یا نظارت."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Restrict detection to non-system users or external-facing applications."
+                    "description": "Restrict detection to non-system users or external-facing applications.",
+                    "description_fa": "شناسایی را به کاربران غیرسیستم یا برنامه های خارجی محدود کنید."
                 },
                 {
                     "field": "HeaderSignatureMatch",
-                    "description": "Specific HTTP header anomalies or patterns (e.g., missing User-Agent)."
+                    "description": "Specific HTTP header anomalies or patterns (e.g., missing User-Agent).",
+                    "description_fa": "ناهنجاری‌ها یا الگوهای هدر HTTP خاص (به عنوان مثال، عدم وجود کاربر-عامل)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1294",
+            "description_fa": "فرآیندهای غیرقابل اعتماد ایجاد اتصالات TLS/HTTPS خروجی با گواهینامه ها یا فیلدهای سرصفحه نادرست، که اغلب با رفتار سرویس هدف مطابقت ندارند. تلاش‌های جعل هویت پروتکل را از طریق تجزیه و تحلیل ابرداده ترافیک و نسل فرآیند میزبان شناسایی می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0023#AN0068",
-                    "external_id": "AN0068"
+                    "external_id": "AN0068",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SignedBinaryContext",
-                    "description": "Helps to distinguish between signed/unsigned packed binaries (common in legitimate vs. malicious cases)."
+                    "description": "Helps to distinguish between signed/unsigned packed binaries (common in legitimate vs. malicious cases).",
+                    "description_fa": "به تمایز بین باینری های بسته بندی شده امضا شده/بدون علامت (متداول در موارد قانونی در مقابل موارد مخرب) کمک می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Can be used to scope to specific users or service accounts targeted in attacks."
+                    "description": "Can be used to scope to specific users or service accounts targeted in attacks.",
+                    "description_fa": "می‌توان از آن برای دسترسی به کاربران خاص یا حساب‌های خدماتی که در حملات هدف قرار می‌گیرند استفاده کرد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0068",
+            "description_fa": "تشخیص باینری های بسته بندی شده Mach-O که در حافظه باز می شوند و کنترل را به بخش های کد اصلاح شده به صورت پویا منتقل می کنند."
         }
     ]
 }

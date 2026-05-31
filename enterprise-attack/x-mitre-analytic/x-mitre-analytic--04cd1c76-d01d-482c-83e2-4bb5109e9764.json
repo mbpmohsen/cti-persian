@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0454#AN1251",
-                    "external_id": "AN1251"
+                    "external_id": "AN1251",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedPlugins",
-                    "description": "Expected set of PAM and authorization plugins; unknown additions may indicate malicious insertion."
+                    "description": "Expected set of PAM and authorization plugins; unknown additions may indicate malicious insertion.",
+                    "description_fa": "مجموعه مورد انتظار PAM و افزونه های مجوز. اضافات ناشناخته ممکن است نشان دهنده درج مخرب باشد."
                 },
                 {
                     "field": "CorrelatedSources",
-                    "description": "Cross-correlation with VPN/physical access logs to identify impossible or anomalous login patterns."
+                    "description": "Cross-correlation with VPN/physical access logs to identify impossible or anomalous login patterns.",
+                    "description_fa": "همبستگی متقابل با سیاهههای مربوط به VPN / دسترسی فیزیکی برای شناسایی الگوهای ورود غیرممکن یا غیرعادی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1251",
+            "description_fa": "تغییرات مشکوک در مجوز macOS و فایل های افزونه PAM را شناسایی می کند. تغییرات فایل را در /etc/pam.d/ یا /Library/Security/SecurityAgentPlugins با تلاش‌های غیرمنتظره احراز هویت یا استفاده غیرعادی از حساب مرتبط می‌کند."
         }
     ]
 }

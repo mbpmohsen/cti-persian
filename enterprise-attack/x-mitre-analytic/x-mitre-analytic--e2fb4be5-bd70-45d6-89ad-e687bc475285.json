@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0329#AN0935",
-                    "external_id": "AN0935"
+                    "external_id": "AN0935",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,10 +41,13 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetVMNames",
-                    "description": "Limit to critical VM names to reduce false positives"
+                    "description": "Limit to critical VM names to reduce false positives",
+                    "description_fa": "برای کاهش موارد مثبت کاذب، نام‌های مهم VM را محدود کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0935",
+            "description_fa": "اجرای پوسته ESXi یا vim-cmd که تمام عکس های فوری VM را با استفاده از vmsvc/snapshot.removeall یا rm در مسیرهای عکس برداری حذف می کند."
         }
     ]
 }

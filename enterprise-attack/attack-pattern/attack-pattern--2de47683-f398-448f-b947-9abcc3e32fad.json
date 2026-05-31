@@ -14,28 +14,28 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1547/012",
                     "external_id": "T1547.012",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Microsoft AddPrintProcessor May 2018",
                     "description": "Microsoft. (2018, May 31). AddPrintProcessor function. Retrieved October 5, 2020.",
                     "url": "https://docs.microsoft.com/en-us/windows/win32/printdocs/addprintprocessor",
-                    "source_name_fa": "Microsoft AddPrintProcessor مه 2018",
-                    "description_fa": "مایکروسافت (2018, May 31) AddPrintProcessor تابع Retrieved 5 اکتبر 2020"
+                    "source_name_fa": "Microsoft AddPrintProcessor می 2018",
+                    "description_fa": "مایکروسافت. (2018، 31 مه). عملکرد AddPrintProcessor. بازبینی شده در 5 اکتبر 2020."
                 },
                 {
                     "source_name": "Microsoft Intro Print Processors",
                     "description": "Microsoft. (2023, June 26). Introduction to print processors. Retrieved September 27, 2023.",
                     "url": "https://learn.microsoft.com/windows-hardware/drivers/print/introduction-to-print-processors",
-                    "source_name_fa": "Microsoft Intro Print Processors",
-                    "description_fa": "مایکروسافت (2023، 26 ژوئن) معرفی پردازنده های چاپی Retrieved ۲۷ سپتامبر ۲۰۲۳"
+                    "source_name_fa": "پردازنده های چاپ معرفی مایکروسافت",
+                    "description_fa": "مایکروسافت. (26 ژوئن 2023). آشنایی با پردازنده های چاپ بازبینی شده در 27 سپتامبر 2023."
                 },
                 {
                     "source_name": "ESET PipeMon May 2020",
                     "description": "Tartare, M. et al. (2020, May 21). No “Game over” for the Winnti Group. Retrieved August 24, 2020.",
                     "url": "https://www.welivesecurity.com/2020/05/21/no-game-over-winnti-group/",
-                    "source_name_fa": "ESET PipeMon 2020",
-                    "description_fa": "Tartare، M. et al. (2020، 21 می) هیچ \"بازی\" برای گروه بردی Retrieved 24 آگوست 2020"
+                    "source_name_fa": "ESET PipeMon می 2020",
+                    "description_fa": "تارتار، ام. و همکاران. (2020، 21 مه). \"بازی تمام شد\" برای گروه Winnti وجود ندارد. بازبینی شده در 24 اوت 2020."
                 }
             ],
             "object_marking_refs": [
@@ -70,7 +70,7 @@
             ],
             "x_mitre_version": "1.2",
             "name_fa": "پردازنده های چاپ",
-            "description_fa": "مخالفان ممکن است از پردازنده های چاپی برای اجرای DLL های مخرب در طول بوت سیستم برای پایداری و / یا افزایش امتیاز استفاده کنند. پردازنده های چاپ DLLهایی هستند که توسط سرویس spooler چاپ بارگذاری می شوند، \\\"spoolsv.exe'، در طول بوت [CTI_PRESERVE_4]\n\nمخالفان ممکن است با اضافه کردن پردازنده های چاپی که DLL های مخرب را در استارت آپ بارگذاری می کنند، از سرویس spooler استفاده کنند. یک پردازنده چاپی را می توان از طریق [CTI_PRESERVE_0] نصب کرد. با یک حساب کاربری تماس بگیرید که از آن استفاده می کند. در عوض، یک پردازنده چاپی را می توان با اضافه کردن [CTI_PRESERVE_2] ثبت کرد. کلید ثبت که به DLL اشاره می کند.\n\nبرای اینکه پردازنده چاپ مخرب به درستی نصب شود، محموله باید در دایرکتوری اختصاصی سیستم چاپ پردازنده قرار گیرد که می تواند با [CTI_PRESERVE_3] یافت شود. تماس API یا ارجاع از طریق یک مسیر نسبی از این دایرکتوری. [[ویرایش] پس از نصب پردازنده های چاپی، سرویس spooler چاپ که در طول بوت شروع می شود، باید دوباره راه اندازی شود تا آنها را اجرا کند.\n\nسرویس spooler چاپ تحت مجوز سطح سیستم اجرا می شود، بنابراین پردازنده های چاپی نصب شده توسط یک دشمن ممکن است تحت امتیازات بالا اجرا شوند. <code>AddPrintProcessor</code> <code>SeLoadDriverPrivilege</code> <code>HKLM\\SYSTEM\\\\[CurrentControlSet or ControlSet001]\\Control\\Print\\Environments\\\\[Windows architecture: e.g., Windows x64]\\Print Processors\\\\[user defined]\\Driver</code> <code>GetPrintProcessorDirectory</code> (Citation: Microsoft Intro Print Processors) (Citation: Microsoft AddPrintProcessor May 2018) (Citation: ESET PipeMon May 2020)"
+            "description_fa": "دشمنان ممکن است از پردازنده های چاپ برای اجرای DLL های مخرب در هنگام بوت شدن سیستم برای تداوم و/یا افزایش امتیاز سوء استفاده کنند. پردازنده‌های چاپ، DLL‌هایی هستند که توسط سرویس اسپولر چاپ، «spoolsv.exe» در هنگام بوت بارگیری می‌شوند.(Citation: Microsoft Intro Print Processors)\n\nدشمنان ممکن است با افزودن پردازنده های چاپی که DLL های مخرب را در هنگام راه اندازی بارگیری می کنند، از سرویس اسپولر چاپ سوء استفاده کنند. یک پردازشگر چاپ را می توان از طریق تماس API <code>AddPrintProcessor</code> با حسابی که <code>SeLoadDriverPrivilege</code> فعال است نصب کرد. همچنین، با افزودن کلید رجیستری <code>HKLM\\SYSTEM\\\\[CurrentControlSet or ControlSet001]\\Control\\Print\\Environments\\\\[Windows architecture: e.g., Windows x64]\\Print Processors\\\\[user defined]\\Driver</code> که به DLL اشاره می‌کند، می‌توان یک پردازنده چاپ را در سرویس اسپولر چاپ ثبت کرد.\n\nبرای اینکه پردازشگر چاپ مخرب به درستی نصب شود، محموله باید در فهرست اختصاصی پرینت-پردازنده سیستم قرار گیرد، که می‌توان آن را با تماس API <code>GetPrintProcessorDirectory</code> یافت، یا از طریق یک مسیر نسبی از این فهرست به آن اشاره کرد. اجرا شود.(Citation: ESET PipeMon May 2020)\n\nسرویس اسپولر چاپ تحت مجوزهای سطح SYSTEM اجرا می شود، بنابراین پردازنده های چاپ نصب شده توسط دشمن ممکن است تحت امتیازات بالا اجرا شوند. (Citation: Microsoft AddPrintProcessor May 2018)"
         }
     ]
 }

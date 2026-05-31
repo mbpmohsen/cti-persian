@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0604#AN1653",
-                    "external_id": "AN1653"
+                    "external_id": "AN1653",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,37 +53,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between enrollment/posture anomaly, privileged capability use, and network egress."
+                    "description": "Correlation window between enrollment/posture anomaly, privileged capability use, and network egress.",
+                    "description_fa": "پنجره همبستگی بین ثبت نام/ناهنجاری وضعیت، استفاده از قابلیت ممتاز، و خروج از شبکه."
                 },
                 {
                     "field": "AllowedOEMComponents",
-                    "description": "Approved system identities, preload packages, and OEM services differ by model and fleet."
+                    "description": "Approved system identities, preload packages, and OEM services differ by model and fleet.",
+                    "description_fa": "شناسه های سیستم تایید شده، بسته های پیش بارگذاری و سرویس های OEM بر اساس مدل و ناوگان متفاوت است."
                 },
                 {
                     "field": "AllowedDestinations",
-                    "description": "OEM update, activation, MDM, and enterprise service destinations vary by environment."
+                    "description": "OEM update, activation, MDM, and enterprise service destinations vary by environment.",
+                    "description_fa": "به‌روزرسانی OEM، فعال‌سازی، MDM و مقصد خدمات سازمانی بسته به محیط متفاوت است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Some protected resource access may be legitimate only when the app is foregrounded."
+                    "description": "Some protected resource access may be legitimate only when the app is foregrounded.",
+                    "description_fa": "برخی از دسترسی به منابع محافظت شده ممکن است تنها زمانی مجاز باشد که برنامه در پیش زمینه باشد."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close resource access must be to user interaction to be considered expected."
+                    "description": "Defines how close resource access must be to user interaction to be considered expected.",
+                    "description_fa": "تعریف می کند که دسترسی به منابع باید چقدر نزدیک به تعامل کاربر باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "EnrollmentGracePeriod",
-                    "description": "Initial setup/update behavior may generate benign network or configuration drift for a short period."
+                    "description": "Initial setup/update behavior may generate benign network or configuration drift for a short period.",
+                    "description_fa": "رفتار راه‌اندازی/به‌روزرسانی اولیه ممکن است برای مدت کوتاهی باعث تغییر شبکه یا پیکربندی خوش‌خیم شود."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Size threshold for suspicious outbound transfer from a device in abnormal posture."
+                    "description": "Size threshold for suspicious outbound transfer from a device in abnormal posture.",
+                    "description_fa": "آستانه اندازه برای انتقال مشکوک به بیرون از دستگاه در وضعیت غیر طبیعی."
                 },
                 {
                     "field": "ApprovedImageBaseline",
-                    "description": "Known-good build fingerprint, patch, boot state, and baseband combinations vary by device fleet."
+                    "description": "Known-good build fingerprint, patch, boot state, and baseband combinations vary by device fleet.",
+                    "description_fa": "اثرانگشت، پچ، وضعیت راه‌اندازی و باند پایه شناخته‌شده، بسته به ناوگان دستگاه متفاوت است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1653",
+            "description_fa": "مدافع دستگاهی را مشاهده می‌کند که به تازگی ثبت نام کرده یا اخیراً فعال شده است که یکپارچگی غیرعادی، گواهی مبتنی بر سخت‌افزار، یا روابط میان‌افزار/ساخت را در صفحه مدیریت ارائه می‌دهد، به دنبال آن دسترسی ممتاز یا زمینه سیستم به منابع محافظت‌شده یا مسیرهای چارچوب، و سپس ارتباط خروجی مغایر با وضعیت راه‌اندازی، وضعیت قفل، یا تعامل اخیر کاربر است. توالی علّی زمانی قوی‌تر است که دستگاه هنوز به وضعیت قابل اعتماد عادی نرسیده باشد اما همچنان استفاده از قابلیت یا فعالیت شبکه در سطح سیستم را نشان دهد."
         }
     ]
 }

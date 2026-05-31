@@ -9,34 +9,42 @@
                 {
                     "external_id": "CAPEC-645",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/645.html"
+                    "url": "https://capec.mitre.org/data/definitions/645.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-522",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/522.html"
+                    "url": "http://cwe.mitre.org/data/definitions/522.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-294",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/294.html"
+                    "url": "http://cwe.mitre.org/data/definitions/294.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-308",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/308.html"
+                    "url": "http://cwe.mitre.org/data/definitions/308.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Use Alternate Authentication Material:Pass The Ticket",
                     "external_id": "T1550.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1550/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1550/003",
+                    "description_fa": "از مواد احراز هویت جایگزین استفاده کنید: بلیط را پاس کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "BRONZE BUTLER Targets Japanese Enterprises, 2017--10---12, Secureworks® Counter Threat Unit™ Threat Intelligence",
                     "external_id": "REF-584",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.secureworks.com/research/bronze-butler-targets-japanese-businesses"
+                    "url": "https://www.secureworks.com/research/bronze-butler-targets-japanese-businesses",
+                    "description_fa": "BRONZE BUTLER شرکت های ژاپنی را هدف قرار می دهد، 2017--10---12، Secureworks® Counter Threat Unit™ Threat Intelligence",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--05740120-81ef-4224-9805-2f0b54d1111f",
@@ -56,6 +64,9 @@
             "x_capec_consequences": {
                 "Integrity": [
                     "Gain Privileges"
+                ],
+                "Integrity_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -71,11 +82,22 @@
             ],
             "x_capec_skills_required": {
                 "High": "The adversary uses a third-party tool to obtain the necessary tickets to execute the attack.",
-                "Low": "Determine if Kerberos authentication is used on the server."
+                "Low": "Determine if Kerberos authentication is used on the server.",
+                "High_fa": "دشمن از ابزار شخص ثالث برای به دست آوردن بلیط های لازم برای اجرای حمله استفاده می کند.",
+                "Low_fa": "تعیین کنید که آیا احراز هویت Kerberos در سرور استفاده می شود یا خیر."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از بلیط های Kerberos سرقت شده برای دسترسی به سیستم ها/منابعی که از پروتکل احراز هویت Kerberos استفاده می کنند استفاده می کند. پروتکل احراز هویت Kerberos حول یک سیستم بلیط است که برای درخواست/اعطای دسترسی به خدمات و سپس دسترسی به خدمات درخواستی استفاده می‌شود. حریف می‌تواند هر یک از این بلیت‌ها (مانند بلیط خدمات، بلیط اعطای بلیت، بلیت نقره‌ای یا بلیت طلایی) را برای احراز هویت در یک سیستم/منبع بدون نیاز به اعتبار حساب دریافت کند. بسته به بلیط به دست آمده، حریف ممکن است بتواند به یک منبع خاص دسترسی داشته باشد یا TGT برای هر حسابی در دامنه Active Directory ایجاد کند.",
+            "name_fa": "استفاده از بلیت‌های ضبط شده (بلیت را پاس کنید)",
+            "x_capec_example_instances_fa": [
+                "نشان داده شده است که باتلر برنز (همچنین به عنوان تیک شناخته می شود)، از بلیط های جعلی اعطای بلیط Kerberos (TGTs) و بلیط های خدمات اعطای بلیط (TGS) برای حفظ دسترسی اداری در تعدادی از سیستم ها استفاده می کند. [REF-584]"
+            ],
+            "x_capec_prerequisites_fa": [
+                "دشمن نیاز به دسترسی فیزیکی به سیستم قربانی دارد.",
+                "استفاده از ابزار جمع آوری اعتبار شخص ثالث."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0033#AN0094",
-                    "external_id": "AN0094"
+                    "external_id": "AN0094",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time between registry modification and suspicious binary execution (e.g., < 1 hour) can be tuned."
+                    "description": "Time between registry modification and suspicious binary execution (e.g., < 1 hour) can be tuned.",
+                    "description_fa": "زمان بین اصلاح رجیستری و اجرای مشکوک باینری (به عنوان مثال، < 1 ساعت) قابل تنظیم است."
                 },
                 {
                     "field": "TargetBinaryNames",
-                    "description": "Specific binaries monitored (e.g., utilman.exe, sethc.exe) can be adjusted per OS version and risk tolerance."
+                    "description": "Specific binaries monitored (e.g., utilman.exe, sethc.exe) can be adjusted per OS version and risk tolerance.",
+                    "description_fa": "باینری های خاص نظارت شده (به عنوان مثال، utilman.exe، sethc.exe) را می توان در هر نسخه سیستم عامل و تحمل خطر تنظیم کرد."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Parent process of cmd.exe (e.g., winlogon.exe) may vary across legitimate and adversarial cases."
+                    "description": "Parent process of cmd.exe (e.g., winlogon.exe) may vary across legitimate and adversarial cases.",
+                    "description_fa": "فرآیند اصلی cmd.exe (به عنوان مثال، winlogon.exe) ممکن است در موارد قانونی و متخاصم متفاوت باشد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Context of SYSTEM account execution vs. administrative sessions may influence tuning."
+                    "description": "Context of SYSTEM account execution vs. administrative sessions may influence tuning.",
+                    "description_fa": "زمینه اجرای حساب SYSTEM در مقابل جلسات اداری ممکن است بر تنظیم تأثیر بگذارد."
                 },
                 {
                     "field": "CommandLineContains",
-                    "description": "Tunable patterns such as launching cmd.exe, powershell, or LOLBins from accessibility binaries."
+                    "description": "Tunable patterns such as launching cmd.exe, powershell, or LOLBins from accessibility binaries.",
+                    "description_fa": "الگوهای قابل تنظیم مانند راه‌اندازی cmd.exe، powershell یا LOLBins از باینری‌های دسترسی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0094",
+            "description_fa": "مدافعان می توانند جایگزینی مشکوک یا دستکاری باینری های دسترسی سیستم (مانند utilman.exe، sethc.exe، osk.exe) و تغییرات غیرعادی در کلیدهای رجیستری مورد استفاده برای تغییر مسیر برنامه های دسترسی (مانند کلیدهای IFEO) را مشاهده کنند. علاوه بر این، اجرای cmd.exe یا سایر باینری های مشکوک که از صفحه ورود به سیستم توسط SYSTEM راه اندازی می شوند، می توانند به عنوان بخشی از یک زنجیره رفتار مرتبط شوند."
         }
     ]
 }

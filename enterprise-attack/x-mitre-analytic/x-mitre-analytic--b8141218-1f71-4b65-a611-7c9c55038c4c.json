@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0139#AN0391",
-                    "external_id": "AN0391"
+                    "external_id": "AN0391",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DYLDInjectedPath",
-                    "description": "Tunable based on naming patterns or location of malicious dylibs"
+                    "description": "Tunable based on naming patterns or location of malicious dylibs",
+                    "description_fa": "قابل تنظیم بر اساس الگوهای نامگذاری یا مکان dylib های مخرب"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Hooking attempts may stem from terminal.app, bash, or AppleScript-based launchers"
+                    "description": "Hooking attempts may stem from terminal.app, bash, or AppleScript-based launchers",
+                    "description_fa": "تلاش‌های Hooking ممکن است از راه‌اندازهای terminal.app، bash یا AppleScript ناشی شوند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0391",
+            "description_fa": "سوء استفاده DYLD_INSERT_LIBRARIES برای قلاب کردن برنامه های کاربردی حساس به اعتبار را با همبستگی ایجاد فرآیند با تزریق کتابخانه غیرمجاز و نظارت بر تغییرات در بخش __TEXT (کد) باینری های مدیریت اعتبار شناسایی می کند."
         }
     ]
 }

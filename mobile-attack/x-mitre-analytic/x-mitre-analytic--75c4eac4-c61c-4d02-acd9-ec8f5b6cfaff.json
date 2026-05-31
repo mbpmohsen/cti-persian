@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0649#AN1730",
-                    "external_id": "AN1730"
+                    "external_id": "AN1730",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,37 +58,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between package replacement, code drift, first launch, and follow-on behavior"
+                    "description": "Correlation window between package replacement, code drift, first launch, and follow-on behavior",
+                    "description_fa": "پنجره همبستگی بین جایگزینی بسته، جابجایی کد، اولین راه‌اندازی و رفتار بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Applications legitimately expected to update frequently or use staged package delivery"
+                    "description": "Applications legitimately expected to update frequently or use staged package delivery",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود به‌طور مکرر به‌روزرسانی شوند یا از تحویل مرحله‌ای بسته استفاده کنند"
                 },
                 {
                     "field": "ApprovedInstallerSources",
-                    "description": "Expected install or update sources such as managed store, Google Play, or enterprise MDM"
+                    "description": "Expected install or update sources such as managed store, Google Play, or enterprise MDM",
+                    "description_fa": "منابع مورد انتظار نصب یا به‌روزرسانی مانند فروشگاه مدیریت‌شده، Google Play یا MDM سازمانی"
                 },
                 {
                     "field": "AllowedSignerLineage",
-                    "description": "Approved signing certificates, rotation chains, and version lineage for managed apps"
+                    "description": "Approved signing certificates, rotation chains, and version lineage for managed apps",
+                    "description_fa": "گواهی‌های امضای تأیید شده، زنجیره‌های چرخش و اصل نسخه برای برنامه‌های مدیریت‌شده"
                 },
                 {
                     "field": "AllowedPackagePaths",
-                    "description": "Expected package cache, installer, and app storage locations involved in legitimate updates"
+                    "description": "Expected package cache, installer, and app storage locations involved in legitimate updates",
+                    "description_fa": "حافظه پنهان بسته، نصب‌کننده و مکان‌های ذخیره‌سازی برنامه مورد انتظار درگیر به‌روزرسانی‌های قانونی هستند"
                 },
                 {
                     "field": "IntegrityDriftThreshold",
-                    "description": "Degree of executable-content or metadata change tolerated before alerting"
+                    "description": "Degree of executable-content or metadata change tolerated before alerting",
+                    "description_fa": "درجه تغییر محتوای اجرایی یا ابرداده قبل از هشدار قابل تحمل است"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether package replacement and first launch should occur only during active user-driven workflows"
+                    "description": "Whether package replacement and first launch should occur only during active user-driven workflows",
+                    "description_fa": "اینکه آیا تعویض بسته و اولین راه‌اندازی باید فقط در جریان‌های کاری فعال کاربر محور اتفاق بیفتد"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume after first execution of replaced app to treat post-compromise communication as meaningful"
+                    "description": "Minimum outbound volume after first execution of replaced app to treat post-compromise communication as meaningful",
+                    "description_fa": "حداقل حجم خروجی پس از اولین اجرای برنامه جایگزین شده برای تلقی کردن ارتباطات پس از سازش معنی دار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1730",
+            "description_fa": "مدافع جایگزین غیرعادی بسته برنامه، به‌روزرسانی یا جابجایی محتوای اجرایی را با اجرای بعدی تحت هویت برنامه مورد اعتماد مرتبط می‌کند، به‌ویژه زمانی که ابرداده بسته، خط امضا، منبع نصب، یکپارچگی فایل یا ویژگی‌های مؤلفه Native/DEX بدون مسیر توزیع قابل اعتماد متناظر تغییر کند. این تحلیل، اثرات صفحه کنترل قابل مشاهده اندروید را اولویت بندی می کند: رویدادهای نصب/به روز رسانی بسته، درهم سازی بسته یا جابجایی بخش کد، عدم تطابق امضاکننده یا شکستن خط، رفتار فرآیند غیرمنتظره برنامه پس از جایگزینی، و فعالیت کوتاه مدت شبکه یا حسگر اختیاری که با خط پایه برنامه قانونی سازگار نیست."
         }
     ]
 }

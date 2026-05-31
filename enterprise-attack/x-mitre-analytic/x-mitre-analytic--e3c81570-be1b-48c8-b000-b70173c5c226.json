@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0088#AN0242",
-                    "external_id": "AN0242"
+                    "external_id": "AN0242",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InstallLocationScope",
-                    "description": "Directories or bundles where backup tools are commonly installed"
+                    "description": "Directories or bundles where backup tools are commonly installed",
+                    "description_fa": "دایرکتوری ها یا بسته هایی که معمولاً ابزارهای پشتیبان در آنها نصب می شود"
                 },
                 {
                     "field": "KnownAppPlistPaths",
-                    "description": "Plist files related to backup software configurations"
+                    "description": "Plist files related to backup software configurations",
+                    "description_fa": "لیست فایل های مربوط به تنظیمات نرم افزار پشتیبان"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0242",
+            "description_fa": "Defender اجرای «mdfind»، «launchctl» یا شمارش مبتنی بر رابط کاربری گرافیکی (به عنوان مثال، «/Applications/Time Machine.app») را همراه با استفاده از خط فرمان «find»، «grep» یا «system_profiler» برای شناسایی ابزارهای پشتیبان نصب شده مانند Time Machine، Carbon Copyblan، یا Backup Clzeon تشخیص می دهد. اغلب از جلسات ترمینال یا در اسکریپت های پس از بهره برداری فعال می شود."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0173#AN0491",
-                    "external_id": "AN0491"
+                    "external_id": "AN0491",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TLSHandshakeRate",
-                    "description": "Number of renegotiations per minute considered suspicious"
+                    "description": "Number of renegotiations per minute considered suspicious",
+                    "description_fa": "تعداد مذاکره مجدد در دقیقه مشکوک در نظر گرفته شده است"
                 },
                 {
                     "field": "ServiceCrashFrequency",
-                    "description": "Threshold of crashes before alerting on instability"
+                    "description": "Threshold of crashes before alerting on instability",
+                    "description_fa": "آستانه سقوط قبل از هشدار در مورد بی ثباتی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0491",
+            "description_fa": "سیل اتصالات TLS یا HTTP(S) ورودی به سرویس‌های میزبان macOS (مانند MAMP، Apache)، که باعث استفاده زیاد از CPU و عدم پاسخگویی سیستم می‌شود."
         }
     ]
 }

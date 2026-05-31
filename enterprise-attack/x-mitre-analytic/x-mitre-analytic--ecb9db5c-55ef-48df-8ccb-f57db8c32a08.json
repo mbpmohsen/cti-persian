@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0008#AN0018",
-                    "external_id": "AN0018"
+                    "external_id": "AN0018",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SSOApplicationScope",
-                    "description": "Tune based on applications federated to high-priv cloud assets"
+                    "description": "Tune based on applications federated to high-priv cloud assets",
+                    "description_fa": "بر اساس برنامه های فدرال شده با دارایی های ابری با خصوصی بالا تنظیم کنید"
                 },
                 {
                     "field": "ClientIDScope",
-                    "description": "Filter based on expected OIDC clients used for login"
+                    "description": "Filter based on expected OIDC clients used for login",
+                    "description_fa": "فیلتر بر اساس مشتریان OIDC مورد انتظار برای ورود به سیستم"
                 },
                 {
                     "field": "LoginVelocity",
-                    "description": "Track multiple geographic logins within short windows"
+                    "description": "Track multiple geographic logins within short windows",
+                    "description_fa": "چندین ورود جغرافیایی را در پنجره های کوتاه ردیابی کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0018",
+            "description_fa": "ورود فدرال با استفاده از اعطای SSO یا OAuth به صفحه کنترل ابری، به دنبال آن فهرست یا شمارش مجوزها"
         }
     ]
 }

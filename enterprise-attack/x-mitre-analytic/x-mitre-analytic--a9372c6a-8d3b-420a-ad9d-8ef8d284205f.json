@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0169#AN0481",
-                    "external_id": "AN0481"
+                    "external_id": "AN0481",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0481",
-            "description": "Defenders should monitor for suspicious enumeration of cloud infrastructure components via APIs or CLI tools. Observable behaviors include repeated listing or description operations for compute instances, snapshots, storage buckets, and volumes. From a defender\u2019s perspective, risky activity is often identified by new or untrusted identities making discovery calls (e.g., DescribeInstances, ListBuckets, az vm list, gcloud compute instances list), enumeration from unusual geolocations or IPs, or rapid multi-service discovery in sequence. Correlating discovery API usage with later snapshot creation or instance modification provides further context of adversary behavior.",
+            "description": "Defenders should monitor for suspicious enumeration of cloud infrastructure components via APIs or CLI tools. Observable behaviors include repeated listing or description operations for compute instances, snapshots, storage buckets, and volumes. From a defender’s perspective, risky activity is often identified by new or untrusted identities making discovery calls (e.g., DescribeInstances, ListBuckets, az vm list, gcloud compute instances list), enumeration from unusual geolocations or IPs, or rapid multi-service discovery in sequence. Correlating discovery API usage with later snapshot creation or instance modification provides further context of adversary behavior.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Identity performing the discovery operation; tuned to filter known administrative or inventory accounts."
+                    "description": "Identity performing the discovery operation; tuned to filter known administrative or inventory accounts.",
+                    "description_fa": "هویتی که عملیات کشف را انجام می دهد. تنظیم شده تا حساب های اداری یا موجودی شناخته شده را فیلتر کند."
                 },
                 {
                     "field": "GeoLocation",
-                    "description": "Source region or IP of discovery requests; tuned to expected operational regions to detect unusual access."
+                    "description": "Source region or IP of discovery requests; tuned to expected operational regions to detect unusual access.",
+                    "description_fa": "منطقه منبع یا IP درخواست های کشف؛ به مناطق عملیاتی مورد انتظار برای تشخیص دسترسی غیرمعمول تنظیم شده است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period to link enumeration calls with subsequent provisioning or exfiltration activity."
+                    "description": "Correlation period to link enumeration calls with subsequent provisioning or exfiltration activity.",
+                    "description_fa": "دوره همبستگی برای پیوند دادن فراخوان های شمارش با فعالیت های تدارکاتی یا خروجی بعدی."
                 },
                 {
                     "field": "APIThreshold",
-                    "description": "Rate or volume of discovery calls; tuned to suppress noise from inventory management tools."
+                    "description": "Rate or volume of discovery calls; tuned to suppress noise from inventory management tools.",
+                    "description_fa": "نرخ یا حجم تماس های کشف؛ تنظیم شده برای سرکوب نویز از ابزارهای مدیریت موجودی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0481",
+            "description_fa": "مدافعان باید بر شمارش مشکوک اجزای زیرساخت ابری از طریق API یا ابزارهای CLI نظارت کنند. رفتارهای قابل مشاهده شامل عملیات فهرست‌بندی یا توصیف مکرر برای نمونه‌های محاسباتی، عکس‌های فوری، سطل‌های ذخیره‌سازی و حجم‌ها است. از دیدگاه مدافع، فعالیت مخاطره‌آمیز اغلب با هویت‌های جدید یا نامعتبر که تماس‌های اکتشافی انجام می‌دهند شناسایی می‌شود (مانند DescribeInstance، ListBuckets، فهرست az vm، فهرست نمونه‌های محاسبه gcloud)، شمارش از موقعیت‌های جغرافیایی یا IPهای غیرمعمول، یا کشف سریع چندسرویس به صورت متوالی. مرتبط کردن استفاده از API اکتشافی با ایجاد عکس فوری یا اصلاح نمونه های بعدی زمینه بیشتری از رفتار دشمن را فراهم می کند."
         }
     ]
 }

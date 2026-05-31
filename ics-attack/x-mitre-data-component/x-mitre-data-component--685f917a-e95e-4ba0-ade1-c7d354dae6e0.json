@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0064",
-                    "external_id": "DC0064"
+                    "external_id": "DC0064",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T15:12:00.774Z",
             "name": "Command Execution",
-            "description": "Command Execution involves monitoring and capturing the execution of textual commands (including shell commands, cmdlets, and scripts) within an operating system or application. These commands may include arguments or parameters and are typically executed through interpreters such as `cmd.exe`, `bash`, `zsh`, `PowerShell`, or programmatic execution. Examples: \n\n- Windows Command Prompt\n    - dir \u2013 Lists directory contents.\n    - net user \u2013 Queries or manipulates user accounts.\n    - tasklist \u2013 Lists running processes.\n- PowerShell\n    - Get-Process \u2013 Retrieves processes running on a system.\n    - Set-ExecutionPolicy \u2013 Changes PowerShell script execution policies.\n    - Invoke-WebRequest \u2013 Downloads remote resources.\n- Linux Shell\n    - ls \u2013 Lists files in a directory.\n    - cat /etc/passwd \u2013 Reads the user accounts file.\n    - curl http://malicious-site.com \u2013 Retrieves content from a malicious URL.\n- Container Environments\n    - docker exec \u2013 Executes a command inside a running container.\n    - kubectl exec \u2013 Runs commands in Kubernetes pods.\n- macOS Terminal\n    - open \u2013 Opens files or URLs.\n    - dscl . -list /Users \u2013 Lists all users on the system.\n    - osascript -e \u2013 Executes AppleScript commands.",
+            "description": "Command Execution involves monitoring and capturing the execution of textual commands (including shell commands, cmdlets, and scripts) within an operating system or application. These commands may include arguments or parameters and are typically executed through interpreters such as `cmd.exe`, `bash`, `zsh`, `PowerShell`, or programmatic execution. Examples: \n\n- Windows Command Prompt\n    - dir – Lists directory contents.\n    - net user – Queries or manipulates user accounts.\n    - tasklist – Lists running processes.\n- PowerShell\n    - Get-Process – Retrieves processes running on a system.\n    - Set-ExecutionPolicy – Changes PowerShell script execution policies.\n    - Invoke-WebRequest – Downloads remote resources.\n- Linux Shell\n    - ls – Lists files in a directory.\n    - cat /etc/passwd – Reads the user accounts file.\n    - curl http://malicious-site.com – Retrieves content from a malicious URL.\n- Container Environments\n    - docker exec – Executes a command inside a running container.\n    - kubectl exec – Runs commands in Kubernetes pods.\n- macOS Terminal\n    - open – Opens files or URLs.\n    - dscl . -list /Users – Lists all users on the system.\n    - osascript -e – Executes AppleScript commands.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_domains": [
@@ -798,7 +799,7 @@
                 },
                 {
                     "name": "macos:unifiedlog",
-                    "channel": "chmod command with arguments including '+s', 'u+s', or numeric values 4000\u20136777"
+                    "channel": "chmod command with arguments including '+s', 'u+s', or numeric values 4000–6777"
                 },
                 {
                     "name": "macos:unifiedlog",
@@ -1098,7 +1099,7 @@
                 },
                 {
                     "name": "networkdevice:syslog",
-                    "channel": "command sequence: erase \u2192 format \u2192 reload"
+                    "channel": "command sequence: erase → format → reload"
                 },
                 {
                     "name": "networkdevice:syslog",
@@ -1196,7 +1197,9 @@
                     "name": "WinEventLog:Security",
                     "channel": "EventCode=4103, 4104, 4105, 4106"
                 }
-            ]
+            ],
+            "name_fa": "اجرای فرمان",
+            "description_fa": "Command Execution شامل نظارت و ضبط اجرای دستورات متنی (شامل دستورات پوسته، cmdlet ها و اسکریپت ها) در یک سیستم عامل یا برنامه است. این دستورات ممکن است شامل آرگومان‌ها یا پارامترها باشد و معمولاً از طریق مفسرهایی مانند «cmd.exe»، «bash»، «zsh»، «PowerShell» یا اجرای برنامه‌ای اجرا می‌شوند. مثال ها: \n\n- خط فرمان ویندوز\n    - dir - محتویات دایرکتوری را فهرست می کند.\n    - کاربر خالص - حساب های کاربری را پرس و جو می کند یا دستکاری می کند.\n    - لیست وظایف - فرآیندهای در حال اجرا را فهرست می کند.\n- PowerShell\n    - Get-Process - فرآیندهای در حال اجرا روی یک سیستم را بازیابی می کند.\n    - Set-ExecutionPolicy - سیاست های اجرای اسکریپت PowerShell را تغییر می دهد.\n    - Invoke-WebRequest - دانلود منابع راه دور.\n- لینوکس شل\n    - ls - فایل ها را در یک فهرست فهرست می کند.\n    - cat /etc/passwd - فایل حساب های کاربری را می خواند.\n    - curl http://malicious-site.com - محتوا را از یک URL مخرب بازیابی می کند.\n- محیط های کانتینری\n    - docker exec - یک فرمان را در داخل یک کانتینر در حال اجرا اجرا می کند.\n    - kubectl exec - دستورات را در پادهای Kubernetes اجرا می کند.\n- ترمینال macOS\n    - open - فایل ها یا URL ها را باز می کند.\n    - dscl. -list /Users - همه کاربران سیستم را فهرست می کند.\n    - osascript -e - دستورات AppleScript را اجرا می کند."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0714#AN1842",
-                    "external_id": "AN1842"
+                    "external_id": "AN1842",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,29 +48,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between icon suppression and later runtime activity"
+                    "description": "Correlation window between icon suppression and later runtime activity",
+                    "description_fa": "پنجره همبستگی بین سرکوب آیکون و فعالیت در زمان اجرا بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Baseline of legitimate apps permitted to reduce launcher visibility, such as managed agents, work-profile utilities, or system applications"
+                    "description": "Baseline of legitimate apps permitted to reduce launcher visibility, such as managed agents, work-profile utilities, or system applications",
+                    "description_fa": "پایه برنامه‌های قانونی مجاز برای کاهش دید راه‌انداز، مانند عوامل مدیریت‌شده، ابزارهای نمایه کاری، یا برنامه‌های سیستمی"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether post-suppression behavior is only suspicious when no recent foreground interaction is present"
+                    "description": "Whether post-suppression behavior is only suspicious when no recent foreground interaction is present",
+                    "description_fa": "آیا رفتار پس از سرکوب تنها زمانی مشکوک است که هیچ تعامل پیش زمینه اخیر وجود نداشته باشد"
                 },
                 {
                     "field": "SuppressionMode",
-                    "description": "Environment-specific handling of hidden, disabled, or synthesized launcher behavior depending on Android version and management posture"
+                    "description": "Environment-specific handling of hidden, disabled, or synthesized launcher behavior depending on Android version and management posture",
+                    "description_fa": "مدیریت رفتار لانچر مخفی، غیرفعال یا ترکیبی برای محیط خاص بسته به نسخه اندروید و وضعیت مدیریت"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound traffic volume used to distinguish meaningful hidden operation from benign background maintenance"
+                    "description": "Minimum outbound traffic volume used to distinguish meaningful hidden operation from benign background maintenance",
+                    "description_fa": "حداقل حجم ترافیک خروجی که برای تشخیص عملیات مخفی معنی دار از نگهداری پس زمینه خوش خیم استفاده می شود"
                 },
                 {
                     "field": "SensorAfterSuppressionThreshold",
-                    "description": "Threshold for sensor access frequency after launcher visibility is reduced"
+                    "description": "Threshold for sensor access frequency after launcher visibility is reduced",
+                    "description_fa": "آستانه فرکانس دسترسی حسگر پس از دید پرتابگر کاهش می یابد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1842",
+            "description_fa": "مربوط به (1) سرکوب یا غیرفعال کردن اجزای برنامه قابل مشاهده پرتاب کننده یا کاهش موثر حضور پرتابگر رو به روی کاربر، (2) تداوم وضعیت برنامه نصب شده پس از حذف نماد، و (3) ادامه فعالیت زمان اجرا مانند اجرای پس‌زمینه، استفاده از چارچوب، دسترسی حسگر، یا ارتباط شبکه پس از در دسترس نشدن نماد، یا جایگزینی آیکون توسط راه‌انداز رفتار-disco. مدافع یک زنجیره علّی را مشاهده می‌کند که در آن یک برنامه دید راه‌انداز خود را حذف یا کاهش می‌دهد در حالی که همچنان عملیاتی می‌شود و به فعالیت معنادار ادامه می‌دهد."
         }
     ]
 }

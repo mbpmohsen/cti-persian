@@ -9,40 +9,52 @@
                 {
                     "external_id": "CAPEC-294",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/294.html"
+                    "url": "https://capec.mitre.org/data/definitions/294.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "J. Mogul, J. Postel, RFC950 - Internet Standard Subnetting Procedure, 1985--08",
                     "external_id": "REF-139",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc950.html"
+                    "url": "http://www.faqs.org/rfcs/rfc950.html",
+                    "description_fa": "J. Mogul، J. Postel، RFC950 - روش استاندارد زیرشبکه اینترنت، 08-1985",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "J. Postel, RFC792 - Internet Control Messaging Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-123",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc792.html"
+                    "url": "http://www.faqs.org/rfcs/rfc792.html",
+                    "description_fa": "J. Postel، RFC792 - پروتکل پیام‌رسانی کنترل اینترنت، 09-1981، آژانس پروژه‌های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Mark Wolfgang, Host Discovery with Nmap, 2002--11",
                     "external_id": "REF-125",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://nmap.org/docs/discovery.pdf"
+                    "url": "http://nmap.org/docs/discovery.pdf",
+                    "description_fa": "مارک ولفگانگ، کشف میزبان با Nmap، 2002--11",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-34",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--4f206bf0-ddaa-49e3-8dd8-6f578082c8e0",
@@ -66,6 +78,16 @@
                 "Confidentiality": [
                     "Other",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -80,7 +102,16 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک درخواست ماسک آدرس ICMP نوع 17 برای جمع آوری اطلاعات در مورد پیکربندی شبکه هدف ارسال می کند. درخواست‌های ماسک آدرس ICMP توسط RFC-950، \"روش استاندارد زیرشبکه اینترنتی\" تعریف شده‌اند. درخواست ماسک آدرس یک پیام ICMP نوع 17 است که سیستم راه دور را با فهرستی از زیرشبکه‌های مرتبط و همچنین دروازه پیش‌فرض و آدرس پخش خود از طریق دیتاگرام ICMP نوع 18 نشانی پاسخ ماسک پاسخ می‌دهد. جمع آوری این نوع اطلاعات به دشمن کمک می کند تا حملات مبتنی بر روتر و همچنین حملات انکار سرویس علیه آدرس پخش را برنامه ریزی کند.",
+            "name_fa": "درخواست ماسک آدرس ICMP",
+            "x_capec_extended_description_fa": "<xhtml:p>بسیاری از سیستم عامل های مدرن به دلایل امنیتی به پیام های نوع 17 ICMP پاسخ نمی دهند. تعیین اینکه آیا یک سیستم یا روتر به درخواست ماسک آدرس ICMP پاسخ می دهد یا خیر، به دشمن کمک می کند تا نسخه سیستم عامل یا سیستم عامل را تعیین کند. علاوه بر این، از آنجایی که این نوع پیام ها نادر هستند، به راحتی توسط سیستم های تشخیص نفوذ شناسایی می شوند. بسیاری از ابزارهای اسکن ICMP از جعل IP پشتیبانی می کنند تا به پنهان کردن منشا درخواست واقعی در میان طوفانی از پیام های مشابه ICMP کمک کنند. این یک روش معمول است که فایروال ها و دروازه های مرزی برای مسدود کردن پیام های ورودی ICMP نوع 17 و خروجی پیام های ICMP نوع 18 پیکربندی شوند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "امکان ارسال پرس و جوی نوع 17 ICMP (درخواست ماسک آدرس) به یک هدف راه دور و دریافت پیام ICMP نوع 18 (پاسخ ماسک آدرس ICMP) در پاسخ. به طور کلی، سیستم عامل های مدرن پیام های نوع 17 ICMP را نادیده می گیرند، با این حال، روترها معمولاً به این درخواست پاسخ می دهند."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان ارسال پرس و جوهای سفارشی ICMP. این را می توان با استفاده از اسکنرها یا ابزارهای مختلف انجام داد."
+            ]
         }
     ],
     "spec_version": "2.0",

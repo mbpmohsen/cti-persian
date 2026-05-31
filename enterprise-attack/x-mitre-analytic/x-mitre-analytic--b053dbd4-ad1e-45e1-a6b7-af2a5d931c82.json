@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0237#AN0661",
-                    "external_id": "AN0661"
+                    "external_id": "AN0661",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "firmware_family",
-                    "description": "Device type or OS determines specific init script location"
+                    "description": "Device type or OS determines specific init script location",
+                    "description_fa": "نوع دستگاه یا سیستم عامل مکان اسکریپت init خاص را تعیین می کند"
                 },
                 {
                     "field": "config_line_pattern",
-                    "description": "Regex or pattern matching approach to detect suspicious CLI"
+                    "description": "Regex or pattern matching approach to detect suspicious CLI",
+                    "description_fa": "Regex یا رویکرد تطبیق الگو برای تشخیص CLI مشکوک"
                 },
                 {
                     "field": "reboot_time_window",
-                    "description": "Time window between config change and first boot post-modification"
+                    "description": "Time window between config change and first boot post-modification",
+                    "description_fa": "پنجره زمانی بین تغییر پیکربندی و اولین بوت پس از اصلاح"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0661",
+            "description_fa": "شناسایی اسکریپت‌های پیکربندی زمان راه‌اندازی اصلاح‌شده که دستورات مخرب CLI را در طول راه‌اندازی مجدد ادامه می‌دهند."
         }
     ]
 }

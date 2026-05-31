@@ -9,52 +9,63 @@
                 {
                     "external_id": "CAPEC-24",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/24.html"
+                    "url": "https://capec.mitre.org/data/definitions/24.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-118",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/118.html"
+                    "url": "http://cwe.mitre.org/data/definitions/118.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-733",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/733.html"
+                    "url": "http://cwe.mitre.org/data/definitions/733.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--d591235a-da3b-4872-8962-27fe44fa1ab0",
@@ -86,6 +97,24 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "اجرای غیر قابل اعتماد"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -103,11 +132,24 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a buffer overflow to inject malicious code into the stack of a software system or even the heap can require a higher skill level.",
-                "Low": "An attacker can simply overflow a buffer by inserting a long string into an attacker-modifiable injection vector. The result can be a DoS."
+                "Low": "An attacker can simply overflow a buffer by inserting a long string into an attacker-modifiable injection vector. The result can be a DoS.",
+                "High_fa": "بهره برداری از سرریز بافر برای تزریق کد مخرب به پشته یک سیستم نرم افزاری یا حتی پشته می تواند به سطح مهارت بالاتری نیاز داشته باشد.",
+                "Low_fa": "یک مهاجم به سادگی می تواند با وارد کردن یک رشته طولانی در یک بردار تزریق قابل تغییر توسط مهاجم، یک بافر را سرریز کند. نتیجه می تواند یک DoS باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این حمله، ایده این است که با ایجاد یک تراکنش بزرگ، یک فیلتر فعال از کار بیفتد. یک مهاجم ممکن است سعی کند رشته های ورودی بیش از حد طولانی را به برنامه وارد کند تا فیلتر را تحت الشعاع قرار دهد (با ایجاد سرریز بافر) و امیدوار باشد که فیلتر به طور ایمن خراب نشود (یعنی ورودی کاربر بدون فیلتر وارد سیستم شود).",
+            "name_fa": "شکست فیلتر از طریق سرریز بافر",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>ارسال آرگومان هایی که بیش از حد طولانی هستند و باعث می شود فیلتر باز نشود، یکی از نمونه های حمله شکست فیلتر است. دیمون Taylor UUCP برای حذف آرگومان های خصمانه قبل از اجرای آنها طراحی شده است. با این حال، اگر آرگومان ها خیلی طولانی باشند، دیمون نمی تواند آنها را حذف کند. این درب را برای حمله باز می گذارد.</xhtml:p>",
+                "یک فیلتر توسط یک برنامه وب برای فیلتر کردن کاراکترها استفاده می شود که ممکن است به ورودی اجازه دهد از صفحه داده به صفحه کنترل بپرد زمانی که داده در یک دستور SQL استفاده می شود (زنجیره کردن این حمله با حمله تزریق SQL). استفاده از سرریز بافر باعث می شود که فیلتر به طور ناامن از کار بیفتد و داده های آلوده مجاز به ورود بدون فیلتر به سیستم شوند و متعاقباً باعث تزریق SQL می شود.",
+                "برش حسابرسی و فیلترها با سرریز بافر. گاهی اوقات می‌توان از تراکنش‌های بسیار بزرگ برای از بین بردن یک فایل گزارش یا ایجاد خرابی جزئی گزارش استفاده کرد. در این نوع حمله، کد پردازش لاگ ممکن است در حال بررسی یک تراکنش در پردازش بلادرنگ باشد، اما تراکنش بزرگ باعث ایجاد یک شاخه منطقی یا یک نوع استثنا می شود که به دام می افتد. به عبارت دیگر، تراکنش هنوز اجرا می‌شود، اما مکانیسم ثبت یا فیلتر کردن همچنان با شکست مواجه می‌شود. این دو پیامد دارد، اول اینکه می‌توانید تراکنش‌هایی را اجرا کنید که به هیچ‌وجه وارد نشده‌اند (یا شاید ورودی گزارش کاملاً خراب شده باشد). نتیجه دوم این است که ممکن است از یک فیلتر فعال عبور کنید که در غیر این صورت حمله شما را متوقف می کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بررسی: </b>مهاجم برنامه مورد نظر را بررسی می‌کند، احتمالاً به عنوان یک کاربر معتبر و تأیید شده</p></li><table><tbody><tr><tr> تکنیک‌های بالقوه‌ای را برای وب‌سایت</t><sd> قرار می‌دهد. فیلتر کردن</td></tr><tr><td>حدس زدن بی رحمانه ورودی های فیلتر شده</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تلاش برای تزریق: </b>سعی کنید داده های بسیار طولانی را به سیستم وارد کنید. این کار را می توان به صورت دستی انجام داد یا از یک ابزار پویا (جعبه سیاه) برای خودکارسازی آن استفاده کرد. مهاجم همچنین می‌تواند از یک اسکریپت سفارشی برای این منظور استفاده کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>حمله خشونت‌آمیز از طریق ابزار تست نفوذ جعبه سیاه.</td></tr><tr><td>مفهوم کردن پروتکل‌های ارتباطی</td></tr><tr><td>حمله احتمالی با استفاده از تست دستی داده‌ها.</td></tr></tbody></table><li> <p> <b>پاسخ‌های نظارتی: </b>مراقب هرگونه نشانه‌ای از وقوع شکست باشید. با دقت تماشا کنید تا ببینید هنگام خرابی فیلتر چه اتفاقی افتاده است. آیا داده‌ها وارد شدند؟</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>برچسب‌گذاری بور. ورودی های حمله واضحی را انتخاب کنید که به راحتی در خروجی قابل مشاهده باشد. در باینری این اغلب 0xa5a5a5a5 است (1s و 0s متناوب). یکی دیگر از مقادیر آشکار تگ صفر است، اما همیشه مشخص نیست که اگر مقادیر تهی وارد داده ها شوند، چه مشکلی پیش می آید.</td></tr><tr><td>فایل های Log را بررسی کنید. مهاجمی که به فایل‌های گزارش دسترسی دارد می‌تواند به نتیجه ورودی بد نگاه کند.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سوء استفاده از سیستم از طریق خرابی فیلتر: </b>یک مهاجم یک اسکریپت می‌نویسد تا به طور مداوم فیلتر را القا کند. شکست.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>DoS از طریق خرابی فیلتر. مهاجم به دلیل فیلتر نشدن صحیح سیستم باعث از کار افتادن یا از کار افتادن سیستم می شود.</td></tr><tr><td>اجرای کد مخرب. مهاجم یک بار مخرب را معرفی می کند و کد دلخواه را روی سیستم مورد نظر اجرا می کند.</td></tr><tr><td>یک مهاجم می تواند از شکست فیلتر برای وارد کردن داده های مخرب به سیستم استفاده کند و در صورت وجود، از تزریق SQL بعدی، Cross Site Scripting، Command Injection یا نقاط ضعف مشابه استفاده کند.",
+            "x_capec_prerequisites_fa": [
+                "امکان کنترل طول داده های ارسال شده به یک فیلتر فعال."
+            ]
         }
     ],
     "spec_version": "2.0",

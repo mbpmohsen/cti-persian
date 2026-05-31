@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0325#AN0924",
-                    "external_id": "AN0924"
+                    "external_id": "AN0924",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LaunchAgentPath",
-                    "description": "Detect persistence used to restart proxy after reboot."
+                    "description": "Detect persistence used to restart proxy after reboot.",
+                    "description_fa": "شناسایی تداوم مورد استفاده برای راه اندازی مجدد پراکسی پس از راه اندازی مجدد."
                 },
                 {
                     "field": "ExternalPort",
-                    "description": "Often high or non-standard ports, configurable for outbound proxy detection."
+                    "description": "Often high or non-standard ports, configurable for outbound proxy detection.",
+                    "description_fa": "اغلب پورت های بالا یا غیر استاندارد، قابل تنظیم برای تشخیص پراکسی خروجی."
                 },
                 {
                     "field": "ProcessReputation",
-                    "description": "Flag unsigned or anomalous binaries making external connections."
+                    "description": "Flag unsigned or anomalous binaries making external connections.",
+                    "description_fa": "باینری های بدون علامت یا غیرعادی را علامت گذاری کنید که اتصالات خارجی ایجاد می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0924",
+            "description_fa": "AppleScript یا جلسات ترمینال ابزارهای راه اندازی (\"curl\"، \"nc\"، \"ssh\") را به IP های خارجی که معمولاً به آنها دسترسی ندارند، راه اندازی می کنند. اتصالات خروجی توسط LaunchAgents/LaunchDaemons ایجاد می شوند که اغلب به عنوان سرویس های سیستم ظاهر می شوند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0570#AN1574",
-                    "external_id": "AN1574"
+                    "external_id": "AN1574",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DatastoreTransferThreshold",
-                    "description": "Threshold for outbound data exfiltration from ESXi datastore files."
+                    "description": "Threshold for outbound data exfiltration from ESXi datastore files.",
+                    "description_fa": "آستانه برای استخراج داده های خروجی از فایل های ذخیره اطلاعات ESXi."
                 },
                 {
                     "field": "ApprovedStorageServices",
-                    "description": "Whitelist of sanctioned storage providers used by admins for backup operations."
+                    "description": "Whitelist of sanctioned storage providers used by admins for backup operations.",
+                    "description_fa": "لیست سفید ارائه دهندگان ذخیره سازی تحریم شده که توسط ادمین ها برای عملیات پشتیبان استفاده می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1574",
+            "description_fa": "فرآیندهای غیرمعمول ESXi (vmx، hostd) خواندن فایل های ذخیره داده و ایجاد ترافیک HTTPS خروجی به سمت نقاط پایانی ذخیره سازی ابری خارجی. دیدگاه مدافع: فعالیت غیرعادی ذخیره‌گاه داده و به دنبال آن انتقال شبکه به Dropbox، AWS S3 یا سایر سرویس‌های ذخیره‌سازی."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0265#AN0736",
-                    "external_id": "AN0736"
+                    "external_id": "AN0736",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "Paths to monitor for suspicious plist files, such as /Library/LaunchAgents, /Library/LaunchDaemons, ~/Library/LaunchAgents."
+                    "description": "Paths to monitor for suspicious plist files, such as /Library/LaunchAgents, /Library/LaunchDaemons, ~/Library/LaunchAgents.",
+                    "description_fa": "مسیرهایی برای نظارت بر فایل‌های فهرست مشکوک، مانند /Library/LaunchAgents، /Library/LaunchDaemons، ~/Library/LaunchAgents."
                 },
                 {
                     "field": "SuspiciousExecPaths",
-                    "description": "Uncommon executable paths (e.g., /tmp, /Shared) that should raise alerts when associated with launchctl services."
+                    "description": "Uncommon executable paths (e.g., /tmp, /Shared) that should raise alerts when associated with launchctl services.",
+                    "description_fa": "مسیرهای اجرایی غیرمعمول (به عنوان مثال، /tmp، /Shared) که باید هنگام ارتباط با سرویس های launchctl، هشدارها را افزایش دهند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for detecting plist file creation and subsequent launchctl execution."
+                    "description": "Correlation window for detecting plist file creation and subsequent launchctl execution.",
+                    "description_fa": "پنجره همبستگی برای تشخیص ایجاد فایل plist و اجرای launchctl بعدی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0736",
+            "description_fa": "سوء استفاده از launchctl برای اجرا یا مدیریت Launch Agents و Daemon. دیدگاه مدافع: ارتباط ایجاد یا اصلاح مشکوک فایل plist در دایرکتوری های LaunchAgents/LaunchDaemons با اجرای بعدی دستور launchctl. مسیرهای غیرعادی اجرایی (به عنوان مثال /tmp، /Shared) یا فعالیت launchctl به دنبال اتصالات شبکه بسیار مشکوک هستند."
         }
     ]
 }

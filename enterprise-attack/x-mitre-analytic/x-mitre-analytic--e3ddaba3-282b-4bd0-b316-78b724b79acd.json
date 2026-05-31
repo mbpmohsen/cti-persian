@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0309#AN0862",
-                    "external_id": "AN0862"
+                    "external_id": "AN0862",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0862",
-            "description": "Adversary ships a tampered application or update: an updater/installer (msiexec/setup/update.exe/vendor service) writes or replaces binaries; on first run it spawns scripts/shells or unsigned DLLs and beacons to non-approved update CDNs/hosts. Detection correlates: (1) process creation of installer/updater \u2192 (2) file metadata changes in program paths \u2192 (3) first-run children and module/signature anomalies \u2192 (4) outbound connections to unexpected hosts within a short window.",
+            "description": "Adversary ships a tampered application or update: an updater/installer (msiexec/setup/update.exe/vendor service) writes or replaces binaries; on first run it spawns scripts/shells or unsigned DLLs and beacons to non-approved update CDNs/hosts. Detection correlates: (1) process creation of installer/updater → (2) file metadata changes in program paths → (3) first-run children and module/signature anomalies → (4) outbound connections to unexpected hosts within a short window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -76,21 +77,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate write\u2192first-run\u2192egress (default 90 minutes)."
+                    "description": "Correlate write→first-run→egress (default 90 minutes).",
+                    "description_fa": "همبستگی نوشتن → اولین اجرا → خروج (پیش فرض 90 دقیقه)."
                 },
                 {
                     "field": "ApprovedUpdateHosts",
-                    "description": "Allow-list of vendor update endpoints, enterprise proxy/cache."
+                    "description": "Allow-list of vendor update endpoints, enterprise proxy/cache.",
+                    "description_fa": "فهرست مجاز نقاط پایانی به‌روزرسانی فروشنده، پروکسی/حافظه پنهان سازمانی."
                 },
                 {
                     "field": "ApprovedSigners",
-                    "description": "Code-signing publishers allowed for programs/services."
+                    "description": "Code-signing publishers allowed for programs/services.",
+                    "description_fa": "ناشران امضای کد برای برنامه ها/خدمات مجاز هستند."
                 },
                 {
                     "field": "ProgramPaths",
-                    "description": "Monitored install locations (e.g., C:\\Program Files, C:\\ProgramData, %LOCALAPPDATA%)."
+                    "description": "Monitored install locations (e.g., C:\\Program Files, C:\\ProgramData, %LOCALAPPDATA%).",
+                    "description_fa": "مکان‌های نصب تحت نظارت (مانند C:\\Program Files، C:\\ProgramData، %LOCALAPPDATA%)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0862",
+            "description_fa": "دشمن یک برنامه یا به روز رسانی دستکاری شده را ارسال می کند: یک به روز رسانی/نصب کننده (msiexec/setup/update.exe/vendor service) باینری ها را می نویسد یا جایگزین می کند. در اولین اجرا، اسکریپت ها/پوسته ها یا DLL ها و بیکن های بدون امضا را برای CDN/میزبان های به روز رسانی تایید نشده ایجاد می کند. تشخیص همبستگی دارد: (1) ایجاد فرآیند نصب/به‌روزرسانی ← (2) تغییرات فراداده فایل در مسیرهای برنامه ← (3) کودکان اولین اجرا و ناهنجاری‌های ماژول/امضا ← (4) اتصالات خروجی به میزبان‌های غیرمنتظره در یک پنجره کوتاه."
         }
     ]
 }

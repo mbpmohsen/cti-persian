@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0123#AN0342",
-                    "external_id": "AN0342"
+                    "external_id": "AN0342",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DriveTypeFilter",
-                    "description": "Filter on removable (e.g., USB) drives only."
+                    "description": "Filter on removable (e.g., USB) drives only.",
+                    "description_fa": "فقط روی درایوهای قابل جابجایی (به عنوان مثال، USB) فیلتر کنید."
                 },
                 {
                     "field": "ProcessNameExclusionList",
-                    "description": "Exclude known, approved backup or sync utilities."
+                    "description": "Exclude known, approved backup or sync utilities.",
+                    "description_fa": "برنامه‌های پشتیبان‌گیری یا همگام‌سازی شناخته شده، تأیید شده را حذف کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Limit correlation of file access and device mount to a defined window (e.g., <5 minutes)."
+                    "description": "Limit correlation of file access and device mount to a defined window (e.g., <5 minutes).",
+                    "description_fa": "ارتباط دسترسی به فایل و نصب دستگاه را به یک پنجره تعریف شده محدود کنید (به عنوان مثال، <5 دقیقه)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0342",
+            "description_fa": "درج درایو قابل جابجایی و به دنبال آن دسترسی غیرمعمول به فایل، فشرده سازی، یا فعالیت مرحله بندی توسط کاربران غیرمجاز یا فرآیندهای غیرمنتظره را تشخیص می دهد."
         }
     ]
 }

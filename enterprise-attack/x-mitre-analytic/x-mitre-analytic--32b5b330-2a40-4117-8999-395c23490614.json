@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0176#AN0499",
-                    "external_id": "AN0499"
+                    "external_id": "AN0499",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0499",
-            "description": "Correlated evidence of browser or webview fetches to uncommon domains or mutated JS resources (proxy/NGFW logs + Zeek/HTTP logs) followed by unexpected interpreters or script engines executing (python, ruby, sh) spawned from browser processes or user sessions, rapid on-disk staging in /tmp, and outbound connections that deviate from baseline. Defender sees: uncommon resource fetch \u2192 short-lived child process executions from user browser context \u2192 file writes in temp directories \u2192 anomalous outbound C2-like connections.",
+            "description": "Correlated evidence of browser or webview fetches to uncommon domains or mutated JS resources (proxy/NGFW logs + Zeek/HTTP logs) followed by unexpected interpreters or script engines executing (python, ruby, sh) spawned from browser processes or user sessions, rapid on-disk staging in /tmp, and outbound connections that deviate from baseline. Defender sees: uncommon resource fetch → short-lived child process executions from user browser context → file writes in temp directories → anomalous outbound C2-like connections.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -60,18 +61,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TempPathPatterns",
-                    "description": "Paths used for staging differ by distro and package manager; tune to include company-specific temp paths or exclude known benign build machines."
+                    "description": "Paths used for staging differ by distro and package manager; tune to include company-specific temp paths or exclude known benign build machines.",
+                    "description_fa": "مسیرهای مورد استفاده برای مرحله بندی بر اساس توزیع و مدیر بسته متفاوت است. تنظیم کنید تا مسیرهای دمایی خاص شرکت را شامل شود یا ماشین‌های ساخت خوش خیم شناخته شده را حذف کنید."
                 },
                 {
                     "field": "UserShellWhitelist",
-                    "description": "Whitelist known server/service accounts or CI/CD runners where shell executions are expected."
+                    "description": "Whitelist known server/service accounts or CI/CD runners where shell executions are expected.",
+                    "description_fa": "حساب‌های سرور/سرویس شناخته‌شده یا اجراکننده‌های CI/CD را که در آن‌ها انتظار می‌رود اجراهای پوسته انجام شود، فهرست سفید کنید."
                 },
                 {
                     "field": "DomainRarityThreshold",
-                    "description": "Threshold for flagging domains based on internal popularity vs global rarity."
+                    "description": "Threshold for flagging domains based on internal popularity vs global rarity.",
+                    "description_fa": "آستانه برای پرچم گذاری دامنه ها بر اساس محبوبیت داخلی در مقابل نادر بودن جهانی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0499",
+            "description_fa": "شواهد مرتبط از واکشی مرورگر یا نمای وب به دامنه‌های غیرمعمول یا منابع JS جهش‌یافته (گزارش‌های پروکسی/NGFW + گزارش‌های Zeek/HTTP) و به‌دنبال اجرای مفسرهای غیرمنتظره یا موتورهای اسکریپت (python، ruby، sh) که از فرآیندهای مرورگر یا جلسات کاربر، اتصالات سریع بر روی دیسک / بر روی دیسک و مرحله‌بندی خارج از دیسک ایجاد می‌شوند. Defender می بیند: واکشی منبع غیرمعمول ← اجرای فرآیندهای فرزند کوتاه مدت از زمینه مرورگر کاربر ← نوشتن فایل در فهرست راهنماهای موقت ← اتصالات غیرعادی خروجی مانند C2."
         }
     ]
 }

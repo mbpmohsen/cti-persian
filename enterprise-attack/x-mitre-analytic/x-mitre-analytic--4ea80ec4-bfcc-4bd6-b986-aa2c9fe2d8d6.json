@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0032#AN0091",
-                    "external_id": "AN0091"
+                    "external_id": "AN0091",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredExtensions",
-                    "description": "Filter hidden file detection by sensitive file extensions (.exe, .dll, .bat)."
+                    "description": "Filter hidden file detection by sensitive file extensions (.exe, .dll, .bat).",
+                    "description_fa": "تشخیص فایل های مخفی را با پسوندهای فایل حساس (exe.، dll.، bat.) فیلتر کنید."
                 },
                 {
                     "field": "ADSMonitoring",
-                    "description": "Enable detection of alternate data streams depending on organizational usage."
+                    "description": "Enable detection of alternate data streams depending on organizational usage.",
+                    "description_fa": "شناسایی جریان های داده جایگزین بسته به استفاده سازمانی را فعال کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0091",
+            "description_fa": "استفاده مشکوک از دستورات attrib.exe یا PowerShell برای تنظیم ویژگی‌های پنهان در فایل‌ها/دایرکتوری‌ها. نمای مدافع: اصلاح ویژگی‌های فایل به «مخفی» یا ایجاد فایل‌ها با ADS (جریان‌های داده جایگزین) را پردازش می‌کند."
         }
     ]
 }

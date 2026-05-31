@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0522#AN1444",
-                    "external_id": "AN1444"
+                    "external_id": "AN1444",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SecretsAccessThreshold",
-                    "description": "Alert threshold for frequency of access to Kerberos secrets files."
+                    "description": "Alert threshold for frequency of access to Kerberos secrets files.",
+                    "description_fa": "آستانه هشدار برای فراوانی دسترسی به فایل‌های مخفی Kerberos."
                 },
                 {
                     "field": "UnusualServiceAccounts",
-                    "description": "Baseline accounts normally performing Kerberos requests; anomalies flagged."
+                    "description": "Baseline accounts normally performing Kerberos requests; anomalies flagged.",
+                    "description_fa": "حساب‌های پایه معمولاً درخواست‌های Kerberos را انجام می‌دهند. ناهنجاری های پرچم گذاری شده"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1444",
+            "description_fa": "دسترسی مشکوک به پایگاه داده اسرار SSSD و مواد کلیدی Kerberos را شناسایی می کند که نشان دهنده سرقت بلیط یا تلاش برای پخش مجدد است. دسترسی غیرعادی به فایل را با درخواست های غیرمعمول بلیط خدمات Kerberos مرتبط می کند."
         }
     ]
 }

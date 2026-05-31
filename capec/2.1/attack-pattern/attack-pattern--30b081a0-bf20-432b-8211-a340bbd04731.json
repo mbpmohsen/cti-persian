@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-192",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/192.html"
+                    "url": "https://capec.mitre.org/data/definitions/192.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-326",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/326.html"
+                    "url": "http://cwe.mitre.org/data/definitions/326.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-57",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Proprietary_protocol"
+                    "url": "http://en.wikipedia.org/wiki/Proprietary_protocol",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-50",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Reverse_engineering"
+                    "url": "http://en.wikipedia.org/wiki/Reverse_engineering",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--30b081a0-bf20-432b-8211-a340bbd04731",
@@ -44,6 +50,12 @@
                 ],
                 "Integrity": [
                     "Modify Data (Modifying communications after successful deciphering of protocol information compromises integrity.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (رمزگشایی موفقیت آمیز اطلاعات پروتکل، محرمانه بودن ارتباطات حساس آینده را به خطر می اندازد.)"
+                ],
+                "Integrity_fa": [
+                    "اصلاح داده ها (اصلاح ارتباطات پس از رمزگشایی موفق اطلاعات پروتکل، یکپارچگی را به خطر می اندازد.)"
                 ]
             },
             "x_capec_domains": [
@@ -63,11 +75,22 @@
                 "Depending on the type of analysis, a variety of tools might be required, such as static code and/or dynamic analysis tools. Alternatively, the effort might require debugging programs such as ollydbg, SoftICE, or disassemblers like IDA Pro. In some instances, packet sniffing or packet analyzing programs such as TCP dump or Wireshark are necessary. Lastly, specific protocol analysis might require tools such as PDB (Protocol Debug), or packet injection tools like pcap or Nemesis."
             ],
             "x_capec_skills_required": {
-                "High": "Knowlegde of the Open Systems Interconnection model (OSI model), and famililarity with Wireshark or some other packet analyzer."
+                "High": "Knowlegde of the Open Systems Interconnection model (OSI model), and famililarity with Wireshark or some other packet analyzer.",
+                "High_fa": "دانش مدل اتصال سیستم های باز (مدل OSI) و آشنایی با Wireshark یا برخی دیگر از تحلیلگرهای بسته."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن درگیر فعالیت‌هایی برای رمزگشایی و/یا رمزگشایی اطلاعات پروتکل برای یک شبکه یا پروتکل ارتباطی برنامه کاربردی است که برای انتقال اطلاعات بین گره‌ها یا سیستم‌های متصل به هم در یک شبکه داده سوئیچ بسته استفاده می‌شود. در حالی که این نوع تجزیه و تحلیل ذاتاً شامل تجزیه و تحلیل یک پروتکل شبکه است، نیازی به حضور یک شبکه واقعی یا فیزیکی ندارد.",
+            "name_fa": "تجزیه و تحلیل پروتکل",
+            "x_capec_extended_description_fa": "<xhtml:p> اگرچه تکنیک‌های خاصی برای تجزیه و تحلیل پروتکل از دستکاری برهم‌کنش‌های زنده بین اجزای ارتباطی سود می‌برند، تکنیک‌های تحلیل استاتیک یا پویا که برای فایل‌های اجرایی و همچنین درایورهای دستگاه مانند درایورهای رابط شبکه اعمال می‌شوند، می‌توانند برای آشکار کردن عملکرد و ویژگی‌های پیاده‌سازی پروتکل ارتباطی نیز استفاده شوند. بسته به روش های مورد استفاده، فرآیند ممکن است شامل مشاهده، تعامل، و اصلاح ارتباطات واقعی بین میزبان ها باشد. هدف از تجزیه و تحلیل پروتکل استخراج نحو انتقال داده و همچنین استخراج محتوای معنادار، از جمله بسته‌ها یا جداکننده‌های محتوای مورد استفاده توسط پروتکل است. این نوع تجزیه و تحلیل اغلب بر روی پروتکل‌های با مشخصات بسته یا پروتکل‌های اختصاصی انجام می‌شود، اما همچنین برای تجزیه و تحلیل مشخصات در دسترس عموم برای تعیین اینکه چگونه پیاده‌سازی‌های خاص از مشخصات منتشر شده انحراف دارند، مفید است.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "دسترسی به یک فایل اجرایی باینری",
+                "توانایی مشاهده و تعامل با یک کانال ارتباطی بین فرآیندهای ارتباطی."
+            ],
+            "x_capec_resources_required_fa": [
+                "بسته به نوع تجزیه و تحلیل، ممکن است به ابزارهای مختلفی نیاز باشد، مانند کد استاتیک و/یا ابزارهای تحلیل پویا. از طرف دیگر، این تلاش ممکن است به برنامه‌های اشکال زدایی مانند ollydbg، SoftICE یا جداکننده‌هایی مانند IDA Pro نیاز داشته باشد. در برخی موارد، برنامه‌های sniffing یا تجزیه و تحلیل بسته‌ها مانند TCP dump یا Wireshark ضروری هستند. در نهایت، تجزیه و تحلیل پروتکل خاص ممکن است به ابزارهایی مانند PDB (Protocol Debug) یا ابزارهای تزریق بسته مانند pcap یا Nemesis نیاز داشته باشد."
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0198#AN0571",
-                    "external_id": "AN0571"
+                    "external_id": "AN0571",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Tune to exclude known orchestrator admin service accounts or CI/CD pipelines that legitimately access secrets"
+                    "description": "Tune to exclude known orchestrator admin service accounts or CI/CD pipelines that legitimately access secrets",
+                    "description_fa": "برای حذف حساب‌های سرویس مدیریت ارکستراتور شناخته شده یا خطوط لوله CI/CD که به طور قانونی به اسرار دسترسی دارند، تنظیم کنید."
                 },
                 {
                     "field": "NamespaceScope",
-                    "description": "Restrict detection to sensitive namespaces (e.g., kube-system, production apps)"
+                    "description": "Restrict detection to sensitive namespaces (e.g., kube-system, production apps)",
+                    "description_fa": "شناسایی را به فضاهای نام حساس محدود کنید (مانند سیستم kube، برنامه‌های تولید)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust correlation timing between pod execution and subsequent API secret retrieval"
+                    "description": "Adjust correlation timing between pod execution and subsequent API secret retrieval",
+                    "description_fa": "تنظیم زمان همبستگی بین اجرای pod و بازیابی مخفی API بعدی"
                 },
                 {
                     "field": "SourceIP",
-                    "description": "Filter based on allowed internal API calls vs anomalous external or cross-cluster access"
+                    "description": "Filter based on allowed internal API calls vs anomalous external or cross-cluster access",
+                    "description_fa": "فیلتر بر اساس تماس‌های مجاز داخلی API در مقابل دسترسی غیرعادی خارجی یا بین خوشه‌ای"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0571",
+            "description_fa": "شناسایی درخواست‌های غیرعادی Docker یا Kubernetes API را با دسترسی به گزارش‌ها، اسرار یا حساب‌های سرویس مرتبط می‌کند. مشاهده استفاده غیرمجاز از «گزارش‌های docker»، «kubectl get Secrets» یا تماس‌های مستقیم API به نقاط پایانی سرور Kubernetes API. الگوهای رفتاری را شناسایی می‌کند که در آن دشمنان از تعامل پایه غلاف/کانتینر به فراخوان‌های API ممتاز افزایش می‌یابند که محتوای اعتبار حساس را افشا می‌کنند."
         }
     ]
 }

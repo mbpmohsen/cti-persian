@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0326#AN0927",
-                    "external_id": "AN0927"
+                    "external_id": "AN0927",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0927",
-            "description": "A process/script constructs or references a custom/alphabet translation table (e.g., 64/85/32+ arbitrary chars, XOR/base-N loops) or emits long high-entropy strings that do NOT validate as standard Base64/Hex \u2192 shortly after, the same process (or its child) generates outbound traffic with asymmetric bytes_out:bytes_in, fixed-size beacons, or protocol/header mismatches (e.g., Content-Type says JSON but body fails JSON parse / contains non-standard alphabet).",
+            "description": "A process/script constructs or references a custom/alphabet translation table (e.g., 64/85/32+ arbitrary chars, XOR/base-N loops) or emits long high-entropy strings that do NOT validate as standard Base64/Hex → shortly after, the same process (or its child) generates outbound traffic with asymmetric bytes_out:bytes_in, fixed-size beacons, or protocol/header mismatches (e.g., Content-Type says JSON but body fails JSON parse / contains non-standard alphabet).",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -56,29 +57,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyThreshold",
-                    "description": "Minimum Shannon entropy for the suspected token/payload (e.g., >4.8)."
+                    "description": "Minimum Shannon entropy for the suspected token/payload (e.g., >4.8).",
+                    "description_fa": "حداقل آنتروپی شانون برای توکن/بار مشکوک (به عنوان مثال، > 4.8)."
                 },
                 {
                     "field": "TokenLengthThreshold",
-                    "description": "Minimum continuous token length to treat as potential non-standard payload (e.g., \u2265120 chars)."
+                    "description": "Minimum continuous token length to treat as potential non-standard payload (e.g., ≥120 chars).",
+                    "description_fa": "حداقل طول توکن پیوسته به عنوان بار غیر استاندارد بالقوه (به عنوان مثال، ≥120 کاراکتر)."
                 },
                 {
                     "field": "BytesOutToInRatio",
-                    "description": "Out:In ratio considered suspicious (e.g., \u22654:1)."
+                    "description": "Out:In ratio considered suspicious (e.g., ≥4:1).",
+                    "description_fa": "خارج: در نسبت مشکوک در نظر گرفته می شود (به عنوان مثال، ≥4:1)."
                 },
                 {
                     "field": "FixedPacketStdDevThreshold",
-                    "description": "Std. dev. threshold (size or interval) to mark packets as 'uniform' (beacon-like)."
+                    "description": "Std. dev. threshold (size or interval) to mark packets as 'uniform' (beacon-like).",
+                    "description_fa": "Std. توسعه دهنده آستانه (اندازه یا فاصله) برای علامت گذاری بسته ها به عنوان \"یکنواخت\" (شبیه چراغ)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window from encode routine to egress (default 10m)."
+                    "description": "Correlation window from encode routine to egress (default 10m).",
+                    "description_fa": "پنجره همبستگی از روال رمزگذاری تا خروج (پیش‌فرض 10 متر)."
                 },
                 {
                     "field": "KnownLegitEncoders",
-                    "description": "Legitimate in-house/custom encoders to suppress."
+                    "description": "Legitimate in-house/custom encoders to suppress.",
+                    "description_fa": "رمزگذارهای داخلی/سفارشی قانونی برای سرکوب."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0927",
+            "description_fa": "یک فرآیند/اسکریپت یک جدول ترجمه سفارشی/الفبای را می سازد یا به آن ارجاع می دهد (به عنوان مثال، 64/85/32+ نویسه های دلخواه، حلقه های XOR/base-N) یا رشته های طولانی با آنتروپی بالا را منتشر می کند که به صورت استاندارد Base64/Hex → کمی بعد، همان فرآیند (یا فرزند آن توسط ترافیک خارج از_تیریک) تولید می کند: نشانگرهای با اندازه ثابت، یا عدم تطابق پروتکل/سرصفحه (به عنوان مثال، Content-Type می گوید JSON اما بدنه JSON تجزیه نمی شود / حاوی الفبای غیر استاندارد است)."
         }
     ]
 }

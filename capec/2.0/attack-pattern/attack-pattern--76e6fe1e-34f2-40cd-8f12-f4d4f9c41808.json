@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-224",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/224.html"
+                    "url": "https://capec.mitre.org/data/definitions/224.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Fingerprinting",
                     "external_id": "45",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Fingerprinting"
+                    "url": "http://projects.webappsec.org/Fingerprinting",
+                    "description_fa": "انگشت نگاری",
+                    "source_name_fa": "WASC"
                 }
             ],
             "id": "attack-pattern--76e6fe1e-34f2-40cd-8f12-f4d4f9c41808",
@@ -34,6 +38,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -52,11 +59,20 @@
                 "If on a network, the adversary needs a tool capable of viewing network communications at the packet level and with header information, like Mitmproxy, Wireshark, or Fiddler."
             ],
             "x_capec_skills_required": {
-                "Medium": "Some fingerprinting activity requires very specific knowledge of how different operating systems respond to various TCP/IP requests. Application fingerprinting can be as easy as envoking the application with the correct command line argument, or mouse clicking in the appropriate place on the screen."
+                "Medium": "Some fingerprinting activity requires very specific knowledge of how different operating systems respond to various TCP/IP requests. Application fingerprinting can be as easy as envoking the application with the correct command line argument, or mouse clicking in the appropriate place on the screen.",
+                "Medium_fa": "برخی از فعالیت های انگشت نگاری نیاز به دانش بسیار خاصی از نحوه پاسخگویی سیستم عامل های مختلف به درخواست های مختلف TCP/IP دارد. انگشت نگاری برنامه می تواند به آسانی فراخوانی برنامه با آرگومان خط فرمان صحیح یا کلیک ماوس در مکان مناسب روی صفحه باشد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن خروجی یک سیستم هدف را با شاخص های شناخته شده ای مقایسه می کند که به طور منحصر به فرد جزئیات خاصی را در مورد هدف شناسایی می کند. معمولاً انگشت نگاری برای تعیین نسخه های سیستم عامل و برنامه ها انجام می شود. انگشت نگاری را می توان به صورت غیرفعال و همچنین فعال انجام داد. اثر انگشت به خودی خود معمولاً برای هدف مضر نیست. با این حال، اطلاعات جمع آوری شده از طریق انگشت نگاری اغلب دشمن را قادر می سازد تا نقاط ضعف موجود در هدف را کشف کند.",
+            "name_fa": "انگشت نگاری",
+            "x_capec_prerequisites_fa": [
+                "وسیله ای برای تعامل مستقیم با سیستم هدف."
+            ],
+            "x_capec_resources_required_fa": [
+                "اگر در یک شبکه باشد، دشمن به ابزاری نیاز دارد که بتواند ارتباطات شبکه را در سطح بسته و با اطلاعات هدر مشاهده کند، مانند Mitmproxy، Wireshark یا Fiddler."
+            ]
         }
     ],
     "spec_version": "2.0",

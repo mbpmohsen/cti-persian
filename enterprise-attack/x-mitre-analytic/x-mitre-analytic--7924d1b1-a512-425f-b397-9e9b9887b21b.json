@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0089#AN0243",
-                    "external_id": "AN0243"
+                    "external_id": "AN0243",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetImage",
-                    "description": "Scope to sensitive GUI/session processes like winlogon.exe or osk.exe"
+                    "description": "Scope to sensitive GUI/session processes like winlogon.exe or osk.exe",
+                    "description_fa": "دامنه پردازش های حساس رابط کاربری گرافیکی/جلسه مانند winlogon.exe یا osk.exe"
                 },
                 {
                     "field": "AccessMask",
-                    "description": "Can be tuned to 0x1fffff for full-access injection detection"
+                    "description": "Can be tuned to 0x1fffff for full-access injection detection",
+                    "description_fa": "برای تشخیص تزریق با دسترسی کامل، می توان آن را روی 0x1fffff تنظیم کرد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tunable for sustained polling or multiple registry edits in short succession"
+                    "description": "Tunable for sustained polling or multiple registry edits in short succession",
+                    "description_fa": "قابل تنظیم برای نظرسنجی پایدار یا ویرایش های متعدد رجیستری در کوتاه مدت"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0243",
+            "description_fa": "استفاده مشکوک از تماس‌های Windows API مانند SetWindowsHookEx، GetKeyState یا عملکردهای نظرسنجی را در فرآیندهای خدمات غیر UI، همراه با تغییرات رجیستری یا درایور، رصد می‌کند."
         }
     ]
 }

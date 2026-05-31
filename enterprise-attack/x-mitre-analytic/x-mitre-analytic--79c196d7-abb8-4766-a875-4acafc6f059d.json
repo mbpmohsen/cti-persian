@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0195#AN0561",
-                    "external_id": "AN0561"
+                    "external_id": "AN0561",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptedContext",
-                    "description": "Scripted tools (e.g., bash calling `ifconfig`) vs GUI-initiated inspection"
+                    "description": "Scripted tools (e.g., bash calling `ifconfig`) vs GUI-initiated inspection",
+                    "description_fa": "ابزارهای اسکریپت شده (به عنوان مثال، bash فراخوانی «ifconfig») در مقابل بازرسی شروع شده توسط رابط کاربری گرافیکی"
                 },
                 {
                     "field": "ExecutionFrequency",
-                    "description": "Enumerations executed frequently or across multiple interfaces may indicate enumeration loops"
+                    "description": "Enumerations executed frequently or across multiple interfaces may indicate enumeration loops",
+                    "description_fa": "شمارش هایی که به طور مکرر یا در چندین رابط اجرا می شوند ممکن است حلقه های شمارش را نشان دهند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0561",
+            "description_fa": "اجرای \"ifconfig\"، \"networksetup\"، یا \"system_profiler\" برای پرس و جو از پیکربندی و وضعیت IP/MAC/interface."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0510#AN1407",
-                    "external_id": "AN1407"
+                    "external_id": "AN1407",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold between SVG file write and script execution (e.g., < 60s)"
+                    "description": "Threshold between SVG file write and script execution (e.g., < 60s)",
+                    "description_fa": "آستانه بین نوشتن فایل SVG و اجرای اسکریپت (به عنوان مثال، کمتر از 60 ثانیه)"
                 },
                 {
                     "field": "ParentProcessWhitelist",
-                    "description": "Allowlisted script engines that may invoke browsers or JS in benign cases"
+                    "description": "Allowlisted script engines that may invoke browsers or JS in benign cases",
+                    "description_fa": "موتورهای اسکریپت فهرست مجاز که ممکن است مرورگرها یا JS را در موارد خوش خیم فراخوانی کنند"
                 },
                 {
                     "field": "FileExtensionPattern",
-                    "description": "Regex or string match for .svg, .svgz, or embedded .svg inside HTML or PDF"
+                    "description": "Regex or string match for .svg, .svgz, or embedded .svg inside HTML or PDF",
+                    "description_fa": "Regex یا مطابقت رشته برای .svg، .svgz، یا .svg جاسازی شده در HTML یا PDF"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1407",
+            "description_fa": "ایجاد یا بارگیری رویدادهای مشکوک فایل SVG و به دنبال آن اجرای موتور اسکریپت (مانند wscript.exe، mshta.exe، rundll32.exe)، تماس‌های شبکه یا مجموعه اعتبار مبتنی بر مرورگر را شناسایی می‌کند."
         }
     ]
 }

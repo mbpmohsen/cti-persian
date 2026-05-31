@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0417#AN1174",
-                    "external_id": "AN1174"
+                    "external_id": "AN1174",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedAdminTools",
-                    "description": "Whitelist expected administrative scripts that legitimately modify power settings."
+                    "description": "Whitelist expected administrative scripts that legitimately modify power settings.",
+                    "description_fa": "اسکریپت‌های مدیریتی مورد انتظار را که به طور قانونی تنظیمات قدرت را تغییر می‌دهند، لیست سفید کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period between powercfg.exe invocation and registry/policy changes."
+                    "description": "Correlation period between powercfg.exe invocation and registry/policy changes.",
+                    "description_fa": "دوره همبستگی بین فراخوانی powercfg.exe و تغییرات رجیستری/خط مشی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1174",
+            "description_fa": "اجرای دستور powercfg.exe را با آرگومان هایی که وقفه های زمانی خواب، خواب زمستانی یا نمایش را تغییر می دهند، نظارت کنید. تغییرات غیرعادی یا مکرر در تنظیمات برق خارج از خطوط پایه اداری ممکن است نشان دهنده تلاش های مداوم باشد. ایجاد فرآیند را با تغییرات رجیستری و پیکربندی سیستم برای ساخت زنجیره های رفتاری مرتبط کنید."
         }
     ]
 }

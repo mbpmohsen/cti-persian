@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0413#AN1160",
-                    "external_id": "AN1160"
+                    "external_id": "AN1160",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Privileged users may be excluded if they routinely perform admin actions on SharePoint or file shares."
+                    "description": "Privileged users may be excluded if they routinely perform admin actions on SharePoint or file shares.",
+                    "description_fa": "اگر کاربران ممتاز به طور معمول اقدامات مدیریتی را روی SharePoint یا اشتراک‌گذاری فایل انجام دهند، ممکن است مستثنی شوند."
                 },
                 {
                     "field": "AccessVolumeThreshold",
-                    "description": "The number of files accessed or pages retrieved in a short window to flag as abnormal."
+                    "description": "The number of files accessed or pages retrieved in a short window to flag as abnormal.",
+                    "description_fa": "تعداد فایل‌های مورد دسترسی یا صفحات بازیابی شده در یک پنجره کوتاه برای علامت‌گذاری غیرعادی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "The time range (e.g., 5 minutes, 1 hour) in which burst access patterns are considered anomalous."
+                    "description": "The time range (e.g., 5 minutes, 1 hour) in which burst access patterns are considered anomalous.",
+                    "description_fa": "محدوده زمانی (به عنوان مثال، 5 دقیقه، 1 ساعت) که در آن الگوهای دسترسی انفجاری غیرعادی در نظر گرفته می شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1160",
+            "description_fa": "دسترسی برنامه‌ریزی شده یا بیش از حد به اشتراک‌گذاری فایل، شیرپوینت یا مخازن پایگاه داده توسط کاربرانی که معمولاً با آنها تعامل ندارند. این شامل دسترسی غیرعادی توسط حساب‌های دارای امتیاز، شمارش تعداد زیادی فایل، یا بارگیری محتوای حساس به صورت ناگهانی است."
         }
     ]
 }

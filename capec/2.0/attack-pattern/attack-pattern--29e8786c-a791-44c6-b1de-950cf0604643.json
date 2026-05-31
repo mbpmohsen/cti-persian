@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-472",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/472.html"
+                    "url": "https://capec.mitre.org/data/definitions/472.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Gareth Heyes, Detecting browsers javascript hacks, The Spanner, 2009--01---29",
                     "external_id": "REF-410",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.thespanner.co.uk/2009/01/29/detecting-browsers-javascript-hacks/"
+                    "url": "http://www.thespanner.co.uk/2009/01/29/detecting-browsers-javascript-hacks/",
+                    "description_fa": "گرت هیس، شناسایی هک های جاوا اسکریپت مرورگرها، The Spanner، 2009--01---29",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--29e8786c-a791-44c6-b1de-950cf0604643",
@@ -45,7 +49,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم با دقت قطعات کوچکی از جاوا اسکریپت ایجاد می کند تا به طور موثر نوع مرورگری را که قربانی احتمالی استفاده می کند شناسایی کند. بسیاری از حملات مبتنی بر وب به دانش قبلی از مرورگر وب از جمله نسخه مرورگر برای اطمینان از بهره برداری موفقیت آمیز از یک آسیب پذیری نیاز دارند. داشتن این دانش به مهاجم اجازه می دهد تا قربانی را با حملاتی هدف قرار دهد که به طور خاص از نقاط ضعف شناخته شده یا روز صفر در نوع و نسخه مرورگر مورد استفاده قربانی سوء استفاده می کند. خودکارسازی این فرآیند از طریق جاوا اسکریپت به‌عنوان بخشی از همان سیستم تحویل مورد استفاده برای بهره‌برداری از مرورگر، کارآمدتر تلقی می‌شود، زیرا مهاجم می‌تواند یک روش انگشت نگاری مرورگر را ارائه کند و آن را با کد سوء استفاده یکپارچه کند، همه در جاوا اسکریپت و در پاسخ به درخواست صفحه وب یکسان توسط مرورگر.",
+            "name_fa": "اثر انگشت مرورگر",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>قطعات کد زیر را می توان برای شناسایی مرورگرهای مختلف استفاده کرد:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\">\n                  <xhtml:b>Firefox 2/3</xhtml:b>\n                  <xhtml:div style=\"margin-left:1em;\">FF=/a/[-1]=='a'</xhtml:div>\n                  <xhtml:b>Firefox 3</xhtml:b>\n                  <xhtml:div style=\"margin-left:1em;\">FF3=(تابع x(){})[-5]=='x'</xhtml:div>\n                  <xhtml:b>Firefox 2</xhtml:b>\n                  <xhtml:div style=\"margin-left:1em;\">FF2=(تابع x(){})[-6]=='x'</xhtml:div>\n                  <xhtml:b>IE</xhtml:b>\n                  <xhtml:div style=\"margin-left:1em;\">IE='\\v'=='v'</xhtml:div>\n                  <xhtml:b>Safari</xhtml:b>\n                  <xhtml:div style=\"margin-left:1em;\">صاف=/a/.__proto__=='//'</xhtml:div>\n                  <xhtml:b>Chrome</xhtml:b>\n                  <xhtml:div style=\"margin-left:1em;\">Chr=/source/.test((/a/.toString+''))</xhtml:div>\n                  <xhtml:b>اپرا</xhtml:b>\n                  <xhtml:div style=\"margin-left:1em;\">Op=/^function \\(/.test([].sort)</xhtml:div>\n               </xhtml:div>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "مرورگر قربانی از وب سایتی بازدید می کند که حاوی جاوا اسکریپت مهاجم است. جاوا اسکریپت در مرورگر قربانی غیرفعال نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

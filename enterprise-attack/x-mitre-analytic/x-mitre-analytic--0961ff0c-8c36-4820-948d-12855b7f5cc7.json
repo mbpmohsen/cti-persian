@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0386#AN1089",
-                    "external_id": "AN1089"
+                    "external_id": "AN1089",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CmdletVolume",
-                    "description": "Tune threshold for recipient/mailbox queries by volume per hour."
+                    "description": "Tune threshold for recipient/mailbox queries by volume per hour.",
+                    "description_fa": "آستانه تنظیم برای درخواست های گیرنده/صندوق پستی بر اساس حجم در ساعت."
                 },
                 {
                     "field": "UserAgent",
-                    "description": "Match known admin consoles and exclude sanctioned tools like MSOL PowerShell."
+                    "description": "Match known admin consoles and exclude sanctioned tools like MSOL PowerShell.",
+                    "description_fa": "با کنسول‌های مدیریت شناخته شده مطابقت دهید و ابزارهای تحریمی مانند MSOL PowerShell را حذف کنید."
                 },
                 {
                     "field": "SessionContext",
-                    "description": "Elevate sessions from unmanaged or external endpoints."
+                    "description": "Elevate sessions from unmanaged or external endpoints.",
+                    "description_fa": "جلسات را از نقاط پایانی مدیریت نشده یا خارجی بالا ببرید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1089",
+            "description_fa": "شمارش انبوه هویت‌های ایمیل کاربر ابری از طریق فهرست‌های «Get-Recipient»، «Get-Mailbox»، «Get-User» یا Graph API توسط حساب‌های غیرعادی یا جلسات مشکوک."
         }
     ]
 }

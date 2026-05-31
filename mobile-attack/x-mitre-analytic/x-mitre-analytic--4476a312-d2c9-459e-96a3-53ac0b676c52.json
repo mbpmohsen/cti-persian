@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0695#AN1808",
-                    "external_id": "AN1808"
+                    "external_id": "AN1808",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,37 +63,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking camera access, lifecycle context, artifact creation, and optional network transfer."
+                    "description": "Correlation window linking camera access, lifecycle context, artifact creation, and optional network transfer.",
+                    "description_fa": "پنجره همبستگی که دسترسی دوربین، بافت چرخه حیات، ایجاد مصنوعات و انتقال اختیاری شبکه را به هم مرتبط می کند."
                 },
                 {
                     "field": "CaptureDurationThreshold",
-                    "description": "Minimum sustained camera session duration considered unusual for the app role."
+                    "description": "Minimum sustained camera session duration considered unusual for the app role.",
+                    "description_fa": "حداقل مدت زمان ثابت دوربین برای نقش برنامه غیرمعمول در نظر گرفته می شود."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved camera-capable apps vary by organization, device group, and role."
+                    "description": "Approved camera-capable apps vary by organization, device group, and role.",
+                    "description_fa": "برنامه های تأیید شده با قابلیت دوربین بسته به سازمان، گروه دستگاه و نقش متفاوت است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Some apps should only access the camera while visibly foregrounded."
+                    "description": "Some apps should only access the camera while visibly foregrounded.",
+                    "description_fa": "برخی از برنامه‌ها فقط باید در حالی که به‌طور قابل‌توجهی در جلو زمینه هستند به دوربین دسترسی داشته باشند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close camera activation must be to user interaction to be considered expected."
+                    "description": "Defines how close camera activation must be to user interaction to be considered expected.",
+                    "description_fa": "مشخص می‌کند که فعال‌سازی دوربین چقدر باید به تعامل کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "AllowedBackgroundCaptureApps",
-                    "description": "Specific enterprise or accessibility workflows may legitimately capture while not foregrounded."
+                    "description": "Specific enterprise or accessibility workflows may legitimately capture while not foregrounded.",
+                    "description_fa": "جریان‌های کاری سازمانی یا دسترسی خاص ممکن است به طور قانونی ثبت شوند در حالی که در پیش زمینه نیستند."
                 },
                 {
                     "field": "ArtifactWriteThreshold",
-                    "description": "Minimum media-buffer or file-write volume indicating probable video or burst-image capture."
+                    "description": "Minimum media-buffer or file-write volume indicating probable video or burst-image capture.",
+                    "description_fa": "حداقل حجم بافر رسانه یا نوشتن فایل که امکان ضبط ویدیو یا تصویر پشت سر هم را نشان می دهد."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Threshold for suspicious outbound transfer after capture."
+                    "description": "Threshold for suspicious outbound transfer after capture.",
+                    "description_fa": "آستانه انتقال مشکوک به بیرون پس از گرفتن."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1808",
+            "description_fa": "مدافع دسترسی به دوربین اندروید را با هویت برنامه با زمینه برنامه و دستگاه مرتبط می‌کند و نشان می‌دهد که عکس‌برداری با رفتار ضبط کاربر محور مورد انتظار مطابقت ندارد. قوی‌ترین شواهد اندروید دسترسی به منابع دوربین است و به دنبال آن مدت زمان ضبط مداوم، ایجاد مصنوعات ویدیویی یا تصویر، رشد بافر یا حافظه پنهان، و انتقال خروجی اختیاری، به‌ویژه زمانی که برنامه در پس‌زمینه است، به‌عنوان یک سرویس پیش‌زمینه بدون شروع قابل مشاهده کاربر، فعال در زمانی که دستگاه قفل است، یا عکس‌برداری بدون تعامل اخیر کاربر است. تشخیص زمانی تقویت می‌شود که برنامه مدیریت نشده باشد، اخیراً به دوربین دسترسی داشته باشد یا برای ضبط ویدیو تأیید نشده باشد."
         }
     ]
 }

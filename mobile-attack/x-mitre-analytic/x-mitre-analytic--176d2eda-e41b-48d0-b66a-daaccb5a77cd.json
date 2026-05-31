@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0690#AN1801",
-                    "external_id": "AN1801"
+                    "external_id": "AN1801",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,29 +63,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between uninstall-capable control, removal action, and app disappearance"
+                    "description": "Correlation window between uninstall-capable control, removal action, and app disappearance",
+                    "description_fa": "پنجره همبستگی بین کنترل با قابلیت حذف، اقدام حذف و ناپدید شدن برنامه"
                 },
                 {
                     "field": "RemovalAuthoritySet",
-                    "description": "Roles or privileges considered capable of enabling silent or assisted uninstall, such as device owner, delegated app-management authority, accessibility, or rooted filesystem access"
+                    "description": "Roles or privileges considered capable of enabling silent or assisted uninstall, such as device owner, delegated app-management authority, accessibility, or rooted filesystem access",
+                    "description_fa": "نقش‌ها یا امتیازاتی که می‌توانند حذف نصب بی‌صدا یا کمکی را فعال کنند، مانند مالک دستگاه، اختیار مدیریت برنامه، دسترسی یا دسترسی به سیستم فایل ریشه‌دار"
                 },
                 {
                     "field": "AllowedRemovalApps",
-                    "description": "Legitimate enterprise or device-management apps allowed to uninstall applications"
+                    "description": "Legitimate enterprise or device-management apps allowed to uninstall applications",
+                    "description_fa": "برنامه‌های سازمانی یا مدیریت دستگاه قانونی مجاز به حذف نصب برنامه‌ها هستند"
                 },
                 {
                     "field": "RemovalAttemptSignalSet",
-                    "description": "Signals used to recognize uninstall initiation, such as package-removal actions, uninstall intent flows, or accessibility-driven confirmation steps"
+                    "description": "Signals used to recognize uninstall initiation, such as package-removal actions, uninstall intent flows, or accessibility-driven confirmation steps",
+                    "description_fa": "سیگنال‌های مورد استفاده برای تشخیص شروع حذف، مانند اقدامات حذف بسته، حذف جریان‌های هدف، یا مراحل تأیید مبتنی بر دسترسی"
                 },
                 {
                     "field": "DisappearanceThreshold",
-                    "description": "Maximum time between removal action and loss of installed-state visibility"
+                    "description": "Maximum time between removal action and loss of installed-state visibility",
+                    "description_fa": "حداکثر زمان بین عمل حذف و از بین رفتن دید نصب شده"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Outbound traffic threshold used to confirm final activity before self-removal"
+                    "description": "Outbound traffic threshold used to confirm final activity before self-removal",
+                    "description_fa": "آستانه ترافیک خروجی برای تأیید فعالیت نهایی قبل از حذف خود استفاده می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1801",
+            "description_fa": "ارتباط (1) برنامه مخربی که یک مسیر کنترلی با قابلیت حذف را به دست می آورد یا از آن استفاده می کند، مانند مالک دستگاه یا اختیار مدیریت برنامه تفویض شده، کنترل سرویس دسترسی بر روی رابط کاربری حذف نصب، یا دسترسی به سیستم فایل ریشه، (2) شروع رفتار حذف نصب یا حذف بسته، و (3) ناپدید شدن برنامه از حالت نصب شده با زمان کوتاه نصب شده و اغلب پس از پاک شدن موجودی محلی یا اجرای نهایی آن، یا ارتباط برون مرزی مدافع یک زنجیره علّی را مشاهده می کند که در آن برنامه ابتدا توانایی حذف خود را ایجاد می کند، سپس حذف نصب یا حذف را آغاز می کند و سپس در حالی که فعالیت دستگاه ادامه دارد، از حضور برنامه مورد انتظار محو می شود."
         }
     ]
 }

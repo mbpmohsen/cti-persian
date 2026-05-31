@@ -9,57 +9,68 @@
                 {
                     "external_id": "CAPEC-120",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/120.html"
+                    "url": "https://capec.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-173",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/173.html"
+                    "url": "http://cwe.mitre.org/data/definitions/173.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-172",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/172.html"
+                    "url": "http://cwe.mitre.org/data/definitions/172.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-177",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/177.html"
+                    "url": "http://cwe.mitre.org/data/definitions/177.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-181",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/181.html"
+                    "url": "http://cwe.mitre.org/data/definitions/181.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-183",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/183.html"
+                    "url": "http://cwe.mitre.org/data/definitions/183.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-184",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/184.html"
+                    "url": "http://cwe.mitre.org/data/definitions/184.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-692",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/692.html"
+                    "url": "http://cwe.mitre.org/data/definitions/692.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--fb506d15-6cda-4669-8fc2-fb41061099d9",
@@ -91,7 +102,21 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف از تکرار فرآیند رمزگذاری برای مجموعه‌ای از کاراکترها (یعنی کاراکترهایی که رمزگذاری کاراکترهای یک کاراکتر را کد می‌کنند) استفاده می‌کند تا بار یک درخواست خاص را مبهم کند. این ممکن است به دشمن اجازه دهد فیلترهایی را که سعی در شناسایی نویسه‌ها یا رشته‌های غیرقانونی دارند، مانند فیلترهایی که ممکن است در حملات پیمایش یا تزریق استفاده شوند، دور بزند. ممکن است فیلترها بتوانند رشته های رمزگذاری شده غیرقانونی را بگیرند، اما ممکن است رشته های رمزگذاری شده مضاعف را نگیرند. به عنوان مثال، یک نقطه (.)، که اغلب در حملات پیمایش مسیر استفاده می شود و بنابراین اغلب توسط فیلترها مسدود می شود، می تواند URL به صورت %2E کدگذاری شود. با این حال، بسیاری از فیلترها این رمزگذاری را می شناسند و همچنان درخواست را مسدود می کنند. در یک رمزگذاری دوگانه، % در رمزگذاری URL بالا دوباره به صورت %25 کدگذاری می‌شود و در نتیجه %252E که ممکن است برخی فیلترها آن را نگیرند، اما همچنان می‌تواند توسط مفسران روی هدف به عنوان یک نقطه (.) تفسیر شود.",
+            "name_fa": "کدگذاری دوگانه",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> حملات رمزگذاری دوگانه اغلب می توانند برای دور زدن تشخیص Cross Site Scripting (XSS) و اجرای حملات XSS استفاده شوند.:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">%253Cscript%253Ealert('این یک حمله XSS است')%253C%252Fscript%253E</xhtml:div>\n               <xhtml:p>از آنجایی که <، <، و / اغلب برای انجام حملات وب مورد شکایت قرار می گیرند، ممکن است این موارد توسط فیلترهای XSS ضبط شوند. استفاده از رمزگذاری مضاعف مانع از کارکرد فیلتر طبق خواسته می شود و به XSS اجازه می دهد تا تشخیص را دور بزند. این می تواند به دشمن اجازه دهد کد مخرب را اجرا کند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه را برای ورودی‌های قابل کنترل کاربر بررسی کنید: </b>با استفاده از یک مرورگر، یک ابزار خودکار یا با بازرسی برنامه، مهاجم تمام نقاط ورودی را در برنامه ثبت می‌کند. برنامه.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها و تجزیه و تحلیل صفحات وب برای یافتن نقاط ورودی استفاده کنید. به پیوندهایی که شامل پارامترهایی در URL می‌شوند، توجه ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت تمام نقاط ورودی کاربر که در طول پیمایش دستی برنامه وب بازدید شده‌اند استفاده کنید.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب‌سایت و تجزیه و تحلیل نحوه ساخت آن استفاده کنید. افزونه‌های بسیاری از مرورگرها برای تسهیل تجزیه و تحلیل یا خودکارسازی کشف در دسترس هستند.</td></tr><tr><td>برنامه را به صورت دستی بازرسی کنید تا نقاط ورودی را پیدا کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>نقاط ورودی را دو برابر کنید. بخش هایی از ورودی به منظور تلاش برای عبور از فیلترها. به عنوان مثال، با رمزگذاری دوبار کاراکترهای خاص در URL (به عنوان مثال نقطه و اسلش)، یک دشمن ممکن است سعی کند به منابع محدود شده در وب سرور دسترسی پیدا کند یا به اجبار به صفحات محافظت شده بپردازد (در نتیجه سرویس مجوز را خراب می کند). یک دشمن همچنین می‌تواند با استفاده از این الگوی حمله، حملات دیگری به سبک تزریق انجام دهد: تزریق فرمان، تزریق SQL، و غیره.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>سعی کنید از کدگذاری دوگانه برای دور زدن روال‌های اعتبارسنجی استفاده کنید.</td></tr></></tbodyol></t",
+            "x_capec_prerequisites_fa": [
+                "فیلترهای هدف باید تشخیص ندهند که یک کاراکتر به صورت مضاعف رمزگذاری شده است، اما موتور تفسیر کننده آن باید همچنان بتواند یک کاراکتر کدگذاری شده مضاعف را به یک کاراکتر رمزگذاری نشده تبدیل کند.",
+                "برنامه درخواست رشته URL را می پذیرد و رمزگشایی می کند.",
+                "برنامه فیلتر/قانونی سازی کافی روی URL ها انجام نمی دهد."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزارهایی که رمزگذاری داده‌ها را خودکار می‌کنند، می‌توانند به دشمن در تولید رشته‌های کدگذاری شده کمک کنند."
+            ]
         }
     ],
     "spec_version": "2.0",

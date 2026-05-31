@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0544#AN1501",
-                    "external_id": "AN1501"
+                    "external_id": "AN1501",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TransactionExecutableNamePattern",
-                    "description": "Pattern of legitimate executables often used as doppelg\u00e4nging targets (e.g., svchost.exe, calc.exe)"
+                    "description": "Pattern of legitimate executables often used as doppelgänging targets (e.g., svchost.exe, calc.exe)",
+                    "description_fa": "الگویی از فایل های اجرایی قانونی که اغلب به عنوان اهداف انحرافی استفاده می شود (مانند svchost.exe، calc.exe)"
                 },
                 {
                     "field": "TimeWindow_TransactionToExecution",
-                    "description": "Time delta between TxF rollback and thread creation in hollowed process"
+                    "description": "Time delta between TxF rollback and thread creation in hollowed process",
+                    "description_fa": "دلتای زمانی بین بازگشت TxF و ایجاد نخ در فرآیند توخالی"
                 },
                 {
                     "field": "ThreadStartEntropyThreshold",
-                    "description": "Entropy level of thread start address in memory used to detect obfuscated shellcode"
+                    "description": "Entropy level of thread start address in memory used to detect obfuscated shellcode",
+                    "description_fa": "سطح آنتروپی آدرس شروع رشته در حافظه که برای شناسایی کد پوسته مبهم استفاده می شود"
                 },
                 {
                     "field": "TxF API Call Frequency Threshold",
-                    "description": "Limit on CreateTransaction + RollbackTransaction sequences per process"
+                    "description": "Limit on CreateTransaction + RollbackTransaction sequences per process",
+                    "description_fa": "محدودیت در توالی CreateTransaction + RollbackTransaction در هر فرآیند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1501",
+            "description_fa": "سوء استفاده دشمن از NTFS تراکنش (TxF) و مکانیسم‌های بارگیری فرآیند غیرمستند (مانند NtCreateProcessEx) را برای ایجاد یک فرآیند توخالی از یک تصویر فایل غیرمتعهد و مخرب در حافظه شناسایی می‌کند که بعداً از طریق NtCreateThreadEx اجرا می‌شود."
         }
     ]
 }

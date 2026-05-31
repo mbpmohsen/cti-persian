@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0188#AN0539",
-                    "external_id": "AN0539"
+                    "external_id": "AN0539",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ssh_source_ip",
-                    "description": "Restrict alerts to unexpected remote sessions accessing host storage commands"
+                    "description": "Restrict alerts to unexpected remote sessions accessing host storage commands",
+                    "description_fa": "هشدارها را به جلسات غیرمنتظره راه دور که به دستورات ذخیره سازی میزبان دسترسی دارند محدود کنید"
                 },
                 {
                     "field": "esxcli_command_scope",
-                    "description": "Tailor detection based on subcommands more likely to be abused"
+                    "description": "Tailor detection based on subcommands more likely to be abused",
+                    "description_fa": "تشخیص خیاطی بر اساس دستورات فرعی به احتمال زیاد مورد سوء استفاده قرار می گیرد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0539",
+            "description_fa": "استفاده از «sxcli storage» یا «vim-cmd vmsvc/getallvms» توسط جلسات غیرمعمول یا از طریق پوسته‌های تعاملی غیرمرتبط با وظایف نگهداری اداری."
         }
     ]
 }

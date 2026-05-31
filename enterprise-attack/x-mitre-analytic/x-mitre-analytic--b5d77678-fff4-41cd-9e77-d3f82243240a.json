@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0230#AN0643",
-                    "external_id": "AN0643"
+                    "external_id": "AN0643",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedCertificateAuthorities",
-                    "description": "Define trusted issuers to suppress noise from legitimate enterprise signing chains"
+                    "description": "Define trusted issuers to suppress noise from legitimate enterprise signing chains",
+                    "description_fa": "ناشران قابل اعتماد را برای سرکوب صدای زنجیره های امضای قانونی شرکت تعریف کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for detecting execution of binaries with newly observed or anomalous certificates"
+                    "description": "Correlation window for detecting execution of binaries with newly observed or anomalous certificates",
+                    "description_fa": "پنجره همبستگی برای تشخیص اجرای باینری ها با گواهی های تازه مشاهده شده یا غیرعادی"
                 },
                 {
                     "field": "CertificateAgeThreshold",
-                    "description": "Baseline normal age of certificates; flag very recent or expired certificates"
+                    "description": "Baseline normal age of certificates; flag very recent or expired certificates",
+                    "description_fa": "سن عادی پایه گواهینامه ها؛ گواهینامه های بسیار اخیر یا منقضی شده را پرچم گذاری کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0643",
+            "description_fa": "اجرای باینری‌های امضا شده با گواهی‌های غیرمعمول یا اخیراً صادر شده، همبستگی اجرای فرآیند با ابرداده‌های غیرعادی ناشر، و زنجیره‌های گواهی نامطلوب را تشخیص می‌دهد. مانیتورهایی برای گواهی امضای کد باطل یا ناشناخته که در زمینه‌های دارای امتیاز بالا استفاده می‌شود."
         }
     ]
 }

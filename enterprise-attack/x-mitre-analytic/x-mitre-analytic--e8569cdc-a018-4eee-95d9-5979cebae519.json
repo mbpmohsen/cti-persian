@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0404#AN1133",
-                    "external_id": "AN1133"
+                    "external_id": "AN1133",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation between registry modification and malicious module load or process creation"
+                    "description": "Time correlation between registry modification and malicious module load or process creation",
+                    "description_fa": "همبستگی زمانی بین اصلاح رجیستری و بارگذاری ماژول مخرب یا ایجاد فرآیند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Privilege level or user context under which registry changes or process executions occur"
+                    "description": "Privilege level or user context under which registry changes or process executions occur",
+                    "description_fa": "سطح امتیاز یا زمینه کاربری که تحت آن تغییرات رجیستری یا اجرای فرآیند رخ می دهد"
                 },
                 {
                     "field": "BinarySignatureValidation",
-                    "description": "Whether to validate binary signatures when DLLs are loaded via Winlogon helper paths"
+                    "description": "Whether to validate binary signatures when DLLs are loaded via Winlogon helper paths",
+                    "description_fa": "آیا برای تأیید اعتبار امضاهای باینری هنگام بارگیری DLL از طریق مسیرهای کمکی Winlogon"
                 },
                 {
                     "field": "ExecutablePathScope",
-                    "description": "Scope of directories considered suspicious for helper DLLs (e.g., temp paths, non-System32 locations)"
+                    "description": "Scope of directories considered suspicious for helper DLLs (e.g., temp paths, non-System32 locations)",
+                    "description_fa": "محدوده دایرکتوری هایی که برای DLL های کمکی مشکوک در نظر گرفته می شوند (به عنوان مثال، مسیرهای موقت، مکان های غیر سیستم 32)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1133",
+            "description_fa": "تغییرات رجیستری ویندوز در کلیدهای Winlogon (Shell، Userinit، Notify) را که مسیرهای اجرایی یا DLL جدیدی را معرفی می کنند، نظارت کنید. این تغییرات را با بارگذاری بعدی DLL، بارگذاری تصویر، یا ایجاد فرآیند از winlogon.exe یا userinit.exe مرتبط کنید. نسب پردازش فرزند غیرعادی یا باینری های غیرمجاز در C:\\Windows\\System32 ممکن است نشان دهنده سوء استفاده باشد."
         }
     ]
 }

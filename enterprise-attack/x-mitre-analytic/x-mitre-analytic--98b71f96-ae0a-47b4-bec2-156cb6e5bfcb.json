@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0593#AN1631",
-                    "external_id": "AN1631"
+                    "external_id": "AN1631",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccessedFilePath",
-                    "description": "Monitored paths such as /proc/[pid]/mem or /proc/[pid]/maps may need to be scoped based on environment"
+                    "description": "Monitored paths such as /proc/[pid]/mem or /proc/[pid]/maps may need to be scoped based on environment",
+                    "description_fa": "مسیرهای نظارت شده مانند /proc/[pid]/mem یا /proc/[pid]/maps ممکن است نیاز به محدوده‌بندی بر اساس محیط داشته باشند."
                 },
                 {
                     "field": "ProcessName",
-                    "description": "Command-line or binary names associated with credential scraping tools may vary"
+                    "description": "Command-line or binary names associated with credential scraping tools may vary",
+                    "description_fa": "نام های خط فرمان یا باینری مرتبط با ابزارهای خراش دادن اعتبار ممکن است متفاوت باشد"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Elevated user or unexpected user context accessing other process memory may indicate malicious activity"
+                    "description": "Elevated user or unexpected user context accessing other process memory may indicate malicious activity",
+                    "description_fa": "دسترسی کاربر بالا یا بافت غیرمنتظره کاربر به حافظه فرآیند دیگر ممکن است نشان دهنده فعالیت مخرب باشد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlating memory access with process creation or ptrace activity within a specific time range"
+                    "description": "Correlating memory access with process creation or ptrace activity within a specific time range",
+                    "description_fa": "ارتباط دسترسی به حافظه با ایجاد فرآیند یا فعالیت ptrace در یک محدوده زمانی خاص"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1631",
+            "description_fa": "نظارت بر دسترسی دشمن به حافظه پردازش حساس از طریق سیستم فایل proc / برای استخراج مطالب اعتبار، که اغلب شامل دسترسی چند مرحله‌ای به /proc/[pid]/mem یا /proc/[pid]/maps همراه با افزایش امتیاز یا باینری‌های حذف اعتبار است."
         }
     ]
 }

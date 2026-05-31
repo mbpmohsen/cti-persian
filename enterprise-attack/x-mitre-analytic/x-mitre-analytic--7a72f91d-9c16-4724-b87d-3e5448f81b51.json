@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0527#AN1463",
-                    "external_id": "AN1463"
+                    "external_id": "AN1463",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExtensionMismatch",
-                    "description": "Filter based on mismatched visible extension vs. magic bytes or mime-type"
+                    "description": "Filter based on mismatched visible extension vs. magic bytes or mime-type",
+                    "description_fa": "فیلتر بر اساس پسوند قابل مشاهده ناهمخوان در مقابل بایت های جادویی یا نوع mime"
                 },
                 {
                     "field": "ProcessLineage",
-                    "description": "Correlation between file open and subsequent script interpreter invocation"
+                    "description": "Correlation between file open and subsequent script interpreter invocation",
+                    "description_fa": "همبستگی بین فراخوانی مفسر فایل باز و متعاقب آن اسکریپت"
                 },
                 {
                     "field": "FilenameEntropy",
-                    "description": "Suspicious Unicode sequences or byte entropy in filenames"
+                    "description": "Suspicious Unicode sequences or byte entropy in filenames",
+                    "description_fa": "دنباله های یونیکد مشکوک یا آنتروپی بایت در نام فایل ها"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1463",
+            "description_fa": "اجرای اسکریپت های دانلود شده یا ایجاد شده توسط کاربر با پسوندهای پنهان به دلیل درج کاراکتر RTLO در نام فایل، که اغلب در محیط های دسکتاپ یا کمپین های فیشینگ وجود دارد."
         }
     ]
 }

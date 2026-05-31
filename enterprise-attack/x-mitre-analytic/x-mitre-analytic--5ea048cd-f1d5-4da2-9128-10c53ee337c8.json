@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0070#AN0188",
-                    "external_id": "AN0188"
+                    "external_id": "AN0188",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousFileTypes",
-                    "description": "Attachment types considered high risk (e.g., .exe, .js, .vbs, .scr, macro-enabled docs)."
+                    "description": "Attachment types considered high risk (e.g., .exe, .js, .vbs, .scr, macro-enabled docs).",
+                    "description_fa": "انواع پیوست در نظر گرفته شده با ریسک بالا (مانند exe.، .js، .vbs، .scr، اسناد دارای قابلیت ماکرو)."
                 },
                 {
                     "field": "AllowedSenders",
-                    "description": "Whitelist of known trusted senders to reduce false positives."
+                    "description": "Whitelist of known trusted senders to reduce false positives.",
+                    "description_fa": "لیست سفید فرستنده های مورد اعتماد شناخته شده برای کاهش موارد مثبت کاذب."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0188",
+            "description_fa": "فعالیت غیرمعمول ایمیل ورودی که در آن پیوست‌ها یا URLهای جاسازی شده به کاربران تحویل داده می‌شوند و به دنبال آن فرآیندهای جدید یا رفتار اسناد مشکوک انجام می‌شود. تشخیص شامل همبستگی فراداده ایمیل، ایجاد فایل و فعالیت شبکه پس از دریافت پیام فیشینگ است."
         }
     ]
 }

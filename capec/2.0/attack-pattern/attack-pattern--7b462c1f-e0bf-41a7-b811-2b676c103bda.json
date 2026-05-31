@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-5",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/5.html"
+                    "url": "https://capec.mitre.org/data/definitions/5.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--7b462c1f-e0bf-41a7-b811-2b676c103bda",
@@ -45,6 +49,18 @@
                 ],
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع (انکار خدمات)"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -62,11 +78,23 @@
                 "CCITT-5 or other vulnerable lines, with the ability to send tones such as combined 2,400 Hz and 2,600 Hz tones to the switch"
             ],
             "x_capec_skills_required": {
-                "Low": "Given a vulnerable phone system, the attackers' technical vector relies on attacks that are well documented in cracker 'zines and have been around for decades."
+                "Low": "Given a vulnerable phone system, the attackers' technical vector relies on attacks that are well documented in cracker 'zines and have been around for decades.",
+                "Low_fa": "با توجه به یک سیستم تلفن آسیب‌پذیر، بردار فنی مهاجمان به حملاتی متکی است که به خوبی در کرکرها ثبت شده‌اند و برای دهه‌ها وجود داشته‌اند."
             },
             "x_capec_status": "Obsolete",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p> این نوع حمله علیه سوئیچ‌ها و ترانک‌های تلفن قدیمی‌تر، دهه‌ها است که وجود داشته است. صدایی توسط یک حریف برای جعل هویت سیگنال ناظر ارسال می شود که اثر آن تغییر مسیر یا غصب فرمان خط است. در حالی که زیرساخت مناسب ایالات متحده ممکن است دارای آسیب پذیری های گسترده در برابر این نوع حملات نباشد، بسیاری از شرکت ها در سطح جهانی از طریق مراکز تماس و برون سپاری فرآیندهای تجاری به هم متصل هستند. این سیستم‌های بین‌المللی ممکن است در کشورهایی اجرا شوند که زیرساخت‌های مخابراتی را ارتقاء نداده‌اند و بنابراین در برابر بوکس آبی آسیب‌پذیر هستند. بوکس آبی نتیجه شکست سیستم در اجرای مجوز قوی برای عملکردهای اداری است. در حالی که زیرساخت با برنامه های کاربردی فعلی استاندارد مانند برنامه های کاربردی وب متفاوت است، درس های تاریخی برای ارتقاء کنترل دسترسی برای عملکردهای اداری وجود دارد.</xhtml:p>\n            <xhtml:p>\n               <xhtml:b>این الگوی حمله برای اهداف تاریخی در CAPEC گنجانده شده است.</xhtml:b>\n            </xhtml:p>",
+            "name_fa": "بوکس آبی",
+            "x_capec_example_instances_fa": [
+                "یک حریف یک خط تلفن آسیب پذیر CCITT-5 را شناسایی می کند و یک آهنگ ترکیبی به سوئیچ می فرستد تا دسترسی اداری را درخواست کند. بر اساس پارامترهای آهنگ و زمان، درخواست برای دسترسی به سوئیچ تأیید می شود. هنگامی که حریف کنترل سوئیچ را به دست آورد، تماس‌های راه‌اندازی، مسیریابی تماس‌ها و مجموعه‌ای از فرصت‌ها در دسترس هستند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "سیستم باید از مکانیزم های احراز هویت ضعیف برای عملکردهای اداری استفاده کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "CCITT-5 یا سایر خطوط آسیب پذیر، با قابلیت ارسال صداهایی مانند زنگ ترکیبی 2400 هرتز و 2600 هرتز به سوییچ"
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0107#AN0298",
-                    "external_id": "AN0298"
+                    "external_id": "AN0298",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0298",
-            "description": "Correlation of inbound emails with embedded links followed by user-driven browser navigation to suspicious or obfuscated domains. Detection chain includes malicious URL in email \u2192 user click recorded in Office logs \u2192 browser process spawning unusual child processes (e.g., PowerShell, cmd) or download activity.",
+            "description": "Correlation of inbound emails with embedded links followed by user-driven browser navigation to suspicious or obfuscated domains. Detection chain includes malicious URL in email → user click recorded in Office logs → browser process spawning unusual child processes (e.g., PowerShell, cmd) or download activity.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousTLDs",
-                    "description": "List of monitored top-level domains commonly abused in phishing (e.g., .xyz, .top, .tk)."
+                    "description": "List of monitored top-level domains commonly abused in phishing (e.g., .xyz, .top, .tk).",
+                    "description_fa": "فهرست دامنه‌های سطح بالای نظارت شده که معمولاً در فیشینگ مورد سوء استفاده قرار می‌گیرند (مانند xyz.، .top، .tk)."
                 },
                 {
                     "field": "URLShortenerDomains",
-                    "description": "Domains like bit.ly, tinyurl.com flagged for deeper expansion/inspection."
+                    "description": "Domains like bit.ly, tinyurl.com flagged for deeper expansion/inspection.",
+                    "description_fa": "دامنه‌هایی مانند bit.ly، tinyurl.com برای گسترش/بازرسی عمیق‌تر پرچم‌گذاری شده‌اند."
                 },
                 {
                     "field": "ClickToExecutionWindow",
-                    "description": "Time threshold between URL click and suspicious process execution."
+                    "description": "Time threshold between URL click and suspicious process execution.",
+                    "description_fa": "آستانه زمانی بین کلیک URL و اجرای فرآیند مشکوک."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0298",
+            "description_fa": "همبستگی ایمیل های ورودی با پیوندهای جاسازی شده و به دنبال آن ناوبری مرورگر کاربر محور به دامنه های مشکوک یا مبهم. زنجیره تشخیص شامل URL مخرب در ایمیل ← کلیک کاربر ثبت شده در گزارش‌های Office ← فرآیند مرورگر که فرآیندهای غیرعادی فرزند (مانند PowerShell، cmd) یا فعالیت دانلود را ایجاد می‌کند."
         }
     ]
 }

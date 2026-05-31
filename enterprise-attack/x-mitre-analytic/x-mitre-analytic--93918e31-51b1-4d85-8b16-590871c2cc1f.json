@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0088#AN0241",
-                    "external_id": "AN0241"
+                    "external_id": "AN0241",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BackupConfigPaths",
-                    "description": "Directory paths and filenames related to backup agents"
+                    "description": "Directory paths and filenames related to backup agents",
+                    "description_fa": "مسیرهای دایرکتوری و نام فایل های مربوط به عوامل پشتیبان"
                 },
                 {
                     "field": "ToolchainScope",
-                    "description": "Shells, interpreters, or binaries used by attacker scripts for discovery"
+                    "description": "Shells, interpreters, or binaries used by attacker scripts for discovery",
+                    "description_fa": "پوسته ها، مفسرها یا باینری ها که توسط اسکریپت های مهاجم برای کشف استفاده می شوند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0241",
+            "description_fa": "Defender استفاده از ابزارهای CLI («یافتن»، «grep»، «ls»، «dpkg»، «rpm»، «systemctl»، «ps aux») را برای کشف عوامل پشتیبان یا فایل‌های پیکربندی (مانند rsnapshot، duplicity، veeam) مشاهده می‌کند. این اغلب شامل خطوط فرمانی است که به صورت بازگشتی دایرکتوری های «/etc/»، «/opt/»، یا «/var/» را برای کلمات کلیدی مانند «پشتیبان گیری»، و روابط والد-فرزند شامل اسکریپت های شل یا پایتون جستجو می کنند."
         }
     ]
 }

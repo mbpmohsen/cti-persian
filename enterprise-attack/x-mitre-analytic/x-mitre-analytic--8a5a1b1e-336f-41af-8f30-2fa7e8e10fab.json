@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0548#AN1512",
-                    "external_id": "AN1512"
+                    "external_id": "AN1512",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredTools",
-                    "description": "Suspicious command-line utilities used for exfiltration (curl, wget, python)."
+                    "description": "Suspicious command-line utilities used for exfiltration (curl, wget, python).",
+                    "description_fa": "ابزارهای مشکوک خط فرمان مورد استفاده برای exfiltration (curl، wget، python)."
                 },
                 {
                     "field": "DataVolumeThreshold",
-                    "description": "Bytes transferred threshold per session to flag unusual uploads."
+                    "description": "Bytes transferred threshold per session to flag unusual uploads.",
+                    "description_fa": "بایت ها آستانه هر جلسه را برای پرچم گذاری آپلودهای غیرمعمول منتقل می کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1512",
+            "description_fa": "فرآیندها (tar، curl، اسکریپت‌های پایتون) دسترسی به مجموعه‌های فایل بزرگ و شروع درخواست‌های HTTPS POST خروجی با اندازه بار ناسازگار با فعالیت پایه. دیدگاه مدافع: توالی غیرعادی بایگانی فایل و به دنبال آن آپلودهای رمزگذاری شده در سرویس های وب خارجی را شناسایی کنید."
         }
     ]
 }

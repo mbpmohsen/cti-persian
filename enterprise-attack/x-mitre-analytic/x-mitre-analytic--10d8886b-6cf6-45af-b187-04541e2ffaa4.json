@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0164#AN0466",
-                    "external_id": "AN0466"
+                    "external_id": "AN0466",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time threshold after process creation during which argv memory manipulation is expected to be rare; anomalies occurring outside this window may be more suspicious."
+                    "description": "Time threshold after process creation during which argv memory manipulation is expected to be rare; anomalies occurring outside this window may be more suspicious.",
+                    "description_fa": "آستانه زمانی پس از ایجاد فرآیند که در طی آن دستکاری حافظه argv نادر است. ناهنجاری هایی که در خارج از این پنجره رخ می دهند ممکن است مشکوک تر باشند."
                 },
                 {
                     "field": "AllowedArgvMismatchPatterns",
-                    "description": "List of known legitimate processes where argv[0] mismatch is expected due to application logic or packaging quirks."
+                    "description": "List of known legitimate processes where argv[0] mismatch is expected due to application logic or packaging quirks.",
+                    "description_fa": "فهرستی از فرآیندهای قانونی شناخته شده که در آن‌ها به دلیل منطق برنامه یا ویژگی‌های بسته‌بندی، عدم تطابق argv[0] مورد انتظار است."
                 },
                 {
                     "field": "ParentExecutableTrustList",
-                    "description": "Trusted parent binaries allowed to spawn processes with altered command-line names."
+                    "description": "Trusted parent binaries allowed to spawn processes with altered command-line names.",
+                    "description_fa": "باینری‌های والد قابل اعتماد اجازه ایجاد فرآیندهایی با نام‌های خط فرمان تغییر یافته را دارند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0466",
+            "description_fa": "رفتار دشمن را در جایی که آرگومان‌های خط فرمان یک فرآیند در حال اجرا در حافظه بازنویسی می‌شوند تا نام فرآیند را جعل کنند، شناسایی می‌کند و معمولاً آن را با یک رشته خوش‌خیم یا گمراه‌کننده جایگزین می‌کند. تشخیص توالی‌های بایت تهی غیرمنتظره، اختلاف بین «/proc/<pid>/cmdline» و اصل و نسب فرآیند را به هم مرتبط می‌کند و حافظه مشکوک مدت کوتاهی پس از شروع فرآیند می‌نویسد."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0603#AN1652",
-                    "external_id": "AN1652"
+                    "external_id": "AN1652",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between privileged control acquisition, lockout action, and resulting device lock state"
+                    "description": "Correlation window between privileged control acquisition, lockout action, and resulting device lock state",
+                    "description_fa": "پنجره همبستگی بین کسب کنترل ممتاز، اقدام قفل و حالت قفل دستگاه حاصل"
                 },
                 {
                     "field": "ProtectedRoleSet",
-                    "description": "Set of elevated roles that materially increase lockout capability, such as device admin, device owner, profile owner, or accessibility service"
+                    "description": "Set of elevated roles that materially increase lockout capability, such as device admin, device owner, profile owner, or accessibility service",
+                    "description_fa": "مجموعه ای از نقش های برجسته که به طور قابل توجهی قابلیت قفل را افزایش می دهد، مانند سرپرست دستگاه، مالک دستگاه، مالک نمایه یا سرویس دسترسی"
                 },
                 {
                     "field": "LockActionSet",
-                    "description": "Framework actions treated as lockout-relevant, including lockNow, password-control changes, overlay persistence, and UI-denial actions"
+                    "description": "Framework actions treated as lockout-relevant, including lockNow, password-control changes, overlay persistence, and UI-denial actions",
+                    "description_fa": "اقدامات چارچوب به‌عنوان مرتبط با قفل تلقی می‌شوند، از جمله lockNow، تغییرات کنترل گذرواژه، تداوم هم‌پوشانی، و اقدامات رد رابط کاربری"
                 },
                 {
                     "field": "AllowedAdminApps",
-                    "description": "Baseline of legitimate enterprise or security apps expected to invoke lock-related controls"
+                    "description": "Baseline of legitimate enterprise or security apps expected to invoke lock-related controls",
+                    "description_fa": "پایه برنامه‌های امنیتی یا سازمانی قانونی که انتظار می‌رود کنترل‌های مربوط به قفل را فراخوانی کنند"
                 },
                 {
                     "field": "RelockThreshold",
-                    "description": "Number of repeated lock or lock-like transitions in a short interval required before escalation"
+                    "description": "Number of repeated lock or lock-like transitions in a short interval required before escalation",
+                    "description_fa": "تعداد انتقال‌های قفل یا قفل‌مانند مکرر در یک بازه زمانی کوتاه که قبل از تشدید لازم است"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Outbound traffic threshold confirming continued meaningful activity after lockout"
+                    "description": "Outbound traffic threshold confirming continued meaningful activity after lockout",
+                    "description_fa": "آستانه ترافیک خروجی که ادامه فعالیت معنی دار را پس از قفل کردن تأیید می کند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1652",
+            "description_fa": "مرتبط (1) کسب یا حضور مسیرهای کنترلی بالا که قادر به ایجاد حالت قفل یا مسدود کردن تعامل کاربر هستند، (2) فراخوانی رفتار قفل صفحه یا انکار رابط کاربری مانند عملیات قفل DevicePolicyManager، همپوشانی مداوم، وقفه ناوبری مبتنی بر دسترسی، یا وقفه گذر از روی صفحه نمایش، قفل کردن قفل در پیش زمینه دستگاه، در دسترس نیست یا به طور مکرر قفل می شود در حالی که برنامه مسئول نصب و فعال باقی می ماند. مدافع یک زنجیره علّی را مشاهده می کند که در آن برنامه ابتدا توانایی کنترل رفتار مربوط به قفل را به دست می آورد، سپس قفل را مجبور یا شبیه سازی می کند و دستگاه برای کاربر قانونی غیرقابل استفاده می شود."
         }
     ]
 }

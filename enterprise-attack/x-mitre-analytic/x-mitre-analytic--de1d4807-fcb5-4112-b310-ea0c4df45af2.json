@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0597#AN1643",
-                    "external_id": "AN1643"
+                    "external_id": "AN1643",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VaultFileExtensions",
-                    "description": "Password manager file extensions (.opvault, .kdbx, .ldb) to monitor for anomalous access."
+                    "description": "Password manager file extensions (.opvault, .kdbx, .ldb) to monitor for anomalous access.",
+                    "description_fa": "پسوند فایل مدیر رمز عبور (opvault، .kdbx، ldb.) برای نظارت بر دسترسی غیرعادی."
                 },
                 {
                     "field": "ParentProcessWhitelist",
-                    "description": "Expected parent processes that normally access password manager files, for filtering false positives."
+                    "description": "Expected parent processes that normally access password manager files, for filtering false positives.",
+                    "description_fa": "پردازش‌های والد مورد انتظار که معمولاً به فایل‌های مدیریت رمز عبور برای فیلتر کردن موارد مثبت نادرست دسترسی دارند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1643",
+            "description_fa": "تشخیص دسترسی به پایگاه داده مدیر رمز عبور (1Password .opvault، حافظه پنهان LastPass، KeePass .kdbx) خارج از فرآیندهای والد مورد انتظار. تلاش‌های حذف حافظه را از طریق تماس‌های مشکوک API یا ابزارهای متصل به فرآیندهای مدیریت رمز عبور شناسایی می‌کند."
         }
     ]
 }

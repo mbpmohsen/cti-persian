@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0273#AN0761",
-                    "external_id": "AN0761"
+                    "external_id": "AN0761",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DoHResolvers",
-                    "description": "Known legitimate DoH endpoints to reduce false positives."
+                    "description": "Known legitimate DoH endpoints to reduce false positives.",
+                    "description_fa": "نقاط پایانی قانونی شناخته شده DoH برای کاهش مثبت کاذب."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "High-entropy traffic deviations used to detect concealed channels."
+                    "description": "High-entropy traffic deviations used to detect concealed channels.",
+                    "description_fa": "انحرافات ترافیکی با آنتروپی بالا برای تشخیص کانال های پنهان استفاده می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0761",
+            "description_fa": "برنامه‌ها یا کارهای راه‌اندازی که ترافیک TLS رمزگذاری شده را به میزبان‌های خارجی کمیاب آغاز می‌کنند. Defender گزارش‌های یکپارچه‌ای را مشاهده می‌کند که تماس‌های API ssl/TLS را توسط فرآیندهایی که در خط پایه تأیید نشده‌اند نشان می‌دهند و آنتروپی بار بارگذاری که جلسات C2 رمزگذاری‌شده را پیشنهاد می‌کند."
         }
     ]
 }

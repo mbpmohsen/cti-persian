@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0106#AN0297",
-                    "external_id": "AN0297"
+                    "external_id": "AN0297",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0297",
-            "description": "Detects PE injection through a behavioral sequence where one process opens (OpenProcess) a handle to another, allocates remote memory (VirtualAllocEx), writes a PE header (MZ) or shellcode (WriteProcessMemory), then initiates a new thread (CreateRemoteThread or NtCreateThreadEx) in that process\u2014executing injected code in memory without touching disk. Optional: injects a trampoline or shellcode that unpacks/reflectively maps the payload.",
+            "description": "Detects PE injection through a behavioral sequence where one process opens (OpenProcess) a handle to another, allocates remote memory (VirtualAllocEx), writes a PE header (MZ) or shellcode (WriteProcessMemory), then initiates a new thread (CreateRemoteThread or NtCreateThreadEx) in that process—executing injected code in memory without touching disk. Optional: injects a trampoline or shellcode that unpacks/reflectively maps the payload.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Controls for detecting high-entropy memory writes indicating shellcode or encrypted PE"
+                    "description": "Controls for detecting high-entropy memory writes indicating shellcode or encrypted PE",
+                    "description_fa": "کنترل‌های تشخیص حافظه با آنتروپی بالا، کد پوسته یا PE رمزگذاری شده را نشان می‌دهد"
                 },
                 {
                     "field": "TargetProcessList",
-                    "description": "High-value or sensitive processes that should never have remote threads injected"
+                    "description": "High-value or sensitive processes that should never have remote threads injected",
+                    "description_fa": "فرآیندهای با ارزش یا حساس که هرگز نباید نخ های راه دور تزریق شوند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Max allowed delay between memory write and thread execution"
+                    "description": "Max allowed delay between memory write and thread execution",
+                    "description_fa": "حداکثر تاخیر مجاز بین نوشتن حافظه و اجرای رشته"
                 },
                 {
                     "field": "ParentProcessAnomalyThreshold",
-                    "description": "Used to filter legitimate process hierarchies vs anomalous injection sources"
+                    "description": "Used to filter legitimate process hierarchies vs anomalous injection sources",
+                    "description_fa": "برای فیلتر کردن سلسله مراتب فرآیندهای قانونی در مقابل منابع تزریق غیرعادی استفاده می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0297",
+            "description_fa": "تزریق PE را از طریق یک توالی رفتاری شناسایی می کند که در آن یک فرآیند (OpenProcess) یک دسته را به دیگری باز می کند، حافظه راه دور (VirtualAllocEx) را اختصاص می دهد، یک هدر PE (MZ) یا کد پوسته (WriteProcessMemory) می نویسد، سپس یک رشته جدید (CreateRemote thatreadreatexThread) را آغاز می کند. کد تزریق شده در حافظه بدون لمس دیسک. اختیاری: یک ترامپولین یا کد پوسته را تزریق می کند که بار محموله را باز می کند/بازتاب می کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0187#AN0535",
-                    "external_id": "AN0535"
+                    "external_id": "AN0535",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedAdminAccounts",
-                    "description": "List of accounts authorized to legitimately modify audit policies or disable services."
+                    "description": "List of accounts authorized to legitimately modify audit policies or disable services.",
+                    "description_fa": "فهرست حساب‌هایی که مجاز به تغییر قانونی خط‌مشی‌های حسابرسی یا غیرفعال کردن خدمات هستند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between registry modification, service stop, and audit policy commands."
+                    "description": "Correlation window between registry modification, service stop, and audit policy commands.",
+                    "description_fa": "پنجره همبستگی بین اصلاح رجیستری، توقف سرویس و دستورات خط مشی حسابرسی."
                 },
                 {
                     "field": "ServiceNames",
-                    "description": "Customizable set of monitored services such as EventLog, Sysmon, or custom loggers."
+                    "description": "Customizable set of monitored services such as EventLog, Sysmon, or custom loggers.",
+                    "description_fa": "مجموعه ای قابل تنظیم از خدمات نظارت شده مانند EventLog، Sysmon، یا ثبت کننده های سفارشی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0535",
+            "description_fa": "شناسایی تلاش‌ها برای غیرفعال کردن یا دستکاری گزارش رویدادهای ویندوز. این شامل توقف یا غیرفعال کردن سرویس EventLog، تغییر کلیدهای رجیستری مربوط به EventLog و Autologger، استفاده از «auditpol» یا «wevtutil» برای غیرفعال کردن دسته‌ها یا پاک کردن خط‌مشی‌های حسابرسی، و شناسایی شکاف‌ها یا بازنشانی‌های مشکوک در گزارش‌های رویداد است. مدافعان تغییرات رجیستری، تغییرات وضعیت سرویس، اجرای فرآیند غیرفعال کردن دستورات و ناهنجاری‌ها را در توالی‌های رکورد رویداد مشاهده می‌کنند."
         }
     ]
 }

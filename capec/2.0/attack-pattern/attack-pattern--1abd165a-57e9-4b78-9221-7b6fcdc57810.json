@@ -9,38 +9,46 @@
                 {
                     "external_id": "CAPEC-680",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/680.html"
+                    "url": "https://capec.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1224",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1224.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1224.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1231",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1231.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1231.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1233",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1233.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1233.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1262",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1262.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1262.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1283",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1283.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1283.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Brandon Hill, Huge Intel CPU Bug Allegedly Causes Kernel Memory Vulnerability With Up To 30% Performance Hit In Windows And Linux, 2018--01---02, David Altavilla and Hot Hardware, Inc",
                     "external_id": "REF-693",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://hothardware.com/news/intel-cpu-bug-kernel-memory-isolation-linux-windows-macos"
+                    "url": "https://hothardware.com/news/intel-cpu-bug-kernel-memory-isolation-linux-windows-macos",
+                    "description_fa": "براندون هیل، باگ عظیم CPU اینتل با عملکرد 30 درصدی در ویندوز و لینوکس، 2018--01---02، David Altavilla و Hot Hardware, Inc، باعث آسیب پذیری حافظه هسته شده است",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--1abd165a-57e9-4b78-9221-7b6fcdc57810",
@@ -61,6 +69,12 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -77,11 +91,22 @@
                 "Access to the hardware being leveraged."
             ],
             "x_capec_skills_required": {
-                "High": "Intricate knowledge of registers."
+                "High": "Intricate knowledge of registers.",
+                "High_fa": "دانش پیچیده از رجیسترها."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک حریف از کنترل دسترسی گمشده یا پیکربندی نادرست در رجیسترها برای خواندن/نوشتن داده‌هایی که قرار نیست توسط کاربر به دست آمده یا اصلاح شوند، سوء استفاده می‌کند.</xhtml:p>",
+            "name_fa": "بهره برداری از ثبت نامناسب کنترل شده",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در طول فرآیند راه‌اندازی ایمن سیستم روی تراشه (SoC)، کدی که باید احراز هویت شود برای تعیین اعتبار کد اندازه‌گیری می‌شود. این مستلزم آن است که هش یک طرفه کد باینری محاسبه شده و به هش قبلی گسترش یابد. مقدار به دست آمده پس از اتمام جریان بوت در یک ثبات ذخیره می شود تا بعداً این مقدار تأیید شود تا مشخص شود که آیا جریان بوت دستکاری شده است یا خیر. با این حال، رجیستر مورد استفاده حریف را از اصلاح محتویات ثبت باز نمی دارد، که می تواند منجر به جعل داده های اندازه گیری مورد استفاده در فرآیند تأیید توسط دشمن شود.</xhtml:p>"
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p>سیستم‌های سخت‌افزاری اغلب از بیت‌های قفل مطمئن برای جلوگیری از نوشتن مجموعه‌ای از رجیسترها یا محدود کردن یک ثبات به یک بار نوشتن استفاده می‌کنند. ثبات‌ها همچنین اغلب برای ذخیره داده‌های حساس مورد استفاده در عملیات امنیتی اضافی، مانند راه‌اندازی امن، کد احراز هویت، تأیید دستگاه و موارد دیگر استفاده می‌شوند. با این حال، مکانیسم‌های کنترل دسترسی که برای محافظت از این رجیسترها طراحی شده‌اند، ممکن است به دلیل پیکربندی نادرست به طور کامل ناپدید یا بی‌اثر باشند. اگر یک حریف بتواند کنترل های دسترسی نامناسبی را که در اطراف رجیسترها وجود دارد کشف کند، می تواند منجر به دستیابی دشمن به داده های حساس و/یا تغییر داده هایی شود که غیرقابل تغییر هستند. این در نهایت می‌تواند منجر به دور زدن فرآیندهایی مانند راه‌اندازی امن یا اصلاح تنظیمات محافظت‌شده شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "آگاهی از سخت افزار مورد استفاده.",
+                "دسترسی به سخت افزار مورد استفاده"
+            ]
         }
     ],
     "spec_version": "2.0",

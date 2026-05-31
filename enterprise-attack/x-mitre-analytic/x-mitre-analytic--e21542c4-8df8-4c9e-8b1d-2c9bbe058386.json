@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0218#AN0610",
-                    "external_id": "AN0610"
+                    "external_id": "AN0610",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredDirectories",
-                    "description": "Directories where binary replacement should trigger alerts."
+                    "description": "Directories where binary replacement should trigger alerts.",
+                    "description_fa": "دایرکتوری هایی که جایگزینی باینری باید هشدارها را راه اندازی کند."
                 },
                 {
                     "field": "EnvVarMonitors",
-                    "description": "Environment variables like LD_PRELOAD or PATH to monitor."
+                    "description": "Environment variables like LD_PRELOAD or PATH to monitor.",
+                    "description_fa": "متغیرهای محیطی مانند LD_PRELOAD یا PATH برای نظارت."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0610",
+            "description_fa": "دستکاری دشمن در مسیرهای کتابخانه مشترک، متغیرهای محیطی، یا جایگزینی باینری های سرویس. Defender تغییرات مشکوکی را در /etc/ld.so.preload مشاهده می کند، تنظیمات پیکربندی سرویس را تغییر می دهد، یا فایل را جایگزین فایل های اجرایی موجود می کند."
         }
     ]
 }

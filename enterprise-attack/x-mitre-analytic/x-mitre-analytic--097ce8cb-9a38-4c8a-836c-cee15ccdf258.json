@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0591#AN1628",
-                    "external_id": "AN1628"
+                    "external_id": "AN1628",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandMatch",
-                    "description": "Touch/setfile and backdated timestamps"
+                    "description": "Touch/setfile and backdated timestamps",
+                    "description_fa": "مهرهای زمانی را لمس کنید/setfile و دارای تاریخ قبلی"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Detects execution under non-interactive/system accounts"
+                    "description": "Detects execution under non-interactive/system accounts",
+                    "description_fa": "اجرا را در حساب های غیر تعاملی/سیستم تشخیص می دهد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1628",
+            "description_fa": "تغییرات مهر زمانی را با استفاده از «touch»، «SetFile» یا دستکاری مستقیم فوق‌داده (به عنوان مثال، دستکاری xattr) از ترمینال، اسکریپت‌ها یا APIهای سطح پایین تشخیص می‌دهد."
         }
     ]
 }

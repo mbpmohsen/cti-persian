@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0675#AN1776",
-                    "external_id": "AN1776"
+                    "external_id": "AN1776",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,33 +53,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LocationSamplingFrequencyThreshold",
-                    "description": "Defines acceptable rate of location queries before triggering anomaly conditions"
+                    "description": "Defines acceptable rate of location queries before triggering anomaly conditions",
+                    "description_fa": "نرخ قابل قبول جستجوهای مکان را قبل از ایجاد شرایط ناهنجاری تعریف می کند"
                 },
                 {
                     "field": "BackgroundLocationPolicy",
-                    "description": "Baseline of legitimate background location usage across applications"
+                    "description": "Baseline of legitimate background location usage across applications",
+                    "description_fa": "مبنای استفاده مشروع از موقعیت مکانی پس‌زمینه در بین برنامه‌ها"
                 },
                 {
                     "field": "LocationToNetworkTimeWindow",
-                    "description": "Temporal linkage between location access and outbound traffic"
+                    "description": "Temporal linkage between location access and outbound traffic",
+                    "description_fa": "ارتباط زمانی بین دسترسی به مکان و ترافیک خروجی"
                 },
                 {
                     "field": "UserInteractionWindow",
-                    "description": "Maximum time since last user interaction before location access becomes suspicious."
+                    "description": "Maximum time since last user interaction before location access becomes suspicious.",
+                    "description_fa": "حداکثر زمان از آخرین تعامل کاربر قبل از مشکوک شدن دسترسی به مکان."
                 },
                 {
                     "field": "AllowedLocationApps",
-                    "description": "Allow-list of expected location-heavy apps (maps, rideshare, fleet apps) for the enterprise device population"
+                    "description": "Allow-list of expected location-heavy apps (maps, rideshare, fleet apps) for the enterprise device population",
+                    "description_fa": "فهرست مجاز برنامه‌های سنگین موقعیت مکانی مورد انتظار (نقشه‌ها، اشتراک‌گذاری سواری، برنامه‌های ناوگان) برای جمعیت دستگاه سازمانی"
                 },
                 {
                     "field": "DevicePolicySensitivity",
-                    "description": "Tuning for how aggressively to treat background location permission as risky depending on org policy."
+                    "description": "Tuning for how aggressively to treat background location permission as risky depending on org policy.",
+                    "description_fa": "تنظیم برای اینکه چگونه به شدت با مجوز مکان پس‌زمینه بسته به خط‌مشی سازمانی خطرناک تلقی شود."
                 },
                 {
                     "field": "AllowedDestinationsBaseline",
-                    "description": "Baseline of expected domains/IPs for legitimate location services (OEM, mapping SDKs, MDM endpoints) to reduce false positives."
+                    "description": "Baseline of expected domains/IPs for legitimate location services (OEM, mapping SDKs, MDM endpoints) to reduce false positives.",
+                    "description_fa": "خط پایه دامنه ها/IP های مورد انتظار برای خدمات مکان قانونی (OEM، نقشه برداری SDK، نقاط پایانی MDM) برای کاهش مثبت کاذب."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1776",
+            "description_fa": "Defender یک برنامه کاربردی را که قابلیت موقعیت مکانی خوب یا پس‌زمینه را به دست می‌آورد/حفظ می‌کند با جلسات حسگر موقعیت مکانی بعدی که در زمانی که برنامه در پس‌زمینه است یا دستگاه قفل است، رخ می‌دهد، و به دنبال آن خواندن مکرر موقعیت مکانی با سرعت دوره‌ای و اتصالات خروجی کوتاه‌مدت به دامنه‌هایی که برای خدمات ناوبری ناوگان/MDM معمول نیستند، رخ می‌دهند، که نشان‌دهنده ردیابی مکان مخفی است."
         }
     ]
 }

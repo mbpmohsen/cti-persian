@@ -9,23 +9,29 @@
                 {
                     "external_id": "CAPEC-275",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/275.html"
+                    "url": "https://capec.mitre.org/data/definitions/275.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-350",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/350.html"
+                    "url": "http://cwe.mitre.org/data/definitions/350.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Collin Jackson, Adam Barth, Andrew Bortz, Weidong Shao, Dan Boneh, Protecting Browsers from DNS Rebinding Attacks, In Proceedings of ACM CCS 07",
                     "external_id": "REF-119",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "کالین جکسون، آدام بارت، اندرو بورتز، ویدونگ شائو، دان بونه، محافظت از مرورگرها در برابر حملات مجدد DNS، در مجموعه مقالات ACM CCS 07",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-120",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/DNS_rebinding"
+                    "url": "http://en.wikipedia.org/wiki/DNS_rebinding",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a7cc8cb3-8652-4669-893a-baaa21f7eb55",
@@ -62,6 +68,29 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -80,11 +109,25 @@
                 "The adversary must serve some web content that a victim accesses initially. This content must include executable content that queries the adversary's DNS name (to provide the second DNS resolution) and then performs the follow-on attack against the internal system. The adversary also requires a customized DNS server that serves an IP address for their registered DNS name, but which resolves subsequent requests by a single client to addresses internal to that client's network."
             ],
             "x_capec_skills_required": {
-                "Medium": "Setup DNS server and the adversary's web server. Write a malicious script to allow the victim to connect to the web server."
+                "Medium": "Setup DNS server and the adversary's web server. Write a malicious script to allow the victim to connect to the web server.",
+                "Medium_fa": "سرور DNS و وب سرور حریف را راه اندازی کنید. یک اسکریپت مخرب بنویسید تا قربانی بتواند به وب سرور متصل شود."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن محتوایی را ارائه می‌کند که آدرس IP آن توسط یک سرور DNS که دشمن آن را کنترل می‌کند حل و فصل می‌شود. پس از تماس اولیه توسط یک مرورگر وب (یا کلاینت مشابه)، دشمن آدرس IP را که نام آن مشخص می‌شود، به آدرسی در سازمان هدف تغییر می‌دهد که برای عموم قابل دسترسی نیست. این به مرورگر وب اجازه می دهد تا این آدرس داخلی را از طرف حریف بررسی کند.",
+            "name_fa": "DNS Rebinding",
+            "x_capec_example_instances_fa": [
+                "دشمن یک نام دامنه مانند www.evil.com با آدرس IP 1.3.5.7 ثبت می کند، آن را به سرور DNS خود (1.3.5.2) واگذار می کند و از پیوندهای فیشینگ یا ایمیل ها برای دریافت ترافیک HTTP استفاده می کند. سرور DNS به جای ارسال یک رکورد TTL معمولی، یک رکورد TTL بسیار کوتاه (مثلاً 1 ثانیه) ارسال می کند و از ذخیره شدن پاسخ DNS ورودی[www.evil.com, 1.3.5.7] در مرورگر قربانی (192.168.1.10) جلوگیری می کند. سرور حریف ابتدا با اسکریپت مخربی مانند جاوا اسکریپت که حاوی آدرس IP (1.3.5.7) سرور است، به قربانی پاسخ می دهد. دشمن از XMLHttpRequest (XHR) برای ارسال درخواست HTTP یا درخواست HTTPS به طور مستقیم به سرور حریف و بارگیری پاسخ استفاده می کند. اسکریپت مخرب به حریف اجازه می دهد تا نام میزبان را به آدرس IP (192.168.1.2) سرور مورد نظر که در پشت فایروال قرار دارد، مجدداً متصل کند. سپس سرور به هدف واقعی دشمن که یک IP میزبان داخلی (192.168.1.2) در همان دامنه قربانی (192.168.1.10) است پاسخ می دهد. از آنجایی که نام هر دو آدرس IP یکسان است، مرورگرها هر دو آدرس IP (1.3.5.7 و 192.168.1.2) را در یک منطقه امنیتی قرار می دهند و اجازه می دهند اطلاعات بین آدرس ها جریان یابد. علاوه بر این، دشمن می‌تواند با ارسال چندین آدرس IP کوتاه مدت، به اسکن و دسترسی به همه میزبان‌های داخلی در شبکه محلی قربانی (192.168.X.X) دست یابد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>هدف‌های بالقوه پیوند مجدد DNS را شناسایی کنید: </b>یک حریف محتوا را با نام و سرور DNS خود در سرور خود منتشر می‌کند. ترافیک HTTP را جذب کنید و آسیب‌پذیری‌های اتصال مجدد را در مرورگرها، پخش‌کننده‌های فلش نسخه قدیمی بررسی کنید.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن از تبلیغات وب برای جذب قربانی برای دسترسی به DNS دشمن استفاده می‌کند. نسخه‌های مرورگر وب یا پخش‌کننده‌های فلش را در درخواست HTTP کاوش کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>دسترسی هدف اولیه به DNS دشمن را ایجاد کنید: </b>اولین باری که هدف باید به آدرس IP حریف دسترسی پیدا کند، به محتوای دشمن دسترسی پیدا می‌کند. سرور DNS حریف این رزولوشن را انجام می‌دهد، و یک Time-To-Live (TTL) کوتاه ارائه می‌کند تا از ذخیره مقدار مورد نظر جلوگیری کند.</p></li><li> <p> <b>قطع‌بندی مجدد قطعنامه DNS به آدرس مورد نظر: </b>هدف درخواست بعدی را به محتوای حریف ارائه می‌کند و این بار دیگر باید آدرس سرور DNS داخلی را به سرور بازگرداند. سازمان هدف که از یک منبع خارجی قابل دسترسی نیست.</p></li><li> <p> <b>تعیین قابلیت بهره‌برداری از دسترسی مجدد DNS به آدرس هدف: </b> سپس دشمن می‌تواند از اسکریپت‌ها در محتوایی که هدف از دشمن در پیام اصلی بازیابی شده است استفاده کند تا داده‌ها را از داخل نام‌گذاری شده استخراج کند. آدرس‌ها.</p></li></ol></div><div><h3>استثمار</h3><ol><li> <p> <b>دسترسی و استخراج داده‌ها در منطقه امنیتی قربانی: </b>سپس دشمن می‌تواند از اسکریپت‌هایی در محتوایی که هدف از دشمن در پیام اصلی بازیابی می‌کند استفاده کند تا داده‌های آدرس داخلی را از پیام استخراج کند. این به دشمنان اجازه می‌دهد اطلاعات حساسی را درباره شبکه داخلی یک شرکت کشف کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن سعی می‌کند از مرورگر قربانی به‌عنوان یک پروکسی HTTP برای منابع دیگر در داخل منطقه امنیتی هدف استفاده کند. این اجازه می دهد تا دو آدرس IP در یک منطقه امنیتی قرار گیرند.</td></tr><tr><td>دشمن سعی می کند با ارسال چندین آدرس IP کوتاه مدت، تمام میزبان های داخلی در شبکه محلی قربانی را اسکن کرده و به آنها دسترسی داشته باشد.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>مرورگرهای وب مناطق امنیتی را بر اساس نام های DNS اعمال می کنند تا از افشای اطلاعات بین منطقه ای جلوگیری کنند. از آنجایی که نام یکسان برای هر دو آدرس IP مشخص می شود، مرورگرها هر دو آدرس IP را در یک منطقه امنیتی قرار می دهند و اجازه می دهند اطلاعات بین آدرس ها جریان یابد. این به دشمنان اجازه می دهد تا اطلاعات حساس در مورد شبکه داخلی یک شرکت را کشف کنند. اگر یک رابطه اعتماد بین رایانه با مرورگر هدف و ماشین داخلی که دشمن شناسایی می کند وجود داشته باشد، حملات اضافی ممکن است. این حمله با حملات فارمینگ تفاوت دارد زیرا دشمن مالک قانونی سرور DNS مخرب است و بنابراین نیازی به به خطر انداختن رفتار سرویس‌های DNS خارجی ندارد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "مرورگر مورد نظر باید از نام DNS کنترل شده توسط دشمن به سرور محتوا دسترسی داشته باشد. برای این منظور اغلب از تبلیغات اینترنتی استفاده می شود. مرورگر مورد نظر باید مقدار TTL را که توسط حریف برگردانده شده است رعایت کند و پس از تماس اولیه، نام DNS حریف را دوباره حل کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید برخی از محتوای وب را ارائه دهد که قربانی در ابتدا به آن دسترسی دارد. این محتوا باید حاوی محتوای اجرایی باشد که نام DNS حریف را پرس و جو کند (برای ارائه وضوح DNS دوم) و سپس حمله بعدی را علیه سیستم داخلی انجام دهد. دشمن همچنین به یک سرور DNS سفارشی نیاز دارد که یک آدرس IP برای نام DNS ثبت شده آنها ارائه می کند، اما درخواست های بعدی یک کلاینت را برای آدرس های داخلی شبکه مشتری حل می کند."
+            ]
         }
     ],
     "spec_version": "2.0",

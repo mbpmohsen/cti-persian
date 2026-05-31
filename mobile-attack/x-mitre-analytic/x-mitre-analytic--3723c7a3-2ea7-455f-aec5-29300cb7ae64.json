@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0614#AN1669",
-                    "external_id": "AN1669"
+                    "external_id": "AN1669",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,33 +63,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "NavigationToExploitWindow",
-                    "description": "Time window used to correlate web navigation with redirects, fingerprinting, downloads, or post-visit capability changes."
+                    "description": "Time window used to correlate web navigation with redirects, fingerprinting, downloads, or post-visit capability changes.",
+                    "description_fa": "پنجره زمانی برای ارتباط پیمایش وب با تغییر مسیرها، اثر انگشت، بارگیری ها یا تغییرات قابلیت پس از بازدید استفاده می شود."
                 },
                 {
                     "field": "AllowedBrowserApps",
-                    "description": "Allow-list of expected browsers or sanctioned WebView-hosting apps used in the enterprise."
+                    "description": "Allow-list of expected browsers or sanctioned WebView-hosting apps used in the enterprise.",
+                    "description_fa": "فهرست مجاز مرورگرهای مورد انتظار یا برنامه‌های میزبانی WebView تحریم‌شده مورد استفاده در شرکت."
                 },
                 {
                     "field": "RedirectChainThreshold",
-                    "description": "Threshold for suspicious number of redirects or cross-domain hops during a single browsing session."
+                    "description": "Threshold for suspicious number of redirects or cross-domain hops during a single browsing session.",
+                    "description_fa": "آستانه برای تعداد مشکوک تغییر مسیر یا جهش بین دامنه‌ای در طول یک جلسه مرور."
                 },
                 {
                     "field": "NewDomainBurstThreshold",
-                    "description": "Threshold for the number of newly observed domains contacted in a short browsing window."
+                    "description": "Threshold for the number of newly observed domains contacted in a short browsing window.",
+                    "description_fa": "آستانه برای تعداد دامنه های تازه مشاهده شده با تماس در یک پنجره مرور کوتاه."
                 },
                 {
                     "field": "DownloadArtifactThreshold",
-                    "description": "Threshold for suspicious downloaded or cached artifacts created after navigation."
+                    "description": "Threshold for suspicious downloaded or cached artifacts created after navigation.",
+                    "description_fa": "آستانه برای مصنوعات دانلود شده یا ذخیره شده مشکوک که پس از پیمایش ایجاد شده اند."
                 },
                 {
                     "field": "PostVisitCapabilityShiftRequired",
-                    "description": "Determines whether to require a new install/prompt/permission/overlay event after browsing to raise confidence."
+                    "description": "Determines whether to require a new install/prompt/permission/overlay event after browsing to raise confidence.",
+                    "description_fa": "تعیین می کند که آیا برای بالا بردن اعتماد به نفس، به یک رویداد نصب/تغییر/مجوز/همپوشانی جدید پس از مرور نیاز است یا خیر."
                 },
                 {
                     "field": "AllowedAdTechDomains",
-                    "description": "Baseline of normal advertising/CDN/tracking domains to reduce false positives from legitimate browsing."
+                    "description": "Baseline of normal advertising/CDN/tracking domains to reduce false positives from legitimate browsing.",
+                    "description_fa": "پایه دامنه‌های معمولی تبلیغات/CDN/ردیابی برای کاهش مثبت‌های نادرست از مرور مشروع."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1669",
+            "description_fa": "مدافع پیمایش به محتوای وب خارجی در یک مرورگر یا WebView تعبیه‌شده را با فعالیت‌های فوری شبکه اسکریپت سنگین یا آماده‌سازی بهره‌برداری، و به دنبال آن رفتار فرآیند مرورگر/WebView غیرطبیعی، فایل‌های مشکوک یا مصنوعات بارگیری، یا جابه‌جایی سریع قابلیت پس از بازدید، مانند تلاش‌های نصب بسته جدید به بیرون، تلاش‌های نصب بسته جدید، درخواست‌های همپوشانی با استفاده از دستورات جدید، استفاده از دستورات غیرعادی مرتبط می‌کند. در حال مرور"
         }
     ]
 }

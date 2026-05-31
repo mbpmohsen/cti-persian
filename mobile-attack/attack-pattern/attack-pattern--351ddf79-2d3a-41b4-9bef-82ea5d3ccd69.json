@@ -13,32 +13,39 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1616",
-                    "external_id": "T1616"
+                    "external_id": "T1616",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android Permissions",
                     "description": "Google. (2021, August 11). Manifest.permission. Retrieved September 22, 2021.",
-                    "url": "https://developer.android.com/reference/android/Manifest.permission"
+                    "url": "https://developer.android.com/reference/android/Manifest.permission",
+                    "source_name_fa": "مجوزهای اندروید",
+                    "description_fa": "گوگل. (2021، 11 اوت). مانیفست.اجازه. بازبینی شده در 22 سپتامبر 2021."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-41.html",
-                    "external_id": "APP-41"
+                    "external_id": "APP-41",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/cellular-threats/CEL-42.html",
-                    "external_id": "CEL-42"
+                    "external_id": "CEL-42",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/cellular-threats/CEL-36.html",
-                    "external_id": "CEL-36"
+                    "external_id": "CEL-36",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/cellular-threats/CEL-18.html",
-                    "external_id": "CEL-18"
+                    "external_id": "CEL-18",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -77,7 +84,9 @@
             "x_mitre_version": "1.2",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "کنترل تماس",
+            "description_fa": "دشمنان ممکن است تماس های تلفنی را بدون مجوز کاربر برقرار، فوروارد یا مسدود کنند. این می‌تواند برای اهداف متخاصم مانند نظارت صوتی، مسدود کردن یا ارسال تماس‌های صاحب دستگاه یا ارتباط C2 استفاده شود.\n\nچندین مجوز ممکن است برای کنترل برنامه‌ریزی تماس‌های تلفنی استفاده شود، از جمله:\n\n* `ANSWER_PHONE_CALLS` - به برنامه اجازه می‌دهد به تماس‌های تلفنی ورودی پاسخ دهد(Citation: Android Permissions)\n* «CALL_PHONE» - به برنامه اجازه می‌دهد تا یک تماس تلفنی را بدون استفاده از رابط Dialer آغاز کند(Citation: Android Permissions)\n* «PROCESS_OUTGOING_CALLS» - به برنامه اجازه می‌دهد تا شماره در حال شماره‌گیری را در طول یک تماس خروجی با گزینه هدایت تماس به شماره دیگری یا قطع کامل تماس مشاهده کند(Citation: Android Permissions)\n* «MANAGE_OWN_CALLS» - به برنامه تماسی اجازه می‌دهد که تماس‌های خود را از طریق APIهای خود مدیریت «ConnectionService» مدیریت کند(Citation: Android Permissions)\n* \"BIND_TELECOM_CONNECTION_SERVICE\" - هنگام استفاده از \"ConnectionService\" مجوز لازم است(Citation: Android Permissions)\n* «WRITE_CALL_LOG» - به برنامه اجازه می‌دهد تا در گزارش تماس‌های دستگاه بنویسد، احتمالاً تماس‌های تلفنی مخرب را پنهان کند(Citation: Android Permissions)\n\nهنگامی که برخی از این مجوزها به یک برنامه کاربردی داده می شود، می تواند بدون باز کردن شماره گیر ابتدا یک تماس تلفنی برقرار کند. با این حال، اگر برنامه‌ای بخواهد به سادگی کاربر را با شماره تلفن پر شده به شماره‌گیر هدایت کند، می‌تواند با استفاده از «Intent.ACTION_DIAL» یک Intent راه‌اندازی کند، که نیازی به مجوز خاصی ندارد. سپس کاربر باید به صراحت تماس را آغاز کند یا از نوعی [Input Injection](https://attack.mitre.org/techniques/T1516) برای شروع برنامه‌ریزی آن استفاده کند."
         }
     ]
 }

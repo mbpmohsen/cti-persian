@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0381#AN1075",
-                    "external_id": "AN1075"
+                    "external_id": "AN1075",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Tune to exclude authorized admin users or domain controllers accessing SYSVOL"
+                    "description": "Tune to exclude authorized admin users or domain controllers accessing SYSVOL",
+                    "description_fa": "تنظیم کنید تا کاربران مجاز سرپرست یا کنترل‌کننده‌های دامنه دسترسی به SYSVOL را حذف کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust for correlation timing between file access and script execution"
+                    "description": "Adjust for correlation timing between file access and script execution",
+                    "description_fa": "تنظیم زمان همبستگی بین دسترسی به فایل و اجرای اسکریپت"
                 },
                 {
                     "field": "KnownToolsSignature",
-                    "description": "Extend to include known GPP parsing tool names or script hashes"
+                    "description": "Extend to include known GPP parsing tool names or script hashes",
+                    "description_fa": "گسترش دهید تا نام ابزار تجزیه GPP شناخته شده یا درهم‌سازی اسکریپت را نیز شامل شود"
                 },
                 {
                     "field": "HostType",
-                    "description": "Distinguish between expected access from DCs vs. lateral movement from workstations"
+                    "description": "Distinguish between expected access from DCs vs. lateral movement from workstations",
+                    "description_fa": "بین دسترسی مورد انتظار از DCها در مقابل حرکت جانبی از ایستگاههای کاری تمایز قائل شوید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1075",
+            "description_fa": "شمارش فایل‌های فایل‌های XML در اشتراک SYSVOL را با اجرای فرآیند مشکوک مرتبط می‌کند که اعتبارنامه‌های رمزگذاری شده تعبیه‌شده در فایل‌های اولویت سیاست گروهی (مانند Get-GPPPassword.ps1، gpprefdecrypt.py، Metasploit) را رمزگشایی یا می‌خواند. دسترسی غیرعادی به \\DOMAIN\\SYSVOL همراه با تجزیه فایل XML یا منطق رمزگشایی را تشخیص می‌دهد."
         }
     ]
 }

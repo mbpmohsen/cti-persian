@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0176#AN0501",
-                    "external_id": "AN0501"
+                    "external_id": "AN0501",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IdpAlertWindow",
-                    "description": "Time window to correlate IdP events to endpoint compromise alerts (default 30 minutes to 2 hours)."
+                    "description": "Time window to correlate IdP events to endpoint compromise alerts (default 30 minutes to 2 hours).",
+                    "description_fa": "پنجره زمانی برای مرتبط کردن رویدادهای IdP با هشدارهای به خطر افتادن نقطه پایانی (پیش‌فرض 30 دقیقه تا 2 ساعت)."
                 },
                 {
                     "field": "HighRiskCountryList",
-                    "description": "List of countries/IP zones considered high risk for sign-ins; used to tune geo-anomalies."
+                    "description": "List of countries/IP zones considered high risk for sign-ins; used to tune geo-anomalies.",
+                    "description_fa": "فهرست کشورها/مناطق IP در نظر گرفته شده با ریسک بالا برای ورود به سیستم؛ برای تنظیم ناهنجاری های جغرافیایی استفاده می شود."
                 },
                 {
                     "field": "DeviceTrustLevel",
-                    "description": "Device trust scoring thresholds that influence whether a sign-in is considered suspicious."
+                    "description": "Device trust scoring thresholds that influence whether a sign-in is considered suspicious.",
+                    "description_fa": "آستانه های امتیازدهی اعتماد دستگاه که بر مشکوک تلقی شدن ورود به سیستم تأثیر می گذارد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0501",
+            "description_fa": "ناهنجاری‌های هویت و جلسه پس از سازش که به دنبال سازش درایو است: استفاده مجدد رمز از IPهای جدید/ناآشنا، الگوهای ورود غیرعادی برای کاربران غیرفعال قبلی، رویدادهای رضایت/اعطای غیرمنتظره یا تغییرات ارائه. Defender یک به خطر افتادن نقطه پایانی/مرورگر (شبکه + سیگنال‌های نقطه پایانی) و به دنبال آن رویدادهای غیرعادی IdP را می‌بیند: صدور نشانه تازه‌سازی جدید، رویدادهای رضایت/اعطای رضایت، الگوهای دور زدن MFA عجیب و غریب، یا ثبت نام‌های غیر معمول مشتری OAuth."
         }
     ]
 }

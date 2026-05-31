@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0496#AN1366",
-                    "external_id": "AN1366"
+                    "external_id": "AN1366",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -66,33 +67,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period binding start\u2192persistence\u2192egress\u2192child (default 15m, adjust per environment)."
+                    "description": "Correlation period binding start→persistence→egress→child (default 15m, adjust per environment).",
+                    "description_fa": "شروع اتصال دوره همبستگی → پایداری → خروج → فرزند (پیش فرض 15 متر، تنظیم در هر محیط)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Differentiate help-desk/jump hosts and admin accounts from standard endpoints."
+                    "description": "Differentiate help-desk/jump hosts and admin accounts from standard endpoints.",
+                    "description_fa": "هاست هاست میز/جهش و حساب های مدیریت را از نقاط پایانی استاندارد متمایز کنید."
                 },
                 {
                     "field": "ProcessAllowlist",
-                    "description": "Known-good remote support tools; suppress expected events while still correlating anomalous sequences."
+                    "description": "Known-good remote support tools; suppress expected events while still correlating anomalous sequences.",
+                    "description_fa": "ابزارهای پشتیبانی از راه دور خوب شناخته شده؛ وقایع مورد انتظار را سرکوب می کند در حالی که همچنان توالی های غیرعادی را مرتبط می کند."
                 },
                 {
                     "field": "InstallPathRegex",
-                    "description": "Alert when services/agents execute from user-writable or temp paths."
+                    "description": "Alert when services/agents execute from user-writable or temp paths.",
+                    "description_fa": "هشدار زمانی که سرویس ها/عامل ها از مسیرهای قابل نوشتن توسط کاربر یا موقت اجرا می شوند."
                 },
                 {
                     "field": "ExternalIPAllowlist",
-                    "description": "Vendors\u2019 support clouds/CDNs to reduce false positives on egress detection."
+                    "description": "Vendors’ support clouds/CDNs to reduce false positives on egress detection.",
+                    "description_fa": "فروشندگان از ابرها/CDN ها برای کاهش مثبت کاذب در تشخیص خروج پشتیبانی می کنند."
                 },
                 {
                     "field": "ShellSpawnRegex",
-                    "description": "Define which child shells from GUI parents are acceptable versus suspicious."
+                    "description": "Define which child shells from GUI parents are acceptable versus suspicious.",
+                    "description_fa": "مشخص کنید که کدام پوسته های فرزند از والدین رابط کاربری گرافیکی قابل قبول در مقابل مشکوک هستند."
                 },
                 {
                     "field": "EgressHeuristics",
-                    "description": "Thresholds for session duration, connection counts, and bytes_out/bytes_in ratio."
+                    "description": "Thresholds for session duration, connection counts, and bytes_out/bytes_in ratio.",
+                    "description_fa": "آستانه برای مدت جلسه، تعداد اتصال، و نسبت bytes_out/bytes_in."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1366",
+            "description_fa": "زنجیره رفتار ابزار دسترسی از راه دور: (1) اجرای اولیه عامل کنترل از راه دور/دستیار یا رابط کاربری گرافیکی در زمینه کاربر. (2) تداوم از طریق سرویس یا autorun. (3) اتصال / تونل خروجی طولانی مدت به زیرساخت خارجی. (4) سیگنال های کنترل تعاملی مانند فرآیندهای shell یا فرزند مدیر فایل که توسط والد RAT ایجاد می شوند."
         }
     ]
 }

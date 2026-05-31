@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0177#AN0502",
-                    "external_id": "AN0502"
+                    "external_id": "AN0502",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,26 +56,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetFolder",
-                    "description": "Home Page can be configured on any folder like Calendar, Inbox, or custom folders"
+                    "description": "Home Page can be configured on any folder like Calendar, Inbox, or custom folders",
+                    "description_fa": "صفحه اصلی را می توان در هر پوشه ای مانند تقویم، صندوق ورودی یا پوشه های سفارشی پیکربندی کرد"
                 },
                 {
                     "field": "HTMLPayloadLocation",
-                    "description": "The Home Page URL may point to internal or external content, hosted on trusted or unknown domains"
+                    "description": "The Home Page URL may point to internal or external content, hosted on trusted or unknown domains",
+                    "description_fa": "نشانی وب صفحه اصلی ممکن است به محتوای داخلی یا خارجی اشاره کند که در دامنه های قابل اعتماد یا ناشناخته میزبانی می شود"
                 },
                 {
                     "field": "ChildProcessName",
-                    "description": "Execution may result in launch of scripting hosts (e.g., mshta.exe, wscript.exe) from outlook.exe"
+                    "description": "Execution may result in launch of scripting hosts (e.g., mshta.exe, wscript.exe) from outlook.exe",
+                    "description_fa": "اجرا ممکن است منجر به راه‌اندازی میزبان‌های برنامه‌نویسی (مانند mshta.exe، wscript.exe) از outlook.exe شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Execution may occur only when the specific folder is accessed after launch, not immediately at startup"
+                    "description": "Execution may occur only when the specific folder is accessed after launch, not immediately at startup",
+                    "description_fa": "اجرا ممکن است فقط زمانی اتفاق بیفتد که پس از راه‌اندازی به پوشه خاص دسترسی داشته باشید، نه بلافاصله در هنگام راه‌اندازی"
                 },
                 {
                     "field": "FormViewBehavior",
-                    "description": "Behavior may vary if the folder's form view is customized or suppressed via GPO"
+                    "description": "Behavior may vary if the folder's form view is customized or suppressed via GPO",
+                    "description_fa": "اگر نمای فرم پوشه سفارشی یا از طریق GPO سرکوب شود، ممکن است رفتار متفاوت باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0502",
+            "description_fa": "Adversary از ابزاری مانند Ruler برای پیکربندی یک صفحه اصلی پوشه مخرب Outlook استفاده می کند که یک بار HTML راه دور یا جاسازی شده را در تعامل با پوشه بارگیری می کند. زنجیره اجرا با راه‌اندازی Outlook، دسترسی به یک پوشه خاص، و ایجاد یک فرآیند مشکوک فرزند یا فراخوانی اجرای مبتنی بر COM شروع می‌شود."
         }
     ]
 }

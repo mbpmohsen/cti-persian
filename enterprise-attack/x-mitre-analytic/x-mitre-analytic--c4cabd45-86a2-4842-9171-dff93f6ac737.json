@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0283#AN0786",
-                    "external_id": "AN0786"
+                    "external_id": "AN0786",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0786",
-            "description": "Detection of suspicious token manipulation chains: use of token-related APIs (e.g., LogonUser, DuplicateTokenEx) or commands (runas) \u2192 spawning of a new process under a different security context (e.g., SYSTEM) \u2192 mismatched parent-child process lineage or anomalies in Event Tracing for Windows (ETW) token/PPID data \u2192 abnormal lateral or privilege escalation activity.",
+            "description": "Detection of suspicious token manipulation chains: use of token-related APIs (e.g., LogonUser, DuplicateTokenEx) or commands (runas) → spawning of a new process under a different security context (e.g., SYSTEM) → mismatched parent-child process lineage or anomalies in Event Tracing for Windows (ETW) token/PPID data → abnormal lateral or privilege escalation activity.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -61,21 +62,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation time between suspicious API usage, runas, and process creation (e.g., 5\u201310m)."
+                    "description": "Correlation time between suspicious API usage, runas, and process creation (e.g., 5–10m).",
+                    "description_fa": "زمان همبستگی بین استفاده مشکوک API، اجراها و ایجاد فرآیند (به عنوان مثال، 5 تا 10 متر)."
                 },
                 {
                     "field": "AllowedServiceAccounts",
-                    "description": "Whitelist of service accounts permitted to spawn SYSTEM-level processes."
+                    "description": "Whitelist of service accounts permitted to spawn SYSTEM-level processes.",
+                    "description_fa": "لیست سفید حساب‌های سرویس مجاز به ایجاد فرآیندهای سطح سیستم."
                 },
                 {
                     "field": "KnownAdminTools",
-                    "description": "Legitimate administrative utilities that trigger token changes."
+                    "description": "Legitimate administrative utilities that trigger token changes.",
+                    "description_fa": "ابزارهای اداری قانونی که باعث تغییرات توکن می شوند."
                 },
                 {
                     "field": "ParentProcessAnomalyThreshold",
-                    "description": "Deviation threshold for PPID mismatches detected via ETW."
+                    "description": "Deviation threshold for PPID mismatches detected via ETW.",
+                    "description_fa": "آستانه انحراف برای عدم تطابق PPID شناسایی شده از طریق ETW."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0786",
+            "description_fa": "تشخیص زنجیره‌های دستکاری نشانه‌های مشکوک: استفاده از APIهای مرتبط با نشانه (مانند LogonUser، DuplicateTokenEx) یا دستورات (ران‌ها) ← ایجاد یک فرآیند جدید تحت یک زمینه امنیتی متفاوت (مانند SYSTEM) ← عدم تطابق والد-فرزند یا اصل و نسب فرآیند والد-فرزند یا عدم تطابق داده‌های غیرعادی EventW PP/ID در Windows فعالیت جانبی یا تشدید امتیاز."
         }
     ]
 }

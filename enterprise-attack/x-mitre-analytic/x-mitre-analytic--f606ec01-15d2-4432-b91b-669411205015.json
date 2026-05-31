@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0322#AN0914",
-                    "external_id": "AN0914"
+                    "external_id": "AN0914",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BinarySizeThreshold",
-                    "description": "Used to flag binaries much larger than typical shell utilities or payloads"
+                    "description": "Used to flag binaries much larger than typical shell utilities or payloads",
+                    "description_fa": "برای پرچم‌گذاری باینری‌های بسیار بزرگ‌تر از ابزارهای معمولی پوسته یا محموله‌ها استفاده می‌شود"
                 },
                 {
                     "field": "MemoryWriteTargets",
-                    "description": "Which processes are allowed ptrace/mprotect \u2013 can limit to suspicious child-to-parent targeting"
+                    "description": "Which processes are allowed ptrace/mprotect – can limit to suspicious child-to-parent targeting",
+                    "description_fa": "کدام فرآیندها مجاز به ptrace/mprotect هستند - می تواند به هدف گیری مشکوک کودک به والدین محدود شود"
                 },
                 {
                     "field": "ExecutionAfterWriteWindow",
-                    "description": "Temporal threshold for file write to execution"
+                    "description": "Temporal threshold for file write to execution",
+                    "description_fa": "آستانه زمانی برای نوشتن فایل تا اجرا"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0914",
+            "description_fa": "باینری‌های ELF نوشته شده روی دیسک را که اندازه یا آنتروپی غیرعادی فایل را نشان می‌دهند و به سرعت اجرا یا ناحیه حافظه را در فرآیندهای راه دور می‌نویسد (مثلاً با استفاده از ptrace) شناسایی می‌کند."
         }
     ]
 }

@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-692",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/692.html"
+                    "url": "https://capec.mitre.org/data/definitions/692.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-494",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/494.html"
+                    "url": "http://cwe.mitre.org/data/definitions/494.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Aviad Gershon, Unverified Commits: Are You Unknowingly Trusting Attackers’ Code?, 2022--07---15, Checkmarx",
                     "external_id": "REF-719",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://checkmarx.com/blog/unverified-commits-are-you-unknowingly-trusting-attackers-code/"
+                    "url": "https://checkmarx.com/blog/unverified-commits-are-you-unknowingly-trusting-attackers-code/",
+                    "description_fa": "آویاد گرشون، تعهدات تایید نشده: آیا شما ناآگاهانه به کد مهاجمان اعتماد دارید؟، 2022--07---15، چکمارکس",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Deeba Ahmed, Hackers can spoof commit metadata to create false GitHub repositories, 2022--07---17, HackRead",
                     "external_id": "REF-720",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.hackread.com/hackers-spoof-commit-metadata-false-github-repositories/"
+                    "url": "https://www.hackread.com/hackers-spoof-commit-metadata-false-github-repositories/",
+                    "description_fa": "دیبا احمد، هکرها می توانند متادیتا را برای ایجاد مخازن نادرست GitHub جعل کنند، 2022--07---17، HackRead",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--e6eccd63-6c72-4500-830e-22c937a2bd4b",
@@ -57,6 +63,22 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Accountability_fa": [
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -74,11 +96,22 @@
                 "Identification of a popular open-source repository whose metadata is to be spoofed."
             ],
             "x_capec_skills_required": {
-                "Medium": "Ability to spoof a variety of repository metadata to convince victims the source is trusted."
+                "Medium": "Ability to spoof a variety of repository metadata to convince victims the source is trusted.",
+                "Medium_fa": "امکان جعل انواع متادیتای مخزن برای متقاعد کردن قربانیان به منبع قابل اعتماد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن ابرداده مربوط به مخزن سیستم کنترل نسخه (VCS) (مانند Git) را جعل می‌کند، متعهد می‌شود که کاربران را فریب دهد تا تصور کنند نرم‌افزار ارائه‌شده به‌طور مخرب اغلب نگهداری می‌شود و از یک منبع قابل اعتماد سرچشمه می‌گیرد.</xhtml:p>",
+            "name_fa": "سیستم کنترل نسخه جعلی Commit Metadata",
+            "x_capec_example_instances_fa": [
+                "در جولای 2022، Checkmarx گزارش داد که اگر commit های بدون امضا توسط مخزن به کار گرفته شوند، ممکن است متادیتای commit GitHub جعل شود. دشمنان توانستند مشارکت کنندگان و همچنین تاریخ/زمان ارتکاب را جعل کنند. این منجر به تعهداتی شد که ظاهراً از توسعه‌دهندگان قابل اعتماد سرچشمه می‌گیرد و یک نمودار فعالیت GitHub که کاربران را فریب می‌داد تا فکر کنند این مخزن برای مدت زمان قابل توجهی نگهداری شده است. فقدان اعتبار سنجی فراداده ارتکاب در نهایت به دشمنان اجازه داد تا بدافزار را به قربانیان ناآگاه منتشر کنند [REF-719] [REF-720]."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین هدف: </b>دشمن ابتدا باید یک مخزن هدف را شناسایی کند تا بتواند جعل کند. به طور معمول، این یک مخزن محبوب و پرکاربرد خواهد بود، زیرا برای افزایش تعداد قربانیانی که یک حمله موفقیت آمیز از آنها سوء استفاده می کند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>ایجاد مخزن مخرب: </b>دشمن باید یک موجود مخرب را مجدداً ارسال کند. جعل شده این ممکن است شامل ایجاد یک نام کاربری باشد که کاملاً با مالک مخزن قانونی مطابقت داشته باشد. ایجاد یک نام مخزن که دقیقاً با نام مخزن قانونی مطابقت دارد. آپلود کد منبع قانونی؛ و موارد دیگر.</p></li><li> <p> <b>فراداده ارتکاب جعل: </b>پس از ایجاد مخزن مخرب، حریف باید متادیتای commit را جعل کند تا به نظر برسد که مخزن مرتبا نگهداری می شود و منبع آن قابل اعتماد است. منابع.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهر زمانی Git Commit: حریف در حالی که متغیرهای محیطی \"GIT_AUTHOR_DATE\" و \"GIT_COMMITTER_DATE\" را روی یک تاریخ تنظیم می‌کند، تعداد زیادی commit جعلی ایجاد می‌کند. مشارکت کنندگان: حریف آدرس ایمیل یک کاربر قانونی و قابل اعتماد را دریافت می کند و سپس این اطلاعات را از طریق دستور \"git config\" تنظیم می کند. سپس دشمن می‌تواند با استفاده از این نام کاربری تغییراتی را انجام دهد.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Exploit قربانیان: </b>دشمن به نرم‌افزار و/یا محیط‌های سیستم نفوذ می‌کند و هدف آن هدایت بیشتر است. حملات.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>فعال: دشمن سعی می‌کند قربانیان را فریب دهد تا نرم‌افزارهای مخرب را از طریق ابزارهایی مانند فیشینگ و مهندسی اجتماعی دانلود کنند. نرم افزار.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> سیستم های کنترل نسخه به طور گسترده توسط توسعه دهندگان برای میزبانی، ردیابی و مدیریت فایل های کد منبع به روشی آسان و همزمان استفاده می شود. این سیستم ها اغلب برای میزبانی نرم افزار منبع باز استفاده می شوند که سایر توسعه دهندگان می توانند آن را در برنامه های خود بگنجانند یا به عنوان برنامه های کاربردی مستقل از آن استفاده کنند. برای جلوگیری از دانلود کدهای آسیب‌پذیر و/یا مخرب، توسعه‌دهندگان اغلب ابرداده‌های تعهدات مخزن VCS را بررسی می‌کنند تا شجره نامه کلی مخزن را تعیین کنند. این ممکن است شامل اطلاعات مختلفی باشد، مانند موارد زیر:</xhtml:p>\n            <xhtml:ul>\n               <xhtml:li>مالک مخزن</xhtml:li>\n               <xhtml:li>نویسندگان تعهدات</xhtml:li>\n               <xhtml:li>فرکانس تعهدات</xhtml:li>\n               <xhtml:li>تاریخ/زمان انجام تعهدات</xhtml:li>\n               <xhtml:li>نمودارهای فعالیت مخزن</xhtml:li>\n            </xhtml:ul>\n            <xhtml:p> این بررسی‌های مقدماتی می‌تواند به توسعه‌دهندگان در تعیین اینکه آیا یک فرد/سازمان مورد اعتماد کد منبع را ارائه می‌کند، تعداد دفعات به‌روزرسانی کد و محبوبیت نسبی نرم‌افزار کمک می‌کند. با این حال، یک دشمن می‌تواند این ابرداده را جعل کند تا یک مخزن حاوی کد مخرب به نظر برسد که از یک منبع قابل اعتماد سرچشمه می‌گیرد، اغلب نگهداری می‌شود و معمولاً توسط توسعه‌دهندگان دیگر استفاده می‌شود. بدون انجام فعالیت های امنیتی اضافی، توسعه دهندگان بی ادعا ممکن است توسط این ابرداده جعلی فریب داده شوند و کد مخرب را در سیستم/برنامه های خود بگنجانند. سپس دشمن در نهایت می‌تواند به اثرات فنی منفی متعددی دست یابد، در حالی که قربانی از هرگونه فعالیت مخرب بی‌اطلاع می‌ماند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "شناسایی یک مخزن منبع باز محبوب که ابرداده های آن باید جعل شود."
+            ]
         }
     ],
     "type": "bundle"

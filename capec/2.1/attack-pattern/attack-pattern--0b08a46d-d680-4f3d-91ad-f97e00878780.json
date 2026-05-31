@@ -9,62 +9,75 @@
                 {
                     "external_id": "CAPEC-81",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/81.html"
+                    "url": "https://capec.mitre.org/data/definitions/81.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-117",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/117.html"
+                    "url": "http://cwe.mitre.org/data/definitions/117.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-93",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/93.html"
+                    "url": "http://cwe.mitre.org/data/definitions/93.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-75",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/75.html"
+                    "url": "http://cwe.mitre.org/data/definitions/75.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-221",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/221.html"
+                    "url": "http://cwe.mitre.org/data/definitions/221.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-96",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/96.html"
+                    "url": "http://cwe.mitre.org/data/definitions/96.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-150",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/150.html"
+                    "url": "http://cwe.mitre.org/data/definitions/150.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-276",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/276.html"
+                    "url": "http://cwe.mitre.org/data/definitions/276.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-279",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/279.html"
+                    "url": "http://cwe.mitre.org/data/definitions/279.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-116",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/116.html"
+                    "url": "http://cwe.mitre.org/data/definitions/116.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--0b08a46d-d680-4f3d-91ad-f97e00878780",
@@ -82,6 +95,9 @@
             "x_capec_consequences": {
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -99,11 +115,24 @@
                 "Ability to send specially formatted HTTP request to web server"
             ],
             "x_capec_skills_required": {
-                "Low": "To input faked entries into Web logs"
+                "Low": "To input faked entries into Web logs",
+                "Low_fa": "برای وارد کردن ورودی های جعلی در گزارش های وب"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حملات دستکاری لاگ های وب شامل تزریق، حذف یا دستکاری در محتویات گزارش های وب توسط مهاجم معمولاً به منظور پنهان کردن سایر رفتارهای مخرب است. علاوه بر این، نوشتن داده‌های مخرب در فایل‌های گزارش ممکن است مشاغل، فیلترها، گزارش‌ها و سایر عواملی را هدف قرار دهد که گزارش‌ها را در یک الگوی حمله ناهمزمان پردازش می‌کنند. این الگوی حمله مشابه \"Log Injection-Tampering-Forging\" است با این تفاوت که در این مورد، حمله لاگ های وب سرور را هدف قرار می دهد نه برنامه را.",
+            "name_fa": "دستکاری گزارش های وب سرور",
+            "x_capec_example_instances_fa": [
+                "اکثر وب سرورها یک رابط عمومی دارند، حتی اگر اکثر سایت ها با رمز عبور محافظت شوند، معمولاً حداقل یک سایت ورود به سیستم و بروشور افزاری وجود دارد که به صورت عمومی در دسترس است. درخواست‌های HTTP به سایت نیز معمولاً در یک گزارش وب ثبت می‌شوند. از نقطه نظر مهاجم، درخواست‌های استاندارد HTTP حاوی یک بار مخرب می‌توانند به وب‌سایت عمومی ارسال شوند (بدون نیاز به دسترسی دیگری)، زمانی که این درخواست‌ها در گزارش ظاهر می‌شوند (مانند [[CTI_PRESERVE_0]]] اسکریپت مخرب> اگر توسط سرپرست دنبال شوند، ممکن است برای بررسی میزبان یا شبکه محلی سرپرست کافی باشد. http://victimsite/index.html?<"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین فرمت فایل گزارش وب سرور برنامه: </b>مهاجم سیستم را مشاهده می‌کند و به دنبال نشانگرهایی می‌گردد که ابزار گزارش‌گیری توسط وب استفاده می‌شود. سرور.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>تعیین ابزار گزارش‌گیری که توسط وب سرور برنامه (مانند log4j) استفاده می‌شود، تنها در صورتی امکان‌پذیر است که برنامه توسط مهاجم شناخته شده باشد یا اگر برنامه پیام‌های خطا را با ابزار ورود به سیستم بازگرداند. اطلاعات.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین محتوای تزریقی: </b>مهاجم اقدامات ثبت‌شده مختلفی را با داده‌های مخرب انجام می‌دهد تا تعیین کند که چه نوع تزریق لاگ است. ممکن است.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم اقدامات ثبت‌شده را با داده‌های مخرب ساخته‌شده به‌عنوان ورودی‌ها، پارامترها، آرگومان‌ها و غیره آغاز می‌کند.</td></tr></tbody></table></ol></div><div><ploit</h3>E فایل‌های گزارش: </b>مهاجم محتویات گزارش را مستقیماً از طریق دستکاری یا جعل یا به‌طور غیرمستقیم از طریق تزریق درخواست‌های ساخته‌شده ویژه‌ای که سرور وب دریافت می‌کند و در گزارش‌ها می‌نویسد، تغییر می‌دهد. این نوع حمله معمولاً یک حمله دیگر را دنبال می‌کند و برای پوشاندن آثار حمله قبلی استفاده می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>\n                  <xhtml:p>به‌طور غیرمستقیم از طریق تزریق، از نویسه‌های بازگشت و/یا تغذیه خط برای شروع یک خط جدید در فایل گزارش استفاده کنید و سپس یک ورودی جعلی اضافه کنید.</xhtml:p>\n                  <xhtml:p>به عنوان مثال: درخواست HTTP برای \"/index.html%0A%0DIP_ADDRESS- - DATE_FORMAT] \"GET /forged-path HTTP/1.1\" 200 - \"-\" USER_AGENT\" ممکن است خط ورود به سیستم را به \"access_log\" Apache اضافه کند (برای مثال). برنامه‌های مختلف ممکن است به رمزگذاری‌های متفاوتی از نویسه‌های بازگشت و تغذیه خط نیاز داشته باشند.</xhtml:p>\n               </td></tr><tr><td>\n                  <xhtml:p>مستقیماً از طریق دستکاری فایل گزارش یا پایگاه داده، از کاراکترهای بازگشتی و/یا خط تغذیه برای شروع یک خط جدید در فایل گزارش استفاده کنید و سپس یک ورودی جعلی اضافه کنید.</xhtml:p>\n                  <xhtml:p>به عنوان مثال: درخواست HTTP برای \"/index.html%0A%0DIP_ADDRESS- - DATE_FORMAT] \"GET /forged-path HTTP/1.1\" 200 - \"-\" USER_AGENT\" ممکن است خط ورود به سیستم را به \"access_log\" Apache اضافه کند (برای مثال). برنامه‌های مختلف ممکن است به رمزگذاری‌های متفاوتی از نویسه‌های بازگشت و تغذیه خط نیاز داشته باشند.</xhtml:p>\n               </td></tr><tr><td>مستقیماً از طریق فایل گزارش یا دستکاری پایگاه داده، ورودی‌های گزارش موجود را تغییر دهید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار سرور هدف باید یک سرور HTTP باشد که ثبت وب را انجام می دهد."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان ارسال درخواست HTTP با فرمت خاص به سرور وب"
+            ]
         }
     ],
     "type": "bundle"

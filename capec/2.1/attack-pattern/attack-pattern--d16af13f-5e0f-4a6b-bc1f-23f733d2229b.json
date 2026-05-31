@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-159",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/159.html"
+                    "url": "https://capec.mitre.org/data/definitions/159.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-706",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/706.html"
+                    "url": "http://cwe.mitre.org/data/definitions/706.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Hijack Execution Flow:Path Interception by Search Order Hijacking",
                     "external_id": "T1574.008",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/008"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/008",
+                    "description_fa": "جریان اجرای ربایش: رهگیری مسیر توسط ربودن دستور جستجو",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Silvio Cesare, Share Library Call Redirection Via ELF PLT Infection (Issue 56), Phrack Magazine, 2000",
                     "external_id": "REF-29",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://phrack.org/issues/56/7.html"
+                    "url": "http://phrack.org/issues/56/7.html",
+                    "description_fa": "سیلویو سزار، تغییر مسیر تماس کتابخانه اشتراک گذاری از طریق عفونت ELF PLT (شماره 56)، مجله Phrack، 2000",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Top 10 2007 (2007), The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-30",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/www-pdf-archive/OWASP_Top_10_2007.pdf"
+                    "url": "https://www.owasp.org/www-pdf-archive/OWASP_Top_10_2007.pdf",
+                    "description_fa": "10 OWASP برتر 2007 (2007)، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--d16af13f-5e0f-4a6b-bc1f-23f733d2229b",
@@ -57,6 +65,13 @@
                 "Authorization": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Bypass Protection Mechanism"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "مکانیسم حفاظت دور زدن"
                 ]
             },
             "x_capec_domains": [
@@ -79,11 +94,23 @@
             "x_capec_skills_required": {
                 "High": "To reverse engineering the libraries and inject malicious code into the libraries",
                 "Low": "To modify the entries in the configuration file pointing to malicious libraries",
-                "Medium": "To force symlink and timing issues for redirecting access to libraries"
+                "Medium": "To force symlink and timing issues for redirecting access to libraries",
+                "High_fa": "برای مهندسی معکوس کتابخانه ها و تزریق کدهای مخرب به کتابخانه ها",
+                "Low_fa": "برای تغییر ورودی های فایل پیکربندی که به کتابخانه های مخرب اشاره می کنند",
+                "Medium_fa": "برای اجبار کردن مسائل مربوط به پیوند نمادین و زمان‌بندی برای تغییر مسیر دسترسی به کتابخانه‌ها"
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از ضعفی در روش جستجوی یک برنامه برای کتابخانه های خارجی برای دستکاری جریان اجرا برای اشاره به کتابخانه یا پایگاه کد ارائه شده توسط دشمن سوء استفاده می کند. این الگوی حمله به حریف اجازه می دهد تا برنامه یا سرور را از طریق اجرای کدهای غیرمجاز به خطر بیاندازد. یک برنامه معمولاً با توابعی که بخشی از کتابخانه های خارج از برنامه هستند تماس می گیرد. این کتابخانه ها ممکن است بخشی از سیستم عامل یا کتابخانه های شخص ثالث باشند. اگر حریف بتواند تلاش های یک برنامه کاربردی برای دسترسی به این کتابخانه ها را به کتابخانه های دیگری که حریف تهیه می کند هدایت کند، دشمن می تواند برنامه مورد نظر را مجبور به اجرای کد دلخواه کند. این امر به ویژه در صورتی خطرناک است که برنامه مورد نظر دارای امتیازات افزایش یافته باشد. دسترسی را می توان از طریق تعدادی تکنیک از جمله استفاده از پیوندهای نمادین، اصلاح مسیر جستجو و دستکاری مسیر نسبی هدایت کرد.",
+            "name_fa": "تغییر مسیر دسترسی به کتابخانه ها",
+            "x_capec_example_instances_fa": [
+                "در این مثال، مهاجمی که از عفونت ELF استفاده می‌کند که جدول پیوند رویه (PLT) یک فایل اجرایی را هدایت می‌کند و اجازه می‌دهد تغییر مسیر خارج از فایل اجرایی آلوده باشد. الگوریتم در کد نقطه ورودی به شرح زیر است... • قسمت نوشتاری قابل نوشتن را علامت گذاری کنید • ورودی PLT(GOT) را ذخیره کنید • ورودی PLT(GOT) را با آدرس فراخوانی جدید lib جایگزین کنید. ورودی PLT(GOT) را با آدرس تماس جدید lib جایگزین کنید"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی هدف: </b> دشمن برنامه مورد نظر را شناسایی می‌کند و تعیین می‌کند از چه کتابخانه‌هایی استفاده می‌شود. وابستگی‌ها.</td></tr><tr><td>به سیستم میزبان برنامه دسترسی پیدا کنید و به دنبال کتابخانه‌ها در مکان‌های رایج بگردید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>درجای کتابخانه‌های مخرب، کتابخانه‌های مخرب را نصب کنید: </b>سیستم کتابخانه‌های مخرب را مستقر کنید. برنامه در حال اجرا است، یا در یک مکان راه دور که می‌تواند توسط برنامه بارگیری شود.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>تغییر مسیر تماس‌های کتابخانه به کتابخانه مخرب: </b>هنگامی که کتابخانه مخرب ایجاد شده توسط حریف، برنامه مخربی را که جریان مخرب ایجاد می‌کند، برنامه را دستکاری می‌کند. کتابخانه این کار را می‌توان به روش‌های مختلفی بر اساس نحوه بارگیری و فراخوانی کتابخانه‌ها توسط برنامه انجام داد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>کش DNS سیستم را مسموم کنید تا یک کتابخانه مخرب را از یک مکان راه دور که توسط دشمن میزبانی می‌شود به جای ><tr><trdlegiti بارگیری کند. symlink که برنامه را فریب می دهد تا فکر کند یک کتابخانه مخرب کتابخانه قانونی است.</td></tr><tr><td>از بارگذاری جانبی DLL برای قرار دادن نسخه مخرب یک DLL در فهرست ویندوز استفاده کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "هدف باید از کتابخانه های خارجی استفاده کند و قبل از استفاده از آنها نتواند یکپارچگی این کتابخانه ها را تأیید کند."
+            ]
         }
     ],
     "type": "bundle"

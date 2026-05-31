@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0127#AN0355",
-                    "external_id": "AN0355"
+                    "external_id": "AN0355",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "OriginalFilenameMismatch",
-                    "description": "Compare executable file name with PE metadata OriginalFilename field"
+                    "description": "Compare executable file name with PE metadata OriginalFilename field",
+                    "description_fa": "نام فایل اجرایی را با قسمت اصلی Filename فراداده PE مقایسه کنید"
                 },
                 {
                     "field": "KnownSystemUtilityPaths",
-                    "description": "Tune based on expected installation directories for signed binaries"
+                    "description": "Tune based on expected installation directories for signed binaries",
+                    "description_fa": "بر اساس دایرکتوری های نصب مورد انتظار برای باینری های امضا شده تنظیم کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between file creation and service/process execution"
+                    "description": "Correlation window between file creation and service/process execution",
+                    "description_fa": "پنجره همبستگی بین ایجاد فایل و اجرای سرویس/فرآیند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0355",
+            "description_fa": "دشمن LOLBIN ها را تغییر نام می دهد یا باینری ها را با نام فایل های جعلی، ابرداده های PE داخلی یا نمادهای گمراه کننده به کار می گیرد تا قانونی به نظر برسد. پس از ایجاد فایل، اجرا یا ثبت سرویس مغایر با استفاده شناخته شده است."
         }
     ]
 }

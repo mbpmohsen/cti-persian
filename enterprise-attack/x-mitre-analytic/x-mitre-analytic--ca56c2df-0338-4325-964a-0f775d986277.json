@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0075#AN0204",
-                    "external_id": "AN0204"
+                    "external_id": "AN0204",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InternalConnectionPattern",
-                    "description": "Tune based on known host-to-host communications that are rare (e.g., workstation-to-workstation)."
+                    "description": "Tune based on known host-to-host communications that are rare (e.g., workstation-to-workstation).",
+                    "description_fa": "تنظیم بر اساس ارتباطات میزبان به میزبان شناخته شده که نادر هستند (به عنوان مثال، ایستگاه کاری به ایستگاه کاری)."
                 },
                 {
                     "field": "DestinationPort",
-                    "description": "Focus on unusual internal traffic on ports like 1080, 8080, 4444, or SMB over non-standard ports."
+                    "description": "Focus on unusual internal traffic on ports like 1080, 8080, 4444, or SMB over non-standard ports.",
+                    "description_fa": "روی ترافیک داخلی غیرعادی در پورت هایی مانند 1080، 8080، 4444 یا SMB بیش از پورت های غیر استاندارد تمرکز کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate unusual traffic bursts with new process execution."
+                    "description": "Correlate unusual traffic bursts with new process execution.",
+                    "description_fa": "ارتباط انفجارهای غیرعادی ترافیک با اجرای فرآیند جدید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0204",
+            "description_fa": "فرآیند غیرعادی (به عنوان مثال، «rundll32»، «svchost»، «cmd») اتصال به میزبان‌های همتای داخلی را آغاز می‌کند که در خطوط پایه ارتباطی معمولی دیده نمی‌شوند، که برای پروکسی یا انتقال ترافیک داخلی، اغلب با استفاده از پورت‌های SMB، RPC یا high استفاده می‌شوند."
         }
     ]
 }

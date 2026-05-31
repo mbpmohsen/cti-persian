@@ -9,28 +9,34 @@
                 {
                     "external_id": "CAPEC-68",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/68.html"
+                    "url": "https://capec.mitre.org/data/definitions/68.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-325",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/325.html"
+                    "url": "http://cwe.mitre.org/data/definitions/325.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-328",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/328.html"
+                    "url": "http://cwe.mitre.org/data/definitions/328.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1326",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1326.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1326.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Subvert Trust Controls: Code Signing",
                     "external_id": "T1553.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1553/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1553/002",
+                    "description_fa": "براندازی کنترل های اعتماد: امضای کد",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--2b8d7aaf-bd4b-424f-8df4-6d0f37b72f4b",
@@ -56,6 +62,15 @@
                 ],
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -77,11 +92,27 @@
                 "The Attacker needs no special resources beyond the listed prerequisites in order to conduct this style of attack."
             ],
             "x_capec_skills_required": {
-                "High": "Subverting code signing is not a trivial activity. Most code signing and verification schemes are based on use of cryptography and the attacker needs to have an understanding of these cryptographic operations in good detail. Additionally the attacker also needs to be aware of the way memory is assigned and accessed by the container since, often, the only way to subvert code signing would be to patch the code in memory. Finally, a knowledge of the platform specific mechanisms of signing and verifying code is a must."
+                "High": "Subverting code signing is not a trivial activity. Most code signing and verification schemes are based on use of cryptography and the attacker needs to have an understanding of these cryptographic operations in good detail. Additionally the attacker also needs to be aware of the way memory is assigned and accessed by the container since, often, the only way to subvert code signing would be to patch the code in memory. Finally, a knowledge of the platform specific mechanisms of signing and verifying code is a must.",
+                "High_fa": "براندازی امضای کد یک فعالیت بی اهمیت نیست. اکثر طرح‌های امضا و تأیید کد مبتنی بر استفاده از رمزنگاری هستند و مهاجم باید درک دقیقی از این عملیات رمزنگاری داشته باشد. علاوه بر این، مهاجم همچنین باید از نحوه تخصیص و دسترسی به حافظه توسط کانتینر آگاه باشد زیرا اغلب تنها راه برای برهم زدن امضای کد، وصله کد در حافظه است. در نهایت، آگاهی از مکانیسم های خاص پلت فرم امضا و تأیید کد ضروری است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "بسیاری از زبان‌ها از امکانات امضای کد برای تضمین هویت کد استفاده می‌کنند و بنابراین کد را به امتیازات اختصاص داده شده در یک محیط مرتبط می‌کنند. براندازی این مکانیسم می تواند در افزایش امتیاز مهاجم موثر باشد. هر وسیله ای برای براندازی روشی که ماشین مجازی امضای کد را اعمال می کند، برای این سبک حمله طبقه بندی می شود.",
+            "name_fa": "واژگونی تسهیلات امضای کد",
+            "x_capec_example_instances_fa": [
+                "در نسخه‌های قدیمی (قبل از 3.0b4) مرورگر وب نت اسکیپ، مهاجمانی که می‌توانستند یک اپلت مخرب را به مرورگر مشتری وارد کنند، می‌توانستند حمله «Magic Coat» را اجرا کنند. در این حمله، اپلت متخلف متد ()getSigners خود را پیاده سازی می کند. این پیاده‌سازی از APIهای حاوی VM برای به دست آوردن امضاهای اپلت دیگر استفاده می‌کند (با فراخوانی متد _their_ getSigners()) و اگر هر اپلت در حال اجرا دارای امضای به اندازه کافی ممتاز بود، اپلت مخرب این امتیاز را به‌طور استعاری به ارث برده است.",
+                "برخی از مرورگرهای وب (قدیمی) به زبان های برنامه نویسی، مانند جاوا اسکریپت، اجازه فراخوانی کد جاوا امضا شده را می دادند. در این شرایط، پیاده‌سازی VM مرورگر انتخاب می‌کند که بازرسی پشته را در سراسر مرزهای زبان انجام ندهد (از جاوای امضا شده تا فراخوانی جاوا اسکریپت) و در مرز زبان با \"true\" اتصال کوتاه کند. انجام این کار به این معنی بود که VM به هر اسکریپت (غیر امتیازی) اجازه می‌دهد تا توابع ممتاز را در کد امضا شده بدون مجازات فراخوانی کند و باعث شود که آنها طعمه حملات فریبنده شوند.",
+                "توانایی بارگذاری کد بدون امضا در هسته نسخه های قبلی ویستا و دور زدن بررسی یکپارچگی نمونه ای از چنین خرابکاری است. در اثبات مفهوم، امکان دور زدن مکانیسم بررسی امضا ویستا برای بارگیری درایورهای دستگاه وجود دارد."
+            ],
+            "x_capec_prerequisites_fa": [
+                "یک زبان مبتنی بر چارچوب که از امضای کد پشتیبانی می کند (مانند، و معمولاً، جاوا یا دات نت)",
+                "کد مستقر شده که توسط فروشنده نویسنده یا شریک آن امضا شده است.",
+                "در بیشتر شرایط، مهاجم همچنین باید بتواند کد را در کانتینر قربانی قرار دهد. این لزوماً به این معنی نیست که آنها مجبورند امنیت سطح میزبان را زیر پا بگذارند، مگر در مواردی که به صراحت اشاره شده باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "مهاجم برای انجام این سبک حمله به منابع خاصی فراتر از پیش نیازهای ذکر شده نیاز ندارد."
+            ]
         }
     ],
     "spec_version": "2.0",

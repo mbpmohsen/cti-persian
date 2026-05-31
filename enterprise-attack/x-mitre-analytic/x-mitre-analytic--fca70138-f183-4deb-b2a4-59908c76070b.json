@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0260#AN0717",
-                    "external_id": "AN0717"
+                    "external_id": "AN0717",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0717",
-            "description": "Defenders may detect adversaries forging web credentials in IaaS environments by monitoring for anomalous API activity such as AssumeRole or GetFederationToken being executed by unusual principals. These events often correlate with sudden logon sessions from unfamiliar IP addresses or regions. The chain is usually secret material misuse (stolen private key or password) \u2192 API request generating a new token \u2192 access to high-value resources.",
+            "description": "Defenders may detect adversaries forging web credentials in IaaS environments by monitoring for anomalous API activity such as AssumeRole or GetFederationToken being executed by unusual principals. These events often correlate with sudden logon sessions from unfamiliar IP addresses or regions. The chain is usually secret material misuse (stolen private key or password) → API request generating a new token → access to high-value resources.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedRoleMappings",
-                    "description": "Define expected users and roles allowed to use AssumeRole or federation APIs."
+                    "description": "Define expected users and roles allowed to use AssumeRole or federation APIs.",
+                    "description_fa": "کاربران مورد انتظار و نقش‌هایی که مجاز به استفاده از AssumeRole یا APIهای فدراسیون هستند را تعریف کنید."
                 },
                 {
                     "field": "GeoVelocityThreshold",
-                    "description": "Alert if the same user authenticates from geographically disparate locations within a short time."
+                    "description": "Alert if the same user authenticates from geographically disparate locations within a short time.",
+                    "description_fa": "هشدار اگر همان کاربر در مدت زمان کوتاهی از مکان‌های جغرافیایی متفاوت احراز هویت کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0717",
+            "description_fa": "مدافعان ممکن است با نظارت بر فعالیت‌های API غیرعادی مانند AssumeRole یا GetFederationToken که توسط اصول غیرمعمول اجرا می‌شوند، دشمنانی را شناسایی کنند که اعتبارنامه‌های وب را در محیط‌های IaaS جعل می‌کنند. این رویدادها اغلب با جلسات ورود ناگهانی از آدرس های IP یا مناطق ناآشنا مرتبط است. این زنجیره معمولاً سوء استفاده از مواد مخفی (کلید خصوصی یا رمز عبور دزدیده شده) → درخواست API ایجاد یک رمز جدید → دسترسی به منابع با ارزش بالا است."
         }
     ]
 }

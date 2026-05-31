@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0532#AN1472",
-                    "external_id": "AN1472"
+                    "external_id": "AN1472",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time range between log-clearing command and 1102 event; tunable to reduce false positives"
+                    "description": "Time range between log-clearing command and 1102 event; tunable to reduce false positives",
+                    "description_fa": "محدوده زمانی بین دستور log-clearing و رویداد 1102. قابل تنظیم برای کاهش مثبت کاذب"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filter by admin/elevated users; allow tuning to detect abuse of high-privilege accounts"
+                    "description": "Filter by admin/elevated users; allow tuning to detect abuse of high-privilege accounts",
+                    "description_fa": "فیلتر توسط مدیر/کاربران بالا. به تنظیم برای شناسایی سوء استفاده از حساب های دارای امتیاز بالا اجازه دهید"
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Match common variations of log-clearing commands like `Remove-EventLog`, `wevtutil cl`"
+                    "description": "Match common variations of log-clearing commands like `Remove-EventLog`, `wevtutil cl`",
+                    "description_fa": "مطابقت با انواع متداول دستورات پاک کردن گزارش مانند \"Remove-EventLog\"، \"wevtutil cl\""
                 },
                 {
                     "field": "TargetLogName",
-                    "description": "Scope detection to Security, System, Application, or custom logs based on environment"
+                    "description": "Scope detection to Security, System, Application, or custom logs based on environment",
+                    "description_fa": "تشخیص محدوده به امنیت، سیستم، برنامه، یا گزارش های سفارشی بر اساس محیط"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1472",
+            "description_fa": "توالی رفتاری را شناسایی می کند که در آن حریف امتیازات بالایی به دست می آورد و گزارش رویدادها را با استفاده از باینری های بومی (مانند wevtutil)، PowerShell یا حذف مستقیم فایل فایل های .evtx پاک می کند."
         }
     ]
 }

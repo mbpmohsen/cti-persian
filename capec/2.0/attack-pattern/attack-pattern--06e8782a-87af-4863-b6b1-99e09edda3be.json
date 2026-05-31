@@ -9,60 +9,74 @@
                 {
                     "external_id": "CAPEC-555",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/555.html"
+                    "url": "https://capec.mitre.org/data/definitions/555.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-522",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/522.html"
+                    "url": "http://cwe.mitre.org/data/definitions/522.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-308",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/308.html"
+                    "url": "http://cwe.mitre.org/data/definitions/308.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-309",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/309.html"
+                    "url": "http://cwe.mitre.org/data/definitions/309.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-294",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/294.html"
+                    "url": "http://cwe.mitre.org/data/definitions/294.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-263",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/263.html"
+                    "url": "http://cwe.mitre.org/data/definitions/263.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-262",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/262.html"
+                    "url": "http://cwe.mitre.org/data/definitions/262.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-521",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/521.html"
+                    "url": "http://cwe.mitre.org/data/definitions/521.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Remote Services",
                     "external_id": "T1021",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1021"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1021",
+                    "description_fa": "خدمات از راه دور",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Email Collection:Remote Email Collection",
                     "external_id": "T1114.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1114/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1114/002",
+                    "description_fa": "مجموعه ایمیل: مجموعه ایمیل از راه دور",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "External Remote Services",
                     "external_id": "T1133",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1133"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1133",
+                    "description_fa": "خدمات از راه دور خارجی",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--06e8782a-87af-4863-b6b1-99e09edda3be",
@@ -88,7 +102,13 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این الگوی حمله شامل دشمنی است که از اعتبارنامه های سرقت شده برای استفاده از سرویس های راه دور مانند RDP، telnet، SSH و VNC برای ورود به سیستم استفاده می کند. هنگامی که دسترسی به دست آمد، هر تعداد از فعالیت های مخرب می تواند انجام شود.",
+            "name_fa": "خدمات از راه دور با اعتبار سرقت شده",
+            "x_capec_example_instances_fa": [
+                "دسکتاپ از راه دور یکی از ویژگی های رایج در سیستم عامل ها است. این به کاربر اجازه می دهد تا با یک رابط کاربری گرافیکی دسکتاپ سیستم در یک سیستم راه دور وارد یک جلسه تعاملی شود. مایکروسافت به اجرای پروتکل دسکتاپ از راه دور (RDP) به عنوان خدمات دسکتاپ از راه دور (RDS) اشاره می کند. پیاده‌سازی‌ها و ابزارهای شخص ثالث دیگری نیز وجود دارند که دسترسی گرافیکی به خدمات از راه دور مشابه RDS را ارائه می‌دهند. در صورتی که سرویس فعال باشد و اجازه دسترسی به حساب‌های دارای اعتبار شناخته شده را بدهد، ممکن است دشمنان از طریق RDP/RDS به یک سیستم راه دور متصل شوند تا دسترسی را گسترش دهند.",
+                "Windows Remote Management (WinRM) نام هر دو سرویس ویندوز و پروتکلی است که به کاربر اجازه می دهد با یک سیستم راه دور تعامل داشته باشد (به عنوان مثال، اجرای یک فایل اجرایی، تغییر رجیستری، تغییر خدمات). ممکن است با دستور winrm یا هر تعداد برنامه مانند PowerShell فراخوانی شود."
+            ]
         }
     ],
     "spec_version": "2.0",

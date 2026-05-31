@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0022#AN0065",
-                    "external_id": "AN0065"
+                    "external_id": "AN0065",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0065",
-            "description": "Adversary stages a lure that references a remote resource (e.g., LNK/SCF/Office template). When the user opens/renders the file or a shell enumerates icons, the host automatically attempts SMB or WebDAV authentication to the attacker host. The chain is: (1) lure file is created or modified in a user-exposed location \u2192 (2) user or system accesses the lure \u2192 (3) host makes outbound NTLM (SMB 139/445 or WebDAV over 80/443) to an untrusted destination \u2192 (4) repeated attempts from multiple users/hosts or from privileged workstations.",
+            "description": "Adversary stages a lure that references a remote resource (e.g., LNK/SCF/Office template). When the user opens/renders the file or a shell enumerates icons, the host automatically attempts SMB or WebDAV authentication to the attacker host. The chain is: (1) lure file is created or modified in a user-exposed location → (2) user or system accesses the lure → (3) host makes outbound NTLM (SMB 139/445 or WebDAV over 80/443) to an untrusted destination → (4) repeated attempts from multiple users/hosts or from privileged workstations.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -56,29 +57,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserLocations",
-                    "description": "Folders where lures are most effective (Desktop, Public, Downloads, Temp, Cache, Start Menu, Startup). Adjust to enterprise layout."
+                    "description": "Folders where lures are most effective (Desktop, Public, Downloads, Temp, Cache, Start Menu, Startup). Adjust to enterprise layout.",
+                    "description_fa": "پوشه‌هایی که در آن فریب‌ها مؤثرتر هستند (رومیزی، عمومی، دانلودها، دما، حافظه پنهان، منوی شروع، راه‌اندازی). تنظیم به طرح سازمانی."
                 },
                 {
                     "field": "LureExtensions",
-                    "description": "File types commonly abused (.lnk, .scf, .url, .doc/.xls/.ppt/.pdf/.html). Extend for your tooling and languages."
+                    "description": "File types commonly abused (.lnk, .scf, .url, .doc/.xls/.ppt/.pdf/.html). Extend for your tooling and languages.",
+                    "description_fa": "انواع فایل هایی که معمولا مورد سوء استفاده قرار می گیرند (.lnk، .scf، .url، .doc/.xls/.ppt/.pdf/.html). برای ابزار و زبان های خود گسترش دهید."
                 },
                 {
                     "field": "UntrustedCIDR/DNS",
-                    "description": "Org-specific list of external/unknown networks or domains; used to suppress sanctioned file servers and WebDAV gateways."
+                    "description": "Org-specific list of external/unknown networks or domains; used to suppress sanctioned file servers and WebDAV gateways.",
+                    "description_fa": "فهرست سازمان‌های خاص شبکه‌ها یا دامنه‌های خارجی/ناشناخته؛ برای سرکوب سرورهای فایل تحریم شده و دروازه های WebDAV استفاده می شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation horizon (e.g., 15\u201330 minutes) between file access and outbound NTLM attempt."
+                    "description": "Correlation horizon (e.g., 15–30 minutes) between file access and outbound NTLM attempt.",
+                    "description_fa": "افق همبستگی (به عنوان مثال، 15 تا 30 دقیقه) بین دسترسی به فایل و تلاش NTLM خروجی."
                 },
                 {
                     "field": "WorkstationZones",
-                    "description": "Asset/zone tags that distinguish workstations from servers; helps flag workstation\u2192workstation SMB, which is often abnormal."
+                    "description": "Asset/zone tags that distinguish workstations from servers; helps flag workstation→workstation SMB, which is often abnormal.",
+                    "description_fa": "برچسب‌های دارایی/منطقه که ایستگاه‌های کاری را از سرورها متمایز می‌کند. به پرچم‌گذاری ایستگاه کاری → ایستگاه کاری SMB کمک می‌کند، که اغلب غیرعادی است."
                 },
                 {
                     "field": "OfficeTemplatePaths",
-                    "description": "Paths to Office templates to catch template injection references and abnormal loads."
+                    "description": "Paths to Office templates to catch template injection references and abnormal loads.",
+                    "description_fa": "مسیرهایی به الگوهای آفیس برای گرفتن مراجع تزریق الگو و بارهای غیرعادی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0065",
+            "description_fa": "حریف فریبکاری را انجام می دهد که به یک منبع راه دور (به عنوان مثال، الگوی LNK/SCF/Office) ارجاع می دهد. هنگامی که کاربر فایل را باز می‌کند/رندر می‌کند یا پوسته آیکون‌ها را برمی‌شمارد، میزبان به طور خودکار احراز هویت SMB یا WebDAV را برای میزبان مهاجم انجام می‌دهد. زنجیره به این صورت است: (1) فایل lure در یک مکان در معرض کاربر ایجاد یا اصلاح می شود → (2) کاربر یا سیستم به فریب دسترسی پیدا می کند → (3) میزبان NTLM خروجی (SMB 139/445 یا WebDAV بیش از 80/443) را به یک مقصد نامعتبر انجام می دهد → (4) تلاش های مکرر از چندین کاربر."
         }
     ]
 }

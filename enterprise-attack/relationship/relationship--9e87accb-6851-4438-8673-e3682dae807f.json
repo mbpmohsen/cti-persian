@@ -13,22 +13,30 @@
                 {
                     "source_name": "Docker Daemon Socket Protect",
                     "description": "Docker. (n.d.). Protect the Docker Daemon Socket. Retrieved March 29, 2021.",
-                    "url": "https://docs.docker.com/engine/security/protect-access/"
+                    "url": "https://docs.docker.com/engine/security/protect-access/",
+                    "source_name_fa": "Docker Daemon Socket Protect",
+                    "description_fa": "داکر. (n.d.). از Docker Daemon Socket محافظت کنید. بازبینی شده در 29 مارس 2021."
                 },
                 {
                     "source_name": "Kubernetes Cloud Native Security",
                     "description": "Kubernetes. (n.d.). Overview of Cloud Native Security. Retrieved March 8, 2023.",
-                    "url": "https://kubernetes.io/docs/concepts/security/overview/"
+                    "url": "https://kubernetes.io/docs/concepts/security/overview/",
+                    "source_name_fa": "Kubernetes Cloud Native Security",
+                    "description_fa": "کوبرنتیس (n.d.). بررسی اجمالی امنیت بومی ابری. بازبینی شده در ۸ مارس ۲۰۲۳."
                 },
                 {
                     "source_name": "Microsoft AKS Azure AD 2023",
                     "description": "Microsoft. (2023, February 27). AKS-managed Azure Active Directory integration. Retrieved March 8, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/azure/aks/managed-aad"
+                    "url": "https://learn.microsoft.com/en-us/azure/aks/managed-aad",
+                    "source_name_fa": "Microsoft AKS Azure AD 2023",
+                    "description_fa": "مایکروسافت. (27 فوریه 2023). ادغام Azure Active Directory با مدیریت AKS. بازبینی شده در ۸ مارس ۲۰۲۳."
                 },
                 {
                     "source_name": "Kubernetes API Control Access",
                     "description": "The Kubernetes Authors. (n.d.). Controlling Access to The Kubernetes API. Retrieved March 29, 2021.",
-                    "url": "https://kubernetes.io/docs/concepts/security/controlling-access/"
+                    "url": "https://kubernetes.io/docs/concepts/security/controlling-access/",
+                    "source_name_fa": "دسترسی کنترل API Kubernetes",
+                    "description_fa": "نویسندگان کوبرنتیس (n.d.). کنترل دسترسی به Kubernetes API. بازبینی شده در 29 مارس 2021."
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +49,8 @@
             "target_ref": "attack-pattern--56e0d8b8-3e25-49dd-9050-3aa252f5aa92",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "description_fa": "ارتباطات با سرویس کانتینر را به کانال های مدیریت شده و ایمن محدود کنید، مانند سوکت های محلی Unix یا دسترسی از راه دور از طریق SSH. برای برقراری ارتباط با APIها از طریق TLS، با غیرفعال کردن دسترسی بدون احراز هویت به Docker API، سرور Kubernetes API و برنامه‌های وب هماهنگ‌سازی کانتینر، به پورت امن نیاز دارید. مجاز به دسترسی به سرور API است.(Citation: Kubernetes Cloud Native Security) در صورت امکان، دسترسی به موقع (JIT) را به API Kubernetes فعال کنید تا محدودیت‌های بیشتری برای دسترسی اعمال کنید.(Citation: Microsoft AKS Azure AD 2023) (Citation: Docker Daemon Socket Protect) (Citation: Kubernetes API Control Access)"
         }
     ]
 }

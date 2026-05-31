@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0030#AN0087",
-                    "external_id": "AN0087"
+                    "external_id": "AN0087",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredIAMConditions",
-                    "description": "Specific condition keys (SourceIp, RequestedRegion, MFAAuthenticated) tuned per environment."
+                    "description": "Specific condition keys (SourceIp, RequestedRegion, MFAAuthenticated) tuned per environment.",
+                    "description_fa": "کلیدهای شرایط خاص (SourceIp، RequestedRegion، MFAAuthenticated) در هر محیط تنظیم شده اند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates policy modification with follow-on logins from newly permitted sources."
+                    "description": "Correlates policy modification with follow-on logins from newly permitted sources.",
+                    "description_fa": "اصلاح خط مشی را با ورودهای بعدی از منابع تازه مجاز مرتبط می کند."
                 },
                 {
                     "field": "PrivilegedAccounts",
-                    "description": "List of administrative accounts to prioritize when monitoring for conditional access changes."
+                    "description": "List of administrative accounts to prioritize when monitoring for conditional access changes.",
+                    "description_fa": "فهرست حساب‌های اداری برای اولویت‌بندی هنگام نظارت بر تغییرات دسترسی مشروط."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0087",
+            "description_fa": "تغییراتی را در شرایط یا خط‌مشی‌های IAM که رفتار احراز هویت را تغییر می‌دهند، مانند افزودن IP‌های قابل اعتماد مجاز، حذف الزامات MFA یا تغییر محدودیت‌های دسترسی منطقه‌ای تشخیص می‌دهد. تشخیص رفتار بر به‌روزرسانی‌های خط‌مشی غیرعادی مرتبط با حساب‌های دارای امتیاز و فعالیت‌های ورود مشکوک بعدی از مناطق یا دستگاه‌هایی که قبلاً مسدود شده‌اند تمرکز دارد."
         }
     ]
 }

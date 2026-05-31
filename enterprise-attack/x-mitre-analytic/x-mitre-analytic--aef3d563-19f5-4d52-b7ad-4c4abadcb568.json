@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0135#AN0379",
-                    "external_id": "AN0379"
+                    "external_id": "AN0379",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessImageName",
-                    "description": "Limit to uncommon clients (e.g., scripts or CLI tools using .NET SMTP libraries)"
+                    "description": "Limit to uncommon clients (e.g., scripts or CLI tools using .NET SMTP libraries)",
+                    "description_fa": "محدود به کلاینت‌های غیر معمول (مانند اسکریپت‌ها یا ابزارهای CLI با استفاده از کتابخانه‌های NET SMTP)"
                 },
                 {
                     "field": "DestPortFilter",
-                    "description": "Typically 25, 587, 993, 995, or 465 \u2013 flag anomalies"
+                    "description": "Typically 25, 587, 993, 995, or 465 – flag anomalies",
+                    "description_fa": "معمولاً 25، 587، 993، 995 یا 465 - ناهنجاری های پرچم"
                 },
                 {
                     "field": "AttachmentType",
-                    "description": "Flag suspicious attachments (e.g., .zip, .7z, .bin)"
+                    "description": "Flag suspicious attachments (e.g., .zip, .7z, .bin)",
+                    "description_fa": "پرچم‌گذاری پیوست‌های مشکوک (مانند .zip، .7z، .bin)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0379",
+            "description_fa": "استفاده غیرمجاز از SMTP/IMAP/POP3 توسط باینری‌های مشکوک (مانند PowerShell، rundll32) برای استخراج داده‌ها یا beacon از طریق ایمیل، اغلب با دور زدن فیلترهای پراکسی یا محتوا را شناسایی می‌کند."
         }
     ]
 }

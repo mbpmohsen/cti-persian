@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0322#AN0913",
-                    "external_id": "AN0913"
+                    "external_id": "AN0913",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "NOPThreshold",
-                    "description": "High proportion of 0x90 opcodes indicating junk code \u2013 tune to suppress noise from some packing tools"
+                    "description": "High proportion of 0x90 opcodes indicating junk code – tune to suppress noise from some packing tools",
+                    "description_fa": "نسبت بالای کدهای 0x90 که کدهای ناخواسته را نشان می دهد - تنظیم برای سرکوب نویز برخی از ابزارهای بسته بندی"
                 },
                 {
                     "field": "ExecutableSizeThreshold",
-                    "description": "Size range for abnormally large binaries relative to their runtime behavior"
+                    "description": "Size range for abnormally large binaries relative to their runtime behavior",
+                    "description_fa": "محدوده اندازه برای باینری های غیرعادی بزرگ نسبت به رفتار زمان اجرا آنها"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window between file creation and execution \u2013 short intervals may indicate staged payload execution"
+                    "description": "Window between file creation and execution – short intervals may indicate staged payload execution",
+                    "description_fa": "پنجره بین ایجاد و اجرا فایل - فواصل کوتاه ممکن است اجرای بار مرحله ای را نشان دهد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0913",
+            "description_fa": "وجود فایل‌های اجرایی با بالشتک NOP بالا، اندازه باینری غیرمعمول بزرگ برای عملکرد آن‌ها، و اجرای بعدی یا تزریق حافظه از چنین فایل‌هایی را تشخیص می‌دهد، به‌ویژه زمانی که از مسیرهای موقت یا فضای کاربر سرچشمه می‌گیرد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0150#AN0429",
-                    "external_id": "AN0429"
+                    "external_id": "AN0429",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BootloaderHashBaseline",
-                    "description": "Baseline checksums of GRUB, kernel, and initramfs images"
+                    "description": "Baseline checksums of GRUB, kernel, and initramfs images",
+                    "description_fa": "جمع‌های چک پایه تصاویر GRUB، هسته و initramfs"
                 },
                 {
                     "field": "EFIFileAllowlist",
-                    "description": "Trusted EFI executables for Linux environments"
+                    "description": "Trusted EFI executables for Linux environments",
+                    "description_fa": "فایل های اجرایی EFI قابل اعتماد برای محیط های لینوکس"
                 },
                 {
                     "field": "AlertThresholds",
-                    "description": "Tunable thresholds for triggering alerts on repeated EFI/bootloader writes"
+                    "description": "Tunable thresholds for triggering alerts on repeated EFI/bootloader writes",
+                    "description_fa": "آستانه های قابل تنظیم برای ایجاد هشدار در نوشتن مکرر EFI/bootloader"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0429",
+            "description_fa": "شناسایی عملیات نوشتن مشکوک برای مسدود کردن دستگاه‌ها، تغییرات فایل‌های بوت‌لودر (GRUB، initrd، vmlinuz) و تغییرات غیرمنتظره در پارتیشن سیستم EFI. اجرای ممتاز ابزارهایی مانند dd، grub-install یا efibootmgr را که بخش‌های راه‌انداز یا ورودی‌های لودر را تغییر می‌دهند، نظارت می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0130#AN0366",
-                    "external_id": "AN0366"
+                    "external_id": "AN0366",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,22 +41,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PrivilegedRoles",
-                    "description": "Set of accounts or roles allowed to retrieve secrets; deviations may indicate misuse."
+                    "description": "Set of accounts or roles allowed to retrieve secrets; deviations may indicate misuse.",
+                    "description_fa": "مجموعه ای از حساب ها یا نقش هایی که مجاز به بازیابی اسرار هستند. انحرافات ممکن است نشان دهنده سوء استفاده باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal window to correlate secret access with authentication and anomalous context."
+                    "description": "Temporal window to correlate secret access with authentication and anomalous context.",
+                    "description_fa": "پنجره زمانی برای ارتباط دسترسی مخفی با احراز هویت و زمینه غیرعادی."
                 },
                 {
                     "field": "AccessPatterns",
-                    "description": "Expected frequency and volume of secret retrievals per user/service; anomalies may indicate exfiltration."
+                    "description": "Expected frequency and volume of secret retrievals per user/service; anomalies may indicate exfiltration.",
+                    "description_fa": "تعداد مورد انتظار و حجم بازیابی های مخفی به ازای هر کاربر/سرویس. ناهنجاری ها ممکن است نشان دهنده اکسفیلتراسیون باشد."
                 },
                 {
                     "field": "RegionConstraints",
-                    "description": "Regions in which secret access is expected; access from unusual geographies may indicate compromise."
+                    "description": "Regions in which secret access is expected; access from unusual geographies may indicate compromise.",
+                    "description_fa": "مناطقی که دسترسی مخفی در آنها مورد انتظار است. دسترسی از مناطق جغرافیایی غیر معمول ممکن است نشان دهنده سازش باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0366",
+            "description_fa": "تشخیص دسترسی مشکوک به سیستم های مدیریت مخفی بومی ابری (AWS Secrets Manager، GCP Secret Manager، Azure Key Vault، HashiCorp Vault). تمرکز بر فعالیت های غیرعادی بازیابی راز، مانند دسترسی به اسرار توسط هویت های غیرمعمول، از مناطق غیرمنتظره، خارج از ساعات کاری یا با حجم بالا. تماس‌های API را با بازیابی مخفی با رویدادهای احراز هویت اطراف، مفروضات نقش و الگوهای اجرای غیرعادی مرتبط می‌کند."
         }
     ]
 }

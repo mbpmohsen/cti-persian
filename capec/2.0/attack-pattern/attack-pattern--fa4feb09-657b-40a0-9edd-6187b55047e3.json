@@ -9,42 +9,54 @@
                 {
                     "external_id": "CAPEC-660",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/660.html"
+                    "url": "https://capec.mitre.org/data/definitions/660.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Process Injection",
                     "external_id": "T1055",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1055"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1055",
+                    "description_fa": "تزریق فرآیند",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Ansgar Kellner, Micha Horlboge, Konrad Rieck, Christian Wressnegger, False Sense of Security: A Study on the Effectivity of Jailbreak Detection in Banking Apps, 2019--06---17, Technische Universität Braunschweig",
                     "external_id": "REF-624",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://cybersecurity.att.com/blogs/security-essentials/mobile-phishing"
+                    "url": "https://cybersecurity.att.com/blogs/security-essentials/mobile-phishing",
+                    "description_fa": "انسگار کلنر، میکا هورلبوگ، کنراد ریک، کریستین ورسنگر، ​​احساس امنیت کاذب: مطالعه ای در مورد اثربخشی تشخیص فرار از زندان در برنامه های بانکی، 2019--06---17، Technische Universität Braunschweig",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "San-Tsai Sun, Andrea Cuadros, Konstantin Beznosov, Android Rooting: Methods, Detection, and Evasion, 2019--06---17, Technische Universität Braunschweig",
                     "external_id": "REF-625",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://lersse-dl.ece.ubc.ca/record/310/files/p3.pdf?subformat=pdfa"
+                    "url": "http://lersse-dl.ece.ubc.ca/record/310/files/p3.pdf?subformat=pdfa",
+                    "description_fa": "San-Tsai Sun، Andrea Cuadros، Konstantin Beznosov، Android Rooting: Methods, Detection, and Evasion، 2019--06---17، Technische Universität Braunschweig",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jose Lopes, Who owns your runtime?, 2015--10---12, Nettitude Labs",
                     "external_id": "REF-626",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://labs.nettitude.com/blog/ios-and-android-runtime-and-anti-debugging-protections/#hooking"
+                    "url": "https://labs.nettitude.com/blog/ios-and-android-runtime-and-anti-debugging-protections/#hooking",
+                    "description_fa": "خوزه لوپس، زمان اجرای شما متعلق به چه کسی است؟، 2015--10---12، Nettitude Labs",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Suresh Khutale, Android Root Detection Bypass by Reverse Engineering APK, 2018--03---06, InfoSec Institute",
                     "external_id": "REF-627",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://resources.infosecinstitute.com/topic/android-root-detection-bypass-reverse-engineering-apk/"
+                    "url": "https://resources.infosecinstitute.com/topic/android-root-detection-bypass-reverse-engineering-apk/",
+                    "description_fa": "Suresh Khutale، بای پس تشخیص ریشه اندروید توسط Reverse Engineering APK، 2018--03---06، موسسه InfoSec",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--fa4feb09-657b-40a0-9edd-6187b55047e3",
@@ -75,6 +87,20 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Through Root/Jailbreak Detection Evasion via Hooking, the adversary compromises the integrity of the application.)"
+                ],
+                "Access_Control_fa": [
+                    "Read Data (یک دشمن ممکن است از Root/Jailbreak Detection Evasion از طریق Hooking استفاده کند تا اطلاعات حساس را به دست آورد.)"
+                ],
+                "Authorization_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (از طریق Root/Jailbreak Detection Evasion از طریق Hooking، حریف یکپارچگی برنامه را به خطر می اندازد.)",
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "Read Data (یک دشمن ممکن است از Root/Jailbreak Detection Evasion از طریق Hooking استفاده کند تا اطلاعات حساس را به دست آورد.)"
+                ],
+                "Integrity_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (از طریق Root/Jailbreak Detection Evasion از طریق Hooking، حریف یکپارچگی برنامه را به خطر می اندازد.)"
                 ]
             },
             "x_capec_domains": [
@@ -95,11 +121,27 @@
             ],
             "x_capec_skills_required": {
                 "High": "Knowledge about Root/Jailbreak detection and evasion techniques.",
-                "Medium": "Knowledge about code hooking."
+                "Medium": "Knowledge about code hooking.",
+                "High_fa": "دانش در مورد شناسایی ریشه / فرار از زندان و تکنیک های فرار.",
+                "Medium_fa": "دانش در مورد قلاب کد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک برنامه تلفن همراه غیرمحدود را مجبور می‌کند تا کد یا فایل‌های کد دلخواه را از طریق Hooking بارگیری کند، تا از شناسایی Root/Jailbreak فرار کند. کاربران دستگاه های تلفن همراه اغلب دستگاه های خود را به منظور به دست آوردن کنترل اداری بر روی سیستم عامل تلفن همراه و/یا نصب برنامه های تلفن همراه شخص ثالث که توسط فروشگاه های برنامه های کاربردی مجاز ارائه نشده اند (مانند فروشگاه Google Play و Apple App Store) روت یا جیلبریک می کنند. دشمنان ممکن است از این قابلیت ها برای افزایش امتیازات یا دور زدن کنترل دسترسی در برنامه های قانونی استفاده کنند. اگرچه بسیاری از برنامه‌های تلفن همراه قبل از استفاده مجاز از برنامه، روت یا جیلبریک بودن دستگاه تلفن همراه را بررسی می‌کنند، ممکن است دشمنان بتوانند برای دور زدن این بررسی‌ها، کد را «قلاب کنند». فرار موفقیت‌آمیز شناسایی Root/Jailbreak به حریف اجازه می‌دهد تا دستورات اداری را اجرا کند، داده‌های محرمانه را به دست آورد، هویت کاربران قانونی برنامه را جعل کند و موارد دیگر.",
+            "name_fa": "Root/Jailbreak Detection Evasion از طریق Hooking",
+            "x_capec_example_instances_fa": [
+                "یک دشمن در تلاش برای به خطر انداختن اطلاعات حساس کاربر، یک برنامه بانکی بدون محدودیت iOS را هدف قرار می دهد. دشمن کد زمان اجرا Objective-C را ایجاد می کند که همیشه هنگام بررسی وجود برنامه Cydia، \"false\" را برمی گرداند. سپس کد مخرب به صورت پویا از طریق متغیر محیطی DYLD_INSERT_LIBRARIES در برنامه بارگذاری می شود. وقتی برنامه‌های بانکی وجود Cydia را بررسی می‌کنند، کد قلاب‌شده «false» را برمی‌گرداند، بنابراین برنامه فرض می‌کند دستگاه موجود است (یعنی جیلبریک نیست) و به آن اجازه دسترسی به برنامه را می‌دهد. با این حال، حریف به تازگی از تشخیص Jailbreak فرار کرده است و اکنون می‌تواند اطلاعات کاربری و/یا جزئیات تراکنش را جمع‌آوری کند.",
+                "یک دشمن یک برنامه رای گیری تلفن همراه در دستگاه اندروید را با هدف ارتکاب کلاهبرداری از رأی دهندگان هدف قرار می دهد. با استفاده از چارچوب Xposed، حریف می‌تواند کد جاوا را ایجاد کرده و به برنامه‌ای متصل کند که روش‌های تشخیص ریشه را دور می‌زند. هنگامی که برنامه رای‌گیری تلاش می‌کند یک دستگاه روت شده را با بررسی بسته‌های نصب شده شناخته شده مرتبط با Rooting شناسایی کند، کد قلاب‌شده بسته‌های مشکوک را قبل از بازگشت به برنامه حذف می‌کند. در نتیجه، برنامه بر این باور است که دستگاه موجود است (یعنی روت نشده است) در حالی که در واقع اینطور نیست. با فرار از تشخیص ریشه، دشمن اکنون می تواند به نامزد مورد نظر خود به عنوان کاربران مختلف رای دهد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه با پتانسیل حمله: </b>دشمن یک برنامه تلفن همراه را جستجو و شناسایی می‌کند که می‌تواند برای اهداف مخرب (مانند بانکداری، رای‌گیری، یا پزشکی) مورد سوء استفاده قرار گیرد. برنامه‌ها).</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>جستجوی فروشگاه‌های برنامه‌های کاربردی برای برنامه‌های تلفن همراه که ارزش بهره‌برداری را دارند</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> کد مورد نظر برای تبلیغات تلفن همراه انتخاب شده است. کدهای موجود را توسعه می‌دهد یا از کدهای موجود استفاده می‌کند که به برنامه هدف متصل می‌شوند تا از روش‌های تشخیص Root/Jailbreak فرار کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>برای دور زدن Root/Jailbreak، کدهای موجود را توسعه دهید یا از کدهای اهرمی برای دور زدن Root/Jailbreak استفاده کنید. کار می کند.</td></tr><tr><td>به طور مکرر کد را توسعه دهید تا زمانی که از روش های تشخیص ریشه/جیل بریک اجتناب شود.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>برای فرار از Root، روش‌های hooking کد را اجرا کنید:HookBreakion Hooking را اجرا کنید</td></tr></tbody></table></ol></div><div><h3> توسعه داده شده یا به دست آمده است، برای فرار از روش‌های شناسایی Root/Jailbreak، کد را در برابر برنامه مورد نظر اجرا کنید.",
+            "x_capec_prerequisites_fa": [
+                "برنامه مورد نظر باید بدون محدودیت باشد تا امکان قلاب کردن کد وجود داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید یک دستگاه تلفن همراه Rooted/Jailbroken داشته باشد.",
+                "حریف باید دسترسی کافی به برنامه هدف برای کنترل کد یا فایل موجود داشته باشد."
+            ]
         }
     ],
     "spec_version": "2.0",

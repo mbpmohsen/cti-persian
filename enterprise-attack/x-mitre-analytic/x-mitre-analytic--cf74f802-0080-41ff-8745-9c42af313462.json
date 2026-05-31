@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0284#AN0789",
-                    "external_id": "AN0789"
+                    "external_id": "AN0789",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedApps",
-                    "description": "Processes not normally associated with data uploads (e.g., Preview, Calculator)."
+                    "description": "Processes not normally associated with data uploads (e.g., Preview, Calculator).",
+                    "description_fa": "فرآیندهایی که معمولاً با آپلود داده ها مرتبط نیستند (مانند پیش نمایش، ماشین حساب)."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "High entropy detection to flag encoded or encrypted data exfiltration."
+                    "description": "High entropy detection to flag encoded or encrypted data exfiltration.",
+                    "description_fa": "تشخیص آنتروپی بالا برای پرچم گذاری استخراج داده های رمزگذاری شده یا رمزگذاری شده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0789",
+            "description_fa": "فرآیندهایی مانند osascript، curl، یا برنامه های آفیس که داده ها را به API ها/دامنه های ذخیره سازی متن ارسال می کنند. دیدگاه مدافع: بریده‌دان یا فایل غیرعادی توسط برنامه‌های غیرمنتظره خوانده می‌شود و بلافاصله پس از آن درخواست‌های HTTPS خروجی به سرویس‌های pastebin مانند خوانده می‌شود."
         }
     ]
 }

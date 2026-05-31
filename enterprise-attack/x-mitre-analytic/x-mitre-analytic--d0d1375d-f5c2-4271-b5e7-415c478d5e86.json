@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0016#AN0048",
-                    "external_id": "AN0048"
+                    "external_id": "AN0048",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcess",
-                    "description": "Defenders can tune based on trusted or known-good parent process relationships"
+                    "description": "Defenders can tune based on trusted or known-good parent process relationships",
+                    "description_fa": "مدافعان می توانند بر اساس روابط فرآیندی والدین قابل اعتماد یا شناخته شده خوب تنظیم شوند"
                 },
                 {
                     "field": "ImagePathContains",
-                    "description": "Regex match on adversary tool or enumeration script used"
+                    "description": "Regex match on adversary tool or enumeration script used",
+                    "description_fa": "تطبیق Regex در ابزار دشمن یا اسکریپت شمارش استفاده شده"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0048",
+            "description_fa": "دشمن با استفاده از WMI، پرس و جوهای رجیستری و ابزارهای داخلی (مانند tasklist، netsh، sc query) دستوراتی را برای شمارش عوامل آنتی ویروس، EDR یا فایروال نصب شده اجرا می کند. با امتیازات فرآیند بالا یا استفاده از موتور برنامه نویسی مرتبط است."
         }
     ]
 }

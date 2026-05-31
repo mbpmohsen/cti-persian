@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0592#AN1630",
-                    "external_id": "AN1630"
+                    "external_id": "AN1630",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedAdminIPs",
-                    "description": "Expected IP ranges or hosts permitted to query configuration repositories; deviations may indicate compromise."
+                    "description": "Expected IP ranges or hosts permitted to query configuration repositories; deviations may indicate compromise.",
+                    "description_fa": "محدوده های IP مورد انتظار یا میزبان هایی که مجاز به پرس و جو از مخازن پیکربندی هستند. انحرافات ممکن است نشان دهنده سازش باشد."
                 },
                 {
                     "field": "NormalAccessTimeWindow",
-                    "description": "Time periods when configuration queries normally occur; anomalies outside these windows may be suspicious."
+                    "description": "Time periods when configuration queries normally occur; anomalies outside these windows may be suspicious.",
+                    "description_fa": "دوره‌های زمانی که معمولاً درخواست‌های پیکربندی رخ می‌دهند. ناهنجاری های خارج از این پنجره ها ممکن است مشکوک باشد."
                 },
                 {
                     "field": "QueryVolumeThreshold",
-                    "description": "Number of queries allowed within a given period before an anomaly is triggered."
+                    "description": "Number of queries allowed within a given period before an anomaly is triggered.",
+                    "description_fa": "تعداد پرس و جوهای مجاز در یک دوره معین قبل از شروع یک ناهنجاری."
                 },
                 {
                     "field": "ProtocolUsageBaseline",
-                    "description": "Expected usage of SNMP, NETCONF, or RESTCONF; deviations from baseline patterns may indicate misuse."
+                    "description": "Expected usage of SNMP, NETCONF, or RESTCONF; deviations from baseline patterns may indicate misuse.",
+                    "description_fa": "استفاده مورد انتظار از SNMP، NETCONF، یا RESTCONF. انحراف از الگوهای پایه ممکن است نشان دهنده استفاده نادرست باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1630",
+            "description_fa": "مدافعان ممکن است تلاش‌های دشمن را برای استخراج داده‌های پیکربندی از مخازن مدیریت با نظارت بر جستارهای SNMP غیرعادی، تماس‌های API یا درخواست‌های پروتکل (مانند NETCONF، RESTCONF) که پیکربندی سیستم را برمی‌شمارند، مشاهده کنند. توالی های مشکوک شامل پرس و جوهای مکرر از IP های نامعتبر، انواع پرس و جو غیرعادی که داده های پیکربندی حساس را درخواست می کنند، یا دسترسی به مخزن خارج از پنجره های معمول تعمیر و نگهداری اداری رخ می دهد. ممکن است تلاش‌های غیرعادی برای احراز هویت، شمارش ناگهانی موجودی دستگاه، یا انتقال داده‌های انبوه فایل‌های پیکربندی نیز مشاهده شود."
         }
     ]
 }

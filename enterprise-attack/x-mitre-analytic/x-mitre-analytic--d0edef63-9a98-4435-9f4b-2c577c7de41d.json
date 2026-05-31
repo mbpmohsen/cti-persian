@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0213#AN0598",
-                    "external_id": "AN0598"
+                    "external_id": "AN0598",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LaunchdJobContext",
-                    "description": "Agent context in which transfer occurs (e.g., user/privileged)"
+                    "description": "Agent context in which transfer occurs (e.g., user/privileged)",
+                    "description_fa": "زمینه عاملی که در آن انتقال رخ می دهد (به عنوان مثال، کاربر/محصول)"
                 },
                 {
                     "field": "TransferSizeMedian",
-                    "description": "Used to define what constitutes 'fixed size' chunks"
+                    "description": "Used to define what constitutes 'fixed size' chunks",
+                    "description_fa": "برای تعیین تکه‌های «اندازه ثابت» استفاده می‌شود"
                 },
                 {
                     "field": "TransferProtocolOutlier",
-                    "description": "Detect if protocol usage deviates from common apps for given destination"
+                    "description": "Detect if protocol usage deviates from common apps for given destination",
+                    "description_fa": "تشخیص دهید که آیا استفاده از پروتکل از برنامه های رایج برای مقصد مشخص منحرف می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0598",
+            "description_fa": "فرآیندهای موجود در macOS اتصالات خارجی را آغاز می کنند که به طور مداوم داده ها را در اندازه های ثابت با استفاده از LaunchAgents یا کاربران غیرمنتظره منتقل می کنند."
         }
     ]
 }

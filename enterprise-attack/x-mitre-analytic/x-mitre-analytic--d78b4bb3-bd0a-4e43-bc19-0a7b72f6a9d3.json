@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0320#AN0903",
-                    "external_id": "AN0903"
+                    "external_id": "AN0903",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousParentProcesses",
-                    "description": "Non-standard binaries launching PowerShell or netstat (e.g., winword.exe spawning powershell.exe)."
+                    "description": "Non-standard binaries launching PowerShell or netstat (e.g., winword.exe spawning powershell.exe).",
+                    "description_fa": "باینری‌های غیر استانداردی که PowerShell یا netstat را راه‌اندازی می‌کنند (به عنوان مثال، winword.exe در حال ایجاد powershell.exe)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates discovery behavior before lateral movement or credential access."
+                    "description": "Correlates discovery behavior before lateral movement or credential access.",
+                    "description_fa": "رفتار کشف را قبل از حرکت جانبی یا دسترسی به اعتبار مرتبط می کند."
                 },
                 {
                     "field": "CommandPatternList",
-                    "description": "Regex or keyword patterns to match discovery utilities (e.g., `netstat`, `Get-NetTCPConnection`)."
+                    "description": "Regex or keyword patterns to match discovery utilities (e.g., `netstat`, `Get-NetTCPConnection`).",
+                    "description_fa": "الگوهای Regex یا کلمه کلیدی برای مطابقت با ابزارهای اکتشافی (مانند «netstat»، «Get-NetTCPConnection»)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0903",
+            "description_fa": "استفاده از دستورات یا فایل های باینری (مانند netstat، PowerShell Get-NetTCPConnection) و تماس های WMI یا API را برای شمارش اتصالات شبکه محلی یا راه دور تشخیص می دهد."
         }
     ]
 }

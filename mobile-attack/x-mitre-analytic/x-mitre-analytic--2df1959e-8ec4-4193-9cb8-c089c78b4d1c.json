@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0637#AN1711",
-                    "external_id": "AN1711"
+                    "external_id": "AN1711",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.376Z",
             "name": "Analytic 1711",
-            "description": "The defender correlates foreground service start or promotion activity with persistent-notification presentation, long-lived application execution, and continued access to while-in-use sensors or network activity outside expected user-driven context. The analytic looks for an application invoking foreground service APIs, sustaining a foreground state longer than expected for its declared role, and retaining camera, microphone, location, or other sensor access while the device is locked, the app lacks recent interaction, or the notification identity/function does not match the application\u2019s behavior.",
+            "description": "The defender correlates foreground service start or promotion activity with persistent-notification presentation, long-lived application execution, and continued access to while-in-use sensors or network activity outside expected user-driven context. The analytic looks for an application invoking foreground service APIs, sustaining a foreground state longer than expected for its declared role, and retaining camera, microphone, location, or other sensor access while the device is locked, the app lacks recent interaction, or the notification identity/function does not match the application’s behavior.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,33 +53,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to run foreground services such as navigation, fitness, calling, media playback, enterprise VPN, accessibility, or device-management apps"
+                    "description": "Apps legitimately expected to run foreground services such as navigation, fitness, calling, media playback, enterprise VPN, accessibility, or device-management apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود خدمات پیش‌زمینه مانند ناوبری، تناسب اندام، تماس، پخش رسانه، VPN سازمانی، قابلیت دسترسی یا برنامه‌های مدیریت دستگاه را اجرا کنند."
                 },
                 {
                     "field": "AllowedServiceTypes",
-                    "description": "Approved foreground service types and role-to-type mappings, especially for Android 14+ and later"
+                    "description": "Approved foreground service types and role-to-type mappings, especially for Android 14+ and later",
+                    "description_fa": "انواع سرویس های پیش زمینه تایید شده و نگاشت نقش به نوع، به ویژه برای اندروید 14 و بالاتر و بالاتر"
                 },
                 {
                     "field": "ForegroundDurationThreshold",
-                    "description": "Duration a foreground service may legitimately remain active before suspicion increases"
+                    "description": "Duration a foreground service may legitimately remain active before suspicion increases",
+                    "description_fa": "مدت زمان یک سرویس پیش زمینه ممکن است به طور قانونی قبل از افزایش سوء ظن فعال باقی بماند"
                 },
                 {
                     "field": "SensorAfterPromotionWindow",
-                    "description": "Maximum expected delay between service promotion and sensor activation for legitimate workflows"
+                    "description": "Maximum expected delay between service promotion and sensor activation for legitimate workflows",
+                    "description_fa": "حداکثر تأخیر مورد انتظار بین ارتقای خدمات و فعال‌سازی حسگر برای گردش‌های کاری قانونی"
                 },
                 {
                     "field": "NotificationMismatchPatterns",
-                    "description": "Patterns indicating misleading or impersonating foreground notifications, such as benign-looking text or mismatched app function"
+                    "description": "Patterns indicating misleading or impersonating foreground notifications, such as benign-looking text or mismatched app function",
+                    "description_fa": "الگوهایی که اعلان‌های پیش‌زمینه گمراه‌کننده یا جعل هویت را نشان می‌دهند، مانند متنی خوش‌خیم یا عملکرد برنامه ناسازگار"
                 },
                 {
                     "field": "RecentInteractionThreshold",
-                    "description": "How recently the user must have interacted with the app for sensor or network activity to be considered expected"
+                    "description": "How recently the user must have interacted with the app for sensor or network activity to be considered expected",
+                    "description_fa": "اخیراً کاربر باید با برنامه تعامل داشته باشد تا فعالیت حسگر یا شبکه مورد انتظار در نظر گرفته شود"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum sustained outbound volume or beacon frequency during persistent foreground execution"
+                    "description": "Minimum sustained outbound volume or beacon frequency during persistent foreground execution",
+                    "description_fa": "حداقل حجم خروجی پایدار یا فرکانس چراغ در طول اجرای مداوم پیش زمینه"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1711",
+            "description_fa": "مدافع شروع یا فعالیت تبلیغی سرویس پیش زمینه را با ارائه اعلان مداوم، اجرای طولانی مدت برنامه و دسترسی مداوم به حسگرهای در حال استفاده یا فعالیت شبکه خارج از زمینه مورد انتظار کاربر محور مرتبط می کند. تجزیه و تحلیل به دنبال برنامه‌ای می‌گردد که APIهای سرویس پیش‌زمینه را فراخوانی می‌کند، وضعیت پیش‌زمینه را بیش از حد انتظار برای نقش اعلام‌شده خود حفظ می‌کند، و دوربین، میکروفون، مکان یا سایر دسترسی‌های حسگر را در زمانی که دستگاه قفل است، برنامه فاقد تعامل اخیر است یا هویت/عملکرد اعلان با رفتار برنامه مطابقت ندارد، حفظ می‌کند."
         }
     ]
 }

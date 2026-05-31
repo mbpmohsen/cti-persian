@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0078#AN0215",
-                    "external_id": "AN0215"
+                    "external_id": "AN0215",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Off-hours API usage or configuration changes are more suspicious outside business context."
+                    "description": "Off-hours API usage or configuration changes are more suspicious outside business context.",
+                    "description_fa": "استفاده از API بدون ساعات کاری یا تغییرات پیکربندی خارج از زمینه کسب و کار مشکوک تر است."
                 },
                 {
                     "field": "UserAgent",
-                    "description": "Unexpected SDK usage (e.g., `boto3`, `azcopy`, unknown User-Agent strings)."
+                    "description": "Unexpected SDK usage (e.g., `boto3`, `azcopy`, unknown User-Agent strings).",
+                    "description_fa": "استفاده غیرمنتظره از SDK (به عنوان مثال، «boto3»، «azcopy»، رشته‌های ناشناخته User-Agent)."
                 },
                 {
                     "field": "CredentialType",
-                    "description": "High-risk if access token or API key used outside expected geographic/IP behavior."
+                    "description": "High-risk if access token or API key used outside expected geographic/IP behavior.",
+                    "description_fa": "اگر نشانه دسترسی یا کلید API خارج از رفتار جغرافیایی/IP مورد انتظار استفاده شود، خطر بالایی دارد."
                 },
                 {
                     "field": "APISequence",
-                    "description": "Unusual or rapid chaining of provisioning, IAM, and execution APIs."
+                    "description": "Unusual or rapid chaining of provisioning, IAM, and execution APIs.",
+                    "description_fa": "زنجیره‌ای غیرمعمول یا سریع APIهای تأمین، IAM و اجرا."
                 },
                 {
                     "field": "ConsoleContext",
-                    "description": "Browser-based Cloud Shell vs local CLI may indicate insider vs external use case."
+                    "description": "Browser-based Cloud Shell vs local CLI may indicate insider vs external use case.",
+                    "description_fa": "Cloud Shell مبتنی بر مرورگر در مقابل CLI محلی ممکن است موارد استفاده داخلی و خارجی را نشان دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0215",
+            "description_fa": "استفاده خصمانه از APIهای ابری را برای اجرای فرمان، کنترل منابع یا شناسایی شناسایی می کند. تمرکز بر سوء استفاده از زبان CLI/SDK/اسکریپت نویسی از طریق اعتبارنامه های سرقت شده یا پوسته های ابری درون مرورگر. نظارت بر تماس‌های API غیرعادی با تغییرات زمینه احراز هویت (به عنوان مثال، رمز دزدیده شده -> اقدام ممتاز) و تأثیرات خدمات متقابل."
         }
     ]
 }

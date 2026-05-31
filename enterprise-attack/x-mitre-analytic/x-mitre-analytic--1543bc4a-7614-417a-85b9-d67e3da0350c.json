@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0131#AN0367",
-                    "external_id": "AN0367"
+                    "external_id": "AN0367",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DataVolumeThresholdMB",
-                    "description": "Set threshold for outbound volume (e.g., >50MB in a single connection)."
+                    "description": "Set threshold for outbound volume (e.g., >50MB in a single connection).",
+                    "description_fa": "آستانه را برای حجم خروجی تنظیم کنید (به عنوان مثال، بیش از 50 مگابایت در یک اتصال واحد)."
                 },
                 {
                     "field": "ProtocolAllowList",
-                    "description": "Allow-listed protocols in use for specific machines or users (e.g., FTP allowed for backups)."
+                    "description": "Allow-listed protocols in use for specific machines or users (e.g., FTP allowed for backups).",
+                    "description_fa": "پروتکل‌های فهرست‌شده مجاز در حال استفاده برای ماشین‌ها یا کاربران خاص (مانند FTP مجاز برای پشتیبان‌گیری)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Define allowed time-of-day windows (e.g., flag after-hours file transfer)."
+                    "description": "Define allowed time-of-day windows (e.g., flag after-hours file transfer).",
+                    "description_fa": "پنجره های مجاز زمانی را تعریف کنید (به عنوان مثال، انتقال فایل پس از ساعت کاری را پرچم گذاری کنید)."
                 },
                 {
                     "field": "ParentProcessAnomaly",
-                    "description": "Identify anomalous parent-child process relationships (e.g., `winword.exe` spawning `ftp.exe`)."
+                    "description": "Identify anomalous parent-child process relationships (e.g., `winword.exe` spawning `ftp.exe`).",
+                    "description_fa": "روابط غیرعادی فرآیند والد-فرزند را شناسایی کنید (به عنوان مثال، «winword.exe» ایجاد «ftp.exe»)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0367",
+            "description_fa": "رفتار غیرعادی انتقال فایل خروجی را با استفاده از پروتکل‌هایی مانند FTP، SMB، SMTP یا DNS که شامل فرآیندهای غیر استاندارد، فعالیت‌های خارج از ساعت یا حجم غیرمعمول بالا است، تشخیص می‌دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0031#AN0089",
-                    "external_id": "AN0089"
+                    "external_id": "AN0089",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SignatureValidationResult",
-                    "description": "Allow tuning to include 'invalid', 'expired', or 'untrusted root' based on environment tolerance"
+                    "description": "Allow tuning to include 'invalid', 'expired', or 'untrusted root' based on environment tolerance",
+                    "description_fa": "بر اساس تحمل محیط، به تنظیم اجازه دهید «نامعتبر»، «منقضی شده» یا «ریشه نامعتبر» را شامل شود"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Helps tune false positives by limiting to suspicious parent process executions"
+                    "description": "Helps tune false positives by limiting to suspicious parent process executions",
+                    "description_fa": "با محدود کردن اجرای فرآیندهای والد مشکوک به تنظیم موارد مثبت کاذب کمک می کند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window between metadata check and process execution"
+                    "description": "Defines correlation window between metadata check and process execution",
+                    "description_fa": "پنجره همبستگی بین بررسی فراداده و اجرای فرآیند را تعریف می کند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0089",
+            "description_fa": "اجرای باینری ها با امضای دیجیتال نامعتبر، جایی که کد ادعای ابرداده امضا شده است اما اعتبارسنجی ناموفق است. رفتار اغلب با فرآیندهای والد مشکوک یا مسیرهای اجرایی غیرمنتظره مرتبط است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0475#AN1308",
-                    "external_id": "AN1308"
+                    "external_id": "AN1308",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlating rundll32 invocation with DLL load or network activity within X seconds."
+                    "description": "Correlating rundll32 invocation with DLL load or network activity within X seconds.",
+                    "description_fa": "ارتباط فراخوانی rundll32 با بار DLL یا فعالیت شبکه در عرض X ثانیه."
                 },
                 {
                     "field": "ParentProcessFilter",
-                    "description": "Limit detection to suspicious parent processes (e.g., explorer.exe, office apps) vs. trusted installers."
+                    "description": "Limit detection to suspicious parent processes (e.g., explorer.exe, office apps) vs. trusted installers.",
+                    "description_fa": "شناسایی را به فرآیندهای والد مشکوک (مانند explorer.exe، برنامه‌های آفیس) در مقایسه با نصب‌کننده‌های مورد اعتماد محدود کنید."
                 },
                 {
                     "field": "AllowedDLLs",
-                    "description": "Baseline list of legitimate DLLs frequently executed by rundll32 in the environment."
+                    "description": "Baseline list of legitimate DLLs frequently executed by rundll32 in the environment.",
+                    "description_fa": "لیست پایه ای از DLL های قانونی که اغلب توسط rundll32 در محیط اجرا می شوند."
                 },
                 {
                     "field": "ExternalIPRange",
-                    "description": "Scope of external IP ranges considered anomalous for rundll32 network connections."
+                    "description": "Scope of external IP ranges considered anomalous for rundll32 network connections.",
+                    "description_fa": "محدوده محدوده IP خارجی برای اتصالات شبکه rundll32 غیرعادی در نظر گرفته می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1308",
+            "description_fa": "شناسایی rundll32.exe با آرگومان های غیر معمول (.dll، .cpl، javascript:، mshtml) فراخوانی شده است. DLL هایی که معمولاً توسط rundll32 بارگذاری نمی شوند در حافظه نگاشت می شوند. Control_RunDLL یا RunHTMLApplication فراخوانی شد. DLL یا اسکریپت های مشکوک که از دیسک یا شبکه قابل دسترسی هستند. Rundll32 به دامنه های خارجی (به عنوان مثال، واکشی .sct یا .hta) دسترسی پیدا می کند."
         }
     ]
 }

@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-590",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/590.html"
+                    "url": "https://capec.mitre.org/data/definitions/590.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-300",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/300.html"
+                    "url": "http://cwe.mitre.org/data/definitions/300.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Abdelberi Chaabane, Terence Chen, Mathieu Cunche, Emiliano De Cristofaro, Arik Friedman, Mohamed Ali Kaafar, Censorship in the Wild: Analyzing Internet Filtering in Syria, 2014--02, IMC 2014",
                     "external_id": "REF-475",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "عبدالبری چابانه، ترنس چن، متیو کانچه، امیلیانو دی کریستوفارو، آریک فریدمن، محمدعلی کفار، سانسور در طبیعت: تحلیل فیلترینگ اینترنت در سوریه، 2014--02، IMC 2014",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5c216971-78b5-4ac1-9cbe-f46fe1c632d1",
@@ -36,6 +40,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Other (Blocking packets intended for a target IP address denies its availability to the user.)"
+                ],
+                "Availability_fa": [
+                    "سایر موارد (مسدود کردن بسته های در نظر گرفته شده برای یک آدرس IP هدف، در دسترس بودن آن را برای کاربر رد می کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -51,7 +58,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمنی که این نوع حمله را انجام می دهد، بسته هایی را که برای یک آدرس IP هدف قرار دارند، رها می کند. هدف جلوگیری از دسترسی به سرویس میزبانی شده در آدرس IP هدف است.",
+            "name_fa": "مسدود کردن آدرس IP",
+            "x_capec_example_instances_fa": [
+                "موقعیت‌های سانسور اطلاعات را برای اهداف سیاسی در نظر بگیرید، جایی که رژیم‌هایی که از دسترسی به سرویس‌های وب خاص جلوگیری می‌کنند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "این حمله به توانایی انجام بازرسی بسته عمیق با یک دستگاه In-Path نیاز دارد که می تواند ترافیک و/یا اتصال مورد نظر را حذف کند."
+            ]
         }
     ],
     "spec_version": "2.0",

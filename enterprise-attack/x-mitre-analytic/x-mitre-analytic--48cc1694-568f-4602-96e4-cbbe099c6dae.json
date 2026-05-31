@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0029#AN0085",
-                    "external_id": "AN0085"
+                    "external_id": "AN0085",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,26 +56,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FormStorageLocation",
-                    "description": "Malicious forms may be stored in various user-specific locations in the Outlook mailbox (e.g., IPM.Note class)"
+                    "description": "Malicious forms may be stored in various user-specific locations in the Outlook mailbox (e.g., IPM.Note class)",
+                    "description_fa": "فرم‌های مخرب ممکن است در مکان‌های خاص کاربر در صندوق پستی Outlook ذخیره شوند (مانند کلاس IPM.Note)"
                 },
                 {
                     "field": "ChildProcessName",
-                    "description": "Child process spawned by outlook.exe may vary (e.g., powershell.exe, rundll32.exe, mshta.exe)"
+                    "description": "Child process spawned by outlook.exe may vary (e.g., powershell.exe, rundll32.exe, mshta.exe)",
+                    "description_fa": "فرآیند فرزند ایجاد شده توسط outlook.exe ممکن است متفاوت باشد (مانند powershell.exe، rundll32.exe، mshta.exe)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Form-triggered execution may happen immediately upon Outlook startup or with delay after crafted message arrival"
+                    "description": "Form-triggered execution may happen immediately upon Outlook startup or with delay after crafted message arrival",
+                    "description_fa": "اجرای فرم راه‌اندازی ممکن است بلافاصله پس از راه‌اندازی Outlook یا با تأخیر پس از رسیدن پیام ساخته‌شده اتفاق بیفتد."
                 },
                 {
                     "field": "OutlookVersion",
-                    "description": "Form behavior and error logs may vary across Outlook 2013, 2016, and M365 builds"
+                    "description": "Form behavior and error logs may vary across Outlook 2013, 2016, and M365 builds",
+                    "description_fa": "رفتار فرم و گزارش‌های خطا ممکن است در ساخت‌های Outlook 2013، 2016 و M365 متفاوت باشد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Attack may target only specific users; contextual correlation needed for account baselining"
+                    "description": "Attack may target only specific users; contextual correlation needed for account baselining",
+                    "description_fa": "حمله ممکن است فقط کاربران خاصی را هدف قرار دهد. همبستگی متنی مورد نیاز برای خط پایه حساب"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0085",
+            "description_fa": "Adversary از ابزاری مانند Ruler برای درج یک فرم سفارشی مخرب در صندوق پستی Outlook کاربر استفاده می کند. این فرم برای اجرای خودکار هنگام راه‌اندازی Outlook یا دریافت ایمیلی طراحی شده است. این منجر به فرآیندهای فرزندی می شود که از outlook.exe و احتمالاً اتصالات شبکه یا بارگذاری بارگذاری راه اندازی می شوند."
         }
     ]
 }

@@ -13,17 +13,21 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1401",
-                    "external_id": "T1401"
+                    "external_id": "T1401",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android DeviceAdminInfo",
                     "description": "Google. (n.d.). DeviceAdminInfo. Retrieved November 20, 2020.",
-                    "url": "https://developer.android.com/reference/android/app/admin/DeviceAdminInfo"
+                    "url": "https://developer.android.com/reference/android/app/admin/DeviceAdminInfo",
+                    "source_name_fa": "Android DeviceAdminInfo",
+                    "description_fa": "گوگل. (n.d.). DeviceAdminInfo. بازبینی شده در 20 نوامبر 2020."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-22.html",
-                    "external_id": "APP-22"
+                    "external_id": "APP-22",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +35,7 @@
             ],
             "modified": "2025-10-24T17:49:02.729Z",
             "name": "Device Administrator Permissions",
-            "description": "Adversaries may request device administrator permissions to perform malicious actions.\n\nBy abusing the device administration API, adversaries can perform several nefarious actions, such as resetting the device\u2019s password for [Device Lockout](https://attack.mitre.org/techniques/T1446), factory resetting the device to [Delete Device Data](https://attack.mitre.org/techniques/T1447) and any traces of the malware, disabling all of the device\u2019s cameras, or make it more difficult to uninstall the app.(Citation: Android DeviceAdminInfo)\n\nDevice administrators must be approved by the user at runtime, with a system popup showing which of the actions have been requested by the app. In conjunction with other techniques, such as [Input Injection](https://attack.mitre.org/techniques/T1516), an app can programmatically grant itself administrator permissions without any user input.",
+            "description": "Adversaries may request device administrator permissions to perform malicious actions.\n\nBy abusing the device administration API, adversaries can perform several nefarious actions, such as resetting the device’s password for [Device Lockout](https://attack.mitre.org/techniques/T1446), factory resetting the device to [Delete Device Data](https://attack.mitre.org/techniques/T1447) and any traces of the malware, disabling all of the device’s cameras, or make it more difficult to uninstall the app.(Citation: Android DeviceAdminInfo)\n\nDevice administrators must be approved by the user at runtime, with a system popup showing which of the actions have been requested by the app. In conjunction with other techniques, such as [Input Injection](https://attack.mitre.org/techniques/T1516), an app can programmatically grant itself administrator permissions without any user input.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -51,7 +55,9 @@
             "x_mitre_version": "2.0",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "مجوزهای مدیر دستگاه",
+            "description_fa": "دشمنان ممکن است برای انجام اقدامات مخرب مجوزهای سرپرست دستگاه را درخواست کنند.\n\nبا سوء استفاده از API مدیریت دستگاه، دشمنان می‌توانند چندین اقدام شرورانه انجام دهند، مانند بازنشانی گذرواژه دستگاه برای [Device Lockout](https://attack.mitre.org/techniques/T1446)، بازنشانی کارخانه‌ای دستگاه به [حذف داده‌های دستگاه](https://attack.mitre.org/techniques/T1447) و هر گونه ردی از دستگاه، غیرفعال کردن دوربین‌ها برای همه موارد مخرب برنامه را حذف نصب کنید.(Citation: Android DeviceAdminInfo)\n\nمدیران دستگاه باید در زمان اجرا توسط کاربر تأیید شوند، با یک پنجره بازشو سیستم که نشان می دهد کدام یک از اقدامات توسط برنامه درخواست شده است. در ارتباط با تکنیک‌های دیگر، مانند [Input Injection](https://attack.mitre.org/techniques/T1516)، یک برنامه می‌تواند به صورت برنامه‌نویسی مجوزهای سرپرست را بدون هیچ ورودی کاربر به خود بدهد."
         }
     ]
 }

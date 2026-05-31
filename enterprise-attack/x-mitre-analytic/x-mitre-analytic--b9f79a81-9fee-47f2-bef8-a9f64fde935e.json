@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0333#AN0943",
-                    "external_id": "AN0943"
+                    "external_id": "AN0943",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TaskUser",
-                    "description": "Unusual users creating jobs (e.g., non-admin accounts or service users)."
+                    "description": "Unusual users creating jobs (e.g., non-admin accounts or service users).",
+                    "description_fa": "کاربران غیرمعمولی که شغل ایجاد می کنند (به عنوان مثال، حساب های غیر سرپرست یا کاربران خدمات)."
                 },
                 {
                     "field": "ExecutionTimeWindow",
-                    "description": "Delay between task registration and execution."
+                    "description": "Delay between task registration and execution.",
+                    "description_fa": "تاخیر بین ثبت و اجرا"
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Unexpected script or binary execution (e.g., cmd.exe /c PowerShell payload)."
+                    "description": "Unexpected script or binary execution (e.g., cmd.exe /c PowerShell payload).",
+                    "description_fa": "اسکریپت غیرمنتظره یا اجرای باینری (به عنوان مثال، بارگذاری بارگذاری cmd.exe /c PowerShell)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0943",
+            "description_fa": "ایجاد وظایف زمان‌بندی‌شده را از طریق کلاس «at.exe» یا WMI «Win32_ScheduledJob» تشخیص می‌دهد و به دنبال آن فرآیندهای غیرعادی توسط svchost.exe یا taskeng.exe اجرا می‌شود."
         }
     ]
 }

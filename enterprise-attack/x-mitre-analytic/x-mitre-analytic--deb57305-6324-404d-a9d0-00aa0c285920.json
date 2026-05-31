@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0348#AN0990",
-                    "external_id": "AN0990"
+                    "external_id": "AN0990",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessAncestry",
-                    "description": "Enables defenders to tune legitimate vs. suspicious lineage (e.g., launchd \u2192 curl is uncommon)."
+                    "description": "Enables defenders to tune legitimate vs. suspicious lineage (e.g., launchd → curl is uncommon).",
+                    "description_fa": "مدافعان را قادر می‌سازد تا نسب مشروع و مشکوک را تنظیم کنند (به‌عنوان مثال، راه‌اندازی → کرل غیر معمول است)."
                 },
                 {
                     "field": "ProtocolList",
-                    "description": "Focus detection on unusual protocols (e.g., IRC, FTP, DNS over HTTPS)."
+                    "description": "Focus detection on unusual protocols (e.g., IRC, FTP, DNS over HTTPS).",
+                    "description_fa": "تشخیص روی پروتکل‌های غیرمعمول (مانند IRC، FTP، DNS از طریق HTTPS) تمرکز کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0990",
+            "description_fa": "برنامه‌ها یا اسکریپت‌های غیرمجاز را شناسایی می‌کند که به داده‌های حساس دسترسی پیدا می‌کنند و به دنبال آن ارتباطات خروجی رمزگذاری شده را به مقاصد خارجی کمیاب یا با نسبت بایت‌های غیرعادی برقرار می‌کند."
         }
     ]
 }

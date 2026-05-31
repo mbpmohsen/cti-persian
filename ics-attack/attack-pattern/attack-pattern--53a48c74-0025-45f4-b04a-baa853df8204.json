@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T0877",
-                    "external_id": "T0877"
+                    "external_id": "T0877",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Nanjundaiah, Vaidyanath",
                     "description": "Nanjundaiah, Vaidyanath   PLC Ladder Logic Basics Retrieved. 2021/10/11 ",
-                    "url": "https://www.ezautomation.net/industry-articles/plc-ladder-logic-basics.htm"
+                    "url": "https://www.ezautomation.net/industry-articles/plc-ladder-logic-basics.htm",
+                    "source_name_fa": "نانجوندایا، وایدیانات",
+                    "description_fa": "Nanjundaiah، Vaidyanath PLC Ladder Logic Basics بازیابی شد. 2021/10/11"
                 },
                 {
                     "source_name": "Spenneberg, Ralf 2016",
                     "description": "Spenneberg, Ralf 2016 PLC-Blaster Retrieved. 2019/06/06 ",
-                    "url": "https://www.blackhat.com/docs/asia-16/materials/asia-16-Spenneberg-PLC-Blaster-A-Worm-Living-Solely-In-The-PLC.pdf"
+                    "url": "https://www.blackhat.com/docs/asia-16/materials/asia-16-Spenneberg-PLC-Blaster-A-Worm-Living-Solely-In-The-PLC.pdf",
+                    "source_name_fa": "اسپنبرگ، رالف 2016",
+                    "description_fa": "Spenneberg, Ralf 2016 PLC-Blaster بازیابی شد. 2019/06/06"
                 }
             ],
             "object_marking_refs": [
@@ -48,7 +53,9 @@
             "x_mitre_platforms": [
                 "None"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "تصویر ورودی/خروجی",
+            "description_fa": "دشمنان ممکن است به دنبال گرفتن مقادیر فرآیند مربوط به ورودی و خروجی یک PLC باشند. در طول چرخه اسکن، یک PLC وضعیت همه ورودی ها را می خواند و آنها را در یک جدول تصویر ذخیره می کند. (Citation: Nanjundaiah, Vaidyanath) جدول تصویر محل ذخیره سازی داخلی PLC است که در آن مقادیر ورودی/خروجی برای یک اسکن در حین اجرای برنامه کاربر ذخیره می شود. پس از اینکه PLC کل برنامه منطقی را حل کرد، جدول تصویر خروجی را به روز می کند. محتویات این جدول تصویر خروجی در نقاط خروجی مربوطه در ماژول های ورودی/خروجی نوشته می شود.\n\nجداول تصویر ورودی و خروجی که در بالا توضیح داده شد، تصویر ورودی/خروجی را در یک PLC تشکیل می دهند. این تصویر به جای تعامل مستقیم با I/O فیزیکی توسط برنامه کاربر استفاده می شود. (Citation: Spenneberg, Ralf 2016) \n\nدشمنان ممکن است وضعیت تصویر ورودی/خروجی یک PLC را با استفاده از یک دستگاه [Native API](https://attack.mitre.org/techniques/T0834) برای دسترسی مستقیم به مناطق حافظه جمع‌آوری کنند. مجموعه ای از وضعیت ورودی/خروجی PLC ها می تواند برای جایگزینی مقادیر یا اطلاع رسانی به مراحل آینده یک حمله استفاده شود."
         }
     ]
 }

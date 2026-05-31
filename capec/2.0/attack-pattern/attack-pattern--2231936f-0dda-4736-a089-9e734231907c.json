@@ -9,36 +9,46 @@
                 {
                     "external_id": "CAPEC-191",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/191.html"
+                    "url": "https://capec.mitre.org/data/definitions/191.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-798",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/798.html"
+                    "url": "http://cwe.mitre.org/data/definitions/798.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Unsecured Credentials:Credentials in files",
                     "external_id": "T1552.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1552/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1552/001",
+                    "description_fa": "اعتبارنامه های ناامن: اعتبارنامه ها در فایل ها",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-51",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Decompiler"
+                    "url": "http://en.wikipedia.org/wiki/Decompiler",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-52",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Debugger"
+                    "url": "http://en.wikipedia.org/wiki/Debugger",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-53",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Disassembler"
+                    "url": "http://en.wikipedia.org/wiki/Disassembler",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2231936f-0dda-4736-a089-9e734231907c",
@@ -65,7 +75,16 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک حریف برای کشف هر گونه ثابت حساس موجود در کد کامپایل شده یک فایل اجرایی درگیر فعالیت‌هایی می‌شود. این ثابت‌ها ممکن است شامل رشته‌های ASCII تحت اللفظی در خود فایل باشند، یا احتمالاً رشته‌هایی با کدهای سخت در روتین‌های خاصی که می‌توانند با روش‌های بازآفرینی کد از جمله تحلیل استاتیک و پویا آشکار شوند.</xhtml:p>",
+            "name_fa": "ثابت های حساس را در یک فایل اجرایی بخوانید",
+            "x_capec_extended_description_fa": "<xhtml:p>یک مثال خاص از رشته های حساس، رمز عبور سخت کد شده است. نمونه‌های معمولی نرم‌افزار با رمزهای عبور سخت‌کد شده شامل فایل‌های اجرایی سمت سرور است که ممکن است رمز یا کلید سخت‌کد شده را در حین احراز هویت کاربر با سرور بررسی کنند. گذرواژه‌های رمزگذاری شده می‌توانند در فایل‌های اجرایی سمت کلاینت نیز وجود داشته باشند که از رمز عبور یا کلید هنگام اتصال به یک مؤلفه راه دور، مانند سرور پایگاه داده، سرور صدور مجوز یا موارد دیگر، یا فرآیندهایی در همان میزبانی که انتظار یک کلید یا رمز عبور را دارد، استفاده می‌کنند. هنگام تجزیه و تحلیل یک فایل اجرایی، دشمن ممکن است با تجزیه و تحلیل کد بایت خود فایل، وجود چنین رشته هایی را جستجو کند. ابزارهای نمونه برای آشکار کردن رشته‌ها در یک فایل شامل «strings»، «grep» یا انواع دیگر این برنامه‌ها بسته به نوع سیستم عامل مورد استفاده است. از این برنامه ها می توان برای حذف هر رشته ASCII یا UNICODE موجود در یک برنامه استفاده کرد. همچنین می توان رشته ها را با استفاده از ویرایشگرهای هگز با بارگیری فایل کد باینری یا شی و استفاده از توابع جستجوی بومی مانند عبارات منظم جستجو کرد.</xhtml:p>\n            <xhtml:p> علاوه بر این، مقادیر عددی حساس می توانند در یک فایل اجرایی رخ دهند. این می تواند برای کشف مکان ثابت های رمزنگاری استفاده شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "دسترسی به یک باینری یا اجرایی به گونه ای که بتوان آن را توسط ابزارهای مختلف تجزیه و تحلیل کرد."
+            ],
+            "x_capec_resources_required_fa": [
+                "برنامه های تجزیه و تحلیل باینری مانند \"strings\" یا \"grep\" یا ویرایشگرهای هگز."
+            ]
         }
     ],
     "spec_version": "2.0",

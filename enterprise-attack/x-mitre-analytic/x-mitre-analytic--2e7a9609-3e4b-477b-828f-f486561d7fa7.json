@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0524#AN1449",
-                    "external_id": "AN1449"
+                    "external_id": "AN1449",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -49,24 +50,29 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--3772e279-27d6-477a-9fe3-c6beb363594c",
                     "name": "NSM:Flow",
-                    "channel": "Packets with unusual flags or payloads outside established flows (e.g., WoL magic FF\u00d76 + 16\u00d7MAC)"
+                    "channel": "Packets with unusual flags or payloads outside established flows (e.g., WoL magic FF×6 + 16×MAC)"
                 }
             ],
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServicePort",
-                    "description": "Port that becomes available post-knock (e.g., 22/8022/2323)."
+                    "description": "Port that becomes available post-knock (e.g., 22/8022/2323).",
+                    "description_fa": "پورتی که پس از ضربه در دسترس می شود (به عنوان مثال، 22/8022/2323)."
                 },
                 {
                     "field": "KnockResetRatio",
-                    "description": "Percentage of failed attempts with RST/ICMP vs SYN/SYN-ACK to qualify as closed-port probing."
+                    "description": "Percentage of failed attempts with RST/ICMP vs SYN/SYN-ACK to qualify as closed-port probing.",
+                    "description_fa": "درصد تلاش های ناموفق با RST/ICMP در مقابل SYN/SYN-ACK برای واجد شرایط بودن به عنوان کاوش درگاه بسته."
                 },
                 {
                     "field": "ProcessAllowList",
-                    "description": "Automation expected to touch firewall/daemon configs (config-mgmt agents)."
+                    "description": "Automation expected to touch firewall/daemon configs (config-mgmt agents).",
+                    "description_fa": "انتظار می‌رود که اتوماسیون تنظیمات فایروال/دمون (عوامل config-mgmt) را لمس کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1449",
+            "description_fa": "دنباله ضربه پورت بسته از یک IP راه دور و به دنبال آن تغییر فایروال روی میزبان (iptables/nftables) یا دیمون شروع به گوش دادن می کند (سوکت باز) و اتصال موفقیت آمیز TCP/UDP. تشخیص اختیاری sniffers libpcap/raw-socket در حال تخم ریزی برای مشاهده مقادیر مخفی."
         }
     ]
 }

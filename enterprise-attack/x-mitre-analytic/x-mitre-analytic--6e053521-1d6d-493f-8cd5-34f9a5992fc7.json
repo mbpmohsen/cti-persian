@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0425#AN1190",
-                    "external_id": "AN1190"
+                    "external_id": "AN1190",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcess",
-                    "description": "Unusual parent-child process behavior initiating external comms (e.g., bash > curl)"
+                    "description": "Unusual parent-child process behavior initiating external comms (e.g., bash > curl)",
+                    "description_fa": "رفتار غیرمعمول فرآیند والد-فرزند شروع کننده کام‌های خارجی (مانند bash > curl)"
                 },
                 {
                     "field": "HostnamePattern",
-                    "description": "Destination hostnames (e.g., *.dropboxapi.com, *.graph.microsoft.com)"
+                    "description": "Destination hostnames (e.g., *.dropboxapi.com, *.graph.microsoft.com)",
+                    "description_fa": "نام میزبان مقصد (به عنوان مثال، *.dropboxapi.com، *.graph.microsoft.com)"
                 },
                 {
                     "field": "RequestFrequency",
-                    "description": "Repeated requests at unusual intervals, suggesting beaconing"
+                    "description": "Repeated requests at unusual intervals, suggesting beaconing",
+                    "description_fa": "درخواست‌های مکرر در فواصل زمانی غیرمعمول، نشان‌دهنده نشان‌دادن فانوس است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1190",
+            "description_fa": "ابزارهای خط فرمان، عوامل یا اسکریپت‌هایی را که اتصالات HTTPS خروجی را به سرویس‌های وب محبوب مانند Discord، Slack، Dropbox یا Graph API در یک زمینه غیرمعمول ایجاد می‌کنند، شناسایی می‌کند."
         }
     ]
 }

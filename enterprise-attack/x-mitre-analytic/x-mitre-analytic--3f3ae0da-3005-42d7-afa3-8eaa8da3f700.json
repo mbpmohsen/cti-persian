@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0174#AN0494",
-                    "external_id": "AN0494"
+                    "external_id": "AN0494",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthServiceList",
-                    "description": "List of monitored authentication services (e.g., sshd, gdm, PAM modules)."
+                    "description": "List of monitored authentication services (e.g., sshd, gdm, PAM modules).",
+                    "description_fa": "فهرست سرویس‌های احراز هویت نظارت شده (مانند ماژول‌های sshd، gdm، PAM)."
                 },
                 {
                     "field": "FailureThreshold",
-                    "description": "Number of failed authentications within a window before escalating to replay suspicion."
+                    "description": "Number of failed authentications within a window before escalating to replay suspicion.",
+                    "description_fa": "تعداد اصالت‌سنجی‌های ناموفق در یک پنجره قبل از تشدید برای پخش مجدد مشکوک."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0494",
+            "description_fa": "بهره برداری از دیمون های احراز هویت یا ماژول های PAM را تشخیص می دهد. دیدگاه مدافع شامل احراز هویت ناموفق یا غیرعادی PAM، خطاهای غیرعادی در سرویس‌های احراز هویت، و تلاش‌های بهره‌برداری و به دنبال آن ورودهای غیرمجاز موفق است. همبستگی، خرابی حافظه، تلاش برای پخش مجدد و افزایش امتیاز مرتبط با خدمات اعتبار را شناسایی می کند."
         }
     ]
 }

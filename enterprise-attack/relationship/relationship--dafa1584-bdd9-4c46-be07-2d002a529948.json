@@ -12,23 +12,31 @@
             "external_references": [
                 {
                     "source_name": "MagicWeb",
-                    "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM\u2019s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
-                    "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/"
+                    "description": "Microsoft Threat Intelligence Center, Microsoft Detection and Response Team, Microsoft 365 Defender Research Team . (2022, August 24). MagicWeb: NOBELIUM’s post-compromise trick to authenticate as anyone. Retrieved September 28, 2022.",
+                    "url": "https://www.microsoft.com/security/blog/2022/08/24/magicweb-nobeliums-post-compromise-trick-to-authenticate-as-anyone/",
+                    "source_name_fa": "مجیک وب",
+                    "description_fa": "مرکز اطلاعات تهدیدات مایکروسافت، تیم شناسایی و پاسخ مایکروسافت، تیم تحقیقاتی Microsoft 365 Defender. (2022، 24 اوت). MagicWeb: ترفند پس از سازش NOBELIUM برای احراز هویت به عنوان هر کسی. بازبینی شده در 28 سپتامبر 2022."
                 },
                 {
                     "source_name": "TechNet Credential Theft",
                     "description": "Microsoft. (2016, April 15). Attractive Accounts for Credential Theft. Retrieved June 3, 2016.",
-                    "url": "https://technet.microsoft.com/en-us/library/dn535501.aspx"
+                    "url": "https://technet.microsoft.com/en-us/library/dn535501.aspx",
+                    "source_name_fa": "سرقت اعتبار TechNet",
+                    "description_fa": "مایکروسافت. (2016، 15 آوریل). حساب های جذاب برای سرقت اعتبار. بازبینی شده در 3 ژوئن 2016."
                 },
                 {
                     "source_name": "TechNet Least Privilege",
                     "description": "Microsoft. (2016, April 16). Implementing Least-Privilege Administrative Models. Retrieved June 3, 2016.",
-                    "url": "https://technet.microsoft.com/en-us/library/dn487450.aspx"
+                    "url": "https://technet.microsoft.com/en-us/library/dn487450.aspx",
+                    "source_name_fa": "TechNet حداقل امتیاز",
+                    "description_fa": "مایکروسافت. (2016، 16 آوریل). اجرای مدل های اداری با حداقل امتیاز. بازبینی شده در 3 ژوئن 2016."
                 },
                 {
                     "source_name": "Microsoft Securing Privileged Access",
                     "description": "Plett, C., Poggemeyer, L. (12, October 26). Securing Privileged Access Reference Material. Retrieved April 25, 2017.",
-                    "url": "https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material#a-nameesaebmaesae-administrative-forest-design-approach"
+                    "url": "https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material#a-nameesaebmaesae-administrative-forest-design-approach",
+                    "source_name_fa": "مایکروسافت امنیت دسترسی ممتاز",
+                    "description_fa": "Plett, C., Poggemeyer, L. (12, 26 اکتبر). ایمن کردن مواد مرجع دسترسی ممتاز. بازبینی شده در ۲۵ آوریل ۲۰۱۷."
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +49,8 @@
             "target_ref": "attack-pattern--f4c1826f-a322-41cd-9557-562100848c84",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "description_fa": "دامنه حسابرسی و حساب‌های محلی و همچنین سطوح مجوز آن‌ها را به طور معمول برای جستجوی موقعیت‌هایی که می‌تواند به حریف اجازه دهد با به‌دست آوردن اعتبار یک حساب ممتاز، دسترسی وسیعی داشته باشد، بررسی کنید. (Citation: TechNet Credential Theft) (Citation: TechNet Least Privilege) این ممیزی‌ها همچنین باید شامل فعال بودن حساب‌های پیش‌فرض یا ایجاد حساب‌های محلی جدید که مجاز نیستند نیز باشد. بهترین شیوه‌ها را برای طراحی و مدیریت شبکه سازمانی دنبال کنید تا استفاده از حساب ممتاز را در سطوح اداری محدود کنید. (Citation: Microsoft Securing Privileged Access)\n\nدسترسی به حساب ریشه را محدود کنید و از طریق جداسازی مناسب امتیازات (SELinux، grsecurity، AppArmor و غیره) و محدود کردن فرصت‌های افزایش امتیاز، از تغییر اجزای محافظت شده توسط کاربران جلوگیری کنید.\n\nحساب‌های داخلی را با دسترسی به راه‌حل هویت ترکیبی محدود کنید. برای مثال، حساب‌های Azure AD Global Administrator را فقط به حساب‌های مورد نیاز محدود کنید و مطمئن شوید که این حساب‌های اختصاصی فقط ابری هستند و نه ترکیبی.(Citation: MagicWeb)"
         }
     ]
 }

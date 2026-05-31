@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0142#AN0399",
-                    "external_id": "AN0399"
+                    "external_id": "AN0399",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Config changes made outside of maintenance windows are more suspicious."
+                    "description": "Config changes made outside of maintenance windows are more suspicious.",
+                    "description_fa": "تغییرات پیکربندی انجام شده در خارج از پنجره های تعمیر و نگهداری مشکوک تر هستند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Unexpected CLI activity by service accounts or users not assigned to manage network devices."
+                    "description": "Unexpected CLI activity by service accounts or users not assigned to manage network devices.",
+                    "description_fa": "فعالیت غیرمنتظره CLI توسط حساب‌های سرویس یا کاربرانی که برای مدیریت دستگاه‌های شبکه اختصاص داده نشده‌اند."
                 },
                 {
                     "field": "CommandPattern",
-                    "description": "Regex or keyword match on dangerous or unusual commands (e.g., 'no logging', 'reload', 'copy tftp', 'config replace')."
+                    "description": "Regex or keyword match on dangerous or unusual commands (e.g., 'no logging', 'reload', 'copy tftp', 'config replace').",
+                    "description_fa": "تطبیق Regex یا کلمه کلیدی در دستورات خطرناک یا غیرعادی (به عنوان مثال، «بدون ورود به سیستم»، «بارگذاری مجدد»، «کپی tftp»، «پیکربندی جایگزین»)."
                 },
                 {
                     "field": "SourceIP",
-                    "description": "Remote CLI sessions originating from untrusted networks or jump hosts."
+                    "description": "Remote CLI sessions originating from untrusted networks or jump hosts.",
+                    "description_fa": "جلسات CLI از راه دور که از شبکه های غیرقابل اعتماد یا میزبان های پرش سرچشمه می گیرند."
                 },
                 {
                     "field": "SessionDuration",
-                    "description": "Abnormally short or long SSH/Telnet CLI sessions compared to baseline."
+                    "description": "Abnormally short or long SSH/Telnet CLI sessions compared to baseline.",
+                    "description_fa": "جلسات SSH/Telnet CLI غیرعادی کوتاه یا طولانی در مقایسه با پایه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0399",
+            "description_fa": "استفاده غیرمجاز یا غیرعادی از رابط های خط فرمان (CLI) در دستگاه های شبکه را تشخیص می دهد. تمرکز بر جلسات دسترسی از راه دور (مانند SSH/Telnet)، افزایش امتیاز در جلسات CLI، اجرای دستورات پرخطر (به عنوان مثال، جایگزینی پیکربندی، مانیتور ترمینال، بدون ورود به سیستم)، و تغییرات پیکربندی خارج از پنجره های تایید شده."
         }
     ]
 }

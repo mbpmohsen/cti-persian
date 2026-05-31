@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0042#AN0118",
-                    "external_id": "AN0118"
+                    "external_id": "AN0118",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,21 +58,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedCLSIDs",
-                    "description": "Baseline CLSIDs frequently invoked by verclsid.exe in normal shell extension verification."
+                    "description": "Baseline CLSIDs frequently invoked by verclsid.exe in normal shell extension verification.",
+                    "description_fa": "CLSIDهای پایه که اغلب توسط verclsid.exe در راستی‌آزمایی پسوند پوسته عادی فراخوانی می‌شوند."
                 },
                 {
                     "field": "ParentProcessFilter",
-                    "description": "Unusual parents (e.g., winword.exe, excel.exe) spawning verclsid.exe should be treated as suspicious."
+                    "description": "Unusual parents (e.g., winword.exe, excel.exe) spawning verclsid.exe should be treated as suspicious.",
+                    "description_fa": "والدین غیرمعمول (مانند winword.exe، excel.exe) که verclsid.exe ایجاد می کنند باید مشکوک تلقی شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between verclsid.exe start, module load, and network activity."
+                    "description": "Correlation window between verclsid.exe start, module load, and network activity.",
+                    "description_fa": "پنجره همبستگی بین شروع verclsid.exe، بارگذاری ماژول و فعالیت شبکه."
                 },
                 {
                     "field": "ExternalIPRange",
-                    "description": "Restrict detection to external IPs not in approved ranges to cut noise."
+                    "description": "Restrict detection to external IPs not in approved ranges to cut noise.",
+                    "description_fa": "شناسایی را به IP های خارجی که در محدوده های تایید شده نیستند محدود کنید تا نویز را کاهش دهید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0118",
+            "description_fa": "سوء استفاده از verclsid.exe را برای اجرای اشیاء COM با نظارت بر ایجاد فرآیند، آرگومان های CLSID، DLL ها یا موتورهای اسکریپت بارگذاری شده در حافظه شناسایی می کند، و اگر CLSID به محتوای SCT/HTA راه دور اشاره کند، verclsid.exe اتصالات خروجی ایجاد می کند."
         }
     ]
 }

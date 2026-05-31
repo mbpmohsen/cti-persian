@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0711#AN1837",
-                    "external_id": "AN1837"
+                    "external_id": "AN1837",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -42,21 +43,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation window between broadcast event and subsequent execution or network activity"
+                    "description": "Time correlation window between broadcast event and subsequent execution or network activity",
+                    "description_fa": "پنجره همبستگی زمانی بین رویداد پخش و اجرای بعدی یا فعالیت شبکه"
                 },
                 {
                     "field": "SensitiveIntentList",
-                    "description": "List of broadcast intents considered high-risk (e.g., BOOT_COMPLETED, SMS_RECEIVED)"
+                    "description": "List of broadcast intents considered high-risk (e.g., BOOT_COMPLETED, SMS_RECEIVED)",
+                    "description_fa": "فهرست اهداف پخش در نظر گرفته شده پرخطر (به عنوان مثال، BOOT_COMPLETED، SMS_RECEIVED)"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Baseline of legitimate applications expected to use broadcast receivers for these intents"
+                    "description": "Baseline of legitimate applications expected to use broadcast receivers for these intents",
+                    "description_fa": "پایه برنامه های کاربردی قانونی که انتظار می رود از گیرنده های پخش برای این اهداف استفاده کنند"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Determines whether execution without foreground presence increases detection confidence"
+                    "description": "Determines whether execution without foreground presence increases detection confidence",
+                    "description_fa": "تعیین می کند که آیا اجرای بدون حضور پیش زمینه اطمینان تشخیص را افزایش می دهد یا خیر"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1837",
+            "description_fa": "مرتبط (1) ثبت برنامه یا فعال سازی گیرنده های پخش مرتبط با اهداف سیستم یا برنامه، (2) اجرای رویداد در حالی که برنامه در پیش زمینه نیست، و (3) اقدامات بعدی فوری مانند ارتباطات شبکه یا دسترسی به داده ها. مدافع یک زنجیره علّی را مشاهده می کند که در آن یک رویداد خارجی (به عنوان مثال، BOOT_COMPLETED، SMS_RECEIVED، USER_PRESENT، CONNECTIVITY_CHANGE) اجرای برنامه را آغاز می کند که انتظارات چرخه عمر عادی کاربر محور را دور می زند، و به دنبال آن پردازش پس زمینه یا فعالیت خروجی انجام می شود."
         }
     ]
 }

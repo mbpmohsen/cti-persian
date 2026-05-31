@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0385#AN1085",
-                    "external_id": "AN1085"
+                    "external_id": "AN1085",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Filter by users with elevated privileges or service accounts"
+                    "description": "Filter by users with elevated privileges or service accounts",
+                    "description_fa": "فیلتر توسط کاربران با امتیازات یا حساب های خدماتی بالا"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate access to .bash_history within X seconds of user switch or privilege escalation"
+                    "description": "Correlate access to .bash_history within X seconds of user switch or privilege escalation",
+                    "description_fa": "مرتبط کردن دسترسی به .bash_history در عرض X ثانیه پس از تغییر کاربر یا افزایش امتیاز"
                 },
                 {
                     "field": "ProcessNamePatterns",
-                    "description": "Add/remove CLI utilities used to read bash history"
+                    "description": "Add/remove CLI utilities used to read bash history",
+                    "description_fa": "افزودن/حذف ابزارهای CLI مورد استفاده برای خواندن تاریخچه bash"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1085",
+            "description_fa": "فرآیندی خارج از زمینه پوسته تعاملی، ~/.bash_history را مستقیماً می خواند (به عنوان مثال، استفاده از cat، less، grep)، اغلب مدت کوتاهی پس از افزایش امتیاز یا تغییر کاربر (su/sudo). این ممکن است با اسکن اعتبار در حافظه یا نوشتن فایل در مکان های جدید دنبال شود."
         }
     ]
 }

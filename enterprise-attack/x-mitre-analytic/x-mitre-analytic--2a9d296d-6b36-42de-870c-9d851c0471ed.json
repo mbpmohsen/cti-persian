@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0024#AN0070",
-                    "external_id": "AN0070"
+                    "external_id": "AN0070",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KerberosAPIProcessBaseline",
-                    "description": "Expected processes using the Kerberos framework (e.g., loginwindow, kinit)."
+                    "description": "Expected processes using the Kerberos framework (e.g., loginwindow, kinit).",
+                    "description_fa": "فرآیندهای مورد انتظار با استفاده از چارچوب Kerberos (به عنوان مثال، پنجره ورود، kinit)."
                 },
                 {
                     "field": "SuspiciousBinaryList",
-                    "description": "List of tools or binaries not normally expected to query Kerberos ccache entries."
+                    "description": "List of tools or binaries not normally expected to query Kerberos ccache entries.",
+                    "description_fa": "فهرست ابزارها یا باینری‌هایی که معمولاً انتظار نمی‌رود ورودی‌های حافظه پنهان Kerberos را پرس و جو کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window to link suspicious process activity with Kerberos authentication anomalies."
+                    "description": "Window to link suspicious process activity with Kerberos authentication anomalies.",
+                    "description_fa": "پنجره ای برای پیوند فعالیت فرآیند مشکوک با ناهنجاری های احراز هویت Kerberos."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0070",
+            "description_fa": "تعامل غیرعادی با حافظه پنهان Kerberos (API:{uuid}) یا لغوهای مبتنی بر فایل را تشخیص می‌دهد. روی فرآیندهایی تمرکز کنید که سعی می‌کنند بلیط‌های Kerberos را خارج از ابزارهای داخلی شمارش یا استخراج کنند. استفاده از ابزارهای منبع باز (مانند Bifrost، پورت های اصلاح شده Mimikatz) را که با APIهای فریمورک Kerberos تعامل دارند را شناسایی می کند."
         }
     ]
 }

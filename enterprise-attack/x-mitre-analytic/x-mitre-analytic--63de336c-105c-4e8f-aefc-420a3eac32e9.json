@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0419#AN1180",
-                    "external_id": "AN1180"
+                    "external_id": "AN1180",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ReputationFeedWhitelist",
-                    "description": "Exclude trusted CDN and cloud provider domains"
+                    "description": "Exclude trusted CDN and cloud provider domains",
+                    "description_fa": "دامنه‌های ارائه‌دهنده CDN و ابر قابل اعتماد را حذف کنید"
                 },
                 {
                     "field": "LexicalScoreThreshold",
-                    "description": "Adjust score for word-based vs. letter-based DGAs"
+                    "description": "Adjust score for word-based vs. letter-based DGAs",
+                    "description_fa": "امتیاز را برای DGAهای مبتنی بر کلمه در مقابل حروف مبتنی بر تنظیم کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1180",
+            "description_fa": "گزارش‌های DNS یکپارچه را برای جستجوهای دامنه غیرعادی با شباهت واژگانی کم به دامنه‌های شناخته شده، جستجوهای ناموفق مکرر و ساختارهای رشته تصادفی نظارت کنید. برای تأیید منشأ غیرعادی (برنامه‌های غیر مرورگر) با گزارش‌های فرآیند بررسی کنید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0228#AN0637",
-                    "external_id": "AN0637"
+                    "external_id": "AN0637",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate two-stage behavior occurring within a short window (e.g., 1-5 minutes)"
+                    "description": "Correlate two-stage behavior occurring within a short window (e.g., 1-5 minutes)",
+                    "description_fa": "رفتار دو مرحله‌ای را که در یک پنجره کوتاه اتفاق می‌افتد مرتبط کنید (مثلاً 1-5 دقیقه)"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Tune to exclude known legitimate updaters and management agents"
+                    "description": "Tune to exclude known legitimate updaters and management agents",
+                    "description_fa": "تنظیم کنید تا به‌روزرسانی‌های قانونی شناخته شده و عوامل مدیریتی را حذف کنید"
                 },
                 {
                     "field": "DestinationHostname",
-                    "description": "May be customized to exclude known corporate domains and CDNs"
+                    "description": "May be customized to exclude known corporate domains and CDNs",
+                    "description_fa": "ممکن است برای حذف دامنه های شرکتی و CDN های شناخته شده سفارشی شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0637",
+            "description_fa": "فرآیند اولیه اتصال خروجی را به مرحله اول C2 آغاز می‌کند، بارها یا دستورات را دریافت می‌کند، سپس در فرآیند دوم ایجاد یا تزریق می‌کند که یک اتصال خروجی جدید به مقصد غیرمرتبط برقرار می‌کند (مرحله دوم C2)."
         }
     ]
 }

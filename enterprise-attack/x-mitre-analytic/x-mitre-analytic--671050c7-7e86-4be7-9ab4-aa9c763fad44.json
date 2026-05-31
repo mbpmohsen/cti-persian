@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0058#AN0160",
-                    "external_id": "AN0160"
+                    "external_id": "AN0160",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetService",
-                    "description": "Known services abused for D2 (e.g., iCloud, Dropbox)"
+                    "description": "Known services abused for D2 (e.g., iCloud, Dropbox)",
+                    "description_fa": "خدمات شناخته شده مورد سوء استفاده برای D2 (مانند iCloud، Dropbox)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Useful to isolate rare users accessing web services for C2"
+                    "description": "Useful to isolate rare users accessing web services for C2",
+                    "description_fa": "برای جداسازی کاربران نادری که به خدمات وب برای C2 دسترسی دارند مفید است"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Max time gap between dead drop resolver fetch and follow-on traffic"
+                    "description": "Max time gap between dead drop resolver fetch and follow-on traffic",
+                    "description_fa": "حداکثر فاصله زمانی بین واکشی رفع‌کننده سقوط مرده و ترافیک بعدی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0160",
+            "description_fa": "شناسایی یک فرآیند یا اسکریپت که به یک وب سرویس مشترک برای بازیابی محتوای حاوی نشانگرهای مبهم یک سرور C2 ثانویه (رفتار حل کننده قطره مرده) دسترسی دارد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0335#AN0948",
-                    "external_id": "AN0948"
+                    "external_id": "AN0948",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedXPCClients",
-                    "description": "Maintain allowlist of binaries permitted to invoke specific XPC services to minimize false positives."
+                    "description": "Maintain allowlist of binaries permitted to invoke specific XPC services to minimize false positives.",
+                    "description_fa": "لیست مجوزهای باینری‌هایی را که مجاز به فراخوانی سرویس‌های خاص XPC هستند برای به حداقل رساندن موارد مثبت کاذب، حفظ کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for correlating abnormal XPC requests with subsequent privilege escalation or process creation."
+                    "description": "Threshold for correlating abnormal XPC requests with subsequent privilege escalation or process creation.",
+                    "description_fa": "آستانه برای ارتباط درخواست‌های غیرعادی XPC با افزایش امتیازات بعدی یا ایجاد فرآیند."
                 },
                 {
                     "field": "UnsignedBinaryAlertLevel",
-                    "description": "Adjust sensitivity of alerts for unsigned or non-Apple-signed clients initiating XPC communication."
+                    "description": "Adjust sensitivity of alerts for unsigned or non-Apple-signed clients initiating XPC communication.",
+                    "description_fa": "حساسیت هشدارها را برای مشتریان بدون امضا یا بدون امضای اپل که ارتباط XPC را آغاز می کنند، تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0948",
+            "description_fa": "استفاده غیرعادی از سرویس‌های macOS XPC برای اجرای کد را تشخیص می‌دهد. مانیتور برای فرآیندهای فراخوانی شیاطین XPC ممتاز با پارامترهای غیرعادی، باینری‌های غیرمنتظره که از طریق NSXPCConnection ارتباط برقرار می‌کنند، یا ابزارهای کمکی که کدی را خارج از خط تولید پردازش والد مورد انتظار خود اجرا می‌کنند. تلاش‌های دسترسی فرآیند به دیمون‌های سطح سیستم، افزایش امتیازات از طریق پیکربندی‌های اشتباه XPC و تزریق بارهای مخرب از طریق ارتباطات بین فرآیندی را به هم مرتبط می‌کند."
         }
     ]
 }

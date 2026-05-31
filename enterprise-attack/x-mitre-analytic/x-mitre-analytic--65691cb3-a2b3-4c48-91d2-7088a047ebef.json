@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0279#AN0779",
-                    "external_id": "AN0779"
+                    "external_id": "AN0779",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceBinaryPaths",
-                    "description": "Valid directories for service binaries to filter out benign changes"
+                    "description": "Valid directories for service binaries to filter out benign changes",
+                    "description_fa": "دایرکتوری های معتبر برای باینری های سرویس برای فیلتر کردن تغییرات خوش خیم"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Expected accounts performing service management (e.g., root/admin)"
+                    "description": "Expected accounts performing service management (e.g., root/admin)",
+                    "description_fa": "حساب‌های مورد انتظاری که مدیریت خدمات را انجام می‌دهند (به عنوان مثال، root/admin)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0779",
+            "description_fa": "فراخوان‌های غیرمعمول سیستمctl، سرویس یا اسکریپت‌های init ایجاد یا تغییر دیمون‌ها را شناسایی کنید. گزارش های حسابرسی را برای اجرای باینری ها از مسیرهای غیرمنتظره مرتبط با فعالیت شروع/توقف سرویس نظارت کنید."
         }
     ]
 }

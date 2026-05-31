@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0299#AN0835",
-                    "external_id": "AN0835"
+                    "external_id": "AN0835",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousPermissionValues",
-                    "description": "Octal permission values that indicate potential malicious intent (default: 777, 755, 4755)"
+                    "description": "Octal permission values that indicate potential malicious intent (default: 777, 755, 4755)",
+                    "description_fa": "مقادیر مجوز هشتگانه که نشان دهنده نیت مخرب بالقوه است (پیش‌فرض: 777، 755، 4755)"
                 },
                 {
                     "field": "CriticalPathPatterns",
-                    "description": "Linux filesystem paths requiring enhanced monitoring (/etc/, /usr/bin/, /home/)"
+                    "description": "Linux filesystem paths requiring enhanced monitoring (/etc/, /usr/bin/, /home/)",
+                    "description_fa": "مسیرهای سیستم فایل لینوکس که به نظارت پیشرفته نیاز دارند (/etc/، /usr/bin/، /home/)"
                 },
                 {
                     "field": "AuthorizedAdminUsers",
-                    "description": "User accounts permitted to perform system-level permission modifications"
+                    "description": "User accounts permitted to perform system-level permission modifications",
+                    "description_fa": "حساب های کاربری مجاز به انجام تغییرات مجوز در سطح سیستم هستند"
                 },
                 {
                     "field": "AnomalyThreshold",
-                    "description": "Statistical threshold for detecting unusual permission modification frequency"
+                    "description": "Statistical threshold for detecting unusual permission modification frequency",
+                    "description_fa": "آستانه آماری برای تشخیص فرکانس اصلاح غیرمعمول مجوز"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0835",
+            "description_fa": "توالی رفتاری افزایش امتیاز غیرمجاز از طریق اصلاح مجوز: (1) اجرای فرآیند chmod/chown/setfacl با پارامترهای مشکوک، (2) هدف‌گیری فایل‌های سیستم بحرانی یا مقادیر مجوز غیرمعمول، (3) همبستگی با غیرمجاز به ازای دسترسی کاربر به ازای هر الگوی زمان‌بندی پی‌گیری موفق"
         }
     ]
 }

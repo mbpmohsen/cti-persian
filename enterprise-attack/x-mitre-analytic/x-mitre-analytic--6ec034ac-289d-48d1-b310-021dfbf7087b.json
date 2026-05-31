@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0217#AN0608",
-                    "external_id": "AN0608"
+                    "external_id": "AN0608",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetWindowClassRegex",
-                    "description": "Regex to scope suspicious or uncommon GUI class names registered by user-created processes"
+                    "description": "Regex to scope suspicious or uncommon GUI class names registered by user-created processes",
+                    "description_fa": "Regex برای نام‌های کلاس‌های رابط کاربری گرافیکی مشکوک یا غیرمعمول ثبت‌شده توسط فرآیندهای ایجاد شده توسط کاربر"
                 },
                 {
                     "field": "ExecutionTriggerWindowMessage",
-                    "description": "API calls like SendNotifyMessage or PostMessage that deliver execution to the shellcode location"
+                    "description": "API calls like SendNotifyMessage or PostMessage that deliver execution to the shellcode location",
+                    "description_fa": "فراخوان‌های API مانند SendNotifyMessage یا PostMessage که اجرا را به محل shellcode تحویل می‌دهند."
                 },
                 {
                     "field": "SharedSectionWriteThreshold",
-                    "description": "Set byte count thresholds on suspicious memory writes to known shared sections"
+                    "description": "Set byte count thresholds on suspicious memory writes to known shared sections",
+                    "description_fa": "آستانه های شمارش بایت را در نوشته های حافظه مشکوک در بخش های مشترک شناخته شده تنظیم کنید"
                 },
                 {
                     "field": "TimeWindowSetWindowLongToMessageTrigger",
-                    "description": "Define max time (e.g., <10s) between API call to set window memory and the message call to trigger it"
+                    "description": "Define max time (e.g., <10s) between API call to set window memory and the message call to trigger it",
+                    "description_fa": "حداکثر زمان (به عنوان مثال، <10 ثانیه) بین تماس API برای تنظیم حافظه پنجره و تماس پیام برای راه اندازی آن را تعیین کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0608",
+            "description_fa": "دستکاری حافظه اضافی پنجره (EWM) توسط دشمن را در یک فرآیند رابط کاربری گرافیکی شناسایی می‌کند، جایی که مهاجم از SetWindowLong یا SetClassLong برای هدایت نشانگرهای تابع به پوسته‌کد تزریقی ذخیره‌شده در حافظه مشترک استفاده می‌کند، سپس از طریق یک پیام پنجره مانند SendNotifyMessage اجرا را آغاز می‌کند."
         }
     ]
 }

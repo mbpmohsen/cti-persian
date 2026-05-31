@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0149#AN0424",
-                    "external_id": "AN0424"
+                    "external_id": "AN0424",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SensitiveDirectoryWatchlist",
-                    "description": "Flag access to paths known to store sensitive or regulated data."
+                    "description": "Flag access to paths known to store sensitive or regulated data.",
+                    "description_fa": "دسترسی به مسیرهای شناخته شده برای ذخیره داده های حساس یا تنظیم شده را علامت گذاری کنید."
                 },
                 {
                     "field": "ProcessBaseline",
-                    "description": "Define which binaries are allowed to communicate externally using HTTP/FTP."
+                    "description": "Define which binaries are allowed to communicate externally using HTTP/FTP.",
+                    "description_fa": "تعریف کنید که کدام باینری ها مجاز به ارتباط خارجی با استفاده از HTTP/FTP هستند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates process/file/network within a defined time window."
+                    "description": "Correlates process/file/network within a defined time window.",
+                    "description_fa": "فرآیند/فایل/شبکه ​​را در یک پنجره زمانی تعریف شده به هم مرتبط می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0424",
+            "description_fa": "دسترسی به فایل یا ابزارهای فشرده سازی و به دنبال آن اتصالات خروجی را با استفاده از curl، wget، ftp یا باینری های سفارشی که از طریق پروتکل های رمزگذاری نشده ارتباط برقرار می کنند، شناسایی می کند."
         }
     ]
 }

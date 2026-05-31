@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0547#AN1508",
-                    "external_id": "AN1508"
+                    "external_id": "AN1508",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServerBinaryPath",
-                    "description": "Alternate install paths like /opt/httpd or user-compiled binaries"
+                    "description": "Alternate install paths like /opt/httpd or user-compiled binaries",
+                    "description_fa": "مسیرهای نصب جایگزین مانند /opt/httpd یا باینری های کامپایل شده توسط کاربر"
                 },
                 {
                     "field": "OutboundPortRange",
-                    "description": "Tunable to match expected versus suspicious outbound traffic patterns"
+                    "description": "Tunable to match expected versus suspicious outbound traffic patterns",
+                    "description_fa": "قابل تنظیم برای مطابقت با الگوهای ترافیک خروجی مورد انتظار با مشکوک"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1508",
+            "description_fa": "سوء استفاده از ماژول‌های سرور توسعه‌پذیر (مانند Apache، Nginx، Tomcat) برای بارگیری افزونه‌های سرکشی که bash را شروع می‌کنند، به C2 متصل می‌شوند یا پوسته‌های معکوس ایجاد می‌کنند."
         }
     ]
 }

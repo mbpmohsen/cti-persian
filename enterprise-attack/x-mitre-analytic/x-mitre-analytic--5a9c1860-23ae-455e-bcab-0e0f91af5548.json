@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0117#AN0325",
-                    "external_id": "AN0325"
+                    "external_id": "AN0325",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UnitFilePath",
-                    "description": "Unusual or user-space paths for systemd unit files"
+                    "description": "Unusual or user-space paths for systemd unit files",
+                    "description_fa": "مسیرهای غیرمعمول یا فضای کاربر برای فایل های واحد سیستم"
                 },
                 {
                     "field": "ServiceNameDeviation",
-                    "description": "Detect units with names similar to legitimate ones (e.g., `networks.service` instead of `network.service`)"
+                    "description": "Detect units with names similar to legitimate ones (e.g., `networks.service` instead of `network.service`)",
+                    "description_fa": "شناسایی واحدهایی با نام‌های مشابه با نام‌های قانونی (مانند «networks.service» به جای «network.service»)"
                 },
                 {
                     "field": "ExecStartPath",
-                    "description": "Track uncommon or suspicious binaries in `ExecStart=` directives"
+                    "description": "Track uncommon or suspicious binaries in `ExecStart=` directives",
+                    "description_fa": "باینری‌های غیرمعمول یا مشکوک را در دستورالعمل‌های «ExecStart=» ردیابی کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0325",
+            "description_fa": "ایجاد یا اصلاح واحدهای سرویس «سیستم» یا کارهای cron با استفاده از نام‌گذاری فریبنده و مسیرهای فرمان نامعتبر، که اغلب با فعالیت شبکه جانبی یا افزایش امتیاز دنبال می‌شود."
         }
     ]
 }

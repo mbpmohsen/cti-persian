@@ -13,12 +13,14 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1512",
-                    "external_id": "T1512"
+                    "external_id": "T1512",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-19.html",
-                    "external_id": "APP-19"
+                    "external_id": "APP-19",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +28,7 @@
             ],
             "modified": "2026-05-12T15:12:00.721Z",
             "name": "Video Capture",
-            "description": "An adversary can leverage a device\u2019s cameras to gather information by capturing video recordings. Images may also be captured, potentially in specified intervals, in lieu of video files.  \n\n \n\nMalware or scripts may interact with the device cameras through an available API provided by the operating system. Video or image files may be written to disk and exfiltrated later. This technique differs from [Screen Capture](https://attack.mitre.org/techniques/T1513) due to use of the device\u2019s cameras for video recording rather than capturing the victim\u2019s screen. \n\n \n\nIn Android, an application must hold the `android.permission.CAMERA` permission to access the cameras. In iOS, applications must include the `NSCameraUsageDescription` key in the `Info.plist` file. In both cases, the user must grant permission to the requesting application to use the camera. If the device has been rooted or jailbroken, an adversary may be able to access the camera without knowledge of the user.  ",
+            "description": "An adversary can leverage a device’s cameras to gather information by capturing video recordings. Images may also be captured, potentially in specified intervals, in lieu of video files.  \n\n \n\nMalware or scripts may interact with the device cameras through an available API provided by the operating system. Video or image files may be written to disk and exfiltrated later. This technique differs from [Screen Capture](https://attack.mitre.org/techniques/T1513) due to use of the device’s cameras for video recording rather than capturing the victim’s screen. \n\n \n\nIn Android, an application must hold the `android.permission.CAMERA` permission to access the cameras. In iOS, applications must include the `NSCameraUsageDescription` key in the `Info.plist` file. In both cases, the user must grant permission to the requesting application to use the camera. If the device has been rooted or jailbroken, an adversary may be able to access the camera without knowledge of the user.  ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -47,7 +49,9 @@
             "x_mitre_version": "2.1",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "فیلمبرداری",
+            "description_fa": "یک دشمن می‌تواند از دوربین‌های دستگاه برای جمع‌آوری اطلاعات با ضبط ویدیوهای ضبط شده استفاده کند. همچنین ممکن است به جای فایل‌های ویدیویی، در فواصل زمانی مشخص، تصاویر گرفته شود.  \n\n \n\nبدافزارها یا اسکریپت‌ها ممکن است از طریق یک API موجود که توسط سیستم عامل ارائه می‌شود، با دوربین‌های دستگاه تعامل داشته باشند. فایل‌های ویدیویی یا تصویری ممکن است روی دیسک نوشته شده و بعداً استخراج شوند. این تکنیک با [Screen Capture](https://attack.mitre.org/techniques/T1513) به دلیل استفاده از دوربین‌های دستگاه برای ضبط ویدیو به جای گرفتن صفحه قربانی متفاوت است. \n\n \n\nدر Android، یک برنامه برای دسترسی به دوربین‌ها باید مجوز «android.permission.CAMERA» را داشته باشد. در iOS، برنامه‌ها باید کلید «NSCameraUsageDescription» را در فایل «Info.plist» قرار دهند. در هر دو مورد، کاربر باید به برنامه درخواست کننده اجازه استفاده از دوربین را بدهد. اگر دستگاه روت یا جیلبریک شده باشد، ممکن است دشمن بتواند بدون اطلاع کاربر به دوربین دسترسی پیدا کند."
         }
     ]
 }

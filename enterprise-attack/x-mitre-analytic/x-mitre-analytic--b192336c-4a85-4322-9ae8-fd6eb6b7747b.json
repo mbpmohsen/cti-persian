@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0339#AN0961",
-                    "external_id": "AN0961"
+                    "external_id": "AN0961",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CipherSuiteWhitelist",
-                    "description": "List of approved encryption algorithms and key lengths; customizable to organizational policy."
+                    "description": "List of approved encryption algorithms and key lengths; customizable to organizational policy.",
+                    "description_fa": "فهرست الگوریتم های رمزگذاری تایید شده و طول کلید. قابل تنظیم بر اساس خط مشی سازمانی"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period between configuration changes and abnormal traffic; adjustable to reduce false positives."
+                    "description": "Correlation period between configuration changes and abnormal traffic; adjustable to reduce false positives.",
+                    "description_fa": "دوره همبستگی بین تغییرات پیکربندی و ترافیک غیرعادی. قابل تنظیم برای کاهش مثبت کاذب"
                 },
                 {
                     "field": "AuthorizedFirmwareSources",
-                    "description": "Known trusted sources of firmware updates; deviations indicate possible compromise."
+                    "description": "Known trusted sources of firmware updates; deviations indicate possible compromise.",
+                    "description_fa": "منابع معتبر شناخته شده به روز رسانی سیستم عامل؛ انحرافات نشان دهنده سازش احتمالی است."
                 },
                 {
                     "field": "TrafficEntropyThreshold",
-                    "description": "Baseline entropy measurements of encrypted traffic; deviations may reveal weakening of encryption."
+                    "description": "Baseline entropy measurements of encrypted traffic; deviations may reveal weakening of encryption.",
+                    "description_fa": "اندازه گیری آنتروپی پایه ترافیک رمزگذاری شده. انحرافات ممکن است تضعیف رمزگذاری را نشان دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0961",
+            "description_fa": "مدافعان ممکن است تغییرات غیرمجاز را در فایل‌های پیکربندی مرتبط با رمزگذاری، میان‌افزار یا ماژول‌های رمزنگاری در دستگاه‌های شبکه مشاهده کنند. الگوهای مشکوک شامل تغییرات در پیکربندی مجموعه رمز، به‌روزرسانی‌های سیستم‌افزار غیرمنتظره که بر کتابخانه‌های رمزنگاری تأثیر می‌گذارد، غیرفعال کردن شتاب‌دهنده‌های رمزنگاری سخت‌افزاری، یا کاهش خط‌مشی‌های طول کلید است. مرتبط کردن تغییرات پیکربندی با ناهنجاری‌ها در ویژگی‌های ترافیک رمزگذاری‌شده (مانند رمزهای ضعیف‌تر یا انتقال متن ساده ناگهانی) تشخیص را تقویت می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0465#AN1284",
-                    "external_id": "AN1284"
+                    "external_id": "AN1284",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SSHMethod",
-                    "description": "Environments using passwordless SSH should not have password logins enabled for root or other default accounts."
+                    "description": "Environments using passwordless SSH should not have password logins enabled for root or other default accounts.",
+                    "description_fa": "محیط‌هایی که از SSH بدون رمز عبور استفاده می‌کنند، نباید ورود رمز عبور را برای حساب‌های روت یا دیگر پیش‌فرض‌ها فعال کنند."
                 },
                 {
                     "field": "RemoteIPWhitelist",
-                    "description": "Logins from jump boxes may be whitelisted depending on environment policies."
+                    "description": "Logins from jump boxes may be whitelisted depending on environment policies.",
+                    "description_fa": "بسته به خط‌مشی‌های محیطی، ورود از جعبه‌های پرش ممکن است در لیست سفید قرار گیرد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1284",
+            "description_fa": "نظارت بر ورود SSH از حساب‌های پیش‌فرض مانند «ریشه»، به‌ویژه زمانی که ورود از طریق رمز عبور است و نه احراز هویت مبتنی بر کلید."
         }
     ]
 }

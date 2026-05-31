@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0199#AN0572",
-                    "external_id": "AN0572"
+                    "external_id": "AN0572",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExpectedAdminUsers",
-                    "description": "List of known administrators authorized to run ESXi enumeration commands."
+                    "description": "List of known administrators authorized to run ESXi enumeration commands.",
+                    "description_fa": "لیست مدیران شناخته شده مجاز برای اجرای دستورات شمارش ESXi."
                 },
                 {
                     "field": "UnexpectedCommandPaths",
-                    "description": "Defines restricted paths or contexts where VM enumeration should not occur."
+                    "description": "Defines restricted paths or contexts where VM enumeration should not occur.",
+                    "description_fa": "مسیرها یا زمینه های محدودی را که در آن شمارش ماشین مجازی نباید رخ دهد، تعریف می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0572",
+            "description_fa": "برای اجرای دستورات مدیریت هایپروایزر مانند «لیست فرآیند esxcli vm» یا «vim-cmd vmsvc/getallvms» که ماشین‌های مجازی را شمارش می‌کنند، نظارت کنید. مدافعان مشاهده می کنند که کاربران غیرمنتظره ای دستورات لیست VM را خارج از جریان کار اداری عادی صادر می کنند."
         }
     ]
 }

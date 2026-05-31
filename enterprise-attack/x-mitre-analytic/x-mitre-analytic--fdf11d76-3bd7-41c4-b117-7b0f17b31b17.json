@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0408#AN1140",
-                    "external_id": "AN1140"
+                    "external_id": "AN1140",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Interval for measuring sudden outbound spike or volume pattern"
+                    "description": "Interval for measuring sudden outbound spike or volume pattern",
+                    "description_fa": "فاصله ای برای اندازه گیری سنبله خروجی ناگهانی یا الگوی حجم"
                 },
                 {
                     "field": "AmplificationProtocolPorts",
-                    "description": "List of known ports used for reflection amplification (e.g., 53/DNS, 123/NTP, 11211/Memcached)"
+                    "description": "List of known ports used for reflection amplification (e.g., 53/DNS, 123/NTP, 11211/Memcached)",
+                    "description_fa": "فهرست پورت های شناخته شده مورد استفاده برای تقویت بازتاب (به عنوان مثال، 53/DNS، 123/NTP، 11211/Memcached)"
                 },
                 {
                     "field": "PacketToByteRatio",
-                    "description": "Heuristic threshold where the response volume far outweighs the request volume"
+                    "description": "Heuristic threshold where the response volume far outweighs the request volume",
+                    "description_fa": "آستانه اکتشافی که در آن حجم پاسخ بسیار بیشتر از حجم درخواست است"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1140",
+            "description_fa": "ترافیک جعلی خروجی به پروتکل‌های تقویت شناخته شده (به عنوان مثال، DNS، NTP، Memcached) همراه با حجم ترافیک غیرعادی شبکه که بازتابنده‌های راه دور را هدف قرار می‌دهد، که منجر به بازگشت ترافیک نامتناسب به قربانی می‌شود."
         }
     ]
 }

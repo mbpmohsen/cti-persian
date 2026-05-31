@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0268#AN0747",
-                    "external_id": "AN0747"
+                    "external_id": "AN0747",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LibraryAllowlist",
-                    "description": "Known business applications using compression libraries."
+                    "description": "Known business applications using compression libraries.",
+                    "description_fa": "برنامه های تجاری شناخته شده با استفاده از کتابخانه های فشرده سازی."
                 },
                 {
                     "field": "SuspiciousExtensions",
-                    "description": "Archive extensions considered sensitive in monitored environments."
+                    "description": "Archive extensions considered sensitive in monitored environments.",
+                    "description_fa": "پسوندهای آرشیو در محیط های نظارت شده حساس در نظر گرفته می شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between script/library invocation and file creation."
+                    "description": "Correlation window between script/library invocation and file creation.",
+                    "description_fa": "پنجره همبستگی بین فراخوانی اسکریپت/کتابخانه و ایجاد فایل."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0747",
+            "description_fa": "بایگانی های متخاصم را با استفاده از کتابخانه ها (zlib، zip API) که توسط اسکریپت ها یا باینری ها احضار شده اند، شناسایی می کند. اجرای فرآیند پایتون، پاورشل یا باینری های سفارشی دات نت را با بارهای DLL/ماژول مرتبط با کتابخانه های فشرده و به دنبال آن ایجاد فایل بایگانی مرتبط می کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0196#AN0564",
-                    "external_id": "AN0564"
+                    "external_id": "AN0564",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SNIHostMismatch",
-                    "description": "Define acceptable mismatch ratio between SNI and HTTP Host fields based on legitimate domain usage patterns."
+                    "description": "Define acceptable mismatch ratio between SNI and HTTP Host fields based on legitimate domain usage patterns.",
+                    "description_fa": "نسبت عدم تطابق قابل قبول بین فیلدهای میزبان SNI و HTTP را بر اساس الگوهای استفاده قانونی دامنه تعریف کنید."
                 },
                 {
                     "field": "CDNAllowList",
-                    "description": "Whitelist of known safe CDN front-end domains (e.g., `cdn.company.com`)."
+                    "description": "Whitelist of known safe CDN front-end domains (e.g., `cdn.company.com`).",
+                    "description_fa": "لیست سفید دامنه های جلویی CDN ایمن شناخته شده (مانند «cdn.company.com»)."
                 },
                 {
                     "field": "ProcessInitiator",
-                    "description": "Filter for suspicious initiators of domain fronting, e.g., scripting engines, lolbins, unknown binaries."
+                    "description": "Filter for suspicious initiators of domain fronting, e.g., scripting engines, lolbins, unknown binaries.",
+                    "description_fa": "فیلتر برای آغازگرهای مشکوک نمایان شدن دامنه، به عنوان مثال، موتورهای اسکریپت نویسی، لوبین ها، باینری های ناشناخته."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0564",
+            "description_fa": "اتصالات HTTPS خروجی مشکوک که در آن نشانگر نام سرور TLS (SNI) با سرصفحه میزبان HTTP مطابقت ندارد، که نشان دهنده استفاده بالقوه از جلوبندی دامنه برای پنهان کردن ترافیک C2 از طریق CDN ها است."
         }
     ]
 }

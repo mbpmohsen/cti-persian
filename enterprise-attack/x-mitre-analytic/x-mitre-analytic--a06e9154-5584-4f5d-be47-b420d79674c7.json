@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0389#AN1095",
-                    "external_id": "AN1095"
+                    "external_id": "AN1095",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InjectedDLLSignatureStatus",
-                    "description": "Whether the DLL is unsigned, untrusted, or loaded from a non-standard path"
+                    "description": "Whether the DLL is unsigned, untrusted, or loaded from a non-standard path",
+                    "description_fa": "آیا DLL بدون امضا، نامعتبر یا از مسیری غیر استاندارد بارگیری شده است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation threshold between memory operations and thread creation"
+                    "description": "Temporal correlation threshold between memory operations and thread creation",
+                    "description_fa": "آستانه همبستگی زمانی بین عملیات حافظه و ایجاد نخ"
                 },
                 {
                     "field": "TargetProcessList",
-                    "description": "List of sensitive or high-value processes targeted for injection (e.g., explorer.exe, winlogon.exe)"
+                    "description": "List of sensitive or high-value processes targeted for injection (e.g., explorer.exe, winlogon.exe)",
+                    "description_fa": "فهرستی از فرآیندهای حساس یا با ارزش بالا که برای تزریق هدف گذاری شده اند (مانند explorer.exe، winlogon.exe)"
                 },
                 {
                     "field": "ParentProcessAnomalyThreshold",
-                    "description": "Degree of deviation from expected parent-child lineage"
+                    "description": "Degree of deviation from expected parent-child lineage",
+                    "description_fa": "درجه انحراف از نسب مورد انتظار والدین-فرزند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1095",
+            "description_fa": "تزریق DLL را از طریق همبستگی تخصیص حافظه و نوشتن به حافظه پردازش راه دور (مانند VirtualAllocEx، WriteProcessMemory)، و به دنبال ایجاد رشته از راه دور (مانند CreateRemoteThread) که یک DLL مشکوک یا بدون امضا را با استفاده از LoadLoadingary بازتابنده بارگیری می کند، تشخیص می دهد."
         }
     ]
 }

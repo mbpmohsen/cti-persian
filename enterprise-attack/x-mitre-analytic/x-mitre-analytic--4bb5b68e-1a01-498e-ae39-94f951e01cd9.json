@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0401#AN1126",
-                    "external_id": "AN1126"
+                    "external_id": "AN1126",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProgramPathRegex",
-                    "description": "Regex patterns to match anomalous executable paths or names in .plist files"
+                    "description": "Regex patterns to match anomalous executable paths or names in .plist files",
+                    "description_fa": "الگوهای Regex برای مطابقت با مسیرهای اجرایی غیرعادی یا نام در فایل‌های plist"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between file modification and launchd process execution"
+                    "description": "Correlation window between file modification and launchd process execution",
+                    "description_fa": "پنجره همبستگی بین اصلاح فایل و اجرای فرآیند راه اندازی شده"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Admin or root context used during daemon installation"
+                    "description": "Admin or root context used during daemon installation",
+                    "description_fa": "متن مدیریت یا ریشه مورد استفاده در هنگام نصب دیمون"
                 },
                 {
                     "field": "UnsignedBinaryFlag",
-                    "description": "Whether the binary associated with the LaunchDaemon is signed or trusted"
+                    "description": "Whether the binary associated with the LaunchDaemon is signed or trusted",
+                    "description_fa": "آیا باینری مرتبط با LaunchDaemon امضا شده یا قابل اعتماد است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1126",
+            "description_fa": "ایجاد یا اصلاح فایل‌های «.plist» در /Library/LaunchDaemons/، به‌ویژه آنهایی که دارای مسیرهای مشکوک Program یا ProgramArguments هستند، همراه با فعالیت‌های اجرایی تحت راه‌اندازی با امتیازات بالا. از طریق گزارش های یکپارچه مرتبط، نظارت بر فایل ها و تله متری فرآیند قابل شناسایی است."
         }
     ]
 }

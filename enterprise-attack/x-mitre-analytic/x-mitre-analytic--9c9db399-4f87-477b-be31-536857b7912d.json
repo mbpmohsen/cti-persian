@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0330#AN0940",
-                    "external_id": "AN0940"
+                    "external_id": "AN0940",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InstallerParent",
-                    "description": "Could be msiexec.exe or third-party wrapper like setup.exe."
+                    "description": "Could be msiexec.exe or third-party wrapper like setup.exe.",
+                    "description_fa": "می تواند msiexec.exe یا بسته بندی شخص ثالث مانند setup.exe باشد."
                 },
                 {
                     "field": "ChildImagePath",
-                    "description": "Payload paths vary based on where installer extracts to (e.g., %TEMP%, C:\\Users\\Public)."
+                    "description": "Payload paths vary based on where installer extracts to (e.g., %TEMP%, C:\\Users\\Public).",
+                    "description_fa": "مسیرهای بار بر اساس جایی که نصب کننده به آن استخراج می کند متفاوت است (به عنوان مثال، %TEMP%, C:\\Users\\Public)."
                 },
                 {
                     "field": "ExecutionTimeWindow",
-                    "description": "Threshold for how soon a payload must run after msiexec to be considered related."
+                    "description": "Threshold for how soon a payload must run after msiexec to be considered related.",
+                    "description_fa": "آستانه برای مدت زمانی که یک payload باید بعد از msiexec اجرا شود تا مرتبط در نظر گرفته شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0940",
+            "description_fa": "شناسایی msiexec.exe در حال اجرا بسته های نصب کننده که منجر به ایجاد فرآیند غیرعادی می شود. به دنبال باینری های غیرمنتظره اجرا شده توسط msiexec یا DLL های اقدام سفارشی در دایرکتوری temp بگردید."
         }
     ]
 }

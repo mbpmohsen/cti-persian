@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0139#AN0389",
-                    "external_id": "AN0389"
+                    "external_id": "AN0389",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcess",
-                    "description": "Credential-sensitive targets (e.g., explorer.exe, winlogon.exe) may vary by environment"
+                    "description": "Credential-sensitive targets (e.g., explorer.exe, winlogon.exe) may vary by environment",
+                    "description_fa": "اهداف حساس به اعتبار (مانند explorer.exe، winlogon.exe) ممکن است بسته به محیط متفاوت باشد."
                 },
                 {
                     "field": "AccessMask",
-                    "description": "Tuning for access rights like 0x1FFFFF for full access vs. thread injection"
+                    "description": "Tuning for access rights like 0x1FFFFF for full access vs. thread injection",
+                    "description_fa": "تنظیم برای حقوق دسترسی مانند 0x1FFFFF برای دسترسی کامل در مقابل تزریق نخ"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate memory access and hook setup in short windows (5\u201310 seconds)"
+                    "description": "Correlate memory access and hook setup in short windows (5–10 seconds)",
+                    "description_fa": "ارتباط دسترسی به حافظه و تنظیم قلاب در پنجره‌های کوتاه (5 تا 10 ثانیه)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0389",
+            "description_fa": "برداشت اعتبار از طریق اتصال API کاربر (به عنوان مثال، SetWindowsHookEx، IAT، یا وصله درون خطی) را با مرتبط کردن تغییرات حافظه با توابع نصب قلاب و بارهای ماژول مشکوک در فرآیندهای حساس به اعتبار مانند lsass.exe، explorer.exe یا winlogon تشخیص می دهد."
         }
     ]
 }

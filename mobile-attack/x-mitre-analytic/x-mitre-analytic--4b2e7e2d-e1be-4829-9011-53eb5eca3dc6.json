@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0643#AN1719",
-                    "external_id": "AN1719"
+                    "external_id": "AN1719",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.377Z",
             "name": "Analytic 1719",
-            "description": "From the defender view: an app registers a clipboard listener or calls ClipboardManager getters; the app is (a) foreground, (b) the default IME, or (c) abusing legacy paths. Shortly after each clipboard change, the app reads the primary clip repeatedly, optionally persists content (local file/DB) and/or exfiltrates it. We correlate: listener/clip-access \u2192 privilege/foreground confirmation \u2192 bursty reads \u2192 local write and/or network egress within a tight window.",
+            "description": "From the defender view: an app registers a clipboard listener or calls ClipboardManager getters; the app is (a) foreground, (b) the default IME, or (c) abusing legacy paths. Shortly after each clipboard change, the app reads the primary clip repeatedly, optionally persists content (local file/DB) and/or exfiltrates it. We correlate: listener/clip-access → privilege/foreground confirmation → bursty reads → local write and/or network egress within a tight window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,29 +58,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time between clip access \u2192 persist/exfil (e.g., 5\u201345s)."
+                    "description": "Max time between clip access → persist/exfil (e.g., 5–45s).",
+                    "description_fa": "حداکثر زمان بین دسترسی به کلیپ → ماندگاری/اکسفیل (مثلاً 5 تا 45 ثانیه)."
                 },
                 {
                     "field": "MinReadBurst",
-                    "description": "Minimum reads per clipboard change to flag harvesting (e.g., \u22652)."
+                    "description": "Minimum reads per clipboard change to flag harvesting (e.g., ≥2).",
+                    "description_fa": "حداقل خوانده شده در هر تغییر کلیپ بورد به برداشت پرچم (به عنوان مثال، ≥2)."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for files/DBs used to stash clipboard content in app container."
+                    "description": "Regex for files/DBs used to stash clipboard content in app container.",
+                    "description_fa": "Regex برای فایل‌ها/DBهایی که برای ذخیره کردن محتوای کلیپ‌بورد در ظرف برنامه استفاده می‌شود."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Allowlisted domains to suppress false positives for analytics SDKs."
+                    "description": "Allowlisted domains to suppress false positives for analytics SDKs.",
+                    "description_fa": "دامنه های فهرست شده مجاز برای سرکوب موارد مثبت کاذب برای SDK های تحلیلی."
                 },
                 {
                     "field": "ForegroundRequired",
-                    "description": "Require foreground unless app is the default IME (true/false)."
+                    "description": "Require foreground unless app is the default IME (true/false).",
+                    "description_fa": "به پیش زمینه نیاز است مگر اینکه برنامه IME پیش فرض باشد (درست/نادرست)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Work Profile/Developer Mode/Doze to scope alerts."
+                    "description": "Work Profile/Developer Mode/Doze to scope alerts.",
+                    "description_fa": "نمایه کاری/حالت برنامه‌نویس/دوز برای دامنه هشدارها."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1719",
+            "description_fa": "از نمای مدافع: یک برنامه شنونده کلیپ بورد را ثبت می کند یا گیرندگان ClipboardManager را فرا می خواند. برنامه (الف) پیش زمینه، (ب) IME پیش فرض است، یا (ج) از مسیرهای قدیمی سوء استفاده می کند. مدت کوتاهی پس از هر تغییر کلیپ‌بورد، برنامه به طور مکرر کلیپ اصلی را می‌خواند، به صورت اختیاری محتوا (فایل محلی/DB) را حفظ می‌کند و/یا آن را استخراج می‌کند. ما با هم ارتباط داریم: شنونده/دسترسی به کلیپ ← تایید امتیاز/پیش زمینه ← خواندن انفجاری → نوشتن محلی و/یا خروج شبکه در یک پنجره تنگ."
         }
     ]
 }

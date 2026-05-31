@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1604",
-                    "external_id": "T1604"
+                    "external_id": "T1604",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Threat Fabric Exobot",
                     "description": "Threat Fabric. (2017, February). Exobot - Android banking Trojan on the rise. Retrieved October 29, 2020.",
-                    "url": "https://www.threatfabric.com/blogs/exobot_android_banking_trojan_on_the_rise.html"
+                    "url": "https://www.threatfabric.com/blogs/exobot_android_banking_trojan_on_the_rise.html",
+                    "source_name_fa": "تهدید Fabric Exobot",
+                    "description_fa": "پارچه تهدید. (2017، فوریه). Exobot - تروجان بانکی اندروید در حال افزایش است. بازبینی شده در 29 اکتبر 2020."
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +29,7 @@
             ],
             "modified": "2025-10-24T17:48:50.301Z",
             "name": "Proxy Through Victim",
-            "description": "Adversaries may use a compromised device as a proxy server to the Internet. By utilizing a proxy, adversaries hide the true IP address of their C2 server and associated infrastructure from the destination of the network traffic. This masquerades an adversary\u2019s traffic as legitimate traffic originating from the compromised device, which can evade IP-based restrictions and alerts on certain services, such as bank accounts and social media websites.(Citation: Threat Fabric Exobot)\n\nThe most common type of proxy is a SOCKS proxy. It can typically be implemented using standard OS-level APIs and 3rd party libraries with no indication to the user. On Android, adversaries can use the `Proxy` API to programmatically establish a SOCKS proxy connection, or lower-level APIs to interact directly with raw sockets.",
+            "description": "Adversaries may use a compromised device as a proxy server to the Internet. By utilizing a proxy, adversaries hide the true IP address of their C2 server and associated infrastructure from the destination of the network traffic. This masquerades an adversary’s traffic as legitimate traffic originating from the compromised device, which can evade IP-based restrictions and alerts on certain services, such as bank accounts and social media websites.(Citation: Threat Fabric Exobot)\n\nThe most common type of proxy is a SOCKS proxy. It can typically be implemented using standard OS-level APIs and 3rd party libraries with no indication to the user. On Android, adversaries can use the `Proxy` API to programmatically establish a SOCKS proxy connection, or lower-level APIs to interact directly with raw sockets.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -46,7 +49,9 @@
             "x_mitre_version": "1.1",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "پروکسی از طریق قربانی",
+            "description_fa": "دشمنان ممکن است از یک دستگاه در معرض خطر به عنوان سرور پروکسی اینترنت استفاده کنند. با استفاده از یک پروکسی، دشمنان آدرس IP واقعی سرور C2 و زیرساخت مرتبط با آن را از مقصد ترافیک شبکه پنهان می کنند. این امر ترافیک دشمن را به عنوان ترافیک قانونی که از دستگاه در معرض خطر نشات می‌گیرد، پنهان می‌کند، که می‌تواند از محدودیت‌های مبتنی بر IP و هشدارهای مربوط به برخی خدمات مانند حساب‌های بانکی و وب‌سایت‌های رسانه‌های اجتماعی اجتناب کند.(Citation: Threat Fabric Exobot)\n\nرایج ترین نوع پروکسی، پروکسی SOCKS است. معمولاً می‌توان آن را با استفاده از APIهای استاندارد سطح سیستم عامل و کتابخانه‌های شخص ثالث بدون هیچ نشانه‌ای برای کاربر پیاده‌سازی کرد. در Android، دشمنان می‌توانند از API «Proxy» برای ایجاد یک اتصال پراکسی SOCKS یا از APIهای سطح پایین‌تر برای تعامل مستقیم با سوکت‌های خام استفاده کنند."
         }
     ]
 }

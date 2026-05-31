@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-591",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/591.html"
+                    "url": "https://capec.mitre.org/data/definitions/591.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-79",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/79.html"
+                    "url": "http://cwe.mitre.org/data/definitions/79.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Watchfire Research, XSS vulnerabilities in Google.com, Full Disclosure mailing list archives",
                     "external_id": "REF-476",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://seclists.org/fulldisclosure/2005/Dec/1107"
+                    "url": "http://seclists.org/fulldisclosure/2005/Dec/1107",
+                    "description_fa": "تحقیقات Watchfire، آسیب‌پذیری‌های XSS در Google.com، بایگانی فهرست پستی Full Disclosure",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-604",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/01-Testing_for_Reflected_Cross_Site_Scripting.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--61b17787-fe92-427c-9e6a-6311997d7b2a",
@@ -58,6 +64,24 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (A successful Reflected attack can enable an adversary run arbitrary code of their choosing, thus enabling a complete compromise of the application.)",
                     "Modify Data (A successful Reflected attack can allow an adversary to tamper with application data.)"
+                ],
+                "Access_Control_fa": [
+                    "به دست آوردن امتیازات (یک حمله موفقیت آمیز Reflected XSS می تواند دشمن را قادر سازد تا سطح امتیاز و عملکرد دسترسی خود را افزایش دهد که در غیر این صورت نباید اجازه دسترسی داشته باشد.)"
+                ],
+                "Authorization_fa": [
+                    "به دست آوردن امتیازات (یک حمله موفقیت آمیز Reflected XSS می تواند دشمن را قادر سازد تا سطح امتیاز و عملکرد دسترسی خود را افزایش دهد که در غیر این صورت نباید اجازه دسترسی داشته باشد.)"
+                ],
+                "Availability_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (یک حمله Reflected موفق می‌تواند کد دلخواه دشمن را به انتخاب خود اجرا کند، بنابراین امکان به خطر افتادن کامل برنامه را فراهم می‌کند.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (یک حمله موفق Reflected XSS می تواند دشمن را قادر سازد تا اطلاعات حساس را از برنامه استخراج کند.)",
+                    "به دست آوردن امتیازات (یک حمله موفقیت آمیز Reflected XSS می تواند دشمن را قادر سازد تا سطح امتیاز و عملکرد دسترسی خود را افزایش دهد که در غیر این صورت نباید اجازه دسترسی داشته باشد.)",
+                    "دستورات غیرمجاز را اجرا کنید (یک حمله Reflected موفق می‌تواند کد دلخواه دشمن را به انتخاب خود اجرا کند، بنابراین امکان به خطر افتادن کامل برنامه را فراهم می‌کند.)"
+                ],
+                "Integrity_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (یک حمله Reflected موفق می‌تواند کد دلخواه دشمن را به انتخاب خود اجرا کند، بنابراین امکان به خطر افتادن کامل برنامه را فراهم می‌کند.)",
+                    "اصلاح داده ها (یک حمله انعکاسی موفق می تواند به دشمن اجازه دهد تا داده های برنامه را دستکاری کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -89,11 +113,27 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Medium": "Requires the ability to write malicious scripts and embed them into HTTP requests."
+                "Medium": "Requires the ability to write malicious scripts and embed them into HTTP requests.",
+                "Medium_fa": "به توانایی نوشتن اسکریپت های مخرب و جاسازی آنها در درخواست های HTTP نیاز دارد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این نوع حمله شکلی از Cross-Site Scripting (XSS) است که در آن یک اسکریپت مخرب از یک برنامه وب آسیب‌پذیر منعکس می‌شود و سپس توسط مرورگر قربانی اجرا می‌شود. این فرآیند با تحویل یک اسکریپت مخرب به قربانی و متقاعد کردن قربانی برای ارسال اسکریپت به برنامه وب آسیب پذیر توسط دشمن شروع می شود.",
+            "name_fa": "XSS منعکس شده است",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک برنامه وب را در نظر بگیرید که برخی از فیلدهای یک فرم را در صفحه از طریق استفاده از پارامتر حالت ارائه شده در رشته جستجو فعال یا غیرفعال می کند.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">http://my.site.com/aform.html?mode=full</xhtml:div>\n               <xhtml:p>کد سمت سرور برنامه ممکن است بخواهد این مقدار حالت را در صفحه HTML در حال ایجاد نشان دهد تا به کاربران بفهمد در چه حالتی هستند. در این مثال، PHP برای استخراج مقدار از URL و تولید HTML مورد نظر استفاده می‌شود.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><?phpecho 'Mode is:' . $_GET[\"mode\"];?></xhtml:div>\n               <xhtml:p>توجه کنید که چگونه مقدار ارائه شده در URL مستقیماً بدون تأیید ورودی انجام شده و هیچ کدگذاری خروجی در محل استفاده می شود. بنابراین می‌توان یک URL ساخته‌شده مخرب به‌گونه‌ای تشکیل داد که اگر قربانی روی URL کلیک کند، یک اسکریپت مخرب توسط مرورگر قربانی اجرا شود:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">http://my.site.com/aform.html?mode=<script>alert('hi');</script></xhtml:div>",
+                "<xhtml:p> حملات XSS منعکس شده می توانند از هدرهای HTTP برای به خطر انداختن قربانی استفاده کنند. به عنوان مثال، فرض کنید یک برنامه وب آسیب‌پذیر به نام «mysite» با استفاده از یک هدر HTTP مانند HTTP_REFERER به صورت پویا یک پیوند ایجاد می‌کند. کد در جایی از برنامه می تواند به شکل زیر باشد:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><?phpecho \"<a href=\"$_SERVER['HTTP_REFERER']\">آزمون URL</a>\"?></xhtml:div>\n               <xhtml:p>سرصفحه HTTP_REFERER با URI که به صفحه در حال اجرا پیوند داده شده است پر شده است. یک وب سایت می تواند توسط دشمن ایجاد و میزبانی شود که با افزودن یک مرجع به برنامه وب آسیب پذیر از این مزیت استفاده می کند. با فریب دادن قربانی به کلیک روی پیوندی که صفحه وب مهاجم را اجرا می کند، مانند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">\"http://attackerswebsite.com?<script>malicious محتوا</script>\"</xhtml:div>\n               <xhtml:p> برنامه وب آسیب‌پذیر ('mysite') اکنون از طریق وب‌سایت مهاجم که توسط مرورگر وب قربانی آغاز شده است فراخوانی می‌شود. هدر HTTP_REFERER حاوی یک اسکریپت مخرب است که توسط برنامه آسیب پذیر در صفحه جاسازی شده و به قربانی ارائه می شود. سپس مرورگر وب قربانی، اسکریپت تزریق شده را اجرا می کند، بنابراین دستگاه قربانی را به خطر می اندازد.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه را برای ورودی‌های قابل کنترل کاربر بررسی کنید: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، دشمن همه پیوندها و اقدامات عمومی را در یک وب‌سایت دنبال می‌کند. آنها همه پیوندها، فرم‌ها، منابع دسترسی‌یافته و سایر نقاط ورودی بالقوه را برای برنامه وب ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها و تجزیه و تحلیل صفحات وب برای یافتن نقاط ورودی استفاده کنید. هر پیوندی را که شامل پارامترهایی در URL است یادداشت ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ضبط همه پیوندهای بازدید شده در طول پیمایش دستی برنامه وب استفاده کنید.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب سایت و تجزیه و تحلیل نحوه ساخت آن استفاده کنید. افزونه‌های بسیاری از مرورگرها برای تسهیل تجزیه و تحلیل یا خودکارسازی کشف در دسترس هستند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>کاوشگر نقاط ورودی بالقوه برای آسیب‌پذیری XSS منعکس‌شده را شناسایی کرد: </b>دشمن جمع‌آوری شده در مرحله ورودی، از نقطه ورودی به عنوان «Ex» استفاده می‌کند. بارهای اسکریپت متداول و کاراکترهای ویژه برای تعیین اینکه آیا یک نقطه ورودی واقعاً یک آسیب‌پذیری را نشان می‌دهد یا نه و مشخص می‌کند که تا چه حد می‌توان از آسیب‌پذیری سوء استفاده کرد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از فهرستی از رشته‌های کاوشگر XSS برای تزریق اسکریپت‌های URL در پارامترهای شناخته‌شده استفاده کنید. در صورت امکان، رشته های کاوشگر حاوی یک شناسه منحصر به فرد هستند.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت نتایج ورودی دستی پروب های XSS در URL های شناخته شده استفاده کنید.</td></tr><tr><td>از لیستی از نویسه های خاص HTML برای تزریق به پارامترهای URL های شناخته شده استفاده کنید و بررسی کنید که آیا آنها به درستی فیلتر شده، جایگزین شده اند یا encod شده اند. out.</td></tr></tbody></table><li> <p> <b>ساخت URL مخرب XSS: </b>هنگامی که حریف مشخص کرد کدام پارامترها در برابر XSS آسیب پذیر هستند، یک URL مخرب حاوی اکسپلویت XSS ایجاد می کند. حریف می‌تواند اهداف زیادی داشته باشد، از سرقت شناسه‌های جلسه، کوکی‌ها، اعتبارنامه‌ها، و محتوای صفحه از قربانی.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک پارامتر URL را تغییر دهید تا شامل یک برچسب اسکریپت مخرب باشد.</td></tr><tr><td>جمع‌آوری مجدد اسکریپت مخرب به اطلاعات مخرب. نقطه پایان.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>قرار دهید قربانی روی URL کلیک کند: </b>برای موفقیت آمیز بودن حمله، قربانی باید به URL مخرب دسترسی پیدا کند. ایمیل حاوی URL مخرب به قربانی. این را می توان در یک ابرپیوند پنهان کرد تا نشانی اینترنتی کامل نشان داده نشود، که ممکن است باعث شک شود.</td></tr><tr><td>نشانی اینترنتی مخرب را در یک انجمن عمومی قرار دهید، جایی که بسیاری از قربانیان ممکن است به طور تصادفی روی پیوند کلیک کنند.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> متداول‌ترین روش از طریق ایمیل فیشینگ است که در آن حریف اسکریپت مخرب را با یک URL که قربانی سپس روی آن کلیک می‌کند، جاسازی می‌کند. در پردازش درخواست بعدی، برنامه وب آسیب پذیر به اشتباه اسکریپت مخرب را به عنوان ورودی معتبر در نظر می گیرد و از آن برای ایجاد پاسخی استفاده می کند که سپس به قربانی ارسال می شود. برای راه‌اندازی یک حمله موفق Reflected XSS، دشمن به دنبال مکان‌هایی است که ورودی کاربر مستقیماً در تولید یک پاسخ استفاده می‌شود. این اغلب شامل عناصری می‌شود که انتظار نمی‌رود اسکریپت‌هایی مانند تگ‌های تصویر (<img>)، یا افزودن ویژگی‌های رویداد مانند onload و onmouseover را میزبانی کنند. این عناصر اغلب مشمول یکسان اعتبارسنجی ورودی، رمزگذاری خروجی، و سایر روال‌های فیلتر کردن و بررسی محتوا نیستند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "برنامه ای که از مرورگر وب سمت کلاینت با فعال بودن اسکریپت استفاده می کند.",
+                "برنامه‌ای که نمی‌تواند ورودی نامعتبر را به‌اندازه کافی پاکسازی یا رمزگذاری کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

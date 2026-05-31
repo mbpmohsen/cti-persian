@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0341#AN0965",
-                    "external_id": "AN0965"
+                    "external_id": "AN0965",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines how far back to look for parent-child relationships and follow-on network activity."
+                    "description": "Defines how far back to look for parent-child relationships and follow-on network activity.",
+                    "description_fa": "تعیین می کند که چقدر به دنبال روابط والدین-فرزند و فعالیت شبکه بعدی است."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filters based on service vs interactive users to reduce noise."
+                    "description": "Filters based on service vs interactive users to reduce noise.",
+                    "description_fa": "فیلترهای مبتنی بر سرویس در مقابل کاربران تعاملی برای کاهش نویز."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Tunable list of expected/benign clipboard accessors."
+                    "description": "Tunable list of expected/benign clipboard accessors.",
+                    "description_fa": "فهرست قابل تنظیم از دسترسی های مورد انتظار/خوش خیم به کلیپ بورد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0965",
+            "description_fa": "تشخیص دسترسی به کلیپ بورد از طریق ابزارهای سیستم عامل (مانند clip.exe، Get-Clipboard) توسط فرآیندهای والد غیرتعاملی یا غیرعادی، که به طور بالقوه با دستورات مرحله‌بندی یا خروج زنجیره‌ای هستند."
         }
     ]
 }

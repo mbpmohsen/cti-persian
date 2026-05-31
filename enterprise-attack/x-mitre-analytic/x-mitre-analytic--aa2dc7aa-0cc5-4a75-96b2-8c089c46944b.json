@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0357#AN1015",
-                    "external_id": "AN1015"
+                    "external_id": "AN1015",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DestinationIP",
-                    "description": "Tunable external IP ranges or domains used to verify Internet access (e.g., 8.8.8.8, example.com)"
+                    "description": "Tunable external IP ranges or domains used to verify Internet access (e.g., 8.8.8.8, example.com)",
+                    "description_fa": "محدوده IP خارجی یا دامنه های قابل تنظیم مورد استفاده برای تأیید دسترسی به اینترنت (مانند 8.8.8.8، example.com)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Cluster rapid test connections with command execution in < 60 seconds"
+                    "description": "Cluster rapid test connections with command execution in < 60 seconds",
+                    "description_fa": "اتصالات تست سریع خوشه ای با اجرای دستور در کمتر از 60 ثانیه"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filter out known admin/script contexts to reduce false positives"
+                    "description": "Filter out known admin/script contexts to reduce false positives",
+                    "description_fa": "زمینه های مدیریت/اسکریپت شناخته شده را فیلتر کنید تا موارد مثبت کاذب را کاهش دهید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1015",
+            "description_fa": "اجرای برنامه های کاربردی (مانند پینگ، ردیابی، Test-NetConnection) یا روش های اسکریپت شده برای آزمایش اتصال به اینترنت با تعامل با IP ها/دامنه های خارجی."
         }
     ]
 }

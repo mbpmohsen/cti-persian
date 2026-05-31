@@ -9,44 +9,54 @@
                 {
                     "external_id": "CAPEC-681",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/681.html"
+                    "url": "https://capec.mitre.org/data/definitions/681.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1259",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1259.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1259.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1267",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1267.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1267.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1270",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1270.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1270.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1294",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1294.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1294.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1302",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1302.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1302.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "PCIe Device Measurement Requirements, 2018--09, Intel Corporation",
                     "external_id": "REF-694",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.intel.com/content/dam/www/public/us/en/documents/reference-guides/pcie-device-security-enhancements.pdf"
+                    "url": "https://www.intel.com/content/dam/www/public/us/en/documents/reference-guides/pcie-device-security-enhancements.pdf",
+                    "description_fa": "الزامات اندازه گیری دستگاه PCIe، 09-2018، شرکت اینتل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "John Butterworth, Cory Kallenberg, Xeno Kovah, BIOS Chronomancy: Fixing the Core Root of Trust for Measurement, 2013--07---31",
                     "external_id": "REF-695",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://media.blackhat.com/us-13/US-13-Butterworth-BIOS-Security-Slides.pdf"
+                    "url": "https://media.blackhat.com/us-13/US-13-Butterworth-BIOS-Security-Slides.pdf",
+                    "description_fa": "John Butterworth، Cory Kallenberg، Xeno Kovah، BIOS Chronomancy: Fixing the Core Root of Trust for Measurement، 2013--07---31",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--e8a8a8f5-3ad5-4d3f-a35b-48036147266b",
@@ -75,6 +85,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -92,11 +115,23 @@
             ],
             "x_capec_skills_required": {
                 "High": "Intricate knowledge of the identifiers being utilized.",
-                "Medium": "Ability to execute actions within the SoC."
+                "Medium": "Ability to execute actions within the SoC.",
+                "High_fa": "دانش پیچیده ای از شناسه های مورد استفاده.",
+                "Medium_fa": "امکان اجرای اقدامات درون SoC."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن از شناسه‌های امنیتی گم شده یا پیکربندی نادرست (مانند نشانه‌ها) که برای کنترل دسترسی در یک سیستم روی تراشه (SoC) استفاده می‌شود، برای خواندن/نوشتن داده‌ها یا اجرای یک اقدام معین استفاده می‌کند.</xhtml:p>",
+            "name_fa": "بهره برداری از شناسه های امنیتی سخت افزاری که به درستی کنترل نشده اند",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک سیستم حاوی یک ثبات (تقسیم شده به چهار ثبات 32 بیتی) است که برای ذخیره یک کلید AES 128 بیتی برای رمزگذاری/رمزگشایی، علاوه بر یک ثبات خط مشی دسترسی استفاده می شود. ثبت خط مشی دسترسی تعیین می کند که کدام عامل می تواند به رجیسترهای کلید AES بر اساس شناسه امنیتی مربوطه دسترسی پیدا کند. فرض بر این است که سیستم دارای دو عامل است: یک کنترل کننده اصلی و یک کنترلر Aux، با شناسه های امنیتی مربوطه \"1\" و \"2\". کنترل کننده اصلی (ID \"1\") به منظور دسترسی به رجیسترهای کلید AES است، در حالی که کنترلر Aux (ID \"2\") به ثبت سیاست دسترسی دسترسی دارد. اگر یک SoC به اشتباه شناسه امنیتی \"1\" را برای هر دو عامل ایجاد کند، هر دو عامل به رجیسترهای کلید AES دسترسی خواهند داشت. این می تواند منجر به انکار سرویس (DoS) یا اجرای یک عمل شود که به نوبه خود می تواند منجر به افزایش امتیاز یا دسترسی ناخواسته شود.</xhtml:p>"
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p>یک سیستم روی تراشه (SoC) اغلب یک مکانیسم شناسه امنیتی را پیاده‌سازی می‌کند تا مشخص کند که چه اقداماتی مجاز یا غیرمجاز هستند وقتی یک تراکنش از یک موجودیت منشا می‌گیرد. با این حال، این مکانیسم ها ممکن است به دلیل تعدادی از موارد زیر قابل بهره برداری باشند:</xhtml:p>\n            <xhtml:ul>\n               <xhtml:li>شناسه های امنیتی وجود ندارد</xhtml:li>\n               <xhtml:li>شناسه های امنیتی به اشتباه پیاده سازی یا تولید شده اند</xhtml:li>\n               <xhtml:li>شناسه‌های امنیتی با یک رمزگذاری منسوخ ایجاد می‌شوند</xhtml:li>\n               <xhtml:li>شناسه های امنیتی به درستی تولید و پیاده سازی شده اند، اما به درستی محافظت می شوند</xhtml:li>\n            </xhtml:ul>\n            <xhtml:p>اگر شناسه‌های امنیتی مورد استفاده توسط SoC گم شده باشند یا به درستی پیکربندی نشده باشند، ممکن است دشمن بتواند از این نقص برای دور زدن کنترل‌های دسترسی مورد نظر استفاده کند. این می تواند منجر به دسترسی ناخواسته دشمن، انجام انکار سرویس (DoS)، افزایش امتیازات، یا جعل اقدامات از یک عامل مورد اعتماد شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "آگاهی از سخت افزار مورد استفاده.",
+                "دسترسی به سخت افزار مورد استفاده"
+            ]
         }
     ],
     "type": "bundle"

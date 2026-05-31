@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0375#AN1056",
-                    "external_id": "AN1056"
+                    "external_id": "AN1056",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UdevRulePath",
-                    "description": "Path to udev rules (may vary by distro or user configuration)"
+                    "description": "Path to udev rules (may vary by distro or user configuration)",
+                    "description_fa": "مسیر قوانین udev (ممکن است بر اساس توزیع یا پیکربندی کاربر متفاوت باشد)"
                 },
                 {
                     "field": "SuspiciousRunPattern",
-                    "description": "Regex or string pattern to flag suspicious command executions in RUN+="
+                    "description": "Regex or string pattern to flag suspicious command executions in RUN+=",
+                    "description_fa": "Regex یا الگوی رشته ای برای پرچم گذاری اجرای دستورات مشکوک در RUN+="
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Max interval between rule change and execution to correlate activity"
+                    "description": "Max interval between rule change and execution to correlate activity",
+                    "description_fa": "حداکثر فاصله بین تغییر قانون و اجرا برای مرتبط کردن فعالیت"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Expected parent of RUN-invoked commands (e.g., systemd-udevd)"
+                    "description": "Expected parent of RUN-invoked commands (e.g., systemd-udevd)",
+                    "description_fa": "والد مورد انتظار دستورات فراخوانی RUN (به عنوان مثال systemd-udevd)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1056",
+            "description_fa": "برای ایجاد یا اصلاح فایل‌های قوانین udev در دایرکتوری‌های کلیدی (/etc/udev/rules.d/، /lib/udev/rules.d/، /usr/lib/udev/rules.d/) نظارت کنید. به دنبال کلیدهای RUN+= یا IMPORT باشید که باینری ها یا اسکریپت های مشکوک را فراخوانی می کنند. این را با اجرای فرآیند از زمینه systemd-udevd مرتبط کنید، و فایل در نزدیکی رویدادهای بارگیری مجدد/راه اندازی مجدد udev می نویسد. این را با فرآیند غیرمنتظره پس‌زمینه تخم‌ریزی از چنگال‌های مرتبط با udevd ترکیب کنید."
         }
     ]
 }

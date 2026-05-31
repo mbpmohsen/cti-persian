@@ -9,25 +9,32 @@
                 {
                     "external_id": "CAPEC-678",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/678.html"
+                    "url": "https://capec.mitre.org/data/definitions/678.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Supply Chain",
                     "external_id": "T1195.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین نرم افزار به خطر افتاده",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Melinda Reed, John F. Miller, Paul Popick, Supply Chain Attack Patterns: Framework and Catalog, 2014--08, Office of the Assistant Secretary of Defense for Research and Engineering",
                     "external_id": "REF-660",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://docplayer.net/13041016-Supply-chain-attack-patterns-framework-and-catalog.html"
+                    "url": "https://docplayer.net/13041016-Supply-chain-attack-patterns-framework-and-catalog.html",
+                    "description_fa": "ملیندا رید، جان اف. میلر، پل پوپیک، الگوهای حمله زنجیره تامین: چارچوب و کاتالوگ، 08-2014، دفتر دستیار وزیر دفاع در امور تحقیقات و مهندسی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--d0a5a641-ba5e-4bd6-8a06-addfa4d03cfb",
@@ -51,6 +58,16 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را اصلاح کنید",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -67,7 +84,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p> در طول فرآیند ساخت سیستم، سیستم به طور عمدی با تغییر داده های ساخت، پیکربندی نادرست می شود. دسترسی به فایل های داده پیکربندی سیستم و فرآیندهای ساخت در معرض پیکربندی اشتباه عمدی سیستم است.</xhtml:p>",
+            "name_fa": "داده های ساخت سیستم به طور مخرب تغییر کرده است",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>«Make» برنامه‌ای است که برای ساختن برنامه‌ها و کتابخانه‌های اجرایی از کد منبع با اجرای دستورات و پیروی از قوانین در یک «میک فایل» استفاده می‌شود. اگر دستورات یا مسیرهای وابستگی در makefile به طور مخرب برای اجرای یک دستور یا مرجع ناخواسته به عنوان یک کد تغییر یافته به طور مخرب وابستگی تغییر داده شوند، می‌تواند یک فایل اجرایی مخرب ایجاد کند.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "یک دشمن به فایل های داده و فرآیندهای مورد استفاده برای اجرای پیکربندی سیستم و انجام ساخت دسترسی دارد."
+            ]
         }
     ],
     "spec_version": "2.0",

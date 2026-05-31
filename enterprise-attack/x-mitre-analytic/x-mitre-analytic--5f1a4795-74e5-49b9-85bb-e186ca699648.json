@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0346#AN0981",
-                    "external_id": "AN0981"
+                    "external_id": "AN0981",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineRegex",
-                    "description": "Customize regex for flag detection (e.g., `screencapture -x`) based on usage patterns"
+                    "description": "Customize regex for flag detection (e.g., `screencapture -x`) based on usage patterns",
+                    "description_fa": "سفارشی کردن regex برای تشخیص پرچم (به عنوان مثال، «صفحه صفحه -x») بر اساس الگوهای استفاده"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "May vary depending on expected screencapture behavior (Terminal vs remote agent)"
+                    "description": "May vary depending on expected screencapture behavior (Terminal vs remote agent)",
+                    "description_fa": "ممکن است بسته به رفتار تصویربرداری مورد انتظار متفاوت باشد (ترمینال در مقابل عامل راه دور)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0981",
+            "description_fa": "فراخوانی دستورات داخلی مانند تصویربرداری یا استفاده از APIهای غیرمستند از فرآیندهای والد مشکوک."
         }
     ]
 }

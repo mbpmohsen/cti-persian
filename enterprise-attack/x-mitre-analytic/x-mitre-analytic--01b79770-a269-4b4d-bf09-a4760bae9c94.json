@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0165#AN0469",
-                    "external_id": "AN0469"
+                    "external_id": "AN0469",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HistoryFilePath",
-                    "description": "Path to PSReadLine file, typically in APPDATA."
+                    "description": "Path to PSReadLine file, typically in APPDATA.",
+                    "description_fa": "مسیر فایل PSReadLine، معمولاً در APPDATA."
                 },
                 {
                     "field": "UserContext",
-                    "description": "User account or role performing deletion (e.g., low-priv user deleting history)."
+                    "description": "User account or role performing deletion (e.g., low-priv user deleting history).",
+                    "description_fa": "حذف حساب کاربری یا نقش (به عنوان مثال، سابقه حذف کاربر با خصوصیات پایین)."
                 },
                 {
                     "field": "CommandPattern",
-                    "description": "Support detection of `Clear-History` and variations."
+                    "description": "Support detection of `Clear-History` and variations.",
+                    "description_fa": "پشتیبانی از تشخیص «Clear-History» و تغییرات."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0469",
+            "description_fa": "فراخوانی «Clear-History» PowerShell یا حذف «ConsoleHost_history.txt» را برای پاک کردن سابقه جلسه گذشته PowerShell شناسایی می کند."
         }
     ]
 }

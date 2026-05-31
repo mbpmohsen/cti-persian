@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0480#AN1322",
-                    "external_id": "AN1322"
+                    "external_id": "AN1322",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WebRootPath",
-                    "description": "Specify custom web service directories (e.g., /Library/WebServer/Documents/)"
+                    "description": "Specify custom web service directories (e.g., /Library/WebServer/Documents/)",
+                    "description_fa": "فهرست راهنمای خدمات وب سفارشی را مشخص کنید (به عنوان مثال، /Library/WebServer/Documents/)"
                 },
                 {
                     "field": "AnomalousProcess",
-                    "description": "Alert on web root changes from non-web processes or scripts"
+                    "description": "Alert on web root changes from non-web processes or scripts",
+                    "description_fa": "هشدار در مورد تغییرات ریشه وب از فرآیندها یا اسکریپت های غیر وب"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1322",
+            "description_fa": "تغییرات غیرمجاز در صفحات ورود میزبانی محلی در macOS را تشخیص می‌دهد (که در محیط‌های VPN توسعه‌دهنده رایج است) و ویرایش‌های فایل را به کارهای cron، اسکریپت‌های پس‌زمینه یا باینری‌های SUID پیوند می‌دهد."
         }
     ]
 }

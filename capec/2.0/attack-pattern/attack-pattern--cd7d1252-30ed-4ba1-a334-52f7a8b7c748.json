@@ -9,28 +9,36 @@
                 {
                     "external_id": "CAPEC-321",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/321.html"
+                    "url": "https://capec.mitre.org/data/definitions/321.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Defense Advanced Research Projects Agency Information Processing Techniques Office, Information Sciences Institute University of Southern California, RFC793 - Transmission Control Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-128",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc793.html"
+                    "url": "http://www.faqs.org/rfcs/rfc793.html",
+                    "description_fa": "دفتر تکنیک های پردازش اطلاعات آژانس پروژه های تحقیقاتی پیشرفته دفاعی، موسسه علوم اطلاعات دانشگاه کالیفرنیای جنوبی، RFC793 - پروتکل کنترل انتقال، 1981-09، آژانس پروژه های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC",
                     "external_id": "REF-212",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--cd7d1252-30ed-4ba1-a334-52f7a8b7c748",
@@ -57,6 +65,19 @@
                     "Read Data",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -71,7 +92,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این کاوشگر اثرانگشت سیستم عامل تخصیص اعداد دنباله TCP توسط سیستم مورد نظر را آزمایش می کند. یکی از راه‌های معمول برای آزمایش تولید شماره توالی TCP، ارسال یک بسته کاوشگر به یک پورت باز روی هدف و سپس مقایسه نحوه ارتباط شماره توالی تولید شده توسط هدف با شماره تأیید در بسته کاوشگر است. سیستم‌عامل‌های مختلف شماره‌های دنباله‌ای را به‌طور متفاوتی اختصاص می‌دهند، بنابراین می‌توان اثر انگشت سیستم عامل را با طبقه‌بندی رابطه بین شماره تأیید و شماره ترتیب به صورت زیر به دست آورد: 1) شماره دنباله تولید شده توسط هدف صفر است، 2) شماره ترتیب تولید شده توسط هدف، همان عددی است که توسط هدف ایجاد می‌شود. هدف، عدد تصدیق به اضافه یک است، یا 4) شماره دنباله هر عدد غیر صفر دیگری است.",
+            "name_fa": "پروب شماره دنباله TCP",
+            "x_capec_prerequisites_fa": [
+                "توانایی نظارت و تعامل با ارتباطات شبکه. دسترسی به حداقل یک میزبان و امتیازات رابط با کارت رابط شبکه."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزاری که قادر به ارسال و دریافت بسته ها از یک سیستم راه دور است."
+            ]
         }
     ],
     "spec_version": "2.0",

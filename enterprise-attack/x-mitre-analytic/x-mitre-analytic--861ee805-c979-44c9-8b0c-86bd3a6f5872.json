@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0124#AN0345",
-                    "external_id": "AN0345"
+                    "external_id": "AN0345",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0345",
-            "description": "Process invokes a standard encoder (e.g., PowerShell -enc, certutil -encode, base64 via .NET/Invoke-Expression) or emits long Base64/hex literals \u2192 shortly followed by outbound network egress with high bytes_out:bytes_in ratio or HTTP headers/payloads containing Base64/MIME blocks.",
+            "description": "Process invokes a standard encoder (e.g., PowerShell -enc, certutil -encode, base64 via .NET/Invoke-Expression) or emits long Base64/hex literals → shortly followed by outbound network egress with high bytes_out:bytes_in ratio or HTTP headers/payloads containing Base64/MIME blocks.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Shannon entropy cutoff to consider payload suspicious (e.g., > 4.5\u20135.0 for HTTP body)."
+                    "description": "Shannon entropy cutoff to consider payload suspicious (e.g., > 4.5–5.0 for HTTP body).",
+                    "description_fa": "قطع آنتروپی شانون برای مشکوک بودن بار (به عنوان مثال، > 4.5-5.0 برای بدنه HTTP)."
                 },
                 {
                     "field": "B64LengthThreshold",
-                    "description": "Min continuous Base64 token length in command lines/script blocks to alert (e.g., > 100 chars)."
+                    "description": "Min continuous Base64 token length in command lines/script blocks to alert (e.g., > 100 chars).",
+                    "description_fa": "حداقل طول توکن Base64 پیوسته در خطوط فرمان/بلوک های اسکریپت برای هشدار (به عنوان مثال، بیش از 100 کاراکتر)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between encoding event and egress (default 10m)."
+                    "description": "Correlation window between encoding event and egress (default 10m).",
+                    "description_fa": "پنجره همبستگی بین رویداد رمزگذاری و خروج (پیش‌فرض 10 متر)."
                 },
                 {
                     "field": "KnownAdminTools",
-                    "description": "Legitimate tools (e.g., backup agents) that routinely encode/compress data."
+                    "description": "Legitimate tools (e.g., backup agents) that routinely encode/compress data.",
+                    "description_fa": "ابزارهای قانونی (به عنوان مثال، عوامل پشتیبان) که به طور معمول داده ها را رمزگذاری/فشرده می کنند."
                 },
                 {
                     "field": "BytesOutToInRatio",
-                    "description": "Minimum ratio to treat flow as asymmetric (e.g., \u2265 4:1)."
+                    "description": "Minimum ratio to treat flow as asymmetric (e.g., ≥ 4:1).",
+                    "description_fa": "حداقل نسبت برای تلقی جریان به عنوان نامتقارن (به عنوان مثال، ≥ 4:1)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0345",
+            "description_fa": "Process یک رمزگذار استاندارد (مانند PowerShell -enc، certutil -encode، base64 از طریق .NET/Invoke-Expression) را فراخوانی می‌کند یا حروف طولانی Base64/hex را منتشر می‌کند → به‌زودی خروجی شبکه خروجی با بایت‌های_out:bytes_in بالا یا بایت‌های بایت‌های_در نسبت بالا/هدف‌های ME/pae64MI."
         }
     ]
 }

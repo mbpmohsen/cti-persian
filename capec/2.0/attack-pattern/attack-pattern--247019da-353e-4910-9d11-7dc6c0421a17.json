@@ -9,33 +9,40 @@
                 {
                     "external_id": "CAPEC-231",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/231.html"
+                    "url": "https://capec.mitre.org/data/definitions/231.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-112",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/112.html"
+                    "url": "http://cwe.mitre.org/data/definitions/112.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-674",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/674.html"
+                    "url": "http://cwe.mitre.org/data/definitions/674.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Shlomo, Yona, XML Parser Attacks: A summary of ways to attack an XML Parser, 2007",
                     "external_id": "REF-89",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://yeda.cs.technion.ac.il/~yona/talks/xml_parser_attacks/slides/slide2.html"
+                    "url": "http://yeda.cs.technion.ac.il/~yona/talks/xml_parser_attacks/slides/slide2.html",
+                    "description_fa": "Shlomo, Yona, XML Parser Attacks: خلاصه ای از راه های حمله به XML Parser, 2007",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--247019da-353e-4910-9d11-7dc6c0421a17",
@@ -70,6 +77,24 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع",
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "اجرای دستورات غیرمجاز",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -88,11 +113,21 @@
             ],
             "x_capec_skills_required": {
                 "High": "Arbitrary code execution",
-                "Low": "Denial of service"
+                "Low": "Denial of service",
+                "High_fa": "اجرای کد دلخواه",
+                "Low_fa": "انکار خدمات"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن در طول پردازش داده ها، محموله های داده های سریالی بزرگ را به تجزیه کننده تزریق می کند تا اثرات نامطلوبی بر تجزیه کننده ایجاد کند، مانند فرسودگی منابع سیستم و اجرای کد دلخواه.",
+            "name_fa": "حجم داده های سریالی بزرگ",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>یک دشمن جریان داده ورودی را که توسط تجزیه‌کننده داده سریالی در سمت قربانی پردازش می‌شود، تعیین می‌کند. هنگامی که داده ها در سیستم قربانی تجزیه می شوند، تأثیر نامطلوبی بر عملکرد تجزیه کننده داده ها دارد.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>برنامه‌ها اغلب نیاز دارند که داده‌ها را با استفاده از تجزیه‌کننده داده به داخل و خارج از قالب‌های داده سریالی، مانند XML و YAML تبدیل کنند. ممکن است برای یک حریف امکان تزریق داده‌هایی وجود داشته باشد که ممکن است اثر نامطلوبی بر تجزیه‌کننده در هنگام پردازش داشته باشد. با ارائه بارهای بزرگ در بردارهای ورودی که توسط تجزیه کننده پردازش خواهند شد، یک دشمن می تواند باعث شود تجزیه کننده منابع بیشتری را در حین پردازش مصرف کند و باعث مصرف بیش از حد حافظه و استفاده از CPU شود و به طور بالقوه باعث اجرای کد دلخواه شود. هدف دشمن این است که از شکست تجزیه کننده به نفع خود استفاده کند. DoS بیشترین ارتباط را با وب سرویس‌ها، SOAP و Rest دارد، زیرا درخواست‌کنندگان سرویس از راه دور می‌توانند داده‌های مخرب را به ارائه‌دهنده سرویس ارسال کنند که برای تخلیه حافظه، CPU و/یا فضای دیسک ارائه‌دهنده خدمات طراحی شده‌اند. این حمله از ماهیت اتصال آزاد سرویس های وب سوء استفاده می کند، جایی که ارائه دهنده خدمات کنترل کمی بر درخواست کننده سرویس و هر پیامی که درخواست کننده سرویس ارسال می کند، ندارد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "یک برنامه کاربردی از یک تجزیه کننده برای داده های سریالی استفاده می کند تا روی داده های قابل کنترل توسط کاربر تبدیل شود.",
+                "یک برنامه کاربردی اعتبار سنجی کافی را برای اطمینان از ایمن بودن داده های قابل کنترل توسط کاربر برای تجزیه کننده داده انجام نمی دهد."
+            ]
         }
     ],
     "spec_version": "2.0",

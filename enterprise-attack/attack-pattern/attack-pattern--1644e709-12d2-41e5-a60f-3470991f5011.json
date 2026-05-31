@@ -14,14 +14,14 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1003/002",
                     "external_id": "T1003.002",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "GitHub Creddump7",
                     "description": "Flathers, R. (2018, February 19). creddump7. Retrieved April 11, 2018.",
                     "url": "https://github.com/Neohapsis/creddump7",
                     "source_name_fa": "GitHub Creddump7",
-                    "description_fa": "تخت خواب، R. (2018، 19 فوریه) Retrieved 11 آوریل 2018"
+                    "description_fa": "فلارز، آر (2018، 19 فوریه). creddump7. بازبینی شده در 11 آوریل 2018."
                 }
             ],
             "object_marking_refs": [
@@ -52,7 +52,7 @@
             ],
             "x_mitre_version": "1.1",
             "name_fa": "مدیر حساب امنیتی",
-            "description_fa": "مخالفان ممکن است تلاش کنند تا مواد معتبر را از پایگاه داده حساب امنیتی (SAM) یا از طریق تکنیک های درون حافظه یا از طریق Windows Registry که پایگاه داده SAM ذخیره می شود استخراج کنند. SAM یک فایل پایگاه داده است که شامل حساب های محلی برای میزبان است، به طور معمول کسانی که با دستور [CTI_PRESERVE_0] پیدا شده اند. استفاده از پایگاه داده SAM نیازمند دسترسی به سطح سیستم است.\n\nتعدادی از ابزارها را می توان برای بازیابی فایل SAM از طریق تکنیک های درون حافظه استفاده کرد:\n\npwdumpx.exe\n[[ویرایش]\n[[ویرایش]\n* اسرار\n\nدر عوض، SAM را می توان از رجیستری با Re استخراج کرد:\n\n[[ویرایش]\n[[ویرایش]\n\nسپس می تواند برای پردازش پایگاه داده SAM به صورت محلی برای بازیابی هش ها استفاده شود.[۱۰]\n\nیادداشت:\n\nحساب RID 500 مدیر محلی و داخلی است.\nRID 501 حساب مهمان است.\n* حساب کاربری با RID از 1000+ شروع می شود. <code>net user</code> <code>reg save HKLM\\sam sam</code> <code>reg save HKLM\\system system</code> (Citation: GitHub Creddump7) https://attack.mitre.org/software/S0008 https://attack.mitre.org/software/S0002"
+            "description_fa": "دشمنان ممکن است سعی کنند اطلاعات اعتباری را از پایگاه داده مدیریت حساب امنیتی (SAM) از طریق تکنیک های درون حافظه یا از طریق رجیستری ویندوز که پایگاه داده SAM در آن ذخیره می شود، استخراج کنند. SAM یک فایل پایگاه داده است که حاوی حساب‌های محلی برای میزبان است، معمولاً آنهایی که با فرمان <code>net user</code> یافت می‌شوند. شمارش پایگاه داده SAM به دسترسی سطح سیستم نیاز دارد.\n\nبرای بازیابی فایل SAM از طریق تکنیک های درون حافظه می توان از تعدادی ابزار استفاده کرد:\n\n* pwdumpx.exe\n* [gsecdump](https://attack.mitre.org/software/S0008)\n* [Mimikatz](https://attack.mitre.org/software/S0002)\n* secretsdump.py\n\nاز طرف دیگر، SAM را می توان با Reg از رجیستری استخراج کرد:\n\n* <code>reg save HKLM\\sam sam</code>\n* <code>reg save HKLM\\system system</code>\n\nسپس می توان از Creddump7 برای پردازش پایگاه داده SAM به صورت محلی برای بازیابی هش استفاده کرد.(Citation: GitHub Creddump7)\n\nیادداشت ها: \n\n* حساب RID 500 مدیر داخلی داخلی است.\n* RID 501 حساب مهمان است.\n* حساب های کاربری با RID 1000+ شروع می شود."
         }
     ]
 }

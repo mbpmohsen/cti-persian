@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-174",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/174.html"
+                    "url": "https://capec.mitre.org/data/definitions/174.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-88",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/88.html"
+                    "url": "http://cwe.mitre.org/data/definitions/88.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Yuval B., Ayal Y., Adi S., Flash Parameter Injection: A Security Advisory, 2008--09---24, IBM Rational Security Team",
                     "external_id": "REF-40",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://blog.watchfire.com/FPI.pdf"
+                    "url": "http://blog.watchfire.com/FPI.pdf",
+                    "description_fa": "Yuval B., Ayal Y., Adi S., Flash Parameter Injection: A Security Advisory, 2008--09---24, IBM Rational Security Team",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Elaborate Ways to Exploit XSS: Flash Parameter Injection (FPI), 2014--04---08, Acunetix",
                     "external_id": "REF-560",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.acunetix.com/blog/articles/elaborate-ways-exploit-xss-flash-parameter-injection/"
+                    "url": "https://www.acunetix.com/blog/articles/elaborate-ways-exploit-xss-flash-parameter-injection/",
+                    "description_fa": "روش‌های پیچیده برای بهره‌برداری از XSS: تزریق پارامتر فلش (FPI)، 2014-04---08، Acunetix",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--8bd0c718-f126-4397-9754-c5225da7b696",
@@ -51,6 +57,12 @@
                 ],
                 "Confidentiality": [
                     "Other (Information Leakage)"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "سایر موارد (نشت اطلاعات)"
                 ]
             },
             "x_capec_domains": [
@@ -66,11 +78,22 @@
                 "The adversary must convince the victim to click their crafted link."
             ],
             "x_capec_skills_required": {
-                "Medium": "The adversary need inject values into the global parameters to the Flash file and understand the parent HTML document DOM structure. The adversary needs to be smart enough to convince the victim to click on their crafted link."
+                "Medium": "The adversary need inject values into the global parameters to the Flash file and understand the parent HTML document DOM structure. The adversary needs to be smart enough to convince the victim to click on their crafted link.",
+                "Medium_fa": "حریف باید مقادیری را به پارامترهای جهانی به فایل Flash تزریق کند و ساختار DOM سند HTML اصلی را درک کند. حریف باید به اندازه کافی باهوش باشد تا قربانی را متقاعد کند که روی پیوند ساخته شده خود کلیک کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از اعتبارسنجی نامناسب داده برای تزریق پارامترهای جهانی مخرب به یک فایل Flash که در یک سند HTML تعبیه شده است استفاده می کند. فایل‌های فلش می‌توانند از داده‌های ارسال‌شده توسط کاربر برای پیکربندی سند Flash و دسترسی به سند HTML تعبیه‌شده استفاده کنند.",
+            "name_fa": "تزریق پارامتر فلاش",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در زیر نمونه هایی از انواع مختلف پارامترهای ارسال شده به فایل Flash آمده است.</xhtml:p>\n               <xhtml:b>تزریق پارامتر Flash مبتنی بر DOM</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\n                  <xhtml:div style=\"margin-left:1em;\"><object><xhtml:div style=\"margin-left:1em;\"><embed src=\"myFlash.swf\" flashvars=\"location=http://example.com/index.htm#&globalVar=e-v-i-l\"></embed></xhtml:div></object></xhtml:div>\n               </xhtml:div>\n               <xhtml:b>گذراندن پارامتر در یک URI تعبیه شده</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\"><object type=\"application/x-shockwave-flash\" data=\"myfile.swf?globalVar=e-v-i-l\" ></object></xhtml:div>\n               <xhtml:b>گذراندن پارامتر در flashvars</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><object type=\"application/x-shockwafile.swf\" ve-flash\" data=\"my flashvars=\"language=English&globalVar=e-v-i-l\"></object></xhtml:div>\n               <xhtml:b>تزریق پارامتر فلش مداوم</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\n                  <xhtml:div>\n                     <xhtml:i>// یک شیء مشترک جدید ایجاد کنید یا یک مورد موجود را بخوانید</xhtml:i>\n                  </xhtml:div>mySharedObject = SharedObject.getLocal(\"flashToLoad\");if (_root.flashfile == undefined) {<xhtml:div style=\"margin-left:1em;\">\n                     <xhtml:div>\n                        <xhtml:i>// بررسی کنید که آیا یک شی به اشتراک گذاشته شده ذخیره شده است</xhtml:i>\n                     </xhtml:div>if (mySharedObject.data.flash == null) {<xhtml:div style=\"margin-left:1em;\">\n                        <xhtml:div>\n                           <xhtml:i>// یک پیش فرض تنظیم کنید</xhtml:i>\n                        </xhtml:div>value _root.flashfile = \"defaultFlash.swf\";</xhtml:div>\n                     } else {<xhtml:div style=\"margin-left:1em;\">\n                        <xhtml:div>\n                           <xhtml:i>// فایل فلش را برای بارگیری از شی مشترک بخوانید</xhtml:i>\n                        </xhtml:div>_root.flashfile = mySharedObject.data.flash;</xhtml:div>\n                     }</xhtml:div>\n                  <xhtml:div>\n                     <xhtml:i>// نام فایل فلش را در شیء مشترک ذخیره کنید</xhtml:i>\n                  </xhtml:div>\n                  mySharedObject.data.flash = _root.flashfile;<xhtml:div>\n                     <xhtml:i>// فایل فلش را بارگیری کنید</xhtml:i>\n                  </xhtml:div>\n                  getURL(_root.flashfile);</xhtml:div>\n               <xhtml:p>اگر یک کاربر ناآگاه توسط یک دشمن فریب داده شود تا روی پیوندی مانند این کلیک کند: http://example.com/vulnerable.swf?flashfile=javascript:alert(document.domain)</xhtml:p>\n               <xhtml:p> نتیجه فقط اجرای یکباره کد جاوا اسکریپت در مرورگر قربانی در زمینه دامنه دارای فایل فلش آسیب پذیر نخواهد بود، بلکه هر بار که Flash بارگیری می شود، چه با مرجع مستقیم یا تعبیه شده در همان دامنه، جاوا اسکریپت دوباره اجرا می شود.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>عنکبوت: </b> دشمن با استفاده از یک مرورگر یا یک ابزار خودکار، تمام نمونه‌هایی از اسناد HTML را که فایل‌های Flash جاسازی شده دارند، ثبت می‌کند. اگر یک فایل فلش جاسازی شده وجود داشته باشد، نحوه ارسال پارامترهای سراسری به فایل Flash از شی جاسازی شده را فهرست می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از یک ابزار خودکار برای ضبط تمام نمونه‌های URLهایی که فایل‌های Flash جاسازی شده‌اند استفاده کنید.><tr><tdse پارامترهایی را که فایل‌های Flash جاسازی شده‌اند، فهرست می‌کنند. مرورگر به‌طور دستی وب‌سایت را کاوش کند تا ببیند آیا سند HTML فایل‌های فلش را تعبیه کرده است یا نه و پارامترهای ارسال شده به فایل Flash را فهرست کند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین حساسیت برنامه به پارامتر Flash:ineterm در پارامتر Flash. تزریق برای هر URL شناسایی‌شده در مرحله کاوش، دشمن تلاش می‌کند از تکنیک‌های مختلفی مانند DOM مبتنی بر، منعکس‌شده، flashvars و حملات مداوم بسته به نوع پارامتر ارسال شده به فایل Flash جاسازی‌شده استفاده کند. پارامتر، \"#\" و بار را به پارامتر موجود در URL تزریق کنید.</td></tr><tr><td>وقتی نام فایل Flash به عنوان یک فرم یا یک پارامتر URL در معرض دید قرار می گیرد، دشمن \"?\" را تزریق می کند. و بارگذاری پس از نام فایل در URL برای لغو مقداری کلی.</td></tr><tr><td>هنگامی که آرگومان‌های ارسال شده در ویژگی‌های «flashvars»، دشمن «&» و بارگذاری بار را در URL وارد می‌کند.</td></tr><tr><td>اگر برخی از ویژگی‌های تگ <object>، ویژگی <object> به عنوان پارامتر <object> دریافت می‌شود. تگ بدون اینکه سازنده صفحه وب قصد داشته باشد اجازه دهد آرگومان‌ها به فایل Flash منتقل شوند.</td></tr><tr><td>اگر از اشیاء مشترک برای ذخیره داده‌های وارد شده توسط کاربر استفاده شود، ممکن است تزریق پارامتر فلش دائمی انجام شود، کد مخربی که به فایل Flash تزریق می‌شود و اجرا می‌شود، هر بار که فایل Flash اجرا می‌شود. بارگذاری شده است.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>اجرای حمله تزریق پارامتر فلش: </b>پارامترها را به فایل Flash وارد کنید. بر اساس نتایج مرحله آزمایش، دشمن URL مخرب زیرین حاوی پارامترهای Flash تزریق شده را ایجاد کرده و آن را به وب سرور ارسال می کند. هنگامی که وب سرور درخواست را دریافت کرد، سند HTML جاسازی شده توسط حریف قابل کنترل خواهد بود.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td> URL مخرب زیربنایی را بسازید و آن را به سرور وب ارسال کنید تا کنترل سند HTML جاسازی شده را در دست بگیرد.",
+            "x_capec_extended_description_fa": "<xhtml:p>این «FlashVars» اغلب از طریق آرگومان‌های URL یا از تگ Object یا Embed در سند HTML جاسازی شده به فایل Flash منتقل می‌شوند. اگر این FlashVars به درستی پاکسازی نشده باشند، ممکن است دشمن بتواند محتوای مخرب (مانند اسکریپت ها) را در سند HTML جاسازی کند.</xhtml:p>\n            <xhtml:p> پارامترهای تزریق شده همچنین می توانند کنترل دشمن را بر سایر اشیاء در فایل Flash و همچنین کنترل کامل بر روی مدل DOM سند والد فراهم کنند. به این ترتیب، این نوعی تزریق پارامتر HTTP است، اما توانایی‌های اعطا شده به سند Flash (مانند دسترسی به مدل سند یک صفحه، از جمله کوکی‌های مرتبط) این حمله را انعطاف‌پذیرتر می‌کند. حملات تزریق پارامتر فلش همچنین می‌توانند مقدمه حملات دیگری مانند اشکال مختلف حملات Cross-Site Scripting (XSS) علاوه بر حملات Session Hijacking باشند.</xhtml:p>",
+            "x_capec_resources_required_fa": [
+                "حریف باید قربانی را متقاعد کند که روی پیوند ساخته شده خود کلیک کند."
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0018#AN0053",
-                    "external_id": "AN0053"
+                    "external_id": "AN0053",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousDirs",
-                    "description": "(/tmp, /dev/shm, /var/tmp, user home dirs) \u2013 adjust to your environment."
+                    "description": "(/tmp, /dev/shm, /var/tmp, user home dirs) – adjust to your environment.",
+                    "description_fa": "(/tmp، /dev/shm، /var/tmp، راهنمای خانه کاربر) - با محیط خود تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate write/fetch of .so to its load (e.g., 0\u201330 minutes)."
+                    "description": "Correlate write/fetch of .so to its load (e.g., 0–30 minutes).",
+                    "description_fa": "نوشتن/واکشی .so را با بار آن مرتبط کنید (مثلاً 0 تا 30 دقیقه)."
                 },
                 {
                     "field": "EnvVarWatchlist",
-                    "description": "LD_PRELOAD, LD_LIBRARY_PATH, LD_AUDIT."
+                    "description": "LD_PRELOAD, LD_LIBRARY_PATH, LD_AUDIT.",
+                    "description_fa": "LD_PRELOAD، LD_LIBRARY_PATH، LD_AUDIT."
                 },
                 {
                     "field": "AllowedSigning/HashList",
-                    "description": "Known-good signed or hashed shared objects."
+                    "description": "Known-good signed or hashed shared objects.",
+                    "description_fa": "اشیاء مشترک شناخته شده با امضا یا هش."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0053",
+            "description_fa": "یک فرآیند یک شی به اشتراک گذاشته شده (.so) را از طریق dlopen/LD_PRELOAD/open از مکان‌های غیر استاندارد یا موقت (مانند /tmp، /dev/shm) بارگیری می‌کند، به‌ویژه مدت کوتاهی پس از آن که .so نوشته یا واکشی شود، یا از طریق متغیرهای محیط دستکاری شده (LD_PRELOAD/LD_LIBRY_LIBRA) پیوند داده شود."
         }
     ]
 }

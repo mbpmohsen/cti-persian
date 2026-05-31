@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0215#AN0605",
-                    "external_id": "AN0605"
+                    "external_id": "AN0605",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FileType",
-                    "description": "Detect renames or write patterns involving .vmdk, .vmx, .nvram."
+                    "description": "Detect renames or write patterns involving .vmdk, .vmx, .nvram.",
+                    "description_fa": "تشخیص تغییر نام یا نوشتن الگوهای مربوط به vmdk.، vmx.، nvram."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Identify shell sessions opened by root or unexpected users outside maintenance window."
+                    "description": "Identify shell sessions opened by root or unexpected users outside maintenance window.",
+                    "description_fa": "جلسات پوسته باز شده توسط کاربران ریشه یا غیرمنتظره در خارج از پنجره تعمیر و نگهداری را شناسایی کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0605",
+            "description_fa": "باج افزار فایل های پیکربندی vmdk.، vmx.، .log، یا VM را در انباره های داده VMFS رمزگذاری می کند. ممکن است به .locked تغییر نام دهد یا با نسخه های رمزگذاری شده حذف/بازنویسی شود. اغلب با دستورات پوسته ای که از طریق «dcui»، SSH یا vSphere اجرا می شوند، مرتبط است."
         }
     ]
 }

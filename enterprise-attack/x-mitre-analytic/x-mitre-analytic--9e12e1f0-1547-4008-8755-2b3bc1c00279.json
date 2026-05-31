@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0021#AN0064",
-                    "external_id": "AN0064"
+                    "external_id": "AN0064",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VMName",
-                    "description": "Targeted virtual machine name"
+                    "description": "Targeted virtual machine name",
+                    "description_fa": "نام ماشین مجازی هدفمند"
                 },
                 {
                     "field": "InitiatorUser",
-                    "description": "User who issued stop or disable command"
+                    "description": "User who issued stop or disable command",
+                    "description_fa": "کاربری که دستور توقف یا غیرفعال کردن را صادر کرده است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0064",
+            "description_fa": "مهاجم سرویس های مرتبط با VM را غیرفعال می کند یا ماشین های مجازی را به اجبار برای هدف قرار دادن vmdk یا گزارش ها متوقف می کند. زنجیره رفتاری: توقف esxcli یا vim-cmd + گزارش حسابرسی که استفاده از امتیاز کاربر را نشان می دهد + دستکاری فایل ذخیره اطلاعات."
         }
     ]
 }

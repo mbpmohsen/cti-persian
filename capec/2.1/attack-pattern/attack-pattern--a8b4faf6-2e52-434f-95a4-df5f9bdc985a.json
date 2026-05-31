@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-675",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/675.html"
+                    "url": "https://capec.mitre.org/data/definitions/675.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1266",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1266.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1266.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Exfiltration Over Physical Medium",
                     "external_id": "T1052",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1052"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1052",
+                    "description_fa": "خروج از محیط فیزیکی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Richard Kissel, Andrew Regenscheid, Matthew Scholl, Kevin Stine, NIST Special Publication 800-88 Revision 1: Guidelines for Media Sanitization, 2014--12, National Institute of Standards and Technology",
                     "external_id": "REF-663",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf"
+                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-88r1.pdf",
+                    "description_fa": "ریچارد کیسل، اندرو رگنشاید، متیو شول، کوین استاین، انتشارات ویژه NIST 800-88 بازبینی 1: دستورالعمل‌هایی برای پاکسازی رسانه، 12-2014، موسسه ملی استاندارد و فناوری",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Linda Pesante, Christopher King, George Silowash, Disposing of Devices Safely, 2012, CISA United States Computer Emergency Readiness Team (US-CERT)",
                     "external_id": "REF-717",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.cisa.gov/uscert/sites/default/files/publications/DisposeDevicesSafely.pdf"
+                    "url": "https://www.cisa.gov/uscert/sites/default/files/publications/DisposeDevicesSafely.pdf",
+                    "description_fa": "لیندا پسانته، کریستوفر کینگ، جورج سیلواش، دفع ایمن دستگاه‌ها، 2012، CISA تیم آمادگی اضطراری کامپیوتری ایالات متحده (US-CERT)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a8b4faf6-2e52-434f-95a4-df5f9bdc985a",
@@ -56,6 +64,9 @@
             "x_capec_consequences": {
                 "Accountability": [
                     "Bypass Protection Mechanism"
+                ],
+                "Accountability_fa": [
+                    "مکانیسم حفاظت دور زدن"
                 ]
             },
             "x_capec_domains": [
@@ -73,11 +84,21 @@
             ],
             "x_capec_skills_required": {
                 "High": "An adversary may need the ability to mount printed circuit boards and target individual chips for exploitation.",
-                "Medium": "An adversary needs the technical skills required to extract solid state drives, hard disk drives, and other storage media to host on a compatible system or harness to gain access to digital content."
+                "Medium": "An adversary needs the technical skills required to extract solid state drives, hard disk drives, and other storage media to host on a compatible system or harness to gain access to digital content.",
+                "High_fa": "یک دشمن ممکن است به توانایی نصب بردهای مدار چاپی و هدف قرار دادن تراشه های جداگانه برای بهره برداری نیاز داشته باشد.",
+                "Medium_fa": "یک حریف به مهارت‌های فنی مورد نیاز برای استخراج درایوهای حالت جامد، درایوهای دیسک سخت و سایر رسانه‌های ذخیره‌سازی برای میزبانی روی یک سیستم سازگار یا مهار برای دسترسی به محتوای دیجیتال نیاز دارد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن سیستم‌ها و دستگاه‌های از کار افتاده، بازیافت یا دور ریخته‌شده‌ای را به دست می‌آورد که می‌تواند شامل مالکیت معنوی سازمان، داده‌های کارکنان، و انواع دیگر اطلاعات کنترل‌شده باشد. سیستم‌ها و دستگاه‌هایی که به پایان چرخه عمر خود رسیده‌اند ممکن است در معرض بازیافت یا دفع قرار گیرند، جایی که می‌توانند در معرض تلاش‌های متخاصم برای بازیابی اطلاعات از تراشه‌های حافظه داخلی و دستگاه‌های ذخیره‌سازی که بخشی از سیستم هستند، قرار گیرند.</xhtml:p>",
+            "name_fa": "بازیابی اطلاعات از دستگاه های از کار افتاده",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> یک شرکت با یک سازمان قرارداد دارد تا خدمات تخریب داده‌ها را برای درایوهای حالت جامد و دیسک سخت در حال دور انداختن ارائه دهد. قبل از تخریب، یک دشمن در شرکت طرف قرارداد، داده‌ها را از دستگاه‌های منتخب کپی می‌کند و الزامات محرمانه بودن داده‌های سازمان ارسال‌کننده را نقض می‌کند.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "دشمن باید به تجهیزات پردازش داده الکترونیکی در حال بازیافت یا دفع (مانند لپ‌تاپ‌ها، سرورها) در محل مجموعه دسترسی داشته باشد و به منظور بهره‌برداری از محتوای آن، بتواند کنترل آن را در دست بگیرد."
+            ]
         }
     ],
     "type": "bundle"

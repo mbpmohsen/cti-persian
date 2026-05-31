@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0359#AN1024",
-                    "external_id": "AN1024"
+                    "external_id": "AN1024",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VPNConfigWhitelist",
-                    "description": "Define allowed internal router communication paths."
+                    "description": "Define allowed internal router communication paths.",
+                    "description_fa": "مسیرهای ارتباطی مجاز داخلی روتر را تعریف کنید."
                 },
                 {
                     "field": "ICMPPayloadEntropy",
-                    "description": "High entropy ICMP payloads may indicate tunneling activity."
+                    "description": "High entropy ICMP payloads may indicate tunneling activity.",
+                    "description_fa": "محموله های ICMP با آنتروپی بالا ممکن است نشان دهنده فعالیت تونل سازی باشد."
                 },
                 {
                     "field": "RelayChainSignature",
-                    "description": "Track known multi-hop pattern signatures or port hopping techniques."
+                    "description": "Track known multi-hop pattern signatures or port hopping techniques.",
+                    "description_fa": "امضاهای الگوی چند هاپ شناخته شده یا تکنیک های پرش پورت را دنبال کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1024",
+            "description_fa": "ترافیک رمزگذاری شده یا تونل ICMP از روترهای مرزی به روترهای داخلی یا IPهای خارجی ناشناخته. ترافیک ارسال‌شده، بدون تطبیق VPN پیکربندی‌شده یا توپولوژی شبکه مورد انتظار، رله‌های هاپ به هاپ ثابت را نشان می‌دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0398#AN1117",
-                    "external_id": "AN1117"
+                    "external_id": "AN1117",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RuleAction",
-                    "description": "Identify rule actions that execute scripts, forward emails externally, or start external content"
+                    "description": "Identify rule actions that execute scripts, forward emails externally, or start external content",
+                    "description_fa": "اقدامات قوانینی را که اسکریپت ها را اجرا می کنند، ایمیل ها را به صورت خارجی ارسال می کنند یا محتوای خارجی را شروع می کنند، شناسایی کنید"
                 },
                 {
                     "field": "MailboxTarget",
-                    "description": "Focus on users with sensitive roles or shared mailboxes"
+                    "description": "Focus on users with sensitive roles or shared mailboxes",
+                    "description_fa": "روی کاربرانی با نقش های حساس یا صندوق پستی مشترک تمرکز کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Detect persistence artifacts created shortly after credential access or login from an unusual location"
+                    "description": "Detect persistence artifacts created shortly after credential access or login from an unusual location",
+                    "description_fa": "مصنوعات ماندگار ایجاد شده اندکی پس از دسترسی به اعتبار یا ورود به سیستم از یک مکان غیرعادی را شناسایی کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1117",
+            "description_fa": "مکانیسم‌های پایداری مبتنی بر راه‌اندازی در Microsoft Office Suite مانند ماکروهای الگو و تغییر مسیرهای صفحه اصلی که از طریق اتوماسیون داخلی یا تنظیمات سمت مشتری پیکربندی می‌شوند."
         }
     ]
 }

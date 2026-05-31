@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0344#AN0973",
-                    "external_id": "AN0973"
+                    "external_id": "AN0973",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegistryPathFilter",
-                    "description": "Scoped to suspicious or abused paths like HKCU\\Software\\Classes\\ or HKLM\\SYSTEM\\CurrentControlSet\\Services\\"
+                    "description": "Scoped to suspicious or abused paths like HKCU\\Software\\Classes\\ or HKLM\\SYSTEM\\CurrentControlSet\\Services\\",
+                    "description_fa": "محدوده به مسیرهای مشکوک یا سوء استفاده شده مانند HKCU\\Software\\Classes\\ یا HKLM\\SYSTEM\\CurrentControlSet\\Services\\"
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Minimum entropy level to flag suspicious registry or WMI content as encoded payloads"
+                    "description": "Minimum entropy level to flag suspicious registry or WMI content as encoded payloads",
+                    "description_fa": "حداقل سطح آنتروپی برای پرچم گذاری محتوای مشکوک رجیستری یا WMI به عنوان بارهای رمزگذاری شده"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal window for correlating WMI/registry modifications with process creation or network usage"
+                    "description": "Temporal window for correlating WMI/registry modifications with process creation or network usage",
+                    "description_fa": "پنجره زمانی برای ارتباط تغییرات WMI/رجیستری با ایجاد فرآیند یا استفاده از شبکه"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0973",
+            "description_fa": "سوء استفاده از مکانیسم‌های ذخیره‌سازی بدون فایل مانند کلیدهای رجیستری، کلاس‌های WMI و گزارش‌های رویداد را که برای مرحله‌بندی بارگذاری‌ها، اسکریپت‌ها یا محتوای کدگذاری‌شده خارج از فایل‌های سنتی استفاده می‌شوند، شناسایی می‌کند."
         }
     ]
 }

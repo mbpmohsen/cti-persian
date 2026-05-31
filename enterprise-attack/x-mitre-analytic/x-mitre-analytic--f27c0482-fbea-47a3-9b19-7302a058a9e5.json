@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0158#AN0445",
-                    "external_id": "AN0445"
+                    "external_id": "AN0445",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousCommandlinePatterns",
-                    "description": "Patterns for identifying malicious msiexec.exe usage (e.g., UNC paths, external domains, DLL execution flags)"
+                    "description": "Patterns for identifying malicious msiexec.exe usage (e.g., UNC paths, external domains, DLL execution flags)",
+                    "description_fa": "الگوهای شناسایی استفاده مخرب msiexec.exe (به عنوان مثال، مسیرهای UNC، دامنه های خارجی، پرچم های اجرای DLL)"
                 },
                 {
                     "field": "SuspiciousDestinationList",
-                    "description": "List of external domains or IP ranges considered suspicious for msiexec network connections"
+                    "description": "List of external domains or IP ranges considered suspicious for msiexec network connections",
+                    "description_fa": "فهرست دامنه های خارجی یا محدوده IP مشکوک برای اتصالات شبکه msiexec"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time range in seconds/minutes for correlating msiexec.exe execution with module load and network activity"
+                    "description": "Time range in seconds/minutes for correlating msiexec.exe execution with module load and network activity",
+                    "description_fa": "محدوده زمانی بر حسب ثانیه/دقیقه برای ارتباط اجرای msiexec.exe با بار ماژول و فعالیت شبکه"
                 },
                 {
                     "field": "LegitimateMSIHashes",
-                    "description": "Hash list of MSI packages considered known-good to reduce false positives"
+                    "description": "Hash list of MSI packages considered known-good to reduce false positives",
+                    "description_fa": "لیست هش بسته‌های MSI که برای کاهش مثبت‌های کاذب خوب شناخته می‌شوند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0445",
+            "description_fa": "شناسایی اجرای msiexec.exe که در آن آرگومان های خط فرمان به بسته های MSI راه دور، مسیرهای UNC، URL های HTTP/HTTPS یا DLL ها ارجاع می دهند که با بارگذاری های بعدی ماژول و/یا اتصالات شبکه به مقصدهایی که قبلاً دیده نشده بودند مرتبط است. پیوندهای زنجیره رفتاری ایجاد msiexec.exe را با پارامترهای مشکوک، فعالیت شبکه برای بازیابی بارهای پرداختی و بارگذاری ماژول که نشان دهنده نصب مخرب یا اجرای DLL است، انجام می دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0485#AN1333",
-                    "external_id": "AN1333"
+                    "external_id": "AN1333",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DNSRotationRate",
-                    "description": "Rate of IP churn per domain to trigger detection"
+                    "description": "Rate of IP churn per domain to trigger detection",
+                    "description_fa": "نرخ ریزش IP در هر دامنه برای شناسایی"
                 },
                 {
                     "field": "NewDomainThreshold",
-                    "description": "Flag if domain was registered recently (e.g., < 30 days)"
+                    "description": "Flag if domain was registered recently (e.g., < 30 days)",
+                    "description_fa": "اگر دامنه اخیراً ثبت شده است، پرچم گذاری کنید (به عنوان مثال، کمتر از 30 روز)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1333",
+            "description_fa": "از گزارش‌های یکپارچه برای شناسایی فرآیندهایی که درخواست‌های مکرر DNS را صادر می‌کنند، جایی که آدرس‌های IP حل‌شده به طور مکرر در مقادیر بسیار کوتاه TTL تغییر می‌کنند، استفاده کنید. با ترافیک شبکه خروجی ارتباط برقرار کنید تا الگوهای مشابه C2 را تأیید کنید."
         }
     ]
 }

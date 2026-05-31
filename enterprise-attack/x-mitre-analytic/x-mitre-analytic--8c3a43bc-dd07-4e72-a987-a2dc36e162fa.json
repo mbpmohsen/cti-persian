@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0383#AN1077",
-                    "external_id": "AN1077"
+                    "external_id": "AN1077",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SimilarityThreshold",
-                    "description": "Defines how close in Levenshtein or visual distance an account name must be to a legitimate one to raise an alert."
+                    "description": "Defines how close in Levenshtein or visual distance an account name must be to a legitimate one to raise an alert.",
+                    "description_fa": "تعیین می‌کند که نام حساب در لوونشتاین یا فاصله بصری چقدر باید به یک نام قانونی نزدیک باشد تا یک هشدار ایجاد شود."
                 },
                 {
                     "field": "MonitoredAccountList",
-                    "description": "Set of known legitimate accounts to compare new account names against."
+                    "description": "Set of known legitimate accounts to compare new account names against.",
+                    "description_fa": "مجموعه ای از حساب های قانونی شناخته شده برای مقایسه نام حساب های جدید با آن."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Period within which anomalous account creation or renaming is evaluated in relation to discovery or deletion activity."
+                    "description": "Period within which anomalous account creation or renaming is evaluated in relation to discovery or deletion activity.",
+                    "description_fa": "دوره ای که در آن ایجاد یا تغییر نام غیرعادی حساب در ارتباط با فعالیت کشف یا حذف ارزیابی می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1077",
+            "description_fa": "رفتار دشمن را در مواردی که یک حساب کاربری جدید ایجاد شده یا تغییر نام داده شده، شباهت زیادی به حساب‌های سرویس یا سرپرست موجود دارد تا با هم ترکیب شود و از شناسایی جلوگیری کند. الگوهای رایج شامل اصلاح پیشوند/پسوند، هموگلیف یا استفاده از نام‌هایی مانند «admin1»، «adm1n» یا «backup_help» است."
         }
     ]
 }

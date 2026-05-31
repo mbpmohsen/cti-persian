@@ -9,72 +9,88 @@
                 {
                     "external_id": "CAPEC-71",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/71.html"
+                    "url": "https://capec.mitre.org/data/definitions/71.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-176",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/176.html"
+                    "url": "http://cwe.mitre.org/data/definitions/176.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-179",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/179.html"
+                    "url": "http://cwe.mitre.org/data/definitions/179.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-180",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/180.html"
+                    "url": "http://cwe.mitre.org/data/definitions/180.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-173",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/173.html"
+                    "url": "http://cwe.mitre.org/data/definitions/173.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-172",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/172.html"
+                    "url": "http://cwe.mitre.org/data/definitions/172.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-184",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/184.html"
+                    "url": "http://cwe.mitre.org/data/definitions/184.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-183",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/183.html"
+                    "url": "http://cwe.mitre.org/data/definitions/183.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-692",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/692.html"
+                    "url": "http://cwe.mitre.org/data/definitions/692.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Unicode Encoding",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Unicode_Encoding"
+                    "url": "https://owasp.org/www-community/attacks/Unicode_Encoding",
+                    "description_fa": "رمزگذاری یونیکد",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--663a1a48-1d23-4dd5-869a-02d5a6b05770",
@@ -107,6 +123,24 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "اجرای غیر قابل اعتماد"
+                ],
+                "Confidentiality_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -121,11 +155,21 @@
                 "Filtering is performed on data that has not be properly canonicalized."
             ],
             "x_capec_skills_required": {
-                "Medium": "An attacker needs to understand Unicode encodings and have an idea (or be able to find out) what system components may not be Unicode aware."
+                "Medium": "An attacker needs to understand Unicode encodings and have an idea (or be able to find out) what system components may not be Unicode aware.",
+                "Medium_fa": "یک مهاجم باید رمزگذاری های یونیکد را درک کند و ایده داشته باشد (یا بتواند بفهمد) چه اجزای سیستم ممکن است از یونیکد آگاه نباشند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم ممکن است یک رشته یونیکد را به یک جزء سیستمی که از یونیکد آگاه نیست ارائه دهد و از آن برای دور زدن فیلتر استفاده کند یا باعث شود مکانیسم طبقه‌بندی به درستی درخواست را درک نکند. این ممکن است به مهاجم اجازه دهد تا داده های مخرب را از فیلتر محتوا عبور دهد و/یا احتمالاً باعث شود برنامه درخواست را به اشتباه هدایت کند.",
+            "name_fa": "استفاده از رمزگذاری یونیکد برای دور زدن منطق اعتبار سنجی",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک تکنیک بسیار رایج برای حمله یونیکد شامل عبور از دایرکتوری ها به دنبال فایل های جالب است. نمونه ای از این ایده اعمال شده در وب</xhtml:p> است\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">http://target.server/some_directory/../../../winnt</xhtml:div>\n               <xhtml:p> در این مورد، مهاجم سعی می کند به دایرکتوری که قرار نیست بخشی از سرویس های وب استاندارد باشد عبور کند. این ترفند کاملاً واضح است، بنابراین بسیاری از وب سرورها و اسکریپت ها از آن جلوگیری می کنند. با این حال، با استفاده از ترفندهای رمزگذاری جایگزین، یک مهاجم ممکن است بتواند فیلترهای درخواستی که به درستی اجرا نشده اند را دور بزند.</xhtml:p>\n               <xhtml:p>در اکتبر 2000، یک دشمن به طور عمومی فاش کرد که سرور IIS مایکروسافت از تنوعی از این مشکل رنج می برد. در مورد IIS، تنها کاری که مهاجم باید انجام می‌داد این بود که رمزگذاری‌های جایگزینی برای نقاط و/یا اسلش‌های موجود در یک حمله کلاسیک ارائه می‌کرد. ترجمه های یونیکد</xhtml:p> هستند\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">. بازده C0 AE/ بازده C0 AF\\ بازده C1 9C</xhtml:div>\n               <xhtml:p>با استفاده از این تبدیل، URL نمایش داده شده قبلی را می توان به صورت</xhtml:p> رمزگذاری کرد\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">http://target.server/some_directory/%C0AE/%C0AE/%C0AE%C0AE/%C0AE%C0AE/winnt</xhtml:div>See نیز: CVE-2000-0884"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه را برای ورودی‌های قابل کنترل کاربر بررسی کنید: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، مهاجم تمام پیوندها و اقدامات عمومی را در یک وب‌سایت دنبال می‌کند. آنها همه پیوندها، فرم‌ها، منابع دسترسی‌یافته و سایر نقاط ورودی بالقوه را برای برنامه وب ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها و تجزیه و تحلیل صفحات وب برای یافتن نقاط ورودی استفاده کنید. به پیوندهایی که شامل پارامترهایی در URL می‌شوند، توجه ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت تمام نقاط ورودی کاربر که در طول پیمایش دستی برنامه وب بازدید شده‌اند استفاده کنید.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب‌سایت و تجزیه و تحلیل نحوه ساخت آن استفاده کنید. افزونه‌های بسیاری از مرورگرها برای تسهیل تجزیه و تحلیل یا خودکار کردن کشف در دسترس هستند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>نقاط ورودی را بررسی کنید تا آسیب‌پذیری‌ها را بیابید: </b>مهاجم از نقاط ورودی مختلف از یک لیست Eplox در فاز جمع‌آوری شده استفاده می‌کند. بارهای رمزگذاری شده برای تعیین اینکه آیا یک نقطه ورودی واقعاً نشان دهنده یک آسیب پذیری با منطق اعتبار سنجی ناکافی است یا خیر و برای مشخص کردن میزانی که آسیب پذیری می تواند مورد سوء استفاده قرار گیرد. روال‌ها.</td></tr><tr><td>سعی کنید از رمزگذاری یونیکد محتوا در HTML برای دور زدن روال‌های اعتبارسنجی استفاده کنید.</td></tr><tr><td>سعی کنید از رمزگذاری یونیکد محتوا در CSS برای دور زدن روال‌های اعتبارسنجی استفاده کنید.",
+            "x_capec_prerequisites_fa": [
+                "فیلتر کردن روی داده‌هایی انجام می‌شود که به‌درستی متعارف نشده‌اند."
+            ]
         }
     ],
     "type": "bundle"

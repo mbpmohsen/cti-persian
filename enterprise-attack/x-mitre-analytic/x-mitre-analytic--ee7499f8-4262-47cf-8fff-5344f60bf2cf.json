@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0419#AN1178",
-                    "external_id": "AN1178"
+                    "external_id": "AN1178",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyThreshold",
-                    "description": "Set threshold for randomness in queried domain strings (e.g., >4.0)"
+                    "description": "Set threshold for randomness in queried domain strings (e.g., >4.0)",
+                    "description_fa": "آستانه تصادفی بودن را در رشته‌های دامنه درخواست شده تنظیم کنید (به عنوان مثال، > 4.0)"
                 },
                 {
                     "field": "QueryFailureRate",
-                    "description": "Failed resolution ratio above normal baseline (e.g., >30%)"
+                    "description": "Failed resolution ratio above normal baseline (e.g., >30%)",
+                    "description_fa": "نسبت وضوح ناموفق بالاتر از خط پایه نرمال (به عنوان مثال، > 30٪)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Duration for aggregating suspicious DNS queries (e.g., 5\u201310 min)"
+                    "description": "Duration for aggregating suspicious DNS queries (e.g., 5–10 min)",
+                    "description_fa": "مدت زمان جمع‌آوری پرسش‌های DNS مشکوک (به عنوان مثال، 5 تا 10 دقیقه)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1178",
+            "description_fa": "پرس و جوهای DNS را که دامنه هایی با آنتروپی بالا یا الگوهای گیج کننده، همراه با اتصالات کوتاه مدت از فرآیندهای غیرمعمول ایجاد می کنند، مرتبط کنید. رویدادهای Sysmon DNS و گزارش‌های امنیتی ویندوز را برای نرخ‌های غیرعادی پرس و جو و جستجوهای ناموفق نظارت کنید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0097#AN0271",
-                    "external_id": "AN0271"
+                    "external_id": "AN0271",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccessedFunction",
-                    "description": "Tune to focus on suspicious function calls (e.g., user32.dll!EnumWindows)."
+                    "description": "Tune to focus on suspicious function calls (e.g., user32.dll!EnumWindows).",
+                    "description_fa": "تنظیم کنید تا روی فراخوانی های عملکرد مشکوک (مانند user32.dll! EnumWindows) تمرکز کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Detect behavior from non-interactive or low-privileged users where enumeration is uncommon."
+                    "description": "Detect behavior from non-interactive or low-privileged users where enumeration is uncommon.",
+                    "description_fa": "شناسایی رفتار از کاربران غیر تعاملی یا با امتیاز پایین در جایی که شمارش غیر معمول است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Shorten detection scope to rapid successive window enumeration attempts."
+                    "description": "Shorten detection scope to rapid successive window enumeration attempts.",
+                    "description_fa": "دامنه تشخیص را به تلاش های سریع شمارش پنجره پی در پی کوتاه کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0271",
+            "description_fa": "با استفاده از فراخوانی های Win32 API (مانند EnumWindows، GetForegroundWindow) یا ابزارهای برنامه نویسی (مانند PowerShell، VBScript) برای شمارش پنجره های باز. اینها اغلب با TTPهای شناسایی یا جمع آوری داده ظاهر می شوند."
         }
     ]
 }

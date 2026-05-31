@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0351#AN0999",
-                    "external_id": "AN0999"
+                    "external_id": "AN0999",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,34 +51,43 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SIPProtectedPaths",
-                    "description": "macOS system paths protected by SIP that should never have permission modifications - maintain current list based on macOS version (/System, /usr, /bin, /sbin)"
+                    "description": "macOS system paths protected by SIP that should never have permission modifications - maintain current list based on macOS version (/System, /usr, /bin, /sbin)",
+                    "description_fa": "مسیرهای سیستم macOS محافظت شده توسط SIP که هرگز نباید تغییرات مجوز داشته باشند - لیست فعلی را بر اساس نسخه macOS حفظ کنید (/System، /usr، /bin، /sbin)"
                 },
                 {
                     "field": "SuspiciousFileFlags",
-                    "description": "chflags parameter combinations indicating potential evasive behavior - customize based on security requirements (uchg, schg, hidden, archived)"
+                    "description": "chflags parameter combinations indicating potential evasive behavior - customize based on security requirements (uchg, schg, hidden, archived)",
+                    "description_fa": "ترکیبات پارامترهای chflags نشان دهنده رفتار اجتنابی بالقوه - سفارشی کردن بر اساس الزامات امنیتی (uchg، schg، پنهان، بایگانی)"
                 },
                 {
                     "field": "CriticalExtendedAttributes",
-                    "description": "Extended attributes requiring monitoring for unauthorized removal or modification (com.apple.quarantine, com.apple.metadata, com.apple.FinderInfo)"
+                    "description": "Extended attributes requiring monitoring for unauthorized removal or modification (com.apple.quarantine, com.apple.metadata, com.apple.FinderInfo)",
+                    "description_fa": "ویژگی‌های گسترده‌ای که برای حذف یا اصلاح غیرمجاز نیاز به نظارت دارند (com.apple.quarantine، com.apple.metadata، com.apple.FinderInfo)"
                 },
                 {
                     "field": "GatekeeperBypassIndicators",
-                    "description": "Patterns in permission/attribute changes that may indicate Gatekeeper bypass attempts"
+                    "description": "Patterns in permission/attribute changes that may indicate Gatekeeper bypass attempts",
+                    "description_fa": "الگوهایی در تغییرات مجوز/ویژگی که ممکن است نشان‌دهنده تلاش‌های دور زدن دروازه‌بان باشد"
                 },
                 {
                     "field": "ApplicationBundleMonitoring",
-                    "description": "Scope of .app directory monitoring for internal permission modifications indicating bundle tampering"
+                    "description": "Scope of .app directory monitoring for internal permission modifications indicating bundle tampering",
+                    "description_fa": "دامنه نظارت دایرکتوری .app برای تغییرات مجوز داخلی که نشان دهنده دستکاری بسته نرم افزاری است"
                 },
                 {
                     "field": "UnifiedLogRetentionPeriod",
-                    "description": "Log retention period for correlating permission changes with subsequent access patterns - balance storage with detection capability"
+                    "description": "Log retention period for correlating permission changes with subsequent access patterns - balance storage with detection capability",
+                    "description_fa": "دوره نگهداری گزارش برای مرتبط کردن تغییرات مجوز با الگوهای دسترسی بعدی - ذخیره تعادل با قابلیت تشخیص"
                 },
                 {
                     "field": "FSEventsFilteringThreshold",
-                    "description": "File system event filtering threshold to manage high-volume environments while maintaining detection coverage"
+                    "description": "File system event filtering threshold to manage high-volume environments while maintaining detection coverage",
+                    "description_fa": "آستانه فیلتر رویداد سیستم فایل برای مدیریت محیط‌های با حجم بالا و در عین حال حفظ پوشش شناسایی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0999",
+            "description_fa": "مجوز macOS و زنجیره رفتاری دستکاری ویژگی: (1) اجرای فرآیند ابزارهای مجوز (chmod، chown، chgrp) یا ابزارهای مخصوص macOS (chflags) با پارامترهای مشکوک، (2) تلاش‌های دور زدن حفاظت از یکپارچگی سیستم (SIP) از طریق اصلاحات مجوز، (3) برای دور زدن مجوزها، (3) یا تداوم، (4) تغییرات ویژگی گسترده (xattr) که بر ابرداده های امنیتی تأثیر می گذارد، (5) همبستگی گزارش یکپارچه با رویدادهای سیستم فایل و الگوهای دسترسی بعدی، (6) عبور از دروازه بان و امضای کد از طریق دستکاری مجوز/ویژگی"
         }
     ]
 }

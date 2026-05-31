@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-693",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/693.html"
+                    "url": "https://capec.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-494",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/494.html"
+                    "url": "http://cwe.mitre.org/data/definitions/494.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Tzachi Zornstein, StarJacking – Making Your New Open Source Package Popular in a Snap, 2022--04---19, Checkmarx",
                     "external_id": "REF-721",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/"
+                    "url": "https://checkmarx.com/blog/starjacking-making-your-new-open-source-package-popular-in-a-snap/",
+                    "description_fa": "Tzachi Zornstein، StarJacking - محبوب کردن بسته منبع باز جدید شما در یک لحظه، 2022--04---19، Checkmarx",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3d0d771e-5878-4476-b870-e1f28a0bd596",
@@ -50,6 +54,22 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Accountability_fa": [
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -67,11 +87,22 @@
                 "Identification of a popular open-source package whose popularity metadata is to be used for the malicious package."
             ],
             "x_capec_skills_required": {
-                "Low": "Ability to provide a package to a package manager and associate a popular package's source code repository URL."
+                "Low": "Ability to provide a package to a package manager and associate a popular package's source code repository URL.",
+                "Low_fa": "امکان ارائه بسته به مدیر بسته و مرتبط کردن URL مخزن کد منبع بسته محبوب."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن ابرداده محبوبیت نرم‌افزار را جعل می‌کند تا کاربران را فریب دهد تا تصور کنند بسته‌ای که به طور مخرب ارائه شده است به طور گسترده استفاده می‌شود و از یک منبع قابل اعتماد سرچشمه می‌گیرد.</xhtml:p>",
+            "name_fa": "استارجکینگ",
+            "x_capec_example_instances_fa": [
+                "در آوریل 2022، Checkmarx گزارش داد که بسته‌های میزبانی شده در NPM، PyPi و Yarn به درستی تأیید نمی‌کنند که URL مخزن GitHub ارائه شده واقعاً به بسته ارائه‌شده مربوط می‌شود. همراه با حملات اضافی مانند TypoSquatting، این به دشمنان اجازه می دهد تا با مرتبط کردن URL های مخزن محبوب GitHub با بسته مخرب، ابرداده محبوبیت را جعل کنند. این می تواند بیشتر منجر به این شود که توسعه دهندگان به طور ناخواسته بسته مخرب را در محیط های توسعه خود قرار دهند [REF-721]."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین هدف: </b>دشمن ابتدا باید بسته هدفی را شناسایی کند که از آمار محبوبیت آن استفاده شود. این یک بسته محبوب و پرکاربرد خواهد بود، زیرا شجره نامه دریافتی بسته مخرب را افزایش می دهد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>محبوبیت بسته جعلی: </b>دشمن بسته مخرب خود را در اختیار یک مدیر کد Stepposit از منبع کد مخرب خود قرار می دهد و از منبع کد spoof استفاده می کند. بسته این بسته مخرب همچنین ممکن است شباهت زیادی به بسته قانونی داشته باشد که از آمارهای آن استفاده می شود.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Exploit قربانیان: </b>دشمن با هدف انجام کارهای اضافی به محیط های توسعه نفوذ می کند. حملات.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>فعال: دشمن سعی می‌کند قربانیان را فریب دهد تا بسته‌های مخرب را با ابزارهایی مانند فیشینگ و مهندسی اجتماعی دانلود کنند.</td></tr><tr><td>غیرفعال: دشمن منتظر است تا قربانیان را دانلود کند و قربانیان را دانلود کند. بسته.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>بسیاری از بسته‌های نرم‌افزار منبع باز از طریق مدیران بسته شخص ثالث (مانند Node Package Manager، PyPi، Yarn و غیره) میزبانی می‌شوند که امکان ادغام آسان اجزای نرم‌افزار را در محیط‌های توسعه موجود فراهم می‌کنند. یک مدیر بسته معمولاً شامل ابرداده‌های مختلفی در مورد نرم‌افزار می‌شود و اغلب شامل پیوندی به مخزن کد منبع بسته می‌شود تا به توسعه‌دهندگان در تعیین قابل اعتماد بودن نرم‌افزار کمک کند. یکی از آمارهای رایج مورد استفاده در این فرآیند تصمیم گیری، محبوبیت بسته است. این مستلزم بررسی میزان \"ستاره\" دریافتی بسته است که مدیر بسته بر اساس URL مخزن کد منبع ارائه شده نمایش می دهد. با این حال، بسیاری از مدیران بسته ارتباط بین بسته و مخزن کد منبع ارائه شده را تأیید نمی کنند. بنابراین، دشمنان می توانند با مرتبط کردن یک URL مخزن کد منبع محبوب با بسته، آمار محبوبیت یک بسته مخرب را جعل کنند. این در نهایت می تواند توسعه دهندگان را فریب دهد تا ناخواسته بسته مخرب را در محیط توسعه خود بگنجانند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "شناسایی یک بسته منبع باز محبوب که ابرداده محبوبیت آن قرار است برای بسته مخرب استفاده شود."
+            ]
         }
     ],
     "spec_version": "2.0",

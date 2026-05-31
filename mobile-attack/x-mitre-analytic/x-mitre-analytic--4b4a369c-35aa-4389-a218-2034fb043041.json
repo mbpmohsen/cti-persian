@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0667#AN1763",
-                    "external_id": "AN1763"
+                    "external_id": "AN1763",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -35,21 +36,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between initial communication burst and steady encrypted traffic"
+                    "description": "Correlation window between initial communication burst and steady encrypted traffic",
+                    "description_fa": "پنجره همبستگی بین انفجار اولیه ارتباط و ترافیک رمزگذاری شده ثابت"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps expected to perform asymmetric key exchanges"
+                    "description": "Apps expected to perform asymmetric key exchanges",
+                    "description_fa": "برنامه‌هایی که انتظار می‌رود تبادل کلیدهای نامتقارن را انجام دهند"
                 },
                 {
                     "field": "HandshakePatternThreshold",
-                    "description": "Threshold for identifying asymmetric handshake-like traffic patterns"
+                    "description": "Threshold for identifying asymmetric handshake-like traffic patterns",
+                    "description_fa": "آستانه برای شناسایی الگوهای ترافیکی دست دادن نامتقارن"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether communication establishment should occur during user interaction"
+                    "description": "Whether communication establishment should occur during user interaction",
+                    "description_fa": "آیا برقراری ارتباط باید در طول تعامل با کاربر رخ دهد یا خیر"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1763",
+            "description_fa": "شواهد غیرمستقیم استفاده از کانال رمزنگاری نامتقارن استنباط شده از طریق الگوهای شبکه مانند تبادل کلید و رفتار اجرای پس‌زمینه برنامه، که در آن مشاهده مستقیم عملیات جفت کلید محدود است. تشخیص وضعیت استحقاق برنامه + اجرای پس زمینه + الگوهای دست دادن نامتقارن + ارتباطات رمزگذاری شده بعدی را به هم مرتبط می کند."
         }
     ]
 }

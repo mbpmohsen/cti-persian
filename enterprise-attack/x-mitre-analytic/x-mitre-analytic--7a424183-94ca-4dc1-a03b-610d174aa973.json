@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0244#AN0682",
-                    "external_id": "AN0682"
+                    "external_id": "AN0682",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "login_hook_path",
-                    "description": "Path of script or binary assigned to login hook; may vary by environment"
+                    "description": "Path of script or binary assigned to login hook; may vary by environment",
+                    "description_fa": "مسیر اسکریپت یا باینری اختصاص داده شده به قلاب ورود. ممکن است بسته به محیط متفاوت باشد"
                 },
                 {
                     "field": "user_context",
-                    "description": "Login hook may be applied to specific user accounts; tune by privilege level"
+                    "description": "Login hook may be applied to specific user accounts; tune by privilege level",
+                    "description_fa": "قلاب ورود ممکن است برای حساب های کاربری خاص اعمال شود. تنظیم بر اساس سطح امتیاز"
                 },
                 {
                     "field": "time_window",
-                    "description": "Correlate plist file modification to execution within a short timeframe"
+                    "description": "Correlate plist file modification to execution within a short timeframe",
+                    "description_fa": "اصلاح فایل plist را به اجرا در یک بازه زمانی کوتاه مرتبط کنید"
                 },
                 {
                     "field": "parent_process_name",
-                    "description": "Expected parent process (e.g., loginwindow); anomalies can indicate masquerading"
+                    "description": "Expected parent process (e.g., loginwindow); anomalies can indicate masquerading",
+                    "description_fa": "فرآیند والد مورد انتظار (به عنوان مثال، پنجره ورود)؛ ناهنجاری‌ها می‌توانند نشان‌دهنده پنهان‌کاری باشند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0682",
+            "description_fa": "شناسایی قلاب‌های ورود دائمی پیکربندی شده از طریق پیش‌فرض‌ها یا تغییرات plist که منجر به اجرای اسکریپت‌ها یا باینری‌ها در ورود کاربر می‌شود، و روند مورد انتظار والد-فرزند را شکست."
         }
     ]
 }

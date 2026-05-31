@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0022",
-                    "external_id": "DC0022"
+                    "external_id": "DC0022",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -34,7 +35,9 @@
                     "name": "AWS:CloudTrail",
                     "channel": "DeleteBucket, DeleteDBCluster, DeleteSnapshot, TerminateInstances"
                 }
-            ]
+            ],
+            "name_fa": "حذف فضای ذخیره سازی ابری",
+            "description_fa": "حذف فضای ذخیره سازی ابری به حذف یا از بین بردن زیرساخت های ذخیره سازی ابری مانند سطل ها، کانتینرها یا دایرکتوری ها در یک محیط ابری اشاره دارد. نظارت بر این فعالیت برای شناسایی اقدامات بالقوه غیرمجاز یا مخرب، مانند تخریب داده ها توسط دشمنان یا حذف تصادفی که ممکن است منجر به از دست رفتن داده شود، حیاتی است. مثال ها: \n\n- حذف سطل AWS S3: یک کاربر AWS با استفاده از تماس API «DeleteBucket» یک سطل S3 را حذف می کند.\n- حذف محفظه ذخیره‌سازی Azure Blob: یک کاربر با استفاده از عملیات «حذف ظرف» یک ظرف را در فضای ذخیره‌سازی حباب Azure حذف می‌کند.\n- Google Cloud Storage Bucket Deletion: یک کاربر Google Cloud با استفاده از API «storage.buckets.delete» یک سطل را حذف می کند.\n- OpenStack Swift Container Deletion: کاربر با استفاده از روش 'DELETE' یک ظرف را در OpenStack Swift حذف می کند.\n\nاین مؤلفه داده را می توان از طریق اقدامات زیر جمع آوری کرد:\n\nLogging for Cloud Storage Services را فعال کنید\n\n- AWS S3: AWS CloudTrail را فعال کنید تا اقدامات API DeleteBucket را ثبت کند.\n- Azure Blob Storage: Azure Monitor و Diagnostic Logs را برای ضبط عملیات Delete Container فعال کنید. از Azure Event Grid برای ضبط و راه‌اندازی هشدارها برای حذف کانتینر استفاده کنید.\n- Google Cloud Storage: گزارش‌های دسترسی به داده‌ها را در گزارش‌های حسابرسی Cloud فعال کنید تا بر روی storage.buckets.delete تماس‌های API نظارت شود.\n- OpenStack Swift: ثبت سوئیفت را برای ثبت درخواست های DELETE برای کانتینرها پیکربندی کنید.\n\nثبت و تجزیه و تحلیل متمرکز\n\n- از پلتفرم هایی مانند Splunk یا SIEM های بومی برای ارسال و تجزیه و تحلیل گزارش ها برای ناهنجاری در حذف های ذخیره سازی ابری استفاده کنید."
         }
     ]
 }

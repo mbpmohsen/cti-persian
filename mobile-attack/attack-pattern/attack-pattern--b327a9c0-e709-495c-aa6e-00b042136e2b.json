@@ -13,27 +13,34 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1582",
-                    "external_id": "T1582"
+                    "external_id": "T1582",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android SmsProvider",
                     "description": "Google. (n.d.). SmsProvider.java. Retrieved September 11, 2020.",
-                    "url": "https://android.googlesource.com/platform/packages/providers/TelephonyProvider/+/7e7c274/src/com/android/providers/telephony/SmsProvider.java"
+                    "url": "https://android.googlesource.com/platform/packages/providers/TelephonyProvider/+/7e7c274/src/com/android/providers/telephony/SmsProvider.java",
+                    "source_name_fa": "Android SMS Provider",
+                    "description_fa": "گوگل. (n.d.). SmsProvider.java. بازیابی شده در 11 سپتامبر 2020."
                 },
                 {
                     "source_name": "SMS KitKat",
                     "description": "S.Main, D. Braun. (2013, October 14).  Getting Your SMS Apps Ready for KitKat. Retrieved September 11, 2020.",
-                    "url": "https://android-developers.googleblog.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html"
+                    "url": "https://android-developers.googleblog.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html",
+                    "source_name_fa": "اس ام اس کیت کت",
+                    "description_fa": "S.Main، D. Braun. (2013، 14 اکتبر).  آماده کردن برنامه های پیامک خود برای کیت کت. بازیابی شده در 11 سپتامبر 2020."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-16.html",
-                    "external_id": "APP-16"
+                    "external_id": "APP-16",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/cellular-threats/CEL-41.html",
-                    "external_id": "CEL-41"
+                    "external_id": "CEL-41",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -61,7 +68,9 @@
             "x_mitre_version": "1.1",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "کنترل پیامک",
+            "description_fa": "دشمنان ممکن است پیام های SMS را بدون مجوز کاربر حذف، تغییر دهند یا ارسال کنند. این می تواند برای مخفی کردن پیام های SMS C2، گسترش بدافزار یا اثرات خارجی مختلف استفاده شود.\n\nاین را می توان با درخواست مجوزهای «RECEIVE_SMS» یا «SEND_SMS» بسته به اینکه بدافزار در تلاش است انجام دهد، انجام داد. اگر برنامه به‌عنوان کنترل‌کننده پیش‌فرض پیامک در دستگاه تنظیم شده باشد، هدف پخش «SMS_DELIVER» می‌تواند ثبت شود، که به برنامه اجازه می‌دهد برای ارائه‌دهنده محتوای پیامک بنویسد. ارائه‌دهنده محتوا مستقیماً پایگاه‌داده پیام‌رسانی دستگاه را تغییر می‌دهد، که می‌تواند به برنامه‌های مخرب با این توانایی اجازه دهد پیام‌های دلخواه را در دستگاه وارد کنند، تغییر دهند یا حذف کنند.(Citation: SMS KitKat)(Citation: Android SmsProvider)"
         }
     ]
 }

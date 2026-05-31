@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0426#AN1193",
-                    "external_id": "AN1193"
+                    "external_id": "AN1193",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetObjectPattern",
-                    "description": "Regex pattern to detect access to raw disk volumes like `\\Device\\HarddiskVolume` or `\\.\\PhysicalDrive*`."
+                    "description": "Regex pattern to detect access to raw disk volumes like `\\Device\\HarddiskVolume` or `\\.\\PhysicalDrive*`.",
+                    "description_fa": "الگوی Regex برای تشخیص دسترسی به حجم‌های دیسک خام مانند «\\Device\\HarddiskVolume» یا «\\.\\PhysicalDrive*»."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Tune for known tools/scripts (e.g., powershell.exe, cmd.exe) often used in misuse scenarios."
+                    "description": "Tune for known tools/scripts (e.g., powershell.exe, cmd.exe) often used in misuse scenarios.",
+                    "description_fa": "برای ابزارها/اسکریپت های شناخته شده (مانند powershell.exe، cmd.exe) که اغلب در سناریوهای سوء استفاده استفاده می شوند، تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate file access and creation across a short time window to avoid false positives."
+                    "description": "Correlate file access and creation across a short time window to avoid false positives.",
+                    "description_fa": "دسترسی و ایجاد فایل را در یک پنجره زمانی کوتاه مرتبط کنید تا از مثبت کاذب جلوگیری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1193",
+            "description_fa": "فرآیندهای دسترسی به درایوهای منطقی خام (مانند \\.\\C:) برای دور زدن حفاظت های سیستم فایل یا دستکاری مستقیم ساختارهای داده."
         }
     ]
 }

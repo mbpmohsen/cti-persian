@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0438#AN1214",
-                    "external_id": "AN1214"
+                    "external_id": "AN1214",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ArchivePaths",
-                    "description": "Directories monitored for anomalous archive creation (e.g., /tmp, /home)."
+                    "description": "Directories monitored for anomalous archive creation (e.g., /tmp, /home).",
+                    "description_fa": "دایرکتوری ها برای ایجاد بایگانی غیرعادی نظارت می شوند (به عنوان مثال، /tmp، /home)."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Entropy score to flag files lacking recognizable compression headers."
+                    "description": "Entropy score to flag files lacking recognizable compression headers.",
+                    "description_fa": "امتیاز آنتروپی برای پرچم‌گذاری فایل‌های فاقد سرصفحه فشرده‌سازی قابل تشخیص."
                 },
                 {
                     "field": "ScriptAllowlist",
-                    "description": "Scripts/processes known to use custom compression methods."
+                    "description": "Scripts/processes known to use custom compression methods.",
+                    "description_fa": "اسکریپت‌ها/فرآیندهایی که از روش‌های فشرده‌سازی سفارشی استفاده می‌کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1214",
+            "description_fa": "روال‌های آرشیو سفارشی را با همبستگی اجرای اسکریپت (Python، Perl، Bash) با ایجاد فایل‌های با آنتروپی بالا در فهرست‌های موقت یا کاربر شناسایی می‌کند. فرآیندهایی را که عملیات بیتی غیرمعمول یا نوشتن فایل‌ها را بدون هدر فشرده‌سازی استاندارد انجام می‌دهند، پرچم‌گذاری می‌کند."
         }
     ]
 }

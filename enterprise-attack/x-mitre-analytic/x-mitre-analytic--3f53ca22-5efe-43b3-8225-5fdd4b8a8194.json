@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0140#AN0395",
-                    "external_id": "AN0395"
+                    "external_id": "AN0395",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LogFilePath",
-                    "description": "Match deletion actions in system-critical locations or malware drop zones."
+                    "description": "Match deletion actions in system-critical locations or malware drop zones.",
+                    "description_fa": "اقدامات حذف را در مکان‌های حیاتی سیستم یا مناطق حذف بدافزار مطابقت دهید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Typically follows suspicious admin login or unexpected shell session."
+                    "description": "Typically follows suspicious admin login or unexpected shell session.",
+                    "description_fa": "معمولاً به دنبال ورود به سیستم مدیر مشکوک یا جلسه پوسته غیرمنتظره است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0395",
+            "description_fa": "حذف دستی یا اسکریپتی گزارش‌ها، مصنوعات یا فضله‌های بدافزار را از طریق «rm» یا PowerCLI در پوسته ESXi تشخیص می‌دهد. روی حذف از /tmp/، /var/core/ یا /scratch تمرکز کنید."
         }
     ]
 }

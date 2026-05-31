@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0647#AN1727",
-                    "external_id": "AN1727"
+                    "external_id": "AN1727",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.375Z",
             "name": "Analytic 1727",
-            "description": "The defender correlates application registration for system event triggers (e.g., broadcast receivers, WorkManager, JobScheduler, SMS/BOOT events) with subsequent execution of application code immediately following the triggering event, without direct user interaction. Confidence increases when execution occurs in background or locked state, is tied to sensitive triggers (SMS received, boot completed, connectivity change), and produces follow-on file or network activity inconsistent with the application\u2019s expected role.",
+            "description": "The defender correlates application registration for system event triggers (e.g., broadcast receivers, WorkManager, JobScheduler, SMS/BOOT events) with subsequent execution of application code immediately following the triggering event, without direct user interaction. Confidence increases when execution occurs in background or locked state, is tied to sensitive triggers (SMS received, boot completed, connectivity change), and produces follow-on file or network activity inconsistent with the application’s expected role.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -47,29 +48,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between event trigger occurrence and execution behavior"
+                    "description": "Correlation window between event trigger occurrence and execution behavior",
+                    "description_fa": "پنجره همبستگی بین وقوع ماشه رویداد و رفتار اجرا"
                 },
                 {
                     "field": "SensitiveEventList",
-                    "description": "List of high-risk trigger events such as BOOT_COMPLETED, SMS_RECEIVED, CONNECTIVITY_CHANGE, PACKAGE_ADDED"
+                    "description": "List of high-risk trigger events such as BOOT_COMPLETED, SMS_RECEIVED, CONNECTIVITY_CHANGE, PACKAGE_ADDED",
+                    "description_fa": "فهرست رویدادهای راه‌اندازی پرخطر مانند BOOT_COMPLETED، SMS_RECEIVED، CONNECTIVITY_CHANGE، PACKAGE_ADDED"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Applications legitimately expected to use background scheduling or event-driven execution (e.g., messaging, system services)"
+                    "description": "Applications legitimately expected to use background scheduling or event-driven execution (e.g., messaging, system services)",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود از برنامه‌ریزی پس‌زمینه یا اجرای رویداد محور استفاده کنند (مانند پیام‌رسانی، خدمات سیستم)"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether execution should only occur during active user interaction for specific app categories"
+                    "description": "Whether execution should only occur during active user interaction for specific app categories",
+                    "description_fa": "آیا اجرا باید فقط در طول تعامل فعال کاربر برای دسته‌های برنامه خاص رخ دهد یا خیر"
                 },
                 {
                     "field": "ExecutionDelayThreshold",
-                    "description": "Maximum allowed delay between event trigger and execution to still be considered causal"
+                    "description": "Maximum allowed delay between event trigger and execution to still be considered causal",
+                    "description_fa": "حداکثر تأخیر مجاز بین راه‌اندازی رویداد و اجرا همچنان علت در نظر گرفته می‌شود"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound data volume after event-triggered execution to indicate meaningful activity"
+                    "description": "Minimum outbound data volume after event-triggered execution to indicate meaningful activity",
+                    "description_fa": "حداقل حجم داده های خروجی پس از اجرای رویداد برای نشان دادن فعالیت معنی دار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1727",
+            "description_fa": "مدافع ثبت برنامه را برای محرک‌های رویداد سیستم (به عنوان مثال، گیرنده‌های پخش، WorkManager، JobScheduler، رویدادهای SMS/BOOT) با اجرای بعدی کد برنامه بلافاصله پس از رویداد راه‌انداز، بدون تعامل مستقیم کاربر، مرتبط می‌کند. هنگامی که اجرا در پس‌زمینه یا حالت قفل‌شده اتفاق می‌افتد، به محرک‌های حساس (پیامک دریافتی، راه‌اندازی کامل، تغییر اتصال) مرتبط می‌شود، و فایل بعدی یا فعالیت شبکه‌ای را تولید می‌کند که با نقش مورد انتظار برنامه سازگار نباشد، اطمینان افزایش می‌یابد."
         }
     ]
 }

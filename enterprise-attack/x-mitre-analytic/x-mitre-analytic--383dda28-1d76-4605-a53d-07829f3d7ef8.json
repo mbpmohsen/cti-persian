@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0573#AN1580",
-                    "external_id": "AN1580"
+                    "external_id": "AN1580",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,22 +61,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CrossAccountIDList",
-                    "description": "List of external cloud accounts authorized for snapshot or bucket sharing"
+                    "description": "List of external cloud accounts authorized for snapshot or bucket sharing",
+                    "description_fa": "فهرستی از حساب‌های ابری خارجی مجاز برای اشتراک‌گذاری عکس فوری یا سطلی"
                 },
                 {
                     "field": "Region",
-                    "description": "Geographic region in which the sharing occurs (may impact logging availability)"
+                    "description": "Geographic region in which the sharing occurs (may impact logging availability)",
+                    "description_fa": "منطقه جغرافیایی که اشتراک‌گذاری در آن انجام می‌شود (ممکن است بر در دسترس بودن گزارش تأثیر بگذارد)"
                 },
                 {
                     "field": "VolumeSizeThresholdGB",
-                    "description": "Threshold to alert on snapshot size or object volume"
+                    "description": "Threshold to alert on snapshot size or object volume",
+                    "description_fa": "آستانه هشدار در مورد اندازه عکس فوری یا حجم شی"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal window between snapshot creation and external sharing"
+                    "description": "Temporal window between snapshot creation and external sharing",
+                    "description_fa": "پنجره زمانی بین ایجاد عکس فوری و اشتراک گذاری خارجی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1580",
+            "description_fa": "با استفاده از اشتراک‌گذاری عکس فوری، به‌روزرسانی‌های خط‌مشی سطل S3 یا تولید SAS URI، اشتراک‌گذاری عکس فوری، صادرات پشتیبان، یا انتقال اشیاء داده از حساب‌های ابری متعلق به قربانی به هویت‌های دیگر ابری در همان ارائه‌دهنده (مانند AWS، Azure) را شناسایی می‌کند."
         }
     ]
 }

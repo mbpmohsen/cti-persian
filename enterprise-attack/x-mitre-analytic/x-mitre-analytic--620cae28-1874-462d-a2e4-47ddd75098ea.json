@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0051#AN0139",
-                    "external_id": "AN0139"
+                    "external_id": "AN0139",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExcludedPaths",
-                    "description": "List of directories excluded from scanning in the environment (customizable per organization)."
+                    "description": "List of directories excluded from scanning in the environment (customizable per organization).",
+                    "description_fa": "فهرست دایرکتوری های حذف شده از اسکن در محیط (قابل تنظیم برای هر سازمان)."
                 },
                 {
                     "field": "ProcessAllowlist",
-                    "description": "Legitimate processes typically writing to excluded paths to minimize false positives."
+                    "description": "Legitimate processes typically writing to excluded paths to minimize false positives.",
+                    "description_fa": "فرآیندهای قانونی معمولاً در مسیرهای حذف شده برای به حداقل رساندن موارد مثبت کاذب می نویسند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0139",
+            "description_fa": "ایجاد یا اصلاح فایل‌هایی در فهرست‌هایی که از اسکن AV مستثنی شده‌اند (مانند C:\\Windows\\Temp، فهرست‌های راهنماهای سرور Exchange، یا استثناهای پیش‌فرض AV). دیدگاه مدافع: ایجاد فایل را با رفتار اجرا یا نوشتن فرآیندهای والد غیرعادی در مسیرهای حذف شده مرتبط کنید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0170#AN0482",
-                    "external_id": "AN0482"
+                    "external_id": "AN0482",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0482",
-            "description": "Defenders may observe adversary attempts to alter or replace a network device\u2019s operating system image through anomalous CLI commands, unexpected firmware updates, integrity check failures, or mismatches in version and checksum validation. Suspicious behavior includes modification of image files on storage, OS version output inconsistent with baselines, unexpected reloads or reboots after image replacement, and changes to boot configuration that load non-standard system images.",
+            "description": "Defenders may observe adversary attempts to alter or replace a network device’s operating system image through anomalous CLI commands, unexpected firmware updates, integrity check failures, or mismatches in version and checksum validation. Suspicious behavior includes modification of image files on storage, OS version output inconsistent with baselines, unexpected reloads or reboots after image replacement, and changes to boot configuration that load non-standard system images.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedAdminAccounts",
-                    "description": "Defines trusted administrator accounts allowed to modify system images; deviations indicate possible malicious modification."
+                    "description": "Defines trusted administrator accounts allowed to modify system images; deviations indicate possible malicious modification.",
+                    "description_fa": "حساب‌های سرپرست مورد اعتماد را که مجاز به تغییر تصاویر سیستم هستند، تعریف می‌کند. انحرافات نشان دهنده تغییرات مخرب احتمالی است."
                 },
                 {
                     "field": "ApprovedFirmwareVersions",
-                    "description": "Whitelist of validated vendor OS images; unexpected versions may suggest adversarial tampering."
+                    "description": "Whitelist of validated vendor OS images; unexpected versions may suggest adversarial tampering.",
+                    "description_fa": "لیست سفید تصاویر تایید شده سیستم عامل فروشنده؛ نسخه های غیرمنتظره ممکن است نشان دهنده دستکاری خصمانه باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for detecting config changes followed by firmware updates or reboots."
+                    "description": "Correlation window for detecting config changes followed by firmware updates or reboots.",
+                    "description_fa": "پنجره همبستگی برای تشخیص تغییرات پیکربندی و به دنبال آن به روز رسانی یا راه اندازی مجدد سیستم عامل."
                 },
                 {
                     "field": "ChecksumBaseline",
-                    "description": "Baseline cryptographic hashes of approved system images; deviations may indicate compromise."
+                    "description": "Baseline cryptographic hashes of approved system images; deviations may indicate compromise.",
+                    "description_fa": "هش های رمزنگاری پایه تصاویر سیستم تایید شده؛ انحرافات ممکن است نشان دهنده سازش باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0482",
+            "description_fa": "مدافعان ممکن است تلاش‌های دشمن برای تغییر یا جایگزینی تصویر سیستم عامل یک دستگاه شبکه را از طریق دستورات غیرعادی CLI، به‌روزرسانی‌های غیرمنتظره سفت‌افزار، شکست‌های بررسی یکپارچگی یا عدم تطابق در اعتبارسنجی نسخه و جمع کنترل مشاهده کنند. رفتار مشکوک شامل اصلاح فایل‌های تصویر در حافظه، خروجی نسخه سیستم‌عامل متناقض با خطوط پایه، بارگیری مجدد یا راه‌اندازی مجدد غیرمنتظره پس از جایگزینی تصویر، و تغییرات در پیکربندی بوت است که تصاویر غیر استاندارد سیستم را بارگیری می‌کند."
         }
     ]
 }

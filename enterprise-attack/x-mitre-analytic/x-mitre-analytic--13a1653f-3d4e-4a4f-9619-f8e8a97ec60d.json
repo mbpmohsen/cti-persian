@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0299#AN0837",
-                    "external_id": "AN0837"
+                    "external_id": "AN0837",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedSSHUsers",
-                    "description": "ESXi user accounts authorized for shell access and file system operations"
+                    "description": "ESXi user accounts authorized for shell access and file system operations",
+                    "description_fa": "حساب های کاربری ESXi مجاز برای دسترسی به پوسته و عملیات سیستم فایل هستند"
                 },
                 {
                     "field": "CriticalVMFSPaths",
-                    "description": "VMFS datastore paths requiring permission change monitoring"
+                    "description": "VMFS datastore paths requiring permission change monitoring",
+                    "description_fa": "مسیرهای ذخیره داده VMFS که نیاز به نظارت بر تغییر مجوز دارند"
                 },
                 {
                     "field": "ShellAccessTimeWindow",
-                    "description": "Time correlation window for linking SSH access with permission modifications"
+                    "description": "Time correlation window for linking SSH access with permission modifications",
+                    "description_fa": "پنجره همبستگی زمانی برای پیوند دسترسی SSH با تغییرات مجوز"
                 },
                 {
                     "field": "vCenterIntegrationScope",
-                    "description": "Scope of vCenter audit event correlation with ESXi host activities"
+                    "description": "Scope of vCenter audit event correlation with ESXi host activities",
+                    "description_fa": "دامنه همبستگی رویداد ممیزی vCenter با فعالیت های میزبان ESXi"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0837",
+            "description_fa": "زنجیره رفتاری اصلاح مجوز Hypervisor ESXi: (1) دسترسی SSH به میزبان ESXi، (2) اجرای chmod/chown در فایل‌های ذخیره‌گاه داده VMFS یا پیکربندی سیستم، (3) اصلاح فایل‌های پیکربندی VM (.vmx) یا مجوزهای دیسک مجازی، (4) رویدادهای میزبان مرکزی مدیریت شده ifer v5."
         }
     ]
 }

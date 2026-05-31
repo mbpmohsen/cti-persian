@@ -13,37 +13,49 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1430",
-                    "external_id": "T1430"
+                    "external_id": "T1430",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Palo Alto HenBox",
                     "description": "A. Hinchliffe, M. Harbison, J. Miller-Osborn, et al. (2018, March 13). HenBox: The Chickens Come Home to Roost. Retrieved September 9, 2019.",
-                    "url": "https://unit42.paloaltonetworks.com/unit42-henbox-chickens-come-home-roost/"
+                    "url": "https://unit42.paloaltonetworks.com/unit42-henbox-chickens-come-home-roost/",
+                    "source_name_fa": "جعبه مرغ پالو آلتو",
+                    "description_fa": "A. Hinchliffe, M. Harbison, J. Miller-Osborn, et al. (2018، 13 مارس). HenBox: The Chickens Come Home to Roost. بازبینی شده در 9 سپتامبر 2019."
                 },
                 {
                     "source_name": "Android Request Location Permissions",
                     "description": "Android Developers. (2022, March 24). Request Location Permissions. Retrieved April 1, 2022.",
-                    "url": "https://developer.android.com/training/location/permissions"
+                    "url": "https://developer.android.com/training/location/permissions",
+                    "source_name_fa": "Android درخواست مجوزهای مکان",
+                    "description_fa": "توسعه دهندگان اندروید (2022، 24 مارس). درخواست مجوزهای موقعیت مکانی بازبینی شده در ۱ آوریل ۲۰۲۲."
                 },
                 {
                     "source_name": "Apple Requesting Authorization for Location Services",
                     "description": "Apple Developers. (n.d.). Requesting Authorization for Location Services. Retrieved April 1, 2022.",
-                    "url": "https://developer.apple.com/documentation/corelocation/requesting_authorization_for_location_services"
+                    "url": "https://developer.apple.com/documentation/corelocation/requesting_authorization_for_location_services",
+                    "source_name_fa": "اپل درخواست مجوز برای خدمات مکان",
+                    "description_fa": "توسعه دهندگان اپل (n.d.). درخواست مجوز برای خدمات مکان. بازبینی شده در ۱ آوریل ۲۰۲۲."
                 },
                 {
                     "source_name": "Google Project Zero Insomnia",
                     "description": "I. Beer. (2019, August 29). Implant Teardown. Retrieved June 2, 2020.",
-                    "url": "https://googleprojectzero.blogspot.com/2019/08/implant-teardown.html"
+                    "url": "https://googleprojectzero.blogspot.com/2019/08/implant-teardown.html",
+                    "source_name_fa": "Google Project Zero Insomnia",
+                    "description_fa": "I. آبجو. (29 اوت 2019). پارگی ایمپلنت. بازبینی شده در 2 ژوئن 2020."
                 },
                 {
                     "source_name": "PaloAlto-SpyDealer",
                     "description": "Wenjun Hu, Cong Zheng and Zhi Xu. (2017, July 6). SpyDealer: Android Trojan Spying on More Than 40 Apps. Retrieved September 18, 2018.",
-                    "url": "https://researchcenter.paloaltonetworks.com/2017/07/unit42-spydealer-android-trojan-spying-40-apps/"
+                    "url": "https://researchcenter.paloaltonetworks.com/2017/07/unit42-spydealer-android-trojan-spying-40-apps/",
+                    "source_name_fa": "PaloAlto-SpyDealer",
+                    "description_fa": "ونجون هو، کونگ ژنگ و ژی زو. (2017، 6 جولای). SpyDealer: تروجان اندروید از بیش از 40 برنامه جاسوسی می کند. بازبینی شده در 18 سپتامبر 2018."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-24.html",
-                    "external_id": "APP-24"
+                    "external_id": "APP-24",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -51,7 +63,7 @@
             ],
             "modified": "2026-05-12T15:12:00.706Z",
             "name": "Location Tracking",
-            "description": "Adversaries may track a device\u2019s physical location through use of standard operating system APIs via malicious or exploited applications on the compromised device. \n\n \n\nOn Android, applications holding the `ACCESS_COAURSE_LOCATION` or `ACCESS_FINE_LOCATION` permissions provide access to the device\u2019s physical location. On Android 10 and up, declaration of the `ACCESS_BACKGROUND_LOCATION` permission in an application\u2019s manifest will allow applications to request location access even when the application is running in the background.(Citation: Android Request Location Permissions) Some adversaries have utilized integration of Baidu map services to retrieve geographical location once the location access permissions had been obtained.(Citation: PaloAlto-SpyDealer)(Citation: Palo Alto HenBox) \n\n \n\nOn iOS, applications must include the `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, and/or `NSLocationAlwaysUsageDescription` keys in their `Info.plist` file depending on the extent of requested access to location information.(Citation: Apple Requesting Authorization for Location Services) On iOS 8.0 and up, applications call `requestWhenInUseAuthorization()` to request access to location information when the application is in use or `requestAlwaysAuthorization()` to request access to location information regardless of whether the application is in use. With elevated privileges, an adversary may be able to access location data without explicit user consent with the `com.apple.locationd.preauthorized` entitlement key.(Citation: Google Project Zero Insomnia)",
+            "description": "Adversaries may track a device’s physical location through use of standard operating system APIs via malicious or exploited applications on the compromised device. \n\n \n\nOn Android, applications holding the `ACCESS_COAURSE_LOCATION` or `ACCESS_FINE_LOCATION` permissions provide access to the device’s physical location. On Android 10 and up, declaration of the `ACCESS_BACKGROUND_LOCATION` permission in an application’s manifest will allow applications to request location access even when the application is running in the background.(Citation: Android Request Location Permissions) Some adversaries have utilized integration of Baidu map services to retrieve geographical location once the location access permissions had been obtained.(Citation: PaloAlto-SpyDealer)(Citation: Palo Alto HenBox) \n\n \n\nOn iOS, applications must include the `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, and/or `NSLocationAlwaysUsageDescription` keys in their `Info.plist` file depending on the extent of requested access to location information.(Citation: Apple Requesting Authorization for Location Services) On iOS 8.0 and up, applications call `requestWhenInUseAuthorization()` to request access to location information when the application is in use or `requestAlwaysAuthorization()` to request access to location information regardless of whether the application is in use. With elevated privileges, an adversary may be able to access location data without explicit user consent with the `com.apple.locationd.preauthorized` entitlement key.(Citation: Google Project Zero Insomnia)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -76,7 +88,9 @@
             "x_mitre_version": "1.2",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "ردیابی موقعیت مکانی",
+            "description_fa": "دشمنان ممکن است مکان فیزیکی دستگاه را از طریق استفاده از APIهای سیستم عامل استاندارد از طریق برنامه های مخرب یا سوء استفاده شده در دستگاه در معرض خطر ردیابی کنند. \n\n \n\nدر Android، برنامه‌هایی که مجوزهای «ACCESS_COAURSE_LOCATION» یا «ACCESS_FINE_LOCATION» را دارند، به مکان فیزیکی دستگاه دسترسی دارند. در Android 10 و بالاتر، اعلام مجوز «ACCESS_BACKGROUND_LOCATION» در مانیفست برنامه به برنامه‌ها اجازه می‌دهد حتی زمانی که برنامه در پس‌زمینه اجرا می‌شود، درخواست دسترسی به مکان کنند. به دست آمد.(Citation: PaloAlto-SpyDealer)(Citation: Palo Alto HenBox) \n\n \n\nدر iOS، برنامه‌ها باید بسته به میزان دسترسی درخواستی به اطلاعات مکان، کلیدهای «NSLocationWhenInUseUsageDescription»، «NSLocationAlwaysAndWhenInUsageDescription»، و/یا «NSLocationAlwaysUsageDescription» را در فایل «Info.plist» خود قرار دهند.[0] RES_TI up به اطلاعات مکان.[0] برنامه‌ها «requestWhenInUseAuthorization()» را برای درخواست دسترسی به اطلاعات مکان زمانی که برنامه در حال استفاده است یا «requestAlwaysAuthorization()» را برای درخواست دسترسی به اطلاعات مکان بدون توجه به اینکه برنامه در حال استفاده است، می‌خوانند. با امتیازات بالا، دشمن ممکن است بتواند بدون رضایت صریح کاربر با کلید حق «com.apple.locationd.preauthorized» به داده های مکان دسترسی پیدا کند.(Citation: Google Project Zero Insomnia) (Citation: Android Request Location Permissions) (Citation: Apple Requesting Authorization for Location Services)"
         }
     ]
 }

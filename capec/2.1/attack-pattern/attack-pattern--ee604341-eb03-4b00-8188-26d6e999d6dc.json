@@ -9,56 +9,70 @@
                 {
                     "external_id": "CAPEC-142",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/142.html"
+                    "url": "https://capec.mitre.org/data/definitions/142.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-348",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/348.html"
+                    "url": "http://cwe.mitre.org/data/definitions/348.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-345",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/345.html"
+                    "url": "http://cwe.mitre.org/data/definitions/345.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-349",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/349.html"
+                    "url": "http://cwe.mitre.org/data/definitions/349.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-346",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/346.html"
+                    "url": "http://cwe.mitre.org/data/definitions/346.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-350",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/350.html"
+                    "url": "http://cwe.mitre.org/data/definitions/350.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Compromise Infrastructure: DNS Server",
                     "external_id": "T1584.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1584/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1584/002",
+                    "description_fa": "زیرساخت سازش: سرور DNS",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-22",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/DNS_cache_poisoning"
+                    "url": "http://en.wikipedia.org/wiki/DNS_cache_poisoning",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "DNS Threats and DNS Weaknesses, DNSSEC",
                     "external_id": "REF-23",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.dnssec.net/dns-threats.php"
+                    "url": "http://www.dnssec.net/dns-threats.php",
+                    "description_fa": "تهدیدات DNS و نقاط ضعف DNS، DNSSEC",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Vulnerability Note VU#800113, 2008--07---08, US CERT",
                     "external_id": "REF-27",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.kb.cert.org/vuls/id/800113#pat"
+                    "url": "http://www.kb.cert.org/vuls/id/800113#pat",
+                    "description_fa": "یادداشت آسیب‌پذیری VU#800113، 2008--07---08، CERT ایالات متحده",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ee604341-eb03-4b00-8188-26d6e999d6dc",
@@ -91,11 +105,24 @@
                 "The adversary must have the resources to modify the targeted cache. In addition, in most cases the adversary will wish to host the sites to which users will be redirected, although in some cases redirecting to a third party site will accomplish the adversary's goals."
             ],
             "x_capec_skills_required": {
-                "Medium": "To overwrite/modify targeted DNS cache"
+                "Medium": "To overwrite/modify targeted DNS cache",
+                "Medium_fa": "برای بازنویسی/تغییر کش DNS هدفمند"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "سرور نام دامنه یک نام دامنه (مانند www.example.com) را به یک آدرس IP ترجمه می کند که میزبان های اینترنت برای تماس با منابع اینترنتی از آن استفاده می کنند. یک دشمن یک کش DNS عمومی را تغییر می‌دهد تا باعث شود نام‌های خاص به آدرس‌های نادرستی که حریف مشخص می‌کند تبدیل شوند. نتیجه این است که برنامه‌های کلاینت که برای تفکیک نام دامنه به کش هدفمند متکی هستند، نه به آدرس واقعی نام دامنه مشخص، بلکه به آدرس دیگری هدایت می‌شوند. دشمنان می‌توانند از این برای جمع‌آوری مشتریان به سایت‌هایی که بدافزار را روی رایانه قربانی نصب می‌کنند یا به عنوان بخشی از حمله Pharming استفاده کنند.",
+            "name_fa": "مسمومیت کش DNS",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> در این مثال، یک دشمن درخواستی را به یک سرور DNS محلی برای جستجوی www.example .com ارسال می کند. آدرس IP مرتبط www.example.com 1.3.5.7 است.</xhtml:p>\n               <xhtml:p>DNS محلی معمولا آدرس های IP را در حافظه پنهان نگه می دارد و هر بار به DNS راه دور نمی رود. از آنجایی که رکورد محلی یافت نشد، سرور DNS سعی می کند برای پرس و جو به DNS راه دور متصل شود. با این حال، قبل از اینکه DNS راه دور آدرس IP مناسب 1.3.5.7 را برگرداند، دشمن DNS محلی را با پاسخ های دستکاری شده با آدرس IP 2.4.6.8 پر می کند. نتیجه این است که 2.4.6.8 در کش DNS ذخیره می شود. در همین حال، 2.4.6.8 با یک وب سایت مخرب مرتبط است www.maliciousexampsle.com</xhtml:p>\n               <xhtml:p>وقتی کاربران به www.example.com متصل می شوند، DNS محلی آن را به www.maliciousexample.com هدایت می کند، این به عنوان بخشی از یک حمله Pharming عمل می کند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کاوش حافظه های پنهان حل کننده: </b>کش های DNS را در سرور محلی DNS و مرورگر مشتری با فعال بودن حافظه پنهان DNS بررسی کنید. حافظه پنهان حل‌کننده در حافظه برای دیدن اینکه آیا حاوی ورودی DNS هدف است یا خیر.</td></tr><tr><td>ببینید که آیا مرورگر مشتری دارای حافظه پنهان DNS فعال است یا خیر. به سرور معتبر برای وب سایت هدف ارسال می شود و منتظر حل کننده نام تکراری باشید. یک دشمن درخواست جعلی را به سرور محلی DNS ارسال می‌کند و سپس پاسخ‌هایی را سیل می‌کند که حافظه پنهان DNS را فریب می‌دهد تا پاسخ‌های مخرب را به خاطر بسپارد، که پاسخ‌های اشتباه جست‌وجوی DNS هستند. شناسه.</td></tr><tr><td>اگر شناسه تراکنش مورد استفاده برای شناسایی هر نمونه پرس و جو در برخی از نرم افزارهای DNS جدید تصادفی باشد، حمله باید شناسه تراکنش را حدس بزند. با ایجاد انکار سرویس، پاسخ سرور DNS واقعی را کاهش دهید. این به دشمنان زمان کافی برای حدس زدن تراکنش می دهد</td></tr><tr><td>دشمن پاسخ DNS را با همان شناسه تراکنش که در درخواست است ایجاد می کند. حریف پاسخ های DNS را قبل از سرور DNS مجاز ارسال می کند. این امر DNS کش محلی را مجبور می کند پاسخ DNS جعلی را ذخیره کند (پاسخ اشتباه). پاسخ‌های جعلی DNS معمولاً شامل آدرس IP یک وب‌سایت مخرب می‌شوند.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>هدایت کاربران به وب‌سایت مخرب: </b>همانطور که دشمن موفق می‌شود سایت آسیب‌پذیر را با استفاده از یک آسیب‌پذیری وب سایت آسیب‌پذیر خوب را به یک دامنه وب متصل کند، نام.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td> هدایت ترافیک وب به سایتی که به اندازه کافی شبیه به سایت اصلی است، به گونه‌ای که هیچ شبهه‌ای ایجاد نشود.</td></tr><tr><td>Adversary-in-the-Middle (CAPEC-94) ارتباط امن بین دو را رهگیری می‌کند. مهمانی ها.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "یک حافظه پنهان DNS باید در برابر حملاتی آسیب پذیر باشد که به دشمن اجازه می دهد آدرس ها را در جدول جستجوی خود جایگزین کند. برنامه های کاربردی مشتری باید به مقادیر نقدی خراب اعتماد کرده و از آنها برای وضوح نام دامنه خود استفاده کنند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید منابعی برای اصلاح حافظه پنهان مورد نظر داشته باشد. بعلاوه، در بیشتر موارد، حریف مایل به میزبانی سایت‌هایی است که کاربران به آن‌ها هدایت می‌شوند، اگرچه در برخی موارد هدایت مجدد به یک سایت شخص ثالث، اهداف دشمن را محقق می‌کند."
+            ]
         }
     ],
     "type": "bundle"

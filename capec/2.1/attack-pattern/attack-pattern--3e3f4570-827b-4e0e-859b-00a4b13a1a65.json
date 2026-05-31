@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-134",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/134.html"
+                    "url": "https://capec.mitre.org/data/definitions/134.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-150",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/150.html"
+                    "url": "http://cwe.mitre.org/data/definitions/150.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Mail Command Injection",
                     "external_id": "30",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Mail-Command-Injection"
+                    "url": "http://projects.webappsec.org/Mail-Command-Injection",
+                    "description_fa": "Mail Command Injection",
+                    "source_name_fa": "WASC"
                 }
             ],
             "id": "attack-pattern--3e3f4570-827b-4e0e-859b-00a4b13a1a65",
@@ -51,7 +55,17 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن با تزریق داده ها از طریق استفاده از کاراکترهای جداکننده بومی پروتکل، هدرها و محتوای یک پیام ایمیل را دستکاری می کند.",
+            "name_fa": "تزریق ایمیل",
+            "x_capec_extended_description_fa": "<xhtml:p>بسیاری از برنامه ها به کاربران اجازه می دهند با پر کردن فیلدها، پیام های ایمیل ارسال کنند. به عنوان مثال، یک وب سایت ممکن است پیوندی برای \"اشتراک گذاری این سایت با یک دوست\" داشته باشد که در آن کاربر آدرس ایمیل گیرنده را ارائه می دهد و برنامه وب تمام فیلدهای دیگر مانند موضوع و متن را پر می کند. در این الگو، دشمن با تزریق محتوای اضافی در یک فیلد ورودی که برای ساخت هدر پیام ایمیل استفاده می‌شود، اطلاعات سرصفحه و بدنه را به پیام ایمیل اضافه می‌کند. این حمله از این واقعیت استفاده می‌کند که RFC 822 مستلزم آن است که سرصفحه‌ها در یک پیام ایمیل با یک بازگشت از هم جدا شوند. در نتیجه، یک حریف می‌تواند سرصفحه‌ها یا محتوای جدیدی را به سادگی با افزودن یک بازگشت محدودکننده و سپس ارائه اطلاعات سرفصل و بدنه جدید تزریق کند. این حمله در صورتی کار نخواهد کرد که کاربر فقط بتواند متن پیام را تامین کند، زیرا بازگشت حامل در بدنه به عنوان یک کاراکتر عادی در نظر گرفته می‌شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید به کاربر امکان ارسال ایمیل به گیرنده را بدهد، حداقل یک فیلد سرصفحه را در پیام مشخص کند، و نباید در برابر تزریق جداکننده‌های فرمان ضدعفونی شود.",
+                "حریف باید توانایی دسترسی به برنامه ایمیل هدف را داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

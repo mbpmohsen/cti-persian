@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0333#AN0944",
-                    "external_id": "AN0944"
+                    "external_id": "AN0944",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AtJobPath",
-                    "description": "Monitoring additional paths (e.g., tmp-mounted spool dirs) for modified at jobs."
+                    "description": "Monitoring additional paths (e.g., tmp-mounted spool dirs) for modified at jobs.",
+                    "description_fa": "نظارت بر مسیرهای اضافی (به عنوان مثال، پیچ‌های قرقره نصب‌شده در tmp) برای اصلاح‌شده در کارها."
                 },
                 {
                     "field": "ScheduleLatency",
-                    "description": "Expected delay between at job creation and execution."
+                    "description": "Expected delay between at job creation and execution.",
+                    "description_fa": "تاخیر مورد انتظار بین ایجاد شغل و اجرا."
                 },
                 {
                     "field": "JobScriptEntropy",
-                    "description": "High entropy or obfuscation in at job payloads."
+                    "description": "High entropy or obfuscation in at job payloads.",
+                    "description_fa": "آنتروپی یا ابهام بالا در بارهای کار."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0944",
+            "description_fa": "استفاده از دستور «at» را برای زمان‌بندی کارها، و به دنبال آن اجرای کار و اصلاح فایل‌های کار در زیر /var/spool/cron/atjobs تشخیص می‌دهد."
         }
     ]
 }

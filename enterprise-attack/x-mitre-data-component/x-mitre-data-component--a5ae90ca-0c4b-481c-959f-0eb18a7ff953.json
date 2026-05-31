@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0072",
-                    "external_id": "DC0072"
+                    "external_id": "DC0072",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,7 +63,9 @@
                     "name": "docker:events",
                     "channel": "docker run with restart=always or modifying init"
                 }
-            ]
+            ],
+            "name_fa": "ایجاد کانتینر",
+            "description_fa": "مولفه داده \"Container Creation\" جزئیات مربوط به ساخت اولیه یک کانتینر را در یک محیط کانتینری ثبت می کند. این شامل رویدادهایی می‌شود که در آن یک کانتینر جدید نمونه‌سازی می‌شود، مانند از طریق Docker، Kubernetes، یا دیگر پلت‌فرم‌های ارکستراسیون کانتینر. نظارت بر این رویدادها به شناسایی ایجاد کانتینر غیرمجاز یا بالقوه مخرب کمک می کند. مثال ها:\n\n- مثال Docker: \"docker create my-container\"، \"docker run --name=my-container nginx:latest\"\n- مثال Kubernetes: \"kubectl my-pod --image=nginx\" را اجرا کرد، \"kubectl ایجاد استقرار my-deployment --image=nginx\"\n- نمونه خدمات کانتینر ابری\n    - AWS ECS: ایجاد وظیفه یا سرویس (\"RunTask\" یا \"CreateService\").\n    - نمونه های کانتینر Azure: استقرار یک گروه کانتینر.\n    - Google Kubernetes Engine (GKE): ایجاد پادهای جدید از طریق GCP API."
         }
     ]
 }

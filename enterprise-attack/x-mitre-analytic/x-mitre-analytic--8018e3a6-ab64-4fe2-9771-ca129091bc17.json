@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0526#AN1459",
-                    "external_id": "AN1459"
+                    "external_id": "AN1459",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ArchiveCommands",
-                    "description": "List of archiving/encryption utilities considered sensitive in the monitored environment."
+                    "description": "List of archiving/encryption utilities considered sensitive in the monitored environment.",
+                    "description_fa": "فهرست ابزارهای بایگانی/رمزگذاری که در محیط نظارت شده حساس هستند."
                 },
                 {
                     "field": "SuspiciousDirectories",
-                    "description": "Paths where archive creation is suspicious (e.g., /tmp, user home directories)."
+                    "description": "Paths where archive creation is suspicious (e.g., /tmp, user home directories).",
+                    "description_fa": "مسیرهایی که ایجاد بایگانی مشکوک است (به عنوان مثال، /tmp، فهرست راهنمای کاربر)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal window to correlate command execution with file creation events."
+                    "description": "Temporal window to correlate command execution with file creation events.",
+                    "description_fa": "پنجره زمانی برای ارتباط اجرای دستور با رویدادهای ایجاد فایل."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1459",
+            "description_fa": "فعالیت آرشیو مخالف را از طریق فراخوانی ابزارهایی مانند tar، gzip، bzip2 یا openssl که در زمینه‌های غیر اداری یا غیرمعمول استفاده می‌شوند، شناسایی می‌کند. الگوهای اجرای دستورات را با ایجاد فایل خروجی های فشرده/رمزگذاری شده در دایرکتوری های مرحله بندی (مانند /tmp، /var/tmp) مرتبط می کند."
         }
     ]
 }

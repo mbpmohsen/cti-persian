@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0415#AN1168",
-                    "external_id": "AN1168"
+                    "external_id": "AN1168",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HTTP5xxRateThreshold",
-                    "description": "Ratio of 5xx error codes over requests indicating resource exhaustion."
+                    "description": "Ratio of 5xx error codes over requests indicating resource exhaustion.",
+                    "description_fa": "نسبت کدهای خطای 5xx به درخواست‌هایی که نشان‌دهنده فرسودگی منابع است."
                 },
                 {
                     "field": "FunctionInvocationRate",
-                    "description": "Spike in lambda/API gateway executions indicating scripted behavior."
+                    "description": "Spike in lambda/API gateway executions indicating scripted behavior.",
+                    "description_fa": "جهش در اجرای دروازه لامبدا/API که نشان دهنده رفتار اسکریپت شده است."
                 },
                 {
                     "field": "AutoscaleEventCount",
-                    "description": "Triggers linked to app DoS where legitimate scaling is mimicked."
+                    "description": "Triggers linked to app DoS where legitimate scaling is mimicked.",
+                    "description_fa": "محرک‌های مرتبط با DoS برنامه که در آن مقیاس‌گذاری قانونی تقلید می‌شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1168",
+            "description_fa": "سوء استفاده خودکار از برنامه‌های میزبانی شده در فضای ابری (مانند برنامه‌های وب، نقاط پایانی REST، APIهای داخلی) که باعث خستگی محاسباتی، نرخ خطای بالای 5xx یا محرک‌های مقیاس خودکار مکرر وارد شده در بینش برنامه یا ساعت ابری می‌شود."
         }
     ]
 }

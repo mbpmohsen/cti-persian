@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-647",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/647.html"
+                    "url": "https://capec.mitre.org/data/definitions/647.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Data from Local System",
                     "external_id": "T1005",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1005"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1005",
+                    "description_fa": "داده ها از سیستم محلی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Query Registry",
                     "external_id": "T1012",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1012"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1012",
+                    "description_fa": "رجیستری پرس و جو",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Unsecured Credentials: Credentials in Registry",
                     "external_id": "T1552.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1552/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1552/002",
+                    "description_fa": "اعتبارنامه های ناامن: اعتبارنامه ها در رجیستری",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--ad242ccf-3578-4787-937c-22eb0ede3fb6",
@@ -49,6 +57,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (The adversary is able to read sensitive information about the system in the registry.)"
+                ],
+                "Confidentiality_fa": [
+                    "Read Data (رقیب قادر است اطلاعات حساس سیستم را در رجیستری بخواند.)"
                 ]
             },
             "x_capec_domains": [
@@ -64,11 +75,22 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Low": "Once the adversary has logical access (which can potentially require high knowledge and skill level), the adversary needs only the capability and facility to navigate the system through the OS graphical user interface or the command line."
+                "Low": "Once the adversary has logical access (which can potentially require high knowledge and skill level), the adversary needs only the capability and facility to navigate the system through the OS graphical user interface or the command line.",
+                "Low_fa": "هنگامی که حریف دسترسی منطقی داشته باشد (که به طور بالقوه می تواند به دانش و مهارت بالایی نیاز داشته باشد)، دشمن فقط به قابلیت و امکانات لازم برای هدایت سیستم از طریق رابط کاربر گرافیکی سیستم عامل یا خط فرمان نیاز دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از ضعف در مجوز برای جمع آوری داده های خاص سیستم و اطلاعات حساس در یک رجیستری (مانند Windows Registry، Mac plist) سوء استفاده می کند. اینها حاوی اطلاعاتی در مورد پیکربندی سیستم، نرم افزار، سیستم عامل و امنیت هستند. دشمن می تواند از اطلاعات جمع آوری شده برای انجام حملات بیشتر استفاده کند.",
+            "name_fa": "جمع آوری داده ها از رجیستری ها",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>دسترسی منطقی به سیستم: </b>یک حریف ابتدا باید به سیستمی که می‌خواهد اطلاعات رجیستری را از آن جمع‌آوری کند، دسترسی منطقی پیدا کند،</p></li><table><tbody><tr><tr><th> اعتبارنامه و دسترسی به سیستم</td></tr><tr><td>نصب بدافزار در سیستم که به حریف دسترسی منطقی از راه دور می‌دهد</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین کنید که آیا دسترسی صحیح است یا خیر. دشمن تعیین خواهد کرد که آیا آنها مجوزهای مناسب یا مجاز برای مشاهده اطلاعات رجیستری را دارند یا خیر. اگر این کار را انجام ندهند، باید امتیازات سیستم را از طریق روش‌های دیگری افزایش دهند</p></li><li> <p> <b>برای اطلاعات از رجیستری استفاده کنند: </b>هنگامی که دشمن به یک رجیستری دسترسی پیدا کند، تمام داده‌های خاص سیستم و اطلاعات حساسی را که مفید می‌داند جمع‌آوری می‌کند. <p> <b>حمله پیگیری: </b>از هرگونه اطلاعات یا نقاط ضعف یافت شده برای انجام یک حمله بعدی استفاده کنید</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "حریف باید به روشی (مثلاً از طریق اعتبار به دست آمده یا نصب بدافزار در سیستم) به سیستم دسترسی منطقی داشته باشد.",
+                "حریف باید قابلیت هدایت سیستم عامل را برای بررسی رجیستری داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

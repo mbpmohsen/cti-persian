@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0371#AN1046",
-                    "external_id": "AN1046"
+                    "external_id": "AN1046",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "Set of /proc paths to monitor for suspicious access"
+                    "description": "Set of /proc paths to monitor for suspicious access",
+                    "description_fa": "مجموعه ای از مسیرهای /proc برای نظارت بر دسترسی مشکوک"
                 },
                 {
                     "field": "SyscallThreshold",
-                    "description": "Rate of syscalls (open/read) used to detect repeated probing for debug artifacts"
+                    "description": "Rate of syscalls (open/read) used to detect repeated probing for debug artifacts",
+                    "description_fa": "نرخ syscalls (باز/خواندن) مورد استفاده برای تشخیص کاوش مکرر برای مصنوعات اشکال زدایی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1046",
+            "description_fa": "نظارت بر دسترسی به /proc/self/status که در آن فیلد TracerPID پرس و جو می شود، زیرا این یک تکنیک رایج برای تشخیص اشکال زدایی است. فرآیندهایی را که سعی می‌کنند عمداً استثناها را راه‌اندازی کنند، شناسایی کنید و نظارت کنید که آیا مدیریت استثنا نشان‌دهنده وجود یک اشکال‌زدا است یا خیر."
         }
     ]
 }

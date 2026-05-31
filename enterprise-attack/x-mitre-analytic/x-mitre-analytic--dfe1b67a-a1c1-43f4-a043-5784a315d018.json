@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0380#AN1073",
-                    "external_id": "AN1073"
+                    "external_id": "AN1073",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandScope",
-                    "description": "Defines list of configuration or diagnostic commands to monitor."
+                    "description": "Defines list of configuration or diagnostic commands to monitor.",
+                    "description_fa": "فهرستی از دستورات پیکربندی یا تشخیصی را برای نظارت تعریف می کند."
                 },
                 {
                     "field": "AuthenticatedUserList",
-                    "description": "Helps reduce false positives by whitelisting known admins."
+                    "description": "Helps reduce false positives by whitelisting known admins.",
+                    "description_fa": "با قرار دادن ادمین های شناخته شده در لیست سفید، به کاهش موارد مثبت کاذب کمک می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1073",
+            "description_fa": "مجموعه ای از پیکربندی دستگاه از طریق دستورات CLI (مانند «نمایش پیکربندی در حال اجرا»، «کپی فلش»، «بیشتر»)، که اغلب با انتقال TFTP/SCP دنبال می شود."
         }
     ]
 }

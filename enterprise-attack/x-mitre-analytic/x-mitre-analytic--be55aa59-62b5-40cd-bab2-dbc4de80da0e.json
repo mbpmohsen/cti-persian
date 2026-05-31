@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0578#AN1594",
-                    "external_id": "AN1594"
+                    "external_id": "AN1594",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., multiple enumeration calls within 5 minutes) may indicate automated discovery versus normal user activity."
+                    "description": "Correlation window (e.g., multiple enumeration calls within 5 minutes) may indicate automated discovery versus normal user activity.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، چندین تماس شمارش در عرض 5 دقیقه) ممکن است نشان دهنده کشف خودکار در مقابل فعالیت عادی کاربر باشد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Expected service accounts and IAM roles that regularly enumerate storage; deviations may indicate suspicious activity."
+                    "description": "Expected service accounts and IAM roles that regularly enumerate storage; deviations may indicate suspicious activity.",
+                    "description_fa": "حساب‌های خدمات مورد انتظار و نقش‌های IAM که به طور منظم فضای ذخیره‌سازی را برمی‌شمارند. انحرافات ممکن است نشان دهنده فعالیت مشکوک باشد."
                 },
                 {
                     "field": "RegionScope",
-                    "description": "Unusual enumeration of buckets across multiple geographic regions in short succession may indicate adversary reconnaissance."
+                    "description": "Unusual enumeration of buckets across multiple geographic regions in short succession may indicate adversary reconnaissance.",
+                    "description_fa": "شمارش غیرمعمول سطل ها در چندین منطقه جغرافیایی به صورت متوالی ممکن است نشان دهنده شناسایی دشمن باشد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1594",
+            "description_fa": "تشخیص شمارش مشکوک اشیاء ذخیره سازی ابری از طریق فراخوانی های API مانند AWS S3 ListObjectsV2، Azure List Blobs یا GCP ListObjects. برای شناسایی الگوهای استفاده غیرعادی (مانند حساب غیرمعمول، مناطق غیرمنتظره، یا شمارش در مقیاس بزرگ در پنجره‌های زمانی کوتاه)، دسترسی را با نقش حساب، زمینه کاربر و فعالیت احراز هویت قبلی مرتبط کنید."
         }
     ]
 }

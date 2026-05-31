@@ -9,33 +9,41 @@
                 {
                     "external_id": "CAPEC-87",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/87.html"
+                    "url": "https://capec.mitre.org/data/definitions/87.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-425",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/425.html"
+                    "url": "http://cwe.mitre.org/data/definitions/425.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Predictable Resource Location",
                     "external_id": "34",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Predictable-Resource-Location"
+                    "url": "http://projects.webappsec.org/Predictable-Resource-Location",
+                    "description_fa": "مکان منبع قابل پیش بینی",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Forced browsing",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Forced_browsing"
+                    "url": "https://owasp.org/www-community/attacks/Forced_browsing",
+                    "description_fa": "مرور اجباری",
+                    "source_name_fa": "حملات OWASP"
                 }
             ],
             "id": "attack-pattern--00268a75-3243-477d-9166-8c78fddf6df6",
@@ -59,6 +67,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Bypass Protection Mechanism"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "مکانیسم حفاظت دور زدن"
                 ]
             },
             "x_capec_domains": [
@@ -76,11 +94,24 @@
                 "None: No specialized resources are required to execute this type of attack. A directory listing is helpful, but not a requirement."
             ],
             "x_capec_skills_required": {
-                "Low": "Forcibly browseable pages can be discovered by using a number of automated tools. Doing the same manually is tedious but by no means difficult."
+                "Low": "Forcibly browseable pages can be discovered by using a number of automated tools. Doing the same manually is tedious but by no means difficult.",
+                "Low_fa": "صفحات قابل مرور اجباری را می توان با استفاده از تعدادی ابزار خودکار کشف کرد. انجام همین کار به صورت دستی خسته کننده است اما به هیچ وجه سخت نیست."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم از مرور اجباری (ورود مستقیم URL) برای دسترسی به بخش‌هایی از وب‌سایت که در غیر این صورت غیرقابل دسترس هستند، استفاده می‌کند. معمولاً از یک کنترلر جلو یا الگوی طراحی مشابه برای محافظت از دسترسی به بخش‌هایی از یک برنامه وب استفاده می‌شود. مرور اجباری مهاجم را قادر می‌سازد به اطلاعات دسترسی پیدا کند، عملیات ممتاز را انجام دهد و در غیر این صورت به بخش‌هایی از برنامه وب دسترسی پیدا کند که به‌درستی محافظت نشده‌اند.",
+            "name_fa": "مرور اجباری",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک برنامه تابلوی اعلانات زمانی که کاربر وارد شده به گروه سرپرستان تعلق دارد، یک رابط مدیریتی در admin.aspx ارائه می دهد.</xhtml:p>\n               <xhtml:p>یک مهاجم می تواند با درخواست مستقیم به صفحه به رابط admin.aspx دسترسی پیدا کند. عدم دسترسی مناسب به رابط محافظت شده به مهاجم این امکان را می دهد که عملکردهای مدیریتی را بدون نیاز به احراز هویت در آن نقش انجام دهد.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>عنکبوت: </b>با استفاده از یک ابزار خودکار، مهاجم تمام پیوندهای عمومی یک وب سایت را دنبال می کند. آنها همه پیوندهایی را که پیدا می‌کنند ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها استفاده کنید.</td></tr><tr><td>از یک ابزار پراکسی برای ضبط همه پیوندهای بازدید شده در طول پیمایش دستی وب استفاده کنید. برنامه.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تلاش کنید مکان‌های منبع شناخته شده یا قابل حدس زدن: </b>با استفاده از یک ابزار خودکار، مهاجم انواع URLهای شناخته شده را درخواست می‌کند که مربوط به عملکردهای داخلی، اداری یا سایر عملکردهای مفید داخلی هستند. آنها همه پاسخ‌های مثبت سرور را ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ثبت تلاش‌ها در URLهای شناخته‌شده استفاده کنید.</td></tr><tr><td>از یک ابزار پراکسی برای ضبط همه پیوندهای بازدید شده در طی یک پیمایش دستی شناخته شده استفاده کنید. URL ها.</td></tr></tbody></table></ol></div><div><h3>استثمار</h3><ol><li> <p> <b>استفاده از منابع غیرمجاز: </b>با بازدید از منبع محافظت نشده، مهاجم از منابع غیرمجاز استفاده می کند. عملکرد.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>به توابع محافظت نشده دسترسی پیدا کنید و آنها را اجرا کنید.</td></tr></tbody></table><li> <p> <b>مشاهده داده های غیرمجاز: </b>مهاجم بدون محافظت شناسایی و مشاهده می کند. داده ها.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>درخواست مستقیم از صفحات محافظت شده که مستقیماً به پشتیبان های پایگاه داده دسترسی دارند. (به عنوان مثال list.jsp، accounts.jsp، status.jsp، و غیره)</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "صفحات قابل مرور اجباری یا منابع قابل دسترسی باید قابل کشف و محافظت نادرست باشند."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. فهرست دایرکتوری مفید است، اما الزامی نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

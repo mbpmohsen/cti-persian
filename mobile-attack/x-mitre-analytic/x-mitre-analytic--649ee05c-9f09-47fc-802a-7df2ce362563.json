@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0607#AN1658",
-                    "external_id": "AN1658"
+                    "external_id": "AN1658",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -42,29 +43,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between shell-like execution indication, process effects, and follow-on file or network behavior"
+                    "description": "Correlation window between shell-like execution indication, process effects, and follow-on file or network behavior",
+                    "description_fa": "پنجره همبستگی بین نشانه اجرای پوسته مانند، اثرات فرآیند، و فایل بعدی یا رفتار شبکه"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Managed apps legitimately expected to perform debugging, remote support, or enterprise automation tasks"
+                    "description": "Managed apps legitimately expected to perform debugging, remote support, or enterprise automation tasks",
+                    "description_fa": "برنامه های مدیریت شده به طور قانونی انتظار می رود که اشکال زدایی، پشتیبانی از راه دور یا وظایف اتوماسیون سازمانی را انجام دهند."
                 },
                 {
                     "field": "AllowedProcessPatterns",
-                    "description": "Expected helper-process or process-launch patterns for approved managed apps"
+                    "description": "Expected helper-process or process-launch patterns for approved managed apps",
+                    "description_fa": "الگوهای مورد انتظار فرآیند کمکی یا راه اندازی فرآیند برای برنامه های مدیریت شده تأیید شده"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether shell-like execution should occur only during active user-driven workflows"
+                    "description": "Whether shell-like execution should occur only during active user-driven workflows",
+                    "description_fa": "آیا اجرای پوسته‌مانند باید فقط در جریان‌های کاری کاربر محور فعال رخ دهد یا خیر"
                 },
                 {
                     "field": "ArtifactPathPatterns",
-                    "description": "Expected temporary or output file locations for approved app behavior"
+                    "description": "Expected temporary or output file locations for approved app behavior",
+                    "description_fa": "محل‌های فایل موقت یا خروجی مورد انتظار برای رفتار برنامه تأیید شده"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume after shell-like execution to treat network behavior as meaningful"
+                    "description": "Minimum outbound volume after shell-like execution to treat network behavior as meaningful",
+                    "description_fa": "حداقل حجم خروجی پس از اجرای پوسته مانند برای تلقی رفتار شبکه به عنوان معنادار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1658",
+            "description_fa": "مدافع، اثرات اجرای برنامه مدیریت‌شده-راه‌اندازی یا شل مانند را با فایل یا فعالیت شبکه بعدی توسط همان برنامه مرتبط می‌کند، سپس زمانی که اجرا در زمینه پس‌زمینه، بدون تعامل کاربر اخیر انجام می‌شود، یا به نظر می‌رسد مرتبط با تحویل فرمان یا خروج خروجی است، اطمینان را افزایش می‌دهد. از آنجایی که مشاهده مستقیم پوسته یونیکس معمولاً در iOS ضعیف‌تر است و پردازش‌های فرزند به وسیله سندباکس برنامه محدود می‌شوند، تحلیلی بر روی اثرات اجرای فرآیند در صورت وجود و سپس بر روی چرخه عمر، فایل و عوارض جانبی شبکه به جای فرض مشاهده پارامترهای پوسته غنی در همه محیط‌ها، لنگر می‌دهد."
         }
     ]
 }

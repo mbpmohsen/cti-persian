@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0188#AN0536",
-                    "external_id": "AN0536"
+                    "external_id": "AN0536",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "user_context",
-                    "description": "Non-system accounts performing drive enumeration may be higher fidelity indicators"
+                    "description": "Non-system accounts performing drive enumeration may be higher fidelity indicators",
+                    "description_fa": "حساب‌های غیر سیستمی که شمارش درایو را انجام می‌دهند ممکن است شاخص‌های وفاداری بالاتری باشند"
                 },
                 {
                     "field": "parent_process_name",
-                    "description": "Baseline parent-child process lineage can help distinguish admin tools from malicious scripts"
+                    "description": "Baseline parent-child process lineage can help distinguish admin tools from malicious scripts",
+                    "description_fa": "خط اولیه فرآیند والد-فرزند می تواند به تشخیص ابزارهای مدیریت از اسکریپت های مخرب کمک کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0536",
+            "description_fa": "شمارش درایو با استفاده از PowerShell («Get-PSDrive»)، «wmic logicaldisk» یا Win32 API که نشان‌دهنده شمارش حجم محلی توسط کاربران غیر سرپرست است یا خارج از اسکریپت‌های موجودی سیستم پایه اجرا شده است."
         }
     ]
 }

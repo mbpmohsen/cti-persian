@@ -9,31 +9,40 @@
                 {
                     "external_id": "CAPEC-532",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/532.html"
+                    "url": "https://capec.mitre.org/data/definitions/532.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Firmware Corruption",
                     "external_id": "T1495",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1495"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1495",
+                    "description_fa": "خرابی سیستم عامل",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Pre-OS Boot:System Firmware",
                     "external_id": "T1542.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1542/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1542/001",
+                    "description_fa": "بوت پیش از سیستم عامل: سفت‌افزار سیستم",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Daniel Simpson, Dani Halfin, Andrews Mariano Gorzelany, Beth Woodbury, Supply chain attacks, 2021--10---28, Microsoft",
                     "external_id": "REF-716",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/intelligence/supply-chain-malware"
+                    "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/intelligence/supply-chain-malware",
+                    "description_fa": "دنیل سیمپسون، دنی هالفین، اندروز ماریانو گورزلانی، بت وودبری، حملات زنجیره تامین، 2021--10---28، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--51d000d6-11a0-461b-98e7-8550beac027b",
@@ -62,11 +71,22 @@
                 "Access to the download and update system(s) used to deliver BIOS images."
             ],
             "x_capec_skills_required": {
-                "High": "Able to develop a malicious BIOS image with the original functionality as a normal BIOS image, but with added functionality that allows for later compromise and/or disruption."
+                "High": "Able to develop a malicious BIOS image with the original functionality as a normal BIOS image, but with added functionality that allows for later compromise and/or disruption.",
+                "High_fa": "قادر به ایجاد یک تصویر مخرب BIOS با عملکرد اصلی به عنوان یک تصویر معمولی بایوس، اما با قابلیت اضافه شده است که اجازه می دهد تا در آینده به خطر بیافتد و/یا اختلال ایجاد کند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجمی که به دانلود و به‌روزرسانی نرم‌افزار سیستم دسترسی دارد، یک BIOS تغییر یافته به طور مخرب را به قربانی یا تامین‌کننده/ادغام‌کننده قربانی ارسال می‌کند که پس از نصب، امکان بهره‌برداری در آینده را فراهم می‌کند.",
+            "name_fa": "بایوس نصب شده تغییر یافته است",
+            "x_capec_example_instances_fa": [
+                "یک مهاجم قسمت دانلود و به‌روزرسانی حضور وب سازنده را به خطر می‌اندازد و یک بایوس مخرب ایجاد می‌کند که علاوه بر عملکرد عادی، در زمان خاصی از روز، بررسی‌های امنیتی زیرسیستم دسترسی از راه دور را نیز غیرفعال می‌کند. بایوس مخرب در وب سایت سازنده قرار می گیرد، به محل قربانی ایمیلی با ظاهر رسمی ارسال می شود که قربانی را از در دسترس بودن بایوس جدید همراه با رفع اشکال و قابلیت های عملکردی پیشرفته برای ترغیب قربانی برای نصب سریع بایوس جدید مطلع می کند. بایوس مخرب بارگیری و بر روی سیستم قربانی نصب می شود، که اجازه می دهد تا مهاجم را در معرض خطر قرار دهد."
+            ],
+            "x_capec_prerequisites_fa": [
+                "دانش پیشرفته در مورد طراحی سیستم هدف نصب شده",
+                "دانش پیشرفته در مورد فرآیندهای نصب دانلود و به روز رسانی.",
+                "دسترسی به سیستم(های) دانلود و به روز رسانی مورد استفاده برای ارائه تصاویر BIOS."
+            ]
         }
     ],
     "type": "bundle"

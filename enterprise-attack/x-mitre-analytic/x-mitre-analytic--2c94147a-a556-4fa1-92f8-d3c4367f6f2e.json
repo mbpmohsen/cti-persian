@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0189#AN0540",
-                    "external_id": "AN0540"
+                    "external_id": "AN0540",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AVAlertMessage",
-                    "description": "Vendor-specific signature string or detection message that can be correlated to threat intel context."
+                    "description": "Vendor-specific signature string or detection message that can be correlated to threat intel context.",
+                    "description_fa": "رشته امضای خاص فروشنده یا پیام شناسایی که می تواند با زمینه اطلاعات تهدید مرتبط باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "The time between AV alert and similar file/process activity (e.g., 5\u201330 minutes)"
+                    "description": "The time between AV alert and similar file/process activity (e.g., 5–30 minutes)",
+                    "description_fa": "زمان بین هشدار AV و فعالیت فایل/فرآیند مشابه (به عنوان مثال، 5 تا 30 دقیقه)"
                 },
                 {
                     "field": "FilenameSimilarityThreshold",
-                    "description": "String or hash similarity thresholds between original and modified binary."
+                    "description": "String or hash similarity thresholds between original and modified binary.",
+                    "description_fa": "آستانه تشابه رشته یا هش بین باینری اصلی و اصلاح شده."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0540",
+            "description_fa": "شناسایی ابزارهای شناخته شده یا بدافزارهای پرچم‌گذاری شده توسط آنتی‌ویروس، و به دنبال آن کاهش کوتاه‌مدت یک باینری مشابه با امضای اصلاح‌شده و فعالیت مجدد (اجرا، C2، یا ماندگاری)."
         }
     ]
 }

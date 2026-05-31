@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0562#AN1553",
-                    "external_id": "AN1553"
+                    "external_id": "AN1553",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MacOSDiscoveryTools",
-                    "description": "macOS-specific system discovery utilities commonly used for environmental validation"
+                    "description": "macOS-specific system discovery utilities commonly used for environmental validation",
+                    "description_fa": "ابزارهای کشف سیستم مخصوص macOS که معمولاً برای اعتبار سنجی محیطی استفاده می شود"
                 },
                 {
                     "field": "SecurityFeatureEnumeration",
-                    "description": "Security features and configurations typically validated by macOS execution guardrails"
+                    "description": "Security features and configurations typically validated by macOS execution guardrails",
+                    "description_fa": "ویژگی‌ها و پیکربندی‌های امنیتی معمولاً توسط حفاظ‌های اجرایی macOS تأیید می‌شوند"
                 },
                 {
                     "field": "HardwareFingerprintBaseline",
-                    "description": "Normal hardware discovery patterns to distinguish from environmental validation attempts"
+                    "description": "Normal hardware discovery patterns to distinguish from environmental validation attempts",
+                    "description_fa": "الگوهای معمولی کشف سخت افزار برای تمایز از تلاش های اعتبارسنجی محیطی"
                 },
                 {
                     "field": "SIPBypassIndicators",
-                    "description": "Patterns indicating attempts to validate or bypass System Integrity Protection"
+                    "description": "Patterns indicating attempts to validate or bypass System Integrity Protection",
+                    "description_fa": "الگوهایی که نشان‌دهنده تلاش‌ها برای تأیید اعتبار یا دور زدن محافظت از یکپارچگی سیستم هستند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1553",
+            "description_fa": "زنجیره رفتاری اعتبارسنجی محیطی macOS: (1) پروفایل سیستم از طریق system_profiler، sysctl، و دستورات کشف سخت افزار، (2) رابط شبکه و شمارش پیکربندی برای موقعیت جغرافیایی و اعتبارسنجی محیط شبکه، (3) نصب برنامه و کشف نسخه برای اثرانگشت محیط نرم افزار، (4) تشخیص ویژگی امنیتی مبتنی بر وضعیت (SIP، Gatekete) در مورد معیارهای محیطی مخصوص macOS و اعتبارسنجی بای پس حفاظت از یکپارچگی سیستم"
         }
     ]
 }

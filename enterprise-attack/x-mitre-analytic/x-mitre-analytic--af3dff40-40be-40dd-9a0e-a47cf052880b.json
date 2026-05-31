@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0264#AN0734",
-                    "external_id": "AN0734"
+                    "external_id": "AN0734",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptLocation",
-                    "description": "Execution of JXA from user-controlled paths like ~/Downloads or /Volumes."
+                    "description": "Execution of JXA from user-controlled paths like ~/Downloads or /Volumes.",
+                    "description_fa": "اجرای JXA از مسیرهای کنترل شده توسط کاربر مانند ~/Downloads یا /Volumes."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "osascript invoked by third-party apps (VSCode, browsers, etc.)."
+                    "description": "osascript invoked by third-party apps (VSCode, browsers, etc.).",
+                    "description_fa": "osascript که توسط برنامه های شخص ثالث (VSCode، مرورگرها و غیره) فراخوانی می شود."
                 },
                 {
                     "field": "APIInvocation",
-                    "description": "Use of OSAKit API by apps not typically scripting-enabled."
+                    "description": "Use of OSAKit API by apps not typically scripting-enabled.",
+                    "description_fa": "استفاده از OSAKit API توسط برنامه هایی که معمولاً اسکریپت نویسی ندارند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0734",
+            "description_fa": "جاوا اسکریپت برای اتوماسیون (JXA) را از طریق osascript یا اسکریپت های کامپایل شده با استفاده از API های OSAKit شناسایی می کند. پرچم‌گذاری‌هایی که شامل اصلاح سیستم، اسکریپت‌نویسی بین فرآیندی یا سوء استفاده از مرورگر است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0571#AN1578",
-                    "external_id": "AN1578"
+                    "external_id": "AN1578",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntrypointOverridePattern",
-                    "description": "Patterns used to detect modified container start scripts"
+                    "description": "Patterns used to detect modified container start scripts",
+                    "description_fa": "الگوهای مورد استفاده برای شناسایی اسکریپت های شروع کانتینر اصلاح شده"
                 },
                 {
                     "field": "RestartPolicyMatch",
-                    "description": "Policy values triggering alert (e.g., always, on-failure)"
+                    "description": "Policy values triggering alert (e.g., always, on-failure)",
+                    "description_fa": "مقادیر خط‌مشی هشدار را راه‌اندازی می‌کنند (به عنوان مثال، همیشه، در صورت شکست)"
                 },
                 {
                     "field": "KubeInitModPath",
-                    "description": "Path filters for `/etc/init.d/`-like behaviors inside containers"
+                    "description": "Path filters for `/etc/init.d/`-like behaviors inside containers",
+                    "description_fa": "فیلترهای مسیر برای رفتارهای شبیه به `/etc/init.d/` در داخل کانتینرها"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1578",
+            "description_fa": "ایجاد فرآیندهای سیستم کانتینر جدید را از طریق «docker run --restart»، «kubectl exec» برای شروع کانتینرها یا اصلاح مشخصات init کانتینر شناسایی می کند. برای جاسازی رفتارهای ماندگار، تصاویر کانتینری را که نقاط ورودی را نادیده می گیرند، پرچم گذاری می کند."
         }
     ]
 }

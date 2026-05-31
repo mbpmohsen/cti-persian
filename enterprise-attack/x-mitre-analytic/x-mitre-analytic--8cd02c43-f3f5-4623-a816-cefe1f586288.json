@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0474#AN1307",
-                    "external_id": "AN1307"
+                    "external_id": "AN1307",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,34 +51,43 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SystemProfilerDataTypes",
-                    "description": "Specific system_profiler data types that adversaries commonly target (SPHardwareDataType, SPSoftwareDataType, SPNetworkDataType) - customize based on threat intelligence"
+                    "description": "Specific system_profiler data types that adversaries commonly target (SPHardwareDataType, SPSoftwareDataType, SPNetworkDataType) - customize based on threat intelligence",
+                    "description_fa": "انواع داده های system_profiler خاص که دشمنان معمولاً هدف قرار می دهند (SPHardwareDataType، SPSoftwareDataType، SPNetworkDataType) - سفارشی سازی بر اساس اطلاعات تهدید"
                 },
                 {
                     "field": "SecurityFrameworkOperationPatterns",
-                    "description": "Security.framework and CommonCrypto API usage patterns indicating cryptographic operations for environmental keying"
+                    "description": "Security.framework and CommonCrypto API usage patterns indicating cryptographic operations for environmental keying",
+                    "description_fa": "الگوهای استفاده Security.framework و CommonCrypto API که عملیات رمزنگاری را برای کلیدهای محیطی نشان می دهد"
                 },
                 {
                     "field": "UnifiedLogRetentionWindow",
-                    "description": "Time window for correlating discovery activities with subsequent cryptographic operations - balance between detection coverage and log volume"
+                    "description": "Time window for correlating discovery activities with subsequent cryptographic operations - balance between detection coverage and log volume",
+                    "description_fa": "پنجره زمانی برای مرتبط کردن فعالیت های کشف با عملیات رمزنگاری بعدی - تعادل بین پوشش شناسایی و حجم گزارش"
                 },
                 {
                     "field": "ApplicationBundleValidationPaths",
-                    "description": "Specific application bundle paths and identifiers that might be subject to environmental validation"
+                    "description": "Specific application bundle paths and identifiers that might be subject to environmental validation",
+                    "description_fa": "مسیرهای بسته نرم افزاری خاص و شناسه هایی که ممکن است مشمول اعتبار سنجی محیطی باشند"
                 },
                 {
                     "field": "NetworkConfigurationIdentifiers",
-                    "description": "Organization-specific network configurations, WiFi SSIDs, and network services that adversaries might validate against"
+                    "description": "Organization-specific network configurations, WiFi SSIDs, and network services that adversaries might validate against",
+                    "description_fa": "پیکربندی‌های شبکه خاص سازمان، SSID‌های WiFi و سرویس‌های شبکه‌ای که ممکن است دشمنان در برابر آنها اعتبارسنجی کنند."
                 },
                 {
                     "field": "MacOSVersionBaseline",
-                    "description": "Expected macOS versions and configurations in environment to identify version-specific environmental targeting"
+                    "description": "Expected macOS versions and configurations in environment to identify version-specific environmental targeting",
+                    "description_fa": "نسخه‌ها و پیکربندی‌های macOS مورد انتظار در محیط برای شناسایی هدف‌گیری محیطی خاص نسخه"
                 },
                 {
                     "field": "FSEventsFilteringCriteria",
-                    "description": "File system event filtering criteria to focus on security-relevant file access patterns while managing event volume"
+                    "description": "File system event filtering criteria to focus on security-relevant file access patterns while managing event volume",
+                    "description_fa": "معیارهای فیلتر رویداد سیستم فایل برای تمرکز بر الگوهای دسترسی به فایل های مرتبط با امنیت در حین مدیریت حجم رویداد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1307",
+            "description_fa": "زنجیره رفتاری کلیدهای محیطی macOS: (1) کشف اطلاعات سیستم از طریق ابزارهای بومی (system_profiler، sw_vers، نام میزبان، dscl) و جستجوهای چارچوب امنیتی، (2) شمارش سخت‌افزار و نرم‌افزار شامل شماره سریال، برنامه‌های نصب شده و نسخه‌های سیستم، (3) ارزیابی پیکربندی شبکه (Networksetup و کشف امنیتی شبکه، scutil معتبر) (5) همبستگی Logs یکپارچه با استفاده از چارچوب رمزنگاری (CommonCrypto، Security.framework)، (6) اجرای بسته نرم افزاری پس از اعتبار سنجی محیطی"
         }
     ]
 }

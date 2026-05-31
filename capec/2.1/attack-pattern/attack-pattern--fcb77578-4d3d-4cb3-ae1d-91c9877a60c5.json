@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-667",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/667.html"
+                    "url": "https://capec.mitre.org/data/definitions/667.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-290",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/290.html"
+                    "url": "http://cwe.mitre.org/data/definitions/290.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--fcb77578-4d3d-4cb3-ae1d-91c9877a60c5",
@@ -45,11 +47,18 @@
                 "Knowledge of a target device's list of trusted connections."
             ],
             "x_capec_skills_required": {
-                "Low": "Adversaries must be in close proximity to Bluetooth devices."
+                "Low": "Adversaries must be in close proximity to Bluetooth devices.",
+                "Low_fa": "دشمنان باید در نزدیکی دستگاه های بلوتوث باشند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن آدرس MAC دستگاه دارای بلوتوث خود را به دستگاهی که یک اتصال فعال و قابل اعتماد برای آن وجود دارد پنهان می کند و با موفقیت احراز هویت می کند. سپس دشمن می تواند بسته به قابلیت های هدف، اقدامات مخربی را بر روی دستگاه بلوتوث مورد نظر انجام دهد.",
+            "name_fa": "حملات جعل هویت بلوتوث (BIAS)",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>جستجو و هدف: </b>دشمن سرویس بلوتوث را در دستگاه مهاجم راه‌اندازی می‌کند و دستگاه‌های شنود مجاور را جستجو می‌کند. آدرس.</td></tr><tr><td>اسکن برای دستگاه‌هایی غیر از هدف مورد اعتماد macchanger برای جعل آدرس بلوتوث خود و تلاش برای احراز هویت با هدف.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>از قابلیت‌های دستگاه برای رسیدن به هدف استفاده کنید: </b>در نهایت، اگر با موفقیت احراز هویت شود، حریف وابسته به قابلیت‌های هدف می‌تواند وظیفه جمع‌آوری را انجام دهد. اتصالات.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "آگاهی از لیست اتصالات مورد اعتماد دستگاه مورد نظر."
+            ]
         }
     ],
     "type": "bundle"

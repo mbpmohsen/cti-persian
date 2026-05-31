@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0041#AN0117",
-                    "external_id": "AN0117"
+                    "external_id": "AN0117",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,22 +41,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LifecycleExpirationDays",
-                    "description": "Policy values setting Expiration in fewer than N days (e.g., 0\u20131) are highly suspicious."
+                    "description": "Policy values setting Expiration in fewer than N days (e.g., 0–1) are highly suspicious.",
+                    "description_fa": "تنظیم مقادیر خط‌مشی انقضا در کمتر از N روز (مثلاً ۰–۱) بسیار مشکوک است."
                 },
                 {
                     "field": "TargetBucket",
-                    "description": "Filter by bucket types (e.g., log storage, production DB snapshots) to prioritize detection."
+                    "description": "Filter by bucket types (e.g., log storage, production DB snapshots) to prioritize detection.",
+                    "description_fa": "بر اساس انواع سطل (مانند ذخیره‌سازی گزارش، عکس‌های فوری DB تولید) برای اولویت‌بندی تشخیص فیلتر کنید."
                 },
                 {
                     "field": "Principal",
-                    "description": "Correlate rare or anomalous IAM principals making destructive lifecycle changes."
+                    "description": "Correlate rare or anomalous IAM principals making destructive lifecycle changes.",
+                    "description_fa": "اصول نادر یا غیرعادی IAM را که تغییرات مخرب چرخه زندگی ایجاد می کنند، مرتبط کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Link lifecycle policy change with API activity suggesting staged deletion or extortion attempt."
+                    "description": "Link lifecycle policy change with API activity suggesting staged deletion or extortion attempt.",
+                    "description_fa": "تغییر خط‌مشی چرخه عمر پیوند با فعالیت API که حاکی از حذف مرحله‌ای یا تلاش برای اخاذی است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0117",
+            "description_fa": "حریف با دسترسی نوشتن به فضای ذخیره‌سازی، خط‌مشی‌های چرخه حیات (به عنوان مثال، از طریق PutBucketLifecycle) را تغییر می‌دهد تا حذف سریع شی در یک یا چند سطل ذخیره‌سازی را برنامه‌ریزی کند. این اغلب برای ایجاد ضربه (تخریب)، حذف سیاهه‌ها (فرار از دفاع)، یا اخاذی زور (باج‌افزار) استفاده می‌شود."
         }
     ]
 }

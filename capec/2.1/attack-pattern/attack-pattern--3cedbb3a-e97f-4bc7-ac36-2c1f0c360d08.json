@@ -9,13 +9,16 @@
                 {
                     "external_id": "CAPEC-585",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/585.html"
+                    "url": "https://capec.mitre.org/data/definitions/585.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Dozens of Online 'Dark Markets' Seized Pursuant to Forfeiture Complaint Filed in Manhattan Federal Court in Conjunction with the Arrest of the Operator of Silk Road 2.0, 2014, FBI",
                     "external_id": "REF-467",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.fbi.gov/contact-us/field-offices/newyork/news/press-releases/dozens-of-online-dark-markets-seized-pursuant-to-forfeiture-complaint-filed-in-manhattan-federal-court-in-conjunction-with-the-arrest-of-the-operator-of-silk-road-2.0"
+                    "url": "https://www.fbi.gov/contact-us/field-offices/newyork/news/press-releases/dozens-of-online-dark-markets-seized-pursuant-to-forfeiture-complaint-filed-in-manhattan-federal-court-in-conjunction-with-the-arrest-of-the-operator-of-silk-road-2.0",
+                    "description_fa": "ده ها بازار تاریک آنلاین به دنبال شکایت ضبط شده در دادگاه فدرال منهتن در رابطه با دستگیری اپراتور جاده ابریشم 2.0، 2014، FBI ضبط شد.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3cedbb3a-e97f-4bc7-ac36-2c1f0c360d08",
@@ -33,6 +36,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Other (Disabling a target domain at the infrastructure level denies the availability of its service to the user.)"
+                ],
+                "Availability_fa": [
+                    "سایر موارد (غیرفعال کردن دامنه هدف در سطح زیرساخت، در دسترس بودن سرویس آن برای کاربر را رد می کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -45,7 +51,15 @@
                 "This attack pattern requires that the adversary has cooperation from the registrar of the target domain."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این الگوی حمله، حریف شرکت میزبان وب هدف را تحت تأثیر قرار می دهد تا دامنه هدف را غیرفعال کند. هدف جلوگیری از دسترسی به سرویس هدفمند ارائه شده توسط آن دامنه است. معمولاً در نتیجه مداخلات حقوقی مدنی یا کیفری رخ می دهد.",
+            "name_fa": "توقیف دامنه DNS",
+            "x_capec_example_instances_fa": [
+                "توقیف وب‌سایت‌های قمار توسط FBI، توقیف وب‌سایت‌های پورنوگرافی کودکان توسط وزارت دادگستری ایالات متحده، و توقیف همه دامنه‌های متعلق به شرکت No-IP توسط مایکروسافت به منظور ایجاد اختلال در یک حمله سایبری که از زیرمجموعه‌ای از این دامنه‌ها منشا می‌گیرد."
+            ],
+            "x_capec_prerequisites_fa": [
+                "این الگوی حمله مستلزم آن است که حریف با ثبت کننده دامنه هدف همکاری داشته باشد."
+            ]
         }
     ],
     "type": "bundle"

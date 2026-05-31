@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0536#AN1476",
-                    "external_id": "AN1476"
+                    "external_id": "AN1476",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KnownSSIDList",
-                    "description": "Defines approved Wi-Fi SSIDs for the environment; deviations may indicate malicious connection attempts."
+                    "description": "Defines approved Wi-Fi SSIDs for the environment; deviations may indicate malicious connection attempts.",
+                    "description_fa": "SSIDهای تایید شده Wi-Fi را برای محیط زیست تعریف می کند. انحرافات ممکن است نشان دهنده تلاش های مخرب برای اتصال باشد."
                 },
                 {
                     "field": "GeoLocationContext",
-                    "description": "Correlates expected physical location of systems with observed Wi-Fi connections to detect anomalies."
+                    "description": "Correlates expected physical location of systems with observed Wi-Fi connections to detect anomalies.",
+                    "description_fa": "مکان فیزیکی مورد انتظار سیستم ها را با اتصالات Wi-Fi مشاهده شده برای تشخیص ناهنجاری ها مرتبط می کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1476",
+            "description_fa": "اتصالات بی سیم غیرعادی مانند ارتباط های غیرمنتظره SSID، تلاش های ناموفق یا مکرر برای احراز هویت، و اتصالات خارج از شبکه های شناخته شده geofenced را شناسایی می کند. مدافعان باید گزارش های اتصال بی سیم و کدهای رویداد را برای کشف شبکه، احراز هویت و رویدادهای مرتبط نظارت کنند."
         }
     ]
 }

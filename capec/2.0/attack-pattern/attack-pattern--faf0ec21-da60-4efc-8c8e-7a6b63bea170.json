@@ -9,40 +9,52 @@
                 {
                     "external_id": "CAPEC-126",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/126.html"
+                    "url": "https://capec.mitre.org/data/definitions/126.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-22",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/22.html"
+                    "url": "http://cwe.mitre.org/data/definitions/22.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Path Traversal",
                     "external_id": "33",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Path-Traversal"
+                    "url": "http://projects.webappsec.org/Path-Traversal",
+                    "description_fa": "پیمایش مسیر",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Path Traversal",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Path_Traversal"
+                    "url": "https://owasp.org/www-community/attacks/Path_Traversal",
+                    "description_fa": "پیمایش مسیر",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Testing Guide (v4), 2010, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-9",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/index.php/Testing_for_Path_Traversal_(OWASP-AZ-001)"
+                    "url": "https://www.owasp.org/index.php/Testing_for_Path_Traversal_(OWASP-AZ-001)",
+                    "description_fa": "راهنمای تست OWASP (نسخه 4)، 2010، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "WASC Threat Classification 2.0, 2010, The Web Application Security Consortium (WASC)",
                     "external_id": "REF-10",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://projects.webappsec.org/w/page/13246952/Path-Traversal"
+                    "url": "http://projects.webappsec.org/w/page/13246952/Path-Traversal",
+                    "description_fa": "WASC Threat Classification 2.0، 2010، کنسرسیوم امنیت برنامه های وب (WASC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--faf0ec21-da60-4efc-8c8e-7a6b63bea170",
@@ -74,6 +86,18 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (The attacker may be able to create or overwrite critical files that are used to execute code, such as programs or libraries.)",
                     "Modify Data (The attacker may be able to overwrite or create critical files, such as programs, libraries, or important data. If the targeted file is used for a security mechanism, then the attacker may be able to bypass that mechanism. For example, appending a new account at the end of a password file may allow an attacker to bypass authentication.)"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (ممکن است مهاجم بتواند فایل های مهمی را که برای اجرای کد استفاده می شوند، مانند برنامه ها یا کتابخانه ها ایجاد یا بازنویسی کند.)",
+                    "اجرای غیرقابل اعتماد (ممکن است مهاجم بتواند فایل‌های حیاتی غیرمنتظره مانند برنامه‌ها، کتابخانه‌ها یا داده‌های مهم را بازنویسی، حذف یا خراب کند. این ممکن است از کار کردن نرم‌افزار به‌طور کلی جلوگیری کند و در مورد مکانیزم‌های حفاظتی مانند احراز هویت، این پتانسیل را دارد که هر کاربر نرم‌افزار را قفل کند.)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (ممکن است مهاجم بتواند فایل های مهمی را که برای اجرای کد استفاده می شوند، مانند برنامه ها یا کتابخانه ها ایجاد یا بازنویسی کند.)",
+                    "خواندن داده ها (ممکن است مهاجم بتواند محتویات فایل های غیرمنتظره را بخواند و داده های حساس را در معرض نمایش قرار دهد. اگر فایل مورد نظر برای مکانیزم امنیتی استفاده شود، مهاجم ممکن است بتواند آن مکانیسم را دور بزند. به عنوان مثال، با خواندن یک فایل رمز عبور، مهاجم می تواند حملات حدس زدن رمز عبور بی رحمانه را انجام دهد تا به یک حساب کاربری در سیستم نفوذ کند.)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (ممکن است مهاجم بتواند فایل های مهمی را که برای اجرای کد استفاده می شوند، مانند برنامه ها یا کتابخانه ها ایجاد یا بازنویسی کند.)",
+                    "تغییر داده‌ها (ممکن است مهاجم بتواند فایل‌های حیاتی مانند برنامه‌ها، کتابخانه‌ها یا داده‌های مهم را بازنویسی یا ایجاد کند. اگر فایل مورد نظر برای مکانیزم امنیتی استفاده شود، مهاجم ممکن است بتواند آن مکانیسم را دور بزند. برای مثال، اضافه کردن یک حساب جدید در انتهای فایل رمز عبور ممکن است به مهاجم اجازه دهد تا احراز هویت را دور بزند.)"
                 ]
             },
             "x_capec_domains": [
@@ -98,11 +122,26 @@
             ],
             "x_capec_skills_required": {
                 "Low": "Simple command line attacks or to inject the malicious payload in a web page.",
-                "Medium": "Customizing attacks to bypass non trivial filters in the application."
+                "Medium": "Customizing attacks to bypass non trivial filters in the application.",
+                "Low_fa": "حملات خط فرمان ساده یا تزریق بار مخرب در یک صفحه وب.",
+                "Medium_fa": "سفارشی کردن حملات برای دور زدن فیلترهای غیر ضروری در برنامه."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از روش‌های دستکاری مسیر برای سوء استفاده از اعتبارسنجی ورودی ناکافی یک هدف برای دستیابی به داده‌هایی استفاده می‌کند که نباید با درخواست‌های معمولی خوب قابل بازیابی باشند. انواع معمولی این حمله شامل تعیین یک مسیر به فایل مورد نظر همراه با کاراکترهای نقطه-نقطه اسلش است که در نتیجه API دسترسی فایل یا تابع از ساختار دایرکتوری مورد نظر عبور می کند و به سیستم فایل ریشه می رود. با جایگزینی یا تغییر اطلاعات مسیر مورد انتظار، تابع دسترسی یا API فایل مورد نظر مهاجم را بازیابی می کند. این حملات یا شامل ارائه یک مسیر کامل به یک فایل مورد نظر توسط مهاجم یا استفاده از کاراکترهای کنترلی (به عنوان مثال جداکننده مسیر (/ یا \\) و/یا نقطه (.)) برای رسیدن به دایرکتوری ها یا فایل های مورد نظر است.",
+            "name_fa": "پیمایش مسیر",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>نمونه ای از استفاده از پیمایش مسیر برای حمله به مجموعه ای از منابع روی سرور وب، استفاده از یک درخواست استاندارد HTTP است</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">http://example/../../../../../etc/passwd</xhtml:div>\n               <xhtml:p>از نقطه نظر مهاجم، این ممکن است برای دسترسی به فایل رمز عبور در یک سیستم با محافظت ضعیف کافی باشد. اگر مهاجم بتواند دایرکتوری های منابع حیاتی را فهرست کند، دسترسی فقط خواندنی برای محافظت از سیستم کافی نیست.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>اثرانگشت سیستم عامل: </b>برای انجام یک پیمایش مسیر معتبر، مهاجم باید بداند که سیستم عامل اصلی چیست تا جداکننده فایل مناسب باشد. استفاده می شود.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>نگاشت پورت. پورت هایی را که سیستم به آنها گوش می دهد شناسایی کنید و سعی کنید ورودی ها و انواع پروتکل ها را در آن پورت ها شناسایی کنید.</td></tr><tr><td>اثرانگشت TCP/IP. مهاجم از نرم افزارهای مختلف برای ایجاد اتصالات یا اتصالات جزئی و مشاهده پاسخ های خاص از سیستم عامل استفاده می کند. با استفاده از این پاسخ‌ها، آن‌ها سعی می‌کنند سیستم عامل واقعی را حدس بزنند.</td></tr><tr><td>برای یافتن پیام‌های خطای آموزنده، خطا ایجاد می‌کند</td></tr></tbody></table><li> <p> <b>بررسی برنامه برای شناسایی ورودی‌های قابل کنترل کاربر: </b>همه‌گیری فایل مورد نظر کاربر را شناسایی می‌کند. ورودی‌ها</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>ورودی‌ها را تغییر دهید، به دنبال نتایج مخرب بگردید: </b>بسته به اینکه برنامه مورد سوء استفاده از راه دور یا محلی باشد، مهاجم فایل مخرب مناسبی را ایجاد می‌کند که شامل ورودی هدف یا مسیر فایل دیگری به سیستم کنترل می‌شود. برنامه</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>دستکاری فایل‌های قابل دسترسی توسط برنامه: </b>مهاجم ممکن است اطلاعات را بدزدد یا مستقیماً فایل‌ها (حذف، کپی، فلاش و غیره) را دستکاری کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید بتواند مسیری را که از هدف درخواست می شود کنترل کند.",
+                "هدف باید نتواند به اندازه کافی مسیرهای ورودی را سالم سازی کند"
+            ],
+            "x_capec_resources_required_fa": [
+                "توانایی دستکاری اطلاعات مسیر مستقیماً از طریق یک برنامه مشتری نسبت به سرویس یا برنامه کاربردی یا از طریق یک برنامه پراکسی."
+            ]
         }
     ],
     "spec_version": "2.0",

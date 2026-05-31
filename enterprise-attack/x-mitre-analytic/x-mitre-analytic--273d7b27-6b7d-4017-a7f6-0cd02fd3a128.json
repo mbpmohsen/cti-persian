@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0081#AN0227",
-                    "external_id": "AN0227"
+                    "external_id": "AN0227",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedBinaryList",
-                    "description": "Binaries like `split`, `tee`, `env`, `awk`, `gzip`, often used in benign scripts"
+                    "description": "Binaries like `split`, `tee`, `env`, `awk`, `gzip`, often used in benign scripts",
+                    "description_fa": "باینری‌هایی مانند «split»، «tee»، «env»، «awk»، «gzip» که اغلب در اسکریپت‌های خوش‌خیم استفاده می‌شوند"
                 },
                 {
                     "field": "AnomalyScore",
-                    "description": "Outlier model for process tree and command arguments"
+                    "description": "Outlier model for process tree and command arguments",
+                    "description_fa": "مدل پرت برای آرگومان های درخت فرآیند و فرمان"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0227",
+            "description_fa": "اجرای باینری‌های سیستم قابل اعتماد (مانند «split»، «tee»، «bash»، «env») که در توالی‌های غیرمعمول یا رفتارهای زنجیره‌ای برای اجرای بارهای مخرب یا انجام اقدامات ناسازگار با رفتار عادی سیستم یا اسکریپت استفاده می‌شوند."
         }
     ]
 }

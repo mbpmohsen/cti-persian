@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0486#AN1335",
-                    "external_id": "AN1335"
+                    "external_id": "AN1335",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 1335",
-            "description": "Identifies abuse of odbcconf.exe to execute malicious DLLs using the REGSVR command flag. Behavior chain: (1) Process creation of odbcconf.exe with /REGSVR or /A {REGSVR ...} arguments \u2192 (2) DLL load by odbcconf.exe of non-standard or unsigned modules \u2192 (3) Optional follow-on process creation or network activity from loaded DLL.",
+            "description": "Identifies abuse of odbcconf.exe to execute malicious DLLs using the REGSVR command flag. Behavior chain: (1) Process creation of odbcconf.exe with /REGSVR or /A {REGSVR ...} arguments → (2) DLL load by odbcconf.exe of non-standard or unsigned modules → (3) Optional follow-on process creation or network activity from loaded DLL.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "List of approved processes that may legitimately invoke odbcconf.exe"
+                    "description": "List of approved processes that may legitimately invoke odbcconf.exe",
+                    "description_fa": "فهرستی از فرآیندهای تایید شده که ممکن است به طور قانونی odbcconf.exe را فراخوانی کنند"
                 },
                 {
                     "field": "AllowedCommandPatterns",
-                    "description": "Known-good odbcconf.exe arguments in the environment"
+                    "description": "Known-good odbcconf.exe arguments in the environment",
+                    "description_fa": "آرگومان های شناخته شده odbcconf.exe در محیط"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time range for correlating module loads and network activity after odbcconf.exe execution"
+                    "description": "Time range for correlating module loads and network activity after odbcconf.exe execution",
+                    "description_fa": "محدوده زمانی برای همبستگی بارهای ماژول و فعالیت شبکه پس از اجرای odbcconf.exe"
                 },
                 {
                     "field": "ApprovedModuleHashes",
-                    "description": "Baseline of legitimate DLLs loaded by odbcconf.exe"
+                    "description": "Baseline of legitimate DLLs loaded by odbcconf.exe",
+                    "description_fa": "خط پایه DLL های قانونی بارگیری شده توسط odbcconf.exe"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1335",
+            "description_fa": "سوء استفاده از odbcconf.exe را برای اجرای DLL های مخرب با استفاده از پرچم دستور REGSVR شناسایی می کند. زنجیره رفتار: (1) فرآیند ایجاد odbcconf.exe با آرگومان های /REGSVR یا /A {REGSVR ...} → (2) بارگیری DLL توسط odbcconf.exe از ماژول های غیر استاندارد یا بدون امضا → (3) ایجاد فرآیند یا فعالیت شبکه اختیاری از DLL بارگذاری شده."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0132#AN0374",
-                    "external_id": "AN0374"
+                    "external_id": "AN0374",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "lockfile_path",
-                    "description": "Path to mutex file (e.g., /tmp/*, /private/tmp/*), tune per environment."
+                    "description": "Path to mutex file (e.g., /tmp/*, /private/tmp/*), tune per environment.",
+                    "description_fa": "مسیر فایل mutex (به عنوان مثال، /tmp/*، /private/tmp/*)، تنظیم در هر محیط."
                 },
                 {
                     "field": "user_context",
-                    "description": "Flag non-user processes using these APIs."
+                    "description": "Flag non-user processes using these APIs.",
+                    "description_fa": "فرآیندهای غیر کاربر را با استفاده از این APIها پرچم گذاری کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Detection correlation across short time intervals between lock attempt and process exit."
+                    "description": "Detection correlation across short time intervals between lock attempt and process exit.",
+                    "description_fa": "همبستگی تشخیص در فواصل زمانی کوتاه بین تلاش قفل و خروج از فرآیند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0374",
+            "description_fa": "برنامه حالت کاربر از flock() یا NSdistributedLock برای دسترسی انحصاری به فایل منبع (به عنوان مثال /tmp/guard.lock) استفاده می کند، اگر قبلاً قفل شده باشد، منطق شرطی اجرا را تغییر می دهد."
         }
     ]
 }

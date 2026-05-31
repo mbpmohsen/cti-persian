@@ -9,30 +9,39 @@
                 {
                     "external_id": "CAPEC-674",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/674.html"
+                    "url": "https://capec.mitre.org/data/definitions/674.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Melinda Reed, John F. Miller, Paul Popick, Supply Chain Attack Patterns: Framework and Catalog, 2014--08, Office of the Assistant Secretary of Defense for Research and Engineering",
                     "external_id": "REF-660",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://docplayer.net/13041016-Supply-chain-attack-patterns-framework-and-catalog.html"
+                    "url": "https://docplayer.net/13041016-Supply-chain-attack-patterns-framework-and-catalog.html",
+                    "description_fa": "ملیندا رید، جان اف. میلر، پل پوپیک، الگوهای حمله زنجیره تامین: چارچوب و کاتالوگ، 08-2014، دفتر دستیار وزیر دفاع در امور تحقیقات و مهندسی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jeremy Muldavin, Assuring Microelectronics Innovation for National Security & Economic Competitiveness (MINSEC), 2017--11, Office of the Deputy Assistant Secretary of Defense for Systems Engineering",
                     "external_id": "REF-662",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "جرمی مولداوین، اطمینان از نوآوری میکروالکترونیک برای امنیت ملی و رقابت اقتصادی (MINSEC)، 2017--11، دفتر معاون معاون وزیر دفاع در مهندسی سیستم ها",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--fcd0d50b-dab4-435d-859e-19514b4e646e",
@@ -49,6 +58,9 @@
             "x_capec_consequences": {
                 "Integrity": [
                     "Alter Execution Logic"
+                ],
+                "Integrity_fa": [
+                    "تغییر منطق اجرا"
                 ]
             },
             "x_capec_domains": [
@@ -63,11 +75,20 @@
                 "An adversary would need to have access to FPGA programming/configuration-related systems in a chip maker’s development environment where FPGAs can be initially configured prior to delivery to a customer or have access to such systems in a customer facility where end-user FPGA configuration/reconfiguration can be performed."
             ],
             "x_capec_skills_required": {
-                "High": "An adversary would need to be skilled in FPGA programming in order to create/manipulate configurations in such a way that when loaded into an FPGA, the end user would be able to observe through testing all user-defined required functions but would be unaware of any additional functions the adversary may have introduced."
+                "High": "An adversary would need to be skilled in FPGA programming in order to create/manipulate configurations in such a way that when loaded into an FPGA, the end user would be able to observe through testing all user-defined required functions but would be unaware of any additional functions the adversary may have introduced.",
+                "High_fa": "یک حریف باید در برنامه نویسی FPGA مهارت داشته باشد تا بتواند پیکربندی هایی را به گونه ای ایجاد کند که وقتی در یک FPGA بارگذاری می شود، کاربر نهایی بتواند از طریق آزمایش تمام توابع مورد نیاز تعریف شده توسط کاربر مشاهده کند، اما از عملکردهای اضافی که ممکن است دشمن معرفی کرده باشد بی اطلاع باشد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک حریف عملکرد یک آرایه دروازه قابل برنامه ریزی میدانی (FPGA) را با ایجاد بارگذاری مجدد تراشه حافظه پیکربندی FPGA به منظور معرفی یک عملکرد مخرب که می تواند منجر به انجام یا فعال کردن عملکردهای مخرب در یک سیستم میزبان توسط FPGA شود، تغییر می دهد. قبل از بارگذاری مجدد تراشه حافظه، حریف برنامه را برای FPGA با افزودن یک تابع برای تأثیرگذاری بر عملکرد سیستم تغییر می‌دهد.</xhtml:p>",
+            "name_fa": "طراحی برای FPGA که به طور مخرب تغییر کرده است",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک دشمن با دسترسی و توانایی تغییر پیکربندی/برنامه‌نویسی FPGA در سیستم‌های سازمانی، یک درپشتی تروجان را معرفی می‌کند که می‌تواند برای تغییر رفتار سیستم اصلی استفاده شود و به عنوان مثال، محرمانه بودن داده‌های در حال پردازش به خطر بیفتد.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "یک دشمن باید به سیستم‌های برنامه‌نویسی/پیکربندی FPGA در محیط توسعه سازنده تراشه دسترسی داشته باشد که در آن FPGA‌ها می‌توانند ابتدا قبل از تحویل به مشتری پیکربندی شوند یا به چنین سیستم‌هایی در یک مرکز مشتری دسترسی داشته باشند که در آن پیکربندی/پیکربندی مجدد FPGA کاربر نهایی می‌تواند انجام شود."
+            ]
         }
     ],
     "spec_version": "2.0",

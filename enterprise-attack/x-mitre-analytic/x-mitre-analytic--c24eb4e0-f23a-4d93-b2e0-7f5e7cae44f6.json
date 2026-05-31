@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0474#AN1306",
-                    "external_id": "AN1306"
+                    "external_id": "AN1306",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,34 +51,43 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DiscoveryCommandSequenceThreshold",
-                    "description": "Number of distinct discovery commands within time window to trigger detection - adjust based on normal system administration patterns in environment"
+                    "description": "Number of distinct discovery commands within time window to trigger detection - adjust based on normal system administration patterns in environment",
+                    "description_fa": "تعداد دستورات کشف متمایز در پنجره زمانی برای شروع شناسایی - تنظیم بر اساس الگوهای مدیریت سیستم عادی در محیط"
                 },
                 {
                     "field": "ProcessAncestryDepth",
-                    "description": "Depth of process parent-child relationships to analyze for discovery activity clustering - balance between detection efficacy and performance"
+                    "description": "Depth of process parent-child relationships to analyze for discovery activity clustering - balance between detection efficacy and performance",
+                    "description_fa": "عمق فرآیند روابط والد-فرزند برای تجزیه و تحلیل برای خوشه بندی فعالیت های اکتشافی - تعادل بین کارایی تشخیص و عملکرد"
                 },
                 {
                     "field": "CryptographicLibraryIndicators",
-                    "description": "Shared libraries and system calls indicating cryptographic operations (libcrypto, libssl, openssl) - customize based on environment-specific crypto tools"
+                    "description": "Shared libraries and system calls indicating cryptographic operations (libcrypto, libssl, openssl) - customize based on environment-specific crypto tools",
+                    "description_fa": "کتابخانه‌های مشترک و تماس‌های سیستمی که عملیات رمزنگاری را نشان می‌دهند (libcrypto، libssl، openssl) - سفارشی‌سازی بر اساس ابزارهای رمزنگاری خاص محیط"
                 },
                 {
                     "field": "TargetSpecificFilesystems",
-                    "description": "Organization-specific mount points, network filesystems, or device paths that adversaries might validate against"
+                    "description": "Organization-specific mount points, network filesystems, or device paths that adversaries might validate against",
+                    "description_fa": "نقاط نصب، سیستم‌های فایل شبکه یا مسیرهای دستگاه خاص سازمان که ممکن است دشمنان در برابر آنها اعتبارسنجی کنند"
                 },
                 {
                     "field": "AuthorizedDiscoveryUsers",
-                    "description": "User accounts and service accounts authorized for extensive system discovery operations - maintain for false positive reduction"
+                    "description": "User accounts and service accounts authorized for extensive system discovery operations - maintain for false positive reduction",
+                    "description_fa": "حساب‌های کاربری و حساب‌های سرویس مجاز برای عملیات‌های گسترده کشف سیستم - برای کاهش مثبت کاذب نگهداری کنید"
                 },
                 {
                     "field": "NetworkConfigurationBaseline",
-                    "description": "Normal network interface configurations and routing tables to identify anomalous network discovery patterns"
+                    "description": "Normal network interface configurations and routing tables to identify anomalous network discovery patterns",
+                    "description_fa": "پیکربندی‌های معمولی رابط شبکه و جداول مسیریابی برای شناسایی الگوهای کشف شبکه غیرعادی"
                 },
                 {
                     "field": "ContainerContextIdentifiers",
-                    "description": "Container runtime identifiers and namespace patterns to detect environmental assessment targeting container environments"
+                    "description": "Container runtime identifiers and namespace patterns to detect environmental assessment targeting container environments",
+                    "description_fa": "شناسه های زمان اجرا کانتینر و الگوهای فضای نام برای شناسایی ارزیابی محیطی که محیط های کانتینر را هدف قرار می دهد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1306",
+            "description_fa": "زنجیره رفتاری کلیدهای محیطی لینوکس: (1) جمع‌آوری اطلاعات سیستم از طریق دستورات بومی (نام، نام میزبان، شناسه، whoami، ifconfig/ip) و شمارش سیستم فایل، (2) کشف پیکربندی شبکه (جدول مسیر، تنظیمات DNS، رابط‌های شبکه)، (3) تجزیه و تحلیل سیستم فایل و نقطه اتصال برای دایرکتوری‌ها یا سرویس‌های خاص هدف، (4) همبستگی استفاده از کتابخانه رمزنگاری با داده های محیطی جمع آوری شده، (6) اجرای بار پس از تایید موفق محیطی"
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0250#AN0694",
-                    "external_id": "AN0694"
+                    "external_id": "AN0694",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KeywordMatch",
-                    "description": "List of strings searched in registry queries (e.g., password, credential, login). May need to expand for localized OS or app-specific terms."
+                    "description": "List of strings searched in registry queries (e.g., password, credential, login). May need to expand for localized OS or app-specific terms.",
+                    "description_fa": "فهرست رشته های جستجو شده در جستارهای رجیستری (به عنوان مثال رمز عبور، اعتبار، ورود به سیستم). ممکن است برای سیستم عامل محلی یا اصطلاحات خاص برنامه نیاز به گسترش داشته باشد."
                 },
                 {
                     "field": "ParentProcessFilter",
-                    "description": "Parent process used for registry access. Can tune for suspicious ancestry (e.g., cmd.exe > reg.exe vs. services.exe > reg.exe)."
+                    "description": "Parent process used for registry access. Can tune for suspicious ancestry (e.g., cmd.exe > reg.exe vs. services.exe > reg.exe).",
+                    "description_fa": "فرآیند والد برای دسترسی به رجیستری استفاده می شود. می تواند برای نسب مشکوک تنظیم شود (به عنوان مثال cmd.exe > reg.exe در مقابل services.exe > reg.exe)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time-based correlation window for detecting chained activity between registry reads and subsequent credential use or exfiltration."
+                    "description": "Time-based correlation window for detecting chained activity between registry reads and subsequent credential use or exfiltration.",
+                    "description_fa": "پنجره همبستگی مبتنی بر زمان برای تشخیص فعالیت زنجیره‌ای بین خواندن‌های رجیستری و استفاده یا استخراج اعتبار بعدی."
                 },
                 {
                     "field": "RegistryHiveScope",
-                    "description": "HKLM vs. HKCU vs. others. May limit scope to user or system context depending on risk appetite."
+                    "description": "HKLM vs. HKCU vs. others. May limit scope to user or system context depending on risk appetite.",
+                    "description_fa": "HKLM در مقابل HKCU در مقابل دیگران. ممکن است بسته به ریسک پذیری، دامنه را به کاربر یا زمینه سیستم محدود کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0694",
+            "description_fa": "مدافعان اجرای خط فرمان یا خواندن های رجیستری مبتنی بر API را مشاهده می کنند که مسیرهای حساسی مانند HKLM یا HKCU را با فیلترهای کلیدواژه مانند «گذرواژه»، «cred» یا «logon» هدف قرار می دهند. معمولاً توسط Reg.exe، PowerShell، باینری های سفارشی یا ابزارهای تهاجمی مانند Cobalt Strike انجام می شود. همبستگی با اصل و نسب فرآیند و آرگومان‌های خط فرمان، فعالیت‌های کشف اعتبار مشکوک را نشان می‌دهد."
         }
     ]
 }

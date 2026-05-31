@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0534#AN1474",
-                    "external_id": "AN1474"
+                    "external_id": "AN1474",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "May vary across macOS versions and user contexts; defenders can tune for known benign cases."
+                    "description": "May vary across macOS versions and user contexts; defenders can tune for known benign cases.",
+                    "description_fa": "ممکن است در نسخه‌های macOS و زمینه‌های کاربری متفاوت باشد. مدافعان می توانند موارد خوش خیم شناخته شده را تنظیم کنند."
                 },
                 {
                     "field": "TCCModificationPath",
-                    "description": "Custom user paths or redirected SQLite DBs may require alternate matching logic."
+                    "description": "Custom user paths or redirected SQLite DBs may require alternate matching logic.",
+                    "description_fa": "مسیرهای کاربر سفارشی یا DBهای SQLite هدایت شده ممکن است به منطق تطبیق جایگزین نیاز داشته باشند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal proximity between launchctl setenv and subsequent privileged access can be tuned."
+                    "description": "Temporal proximity between launchctl setenv and subsequent privileged access can be tuned.",
+                    "description_fa": "نزدیکی زمانی بین launchctl setenv و دسترسی ممتاز بعدی را می توان تنظیم کرد."
                 },
                 {
                     "field": "SIPStateCheckInterval",
-                    "description": "Frequency of SIP integrity checks may vary based on system hardening policies."
+                    "description": "Frequency of SIP integrity checks may vary based on system hardening policies.",
+                    "description_fa": "فرکانس بررسی یکپارچگی SIP ممکن است بر اساس سیاست های سخت شدن سیستم متفاوت باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1474",
+            "description_fa": "اصلاح غیرمجاز TCC.db و به دنبال آن اجرای فرآیند بالا تحت یک والدین قابل اعتماد (مانند Finder، SystemUIServer) یا از طریق لغو محیط launchctl. همچنین شامل شناسایی غیرفعال شدن SIP است که بسیار غیر معمول است و پیش نیاز این مسیر سوء استفاده است."
         }
     ]
 }

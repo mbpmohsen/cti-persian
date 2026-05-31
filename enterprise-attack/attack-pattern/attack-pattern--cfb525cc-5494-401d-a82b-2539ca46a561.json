@@ -14,42 +14,42 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1555/006",
                     "external_id": "T1555.006",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Sysdig ScarletEel 2.0 2023",
                     "description": "Alessandro Brucato. (2023, July 11). SCARLETEEL 2.0: Fargate, Kubernetes, and Crypto. Retrieved September 25, 2023.",
                     "url": "https://sysdig.com/blog/scarleteel-2-0/",
                     "source_name_fa": "Sysdig ScarletEel 2.0 2023",
-                    "description_fa": "Alessandro Brucato SCARLETEEL 2.0: Fargate، Kubernetes و Crypto Retrieved 25 سپتامبر 2023."
+                    "description_fa": "الساندرو بروکاتو. (2023، 11 ژوئیه). SCARLETEEL 2.0: Fargate، Kubernetes و Crypto. بازبینی شده در 25 سپتامبر 2023."
                 },
                 {
                     "source_name": "AWS Secrets Manager",
                     "description": "AWS. (n.d.). Retrieve secrets from AWS Secrets Manager. Retrieved September 25, 2023.",
                     "url": "https://docs.aws.amazon.com/secretsmanager/latest/userguide/retrieving-secrets.html",
-                    "source_name_fa": "مدیریت اسرار AWS",
-                    "description_fa": "AWS (n.d.) رازهایی از مدیر اسرار AWS Retrieved 25 سپتامبر 2023."
+                    "source_name_fa": "مدیر اسرار AWS",
+                    "description_fa": "AWS. (n.d.). اسرار را از AWS Secrets Manager بازیابی کنید. بازبینی شده در 25 سپتامبر 2023."
                 },
                 {
                     "source_name": "Google Cloud Secrets",
                     "description": "Google Cloud. (n.d.). List secrets and view secret details. Retrieved September 25, 2023.",
                     "url": "https://cloud.google.com/secret-manager/docs/view-secret-details",
                     "source_name_fa": "Google Cloud Secrets",
-                    "description_fa": "Google Cloud رازهای لیست و جزئیات محرمانه را مشاهده کنید. Retrieved 25 سپتامبر 2023."
+                    "description_fa": "Google Cloud. (n.d.). اسرار را فهرست کنید و جزئیات راز را مشاهده کنید. بازبینی شده در 25 سپتامبر 2023."
                 },
                 {
                     "source_name": "Permiso Scattered Spider 2023",
                     "description": "Ian Ahl. (2023, September 20). LUCR-3: SCATTERED SPIDER GETTING SAAS-Y IN THE CLOUD. Retrieved September 25, 2023.",
                     "url": "https://permiso.io/blog/lucr-3-scattered-spider-getting-saas-y-in-the-cloud",
                     "source_name_fa": "Permiso Scattered Spider 2023",
-                    "description_fa": "ایان پست (۲۰۲۳)، ۲۰ سپتامبر LUCR-3: SCATTERED SPIDER SAAS-Y در CLOUD Retrieved 25 سپتامبر 2023."
+                    "description_fa": "ایان اهل. (20 سپتامبر 2023). LUCR-3: عنکبوت پراکنده که SAAS-Y را در ابر می گیرد. بازبینی شده در 25 سپتامبر 2023."
                 },
                 {
                     "source_name": "Microsoft Azure Key Vault",
                     "description": "Microsoft. (2023, January 13). Quickstart: Set and retrieve a secret from Azure Key Vault using Azure CLI. Retrieved September 25, 2023.",
                     "url": "https://learn.microsoft.com/en-us/azure/key-vault/secrets/quick-create-cli",
                     "source_name_fa": "Microsoft Azure Key Vault",
-                    "description_fa": "مایکروسافت (2023، 13 ژانویه) Quickstart: Set و بازیابی یک راز از Azure Key Vault با استفاده از Azure CLI Retrieved 25 سپتامبر 2023."
+                    "description_fa": "مایکروسافت. (2023، 13 ژانویه). شروع سریع: با استفاده از Azure CLI یک راز را از Azure Key Vault تنظیم و بازیابی کنید. بازبینی شده در 25 سپتامبر 2023."
                 }
             ],
             "object_marking_refs": [
@@ -78,8 +78,8 @@
                 "IaaS"
             ],
             "x_mitre_version": "1.0",
-            "name_fa": "فروشگاه های Cloud Secrets Management",
-            "description_fa": "مخالفان ممکن است از راه حل های مدیریت مخفی ابری مانند AWS Secrets Manager، GCP Secret Manager، Azure Key Vault و Terraform Vault اعتبار کسب کنند.\n\nمدیران اسرار از مدیریت متمرکز امن کلمات عبور، کلید های API و سایر مواد معتبر پشتیبانی می کنند. در جایی که مدیران اسرار در حال استفاده هستند، سرویس های ابری می توانند به طور پویا از طریق درخواست های API به جای دسترسی به اسرار ذخیره شده در فایل های متنی ساده یا متغیرهای محیطی، اعتبار کسب کنند.\n\nاگر یک دشمن بتواند امتیازات کافی در یک محیط ابری به دست آورد، مثلاً با به دست آوردن اعتبارهای بالا (حسابهای ابری) ([[[۱۰]_PRESERVE_۵]) یا به خطر انداختن خدماتی که اجازه بازیابی اسرار را دارند، ممکن است بتوانند اسرار را از مدیر اسرار درخواست کنند. این کار را می توان از طریق دستوراتی مانند “get Secret-value” در AWS انجام داد، “رازهای ابری” در GCP توضیح می دهند و “نمایشگاه مخفی کلیدی” در Azure ([CTI_PRESERVE_0][۱۰] [CTI_PRESERVE_SERVE] تلفظ می شود.\n\n* توجه: این تکنیک از [Cloud Instance Metadata API] متمایز است ([[CTI_PRESERVE_6]) که در آن مدارک به طور مستقیم از مدیر اسرار ابر درخواست می شود، به جای از طریق رسانه از مثال meta API. (Citation: Permiso Scattered Spider 2023) (Citation: Sysdig ScarletEel 2.0 2023) (Citation: AWS Secrets Manager) (Citation: Google Cloud Secrets) (Citation: Microsoft Azure Key Vault) https://attack.mitre.org/techniques/T1078/004 https://attack.mitre.org/techniques/T1552/005"
+            "name_fa": "فروشگاه های مدیریت اسرار ابری",
+            "description_fa": "دشمنان ممکن است از راه‌حل‌های مدیریت مخفی بومی ابری مانند AWS Secrets Manager، GCP Secret Manager، Azure Key Vault و Terraform Vault اعتبار کسب کنند.  \n\nمدیران Secrets از مدیریت متمرکز ایمن گذرواژه‌ها، کلیدهای API و سایر موارد اعتبار پشتیبانی می‌کنند. در جایی که مدیران اسرار در حال استفاده هستند، سرویس‌های ابری می‌توانند به‌جای دسترسی به اسرار ذخیره‌شده در فایل‌های متنی ساده یا متغیرهای محیطی، اعتبارنامه‌ها را به‌صورت پویا از طریق درخواست‌های API به دست آورند.  \n\nاگر یک دشمن بتواند امتیازات کافی را در یک محیط ابری به دست آورد - برای مثال، با به دست آوردن اعتبار [حساب‌های ابری] با امتیاز بالا (https://attack.mitre.org/techniques/T1078/004) یا به خطر انداختن سرویسی که مجوز بازیابی اسرار را دارد، ممکن است بتواند اسرار را از مدیر اسرار درخواست کند. این را می‌توان از طریق دستوراتی مانند «get-secret-value» در AWS، «مخفی‌های gcloud describe» در GCP و «az key vault secret show» در لاجوردی.(Citation: Permiso Scattered Spider 2023)(Citation: Sysdig ScarletEel 2.0 2023)(Citation: AWS Secrets Manager)(Citation: Google Cloud Secrets)(Citation: Microsoft Azure Key Vault)\n\n**توجه:** این تکنیک با [API ابرداده نمونه ابری](https://attack.mitre.org/techniques/T1552/005) متمایز است، زیرا اعتبارنامه‌ها مستقیماً از مدیر اسرار ابری درخواست می‌شوند، نه از طریق رسانه API فراداده نمونه."
         }
     ]
 }

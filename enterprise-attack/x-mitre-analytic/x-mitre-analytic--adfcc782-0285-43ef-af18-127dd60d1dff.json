@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0393#AN1105",
-                    "external_id": "AN1105"
+                    "external_id": "AN1105",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "targetRoleName",
-                    "description": "Define which roles are allowed to be assumed or passed; restrict highly privileged roles."
+                    "description": "Define which roles are allowed to be assumed or passed; restrict highly privileged roles.",
+                    "description_fa": "تعیین کنید که کدام نقش ها مجاز به قبول یا پاس شدن هستند. نقش های بسیار ممتاز را محدود کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time range between PassRole and AssumeRole events to link the privilege chain."
+                    "description": "Time range between PassRole and AssumeRole events to link the privilege chain.",
+                    "description_fa": "محدوده زمانی بین رویدادهای PassRole و AssumeRole برای پیوند زنجیره امتیاز."
                 },
                 {
                     "field": "invokingService",
-                    "description": "Restrict which services are authorized to invoke role passing (e.g., Lambda, EC2)."
+                    "description": "Restrict which services are authorized to invoke role passing (e.g., Lambda, EC2).",
+                    "description_fa": "خدماتی را که مجاز به فراخوانی پاس نقش هستند محدود کنید (مثلاً لامبدا، EC2)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1105",
+            "description_fa": "چندین رویداد AWS CloudTrail که نشان‌دهنده افزایش موقت امتیاز از طریق PassRole و AssumeRole است که خدمات جدید ایجاد شده یا زیرساخت‌های غیر تعاملی را هدف قرار می‌دهد."
         }
     ]
 }

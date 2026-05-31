@@ -9,13 +9,16 @@
                 {
                     "external_id": "CAPEC-630",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/630.html"
+                    "url": "https://capec.mitre.org/data/definitions/630.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Nick Nikiforakis, Marco Balduzzi, Lieven Desmet, Frank Piessens, Wouter Joosen, Soundsquatting: Uncovering the Use of Homophones in Domain Squatting, Trend Micro",
                     "external_id": "REF-491",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.trendmicro.de/cloud-content/us/pdfs/security-intelligence/white-papers/wp-soundsquatting.pdf"
+                    "url": "https://www.trendmicro.de/cloud-content/us/pdfs/security-intelligence/white-papers/wp-soundsquatting.pdf",
+                    "description_fa": "نیک نیکیفوراکیس، مارکو بالدوزی، لیون دزمت، فرانک پیسنز، ووتر جوسن، Soundsquatting: کشف استفاده از هموفون در دامنه اسکوات، Trend Micro",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--b6f0fd7e-6068-4557-976c-fd34914b11bf",
@@ -39,6 +42,9 @@
             "x_capec_consequences": {
                 "Other": [
                     "Other (Depending on the intention of the adversary, a successful TypoSquatting attack can be leveraged to execute more complex attacks such as cross-site scripting or stealing account credentials.)"
+                ],
+                "Other_fa": [
+                    "موارد دیگر (بسته به قصد دشمن، یک حمله موفق TypoSquatting می تواند برای اجرای حملات پیچیده تری مانند اسکریپت بین سایتی یا سرقت اعتبار حساب کاربری مورد استفاده قرار گیرد.)"
                 ]
             },
             "x_capec_domains": [
@@ -53,11 +59,21 @@
                 "An adversary requires knowledge of popular or high traffic domains, that could be used to deceive potential targets."
             ],
             "x_capec_skills_required": {
-                "Low": "Adversaries must be able to register DNS hostnames/URL’s."
+                "Low": "Adversaries must be able to register DNS hostnames/URL’s.",
+                "Low_fa": "دشمنان باید بتوانند نام هاست DNS/URL را ثبت کنند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف یک نام دامنه را با حداقل یک کاراکتر متفاوت از دامنه مورد اعتماد ثبت می کند. حمله TypoSquatting از مواردی استفاده می کند که کاربر URL را اشتباه تایپ می کند (به عنوان مثال www.goggle.com) یا قبل از کلیک کردن روی آن URL را به صورت بصری تأیید نمی کند (مثلاً حمله فیشینگ). در نتیجه، کاربر به مقصدی که توسط دشمن کنترل می شود هدایت می شود. TypoSquatting نیازی به حمله علیه دامنه مورد اعتماد یا مهندسی معکوس پیچیده ندارد.",
+            "name_fa": "TypoSquatting",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک حریف ایمیلی را با جعل هویت paypal.com به کاربر می‌فرستد و بیان می‌کند که به تازگی یک انتقال پول دریافت کرده است و برای دریافت پول روی پیوند داده شده کلیک می‌کند.</xhtml:p>\n               <xhtml:p>با این حال، پیوند موجود در ایمیل به جای paypal.com، paypa1.com است، که کاربر بدون خواندن کامل پیوند، روی آن کلیک می‌کند.</xhtml:p>\n               <xhtml:p>کاربر به وب‌سایت حریف هدایت می‌شود، که به نظر می‌رسد صفحه ورود قانونی paypal.com است.</xhtml:p>\n               <xhtml:p> کاربر فکر می کند که در حال ورود به حساب خود است، اما در واقع اعتبار پی پال خود را به حریف داده است. دشمن اکنون می‌تواند از اعتبار قانونی پی‌پال کاربر برای ورود به حساب کاربر و سرقت هر گونه پولی که ممکن است در حساب کاربری باشد استفاده کند.</xhtml:p>\n               <xhtml:p>آسیب‌پذیری TypoSquatting به حریف اجازه می‌دهد تا جعل هویت یک دامنه مورد اعتماد و فریب کاربر را برای بازدید از وب‌سایت مخرب برای سرقت اطلاعات کاربری کاربر فریب دهد.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین وب‌سایت هدف: </b>دشمن ابتدا تعیین می‌کند که کدام وب‌سایت را جعل کند، معمولاً وب‌سایتی که قابل اعتماد است و میزان ترافیک ثابتی دریافت می‌کند. وب سایت های پر بازدید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>جعل هویت دامنه مورد اعتماد: </b>برای جعل هویت دامنه مورد اعتماد، حریف باید TypoSquatted را ثبت کند. نشانی وب.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دامنه TypoSquatted را ثبت کنید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>فریب دادن کاربر به دامنه تبلیغاتی: بازدیدکننده F را فریب دهید. یک کاربر برای بازدید از دامنه TypoSquatted.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک حمله فیشینگ را اجرا کنید و برای کاربر یک ایمیل ارسال کنید تا کاربر را متقاعد کند تا روی پیوندی که کاربر را به دامنه TypoSquatted هدایت می کند کلیک کند. URL، کاربر را به دامنه TypoSquatted هدایت می کند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "یک حریف به دانش دامنه های محبوب یا پرترافیک نیاز دارد که می تواند برای فریب دادن اهداف بالقوه مورد استفاده قرار گیرد."
+            ]
         }
     ],
     "spec_version": "2.0",

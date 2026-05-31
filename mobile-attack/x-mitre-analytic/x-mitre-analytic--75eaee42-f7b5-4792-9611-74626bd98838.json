@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0693#AN1806",
-                    "external_id": "AN1806"
+                    "external_id": "AN1806",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,29 +58,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between security-setting change, tool degradation, and subsequent continued activity"
+                    "description": "Correlation window between security-setting change, tool degradation, and subsequent continued activity",
+                    "description_fa": "پنجره همبستگی بین تغییر تنظیمات امنیتی، تخریب ابزار و ادامه فعالیت های بعدی"
                 },
                 {
                     "field": "CriticalToolSet",
-                    "description": "Security-relevant applications or components expected to remain enabled and reporting, such as mobile EDR, Play Protect-associated controls, or agent services"
+                    "description": "Security-relevant applications or components expected to remain enabled and reporting, such as mobile EDR, Play Protect-associated controls, or agent services",
+                    "description_fa": "برنامه‌ها یا مؤلفه‌های مرتبط با امنیت که انتظار می‌رود فعال و گزارش‌دهی شوند، مانند EDR تلفن همراه، کنترل‌های مرتبط با Play Protect، یا خدمات عامل"
                 },
                 {
                     "field": "TelemetryGapThreshold",
-                    "description": "Duration or volume threshold defining abnormal loss of expected security telemetry"
+                    "description": "Duration or volume threshold defining abnormal loss of expected security telemetry",
+                    "description_fa": "مدت زمان یا آستانه حجم که از دست دادن غیرعادی تله متری امنیتی مورد انتظار را تعیین می کند"
                 },
                 {
                     "field": "ProtectedSettingSet",
-                    "description": "Protected settings or files treated as suspicious if modified, including SELinux-relevant enforcement state or security-app configuration"
+                    "description": "Protected settings or files treated as suspicious if modified, including SELinux-relevant enforcement state or security-app configuration",
+                    "description_fa": "تنظیمات یا فایل‌های محافظت‌شده در صورت تغییر مشکوک تلقی می‌شوند، از جمله وضعیت اجرایی مرتبط با SELinux یا پیکربندی برنامه امنیتی"
                 },
                 {
                     "field": "AllowedAdminApps",
-                    "description": "Legitimate applications or management agents allowed to modify security-relevant posture"
+                    "description": "Legitimate applications or management agents allowed to modify security-relevant posture",
+                    "description_fa": "برنامه های کاربردی قانونی یا عوامل مدیریتی مجاز به تغییر وضعیت مربوط به امنیت هستند"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Outbound traffic threshold used to confirm continued meaningful activity during reduced defensive visibility"
+                    "description": "Outbound traffic threshold used to confirm continued meaningful activity during reduced defensive visibility",
+                    "description_fa": "آستانه ترافیک خروجی برای تأیید ادامه فعالیت معنی دار در طول کاهش دید دفاعی استفاده می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1806",
+            "description_fa": "مرتبط (1) اکتساب برنامه یا استفاده از مسیرهای کنترلی بالا که قادر به تغییر ابزارهای دفاعی یا وضعیت سیستم محافظت شده هستند، مانند مدیریت دستگاه، اصلاح با روت یا دستکاری تنظیمات امنیتی، (2) تغییرات مستقیم در پیکربندی ابزار امنیتی، وضعیت سرویس، وضعیت بسته، یا تنظیمات اجرایی محافظت شده مانند فایل‌های SELinux-relev، فایل‌های SELinux-relev. سرکوب، یا ناپدید شدن تله متری امنیتی مورد انتظار در حالی که دستگاه و برنامه شروع کننده فعال باقی می مانند. مدافع یک زنجیره علّی را مشاهده می‌کند که در آن ابتدا یک کنترل امنیتی اصلاح می‌شود، سپس نظارت یا حفاظت ضعیف می‌شود و فعالیت‌های بعدی با دید دفاعی کاهش می‌یابد."
         }
     ]
 }

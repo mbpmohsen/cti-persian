@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0645#AN1723",
-                    "external_id": "AN1723"
+                    "external_id": "AN1723",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,37 +53,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum allowed time between locked-state boundary, suspicious app/framework activity, and unlock transition."
+                    "description": "Maximum allowed time between locked-state boundary, suspicious app/framework activity, and unlock transition.",
+                    "description_fa": "حداکثر زمان مجاز بین مرز حالت قفل، فعالیت برنامه/چارچوب مشکوک، و باز کردن انتقال قفل."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved apps permitted to hold accessibility, overlay, device-admin, or other authentication-adjacent special access."
+                    "description": "Approved apps permitted to hold accessibility, overlay, device-admin, or other authentication-adjacent special access.",
+                    "description_fa": "برنامه‌های تأیید شده مجاز به دسترسی، پوشش، دستگاه-سرپرست، یا سایر دسترسی‌های ویژه در مجاورت احراز هویت هستند."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether a benign authentication-adjacent app is expected to be visible in the foreground during unlock-related operations."
+                    "description": "Whether a benign authentication-adjacent app is expected to be visible in the foreground during unlock-related operations.",
+                    "description_fa": "آیا انتظار می رود که یک برنامه مجاور احراز هویت خوش خیم در طول عملیات مربوط به باز کردن قفل در پیش زمینه قابل مشاهده باشد یا خیر."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Time threshold for treating the unlock as user-driven based on touch, motion, or interaction context."
+                    "description": "Time threshold for treating the unlock as user-driven based on touch, motion, or interaction context.",
+                    "description_fa": "آستانه زمانی برای تلقی قفل به عنوان کاربر محور بر اساس لمس، حرکت یا زمینه تعامل."
                 },
                 {
                     "field": "ExpectedUnlockPopulation",
-                    "description": "User or device groups expected to use alternative lockscreen workflows, enterprise trust agents, or kiosk-like modes."
+                    "description": "User or device groups expected to use alternative lockscreen workflows, enterprise trust agents, or kiosk-like modes.",
+                    "description_fa": "گروه‌های کاربر یا دستگاه انتظار می‌رود از گردش‌های کاری صفحه قفل جایگزین، نمایندگان اعتماد سازمانی یا حالت‌های کیوسک مانند استفاده کنند."
                 },
                 {
                     "field": "TrustedDestinationAllowList",
-                    "description": "Expected destinations contacted immediately after legitimate unlock by enterprise apps."
+                    "description": "Expected destinations contacted immediately after legitimate unlock by enterprise apps.",
+                    "description_fa": "مقاصد مورد انتظاری که بلافاصله پس از باز کردن قفل قانونی توسط برنامه‌های سازمانی با آنها تماس گرفته می‌شود."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Threshold for suspicious immediate post-unlock outbound traffic."
+                    "description": "Threshold for suspicious immediate post-unlock outbound traffic.",
+                    "description_fa": "آستانه برای ترافیک خروجی مشکوک بلافاصله پس از باز کردن قفل."
                 },
                 {
                     "field": "SensorUseAllowList",
-                    "description": "Apps expected to access camera or other sensors near the authentication boundary."
+                    "description": "Apps expected to access camera or other sensors near the authentication boundary.",
+                    "description_fa": "برنامه‌هایی که انتظار می‌رود به دوربین یا سایر حسگرها در نزدیکی مرز احراز هویت دسترسی داشته باشند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1723",
+            "description_fa": "تله متری انتقال حالت قفل، دسترسی ویژه یا قابلیت تعامل ممتاز، استفاده از چارچوب حساس به امنیت، و فعالیت فوری پایین دستی در حالی که زمینه تعامل کاربر ضعیف یا ناسازگار است. این پوشش قوی تری در اندروید نسبت به iOS دارد."
         }
     ]
 }

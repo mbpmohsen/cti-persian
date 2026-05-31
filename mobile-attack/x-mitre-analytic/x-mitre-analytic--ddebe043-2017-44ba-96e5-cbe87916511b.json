@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0610#AN1663",
-                    "external_id": "AN1663"
+                    "external_id": "AN1663",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -72,37 +73,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window used to evaluate recurring retrieval and absence of same-service writeback."
+                    "description": "Correlation window used to evaluate recurring retrieval and absence of same-service writeback.",
+                    "description_fa": "پنجره همبستگی برای ارزیابی بازیابی مکرر و عدم وجود بازنویسی همان سرویس استفاده می شود."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved app identities vary by organization, role, and device group."
+                    "description": "Approved app identities vary by organization, role, and device group.",
+                    "description_fa": "هویت برنامه های تأیید شده بر اساس سازمان، نقش و گروه دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedServiceClasses",
-                    "description": "Some apps legitimately retrieve content from collaboration, messaging, storage, or code-hosting services."
+                    "description": "Some apps legitimately retrieve content from collaboration, messaging, storage, or code-hosting services.",
+                    "description_fa": "برخی از برنامه‌ها به طور قانونی محتوا را از سرویس‌های همکاری، پیام‌رسانی، ذخیره‌سازی یا میزبانی کد بازیابی می‌کنند."
                 },
                 {
                     "field": "AllowedReadOnlyMappings",
-                    "description": "Defines which apps are expected to only retrieve, and under what foreground/background conditions."
+                    "description": "Defines which apps are expected to only retrieve, and under what foreground/background conditions.",
+                    "description_fa": "مشخص می‌کند کدام برنامه‌ها فقط باید بازیابی شوند و تحت چه شرایطی پیش‌زمینه/پس‌زمینه."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close retrieval must be to user activity to be considered expected"
+                    "description": "Defines how close retrieval must be to user activity to be considered expected",
+                    "description_fa": "تعیین می کند که بازیابی چقدر باید به فعالیت کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود"
                 },
                 {
                     "field": "BeaconIntervalTolerance",
-                    "description": "Allowed recurrence interval for benign refresh, sync, or polling behavior differs by app category"
+                    "description": "Allowed recurrence interval for benign refresh, sync, or polling behavior differs by app category",
+                    "description_fa": "فاصله مجاز تکرار برای رفتار تازه‌سازی، همگام‌سازی یا نظرسنجی خوش‌خیم براساس دسته برنامه متفاوت است"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Some apps should only retrieve from certain public service classes while foregrounded"
+                    "description": "Some apps should only retrieve from certain public service classes while foregrounded",
+                    "description_fa": "برخی از برنامه‌ها فقط باید از کلاس‌های خدمات عمومی خاص در حالت پیش‌زمینه بازیابی شوند"
                 },
                 {
                     "field": "InboundOutboundRatioThreshold",
-                    "description": "Expected ratio of inbound to outbound bytes for benign app refresh behavior varies by workload."
+                    "description": "Expected ratio of inbound to outbound bytes for benign app refresh behavior varies by workload.",
+                    "description_fa": "نسبت پیش‌بینی‌شده بایت‌های ورودی به خروجی برای رفتار خوش‌خیم به‌روزرسانی برنامه، بسته به حجم کاری متفاوت است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1663",
+            "description_fa": "مدافع بازیابی مکرر یا دوره‌ای منتسب به برنامه از یک پلت‌فرم خدمات وب عمومی قانونی را با شرایط زمان اجرا که نشان می‌دهد بازیابی با مصرف پیش‌زمینه معمولی، تعامل کاربر یا نقش برنامه تأیید شده هماهنگ نیست، مرتبط می‌کند. قوی‌ترین شواهد اندروید یک برنامه مدیریت‌شده یا نصب‌شده است که به‌طور مکرر عملیات‌های GET، واکشی، همگام‌سازی یا کشش محتوا را به شبکه‌های اجتماعی، مشارکت، چسباندن، میزبانی کد، ذخیره‌سازی ابری، پیام‌رسانی یا عمومی HTTPS ارائه می‌کند، در حالی که برنامه در پس‌زمینه است، در حالی که دستگاه قفل است، یا بدون استفاده از سرویس‌های جدید در حال نوشتن، پنجره تشخیص زمانی تقویت می‌شود که بازیابی به طور موقت در مجاورت اجرای برنامه‌ریزی‌شده/پس‌زمینه، تغییرات حالت محلی یا اثرات پایین‌دستی بعدی باشد که برای دریافت خروجی به پلتفرم عمومی یکسانی نیاز ندارند."
         }
     ]
 }

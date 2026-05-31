@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0015",
-                    "external_id": "DC0015"
+                    "external_id": "DC0015",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -54,7 +55,9 @@
                     "name": "kubernetes:apiserver",
                     "channel": "Pod spec triggering build or custom controller activity invoking image builds"
                 }
-            ]
+            ],
+            "name_fa": "ایجاد تصویر",
+            "description_fa": "ساخت اولیه تصویر ماشین مجازی در محیط ابری. تصاویر ماشین مجازی قالب هایی هستند که شامل یک سیستم عامل و برنامه های کاربردی نصب شده هستند که می توانند برای ایجاد ماشین های مجازی جدید مستقر شوند. نظارت بر ایجاد این تصاویر مهم است زیرا دشمنان ممکن است تصاویر سفارشی ایجاد کنند تا شامل نرم‌افزارهای مخرب یا پیکربندی‌های نادرست برای سوءاستفاده بعدی شوند. مثال ها: \n\n- ایجاد تصویر سرویس محاسباتی Azure\n    - مثال: ایجاد یک تصویر ماشین مجازی در Azure با استفاده از Azure CLI: `az image create --resource-group MyResourceGroup --name MyImage --source MyVM`\n- ایجاد AWS EC2 AMI (Amazon Machine Image).\n    - مثال: ایجاد یک AMI از یک نمونه EC2: `aws ec2 create-image --instance-id i-1234567890abcdef0 --نام \"MyAMI\" --شرح \"An AMI برای برنامه من\"\"\n- Google Cloud Compute Engine ایجاد تصویر\n    - مثال: ایجاد یک تصویر سفارشی با استفاده از gcloud: `تصاویر محاسبه gcloud ایجاد تصویر سفارشی من --source-disk my-disk --source-disk-zone us-central1-a`\n- VMware vSphere\n    - مثال: صادرات یک ماشین مجازی برای ایجاد یک الگوی OVF (فرمت مجازی سازی باز): این قالب می تواند بعداً به محیط های دیگر با دستکاری احتمالی وارد شود."
         }
     ]
 }

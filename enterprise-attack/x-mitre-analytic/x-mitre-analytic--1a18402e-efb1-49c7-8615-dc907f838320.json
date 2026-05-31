@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0530#AN1468",
-                    "external_id": "AN1468"
+                    "external_id": "AN1468",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ShareName",
-                    "description": "Targeted admin share path, such as C$, ADMIN$, IPC$"
+                    "description": "Targeted admin share path, such as C$, ADMIN$, IPC$",
+                    "description_fa": "مسیر اشتراک ادمین هدفمند، مانند C$، ADMIN$، IPC$"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between remote file access and remote execution (e.g., 5-10 minutes)"
+                    "description": "Correlation window between remote file access and remote execution (e.g., 5-10 minutes)",
+                    "description_fa": "پنجره همبستگی بین دسترسی به فایل از راه دور و اجرای از راه دور (به عنوان مثال، 5-10 دقیقه)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Distinguish expected remote administrators vs. rare/first-time access by specific users"
+                    "description": "Distinguish expected remote administrators vs. rare/first-time access by specific users",
+                    "description_fa": "تشخیص مدیران راه دور مورد انتظار در مقابل دسترسی نادر/اولین بار توسط کاربران خاص"
                 },
                 {
                     "field": "ProcessList",
-                    "description": "List of suspicious binaries or tools executed post remote copy (e.g., cmd.exe, powershell.exe, runonce.exe)"
+                    "description": "List of suspicious binaries or tools executed post remote copy (e.g., cmd.exe, powershell.exe, runonce.exe)",
+                    "description_fa": "فهرستی از باینری ها یا ابزارهای مشکوک اجرا شده پس از کپی از راه دور (مانند cmd.exe، powershell.exe، runonce.exe)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1468",
+            "description_fa": "دسترسی به اشتراک گذاری فایل از راه دور مبتنی بر SMB و به دنبال آن اقدامات حرکت جانبی مانند ایجاد سرویس از راه دور، زمان‌بندی کار، یا اجرای فرآیند مشکوک در میزبان هدف با استفاده از اشتراک‌های ADMIN$ یا C$."
         }
     ]
 }

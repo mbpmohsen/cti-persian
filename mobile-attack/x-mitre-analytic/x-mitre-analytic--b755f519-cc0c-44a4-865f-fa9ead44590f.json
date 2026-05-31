@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0621#AN1684",
-                    "external_id": "AN1684"
+                    "external_id": "AN1684",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.381Z",
             "name": "Analytic 1684",
-            "description": "Defender correlates attempts to access other apps\u2019 data via shared containers (App Groups), Photos/Files providers, pasteboard abuse, or jailbroken cross-container reads, followed by aggregation/packaging and optional exfil/share. Sequence: capability/consent (TCC/entitlements) \u2192 target discovery (AppGroup/Photos/Files enumeration, URL schemes) \u2192 bulk read from shared/foreign container or provider \u2192 package/encode \u2192 exfil/share.",
+            "description": "Defender correlates attempts to access other apps’ data via shared containers (App Groups), Photos/Files providers, pasteboard abuse, or jailbroken cross-container reads, followed by aggregation/packaging and optional exfil/share. Sequence: capability/consent (TCC/entitlements) → target discovery (AppGroup/Photos/Files enumeration, URL schemes) → bulk read from shared/foreign container or provider → package/encode → exfil/share.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,33 +58,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window for consent/discovery \u2192 read \u2192 package \u2192 exfil (e.g., 20\u2013180s)."
+                    "description": "Correlation window for consent/discovery → read → package → exfil (e.g., 20–180s).",
+                    "description_fa": "پنجره همبستگی برای رضایت/کشف → خواندن → بسته → exfil (به عنوان مثال، 20-180s)."
                 },
                 {
                     "field": "AppGroupAllowlist",
-                    "description": "Allowed App Group IDs for each bundle to reduce FPs."
+                    "description": "Allowed App Group IDs for each bundle to reduce FPs.",
+                    "description_fa": "شناسه‌های گروه برنامه برای هر بسته برای کاهش FP مجاز است."
                 },
                 {
                     "field": "ProviderScope",
-                    "description": "Files/Photos provider collections permitted for the app."
+                    "description": "Files/Photos provider collections permitted for the app.",
+                    "description_fa": "مجموعه‌های ارائه‌دهنده فایل‌ها/عکس‌ها برای برنامه مجاز هستند."
                 },
                 {
                     "field": "MinBytesRead",
-                    "description": "Lower bound on cumulative read size to signal collection vs casual access."
+                    "description": "Lower bound on cumulative read size to signal collection vs casual access.",
+                    "description_fa": "حد پایین در اندازه خواندن تجمعی برای جمع آوری سیگنال در مقابل دسترسی معمولی."
                 },
                 {
                     "field": "ArchiveExtensions",
-                    "description": "Packaging extensions to track when aggregating data."
+                    "description": "Packaging extensions to track when aggregating data.",
+                    "description_fa": "پسوندهای بسته بندی برای ردیابی هنگام جمع آوری داده ها."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Known-good enterprise domains/CDNs for uploads."
+                    "description": "Known-good enterprise domains/CDNs for uploads.",
+                    "description_fa": "دامنه‌های سازمانی خوب/CDN برای آپلود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground/background and Work Profile state to scope analytics."
+                    "description": "Foreground/background and Work Profile state to scope analytics.",
+                    "description_fa": "پیش‌زمینه/پس‌زمینه و وضعیت نمایه کاری برای تجزیه و تحلیل دامنه."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1684",
+            "description_fa": "Defender تلاش‌ها برای دسترسی به داده‌های دیگر برنامه‌ها را از طریق کانتینرهای مشترک (گروه‌های برنامه)، ارائه‌دهندگان عکس‌ها/فایل‌ها، سوءاستفاده از کارت‌های کاغذی، یا خواندن‌های بین کانتینرهای جیلبریک، و به دنبال آن تجمع/بسته‌بندی و exfil/اشتراک‌گذاری اختیاری مرتبط می‌کند. دنباله: قابلیت/رضایت (TCC/حقوق) ← کشف هدف (AppGroup/Photos/Files enumeration، طرح‌های URL) ← خواندن انبوه از کانتینر یا ارائه‌دهنده مشترک/خارجی ← بسته/کد ← exfil/share."
         }
     ]
 }

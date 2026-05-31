@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0316#AN0883",
-                    "external_id": "AN0883"
+                    "external_id": "AN0883",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetDevices",
-                    "description": "Exclude removable drives or designated partitions that may be overwritten during maintenance."
+                    "description": "Exclude removable drives or designated partitions that may be overwritten during maintenance.",
+                    "description_fa": "درایوهای قابل جابجایی یا پارتیشن‌های تعیین‌شده را که ممکن است در طول تعمیر و نگهداری بازنویسی شوند، حذف نکنید."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Tune detection for pseudorandom write patterns to reduce false positives during high-volume I/O."
+                    "description": "Tune detection for pseudorandom write patterns to reduce false positives during high-volume I/O.",
+                    "description_fa": "شناسایی الگوهای نوشتن شبه تصادفی برای کاهش مثبت کاذب در طول I/O با حجم بالا."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0883",
+            "description_fa": "اجرای ابزارهای مخرب (dd، shred، wipe) که دستگاه‌های بلوک را هدف قرار می‌دهند، یا فرآیندهای فراخوانی syscals برای بازنویسی مستقیم پارتیشن‌های /dev/sd* یا /dev/nvme*. تلاش‌های غیرعادی برای نوشتن فایل را با اجرای فرآیند پوسته مرتبط کنید و دسترسی دستگاه را مسدود کنید."
         }
     ]
 }

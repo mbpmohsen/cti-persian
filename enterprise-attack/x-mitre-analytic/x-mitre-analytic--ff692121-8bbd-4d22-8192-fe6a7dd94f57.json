@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0310#AN0866",
-                    "external_id": "AN0866"
+                    "external_id": "AN0866",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "GroupName",
-                    "description": "Focus on 'sudo', 'wheel', or custom high-privilege groups"
+                    "description": "Focus on 'sudo', 'wheel', or custom high-privilege groups",
+                    "description_fa": "روی «سودو»، «چرخ» یا گروه‌های دارای امتیاز بالا تمرکز کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Account that initiated the change (e.g., service account or unrecognized user)"
+                    "description": "Account that initiated the change (e.g., service account or unrecognized user)",
+                    "description_fa": "حسابی که تغییر را آغاز کرده است (به عنوان مثال، حساب سرویس یا کاربر ناشناس)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Detect elevation outside change windows"
+                    "description": "Detect elevation outside change windows",
+                    "description_fa": "تشخیص ارتفاع در خارج از پنجره های تعویض"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0866",
+            "description_fa": "استفاده غیرمنتظره از usermod، gpasswd یا تغییر مستقیم /etc/group را برای افزایش عضویت در گروه کاربر تشخیص می‌دهد."
         }
     ]
 }

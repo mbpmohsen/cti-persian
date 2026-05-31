@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0383#AN1078",
-                    "external_id": "AN1078"
+                    "external_id": "AN1078",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedSystemAccounts",
-                    "description": "Whitelist of legitimate service accounts used for validation."
+                    "description": "Whitelist of legitimate service accounts used for validation.",
+                    "description_fa": "لیست سفید حساب‌های خدمات قانونی مورد استفاده برای اعتبارسنجی."
                 },
                 {
                     "field": "LevenshteinThreshold",
-                    "description": "Edit distance sensitivity between created account and existing account names."
+                    "description": "Edit distance sensitivity between created account and existing account names.",
+                    "description_fa": "حساسیت فاصله بین حساب ایجاد شده و نام حساب های موجود را ویرایش کنید."
                 },
                 {
                     "field": "ScriptInitiatorDetection",
-                    "description": "Whether to flag account creation events triggered from suspicious scripts or shell histories."
+                    "description": "Whether to flag account creation events triggered from suspicious scripts or shell histories.",
+                    "description_fa": "آیا باید رویدادهای ایجاد حساب که از اسکریپت‌های مشکوک یا تاریخچه‌های پوسته ایجاد شده‌اند پرچم‌گذاری شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1078",
+            "description_fa": "ایجاد یا تغییر نام حساب‌هایی را با نام‌هایی که دقیقاً با حساب‌های سرویس، ریشه یا مدیریت شناخته شده مطابقت دارند، تشخیص می‌دهد. رفتار اغلب به دنبال کشف یا حذف حساب می‌آید و سعی می‌کند با استفاده از قراردادهای نام قابل اعتماد در گزارش‌های فعالیت سیستم ترکیب شود."
         }
     ]
 }

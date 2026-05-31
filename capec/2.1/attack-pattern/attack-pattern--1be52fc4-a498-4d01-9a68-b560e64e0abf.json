@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-217",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/217.html"
+                    "url": "https://capec.mitre.org/data/definitions/217.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-201",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/201.html"
+                    "url": "http://cwe.mitre.org/data/definitions/201.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--1be52fc4-a498-4d01-9a68-b560e64e0abf",
@@ -39,6 +41,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -57,10 +69,24 @@
                 "The adversary needs the ability to sniff traffic, and optionally be able to route said traffic to a system where the sniffing of traffic can take place, and act upon the recovered traffic in real time."
             ],
             "x_capec_skills_required": {
-                "High": "The adversary needs real-time access to network traffic in such a manner that the adversary can grab needed information from the SSL stream, possibly influence the decided-upon encryption method and options, and perform automated analysis to decipher encrypted material recovered. Tools exist to automate part of the tasks, but to successfully use these tools in an attack scenario requires detailed understanding of the underlying principles."
+                "High": "The adversary needs real-time access to network traffic in such a manner that the adversary can grab needed information from the SSL stream, possibly influence the decided-upon encryption method and options, and perform automated analysis to decipher encrypted material recovered. Tools exist to automate part of the tasks, but to successfully use these tools in an attack scenario requires detailed understanding of the underlying principles.",
+                "High_fa": "حریف نیاز به دسترسی بلادرنگ به ترافیک شبکه دارد به گونه‌ای که حریف بتواند اطلاعات مورد نیاز را از جریان SSL بگیرد، احتمالاً بر روش و گزینه‌های رمزگذاری تصمیم‌گیری شده تأثیر بگذارد و تجزیه و تحلیل خودکار را برای رمزگشایی مواد رمزگذاری شده بازیابی شده انجام دهد. ابزارهایی برای خودکارسازی بخشی از وظایف وجود دارند، اما برای استفاده موفقیت‌آمیز از این ابزارها در سناریوی حمله نیاز به درک دقیق اصول اساسی دارد."
             },
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف از ارتباطات SSL/TLS که به درستی پیکربندی نشده است استفاده می‌کند که امکان دسترسی به داده‌هایی را که برای رمزگذاری در نظر گرفته شده است را ممکن می‌سازد. دشمن همچنین ممکن است از این نوع حمله برای تزریق دستورات یا سایر ترافیک به جریان رمزگذاری شده استفاده کند تا باعث به خطر افتادن مشتری یا سرور شود.",
+            "name_fa": "بهره برداری از SSL/TLS با پیکربندی نادرست",
+            "x_capec_example_instances_fa": [
+                "با استفاده از تکنیک‌های MITM، یک حریف با استفاده از یک جلسه SSL با استفاده از یک پروتکل رمزگذاری در حالت CBC با بردارهای اولیه زنجیره‌ای (IV) یک حمله مرزی انتخاب شده را برای به دست آوردن هدرهای HTTP متن ساده راه‌اندازی می‌کند. این به حریف اجازه می‌دهد تا شناسه‌های جلسه، کوکی‌های احراز هویت و احتمالاً سایر داده‌های ارزشمندی را که می‌توانند برای بهره‌برداری بیشتر استفاده شوند، بازیابی کند. علاوه بر این، این می‌تواند امکان درج داده‌ها را در جریان، امکان وقوع حملات اضافی (CSRF، SQL inject و غیره) را فراهم کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین پیکربندی SSL/TLS: </b>پیکربندی SSL/TLS سرور یا کلاینت مورد هدف، ترجیحاً هر دو را تعیین کنید. این یک نیاز سخت نیست، زیرا حریف به سادگی می‌تواند تنظیمات پیکربندی معمولی قابل بهره‌برداری را در نظر بگیرد و به طور بی‌رویه آنها را امتحان کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>اگر هدف یک صفحه وب باشد، برخی از تنظیمات SSL/TLS مانند تنظیمات کلیدهای امنیتی و اندازه‌ها و اطلاعات امنیتی مرورگر را می‌توان مشاهده کرد. استفاده می‌شود.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>ارتباط رهگیری: </b>دسترسی کنترل‌شده‌ای به سرور توسط کلاینت ارائه می‌کند، یا با ارائه پیوندی برای کلیک کردن روی کلاینت، و یا با قرار دادن موقعیت شبکه برای کنترل جریان داده‌ها و کنترل مشتری در مکانی، دسترسی کنترل‌شده‌ای را به سرویس گیرنده ارائه دهید. AiTM (دشمن در وسط - CAPEC-94).</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک صفحه وب مخرب ایجاد کنید که شبیه به صفحه وب هدف باشد، اما ترافیک مشتری را به سمت سرور هدایت می‌کند تا دشمن بتواند ترافیک را مشاهده کند و حمله‌ای را انجام دهد. دسترسی به شبکه ای که کلاینت یا سرور در آن است، می تواند سعی کند از یک packet sniffer برای انجام یک دشمن در حمله میانی استفاده کند.</td></tr><tr><td>یک packet sniffer را از طریق بدافزار مستقیماً روی دستگاه مشتری نصب کنید که می تواند ترافیک SSL/TLS را رهگیری کند و یک دشمن در وسط انجام دهد. حمله.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>گرفتن یا دستکاری داده های حساس: </b>هنگامی که حریف توانایی رهگیری ارتباط ایمن را داشته باشد، از SSL که به درستی رمزگذاری شده است برای پیکربندی نادرست سوء استفاده می کند. حریف می‌تواند انتخاب کند که فقط ارتباط امن را ضبط کند یا داده‌ها را برای دستیابی به اثر دلخواه دستکاری کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از سوء استفاده‌های شناخته شده برای نسخه‌های قدیمی SSL و TLS استفاده کنید.</td></tr><tr><td>از سوء استفاده‌های شناخته‌شده مانند رمزهای DES ضعیف استفاده کنید. RC4.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "ارتباطات SSL/TLS زمانی که از نسخه های قدیمی و رمزهای ناامن استفاده می کنند در برابر این حمله آسیب پذیر می شوند. در حال حاضر تمامی نسخه های SSL منسوخ شده و نسخه های TLS 1.0 و 1.1 نیز به دلیل ناامن بودن منسوخ شده اند. اگر نسخه‌های بعدی TLS با رمزهای ناامن مانند 3DES یا RC4 پیکربندی شده باشند، همچنان ممکن است ناامن باشند.",
+            "x_capec_prerequisites_fa": [
+                "دسترسی به جریان مشتری/سرور."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف به توانایی استشمام کردن ترافیک نیاز دارد و به صورت اختیاری بتواند ترافیک مذکور را به سیستمی که در آن استشمام ترافیک می‌تواند انجام شود هدایت کند و بر اساس ترافیک بازیابی شده در زمان واقعی عمل کند."
+            ]
         }
     ],
     "type": "bundle"

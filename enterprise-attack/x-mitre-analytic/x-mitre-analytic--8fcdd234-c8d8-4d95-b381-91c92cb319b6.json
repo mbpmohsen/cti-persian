@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0017#AN0051",
-                    "external_id": "AN0051"
+                    "external_id": "AN0051",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,26 +56,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CustomShimPathAllowlist",
-                    "description": "Filter out known-good .sdb paths in AppPatch\\Custom folders"
+                    "description": "Filter out known-good .sdb paths in AppPatch\\Custom folders",
+                    "description_fa": "مسیرهای شناخته شده sdb. را در پوشه‌های AppPatch\\Custom فیلتر کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tunable window for correlating registry modification and sdbinst.exe execution"
+                    "description": "Tunable window for correlating registry modification and sdbinst.exe execution",
+                    "description_fa": "پنجره قابل تنظیم برای ارتباط اصلاح رجیستری و اجرای sdbinst.exe"
                 },
                 {
                     "field": "DLLInjectionTarget",
-                    "description": "Expected target applications or binaries for injected DLLs"
+                    "description": "Expected target applications or binaries for injected DLLs",
+                    "description_fa": "برنامه های هدف یا باینری های مورد انتظار برای DLL های تزریقی"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Limit alerting to admin or SYSTEM-context initiated shim installations"
+                    "description": "Limit alerting to admin or SYSTEM-context initiated shim installations",
+                    "description_fa": "هشدار را به ادمین یا نصب‌های شیم آغاز شده در زمینه سیستم محدود کنید"
                 },
                 {
                     "field": "ShimCommandLinePattern",
-                    "description": "Expected or benign sdbinst.exe command-line patterns to exclude"
+                    "description": "Expected or benign sdbinst.exe command-line patterns to exclude",
+                    "description_fa": "الگوهای خط فرمان مورد انتظار یا خوش خیم sdbinst.exe حذف شوند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0051",
+            "description_fa": "اصلاح مرتبط کلیدهای رجیستری AppCompat و اجرای sdbinst.exe برای نصب پایگاه داده های شیم سفارشی. به دنبال تزریق DLL از طریق رفتار شیم به فرآیندهای برنامه هدف."
         }
     ]
 }

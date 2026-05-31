@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0560#AN1546",
-                    "external_id": "AN1546"
+                    "external_id": "AN1546",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MFAFailureCount",
-                    "description": "Threshold of failed MFA attempts before alerting."
+                    "description": "Threshold of failed MFA attempts before alerting.",
+                    "description_fa": "آستانه تلاش های ناموفق MFA قبل از هشدار."
                 },
                 {
                     "field": "RiskScoreThreshold",
-                    "description": "Custom threshold based on calculated identity risk."
+                    "description": "Custom threshold based on calculated identity risk.",
+                    "description_fa": "آستانه سفارشی بر اساس ریسک هویت محاسبه شده."
                 },
                 {
                     "field": "IPGeoVelocity",
-                    "description": "Detect impossible travel (logins from two distant geolocations within short time)."
+                    "description": "Detect impossible travel (logins from two distant geolocations within short time).",
+                    "description_fa": "شناسایی سفر غیرممکن (ورود از دو مکان جغرافیایی دور در مدت زمان کوتاه)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1546",
+            "description_fa": "تشخیص سوء استفاده از حساب معتبر در گزارش‌های IdP از طریق ناهنجاری‌های جغرافیایی، سفر غیرممکن، ورود به سیستم پرخطر، و تلاش‌ها یا شکست‌های متعدد MFA."
         }
     ]
 }

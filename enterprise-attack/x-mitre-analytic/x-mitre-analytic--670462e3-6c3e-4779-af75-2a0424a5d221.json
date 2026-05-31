@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0379#AN1069",
-                    "external_id": "AN1069"
+                    "external_id": "AN1069",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KnownSSIDs",
-                    "description": "Baseline of authorized SSIDs; deviations may indicate rogue AP."
+                    "description": "Baseline of authorized SSIDs; deviations may indicate rogue AP.",
+                    "description_fa": "پایه SSIDهای مجاز؛ انحرافات ممکن است نشان دهنده AP سرکش باشد."
                 },
                 {
                     "field": "AllowedBSSIDs",
-                    "description": "Whitelist of BSSID/MAC addresses mapped to corporate SSIDs."
+                    "description": "Whitelist of BSSID/MAC addresses mapped to corporate SSIDs.",
+                    "description_fa": "لیست سفید آدرس های BSSID/MAC نگاشت شده به SSID های شرکتی."
                 },
                 {
                     "field": "SignalStrengthThreshold",
-                    "description": "Used to flag unusually strong signals from unexpected APs."
+                    "description": "Used to flag unusually strong signals from unexpected APs.",
+                    "description_fa": "برای علامت گذاری سیگنال های غیرمعمول قوی از AP ​​های غیرمنتظره استفاده می شود."
                 },
                 {
                     "field": "CaptivePortalDomains",
-                    "description": "Trusted login domains; unrecognized portals may be malicious."
+                    "description": "Trusted login domains; unrecognized portals may be malicious.",
+                    "description_fa": "دامنه های ورود مورد اعتماد؛ پورتال های ناشناس ممکن است مخرب باشند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1069",
+            "description_fa": "نقاط دسترسی Wi-Fi سرکش را شناسایی می کند که همان SSID را با APهای قانونی با قدرت سیگنال قوی تر، مقادیر MAC/BSSID غیرمنتظره یا تنظیمات رمزگذاری متناقض پخش می کنند. تلاش‌های احراز هویت، تغییر مسیرهای پورتال محصور، و جریان‌های ترافیک غیرعادی را از طریق APهای غیرمجاز مرتبط می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0589#AN1621",
-                    "external_id": "AN1621"
+                    "external_id": "AN1621",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredOUs",
-                    "description": "Scope of Organizational Units where reversible encryption property monitoring is enabled."
+                    "description": "Scope of Organizational Units where reversible encryption property monitoring is enabled.",
+                    "description_fa": "محدوده واحدهای سازمانی که در آن نظارت بر ویژگی رمزگذاری برگشت پذیر فعال است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time window in which to correlate Group Policy modification and subsequent user property changes."
+                    "description": "Time window in which to correlate Group Policy modification and subsequent user property changes.",
+                    "description_fa": "پنجره زمانی که در آن اصلاح خط مشی گروه و تغییرات خصوصیات کاربر بعدی مرتبط می شود."
                 },
                 {
                     "field": "SuspiciousCmdletList",
-                    "description": "List of PowerShell cmdlets to monitor for account configuration changes."
+                    "description": "List of PowerShell cmdlets to monitor for account configuration changes.",
+                    "description_fa": "فهرست cmdlet های PowerShell برای نظارت بر تغییرات پیکربندی حساب."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1621",
+            "description_fa": "فعال کردن رمزگذاری رمز عبور برگشت پذیر در Active Directory یا Group Policy، دستورات مشکوک PowerShell که ویژگی های کاربر AD را تغییر می دهد و تغییرات غیرعادی پیکربندی حساب مرتبط با اصلاحات خط مشی را شناسایی می کند. پیوندهای همبستگی چند رویدادی، ویرایش‌های خط‌مشی گروه، اجرای فرمان PowerShell و تغییرات ویژگی حساب کاربری را برای شناسایی دستکاری در تنظیمات رمزگذاری احراز هویت پیوند می‌دهد."
         }
     ]
 }

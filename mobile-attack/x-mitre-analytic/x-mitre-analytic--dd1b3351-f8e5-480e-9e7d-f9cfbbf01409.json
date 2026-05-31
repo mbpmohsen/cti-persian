@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0719#AN1850",
-                    "external_id": "AN1850"
+                    "external_id": "AN1850",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,21 +48,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window between root detection, runtime manipulation, and anomalous API behavior"
+                    "description": "Defines correlation window between root detection, runtime manipulation, and anomalous API behavior",
+                    "description_fa": "پنجره همبستگی بین تشخیص ریشه، دستکاری زمان اجرا و رفتار غیرعادی API را تعریف می کند"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Baseline of known applications that legitimately use instrumentation or debugging frameworks"
+                    "description": "Baseline of known applications that legitimately use instrumentation or debugging frameworks",
+                    "description_fa": "پایه برنامه های شناخته شده ای که به طور قانونی از چارچوب های ابزار دقیق یا اشکال زدایی استفاده می کنند"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Determines whether suspicious API manipulation must occur in background to increase fidelity"
+                    "description": "Determines whether suspicious API manipulation must occur in background to increase fidelity",
+                    "description_fa": "تعیین می کند که آیا دستکاری API مشکوک باید در پس زمینه رخ دهد تا وفاداری را افزایش دهد"
                 },
                 {
                     "field": "IntegritySignalSource",
-                    "description": "Defines which attestation signals (Play Integrity, OEM attestation) are trusted in the environment"
+                    "description": "Defines which attestation signals (Play Integrity, OEM attestation) are trusted in the environment",
+                    "description_fa": "مشخص می کند که کدام سیگنال های گواهی (Play Integrity، OEM atestation) در محیط قابل اعتماد هستند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1850",
+            "description_fa": "(1) تغییرات وضعیت دستگاه که نشان دهنده وضعیت دسترسی ریشه یا افزایش یافته است، (2) دستکاری یا تزریق چارچوب زمان اجرا به فرآیندهای برنامه، و (3) رفتار غیرعادی API یا سیگنال های امنیتی سرکوب شده مرتبط است. مدافع یک زنجیره علّی را مشاهده می‌کند که در آن یک برنامه کاربردی زمینه اجرای ممتازی را به دست می‌آورد، با چارچوب‌های سیستم (مانند ART/Zygote) تعامل می‌کند، و خروجی‌های API مورد انتظار را تغییر می‌دهد یا سیگنال‌های مرتبط با امنیت مانند بررسی مجوز، گزارش دسترسی حسگر، یا دید فرآیند را سرکوب می‌کند."
         }
     ]
 }

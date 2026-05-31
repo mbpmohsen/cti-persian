@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0387#AN1092",
-                    "external_id": "AN1092"
+                    "external_id": "AN1092",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedARPUpdates",
-                    "description": "Expected legitimate IP-to-MAC updates for servers or virtual routers."
+                    "description": "Expected legitimate IP-to-MAC updates for servers or virtual routers.",
+                    "description_fa": "به روز رسانی های مجاز IP-to-MAC برای سرورها یا روترهای مجازی مورد انتظار است."
                 },
                 {
                     "field": "AlertThreshold",
-                    "description": "Number of anomalous ARP packets per second before triggering detection."
+                    "description": "Number of anomalous ARP packets per second before triggering detection.",
+                    "description_fa": "تعداد بسته های ARP غیرعادی در هر ثانیه قبل از شروع شناسایی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1092",
+            "description_fa": "با استفاده از ممیزی و ضبط بسته‌ها، پاسخ‌های مشکوک و بلاعوض ARP یا نگاشت‌های IP به MAC متناقض را شناسایی می‌کند. تمرکز رفتاری بر پاسخ‌های ناخواسته است که مالکیت قانونی ARP را نادیده می‌گیرند."
         }
     ]
 }

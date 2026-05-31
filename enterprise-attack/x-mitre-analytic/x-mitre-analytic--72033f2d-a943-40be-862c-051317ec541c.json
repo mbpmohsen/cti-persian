@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0163#AN0465",
-                    "external_id": "AN0465"
+                    "external_id": "AN0465",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation window between NAT rule change and unexpected traffic; adjustable to align with change management practices."
+                    "description": "Time correlation window between NAT rule change and unexpected traffic; adjustable to align with change management practices.",
+                    "description_fa": "پنجره همبستگی زمانی بین تغییر قانون NAT و ترافیک غیرمنتظره. قابل تنظیم برای هماهنگی با شیوه های مدیریت تغییر."
                 },
                 {
                     "field": "AuthorizedNATRules",
-                    "description": "Whitelist of approved NAT policies and rules; prevents false positives from legitimate operations."
+                    "description": "Whitelist of approved NAT policies and rules; prevents false positives from legitimate operations.",
+                    "description_fa": "لیست سفید سیاست ها و قوانین NAT تایید شده؛ از عملیات مشروع از مثبت کاذب جلوگیری می کند."
                 },
                 {
                     "field": "TrafficVolumeThreshold",
-                    "description": "Threshold for abnormal traffic across NAT; tuned to differentiate testing from large-scale exfiltration or bridging."
+                    "description": "Threshold for abnormal traffic across NAT; tuned to differentiate testing from large-scale exfiltration or bridging.",
+                    "description_fa": "آستانه برای ترافیک غیرعادی در سراسر NAT. تنظیم شده تا آزمایش را از اکسفیلتراسیون یا پل زدن در مقیاس بزرگ متمایز کند."
                 },
                 {
                     "field": "InterfaceScope",
-                    "description": "Specific interfaces or zones monitored for NAT translation; allows tuning for internal vs. external-facing boundaries."
+                    "description": "Specific interfaces or zones monitored for NAT translation; allows tuning for internal vs. external-facing boundaries.",
+                    "description_fa": "رابط های خاص یا مناطقی که برای ترجمه NAT نظارت می شوند. امکان تنظیم مرزهای داخلی در مقابل خارجی را فراهم می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0465",
+            "description_fa": "مدافعان ممکن است تغییرات غیرمجاز یا غیرعادی را در پیکربندی‌های NAT مشاهده کنند، از جمله افزودن قوانین ترجمه جدید یا اصلاحات به قوانین موجود. رفتارهای مشکوک شامل معرفی ناگهانی نقشه‌های NAT که شبکه‌های تقسیم‌بندی شده را پل می‌کنند، قوانین ترجمه آدرس پورت جدید که IPهای منبع واقعی را مبهم می‌کند، یا جریان‌های ترافیکی که با طراحی شبکه مورد انتظار مطابقت ندارد. همبستگی چند رویدادی شامل تشخیص تغییرات پیکربندی در روترها/دیوارهای آتش و به دنبال آن ترافیک عبوری از جفت آدرس داخلی/خارجی غیرمنتظره است."
         }
     ]
 }

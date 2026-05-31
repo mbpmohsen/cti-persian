@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0303#AN0846",
-                    "external_id": "AN0846"
+                    "external_id": "AN0846",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Detects variations of 'net user', 'net localgroup', 'Get-LocalUser'."
+                    "description": "Detects variations of 'net user', 'net localgroup', 'Get-LocalUser'.",
+                    "description_fa": "تغییرات \"کاربر خالص\"، \"گروه محلی خالص\"، \"Get-LocalUser\" را تشخیص می دهد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Restrict monitoring to low-privileged or unexpected users executing enumeration."
+                    "description": "Restrict monitoring to low-privileged or unexpected users executing enumeration.",
+                    "description_fa": "نظارت را به کاربران کم امتیاز یا غیرمنتظره ای که شمارش را اجرا می کنند محدود کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tune for bursts of enumeration commands in short succession."
+                    "description": "Tune for bursts of enumeration commands in short succession.",
+                    "description_fa": "مجموعه ای از دستورات شمارش را به صورت متوالی تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0846",
+            "description_fa": "شمارش دشمنان حساب های کاربری محلی با استفاده از Net.exe، WMI، یا PowerShell."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0152#AN0435",
-                    "external_id": "AN0435"
+                    "external_id": "AN0435",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0435",
-            "description": "Detection focuses on adversaries placing or modifying malicious dylibs in locations searched by legitimate applications. From the defender\u2019s perspective, observable patterns include unexpected creation or modification of dylib files in application bundle paths, unusual module loads by processes compared to historical baselines, and execution of applications loading dylibs from suspicious directories (e.g., /tmp, user-controlled paths). Correlation across file system changes, process execution, and module loads provides high-fidelity detection.",
+            "description": "Detection focuses on adversaries placing or modifying malicious dylibs in locations searched by legitimate applications. From the defender’s perspective, observable patterns include unexpected creation or modification of dylib files in application bundle paths, unusual module loads by processes compared to historical baselines, and execution of applications loading dylibs from suspicious directories (e.g., /tmp, user-controlled paths). Correlation across file system changes, process execution, and module loads provides high-fidelity detection.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredDirectories",
-                    "description": "Application bundle directories (e.g., /Applications/*/Contents/MacOS, /Library/Frameworks). Adversaries may use non-standard paths like /tmp."
+                    "description": "Application bundle directories (e.g., /Applications/*/Contents/MacOS, /Library/Frameworks). Adversaries may use non-standard paths like /tmp.",
+                    "description_fa": "فهرست راهنماهای بسته نرم افزاری (به عنوان مثال، /Applications/*/Contents/MacOS، /Library/Frameworks). دشمنان ممکن است از مسیرهای غیر استاندارد مانند /tmp استفاده کنند."
                 },
                 {
                     "field": "BaselineDylibs",
-                    "description": "Historical record of dylibs typically loaded by applications. Deviations should be flagged."
+                    "description": "Historical record of dylibs typically loaded by applications. Deviations should be flagged.",
+                    "description_fa": "سابقه تاریخی dylibs که معمولاً توسط برنامه‌ها بارگذاری می‌شوند. انحرافات باید علامت گذاری شوند."
                 },
                 {
                     "field": "CorrelationWindow",
-                    "description": "Timeframe to correlate dylib file modification with subsequent process execution and module loads."
+                    "description": "Timeframe to correlate dylib file modification with subsequent process execution and module loads.",
+                    "description_fa": "بازه زمانی برای ارتباط اصلاح فایل dylib با اجرای فرآیند بعدی و بارگذاری ماژول."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0435",
+            "description_fa": "تشخیص بر روی دشمنانی تمرکز می‌کند که دیلیب‌های مخرب را در مکان‌هایی که توسط اپلیکیشن‌های قانونی جستجو می‌شوند، قرار داده یا اصلاح می‌کنند. از دیدگاه مدافع، الگوهای قابل مشاهده شامل ایجاد یا تغییر غیرمنتظره فایل‌های dylib در مسیرهای بسته نرم‌افزاری، بارگذاری غیرمعمول ماژول توسط فرآیندها در مقایسه با خطوط پایه تاریخی، و اجرای برنامه‌هایی است که dylib‌ها را از دایرکتوری‌های مشکوک بارگیری می‌کنند (به عنوان مثال، /tmp، مسیرهای کنترل‌شده توسط کاربر). همبستگی بین تغییرات سیستم فایل، اجرای فرآیند، و بارهای ماژول، تشخیص با وفاداری بالا را فراهم می کند."
         }
     ]
 }

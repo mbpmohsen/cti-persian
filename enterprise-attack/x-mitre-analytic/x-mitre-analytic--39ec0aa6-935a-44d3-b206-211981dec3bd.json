@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0223#AN0623",
-                    "external_id": "AN0623"
+                    "external_id": "AN0623",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentImageList",
-                    "description": "Allowlist of known SCCM-related binary spawners (e.g., 'CCMExec.exe')"
+                    "description": "Allowlist of known SCCM-related binary spawners (e.g., 'CCMExec.exe')",
+                    "description_fa": "لیست مجاز مولدهای باینری مرتبط با SCCM شناخته شده (مانند «CCMExec.exe»)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Expected deployment activity from scheduled system accounts"
+                    "description": "Expected deployment activity from scheduled system accounts",
+                    "description_fa": "فعالیت استقرار مورد انتظار از حساب های سیستم برنامه ریزی شده"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Unusual deployment timing outside standard maintenance hours"
+                    "description": "Unusual deployment timing outside standard maintenance hours",
+                    "description_fa": "زمان بندی غیرمعمول استقرار خارج از ساعات تعمیر و نگهداری استاندارد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0623",
+            "description_fa": "SCCM، Intune، یا اسکریپت‌ها یا باینری‌های باینری‌های ایجاد فشار از راه دور را از زمینه SYSTEM یا کنسول‌های غیرمعمول شناسایی می‌کند (مثلاً cmtrace.exe PowerShell یا cmd.exe را راه‌اندازی می‌کند)."
         }
     ]
 }

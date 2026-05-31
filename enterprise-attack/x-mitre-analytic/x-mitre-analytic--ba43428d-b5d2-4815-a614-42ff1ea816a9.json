@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0476#AN1310",
-                    "external_id": "AN1310"
+                    "external_id": "AN1310",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedMailDirs",
-                    "description": "Specify user mail directories (/var/mail, ~/Maildir)"
+                    "description": "Specify user mail directories (/var/mail, ~/Maildir)",
+                    "description_fa": "فهرست راهنمای ایمیل کاربر (/var/mail، ~/Maildir) را مشخص کنید"
                 },
                 {
                     "field": "ProcessNameList",
-                    "description": "Tune based on local mail clients or curl usage in environment"
+                    "description": "Tune based on local mail clients or curl usage in environment",
+                    "description_fa": "بر اساس کلاینت‌های ایمیل محلی یا استفاده از پیچیدگی در محیط تنظیم کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Define how close together access and exfil events must occur"
+                    "description": "Define how close together access and exfil events must occur",
+                    "description_fa": "تعریف کنید که رویدادهای دسترسی و exfil چقدر باید به هم نزدیک شوند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1310",
+            "description_fa": "دسترسی فایل به فایل‌های mbox/maildir را در ارتباط با اجرای curl/wget/postfix یا اسکریپت‌های پوسته غیرعادی که فهرست‌های پست الکترونیکی کاربر را جمع‌آوری می‌کنند، شناسایی می‌کند."
         }
     ]
 }

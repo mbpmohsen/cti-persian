@@ -9,29 +9,37 @@
                 {
                     "external_id": "CAPEC-86",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/86.html"
+                    "url": "https://capec.mitre.org/data/definitions/86.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-80",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/80.html"
+                    "url": "http://cwe.mitre.org/data/definitions/80.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Cheatsheets, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-69",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/www-community/xss-filter-evasion-cheatsheet"
+                    "url": "https://www.owasp.org/www-community/xss-filter-evasion-cheatsheet",
+                    "description_fa": "OWASP Cheatsheets، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Watchfire Research, XSS vulnerabilities in Google.com, Full Disclosure mailing list archives",
                     "external_id": "REF-476",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://seclists.org/fulldisclosure/2005/Dec/1107"
+                    "url": "http://seclists.org/fulldisclosure/2005/Dec/1107",
+                    "description_fa": "تحقیقات Watchfire، آسیب‌پذیری‌های XSS در Google.com، بایگانی فهرست پستی Full Disclosure",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--39322012-07ba-4bfc-bac7-10891614ee3e",
@@ -65,6 +73,23 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -87,11 +112,27 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a client side vulnerability to inject malicious scripts into the browser's executable process.",
-                "Low": "To achieve a redirection and use of less trusted source, an adversary can simply edit HTTP Headers that are sent to client machine."
+                "Low": "To achieve a redirection and use of less trusted source, an adversary can simply edit HTTP Headers that are sent to client machine.",
+                "High_fa": "بهره برداری از آسیب پذیری سمت سرویس گیرنده برای تزریق اسکریپت های مخرب به فرآیند اجرایی مرورگر.",
+                "Low_fa": "برای دستیابی به تغییر مسیر و استفاده از منبع کمتر قابل اعتماد، یک حریف به سادگی می‌تواند هدرهای HTTP را که به ماشین کلاینت ارسال می‌شوند ویرایش کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن از برنامه‌های کاربردی وب که محتوای وب تولید می‌کنند، مانند پیوندها در یک صفحه HTML، بر اساس داده‌های تأیید نشده یا نامناسب ارسال شده توسط بازیگران دیگر، سوء استفاده می‌کند. حملات XSS در HTTP Headers هدرهای HTTP را هدف قرار می دهند که از دید اکثر کاربران پنهان هستند و ممکن است توسط برنامه های کاربردی وب تایید نشوند.",
+            "name_fa": "XSS از طریق هدرهای HTTP",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> از یک شیوه نامه راه دور در سربرگ HTTP برای حمله XSS استفاده کنید. هنگامی که حریف بتواند به یک شیوه نامه راه دور اشاره کند، هر یک از متغیرهای تنظیم شده در آن شیوه نامه در سمت مشتری توسط حریف راه دور قابل کنترل است. مانند اکثر حملات XSS، نتایج بسته به مرورگری که استفاده می‌شود متفاوت است [REF-97].</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\"><META HTTP-EQUIV=\"Link\" Content=\"<http://ha.ckers.org/xss.css>; REL=stylesheet\"></xhtml:div>",
+                "<xhtml:p>اسکریپت تغییر مسیر 404 Google در برابر این بردار حمله آسیب پذیر یافت شد.</xhtml:p>\n               <xhtml:p>صفحه یافت نشد فایل 404 Google خوانده شد</xhtml:p>\n               <xhtml:p>* سرصفحه‌های پاسخ: \"نوع محتوا: text/html؛ charset=[رمزگذاری]\".</xhtml:p>\n               <xhtml:p>* بدنه پاسخ: <META http-equiv=\"Content-Type\" (...) charset=[encoding]/></xhtml:p>\n               <xhtml:p>اگر پاسخ یک نوع رمزگذاری غیرمنتظره مانند UTF-7 ارسال کند، هیچ اجرایی بر روی محموله انجام نمی‌شود و کد XSS دلخواه همراه با پاسخ استاندارد HTTP منتقل می‌شود. [REF-476]</xhtml:p>",
+                "XSS را می توان به روش های مختلفی استفاده کرد، زیرا اسکریپت نویسی شده و به صورت توزیع شده و ناهمزمان اجرا می شود، می تواند بردار و بازهای خود را ایجاد کند. به عنوان مثال، حریف می‌تواند از XSS برای نصب یک حمله DDoS با داشتن مجموعه‌ای از رایانه‌های مختلف که ناآگاهانه درخواست‌هایی را علیه یک میزبان واحد اجرا می‌کنند، استفاده کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه را برای پیوندهای عمومی بررسی کنید: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، دشمن همه پیوندهای عمومی را در یک وب سایت دنبال می کند. آنها تمام نقاط ورودی (ورودی) را که بخشی از هدر HTTP تولید شده می‌شوند (نه تنها GET/POST/COOKIE، بلکه Content-Type، و غیره) را ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ثبت تمام لینک‌ها برای یافتن و تجزیه و تحلیل صفحات وب استفاده کنید. هر پیوندی را که شامل پارامترهای مورد استفاده در سرصفحه های HTTP می شود، یادداشت ویژه داشته باشید.</td></tr><tr><td>به دنبال متا تگ های HTML باشید که می توانند تزریق شوند</td></tr><tr><td>از یک ابزار پراکسی برای ضبط همه پیوندهای بازدید شده در طول پیمایش دستی برنامه وب استفاده کنید. افزونه‌های بسیاری از مرورگرها برای تسهیل تجزیه و تحلیل یا خودکارسازی کشف در دسترس هستند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p>[کاوشگر نقاط ورودی بالقوه برای آسیب‌پذیری XSS را شناسایی کرد]<xhtml:p>دشمن در فازهای مختلف، از نقاط ورودی به عنوان یک لیست هدف استفاده می‌کند. بارهای اسکریپت برای تعیین اینکه آیا یک نقطه ورودی واقعاً یک آسیب پذیری را نشان می دهد یا خیر و مشخص می کند که تا چه حد می توان از آسیب پذیری سوء استفاده کرد. آنها تمام پاسخ‌های سرور را که شامل نسخه‌های اصلاح‌نشده اسکریپتشان است، ضبط می‌کنند.</xhtml:p>\n                  <xhtml:p> دشمن همچنین سعی می‌کند پارامترهای اضافی را به درخواست HTTP تزریق کند تا ببیند آیا آنها در صفحه وب یا در پاسخ HTTP منعکس می‌شوند یا خیر.</xhtml:p>\n               </p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>به‌صورت دستی بارهای اسکریپت مختلف را با استفاده از فهرستی از کاوشگرهای رایج تزریق اسکریپت به هر نقطه ورودی شناسایی‌شده تزریق کنید و رفتار سیستم را مشاهده کنید تا تعیین کنید آیا اسکریپت اجرا شده است یا خیر.</td></tr><tr><td>از یک اسکریپت مختلف برای ورود به نقطه‌های ورودی استفاده کنید. فهرستی از کاوشگرهای رایج تزریق اسکریپت و مشاهده رفتار سیستم برای تعیین اینکه آیا اسکریپت اجرا شده است یا خیر.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت نتایج ورودی دستی کاوشگرهای XSS در URL های شناخته شده استفاده کنید.</td></tr></tbody></table><li> <p> <b>Craft مخرب XSSn دارای URL های مشخص شده است. XSS، آنها یک URL مخرب حاوی اکسپلویت XSS ایجاد خواهند کرد. حریف می‌تواند اهداف زیادی داشته باشد، از سرقت شناسه‌های جلسه، کوکی‌ها، اعتبارنامه‌ها و محتوای صفحه از قربانی.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک پارامتر URL که در هدر HTTP استفاده می‌شود را تغییر دهید تا شامل یک برچسب اسکریپت مخرب باشد. از آنجایی که در هدر است، ممکن است اعتبارسنجی را دور بزند.</td></tr><tr><td>اطلاعات جمع‌آوری‌شده از اسکریپت مخرب را به یک نقطه پایانی راه دور ارسال کنید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>برای حمله به قربانی باید URL را با موفقیت دریافت کنید. به URL مخرب دسترسی داشته باشید.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک ایمیل فیشینگ حاوی URL مخرب برای قربانی ارسال کنید. این را می توان در یک ابرپیوند پنهان کرد تا نشانی اینترنتی کامل نشان داده نشود، که ممکن است باعث شک شود.</td></tr><tr><td>نشانی اینترنتی مخرب را در یک انجمن عمومی قرار دهید، جایی که بسیاری از قربانیان ممکن است به طور تصادفی روی پیوند کلیک کنند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار هدف باید یک کلاینت باشد که امکان ارتباط اسکریپت از هاست های راه دور را فراهم کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید توانایی استقرار یک سرویس خصمانه سفارشی برای دسترسی مشتریان هدف و توانایی برقراری ارتباط همزمان یا ناهمزمان با ماشین کلاینت را داشته باشد. حریف همچنین باید یک سایت از راه دور را کنترل کند تا مشتری و داده ها را به آن هدایت کند."
+            ]
         }
     ],
     "type": "bundle"

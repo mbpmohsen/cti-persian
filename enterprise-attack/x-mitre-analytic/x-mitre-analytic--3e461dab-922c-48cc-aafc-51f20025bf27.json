@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0081#AN0228",
-                    "external_id": "AN0228"
+                    "external_id": "AN0228",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedUtilityList",
-                    "description": "macOS binary whitelist including `/usr/bin/osascript`, `/bin/bash`, `/usr/bin/curl`"
+                    "description": "macOS binary whitelist including `/usr/bin/osascript`, `/bin/bash`, `/usr/bin/curl`",
+                    "description_fa": "لیست سفید دودویی macOS شامل «/usr/bin/osascript»، «/bin/bash»، «/usr/bin/curl»"
                 },
                 {
                     "field": "SignedToUnsignedTransition",
-                    "description": "Used to detect proxy execution from signed binary to unsigned payload"
+                    "description": "Used to detect proxy execution from signed binary to unsigned payload",
+                    "description_fa": "برای تشخیص اجرای پروکسی از دودویی امضا شده به بار بدون علامت استفاده می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0228",
+            "description_fa": "استفاده از باینری‌های سیستمی مانند «osascript»، «bash» یا «curl» برای دانلود یا اجرای کد یا فایل‌های بدون امضا در ارتباط با پروکسی برنامه."
         }
     ]
 }

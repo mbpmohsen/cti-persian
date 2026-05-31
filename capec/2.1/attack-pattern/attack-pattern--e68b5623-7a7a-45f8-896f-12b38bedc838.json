@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-490",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/490.html"
+                    "url": "https://capec.mitre.org/data/definitions/490.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Network Denial of Service:Reflection Amplification",
                     "external_id": "T1498.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1498/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1498/002",
+                    "description_fa": "انکار سرویس شبکه: تقویت بازتاب",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--e68b5623-7a7a-45f8-896f-12b38bedc838",
@@ -42,7 +46,12 @@
                 "This type of an attack requires the existence of a 3rd party service that generates a response that is significantly larger than the request that triggers it."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف ممکن است تقویتی را در جایی اجرا کند که اندازه یک پاسخ به مراتب بیشتر از درخواستی باشد که آن را ایجاد می کند. هدف از این حمله استفاده از منابع نسبتا کمی برای ایجاد حجم زیادی از ترافیک علیه سرور هدف است. برای اجرای این حمله، یک دشمن درخواستی را به یک سرویس شخص ثالث ارسال می کند و آدرس منبع را به عنوان آدرس سرور هدف جعل می کند. پاسخ بزرگتری که توسط سرویس شخص ثالث ایجاد می شود، سپس به سرور مورد نظر ارسال می شود. با ارسال تعداد زیادی درخواست اولیه، دشمن می تواند حجم عظیمی از ترافیک را به سمت هدف ایجاد کند. هر چه اختلاف اندازه بین درخواست اولیه و محموله نهایی تحویل داده شده به هدف بیشتر باشد، اثربخشی این حمله را افزایش می دهد.",
+            "name_fa": "تقویت",
+            "x_capec_prerequisites_fa": [
+                "این نوع حمله مستلزم وجود یک سرویس شخص ثالث است که پاسخی را تولید می کند که به طور قابل توجهی بزرگتر از درخواستی است که آن را راه اندازی می کند."
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0519#AN1436",
-                    "external_id": "AN1436"
+                    "external_id": "AN1436",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,22 +61,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TemplatePath",
-                    "description": "Path to Normal.dotm, Personal.xlsb, or Excel/Word startup templates may vary by Office version and user"
+                    "description": "Path to Normal.dotm, Personal.xlsb, or Excel/Word startup templates may vary by Office version and user",
+                    "description_fa": "مسیر رسیدن به قالب‌های راه‌اندازی Normal.dotm، Personal.xlsb یا Excel/Word ممکن است بسته به نسخه آفیس و کاربر متفاوت باشد."
                 },
                 {
                     "field": "RegistryPath",
-                    "description": "GlobalDotName or equivalent registry keys may differ across Office versions or deployments"
+                    "description": "GlobalDotName or equivalent registry keys may differ across Office versions or deployments",
+                    "description_fa": "GlobalDotName یا کلیدهای رجیستری معادل ممکن است در نسخه‌های Office یا استقرار متفاوت باشد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Office process creation and macro execution timing after system or user login"
+                    "description": "Office process creation and macro execution timing after system or user login",
+                    "description_fa": "ایجاد فرآیند آفیس و زمان بندی اجرای ماکرو پس از ورود به سیستم یا کاربر"
                 },
                 {
                     "field": "UserContext",
-                    "description": "May be scoped to high-value users or those with access to sensitive templates"
+                    "description": "May be scoped to high-value users or those with access to sensitive templates",
+                    "description_fa": "ممکن است برای کاربران با ارزش بالا یا کسانی که به الگوهای حساس دسترسی دارند باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1436",
+            "description_fa": "دشمنان ماکروهای VBA را به قالب‌های آفیس مانند Normal.dotm یا Personal.xlsb تزریق می‌کنند یا مسیر بارگذاری قالب آفیس را از طریق کلید رجیستری (GlobalDotName) هدایت می‌کنند تا ماندگاری داشته باشند. ماکروهای الگو اجرای کدهای مخرب را در هنگام راه اندازی برنامه راه اندازی می کنند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0557#AN1536",
-                    "external_id": "AN1536"
+                    "external_id": "AN1536",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ImagePathWhitelist",
-                    "description": "Paths or filenames of known-good DLLs to exclude from alerting"
+                    "description": "Paths or filenames of known-good DLLs to exclude from alerting",
+                    "description_fa": "مسیرها یا نام فایل های DLL های خوب شناخته شده برای حذف از هشدار"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Context of the user modifying the registry key (e.g., admin vs standard user)"
+                    "description": "Context of the user modifying the registry key (e.g., admin vs standard user)",
+                    "description_fa": "متن کاربر در حال تغییر کلید رجیستری (به عنوان مثال، مدیر در مقابل کاربر استاندارد)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal threshold for correlating registry modification and DLL load"
+                    "description": "Temporal threshold for correlating registry modification and DLL load",
+                    "description_fa": "آستانه زمانی برای همبستگی اصلاح رجیستری و بار DLL"
                 },
                 {
                     "field": "DLLSignatureStatus",
-                    "description": "Filter or flag unsigned or suspiciously signed DLLs"
+                    "description": "Filter or flag unsigned or suspiciously signed DLLs",
+                    "description_fa": "DLL های بدون امضا یا مشکوک امضا شده را فیلتر یا پرچم گذاری کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1536",
+            "description_fa": "تغییر کلید رجیستری به مقدار AppInit_DLL و به دنبال آن بارگیری غیرعادی DLL توسط فرآیندهای واردکننده user32.dll، به خصوص DLL های بدون امضا یا غیر معمول، که نشان دهنده تداوم یا افزایش امتیاز غیرمجاز AppInit است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0386#AN1090",
-                    "external_id": "AN1090"
+                    "external_id": "AN1090",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "APIRequestRate",
-                    "description": "Detect rapid enumeration attempts or recursive group expansion."
+                    "description": "Detect rapid enumeration attempts or recursive group expansion.",
+                    "description_fa": "شناسایی تلاش های سریع شمارش یا گسترش گروه بازگشتی."
                 },
                 {
                     "field": "AppIntegrationID",
-                    "description": "Tag expected SCIM clients and suppress false positives from enterprise sync tools."
+                    "description": "Tag expected SCIM clients and suppress false positives from enterprise sync tools.",
+                    "description_fa": "مشتریان SCIM مورد انتظار را برچسب گذاری کنید و موارد مثبت کاذب را از ابزارهای همگام سازی سازمانی حذف کنید."
                 },
                 {
                     "field": "GeoContext",
-                    "description": "Trigger alerts if enumeration occurs from anomalous IPs or regions."
+                    "description": "Trigger alerts if enumeration occurs from anomalous IPs or regions.",
+                    "description_fa": "در صورتی که شمارش از آی پی ها یا مناطق غیرعادی رخ دهد، هشدارها را راه اندازی کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1090",
+            "description_fa": "دسترسی به دایرکتوری‌های سازمانی از طریق Google Workspace Directory API، Slack SCIM یا Okta SCIM توسط برنامه‌ها یا هویت‌های خارج از نقش‌های عادی."
         }
     ]
 }

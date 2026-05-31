@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0020#AN0060",
-                    "external_id": "AN0060"
+                    "external_id": "AN0060",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FileTargetList",
-                    "description": "Customizable list of shell config files considered sensitive for detection."
+                    "description": "Customizable list of shell config files considered sensitive for detection.",
+                    "description_fa": "لیست قابل تنظیم فایل های پیکربندی پوسته که برای شناسایی حساس هستند."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Used to distinguish benign from potentially obfuscated commands written to config files."
+                    "description": "Used to distinguish benign from potentially obfuscated commands written to config files.",
+                    "description_fa": "برای تشخیص دستورات خوش خیم از بالقوه مبهم نوشته شده در فایل های پیکربندی استفاده می شود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scoping based on user login class, e.g., administrative vs standard users."
+                    "description": "Scoping based on user login class, e.g., administrative vs standard users.",
+                    "description_fa": "محدوده بندی بر اساس کلاس ورود کاربر، به عنوان مثال، مدیران در مقابل کاربران استاندارد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0060",
+            "description_fa": "تغییرات فایل پیکربندی پوسته zsh (به عنوان مثال، ~/.zshrc، ~/.zlogin، /etc/zprofile) را با اجرای باینری های غیرمجاز یا فعالیت غیرمنتظره شبکه که در راه اندازی Terminal.app فعال می شود، مرتبط می کند."
         }
     ]
 }

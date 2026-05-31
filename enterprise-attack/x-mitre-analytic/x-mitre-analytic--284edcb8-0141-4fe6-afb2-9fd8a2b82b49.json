@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0543#AN1497",
-                    "external_id": "AN1497"
+                    "external_id": "AN1497",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExpectedCryptoLibs",
-                    "description": "Baseline libraries that normally handle asymmetric crypto."
+                    "description": "Baseline libraries that normally handle asymmetric crypto.",
+                    "description_fa": "کتابخانه های پایه که معمولاً رمزنگاری نامتقارن را مدیریت می کنند."
                 },
                 {
                     "field": "TrafficAsymmetryRatio",
-                    "description": "Threshold for client-heavy data sending vs server."
+                    "description": "Threshold for client-heavy data sending vs server.",
+                    "description_fa": "آستانه برای ارسال داده های سنگین مشتری در مقابل سرور."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1497",
+            "description_fa": "فرآیندهایی (به عنوان مثال، bash، python، باینری های سفارشی) libcrypto/libssl را به صورت پویا برای تبادل کلید RSA پیوند می دهند، سپس اتصالات خارجی با اعتبارسنجی گواهی غیرعادی یا ناهنجاری های دست دادن ایجاد می کنند. Defender ردیابی syscall و مبادلات کلید نامتقارن خروجی را از فرآیندهای غیر بومی SSL مشاهده می کند."
         }
     ]
 }

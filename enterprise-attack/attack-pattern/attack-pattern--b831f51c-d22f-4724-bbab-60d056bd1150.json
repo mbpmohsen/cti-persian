@@ -14,28 +14,28 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1690",
                     "external_id": "T1690",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Google Cloud Threat Intelligence ESXi VIBs 2022",
                     "description": "Alexander Marvi, Jeremy Koppen, Tufail Ahmed, and Jonathan Lepore. (2022, September 29). Bad VIB(E)s Part One: Investigating Novel Malware Persistence Within ESXi Hypervisors. Retrieved March 26, 2025.",
                     "url": "https://cloud.google.com/blog/topics/threat-intelligence/esxi-hypervisors-malware-persistence",
                     "source_name_fa": "Google Cloud Threat Intelligence ESXi VIBs 2022",
-                    "description_fa": "الکساندر Marvi، جرمی Koppen، Tufail احمد و جاناتان لیر (۲۰۲۲، ۲۹ سپتامبر) Bad VIB (E) بخش اول: بررسی بدافزار جدید در ESXi Hypervisors Retrieved 26 مارس 2025"
+                    "description_fa": "الکساندر مروی، جرمی کوپن، طفیل احمد و جاناتان لپور. (29 سپتامبر 2022). Bad VIB(E) قسمت اول: بررسی تداوم بدافزار جدید در Hypervisors ESXi. بازبینی شده در 26 مارس 2025."
                 },
                 {
                     "source_name": "Microsoft about_History prevent command history",
                     "description": "Microsoft. (n.d.). Retrieved April 15, 2026.",
                     "url": "https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_history?view=powershell-7.6&viewFallbackFrom=powershell-7",
-                    "source_name_fa": "مایکروسافت درباره_تاریخ جلوگیری از تاریخ فرمان",
-                    "description_fa": "مایکروسافت (n.d.) Retrieved 15, 2026."
+                    "source_name_fa": "Microsoft about_History از تاریخچه فرمان جلوگیری می کند",
+                    "description_fa": "مایکروسافت. (n.d.). بازبینی شده در 15 آوریل 2026."
                 },
                 {
                     "source_name": "Sophos PowerShell Command History Forensics",
                     "description": "Vikas, S. (2020, August 26). PowerShell Command History Forensics. Retrieved November 17, 2024.",
                     "url": "https://community.sophos.com/sophos-labs/b/blog/posts/powershell-command-history-forensics",
-                    "source_name_fa": "قدرت Sophos تاریخ فرماندهی شل",
-                    "description_fa": "Vikas، S. (2020، 26 آگوست) قدرت قدرت تاریخ فرماندهی شل Retrieved ۱۷ نوامبر ۲۰۲۴"
+                    "source_name_fa": "Sophos PowerShell Command History Forensics",
+                    "description_fa": "Vikas, S. (2020، 26 اوت). Forensics تاریخچه فرماندهی PowerShell. بازبینی شده در 17 نوامبر 2024."
                 }
             ],
             "object_marking_refs": [
@@ -70,8 +70,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.0",
-            "name_fa": "جلوگیری از تاریخ فرماندهی",
-            "description_fa": "مخالفان ممکن است باعث آسیب رساندن به تاریخ فرمان برای مخفی کردن دستوراتی که در یک سیستم به خطر افتاده اجرا می شوند، شوند. مترجمان مختلف دستور پیگیری دستورات کاربران را در ترمینال خود نگه می دارند تا کاربران بتوانند آنچه را که انجام داده اند را دوباره مورد بررسی قرار دهند.\n\nدر لینوکس و macOS، تاریخ فرمان در یک فایل مشخص شده توسط متغیر محیط زیست \"HISTFILE\" ردیابی می شود. هنگامی که یک کاربر از یک سیستم خارج می شود، این اطلاعات به یک فایل در دایرکتوری خانه کاربر به نام `~/.bash_history ارسال می شود. متغیر محیط زیست HISTCONTROL پیگیری آنچه باید توسط دستور تاریخ ذخیره شود و در نهایت به فایل `~/.bash_history هنگامی که یک کاربر وارد می شود. HISTCONTROL به طور پیش فرض در macOS وجود ندارد، اما می تواند توسط کاربر تنظیم شود و مورد احترام قرار گیرد. متغیر محیط زیست HISTFILE نیز در برخی از سیستم های ESXi استفاده می شود.[۱۰]\n\nمخالفان ممکن است متغیر محیط تاریخ (unset HISTFILE) را روشن کنند یا اندازه تاریخ فرمان را به صفر تنظیم کنند (Export HISTFILESIZE =) برای جلوگیری از ورود دستورات. علاوه بر این، “HISTCONTROL” را می توان پیکربندی کرد تا دستوراتی را که با فضا شروع می شوند را نادیده بگیرد و به سادگی آن را به “ignorespace” تبدیل کند. \"HISTCONTROL\" همچنین می تواند برای نادیده گرفتن دستورات تکراری با تنظیم آن به \"جبران\" تنظیم شود. در برخی از سیستم های لینوکس، این به طور پیش فرض تنظیم شده است تا \"هر دو\" که هر دو نمونه قبلی را پوشش می دهد. این بدان معنی است که \" ls\" ذخیره نخواهد شد، اما \"ls\" توسط تاریخ ذخیره خواهد شد. مخالفان می توانند از این کار سوء استفاده کنند بدون اینکه رد پای خود را به سادگی به تمام دستورات ترمینال خود منتقل کنند.\n\nدر سیستم های ویندوز، ماژول \"PSReadLine\" دستورات مورد استفاده در تمام جلسات PowerShell را ردیابی می کند و آنها را به یک فایل می نویسد (env:APPDATA\\Windows\\PowerShell\\PSline\\ConsoleHost_history.txt). مخالفان ممکن است تغییر کنند که در آن این log ها با استفاده از \"Set-PSReadLineاختیاری -تاریخ نجات Path\" ذخیره می شوند. این باعث می شود که \"ConsoleHost_history.txt\" متوقف شود تا از دریافت logs جلوگیری کند. علاوه بر این، ممکن است ورود به این فایل با استفاده از دستور PowerShell (Set-PSReadlineاختیاری) - تاریخ پس انداز هیچ چیز را ذخیره نمی کند.\n\nهمچنین ممکن است از دستگاه های شبکه ای استفاده کنند ([CTI_PRESERVE_3]) در دستگاه های شبکه برای غیرفعال کردن خط لوله های تاریخی (به عنوان مثال بدون ورود). (Citation: Google Cloud Threat Intelligence ESXi VIBs 2022) (Citation: Microsoft about_History prevent command history) (Citation: Sophos PowerShell Command History Forensics) https://attack.mitre.org/techniques/T1059/008"
+            "name_fa": "جلوگیری از ثبت تاریخچه فرمان",
+            "description_fa": "دشمنان ممکن است ثبت تاریخچه دستورات را مختل کنند تا دستوراتی را که روی یک سیستم در معرض خطر اجرا می کنند مخفی کنند. مفسرهای مختلف دستوراتی را که کاربران در ترمینال خود تایپ می‌کنند پیگیری می‌کنند تا کاربران بتوانند کارهایی که انجام داده‌اند را دوباره دنبال کنند.\n\nدر لینوکس و macOS، تاریخچه فرمان در فایلی ردیابی می‌شود که متغیر محیطی «HISTFILE» به آن اشاره می‌کند. هنگامی که کاربر از سیستمی خارج می شود، این اطلاعات به فایلی در فهرست اصلی کاربر به نام \"~/.bash_history\" منتقل می شود. متغیر محیطی «HISTCONTROL» مواردی را که باید توسط فرمان history ذخیره شود و در نهایت در فایل «~/.bash_history» ذخیره شود، زمانی که کاربر از سیستم خارج می‌شود، پیگیری می‌کند. «HISTCONTROL» به طور پیش‌فرض در macOS وجود ندارد، اما می‌تواند توسط کاربر تنظیم شود و مورد احترام قرار گیرد. متغیر محیطی «HISTFILE» نیز در برخی از سیستم‌های ESXi استفاده می‌شود.(Citation: Google Cloud Threat Intelligence ESXi VIBs 2022)\n\nدشمنان ممکن است متغیر محیط سابقه را پاک کنند («تنظیم HISTFILE») یا اندازه تاریخچه فرمان را روی صفر تنظیم کنند («صادرات HISTFILESIZE=0») برای جلوگیری از ثبت دستورات. به‌علاوه، «HISTCONTROL» را می‌توان طوری پیکربندی کرد که دستوراتی را که با یک فاصله شروع می‌شوند، صرفاً با تنظیم آن بر روی «غیرفضا» نادیده بگیرد. «HISTCONTROL» همچنین می‌تواند برای نادیده گرفتن دستورات تکراری با تنظیم آن بر روی «ignoredups» تنظیم شود. در برخی از سیستم‌های لینوکس، این به طور پیش‌فرض روی \"نادیده گرفتن هر دو\" تنظیم شده است که هر دو نمونه قبلی را پوشش می‌دهد. این بدان معنی است که \"ls\" ذخیره نمی شود، اما \"ls\" توسط تاریخ ذخیره می شود. دشمنان می‌توانند از این کار برای عمل کردن بدون گذاشتن ردی به سادگی با قرار دادن یک فاصله برای همه دستورات ترمینال خود سوء استفاده کنند.\n\nدر سیستم‌های ویندوز، ماژول «PSReadLine» دستورات مورد استفاده در تمام جلسات PowerShell را ردیابی می‌کند و آنها را در یک فایل می‌نویسد (به طور پیش‌فرض، «$env:APPDATA\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt». دشمنان ممکن است محل ذخیره این گزارش‌ها را با استفاده از «Set-PSReadLineOption -HistorySavePath {File Path}» تغییر دهند. این باعث می‌شود «ConsoleHost_history.txt» دریافت گزارش‌ها را متوقف کند. علاوه بر این، می‌توان ورود به این فایل را با استفاده از دستور PowerShell «Set-PSReadlineOption -HistorySaveStyle SaveNothing» خاموش کرد.(Citation: Microsoft about_History prevent command history)(Citation: Sophos PowerShell Command History Forensics)\n\nهمچنین ممکن است دشمنان از [CLI دستگاه شبکه](https://attack.mitre.org/techniques/T1059/008) در دستگاه‌های شبکه برای غیرفعال کردن گزارش‌گیری دستورات تاریخی (مثلاً «بدون گزارش») استفاده کنند."
         }
     ]
 }

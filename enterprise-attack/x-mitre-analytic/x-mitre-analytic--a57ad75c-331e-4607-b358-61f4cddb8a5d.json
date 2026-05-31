@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0080#AN0222",
-                    "external_id": "AN0222"
+                    "external_id": "AN0222",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0222",
-            "description": "Adversary exploits containerized app via ingress or service. Chain: (1) suspicious request in ingress/app logs \u2192 (2) container process spawns a shell/exec/sidecar (kubectl exec/docker exec) \u2192 (3) egress to Internet or metadata service (169.254.169.254).",
+            "description": "Adversary exploits containerized app via ingress or service. Chain: (1) suspicious request in ingress/app logs → (2) container process spawns a shell/exec/sidecar (kubectl exec/docker exec) → (3) egress to Internet or metadata service (169.254.169.254).",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IngressNamespaces",
-                    "description": "Namespaces that are Internet-facing."
+                    "description": "Namespaces that are Internet-facing.",
+                    "description_fa": "فضاهای نامی که با اینترنت روبرو هستند."
                 },
                 {
                     "field": "MetadataEndpoints",
-                    "description": "Cloud metadata IPs/hostnames for exfil of credentials."
+                    "description": "Cloud metadata IPs/hostnames for exfil of credentials.",
+                    "description_fa": "IPهای ابرداده/نام میزبان برای exfil از اعتبار."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Join period between ingress request and pod exec/egress."
+                    "description": "Join period between ingress request and pod exec/egress.",
+                    "description_fa": "دوره پیوستن بین درخواست ورود و pod exec/egress."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0222",
+            "description_fa": "دشمن از برنامه کانتینری شده از طریق ورود یا سرویس سوء استفاده می کند. زنجیره: (1) درخواست مشکوک در گزارش‌های ورود/برنامه → (2) فرآیند کانتینر یک پوسته/exec/sidecar ایجاد می‌کند (kubectl exec/docker exec) → (3) خروج به اینترنت یا سرویس ابرداده (169.254.169.254)."
         }
     ]
 }

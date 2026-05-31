@@ -13,32 +13,43 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1628/001",
-                    "external_id": "T1628.001"
+                    "external_id": "T1628.001",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android 10 Limitations to Hiding App Icons",
                     "description": "Android. (n.d.). Android 10 Release Notes: Limitations to hiding app icons. Retrieved March 30, 2022.",
-                    "url": "https://source.android.com/setup/start/android-10-release#limitations_to_hiding_app_icons"
+                    "url": "https://source.android.com/setup/start/android-10-release#limitations_to_hiding_app_icons",
+                    "source_name_fa": "محدودیت های اندروید 10 برای پنهان کردن آیکون های برنامه",
+                    "description_fa": "اندروید. (n.d.). یادداشت‌های انتشار اندروید 10: محدودیت‌های پنهان کردن نمادهای برنامه. بازبینی شده در 30 مارس 2022."
                 },
                 {
                     "source_name": "LauncherApps getActivityList",
                     "description": "Android. (n.d.). LauncherApps: getActivityList. Retrieved March 30, 2022.",
-                    "url": "https://developer.android.com/reference/kotlin/android/content/pm/LauncherApps#getactivitylist"
+                    "url": "https://developer.android.com/reference/kotlin/android/content/pm/LauncherApps#getactivitylist",
+                    "source_name_fa": "LauncherApps getActivityList",
+                    "description_fa": "اندروید. (n.d.). LauncherApps: getActivityList. بازبینی شده در 30 مارس 2022."
                 },
                 {
                     "source_name": "sunny-stolen-credentials",
-                    "description": "Luk\u00e1\u0161 \u0160tefanko. (2017, February 22). Sunny with a chance of stolen credentials: Malicious weather app found on Google Play. Retrieved July 11, 2019.",
-                    "url": "https://www.welivesecurity.com/2017/02/22/sunny-chance-stolen-credentials-malicious-weather-app-found-google-play/"
+                    "description": "Lukáš Štefanko. (2017, February 22). Sunny with a chance of stolen credentials: Malicious weather app found on Google Play. Retrieved July 11, 2019.",
+                    "url": "https://www.welivesecurity.com/2017/02/22/sunny-chance-stolen-credentials-malicious-weather-app-found-google-play/",
+                    "source_name_fa": "آفتابی - سرقت شده - اعتبار",
+                    "description_fa": "لوکاش استفانکو (22 فوریه 2017). Sunny با احتمال سرقت اطلاعات کاربری: برنامه آب و هوای مخرب در Google Play پیدا شد. بازبینی شده در 11 جولای 2019."
                 },
                 {
                     "source_name": "android-trojan-steals-paypal-2fa",
-                    "description": "Luk\u00e1\u0161 \u0160tefanko. (2018, December 11). Android Trojan steals money from PayPal accounts even with 2FA on. Retrieved July 11, 2019.",
-                    "url": "https://www.welivesecurity.com/2018/12/11/android-trojan-steals-money-paypal-accounts-2fa/"
+                    "description": "Lukáš Štefanko. (2018, December 11). Android Trojan steals money from PayPal accounts even with 2FA on. Retrieved July 11, 2019.",
+                    "url": "https://www.welivesecurity.com/2018/12/11/android-trojan-steals-money-paypal-accounts-2fa/",
+                    "source_name_fa": "android-trojan-steals-paypal-2fa",
+                    "description_fa": "لوکاش استفانکو (2018، 11 دسامبر). تروجان اندروید حتی با روشن بودن 2FA از حساب های پی پال پول می دزدد. بازبینی شده در 11 جولای 2019."
                 },
                 {
                     "source_name": "bankbot-spybanker",
                     "description": "NJCCIC. (2017, March 2). BankBot/Spy Banker. Retrieved September 12, 2024.",
-                    "url": "https://www.cyber.nj.gov/threat-landscape/malware/trojans/bankbot-spy-banker"
+                    "url": "https://www.cyber.nj.gov/threat-landscape/malware/trojans/bankbot-spy-banker",
+                    "source_name_fa": "bankbot-spybanker",
+                    "description_fa": "NJCCIC. (2 مارس 2017). BankBot/Spy Banker. بازبینی شده در 12 سپتامبر 2024."
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +57,7 @@
             ],
             "modified": "2025-10-24T17:49:35.410Z",
             "name": "Suppress Application Icon",
-            "description": "A malicious application could suppress its icon from being displayed to the user in the application launcher. This hides the fact that it is installed, and can make it more difficult for the user to uninstall the application. Hiding the application's icon programmatically does not require any special permissions. \n\nThis behavior has been seen in the BankBot/Spy Banker family of malware.(Citation: android-trojan-steals-paypal-2fa)(Citation: sunny-stolen-credentials)(Citation: bankbot-spybanker) \n\nBeginning in Android 10, changes were introduced to inhibit malicious applications\u2019 ability to hide their icon. If an app is a system app, requests no permissions, or does not have a launcher activity, the application\u2019s icon will be fully hidden. Further, if the device is fully managed or the application is in a work profile, the icon will be fully hidden. Otherwise, a synthesized activity is shown, which is a launcher icon that represents the app\u2019s details page in the system settings. If the user clicks the synthesized activity in the launcher, they are taken to the application\u2019s details page in the system settings.(Citation: Android 10 Limitations to Hiding App Icons)(Citation: LauncherApps getActivityList)",
+            "description": "A malicious application could suppress its icon from being displayed to the user in the application launcher. This hides the fact that it is installed, and can make it more difficult for the user to uninstall the application. Hiding the application's icon programmatically does not require any special permissions. \n\nThis behavior has been seen in the BankBot/Spy Banker family of malware.(Citation: android-trojan-steals-paypal-2fa)(Citation: sunny-stolen-credentials)(Citation: bankbot-spybanker) \n\nBeginning in Android 10, changes were introduced to inhibit malicious applications’ ability to hide their icon. If an app is a system app, requests no permissions, or does not have a launcher activity, the application’s icon will be fully hidden. Further, if the device is fully managed or the application is in a work profile, the icon will be fully hidden. Otherwise, a synthesized activity is shown, which is a launcher icon that represents the app’s details page in the system settings. If the user clicks the synthesized activity in the launcher, they are taken to the application’s details page in the system settings.(Citation: Android 10 Limitations to Hiding App Icons)(Citation: LauncherApps getActivityList)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -69,7 +80,9 @@
             "x_mitre_version": "1.1",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "نماد برنامه را سرکوب کنید",
+            "description_fa": "یک برنامه مخرب می تواند نماد خود را از نمایش دادن به کاربر در راه اندازی برنامه سرکوب کند. این واقعیت نصب بودن آن را پنهان می کند و می تواند حذف نصب برنامه را برای کاربر دشوارتر کند. مخفی کردن آیکون برنامه به صورت برنامه‌ای نیازی به مجوز خاصی ندارد. \n\nاین رفتار در خانواده بدافزارهای BankBot/Spy Banker دیده شده است.(Citation: android-trojan-steals-paypal-2fa)(Citation: sunny-stolen-credentials)(Citation: bankbot-spybanker) \n\nبا شروع اندروید 10، تغییراتی برای جلوگیری از توانایی برنامه های مخرب برای مخفی کردن نماد خود ارائه شد. اگر یک برنامه یک برنامه سیستمی است، هیچ مجوزی درخواست نمی‌کند یا فعالیت راه‌اندازی ندارد، نماد برنامه کاملاً پنهان می‌شود. علاوه بر این، اگر دستگاه به طور کامل مدیریت شود یا برنامه در یک نمایه کاری باشد، نماد به طور کامل پنهان می شود. در غیر این صورت، یک فعالیت ترکیبی نشان داده می‌شود، که نماد راه‌اندازی است که صفحه جزئیات برنامه را در تنظیمات سیستم نشان می‌دهد. اگر کاربر روی فعالیت سنتز شده در راه‌انداز کلیک کند، به صفحه جزئیات برنامه در تنظیمات سیستم منتقل می‌شود.(Citation: Android 10 Limitations to Hiding App Icons)(Citation: LauncherApps getActivityList)"
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0261#AN0726",
-                    "external_id": "AN0726"
+                    "external_id": "AN0726",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StagingTargets",
-                    "description": "Shared dirs commonly abused for local collection"
+                    "description": "Shared dirs commonly abused for local collection",
+                    "description_fa": "تیرهای مشترک که معمولاً برای مجموعه محلی مورد سوء استفاده قرار می گیرند"
                 },
                 {
                     "field": "CompressionBinaries",
-                    "description": "zip, tar, ditto"
+                    "description": "zip, tar, ditto",
+                    "description_fa": "زیپ، تار، همینطور"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Seconds/minutes between source file read and output staging write"
+                    "description": "Seconds/minutes between source file read and output staging write",
+                    "description_fa": "ثانیه/دقیقه بین خواندن فایل منبع و نوشتن مرحله‌بندی خروجی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0726",
+            "description_fa": "داده های مرحله بندی شده را در /Users/Shared، /private/tmp با ابزارهای فشرده سازی مانند ditto یا zip، که از طریق Terminal یا AppleScript آغاز شده اند، شناسایی می کند."
         }
     ]
 }

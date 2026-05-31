@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0309#AN0863",
-                    "external_id": "AN0863"
+                    "external_id": "AN0863",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0863",
-            "description": "A compromised package/update (deb/rpm/tarball/AppImage/vendor updater) is installed, writing/overwriting files in /usr/local/bin, /usr/bin, /opt, or ~/.local; first run executes unexpected shells/curl/wget and connects to unapproved hosts. Correlate package/updater execution \u2192 file writes/replace \u2192 first-run child processes \u2192 egress.",
+            "description": "A compromised package/update (deb/rpm/tarball/AppImage/vendor updater) is installed, writing/overwriting files in /usr/local/bin, /usr/bin, /opt, or ~/.local; first run executes unexpected shells/curl/wget and connects to unapproved hosts. Correlate package/updater execution → file writes/replace → first-run child processes → egress.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PathScope",
-                    "description": "Monitored install paths (/usr/local, /usr/bin, /opt/*, ~/.local/bin, /var/lib/systemd)."
+                    "description": "Monitored install paths (/usr/local, /usr/bin, /opt/*, ~/.local/bin, /var/lib/systemd).",
+                    "description_fa": "مسیرهای نصب تحت نظارت (/usr/local، /usr/bin، /opt/*، ~/.local/bin، /var/lib/systemd)."
                 },
                 {
                     "field": "ApprovedRepos",
-                    "description": "Allow-listed APT/YUM repos and GPG keys for vendor updates."
+                    "description": "Allow-listed APT/YUM repos and GPG keys for vendor updates.",
+                    "description_fa": "ذخیره‌سازی APT/YUM و کلیدهای GPG فهرست‌شده برای به‌روزرسانی‌های فروشنده."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Default 90 minutes."
+                    "description": "Default 90 minutes.",
+                    "description_fa": "90 دقیقه پیش فرض"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0863",
+            "description_fa": "یک بسته/به‌روزرسانی در معرض خطر (deb/rpm/tarball/AppImage/vendor updater) نصب می‌شود، فایل‌ها را در /usr/local/bin، /usr/bin، /opt یا ~/.local می‌نویسد/بازنویسی می‌کند. اولین اجرا shell/curl/wget غیرمنتظره را اجرا می کند و به هاست های تایید نشده متصل می شود. همبستگی اجرای بسته/به‌روزرسانی ← نوشتن/جایگزینی فایل ← فرآیندهای فرزند اول اجرا → خروج."
         }
     ]
 }

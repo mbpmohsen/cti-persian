@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0505#AN1396",
-                    "external_id": "AN1396"
+                    "external_id": "AN1396",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InterpreterParentFilter",
-                    "description": "Limits detection scope to shell or scripting interpreters like zsh, bash, osascript"
+                    "description": "Limits detection scope to shell or scripting interpreters like zsh, bash, osascript",
+                    "description_fa": "محدوده تشخیص را به مفسرهای پوسته یا اسکریپت مانند zsh، bash، osascript محدود می کند."
                 },
                 {
                     "field": "ScriptEntropyThreshold",
-                    "description": "Minimum entropy required to consider the command or script obfuscated"
+                    "description": "Minimum entropy required to consider the command or script obfuscated",
+                    "description_fa": "حداقل آنتروپی مورد نیاز برای در نظر گرفتن دستور یا اسکریپت مبهم"
                 },
                 {
                     "field": "ArgumentLengthDeviation",
-                    "description": "Deviation from baseline for long or highly nested arguments"
+                    "description": "Deviation from baseline for long or highly nested arguments",
+                    "description_fa": "انحراف از خط مبنا برای آرگومان های طولانی یا بسیار تو در تو"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1396",
+            "description_fa": "تشخیص دستورات مبهم از طریق مفسرهای پوسته، osascript یا AppleScript با استفاده از توکن‌های غیرمعمول، رمزگذاری، جایگزینی متغیر یا بازسازی رشته‌های زمان اجرا."
         }
     ]
 }

@@ -9,25 +9,32 @@
                 {
                     "external_id": "CAPEC-523",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/523.html"
+                    "url": "https://capec.mitre.org/data/definitions/523.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Supply Chain",
                     "external_id": "T1195.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین نرم افزار به خطر افتاده",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Daniel Simpson, Dani Halfin, Andrews Mariano Gorzelany, Beth Woodbury, Supply chain attacks, 2021--10---28, Microsoft",
                     "external_id": "REF-716",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/intelligence/supply-chain-malware"
+                    "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/intelligence/supply-chain-malware",
+                    "description_fa": "دنیل سیمپسون، دنی هالفین، اندروز ماریانو گورزلانی، بت وودبری، حملات زنجیره تامین، 2021--10---28، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--02570621-96aa-4525-b782-8e3939affac3",
@@ -54,11 +61,21 @@
                 "Physical access to the system after it has left the manufacturer but before it is deployed at the victim location."
             ],
             "x_capec_skills_required": {
-                "High": "Malicious software creation."
+                "High": "Malicious software creation.",
+                "High_fa": "ایجاد نرم افزارهای مخرب"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم نرم‌افزار مخرب را در کانال توزیع زنجیره تامین به سیستم وارد می‌کند تا در هنگام استقرار سیستم، اختلالات مخرب ایجاد کند یا اجازه ایجاد خطرات اضافی را بدهد.",
+            "name_fa": "نرم افزار مخرب کار گذاشته شد",
+            "x_capec_example_instances_fa": [
+                "یک مهاجم یک نرم افزار مخرب ایجاد کرده است که به عنوان یک درب پشتی در سیستمی طراحی شده است که قرار است در محل قربانی مستقر شود. در طول حمل و نقل سیستم، مهاجم برای مدت کوتاهی به سیستم در اسکله بارگیری یکپارچه کننده دسترسی فیزیکی دارد. مهاجم سیستم را باز می کند و نیرو می دهد و نرم افزار مخرب را نصب می کند و آن را طوری پیکربندی می کند که پس از بوت شدن سیستم اجرا شود. این سیستم دوباره بسته بندی می شود و به محل خود در بارگیری بازگردانده می شود و با نرم افزار مخرب موجود در محل قربانی ارسال و نصب می شود و به مهاجم اجازه می دهد فایروال ها را دور بزند و از راه دور به شبکه قربانی برای فعالیت های مخرب بعدی دسترسی پیدا کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین نقطه ورود: </b> دشمن ابتدا باید سیستمی را که می‌خواهد هدف قرار دهد شناسایی کند و نقطه ورودی را جستجو کند که بتواند از آن برای نصب نرم‌افزار مخرب استفاده کند. این می‌تواند سیستمی باشد که آن‌ها اطلاعات قبلی در مورد آن دارند و به آنها بینشی نسبت به نرم‌افزار و محیط می‌دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از JTAGulator برای شناسایی رابط‌های JTAG و UART در معرض نمایش در سیستم‌های تعبیه‌شده کوچک‌تر استفاده کنید.</td></tr><tr><tify می‌توان برای اتصال USB استفاده کرد. نرم افزار.</td></tr></tbody></table><li> <p> <b>کشف آسیب پذیری در زنجیره تامین: </b> دشمن زنجیره تامین را برای سیستم مورد نظر ترسیم می کند. آن‌ها به دنبال فرصت‌هایی برای دسترسی فیزیکی به سیستم پس از خروج از سازنده، اما قبل از استقرار آن برای قربانی می‌گردند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک سیستم را تهیه کنید و مراحلی را که در فرآیند حمل و نقل طی می‌کند مشاهده کنید. تولید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>آزمایش نرم‌افزار مخرب: </b>قبل از انجام حمله در طبیعت، یک دشمن حمله را بر روی سیستمی که خریداری کرده است آزمایش می‌کند تا مطمئن شود که خروجی مورد نظر خواهد بود. به دست آمده است.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>نرم‌افزار مخربی را طراحی کنید که به دشمن پس از استقرار آن به قربانی، یک درب پشتی را به سیستم می‌دهد.</td></tr><tr><td>نرم‌افزار مخرب از قبل طراحی‌شده را دریافت کنید که فقط باید در آن قرار داده شود. سیستم.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>نرم افزار ایمپلنت در زنجیره تامین: </b>با استفاده از آسیب پذیری در زنجیره تامین سیستم که در مرحله کاوش کشف شد، دشمن نرم افزار مخرب را وارد سیستم می کند. این منجر به دسترسی ناخواسته دشمن به سیستم ها پس از رسیدن به قربانی می شود و می تواند منجر به انواع حملات بعدی شود.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "دسترسی فیزیکی به سیستم پس از خروج از سازنده اما قبل از استقرار در محل قربانی."
+            ]
         }
     ],
     "type": "bundle"

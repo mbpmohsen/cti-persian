@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0514#AN1419",
-                    "external_id": "AN1419"
+                    "external_id": "AN1419",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DriverNamePattern",
-                    "description": "Targeted BYOVD drivers may vary based on campaign and tooling."
+                    "description": "Targeted BYOVD drivers may vary based on campaign and tooling.",
+                    "description_fa": "درایورهای هدفمند BYOVD ممکن است بر اساس کمپین و ابزار متفاوت باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Controls temporal linking of driver load \u2192 process spawn \u2192 privilege use."
+                    "description": "Controls temporal linking of driver load → process spawn → privilege use.",
+                    "description_fa": "پیوند زمانی بار راننده → تخم ریزی فرآیند → استفاده از امتیاز را کنترل می کند."
                 },
                 {
                     "field": "ParentProcessPath",
-                    "description": "Parent-child relationships vary by exploitation vector (e.g., LOLBin vs. dropper)."
+                    "description": "Parent-child relationships vary by exploitation vector (e.g., LOLBin vs. dropper).",
+                    "description_fa": "روابط والد و فرزند بر اساس بردار بهره برداری متفاوت است (به عنوان مثال، LOLBin در مقابل قطره چکان)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1419",
+            "description_fa": "تلاش‌های بهره‌برداری را شناسایی می‌کند که درایورهای آسیب‌پذیر هسته یا اجزای سیستم‌عامل را هدف قرار می‌دهند، که اغلب توسط فرآیند یا رفتار توکن غیرعادی دنبال می‌شود."
         }
     ]
 }

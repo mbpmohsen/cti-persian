@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0126#AN0350",
-                    "external_id": "AN0350"
+                    "external_id": "AN0350",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal window to correlate file writes and suspicious process launches (e.g., <60s)"
+                    "description": "Temporal window to correlate file writes and suspicious process launches (e.g., <60s)",
+                    "description_fa": "پنجره زمانی برای مرتبط کردن نوشتن فایل و راه اندازی فرآیند مشکوک (به عنوان مثال، <60s)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Expected user-to-process correlation (e.g., root writing to non-root authorized_keys)"
+                    "description": "Expected user-to-process correlation (e.g., root writing to non-root authorized_keys)",
+                    "description_fa": "همبستگی مورد انتظار کاربر به فرآیند (به عنوان مثال، نوشتن ریشه در کلیدهای مجاز مجاز غیر ریشه)"
                 },
                 {
                     "field": "TargetPath",
-                    "description": "Custom SSH path or user home variation (e.g., /etc/skel/.ssh/)"
+                    "description": "Custom SSH path or user home variation (e.g., /etc/skel/.ssh/)",
+                    "description_fa": "مسیر سفارشی SSH یا تغییر خانه کاربر (به عنوان مثال، /etc/skel/.ssh/)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0350",
+            "description_fa": "دشمن تلاش می‌کند با تغییر ~/.ssh/authorized_keys از طریق پوسته، ویرایشگر متن، اکو یا خروجی تغییر مسیر داده، پایداری به دست آورد."
         }
     ]
 }

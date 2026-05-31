@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0129#AN0365",
-                    "external_id": "AN0365"
+                    "external_id": "AN0365",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandPattern",
-                    "description": "Match patterns such as 'dscl /Active\\ Directory/All\\ Domains -list /Users'."
+                    "description": "Match patterns such as 'dscl /Active\\ Directory/All\\ Domains -list /Users'.",
+                    "description_fa": "الگوهایی مانند \"dscl /Active\\ Directory/All\\ Domains -list /Users\" را مطابقت دهید."
                 },
                 {
                     "field": "EndpointRole",
-                    "description": "Flag this activity only on non-directory hosts or non-admin accounts."
+                    "description": "Flag this activity only on non-directory hosts or non-admin accounts.",
+                    "description_fa": "این فعالیت را فقط در میزبان‌های غیر دایرکتوری یا حساب‌های غیر سرپرست پرچم‌گذاری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0365",
+            "description_fa": "گروه دامنه و شمارش کاربر از طریق dscl یا dscacheutil، یا پرس و جو به خدمات دایرکتوری از نقاط پایانی غیر سرپرست."
         }
     ]
 }

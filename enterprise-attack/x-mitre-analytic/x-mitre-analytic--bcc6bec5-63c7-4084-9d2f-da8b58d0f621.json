@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0596#AN1638",
-                    "external_id": "AN1638"
+                    "external_id": "AN1638",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window from login to first post-SSH process (e.g., 60s)"
+                    "description": "Defines correlation window from login to first post-SSH process (e.g., 60s)",
+                    "description_fa": "پنجره همبستگی را از ورود به اولین فرآیند پس از SSH تعریف می کند (به عنوان مثال، دهه 60)"
                 },
                 {
                     "field": "SuspiciousProcessList",
-                    "description": "List of binaries considered unusual in SSH context (e.g., nc, base64, bash -i)"
+                    "description": "List of binaries considered unusual in SSH context (e.g., nc, base64, bash -i)",
+                    "description_fa": "فهرست باینری‌هایی که در زمینه SSH غیرمعمول در نظر گرفته می‌شوند (مانند nc، base64، bash -i)"
                 },
                 {
                     "field": "UsernameFilter",
-                    "description": "Accounts of interest for SSH logins (e.g., root, admin)"
+                    "description": "Accounts of interest for SSH logins (e.g., root, admin)",
+                    "description_fa": "حساب های مورد علاقه برای ورود به سیستم SSH (به عنوان مثال، root، admin)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1638",
+            "description_fa": "ورود SSH از یک سیستم راه دور (از طریق sshd)، به دنبال اجرای متن کاربر باینری های مشکوک یا رفتار افزایش امتیاز."
         }
     ]
 }

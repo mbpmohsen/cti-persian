@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0292#AN0813",
-                    "external_id": "AN0813"
+                    "external_id": "AN0813",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilenamePattern",
-                    "description": "Tunable regex or path rule to match common masquerade attempts (e.g., 'Terminal .app')."
+                    "description": "Tunable regex or path rule to match common masquerade attempts (e.g., 'Terminal .app').",
+                    "description_fa": "قاعده regex یا مسیر قابل تنظیم برای مطابقت با تلاش‌های متداول بالماسکه (مانند «Terminal .app»)."
                 },
                 {
                     "field": "TargetPath",
-                    "description": "Analytic can be scoped to key directories (e.g., /Users/Library/LaunchAgents/)."
+                    "description": "Analytic can be scoped to key directories (e.g., /Users/Library/LaunchAgents/).",
+                    "description_fa": "Analytic را می توان به دایرکتوری های کلیدی (به عنوان مثال، /Users/Library/LaunchAgents/) محدود کرد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Focus detection on suspicious user sessions or service creation under non-admin users."
+                    "description": "Focus detection on suspicious user sessions or service creation under non-admin users.",
+                    "description_fa": "تمرکز تشخیص بر روی جلسات کاربر مشکوک یا ایجاد سرویس تحت کاربران غیر سرپرست."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0813",
+            "description_fa": "اجرای فایل های تغییر نام یافته یا حذف شده با فضای انتهایی برای فریب کاربران یا تحلیلگران، به ویژه در LaunchAgents یا LaunchDaemons."
         }
     ]
 }

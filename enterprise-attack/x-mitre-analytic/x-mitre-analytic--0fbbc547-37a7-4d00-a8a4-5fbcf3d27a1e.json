@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0290#AN0805",
-                    "external_id": "AN0805"
+                    "external_id": "AN0805",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CronFilePath",
-                    "description": "System-specific crontab paths may vary across distros or deployments."
+                    "description": "System-specific crontab paths may vary across distros or deployments.",
+                    "description_fa": "مسیرهای crontab مخصوص سیستم ممکن است در توزیع‌ها یا استقرارها متفاوت باشد."
                 },
                 {
                     "field": "RunUser",
-                    "description": "Define if only root or specific admin users are allowed to schedule jobs."
+                    "description": "Define if only root or specific admin users are allowed to schedule jobs.",
+                    "description_fa": "مشخص کنید که آیا فقط کاربران روت یا ادمین خاص مجاز به زمان‌بندی کارها هستند."
                 },
                 {
                     "field": "ExecutionFrequency",
-                    "description": "Threshold for suspicious repetition (e.g., every minute jobs)."
+                    "description": "Threshold for suspicious repetition (e.g., every minute jobs).",
+                    "description_fa": "آستانه تکرار مشکوک (مثلاً کارهای هر دقیقه)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0805",
+            "description_fa": "ایجاد یا اصلاح ورودی‌های crontab توسط کاربران غیر ریشه یا از فرآیندهای والد غیرعادی را تشخیص می‌دهد و به دنبال آن باینری‌های غیر معمول در فواصل زمان‌بندی شده اجرا می‌شوند."
         }
     ]
 }

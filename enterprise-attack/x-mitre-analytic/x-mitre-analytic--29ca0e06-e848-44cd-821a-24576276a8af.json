@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0898#AN2032",
-                    "external_id": "AN2032"
+                    "external_id": "AN2032",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,13 +53,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserAgentFingerprint",
-                    "description": "Flag browser-based sessions"
+                    "description": "Flag browser-based sessions",
+                    "description_fa": "پرچم گذاری جلسات مبتنی بر مرورگر"
                 },
                 {
                     "field": "HeaderSignatureMatch",
-                    "description": "Specific HTTP header anomalies or patterns (e.g., spoofed User-Agent)."
+                    "description": "Specific HTTP header anomalies or patterns (e.g., spoofed User-Agent).",
+                    "description_fa": "ناهنجاری ها یا الگوهای هدر HTTP خاص (به عنوان مثال، کاربر-عامل جعلی)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 2032",
+            "description_fa": "مشاهده درخواست‌های شبکه اسکریپت‌شده (مثلاً با استفاده از osascript، curl، یا python) که شامل رشته‌های User-Agent مرورگر ناهماهنگ یا جعلی در مقایسه با خط پایه macOS Safari یا Chrome است، به‌ویژه زمانی که توسط عوامل راه‌اندازی غیرتعاملی، قلاب‌های ورود به سیستم یا دیمون‌های پس‌زمینه فعال شوند."
         }
     ]
 }

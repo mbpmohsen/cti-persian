@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0281#AN0783",
-                    "external_id": "AN0783"
+                    "external_id": "AN0783",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PathRegex",
-                    "description": "Flag compressed archives extracted to /tmp, /dev/shm, or user\u2019s home dir"
+                    "description": "Flag compressed archives extracted to /tmp, /dev/shm, or user’s home dir",
+                    "description_fa": "پرچم‌گذاری بایگانی‌های فشرده استخراج‌شده در /tmp، /dev/shm، یا آدرس خانه کاربر"
                 },
                 {
                     "field": "CompressionToolPatterns",
-                    "description": "gzip, tar, bzip2, xz, 7z \u2013 tune to suppress admin packaging workflows"
+                    "description": "gzip, tar, bzip2, xz, 7z – tune to suppress admin packaging workflows",
+                    "description_fa": "gzip، tar، bzip2، xz، 7z – تنظیم برای سرکوب گردش کار بسته‌بندی مدیریت"
                 },
                 {
                     "field": "ExecutionAfterUnpackWindow",
-                    "description": "How soon a new file is executed after it\u2019s unpacked"
+                    "description": "How soon a new file is executed after it’s unpacked",
+                    "description_fa": "یک فایل جدید پس از باز شدن چقدر زود اجرا می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0783",
+            "description_fa": "ابزارهای فشرده سازی متوالی خط فرمان (مانند gzip، tar، zip، 7z) و به دنبال اجرای فایل های بسته نشده، به ویژه در فهرست های موقت یا در مکان های غیر استاندارد مانند /dev/shm یا /tmp با باینری های ELF را شناسایی می کند."
         }
     ]
 }

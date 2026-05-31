@@ -9,64 +9,80 @@
                 {
                     "external_id": "CAPEC-92",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/92.html"
+                    "url": "https://capec.mitre.org/data/definitions/92.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-190",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/190.html"
+                    "url": "http://cwe.mitre.org/data/definitions/190.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-128",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/128.html"
+                    "url": "http://cwe.mitre.org/data/definitions/128.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-122",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/122.html"
+                    "url": "http://cwe.mitre.org/data/definitions/122.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-196",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/196.html"
+                    "url": "http://cwe.mitre.org/data/definitions/196.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Integer Overflows",
                     "external_id": "03",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Integer-Overflows"
+                    "url": "http://projects.webappsec.org/Integer-Overflows",
+                    "description_fa": "سرریزهای عدد صحیح",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "J. Viega, G. McGraw, Building Secure Software, 2002, Addison-Wesley",
                     "external_id": "REF-131",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "J. Viega، G. McGraw، ایجاد نرم افزار امن، 2002، ادیسون-وسلی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Robert C. Seacord, SAMATE - Software Assurance Metrics And Tool Evaluation, 2006--05---22, National Institute of Standards and Technology (NIST)",
                     "external_id": "REF-547",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://samate.nist.gov/SRD/view_testcase.php?tID=1511"
+                    "url": "http://samate.nist.gov/SRD/view_testcase.php?tID=1511",
+                    "description_fa": "رابرت سی. سیکورد، سامات - معیارهای تضمین نرم افزار و ارزیابی ابزار، 2006--05---22، موسسه ملی استانداردها و فناوری (NIST)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Robert C. Seacord, Secure Coding in C and C++",
                     "external_id": "REF-548",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "رابرت سی سیکورد، کدگذاری ایمن در C و C++",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--369d69a3-fb4a-49ac-8999-9b4ecfbf74c6",
@@ -100,6 +116,25 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "اجرای غیر قابل اعتماد"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -118,11 +153,25 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a buffer overflow by injecting malicious code into the stack of a software system or even the heap can require a higher skill level.",
-                "Low": "An attacker can simply overflow an integer by inserting an out of range value."
+                "Low": "An attacker can simply overflow an integer by inserting an out of range value.",
+                "High_fa": "بهره برداری از سرریز بافر با تزریق کد مخرب به پشته یک سیستم نرم افزاری یا حتی پشته می تواند به سطح مهارت بالاتری نیاز داشته باشد.",
+                "Low_fa": "یک مهاجم به سادگی می تواند با درج یک مقدار خارج از محدوده، یک عدد صحیح را سرریز کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله یک متغیر عدد صحیح را مجبور می کند که از محدوده خارج شود. متغیر عدد صحیح اغلب به عنوان یک افست مانند اندازه تخصیص حافظه یا مشابه آن استفاده می شود. مهاجم معمولاً مقدار چنین متغیری را کنترل می کند و سعی می کند آن را از محدوده خارج کند. به عنوان مثال، عدد صحیح مورد نظر از حداکثر مقدار ممکن افزایش می یابد، ممکن است به یک عدد بسیار کوچک یا منفی تبدیل شود، بنابراین مقدار بسیار نادرستی ارائه می دهد که می تواند منجر به رفتار غیرمنتظره شود. در بدترین حالت، مهاجم می تواند کد دلخواه را اجرا کند.",
+            "name_fa": "سرریز عدد صحیح اجباری",
+            "x_capec_example_instances_fa": [
+                "سرریز اعداد صحیح در تابع ProcAuWriteElement در server/dia/audispatch.c در سیستم صوتی شبکه (NAS) قبل از 1.8a SVN 237 به مهاجمان راه دور اجازه می دهد تا باعث انکار سرویس (خراش) شوند و احتمالاً کد دلخواه را از طریق مقدار max_samples بزرگ اجرا کنند. همچنین ببینید: CVE-2007-1544",
+                "<xhtml:p>کد زیر یک سرریز عدد صحیح را نشان می دهد. اعلان عدد صحیح کل به عنوان \"int کوتاه بدون علامت\" فرض می کند که طول آرگومان های اول و دوم در چنین عدد صحیحی قرار می گیرد [REF-547]، [REF-548].</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">include <stdlib.h>include <string.h>include <stdio.h>\n                  int main (int argc, char *const *argv){<xhtml:div style=\"margin-left:1em;\">if (argc !=3){<xhtml:div style=\"margin-left:1em;\">printf(\"Usage: prog_name <string1> <string2>(-1:v\");</xit\n                     }int short unsigned total;total = strlen(argv[1])+strlen(argv[2])+1;char * buff = (char *)malloc(total);strcpy(buff, argv[1]);strcpy(buff, argv[2]);</xhtml:div>\n                  }</xhtml:div>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>مرحله اول اکتشافی است به این معنی که مهاجم به دنبال یک متغیر عدد صحیح می‌گردد که بتواند آن را کنترل کند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> می‌تواند متغیرهای قابل دستکاری را در حمله بنویسد یا امتحان کند. مقدار عدد صحیح را از محدوده ممکن خارج کنید.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p>متغیر عدد صحیح مجبور است مقداری خارج از محدوده داشته باشد که مقدار نهایی آن را روی یک مقدار غیرمنتظره تنظیم می‌کند.</p></li><li> <p>ممکن است رفتار میزبان هدف روی داده‌ها انکس شود. اتفاق می افتد.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم می تواند مقدار یک متغیر عدد صحیح مورد استفاده توسط میزبان هدف را دستکاری کند.",
+                "میزبان هدف قبل از استفاده از متغیر، محدوده مناسبی را بررسی نمی کند.",
+                "هنگامی که متغیر عدد صحیح به مقدار خارج از محدوده افزایش یا کاهش می یابد، مقدار بسیار متفاوتی دریافت می کند (به عنوان مثال عدد بسیار کوچک یا منفی)"
+            ]
         }
     ],
     "type": "bundle"

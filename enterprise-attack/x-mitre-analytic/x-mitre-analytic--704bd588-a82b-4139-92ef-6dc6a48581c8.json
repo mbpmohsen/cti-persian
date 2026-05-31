@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0143#AN0400",
-                    "external_id": "AN0400"
+                    "external_id": "AN0400",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedCryptoProcesses",
-                    "description": "Processes normally expected to use symmetric crypto (e.g., disk encryption, secure messaging)."
+                    "description": "Processes normally expected to use symmetric crypto (e.g., disk encryption, secure messaging).",
+                    "description_fa": "فرآیندهایی که معمولاً انتظار می‌رود از رمزنگاری متقارن استفاده کنند (مانند رمزگذاری دیسک، پیام‌رسانی ایمن)."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Minimum payload entropy score for flagging unusual encrypted sessions."
+                    "description": "Minimum payload entropy score for flagging unusual encrypted sessions.",
+                    "description_fa": "حداقل امتیاز آنتروپی بار برای پرچم گذاری جلسات رمزگذاری شده غیر معمول."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between module load and encrypted connection creation."
+                    "description": "Correlation window between module load and encrypted connection creation.",
+                    "description_fa": "پنجره همبستگی بین بار ماژول و ایجاد اتصال رمزگذاری شده."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0400",
+            "description_fa": "فرآیندهایی که معمولاً عملیات رمزنگاری را انجام نمی‌دهند و کتابخانه‌های رمزگذاری متقارن را بارگیری می‌کنند (مانند bcryptprimitives.dll، aes.dll)، سپس اتصالات خروجی را با بارهای با آنتروپی بالا آغاز می‌کنند. Defender ایجاد فرآیند، بار DLL و الگوهای ترافیک رمزگذاری شده غیرعادی را به هم مرتبط می کند."
         }
     ]
 }

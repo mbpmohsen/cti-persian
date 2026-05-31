@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0066#AN0178",
-                    "external_id": "AN0178"
+                    "external_id": "AN0178",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., 15m) between link click / first egress / file write."
+                    "description": "Correlation window (e.g., 15m) between link click / first egress / file write.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، 15 متر) بین کلیک پیوند / اولین خروج / نوشتن فایل."
                 },
                 {
                     "field": "BrowserParents",
-                    "description": "Processes considered link sources: chrome.exe, msedge.exe, firefox.exe, winword.exe, outlook.exe, teams.exe."
+                    "description": "Processes considered link sources: chrome.exe, msedge.exe, firefox.exe, winword.exe, outlook.exe, teams.exe.",
+                    "description_fa": "فرآیندهایی که منابع پیوند را در نظر می گیرند: chrome.exe، msedge.exe، firefox.exe، winword.exe، outlook.exe، teams.exe."
                 },
                 {
                     "field": "UserPaths",
-                    "description": "User-writable directories to monitor (%USERPROFILE%\\Downloads, %TEMP%, %APPDATA%\\*, OneDrive caches)."
+                    "description": "User-writable directories to monitor (%USERPROFILE%\\Downloads, %TEMP%, %APPDATA%\\*, OneDrive caches).",
+                    "description_fa": "دایرکتوری های قابل نوشتن توسط کاربر برای نظارت (%USERPROFILE%\\Downloads، %TEMP%, %APPDATA%\\*، حافظه پنهان OneDrive)."
                 },
                 {
                     "field": "SuspiciousTLDs",
-                    "description": "High-risk TLD and domain list (e.g., .top .xyz .monster; newly observed domains/NOD)."
+                    "description": "High-risk TLD and domain list (e.g., .top .xyz .monster; newly observed domains/NOD).",
+                    "description_fa": "لیست دامنه و TLD پرخطر (به عنوان مثال، .top .xyz .monster؛ دامنه های تازه مشاهده شده/NOD)."
                 },
                 {
                     "field": "AllowedCDNs",
-                    "description": "Corporate CDNs/update hosts to reduce false positives."
+                    "description": "Corporate CDNs/update hosts to reduce false positives.",
+                    "description_fa": "CDN های شرکتی/میزبان ها را برای کاهش مثبت کاذب به روز کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0178",
+            "description_fa": "زنجیره رفتاری: (1) یک برنامه رو به روی کاربر (مرورگر/دفتر/کلاینت ایمیل) URL را راه اندازی می کند یا پیوندی را مدیریت می کند، سپس (2) همان نسل فرآیند یک اتصال خروجی به یک دامنه/IP نامعتبر ایجاد می کند، (3) یک فایل در مدت کوتاهی پس از کلیک بارگیری یا در مکانی قابل نوشتن توسط کاربر باز می شود. غنی سازی اختیاری: اعدام بعدی توسط LOLBIN ها."
         }
     ]
 }

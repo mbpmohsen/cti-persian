@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0445#AN1233",
-                    "external_id": "AN1233"
+                    "external_id": "AN1233",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RuleType",
-                    "description": "Focus on new allow/permit rules with dynamic NAT or port forwarders."
+                    "description": "Focus on new allow/permit rules with dynamic NAT or port forwarders.",
+                    "description_fa": "روی قوانین اجازه/مجاز جدید با NAT پویا یا ارسال‌کننده پورت تمرکز کنید."
                 },
                 {
                     "field": "ChangeUser",
-                    "description": "Flag any non-admins initiating proxy config changes."
+                    "description": "Flag any non-admins initiating proxy config changes.",
+                    "description_fa": "هر غیر سرپرستی را که تغییرات پیکربندی پروکسی را آغاز می کند، پرچم گذاری کنید."
                 },
                 {
                     "field": "FlowVolumeDelta",
-                    "description": "Detect sharp changes in bi-directional traffic patterns."
+                    "description": "Detect sharp changes in bi-directional traffic patterns.",
+                    "description_fa": "تشخیص تغییرات شدید در الگوهای ترافیک دو جهته."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1233",
+            "description_fa": "قوانین حمل و نقل پورت پویا یا ایستا به مسیریابی ترافیک از طریق یک میزبان داخلی اضافه شده است، یا تغییرات پیکربندی در قوانین فایروال پراکسی که با خط‌مشی پایه همسو نیستند."
         }
     ]
 }

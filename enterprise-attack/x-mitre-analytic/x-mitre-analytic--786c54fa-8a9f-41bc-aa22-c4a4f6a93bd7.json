@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0324#AN0919",
-                    "external_id": "AN0919"
+                    "external_id": "AN0919",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0919",
-            "description": "Identifies self-modifying executables that exhibit changes in binary hash, entropy, or memory sections during or between executions\u2014often tied to dynamic unpacking or decryption behaviors.",
+            "description": "Identifies self-modifying executables that exhibit changes in binary hash, entropy, or memory sections during or between executions—often tied to dynamic unpacking or decryption behaviors.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyThreshold",
-                    "description": "Tune based on expected baseline entropy for executables; higher values may indicate polymorphic packing."
+                    "description": "Tune based on expected baseline entropy for executables; higher values may indicate polymorphic packing.",
+                    "description_fa": "تنظیم بر اساس آنتروپی پایه مورد انتظار برای فایل های اجرایی. مقادیر بالاتر ممکن است نشان دهنده بسته بندی چندشکلی باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate rapid process spawn + image load activity suggesting mutation engine usage."
+                    "description": "Correlate rapid process spawn + image load activity suggesting mutation engine usage.",
+                    "description_fa": "ارتباط تخم ریزی فرآیند سریع + فعالیت بار تصویر که نشان دهنده استفاده از موتور جهش است."
                 },
                 {
                     "field": "ParentProcessPatterns",
-                    "description": "Define expected or suspicious parent-child chains (e.g., script runner -> encoded PE)"
+                    "description": "Define expected or suspicious parent-child chains (e.g., script runner -> encoded PE)",
+                    "description_fa": "زنجیره های مورد انتظار یا مشکوک والدین-فرزند را تعریف کنید (به عنوان مثال، اسکریپت اجرا -> PE رمزگذاری شده)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0919",
+            "description_fa": "فایل های اجرایی خودتغییر شونده را شناسایی می کند که تغییرات در هش باینری، آنتروپی، یا بخش های حافظه را در طول یا بین اجراها نشان می دهند – که اغلب به رفتارهای باز کردن بسته بندی یا رمزگشایی پویا مرتبط است."
         }
     ]
 }

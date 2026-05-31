@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0112#AN0312",
-                    "external_id": "AN0312"
+                    "external_id": "AN0312",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilePath",
-                    "description": "Initialization script path that can differ across user and system profiles."
+                    "description": "Initialization script path that can differ across user and system profiles.",
+                    "description_fa": "مسیر اسکریپت اولیه سازی که می تواند در پروفایل های کاربر و سیستم متفاوت باشد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "User-level vs root-level configuration."
+                    "description": "User-level vs root-level configuration.",
+                    "description_fa": "پیکربندی سطح کاربر در مقابل پیکربندی سطح ریشه."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Useful to correlate between file change and subsequent execution."
+                    "description": "Useful to correlate between file change and subsequent execution.",
+                    "description_fa": "برای ارتباط بین تغییر فایل و اجرای بعدی مفید است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0312",
+            "description_fa": "تشخیص تغییرات یا اجرای اسکریپت های اولیه سازی پوسته مانند .bashrc، .profile یا /etc/profile برای ماندگاری."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0038#AN0108",
-                    "external_id": "AN0108"
+                    "external_id": "AN0108",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredDirectories",
-                    "description": "Specific writable directories to monitor (e.g., %TEMP%, C:\\ProgramData, installer unpack paths)."
+                    "description": "Specific writable directories to monitor (e.g., %TEMP%, C:\\ProgramData, installer unpack paths).",
+                    "description_fa": "دایرکتوری های قابل نوشتن خاص برای نظارت (به عنوان مثال، %TEMP%, C:\\ProgramData، مسیرهای باز کردن بسته نصب کننده)."
                 },
                 {
                     "field": "HashBaseline",
-                    "description": "Known good hashes of installer binaries to detect replacement."
+                    "description": "Known good hashes of installer binaries to detect replacement.",
+                    "description_fa": "هش های خوب شناخته شده باینری های نصب کننده برای تشخیص جایگزینی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval between file overwrite and execution event."
+                    "description": "Correlation interval between file overwrite and execution event.",
+                    "description_fa": "فاصله همبستگی بین بازنویسی فایل و رویداد اجرا."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Differentiate expected admin-installer execution vs. anomalous user writes."
+                    "description": "Differentiate expected admin-installer execution vs. anomalous user writes.",
+                    "description_fa": "اجرای مورد انتظار مدیر نصب کننده را در مقابل نوشته های غیرعادی کاربر متمایز کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0108",
+            "description_fa": "فایل های اجرایی نوشته شده یا اصلاح شده در دایرکتوری های نصب کننده (به عنوان مثال، %TEMP% زیر شاخه ها یا مسیرهای نصب کننده فایل های برنامه) و به دنبال آن در زمینه بالا اجرا می شوند. Defender فعالیت غیرعادی جایگزینی فایل، ایجاد فرآیند توسط فرآیندهای نصب کننده را که به باینری های ارائه شده توسط مهاجم اشاره می کند و بارهای غیرمنتظره ماژول در فرآیندهای بالا مشاهده می کند."
         }
     ]
 }

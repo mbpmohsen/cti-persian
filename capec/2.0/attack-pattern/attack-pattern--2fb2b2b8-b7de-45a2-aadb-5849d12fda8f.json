@@ -9,23 +9,29 @@
                 {
                     "external_id": "CAPEC-248",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/248.html"
+                    "url": "https://capec.mitre.org/data/definitions/248.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-77",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/77.html"
+                    "url": "http://cwe.mitre.org/data/definitions/77.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Command Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Command_Injection"
+                    "url": "https://owasp.org/www-community/attacks/Command_Injection",
+                    "description_fa": "تزریق فرمان",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-615",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/12-Testing_for_Command_Injection.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2fb2b2b8-b7de-45a2-aadb-5849d12fda8f",
@@ -45,6 +51,15 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (A successful command injection attack enables an adversary to alter the command being executed and achieve a variety of negative consequences depending on the makeup of the new command. This includes potential information disclosure or the corruption of application data.)"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (یک حمله موفقیت آمیز تزریق فرمان، دشمن را قادر می سازد تا فرمان در حال اجرا را تغییر دهد و بسته به ترکیب دستور جدید به پیامدهای منفی مختلفی دست یابد. این شامل افشای اطلاعات احتمالی یا خراب شدن داده های برنامه می شود.)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (یک حمله موفقیت آمیز تزریق فرمان، دشمن را قادر می سازد تا فرمان در حال اجرا را تغییر دهد و بسته به ترکیب دستور جدید به پیامدهای منفی مختلفی دست یابد. این شامل افشای اطلاعات احتمالی یا خراب شدن داده های برنامه می شود.)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (یک حمله موفقیت آمیز تزریق فرمان، دشمن را قادر می سازد تا فرمان در حال اجرا را تغییر دهد و بسته به ترکیب دستور جدید به پیامدهای منفی مختلفی دست یابد. این شامل افشای اطلاعات احتمالی یا خراب شدن داده های برنامه می شود.)"
                 ]
             },
             "x_capec_domains": [
@@ -65,7 +80,12 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریفی که به دنبال اجرای دستوری به انتخاب خود است، آیتم های جدیدی را به دستور موجود تزریق می کند و بدین ترتیب تفسیر را از آنچه در نظر گرفته شده بود تغییر می دهد. دستورات در این زمینه اغلب رشته‌های مستقلی هستند که توسط یک جزء پایین‌دست تفسیر می‌شوند و باعث پاسخ‌های خاصی می‌شوند. این نوع حمله زمانی امکان پذیر است که از مقادیر غیرقابل اعتماد برای ساخت این رشته های دستوری استفاده شود. ضعف در اعتبار سنجی ورودی یا ساخت فرمان می تواند حمله را فعال کرده و منجر به بهره برداری موفقیت آمیز شود.",
+            "name_fa": "تزریق فرمان",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید ورودی کاربر را بپذیرد و سپس از این ورودی در ساخت دستوراتی که قرار است اجرا شود استفاده کند. تقریباً در همه موارد، این نوعی از ورودی رشته است که به یک رشته ثابت تعریف شده توسط برنامه متصل می شود تا دستور کامل اجرا شود."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0631#AN1702",
-                    "external_id": "AN1702"
+                    "external_id": "AN1702",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,37 +58,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between proxy/socket setup and subsequent inbound-outbound traffic bridging"
+                    "description": "Correlation window between proxy/socket setup and subsequent inbound-outbound traffic bridging",
+                    "description_fa": "پنجره همبستگی بین راه اندازی پراکسی/سوکت و پل زدن ترافیک ورودی-خروجی بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to proxy or tunnel traffic, such as enterprise VPN, remote access, security testing, or managed browser apps"
+                    "description": "Apps legitimately expected to proxy or tunnel traffic, such as enterprise VPN, remote access, security testing, or managed browser apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود ترافیک پراکسی یا تونل شوند، مانند VPN سازمانی، دسترسی از راه دور، تست امنیتی، یا برنامه‌های مرورگر مدیریت‌شده"
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Approved remote destinations or service categories for legitimate tunneling applications"
+                    "description": "Approved remote destinations or service categories for legitimate tunneling applications",
+                    "description_fa": "مقاصد راه دور یا دسته‌های خدمات تأیید شده برای برنامه‌های تونل‌زنی قانونی"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether proxy-capable or relayed traffic should occur only during active user-driven workflows"
+                    "description": "Whether proxy-capable or relayed traffic should occur only during active user-driven workflows",
+                    "description_fa": "این که آیا ترافیک دارای پروکسی یا رله باید فقط در جریان کار فعال کاربر محور رخ دهد"
                 },
                 {
                     "field": "RelaySessionThreshold",
-                    "description": "Minimum number of correlated inbound and outbound session pairs required to indicate relay behavior"
+                    "description": "Minimum number of correlated inbound and outbound session pairs required to indicate relay behavior",
+                    "description_fa": "حداقل تعداد جفت جلسات ورودی و خروجی مرتبط مورد نیاز برای نشان دادن رفتار رله"
                 },
                 {
                     "field": "ByteSymmetryTolerance",
-                    "description": "Allowed variance between inbound and outbound byte volumes when identifying proxied traffic"
+                    "description": "Allowed variance between inbound and outbound byte volumes when identifying proxied traffic",
+                    "description_fa": "واریانس مجاز بین حجم بایت های ورودی و خروجی هنگام شناسایی ترافیک پراکسی"
                 },
                 {
                     "field": "ConcurrentDestinationThreshold",
-                    "description": "Maximum expected number of simultaneous unrelated remote destinations for a legitimate app"
+                    "description": "Maximum expected number of simultaneous unrelated remote destinations for a legitimate app",
+                    "description_fa": "حداکثر تعداد مورد انتظار مقاصد راه دور غیرمرتبط همزمان برای یک برنامه قانونی"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume required for relay behavior to be considered meaningful"
+                    "description": "Minimum outbound volume required for relay behavior to be considered meaningful",
+                    "description_fa": "حداقل حجم خروجی مورد نیاز برای رفتار رله معنی دار در نظر گرفته شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1702",
+            "description_fa": "مدافع راه‌اندازی شبکه با قابلیت پراکسی یا رفتار مدیریت سوکت را با انتقال ترافیک دوطرفه بعدی از طریق همان دستگاه و زمینه برنامه مرتبط می‌کند، به‌ویژه زمانی که جلسات مشتری ورودی با اتصالات خروجی به مقاصد راه دور نامرتبط دنبال می‌شوند یا زمانی که دستگاه دارای الگوهای ترافیکی چندگانه است که با جریان‌های کاری نرم‌افزار تلفن همراه سازگار نیست. این تحلیل، اثرات قابل مشاهده اندروید را اولویت بندی می کند: راه اندازی پراکسی یا سوکت خام، اجرای پس زمینه برنامه، پل زدن ترافیک ورودی به خروجی، و جریان های رله پایدار به مقصدهای متعدد بدون تعامل اخیر کاربر."
         }
     ]
 }

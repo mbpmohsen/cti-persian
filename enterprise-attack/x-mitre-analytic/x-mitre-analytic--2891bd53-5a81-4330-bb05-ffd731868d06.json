@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0071#AN0196",
-                    "external_id": "AN0196"
+                    "external_id": "AN0196",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StagingPaths",
-                    "description": "Monitored remote-to-local write destinations such as /Users/Shared"
+                    "description": "Monitored remote-to-local write destinations such as /Users/Shared",
+                    "description_fa": "مقاصد نوشتن از راه دور به محلی مانند /Users/Shared نظارت می شود"
                 },
                 {
                     "field": "CompressionIndicators",
-                    "description": "Presence of .zip, .7z, or tar.gz indicating consolidation"
+                    "description": "Presence of .zip, .7z, or tar.gz indicating consolidation",
+                    "description_fa": "وجود .zip، 0.7z، یا tar.gz که نشان دهنده ادغام است"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation of transfer and staging write operations"
+                    "description": "Temporal correlation of transfer and staging write operations",
+                    "description_fa": "همبستگی زمانی عملیات نوشتن انتقال و مرحله‌بندی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0196",
+            "description_fa": "rsync یا scp ورودی از میزبان‌های دیگر را شناسایی می‌کند که سپس محتوا را در /Users/Shared یا /private/tmp جمع‌آوری می‌کند، که اغلب شامل فایل‌ها یا اسکریپت‌های فشرده می‌شود."
         }
     ]
 }

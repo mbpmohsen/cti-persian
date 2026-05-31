@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0298#AN0833",
-                    "external_id": "AN0833"
+                    "external_id": "AN0833",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedArchivers",
-                    "description": "Business-approved applications permitted to create archives (e.g., backup agents)."
+                    "description": "Business-approved applications permitted to create archives (e.g., backup agents).",
+                    "description_fa": "برنامه‌های مورد تأیید کسب‌وکار مجاز به ایجاد آرشیو (مانند عوامل پشتیبان‌گیری) هستند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Flag archiving under privileged or service accounts as higher risk."
+                    "description": "Flag archiving under privileged or service accounts as higher risk.",
+                    "description_fa": "بایگانی تحت حساب های دارای امتیاز یا خدمات را به عنوان ریسک بالاتر علامت گذاری کنید."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Entropy threshold for detecting encrypted archives versus normal compression."
+                    "description": "Entropy threshold for detecting encrypted archives versus normal compression.",
+                    "description_fa": "آستانه آنتروپی برای تشخیص آرشیوهای رمزگذاری شده در مقابل فشرده سازی معمولی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0833",
+            "description_fa": "فراخوانی ابزارهای آرشیو بومی macOS (zip، ditto، hdiutil) یا openssl مورد استفاده برای رمزگذاری را تشخیص می‌دهد. اجرا را با ایجاد فایل بایگانی یا رمزگذاری شده (.zip، .dmg، .tar.gz) در دایرکتوری های کاربر یا موقت مرتبط می کند. استفاده غیرعادی از دستورات بایگانی توسط برنامه های Office یا دیمون ها را شناسایی می کند."
         }
     ]
 }

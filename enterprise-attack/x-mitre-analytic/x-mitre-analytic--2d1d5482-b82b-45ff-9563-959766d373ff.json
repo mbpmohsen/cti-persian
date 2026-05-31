@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0410#AN1146",
-                    "external_id": "AN1146"
+                    "external_id": "AN1146",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MountPoint",
-                    "description": "Organization-specific share mount paths may vary (/mnt/share1, /srv/data etc.)"
+                    "description": "Organization-specific share mount paths may vary (/mnt/share1, /srv/data etc.)",
+                    "description_fa": "مسیرهای نصب اشتراک ویژه سازمان ممکن است متفاوت باشد (/mnt/share1، /srv/data و غیره)"
                 },
                 {
                     "field": "UID",
-                    "description": "May need to scope to service accounts or user ID patterns specific to enterprise policy."
+                    "description": "May need to scope to service accounts or user ID patterns specific to enterprise policy.",
+                    "description_fa": "ممکن است نیاز باشد به حساب‌های سرویس یا الگوهای شناسه کاربر خاص برای خط‌مشی سازمانی اختصاص یابد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1146",
+            "description_fa": "دسترسی غیرمعمول یا کپی کردن فایل‌ها از درایوهای شبکه نصب شده (مانند NFS، CIFS/SMB) توسط پوسته‌ها یا اسکریپت‌های کاربر و به دنبال آن انتقال داده‌های بزرگ."
         }
     ]
 }

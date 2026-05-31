@@ -9,39 +9,49 @@
                 {
                     "external_id": "CAPEC-460",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/460.html"
+                    "url": "https://capec.mitre.org/data/definitions/460.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-88",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/88.html"
+                    "url": "http://cwe.mitre.org/data/definitions/88.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-147",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/147.html"
+                    "url": "http://cwe.mitre.org/data/definitions/147.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-235",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/235.html"
+                    "url": "http://cwe.mitre.org/data/definitions/235.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Web Parameter Tampering",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Web_Parameter_Tampering"
+                    "url": "https://owasp.org/www-community/attacks/Web_Parameter_Tampering",
+                    "description_fa": "دستکاری پارامترهای وب",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Luca Carettoni, Stefano di Paola, HTTP Parameter Pollution (OWASP EU09 Poland), 2008, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-397",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/images/b/ba/AppsecEU09_CarettoniDiPaola_v0.8.pdf"
+                    "url": "https://www.owasp.org/images/b/ba/AppsecEU09_CarettoniDiPaola_v0.8.pdf",
+                    "description_fa": "لوکا کارتونی، استفانو دی پائولا، آلودگی پارامتر HTTP (OWASP EU09 لهستان)، 2008، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-606",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/04-Testing_for_HTTP_Parameter_Pollution.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/04-Testing_for_HTTP_Parameter_Pollution.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--70c8a212-72da-4a98-a626-e5d38e5416e3",
@@ -71,7 +81,16 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف پارامترهای تکراری HTTP GET/POST را با تزریق جداکننده‌های رشته کوئری اضافه می‌کند. از طریق HPP ممکن است بتوان پارامترهای HTTP کدگذاری شده موجود را نادیده گرفت، رفتارهای برنامه را تغییر داد، به متغیرهای غیرقابل کنترل دسترسی و، به طور بالقوه، بهره برداری کرد، و نقاط بازرسی اعتبار ورودی و قوانین WAF را دور زد.",
+            "name_fa": "آلودگی پارامتر HTTP (HPP)",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>پیدا کردن ورودی کاربر: </b> دشمن هر جایی را در برنامه وب پیدا می‌کند که از ورودی ارائه‌شده توسط کاربر در فرم یا اقدامی استفاده می‌کند. این را می‌توان با نگاه کردن به پارامترهای URL در نوار پیمایش مرورگر نیز پیدا کرد</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>افزودن مقادیر پارامتر تکراری: </b>هنگامی که حریف تشخیص داد که کدام ورودی کاربر به عنوان یک پارامتر HTTP برای اضافه کردن یک پارامتر HTTP استفاده می‌کند. نتایج اگر پاسخ درخواست HTTP مقدار پارامتر تکراری را به طریقی با مقدار پارامتر اصلی الحاق کرده باشد، یا فقط مقدار پارامتر تکراری را نشان دهد، HPP امکان پذیر است.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>در URL، با استفاده از \"&\" یک پارامتر تکراری اضافه کنید. به عنوان مثال \"par1=val1\" به \"par1=val1&par1=val2\" تبدیل می شود. بسته به API پشتیبان، این می تواند به عنوان \"par1=val1, val2\" در نظر گرفته شود، که می تواند منجر به تنظیم par1 به val2، نادیده گرفتن val1 شود.</td></tr><tr><td>اگر درخواست بر اساس ورودی کاربر مستقیماً در صفحه ایجاد شود، حریف با افزودن یک جداکننده رمزگذاری شده به ورودی آزمایش می کند. برای مثال، دشمن ممکن است \"1000%26action=withdraw\" را ارائه کند و پشتیبانی ممکن است درخواست POST را با پارامترهای \"action=deposit&amount=1000&action=withdraw\"</td></tr></tbody></table></ol></div><div><h3>Ex تفسیر کند. HPP: </b>هنگامی که حریف تشخیص داد که باطن چگونه پارامترهای تکراری را مدیریت می کند، با آلوده کردن پارامترها به نحوی که به نفع آنها باشد، از این کار استفاده می کند. در برخی موارد، پارامترهای کدگذاری شده توسط backend نادیده گرفته می شوند. در موارد دیگر، حریف می‌تواند یک WAF را دور بزند که فقط ممکن است یک پارامتر را قبل از الحاق شدن توسط باطن بررسی کند، و در نتیجه پرس‌وجوهای مخرب از بین می‌روند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "پروتکل HTTP با تصویب برخی از پارامترهای GET/POST استفاده می شود"
+            ],
+            "x_capec_resources_required_fa": [
+                "هر ابزاری که رهگیری و دستکاری درخواست های HTTP را امکان پذیر می کند"
+            ]
         }
     ],
     "type": "bundle"

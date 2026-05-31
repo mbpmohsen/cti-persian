@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0139#AN0390",
-                    "external_id": "AN0390"
+                    "external_id": "AN0390",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InjectedLibraryName",
-                    "description": "Watch for user-defined suspicious .so files (e.g., libhook.so, libshadow.so)"
+                    "description": "Watch for user-defined suspicious .so files (e.g., libhook.so, libshadow.so)",
+                    "description_fa": "مراقب فایل‌های .so مشکوک تعریف‌شده توسط کاربر (مانند libhook.so، libshadow.so) باشید."
                 },
                 {
                     "field": "TargetProcessName",
-                    "description": "Hooked binaries vary by use case (e.g., ssh, login, gdm)"
+                    "description": "Hooked binaries vary by use case (e.g., ssh, login, gdm)",
+                    "description_fa": "باینری های قلاب شده بسته به موارد استفاده متفاوت هستند (مانند ssh، ورود، gdm)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0390",
+            "description_fa": "رهگیری اعتبار را از طریق کتابخانه های اشتراکی مخرب مبتنی بر LD_PRELOAD که در فرآیندهای ssh، sudo یا scp بارگذاری شده اند، شناسایی می کند. تزریق متغیر محیطی، بارهای غیرمنتظره کتابخانه و رفتار وصله حافظه را به هم مرتبط می کند."
         }
     ]
 }

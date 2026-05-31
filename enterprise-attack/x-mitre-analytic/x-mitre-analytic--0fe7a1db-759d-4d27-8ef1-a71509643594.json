@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0076#AN0209",
-                    "external_id": "AN0209"
+                    "external_id": "AN0209",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,26 +46,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcess",
-                    "description": "Microsoft Word/Excel or mshta.exe spawning wscript.exe/cscript.exe."
+                    "description": "Microsoft Word/Excel or mshta.exe spawning wscript.exe/cscript.exe.",
+                    "description_fa": "Microsoft Word/Excel یا mshta.exe wscript.exe/cscript.exe را ایجاد می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Script execution by non-admin users or service accounts."
+                    "description": "Script execution by non-admin users or service accounts.",
+                    "description_fa": "اجرای اسکریپت توسط کاربران غیر ادمین یا حساب های سرویس."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Script execution outside normal business hours or patching cycle."
+                    "description": "Script execution outside normal business hours or patching cycle.",
+                    "description_fa": "اجرای اسکریپت خارج از ساعات کاری عادی یا چرخه وصله."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "High entropy indicative of obfuscation or encoding in the script."
+                    "description": "High entropy indicative of obfuscation or encoding in the script.",
+                    "description_fa": "آنتروپی بالا نشان دهنده مبهم یا رمزگذاری در اسکریپت است."
                 },
                 {
                     "field": "ModuleName",
-                    "description": "Loading of vbscript.dll, scrrun.dll, or other scripting engine modules."
+                    "description": "Loading of vbscript.dll, scrrun.dll, or other scripting engine modules.",
+                    "description_fa": "بارگیری vbscript.dll، scrrun.dll یا سایر ماژول های موتور برنامه نویسی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0209",
+            "description_fa": "اجرای اسکریپت‌ها یا ماکروهای مبتنی بر VB (VBS/VBA/VBScript) را از طریق cscript.exe/wscript.exe، زنجیره‌های فرآیند مبتنی بر Office یا استفاده از HTA تشخیص می‌دهد. بر رفتار زنجیره‌ای تمرکز می‌کند: محفظه آفیس یا HTML میزبان اسکریپت ایجاد می‌کند > میزبان اسکریپت PowerShell، اتصالات شبکه یا تزریق فرآیند را ایجاد می‌کند."
         }
     ]
 }

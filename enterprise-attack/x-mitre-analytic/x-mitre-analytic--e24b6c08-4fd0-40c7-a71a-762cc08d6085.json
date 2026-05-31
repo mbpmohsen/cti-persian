@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0556#AN1535",
-                    "external_id": "AN1535"
+                    "external_id": "AN1535",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -75,34 +76,43 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between msbuild.exe start, payload write, suspicious child spawn, and network (e.g., 0\u201330 minutes)."
+                    "description": "Correlation window between msbuild.exe start, payload write, suspicious child spawn, and network (e.g., 0–30 minutes).",
+                    "description_fa": "پنجره همبستگی بین شروع msbuild.exe، نوشتن payload، ایجاد فرزند مشکوک و شبکه (به عنوان مثال، 0-30 دقیقه)."
                 },
                 {
                     "field": "DeveloperHosts",
-                    "description": "Tag/allowlist known developer or CI/CD hosts to reduce noise."
+                    "description": "Tag/allowlist known developer or CI/CD hosts to reduce noise.",
+                    "description_fa": "برای کاهش نویز، برنامه‌نویس شناخته شده یا میزبان‌های CI/CD را تگ/مجاز کنید."
                 },
                 {
                     "field": "SuspiciousChildList",
-                    "description": "High-risk children (powershell.exe, rundll32.exe, regsvr32.exe, cmd.exe, wscript.exe, mshta.exe) spawned by msbuild.exe."
+                    "description": "High-risk children (powershell.exe, rundll32.exe, regsvr32.exe, cmd.exe, wscript.exe, mshta.exe) spawned by msbuild.exe.",
+                    "description_fa": "کودکان پرخطر (powershell.exe، rundll32.exe، regsvr32.exe، cmd.exe، wscript.exe، mshta.exe) ایجاد شده توسط msbuild.exe."
                 },
                 {
                     "field": "RarePathRegex",
-                    "description": "Regex of user-writable or atypical paths (e.g., %TEMP%, %APPDATA%, OneDrive sync dirs) used to drop payloads."
+                    "description": "Regex of user-writable or atypical paths (e.g., %TEMP%, %APPDATA%, OneDrive sync dirs) used to drop payloads.",
+                    "description_fa": "Regex مسیرهای قابل نوشتن توسط کاربر یا غیر معمول (به عنوان مثال، %TEMP٪، %APPDATA، همگام‌سازی OneDrive dirs) که برای رها کردن بارها استفاده می‌شوند."
                 },
                 {
                     "field": "UnsignedOrInvalidSignatureOnly",
-                    "description": "Tighten alerting to cases with invalid or missing signatures on modules/children."
+                    "description": "Tighten alerting to cases with invalid or missing signatures on modules/children.",
+                    "description_fa": "هشدار به مواردی که دارای امضای نامعتبر یا مفقود در ماژول ها/کودکان هستند را تشدید کنید."
                 },
                 {
                     "field": "NetworkReputationThreshold",
-                    "description": "Minimum rarity/risk score for external destinations to alert."
+                    "description": "Minimum rarity/risk score for external destinations to alert.",
+                    "description_fa": "حداقل امتیاز نادر/خطر برای مقاصد خارجی برای هشدار."
                 },
                 {
                     "field": "BehaviorRiskScoreThreshold",
-                    "description": "Numeric threshold for fused, scored correlation (e.g., \u226570/100 triggers an alert)."
+                    "description": "Numeric threshold for fused, scored correlation (e.g., ≥70/100 triggers an alert).",
+                    "description_fa": "آستانه عددی برای همبستگی ترکیب شده و امتیازدهی شده (به عنوان مثال، 70/100 ≥ یک هشدار را ایجاد می کند)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1535",
+            "description_fa": "MSBuild.exe خارج از زمینه های مورد انتظار توسعه دهنده/ساخت یا با آرگومان های غیرعادی (مانند مسیرهای غیر متعارف، اشتراک گذاری های راه دور، مقادیر دارایی Base64/مبهم) فراخوانی می شود. در یک پنجره کوتاه، (الف) مفسرهای LOLBins/اسکریپت پرخطر ایجاد می‌کند، (ب) مصنوعات PE/DLL/اسکریپت جدید را در مسیرهای قابل نوشتن توسط کاربر می‌نویسد و آنها را اجرا می‌کند، (ج) ماژول‌های بدون علامت/قابل نوشتن توسط کاربر را بارگیری می‌کند، (د) تزریق حافظه/رشته‌ها را انجام می‌دهد و ایجاد رشته‌ها را در سایر فرآیندها انجام می‌دهد."
         }
     ]
 }

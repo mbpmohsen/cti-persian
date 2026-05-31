@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0409#AN1144",
-                    "external_id": "AN1144"
+                    "external_id": "AN1144",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Allows tuning the correlation timeframe between authentication, session creation, and process/network activity."
+                    "description": "Allows tuning the correlation timeframe between authentication, session creation, and process/network activity.",
+                    "description_fa": "به تنظیم بازه زمانی همبستگی بین احراز هویت، ایجاد جلسه و فعالیت فرآیند/شبکه ​​اجازه می‌دهد."
                 },
                 {
                     "field": "SourceAccountAnomalyThreshold",
-                    "description": "Supports tuning detection sensitivity based on deviations from normal user login patterns or usage context."
+                    "description": "Supports tuning detection sensitivity based on deviations from normal user login patterns or usage context.",
+                    "description_fa": "پشتیبانی از حساسیت تشخیص تنظیم بر اساس انحراف از الگوهای ورود کاربر معمولی یا زمینه استفاده."
                 },
                 {
                     "field": "LogonTypeFilter",
-                    "description": "Allows focusing detection on specific logon types (e.g., LogonType 3 for network logon, Type 10 for RDP)."
+                    "description": "Allows focusing detection on specific logon types (e.g., LogonType 3 for network logon, Type 10 for RDP).",
+                    "description_fa": "به تشخیص فوکوس روی انواع ورود به سیستم اجازه می دهد (مانند LogonType 3 برای ورود به شبکه، نوع 10 برای RDP)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1144",
+            "description_fa": "احراز هویت غیرعادی NTLM LogonType 3 را که بدون رویدادهای ورود به دامنه همراه، به ویژه از سیستم های جانبی یا شامل ابزارهای اداری داخلی رخ می دهد، تشخیص می دهد. نظارت بر عدم تطابق بین متن کاربر منبع و سیستم مورد دسترسی. ایجاد LogonSession، احراز هویت NTLM و شروع فرآیند/سرویس را برای شناسایی استفاده مشکوک از هش رمز عبور دزدیده شده برای دسترسی از راه دور یا ورود به سرویس بدون وارد کردن رمز عبور مرتبط می کند. با ترکیب صدور بلیط Kerberos با حرکت جانبی مبتنی بر NTLM، هش را تشخیص می دهد."
         }
     ]
 }

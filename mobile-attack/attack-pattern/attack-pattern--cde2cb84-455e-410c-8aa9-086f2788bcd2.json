@@ -13,22 +13,28 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1478",
-                    "external_id": "T1478"
+                    "external_id": "T1478",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Talos-MDM",
                     "description": "Warren Mercer, Paul Rascagneres, Andrew Williams. (2018, July 12). Advanced Mobile Malware Campaign in India uses Malicious MDM. Retrieved September 24, 2018.",
-                    "url": "https://blog.talosintelligence.com/2018/07/Mobile-Malware-Campaign-uses-Malicious-MDM.html"
+                    "url": "https://blog.talosintelligence.com/2018/07/Mobile-Malware-Campaign-uses-Malicious-MDM.html",
+                    "source_name_fa": "Talos-MDM",
+                    "description_fa": "وارن مرسر، پل راسکگنرس، اندرو ویلیامز. (2018، 12 جولای). کمپین پیشرفته بدافزار موبایل در هند از MDM مخرب استفاده می کند. بازبینی شده در 24 سپتامبر 2018."
                 },
                 {
                     "source_name": "Symantec-iOSProfile",
-                    "description": "Yair Amit. (2013, March 12). Malicious Profiles \u2013 The Sleeping Giant of iOS Security. Retrieved September 24, 2018.",
-                    "url": "https://www.symantec.com/connect/blogs/malicious-profiles-sleeping-giant-ios-security"
+                    "description": "Yair Amit. (2013, March 12). Malicious Profiles – The Sleeping Giant of iOS Security. Retrieved September 24, 2018.",
+                    "url": "https://www.symantec.com/connect/blogs/malicious-profiles-sleeping-giant-ios-security",
+                    "source_name_fa": "Symantec-iOSProfile",
+                    "description_fa": "یایر آمیت. (2013، 12 مارس). نمایه های مخرب – غول خفته امنیت iOS. بازبینی شده در 24 سپتامبر 2018."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/stack-threats/STA-7.html",
-                    "external_id": "STA-7"
+                    "external_id": "STA-7",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -61,7 +67,9 @@
             "x_mitre_version": "1.0",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "پیکربندی ناامن یا مخرب را نصب کنید",
+            "description_fa": "دشمن می‌تواند از طریق ابزارهایی مانند ایمیل‌های فیشینگ یا پیام‌های متنی که مستقیماً حاوی تنظیمات پیکربندی به عنوان پیوست یا حاوی پیوند وب به تنظیمات پیکربندی هستند، تنظیمات پیکربندی ناامن یا مخرب را روی دستگاه تلفن همراه نصب کند. کاربر دستگاه ممکن است فریب بخورد تا تنظیمات پیکربندی را از طریق تکنیک های مهندسی اجتماعی (Citation: Symantec-iOSProfile) نصب کند.\n\nبه عنوان مثال، یک گواهی نامه مرجع صدور گواهینامه (CA) ناخواسته می تواند در فروشگاه گواهی مورد اعتماد دستگاه قرار داده شود، که حساسیت دستگاه را در برابر حملات شبکه میانی دشمن که به دنبال استراق سمع یا دستکاری ارتباطات شبکه دستگاه هستند، افزایش می دهد ([Eavesdrop on Insecure Network Communication]([[Pule_2] ارتباطات](https://attack.mitre.org/techniques/T1463)).\n\nدر iOS، نمایه‌های پیکربندی مخرب می‌تواند حاوی گواهی‌های مرجع صدور گواهینامه (CA) ناخواسته یا سایر تنظیمات ناامن مانند تنظیمات سرور پراکسی ناخواسته یا تنظیمات VPN باشد تا ترافیک شبکه دستگاه را از طریق سیستم دشمن هدایت کند. این دستگاه همچنین می‌تواند به طور بالقوه در یک سیستم مخرب مدیریت دستگاه تلفن همراه (MDM) (Citation: Talos-MDM) ثبت شود. https://attack.mitre.org/techniques/T1439"
         }
     ]
 }

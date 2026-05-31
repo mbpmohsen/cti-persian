@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0432#AN1206",
-                    "external_id": "AN1206"
+                    "external_id": "AN1206",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ADSPathWhitelist",
-                    "description": "Exclude legitimate ADS usage by system or AV tools."
+                    "description": "Exclude legitimate ADS usage by system or AV tools.",
+                    "description_fa": "استفاده قانونی از ADS توسط سیستم یا ابزارهای AV را حذف کنید."
                 },
                 {
                     "field": "ProcessScope",
-                    "description": "Restrict monitoring to suspicious parent processes (e.g., powershell.exe, cmd.exe, wscript.exe)."
+                    "description": "Restrict monitoring to suspicious parent processes (e.g., powershell.exe, cmd.exe, wscript.exe).",
+                    "description_fa": "نظارت را به فرآیندهای والد مشکوک (مانند powershell.exe، cmd.exe، wscript.exe) محدود کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate ADS creation with subsequent process execution to strengthen malicious context."
+                    "description": "Correlate ADS creation with subsequent process execution to strengthen malicious context.",
+                    "description_fa": "ایجاد ADS را با اجرای فرآیند بعدی برای تقویت زمینه مخرب مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1206",
+            "description_fa": "استفاده مشکوک از ویژگی های فایل NTFS مانند جریان های داده جایگزین (ADS) یا ویژگی های توسعه یافته (EA) برای پنهان کردن داده ها. دیدگاه مدافع: ایجاد یا تغییرات غیرعادی فایل حاوی نحو کولون (file.ext:ads)، فراخوانی‌های API مانند ZwSetEaFile/ZwQueryEaFile یا ابزارهای PowerShell/Windows که با پارامترهای جریان تعامل دارند. همبستگی بین ناهنجاری های فراداده فایل، خط و نسب فرآیند و اجرای فرمان زمینه را فراهم می کند."
         }
     ]
 }

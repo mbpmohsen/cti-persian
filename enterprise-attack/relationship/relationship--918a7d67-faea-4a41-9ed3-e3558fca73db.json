@@ -12,13 +12,17 @@
             "external_references": [
                 {
                     "source_name": "ADSecurity Kerberos and KRBTGT",
-                    "description": "Sean Metcalf. (2014, November 10). Kerberos & KRBTGT: Active Directory\u2019s Domain Kerberos Service Account. Retrieved January 30, 2020.",
-                    "url": "https://adsecurity.org/?p=483"
+                    "description": "Sean Metcalf. (2014, November 10). Kerberos & KRBTGT: Active Directory’s Domain Kerberos Service Account. Retrieved January 30, 2020.",
+                    "url": "https://adsecurity.org/?p=483",
+                    "source_name_fa": "ADSecurity Kerberos و KRBTGT",
+                    "description_fa": "شان متکالف (10 نوامبر 2014). Kerberos & KRBTGT: حساب خدمات Kerberos دامنه Active Directory. بازیابی شده در 30 ژانویه 2020."
                 },
                 {
                     "source_name": "STIG krbtgt reset",
                     "description": "UCF. (n.d.). The password for the krbtgt account on a domain must be reset at least every 180 days. Retrieved November 5, 2020.",
-                    "url": "https://www.stigviewer.com/stig/windows_server_2016/2019-12-12/finding/V-91779"
+                    "url": "https://www.stigviewer.com/stig/windows_server_2016/2019-12-12/finding/V-91779",
+                    "source_name_fa": "STIG krbtgt بازنشانی شود",
+                    "description_fa": "UCF. (n.d.). رمز عبور حساب krbtgt در یک دامنه باید حداقل هر 180 روز یکبار بازنشانی شود. بازیابی شده در 5 نوامبر 2020."
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +35,8 @@
             "target_ref": "attack-pattern--7b211ac6-c815-4189-93a9-ab415deca926",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "description_fa": "برای جلوگیری از تأثیر بلیط طلایی تولید شده قبلی، رمز عبور حساب داخلی KRBTGT را دو بار بازنشانی کنید، که هر بلیط طلایی موجودی را که با هش KRBTGT و سایر بلیط های Kerberos مشتق شده از آن ایجاد شده اند، باطل می کند. هر 180 روز یکبار گذرواژه حساب KRBTGT را بچرخانید.(Citation: STIG krbtgt reset) (Citation: ADSecurity Kerberos and KRBTGT)"
         }
     ]
 }

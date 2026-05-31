@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0059#AN0162",
-                    "external_id": "AN0162"
+                    "external_id": "AN0162",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredFilePaths",
-                    "description": "List of critical data directories or files; environment-specific tuning required."
+                    "description": "List of critical data directories or files; environment-specific tuning required.",
+                    "description_fa": "فهرست دایرکتوری ها یا فایل های داده های حیاتی؛ تنظیم خاص محیط مورد نیاز است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for correlating process execution with rapid data changes."
+                    "description": "Threshold for correlating process execution with rapid data changes.",
+                    "description_fa": "آستانه برای همبستگی اجرای فرآیند با تغییرات سریع داده ها."
                 },
                 {
                     "field": "AuthorizedProcesses",
-                    "description": "Expected processes permitted to modify business-critical data."
+                    "description": "Expected processes permitted to modify business-critical data.",
+                    "description_fa": "فرآیندهای مورد انتظار مجاز به اصلاح داده‌های حیاتی تجاری هستند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0162",
+            "description_fa": "تغییرات، حذف‌ها یا تغییرات فراداده غیرمجاز یا غیرمجاز فایل را با اجرای فرآیند مشکوک یا فراخوان‌های API مرتبط کنید. تشخیص تغییرات غیرعادی در داده های ساختاریافته (مانند فایل های پایگاه داده، گزارش ها، سوابق مالی) خارج از فعالیت مورد انتظار فرآیند تجاری."
         }
     ]
 }

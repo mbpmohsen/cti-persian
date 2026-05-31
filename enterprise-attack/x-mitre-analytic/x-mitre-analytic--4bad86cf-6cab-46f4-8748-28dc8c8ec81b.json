@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0129#AN0364",
-                    "external_id": "AN0364"
+                    "external_id": "AN0364",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessName",
-                    "description": "Detect suspicious use of ldapsearch, wbinfo, getent passwd, or samba enumeration tools."
+                    "description": "Detect suspicious use of ldapsearch, wbinfo, getent passwd, or samba enumeration tools.",
+                    "description_fa": "استفاده مشکوک از ابزارهای ldapsearch، wbinfo، getent passwd یا samba را شناسایی کنید."
                 },
                 {
                     "field": "LDAPSearchFilter",
-                    "description": "Tune for high-volume or broad-scope LDAP queries."
+                    "description": "Tune for high-volume or broad-scope LDAP queries.",
+                    "description_fa": "برای پرس و جوهای LDAP با حجم بالا یا دامنه وسیع تنظیم کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Apply filters for unexpected users or service accounts executing the behavior."
+                    "description": "Apply filters for unexpected users or service accounts executing the behavior.",
+                    "description_fa": "فیلترها را برای کاربران غیرمنتظره یا حساب‌های خدماتی که رفتار را اجرا می‌کنند، اعمال کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0364",
+            "description_fa": "شمارش حساب دامنه با استفاده از ldapsearch، ابزارهای samba (به عنوان مثال، 'wbinfo -u')، یا جستجوهای winbindd."
         }
     ]
 }

@@ -16,10 +16,12 @@ import concurrent.futures
 import html
 import json
 import os
+import random
 import re
 import sqlite3
 import ssl
 import sys
+import threading
 import time
 import urllib.error
 import urllib.parse
@@ -234,6 +236,62 @@ class GoogleCloudTranslator:
 
     def translate_text(self, text: str) -> str:
         return self.translate_batch([text])[0]
+
+
+class GoogleTransTranslator:
+    """Uses googletrans package (unofficial web API)."""
+
+    name = "googletrans"
+
+    def __init__(self, source_lang: str, target_lang: str) -> None:
+        self.source_lang = source_lang
+        self.target_lang = target_lang
+        self._local = threading.local()
+
+        try:
+            from googletrans import Translator  # type: ignore
+        except Exception as exc:  # noqa: BLE001
+            raise TranslationError(
+                "googletrans is not installed. Install it with: pip install 'googletrans==4.0.2'"
+            ) from exc
+        self._translator_cls = Translator
+
+    def _get_translator(self) -> Any:
+        tr = getattr(self._local, "translator", None)
+        if tr is None:
+            tr = self._translator_cls()
+            # googletrans variants use inconsistent attribute names.
+            if not hasattr(tr, "raise_Exception"):
+                try:
+                    setattr(tr, "raise_Exception", False)
+                except Exception:  # noqa: BLE001
+                    pass
+            if not hasattr(tr, "raise_exception"):
+                try:
+                    setattr(tr, "raise_exception", False)
+                except Exception:  # noqa: BLE001
+                    pass
+            self._local.translator = tr
+        return tr
+
+    def _reset_translator(self) -> None:
+        tr = self._translator_cls()
+        if not hasattr(tr, "raise_Exception"):
+            try:
+                setattr(tr, "raise_Exception", False)
+            except Exception:  # noqa: BLE001
+                pass
+        if not hasattr(tr, "raise_exception"):
+            try:
+                setattr(tr, "raise_exception", False)
+            except Exception:  # noqa: BLE001
+                pass
+        self._local.translator = tr
+
+    def translate_text(self, text: str) -> str:
+        tr = self._get_translator()
+        result = tr.translate(text, src=self.source_lang, dest=self.target_lang)
+        return str(result.text)
 
 
 class ArgosOfflineTranslator:
@@ -456,18 +514,26 @@ def chunked(items: Sequence[str], size: int) -> Iterator[Sequence[str]]:
 
 
 def translate_with_retries(
-    translator: GooglePublicTranslator | GoogleCloudTranslator,
+    translator: Any,
     text: str,
     max_retries: int,
     initial_backoff: float,
+    jitter_seconds: float = 0.0,
 ) -> str:
     backoff = initial_backoff
     last_error: Exception | None = None
     for attempt in range(1, max_retries + 1):
         try:
+            if jitter_seconds > 0:
+                time.sleep(random.uniform(0.0, jitter_seconds))
             return translator.translate_text(text)
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, TranslationError) as exc:
+        except Exception as exc:  # noqa: BLE001
             last_error = exc
+            if hasattr(translator, "_reset_translator"):
+                try:
+                    translator._reset_translator()
+                except Exception:  # noqa: BLE001
+                    pass
             if attempt == max_retries:
                 break
             time.sleep(backoff)
@@ -481,10 +547,15 @@ def has_existing_suffix_translation(
     parent: Any | None,
     parent_key: str | int | None,
     suffix: str,
+    source_value: str,
 ) -> bool:
     if isinstance(container, dict) and isinstance(key, str):
         translated_key = f"{key}{suffix}"
-        return translated_key in container and isinstance(container[translated_key], str)
+        if translated_key not in container or not isinstance(container[translated_key], str):
+            return False
+        translated = container[translated_key].strip()
+        source = source_value.strip()
+        return bool(translated) and translated != source
 
     if (
         isinstance(container, list)
@@ -494,11 +565,15 @@ def has_existing_suffix_translation(
     ):
         translated_key = f"{parent_key}{suffix}"
         translated_list = parent.get(translated_key)
-        return (
+        if not (
             isinstance(translated_list, list)
             and key < len(translated_list)
             and isinstance(translated_list[key], str)
-        )
+        ):
+            return False
+        translated = translated_list[key].strip()
+        source = source_value.strip()
+        return bool(translated) and translated != source
 
     return False
 
@@ -566,7 +641,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--provider",
-        choices=["google_public", "google_cloud", "argos_offline"],
+        choices=["google_public", "google_cloud", "googletrans", "argos_offline"],
         default="google_public",
         help="Translation backend.",
     )
@@ -670,6 +745,24 @@ def parse_args() -> argparse.Namespace:
         help="Initial retry backoff in seconds (default: 1.0).",
     )
     parser.add_argument(
+        "--jitter",
+        type=float,
+        default=0.2,
+        help="Random sleep jitter (seconds) before each network translation call.",
+    )
+    parser.add_argument(
+        "--progress-every",
+        type=int,
+        default=100,
+        help="Print progress every N files (default: 100).",
+    )
+    parser.add_argument(
+        "--progress-seconds",
+        type=float,
+        default=30.0,
+        help="Print heartbeat progress at least every N seconds (default: 30).",
+    )
+    parser.add_argument(
         "--limit",
         type=int,
         default=0,
@@ -706,11 +799,18 @@ def main() -> int:
                 file=sys.stderr,
             )
             return 2
-        translator: GooglePublicTranslator | GoogleCloudTranslator | ArgosOfflineTranslator = GoogleCloudTranslator(
+        translator: (
+            GooglePublicTranslator | GoogleCloudTranslator | GoogleTransTranslator | ArgosOfflineTranslator
+        ) = GoogleCloudTranslator(
             source_lang=args.source_lang,
             target_lang=args.target_lang,
             api_key=args.api_key,
             ssl_context=ssl_context,
+        )
+    elif args.provider == "googletrans":
+        translator = GoogleTransTranslator(
+            source_lang=args.source_lang,
+            target_lang=args.target_lang,
         )
     elif args.provider == "argos_offline":
         translator = ArgosOfflineTranslator(
@@ -754,18 +854,46 @@ def main() -> int:
         changed_file_count = 0
         failed_file_count = 0
         skipped_file_count = 0
+        failed_translation_count = 0
         memory_cache: dict[str, str] = {}
+        start_time = time.time()
+        last_progress_print = start_time
+
+        def maybe_print_progress(idx_value: int, current_file: str = "", force: bool = False) -> None:
+            nonlocal last_progress_print
+            now = time.time()
+            should_print = force
+            if not should_print and args.progress_every > 0 and idx_value % args.progress_every == 0:
+                should_print = True
+            if not should_print and args.progress_seconds > 0 and now - last_progress_print >= args.progress_seconds:
+                should_print = True
+            if not should_print:
+                return
+
+            rate = idx_value / max(now - start_time, 1e-6)
+            parts = [
+                f"[progress] {idx_value}/{len(files)} files",
+                f"changed: {changed_file_count}",
+                f"skipped existing: {skipped_file_count}",
+                f"cache hits: {cache_hit_count}",
+                f"translated strings: {translated_text_count}",
+                f"translation errors: {failed_translation_count}",
+                f"rate: {rate:.2f} files/s",
+            ]
+            if current_file:
+                parts.append(f"current: {current_file}")
+            print(" | ".join(parts))
+            last_progress_print = now
 
         for idx, src_path in enumerate(files, start=1):
             rel_path = src_path.relative_to(source_root)
             dst_path = src_path if in_place else output_root / rel_path
+            if args.progress_seconds > 0 and time.time() - last_progress_print >= args.progress_seconds:
+                maybe_print_progress(idx - 1, str(rel_path), force=True)
 
             if args.skip_existing and not in_place and not args.dry_run and dst_path.exists():
                 skipped_file_count += 1
-                if idx % 100 == 0 or idx == len(files):
-                    print(
-                        f"[progress] {idx}/{len(files)} files | skipped existing: {skipped_file_count}"
-                    )
+                maybe_print_progress(idx, str(rel_path))
                 continue
 
             try:
@@ -787,8 +915,7 @@ def main() -> int:
                 if not args.dry_run:
                     ensure_parent(dst_path)
                     dst_path.write_text(raw, encoding="utf-8")
-                if idx % 100 == 0 or idx == len(files):
-                    print(f"[progress] {idx}/{len(files)} files")
+                maybe_print_progress(idx, str(rel_path))
                 continue
 
             if in_place and args.skip_existing and args.mode == "suffix":
@@ -799,15 +926,13 @@ def main() -> int:
                         parent=parent,
                         parent_key=parent_key,
                         suffix=args.fa_suffix,
+                        source_value=source_value,
                     )
-                    for container, key, _, _, parent, parent_key in targets
+                    for container, key, _, source_value, parent, parent_key in targets
                 )
                 if already_translated:
                     skipped_file_count += 1
-                    if idx % 100 == 0 or idx == len(files):
-                        print(
-                            f"[progress] {idx}/{len(files)} files | skipped existing: {skipped_file_count}"
-                        )
+                    maybe_print_progress(idx, str(rel_path))
                     continue
 
             unique_prepared: dict[str, tuple[str, dict[str, str]]] = {}
@@ -878,17 +1003,26 @@ def main() -> int:
                                 time.sleep(backoff)
                                 backoff *= 2
                         if translated_batch is None:
-                            raise TranslationError(
-                                f"Batch translation failed after retries: {last_error}"
+                            failed_translation_count += len(batch)
+                            print(
+                                f"[warn] batch translation failed for {len(batch)} strings in {rel_path}: {last_error}",
+                                file=sys.stderr,
                             )
+                            continue
 
                         for source_value, translated_masked in zip(batch, translated_batch):
                             protected = unique_prepared[source_value][1]
                             translated = restore_text(translated_masked, protected)
                             translation_results[source_value] = translated
                             translated_pairs.append((source_value, translated))
-                elif isinstance(translator, GooglePublicTranslator):
-                    # Public endpoint is safer as one-text-per-request with retries.
+                        if args.progress_seconds > 0 and time.time() - last_progress_print >= args.progress_seconds:
+                            maybe_print_progress(
+                                idx - 1,
+                                str(rel_path),
+                                force=True,
+                            )
+                elif isinstance(translator, (GooglePublicTranslator, GoogleTransTranslator)):
+                    # Public endpoints and googletrans are one-text-per-request with retries.
                     def run_one(source_value: str) -> tuple[str, str]:
                         masked = unique_prepared[source_value][0]
                         translated_masked = translate_with_retries(
@@ -896,6 +1030,7 @@ def main() -> int:
                             text=masked,
                             max_retries=args.max_retries,
                             initial_backoff=args.backoff,
+                            jitter_seconds=args.jitter,
                         )
                         protected = unique_prepared[source_value][1]
                         return source_value, restore_text(translated_masked, protected)
@@ -903,11 +1038,31 @@ def main() -> int:
                     with concurrent.futures.ThreadPoolExecutor(
                         max_workers=max(1, args.workers)
                     ) as executor:
-                        futures = [executor.submit(run_one, text) for text in missing_sources]
-                        for future in concurrent.futures.as_completed(futures):
-                            source_value, translated = future.result()
+                        future_to_source = {
+                            executor.submit(run_one, text): text for text in missing_sources
+                        }
+                        for future in concurrent.futures.as_completed(future_to_source):
+                            source_value = future_to_source[future]
+                            try:
+                                source_value, translated = future.result()
+                            except Exception as exc:  # noqa: BLE001
+                                failed_translation_count += 1
+                                print(
+                                    f"[warn] translation failed for one string in {rel_path}: {exc}",
+                                    file=sys.stderr,
+                                )
+                                continue
                             translation_results[source_value] = translated
                             translated_pairs.append((source_value, translated))
+                            if (
+                                args.progress_seconds > 0
+                                and time.time() - last_progress_print >= args.progress_seconds
+                            ):
+                                maybe_print_progress(
+                                    idx - 1,
+                                    str(rel_path),
+                                    force=True,
+                                )
                 else:
                     # Offline translation can also benefit from thread-level parallelism.
                     def run_offline(source_value: str) -> tuple[str, str]:
@@ -919,11 +1074,31 @@ def main() -> int:
                     with concurrent.futures.ThreadPoolExecutor(
                         max_workers=max(1, args.workers)
                     ) as executor:
-                        futures = [executor.submit(run_offline, text) for text in missing_sources]
-                        for future in concurrent.futures.as_completed(futures):
-                            source_value, translated = future.result()
+                        future_to_source = {
+                            executor.submit(run_offline, text): text for text in missing_sources
+                        }
+                        for future in concurrent.futures.as_completed(future_to_source):
+                            source_value = future_to_source[future]
+                            try:
+                                source_value, translated = future.result()
+                            except Exception as exc:  # noqa: BLE001
+                                failed_translation_count += 1
+                                print(
+                                    f"[warn] offline translation failed for one string in {rel_path}: {exc}",
+                                    file=sys.stderr,
+                                )
+                                continue
                             translation_results[source_value] = translated
                             translated_pairs.append((source_value, translated))
+                            if (
+                                args.progress_seconds > 0
+                                and time.time() - last_progress_print >= args.progress_seconds
+                            ):
+                                maybe_print_progress(
+                                    idx - 1,
+                                    str(rel_path),
+                                    force=True,
+                                )
 
                 cache.put_many(
                     provider=translator.name,
@@ -936,8 +1111,7 @@ def main() -> int:
 
             if args.dry_run:
                 translated_text_count += len(targets)
-                if idx % 100 == 0 or idx == len(files):
-                    print(f"[progress] {idx}/{len(files)} files")
+                maybe_print_progress(idx, str(rel_path))
                 continue
 
             file_changed = False
@@ -1000,10 +1174,7 @@ def main() -> int:
                 encoding="utf-8",
             )
 
-            if idx % 100 == 0 or idx == len(files):
-                print(
-                    f"[progress] {idx}/{len(files)} files | changed: {changed_file_count} | translated strings: {translated_text_count}"
-                )
+            maybe_print_progress(idx, str(rel_path))
 
         print("")
         print("[done]")
@@ -1012,6 +1183,7 @@ def main() -> int:
         print(f"translated strings: {translated_text_count}")
         print(f"cache hits: {cache_hit_count}")
         print(f"skipped existing files: {skipped_file_count}")
+        print(f"failed translations: {failed_translation_count}")
         print(f"failed files: {failed_file_count}")
         return 0
     finally:

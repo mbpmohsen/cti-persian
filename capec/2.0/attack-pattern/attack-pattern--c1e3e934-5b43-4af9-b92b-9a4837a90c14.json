@@ -9,44 +9,56 @@
                 {
                     "external_id": "CAPEC-61",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/61.html"
+                    "url": "https://capec.mitre.org/data/definitions/61.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-384",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/384.html"
+                    "url": "http://cwe.mitre.org/data/definitions/384.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-664",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/664.html"
+                    "url": "http://cwe.mitre.org/data/definitions/664.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-732",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/732.html"
+                    "url": "http://cwe.mitre.org/data/definitions/732.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Session Fixation",
                     "external_id": "37",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Session-Fixation"
+                    "url": "http://projects.webappsec.org/Session-Fixation",
+                    "description_fa": "تثبیت جلسه",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Session fixation",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Session_fixation"
+                    "url": "https://owasp.org/www-community/attacks/Session_fixation",
+                    "description_fa": "تثبیت جلسه",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-601",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/03-Testing_for_Session_Fixation.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/03-Testing_for_Session_Fixation.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--c1e3e934-5b43-4af9-b92b-9a4837a90c14",
@@ -72,6 +84,15 @@
                 ],
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -92,11 +113,27 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Low": "Only basic skills are required to determine and fixate session identifiers in a user's browser. Subsequent attacks may require greater skill levels depending on the attackers' motives."
+                "Low": "Only basic skills are required to determine and fixate session identifiers in a user's browser. Subsequent attacks may require greater skill levels depending on the attackers' motives.",
+                "Low_fa": "برای تعیین و تثبیت شناسه‌های جلسه در مرورگر کاربر، فقط مهارت‌های اولیه لازم است. حملات بعدی بسته به انگیزه مهاجمان ممکن است به سطوح مهارت بیشتری نیاز داشته باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم یک کلاینت را وادار می کند تا با استفاده از شناسه جلسه ارائه شده توسط مهاجم، یک جلسه با نرم افزار هدف برقرار کند. هنگامی که کاربر با موفقیت به نرم افزار هدف احراز هویت می کند، مهاجم از شناسه جلسه (اکنون دارای امتیاز) در تراکنش های خود استفاده می کند. این حمله از این واقعیت استفاده می‌کند که نرم‌افزار هدف یا به شناسه‌های جلسه تولید شده توسط مشتری متکی است یا همان شناسه‌های جلسه را پس از افزایش امتیاز حفظ می‌کند.",
+            "name_fa": "تثبیت جلسه",
+            "x_capec_example_instances_fa": [
+                "یک برنامه بانکی را در نظر بگیرید که قبل از ورود به سیستم یک شناسه جلسه در URL برای کاربر صادر می کند و از همان شناسه برای شناسایی مشتری پس از احراز هویت موفق استفاده می کند. یک مهاجم به راحتی می‌تواند با کلیک کردن قربانی روی پیوند جعلی که حاوی شناسه جلسه معتبر از راه‌اندازی جلسه به دام افتاده توسط مهاجم است، از تثبیت جلسه برای دسترسی به حساب قربانی استفاده کند. هنگامی که قربانی احراز هویت شد، مهاجم می‌تواند جلسه را تصاحب کند و با همان سطوح امتیاز قربانی ادامه دهد.",
+                "یک مهاجم می‌تواند جلسات کاربر را ربوده، کنترل‌های احراز هویت را دور بزند و احتمالاً با تثبیت جلسه تأیید هویت کاربر در کنسول مدیریت در نسخه‌های خاصی از Macromedia JRun 4.0، امتیاز مدیریتی را به دست آورد. این را می توان با تنظیم شناسه جلسه در مرورگر کاربر و تأیید هویت کاربر در کنسول مدیریت به دست آورد. تثبیت جلسه امکان پذیر است زیرا سرور برنامه زمانی که تغییری در سطوح امتیاز وجود دارد شناسه های جلسه را بازسازی نمی کند. همچنین ببینید: CVE-2004-2182"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تنظیم حمله: </b>تنظیم جلسه: مهاجم باید یک جلسه تله ای را راه اندازی کند که یک شناسه جلسه معتبر ارائه می دهد، یا یک شناسه دلخواه را بسته به مکانیزم استفاده شده توسط برنامه انتخاب کند. جلسه تله یک جلسه ساختگی است که با برنامه توسط مهاجم ایجاد می شود و صرفاً برای به دست آوردن شناسه های جلسه معتبر استفاده می شود. همچنین ممکن است برای به دست آوردن شناسه های جلسه معتبر، از مهاجم خواسته شود که به طور دوره ای جلسه تله را بازخوانی کند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>مهاجم یک شناسه از پیش تعریف شده را انتخاب می کند که می داند.</td></tr><tr><td>مهاجم جلسه trap را ایجاد می کند. قربانی.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>جذب قربانی: </b>تعیین جلسه: مهاجم اکنون باید شناسه جلسه را از جلسه تله به قربانی با معرفی مرورگر قربانی به شناسه جلسه منتقل کند. این به عنوان تثبیت جلسه شناخته می شود. شناسه جلسه را می توان با استفاده از آسیب پذیری اسکریپت متقابل سایت، با استفاده از تگ های متا یا تنظیم سرصفحه های پاسخ HTTP به روش های مختلف به مرورگر قربانی وارد کرد. فرم‌ها).</td></tr><tr><td> مهاجمان می‌توانند سرورهای پروکسی سرکش را برای پروتکل‌های شبکه ایجاد کنند که شناسه جلسه را ارائه می‌کنند و سپس اتصال را به سرویس قانونی هدایت می‌کنند.</td></tr><tr><td> مهاجمان می‌توانند آدرس‌های اینترنتی را به قربانیان احتمالی از طریق هرزنامه و فیشینگ ایمیل کنند. تکنیک‌ها.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سوء استفاده از جلسه قربانی: </b>تسلط بر جلسه ثابت: هنگامی که قربانی به سطح بالاتری از امتیاز دست یافت، احتمالاً مهاجم با استفاده از جلسه، می‌تواند با استفاده از جلسه، جلسه را برطرف کند. شناسه.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم شناسه جلسه از پیش تعریف‌شده را در مرورگر خود بارگیری می‌کند و داده‌ها یا عملکردهای محافظت شده را مرور می‌کند.</td></tr><tr><td>مهاجم شناسه جلسه از پیش تعریف‌شده را در نرم‌افزار خود بارگیری می‌کند و از حقوق استفاده می‌کند. قربانی.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "شناسه‌های جلسه که با تغییر سطوح امتیاز بدون تغییر باقی می‌مانند.",
+                "مکانیزم مدیریت جلسه مجاز که شناسه های جلسه تصادفی تولید شده توسط کاربر را می پذیرد",
+                "شناسه های جلسه قابل پیش بینی"
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -9,42 +9,50 @@
                 {
                     "external_id": "CAPEC-16",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/16.html"
+                    "url": "https://capec.mitre.org/data/definitions/16.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-521",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/521.html"
+                    "url": "http://cwe.mitre.org/data/definitions/521.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-262",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/262.html"
+                    "url": "http://cwe.mitre.org/data/definitions/262.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-263",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/263.html"
+                    "url": "http://cwe.mitre.org/data/definitions/263.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-654",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/654.html"
+                    "url": "http://cwe.mitre.org/data/definitions/654.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-307",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/307.html"
+                    "url": "http://cwe.mitre.org/data/definitions/307.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-308",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/308.html"
+                    "url": "http://cwe.mitre.org/data/definitions/308.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-309",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/309.html"
+                    "url": "http://cwe.mitre.org/data/definitions/309.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--a9dc4914-409a-4f71-80df-c5cc3923d112",
@@ -79,6 +87,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -99,11 +120,27 @@
                 "A machine with sufficient resources for the job (e.g. CPU, RAM, HD). Applicable dictionaries are required. Also a password cracking tool or a custom script that leverages the dictionary database to launch the attack."
             ],
             "x_capec_skills_required": {
-                "Low": "A variety of password cracking tools and dictionaries are available to launch this type of an attack."
+                "Low": "A variety of password cracking tools and dictionaries are available to launch this type of an attack.",
+                "Low_fa": "انواع ابزارهای شکستن رمز عبور و فرهنگ لغت برای راه اندازی این نوع حمله در دسترس هستند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک مهاجم هر یک از کلمات یک فرهنگ لغت را به عنوان رمز عبور امتحان می کند تا از طریق حساب کاربری به سیستم دسترسی پیدا کند. اگر رمز عبور انتخاب شده توسط کاربر یک کلمه در فرهنگ لغت باشد، این حمله موفقیت آمیز خواهد بود (در صورت عدم وجود سایر اقدامات کاهشی). این یک نمونه خاص از الگوی حمله بیرحمانه گذرواژه است.</xhtml:p>\n            <xhtml:p> حملات دیکشنری با حملات مشابهی مانند Password Spraying (CAPEC-565) و Credential Stuffing (CAPEC-600) متفاوت است، زیرا از ترکیب نام کاربری/گذرواژه ناشناخته استفاده می کنند و به ایجاد قفل حساب اهمیتی نمی دهند.</xhtml:p>",
+            "name_fa": "حمله رمز عبور مبتنی بر فرهنگ لغت",
+            "x_capec_example_instances_fa": [
+                "یک کاربر سیستم کلمه \"خائنانه\" را به عنوان رمز عبور خود انتخاب می کند و معتقد است که حدس زدن آن بسیار دشوار است. حمله دیکشنری مبتنی بر رمز عبور برای شکستن این رمز عبور و دسترسی به حساب کاربری استفاده می شود.",
+                "<xhtml:p>مکانیسم احراز هویت چالش/پاسخ Cisco LEAP از گذرواژه‌ها به‌گونه‌ای استفاده می‌کند که مستعد حملات فرهنگ لغت هستند، که این امر باعث می‌شود مهاجمان راه دور از طریق حملات حدس زدن رمز عبور بی‌تردید، امتیازات را به دست آورند.</xhtml:p>\n               <xhtml:p> Cisco LEAP یک الگوریتم احراز هویت متقابل است که از استخراج پویا از کلیدهای جلسه پشتیبانی می کند. با Cisco LEAP، احراز هویت متقابل بر یک راز مشترک، رمز ورود کاربر (که توسط کلاینت و شبکه شناخته می‌شود) متکی است و برای پاسخگویی به چالش‌های بین کاربر و سرور سرویس کاربر شماره‌گیری احراز هویت از راه دور (RADIUS) استفاده می‌شود.</xhtml:p>\n               <xhtml:p>روش هایی برای شخصی وجود دارد که بتواند ابزاری بنویسد تا یک حمله فرهنگ لغت آفلاین را بر روی احراز هویت مبتنی بر رمز عبور که از Microsoft MS-CHAP استفاده می کند، مانند Cisco LEAP، راه اندازی کند. این ابزار از لیست‌های رمز عبور بزرگ برای راه‌اندازی مؤثر حملات فرهنگ لغت آفلاین علیه حساب‌های کاربری LEAP استفاده می‌کند، که از طریق تکنیک‌های غیرفعال sniffing یا فعال جمع‌آوری شده است.</xhtml:p>همچنین ببینید: CVE-2003-1096."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین خط‌مشی رمز عبور برنامه/سیستم: </b>خط‌مشی‌های گذرواژه برنامه/سیستم مورد نظر را تعیین کنید.</p></li><table><tbody><tr><th>تکنیک‌های حداقل مجاز و حداکثر رمز عبور</thd><tr>تعیین کنید. طول ها.</td></tr><tr><td>قالب گذرواژه های مجاز را تعیین کنید (اعم از اینکه لازم باشد یا مجاز باشد حاوی اعداد، نویسه های خاص و غیره باشد یا اینکه مجاز باشد کلماتی از فرهنگ لغت داشته باشد).</td></tr><tr><td>خط مشی قفل کردن حساب را تعیین کنید (یک خط مشی قفل حساب سختگیرانه از حملات brute force></></><tr>body جلوگیری می کند).</tdli> <b>واژه‌نامه‌ها را انتخاب کنید: </b>واژه‌نامه‌هایی را برای استفاده در حمله انتخاب کنید (مانند زبان‌های مختلف، اصطلاحات خاص، و غیره)</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>بر اساس زبان‌های دلخواه کاربران خاص، فرهنگ لغت را انتخاب کنید. زبان‌ها.</td></tr></tbody></table><li> <p> <b>تعیین نام(های) کاربری برای هدف: </b>تعیین نام(های) کاربری که رمز عبور آنها شکسته شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>نام کاربری(های) کاربری را با استفاده از شبکه دریافت کنید بسته‌ها.</td></tr><tr><td>نام کاربری(های) را با درخواست برنامه/سیستم دریافت کنید (مثلاً اگر پس از تلاش برای ورود ناموفق، سیستم نشان می‌دهد که آیا نام کاربری وارد شده معتبر بوده یا نه)</td></tr><tr><td>نام‌های کاربری را از سیستم فایل دریافت کنید (مثلاً فهرست فهرست‌ها در فهرست‌های Windows، و Setting in\\sw\\sw. در سیستم‌های یونیکس مانند)</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>از فرهنگ لغت برای شکستن رمزهای عبور استفاده کنید.: </b>از یک ابزار شکستن رمز عبور استفاده کنید که فرهنگ لغت را برای تغذیه گذرواژه‌ها به سیستم و بررسی اینکه آیا آنها را به سیستم می‌رساند کار کنید.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>همه کلمات موجود در فرهنگ لغت، و همچنین غلط املایی رایج کلمات را به عنوان رمز عبور نام(های کاربری) انتخابی امتحان کنید.</td></tr><tr><td>از ترکیب‌های رایج کلمات در فرهنگ لغت، و همچنین غلط املایی رایج برای ترکیب استفاده کنید. نام کاربری (ها).</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "این سیستم از احراز هویت مبتنی بر رمز عبور یک عاملی استفاده می کند.",
+                "سیستم دارای خط مشی رمز عبور صحیحی نیست که در حال اجرا باشد.",
+                "این سیستم یک مکانیسم موثر مهار رمز عبور را پیاده سازی نمی کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "ماشینی با منابع کافی برای کار (مانند CPU، RAM، HD). دیکشنری های کاربردی مورد نیاز است. همچنین یک ابزار شکستن رمز عبور یا یک اسکریپت سفارشی که از پایگاه داده فرهنگ لغت برای راه اندازی حمله استفاده می کند."
+            ]
         }
     ],
     "type": "bundle"

@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1542/003",
                     "external_id": "T1542.003",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Lau 2011",
                     "description": "Lau, H. (2011, August 8). Are MBR Infections Back in Fashion? (Infographic). Retrieved November 13, 2014.",
                     "url": "http://www.symantec.com/connect/blogs/are-mbr-infections-back-fashion",
-                    "source_name_fa": "برنده 2011",
-                    "description_fa": "لو، H. (2011، 8) آیا عفونت های MBR در مد هستند؟ (یادداشت) Retrieved 13 نوامبر 2014"
+                    "source_name_fa": "لاو 2011",
+                    "description_fa": "Lau, H. (2011، 8 اوت). آیا عفونت های MBR به مد بازگشته اند؟ (اینفوگرافیک). بازبینی شده در 13 نوامبر 2014."
                 },
                 {
                     "source_name": "Mandiant M Trends 2016",
                     "description": "Mandiant. (2016, February 25). Mandiant M-Trends 2016. Retrieved November 17, 2024.",
                     "url": "https://web.archive.org/web/20211024160454/https://www.fireeye.com/content/dam/fireeye-www/current-threats/pdfs/rpt-mtrends-2016.pdf",
                     "source_name_fa": "Mandiant M Trends 2016",
-                    "description_fa": "Mandiant Mandiant M-Trends 2016 Retrieved ۱۷ نوامبر ۲۰۲۴"
+                    "description_fa": "ماندانت. (25 فوریه 2016). Mandiant M-Trends 2016. بازیابی شده در 17 نوامبر 2024."
                 },
                 {
                     "source_name": "welivesecurity",
                     "description": "Martin Smolár. (2023, March 1). BlackLotus UEFI bootkit: Myth confirmed. Retrieved February 11, 2025.",
                     "url": "https://www.welivesecurity.com/2023/03/01/blacklotus-uefi-bootkit-myth-confirmed/",
-                    "source_name_fa": "ما زندگی می کنیم",
-                    "description_fa": "مارتین Smolár BlackLotus UEFI bootkit: Myth تایید کرد. Retrieved 11 فوریه 2025"
+                    "source_name_fa": "امنیت عمومی",
+                    "description_fa": "مارتین اسمولار. (1 مارس 2023). بوت کیت BlackLotus UEFI: افسانه تایید شد. بازبینی شده در 11 فوریه 2025."
                 },
                 {
                     "source_name": "Microsoft Security",
                     "description": "Microsoft Incident Response. (2023, April 11). Guidance for investigating attacks using CVE-2022-21894: The BlackLotus campaign. Retrieved February 12, 2025.",
                     "url": "https://www.microsoft.com/en-us/security/blog/2023/04/11/guidance-for-investigating-attacks-using-cve-2022-21894-the-blacklotus-campaign/",
-                    "source_name_fa": "Microsoft Security",
-                    "description_fa": "پاسخ رویداد مایکروسافت (2023، 11 آوریل) راهنمایی برای بررسی حملات با استفاده از CVE-2022-21894 کمپین BlackLotus Retrieved 12 فوریه 2025"
+                    "source_name_fa": "امنیت مایکروسافت",
+                    "description_fa": "واکنش به حادثه مایکروسافت (2023، 11 آوریل). راهنمایی برای بررسی حملات با استفاده از CVE-2022-21894: کمپین BlackLotus. بازبینی شده در 12 فوریه 2025."
                 }
             ],
             "object_marking_refs": [
@@ -73,8 +73,8 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "Bootkit",
-            "description_fa": "مخالفان ممکن است از بوت بوک برای ادامه سیستم ها استفاده کنند. بوت بوک یک نوع بدافزار است که بخش های بوت هارد دیسک را اصلاح می کند و اجازه می دهد کد مخرب قبل از سیستم عامل کامپیوتر اجرا شود. بوتت ها در یک لایه زیر سیستم عامل قرار دارند و ممکن است انجام اصلاح کامل آن را دشوار کند مگر اینکه یک سازمان مظنون به استفاده از آن باشد و بتواند بر اساس آن عمل کند.\n\nدر سیستم های BIOS، یک بوت باکس ممکن است رکورد Master Boot Record (MBR) و / یا Volume Boot Record (VBR) را تغییر دهد. MBR بخش دیسک است که برای اولین بار پس از تکمیل اولیه سخت افزار توسط BIOS بارگذاری می شود. این محل بوت لودر است. یک دشمن که دسترسی خام به درایو بوت دارد، ممکن است این منطقه را بازنویسی کند و در طول راه اندازی از لودر بوت معمولی به کد دشمن حرکت کند. [[ویرایش]\n\nMBR کنترل فرآیند بوت را به VBR منتقل می کند. شبیه به مورد MBR، یک دشمن که دسترسی خام به درایو بوت دارد، ممکن است VBR را بازنویسی کند تا اجرای را در طول راه اندازی به کد دشمن منحرف کند.\n\nدر سیستم های UEFI (Unified Extensible) ، بوت باکس ممکن است به جای آن فایل ها را در پارتیشن سیستم EFI (ESP) ایجاد یا اصلاح کند. ESP یک پارتیشن در ذخیره سازی داده های مورد استفاده توسط دستگاه های حاوی UEFI است که به سیستم اجازه می دهد تا سیستم عامل و سایر خدمات مورد استفاده توسط سیستم را بوت کند. یک دشمن می تواند از فایل های جدید ایجاد شده یا پچ شده در ESP برای اجرای کد هسته مخرب استفاده کند. [CTI_PRESERVE_2] (Citation: Mandiant M Trends 2016) (Citation: Lau 2011) (Citation: Microsoft Security) (Citation: welivesecurity)"
+            "name_fa": "بوت کیت",
+            "description_fa": "دشمنان ممکن است از بوت کیت ها برای تداوم در سیستم ها استفاده کنند. بوت کیت یک نوع بدافزار است که بخش‌های راه‌اندازی هارد دیسک را تغییر می‌دهد و به کدهای مخرب اجازه می‌دهد قبل از بارگیری سیستم عامل رایانه اجرا شوند. بوت کیت ها در یک لایه زیر سیستم عامل قرار دارند و ممکن است انجام اصلاح کامل را دشوار کنند، مگر اینکه سازمانی مشکوک به استفاده از آن باشد و بتواند مطابق با آن عمل کند.\n\nدر سیستم‌های بایوس، یک بوت کیت ممکن است رکورد اصلی بوت (MBR) و/یا ضبط حجمی (VBR) را تغییر دهد. محل بوت لودر است. دشمنی که دسترسی خام به درایو راه‌اندازی دارد، ممکن است این ناحیه را بازنویسی کند، و اجرا را در حین راه‌اندازی از بوت‌لودر معمولی به کد دشمن منحرف کند.(Citation: Lau 2011)\n\nMBR کنترل فرآیند بوت را به VBR می دهد. مشابه مورد MBR، دشمنی که دسترسی خام به درایو بوت دارد، می‌تواند VBR را بازنویسی کند تا اجرا را در هنگام راه‌اندازی به کد دشمن منحرف کند.\n\nدر سیستم‌های UEFI (رابط میان‌افزار توسعه‌پذیر یکپارچه)، یک بوت کیت ممکن است در عوض فایل‌هایی را در پارتیشن سیستم EFI (ESP) ایجاد یا تغییر دهد. ESP پارتیشنی در ذخیره‌سازی داده‌ها است که توسط دستگاه‌های حاوی UEFI استفاده می‌شود و به سیستم اجازه می‌دهد تا سیستم‌عامل و سایر ابزارهای استفاده شده توسط سیستم را بوت کند. یک حریف می‌تواند از فایل‌های تازه ایجاد شده یا وصله‌شده در ESP برای اجرای کدهای مخرب هسته استفاده کند.(Citation: Microsoft Security)(Citation: welivesecurity) (Citation: Mandiant M Trends 2016)"
         }
     ]
 }

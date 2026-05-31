@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0007#AN0016",
-                    "external_id": "AN0016"
+                    "external_id": "AN0016",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,22 +61,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentImage",
-                    "description": "Tune based on expected script hosts or authorized administrators invoking trust enumeration."
+                    "description": "Tune based on expected script hosts or authorized administrators invoking trust enumeration.",
+                    "description_fa": "بر اساس میزبان های مورد انتظار اسکریپت یا مدیران مجاز که از شمارش اعتماد استفاده می کنند تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate enumeration + subsequent Kerberos activity or DC interaction within a bounded window."
+                    "description": "Correlate enumeration + subsequent Kerberos activity or DC interaction within a bounded window.",
+                    "description_fa": "همبستگی شمارش + فعالیت بعدی Kerberos یا تعامل DC در یک پنجره محدود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Prioritize detection for non-admin or unexpected user accounts performing enumeration."
+                    "description": "Prioritize detection for non-admin or unexpected user accounts performing enumeration.",
+                    "description_fa": "تشخیص را برای حساب‌های کاربری غیرمنتظره یا غیرمدیر که شمارش را انجام می‌دهند، اولویت‌بندی کنید."
                 },
                 {
                     "field": "API_Name",
-                    "description": "Flag uncommon or low-prevalence API calls like DSEnumerateDomainTrusts for inspection."
+                    "description": "Flag uncommon or low-prevalence API calls like DSEnumerateDomainTrusts for inspection.",
+                    "description_fa": "فراخوان‌های API غیرمعمول یا کم‌شیوع مانند DSEnumerateDomainTrusts را برای بازرسی علامت‌گذاری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0016",
+            "description_fa": "Adversary از nltest، PowerShell یا Win32/.NET API برای برشمردن روابط اعتماد دامنه (از طریق DSEnumerateDomainTrusts، GetAllTrustRelationships، یا پرس و جوهای LDAP) استفاده می کند، و سپس مراحل کشف یا احراز هویت انجام می شود."
         }
     ]
 }

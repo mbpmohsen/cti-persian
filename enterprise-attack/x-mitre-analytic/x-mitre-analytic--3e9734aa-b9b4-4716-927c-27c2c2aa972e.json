@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0062#AN0171",
-                    "external_id": "AN0171"
+                    "external_id": "AN0171",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceWhitelist",
-                    "description": "Exclude legitimate administrative service stops during system maintenance."
+                    "description": "Exclude legitimate administrative service stops during system maintenance.",
+                    "description_fa": "توقف خدمات اداری قانونی در طول نگهداری سیستم را حذف کنید."
                 },
                 {
                     "field": "FilePathScope",
-                    "description": "Specify monitored paths (/etc/audit/audit.rules, audit.conf) to avoid false positives from unrelated file writes."
+                    "description": "Specify monitored paths (/etc/audit/audit.rules, audit.conf) to avoid false positives from unrelated file writes.",
+                    "description_fa": "مسیرهای نظارت شده (/etc/audit/audit.rules، audit.conf) را مشخص کنید تا از مثبت کاذب از نوشتن فایل نامرتبط جلوگیری کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate suspicious commands, file modifications, and audit log gaps in short succession."
+                    "description": "Correlate suspicious commands, file modifications, and audit log gaps in short succession.",
+                    "description_fa": "دستورات مشکوک، اصلاحات فایل و شکاف های گزارش حسابرسی را به صورت متوالی به هم مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0171",
+            "description_fa": "غیرفعال کردن یا اصلاح سیستم حسابرسی لینوکس از طریق خاتمه فرآیند (auditd kill)، مدیریت سرویس (systemctl stop auditd)، یا دستکاری در فایل‌های قوانین/پیکربندی (/etc/audit/audit.rules، audit.conf). نمای مدافع: اجرای مشکوک دستورات auditctl/systemctl، اصلاحات فایل در قوانین حسابرسی، یا عدم وجود ناگهانی گزارش های حسابرسی مرتبط با اجرای ممتاز."
         }
     ]
 }

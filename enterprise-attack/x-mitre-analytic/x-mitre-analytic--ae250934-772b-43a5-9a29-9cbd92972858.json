@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0328#AN0932",
-                    "external_id": "AN0932"
+                    "external_id": "AN0932",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -71,25 +72,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "INFPathRegex",
-                    "description": "Regex for identifying suspicious INF files; adjust to suppress known safe profiles"
+                    "description": "Regex for identifying suspicious INF files; adjust to suppress known safe profiles",
+                    "description_fa": "Regex برای شناسایی فایل های INF مشکوک. تنظیم کنید تا پروفایل های ایمن شناخته شده را سرکوب کنید"
                 },
                 {
                     "field": "ExternalIPAllowlist",
-                    "description": "Domains or IP ranges allowed for CMSTP network connections"
+                    "description": "Domains or IP ranges allowed for CMSTP network connections",
+                    "description_fa": "دامنه ها یا محدوده IP مجاز برای اتصالات شبکه CMSTP"
                 },
                 {
                     "field": "COMInterfaceGUIDs",
-                    "description": "Set of auto-elevated COM interface GUIDs to flag (e.g., CMSTPLUA, CMLUAUTIL)"
+                    "description": "Set of auto-elevated COM interface GUIDs to flag (e.g., CMSTPLUA, CMLUAUTIL)",
+                    "description_fa": "مجموعه ای از GUID های رابط COM که به صورت خودکار بالا می روند برای پرچم گذاری (مانند CMSTPLUA، CMLUAUTIL)"
                 },
                 {
                     "field": "RegistryKeyAllowlist",
-                    "description": "Known good registry entries for CMSTP profile registration"
+                    "description": "Known good registry entries for CMSTP profile registration",
+                    "description_fa": "ورودی های رجیستری خوب شناخته شده برای ثبت نمایه CMSTP"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate CMSTP execution with subsequent network activity or process creation within N seconds"
+                    "description": "Correlate CMSTP execution with subsequent network activity or process creation within N seconds",
+                    "description_fa": "اجرای CMSTP را با فعالیت بعدی شبکه یا ایجاد فرآیند در N ثانیه مرتبط کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0932",
+            "description_fa": "اجرای CMSTP.exe با آرگومان هایی که به بارهای INF/SCT/DLL مشکوک یا از راه دور اشاره می کنند، به صورت اختیاری و به دنبال آن اتصالات شبکه خروجی به IP های نامعتبر، تزریق فرآیند از طریق رابط های COM (CMSTPLUA، CMLUAUTIL)، تغییرات رجیستری که فایل های مخرب را ثبت می کنند/پروفایل های مخرب/INFD/INFCT، یا ایجاد پروفایل های مخرب در LLINFD. اعدام"
         }
     ]
 }

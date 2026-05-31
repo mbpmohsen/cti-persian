@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0300#AN0839",
-                    "external_id": "AN0839"
+                    "external_id": "AN0839",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessNameScope",
-                    "description": "Uncommon for service binaries to call memfd_create; detection tuned for high-risk processes."
+                    "description": "Uncommon for service binaries to call memfd_create; detection tuned for high-risk processes.",
+                    "description_fa": "غیر معمول برای باینری های سرویس برای فراخوانی memfd_create. شناسایی برای فرآیندهای پرخطر تنظیم شده است."
                 },
                 {
                     "field": "RWXMemoryThreshold",
-                    "description": "Adjust threshold for allowed RWX allocations to reduce false positives in JIT runtimes."
+                    "description": "Adjust threshold for allowed RWX allocations to reduce false positives in JIT runtimes.",
+                    "description_fa": "آستانه را برای تخصیص های مجاز RWX تنظیم کنید تا مثبت های کاذب در زمان های اجرا JIT کاهش یابد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0839",
+            "description_fa": "نظارت بر فعالیت‌های mmap + mprotect + execve/execveat در حال پردازش که در آن مجوزهای حافظه از قابل نوشتن به قابل اجرا در داخل همان فرآیند بدون ELF مربوطه روی دیسک تغییر می‌کنند."
         }
     ]
 }

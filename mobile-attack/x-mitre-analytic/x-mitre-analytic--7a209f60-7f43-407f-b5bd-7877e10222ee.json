@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0704#AN1824",
-                    "external_id": "AN1824"
+                    "external_id": "AN1824",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,41 +58,52 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum span between install/version change and first suspicious post-delivery behavior."
+                    "description": "Maximum span between install/version change and first suspicious post-delivery behavior.",
+                    "description_fa": "حداکثر فاصله بین نصب/تغییر نسخه و اولین رفتار مشکوک پس از تحویل."
                 },
                 {
                     "field": "SupervisedOnly",
-                    "description": "Whether the analytic should only apply to supervised devices with high-confidence managed app telemetry."
+                    "description": "Whether the analytic should only apply to supervised devices with high-confidence managed app telemetry.",
+                    "description_fa": "اینکه آیا تجزیه و تحلیل باید فقط برای دستگاه‌های تحت نظارت با تله متری برنامه مدیریت شده با اطمینان بالا اعمال شود یا خیر."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved apps expected to change capabilities, services, or destinations because of legitimate releases."
+                    "description": "Approved apps expected to change capabilities, services, or destinations because of legitimate releases.",
+                    "description_fa": "برنامه‌های تأیید شده انتظار می‌رود قابلیت‌ها، سرویس‌ها یا مقصدها را به دلیل نسخه‌های قانونی تغییر دهند."
                 },
                 {
                     "field": "AllowedVersionChangeWindow",
-                    "description": "Grace period after an approved release during which limited behavior drift may be expected."
+                    "description": "Grace period after an approved release during which limited behavior drift may be expected.",
+                    "description_fa": "دوره مهلت پس از انتشار تایید شده که در طی آن ممکن است تغییر رفتار محدودی مورد انتظار باشد."
                 },
                 {
                     "field": "CapabilityDriftThreshold",
-                    "description": "Threshold for how much entitlement or capability drift is tolerated for a known app."
+                    "description": "Threshold for how much entitlement or capability drift is tolerated for a known app.",
+                    "description_fa": "آستانه برای میزان حق یا جابجایی قابلیت برای یک برنامه شناخته شده تحمل می شود."
                 },
                 {
                     "field": "SensorDriftThreshold",
-                    "description": "Threshold for newly used sensors or privacy-sensitive resources tolerated for a known app."
+                    "description": "Threshold for newly used sensors or privacy-sensitive resources tolerated for a known app.",
+                    "description_fa": "آستانه برای حسگرهای تازه استفاده شده یا منابع حساس به حریم خصوصی که برای یک برنامه شناخته شده قابل تحمل است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether certain behaviors should only be treated as suspicious when they occur without visible user interaction."
+                    "description": "Whether certain behaviors should only be treated as suspicious when they occur without visible user interaction.",
+                    "description_fa": "اینکه آیا رفتارهای خاص فقط زمانی باید مشکوک تلقی شوند که بدون تعامل کاربر قابل مشاهده باشند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Threshold for distinguishing autonomous post-update activity from normal user-driven first-run behavior."
+                    "description": "Threshold for distinguishing autonomous post-update activity from normal user-driven first-run behavior.",
+                    "description_fa": "آستانه تمایز فعالیت مستقل پس از به‌روزرسانی از رفتار معمولی کاربر-محور اولین اجرا."
                 },
                 {
                     "field": "DestinationAllowList",
-                    "description": "Expected domains, telemetry services, or APIs associated with approved app updates and known SDK behavior."
+                    "description": "Expected domains, telemetry services, or APIs associated with approved app updates and known SDK behavior.",
+                    "description_fa": "دامنه‌های مورد انتظار، خدمات تله‌متری یا APIهای مرتبط با به‌روزرسانی‌های تأییدشده برنامه و رفتار SDK شناخته شده."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1824",
+            "description_fa": "یک برنامه یا به‌روزرسانی قانونی که به نظر می‌رسد از طریق یک مسیر توزیع مورد انتظار یا قابل اعتماد وارد می‌شود، اما برنامه ارائه‌شده شروع به نشان دادن اعمال حق جدید، فعالیت پس‌زمینه، استفاده از چارچوب، دسترسی حسگر یا رفتار شبکه می‌کند که با خط پایه قبلی یا نقش مستند قبلی‌اش مطابقت ندارد. از آنجایی که بازرسی مستقیم وابستگی‌های آسیب‌دیده یا ابزارهای توسعه‌دهنده در iOS ضعیف‌تر است، مدافع بر موجودی برنامه‌های دستگاه نظارت‌شده، تغییر رفتار پس از به‌روزرسانی، الگوهای اجرای اول یا پس‌زمینه جدید، و ارتباطات پایین‌دستی که کتابخانه‌های تعبیه‌شده به خطر افتاده یا خروجی‌های ساخت دستکاری شده را پیشنهاد می‌کنند، تأکید می‌کند."
         }
     ]
 }

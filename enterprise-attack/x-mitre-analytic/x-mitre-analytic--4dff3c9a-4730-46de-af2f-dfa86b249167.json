@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0561#AN1549",
-                    "external_id": "AN1549"
+                    "external_id": "AN1549",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1549",
-            "description": "Adversary installs or abuses IDE extensions via CLI or direct write to profile directories and then communicates with marketplaces or remote tunnel services. Chain: auditd execve (code/idea/eclipse) with install/update flags or writes under ~/.vscode/extensions, ~/.config/JetBrains \u2192 outbound flows to *.visualstudio.com, marketplace.visualstudio.com, *.jetbrains.com, githubusercontent.com, or SSH/WebSocket tunnel endpoints \u2192 optional ssh/node processes spawned by IDE.",
+            "description": "Adversary installs or abuses IDE extensions via CLI or direct write to profile directories and then communicates with marketplaces or remote tunnel services. Chain: auditd execve (code/idea/eclipse) with install/update flags or writes under ~/.vscode/extensions, ~/.config/JetBrains → outbound flows to *.visualstudio.com, marketplace.visualstudio.com, *.jetbrains.com, githubusercontent.com, or SSH/WebSocket tunnel endpoints → optional ssh/node processes spawned by IDE.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IDEPaths",
-                    "description": "Per-distro/profile extension directories differ; tune for Chromium/JetBrains snap/flatpak paths."
+                    "description": "Per-distro/profile extension directories differ; tune for Chromium/JetBrains snap/flatpak paths.",
+                    "description_fa": "دایرکتوری های پسوند برای توزیع/پروفایل متفاوت است. برای مسیرهای snap/flatpak Chromium/JetBrains تنظیم کنید."
                 },
                 {
                     "field": "DomainAllowlist",
-                    "description": "Enterprise-approved repos and proxies to reduce FPs."
+                    "description": "Enterprise-approved repos and proxies to reduce FPs.",
+                    "description_fa": "مخازن و پروکسی های مورد تایید سازمان برای کاهش FP."
                 },
                 {
                     "field": "UserRoleScope",
-                    "description": "Limit to non-developer users or production servers."
+                    "description": "Limit to non-developer users or production servers.",
+                    "description_fa": "محدود به کاربران غیر توسعه دهنده یا سرورهای تولیدی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Join horizon across file, process, and network telemetry."
+                    "description": "Join horizon across file, process, and network telemetry.",
+                    "description_fa": "به افق بین فایل، فرآیند و تله متری شبکه بپیوندید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1549",
+            "description_fa": "دشمن برنامه‌های افزودنی IDE را از طریق CLI یا نوشتن مستقیم در فهرست‌های نمایه نصب یا سوء استفاده می‌کند و سپس با بازارها یا خدمات تونل راه دور ارتباط برقرار می‌کند. زنجیره: execve ممیزی شده (code/idea/eclipse) با نصب/به‌روزرسانی پرچم‌ها یا نوشته‌های زیر ~/.vscode/extensions، ~/.config/JetBrains → جریان‌های خروجی به *.visualstudio.com، marketplace.visualstudio.com، *.jetbrains.com، tunelocket.com، gt. نقاط پایانی ← فرآیندهای اختیاری ssh/node که توسط IDE ایجاد می شوند."
         }
     ]
 }

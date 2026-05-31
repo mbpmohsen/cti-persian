@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0270#AN0755",
-                    "external_id": "AN0755"
+                    "external_id": "AN0755",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,21 +53,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ObjectDN",
-                    "description": "Filter to specific AD containers (e.g., CN=Policies,CN=System,DC=domain,DC=com) for GPOs."
+                    "description": "Filter to specific AD containers (e.g., CN=Policies,CN=System,DC=domain,DC=com) for GPOs.",
+                    "description_fa": "به ظروف AD خاص (مانند CN=Policies,CN=System,DC=domain,DC=com) برای GPOها فیلتر کنید."
                 },
                 {
                     "field": "AttributeModified",
-                    "description": "Focus on high-risk attributes such as gPCFileSysPath, ntSecurityDescriptor."
+                    "description": "Focus on high-risk attributes such as gPCFileSysPath, ntSecurityDescriptor.",
+                    "description_fa": "روی ویژگی های پرخطر مانند gPCFileSysPath، ntSecurityDescriptor تمرکز کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate changes with suspicious process creation or privileged user logon."
+                    "description": "Correlate changes with suspicious process creation or privileged user logon.",
+                    "description_fa": "تغییرات را با ایجاد فرآیند مشکوک یا ورود کاربر ممتاز مرتبط کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Alert on unexpected user or service account modifying domain policy."
+                    "description": "Alert on unexpected user or service account modifying domain policy.",
+                    "description_fa": "هشدار در مورد تغییر خط مشی دامنه غیرمنتظره کاربر یا حساب سرویس."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0755",
+            "description_fa": "دشمن اشیاء خط مشی گروه (GPO)، اعتماد دامنه، یا اشیاء سرویس دایرکتوری را از طریق رابط کاربری گرافیکی، CLI یا APIهای برنامه‌ای تغییر می‌دهد. رفتار شامل ایجاد/تغییر GPO ها، مجوزهای تفویض اختیار، اشیاء اعتماد، یا ثبت نام کنترل کننده دامنه سرکش است."
         }
     ]
 }

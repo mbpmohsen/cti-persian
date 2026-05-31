@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0296#AN0824",
-                    "external_id": "AN0824"
+                    "external_id": "AN0824",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredFiles",
-                    "description": "List of system files shaping traffic flow (hosts, resolv.conf, PAM modules)."
+                    "description": "List of system files shaping traffic flow (hosts, resolv.conf, PAM modules).",
+                    "description_fa": "فهرست فایل‌های سیستمی که جریان ترافیک را شکل می‌دهند (میزبان، resolv.conf، ماژول‌های PAM)."
                 },
                 {
                     "field": "ARPThreshold",
-                    "description": "Rate/volume thresholds for ARP/DNS anomalies tuned per subnet."
+                    "description": "Rate/volume thresholds for ARP/DNS anomalies tuned per subnet.",
+                    "description_fa": "آستانه های نرخ/حجم برای ناهنجاری های ARP/DNS که در هر زیرشبکه تنظیم شده اند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0824",
+            "description_fa": "ویرایش‌های غیرمجاز در /etc/hosts، /etc/resolv.conf یا پخش‌های مشکوک ARP را شناسایی می‌کند. تغییرات فایل را با جلسات شبکه غیرمنتظره بعدی یا ایجاد سرویس مرتبط می کند."
         }
     ]
 }

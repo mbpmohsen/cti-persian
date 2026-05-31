@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0501#AN1383",
-                    "external_id": "AN1383"
+                    "external_id": "AN1383",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CompilerInvocationPattern",
-                    "description": "Detect calls to `xcodebuild`, `clang`, or `/Applications/Mono.app/...` from non-admin users"
+                    "description": "Detect calls to `xcodebuild`, `clang`, or `/Applications/Mono.app/...` from non-admin users",
+                    "description_fa": "تشخیص تماس‌های «xcodebuild»، «clang» یا «/Applications/Mono.app/...» از سوی کاربران غیر سرپرست"
                 },
                 {
                     "field": "OutputBinaryPath",
-                    "description": "Monitor for output files in user-writable paths (e.g., `~/Library/Caches`, `~/Downloads`)"
+                    "description": "Monitor for output files in user-writable paths (e.g., `~/Library/Caches`, `~/Downloads`)",
+                    "description_fa": "نظارت بر فایل‌های خروجی در مسیرهای قابل نوشتن توسط کاربر (مانند «~/کتابخانه/حافظه پنهان»، «~/دانلودها»)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1383",
+            "description_fa": "فعالیت کامپایل غیر استاندارد را از طریق ابزارهای Xcode CLI یا بسته‌های GCC/MONO همراه با نوشتن فایل‌های اجرایی جدید و اجرای آن‌ها در خارج از محیط‌های توسعه‌دهنده (به عنوان مثال، پوشه بارگیری‌های کاربر) شناسایی می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0141#AN0398",
-                    "external_id": "AN0398"
+                    "external_id": "AN0398",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AppBundleIdentifier",
-                    "description": "Correlate with known/expected signed apps vs. unsigned binaries to reduce noise."
+                    "description": "Correlate with known/expected signed apps vs. unsigned binaries to reduce noise.",
+                    "description_fa": "برای کاهش نویز، با برنامه های امضا شده شناخته شده/مورد انتظار در مقابل باینری های بدون علامت ارتباط برقرار کنید."
                 },
                 {
                     "field": "TimeToNextEvent",
-                    "description": "Minimum time expected between process start and observable I/O for normal apps."
+                    "description": "Minimum time expected between process start and observable I/O for normal apps.",
+                    "description_fa": "حداقل زمان مورد انتظار بین شروع فرآیند و ورودی/خروجی قابل مشاهده برای برنامه‌های معمولی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0398",
+            "description_fa": "استفاده از فراخوانی‌های «usleep»، «nanosleep»، یا «NSTimer» در فایل‌های اجرایی یا باینری بدون تعامل رابط کاربری گرافیکی، به‌ویژه به دنبال فعالیت دیسک/شبکه."
         }
     ]
 }

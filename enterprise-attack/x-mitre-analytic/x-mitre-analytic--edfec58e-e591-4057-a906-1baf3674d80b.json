@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0195#AN0559",
-                    "external_id": "AN0559"
+                    "external_id": "AN0559",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcess",
-                    "description": "Filter known/legit CLI chains (e.g., explorer.exe \u2192 cmd.exe) to reduce FP"
+                    "description": "Filter known/legit CLI chains (e.g., explorer.exe → cmd.exe) to reduce FP",
+                    "description_fa": "برای کاهش FP، زنجیره‌های CLI شناخته شده/مشروع (مانند explorer.exe → cmd.exe) را فیلتر کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Target executions by non-admin or unexpected users"
+                    "description": "Target executions by non-admin or unexpected users",
+                    "description_fa": "اجراهای غیرمنتظره یا غیرمنتظره را هدف قرار دهید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Cluster enumeration commands within short time windows"
+                    "description": "Cluster enumeration commands within short time windows",
+                    "description_fa": "دستورات شمارش خوشه ای در پنجره های کوتاه مدت"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0559",
+            "description_fa": "اجرای ابزارهای داخلی (مانند ipconfig، route، netsh) یا کوئری های PowerShell/WMI برای برشمردن IP، MAC، وضعیت رابط یا پیکربندی مسیریابی."
         }
     ]
 }

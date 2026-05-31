@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0088#AN0240",
-                    "external_id": "AN0240"
+                    "external_id": "AN0240",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KnownBackupVendors",
-                    "description": "List of software vendors to match in command-line or registry queries"
+                    "description": "List of software vendors to match in command-line or registry queries",
+                    "description_fa": "فهرست فروشندگان نرم افزار برای مطابقت در پرس و جوهای خط فرمان یا رجیستری"
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "Focus on low-privilege or interactive user contexts rather than service accounts"
+                    "description": "Focus on low-privilege or interactive user contexts rather than service accounts",
+                    "description_fa": "به جای حساب های خدماتی، بر زمینه های کاربری کم امتیاز یا تعاملی تمرکز کنید"
                 },
                 {
                     "field": "SuspiciousParentProcesses",
-                    "description": "Flag execution from scripting tools, interpreters, or LOLBins"
+                    "description": "Flag execution from scripting tools, interpreters, or LOLBins",
+                    "description_fa": "اجرای پرچم از ابزارهای اسکریپت، مفسرها، یا LOLBins"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0240",
+            "description_fa": "Defender اجرای دستوراتی مانند «لیست وظیفه»، «پرس و جوی sc»، «پرس و جوی ثبت»، یا پرس و جوهای PowerShell WMI/Registry را که محصولات پشتیبان شناخته شده را هدف قرار می دهند (مانند Veeam، Acronis، CrashPlan) مشاهده می کند. رفتار اغلب شامل نسب والد-فرزند شامل PowerShell یا cmd.exe با نحو اکتشاف، و شمارش سرویس‌ها، دایرکتوری‌ها یا مسیرهای رجیستری مرتبط با نرم‌افزار پشتیبان است."
         }
     ]
 }

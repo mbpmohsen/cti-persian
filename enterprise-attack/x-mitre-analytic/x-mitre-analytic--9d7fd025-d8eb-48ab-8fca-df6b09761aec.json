@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0220#AN0618",
-                    "external_id": "AN0618"
+                    "external_id": "AN0618",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DriveLabelFilter",
-                    "description": "Flag removable volumes with suspicious or default names (e.g., NO NAME, BACKUP_01)."
+                    "description": "Flag removable volumes with suspicious or default names (e.g., NO NAME, BACKUP_01).",
+                    "description_fa": "جلدهای قابل جابجایی را با نام‌های مشکوک یا پیش‌فرض پرچم‌گذاری کنید (به‌عنوان مثال، NO NAME، BACKUP_01)."
                 },
                 {
                     "field": "ScriptExecutionContext",
-                    "description": "Watch for shell or AppleScript execution tied to USB copy."
+                    "description": "Watch for shell or AppleScript execution tied to USB copy.",
+                    "description_fa": "مراقب اجرای پوسته یا AppleScript متصل به کپی USB باشید."
                 },
                 {
                     "field": "VolumeMountFrequency",
-                    "description": "Detect repeated or abnormal device mounts during work hours."
+                    "description": "Detect repeated or abnormal device mounts during work hours.",
+                    "description_fa": "نصب های مکرر یا غیرعادی دستگاه را در طول ساعات کاری تشخیص دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0618",
+            "description_fa": "نصب ولوم خارجی را با Finder، Terminal یا کپی فایل با اسکریپت از نمایه‌های کاربر، پوشه‌های حساس یا فهرست‌های همگام‌سازی فضای ذخیره‌سازی ابری به USB تشخیص می‌دهد."
         }
     ]
 }

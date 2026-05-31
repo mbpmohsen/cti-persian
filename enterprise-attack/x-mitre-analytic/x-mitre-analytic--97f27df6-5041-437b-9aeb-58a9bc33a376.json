@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0496#AN1368",
-                    "external_id": "AN1368"
+                    "external_id": "AN1368",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedAppBundlePaths",
-                    "description": "Legitimate remote-support apps under /Applications."
+                    "description": "Legitimate remote-support apps under /Applications.",
+                    "description_fa": "برنامه های پشتیبانی از راه دور قانونی در زیر /Applications."
                 },
                 {
                     "field": "LaunchdAllowlist",
-                    "description": "Known-good LaunchAgents/Daemons identifiers."
+                    "description": "Known-good LaunchAgents/Daemons identifiers.",
+                    "description_fa": "شناسه های LaunchAgents/Daemons خوب شناخته شده."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window for correlating exec\u2192launchd\u2192egress events."
+                    "description": "Window for correlating exec→launchd→egress events.",
+                    "description_fa": "پنجره ای برای ارتباط exec → راه اندازی → رویدادهای خروج."
                 },
                 {
                     "field": "EgressHeuristics",
-                    "description": "Duration/volume thresholds for persistent sessions."
+                    "description": "Duration/volume thresholds for persistent sessions.",
+                    "description_fa": "آستانه مدت/حجم برای جلسات مداوم."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1368",
+            "description_fa": "اجرای Electron/GUI یا RAT بدون سر و به دنبال آن پایداری LaunchAgent/Daemon و اتصالات خارجی مداوم. کودکان تعاملی (osascript/sh/curl) که توسط والدین ایجاد می شوند."
         }
     ]
 }

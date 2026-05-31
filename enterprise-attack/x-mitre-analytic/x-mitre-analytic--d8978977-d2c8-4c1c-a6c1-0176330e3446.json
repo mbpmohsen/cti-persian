@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0503#AN1390",
-                    "external_id": "AN1390"
+                    "external_id": "AN1390",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,14 +56,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FileTransferIndicator",
-                    "description": "Threshold for transferred data size or extension type."
+                    "description": "Threshold for transferred data size or extension type.",
+                    "description_fa": "آستانه برای اندازه داده های منتقل شده یا نوع پسوند."
                 },
                 {
                     "field": "LibraryCallTracking",
-                    "description": "Hooks into use of encryption libraries like `libcrypto.so`, `pycrypto`, `gpg`."
+                    "description": "Hooks into use of encryption libraries like `libcrypto.so`, `pycrypto`, `gpg`.",
+                    "description_fa": "به استفاده از کتابخانه‌های رمزگذاری مانند «libcrypto.so»، «pycrypto»، «gpg» متصل می‌شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1390",
+            "description_fa": "ابزارهای خط فرمان یا اسکریپت ها را با استفاده از کتابخانه های رمزگذاری یا الگوریتم های متقارن (مانند OpenSSL AES، GPG، Python + PyCrypto) در ارتباط با انتقال فایل های خروجی یا ترافیک به مقصدهای خارجی شناسایی می کند."
         }
     ]
 }

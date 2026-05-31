@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0302#AN0843",
-                    "external_id": "AN0843"
+                    "external_id": "AN0843",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -44,24 +45,29 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
                     "name": "NSM:Flow",
-                    "channel": "Knock pattern: repeated REJ/S0 across \u2265MinSequenceLen ports from same src_ip then SF success."
+                    "channel": "Knock pattern: repeated REJ/S0 across ≥MinSequenceLen ports from same src_ip then SF success."
                 }
             ],
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServicePort",
-                    "description": "Candidate port expected to open after knock (e.g., 22/2323)."
+                    "description": "Candidate port expected to open after knock (e.g., 22/2323).",
+                    "description_fa": "انتظار می رود پورت کاندید پس از ضربه باز شود (به عنوان مثال، 22/2323)."
                 },
                 {
                     "field": "KnockTolerance",
-                    "description": "Max seconds between hits inside the sequence."
+                    "description": "Max seconds between hits inside the sequence.",
+                    "description_fa": "حداکثر ثانیه بین بازدیدهای داخل سکانس."
                 },
                 {
                     "field": "MgmtAllowList",
-                    "description": "Automation allowed to change firewall/daemon state (config mgmt, orchestration)."
+                    "description": "Automation allowed to change firewall/daemon state (config mgmt, orchestration).",
+                    "description_fa": "اتوماسیون اجازه تغییر حالت فایروال/شیب (پیکربندی mgmt، ارکستراسیون) را می دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0843",
+            "description_fa": "یک منبع یک توالی پورت بسته کوتاه را انجام می دهد. سپس هاست قوانین iptables/nftables/ufw را تغییر می‌دهد یا یک شبح را شروع می‌کند که یک سوکت جدید را متصل می‌کند و به دنبال آن یک اتصال موفق از همان منبع انجام می‌شود."
         }
     ]
 }

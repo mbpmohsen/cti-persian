@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0508#AN1401",
-                    "external_id": "AN1401"
+                    "external_id": "AN1401",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcessSignature",
-                    "description": "Expected signing identity or origin of process being injected"
+                    "description": "Expected signing identity or origin of process being injected",
+                    "description_fa": "هویت امضای مورد انتظار یا مبدا فرآیند تزریق شده"
                 },
                 {
                     "field": "MachSyscallContext",
-                    "description": "Observed syscall combinations (e.g., task_for_pid followed by vm_write)"
+                    "description": "Observed syscall combinations (e.g., task_for_pid followed by vm_write)",
+                    "description_fa": "ترکیبات syscall مشاهده شده (به عنوان مثال task_for_pid به دنبال vm_write)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1401",
+            "description_fa": "با نظارت بر «task_for_pid»، «mach_vm_write»، و الگوهای تزریق dylib از طریق «DYLD_INSERT_LIBRARIES» یا نگاشت دستی حافظه، تزریق مبتنی بر حافظه را تشخیص می‌دهد."
         }
     ]
 }

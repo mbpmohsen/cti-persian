@@ -9,31 +9,40 @@
                 {
                     "external_id": "CAPEC-677",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/677.html"
+                    "url": "https://capec.mitre.org/data/definitions/677.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Melinda Reed, John F. Miller, Paul Popick, Supply Chain Attack Patterns: Framework and Catalog, 2014--08, Office of the Assistant Secretary of Defense for Research and Engineering",
                     "external_id": "REF-660",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://docplayer.net/13041016-Supply-chain-attack-patterns-framework-and-catalog.html"
+                    "url": "https://docplayer.net/13041016-Supply-chain-attack-patterns-framework-and-catalog.html",
+                    "description_fa": "ملیندا رید، جان اف. میلر، پل پوپیک، الگوهای حمله زنجیره تامین: چارچوب و کاتالوگ، 08-2014، دفتر دستیار وزیر دفاع در امور تحقیقات و مهندسی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": " Kaspersky Finds Sophisticated UEFI Malware in the Wild , 2020--10---05, ExtremeTech ",
                     "external_id": "REF-685",
                     "source_name": "reference_from_CAPEC",
-                    "url": " https://www.extremetech.com/computing/315860-kaspersky-finds-sophisticated-uefi-malware-in-the-wild"
+                    "url": " https://www.extremetech.com/computing/315860-kaspersky-finds-sophisticated-uefi-malware-in-the-wild",
+                    "description_fa": "Kaspersky بدافزار پیچیده UEFI را در طبیعت پیدا می کند، 2020--10---05، ExtremeTech",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ea2e5cbd-8278-4f8a-b56b-3cfb955d2366",
@@ -51,6 +60,9 @@
             "x_capec_consequences": {
                 "Integrity": [
                     "Execute Unauthorized Commands"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -67,7 +79,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p> بدافزار در مادربرد سرور (مثلاً در حافظه فلش) وارد می شود تا عملکرد سرور را از آنچه در نظر گرفته شده تغییر دهد. محیط توسعه یا محیط فعالیت پشتیبانی سخت‌افزار/نرم‌افزار در معرض قرار دادن یک دشمن نرم‌افزار مخرب در اجزای سخت‌افزار در طول توسعه یا به‌روزرسانی است.</xhtml:p>",
+            "name_fa": "به خطر افتادن مادربرد سرور",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> بدافزار در نرم‌افزار Unified Extensible Firmware Interface (UEFI) وارد می‌شود که روی یک تراشه حافظه فلش لحیم شده به مادربرد رایانه قرار دارد. این اولین چیزی است که هنگام بوت شدن سیستم روشن می شود و تقریباً به هر قسمت از سیستم عامل دسترسی پیدا می کند. از این رو، بدافزار کنترل گسترده ای بر عملکردهای سیستم عامل خواهد داشت و پس از راه اندازی مجدد سیستم باقی می ماند. [REF-685]</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "دشمنی که به فرآیندها و ابزارهای سخت‌افزار/نرم‌افزار در محیط توسعه یا پشتیبانی سخت‌افزار/نرم‌افزار دسترسی دارد، می‌تواند در طول توسعه یا به‌روزرسانی/نگهداری، نرم‌افزار مخرب را در اجزای سخت‌افزار وارد کند."
+            ]
         }
     ],
     "type": "bundle"

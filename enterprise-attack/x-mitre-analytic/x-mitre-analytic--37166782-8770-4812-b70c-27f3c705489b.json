@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0153#AN0439",
-                    "external_id": "AN0439"
+                    "external_id": "AN0439",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DatastoreExfilThreshold",
-                    "description": "Minimum data volume to flag exfiltration attempts from VM files."
+                    "description": "Minimum data volume to flag exfiltration attempts from VM files.",
+                    "description_fa": "حداقل حجم داده برای پرچم گذاری تلاش های خروج از فایل های VM."
                 },
                 {
                     "field": "ApprovedIntegrations",
-                    "description": "Whitelisted CI/CD or automation webhooks tied to vSphere/ESXi."
+                    "description": "Whitelisted CI/CD or automation webhooks tied to vSphere/ESXi.",
+                    "description_fa": "وب‌قلاب‌های CI/CD یا اتوماسیون مرتبط با vSphere/ESXi در لیست سفید قرار گرفته‌اند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0439",
+            "description_fa": "سرویس‌های VMware یا دیمون‌های مدیریتی که درخواست‌های HTTP POST را به نقاط پایانی وب هوک می‌دهند، زنجیره‌ای با دسترسی غیرعادی به داده‌های ذخیره‌سازی یا ورود به سیستم. دیدگاه مدافع: خروج از لاگ های VM یا تصاویر دیسک بر روی URL های وب هوک."
         }
     ]
 }

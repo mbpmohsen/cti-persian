@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0221#AN0621",
-                    "external_id": "AN0621"
+                    "external_id": "AN0621",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FrameworkCall",
-                    "description": "CoreAudio vs. AVFoundation vs. lower-level device access APIs."
+                    "description": "CoreAudio vs. AVFoundation vs. lower-level device access APIs.",
+                    "description_fa": "CoreAudio در مقابل AVFoundation در مقابل API های دسترسی دستگاه های سطح پایین."
                 },
                 {
                     "field": "TargetDirectory",
-                    "description": "Suspicious file drops (e.g., ~/Library/Caches/, /tmp/, nonstandard user folders)."
+                    "description": "Suspicious file drops (e.g., ~/Library/Caches/, /tmp/, nonstandard user folders).",
+                    "description_fa": "ریزش فایل مشکوک (به عنوان مثال، ~/Library/Caches/، /tmp/، پوشه‌های کاربر غیر استاندارد)."
                 },
                 {
                     "field": "AnomalousParent",
-                    "description": "Unexpected parent-child relationship between non-media apps and AV capture."
+                    "description": "Unexpected parent-child relationship between non-media apps and AV capture.",
+                    "description_fa": "رابطه غیرمنتظره والد-فرزند بین برنامه‌های غیر رسانه‌ای و ضبط AV."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0621",
+            "description_fa": "فرآیندهای فراخوانی چارچوب های AVFoundation یا CoreAudio، دسترسی به دستگاه های ورودی از طریق گزارش های TCC یا گزارش های یکپارچه، و به دنبال آن نوشتن فایل های AIFF/WAV/MP3 روی دیسک."
         }
     ]
 }

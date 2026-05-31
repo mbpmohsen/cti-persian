@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0590#AN1623",
-                    "external_id": "AN1623"
+                    "external_id": "AN1623",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "web_root",
-                    "description": "May differ (e.g., /var/www/html, /srv/http, etc.)"
+                    "description": "May differ (e.g., /var/www/html, /srv/http, etc.)",
+                    "description_fa": "ممکن است متفاوت باشد (به عنوان مثال، /var/www/html، /srv/http، و غیره)"
                 },
                 {
                     "field": "payload_hash",
-                    "description": "Adversary content hash may change across campaigns"
+                    "description": "Adversary content hash may change across campaigns",
+                    "description_fa": "هش محتوای دشمن ممکن است در بین کمپین‌ها تغییر کند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Can range from apache/nginx user to root if escalated"
+                    "description": "Can range from apache/nginx user to root if escalated",
+                    "description_fa": "در صورت افزایش می تواند از کاربر apache/nginx تا روت متغیر باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1623",
+            "description_fa": "دشمن یک وب سرور مبتنی بر لینوکس را به خطر می اندازد و فایل های وب میزبانی شده را با سوء استفاده از آسیب پذیری های آپلود، اجرای کد از راه دور یا جایگزینی index.html از طریق SSH/webshell اصلاح می کند."
         }
     ]
 }

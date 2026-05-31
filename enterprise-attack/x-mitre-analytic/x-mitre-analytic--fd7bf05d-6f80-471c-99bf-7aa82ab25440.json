@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0051#AN0140",
-                    "external_id": "AN0140"
+                    "external_id": "AN0140",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExcludedDirectories",
-                    "description": "System- or security-tool-configured exclusion directories where files should rarely change."
+                    "description": "System- or security-tool-configured exclusion directories where files should rarely change.",
+                    "description_fa": "دایرکتوری های حذف پیکربندی شده با سیستم یا ابزار امنیتی که فایل ها به ندرت باید تغییر کنند."
                 },
                 {
                     "field": "CorrelationWindow",
-                    "description": "Time window to correlate file creation in excluded paths with execution or network activity."
+                    "description": "Time window to correlate file creation in excluded paths with execution or network activity.",
+                    "description_fa": "پنجره زمانی برای ارتباط ایجاد فایل در مسیرهای حذف شده با اجرا یا فعالیت شبکه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0140",
+            "description_fa": "حریفانی که بارهای پرداختی را به دایرکتوری‌هایی که به‌عنوان مسیرهای حذف AV/EDR پیکربندی شده‌اند، می‌نویسند یا منتقل می‌کنند (به عنوان مثال، /tmp، /var/lib، یا دایرکتوری‌های سفارشی از قوانین حذف حسابرسی شده). دیدگاه مدافع: ایجاد فایل را در مسیرهای منطبق با استثناهای شناخته شده مرتبط با فرآیندهای والد غیرعادی شناسایی کنید."
         }
     ]
 }

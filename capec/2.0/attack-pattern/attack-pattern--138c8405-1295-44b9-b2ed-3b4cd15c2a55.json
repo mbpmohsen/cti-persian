@@ -9,34 +9,42 @@
                 {
                     "external_id": "CAPEC-459",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/459.html"
+                    "url": "https://capec.mitre.org/data/definitions/459.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-327",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/327.html"
+                    "url": "http://cwe.mitre.org/data/definitions/327.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-295",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/295.html"
+                    "url": "http://cwe.mitre.org/data/definitions/295.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-290",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/290.html"
+                    "url": "http://cwe.mitre.org/data/definitions/290.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Alexander Sotirov, Marc Stevens, Jacob Appelbaum, Arjen Lenstra, David Molnar, Dag Arne Osvik, Benne de Weger, MD5 Considered Harmful Today: Creating a Rogue CA Certificate, 2008--12---30, Phreedom.org",
                     "external_id": "REF-395",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.phreedom.org/research/rogue-ca/"
+                    "url": "http://www.phreedom.org/research/rogue-ca/",
+                    "description_fa": "الکساندر سوتیروف، مارک استیونز، یاکوب آپلبام، آرین لنسترا، دیوید مولنار، داگ آرنه اسویک، بن د وگر، MD5 امروزه مضر تلقی می شوند: ایجاد گواهینامه CA سرکش، 2008--12---30، Phreedom.org",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Alexander Sotirov, Marc Stevens, Jacob Appelbaum, Arjen Lenstra, David Molnar, Dag Arne Osvik, Benne de Weger, MD5 considered harmful today, 2009--12",
                     "external_id": "REF-587",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.win.tue.nl/hashclash/rogue-ca/#Ref"
+                    "url": "https://www.win.tue.nl/hashclash/rogue-ca/#Ref",
+                    "description_fa": "الکساندر سوتیروف، مارک استیونز، یاکوب آپلبام، آرین لنسترا، دیوید مولنار، داگ آرنه اسویک، بن د وگر، MD5 امروز مضر تلقی می شوند، 2009--12",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--138c8405-1295-44b9-b2ed-3b4cd15c2a55",
@@ -56,6 +64,12 @@
                 ],
                 "Authentication": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -78,11 +92,29 @@
             ],
             "x_capec_skills_required": {
                 "High": "An attacker must be able to craft two X.509 certificates that produce the same hash value",
-                "Medium": "Knowledge needed to set up a certification authority"
+                "Medium": "Knowledge needed to set up a certification authority",
+                "High_fa": "یک مهاجم باید بتواند دو گواهی X.509 ایجاد کند که مقدار هش یکسانی را تولید کنند",
+                "Medium_fa": "دانش مورد نیاز برای راه اندازی یک مرجع صدور گواهینامه"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از ضعف ناشی از استفاده از یک الگوریتم هش با مقاومت در برابر برخورد ضعیف برای ایجاد درخواست‌های امضای گواهی (CSR) استفاده می‌کند که شامل بلوک‌های برخورد در بخش‌های «تا امضا» است. حریف یک CSR را ارسال می کند تا توسط یک مرجع گواهی معتبر امضا شود، سپس از حباب امضا شده استفاده می کند تا گواهی دوم را با امضای مرجع گواهی مذکور نشان دهد. به دلیل برخورد هش، هر دو گواهی، اگرچه متفاوت هستند، اما به یک مقدار هش می کنند و بنابراین حباب امضا شده در گواهی دوم به خوبی کار می کند. اثر خالص این است که گواهینامه X.509 دوم دشمن، که مرجع صدور گواهینامه هرگز آن را ندیده است، اکنون توسط آن مرجع صدور گواهینامه امضا و تایید شده است.",
+            "name_fa": "ایجاد یک گواهی مرجع صدور گواهینامه سرکش",
+            "x_capec_example_instances_fa": [
+                "<xhtml:b>برخوردهای MD5</xhtml:b>\n               <xhtml:p>الگوریتم MD5 در برابر برخورد مقاوم نیست، و به مهاجمان اجازه می دهد تا از حملات جعل برای ایجاد مقامات گواهی سرکش استفاده کنند.</xhtml:p>همچنین ببینید: CVE-2004-2761",
+                "<xhtml:b>برخورد SHA1</xhtml:b>\n               <xhtml:p>الگوریتم SHA1 در برابر برخورد مقاوم نیست و به مهاجمان اجازه می‌دهد از حملات جعل برای ایجاد مقامات گواهی سرکش استفاده کنند.</xhtml:p>همچنین ببینید: CVE-2005-4900",
+                "<xhtml:b>آسیب پذیری های زیرساخت PKI</xhtml:b>\n               <xhtml:p>تحقیق آسیب پذیری های قابل توجهی را در زیرساخت PKI نشان داده است. نشان داده شده است که مقامات گواهی معتبر از الگوریتم های هش ضعیف پس از نشان دادن حملات علیه آن الگوریتم ها استفاده می کنند. علاوه بر این، روش های قابل اعتمادی برای برخوردهای MD5 ایجاد شده نشان داده شده است که می تواند برای ایجاد CSR های مخرب استفاده شود.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>آزمایش</h3><ol><li> <p> <b>گواهینامه‌های Craft: </b>دشمن دو گواهی متفاوت، اما معتبر X.509 ایجاد می‌کند که وقتی با یک هش مقاوم در برابر برخورد ناکافی هش می‌شوند، الگوریتم هش‌سازی ناکافی <p><li>را نشان می‌دهد. <b>ارسال CSR به مرجع صدور گواهی: </b> حریف CSR را برای یکی از گواهینامه ها به مرجع صدور گواهینامه می فرستد که از الگوریتم هش هدفمند استفاده می کند. این درخواست کاملاً معتبر است و مرجع صدور گواهینامه یک گواهی X.509 برای حریف صادر می کند که با کلید خصوصی آن امضا شده است.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>X.Signed Blob را در Certificate Unsigned وارد کنید. گواهی ای که مهاجم ایجاد کرده است. به دلیل برخورد هش، هر دو گواهی، اگرچه متفاوت هستند، اما به یک مقدار هش می کنند و بنابراین حباب امضا شده در گواهی دوم معتبر است. نتیجه دو گواهی است که به نظر می رسد توسط یک مرجع معتبر گواهی امضا شده است، علیرغم اینکه تنها یکی از آنها امضا شده است.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> از طرف دیگر، گواهی دوم می تواند یک گواهی امضا باشد. بنابراین، حریف می‌تواند مرجع صدور گواهینامه خود را راه‌اندازی کند که در ریشه اعتماد خود به مرجع صدور گواهینامه قانونی که اولین گواهینامه X.509 مهاجم را امضا کرده است، متکی است. اگر مرجع صدور گواهینامه اصلی توسط مرورگرها به طور پیش‌فرض پذیرفته شده باشد، مرجع صدور گواهینامه توسط دشمن و هر گواهینامه‌ای که امضا می‌کند، راه‌اندازی می‌شود. در نتیجه، حریف می‌تواند هر گونه گواهی SSL را برای جعل هویت هر وب سرور تولید کند و مرورگر کاربر هیچ هشداری برای قربانی صادر نخواهد کرد. این می‌تواند برای به خطر انداختن ارتباطات HTTPS و انواع دیگر سیستم‌هایی که ممکن است از گواهی‌های PKI و X.509 استفاده شود (مانند VPN، IPSec).</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "مرجع صدور گواهی از یک تابع هش با مقاومت در برابر برخورد ناکافی برای تولید هش گواهی برای امضا استفاده می کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "دانش یک مرجع گواهی که از الگوریتم های هش با مقاومت در برابر برخورد ضعیف استفاده می کند",
+                "یک درخواست گواهی معتبر و یک درخواست گواهی مخرب با مقادیر هش یکسان"
+            ]
         }
     ],
     "spec_version": "2.0",

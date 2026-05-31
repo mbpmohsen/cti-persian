@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0027#AN0078",
-                    "external_id": "AN0078"
+                    "external_id": "AN0078",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ShellScriptMatch",
-                    "description": "Match on commands like `wget https://*`, `curl -s`"
+                    "description": "Match on commands like `wget https://*`, `curl -s`",
+                    "description_fa": "مطابق با دستوراتی مانند «wget https://*`, «curl -s»"
                 },
                 {
                     "field": "ExternalConnectionFilter",
-                    "description": "Public IPs or external DNS hostnames"
+                    "description": "Public IPs or external DNS hostnames",
+                    "description_fa": "IP های عمومی یا نام هاست DNS خارجی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0078",
+            "description_fa": "ارتباطات HTTP یا HTTPS را که توسط اسکریپت‌های مبتنی بر پوسته یا دیمون‌های مدیریتی آغاز شده‌اند، به‌ویژه آنهایی که با استفاده از curl یا wget تعبیه‌شده به IPهای عمومی از طریق پورت‌های 80/443 می‌رسند، شناسایی می‌کند."
         }
     ]
 }

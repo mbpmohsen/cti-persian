@@ -9,35 +9,44 @@
                 {
                     "external_id": "CAPEC-664",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/664.html"
+                    "url": "https://capec.mitre.org/data/definitions/664.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-918",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/918.html"
+                    "url": "http://cwe.mitre.org/data/definitions/918.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "OWASP SSRF Bible, 2017--01---26, OWASP",
                     "external_id": "REF-644",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://cheatsheetseries.owasp.org/assets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet_SSRF_Bible.pdf"
+                    "url": "https://cheatsheetseries.owasp.org/assets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet_SSRF_Bible.pdf",
+                    "description_fa": "OWASP SSRF Bible، 2017--01---26، OWASP",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Server Side Request Forgery, PortSwigger",
                     "external_id": "REF-645",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://portswigger.net/web-security/ssrf"
+                    "url": "https://portswigger.net/web-security/ssrf",
+                    "description_fa": "جعل درخواست سمت سرور، PortSwigger",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "CallStranger Vulnerability, 2020--06---08, Yunus Cadirici",
                     "external_id": "REF-646",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://github.com/yunuscadirci/CallStranger"
+                    "url": "https://github.com/yunuscadirci/CallStranger",
+                    "description_fa": "آسیب پذیری CallStranger، 2020--06---08، Yunus Cadirici",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--f231b993-ed39-40cf-adfb-9828ddcfc642",
@@ -69,6 +78,17 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Availability_fa": [
+                    "داده ها را اصلاح کنید",
+                    "مصرف منابع"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را اصلاح کنید",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -88,11 +108,26 @@
             ],
             "x_capec_skills_required": {
                 "High": "The adversary will be required to access internal resources, extract information, or leverage the services running on the server to perform unauthorized actions such as traversing the local network or routing a reflected TCP DDoS through them.",
-                "Medium": "The adversary will have to detect the vulnerability through an intermediary service or specify maliciously crafted URLs and analyze the server response."
+                "Medium": "The adversary will have to detect the vulnerability through an intermediary service or specify maliciously crafted URLs and analyze the server response.",
+                "High_fa": "حریف باید به منابع داخلی دسترسی داشته باشد، اطلاعات را استخراج کند یا از سرویس های در حال اجرا روی سرور برای انجام اقدامات غیرمجاز مانند عبور از شبکه محلی یا مسیریابی یک TCP DDoS منعکس شده از طریق آنها استفاده کند.",
+                "Medium_fa": "حریف باید آسیب پذیری را از طریق یک سرویس واسطه شناسایی کند یا URL های ساخته شده به طور مخرب را مشخص کند و پاسخ سرور را تجزیه و تحلیل کند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک حریف از اعتبارسنجی ورودی نامناسب با ارسال ورودی های مخرب به برنامه هدفی که روی سرور اجرا می شود، با هدف وادار کردن سرور به درخواست از خود، سرویس های وب در حال اجرا در شبکه داخلی سرور یا اشخاص ثالث خارجی، سوء استفاده می کند. در صورت موفقیت آمیز بودن، درخواست حریف با دور زدن کنترل های احراز هویت سرور با سطح امتیاز سرور انجام می شود. این در نهایت به حریف اجازه می‌دهد به داده‌های حساس دسترسی پیدا کند، دستورات را در شبکه سرور اجرا کند و درخواست‌های خارجی با هویت دزدیده شده سرور ارائه دهد. حملات جعل درخواست سمت سرور با حملات جعل درخواست Cross Site از این جهت متفاوت است که خود سرور را هدف قرار می دهند، در حالی که حملات CSRF از مکانیسم احراز هویت کاربر ناامن برای انجام اقدامات غیرمجاز از طرف کاربر سوء استفاده می کنند.</xhtml:p>",
+            "name_fa": "جعل درخواست سمت سرور",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> وب سایت تجارت الکترونیک به مشتری اجازه می دهد تا نتایج را بر اساس دسته بندی های خاص فیلتر کند. هنگامی که مشتری دسته مورد نظر را انتخاب می کند، فروشگاه اینترنتی یک سرویس پشتیبان را برای بازیابی محصولات درخواستی درخواست می کند. درخواست ممکن است چیزی شبیه به:</xhtml:p> باشد\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\n                  <xhtml:p>POST /product/category HTTP/1.0</xhtml:p>\n                  <xhtml:p>نوع محتوا: application/x-www-form-urlencoded</xhtml:p>\n                  <xhtml:p>طول محتوا: 200</xhtml:p>\n                  <xhtml:p>vulnerableService=http://vulnerableshop.net:8080/product/category/check%3FcategoryName%3DsomeCategory</xhtml:p>\n               </xhtml:div>\n               <xhtml:p>یک کاربر مخرب می تواند URL درخواست را به این شکل تغییر دهد:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">\n                  <xhtml:p>POST /product/category HTTP/1.0</xhtml:p>\n                  <xhtml:p>نوع محتوا: application/x-www-form-urlencoded</xhtml:p>\n                  <xhtml:p>طول محتوا: 200</xhtml:p>\n                  <xhtml:p>سرویس آسیب پذیر=http://localhost/server-status</xhtml:p>\n               </xhtml:div>\n               <xhtml:p>یا</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">\n                  <xhtml:p>vulnerableService = file:///etc/passwd</xhtml:p>\n               </xhtml:div>\n               <xhtml:p>یا</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">\n                  <xhtml:p>vulnerableService=dict://localhost:12345/info</xhtml:p>\n               </xhtml:div>\n               <xhtml:p>در صورت موفقیت آمیز بودن اکسپلویت، سرور ممکن است داده های درخواست شده توسط دشمن را برگرداند</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"bad\">\n                  <xhtml:p>root:!:0:0::/:/usr/bin/ksh</xhtml:p>\n                  <xhtml:p>daemon:!:1:1::/etc:</xhtml:p>\n                  <xhtml:p>bin:!:2:2::/bin:</xhtml:p>\n                  <xhtml:p>sys:!:3:3::/usr/sys:</xhtml:p>\n                  <xhtml:p>adm:!:4:4::/var/adm:</xhtml:p>\n                  <xhtml:p>uucp:!:5:5::/usr/lib/uucp:</xhtml:p>\n                  <xhtml:p>مهمان:!:100:100::/home/مهمان:</xhtml:p>\n                  <xhtml:p>هیچ کس:!:4294967294:4294967294::/:</xhtml:p>\n                  <xhtml:p>lpd:!:9:4294967294::/:</xhtml:p>\n                  <xhtml:p>lp:*:11:11::/var/spool/lp:/bin/false</xhtml:p>\n                  <xhtml:p>invscout:*:200:1::/var/adm/invscout:/usr/bin/ksh</xhtml:p>\n                  <xhtml:p>nuucp:*:6:5:uucp کاربر ورود به سیستم:/var/spool/uucppublic:/usr/sbin/uucp/uucico</xhtml:p>\n                  <xhtml:p>paul:!:201:1::/home/paul:/usr/bin/ksh</xhtml:p>\n                  <xhtml:p>jdoe:*:202:1:نام من:/home/myname:/usr/bin/ksh</xhtml:p>\n               </xhtml:div>",
+                "<xhtml:p>حمله CallStranger یک نمونه مشاهده شده از SSRF است. این به طور خاص پروتکل UPnP (Universal Plug and Play) مورد استفاده توسط دستگاه های مختلف شبکه و کنسول های بازی را هدف قرار می دهد. برای اجرای حمله، یک دشمن یک اسکن از LAN را برای کشف دستگاه های فعال UPnP، و متعاقباً لیستی از سرویس های UPnP که استفاده می کند، انجام می دهد. هنگامی که نقاط پایانی سرویس UPnP لیست شدند، یک آسیب پذیری در پروتکل UPnP برای ارسال این نقاط پایانی به صورت رمزگذاری شده به سرور تأیید از طریق روش UPnP Callback استفاده می شود. از آنجایی که رمزگذاری در سمت سرویس گیرنده انجام می شود، سرور لیست رمزگذاری شده ای از خدمات را برمی گرداند که در سمت مشتری رمزگشایی شده است. سپس دشمن فهرستی از سرویس‌هایی دارد که پروتکل آسیب‌پذیر UPnP را اجرا می‌کنند، که دشمن می‌تواند از آن‌ها برای ایجاد درخواست‌های جعلی استفاده کند. [REF-646]</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>پیدا کردن برنامه هدف: </b>برنامه وب مورد نظر را پیدا کنید که ورودی کاربر را می‌پذیرد و داده‌ها را از سرور بازیابی می‌کند</p></li></ol></div><div><h3>آزمایش <b><b><li>برنامه موجود </b>برای مشاهده قالب درخواست URL، درخواست‌های HTTP/GET را بررسی کنید. دشمنان آزمایش می‌کنند تا ببینند آیا این نوع حمله از طریق ضعف‌هایی که در حفاظت برنامه‌ها از جعل درخواست سمت سرور امکان‌پذیر است یا نه</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>تلاش کنید URL را برای بازیابی پاسخ/کد خطا از سرور دستکاری کنید. رشته های کاوشگر XSS برای تعیین به عنوان پارامترهای URL های شناخته شده. در صورت امکان، از رشته‌های پروب با شناسه‌های منحصربه‌فرد استفاده کنید.</td></tr><tr><td>یک درخواست GET با یک مسیر فایل سرور مشترک مانند /etc/passwd به عنوان پارامتر ایجاد کنید و خروجی را بررسی کنید. </b>دشمن یک درخواست URL مخرب ایجاد می کند که سطح امتیاز سرور را برای پرس و جو از خدمات شبکه داخلی یا خارجی فرض می کند و درخواست را به برنامه ارسال می کند</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "سرور باید یک برنامه وب را اجرا کند که درخواست های HTTP را پردازش می کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "[هیچ] هیچ منبع تخصصی برای اجرای این نوع حمله مورد نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

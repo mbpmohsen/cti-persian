@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0081",
-                    "external_id": "DC0081"
+                    "external_id": "DC0081",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -38,7 +39,9 @@
                     "name": "gcp:audit",
                     "channel": "compute.instances.delete"
                 }
-            ]
+            ],
+            "name_fa": "حذف نمونه",
+            "description_fa": "حذف ماشین مجازی (VM) یا نمونه محاسباتی در زیرساخت ابری. این فعالیت منجر به خاتمه و حذف منابع اختصاص داده شده (به عنوان مثال، CPU، حافظه، ذخیره سازی) می شود و نمونه را برای استفاده در آینده در دسترس نیست. مثال ها:\n\n- AWS: حذف نمونه شامل تماس API «TerminateInstances» است که در گزارش‌های CloudTrail ثبت می‌شود.\n- Azure: حذف VM را می توان از طریق Azure Activity Logs که عملیات «Microsoft.Compute/virtualMachines/delete» را نشان می دهد، نظارت کرد.\n- GCP: حذف نمونه به عنوان یک عملیات instance.delete در گزارش های حسابرسی GCP ثبت می شود."
         }
     ]
 }

@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-2",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/2.html"
+                    "url": "https://capec.mitre.org/data/definitions/2.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-645",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/645.html"
+                    "url": "http://cwe.mitre.org/data/definitions/645.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Account Access Removal",
                     "external_id": "T1531",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1531"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1531",
+                    "description_fa": "حذف دسترسی به حساب",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--4ee9fc30-e736-4f4f-b55b-8a3008214042",
@@ -37,6 +41,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Resource Consumption (Denial of Service)"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع (انکار خدمات)"
                 ]
             },
             "x_capec_domains": [
@@ -55,11 +62,25 @@
                 "Computer with access to the login portion of the target system"
             ],
             "x_capec_skills_required": {
-                "Low": "No programming skills or computer knowledge is needed. An attacker can easily use this attack pattern following the Execution Flow above."
+                "Low": "No programming skills or computer knowledge is needed. An attacker can easily use this attack pattern following the Execution Flow above.",
+                "Low_fa": "به هیچ مهارت برنامه نویسی یا دانش کامپیوتری نیاز نیست. یک مهاجم می تواند به راحتی از این الگوی حمله به دنبال جریان اجرایی بالا استفاده کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از عملکرد امنیتی سیستم با هدف خنثی کردن حملات احتمالی استفاده می کند تا حمله انکار سرویس را علیه کاربر قانونی سیستم انجام دهد. به عنوان مثال، بسیاری از سیستم‌ها، یک مکانیسم کنترل رمز عبور را پیاده‌سازی می‌کنند که پس از تعداد معینی از تلاش‌های نادرست ورود به سیستم، حساب را قفل می‌کند. یک مهاجم می‌تواند از این مکانیسم فشار برای قفل کردن یک کاربر قانونی از حساب خود استفاده کند. ضعفی که توسط مهاجم مورد استفاده قرار می گیرد، همان ویژگی امنیتی است که برای مقابله با حملات قرار داده شده است.",
+            "name_fa": "القای قفل کردن حساب",
+            "x_capec_example_instances_fa": [
+                "یک مثال معروف از این نوع حملات، حمله eBay است. eBay همیشه شناسه کاربری بالاترین پیشنهاد را نشان می دهد. در دقایق پایانی مزایده، یکی از پیشنهاد دهندگان می توانست سه بار به عنوان بالاترین پیشنهاد وارد شود. پس از سه بار تلاش نادرست برای ورود به سیستم، حذف رمز عبور eBay برای مدتی حساب بالاترین پیشنهاد دهنده را مسدود می کند. سپس مهاجم می تواند پیشنهاد خود را ارائه دهد و قربانی او فرصتی برای ارائه پیشنهاد متقابل ندارد، زیرا آنها قفل می شوند. بنابراین یک مهاجم می تواند برنده حراج باشد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>آزمایش</h3><ol><li> <p> <b>بررسی رفتار قفل کردن حساب سیستم: </b>بررسی ویژگی‌های امنیتی موجود در سیستم که ممکن است باعث قفل شدن حساب شود</p></li><table><tbody><tr><thze</p><tr><thd>Techni فهرستی از رویدادهایی که به طور بالقوه می توانند باعث قفل شدن حساب شوند</td></tr><tr><td>حساب کاربری را در سیستم دریافت کنید و سعی کنید با ارسال مکرر داده های نادرست یا نادرست آن را قفل کنید</td></tr><tr><td>شناسه ورود به سیستم کاربر دیگر را تعیین کنید و تلاش کنید تا رمز عبور (یا دیگر اعتبارنامه ها) را تا زمانی که تعداد دفعات حساب برای آن مشخص شود، به زور وارد کنید. قفل شده است.</td></tr></tbody></table><li> <p> <b>دریافت فهرستی از حساب‌های کاربری برای قفل کردن: </b>لیستی از حساب‌های کاربری معتبر برای قفل کردن ایجاد کنید</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دریافت لیستی از کاربران دیگر مانند حمله QL، با استفاده از الگوی SQ مجاز، با استفاده از الگوی SQ مجاز. تزریق.</td></tr><tr><td>در صورت امکان سعی کنید حساب ایجاد کنید. سیستم باید نشان دهد که آیا قبلاً یک شناسه کاربری گرفته شده است یا خیر.</td></tr><tr><td>اگر سیستم نشان می‌دهد که شناسه کاربر مشخصی در صورت تلاش‌های ناموفق برای ورود معتبر است یا نه، سعی کنید شناسه‌های کاربر را به زور بی‌رحمانه کنید. روش قفل کردن برای همه حساب‌هایی که مهاجم می‌خواهد قفل کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>برای اینکه هر شناسه کاربری قفل شود، رویه قفل‌سازی کشف‌شده در مرحله اول را انجام دهید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "سیستم دارای مکانیزم قفل است.",
+                "یک مهاجم باید بتواند رفتاری را که منجر به قفل شدن یک حساب کاربری می شود، بازتولید کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "رایانه با دسترسی به بخش ورود به سیستم هدف"
+            ]
         }
     ],
     "spec_version": "2.0",

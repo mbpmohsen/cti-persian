@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0068#AN0184",
-                    "external_id": "AN0184"
+                    "external_id": "AN0184",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -66,25 +67,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Adjustable time frame for detecting chained events (e.g., config change + module load)"
+                    "description": "Adjustable time frame for detecting chained events (e.g., config change + module load)",
+                    "description_fa": "چارچوب زمانی قابل تنظیم برای تشخیص رویدادهای زنجیره ای (به عنوان مثال، تغییر پیکربندی + بار ماژول)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope detection to specific users or roles allowed to modify IIS components"
+                    "description": "Scope detection to specific users or roles allowed to modify IIS components",
+                    "description_fa": "تشخیص محدوده برای کاربران خاص یا نقش‌هایی که مجاز به تغییر مؤلفه‌های IIS هستند"
                 },
                 {
                     "field": "WatchedPaths",
-                    "description": "Specific directories such as %windir%\\System32\\inetsrv\\ for DLL monitoring"
+                    "description": "Specific directories such as %windir%\\System32\\inetsrv\\ for DLL monitoring",
+                    "description_fa": "دایرکتوری های خاص مانند %windir%\\System32\\inetsrv\\ برای نظارت بر DLL"
                 },
                 {
                     "field": "DLLNameEntropyThreshold",
-                    "description": "Entropy or name patterns to flag suspicious DLLs registered as components"
+                    "description": "Entropy or name patterns to flag suspicious DLLs registered as components",
+                    "description_fa": "الگوهای آنتروپی یا نام گذاری برای پرچم گذاری DLL های مشکوک ثبت شده به عنوان مؤلفه"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Restrict to DLLs loaded by w3wp.exe or invoked via AppCmd.exe"
+                    "description": "Restrict to DLLs loaded by w3wp.exe or invoked via AppCmd.exe",
+                    "description_fa": "محدود به DLL های بارگیری شده توسط w3wp.exe یا فراخوانی شده از طریق AppCmd.exe"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0184",
+            "description_fa": "دشمن با استفاده از فایل‌های DLL ثبت‌شده از طریق تغییرات پیکربندی یا ابزارهای مدیریتی مانند AppCmd.exe، مؤلفه‌های IIS (فیلترها، برنامه‌های افزودنی یا ماژول‌های ISAPI) را نصب یا تغییر می‌دهد. این مؤلفه ها درخواست ها/پاسخ های HTTP را برای ماندگاری یا C2 رهگیری یا دستکاری می کنند."
         }
     ]
 }

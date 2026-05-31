@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0094",
-                    "external_id": "DC0094"
+                    "external_id": "DC0094",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -34,7 +35,9 @@
                     "name": "m365:unified",
                     "channel": "Add member to group"
                 }
-            ]
+            ],
+            "name_fa": "اصلاح گروه",
+            "description_fa": "تغییرات ایجاد شده در یک گروه، مانند عضویت، نام، یا مجوزها (مثلاً: Windows EID 4728 یا 4732، AWS IAM UpdateGroup). مثال ها: \n\n- اکتیو دایرکتوری:\n    - شناسه رویداد 4728: عضو به یک گروه جهانی اضافه شد.\n    - شناسه رویداد 4732: عضو به یک گروه محلی اضافه شد.\n- Azure AD: `Set-AzureADGroup -ObjectId <GroupId> -DisplayName \"New Name\"`\n- AWS IAM: `aws iam update-group --group-name <GroupName> --new-path \"/admin/\"`\n- Google Workspace: تغییر مجوزها از طریق Admin SDK API: `PATCH https://admin.googleapis.com/admin/directory/v1/groups/<groupKey>`\n- Office 365: تغییر گروه ها از طریق Graph API: `PATCH https://graph.microsoft.com/v1.0/groups/<groupId>`\n\n*اقدامات جمع آوری داده ها:*\n\n- ثبت دایرکتوری:\n    - ویندوز: ورود EIDs 4728 (افزودن)، 4729 (حذف).\n    - Azure AD: \"Audit logs\" را فعال کنید.\n    - Google Workspace: گزارش‌های فعالیت مدیریت را فعال کنید.\n    - Office 365: از گزارش حسابرسی یکپارچه استفاده کنید.\n- مانیتورینگ ابری:\n    - AWS: «UpdateGroup»، «AttachGroupPolicy»، «RemoveUserFromGroup» را وارد کنید.\n    - Azure: تغییرات را از طریق گزارش های حسابرسی دنبال کنید.\n- نظارت بر API: تماس‌های SDK مدیریت Google و Microsoft Graph API را ثبت کنید.\n- یکپارچه سازی SIEM: گزارش های اصلاح گروه را متمرکز و نظارت کنید."
         }
     ]
 }

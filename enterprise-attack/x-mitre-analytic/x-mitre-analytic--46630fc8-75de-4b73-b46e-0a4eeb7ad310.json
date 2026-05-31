@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0488#AN1344",
-                    "external_id": "AN1344"
+                    "external_id": "AN1344",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ThirdPartyCIDRs",
-                    "description": "Ranges used by MSPs/contractors/VPN egress; used to enrich logons and network flows."
+                    "description": "Ranges used by MSPs/contractors/VPN egress; used to enrich logons and network flows.",
+                    "description_fa": "محدوده مورد استفاده توسط MSP ها / پیمانکاران / خروج VPN. برای غنی‌سازی لاگین‌ها و جریان‌های شبکه استفاده می‌شود."
                 },
                 {
                     "field": "ExpectedAdminHosts",
-                    "description": "Servers where third-party admins are allowed; deviations raise risk."
+                    "description": "Servers where third-party admins are allowed; deviations raise risk.",
+                    "description_fa": "سرورهایی که ادمین های شخص ثالث مجاز هستند؛ انحرافات خطر را افزایش می دهند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking logon \u2192 elevation \u2192 access (e.g., 30\u2013120 minutes)."
+                    "description": "Correlation window linking logon → elevation → access (e.g., 30–120 minutes).",
+                    "description_fa": "پنجره همبستگی پیوند ورود به سیستم → ارتفاع → دسترسی (به عنوان مثال، 30-120 دقیقه)."
                 },
                 {
                     "field": "HighValueResources",
-                    "description": "File shares/AD objects/servers that should never be touched by third-party sessions."
+                    "description": "File shares/AD objects/servers that should never be touched by third-party sessions.",
+                    "description_fa": "اشتراک‌گذاری فایل/اشیاء AD/سرورهایی که هرگز نباید توسط جلسات شخص ثالث لمس شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1344",
+            "description_fa": "زنجیره رفتاری: (1) ورود از یک حساب شخص ثالث یا شبکه منبع نامعتبر یک جلسه تعاملی/راه دور ایجاد می کند. (2) جلسه امتیازات بالایی به دست می آورد یا به منابع حساس غیر معمول برای آن حساب دسترسی پیدا می کند. (3) حرکت جانبی بعدی یا دسترسی به داده از همان جلسه/دستگاه اتفاق می افتد. رویدادهای ورود به سیستم ویندوز، افزایش نشانه/استفاده ممتاز و دسترسی به منابع را با زمینه شخص ثالث مرتبط کنید."
         }
     ]
 }

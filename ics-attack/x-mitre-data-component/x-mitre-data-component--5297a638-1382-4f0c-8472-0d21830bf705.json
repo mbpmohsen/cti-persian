@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0060",
-                    "external_id": "DC0060"
+                    "external_id": "DC0060",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -91,7 +92,9 @@
                     "name": "containerLogs:systemd_unit_files",
                     "channel": "unit file referencing container binary with persistent flags"
                 }
-            ]
+            ],
+            "name_fa": "ایجاد خدمات",
+            "description_fa": "ثبت یک سرویس یا دیمون جدید در یک سیستم عامل.\n\n*اقدامات جمع آوری داده ها:*\n\n- گزارش رویدادهای ویندوز\n    - Event ID 4697 - ایجاد یک سرویس جدید ویندوز را ضبط می کند.\n    - Event ID 7045 - خدمات نصب شده توسط مدیران یا مخالفان را ضبط می کند.\n    - شناسه رویداد 7034 - می تواند نشان دهنده تغییر یا سوء استفاده از سرویس مخرب باشد.\n- سیاهههای مربوط به Sysmon\n    - Sysmon Event ID 1 - Process Creation (دستورالعمل های اجرایی سرویس را می گیرد).\n    - Sysmon Event ID 4 - تغییرات وضعیت سرویس (نصب سرویس را تشخیص می دهد).\n    - Sysmon Event ID 13 - تغییرات رجیستری (تغییرات تداوم سرویس را ضبط می کند).\n- ورود به سیستم PowerShell\n    - کنترل cmdlet های «New-Service» و «Set-Service» PowerShell در Event ID 4104 (Logging Block Script).\n- روش های مجموعه Linux/macOS\n    - AuditD & Syslog Daemon Logs (`/var/log/syslog`, `/var/log/messages`, `/var/log/daemon.log`)\n    - قوانین AuditD:\n        - `auditctl -w /etc/systemd/system -p wa -k service_creation`\n        - تغییرات پیکربندی سرویس «systemd» را تشخیص می دهد.\n- مجلات سیستمی (`journalctl -u <service_name>`)\n    - خدمات systemd جدید ایجاد شده را ضبط می کند.\n- LaunchDaemons & LaunchAgents (macOS)\n    - برای فایل‌های فهرست جدید، «/Library/LaunchDaemons/» و «/Library/LaunchAgents/» را مانیتور کنید."
         }
     ]
 }

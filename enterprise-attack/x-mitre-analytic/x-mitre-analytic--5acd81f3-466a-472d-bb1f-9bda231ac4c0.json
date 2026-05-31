@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0538#AN1484",
-                    "external_id": "AN1484"
+                    "external_id": "AN1484",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ForwardingFlags",
-                    "description": "Specific sshd config flags indicating port forwarding."
+                    "description": "Specific sshd config flags indicating port forwarding.",
+                    "description_fa": "پرچم های پیکربندی sshd خاص که نشان دهنده ارسال پورت است."
                 },
                 {
                     "field": "ProtocolBaseline",
-                    "description": "Define expected application protocols by port to catch tunneling mismatches."
+                    "description": "Define expected application protocols by port to catch tunneling mismatches.",
+                    "description_fa": "پروتکل‌های برنامه مورد انتظار را بر اساس پورت تعریف کنید تا عدم تطابق تونل را پیدا کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1484",
+            "description_fa": "sshd، socat، یا باینری های سفارشی که هدایت پورت را آغاز می کنند یا ترافیک را کپسوله می کنند (مانند RDP، SMB) از طریق SSH یا HTTP. Defender سیگنال‌های اتصال/پیوند غیرعادی، ترافیک رمزگذاری‌شده در پورت‌هایی را که معمولاً برای سرویس‌های غیررمزگذاری‌شده استفاده می‌شوند، و الگوهای حجم ترافیک پرت را می‌بیند."
         }
     ]
 }

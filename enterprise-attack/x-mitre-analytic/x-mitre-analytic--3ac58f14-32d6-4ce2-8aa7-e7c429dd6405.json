@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0061#AN0170",
-                    "external_id": "AN0170"
+                    "external_id": "AN0170",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines how long after the registry modification to correlate a suspicious process execution"
+                    "description": "Defines how long after the registry modification to correlate a suspicious process execution",
+                    "description_fa": "مدت زمان پس از اصلاح رجیستری را تعیین می کند تا اجرای فرآیند مشکوک را به هم مرتبط کند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune to ignore known admin or installer behavior in specific user profiles"
+                    "description": "Tune to ignore known admin or installer behavior in specific user profiles",
+                    "description_fa": "برای نادیده گرفتن رفتار مدیر یا نصب کننده شناخته شده در نمایه های کاربر خاص تنظیم کنید"
                 },
                 {
                     "field": "SuspiciousHandlerPathRegex",
-                    "description": "Pattern match for suspicious handler paths (e.g., powershell.exe, rundll32.exe)"
+                    "description": "Pattern match for suspicious handler paths (e.g., powershell.exe, rundll32.exe)",
+                    "description_fa": "مطابقت الگو برای مسیرهای کنترل کننده مشکوک (مانند powershell.exe، rundll32.exe)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0170",
+            "description_fa": "تغییر کلیدهای رجیستری مورد استفاده برای کنترل کننده فایل های پیش فرض را تشخیص می دهد و به دنبال آن اجرای غیرعادی فرآیند از فایل آغاز شده توسط کاربر باز می شود. این شامل ردیابی تغییرات تحت HKCU و HKCR برای نگاشت پسوند فایل، و مرتبط کردن آنها با مسیرهای کنترل کننده جدید یا مشکوک است که فرآیندهای فرزند غیرعادی را راه اندازی می کند (مانند PowerShell، cmd، wscript)."
         }
     ]
 }

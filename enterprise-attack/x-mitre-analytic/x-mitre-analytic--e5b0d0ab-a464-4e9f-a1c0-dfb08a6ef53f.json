@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0126#AN0353",
-                    "external_id": "AN0353"
+                    "external_id": "AN0353",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SSHConfigPath",
-                    "description": "Could be modified SSH path in hypervisor"
+                    "description": "Could be modified SSH path in hypervisor",
+                    "description_fa": "می توان مسیر SSH را در Hypervisor تغییر داد"
                 },
                 {
                     "field": "ESXiShellActivity",
-                    "description": "Whether shell was enabled beforehand via DCUI or API"
+                    "description": "Whether shell was enabled beforehand via DCUI or API",
+                    "description_fa": "آیا پوسته از قبل از طریق DCUI یا API فعال شده است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0353",
+            "description_fa": "تغییر مستقیم /etc/ssh/keys-<user>/authorized_keys یا فعال کردن SSH در sshd_config برای پشتیبانی از احراز هویت کلید عمومی."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0196#AN0565",
-                    "external_id": "AN0565"
+                    "external_id": "AN0565",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SNIFieldAbsent",
-                    "description": "Detect TLS sessions where SNI is empty\u2014'domainless' fronting."
+                    "description": "Detect TLS sessions where SNI is empty—'domainless' fronting.",
+                    "description_fa": "جلسات TLS را که در آن SNI خالی است - جلوی صفحه \"بدون دامنه\"."
                 },
                 {
                     "field": "AllowedTools",
-                    "description": "Environmental tuning for known binaries using alternate SNI for testing (e.g., API tests)."
+                    "description": "Environmental tuning for known binaries using alternate SNI for testing (e.g., API tests).",
+                    "description_fa": "تنظیم محیطی برای باینری های شناخته شده با استفاده از SNI جایگزین برای آزمایش (به عنوان مثال، تست های API)."
                 },
                 {
                     "field": "ProcessContext",
-                    "description": "Enrich command-line arguments or parent-child lineage to detect abuse."
+                    "description": "Enrich command-line arguments or parent-child lineage to detect abuse.",
+                    "description_fa": "برای شناسایی سوء استفاده، آرگومان های خط فرمان یا تبار والدین-فرزند را غنی کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0565",
+            "description_fa": "برنامه‌هایی مانند «curl»، «wget» یا باینری‌های سفارشی، اتصالات HTTPS را در جایی که TLS SNI با هم مطابقت ندارد یا وجود ندارد، در حالی که میزبان HTTP نقاط پایانی C2 در دسترس CDN را هدف قرار می‌دهد."
         }
     ]
 }

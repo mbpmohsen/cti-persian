@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0124#AN0348",
-                    "external_id": "AN0348"
+                    "external_id": "AN0348",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0348",
-            "description": "ESXi shell (BusyBox) or VMware utilities (openssl, python if present) used to Base64/hex encode data from datastore or config files \u2192 followed by abnormal egress from the host (NSX/flow logs) with asymmetric bytes_out or HTTPS posts to non-management endpoints.",
+            "description": "ESXi shell (BusyBox) or VMware utilities (openssl, python if present) used to Base64/hex encode data from datastore or config files → followed by abnormal egress from the host (NSX/flow logs) with asymmetric bytes_out or HTTPS posts to non-management endpoints.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MgmtCIDRs",
-                    "description": "CIDRs for legitimate vCenter/NSX/backup endpoints."
+                    "description": "CIDRs for legitimate vCenter/NSX/backup endpoints.",
+                    "description_fa": "CIDR ها برای vCenter/NSX/نقاط پایانی معتبر."
                 },
                 {
                     "field": "BytesRatio",
-                    "description": "Out:In ratio deemed suspicious (e.g., \u22653 on ESXi)."
+                    "description": "Out:In ratio deemed suspicious (e.g., ≥3 on ESXi).",
+                    "description_fa": "خارج: نسبت مشکوک تلقی می شود (مثلاً ≥3 در ESXi)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between shell command and egress."
+                    "description": "Correlation window between shell command and egress.",
+                    "description_fa": "پنجره همبستگی بین فرمان پوسته و خروج."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0348",
+            "description_fa": "پوسته ESXi (BusyBox) یا ابزارهای VMware (openssl، python در صورت وجود) برای کدگذاری Base64/hex داده‌ها از ذخیره‌گاه داده یا فایل‌های پیکربندی استفاده می‌شود ← به دنبال خروج غیرعادی از میزبان (NSX/گزارش‌های جریان) با بایت‌های_out نامتقارن یا پست‌های HTTPS به انتهای غیر مدیریتی."
         }
     ]
 }

@@ -9,19 +9,24 @@
                 {
                     "external_id": "CAPEC-511",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/511.html"
+                    "url": "https://capec.mitre.org/data/definitions/511.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
                     "external_id": "T1195.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001",
+                    "description_fa": "مصالحه با زنجیره تامین: وابستگی های نرم افزاری و ابزارهای توسعه را به خطر بیاندازید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5f69cd20-0000-4733-85d5-9bb2fdcaeb36",
@@ -50,11 +55,24 @@
             ],
             "x_capec_skills_required": {
                 "High": "Development skills to construct malicious attachments that can be used to exploit vulnerabilities in typical desktop applications or system configurations. The malicious attachments should be crafted well enough to bypass typical defensive systems (IDS, anti-virus, etc)",
-                "Medium": "Intelligence about the manufacturer's operating environment and infrastructure."
+                "Medium": "Intelligence about the manufacturer's operating environment and infrastructure.",
+                "High_fa": "مهارت‌های توسعه برای ساخت پیوست‌های مخرب که می‌توانند برای سوءاستفاده از آسیب‌پذیری‌ها در برنامه‌های معمولی دسکتاپ یا پیکربندی‌های سیستم مورد استفاده قرار گیرند. پیوست های مخرب باید به اندازه کافی ساخته شوند تا از سیستم های دفاعی معمولی (IDS، آنتی ویروس و غیره) عبور کنند.",
+                "Medium_fa": "اطلاعات در مورد محیط عملیاتی و زیرساخت سازنده."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از مکانیسم‌های تحویل رایج مانند پیوست‌های ایمیل یا رسانه‌های قابل جابجایی برای نفوذ به IDE (محیط توسعه یکپارچه) سازنده قربانی با هدف کاشت بدافزار استفاده می‌کند که امکان کنترل حمله بر محیط IDE قربانی را فراهم می‌کند. سپس حمله از این دسترسی برای استخراج داده ها یا اطلاعات حساس، دستکاری داده ها یا اطلاعات مذکور و پنهان کردن این اقدامات استفاده می کند. این اجازه می‌دهد و به حمله کمک می‌کند تا هدف به خطر افتادن آینده گیرنده محصول تولیدی قربانی را در زنجیره تامین برآورده کند.",
+            "name_fa": "نفوذ به محیط توسعه نرم افزار",
+            "x_capec_example_instances_fa": [
+                "مهاجم با دانستن اینکه قربانی ایمیل را در یک سیستم مجاور سیستم IDE اجرا می کند، یک ایمیل فیشینگ با یک پیوست مخرب برای قربانی ارسال می کند. هنگام مشاهده، پیوست مخرب یک درب پشتی نصب می کند که به مهاجم اجازه می دهد تا از راه دور سیستم IDE مجاور را از ایستگاه کاری قربانی به خطر بیاندازد. سپس مهاجم می‌تواند داده‌های حساس نرم‌افزاری را که در سیستم IDE توسعه می‌یابد، استخراج کند.",
+                "با استفاده از نسخه‌های سرکش Xcode (ابزار توسعه برنامه اپل) که از وب‌سایت‌های شخص ثالث دانلود می‌شد، این امکان برای دشمن وجود داشت که در طول فرآیند توسعه، کدهای مخرب را در برنامه‌های قانونی وارد کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "قربانی باید از ایمیل یا رسانه‌های قابل جابجایی سیستم‌هایی که IDE را اجرا می‌کنند (یا سیستم‌های مجاور سیستم‌های IDE) استفاده کند.",
+                "قربانی باید دارای سیستمی باشد که برنامه های کاربردی قابل بهره برداری و/یا پیکربندی آسیب پذیر را اجرا می کند تا امکان نفوذ اولیه را فراهم کند.",
+                "مهاجم باید دانش کاری در مورد برخی از اجزای درگیر در سیستم IDE و همچنین زیرساخت داشته باشد."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0670#AN1768",
-                    "external_id": "AN1768"
+                    "external_id": "AN1768",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,33 +58,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between lifecycle event, local package creation, and upload"
+                    "description": "Correlation window between lifecycle event, local package creation, and upload",
+                    "description_fa": "پنجره همبستگی بین رویداد چرخه حیات، ایجاد بسته محلی و آپلود"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Managed apps expected to archive, export, or synchronize data"
+                    "description": "Managed apps expected to archive, export, or synchronize data",
+                    "description_fa": "برنامه‌های مدیریت‌شده انتظار می‌رود داده‌ها را بایگانی، صادر یا همگام‌سازی کنند"
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Approved cloud, enterprise, or sync endpoints for legitimate exports"
+                    "description": "Approved cloud, enterprise, or sync endpoints for legitimate exports",
+                    "description_fa": "نقاط پایانی ابر، سازمانی یا همگام‌سازی مورد تأیید برای صادرات قانونی"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether packaging or export should occur only during active user interaction"
+                    "description": "Whether packaging or export should occur only during active user interaction",
+                    "description_fa": "بسته‌بندی یا صادرات فقط باید در طول تعامل فعال کاربر رخ دهد"
                 },
                 {
                     "field": "ArchiveSizeThreshold",
-                    "description": "Minimum size for suspicious local package or blob"
+                    "description": "Minimum size for suspicious local package or blob",
+                    "description_fa": "حداقل اندازه برای بسته یا لکه محلی مشکوک"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Threshold for identifying encrypted or compressed staged output"
+                    "description": "Threshold for identifying encrypted or compressed staged output",
+                    "description_fa": "آستانه برای شناسایی خروجی مرحله ای رمزگذاری شده یا فشرده شده"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume consistent with recently created archive"
+                    "description": "Minimum outbound volume consistent with recently created archive",
+                    "description_fa": "حداقل حجم خروجی مطابق با آرشیو اخیرا ایجاد شده است"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1768",
+            "description_fa": "مدافع دسترسی به داده های برنامه مدیریت شده و بافت چرخه عمر را با شواهد غیرمستقیم بسته بندی یا رمزگذاری قبل از انتقال خروجی مرتبط می کند. از آنجایی که دید مستقیم بایگانی/فشرده‌سازی عموماً در iOS ضعیف‌تر است، لنگرهای تحلیلی در وضعیت چرخه عمر برنامه، جلوه‌های فایل/خروجی قابل مشاهده توسط EDR تلفن همراه در صورت وجود، نقش برنامه مدیریت‌شده از طریق MDM، و آپلودهای شبکه پایین‌دستی که از نزدیک ایجاد مصنوعات محلی جدید بزرگ یا با آنتروپی بالا را دنبال می‌کنند. وقتی فقط جلوه های شبکه در دسترس باشد، اطمینان کمتر است."
         }
     ]
 }

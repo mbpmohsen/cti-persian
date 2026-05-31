@@ -9,57 +9,69 @@
                 {
                     "external_id": "CAPEC-47",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/47.html"
+                    "url": "https://capec.mitre.org/data/definitions/47.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-118",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/118.html"
+                    "url": "http://cwe.mitre.org/data/definitions/118.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-130",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/130.html"
+                    "url": "http://cwe.mitre.org/data/definitions/130.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-131",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/131.html"
+                    "url": "http://cwe.mitre.org/data/definitions/131.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--e61f5dd9-d26e-454f-ab07-171f3dea6e73",
@@ -93,6 +105,25 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -112,11 +143,26 @@
                 "Access to the program source or binary. If the program is only available in binary then a disassembler and other reverse engineering tools will be helpful."
             ],
             "x_capec_skills_required": {
-                "High": "Finding this particular buffer overflow may not be trivial. Also, stack and especially heap based buffer overflows require a lot of knowledge if the intended goal is arbitrary code execution. Not only that the adversary needs to write the shell code to accomplish their goals, but the adversary also needs to find a way to get the program execution to jump to the planted shell code. There also needs to be sufficient room for the payload. So not every buffer overflow will be exploitable, even by a skilled adversary."
+                "High": "Finding this particular buffer overflow may not be trivial. Also, stack and especially heap based buffer overflows require a lot of knowledge if the intended goal is arbitrary code execution. Not only that the adversary needs to write the shell code to accomplish their goals, but the adversary also needs to find a way to get the program execution to jump to the planted shell code. There also needs to be sufficient room for the payload. So not every buffer overflow will be exploitable, even by a skilled adversary.",
+                "High_fa": "پیدا کردن این سرریز بافر خاص ممکن است بی اهمیت نباشد. همچنین اگر هدف مورد نظر اجرای کد دلخواه باشد، سرریزهای بافر مبتنی بر پشته و به خصوص پشته به دانش زیادی نیاز دارند. نه تنها حریف برای دستیابی به اهداف خود نیاز به نوشتن کد پوسته دارد، بلکه باید راهی پیدا کند تا اجرای برنامه به کد پوسته کاشته شده بپرد. همچنین باید فضای کافی برای محموله وجود داشته باشد. بنابراین هر سرریز بافری حتی توسط یک دشمن ماهر قابل بهره برداری نخواهد بود."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این حمله، به نرم افزار هدف ورودی داده می شود که حریف می داند که در طول پردازش تغییر و اندازه آن افزایش می یابد. این حمله متکی به نرم افزار هدف است که نمی تواند پیش بینی کند که داده های گسترش یافته ممکن است از حد داخلی تجاوز کند و در نتیجه یک سرریز بافر ایجاد کند.",
+            "name_fa": "سرریز بافر از طریق گسترش پارامتر",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>مثال حمله: FTP glob()</xhtml:p>\n               <xhtml:p> تابع glob() در سرورهای FTP در نتیجه تغییر اندازه نادرست در معرض حمله قرار گرفته است. این یک آسیب‌پذیری ftpd glob() Expansion LIST Heap Overflow است. دیمون ftp حاوی یک شرط سرریز بافر مبتنی بر پشته است. سرریز زمانی اتفاق می‌افتد که دستور LIST با آرگومان صادر می‌شود که پس از پردازش توسط glob() به یک رشته بزرگ تبدیل می‌شود.</xhtml:p>\n               <xhtml:p> این سرریز بافر در حافظه ای که به صورت پویا تخصیص داده می شود رخ می دهد. ممکن است دشمنان از این آسیب پذیری سوء استفاده کنند و کد دلخواه را روی میزبان آسیب دیده اجرا کنند.</xhtml:p>\n               <xhtml:p>برای سوء استفاده از این، حریف باید بتواند دایرکتوری هایی را در میزبان هدف ایجاد کند.</xhtml:p>\n               <xhtml:p> تابع glob() برای گسترش نمادهای کوتاه به نام فایل‌های کامل استفاده می‌شود. با ارسال درخواستی به سرور FTP حاوی یک tilde (~) و سایر کاراکترهای عام در رشته نام مسیر، یک حریف راه دور می تواند یک بافر را سرریز کند و کد دلخواه را روی سرور FTP اجرا کند تا امتیازات ریشه را به دست آورد. هنگامی که درخواست پردازش شد، تابع glob() ورودی کاربر را گسترش می‌دهد که می‌تواند از طول مورد انتظار فراتر رود. به منظور سوء استفاده از این آسیب پذیری، دشمن باید بتواند دایرکتوری هایی را در سرور FTP ایجاد کند.</xhtml:p>\n               <xhtml:p>[REF-1]</xhtml:p>همچنین ببینید: CVE-2001-0249",
+                "<xhtml:p>سرریز بافر در پیاده‌سازی glob در libc در NetBSD-current قبل از 20050914، و NetBSD 2.* و 3.* قبل از 20061203، همانطور که توسط شبح FTP استفاده می‌شود، به کاربران احراز هویت از راه دور اجازه می‌دهد تا کد دلخواه را از طریق یک مسیر طولانی expansion:p اجرا کنند.</html>\n               <xhtml:p>محاسبه حد یک بافر داخلی اشتباه انجام شده است. اندازه بافر در بایت به عنوان تعداد عناصر استفاده شد، حتی اگر عناصر بافر 2 بایت طول داشته باشند. بنابراین نام مسیرهای طولانی گسترش یافته از بافر سرریز می شود.</xhtml:p>همچنین ببینید: CVE-2006-6652"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه هدف: </b> دشمن برنامه یا برنامه هدف را برای اجرای سرریز بافر در آن شناسایی می کند. دشمنان اغلب به دنبال برنامه‌هایی هستند که ورودی کاربر را می‌پذیرند و مدیریت حافظه را به صورت دستی انجام می‌دهند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>پیدا کردن بردار تزریق: </b> دشمن یک بردار تزریق را شناسایی می‌کند تا محتوای بیش از حد را به برنامه مورد نظر تحویل دهد. بافر.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>در این حمله، روش عادی ارائه ورودی بزرگ کاربر کار نمی کند. این برنامه محدودیت ها را در ورودی کاربر بررسی می کند، اما ورودی کاربر گسترش یافته را بررسی نمی کند. حریف باید ورودی هایی را ارائه دهد که معتقدند برنامه برای سرریز شدن یک بافر گسترش می یابد. برای شناسایی محل‌هایی که این امکان وجود دارد، یک دشمن یا باید از عملکرد درونی برنامه اطلاعات داشته باشد یا از یک disassembler و سایر ابزارهای مهندسی معکوس برای هدایت جستجو استفاده کند.</td></tr></tbody></table><li> <p> <b>محتوای سرریز کاردستی: </b> دشمن ورودی‌هایی را ایجاد می‌کند که باید به برنامه داده شود. اگر هدف این است که به سادگی باعث از کار افتادن نرم افزار شود، ورودی فقط باید به مقدار بیش از حد داده های تصادفی گسترش یابد. اگر هدف استفاده از سرریز برای اجرای کد دلخواه باشد، حریف ورودی ایجاد می‌کند که به گونه‌ای گسترش می‌یابد که نه تنها بافر مورد نظر را سرریز می‌کند، بلکه این کار را به گونه‌ای انجام می‌دهد که آدرس بازگشتی رونویسی شده با انتخاب یکی از حریفان جایگزین می‌شود که کدام نقاط کد را تزریق می‌کند. دشمن.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>فایل‌ها و دایرکتوری‌های خاصی را در سیستم ایجاد کنید و سپس با استفاده از میانبرهای پیمایش مسیر به آن دسته از دایرکتوری‌هایی که می‌توانند از یک بافر ورودی گسترش پیدا کنند، ورودی بدهید. <b>سرریز کردن بافر: </b>با استفاده از بردار تزریق، حریف ورودی دستکاری شده را به برنامه می دهد و بافر را سرریز می کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه یکی از پارامترهای ارسال شده به یک تابع را با ورودی کنترل شده توسط کاربر گسترش می‌دهد، اما تابع بعدی که از پارامتر توسعه‌یافته استفاده می‌کند، به اشتباه اندازه اصلی و نه اندازه گسترش‌یافته پارامتر را در نظر می‌گیرد.",
+                "پارامتر گسترش‌یافته در زمینه‌ای استفاده می‌شود که ممکن است سرریز بافر به دلیل درک نادرست اندازه پارامتر امکان‌پذیر شود (یعنی تصور اینکه کوچکتر از چیزی است که واقعاً هست)."
+            ],
+            "x_capec_resources_required_fa": [
+                "دسترسی به منبع برنامه یا باینری. اگر این برنامه فقط به صورت باینری در دسترس است، جداساز و سایر ابزارهای مهندسی معکوس مفید خواهند بود."
+            ]
         }
     ],
     "type": "bundle"

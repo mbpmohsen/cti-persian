@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0510#AN1408",
-                    "external_id": "AN1408"
+                    "external_id": "AN1408",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetPaths",
-                    "description": "Suspicious write locations such as /tmp/, ~/Downloads/"
+                    "description": "Suspicious write locations such as /tmp/, ~/Downloads/",
+                    "description_fa": "مکان‌های نوشتن مشکوک مانند /tmp/، ~/Downloads/"
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Processes spawned by browsers or svg-viewing apps that invoke interpreters"
+                    "description": "Processes spawned by browsers or svg-viewing apps that invoke interpreters",
+                    "description_fa": "فرآیندهای ایجاد شده توسط مرورگرها یا برنامه های مشاهده svg که مفسرها را فراخوانی می کنند"
                 },
                 {
                     "field": "NetworkDestinations",
-                    "description": "URLs/IPs contacted post-SVG access \u2013 may reflect initial C2"
+                    "description": "URLs/IPs contacted post-SVG access – may reflect initial C2",
+                    "description_fa": "نشانی‌های وب/آی‌پی‌هایی که پس از دسترسی SVG تماس گرفتند - ممکن است منعکس کننده C2 ​​اولیه باشند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1408",
+            "description_fa": "فایل‌های SVG دانلود شده را شناسایی می‌کند و سپس فرآیندهای مرورگر یا ابزارهایی مانند xdg-open را اجرا می‌کند و اتصالات شبکه را دنبال می‌کند یا فرآیند را به مفسرانی مانند python یا bash منتقل می‌کند."
         }
     ]
 }

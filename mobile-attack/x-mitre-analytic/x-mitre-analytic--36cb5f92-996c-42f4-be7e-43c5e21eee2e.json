@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0682#AN1788",
-                    "external_id": "AN1788"
+                    "external_id": "AN1788",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.376Z",
             "name": "Analytic 1788",
-            "description": "Defender observes an app (package/UID) issuing high-rate directory or content-index enumerations against external/shared storage or other apps\u2019 Documents/Media providers (logcat:ContentResolver, logcat:StorageAccessFramework), followed within a short window by bulk READ handles or stat/list calls over many distinct paths (logcat:FileIO). Activity occurs without foreground UI or exceeds typical per-app baseline, indicating automated file/dir discovery rather than user-driven browsing. Correlate on package/UID/profile and time proximity.",
+            "description": "Defender observes an app (package/UID) issuing high-rate directory or content-index enumerations against external/shared storage or other apps’ Documents/Media providers (logcat:ContentResolver, logcat:StorageAccessFramework), followed within a short window by bulk READ handles or stat/list calls over many distinct paths (logcat:FileIO). Activity occurs without foreground UI or exceeds typical per-app baseline, indicating automated file/dir discovery rather than user-driven browsing. Correlate on package/UID/profile and time proximity.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,29 +58,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Time window to correlate API queries with file listings (e.g., 30\u2013300s)."
+                    "description": "Time window to correlate API queries with file listings (e.g., 30–300s).",
+                    "description_fa": "پنجره زمانی برای ارتباط پرس و جوهای API با لیست فایل ها (به عنوان مثال، 30-300s)."
                 },
                 {
                     "field": "MinDistinctPaths",
-                    "description": "Minimum unique paths accessed to qualify as discovery (e.g., \u226550)."
+                    "description": "Minimum unique paths accessed to qualify as discovery (e.g., ≥50).",
+                    "description_fa": "حداقل مسیرهای منحصر به فرد قابل دسترسی برای واجد شرایط بودن به عنوان کشف (به عنوان مثال، ≥50)."
                 },
                 {
                     "field": "BackgroundOnly",
-                    "description": "Require app to be backgrounded to reduce user-driven noise."
+                    "description": "Require app to be backgrounded to reduce user-driven noise.",
+                    "description_fa": "برای کاهش نویز کاربر باید برنامه را پس‌زمینه داشته باشید."
                 },
                 {
                     "field": "TargetPathRegex",
-                    "description": "Scope to enterprise-relevant locations (e.g., /Documents, /Android/media/<corp>)."
+                    "description": "Scope to enterprise-relevant locations (e.g., /Documents, /Android/media/<corp>).",
+                    "description_fa": "دامنه به مکان های مرتبط با شرکت (به عنوان مثال، /Documents، /Android/media/<corp>)."
                 },
                 {
                     "field": "AllowlistedPackages",
-                    "description": "Backup/DLP/security apps expected to enumerate broadly."
+                    "description": "Backup/DLP/security apps expected to enumerate broadly.",
+                    "description_fa": "برنامه‌های پشتیبان‌گیری/DLP/امنیتی که انتظار می‌رود به طور گسترده‌ای شمارش شوند."
                 },
                 {
                     "field": "ProfileScope",
-                    "description": "Limit to Work Profile to reduce personal data noise."
+                    "description": "Limit to Work Profile to reduce personal data noise.",
+                    "description_fa": "برای کاهش نویز اطلاعات شخصی، به نمایه کاری محدود کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1788",
+            "description_fa": "Defender برنامه ای (بسته/UID) را مشاهده می کند که فهرستی با نرخ بالا یا فهرست محتوا را در برابر ذخیره سازی خارجی/اشتراک گذاری شده یا سایر ارائه دهندگان اسناد/رسانه برنامه ها (logcat:ContentResolver، logcat:StorageAccessFramework) صادر می کند، که در یک پنجره کوتاه توسط دسته های READ انبوه یا فراخوانی های stat/list در مسیر فایل های بسیاری (مسیرهای stat/listin). فعالیت بدون رابط کاربری پیش‌زمینه انجام می‌شود یا از خط پایه معمولی هر برنامه فراتر می‌رود، که نشان‌دهنده کشف خودکار فایل/دیر به جای مرور کاربر محور است. با بسته/UID/نمایه و نزدیکی زمانی ارتباط برقرار کنید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0583#AN1604",
-                    "external_id": "AN1604"
+                    "external_id": "AN1604",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation between Event ID 4720 and creating process may vary by environment and automation delays"
+                    "description": "Correlation between Event ID 4720 and creating process may vary by environment and automation delays",
+                    "description_fa": "همبستگی بین شناسه رویداد 4720 و فرآیند ایجاد ممکن است بسته به تأخیرهای محیط و اتوماسیون متفاوت باشد"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Tools like net.exe or powershell.exe can be normal or malicious depending on user context"
+                    "description": "Tools like net.exe or powershell.exe can be normal or malicious depending on user context",
+                    "description_fa": "ابزارهایی مانند net.exe یا powershell.exe بسته به زمینه کاربر می توانند عادی یا مخرب باشند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "System vs. administrator vs. low-privilege user context changes alert criticality"
+                    "description": "System vs. administrator vs. low-privilege user context changes alert criticality",
+                    "description_fa": "سیستم در مقابل سرپرست در مقابل زمینه کاربر با امتیاز پایین، بحرانی بودن هشدار را تغییر می‌دهد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1604",
+            "description_fa": "دشمن از ابزارهای سیستم عامل داخلی یا فراخوانی های API برای ایجاد حساب های محلی یا دامنه برای تداوم یا حرکت جانبی استفاده می کند. ممکن است از ابزارهایی مانند «کاربر خالص»، PowerShell یا MMC استفاده شود. تشخیص بر روی شناسه رویداد 4720 جفت شده با اصل و نسب فرآیند و زمینه کاربر تمرکز دارد."
         }
     ]
 }

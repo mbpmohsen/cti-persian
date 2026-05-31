@@ -9,41 +9,53 @@
                 {
                     "external_id": "CAPEC-593",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/593.html"
+                    "url": "https://capec.mitre.org/data/definitions/593.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-287",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/287.html"
+                    "url": "http://cwe.mitre.org/data/definitions/287.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Browser Session Hijacking",
                     "external_id": "T1185",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1185"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1185",
+                    "description_fa": "ربودن جلسه مرورگر",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Use Alternate Authentication Material:Application Access Token",
                     "external_id": "T1550.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1550/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1550/001",
+                    "description_fa": "از مواد احراز هویت جایگزین: رمز دسترسی برنامه استفاده کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Remote Service Session Hijacking",
                     "external_id": "T1563",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1563"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1563",
+                    "description_fa": "ربودن جلسه سرویس از راه دور",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Session hijacking attack",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Session_hijacking_attack"
+                    "url": "https://owasp.org/www-community/attacks/Session_hijacking_attack",
+                    "description_fa": "حمله ربودن جلسه",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-603",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/09-Testing_for_Session_Hijacking.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/09-Testing_for_Session_Hijacking.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--63f43efb-7a34-4302-b3dc-8245100fdea9",
@@ -73,6 +85,15 @@
                 ],
                 "Integrity": [
                     "Gain Privileges (A successful attack can enable an adversary to gain unauthorized access to an application.)"
+                ],
+                "Availability_fa": [
+                    "به دست آوردن امتیازات (یک حمله موفقیت آمیز می تواند دشمن را قادر به دسترسی غیرمجاز به یک برنامه کاربردی کند.)"
+                ],
+                "Confidentiality_fa": [
+                    "به دست آوردن امتیازات (یک حمله موفقیت آمیز می تواند دشمن را قادر به دسترسی غیرمجاز به یک برنامه کاربردی کند.)"
+                ],
+                "Integrity_fa": [
+                    "به دست آوردن امتیازات (یک حمله موفقیت آمیز می تواند دشمن را قادر به دسترسی غیرمجاز به یک برنامه کاربردی کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -93,11 +114,21 @@
                 "The adversary must have the ability to communicate with the application over the network."
             ],
             "x_capec_skills_required": {
-                "Low": "Exploiting a poorly protected identity token is a well understood attack with many helpful resources available."
+                "Low": "Exploiting a poorly protected identity token is a well understood attack with many helpful resources available.",
+                "Low_fa": "بهره برداری از یک نشانه هویت ضعیف محافظت شده یک حمله به خوبی درک شده با بسیاری از منابع مفید در دسترس است."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این نوع حمله شامل یک دشمن است که از نقاط ضعف در استفاده برنامه از جلسات در اجرای احراز هویت سوء استفاده می کند. حریف می‌تواند یک جلسه فعال را بدزدد یا دستکاری کند و از آن برای دسترسی غیرمجاز به برنامه استفاده کند.",
+            "name_fa": "ربودن جلسه",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کشف رمز جلسه موجود: </b>از طریق ابزارهای مختلف، دشمن یک نشانه جلسه موجود را برای کاربر تأیید شده دیگر کشف و ذخیره می کند. جلسه.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>درج نشانه جلسه یافت شده: </b>مهاجم تلاش می‌کند تا یک نشانه جلسه یافت شده را در ارتباط با برنامه هدف قرار دهد تا قابلیت بهره‌برداری را تأیید کند.</p></li></ol><v></h</h>Exdiv> <b>Session Token Exploitation: </b> مهاجم از نشانه جلسه ضبط شده استفاده می کند تا با برنامه مورد نظر به شیوه ای مخرب تعامل داشته باشد و هویت قربانی را جعل کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه ای که از جلسات برای احراز هویت استفاده می کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید توانایی برقراری ارتباط با برنامه را از طریق شبکه داشته باشد."
+            ]
         }
     ],
     "type": "bundle"

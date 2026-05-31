@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0057#AN0157",
-                    "external_id": "AN0157"
+                    "external_id": "AN0157",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredProcesses",
-                    "description": "List of credential storage daemons (e.g., securityd, gnome-keyring, kwallet) monitored for memory access attempts"
+                    "description": "List of credential storage daemons (e.g., securityd, gnome-keyring, kwallet) monitored for memory access attempts",
+                    "description_fa": "فهرستی از دیمون‌های ذخیره‌سازی اعتبار (مانند، ایمن‌شده، gnome-keyring، kwallet) که برای تلاش‌های دسترسی به حافظه نظارت می‌شوند"
                 },
                 {
                     "field": "CorrelationDepth",
-                    "description": "Defines how many chained events (process execution + syscall + file read) to correlate before raising an alert"
+                    "description": "Defines how many chained events (process execution + syscall + file read) to correlate before raising an alert",
+                    "description_fa": "تعداد رویدادهای زنجیره‌ای (اجرای فرآیند + syscall + خواندن فایل) را تعیین می‌کند تا قبل از اعلام هشدار با هم مرتبط شوند."
                 },
                 {
                     "field": "PrivilegeContext",
-                    "description": "Expected user/group context for processes allowed to access protected memory"
+                    "description": "Expected user/group context for processes allowed to access protected memory",
+                    "description_fa": "زمینه کاربر/گروه مورد انتظار برای فرآیندهایی که اجازه دسترسی به حافظه محافظت شده را دارند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0157",
+            "description_fa": "دشمنانی را که تلاش می‌کنند اشکال‌زدایی یا ابزارهای تخلیه حافظه را به دیمون‌های ذخیره‌سازی اعتبار مشابه با macOS «securityd» متصل کنند، شناسایی می‌کند. syscalls ptrace، /proc/<pid>/mem دسترسی، یا gcore dump در برابر فرآیندهای حساس را مشاهده می‌کند. ناهنجاری ها را با تشدید امتیازات یا تلاش برای تخلیه اعتبار مرتبط می کند."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0650#AN1732",
-                    "external_id": "AN1732"
+                    "external_id": "AN1732",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -35,21 +36,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between background execution and network transmission"
+                    "description": "Correlation window between background execution and network transmission",
+                    "description_fa": "پنجره همبستگی بین اجرای پس زمینه و انتقال شبکه"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Threshold for detecting encrypted payloads"
+                    "description": "Threshold for detecting encrypted payloads",
+                    "description_fa": "آستانه برای تشخیص محموله های رمزگذاری شده"
                 },
                 {
                     "field": "BeaconIntervalVariance",
-                    "description": "Tolerance for periodic encrypted communication"
+                    "description": "Tolerance for periodic encrypted communication",
+                    "description_fa": "تحمل ارتباطات رمزگذاری شده دوره ای"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps expected to exhibit encrypted communication patterns"
+                    "description": "Apps expected to exhibit encrypted communication patterns",
+                    "description_fa": "برنامه‌هایی که انتظار می‌رود الگوهای ارتباطی رمزگذاری‌شده را نشان دهند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1732",
+            "description_fa": "شواهد غیرمستقیم استفاده از کانال رمزنگاری متقارن از طریق ارسال‌های شبکه رمزگذاری‌شده ساختاریافته مکرر و الگوهای پردازش پس‌زمینه استنباط می‌شود، که در آن مشاهده مستقیم عملیات کریپتو متقارن محدود است. تشخیص با اجرای پس‌زمینه برنامه + الگوهای محموله رمزگذاری‌شده ثابت + وضعیت استحقاق برنامه برای شناسایی سوء استفاده از رمزگذاری متقارن برای فرمان و کنترل ارتباط دارد."
         }
     ]
 }

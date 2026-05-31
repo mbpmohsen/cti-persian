@@ -9,19 +9,24 @@
                 {
                     "external_id": "CAPEC-548",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/548.html"
+                    "url": "https://capec.mitre.org/data/definitions/548.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Florida Industrial Security Working Group (FISWG), Managing a “Data Spill”",
                     "external_id": "REF-742",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://fiswg.research.ucf.edu/Documents/PPT/Manage%20a%20Data%20Spill-Contamination%20September%202015.pptx"
+                    "url": "https://fiswg.research.ucf.edu/Documents/PPT/Manage%20a%20Data%20Spill-Contamination%20September%202015.pptx",
+                    "description_fa": "کارگروه امنیت صنعتی فلوریدا (FISWG)، مدیریت \"نشت داده ها\"",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "data spillage",
                     "external_id": "REF-743",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://csrc.nist.gov/glossary/term/data_spillage"
+                    "url": "https://csrc.nist.gov/glossary/term/data_spillage",
+                    "description_fa": "ریختن داده ها",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--61546d1a-d720-4609-89ca-12039268d502",
@@ -45,6 +50,12 @@
                 ],
                 "Confidentiality": [
                     "Read Data (Victims of the attack can be exposed to classified materials)"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع (انکار خدمات)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (قربانیان حمله می توانند در معرض مواد طبقه بندی شده قرار بگیرند)"
                 ]
             },
             "x_capec_domains": [
@@ -61,11 +72,22 @@
             ],
             "x_capec_skills_required": {
                 "High": "The ability to obtain a classified document or information",
-                "Low": "The ability to fake a classified document"
+                "Low": "The ability to fake a classified document",
+                "High_fa": "امکان به دست آوردن یک سند یا اطلاعات طبقه بندی شده",
+                "Low_fa": "امکان جعل اسناد طبقه بندی شده"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن سیستم‌های اطلاعات سازمانی (شامل دستگاه‌ها و شبکه‌ها) را با وادار کردن آنها به مدیریت اطلاعات طبقه‌بندی/حساسیتی که برای آن مجاز نشده است، آلوده می‌کند. هنگامی که این اتفاق می‌افتد، سیستم، دستگاه یا شبکه اطلاعات آلوده باید برای بررسی و کاهش نشت داده‌ها آفلاین شود، که در دسترس بودن سیستم تا زمانی که بررسی کامل نشود، رد می‌شود.",
+            "name_fa": "آلوده کردن منبع",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک تهدید خودی توانست یک سند طبقه بندی شده به دست آورد. آنها می دانند که یک سرور پشتیبان که دسترسی به یک وب سایت را فراهم می کند، یک سرور ایمیل نیز اجرا می کند. حریف یک آدرس ایمیل دور ریختنی ایجاد می کند و سند طبقه بندی شده را به سرور پست الکترونیکی ارسال می کند. هنگامی که یک سرپرست سرور ایمیل را بررسی می کند، متوجه می شود که ایمیلی را با یک سند طبقه بندی شده پردازش کرده است و سرور باید در حین بررسی آلودگی، آفلاین شود. در همین حال، وب‌سایت نیز باید حذف شود و دسترسی به وب‌سایت ممنوع می‌شود تا زمانی که پشتیبانی به سرور دیگری منتقل شود یا بررسی کامل شود.</xhtml:p>"
+            ],
+            "x_capec_extended_description_fa": "آلودگی از طریق ایمیل یک عامل حمله بسیار رایج است. سیستم‌های دارای سرورهای ایمیل یا سیستم‌های کاری شخصی که از ایمیل استفاده می‌کنند، صرفاً با دریافت ایمیلی که حاوی یک سند یا اطلاعات طبقه‌بندی‌شده است، مستعد این حمله هستند. حتی می‌توان از یک سند طبقه‌بندی شده جعلی استفاده کرد که به‌عنوان مطالب طبقه‌بندی شده واقعی اشتباه گرفته شود. این همچنان باعث می‌شود تا زمانی که اعتبار مطالب طبقه‌بندی‌شده تأیید نشود، سیستم از حالت آنلاین خارج شود.",
+            "x_capec_prerequisites_fa": [
+                "حریف باید اطلاعات طبقه بندی شده/حساس واقعی یا جعلی را برای قرار دادن در یک سیستم داشته باشد"
+            ]
         }
     ],
     "type": "bundle"

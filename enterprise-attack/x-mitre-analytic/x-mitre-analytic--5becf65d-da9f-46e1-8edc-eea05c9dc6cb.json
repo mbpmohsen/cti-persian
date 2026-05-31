@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0294#AN0820",
-                    "external_id": "AN0820"
+                    "external_id": "AN0820",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between file create and exec (e.g., \u226410m)."
+                    "description": "Correlation window between file create and exec (e.g., ≤10m).",
+                    "description_fa": "پنجره همبستگی بین ایجاد فایل و exec (به عنوان مثال، ≤10m)."
                 },
                 {
                     "field": "QuarantineRequired",
-                    "description": "Require com.apple.quarantine attribute present on the file for higher fidelity."
+                    "description": "Require com.apple.quarantine attribute present on the file for higher fidelity.",
+                    "description_fa": "برای وفاداری بیشتر، ویژگی com.apple.quarantine موجود در فایل را الزامی کنید."
                 },
                 {
                     "field": "ParentApps",
-                    "description": "Approved document viewers/editors to anchor lineage."
+                    "description": "Approved document viewers/editors to anchor lineage.",
+                    "description_fa": "بینندگان/ویرایشگران سند تایید شده برای لنگر دادن به خط و نسب."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0820",
+            "description_fa": "کاربر یک سند/نصب کننده دانلود شده را باز می کند که منجر به ایجاد فایل EndpointSecurity در مسیرهای ~/Downloads یا ~/Library می شود و سپس یک exec از یک ابزار مشکوک (osascript، bash/zsh، curl، chmod، باز کردن با -a Terminal) باز می شود. ایجاد فایل را با اجرای فرآیندهای بعدی و به صورت اختیاری، رویدادهای قرنطینه/LSQuarantine مرتبط می کند."
         }
     ]
 }

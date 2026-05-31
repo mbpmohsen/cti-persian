@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0102#AN0283",
-                    "external_id": "AN0283"
+                    "external_id": "AN0283",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessName",
-                    "description": "Unusual process accessing device files"
+                    "description": "Unusual process accessing device files",
+                    "description_fa": "فرآیند غیرمعمول دسترسی به فایل های دستگاه"
                 },
                 {
                     "field": "DevicePath",
-                    "description": "Typically /dev/input/*, but tunable to exact endpoint config"
+                    "description": "Typically /dev/input/*, but tunable to exact endpoint config",
+                    "description_fa": "به طور معمول /dev/input/*، اما برای پیکربندی دقیق نقطه پایانی قابل تنظیم است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0283",
+            "description_fa": "استفاده از ابزارها/اسکریپت ها را برای دسترسی به دستگاه های ورودی مانند /dev/input/* یا evdev از طریق فرآیندهای مشکوک فاقد زمینه رابط کاربری گرافیکی تشخیص می دهد."
         }
     ]
 }

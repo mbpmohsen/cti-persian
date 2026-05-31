@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0485#AN1332",
-                    "external_id": "AN1332"
+                    "external_id": "AN1332",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TTLThreshold",
-                    "description": "Minimum TTL value considered suspicious (e.g., < 60 seconds)"
+                    "description": "Minimum TTL value considered suspicious (e.g., < 60 seconds)",
+                    "description_fa": "حداقل مقدار TTL مشکوک در نظر گرفته می شود (به عنوان مثال، <60 ثانیه)"
                 },
                 {
                     "field": "DomainReputationFeed",
-                    "description": "External TI feed to exclude benign CDN or load balancer behavior"
+                    "description": "External TI feed to exclude benign CDN or load balancer behavior",
+                    "description_fa": "خوراک TI خارجی برای حذف رفتار CDN خوش خیم یا متعادل کننده بار"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1332",
+            "description_fa": "گزارش‌های حل‌کننده و رویدادهای حسابرسی شده را برای دامنه‌هایی که به مجموعه‌ای از IPهای چرخشی در فواصل زمانی بسیار کوتاه TTL حل می‌شوند، نظارت کنید. نرخ درخواست بالا را از برنامه های غیر مرورگر (مانند پایتون، کرل) مرتبط کنید."
         }
     ]
 }

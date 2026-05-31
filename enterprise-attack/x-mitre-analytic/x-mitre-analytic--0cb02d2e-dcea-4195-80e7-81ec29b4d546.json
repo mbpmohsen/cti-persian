@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0313#AN0872",
-                    "external_id": "AN0872"
+                    "external_id": "AN0872",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,17 +63,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time range between HTML file open and file drop + execution (e.g., 1\u201310 minutes)"
+                    "description": "Time range between HTML file open and file drop + execution (e.g., 1–10 minutes)",
+                    "description_fa": "بازه زمانی بین باز کردن فایل HTML و رها کردن فایل + اجرا (به عنوان مثال، 1-10 دقیقه)"
                 },
                 {
                     "field": "DroppedFileExtensionWatchlist",
-                    "description": "Tunable list of file extensions of interest (e.g., .js, .hta, .exe)"
+                    "description": "Tunable list of file extensions of interest (e.g., .js, .hta, .exe)",
+                    "description_fa": "فهرست قابل تنظیم پسوندهای فایل مورد علاقه (به عنوان مثال، js.، hta.، exe.)"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Expected processes that may drop files (e.g., browser, Outlook); tune for normal behavior"
+                    "description": "Expected processes that may drop files (e.g., browser, Outlook); tune for normal behavior",
+                    "description_fa": "فرآیندهای مورد انتظار که ممکن است فایل ها را حذف کنند (به عنوان مثال، مرورگر، Outlook)؛ برای رفتار عادی تنظیم کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0872",
+            "description_fa": "تشخیص ایجاد فایل مبتنی بر مرورگر یا ایمیل مبتنی بر مشتری (اغلب از دایرکتوری‌های موقت) پس از پیمایش یا اجرای فایل‌های HTML حاوی JavaScript Blob API یا آدرس‌های اینترنتی base64 داده، همراه با اجرای بعدی باری که کاهش یافته است. استفاده از Sysmon EventID 15 برای بازرسی Zone.Identifier ADS برای نشانگرهای HostUrl/ReferrerUrl (به عنوان مثال، HostUrl=about:internet). اختیاری: عدم وجود یک رکورد دانلود HTTP بزرگ برای همان URL/کلینت در گزارش‌های پروکسی (پیشنهاد مونتاژ محلی)"
         }
     ]
 }

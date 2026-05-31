@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0454#AN1250",
-                    "external_id": "AN1250"
+                    "external_id": "AN1250",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "List of PAM configuration and module directories monitored (e.g., /etc/pam.d/, /lib/security/)."
+                    "description": "List of PAM configuration and module directories monitored (e.g., /etc/pam.d/, /lib/security/).",
+                    "description_fa": "فهرستی از پیکربندی PAM و دایرکتوری های ماژول نظارت شده (به عنوان مثال /etc/pam.d/، /lib/security/)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Timeframe for correlating suspicious file modifications with anomalous login events."
+                    "description": "Timeframe for correlating suspicious file modifications with anomalous login events.",
+                    "description_fa": "بازه زمانی برای ارتباط تغییرات مشکوک فایل با رویدادهای ورود غیرعادی."
                 },
                 {
                     "field": "BaselineAccounts",
-                    "description": "Expected login frequency and systems per user account; deviations may indicate compromise."
+                    "description": "Expected login frequency and systems per user account; deviations may indicate compromise.",
+                    "description_fa": "تعداد دفعات ورود و سیستم مورد انتظار برای هر حساب کاربری؛ انحرافات ممکن است نشان دهنده سازش باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1250",
+            "description_fa": "تغییرات غیرمجاز در فایل‌های پیکربندی PAM یا ماژول‌های شی مشترک را تشخیص می‌دهد. رویدادهای تغییر فایل را در /etc/pam.d/ یا /lib/security/ با فعالیت‌های احراز هویت غیرمعمول مانند ورود به سیستم چندگانه، ورود بدون ساعات کاری، یا ورود بدون دسترسی فیزیکی/VPN متناظر مرتبط می‌کند."
         }
     ]
 }

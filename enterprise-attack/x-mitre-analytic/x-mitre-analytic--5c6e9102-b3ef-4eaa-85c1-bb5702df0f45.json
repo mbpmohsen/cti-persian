@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0148#AN0419",
-                    "external_id": "AN0419"
+                    "external_id": "AN0419",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,10 +46,13 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CrossAccountUsage",
-                    "description": "Flag SAML tokens used across unexpected accounts or cloud tenants."
+                    "description": "Flag SAML tokens used across unexpected accounts or cloud tenants.",
+                    "description_fa": "نشانه‌های SAML مورد استفاده در حساب‌های غیرمنتظره یا مستاجران ابری را علامت‌گذاری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0419",
+            "description_fa": "توکن‌های SAML جعلی در محیط‌های IaaS اغلب به‌عنوان احراز هویت متقابل ابری یا بین حساب‌ها بدون مطابقت با رویدادهای STS ظاهر می‌شوند. مدافعان ممکن است استفاده AssumeRole یا GetFederationToken API را بدون گزارش ادعای SAML مربوطه از IdP مورد اعتماد ببینند."
         }
     ]
 }

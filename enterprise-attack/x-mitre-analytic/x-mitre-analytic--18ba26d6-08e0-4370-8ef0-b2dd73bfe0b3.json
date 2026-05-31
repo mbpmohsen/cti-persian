@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0513#AN1417",
-                    "external_id": "AN1417"
+                    "external_id": "AN1417",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetFilename",
-                    "description": "Location of cached credential files may vary with OS version or custom registry hive exports."
+                    "description": "Location of cached credential files may vary with OS version or custom registry hive exports.",
+                    "description_fa": "محل فایل‌های اعتبار ذخیره‌سازی شده ممکن است با نسخه OS یا صادرات رجیستری سفارشی متفاوت باشد."
                 },
                 {
                     "field": "CommandLine",
-                    "description": "Patterns for reg save, secretsdump, or PowerShell dumping tools may be tuned to org-specific tooling."
+                    "description": "Patterns for reg save, secretsdump, or PowerShell dumping tools may be tuned to org-specific tooling.",
+                    "description_fa": "الگوهای ابزارهای reg save، secretsdump یا PowerShell ممکن است با ابزارهای خاص سازمان تنظیم شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation window between process execution and registry/file access."
+                    "description": "Temporal correlation window between process execution and registry/file access.",
+                    "description_fa": "پنجره همبستگی زمانی بین اجرای فرآیند و دسترسی به رجیستری/فایل."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1417",
+            "description_fa": "با استفاده از ابزارهایی مانند Mimikatz، reg.exe یا PowerShell، که اغلب با صادرات رجیستری یا حذف حافظه LSASS ترکیب می‌شود، رفتار دشمن را در دسترسی به فایل‌های اعتبار دامنه حافظه پنهان ویندوز تشخیص می‌دهد."
         }
     ]
 }

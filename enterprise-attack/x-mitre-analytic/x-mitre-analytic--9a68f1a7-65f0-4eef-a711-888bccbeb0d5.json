@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0594#AN1632",
-                    "external_id": "AN1632"
+                    "external_id": "AN1632",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the correlation window for unusual account access followed by DRSUAPI traffic."
+                    "description": "Defines the correlation window for unusual account access followed by DRSUAPI traffic.",
+                    "description_fa": "پنجره همبستگی را برای دسترسی غیرعادی به حساب و به دنبال آن ترافیک DRSUAPI تعریف می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Allows tuning for specific accounts known to legitimately request replication."
+                    "description": "Allows tuning for specific accounts known to legitimately request replication.",
+                    "description_fa": "تنظیم برای حساب های خاصی که به طور قانونی درخواست تکرار دارند، اجازه می دهد."
                 },
                 {
                     "field": "SourceIP",
-                    "description": "Expected replication should only come from known DCs; this field allows excluding trusted DCs."
+                    "description": "Expected replication should only come from known DCs; this field allows excluding trusted DCs.",
+                    "description_fa": "تکثیر مورد انتظار فقط باید از DCهای شناخته شده باشد. این فیلد اجازه می دهد تا DC های مورد اعتماد را حذف کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1632",
+            "description_fa": "فراخوانی غیرمجاز عملیات تکرار (DCSync) را از طریق Directory Replication Service (DRS) شناسایی می‌کند، که اغلب توسط عوامل تهدید با استفاده از Mimikatz یا ابزارهای مشابه از نقاط پایانی غیرDC اجرا می‌شود."
         }
     ]
 }

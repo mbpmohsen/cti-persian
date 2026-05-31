@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0399#AN1119",
-                    "external_id": "AN1119"
+                    "external_id": "AN1119",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptPathRegex",
-                    "description": "Path patterns for shell scripts responsible for scheduled transfers"
+                    "description": "Path patterns for shell scripts responsible for scheduled transfers",
+                    "description_fa": "الگوهای مسیر برای اسکریپت های پوسته مسئول انتقال های برنامه ریزی شده"
                 },
                 {
                     "field": "CronIntervalThreshold",
-                    "description": "Minimum repetition frequency (e.g., 24h for daily jobs)"
+                    "description": "Minimum repetition frequency (e.g., 24h for daily jobs)",
+                    "description_fa": "حداقل تعداد تکرار (مثلاً 24 ساعت برای کارهای روزانه)"
                 },
                 {
                     "field": "ExfilUserContext",
-                    "description": "Suspicious or unexpected users launching scheduled transfers"
+                    "description": "Suspicious or unexpected users launching scheduled transfers",
+                    "description_fa": "کاربران مشکوک یا غیرمنتظره انتقالات برنامه ریزی شده را راه اندازی می کنند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1119",
+            "description_fa": "تشخیص انتقال‌های تکراری مبتنی بر cron یا اسکریپت که در آن اسکریپت، کاربر یا مقصد یکسان در فواصل قابل پیش‌بینی دوباره ظاهر می‌شود."
         }
     ]
 }

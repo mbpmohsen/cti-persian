@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0377#AN1061",
-                    "external_id": "AN1061"
+                    "external_id": "AN1061",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DriverSignatureStatus",
-                    "description": "Signed vs unsigned drivers; many environments restrict unsigned drivers, but some legacy systems allow them."
+                    "description": "Signed vs unsigned drivers; many environments restrict unsigned drivers, but some legacy systems allow them.",
+                    "description_fa": "درایورهای امضا شده در مقابل بدون امضا. بسیاری از محیط‌ها درایورهای بدون امضا را محدود می‌کنند، اما برخی از سیستم‌های قدیمی به آنها اجازه می‌دهند."
                 },
                 {
                     "field": "TargetDirectory",
-                    "description": "Suspicious driver or DLL drop locations, e.g., \\System32\\Drivers\\ or \\Temp\\"
+                    "description": "Suspicious driver or DLL drop locations, e.g., \\System32\\Drivers\\ or \\Temp\\",
+                    "description_fa": "مکان‌های ریزش درایور یا DLL مشکوک، به عنوان مثال، \\System32\\Drivers\\ یا \\Temp\\"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Rootkit installation via admin or SYSTEM account."
+                    "description": "Rootkit installation via admin or SYSTEM account.",
+                    "description_fa": "نصب روت کیت از طریق اکانت admin یا SYSTEM."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1061",
+            "description_fa": "بارگیری غیرمجاز یا غیرعادی درایورها یا DLLهای حالت هسته، سرویس‌های پنهان یا اصلاح غیرعادی اجزای بوت که نشان‌دهنده فعالیت روت‌کیت است."
         }
     ]
 }

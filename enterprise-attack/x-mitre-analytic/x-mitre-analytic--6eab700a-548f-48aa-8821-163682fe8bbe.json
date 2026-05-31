@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0498#AN1375",
-                    "external_id": "AN1375"
+                    "external_id": "AN1375",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2025-10-28T19:57:23.683Z",
             "name": "Analytic 1375",
-            "description": "A process creates a brand\u2011new logon session/token (LogonUser*/LsaLogonUser) and then assigns/impersonates it (SetThreadToken/ImpersonateLoggedOnUser) to run actions under that freshly created security context. Chain: (1) suspicious command or script block (e.g., runas /netonly, PowerShell P/Invoke of LogonUser) \u2192 (2) ETW/API evidence of LogonUser*/SetThreadToken \u2192 (3) Security 4624 New Logon (often LogonType=9 NewCredentials or 2/3 from a non\u2011interactive parent) with no interactive desktop \u2192 (4) sysmon 1 process(es) executing with the new LogonId/SID different from the parent process \u2192 (5) optional privileged ops/lateral movement.",
+            "description": "A process creates a brand‑new logon session/token (LogonUser*/LsaLogonUser) and then assigns/impersonates it (SetThreadToken/ImpersonateLoggedOnUser) to run actions under that freshly created security context. Chain: (1) suspicious command or script block (e.g., runas /netonly, PowerShell P/Invoke of LogonUser) → (2) ETW/API evidence of LogonUser*/SetThreadToken → (3) Security 4624 New Logon (often LogonType=9 NewCredentials or 2/3 from a non‑interactive parent) with no interactive desktop → (4) sysmon 1 process(es) executing with the new LogonId/SID different from the parent process → (5) optional privileged ops/lateral movement.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -52,25 +53,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between LogonUser*/SetThreadToken and the first spawned process (default 5\u201310 minutes)."
+                    "description": "Correlation window between LogonUser*/SetThreadToken and the first spawned process (default 5–10 minutes).",
+                    "description_fa": "پنجره همبستگی بین LogonUser*/SetThreadToken و اولین فرآیند ایجاد شده (پیش‌فرض 5 تا 10 دقیقه)."
                 },
                 {
                     "field": "SuspiciousLogonTypes",
-                    "description": "Which 4624 LogonTypes to treat as high risk (e.g., 9 NewCredentials, 3 Network when sourced locally)."
+                    "description": "Which 4624 LogonTypes to treat as high risk (e.g., 9 NewCredentials, 3 Network when sourced locally).",
+                    "description_fa": "کدام 4624 LogonType را به‌عنوان پرخطر تلقی کنیم (به عنوان مثال، 9 اعتبار جدید، 3 شبکه زمانی که منبع محلی باشد)."
                 },
                 {
                     "field": "AllowedImpersonators",
-                    "description": "Processes/accounts legitimately creating tokens (e.g., winlogon.exe, lsass.exe, IIS worker, trusted service accounts)."
+                    "description": "Processes/accounts legitimately creating tokens (e.g., winlogon.exe, lsass.exe, IIS worker, trusted service accounts).",
+                    "description_fa": "فرآیندها/حساب هایی که به طور قانونی توکن ها را ایجاد می کنند (مانند winlogon.exe، lsass.exe، کارگر IIS، حساب های سرویس مورد اعتماد)."
                 },
                 {
                     "field": "ParentChildUserMismatch",
-                    "description": "Whether to alert on any SID/LogonId mismatch between parent/child not in allow-list."
+                    "description": "Whether to alert on any SID/LogonId mismatch between parent/child not in allow-list.",
+                    "description_fa": "هشدار در مورد عدم تطابق SID/LogonId بین والدین/فرزند که در لیست مجاز نیست."
                 },
                 {
                     "field": "IntegrityEscalationDelta",
-                    "description": "Minimum integrity level jump (e.g., Medium\u2192High/System) to raise severity."
+                    "description": "Minimum integrity level jump (e.g., Medium→High/System) to raise severity.",
+                    "description_fa": "حداقل پرش سطح یکپارچگی (به عنوان مثال، متوسط ​​→ بالا/سیستم) برای افزایش شدت."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1375",
+            "description_fa": "یک فرآیند یک جلسه/توکن ورود نام تجاری جدید (LogonUser*/LsaLogonUser) ایجاد می‌کند و سپس آن را اختصاص می‌دهد/جعل هویت می‌کند (SetThreadToken/ImpersonateLoggedOnUser) تا اقداماتی را در آن زمینه امنیتی تازه ایجاد شده اجرا کند. زنجیره: (1) فرمان یا بلوک اسکریپت مشکوک (به عنوان مثال، runas /netonly، PowerShell P/Invoke of LogonUser) → (2) شواهد ETW/API LogonUser*/SetThreadToken → (3) امنیت 4624 ورود جدید (اغلب LogonType=9 غیرفعال یا 9 NewCredential از) بدون دسکتاپ تعاملی → (4) فرآیند(های) sysmon 1 که با LogonId/SID جدید متفاوت از فرآیند والد اجرا می شود."
         }
     ]
 }

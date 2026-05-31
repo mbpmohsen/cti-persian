@@ -9,7 +9,8 @@
                 {
                     "external_id": "CAPEC-605",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/605.html"
+                    "url": "https://capec.mitre.org/data/definitions/605.html",
+                    "source_name_fa": "capec"
                 }
             ],
             "id": "attack-pattern--17593c9a-d8a0-4ef3-8da1-9d948426bbb8",
@@ -27,6 +28,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Resource Consumption (The attacker's goal is to prevent users from accessing the cellular network. Denying connectivity to the cellular network prevents the user from being able to transmit or receive any data, which also prevents VOIP calls, however this attack poses no threat to data confidentiality.)"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع (هدف مهاجم جلوگیری از دسترسی کاربران به شبکه تلفن همراه است. عدم اتصال به شبکه تلفن همراه باعث می شود کاربر نتواند هر گونه داده ای را ارسال یا دریافت کند، که از تماس های VOIP نیز جلوگیری می کند، اما این حمله هیچ تهدیدی برای محرمانه بودن داده ها ندارد.)"
                 ]
             },
             "x_capec_domains": [
@@ -36,11 +40,17 @@
                 "Lack of anti-jam features in cellular technology (2G, 3G, 4G, LTE)"
             ],
             "x_capec_skills_required": {
-                "Low": "This attack can be performed by low capability attackers with commercially available tools."
+                "Low": "This attack can be performed by low capability attackers with commercially available tools.",
+                "Low_fa": "این حمله را می توان توسط مهاجمان کم توان با ابزارهای تجاری در دسترس انجام داد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این سناریوی حمله، مهاجم به طور فعال سیگنال هایی را برای غلبه بر قدرت و اختلال در ارتباط بین یک دستگاه کاربر سلولی و یک برج سلولی ارسال می کند. چندین تکنیک موجود در ادبیات باز برای این حمله برای فناوری سلولی 2G، 3G و 4G LTE شناخته شده است. به عنوان مثال، برخی از حملات برج های سلولی را با غلبه بر پیام های وضعیت نادرست هدف قرار می دهند، در حالی که برخی دیگر سطوح بالایی از نویز را در کانال های سیگنال معرفی می کنند.",
+            "name_fa": "پارازیت سلولی",
+            "x_capec_prerequisites_fa": [
+                "عدم وجود ویژگی های ضد جم در فناوری سلولی (2G، 3G، 4G، LTE)"
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0430#AN1198",
-                    "external_id": "AN1198"
+                    "external_id": "AN1198",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,13 +52,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcesses",
-                    "description": "List of sensitive processes to monitor (e.g., lsass.exe, svchost.exe)"
+                    "description": "List of sensitive processes to monitor (e.g., lsass.exe, svchost.exe)",
+                    "description_fa": "فهرستی از فرآیندهای حساس برای نظارت (به عنوان مثال، lsass.exe، svchost.exe)"
                 },
                 {
                     "field": "KeywordPatterns",
-                    "description": "Regex for suspicious command-line arguments such as 'dpapi', 'credman', 'mimikatz'"
+                    "description": "Regex for suspicious command-line arguments such as 'dpapi', 'credman', 'mimikatz'",
+                    "description_fa": "Regex برای آرگومان های خط فرمان مشکوک مانند 'dpapi'، 'credman'، 'mimikatz'"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1198",
+            "description_fa": "دسترسی مشکوک به فروشگاه‌های رمز عبور مانند LSASS، DPAPI، Windows Credential Manager یا پایگاه‌های اطلاعاتی اعتبار مرورگر را کنترل می‌کند. دسترسی غیرعادی فرآیند به فرآیند (به عنوان مثال، دسترسی Mimikatz به LSASS) و ارتباط خواندن فایل ذخیره اطلاعات اعتبار با اجرای فرآیندهای غیر استاندارد را تشخیص می دهد."
         }
     ]
 }

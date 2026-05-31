@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0460#AN1265",
-                    "external_id": "AN1265"
+                    "external_id": "AN1265",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BreachedCredentialSourceMatch",
-                    "description": "Optional enrichment using known leaked credentials database"
+                    "description": "Optional enrichment using known leaked credentials database",
+                    "description_fa": "غنی سازی اختیاری با استفاده از پایگاه داده اعتبارنامه های لو رفته شناخته شده"
                 },
                 {
                     "field": "SSOServiceScope",
-                    "description": "Targeting only federated or hybrid identity auth flows"
+                    "description": "Targeting only federated or hybrid identity auth flows",
+                    "description_fa": "هدف قرار دادن فقط جریان های هویت فدرال یا ترکیبی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1265",
+            "description_fa": "IP منبع یکسانی که چندین بار احراز هویت را با استفاده از ترکیبات نام کاربری/گذرواژه نقض شده شناخته شده در هویت‌های مختلف در Azure AD، Okta یا Duo انجام می‌دهد."
         }
     ]
 }

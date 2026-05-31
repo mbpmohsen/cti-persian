@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-467",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/467.html"
+                    "url": "https://capec.mitre.org/data/definitions/467.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-352",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/352.html"
+                    "url": "http://cwe.mitre.org/data/definitions/352.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-359",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/359.html"
+                    "url": "http://cwe.mitre.org/data/definitions/359.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Ronen, Cross Site Identification - or - How your social network might expose you when you least expect it, 2009--12---27",
                     "external_id": "REF-404",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://blog.quaji.com/2009/12/out-of-context-information-disclosure.html"
+                    "url": "http://blog.quaji.com/2009/12/out-of-context-information-disclosure.html",
+                    "description_fa": "Ronen، Cross Site Identification - یا - چگونه شبکه اجتماعی شما ممکن است زمانی که انتظارش را ندارید، شما را در معرض دید قرار دهد، 2009--12---27",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--c50d5a35-0010-422d-b6f7-d4b963c9bad4",
@@ -52,11 +57,22 @@
             ],
             "x_capec_skills_required": {
                 "High": "An attacker should be able to create a payload and deliver it to the victim's browser.",
-                "Medium": "An attacker needs to know how to interact with various social networking sites (e.g., via available APIs) to request information and how to send the harvested data back to the attacker."
+                "Medium": "An attacker needs to know how to interact with various social networking sites (e.g., via available APIs) to request information and how to send the harvested data back to the attacker.",
+                "High_fa": "یک مهاجم باید بتواند یک پیلود ایجاد کرده و آن را به مرورگر قربانی تحویل دهد.",
+                "Medium_fa": "یک مهاجم باید بداند که چگونه با سایت‌های شبکه‌های اجتماعی مختلف (مثلاً از طریق APIهای موجود) تعامل داشته باشد تا اطلاعات را درخواست کند و چگونه داده‌های جمع‌آوری‌شده را به مهاجم ارسال کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم اطلاعات شناسایی قربانی را از طریق یک جلسه فعال که مرورگر قربانی با یک سایت شبکه اجتماعی دارد جمع آوری می کند. قربانی ممکن است سایت شبکه اجتماعی را در یک برگه باز کرده باشد یا شاید به سادگی از ویژگی \"مرا به خاطر بسپار\" برای فعال نگه داشتن جلسه خود با سایت شبکه اجتماعی استفاده می کند. یک مهاجم باری را برای اجرا در مرورگر قربانی القا می کند که به طور شفاف برای قربانی درخواستی را به سایت شبکه اجتماعی (مثلاً از طریق APIهای موجود در شبکه اجتماعی) برای بازیابی اطلاعات شناسایی قربانی آغاز می کند. در حالی که برخی از این اطلاعات ممکن است عمومی باشد، مهاجم می‌تواند این اطلاعات را در زمینه جمع‌آوری کند و ممکن است از آن برای حملات بیشتر به کاربر استفاده کند (به عنوان مثال، فیشینگ نیزه‌ای).",
+            "name_fa": "شناسایی متقابل سایت",
+            "x_capec_example_instances_fa": [
+                "یک مهاجم ممکن است یک پست مخرب ارسال کند که حاوی یک تصویر با پیوند تعبیه شده است. پیوند در واقع اطلاعات شناسایی را از سایت شبکه اجتماعی درخواست می کند. قربانی که پست های مخرب را در مرورگر خود مشاهده می کند، تا زمانی که قربانی یک جلسه فعال با سایت شبکه اجتماعی داشته باشد، اطلاعات شناسایی را برای مهاجم ارسال می کند."
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p> راه‌های زیادی وجود دارد که مهاجم ممکن است از طریق یافتن راهی برای مخفی کردن آن در برخی از سایت‌های معتبری که قربانی بازدید می‌کند، پیلود را در مرورگر قربانی اجرا کند. مهاجم همچنین می‌تواند پیوند را در یک ایمیل برای قربانی بفرستد و قربانی را فریب دهد تا روی پیوند کلیک کند. این حمله در اصل یک حمله جعل درخواست متقابل سایت با دو تفاوت اصلی است. اولاً، به جز اطلاعات برداشت، هیچ اقدامی از طرف کاربر انجام نمی شود. بنابراین حفاظت استاندارد CSRF ممکن است در این شرایط کار نکند. دوم، آنچه در این الگوی حمله مهم است، ماهیت داده‌های جمع‌آوری‌شده است، که شناسایی اطلاعاتی است که می‌توان به دست آورد و در زمینه استفاده کرد. این جمع‌آوری بی‌درنگ اطلاعات شناسایی می‌تواند به عنوان مقدمه‌ای برای راه‌اندازی حملات مهندسی اجتماعی هدفمند در زمان واقعی به قربانی استفاده شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "قربانی یک جلسه فعال با سایت شبکه اجتماعی دارد."
+            ]
         }
     ],
     "type": "bundle"

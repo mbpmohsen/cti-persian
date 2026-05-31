@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0653#AN1737",
-                    "external_id": "AN1737"
+                    "external_id": "AN1737",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,29 +48,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between environment checks and subsequent guarded execution"
+                    "description": "Correlation window between environment checks and subsequent guarded execution",
+                    "description_fa": "پنجره همبستگی بین بررسی های محیطی و اجرای محافظت شده بعدی"
                 },
                 {
                     "field": "TargetAttributeSet",
-                    "description": "Environment attributes treated as likely guardrail inputs, such as locale, geolocation, carrier, Wi-Fi identity, device model, or lock state"
+                    "description": "Environment attributes treated as likely guardrail inputs, such as locale, geolocation, carrier, Wi-Fi identity, device model, or lock state",
+                    "description_fa": "ویژگی‌های محیطی که به‌عنوان ورودی‌های حفاظ احتمالی در نظر گرفته می‌شوند، مانند موقعیت مکانی، موقعیت جغرافیایی، حامل، هویت Wi-Fi، مدل دستگاه یا وضعیت قفل"
                 },
                 {
                     "field": "DormancyThreshold",
-                    "description": "Amount of suppressed or low-activity runtime before sensitive behavior begins"
+                    "description": "Amount of suppressed or low-activity runtime before sensitive behavior begins",
+                    "description_fa": "مقدار زمان اجرای سرکوب شده یا کم فعالیت قبل از شروع رفتار حساس"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Baseline of legitimate apps expected to evaluate environment attributes before conditional feature activation"
+                    "description": "Baseline of legitimate apps expected to evaluate environment attributes before conditional feature activation",
+                    "description_fa": "خط پایه برنامه‌های قانونی که انتظار می‌رود قبل از فعال‌سازی ویژگی مشروط، ویژگی‌های محیط را ارزیابی کنند"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether guarded execution is only suspicious when activated from background or without recent user interaction"
+                    "description": "Whether guarded execution is only suspicious when activated from background or without recent user interaction",
+                    "description_fa": "آیا اجرای محافظت شده تنها زمانی مشکوک است که از پس‌زمینه فعال شود یا بدون تعامل اخیر کاربر"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound traffic volume used to distinguish meaningful guarded execution from benign telemetry"
+                    "description": "Minimum outbound traffic volume used to distinguish meaningful guarded execution from benign telemetry",
+                    "description_fa": "حداقل حجم ترافیک خروجی مورد استفاده برای تشخیص اجرای محافظت شده معنی دار از تله متری خوش خیم"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1737",
+            "description_fa": "(1) دسترسی برنامه به ویژگی های خاص دستگاه یا محیط مورد استفاده برای اعتبارسنجی شرایط هدف، (2) سرکوب رفتار حساس تا زمانی که این ویژگی ها با مقدار مورد انتظار مطابقت داشته باشند، و (3) انتقال فوری به اقدامات محافظت شده مانند استفاده از حسگر، دسترسی به فایل یا ارتباطات شبکه تنها پس از برآورده شدن شرایط. مدافع یک زنجیره علّی را مشاهده می‌کند که در آن یک برنامه مکرراً وضعیت دستگاه یا زمینه محیطی را ارزیابی می‌کند و اجرا را تا زمانی که یک تطابق خاص هدف رخ دهد، متوقف می‌کند."
         }
     ]
 }

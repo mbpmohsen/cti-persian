@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0275#AN0769",
-                    "external_id": "AN0769"
+                    "external_id": "AN0769",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DecodeInterpreter",
-                    "description": "Could involve base64, osascript, python, perl, or plutil"
+                    "description": "Could involve base64, osascript, python, perl, or plutil",
+                    "description_fa": "می تواند شامل base64، osascript، python، perl یا plutil باشد"
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Deobfuscation may happen within GUI app context or LaunchAgent/Daemon"
+                    "description": "Deobfuscation may happen within GUI app context or LaunchAgent/Daemon",
+                    "description_fa": "Deobfuscation ممکن است در زمینه برنامه رابط کاربری گرافیکی یا LaunchAgent/Daemon رخ دهد"
                 },
                 {
                     "field": "UserContext",
-                    "description": "May differ depending on local user, root escalation, or persistence method"
+                    "description": "May differ depending on local user, root escalation, or persistence method",
+                    "description_fa": "ممکن است بسته به کاربر محلی، افزایش ریشه یا روش ماندگاری متفاوت باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0769",
+            "description_fa": "دشمن از ابزارهای اسکریپت نویسی یا رمزگشایی داخلی مانند برنامه های مبتنی بر base64، plutil یا AppleScript برای رمزگشایی فایل های تعبیه شده در مصنوعات مرحله بندی استفاده می کند. رمزگشایی اغلب پس از دانلود یا به عنوان بخشی از استقرار بار پس از بهره برداری از طریق zsh، python یا osascript انجام می شود."
         }
     ]
 }

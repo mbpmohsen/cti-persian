@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0081#AN0226",
-                    "external_id": "AN0226"
+                    "external_id": "AN0226",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Used to profile unexpected parent-child relationships (e.g., regsvr32.exe not launched by explorer.exe)"
+                    "description": "Used to profile unexpected parent-child relationships (e.g., regsvr32.exe not launched by explorer.exe)",
+                    "description_fa": "برای نمایه کردن روابط غیرمنتظره والدین و فرزند استفاده می شود (به عنوان مثال، regsvr32.exe توسط explorer.exe راه اندازی نشده است)"
                 },
                 {
                     "field": "SignedBinaryList",
-                    "description": "List of known signed binaries allowed for execution (e.g., msiexec.exe, regsvr32.exe)"
+                    "description": "List of known signed binaries allowed for execution (e.g., msiexec.exe, regsvr32.exe)",
+                    "description_fa": "فهرست باینری های امضا شده شناخته شده مجاز برای اجرا (مانند msiexec.exe، regsvr32.exe)"
                 },
                 {
                     "field": "CommandLineRegex",
-                    "description": "Regex to match suspicious arguments, such as URLs, script paths, or DLL entrypoints"
+                    "description": "Regex to match suspicious arguments, such as URLs, script paths, or DLL entrypoints",
+                    "description_fa": "Regex برای مطابقت با آرگومان های مشکوک، مانند URL ها، مسیرهای اسکریپت یا نقاط ورودی DLL"
                 },
                 {
                     "field": "RemoteDomainAllowlist",
-                    "description": "Filter to suppress activity contacting legitimate enterprise domains"
+                    "description": "Filter to suppress activity contacting legitimate enterprise domains",
+                    "description_fa": "فیلتر برای سرکوب فعالیت در تماس با دامنه‌های سازمانی قانونی"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0226",
+            "description_fa": "اجرای باینری های قابل اعتماد و با امضای مایکروسافت مانند «rundll32.exe»، «msiexec.exe» یا «regsvr32.exe» که برای اجرای بارهای میزبان خارجی، بدون امضا یا مشکوک از طریق پارامترهای خط فرمان یا بازیابی شبکه استفاده می شود."
         }
     ]
 }

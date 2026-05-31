@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0020#AN0059",
-                    "external_id": "AN0059"
+                    "external_id": "AN0059",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines how soon after shell startup process execution or network activity is considered suspicious."
+                    "description": "Defines how soon after shell startup process execution or network activity is considered suspicious.",
+                    "description_fa": "مشخص می کند که چه مدت پس از اجرای فرآیند راه اندازی پوسته یا فعالیت شبکه مشکوک تلقی می شود."
                 },
                 {
                     "field": "TargetUser",
-                    "description": "Limits detection to specific user accounts or roles such as root or service accounts."
+                    "description": "Limits detection to specific user accounts or roles such as root or service accounts.",
+                    "description_fa": "شناسایی را به حساب‌های کاربری خاص یا نقش‌هایی مانند حساب‌های ریشه یا سرویس محدود می‌کند."
                 },
                 {
                     "field": "FilePathRegex",
-                    "description": "Defines what shell configuration paths are considered relevant (e.g., .bashrc, .bash_logout, etc.)"
+                    "description": "Defines what shell configuration paths are considered relevant (e.g., .bashrc, .bash_logout, etc.)",
+                    "description_fa": "مشخص می کند که چه مسیرهای پیکربندی پوسته مرتبط در نظر گرفته می شوند (به عنوان مثال، .bashrc، .bash_logout، و غیره)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0059",
+            "description_fa": "تغییر اسکریپت‌های شروع/خروج پوسته مانند ~/.bashrc، ~/.bash_profile، یا /etc/profile را شناسایی می‌کند، به دنبال آن اجرای غیرعادی فرآیند یا اتصالات شبکه پس از ورود به سیستم پوسته تعاملی یا راه دور."
         }
     ]
 }

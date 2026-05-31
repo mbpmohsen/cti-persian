@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0467#AN1289",
-                    "external_id": "AN1289"
+                    "external_id": "AN1289",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcessFilter",
-                    "description": "Subset of processes whose TLS callbacks should not change post-load (e.g., explorer.exe, lsass.exe)"
+                    "description": "Subset of processes whose TLS callbacks should not change post-load (e.g., explorer.exe, lsass.exe)",
+                    "description_fa": "زیر مجموعه‌ای از فرآیندهایی که تماس‌های TLS آن‌ها نباید پس از بارگذاری تغییر کند (مانند explorer.exe، lsass.exe)"
                 },
                 {
                     "field": "TimeWindowBetweenLoadAndTLSModification",
-                    "description": "Acceptable delay between image load and memory tampering in .tls or .data sections"
+                    "description": "Acceptable delay between image load and memory tampering in .tls or .data sections",
+                    "description_fa": "تاخیر قابل قبول بین بارگذاری تصویر و دستکاری حافظه در بخش های .tls یا .data"
                 },
                 {
                     "field": "AnomalousThreadStartThreshold",
-                    "description": "Number of threads executing prior to main entry point that is considered suspicious"
+                    "description": "Number of threads executing prior to main entry point that is considered suspicious",
+                    "description_fa": "تعداد thread هایی که قبل از نقطه ورودی اصلی اجرا می شوند و مشکوک تلقی می شوند"
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Optional threshold to distinguish injected shellcode from benign memory writes"
+                    "description": "Optional threshold to distinguish injected shellcode from benign memory writes",
+                    "description_fa": "آستانه اختیاری برای تشخیص پوسته تزریق شده از حافظه خوش خیم"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1289",
+            "description_fa": "با نظارت بر تغییرات حافظه در هدرهای PE و ساختارهای دایرکتوری TLS در طول یا بعد از رویدادهای حفره‌ای فرآیند، و به دنبال آن رفتار رشته غیرعادی قبل از اجرای نقطه ورودی اصلی، تزریق برگشت تماس (TLS) را تشخیص می‌دهد."
         }
     ]
 }

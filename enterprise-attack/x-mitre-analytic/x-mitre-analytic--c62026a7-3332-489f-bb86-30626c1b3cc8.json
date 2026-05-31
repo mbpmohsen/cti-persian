@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0075#AN0206",
-                    "external_id": "AN0206"
+                    "external_id": "AN0206",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LaunchAgentPath",
-                    "description": "Directory where proxying LaunchDaemons may be dropped, e.g., `/Library/LaunchDaemons/`."
+                    "description": "Directory where proxying LaunchDaemons may be dropped, e.g., `/Library/LaunchDaemons/`.",
+                    "description_fa": "دایرکتوری که در آن پراکسی LaunchDaemons ممکن است حذف شود، به عنوان مثال، `/Library/LaunchDaemons/`."
                 },
                 {
                     "field": "PortBindings",
-                    "description": "Dynamic port forwards often use ephemeral or non-standard service ports."
+                    "description": "Dynamic port forwards often use ephemeral or non-standard service ports.",
+                    "description_fa": "فورواردهای پورت پویا اغلب از پورت های سرویس زودگذر یا غیر استاندارد استفاده می کنند."
                 },
                 {
                     "field": "AppleScriptUsage",
-                    "description": "May trigger on less common scripting interfaces for traffic redirection."
+                    "description": "May trigger on less common scripting interfaces for traffic redirection.",
+                    "description_fa": "ممکن است در واسط های اسکریپت نویسی کمتر رایج برای تغییر مسیر ترافیک فعال شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0206",
+            "description_fa": "اجرای سرویس‌های AppleScript یا Automator که آیتم‌های «ssh -L»، «socat» یا «launchctl» را راه‌اندازی می‌کنند که به‌طور پویا ترافیک را از یک نقطه پایانی Mac به نقطه دیگر تغییر مسیر می‌دهند. LaunchAgents برای ایجاد تونل های داخلی دائمی استفاده می شود."
         }
     ]
 }

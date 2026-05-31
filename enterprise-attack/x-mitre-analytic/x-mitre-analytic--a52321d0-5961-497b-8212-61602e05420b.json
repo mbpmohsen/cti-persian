@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0277#AN0772",
-                    "external_id": "AN0772"
+                    "external_id": "AN0772",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AdminRoleThreshold",
-                    "description": "Number of accounts allowed to hold sensitive roles like Global Admin"
+                    "description": "Number of accounts allowed to hold sensitive roles like Global Admin",
+                    "description_fa": "تعداد حساب‌هایی که اجازه دارند نقش‌های حساسی مانند Global Admin را داشته باشند"
                 },
                 {
                     "field": "RoleAssignmentMethod",
-                    "description": "Mechanism by which role was added (PowerShell, API, UI)"
+                    "description": "Mechanism by which role was added (PowerShell, API, UI)",
+                    "description_fa": "مکانیزم اضافه شدن نقش (PowerShell، API، UI)"
                 },
                 {
                     "field": "GrantContext",
-                    "description": "Expected user-to-role mapping defined by org policy"
+                    "description": "Expected user-to-role mapping defined by org policy",
+                    "description_fa": "نگاشت کاربر به نقش مورد انتظار توسط خط مشی سازمان تعریف شده است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0772",
+            "description_fa": "زنجیره رفتاری کاربری که به دنبال فعالیت مشکوک ورود به سیستم یا ایجاد حساب، امتیازات یا نقش‌های بالاتری در Entra ID یا Okta اعطا می‌شود."
         }
     ]
 }

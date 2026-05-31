@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0156#AN0443",
-                    "external_id": "AN0443"
+                    "external_id": "AN0443",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,26 +46,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the rolling window over which SMS API invocation frequency is measured. Tunable based on average platform traffic."
+                    "description": "Defines the rolling window over which SMS API invocation frequency is measured. Tunable based on average platform traffic.",
+                    "description_fa": "پنجره متحرکی را که فرکانس فراخوانی SMS API در آن اندازه گیری می شود، تعریف می کند. قابل تنظیم بر اساس میانگین ترافیک پلت فرم."
                 },
                 {
                     "field": "SMSFrequencyThreshold",
-                    "description": "Number of SMS requests per endpoint or per user that should trigger investigation. Should align with business logic and user behavior."
+                    "description": "Number of SMS requests per endpoint or per user that should trigger investigation. Should align with business logic and user behavior.",
+                    "description_fa": "تعداد درخواست‌های پیامک برای هر نقطه پایانی یا هر کاربر که باید تحقیقات را آغاز کند. باید با منطق تجاری و رفتار کاربر هماهنگ باشد."
                 },
                 {
                     "field": "DestinationCountryCodeFilter",
-                    "description": "Monitors if requests target known high-risk, revenue-sharing regions. Tunable to reflect SMS tariff rates or abuse history."
+                    "description": "Monitors if requests target known high-risk, revenue-sharing regions. Tunable to reflect SMS tariff rates or abuse history.",
+                    "description_fa": "اگر درخواست ها مناطق شناخته شده پرخطر و دارای اشتراک درآمد را هدف قرار دهند، نظارت می کند. قابل تنظیم برای انعکاس نرخ تعرفه پیامک یا سابقه سوء استفاده."
                 },
                 {
                     "field": "UserAgentAnomalyThreshold",
-                    "description": "Defines outlier score or list of unknown/automated user agents submitting forms."
+                    "description": "Defines outlier score or list of unknown/automated user agents submitting forms.",
+                    "description_fa": "امتیاز پرت یا فهرستی از عوامل کاربر ناشناخته/خودکار که فرم ها را ارسال می کنند را تعریف می کند."
                 },
                 {
                     "field": "IPGeoVarianceScore",
-                    "description": "Tracks abnormal geographic spread of traffic sourcing OTP triggers."
+                    "description": "Tracks abnormal geographic spread of traffic sourcing OTP triggers.",
+                    "description_fa": "گسترش جغرافیایی غیرعادی محرک های OTP منبع ترافیک را ردیابی می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0443",
+            "description_fa": "راه‌اندازی خودکار و مکرر پیام‌های SMS از طریق فیلدهای تأیید OTP/حساب در پلتفرم‌های SaaS، استفاده از APIهای پیام‌رسانی پس‌زمینه مانند Twilio، AWS SNS یا Amazon Cognito برای ایجاد ترافیک به سمت شماره‌های کنترل‌شده توسط مهاجم."
         }
     ]
 }

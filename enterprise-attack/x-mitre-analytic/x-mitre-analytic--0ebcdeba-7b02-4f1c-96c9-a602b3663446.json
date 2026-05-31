@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0165#AN0467",
-                    "external_id": "AN0467"
+                    "external_id": "AN0467",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Detect shell history clearing shortly after login or command execution."
+                    "description": "Detect shell history clearing shortly after login or command execution.",
+                    "description_fa": "تشخیص پاک شدن تاریخچه پوسته اندکی پس از ورود به سیستم یا اجرای دستور."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Elevated shell sessions (e.g., root or sudo) without command history may be more suspicious."
+                    "description": "Elevated shell sessions (e.g., root or sudo) without command history may be more suspicious.",
+                    "description_fa": "جلسات پوسته بالا (به عنوان مثال، root یا sudo) بدون سابقه دستور ممکن است مشکوک تر باشند."
                 },
                 {
                     "field": "HistoryFilePath",
-                    "description": "Bash/Zsh history file paths (e.g., ~/.bash_history, ~/.zsh_history)."
+                    "description": "Bash/Zsh history file paths (e.g., ~/.bash_history, ~/.zsh_history).",
+                    "description_fa": "مسیرهای فایل تاریخچه Bash/Zsh (به عنوان مثال، ~/.bash_history، ~/.zsh_history)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0467",
+            "description_fa": "تشخیص رفتار دشمن پاک کردن تاریخچه فرمان از طریق «history -c»، حذف یا اصلاح ~/.bash_history، یا دستکاری متغیر محیطی HISTFILE پس از ورود به سیستم."
         }
     ]
 }

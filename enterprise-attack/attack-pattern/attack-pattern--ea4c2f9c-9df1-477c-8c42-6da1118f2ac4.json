@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1027/007",
                     "external_id": "T1027.007",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Huntress API Hash",
                     "description": "Brennan, M. (2022, February 16). Hackers No Hashing: Randomizing API Hashes to Evade Cobalt Strike Shellcode Detection. Retrieved August 22, 2022.",
                     "url": "https://www.huntress.com/blog/hackers-no-hashing-randomizing-api-hashes-to-evade-cobalt-strike-shellcode-detection",
-                    "source_name_fa": "دانلود بازی Huntress API Hash",
-                    "description_fa": "برنان، M. (2022، 16 فوریه) هکرها بدون هشینگ: تصادفی کردن هش های API به Ode VGA Strike Shellcode تشخیص. Retrieved ۲۲ اوت ۲۰۲۲"
+                    "source_name_fa": "Huntress API Hash",
+                    "description_fa": "برنان، ام. (2022، 16 فوریه). هکرها بدون هش: تصادفی سازی هش های API برای فرار از تشخیص کد پوسته Cobalt Strike. بازبینی شده در 22 اوت 2022."
                 },
                 {
                     "source_name": "BlackHat API Packers",
                     "description": "Choi, S. (2015, August 6). Obfuscated API Functions in Modern Packers. Retrieved August 22, 2022.",
                     "url": "https://www.blackhat.com/docs/us-15/materials/us-15-Choi-API-Deobfuscator-Resolving-Obfuscated-API-Functions-In-Modern-Packers.pdf",
                     "source_name_fa": "BlackHat API Packers",
-                    "description_fa": "چوی، S. (2015، 6 آگوست) تابع های API Obfuscated در بسته های مدرن Retrieved ۲۲ اوت ۲۰۲۲"
+                    "description_fa": "چوی، اس. (2015، 6 اوت). توابع API مبهم در Packers مدرن. بازبینی شده در 22 اوت 2022."
                 },
                 {
                     "source_name": "Drakonia HInvoke",
                     "description": "drakonia. (2022, August 10). HInvoke and avoiding PInvoke. Retrieved August 22, 2022.",
                     "url": "https://dr4k0nia.github.io/posts/HInvoke-and-avoiding-PInvoke/",
-                    "source_name_fa": "Drakonia HInvoke",
-                    "description_fa": "drakonia (2022، 10 آگوست) HInvoke و اجتناب از PInvoke Retrieved ۲۲ اوت ۲۰۲۲"
+                    "source_name_fa": "دراکونیا HInvoke",
+                    "description_fa": "دراکونیا (10 اوت 2022). HInvoke و اجتناب از PInvoke. بازبینی شده در 22 اوت 2022."
                 },
                 {
                     "source_name": "IRED API Hashing",
                     "description": "spotheplanet. (n.d.). Windows API Hashing in Malware. Retrieved August 22, 2022.",
                     "url": "https://www.ired.team/offensive-security/defense-evasion/windows-api-hashing-in-malware",
                     "source_name_fa": "IRED API Hashing",
-                    "description_fa": "هواپیما (n.d.) Windows API Hashing در بدافزار Retrieved ۲۲ اوت ۲۰۲۲"
+                    "description_fa": "سیاره نقطه ای (n.d.). هش کردن API ویندوز در بدافزار. بازبینی شده در 22 اوت 2022."
                 }
             ],
             "object_marking_refs": [
@@ -68,8 +68,8 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "Dynamic API Resolution",
-            "description_fa": "مخالفان ممکن است پس از آن به طور پویا توابع API به نام بدافزار خود را حل کنند تا عملکردهای مخرب را پنهان کنند و تجزیه و تحلیل تدافعی را مختل کنند. بدافزار به طور معمول از توابع مختلف (Native API) ([CTI_PRESERVE_5] استفاده می کند که توسط سیستم عامل برای انجام وظایف مختلف مانند فرایندهای، فایل ها و سایر مصنوعات سیستم ارائه شده است.\n\nتوابع API به نام بدافزار ممکن است مصنوعات استاتیک مانند رشته در فایل های بارگیری را ترک کنند. تحلیلگران Defensive همچنین ممکن است کشف کنند که کدام یک از فایل های باینری ممکن است از طریق یک جدول آدرس واردات (IAT) یا ساختارهای دیگر که به طور پویا کد تماس را به ماژول های مشترک که توابع ارائه می دهند، اجرا شود. [[ویرایش]\n\nبرای جلوگیری از تجزیه و تحلیل استاتیک یا دیگر تجزیه و تحلیل های دفاعی، دشمنان ممکن است از وضوح API پویا برای پنهان کردن ویژگی های مخرب و توابع استفاده کنند. همانند [نرم افزار بسته بندی] ([[CTI_PRESERVE_6]])، وضوح API پویا ممکن است امضا فایل ها را تغییر دهد و تابع مخرب API را تا زمانی که حل و فصل شوند و در طول زمان اجرا مورد استفاده قرار گیرد.\n\nروش های مختلف ممکن است برای تماس های مخربobfuscate به توابع API استفاده شود. به عنوان مثال، هش نام تابع معمولا در بدافزار به جای رشته های واقعی ذخیره می شود. بدافزار می تواند از این هش ها (یا شناسه های دیگر) استفاده کند تا به صورت دستی فرآیند اتصال و بارگیری را با استفاده از توابع مانند \"getProcAddress()\" و \"Load Library() بازسازی کند. این هش ها یا شناسه ها نیز می توانند با استفاده از رمزگذاری یا سایر ترفندهای دستکاری رشته ای (با استفاده از فرم های مختلف (Deobfuscate/Decode Files یا اطلاعات) ([CTI_PRESERVE_7] در طول اجرا) استفاده کنند. (Citation: Huntress API Hash) (Citation: IRED API Hashing) (Citation: BlackHat API Packers) (Citation: Drakonia HInvoke) (Citation: Huntress API Hash) https://attack.mitre.org/techniques/T1106 https://attack.mitre.org/techniques/T1027/002 https://attack.mitre.org/techniques/T1140"
+            "name_fa": "وضوح API پویا",
+            "description_fa": "دشمنان ممکن است برای پنهان کردن عملکردهای مخرب و آسیب رساندن به تجزیه و تحلیل دفاعی، توابع API را که توسط بدافزارشان فراخوانی شده است را به صورت پویا حل و فصل کنند. بدافزار معمولاً از توابع مختلف [Native API](https://attack.mitre.org/techniques/T1106) ارائه شده توسط سیستم عامل برای انجام کارهای مختلفی مانند کارهای مربوط به فرآیندها، فایل‌ها و دیگر مصنوعات سیستم استفاده می‌کند.\n\nتوابع API که توسط بدافزار فراخوانی می‌شوند ممکن است مصنوعات ثابتی مانند رشته‌ها را در فایل‌های payload باقی بگذارند. تحلیلگران دفاعی همچنین می‌توانند عملکردهایی را که یک فایل باینری می‌تواند از طریق جدول آدرس ورودی (IAT) یا سایر ساختارهایی که به پیوند پویا کد فراخوانی را به ماژول‌های مشترکی که توابع را ارائه می‌کنند، اجرا کند، کشف کنند.(Citation: Huntress API Hash)(Citation: IRED API Hashing)\n\nبرای جلوگیری از تجزیه و تحلیل استاتیک یا سایر تحلیل‌های دفاعی، دشمنان ممکن است از وضوح API پویا برای پنهان کردن ویژگی‌ها و عملکردهای بدافزار استفاده کنند. مانند [Software Packing](https://attack.mitre.org/techniques/T1027/002)، وضوح API پویا ممکن است امضاهای فایل را تغییر دهد و فراخوانی های عملکرد مخرب API را تا زمانی که در طول زمان حل و فصل شوند و فراخوانی شوند، مبهم کند.\n\nروش‌های مختلفی ممکن است برای مبهم کردن تماس‌های بدافزار به توابع API استفاده شود. به عنوان مثال، هش نام توابع معمولا در بدافزار به جای رشته های تحت اللفظی ذخیره می شود. بدافزار می‌تواند از این هش‌ها (یا سایر شناسه‌ها) برای بازتولید دستی فرآیند پیوند و بارگیری با استفاده از توابعی مانند «GetProcAddress()» و «LoadLibrary()» استفاده کند. این هش‌ها/شناسه‌ها همچنین می‌توانند با استفاده از رمزگذاری یا سایر ترفندهای دستکاری رشته (که به اشکال مختلف [Deobfuscate/Decode Files or Information] (https://attack.mitre.org/techniques/T1140) در طول اجرا).(Citation: BlackHat API Packers)(Citation: Drakonia HInvoke)(Citation: Huntress API Hash)"
         }
     ]
 }

@@ -9,25 +9,32 @@
                 {
                     "external_id": "CAPEC-445",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/445.html"
+                    "url": "https://capec.mitre.org/data/definitions/445.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
                     "external_id": "T1195.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001",
+                    "description_fa": "مصالحه با زنجیره تامین: وابستگی های نرم افزاری و ابزارهای توسعه را به خطر بیاندازید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Jon Boyens, Angela Smith, Nadya Bartol, Kris Winkler, Alex Holbrook, Matthew Fallon, Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations (2nd Draft), 2021--10---28, National Institute of Standards and Technology (NIST)",
                     "external_id": "REF-379",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-draft2.pdf"
+                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-draft2.pdf",
+                    "description_fa": "جان بوینز، آنجلا اسمیت، نادیا بارتول، کریس وینکلر، الکس هالبروک، متیو فالون، شیوه‌های مدیریت ریسک زنجیره تامین امنیت سایبری برای سیستم‌ها و سازمان‌ها (پیش‌نویس دوم)، 2021--10---28، موسسه ملی استاندارد و فناوری (NIST)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Chef Manage deserializes cookie data insecurely, 2016--05---17, Carnegie Mellon University",
                     "external_id": "REF-706",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.kb.cert.org/vuls/id/586503"
+                    "url": "https://www.kb.cert.org/vuls/id/586503",
+                    "description_fa": "Chef Manage داده‌های کوکی را به‌طور ناامن غیرقانونی می‌کند، 2016--05---17، دانشگاه کارنگی ملون",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--f7fd56fe-cc88-4200-907a-8ea3b89e1ddb",
@@ -44,6 +51,9 @@
             "x_capec_consequences": {
                 "Authorization": [
                     "Execute Unauthorized Commands"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -60,7 +70,16 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن از یک سیستم مدیریت پیکربندی سوء استفاده می کند تا منطق مخرب در محیط ساخت، به روز رسانی یا استقرار محصولات نرم افزاری وارد شود. اگر دشمن بتواند عناصر موجود در مدیریت پیکربندی محصول را برای ساخت کنترل کند، می‌تواند فایل‌های کد حاوی منطق مخرب را جایگزین، اصلاح یا درج کند. اگر یک دشمن بتواند عناصر خط پایه مدیریت پیکربندی عملیاتی مداوم محصول را کنترل کند، به طور بالقوه می‌تواند مشتریانی را که به‌روزرسانی‌ها را از سیستم دریافت می‌کنند مجبور به نصب نرم‌افزار ناامن هنگام دریافت به‌روزرسانی‌ها از سرور کنند.</xhtml:p>",
+            "name_fa": "درج منطق مخرب به نرم افزار محصول از طریق دستکاری مدیریت پیکربندی",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در سال 2016، سیستم مدیریت پیکربندی مبتنی بر خط‌مشی Chef در برابر حملات اجرای کد از راه دور آسیب‌پذیر بود که بر اساس افزونه Chef Manage به‌طور نامناسب داده‌های کوکی کاربر محور را غیرقانونی می‌کند. این به کاربران احراز هویت نشده امکان ساخت داده‌های کوکی را می‌داد که کد دلخواه را با امتیازات سرور وب اجرا می‌کردند. [REF-706]</xhtml:p>"
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p>سرورهای مدیریت پیکربندی بر اساس یک مجموعه کلاینت عمل می‌کنند و به هر کلاینت دستور می‌دهند که کدام نرم‌افزار را روی آن نصب کنند. در برخی موارد سرور مدیریت پیکربندی فرآیند نصب نرم افزار را خودکار می کند. یک خودی مخرب یا دشمنی که سرور را به خطر انداخته است می‌تواند پایه نرم‌افزاری را که کلاینت‌ها باید نصب کنند، تغییر دهد و به دشمن اجازه دهد با استفاده از سیستم مدیریت پیکربندی، تعداد زیادی از ماشین‌های ماهواره‌ای را در معرض خطر قرار دهد. اگر یک دشمن بتواند عناصر مدیریت پیکربندی محصول را برای محیط مستقر آن کنترل کند، به طور بالقوه می‌تواند ویژگی‌های امنیتی اساسی سیستم را بر اساس فرضیاتی مبنی بر وجود پیکربندی‌های ایمن تغییر دهد. همچنین شایان ذکر است که این حمله می تواند در طول توسعه محصول اولیه یا در طول مدت نگهداری محصول رخ دهد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "دسترسی به سیستم مدیریت پیکربندی در حین استقرار یا در حال حاضر در مکان قربانی مستقر شده است. این دسترسی اغلب از طریق دسترسی داخلی یا با استفاده از الگوی حمله دیگری برای به دست آوردن مجوزهایی که حریف معمولاً ندارد به دست می آید."
+            ]
         }
     ],
     "spec_version": "2.0",

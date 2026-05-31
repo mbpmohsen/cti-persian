@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0060#AN0165",
-                    "external_id": "AN0165"
+                    "external_id": "AN0165",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Tune for known good updaters (e.g., ChromeUpdate, OneDrive)"
+                    "description": "Tune for known good updaters (e.g., ChromeUpdate, OneDrive)",
+                    "description_fa": "برای به‌روزرسانی‌های خوب شناخته‌شده (مانند ChromeUpdate، OneDrive) تنظیم کنید"
                 },
                 {
                     "field": "DestinationIPCategory",
-                    "description": "Allow filtering by internal vs external IP blocks"
+                    "description": "Allow filtering by internal vs external IP blocks",
+                    "description_fa": "اجازه فیلتر کردن توسط بلوک IP داخلی در مقابل خارجی"
                 },
                 {
                     "field": "FilePathRegex",
-                    "description": "Focus on uncommon file drop paths (e.g., C:\\Users\\Public\\)"
+                    "description": "Focus on uncommon file drop paths (e.g., C:\\Users\\Public\\)",
+                    "description_fa": "روی مسیرهای رها کردن فایل غیر معمول تمرکز کنید (به عنوان مثال، C:\\Users\\Public\\)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0165",
+            "description_fa": "فرآیندهای غیرمعمول یا غیر معمول اتصالات شبکه را به مقاصد خارجی و به دنبال آن ایجاد فایل (ابزارهای دانلود شده) آغاز می کنند."
         }
     ]
 }

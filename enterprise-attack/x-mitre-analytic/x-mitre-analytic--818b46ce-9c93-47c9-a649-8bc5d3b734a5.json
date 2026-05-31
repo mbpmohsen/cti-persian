@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0104#AN0287",
-                    "external_id": "AN0287"
+                    "external_id": "AN0287",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredRegistryKeys",
-                    "description": "Specific LSASS and password filter registry paths monitored for modification."
+                    "description": "Specific LSASS and password filter registry paths monitored for modification.",
+                    "description_fa": "LSASS خاص و مسیرهای رجیستری فیلتر رمز عبور برای اصلاح نظارت می شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between registry change, DLL load, and lsass.exe access."
+                    "description": "Correlation window between registry change, DLL load, and lsass.exe access.",
+                    "description_fa": "پنجره همبستگی بین تغییر رجیستری، بار DLL و دسترسی lsass.exe."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0287",
+            "description_fa": "تغییر LSASS و DLLهای احراز هویت، تغییرات مشکوک رجیستری در بسته های فیلتر رمز عبور و دسترسی غیرعادی به فرآیند به lsass.exe را شناسایی می کند. تغییرات رجیستری، بارگیری‌های DLL و رویدادهای دسترسی مدیریت پردازش را به هم مرتبط می‌کند."
         }
     ]
 }

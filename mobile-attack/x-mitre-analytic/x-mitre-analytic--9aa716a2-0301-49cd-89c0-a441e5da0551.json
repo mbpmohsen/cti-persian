@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0628#AN1698",
-                    "external_id": "AN1698"
+                    "external_id": "AN1698",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,37 +58,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum span between app install/version change and first suspicious post-delivery behavior."
+                    "description": "Maximum span between app install/version change and first suspicious post-delivery behavior.",
+                    "description_fa": "حداکثر فاصله بین نصب/تغییر نسخه برنامه و اولین رفتار مشکوک پس از تحویل."
                 },
                 {
                     "field": "SupervisedOnly",
-                    "description": "Whether the analytic should only apply to supervised devices with high-confidence app inventory and managed distribution telemetry."
+                    "description": "Whether the analytic should only apply to supervised devices with high-confidence app inventory and managed distribution telemetry.",
+                    "description_fa": "اینکه آیا تجزیه و تحلیل باید فقط برای دستگاه‌های تحت نظارت با موجودی برنامه با اطمینان بالا و تله متری توزیع مدیریت شده اعمال شود یا خیر."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved apps expected to expand capabilities or contact new destinations because of legitimate releases."
+                    "description": "Approved apps expected to expand capabilities or contact new destinations because of legitimate releases.",
+                    "description_fa": "برنامه‌های تأیید شده انتظار می‌رود به دلیل انتشارات قانونی، قابلیت‌ها را گسترش دهند یا با مقصدهای جدید تماس بگیرند."
                 },
                 {
                     "field": "AllowedVersionChangeWindow",
-                    "description": "Grace period after approved releases during which some behavior drift may be expected."
+                    "description": "Grace period after approved releases during which some behavior drift may be expected.",
+                    "description_fa": "دوره مهلت پس از انتشار تایید شده که در طی آن ممکن است برخی تغییر رفتارها مورد انتظار باشد."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether certain behaviors should only be treated as suspicious when they occur without expected visible user interaction."
+                    "description": "Whether certain behaviors should only be treated as suspicious when they occur without expected visible user interaction.",
+                    "description_fa": "اینکه آیا رفتارهای خاصی باید فقط زمانی مشکوک تلقی شوند که بدون تعامل قابل مشاهده کاربر مورد انتظار رخ دهند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Threshold for distinguishing autonomous post-update behavior from expected user-driven first-run flows."
+                    "description": "Threshold for distinguishing autonomous post-update behavior from expected user-driven first-run flows.",
+                    "description_fa": "آستانه برای تشخیص رفتار مستقل پس از به‌روزرسانی از جریان‌های مورد انتظار کاربر محور اولین اجرا."
                 },
                 {
                     "field": "DestinationAllowList",
-                    "description": "Expected new domains, APIs, telemetry services, or CDNs associated with approved app updates."
+                    "description": "Expected new domains, APIs, telemetry services, or CDNs associated with approved app updates.",
+                    "description_fa": "دامنه‌ها، APIها، خدمات تله متری یا CDNهای جدید مرتبط با به‌روزرسانی‌های برنامه تأیید شده مورد انتظار."
                 },
                 {
                     "field": "CapabilityDriftThreshold",
-                    "description": "Threshold for how much entitlement or capability drift is tolerated for a known app."
+                    "description": "Threshold for how much entitlement or capability drift is tolerated for a known app.",
+                    "description_fa": "آستانه برای میزان حق یا جابجایی قابلیت برای یک برنامه شناخته شده تحمل می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1698",
+            "description_fa": "یک برنامه مدیریت شده یا تحت نظارت، به‌روزرسانی برنامه، یا ساخت توزیع‌شده توسط شرکت، هویت ظاهری مشروعی را حفظ می‌کند، اما رفتار پس از تحویل را نشان می‌دهد که با نقش موردانتظار، نسخه قبلی یا زمینه توزیع سازگار نیست. از آنجایی که iOS دید مستقیم کمتری را در معرض دستکاری وابستگی همراه یا درج زنجیره تامین در سطح مؤلفه قرار می‌دهد، مدافع موجودی برنامه تحت نظارت، وضعیت اعتماد امضا/تامین، تغییر حق و رفتار پس از به‌روزرسانی، استفاده از حسگر/منبع جدید و اثرات شبکه پایین‌دستی جدید بلافاصله پس از نصب یا تغییر نسخه را در اولویت قرار می‌دهد."
         }
     ]
 }

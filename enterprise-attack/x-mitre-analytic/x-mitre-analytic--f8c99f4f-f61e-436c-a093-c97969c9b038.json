@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0118#AN0327",
-                    "external_id": "AN0327"
+                    "external_id": "AN0327",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -71,21 +72,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServicePortSet",
-                    "description": "List of monitored service ports (default: 445,135,3389,5985,5986,1433,3306)."
+                    "description": "List of monitored service ports (default: 445,135,3389,5985,5986,1433,3306).",
+                    "description_fa": "لیست پورت های سرویس نظارت شده (پیش فرض: 445,135,3389,5985,5986,1433,3306)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between inbound access and crash/child-process (default: 10 minutes)."
+                    "description": "Correlation window between inbound access and crash/child-process (default: 10 minutes).",
+                    "description_fa": "پنجره همبستگی بین دسترسی ورودی و خرابی/فرآیند فرزند (پیش‌فرض: 10 دقیقه)."
                 },
                 {
                     "field": "AllowedAdminCIDRs",
-                    "description": "Known management networks to suppress benign admin traffic."
+                    "description": "Known management networks to suppress benign admin traffic.",
+                    "description_fa": "شبکه های مدیریتی شناخته شده برای سرکوب ترافیک بدخیم ادمین."
                 },
                 {
                     "field": "MinConnErrorRate",
-                    "description": "Percent of failed/aborted connections to treat as anomalous (default: 30%)."
+                    "description": "Percent of failed/aborted connections to treat as anomalous (default: 30%).",
+                    "description_fa": "درصد اتصالات ناموفق/سقط شده برای تلقی غیرعادی (پیش‌فرض: 30%)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0327",
+            "description_fa": "دسترسی شبکه ورودی به پورت‌های سرویس راه دور (مانند SMB/RPC 445/135، RDP 3389، WinRM 5985/5986) را با بی‌ثباتی زمان نزدیک در سرویس هدف (خراش، راه‌اندازی مجدد غیرعادی)، ایجاد فرآیند مشکوک فرزند تحت سرویس، و رفتار جانبی پس از دسترسی مرتبط می‌کند. زنجیره نشان‌دهنده بهره‌برداری احتمالی به جای مدیریت عادی است."
         }
     ]
 }

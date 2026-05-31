@@ -13,32 +13,42 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1414",
-                    "external_id": "T1414"
+                    "external_id": "T1414",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android 10 Privacy Changes",
                     "description": "Android Developers. (n.d.). Privacy changes in Android 10. Retrieved September 11, 2019.",
-                    "url": "https://developer.android.com/about/versions/10/privacy/changes#clipboard-data"
+                    "url": "https://developer.android.com/about/versions/10/privacy/changes#clipboard-data",
+                    "source_name_fa": "تغییرات حریم خصوصی اندروید 10",
+                    "description_fa": "توسعه دهندگان اندروید (n.d.). تغییرات حریم خصوصی در اندروید 10. بازیابی شده در 11 سپتامبر 2019."
                 },
                 {
                     "source_name": "UIPPasteboard",
                     "description": "Apple Developer. (n.d.). UIPasteboard. Retrieved April 1, 2022.",
-                    "url": "https://developer.apple.com/documentation/uikit/uipasteboard"
+                    "url": "https://developer.apple.com/documentation/uikit/uipasteboard",
+                    "source_name_fa": "UIPsteboard",
+                    "description_fa": "توسعه دهنده اپل. (n.d.). UIPsteboard. بازبینی شده در ۱ آوریل ۲۰۲۲."
                 },
                 {
                     "source_name": "Fahl-Clipboard",
                     "description": "Fahl, S, et al.. (2013). Hey, You, Get Off of My Clipboard. Retrieved September 12, 2024.",
-                    "url": "https://saschafahl.de/static/paper/pwmanagers2013.pdf"
+                    "url": "https://saschafahl.de/static/paper/pwmanagers2013.pdf",
+                    "source_name_fa": "Fahl-Clipboard",
+                    "description_fa": "Fahl, S, et al.. (2013). هی، تو، از کلیپ بورد من خارج شو. بازبینی شده در 12 سپتامبر 2024."
                 },
                 {
                     "source_name": "Github Capture Clipboard 2019",
                     "description": "Pearce, G. (, January). Retrieved August 8, 2019.",
-                    "url": "https://github.com/grepx/android-clipboard-security"
+                    "url": "https://github.com/grepx/android-clipboard-security",
+                    "source_name_fa": "Github Capture Clipboard 2019",
+                    "description_fa": "پیرس، جی. (، ژانویه). بازبینی شده در ۸ اوت ۲۰۱۹."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-35.html",
-                    "external_id": "APP-35"
+                    "external_id": "APP-35",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +56,7 @@
             ],
             "modified": "2025-10-24T17:49:21.369Z",
             "name": "Clipboard Data",
-            "description": "Adversaries may abuse clipboard manager APIs to obtain sensitive information copied to the device clipboard. For example, passwords being copied and pasted from a password manager application could be captured by a malicious application installed on the device.(Citation: Fahl-Clipboard) \n\n \n\nOn Android, applications can use the `ClipboardManager.OnPrimaryClipChangedListener()` API to register as a listener and monitor the clipboard for changes. However, starting in Android 10, this can only be used if the application is in the foreground, or is set as the device\u2019s default input method editor (IME).(Citation: Github Capture Clipboard 2019)(Citation: Android 10 Privacy Changes) \n\n \n\nOn iOS, this can be accomplished by accessing the `UIPasteboard.general.string` field. However, starting in iOS 14, upon accessing the clipboard, the user will be shown a system notification if the accessed text originated in a different application. For example, if the user copies the text of an iMessage from the Messages application, the notification will read \u201capplication_name has pasted from Messages\u201d when the text was pasted in a different application.(Citation: UIPPasteboard)",
+            "description": "Adversaries may abuse clipboard manager APIs to obtain sensitive information copied to the device clipboard. For example, passwords being copied and pasted from a password manager application could be captured by a malicious application installed on the device.(Citation: Fahl-Clipboard) \n\n \n\nOn Android, applications can use the `ClipboardManager.OnPrimaryClipChangedListener()` API to register as a listener and monitor the clipboard for changes. However, starting in Android 10, this can only be used if the application is in the foreground, or is set as the device’s default input method editor (IME).(Citation: Github Capture Clipboard 2019)(Citation: Android 10 Privacy Changes) \n\n \n\nOn iOS, this can be accomplished by accessing the `UIPasteboard.general.string` field. However, starting in iOS 14, upon accessing the clipboard, the user will be shown a system notification if the accessed text originated in a different application. For example, if the user copies the text of an iMessage from the Messages application, the notification will read “application_name has pasted from Messages” when the text was pasted in a different application.(Citation: UIPPasteboard)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -71,7 +81,9 @@
             "x_mitre_version": "3.1",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "داده های کلیپ بورد",
+            "description_fa": "ممکن است دشمنان از APIهای مدیر کلیپ بورد برای به دست آوردن اطلاعات حساس کپی شده در کلیپ بورد دستگاه سوء استفاده کنند. برای مثال، گذرواژه‌هایی که از یک برنامه مدیریت رمز عبور کپی و جای‌گذاری می‌شوند، می‌توانند توسط یک برنامه مخرب نصب شده در دستگاه ضبط شوند.(Citation: Fahl-Clipboard) \n\n \n\nدر Android، برنامه‌ها می‌توانند از API «ClipboardManager.OnPrimaryClipChangedListener()» برای ثبت‌نام به‌عنوان شنونده و نظارت بر کلیپ‌بورد برای تغییرات استفاده کنند. با این حال، از Android 10، این تنها در صورتی قابل استفاده است که برنامه در پیش‌زمینه باشد یا به‌عنوان ویرایشگر روش ورودی پیش‌فرض دستگاه (IME) تنظیم شده باشد.(Citation: Github Capture Clipboard 2019)(Citation: Android 10 Privacy Changes) \n\n \n\nدر iOS، این کار را می توان با دسترسی به فیلد «UIPasteboard.general.string» انجام داد. با این حال، با شروع iOS 14، پس از دسترسی به کلیپ بورد، در صورتی که متن مورد دسترسی از یک برنامه دیگر منشا گرفته باشد، یک اعلان سیستم به کاربر نشان داده می شود. به عنوان مثال، اگر کاربر متن یک iMessage را از برنامه پیام‌ها کپی کند، زمانی که متن در برنامه دیگری جای‌گذاری شد، اعلان به عنوان \"application_name has pasted from Messages\" خوانده می‌شود.(Citation: UIPPasteboard)"
         }
     ]
 }

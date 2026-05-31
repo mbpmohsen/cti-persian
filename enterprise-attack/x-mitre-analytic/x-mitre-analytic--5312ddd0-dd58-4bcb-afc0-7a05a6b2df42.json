@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0511#AN1411",
-                    "external_id": "AN1411"
+                    "external_id": "AN1411",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MountPathRegex",
-                    "description": "Filter for unexpected or user-defined mount locations (e.g., /media/usb*)"
+                    "description": "Filter for unexpected or user-defined mount locations (e.g., /media/usb*)",
+                    "description_fa": "فیلتر برای مکان های نصب غیرمنتظره یا تعریف شده توسط کاربر (به عنوان مثال، /media/usb*)"
                 },
                 {
                     "field": "AccessMask",
-                    "description": "Tune based on read/write access types seen during collection"
+                    "description": "Tune based on read/write access types seen during collection",
+                    "description_fa": "تنظیم بر اساس انواع دسترسی خواندن/نوشتن که در طول مجموعه مشاهده می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1411",
+            "description_fa": "دشمن درایو خارجی را روی /media یا /mnt قرار می‌دهد و سپس از طریق پوسته، cp یا tar به داده‌های هدف دسترسی یا کپی می‌کند."
         }
     ]
 }

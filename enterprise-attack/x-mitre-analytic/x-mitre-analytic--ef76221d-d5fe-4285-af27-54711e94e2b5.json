@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0357#AN1018",
-                    "external_id": "AN1018"
+                    "external_id": "AN1018",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SSHSessionOrigin",
-                    "description": "Distinguish external SSH sessions from internal admin maintenance"
+                    "description": "Distinguish external SSH sessions from internal admin maintenance",
+                    "description_fa": "جلسات SSH خارجی را از نگهداری ادمین داخلی متمایز کنید"
                 },
                 {
                     "field": "TargetIP",
-                    "description": "Egress test destination may be filtered to known CDNs/test nodes"
+                    "description": "Egress test destination may be filtered to known CDNs/test nodes",
+                    "description_fa": "مقصد آزمون خروج ممکن است به CDN ها/گره های آزمایشی شناخته شده فیلتر شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1018",
+            "description_fa": "اجرای «پینگ»، «vmkping» یا «کرل» از پوسته یا از طریق مشاغل/اسکریپت‌های اتوماسیون برای تأیید خروج اینترنت."
         }
     ]
 }

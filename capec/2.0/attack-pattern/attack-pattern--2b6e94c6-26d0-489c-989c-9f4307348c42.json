@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-465",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/465.html"
+                    "url": "https://capec.mitre.org/data/definitions/465.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-441",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/441.html"
+                    "url": "http://cwe.mitre.org/data/definitions/441.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Proxy: Internal Proxy",
                     "external_id": "T1090.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1090/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1090/001",
+                    "description_fa": "پروکسی: پروکسی داخلی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Robert Auger, Socket Capable Browser Plugins Result In Transparent Proxy Abuse, 2009",
                     "external_id": "REF-402",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.thesecuritypractice.com/the_security_practice/TransparentProxyAbuse.pdf"
+                    "url": "http://www.thesecuritypractice.com/the_security_practice/TransparentProxyAbuse.pdf",
+                    "description_fa": "رابرت اوگر، پلاگین های مرورگر با قابلیت سوکت منجر به سوء استفاده از پروکسی شفاف، 2009",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2b6e94c6-26d0-489c-989c-9f4307348c42",
@@ -48,11 +54,18 @@
                 "Transparent proxy is usedVulnerable configuration of network topology involving the transparent proxy (e.g., no NAT happening between the client and the proxy)Execution of malicious Flash or Applet in the victim's browser"
             ],
             "x_capec_skills_required": {
-                "Medium": "Creating malicious Flash or Applet to open a cross-domain socket connection to a remote system"
+                "Medium": "Creating malicious Flash or Applet to open a cross-domain socket connection to a remote system",
+                "Medium_fa": "ایجاد فلش یا اپلت مخرب برای باز کردن یک اتصال سوکت بین دامنه به یک سیستم راه دور"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک پروکسی شفاف به عنوان یک واسطه بین مشتری و اینترنت به طور کلی عمل می کند. تمام درخواست‌های ارسالی از مشتری را رهگیری می‌کند و آنها را به مکان صحیح ارسال می‌کند. پروکسی همچنین تمام پاسخ‌های مشتری را رهگیری می‌کند و آن‌ها را به مشتری ارسال می‌کند. همه اینها به گونه ای شفاف برای مشتری انجام می شود.",
+            "name_fa": "سوء استفاده از پروکسی شفاف",
+            "x_capec_extended_description_fa": "<xhtml:p>پراکسی های شفاف اغلب توسط شرکت ها و ISP ها استفاده می شود. برای درخواست‌هایی که از مشتری سرچشمه می‌گیرند، پراکسی‌های شفاف باید مقصد نهایی بسته داده مشتری را مشخص کنند. دو راه برای انجام این کار در دسترس است: یا با نگاه کردن به آدرس IP لایه سه (شبکه) یا با بررسی مقصد هدر HTTP لایه هفت (برنامه). یک مرورگر خط مشی مبدأ یکسانی دارد که معمولاً از اسکریپت‌هایی که از یک دامنه می‌آیند، درخواست‌ها را به وب‌سایت‌هایی که از آن‌ها وارد نشده‌اند، آغاز می‌کند. اما برای دور زدن آن، فلش مخرب یا اپلتی که در مرورگر کاربر اجرا می‌شود، می‌تواند تلاش کند تا یک اتصال سوکت بین دامنه‌ای از مشتری به دامنه راه دور ایجاد کند. پروکسی شفاف هدر HTTP درخواست را بررسی می‌کند و آن را به سایت راه دور هدایت می‌کند و در نتیجه تا حدی از همان خط‌مشی مبدا مرورگر دور می‌زند. اگر پروکسی شفاف از اطلاعات هدر میزبان HTTP برای آدرس دهی به جای اطلاعات آدرس IP در لایه شبکه استفاده کند، این اتفاق می افتد. این حمله به اسکریپت‌های مخرب داخل مرورگر قربانی اجازه می‌دهد تا درخواست‌های بین دامنه‌ای را برای هر میزبانی که به پروکسی شفاف در دسترس است، صادر کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "پراکسی شفاف استفاده می شود پیکربندی آسیب پذیر توپولوژی شبکه شامل پراکسی شفاف (به عنوان مثال، عدم وجود NAT بین مشتری و پروکسی) اجرای فلش یا اپلت مخرب در مرورگر قربانی"
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0697#AN1812",
-                    "external_id": "AN1812"
+                    "external_id": "AN1812",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,33 +48,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedAccessibilityApps",
-                    "description": "Allow-list of sanctioned accessibility-enabled apps in the environment, such as screen readers or approved assistive tools."
+                    "description": "Allow-list of sanctioned accessibility-enabled apps in the environment, such as screen readers or approved assistive tools.",
+                    "description_fa": "فهرست مجاز برنامه‌های دارای قابلیت دسترسی مجاز در محیط، مانند صفحه‌خوان‌ها یا ابزارهای کمکی تأییدشده."
                 },
                 {
                     "field": "AccessibilityEventRateThreshold",
-                    "description": "Threshold for event volume or sustained event consumption indicating broad UI monitoring rather than limited assistive use."
+                    "description": "Threshold for event volume or sustained event consumption indicating broad UI monitoring rather than limited assistive use.",
+                    "description_fa": "آستانه برای حجم رویداد یا مصرف مداوم رویداد که نشان دهنده نظارت گسترده UI به جای استفاده کمکی محدود است."
                 },
                 {
                     "field": "SensitiveFieldCorrelationRequired",
-                    "description": "Determines whether detection should require correlation to text-entry fields, login screens, or password/credential UI contexts."
+                    "description": "Determines whether detection should require correlation to text-entry fields, login screens, or password/credential UI contexts.",
+                    "description_fa": "تعیین می‌کند که آیا تشخیص باید به همبستگی با فیلدهای ورودی متن، صفحه‌های ورود به سیستم یا زمینه‌های رابط کاربری رمز عبور/اعتبارنامه نیاز داشته باشد."
                 },
                 {
                     "field": "OverlayCorrelationWindow",
-                    "description": "Time window correlating accessibility activity with overlay/window presentation over other apps."
+                    "description": "Time window correlating accessibility activity with overlay/window presentation over other apps.",
+                    "description_fa": "پنجره زمانی مرتبط با فعالیت دسترس‌پذیری با نمایش همپوشانی/پنجره بر روی سایر برنامه‌ها."
                 },
                 {
                     "field": "AccessibilityToNetworkWindow",
-                    "description": "Time window linking accessibility event capture or text change activity to outbound network communication."
+                    "description": "Time window linking accessibility event capture or text change activity to outbound network communication.",
+                    "description_fa": "پنجره زمانی که ضبط رویداد دسترس‌پذیری یا فعالیت تغییر متن را به ارتباطات شبکه برون‌گرا پیوند می‌دهد."
                 },
                 {
                     "field": "BackgroundServiceAllowed",
-                    "description": "Tuning for whether background accessibility service activity is expected for approved assistive tools."
+                    "description": "Tuning for whether background accessibility service activity is expected for approved assistive tools.",
+                    "description_fa": "تنظیم برای اینکه آیا فعالیت خدمات دسترسی پس‌زمینه برای ابزارهای کمکی تأیید شده مورد انتظار است یا خیر."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound byte volume or burst count considered suspicious after accessibility event capture."
+                    "description": "Minimum outbound byte volume or burst count considered suspicious after accessibility event capture.",
+                    "description_fa": "حداقل حجم بایت خروجی یا تعداد دفعات پس از ضبط رویداد دسترسی مشکوک در نظر گرفته می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1812",
+            "description_fa": "یک مدافع به برنامه ای که کنترل سرویس دسترسی به آن اعطا می شود، با مصرف بعدی رویدادهای دسترسی با حجم بالا، تعامل با عناصر حساس رابط کاربری یا فیلدهای ورودی متن، نمایش همپوشانی/پنجره اختیاری بر روی سایر برنامه ها، و بافر محلی یا انتقال شبکه خروجی کوتاه مدت مرتبط می کند، که نشان دهنده سوء استفاده از ویژگی های دسترسی برای ضبط ورودی، خودکارسازی اعتبار، است."
         }
     ]
 }

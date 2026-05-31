@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0329#AN0936",
-                    "external_id": "AN0936"
+                    "external_id": "AN0936",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -34,20 +35,24 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
                     "name": "networkdevice:syslog",
-                    "channel": "command sequence: erase \u2192 format \u2192 reload"
+                    "channel": "command sequence: erase → format → reload"
                 }
             ],
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandSequenceWindow",
-                    "description": "Time between erase and reload command to establish causality"
+                    "description": "Time between erase and reload command to establish causality",
+                    "description_fa": "زمان بین دستور پاک کردن و بارگذاری مجدد برای ایجاد علیت"
                 },
                 {
                     "field": "UserPrivilegeLevel",
-                    "description": "Filter for high-privilege user sessions"
+                    "description": "Filter for high-privilege user sessions",
+                    "description_fa": "فیلتر برای جلسات کاربر با امتیاز بالا"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0936",
+            "description_fa": "اجرای «پاک کردن»، «فرمت» و «بارگذاری مجدد» به ترتیب فوری از یک جلسه AAA ممتاز"
         }
     ]
 }

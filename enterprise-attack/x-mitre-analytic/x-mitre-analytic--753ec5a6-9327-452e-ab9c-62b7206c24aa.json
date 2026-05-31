@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0199#AN0573",
-                    "external_id": "AN0573"
+                    "external_id": "AN0573",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "NonRootAccounts",
-                    "description": "Monitor non-root users invoking hypervisor management utilities."
+                    "description": "Monitor non-root users invoking hypervisor management utilities.",
+                    "description_fa": "نظارت بر کاربران غیر روت که از ابزارهای مدیریت Hypervisor استفاده می کنند."
                 },
                 {
                     "field": "KnownAdminScripts",
-                    "description": "Whitelist of scripts expected to run VM enumeration as part of routine operations."
+                    "description": "Whitelist of scripts expected to run VM enumeration as part of routine operations.",
+                    "description_fa": "لیست سفید اسکریپت هایی که انتظار می رود شمارش ماشین مجازی را به عنوان بخشی از عملیات روتین اجرا کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0573",
+            "description_fa": "تلاش‌ها برای شمارش ماشین‌های مجازی از طریق ابزارهای هایپروایزر مانند «virsh»، «VBoxManage» یا «qemu-img» را شناسایی می‌کند. Defender فراخوانی های مشکوک فرمان را با نسل فرآیند والد و کاربران غیرمنتظره مرتبط می کند."
         }
     ]
 }

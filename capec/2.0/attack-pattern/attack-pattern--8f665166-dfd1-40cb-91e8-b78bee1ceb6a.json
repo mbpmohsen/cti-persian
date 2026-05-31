@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-115",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/115.html"
+                    "url": "https://capec.mitre.org/data/definitions/115.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-287",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/287.html"
+                    "url": "http://cwe.mitre.org/data/definitions/287.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Abuse Elevation Control Mechanism",
                     "external_id": "T1548",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1548"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1548",
+                    "description_fa": "مکانیسم کنترل ارتفاع سوء استفاده",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-598",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/04-Testing_for_Bypassing_Authentication_Schema.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/04-Testing_for_Bypassing_Authentication_Schema.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--8f665166-dfd1-40cb-91e8-b78bee1ceb6a",
@@ -62,7 +68,16 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم با طفره رفتن یا دور زدن مکانیزم احراز هویت به برنامه، سرویس یا دستگاه با امتیازات یک کاربر مجاز یا دارای امتیاز دسترسی پیدا می کند. بنابراین مهاجم می تواند به داده های محافظت شده دسترسی داشته باشد بدون اینکه احراز هویت انجام شود.",
+            "name_fa": "دور زدن احراز هویت",
+            "x_capec_extended_description_fa": "<xhtml:p>این به حمله کننده ای اشاره دارد که دسترسی معادل یک کاربر احراز هویت شده را بدون گذراندن مراحل احراز هویت به دست می آورد. این معمولاً نتیجه استفاده مهاجم از یک روش دسترسی غیرمنتظره است که از نقاط بازرسی مناسبی که در آن احراز هویت باید انجام شود، عبور نمی کند. به عنوان مثال، یک وب سایت ممکن است فرض کند که همه کاربران از طریق یک پیوند مشخص کلیک می کنند تا به مطالب ایمن برسند و به سادگی همه افرادی را که روی پیوند کلیک می کنند تأیید اعتبار کنند. با این حال، یک مهاجم ممکن است بتواند با وارد کردن صریح مسیر محتوا به جای کلیک کردن بر روی پیوند احراز هویت، به محتوای وب ایمن دسترسی پیدا کند و در نتیجه از بررسی کامل اجتناب کند. این الگوی حمله با سایر حملات احراز هویت متفاوت است زیرا حملات این الگو به طور کامل از احراز هویت جلوگیری می کند، نه اینکه با سوء استفاده از نقص ها یا سرقت اعتبار از کاربران قانونی، احراز هویت جعلی را انجام دهد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "مکانیزم یا زیرسیستم احراز هویت که برخی از انواع احراز هویت مانند رمزهای عبور، احراز هویت خلاصه، گواهی‌های امنیتی و غیره را پیاده‌سازی می‌کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "یک برنامه مشتری، مانند یک مرورگر وب، یا یک زبان برنامه نویسی که قادر به تعامل با هدف است."
+            ]
         }
     ],
     "spec_version": "2.0",

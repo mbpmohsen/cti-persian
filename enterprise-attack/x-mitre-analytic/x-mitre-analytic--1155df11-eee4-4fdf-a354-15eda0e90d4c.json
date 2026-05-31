@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0215#AN0602",
-                    "external_id": "AN0602"
+                    "external_id": "AN0602",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FileExtension",
-                    "description": "Non-standard or randomly generated file extensions may indicate encrypted content."
+                    "description": "Non-standard or randomly generated file extensions may indicate encrypted content.",
+                    "description_fa": "پسوندهای فایل غیر استاندارد یا تصادفی تولید شده ممکن است محتوای رمزگذاری شده را نشان دهد."
                 },
                 {
                     "field": "TargetFolder",
-                    "description": "Focus on user document folders, network shares, or system paths like %System32%."
+                    "description": "Focus on user document folders, network shares, or system paths like %System32%.",
+                    "description_fa": "روی پوشه‌های اسناد کاربر، اشتراک‌گذاری‌های شبکه، یا مسیرهای سیستم مانند %System32% تمرکز کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate rapid writes and renames within seconds across high file count."
+                    "description": "Correlate rapid writes and renames within seconds across high file count.",
+                    "description_fa": "نوشتن و تغییر نام سریع را در عرض چند ثانیه در تعداد بالای فایل‌ها به هم مرتبط کنید."
                 },
                 {
                     "field": "CommandLine",
-                    "description": "Flag common ransomware tools or functions (vssadmin delete shadows /all /quiet)."
+                    "description": "Flag common ransomware tools or functions (vssadmin delete shadows /all /quiet).",
+                    "description_fa": "ابزارها یا عملکردهای رایج باج افزار را علامت گذاری کنید (vssadmin delete shadows /all /quiet)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0602",
+            "description_fa": "عملیات نوشتن فایل با فرکانس بالا با استفاده از پسوندهای غیر معمول، به دنبال ایجاد یادداشت باج، دستکاری رجیستری، یا حذف کپی سایه. اغلب از ابزارهای CLI مانند vssadmin، wbadmin، cipher یا PowerShell استفاده می‌کند."
         }
     ]
 }

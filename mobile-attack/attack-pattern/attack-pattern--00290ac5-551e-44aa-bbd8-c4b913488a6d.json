@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1603",
-                    "external_id": "T1603"
+                    "external_id": "T1603",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Apple NSBackgroundActivityScheduler",
                     "description": "Apple. (n.d.). NSBackgroundActivityScheduler. Retrieved November 4, 2020.",
-                    "url": "https://developer.apple.com/documentation/foundation/nsbackgroundactivityscheduler"
+                    "url": "https://developer.apple.com/documentation/foundation/nsbackgroundactivityscheduler",
+                    "source_name_fa": "Apple NSBackgroundActivityScheduler",
+                    "description_fa": "اپل. (n.d.). NSBackgroundActivityScheduler. بازبینی شده در 4 نوامبر 2020."
                 },
                 {
                     "source_name": "Android WorkManager",
                     "description": "Google. (n.d.). Schedule tasks with WorkManager. Retrieved November 4, 2020.",
-                    "url": "https://developer.android.com/topic/libraries/architecture/workmanager"
+                    "url": "https://developer.android.com/topic/libraries/architecture/workmanager",
+                    "source_name_fa": "Android WorkManager",
+                    "description_fa": "گوگل. (n.d.). کارها را با WorkManager برنامه ریزی کنید. بازبینی شده در 4 نوامبر 2020."
                 }
             ],
             "object_marking_refs": [
@@ -59,7 +64,9 @@
             "x_mitre_version": "1.0",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "کار/کار برنامه ریزی شده",
+            "description_fa": "ممکن است دشمنان از عملکرد زمان‌بندی کار برای تسهیل اجرای اولیه یا تکراری کد مخرب سوء استفاده کنند. در Android و iOS، APIها و کتابخانه‌ها برای تسهیل کارهای زمان‌بندی برای اجرا در تاریخ، زمان یا بازه زمانی مشخص وجود دارند.\n\nدر اندروید، «WorkManager» API اجازه می دهد تا کارهای ناهمزمان با سیستم برنامه ریزی شود. «WorkManager» با استفاده از «JobScheduler»، «GcmNetworkManager» و «AlarmManager» به صورت داخلی برای یکسان کردن زمان‌بندی وظایف در Android معرفی شد. «WorkManager» انعطاف‌پذیری زیادی برای زمان‌بندی ارائه می‌کند، از جمله به صورت دوره‌ای، یک‌باره یا مبتنی بر محدودیت (مثلاً فقط زمانی که دستگاه در حال شارژ شدن است).(Citation: Android WorkManager)\n\nدر iOS، API «NSBackgroundActivityScheduler» اجازه می دهد تا کارهای ناهمزمان با سیستم برنامه ریزی شوند. وظایف را می توان به صورت تکراری یا غیر تکراری برنامه ریزی کرد، با این حال، سیستم انتخاب می کند که وظایف چه زمانی اجرا شوند. برنامه می‌تواند فاصله زمانی را برای تکرار کارها یا تأخیر بین زمان‌بندی و اجرا برای کارهای یک‌بار مصرف انتخاب کند.(Citation: Apple NSBackgroundActivityScheduler)"
         }
     ]
 }

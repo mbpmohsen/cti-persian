@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0721#AN1853",
-                    "external_id": "AN1853"
+                    "external_id": "AN1853",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,33 +58,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between install/update and subsequent runtime/network effects."
+                    "description": "Correlation window between install/update and subsequent runtime/network effects.",
+                    "description_fa": "پنجره همبستگی بین نصب/به روز رسانی و اثرات زمان اجرا/شبکه ​​بعدی."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved managed or trusted applications vary by organization and device group."
+                    "description": "Approved managed or trusted applications vary by organization and device group.",
+                    "description_fa": "برنامه های کاربردی مدیریت شده یا مورد اعتماد تأیید شده بر اساس سازمان و گروه دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedInstallerSources",
-                    "description": "Permitted installer source or app delivery mechanism differs by fleet and policy."
+                    "description": "Permitted installer source or app delivery mechanism differs by fleet and policy.",
+                    "description_fa": "منبع مجاز نصب‌کننده یا مکانیسم تحویل برنامه براساس ناوگان و خط‌مشی متفاوت است."
                 },
                 {
                     "field": "AllowedSigningBaseline",
-                    "description": "Expected signing lineage, certificate relationship, or integrity metadata vary by package."
+                    "description": "Expected signing lineage, certificate relationship, or integrity metadata vary by package.",
+                    "description_fa": "اصل و نسب امضای مورد انتظار، رابطه گواهی، یا فراداده یکپارچگی بسته به بسته متفاوت است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Some protected-resource use is legitimate only when an app is foregrounded."
+                    "description": "Some protected-resource use is legitimate only when an app is foregrounded.",
+                    "description_fa": "برخی از استفاده از منابع محافظت شده تنها زمانی مجاز است که یک برنامه در پیش زمینه باشد."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close behavior must be to user interaction to be considered expected."
+                    "description": "Defines how close behavior must be to user interaction to be considered expected.",
+                    "description_fa": "تعریف می کند که رفتار باید چقدر نزدیک به تعامل کاربر باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "AllowedDestinations",
-                    "description": "Expected app destinations, CDNs, APIs, and service providers vary by app and tenant."
+                    "description": "Expected app destinations, CDNs, APIs, and service providers vary by app and tenant.",
+                    "description_fa": "مقصدهای مورد انتظار برنامه، CDN ها، APIها و ارائه دهندگان خدمات بر اساس برنامه و مستاجر متفاوت است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1853",
+            "description_fa": "مدافع ورود، نصب یا به‌روزرسانی یک برنامه مورد اعتماد یا مورد انتظار را با انحراف بعدی در ویژگی‌های اعتماد بسته، وضعیت مجوز، استفاده از منابع محافظت‌شده، رفتار چارچوب یا ارتباطات شبکه‌ای که با نقش خوب شناخته شده آن برنامه سازگار نیست، مرتبط می‌کند. قوی‌ترین شواهد اندروید یک بسته مدیریت‌شده یا قابل اعتماد است که رفتار اولین اجرا یا پس از به‌روزرسانی آن، دسترسی ویژه غیرمنتظره، استفاده حساس از حسگر، اجرای پس‌زمینه غیرمعمول، تعامل چارچوب ممتاز، یا ارتباط خروجی را به مقصدهایی خارج از خط اصلی برنامه در مدت کوتاهی پس از نصب یا به‌روزرسانی معرفی می‌کند."
         }
     ]
 }

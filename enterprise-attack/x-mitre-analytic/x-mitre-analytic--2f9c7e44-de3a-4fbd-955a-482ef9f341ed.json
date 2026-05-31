@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0330#AN0939",
-                    "external_id": "AN0939"
+                    "external_id": "AN0939",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptName",
-                    "description": "May be postinst, preinst, prerm, or postrm depending on packaging system"
+                    "description": "May be postinst, preinst, prerm, or postrm depending on packaging system",
+                    "description_fa": "بسته به سیستم بسته بندی ممکن است postinst، preinst، prerm یا postrm باشد"
                 },
                 {
                     "field": "PackageManager",
-                    "description": "Depends on system: dpkg, apt, rpm, yum, etc."
+                    "description": "Depends on system: dpkg, apt, rpm, yum, etc.",
+                    "description_fa": "بستگی به سیستم دارد: dpkg، apt، rpm، yum و غیره."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0939",
+            "description_fa": "تشخیص اسکریپت های نگهدارنده (به عنوان مثال، postinst، preinst) که در طول عملیات dpkg یا rpm اصلاح یا اجرا می شوند. مراقب محتوای اسکریپتی باشید که فرآیندهای اضافی ایجاد می کند یا خارج از محدوده بسته می نویسد."
         }
     ]
 }

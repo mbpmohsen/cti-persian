@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0639#AN1714",
-                    "external_id": "AN1714"
+                    "external_id": "AN1714",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,37 +63,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum span for correlating app activity, posture stability, and repeated network failure into a single denial event."
+                    "description": "Maximum span for correlating app activity, posture stability, and repeated network failure into a single denial event.",
+                    "description_fa": "حداکثر بازه برای مرتبط کردن فعالیت برنامه، پایداری وضعیت بدن و شکست مکرر شبکه در یک رویداد انکار."
                 },
                 {
                     "field": "SupervisedOnly",
-                    "description": "Whether the analytic should only apply to supervised devices with high-confidence MDM policy telemetry."
+                    "description": "Whether the analytic should only apply to supervised devices with high-confidence MDM policy telemetry.",
+                    "description_fa": "اینکه آیا تجزیه و تحلیل باید فقط برای دستگاه‌های تحت نظارت با تله‌متری خط‌مشی MDM با اطمینان بالا اعمال شود یا خیر."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps expected to retry aggressively or queue offline work during routine coverage degradation."
+                    "description": "Apps expected to retry aggressively or queue offline work during routine coverage degradation.",
+                    "description_fa": "برنامه‌ها انتظار می‌رود در طول کاهش روتین پوشش، به‌طور تهاجمی دوباره تلاش کنند یا کارهای آفلاین را در صف قرار دهند."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether the app should be foreground or recently active for the analytic to be treated as high confidence."
+                    "description": "Whether the app should be foreground or recently active for the analytic to be treated as high confidence.",
+                    "description_fa": "این که آیا برنامه باید پیش زمینه باشد یا اخیراً فعال باشد تا تجزیه و تحلیل به عنوان یک اطمینان بالا تلقی شود."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Time threshold for determining whether the denial occurred during active user use versus background idle periods."
+                    "description": "Time threshold for determining whether the denial occurred during active user use versus background idle periods.",
+                    "description_fa": "آستانه زمانی برای تعیین اینکه آیا انکار در طول استفاده کاربر فعال در مقابل دوره های بیکاری پس زمینه رخ داده است یا خیر."
                 },
                 {
                     "field": "FailureBurstThreshold",
-                    "description": "Threshold for repeated session failures, resets, timeouts, or DNS failures within the correlation window."
+                    "description": "Threshold for repeated session failures, resets, timeouts, or DNS failures within the correlation window.",
+                    "description_fa": "آستانه برای شکست های مکرر جلسه، بازنشانی، وقفه زمانی یا خرابی های DNS در پنجره همبستگی."
                 },
                 {
                     "field": "ExpectedCoverageZones",
-                    "description": "Known sites or geographies where benign poor service should be baseline-adjusted."
+                    "description": "Known sites or geographies where benign poor service should be baseline-adjusted.",
+                    "description_fa": "سایت‌ها یا مناطق جغرافیایی شناخته‌شده که در آن‌ها خدمات ضعیف بدخیم باید براساس خط پایه تنظیم شوند."
                 },
                 {
                     "field": "TrustedDestinationAllowList",
-                    "description": "Expected enterprise destinations whose temporary maintenance or outage should not be treated as device-targeted denial."
+                    "description": "Expected enterprise destinations whose temporary maintenance or outage should not be treated as device-targeted denial.",
+                    "description_fa": "مقاصد سازمانی مورد انتظار که تعمیر و نگهداری موقت یا قطع آنها نباید به عنوان انکار هدفمند دستگاه تلقی شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1714",
+            "description_fa": "Defender یک زنجیره اطمینان کاهش یافته مخصوص iOS را به هم مرتبط می کند که در آن یک دستگاه مدیریت شده یا تحت نظارت فعال باقی می ماند اما از دست دادن ناگهانی عملکرد وابسته به شبکه، شکست مکرر جلسه یا عدم توانایی ارتباط پایدار بدون تغییرات پیکربندی منطبق یا عملکرد معمولی کاربر را تجربه می کند. از آنجایی که دید مستقیم لایه رادیویی و علت RF در iOS ضعیف تر است، مدافع بر وضعیت دستگاه، بیدار شدن برنامه یا رفتار پیش زمینه در هنگام از دست دادن سرویس، پایداری خط مشی شبکه محافظت شده و الگوهای خرابی پایین دست مشاهده شده در VPN یا تله متری پراکسی تأکید می کند."
         }
     ]
 }

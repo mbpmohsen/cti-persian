@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0193#AN0556",
-                    "external_id": "AN0556"
+                    "external_id": "AN0556",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedPaths",
-                    "description": "Environment-specific paths where business-critical stored data resides."
+                    "description": "Environment-specific paths where business-critical stored data resides.",
+                    "description_fa": "مسیرهای خاص محیطی که در آن داده های ذخیره شده حیاتی تجاری در آن قرار دارند."
                 },
                 {
                     "field": "CommandExclusions",
-                    "description": "Legitimate scripts/utilities excluded to minimize false positives."
+                    "description": "Legitimate scripts/utilities excluded to minimize false positives.",
+                    "description_fa": "اسکریپت‌ها/ برنامه‌های کاربردی قانونی برای به حداقل رساندن موارد مثبت کاذب حذف شدند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0556",
+            "description_fa": "ایجاد، اصلاح یا حذف فایل مشکوک را در فهرست‌های راهنمای داده‌های ذخیره‌شده (مانند «/var/lib/mysql/»، «/var/log/»، قرقره‌های ایمیل) شناسایی کنید. دستورات پوسته را که مستقیماً با فایل های داده ساختاریافته در تعامل هستند، به جای ابزارهای پایگاه داده قانونی شناسایی کنید."
         }
     ]
 }

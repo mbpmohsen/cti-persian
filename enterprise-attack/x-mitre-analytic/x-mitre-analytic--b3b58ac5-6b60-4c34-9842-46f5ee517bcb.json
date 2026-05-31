@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0287#AN0798",
-                    "external_id": "AN0798"
+                    "external_id": "AN0798",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0798",
-            "description": "Cause\u2192effect chain: (1) Browser/Office/reader process logs crash/segfault or abnormal sandbox message, (2) new executable/script/write occurs in $HOME (Downloads, ~/.cache, /tmp), (3) unexpected child like curl/wget/bash/python opens network connections soon after.",
+            "description": "Cause→effect chain: (1) Browser/Office/reader process logs crash/segfault or abnormal sandbox message, (2) new executable/script/write occurs in $HOME (Downloads, ~/.cache, /tmp), (3) unexpected child like curl/wget/bash/python opens network connections soon after.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -65,22 +66,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "5\u201320m correlation window."
+                    "description": "5–20m correlation window.",
+                    "description_fa": "پنجره همبستگی 5-20 متر."
                 },
                 {
                     "field": "UserPaths",
-                    "description": "HOME write targets: ~/Downloads, ~/.config/autostart, ~/.local/share, /tmp."
+                    "description": "HOME write targets: ~/Downloads, ~/.config/autostart, ~/.local/share, /tmp.",
+                    "description_fa": "اهداف نوشتن HOME: ~/Downloads، ~/.config/autostart، ~/.local/share، /tmp."
                 },
                 {
                     "field": "HighRiskChildren",
-                    "description": "bash, sh, python, perl, node, curl, wget, socat, openssl, xxd."
+                    "description": "bash, sh, python, perl, node, curl, wget, socat, openssl, xxd.",
+                    "description_fa": "bash، sh، python، perl، node، curl، wget، socat، openssl، xxd."
                 },
                 {
                     "field": "PackageUpdaters",
-                    "description": "Allow-list common updaters (snap, flatpak, packagekit) to reduce FP."
+                    "description": "Allow-list common updaters (snap, flatpak, packagekit) to reduce FP.",
+                    "description_fa": "به‌روزرسانی‌های رایج (snap، flatpak، packagekit) را برای کاهش FP فهرست کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0798",
+            "description_fa": "زنجیره علت → اثر: (1) خرابی گزارش‌های فرآیند مرورگر/دفتر/خواننده/سگ خطا یا پیام غیرعادی جعبه ایمنی، (2) اجرایی/اسکریپت/نوشتن جدید در $HOME (دانلودها، ~/.cache، /tmp)، (3) فرزند غیرمنتظره مانند اتصال curl/wgets/bash به زودی رخ می‌دهد."
         }
     ]
 }

@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-654",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/654.html"
+                    "url": "https://capec.mitre.org/data/definitions/654.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1021",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1021.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1021.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Input Capture",
                     "external_id": "T1056",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1056"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1056",
+                    "description_fa": "ضبط ورودی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Abuse Elevation Control Mechanism: Elevated Execution with Prompt",
                     "external_id": "T1548.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1548/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1548/004",
+                    "description_fa": "مکانیسم کنترل ارتفاع سوء استفاده: اجرای بالا با اعلان",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--f7a0e7bd-d24a-4390-b365-9e71f22e4e06",
@@ -47,6 +53,12 @@
                 ],
                 "Authentication": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -68,11 +80,28 @@
                 "Additional malware to impersonate a legitimate credential prompt."
             ],
             "x_capec_skills_required": {
-                "Low": "Once an adversary has gained access to the target system, impersonating a credential prompt is not difficult."
+                "Low": "Once an adversary has gained access to the target system, impersonating a credential prompt is not difficult.",
+                "Low_fa": "هنگامی که یک دشمن به سیستم هدف دسترسی پیدا کرد، جعل هویت یک درخواست اعتبار کار دشواری نیست."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف، از طریق یک برنامه مخرب نصب شده قبلی، جعل هویت یک درخواست اعتبار را در تلاش برای سرقت اطلاعات کاربری یک کاربر جعل می کند.",
+            "name_fa": "جعل هویت سریع اعتبارنامه",
+            "x_capec_example_instances_fa": [
+                "یک دشمن لیست وظایف سیستم را برای Microsoft Outlook نظارت می کند تا مشخص کند چه زمانی ممکن است برنامه از کاربر بخواهد که اعتبار خود را برای مشاهده ایمیل رمزگذاری شده وارد کند. هنگامی که کار اجرا شد، حریف درخواست اعتبار را جعل هویت می کند تا اعتبار رمزگذاری Microsoft Outlook کاربر را به دست آورد. سپس حریف می تواند از این اعتبارنامه ها برای خواندن ایمیل رمزگذاری شده کاربر استفاده کند.",
+                "یک حریف به طور تصادفی از کاربر می خواهد تا اعتبار سیستم خود را وارد کند، و کاربر را فریب می دهد تا باور کند که یک فرآیند پس زمینه برای عملکرد به اعتبارنامه نیاز دارد. سپس دشمن می تواند از این اعتبارنامه های جمع آوری شده برای اجرای حملات اضافی یا به دست آوردن داده ها استفاده کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین وظایف مناسب برای بهره برداری: </b>تعیین کنید چه وظایفی در سیستم هدف وجود دارد که ممکن است منجر به ارائه اعتبارنامه توسط کاربر شود. از یک کاربر اطلاعات کاربری خود را بخواهید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>جعل وظیفه: </b>جعل هویت یک کار قانونی، مورد انتظار یا غیرمنتظره، در تلاش برای به دست آوردن کاربر اعتبارنامه‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از کاربر بخواهید تا اعتبارنامه‌های خود را دریافت کند، در حالی که کاربر را وادار می‌کند این درخواست اعتبارنامه قانونی است.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> حریف ممکن است لیست وظایف نگهداری شده توسط سیستم عامل را زیر نظر داشته باشد و منتظر باشد تا یک درخواست اعتبار قانونی خاص فعال شود. هنگامی که اعلان شناسایی شد، حریف یک اعلان اعتبار جدید را در پیش زمینه راه اندازی می کند که از رابط کاربری درخواست اعتبار قانونی تقلید می کند. در این مرحله، کاربر فکر می‌کند که با درخواست اعتبار قانونی در حال تعامل است، اما در عوض با اعلان اعتبار مخرب در تعامل است.</xhtml:p>\n            <xhtml:p>رویکرد دوم شامل جعل هویت یک درخواست اعتبار غیرمنتظره توسط دشمن است، اما رویکردی که اغلب ممکن است توسط فرآیندهای پس‌زمینه قانونی ایجاد شود. به عنوان مثال، یک دشمن ممکن است به طور تصادفی یک درخواست اعتبار سیستم را جعل کند، به این معنی که یک فرآیند پس زمینه یا برنامه معمول مورد استفاده (به عنوان مثال، ایمیل خوان) برای اهدافی نیاز به احراز هویت دارد. کاربر، با این باور که در حال تعامل با یک اعلان اعتبار قانونی است، اعتبار خود را وارد می کند که سپس حریف برای اهداف پلید از آن استفاده می کند. هدف نهایی این حمله به دست آوردن اطلاعات حساس (به عنوان مثال، اعتبار) از کاربر است.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "دشمن باید قبلاً از طریق برخی ابزارها به سیستم هدف دسترسی داشته باشد.",
+                "یک وظیفه مشروع باید وجود داشته باشد که دشمن بتواند آن را جعل هویت کند تا اعتبارنامه را جمع آوری کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "بدافزار یا هر وسیله دیگری که در ابتدا سیستم هدف را تشکیل می دهد.",
+                "بدافزار اضافی برای جعل هویت یک درخواست اعتبار قانونی."
+            ]
         }
     ],
     "type": "bundle"

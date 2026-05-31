@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0641#AN1717",
-                    "external_id": "AN1717"
+                    "external_id": "AN1717",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -35,21 +36,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between background processing and network transmission"
+                    "description": "Correlation window between background processing and network transmission",
+                    "description_fa": "پنجره همبستگی بین پردازش پس زمینه و انتقال شبکه"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps expected to use encrypted communication channels"
+                    "description": "Apps expected to use encrypted communication channels",
+                    "description_fa": "انتظار می رود برنامه ها از کانال های ارتباطی رمزگذاری شده استفاده کنند"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Threshold for identifying encoded/encrypted payloads"
+                    "description": "Threshold for identifying encoded/encrypted payloads",
+                    "description_fa": "آستانه برای شناسایی محموله های رمزگذاری شده/رمزگذاری شده"
                 },
                 {
                     "field": "BeaconIntervalVariance",
-                    "description": "Tolerance for periodic communication patterns"
+                    "description": "Tolerance for periodic communication patterns",
+                    "description_fa": "تحمل الگوهای ارتباطی دوره ای"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1717",
+            "description_fa": "شواهد غیرمستقیم استفاده از کانال رمزگذاری شده لایه برنامه از طریق پردازش غیرعادی پس‌زمینه و الگوهای انتقال شبکه پس از فعالیت برنامه، که در آن عملیات رمزگذاری مستقیماً قابل مشاهده نیست، استنباط می‌شود. تشخیص با اجرای پس‌زمینه + رفتار شبکه + وضعیت استحقاق برنامه برای شناسایی سوء استفاده از کانال‌های ارتباطی رمزگذاری‌شده مرتبط است."
         }
     ]
 }

@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-464",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/464.html"
+                    "url": "https://capec.mitre.org/data/definitions/464.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-359",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/359.html"
+                    "url": "http://cwe.mitre.org/data/definitions/359.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Forge Web Credentials: Web Cookies",
                     "external_id": "T1606.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1606/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1606/001",
+                    "description_fa": "جعل اعتبار وب: کوکی های وب",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Samy Kamkar, Evercookie, 2010--09---09",
                     "external_id": "REF-401",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://samy.pl/evercookie/"
+                    "url": "http://samy.pl/evercookie/",
+                    "description_fa": "سامی کامکار، Evercookie، 2010--09---09",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ed57f38c-2f0c-47ad-a6e2-16932fde978f",
@@ -52,7 +58,16 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم یک کوکی بسیار پایدار ایجاد می کند که حتی پس از اینکه کاربر فکر می کند حذف شده است، موجود می ماند. کوکی در بیش از ده مکان در دستگاه قربانی ذخیره می شود. هنگامی که قربانی حافظه پنهان کوکی را از طریق روش های سنتی در داخل مرورگر پاک می کند، این عملیات کوکی را از مکان های خاصی حذف می کند اما از مکان های دیگر حذف نمی شود. سپس کد مخرب کوکی را از همه مکان‌هایی که حذف نشده است به تمام مکان‌های ذخیره‌سازی ممکن تکرار می‌کند. بنابراین قربانی دوباره کوکی را در تمام مکان‌های ذخیره‌سازی اصلی دارد. به عبارت دیگر، عدم حذف کوکی حتی در یک مکان منجر به زنده شدن کوکی در همه جا می شود. evercookie همچنین در مرورگرهای مختلف باقی می‌ماند زیرا فروشگاه‌های خاصی (به عنوان مثال، Local Shared Objects) بین مرورگرهای مختلف به اشتراک گذاشته می‌شوند.",
+            "name_fa": "اورکوکی",
+            "x_capec_extended_description_fa": "<xhtml:p>مکان‌هایی که یک کوکی دائمی در دستگاه قربانی ذخیره می‌شود عبارتند از: کوکی‌های استاندارد HTTP، اشیاء مشترک محلی (کوکی‌های فلش)، ذخیره‌سازی جداشده Silverlight، ذخیره کوکی‌ها در مقادیر RGB تولید شده به‌طور خودکار، ذخیره‌سازی اجباری، PNG با استفاده از HTML5 Canvas Tag (برچسب Web Stocookring برای خواندن پیکسل‌های پشتیبان، Stocookring) کوکی‌ها در HTTP ETags، ذخیره کوکی‌ها در کش وب، ذخیره‌سازی window.name، ذخیره‌سازی داده‌های کاربر اینترنت اکسپلورر، ذخیره‌سازی جلسه HTML5، ذخیره‌سازی محلی HTML5، ذخیره‌سازی جهانی HTML5، ذخیره‌سازی پایگاه داده HTML5 از طریق SQLite و غیره.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "مرورگر قربانی برای رد کردن همه کوکی‌ها پیکربندی نشده است. قربانی از وب‌سایتی بازدید می‌کند که evercookie مهاجمان را ارائه می‌کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "کد منبع Evercookie"
+            ]
         }
     ],
     "spec_version": "2.0",

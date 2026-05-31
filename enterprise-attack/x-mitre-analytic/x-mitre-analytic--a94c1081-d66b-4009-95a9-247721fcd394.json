@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0343#AN0970",
-                    "external_id": "AN0970"
+                    "external_id": "AN0970",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SyscallBurstCount",
-                    "description": "Threshold of repeated socket calls within a short interval indicating flood behavior."
+                    "description": "Threshold of repeated socket calls within a short interval indicating flood behavior.",
+                    "description_fa": "آستانه تماس های مکرر سوکت در یک بازه زمانی کوتاه که نشان دهنده رفتار سیل است."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Restrict to non-admin user traffic unless elevated access is detected."
+                    "description": "Restrict to non-admin user traffic unless elevated access is detected.",
+                    "description_fa": "محدود به ترافیک کاربر غیر سرپرست مگر اینکه دسترسی بالا تشخیص داده شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0970",
+            "description_fa": "فرآیندهای هسته یا سرزمین کاربر که ترافیک شبکه با نرخ بالا (ICMP، UDP، TCP SYN) را فراتر از توان عملیاتی مورد انتظار رابط یا هنجارهای رفتار کاربر ایجاد می کند."
         }
     ]
 }

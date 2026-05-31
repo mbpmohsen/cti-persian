@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0087#AN0237",
-                    "external_id": "AN0237"
+                    "external_id": "AN0237",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "Image",
-                    "description": "Path of decoder utilities (e.g., certutil.exe, powershell.exe) can vary across environments."
+                    "description": "Path of decoder utilities (e.g., certutil.exe, powershell.exe) can vary across environments.",
+                    "description_fa": "مسیر ابزارهای رمزگشا (به عنوان مثال، certutil.exe، powershell.exe) می تواند در محیط های مختلف متفاوت باشد."
                 },
                 {
                     "field": "CommandLine",
-                    "description": "Base64/hex strings used may change per encoded payload."
+                    "description": "Base64/hex strings used may change per encoded payload.",
+                    "description_fa": "رشته های Base64/Hex مورد استفاده ممکن است در هر بار رمزگذاری شده تغییر کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "The duration between file decode and execution may differ across implementations."
+                    "description": "The duration between file decode and execution may differ across implementations.",
+                    "description_fa": "مدت زمان بین رمزگشایی فایل و اجرا ممکن است در اجراها متفاوت باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0237",
+            "description_fa": "شناسایی فرآیندهایی که فایل‌های رمزگذاری‌شده/رمزگذاری‌شده را در حافظه بارگیری یا رمزگشایی می‌کنند و متعاقباً آنها را اجرا یا تزریق می‌کنند، که نشان‌دهنده باز کردن بسته‌بندی بار یا بدافزار ساکن حافظه است."
         }
     ]
 }

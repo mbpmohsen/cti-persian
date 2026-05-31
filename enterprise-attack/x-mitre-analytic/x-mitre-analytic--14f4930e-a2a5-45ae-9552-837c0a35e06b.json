@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0354#AN1006",
-                    "external_id": "AN1006"
+                    "external_id": "AN1006",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1006",
-            "description": "Unexpected inbound or outbound VNC/SSH/Screen Sharing connections from external sources \u2192 repeated failed logins followed by success \u2192 remote interactive sessions or abnormal file transfers.",
+            "description": "Unexpected inbound or outbound VNC/SSH/Screen Sharing connections from external sources → repeated failed logins followed by success → remote interactive sessions or abnormal file transfers.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KnownVNCServers",
-                    "description": "List of approved VNC/SSH sources."
+                    "description": "List of approved VNC/SSH sources.",
+                    "description_fa": "فهرست منابع تایید شده VNC/SSH."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation between failed attempts and success."
+                    "description": "Time correlation between failed attempts and success.",
+                    "description_fa": "همبستگی زمانی بین تلاش های ناموفق و موفقیت"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1006",
+            "description_fa": "اتصالات VNC/SSH/Screen Sharing ورودی یا خروجی غیرمنتظره از منابع خارجی → ورود ناموفق مکرر و به دنبال آن موفقیت آمیز → جلسات تعاملی راه دور یا انتقال غیرعادی فایل."
         }
     ]
 }

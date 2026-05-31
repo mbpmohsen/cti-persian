@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0176#AN0500",
-                    "external_id": "AN0500"
+                    "external_id": "AN0500",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,14 +61,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SleepyUserThreshold",
-                    "description": "Volume thresholds for interactive user browsing vs. automated systems (e.g., shared kiosks) \u2014 tune to reduce FP in heavy-browsing employees."
+                    "description": "Volume thresholds for interactive user browsing vs. automated systems (e.g., shared kiosks) — tune to reduce FP in heavy-browsing employees.",
+                    "description_fa": "آستانه‌های حجم برای مرور تعاملی کاربر در مقابل سیستم‌های خودکار (مانند کیوسک‌های مشترک) - برای کاهش FP در کارمندانی که در حال مرور زیاد هستند، تنظیم کنید."
                 },
                 {
                     "field": "ExtensionInstallPolicy",
-                    "description": "Policy setting that influences how extension installs are treated: strict policy reduces FP from known extension behavior."
+                    "description": "Policy setting that influences how extension installs are treated: strict policy reduces FP from known extension behavior.",
+                    "description_fa": "تنظیم خط مشی که بر نحوه برخورد با نصب برنامه های افزودنی تأثیر می گذارد: خط مشی سختگیرانه FP را از رفتار شناخته شده برنامه افزودنی کاهش می دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0500",
+            "description_fa": "شواهد مرتبطی که در آن فرآیندهای مبتنی بر Safari/Chrome/WebKit درخواست‌های شبکه را برای منابع JS غیرمعمول یا مبهم و به دنبال ایجاد مفسرهای اسکریپت، باینری‌های راه‌اندازی یا موقت، فرآیندهای فرزند غیرمعمول، یا بارگذاری‌های کتابخانه پویا در فرآیندهای مرورگر صادر می‌کنند. Defender می‌بیند: گزارش‌های پروکسی/HTTP با محتوای منبع مشکوک + گزارش‌های یکپارچه/ASL که خرابی‌های مرورگر/افزونه‌ها یا بارهای برنامه افزودنی را نشان می‌دهد + رویدادهای فرآیندی که نشان‌دهنده ایجاد فرآیند فرزند و نوشتن فایل در /var/پوشه‌ها یا tmp در مدت کوتاهی پس از واکشی است."
         }
     ]
 }

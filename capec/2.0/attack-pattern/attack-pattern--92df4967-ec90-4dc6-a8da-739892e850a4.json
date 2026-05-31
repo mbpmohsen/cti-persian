@@ -9,31 +9,40 @@
                 {
                     "external_id": "CAPEC-638",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/638.html"
+                    "url": "https://capec.mitre.org/data/definitions/638.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Pre-OS Boot:Component Firmware",
                     "external_id": "T1542.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1542/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1542/002",
+                    "description_fa": "بوت پیش از سیستم عامل: سفت‌افزار کامپوننت",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "EQUATION GROUP: QUESTIONS AND ANSWERS (1.5), 2015--02, Kaspersky Lab HQ",
                     "external_id": "REF-664",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/08064459/Equation_group_questions_and_answers.pdf"
+                    "url": "https://media.kasperskycontenthub.com/wp-content/uploads/sites/43/2018/03/08064459/Equation_group_questions_and_answers.pdf",
+                    "description_fa": "گروه معادله: پرسش و پاسخ (1.5)، 2015--02، دفتر مرکزی آزمایشگاه کسپرسکی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Preston Hood, Hard Drive Firmware Implant IRATEMONK, 2014--10---26, PJHoodsCo Blog",
                     "external_id": "REF-665",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://blog.pjhoodsco.org/hard-drive-firmware-implant-iratemonk/"
+                    "url": "https://blog.pjhoodsco.org/hard-drive-firmware-implant-iratemonk/",
+                    "description_fa": "ایمپلنت سفت‌افزار پریستون هود، هارد دیسک IRATEMONK، 2014--10---26، وبلاگ PJHoodsCo",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Bruce Schneier, IRATEMONK: NSA Exploit of the Day, 2014--01---31, Schneier on Security",
                     "external_id": "REF-666",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.schneier.com/blog/archives/2014/01/iratemonk_nsa_e.html"
+                    "url": "https://www.schneier.com/blog/archives/2014/01/iratemonk_nsa_e.html",
+                    "description_fa": "Bruce Schneier, IRATEMONK: NSA Exploit of the Day, 2014--01---31, Schneier on Security",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--92df4967-ec90-4dc6-a8da-739892e850a4",
@@ -67,6 +76,26 @@
                 "Confidentiality": [
                     "Read Data",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "داده ها را بخوانید",
+                    "داده ها را اصلاح کنید"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -92,11 +121,31 @@
             "x_capec_skills_required": {
                 "High": "Ability to intercept components in transit.",
                 "Low": "Ability to leverage known malware tools to infect target system and insert firmware altering malware/payload",
-                "Medium": "Ability to create malicious payload to be executed from MBR."
+                "Medium": "Ability to create malicious payload to be executed from MBR.",
+                "High_fa": "قابلیت رهگیری قطعات در حال حمل و نقل.",
+                "Low_fa": "امکان استفاده از ابزارهای بدافزار شناخته شده برای آلوده کردن سیستم هدف و قرار دادن سیستم عامل تغییر بدافزار/بار پرداخت",
+                "Medium_fa": "امکان ایجاد بار مخرب برای اجرا از MBR."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از ویژگی‌های سیستم و/یا سیستم‌افزار محافظت‌شده نادرست اجزای سخت‌افزاری، مانند درایوهای دیسک سخت (HDD) با هدف اجرای کدهای مخرب از داخل رکورد اصلی بوت مؤلفه (MBR) سوء استفاده می‌کند. انجام این نوع حمله مستلزم آن است که دشمن هدف را با بدافزارهای تغییر دهنده سفت‌افزار، با استفاده از ابزارهای شناخته‌شده و یک محموله آلوده کند. هنگامی که این بدافزار اجرا شد، MBR به گونه‌ای اصلاح می‌شود که شامل دستورالعمل‌هایی برای اجرای payload در فواصل زمانی دلخواه و زمانی که سیستم بوت می‌شود، باشد. یک حمله موفقیت آمیز در سیستم قربانی پایداری خواهد داشت حتی اگر سیستم عامل دوباره نصب شود و/یا اگر مؤلفه فرمت شده باشد یا داده های آن پاک شود.",
+            "name_fa": "سیستم عامل اجزای تغییر یافته",
+            "x_capec_example_instances_fa": [
+                "در سال 2014، گروه Equation مشاهده شد که از ابزارهای بدافزار شناخته شده برای انجام حملات تغییر سفت‌افزار مؤلفه‌ها علیه دیسک‌های سخت استفاده می‌کند. در مجموع، 12 دسته HDD از تولیدکنندگانی مانند Western Digital، HGST، Samsung و Seagate آسیب پذیر بودند. به دلیل پیچیدگی آنها، تنها تعداد کمی از قربانیان هدف این حملات قرار گرفتند. [REF-664]"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>انتخاب هدف: </b>دشمن به دنبال هدف مناسبی برای حمله می‌گردد، مانند سازمان‌های دولتی و/یا صنعتی خصوصی. اهداف مورد سوء استفاده قرار گیرد.</td></tr></tbody></table><li> <p> <b>شناسایی مؤلفه ها: </b>پس از انتخاب یک هدف، حریف تعیین می کند که آیا یک جزء آسیب پذیر، مانند یک ساخت و مدل خاص از یک HDD، در هدف موجود است یا خیر. سیستم.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>[بردار دسترسی از راه دور] حریف معمولاً از طریق بدافزار اضافی، به هدف دسترسی از راه دور به دست می‌آورد و سیستم را برای تعیین اجزای سخت‌افزاری که مورد استفاده قرار می‌گیرند، تعیین می‌کند. اگر کامپوننت در برابر حمله آسیب‌پذیر باشد.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>اختیاری: ایجاد Payload: </b>اگر از یک payload از قبل موجود استفاده نمی‌کند، حریف فرآیندهای خود را ایجاد می‌کند تا در سیستم بوت تعریف شده اجرا شوند. سپس ممکن است این بار بر روی سیستم هدف یا یک سیستم آزمایشی آزمایش شود تا عملکرد آن تأیید شود.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Insert Firmware Altering Malware: </b>هنگامی که یک جزء آسیب پذیر شناسایی شد، ابزارهای مخرب در داخل ابزارهای متخاصم اهرم‌های بارگذاری شناخته شده را کاهش می‌دهند. MBR جزء این به حریف اجازه می‌دهد تا روی هدف پایداری داشته باشد و بدون شناسایی، محموله را اجرا کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن بدافزار تغییردهنده نرم‌افزار را از طریق استفاده از ابزارهای بدافزار شناخته‌شده وارد می‌کند.</td></tr>Accessary Vectors مؤلفه به مقصد مورد نظر اصلی خود، جایی که بر روی یک سیستم قربانی نصب خواهد شد.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "دانش پیشرفته در مورد سیستم عامل جزء هدف",
+                "دانش پیشرفته در مورد Master Boot Records (MBR)",
+                "دانش پیشرفته در مورد ابزارهای مورد استفاده برای قرار دادن بدافزار تغییر دهنده سیستم عامل.",
+                "دانش پیشرفته در مورد ارسال قطعات به سازمان هدف."
+            ],
+            "x_capec_resources_required_fa": [
+                "کد منبع سازنده برای قطعات سخت افزاری.",
+                "ابزارهای بدافزاری که برای وارد کردن بدافزار و بارگذاری بر روی جزء هدف استفاده می‌شوند.",
+                "دسترسی از راه دور یا فیزیکی به جزء هدف."
+            ]
         }
     ],
     "spec_version": "2.0",

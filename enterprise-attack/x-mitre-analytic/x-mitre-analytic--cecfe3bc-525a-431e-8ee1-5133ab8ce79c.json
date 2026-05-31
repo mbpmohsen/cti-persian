@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0356#AN1012",
-                    "external_id": "AN1012"
+                    "external_id": "AN1012",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for burst traffic over short period (e.g., 30s - 2min)"
+                    "description": "Threshold for burst traffic over short period (e.g., 30s - 2min)",
+                    "description_fa": "آستانه برای ترافیک متوالی در مدت کوتاه (به عنوان مثال، 30 ثانیه - 2 دقیقه)"
                 },
                 {
                     "field": "ConnectionRateThreshold",
-                    "description": "SYN/ACK packet rate threshold that triggers investigation"
+                    "description": "SYN/ACK packet rate threshold that triggers investigation",
+                    "description_fa": "آستانه نرخ بسته SYN/ACK که بررسی را آغاز می کند"
                 },
                 {
                     "field": "ProcessParentCheck",
-                    "description": "Whether parent process of flooding tool is a known admin shell or unexpected context"
+                    "description": "Whether parent process of flooding tool is a known admin shell or unexpected context",
+                    "description_fa": "آیا فرآیند والد ابزار flooding یک پوسته مدیریت شناخته شده است یا زمینه غیرمنتظره"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1012",
+            "description_fa": "انبوه دست دادن‌های ناقص TCP (مانند سیل SYN) یا بسته‌های ACK نامرتبط که جدول حالت را هدف قرار می‌دهند که منجر به فرسودگی منابع سیستم‌عامل می‌شود."
         }
     ]
 }

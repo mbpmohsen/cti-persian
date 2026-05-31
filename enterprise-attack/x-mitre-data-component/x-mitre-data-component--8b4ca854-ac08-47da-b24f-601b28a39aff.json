@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0026",
-                    "external_id": "DC0026"
+                    "external_id": "DC0026",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -28,7 +29,9 @@
                 "enterprise-attack"
             ],
             "x_mitre_version": "2.0",
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "name_fa": "حذف تصویر",
+            "description_fa": "حذف تصویر ماشین مجازی در زیرساخت ابری (مثلاً: تصاویر سرویس محاسباتی Azure DELETE) مثال‌ها: \n\n- حذف تصویر سرویس محاسباتی Azure\n    - مثال: حذف تصویر ماشین مجازی با استفاده از Azure CLI: `az image delete --name MyImage --resource-group MyResourceGroup`\n- حذف AWS EC2 AMI (تصویر ماشین آمازون).\n    - مثال: لغو ثبت یک AMI در AWS: `aws ec2 deregister-image --image-id ami-1234567890abcdef0`\n- Google Cloud Compute Engine حذف تصویر\n    - مثال: حذف یک تصویر سفارشی در Google Cloud: `gcloud compute images delete my-custom-image`\n- VMware vSphere\n    - مثال: حذف یک تصویر/الگوی VM از محیط vSphere:\n\nاین مؤلفه داده را می توان از طریق اقدامات زیر جمع آوری کرد:\n\nورود به سیستم Cloud Platform را فعال کنید\n\n- Azure: برای ثبت درخواست‌های DELETE به «Microsoft.Compute/images» «Activity Logs» را فعال کنید.\n- AWS: از AWS CloudTrail برای نظارت بر تماس‌های API «DeregisterImage» یا «DeleteSnapshot» استفاده کنید.\n- Google Cloud: برای ردیابی رویدادهای حذف تصویر در «compute.googleapis.com/images»، «Cloud Audit Logs» را فعال کنید.\n\nمانیتورینگ API\n\n- نظارت بر فعالیت API برای پیگیری حذف تصاویر با استفاده از:\n    - AWS SDK/CLI «DeregisterImage» یا «DeleteSnapshot».\n    - عملیات Azure REST API DELETE برای تصاویر.\n    - APIهای Google Cloud Compute Engine برای حذف تصویر.\n\nیکپارچه سازی ابر SIEM\n\n- ورود گزارش‌ها به یک پلت فرم متمرکز SIEM برای نظارت و هشدار:\n\nهمبستگی رویداد\n\n- رویدادهای حذف تصویر را با فعالیت غیرمعمول حساب یا عملیات غیرمجاز همزمان مرتبط کنید."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0305#AN0854",
-                    "external_id": "AN0854"
+                    "external_id": "AN0854",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,25 +63,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ObjectDN",
-                    "description": "Focus detection on AD paths like CN=Policies,CN=System,DC=domain,DC=com."
+                    "description": "Focus detection on AD paths like CN=Policies,CN=System,DC=domain,DC=com.",
+                    "description_fa": "تشخیص تمرکز بر روی مسیرهای AD مانند CN=Policies,CN=System,DC=domain,DC=com."
                 },
                 {
                     "field": "TargetFilename",
-                    "description": "Target specific files like ScheduledTasks.xml or GptTmpl.inf in SYSVOL."
+                    "description": "Target specific files like ScheduledTasks.xml or GptTmpl.inf in SYSVOL.",
+                    "description_fa": "فایل های خاصی مانند ScheduledTasks.xml یا GptTmpl.inf را در SYSVOL مورد هدف قرار دهید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate GPO object change and SYSVOL file modification within N seconds."
+                    "description": "Correlate GPO object change and SYSVOL file modification within N seconds.",
+                    "description_fa": "تغییر شی GPO و اصلاح فایل SYSVOL را در عرض N ثانیه به هم مرتبط کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Alert on unexpected modification by non-admins or uncommon accounts."
+                    "description": "Alert on unexpected modification by non-admins or uncommon accounts.",
+                    "description_fa": "هشدار در مورد تغییر غیرمنتظره توسط غیر سرپرست یا حساب های غیر معمول."
                 },
                 {
                     "field": "CommandLine",
-                    "description": "Flag usage of GPO manipulation tools like Set-GPRegistryValue, New-GPOImmediateTask."
+                    "description": "Flag usage of GPO manipulation tools like Set-GPRegistryValue, New-GPOImmediateTask.",
+                    "description_fa": "پرچم گذاری استفاده از ابزارهای دستکاری GPO مانند Set-GPRegistryValue، New-GPOImmediateTask."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0854",
+            "description_fa": "دشمن با استفاده از ابزارهای LDAP، ADSI، PowerShell (به عنوان مثال، New-GPOImmediateTask) یا GUI، ظروف یا فایل‌های GPO را تحت SYSVOL تغییر می‌دهد. این شامل تغییرات شی دایرکتوری (به عنوان مثال، gPCFileSysPath)، واگذاری‌ها (SeEnableDelegationPrivilege)، و نوشتن فایل SYSVOL (ScheduledTasks.xml، GptTmpl.inf) می‌شود."
         }
     ]
 }

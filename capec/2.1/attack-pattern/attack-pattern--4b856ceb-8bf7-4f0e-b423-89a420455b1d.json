@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-256",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/256.html"
+                    "url": "https://capec.mitre.org/data/definitions/256.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-805",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/805.html"
+                    "url": "http://cwe.mitre.org/data/definitions/805.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "SOAP Array Abuse",
                     "external_id": "35",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/SOAP-Array-Abuse"
+                    "url": "http://projects.webappsec.org/SOAP-Array-Abuse",
+                    "description_fa": "سوء استفاده از آرایه SOAP",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Robin Cover, ed., XML and Web Services In The News, XML Daily Newslink",
                     "external_id": "REF-102",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.xml.org/xml/news/archives/archive.11292006.shtml"
+                    "url": "http://www.xml.org/xml/news/archives/archive.11292006.shtml",
+                    "description_fa": "رابین کاور، ویرایش، XML و خدمات وب در اخبار، XML Daily Newslink",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Simple Object Access Protocol (SOAP) 1.1, 2006--11---29, W3C",
                     "external_id": "REF-103",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383522"
+                    "url": "http://www.w3.org/TR/2000/NOTE-SOAP-20000508/#_Toc478383522",
+                    "description_fa": "پروتکل دسترسی به شی ساده (SOAP) 1.1، 2006--11---29، W3C",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--4b856ceb-8bf7-4f0e-b423-89a420455b1d",
@@ -59,7 +67,16 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم یک درخواست SOAP را با آرایه ای ارسال می کند که طول واقعی آن از طول نشان داده شده در درخواست بیشتر است. اگر سروری که انتقال را پردازش می کند ساده لوحانه به اندازه مشخص شده اعتماد کند، مهاجم می تواند عمداً اندازه آرایه را کمتر از حد اعلام کند و اگر سرور تلاش کند کل مجموعه داده را در حافظه ای که برای یک آرایه کوچکتر اختصاص داده است بخواند، احتمالاً منجر به سرریز بافر می شود.",
+            "name_fa": "سرریز آرایه SOAP",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه هدف: </b> دشمن برنامه هدف را برای اجرای سرریز بافر در آن شناسایی می کند. در این حمله، دشمنان به دنبال برنامه‌هایی می‌گردند که از SOAP به عنوان مکانیزم ارتباطی استفاده می‌کنند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>پیدا کردن بردار تزریق: </b>دشمن یک بردار تزریق را شناسایی می‌کند تا محتوای بیش از حد برنامه مورد نظر را به برنامه ارسال کند. بافر.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>دشمن یک پیام SOAP ایجاد می کند که به اشتباه اندازه آرایه خود را کوچکتر از اندازه محتوای واقعی با یک حاشیه بزرگ مشخص می کند و آن را به برنامه ارسال می کند. اگر این باعث خرابی یا رفتار ناخواسته شود، احتمالاً این یک بردار تزریق معتبر است.</td></tr></tbody></table><li> <p> <b>محتوای سرریز کاردستی: </b>دشمن محتوایی را که باید تزریق شود ایجاد می‌کند. اگر هدف این است که به سادگی باعث از کار افتادن نرم افزار شود، محتوا فقط باید از مقدار بیش از حد داده های تصادفی تشکیل شود. اگر قصد استفاده از سرریز برای اجرای کد دلخواه باشد، حریف محموله را به گونه‌ای طراحی می‌کند که آدرس بازگشتی رونویسی شده با یکی از گزینه‌های دشمن جایگزین می‌شود. آن را.</td></tr><tr><td>از یک سورتمه NOP در محتوای سرریز استفاده کنید تا راحت‌تر به کد مخرب \"اسلاید\" کنید. این کار به این دلیل انجام می‌شود که آدرس برگشتی دقیق لازم نباشد، فقط در محدوده همه NOPها باشد</td></tr><tr><td> دشمن یک نوع SOAP را انتخاب می‌کند که به آنها اجازه می‌دهد هنگام خواندن آرایه در برنامه، کد پوسته را در بافر قرار دهند.</td></tr></tbody></table></ol></3hExv> <b>سرریز کردن بافر: </b> با استفاده از بردار تزریق، حریف پیام SOAP ساخته شده را به برنامه می فرستد و بافر را سرریز می کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "سرور SOAP مورد نظر باید اطمینان داشته باشد که اندازه آرایه همانطور که در پیام هایی که دریافت می کند صحیح است، اما تمام محتوای پیام را بدون توجه به اندازه بیان شده آرایه مطالعه کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "مهاجم باید بتواند پیام‌های SOAP نادرست را ایجاد کند، به‌ویژه پیام‌هایی با آرایه‌هایی که اندازه آرایه اعلام‌شده اندازه واقعی آرایه در پیام را کمتر نشان می‌دهد."
+            ]
         }
     ],
     "type": "bundle"

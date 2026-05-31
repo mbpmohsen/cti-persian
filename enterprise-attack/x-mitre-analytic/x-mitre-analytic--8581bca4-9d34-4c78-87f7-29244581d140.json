@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0194#AN0558",
-                    "external_id": "AN0558"
+                    "external_id": "AN0558",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CPLPathRegex",
-                    "description": "Regex to match CPL file paths; tune to exclude legitimate CPLs in System32"
+                    "description": "Regex to match CPL file paths; tune to exclude legitimate CPLs in System32",
+                    "description_fa": "Regex برای مطابقت با مسیرهای فایل CPL. برای حذف CPLهای قانونی در System32 تنظیم کنید"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Helps filter known parent processes that legitimately use control.exe"
+                    "description": "Helps filter known parent processes that legitimately use control.exe",
+                    "description_fa": "به فیلتر کردن فرآیندهای والد شناخته شده ای که به طور قانونی از control.exe استفاده می کنند کمک می کند"
                 },
                 {
                     "field": "NewFileTimeWindow",
-                    "description": "Time delta between CPL file creation and execution to detect rapid execution of newly dropped files"
+                    "description": "Time delta between CPL file creation and execution to detect rapid execution of newly dropped files",
+                    "description_fa": "دلتای زمانی بین ایجاد و اجرای فایل CPL برای تشخیص اجرای سریع فایل‌های تازه حذف شده"
                 },
                 {
                     "field": "RegistryKeyAllowlist",
-                    "description": "Whitelist of known good CPL registry entries"
+                    "description": "Whitelist of known good CPL registry entries",
+                    "description_fa": "لیست سفید ورودی های رجیستری CPL خوب شناخته شده"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0558",
+            "description_fa": "اجرای control.exe یا rundll32.exe با پارامترهایی که به فایل‌های CPL اشاره می‌کنند، به‌ویژه از دایرکتوری‌های غیراستاندارد یا فایل‌های تازه ایجاد شده، و به دنبال آن اجرای فرآیند فرزند مشکوک یا تغییرات رجیستری با ثبت موارد جدید کنترل پنل."
         }
     ]
 }

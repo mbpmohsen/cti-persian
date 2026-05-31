@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0382#AN1076",
-                    "external_id": "AN1076"
+                    "external_id": "AN1076",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HollowedImageNamePattern",
-                    "description": "Regex to match common decoy executables used for hollowing (e.g., 'svchost.exe', 'notepad.exe')"
+                    "description": "Regex to match common decoy executables used for hollowing (e.g., 'svchost.exe', 'notepad.exe')",
+                    "description_fa": "Regex برای تطبیق با فایل‌های اجرایی فریبنده رایج مورد استفاده برای توخالی کردن (مانند 'svchost.exe'، 'notepad.exe')"
                 },
                 {
                     "field": "TimeWindow_ProcessCreateToResume",
-                    "description": "Temporal threshold for unmap/write/execute sequence (e.g., within 5\u201310 seconds)"
+                    "description": "Temporal threshold for unmap/write/execute sequence (e.g., within 5–10 seconds)",
+                    "description_fa": "آستانه زمانی برای توالی نقشه برداری/نوشتن/اجرا (به عنوان مثال، در عرض 5 تا 10 ثانیه)"
                 },
                 {
                     "field": "SuspendedProcessStartFlag",
-                    "description": "CreateProcess flag used to identify suspended thread creation"
+                    "description": "CreateProcess flag used to identify suspended thread creation",
+                    "description_fa": "پرچم CreateProcess برای شناسایی ایجاد رشته معلق استفاده می شود"
                 },
                 {
                     "field": "MemoryWriteSizeThreshold",
-                    "description": "Minimum byte size to flag suspicious memory overwrite in hollowed process"
+                    "description": "Minimum byte size to flag suspicious memory overwrite in hollowed process",
+                    "description_fa": "حداقل اندازه بایت برای علامت گذاری بازنویسی حافظه مشکوک در فرآیند توخالی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1076",
+            "description_fa": "استفاده دشمن از ایجاد فرآیند تعلیق شده را با استفاده از پرچم CREATE_SUSPENDED از طریق CreateProcess شناسایی می کند، و سپس حافظه پردازش فرزند (NtUnmapViewOfSection) را حذف می کند و آن را با کد مخرب جایگزین می کند از طریق VirtualAllocEx/WriteProcessMemory، سپس SetsumTontexreadreadContexTehread. فرآیند توخالی"
         }
     ]
 }

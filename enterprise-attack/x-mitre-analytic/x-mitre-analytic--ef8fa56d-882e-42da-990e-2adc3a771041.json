@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0179#AN0509",
-                    "external_id": "AN0509"
+                    "external_id": "AN0509",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLine",
-                    "description": "Filters for suspicious execution of 'dscl . -read /Groups', etc."
+                    "description": "Filters for suspicious execution of 'dscl . -read /Groups', etc.",
+                    "description_fa": "فیلترهایی برای اجرای مشکوک 'dscl . -خواندن /گروه ها و غیره"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Flag group enumeration from automation tools (e.g., LaunchAgents or suspicious apps)."
+                    "description": "Flag group enumeration from automation tools (e.g., LaunchAgents or suspicious apps).",
+                    "description_fa": "شماره گذاری گروه را از ابزارهای اتوماسیون (به عنوان مثال، LaunchAgents یا برنامه های مشکوک) علامت گذاری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0509",
+            "description_fa": "بررسی عضویت گروه از طریق «dscl»، «dscacheutil» یا «id»، معمولاً از طریق ترمینال یا اسکریپت‌های اتوماسیون انجام می‌شود."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0672#AN1770",
-                    "external_id": "AN1770"
+                    "external_id": "AN1770",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,41 +63,52 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking app state, resource use, staging activity, and web-service communication."
+                    "description": "Correlation window linking app state, resource use, staging activity, and web-service communication.",
+                    "description_fa": "پنجره همبستگی که وضعیت برنامه، استفاده از منابع، فعالیت مرحله‌بندی و ارتباطات وب سرویس را به هم مرتبط می‌کند."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved app identities and expected business roles vary by fleet and device group."
+                    "description": "Approved app identities and expected business roles vary by fleet and device group.",
+                    "description_fa": "هویت برنامه‌های تأیید شده و نقش‌های تجاری مورد انتظار براساس ناوگان و گروه دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedServiceClasses",
-                    "description": "Some organizations legitimately use cloud storage, messaging, or collaboration services from mobile apps."
+                    "description": "Some organizations legitimately use cloud storage, messaging, or collaboration services from mobile apps.",
+                    "description_fa": "برخی از سازمان‌ها به طور قانونی از فضای ذخیره‌سازی ابری، پیام‌رسانی یا سرویس‌های همکاری از برنامه‌های تلفن همراه استفاده می‌کنند."
                 },
                 {
                     "field": "AllowedDestinations",
-                    "description": "Expected domains, SNI values, CDNs, API endpoints, and redirectors vary by application and tenant."
+                    "description": "Expected domains, SNI values, CDNs, API endpoints, and redirectors vary by application and tenant.",
+                    "description_fa": "دامنه های مورد انتظار، مقادیر SNI، CDN ها، نقاط پایانی API و تغییر مسیرها بر اساس برنامه کاربردی و مستاجر متفاوت است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Certain apps may legitimately communicate only in foreground, while others support background sync."
+                    "description": "Certain apps may legitimately communicate only in foreground, while others support background sync.",
+                    "description_fa": "برخی از برنامه ها ممکن است به طور قانونی فقط در پیش زمینه ارتباط برقرار کنند، در حالی که برخی دیگر از همگام سازی پس زمینه پشتیبانی می کنند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close traffic must be to user activity to be considered expected."
+                    "description": "Defines how close traffic must be to user activity to be considered expected.",
+                    "description_fa": "مشخص می کند که ترافیک چقدر باید به فعالیت کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "BeaconIntervalTolerance",
-                    "description": "Recurring connection periodicity thresholds vary with push, sync, and collaboration workloads."
+                    "description": "Recurring connection periodicity thresholds vary with push, sync, and collaboration workloads.",
+                    "description_fa": "آستانه تناوب اتصال مکرر با حجم کاری فشار، همگام سازی و همکاری متفاوت است."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Data volume threshold for suspicious transfer to legitimate web-service infrastructure."
+                    "description": "Data volume threshold for suspicious transfer to legitimate web-service infrastructure.",
+                    "description_fa": "آستانه حجم داده برای انتقال مشکوک به زیرساخت خدمات وب قانونی."
                 },
                 {
                     "field": "ExpectedBackgroundBehavior",
-                    "description": "Normal background communication differs across app categories such as mail, chat, navigation, and security tools."
+                    "description": "Normal background communication differs across app categories such as mail, chat, navigation, and security tools.",
+                    "description_fa": "ارتباطات پس‌زمینه عادی در دسته‌های برنامه‌ها مانند ایمیل، چت، ناوبری و ابزارهای امنیتی متفاوت است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1770",
+            "description_fa": "مدافع ارتباطات خروجی از یک برنامه یا سرویس را به پلتفرم‌های وب خارجی قانونی با زمینه زمان اجرا موبایل مرتبط می‌کند و نشان می‌دهد که ارتباط با نقش تأیید شده برنامه، مقصدهای مورد انتظار، الگوی تعامل کاربر یا وضعیت دستگاه ناسازگار است. قوی‌ترین شواهد اندروید یک برنامه مدیریت‌شده یا نصب‌شده است که با فضای ذخیره‌سازی ابری، شبکه اجتماعی، پیام‌رسانی، میزبانی کد یا زیرساخت سرویس وب عمومی HTTPS در مدت کوتاهی پس از فعال‌سازی پس‌زمینه، استفاده از منابع محافظت‌شده، یا فعالیت مرحله‌بندی محلی، ارتباط برقرار می‌کند، به‌ویژه زمانی که دستگاه قفل است، تعامل کاربر وجود ندارد، یا خط پایه شبکه تاریخی برنامه شامل آن سرویس نمی‌شود."
         }
     ]
 }

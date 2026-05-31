@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0094#AN0261",
-                    "external_id": "AN0261"
+                    "external_id": "AN0261",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ContainerLabel",
-                    "description": "Labels or tags indicating dev/test containers executing scheduled tasks."
+                    "description": "Labels or tags indicating dev/test containers executing scheduled tasks.",
+                    "description_fa": "برچسب‌ها یا برچسب‌هایی که نشان‌دهنده ظروف برنامه‌نویس/آزمایشی هستند که وظایف زمان‌بندی شده را اجرا می‌کنند."
                 },
                 {
                     "field": "ScriptFrequency",
-                    "description": "Repetitive invocation pattern within short container lifespan."
+                    "description": "Repetitive invocation pattern within short container lifespan.",
+                    "description_fa": "الگوی فراخوانی تکراری در طول عمر ظرف کوتاه."
                 },
                 {
                     "field": "ImageSource",
-                    "description": "Unexpected container image sources creating cron entries."
+                    "description": "Unexpected container image sources creating cron entries.",
+                    "description_fa": "منابع تصویر کانتینر غیرمنتظره ورودی‌های cron را ایجاد می‌کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0261",
+            "description_fa": "استفاده غیرعادی از حلقه‌های «cron» یا «sleep» را در داخل کانتینرهایی که اسکریپت‌ها یا باینری‌های ناآشنا را به طور مکرر اجرا می‌کنند، تشخیص می‌دهد."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0617#AN1676",
-                    "external_id": "AN1676"
+                    "external_id": "AN1676",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +47,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
                     "name": "MobileEDR:telemetry",
-                    "channel": "DeviceLockState=locked or BackgroundRefresh active during resolver\u2192pivot sequence"
+                    "channel": "DeviceLockState=locked or BackgroundRefresh active during resolver→pivot sequence"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--55c669d9-b42a-4cf6-a38a-07161b228ce9",
@@ -56,7 +57,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
                     "name": "iOS:MDMLog",
-                    "channel": "Bundle performing resolver\u2192pivot sequence not present in approved managed-app baseline or lacks expected service relationship"
+                    "channel": "Bundle performing resolver→pivot sequence not present in approved managed-app baseline or lacks expected service relationship"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
@@ -67,25 +68,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum allowed time between resolver retrieval and pivot connection."
+                    "description": "Maximum allowed time between resolver retrieval and pivot connection.",
+                    "description_fa": "حداکثر زمان مجاز بین بازیابی حل‌کننده و اتصال محوری."
                 },
                 {
                     "field": "NewDomainThreshold",
-                    "description": "Defines rarity or novelty of domain for the device or bundle."
+                    "description": "Defines rarity or novelty of domain for the device or bundle.",
+                    "description_fa": "نادر بودن یا جدید بودن دامنه را برای دستگاه یا بسته تعریف می کند."
                 },
                 {
                     "field": "AllowedServiceToDestinationMapping",
-                    "description": "Expected relationships between apps and external services."
+                    "description": "Expected relationships between apps and external services.",
+                    "description_fa": "روابط مورد انتظار بین برنامه ها و سرویس های خارجی."
                 },
                 {
                     "field": "BackgroundRefreshBaseline",
-                    "description": "Expected background network behavior for managed apps."
+                    "description": "Expected background network behavior for managed apps.",
+                    "description_fa": "رفتار شبکه پس‌زمینه مورد انتظار برای برنامه‌های مدیریت‌شده."
                 },
                 {
                     "field": "UserInteractionThreshold",
-                    "description": "Defines acceptable timing between user activity and network requests."
+                    "description": "Defines acceptable timing between user activity and network requests.",
+                    "description_fa": "زمان قابل قبولی را بین فعالیت کاربر و درخواست های شبکه تعریف می کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1676",
+            "description_fa": "مدافع یک درخواست دستگاه تحت نظارت یا برنامه مدیریت شده را با یک پلت فرم وب قانونی با اتصال بعدی به مقصد تازه مشتق شده که بخشی از تعامل خدمات مورد انتظار نیست، مرتبط می کند. از آنجایی که iOS تله متری در سطح برنامه ضعیف تری دارد، قوی ترین سیگنال یک توالی در سطح شبکه است که در آن درخواست به یک پلتفرم عمومی شناخته شده بلافاصله با اتصال به دامنه یا IP دیگری دنبال می شود، به ویژه زمانی که دستگاه قفل است، هیچ تعامل اخیر با کاربر رخ نداده است، و انتظار نمی رود که بسته با چنین زیرساخت پایین دستی تعامل داشته باشد."
         }
     ]
 }

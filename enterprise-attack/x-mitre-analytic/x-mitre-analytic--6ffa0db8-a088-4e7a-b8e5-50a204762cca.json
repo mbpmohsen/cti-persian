@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0520#AN1438",
-                    "external_id": "AN1438"
+                    "external_id": "AN1438",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "The time window used to correlate log file interaction and suspicious command execution."
+                    "description": "The time window used to correlate log file interaction and suspicious command execution.",
+                    "description_fa": "پنجره زمانی مورد استفاده برای ارتباط تعامل فایل لاگ و اجرای فرمان مشکوک."
                 },
                 {
                     "field": "LogFilePathPattern",
-                    "description": "Regex pattern used to match monitored log file paths (e.g., /var/log/auth.log)."
+                    "description": "Regex pattern used to match monitored log file paths (e.g., /var/log/auth.log).",
+                    "description_fa": "الگوی Regex برای مطابقت با مسیرهای فایل گزارش نظارت شده (به عنوان مثال /var/log/auth.log) استفاده می شود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "User or group (e.g., root) that should trigger higher severity detection."
+                    "description": "User or group (e.g., root) that should trigger higher severity detection.",
+                    "description_fa": "کاربر یا گروهی (مثلاً ریشه) که باید تشخیص با شدت بیشتری را آغاز کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1438",
+            "description_fa": "رفتار پاکسازی گزارش را با همبستگی اجرای دستور مشکوک با هدف قرار دادن فایل‌های گزارش تحت /var/log/، حذف یا برش غیرعادی گزارش‌های سیستم، و فرآیندهای فرزند غیرمعمول (مانند خطوط لوله پوسته یا تغییر مسیرها) شناسایی می‌کند."
         }
     ]
 }

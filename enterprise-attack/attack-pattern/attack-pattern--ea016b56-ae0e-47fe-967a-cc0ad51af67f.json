@@ -14,28 +14,28 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/008",
                     "external_id": "T1055.008",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "BH Linux Inject",
                     "description": "Colgan, T. (2015, August 15). Linux-Inject. Retrieved February 21, 2020.",
                     "url": "https://github.com/gaffe23/linux-inject/blob/master/slides_BHArsenal2015.pdf",
                     "source_name_fa": "BH Linux Inject",
-                    "description_fa": "کولگان، T. (2015، 15 آگوست) Linux-Inject Retrieved 21 فوریه 2020"
+                    "description_fa": "Colgan, T. (2015, 15 اوت). Linux-Inject. بازبینی شده در 21 فوریه 2020."
                 },
                 {
                     "source_name": "Medium Ptrace JUL 2018",
                     "description": "Jain, S. (2018, July 25). Code injection in running process using ptrace. Retrieved February 21, 2020.",
                     "url": "https://medium.com/@jain.sm/code-injection-in-running-process-using-ptrace-d3ea7191a4be",
-                    "source_name_fa": "مسابقه متوسط JUL 2018",
-                    "description_fa": "Jain، S. (2018، 25 ژوئیه) تزریق کد در فرآیند دویدن با استفاده از ptrace Retrieved 21 فوریه 2020"
+                    "source_name_fa": "Medium Ptrace جولای 2018",
+                    "description_fa": "جین، اس. (2018، 25 ژوئیه). تزریق کد در فرآیند در حال اجرا با استفاده از ptrace. بازبینی شده در 21 فوریه 2020."
                 },
                 {
                     "source_name": "PTRACE man",
                     "description": "Kerrisk, M. (2020, February 9). PTRACE(2) - Linux Programmer's Manual. Retrieved February 21, 2020.",
                     "url": "http://man7.org/linux/man-pages/man2/ptrace.2.html",
-                    "source_name_fa": "دانلود فیلم PTRACE Man",
-                    "description_fa": "Kerrisk، M. (2020، فوریه 9) PTRACE (2) - راهنمای لینوکس Retrieved 21 فوریه 2020"
+                    "source_name_fa": "مرد PTRACE",
+                    "description_fa": "کریسک، ام. (2020، 9 فوریه). PTRACE(2) - راهنمای برنامه نویس لینوکس. بازبینی شده در 21 فوریه 2020."
                 }
             ],
             "object_marking_refs": [
@@ -65,8 +65,8 @@
                 "Linux"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "سیستم Ptrace Calls",
-            "description_fa": "مخالفان ممکن است کد مخرب را به فرآیندها از طریق سیستم ptrace (فرآیند ردیابی) تزریق کنند تا از دفاع مبتنی بر فرایند و همچنین احتمالا امتیازات را بالا ببرند. تزریق سیستم Ptrace یک روش برای اجرای کد دلخواه در فضای آدرس یک فرآیند جداگانه است.\n\nتزریق تماس سیستم Ptrace شامل اتصال به و اصلاح یک فرآیند دویدن است. فراخوان سیستم ptrace یک فرآیند اشکال زدایی را برای مشاهده و کنترل فرایند دیگری (و هر رشته فردی)، از جمله تغییر حافظه و ارزش های ثبت شده فراهم می کند. [CTI_PRESERVE_4] سیستم Ptrace به طور معمول با نوشتن کد دلخواه در یک فرایند اجرا (ex: [CTI_PRESERVE_0] انجام می شود و سپس آن را با استفاده از حافظه (CTI_PRESERVE). سیستم Ptrace نیز می تواند با استفاده از [CTI_PRESERVE_2] / [[CTI_PRESERVE_3] انجام شود، که داده ها را به یک آدرس خاص در حافظه فرآیندهای هدف (ex: آدرس فعلی آموزش بعدی). [[ویرایش]\n\nتزریق تماس سیستم Ptrace ممکن است فرایند هایی را هدف قرار دهد که فرآیندهای غیر کودک هستند و یا دارای اولویت بالاتری هستند.\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق تزریق تماس با سیستم ptrace نیز ممکن است از تشخیص از محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. <code>malloc</code> <code>PTRACE_SETREGS</code> <code>PTRACE_POKETEXT</code> <code>PTRACE_POKEDATA</code> (Citation: PTRACE man) (Citation: PTRACE man) (Citation: Medium Ptrace JUL 2018) (Citation: BH Linux Inject)"
+            "name_fa": "تماس های سیستم Ptrace",
+            "description_fa": "دشمنان ممکن است از طریق فراخوانی های سیستم ptrace (ردیابی فرآیند) کدهای مخرب را به فرآیندها تزریق کنند تا از دفاع های مبتنی بر فرآیند و همچنین احتمالاً افزایش امتیازات فرار کنند. تزریق فراخوانی سیستم Ptrace روشی برای اجرای کد دلخواه در فضای آدرس یک فرآیند زنده جداگانه است. \n\nتزریق فراخوانی سیستم Ptrace شامل اتصال و اصلاح یک فرآیند در حال اجرا است. فراخوانی سیستم ptrace فرآیند اشکال‌زدایی را قادر می‌سازد تا فرآیند دیگری (و هر رشته جداگانه) را مشاهده و کنترل کند، از جمله تغییر مقادیر حافظه و ثبت. ثبات حاوی دستور بعدی برای اجرا. تزریق فراخوانی سیستم Ptrace همچنین می‌تواند با <code>PTRACE_POKETEXT</code>/<code>PTRACE_POKEDATA</code> انجام شود، که داده‌ها را در یک آدرس خاص در حافظه پردازش‌های هدف کپی می‌کند (مثلاً آدرس فعلی دستورالعمل بعدی). (Citation: PTRACE man)(Citation: Medium Ptrace JUL 2018) \n\nتزریق فراخوانی سیستم Ptrace ممکن است فرآیندهایی را که فرآیندهای غیرکودک هستند و/یا دارای امتیازات بالاتری هستند، هدف قرار ندهد.(Citation: BH Linux Inject) \n\nاجرای کد در زمینه یک فرآیند دیگر ممکن است امکان دسترسی به حافظه فرآیند، منابع سیستم/شبکه و احتمالاً امتیازات بالاتر را فراهم کند. اجرای از طریق تزریق فراخوانی سیستم ptrace نیز ممکن است از شناسایی محصولات امنیتی جلوگیری کند زیرا اجرا تحت یک فرآیند قانونی پنهان شده است. <code>malloc</code> <code>PTRACE_SETREGS</code> (Citation: PTRACE man)"
         }
     ]
 }

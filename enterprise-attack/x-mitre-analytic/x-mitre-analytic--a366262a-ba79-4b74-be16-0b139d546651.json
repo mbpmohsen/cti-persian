@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0269#AN0751",
-                    "external_id": "AN0751"
+                    "external_id": "AN0751",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SourceIP",
-                    "description": "Limit to new/unexpected SSH source IPs"
+                    "description": "Limit to new/unexpected SSH source IPs",
+                    "description_fa": "محدود به IP های منبع SSH جدید/غیرمنتظره"
                 },
                 {
                     "field": "CommandList",
-                    "description": "Flag suspicious post-SSH command patterns"
+                    "description": "Flag suspicious post-SSH command patterns",
+                    "description_fa": "الگوهای فرمان مشکوک پس از SSH را پرچم گذاری کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0751",
+            "description_fa": "جلسه SSH از IP منبع جدید و به دنبال آن افزایش پوسته یا امتیازات تعاملی (به عنوان مثال، sudo، su) و اتصال جانبی خروجی."
         }
     ]
 }

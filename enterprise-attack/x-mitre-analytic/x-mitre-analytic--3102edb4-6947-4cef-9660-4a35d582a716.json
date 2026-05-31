@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0208#AN0584",
-                    "external_id": "AN0584"
+                    "external_id": "AN0584",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Number of service crashes or high-CPU events within a defined time period"
+                    "description": "Number of service crashes or high-CPU events within a defined time period",
+                    "description_fa": "تعداد خرابی سرویس یا رویدادهای CPU بالا در یک بازه زمانی مشخص"
                 },
                 {
                     "field": "ServiceTarget",
-                    "description": "Specific service name or executable targeted for DoS (e.g., svchost.exe, w3wp.exe)"
+                    "description": "Specific service name or executable targeted for DoS (e.g., svchost.exe, w3wp.exe)",
+                    "description_fa": "نام سرویس خاص یا فایل اجرایی مورد نظر برای DoS (مانند svchost.exe، w3wp.exe)"
                 },
                 {
                     "field": "CPUThresholdPercent",
-                    "description": "CPU usage percent considered anomalous over duration"
+                    "description": "CPU usage percent considered anomalous over duration",
+                    "description_fa": "درصد استفاده از CPU در طول مدت غیرعادی در نظر گرفته می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0584",
+            "description_fa": "فرسودگی بیش از حد منابع یا خرابی سرویس ناشی از فرآیندهای راه‌اندازی شده توسط کاربران یا اسکریپت‌هایی که به‌سرعت CPU/حافظه را مصرف می‌کنند یا تلاش می‌کنند تا تعاملات سرویس نادرست داشته باشند."
         }
     ]
 }

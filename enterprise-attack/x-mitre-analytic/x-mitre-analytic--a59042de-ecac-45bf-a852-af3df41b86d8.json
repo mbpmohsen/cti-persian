@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0440#AN1220",
-                    "external_id": "AN1220"
+                    "external_id": "AN1220",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineRegex",
-                    "description": "Detects embedded PowerShell commands in SyncAppvPublishingServer.vbs invocation, e.g., `{powershell -nop -enc ...}`"
+                    "description": "Detects embedded PowerShell commands in SyncAppvPublishingServer.vbs invocation, e.g., `{powershell -nop -enc ...}`",
+                    "description_fa": "دستورات جاسازی شده PowerShell را در فراخوانی SyncAppvPublishingServer.vbs، به عنوان مثال، «{powershell -nop -enc ...}» تشخیص می‌دهد."
                 },
                 {
                     "field": "ScriptInterpreter",
-                    "description": "May vary between `wscript.exe`, `cscript.exe`, or called via `cmd.exe`"
+                    "description": "May vary between `wscript.exe`, `cscript.exe`, or called via `cmd.exe`",
+                    "description_fa": "ممکن است بین «wscript.exe»، «cscript.exe» یا از طریق «cmd.exe» فراخوانی شود"
                 },
                 {
                     "field": "PowerShellObfuscationScore",
-                    "description": "Used to detect encoding, obfuscation, or entropy level in embedded PowerShell payloads"
+                    "description": "Used to detect encoding, obfuscation, or entropy level in embedded PowerShell payloads",
+                    "description_fa": "برای شناسایی سطح رمزگذاری، مبهم سازی یا آنتروپی در بارهای جاسازی شده PowerShell استفاده می شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time delta between VBScript proxy invocation and PowerShell payload execution"
+                    "description": "Time delta between VBScript proxy invocation and PowerShell payload execution",
+                    "description_fa": "دلتای زمانی بین فراخوانی پروکسی VBScript و اجرای بارگذاری PowerShell"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1220",
+            "description_fa": "اجرای SyncAppvPublishingServer.vbs از طریق wscript.exe با خط فرمان حاوی PowerShell تعبیه شده، پروکسی اجرای مخرب PowerShell از طریق مفسر VBScript امضا شده توسط مایکروسافت برای فرار از شناسایی و محدودیت ها."
         }
     ]
 }

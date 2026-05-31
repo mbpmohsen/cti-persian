@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-608",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/608.html"
+                    "url": "https://capec.mitre.org/data/definitions/608.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-327",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/327.html"
+                    "url": "http://cwe.mitre.org/data/definitions/327.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--9dded599-dd66-4a4c-8f17-6afb81c234f8",
@@ -31,6 +33,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Other (Reveals IMSI and IMEI for tracking of retransmission device and enables further follow-on attacks by revealing black network control messages. (e.g., revealing IP addresses of enterprise servers for VOIP connectivity))"
+                ],
+                "Confidentiality_fa": [
+                    "موارد دیگر (IMSI و IMEI را برای ردیابی دستگاه ارسال مجدد نشان می‌دهد و حملات بعدی را با آشکار کردن پیام‌های کنترل شبکه سیاه فعال می‌کند. (مثلاً نشان‌دادن IP سرورهای سازمانی برای اتصال VOIP))"
                 ]
             },
             "x_capec_domains": [
@@ -40,11 +45,17 @@
                 "None"
             ],
             "x_capec_skills_required": {
-                "Medium": "Adversaries can rent commercial supercomputer time globally to conduct cryptanalysis on encrypted data captured from mobile devices. Foreign governments have their own cryptanalysis technology and capabilities. Commercial cellular standards for encryption (GSM and CDMA) are also subject to adversary cryptanalysis."
+                "Medium": "Adversaries can rent commercial supercomputer time globally to conduct cryptanalysis on encrypted data captured from mobile devices. Foreign governments have their own cryptanalysis technology and capabilities. Commercial cellular standards for encryption (GSM and CDMA) are also subject to adversary cryptanalysis.",
+                "Medium_fa": "دشمنان می‌توانند زمان ابررایانه تجاری را در سطح جهانی اجاره کنند تا روی داده‌های رمزگذاری‌شده گرفته‌شده از دستگاه‌های تلفن همراه، آنالیز رمزگذاری انجام دهند. دولت های خارجی فناوری و قابلیت های رمزنگاری خاص خود را دارند. استانداردهای سلولی تجاری برای رمزگذاری (GSM و CDMA) نیز در معرض تحلیل رمزی دشمن قرار دارند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "استفاده از تکنیک‌های رمزنگاری برای استخراج کلیدهای رمزنگاری یا شکست مؤثر رمزگذاری سلولی برای آشکار کردن محتوای ترافیک. برخی از الگوریتم های رمزگذاری سلولی مانند A5/1 و A5/2 (مشخص شده برای استفاده از GSM) در برابر چنین حملاتی آسیب پذیر هستند و ابزارهای تجاری برای اجرای این حملات و رمزگشایی مکالمات تلفن همراه در زمان واقعی در دسترس هستند. الگوریتم‌های رمزگذاری جدیدتری که توسط UMTS و LTE استفاده می‌شوند قوی‌تر هستند و در حال حاضر اعتقاد بر این است که کمتر در برابر این نوع حملات آسیب‌پذیر هستند. با این حال، توجه داشته باشید که یک مهاجم با یک ایستگاه پایه Cellular Rogue می تواند حتی توسط دستگاه های تلفن همراه جدیدتر از رمزگذاری ضعیف سلولی استفاده کند.",
+            "name_fa": "رمزگذاری رمزگذاری سلولی",
+            "x_capec_prerequisites_fa": [
+                "هیچ کدام"
+            ]
         }
     ],
     "spec_version": "2.0",

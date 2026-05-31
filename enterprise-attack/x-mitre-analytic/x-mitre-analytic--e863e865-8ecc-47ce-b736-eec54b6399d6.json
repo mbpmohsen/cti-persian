@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0365#AN1032",
-                    "external_id": "AN1032"
+                    "external_id": "AN1032",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ImagePath",
-                    "description": "Full path of the binary/script being registered in Run keys. Tunable to exclude known software baselines."
+                    "description": "Full path of the binary/script being registered in Run keys. Tunable to exclude known software baselines.",
+                    "description_fa": "مسیر کامل باینری/اسکریپت در حال ثبت در کلیدهای Run. قابل تنظیم برای حذف خطوط پایه نرم افزار شناخته شده."
                 },
                 {
                     "field": "RegistryKeyPath",
-                    "description": "Tunable list of startup-related registry keys to monitor more/less aggressively based on enterprise software context."
+                    "description": "Tunable list of startup-related registry keys to monitor more/less aggressively based on enterprise software context.",
+                    "description_fa": "فهرست قابل تنظیم کلیدهای رجیستری مربوط به راه اندازی برای نظارت بیشتر/کمتر بر اساس زمینه نرم افزار سازمانی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate registry key creation and process execution within this window. Defaults between 5\u201310 minutes."
+                    "description": "Correlate registry key creation and process execution within this window. Defaults between 5–10 minutes.",
+                    "description_fa": "ایجاد کلید رجیستری و اجرای فرآیند را در این پنجره مرتبط کنید. پیش‌فرض بین 5 تا 10 دقیقه."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filter for specific user SIDs or exclude known admin/script accounts."
+                    "description": "Filter for specific user SIDs or exclude known admin/script accounts.",
+                    "description_fa": "برای SIDهای کاربر خاص فیلتر کنید یا حساب‌های مدیر/اسکریپت شناخته شده را حذف کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1032",
+            "description_fa": "همبستگی رویدادهای ایجاد/تغییر کلید رجیستری تحت کلیدهای شناخته شده Run/Startup با مسیرهای باینری جدید یا غیرمعمول یا بارهای مبتنی بر اسکریپت. تشخیص چند رویدادی شامل اصلاح رجیستری و به دنبال آن اجرای فرآیند از دایرکتوری های غیر استاندارد یا روابط غیرعادی فرآیند والد-فرزند است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0321#AN0910",
-                    "external_id": "AN0910"
+                    "external_id": "AN0910",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ImageDirectoryWhitelist",
-                    "description": "Legitimate VM image storage paths to reduce false positives."
+                    "description": "Legitimate VM image storage paths to reduce false positives.",
+                    "description_fa": "مسیرهای ذخیره سازی تصویر VM قانونی برای کاهش مثبت کاذب."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Correlate suspicious VM execution with non-admin or service accounts."
+                    "description": "Correlate suspicious VM execution with non-admin or service accounts.",
+                    "description_fa": "اجرای مشکوک VM را با حساب‌های غیر سرپرست یا خدمات مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0910",
+            "description_fa": "اجرای فرآیندهای QEMU، KVM، یا VirtualBox با پرچم‌های غیرمعمول (مثلاً '-nographic'، '-snapshot'). ایجاد فایل تصاویر VM در دایرکتوری های غیر معمول. نمای مدافع: نظارت بر گزارش های حسابرسی برای اجرای فرآیند و اصلاحات فایل مرتبط با مجازی سازی پنهان."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0358#AN1019",
-                    "external_id": "AN1019"
+                    "external_id": "AN1019",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the time span (e.g., 5m, 1h) in which excessive access behavior becomes suspicious."
+                    "description": "Defines the time span (e.g., 5m, 1h) in which excessive access behavior becomes suspicious.",
+                    "description_fa": "بازه زمانی (مثلاً 5 متر، 1 ساعت) را تعریف می کند که در آن رفتار دسترسی بیش از حد مشکوک می شود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Privileged user roles (e.g., domain admins) should be excluded or flagged if found accessing documentation repositories."
+                    "description": "Privileged user roles (e.g., domain admins) should be excluded or flagged if found accessing documentation repositories.",
+                    "description_fa": "در صورت دسترسی به مخازن اسناد، نقش‌های کاربری ممتاز (به عنوان مثال، مدیران دامنه) باید حذف یا پرچم‌گذاری شوند."
                 },
                 {
                     "field": "AccessThreshold",
-                    "description": "The number of pages viewed or exported by a single user before triggering detection logic."
+                    "description": "The number of pages viewed or exported by a single user before triggering detection logic.",
+                    "description_fa": "تعداد صفحاتی که قبل از شروع منطق تشخیص توسط یک کاربر مشاهده یا صادر شده است."
                 },
                 {
                     "field": "AgentFilter",
-                    "description": "User agent strings that may indicate scripted, automated, or non-interactive access methods."
+                    "description": "User agent strings that may indicate scripted, automated, or non-interactive access methods.",
+                    "description_fa": "رشته های عامل کاربر که ممکن است روش های دسترسی اسکریپتی، خودکار یا غیر تعاملی را نشان دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1019",
+            "description_fa": "تشخیص دسترسی بیش از حد یا برنامه‌ای به فضاها یا صفحات Confluence، به ویژه توسط کاربران ممتاز، از طریق ترکیبی از گزارش‌های دسترسی، استفاده از API و زمینه هویت. جلسات ورود به سیستم، نقش های کاربر و رفتار غیرعادی مشاهده یا صادرات سند را به هم مرتبط می کند. الگوهای دسترسی پشت سر هم و ابزارها/اسکریپت هایی را که از Confluence API برای شمارش انبوه یا حذف داده ها سوء استفاده می کنند، شناسایی می کند."
         }
     ]
 }

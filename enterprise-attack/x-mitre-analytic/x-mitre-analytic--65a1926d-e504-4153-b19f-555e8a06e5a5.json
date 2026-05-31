@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0270#AN0756",
-                    "external_id": "AN0756"
+                    "external_id": "AN0756",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "OperationName",
-                    "description": "Identify rare modification operations that are not part of standard admin lifecycle."
+                    "description": "Identify rare modification operations that are not part of standard admin lifecycle.",
+                    "description_fa": "عملیات اصلاح نادری را که بخشی از چرخه عمر مدیریت استاندارد نیستند، شناسایی کنید."
                 },
                 {
                     "field": "InitiatedBy",
-                    "description": "Filter by known administrators or service principals. Flag unknown initiators."
+                    "description": "Filter by known administrators or service principals. Flag unknown initiators.",
+                    "description_fa": "توسط مدیران شناخته شده یا مدیران سرویس فیلتر کنید. آغازگر ناشناس را پرچم گذاری کنید."
                 },
                 {
                     "field": "UserAgent",
-                    "description": "Detect scripted modifications (e.g., PowerShell/Graph API vs Azure Portal)."
+                    "description": "Detect scripted modifications (e.g., PowerShell/Graph API vs Azure Portal).",
+                    "description_fa": "تغییرات اسکریپت شده را شناسایی کنید (به عنوان مثال، PowerShell/Graph API در مقابل Azure Portal)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate tenant policy changes with new sign-ins or token forgery attempts."
+                    "description": "Correlate tenant policy changes with new sign-ins or token forgery attempts.",
+                    "description_fa": "تغییرات خط‌مشی مستاجر را با ورود به سیستم جدید یا تلاش‌های جعل نشانه مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0756",
+            "description_fa": "Adversary خط مشی مستاجر را از طریق تغییرات در پیکربندی فدراسیون، تنظیمات اعتماد، یا افزوده‌های ارائه‌دهنده هویت در Microsoft 365/AzureAD از طریق Portal، PowerShell یا Graph API تغییر می‌دهد. شامل تنظیم احراز هویت در دامنه های فدرال یا به روز رسانی فدرال است."
         }
     ]
 }

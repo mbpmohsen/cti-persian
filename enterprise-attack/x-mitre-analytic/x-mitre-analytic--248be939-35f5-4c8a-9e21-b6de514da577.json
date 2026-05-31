@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0218#AN0609",
-                    "external_id": "AN0609"
+                    "external_id": "AN0609",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceBaseline",
-                    "description": "Expected registry keys and service paths for comparison."
+                    "description": "Expected registry keys and service paths for comparison.",
+                    "description_fa": "کلیدهای رجیستری و مسیرهای خدمات مورد انتظار برای مقایسه."
                 },
                 {
                     "field": "AllowedDllPaths",
-                    "description": "Directories considered valid for DLL loading."
+                    "description": "Directories considered valid for DLL loading.",
+                    "description_fa": "دایرکتوری هایی که برای بارگذاری DLL معتبر در نظر گرفته می شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval between registry/file modification and process execution."
+                    "description": "Correlation interval between registry/file modification and process execution.",
+                    "description_fa": "فاصله همبستگی بین اصلاح رجیستری/فایل و اجرای فرآیند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0609",
+            "description_fa": "تغییرات غیرمعمول در سرویس مسیرهای باینری، کلیدهای رجیستری یا مسیرهای بارگذاری DLL که منجر به جریان اجرای متناوب می شود. Defender تغییرات کلید رجیستری را مشاهده می کند، فایل های مشکوک را در فهرست های سیستم می نویسد، و بارگیری کتابخانه ها را از مسیرهای غیرعادی پردازش می کند."
         }
     ]
 }

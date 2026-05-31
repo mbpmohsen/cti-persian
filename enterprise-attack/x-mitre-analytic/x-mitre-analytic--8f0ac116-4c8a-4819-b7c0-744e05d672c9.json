@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0129#AN0363",
-                    "external_id": "AN0363"
+                    "external_id": "AN0363",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Detect variations of 'net user /domain', 'Get-ADUser', 'Get-ADGroupMember'."
+                    "description": "Detect variations of 'net user /domain', 'Get-ADUser', 'Get-ADGroupMember'.",
+                    "description_fa": "انواع \"کاربر / دامنه\"، \"Get-ADUser\"، \"Get-ADGroupMember\" را شناسایی کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tune detection for bursts of enumeration commands or search queries."
+                    "description": "Tune detection for bursts of enumeration commands or search queries.",
+                    "description_fa": "شناسایی را برای انبوه دستورات شمارش یا عبارت‌های جستجو تنظیم کنید."
                 },
                 {
                     "field": "SourceHost",
-                    "description": "Restrict detection to non-DC or non-admin systems where such commands are unexpected."
+                    "description": "Restrict detection to non-DC or non-admin systems where such commands are unexpected.",
+                    "description_fa": "شناسایی را به سیستم های غیر DC یا غیر مدیریتی که چنین دستوراتی غیرمنتظره هستند محدود کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0363",
+            "description_fa": "شمارش دشمن حساب‌های دامنه با استفاده از جستارهای net.exe، PowerShell، WMI، یا LDAP از کنترل‌کننده‌های غیر دامنه یا نقاط پایانی غیر سرپرست."
         }
     ]
 }

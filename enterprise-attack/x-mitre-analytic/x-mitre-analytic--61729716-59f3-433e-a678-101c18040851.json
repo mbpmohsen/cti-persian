@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0204#AN0580",
-                    "external_id": "AN0580"
+                    "external_id": "AN0580",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,25 +63,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetDLLDirectory",
-                    "description": "Expected directory path for legitimate monitor DLLs (e.g., C:\\Windows\\System32)"
+                    "description": "Expected directory path for legitimate monitor DLLs (e.g., C:\\Windows\\System32)",
+                    "description_fa": "مسیر دایرکتوری مورد انتظار برای DLL های مانیتور قانونی (به عنوان مثال، C:\\Windows\\System32)"
                 },
                 {
                     "field": "SignedImageValidation",
-                    "description": "Enable/disable signature validation on DLLs loaded by spoolsv.exe"
+                    "description": "Enable/disable signature validation on DLLs loaded by spoolsv.exe",
+                    "description_fa": "فعال/غیرفعال کردن اعتبارسنجی امضا در DLL های بارگیری شده توسط spoolsv.exe"
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "Define whether only SYSTEM/user installs are expected to make changes to the port monitor registry keys"
+                    "description": "Define whether only SYSTEM/user installs are expected to make changes to the port monitor registry keys",
+                    "description_fa": "تعیین کنید که آیا فقط نصب‌های SYSTEM/user انتظار می‌رود تغییراتی در کلیدهای رجیستری مانیتور پورت ایجاد کنند یا خیر."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Timeframe between registry modification and subsequent spoolsv.exe DLL load"
+                    "description": "Timeframe between registry modification and subsequent spoolsv.exe DLL load",
+                    "description_fa": "بازه زمانی بین اصلاح رجیستری و بارگذاری DLL بعدی spoolsv.exe"
                 },
                 {
                     "field": "AddMonitorCallContext",
-                    "description": "Filter on calling process of AddMonitor API to detect anomalies outside installer/updater"
+                    "description": "Filter on calling process of AddMonitor API to detect anomalies outside installer/updater",
+                    "description_fa": "فرآیند فراخوانی AddMonitor API را برای تشخیص ناهنجاری‌های خارج از نصب‌کننده/به‌روزرسانی فیلتر کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0580",
+            "description_fa": "تغییرات مشکوک رجیستری را در «HKLM\\SYSTEM\\CurrentControlSet\\Control\\Print\\Monitors\\*\\Driver»، بارگیری‌های DLL توسط «spoolsv.exe» ماژول‌های غیراستاندارد یا بدون امضا و استفاده غیرعادی از فرآیند «Add-Monitor» توسط APIهای غیرعادی «Add-Monitor» شناسایی می‌کند. این الگو اغلب نشان‌دهنده تلاشی برای تداوم یک DLL مخرب از طریق مکانیسم نمایشگر چاپ است، به‌ویژه زمانی که با ایجاد فایل‌هایی در «C:\\Windows\\System32» مرتبط باشد که به وصله‌ها یا نصب‌های شناخته شده مرتبط نیستند."
         }
     ]
 }

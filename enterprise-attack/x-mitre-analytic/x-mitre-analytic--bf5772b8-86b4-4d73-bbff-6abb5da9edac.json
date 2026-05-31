@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0055#AN0152",
-                    "external_id": "AN0152"
+                    "external_id": "AN0152",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,17 +58,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the correlation window to link suspicious PowerShell activity, gpresult execution, and LDAP enumeration."
+                    "description": "Defines the correlation window to link suspicious PowerShell activity, gpresult execution, and LDAP enumeration.",
+                    "description_fa": "پنجره همبستگی را برای پیوند دادن فعالیت مشکوک PowerShell، اجرای gpresult و شمارش LDAP تعریف می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Identifies accounts expected to perform GPO enumeration (administrators vs. standard users)."
+                    "description": "Identifies accounts expected to perform GPO enumeration (administrators vs. standard users).",
+                    "description_fa": "حساب های مورد انتظار برای انجام شمارش GPO (مدیران در مقابل کاربران استاندارد) را شناسایی می کند."
                 },
                 {
                     "field": "CommandLinePatterns",
-                    "description": "Patterns for detecting suspicious gpresult or PowerShell cmdlets; tunable to reduce noise in environments where these tools are common."
+                    "description": "Patterns for detecting suspicious gpresult or PowerShell cmdlets; tunable to reduce noise in environments where these tools are common.",
+                    "description_fa": "الگوهایی برای تشخیص cmdlet های gpresult یا PowerShell مشکوک. قابل تنظیم برای کاهش نویز در محیط هایی که این ابزارها رایج هستند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0152",
+            "description_fa": "شناسایی تلاش‌های دشمن برای برشمردن تنظیمات Group Policy از طریق اجرای فرمان مشکوک (gpresult)، شمارش PowerShell (Get-DomainGPO، Get-DomainGPOLocalGroup)، و جستارهای غیرعادی LDAP که اشیاء groupPolicyContainer را هدف قرار می‌دهند. مدافعان اصل و نسب فرآیند غیرعادی، اجرای اسکریپت یا فعالیت فیلتر LDAP را در برابر کنترل کننده های دامنه مشاهده می کنند."
         }
     ]
 }

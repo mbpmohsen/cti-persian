@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0048#AN0131",
-                    "external_id": "AN0131"
+                    "external_id": "AN0131",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserAgentPattern",
-                    "description": "Filters user agents like 'PowerShell', 'AADInternals', 'python-requests' which can vary depending on script/tool."
+                    "description": "Filters user agents like 'PowerShell', 'AADInternals', 'python-requests' which can vary depending on script/tool.",
+                    "description_fa": "عوامل کاربر مانند \"PowerShell\"، \"AADInternals\"، \"python-requests\" را فیلتر می کند که بسته به اسکریپت/ابزار می تواند متفاوت باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the temporal correlation window between login, command execution, and outbound email access."
+                    "description": "Defines the temporal correlation window between login, command execution, and outbound email access.",
+                    "description_fa": "پنجره همبستگی زمانی بین ورود به سیستم، اجرای فرمان و دسترسی به ایمیل خروجی را تعریف می کند."
                 },
                 {
                     "field": "KnownIPLocations",
-                    "description": "Defines baseline geo/IP address ranges to suppress known corporate access."
+                    "description": "Defines baseline geo/IP address ranges to suppress known corporate access.",
+                    "description_fa": "محدوده های آدرس جغرافیایی/IP خط پایه را برای جلوگیری از دسترسی شناخته شده شرکت تعریف می کند."
                 },
                 {
                     "field": "PrivilegedUserList",
-                    "description": "Defines the accounts considered privileged (admin, execs) and worthy of tighter thresholds."
+                    "description": "Defines the accounts considered privileged (admin, execs) and worthy of tighter thresholds.",
+                    "description_fa": "حساب‌هایی را تعریف می‌کند که ممتاز (مدیر، مدیران اجرایی) و شایسته آستانه‌های محدودتر در نظر گرفته می‌شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0131",
+            "description_fa": "دشمنانی را شناسایی می کند که به سیستم های پست از راه دور (مانند Exchange Online، O365) با استفاده از اطلاعات کاربری سرقت شده یا توکن های OAuth دسترسی دارند و به دنبال آن دسترسی اسکریپتی به محتویات صندوق پستی از طریق PowerShell، AADInternals، یا پرس و جوهای API بدون نظارت انجام می شود. تشخیص بر جلسات ورود غیرعادی، عوامل کاربر، مکان‌های IP و دسترسی به داده‌های ایمیل مبتنی بر اسکریپت یا ابزار متمرکز است."
         }
     ]
 }

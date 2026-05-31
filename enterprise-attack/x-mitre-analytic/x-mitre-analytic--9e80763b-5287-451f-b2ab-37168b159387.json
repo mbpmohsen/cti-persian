@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0394#AN1109",
-                    "external_id": "AN1109"
+                    "external_id": "AN1109",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WebRootPath",
-                    "description": "Web server root varies by distro and hosting configuration"
+                    "description": "Web server root varies by distro and hosting configuration",
+                    "description_fa": "ریشه سرور وب بر اساس توزیع و پیکربندی میزبانی متفاوت است"
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Base64 or XOR encoded shells may exceed this value"
+                    "description": "Base64 or XOR encoded shells may exceed this value",
+                    "description_fa": "پوسته های کدگذاری شده Base64 یا XOR ممکن است از این مقدار بیشتر باشد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate file creation with process spawn within X seconds"
+                    "description": "Correlate file creation with process spawn within X seconds",
+                    "description_fa": "ایجاد فایل را با فرآیند تخم ریزی در عرض X ثانیه مرتبط کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1109",
+            "description_fa": "ایجاد فایل اسکریپت غیرمجاز (به عنوان مثال، php.، .sh) در /var/www/html و به دنبال اجرای ابزارهای غیرمنتظره سیستم (مانند curl، bash، nc) توسط apache/nginx"
         }
     ]
 }

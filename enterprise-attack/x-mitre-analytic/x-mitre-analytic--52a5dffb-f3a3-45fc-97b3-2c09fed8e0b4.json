@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0018#AN0054",
-                    "external_id": "AN0054"
+                    "external_id": "AN0054",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousDirs",
-                    "description": "~/Library, /tmp, /Users/*/.* (hidden dirs) \u2013 tune to enterprise layout."
+                    "description": "~/Library, /tmp, /Users/*/.* (hidden dirs) – tune to enterprise layout.",
+                    "description_fa": "~/کتابخانه، /tmp، /کاربران/*/.* (دایره های پنهان) – برای چیدمان سازمانی تنظیم کنید."
                 },
                 {
                     "field": "UnsignedOnly",
-                    "description": "Alert only when code-signing is invalid or absent."
+                    "description": "Alert only when code-signing is invalid or absent.",
+                    "description_fa": "هشدار فقط زمانی که امضای کد نامعتبر است یا وجود ندارد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate write/open to module load within N minutes."
+                    "description": "Correlate write/open to module load within N minutes.",
+                    "description_fa": "ارتباط نوشتن/باز کردن با بار ماژول در عرض N دقیقه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0054",
+            "description_fa": "یک فرآیند یک .dylib/.so غیر سیستمی را از طریق dyld (dlopen/dlsym) از مکان‌های قابل نوشتن توسط کاربر (~/Library، /tmp) یا پس از ایجاد/دانلود کتابخانه اخیراً بارگیری می‌کند، که اغلب با خروج یا ماندگاری شبکه دنبال می‌شود."
         }
     ]
 }

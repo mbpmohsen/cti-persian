@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0678#AN1781",
-                    "external_id": "AN1781"
+                    "external_id": "AN1781",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,45 +58,57 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum correlation span between app activation, framework use, and burst file transformation."
+                    "description": "Maximum correlation span between app activation, framework use, and burst file transformation.",
+                    "description_fa": "حداکثر دامنه همبستگی بین فعال سازی برنامه، استفاده از چارچوب و تبدیل فایل پشت سر هم."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved apps allowed to perform legitimate broad file operations such as backup, sync, AV scanning, enterprise migration, media editing, or document management."
+                    "description": "Approved apps allowed to perform legitimate broad file operations such as backup, sync, AV scanning, enterprise migration, media editing, or document management.",
+                    "description_fa": "برنامه‌های تأیید شده مجاز به انجام عملیات قانونی گسترده فایل مانند پشتیبان‌گیری، همگام‌سازی، اسکن AV، مهاجرت سازمانی، ویرایش رسانه یا مدیریت اسناد هستند."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether a benign bulk file operation is expected to occur only while the app is visible and actively used."
+                    "description": "Whether a benign bulk file operation is expected to occur only while the app is visible and actively used.",
+                    "description_fa": "اینکه آیا انتظار می‌رود که عملیات فایل انبوه خوش‌خیم فقط زمانی رخ دهد که برنامه قابل مشاهده است و به طور فعال استفاده می‌شود."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Threshold for determining whether large-scale file transformation was user-driven versus unattended."
+                    "description": "Threshold for determining whether large-scale file transformation was user-driven versus unattended.",
+                    "description_fa": "آستانه برای تعیین اینکه آیا تبدیل فایل در مقیاس بزرگ مبتنی بر کاربر است یا نه."
                 },
                 {
                     "field": "FileWriteBurstThreshold",
-                    "description": "Threshold for number of file create, overwrite, rename, or replace actions within the correlation window."
+                    "description": "Threshold for number of file create, overwrite, rename, or replace actions within the correlation window.",
+                    "description_fa": "آستانه تعداد فایل ایجاد، بازنویسی، تغییر نام یا جایگزینی اقدامات در پنجره همبستگی."
                 },
                 {
                     "field": "DistinctDirectoryThreshold",
-                    "description": "Threshold for number of distinct folders or content roots touched during the file-impact burst."
+                    "description": "Threshold for number of distinct folders or content roots touched during the file-impact burst.",
+                    "description_fa": "آستانه تعداد پوشه‌های متمایز یا ریشه‌های محتوای لمس شده در طول انفجار فایل."
                 },
                 {
                     "field": "ExtensionChangeThreshold",
-                    "description": "Threshold for suspicious file extension changes or replacement-file patterns indicative of mass transformation."
+                    "description": "Threshold for suspicious file extension changes or replacement-file patterns indicative of mass transformation.",
+                    "description_fa": "آستانه برای تغییرات مشکوک پسوند فایل یا الگوهای فایل جایگزینی که نشان دهنده تبدیل انبوه است."
                 },
                 {
                     "field": "BytesWrittenThreshold",
-                    "description": "Threshold for cumulative bytes written during the impact window."
+                    "description": "Threshold for cumulative bytes written during the impact window.",
+                    "description_fa": "آستانه برای بایت های تجمعی نوشته شده در طول پنجره ضربه."
                 },
                 {
                     "field": "ProtectedPathAllowList",
-                    "description": "Known paths, document roots, or work-profile storage locations where benign enterprise migration or sync tooling may rewrite many files."
+                    "description": "Known paths, document roots, or work-profile storage locations where benign enterprise migration or sync tooling may rewrite many files.",
+                    "description_fa": "مسیرهای شناخته شده، ریشه‌های سند، یا مکان‌های ذخیره‌سازی نمایه کاری که در آن‌ها مهاجرت سازمانی یا ابزار همگام‌سازی ممکن است بسیاری از فایل‌ها را بازنویسی کند."
                 },
                 {
                     "field": "DestinationAllowList",
-                    "description": "Expected network destinations contacted by legitimate storage, sync, backup, or MDM remediation apps."
+                    "description": "Expected network destinations contacted by legitimate storage, sync, backup, or MDM remediation apps.",
+                    "description_fa": "مقاصد شبکه مورد انتظار که توسط برنامه‌های ذخیره‌سازی قانونی، همگام‌سازی، پشتیبان‌گیری یا اصلاح MDM با آنها تماس گرفته می‌شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1781",
+            "description_fa": "برنامه‌ای با دسترسی به دامنه‌های گسترده فایل یا مناطق ذخیره‌سازی حساس فعال می‌شود، خواندن و نوشتن غیرعادی فایل پشت سر هم در بسیاری از مکان‌های ذخیره‌سازی مشترک یا کاربر انجام می‌دهد، محتوای فایل یا پسوندها را در یک پنجره کوتاه تبدیل می‌کند، و باعث عدم دسترسی سریع، بازنویسی یا جایگزینی فایل می‌شود که با رفتار عادی همگام‌سازی، پشتیبان‌گیری، پردازش رسانه‌ای، پشتیبان‌گیری، پردازش رسانه‌ای، سازگار نیست. مدافع وضعیت قابلیت، چرخه عمر برنامه، استفاده از چارچوب، جلوه های انبوه نوشتن فایل و ارتباطات شبکه اختیاری را به هم مرتبط می کند تا رفتار رمزگذاری برای ضربه را از عملیات فایل انبوه خوش خیم تشخیص دهد."
         }
     ]
 }

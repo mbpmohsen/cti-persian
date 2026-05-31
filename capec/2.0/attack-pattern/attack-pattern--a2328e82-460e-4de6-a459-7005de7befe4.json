@@ -9,31 +9,40 @@
                 {
                     "external_id": "CAPEC-520",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/520.html"
+                    "url": "https://capec.mitre.org/data/definitions/520.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Cristin Goodwin, Joram Borenstein, Guarding against supply chain attacks—Part 2: Hardware risks, 2020--02---03, Microsoft",
                     "external_id": "REF-712",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.microsoft.com/security/blog/2020/02/03/guarding-against-supply-chain-attacks-part-2-hardware-risks/"
+                    "url": "https://www.microsoft.com/security/blog/2020/02/03/guarding-against-supply-chain-attacks-part-2-hardware-risks/",
+                    "description_fa": "کریستین گودوین، جورام بورنشتاین، محافظت در برابر حملات زنجیره تامین - قسمت 2: خطرات سخت افزاری، 2020--02---03، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jordan Robertson, Michael Riley, The Big Hack: How China Used a Tiny Chip to Infiltrate U.S. Companies, 2018--10---04, Bloomberg",
                     "external_id": "REF-713",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies"
+                    "url": "https://www.bloomberg.com/news/features/2018-10-04/the-big-hack-how-china-used-a-tiny-chip-to-infiltrate-america-s-top-companies",
+                    "description_fa": "جردن رابرتسون، مایکل رایلی، هک بزرگ: چگونه چین از یک تراشه کوچک برای نفوذ به شرکت‌های آمریکایی استفاده کرد، 2018--10---04، بلومبرگ",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a2328e82-460e-4de6-a459-7005de7befe4",
@@ -59,11 +68,21 @@
                 "The adversary will need either physical access or be able to supply malicious hardware components to the product development facility."
             ],
             "x_capec_skills_required": {
-                "High": "Resources to physically infiltrate manufacturer or manufacturer's supplier."
+                "High": "Resources to physically infiltrate manufacturer or manufacturer's supplier.",
+                "High_fa": "منابعی برای نفوذ فیزیکی به سازنده یا تامین کننده سازنده."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن با دسترسی مستقیم به فرآیند مونتاژ محصول یا به تامین اجزای فرعی مورد استفاده در فرآیند مونتاژ محصول، قطعات سخت افزاری تقلبی را وارد مونتاژ محصول می کند. مجموعه ای که حاوی اجزای تقلبی است منجر به سیستمی می شود که به طور خاص برای اهداف مخرب طراحی شده است.",
+            "name_fa": "قطعه سخت افزاری تقلبی در هنگام مونتاژ محصول وارد شده است",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک سازنده سیستم فایروال به یک کارت سخت افزاری نیاز دارد که به عنوان یک کارت اترنت چند جک با چهار پورت اترنت عمل کند. حریف یک کارت تقلبی می سازد که به طور معمول کار می کند به جز اینکه بسته های شبکه حریف اجازه دارند پردازش فایروال را به طور کامل دور بزنند. پس از استقرار در یک مکان قربانی، به دشمن اجازه می‌دهد بدون محدودیت دیوار آتش را دور بزند.</xhtml:p>",
+                "<xhtml:p>در سال 2018 کشف شد که جاسوسان چینی تا سال 2015 با گنجاندن یک ریزتراشه مخرب در مادربرد سرورهای فروخته شده توسط Elemental Technologies به قربانیان، به چندین سازمان و شرکت دولتی ایالات متحده نفوذ کردند. اگرچه این سرورها از طریق یک شرکت مستقر در ایالات متحده مونتاژ شدند، مادربردهای مورد استفاده در سرورها از طریق یک پیمانکار فرعی چینی ساخته و به طور مخرب تغییر داده شدند. Elemental Technologies سپس این سرورهای مخرب را به سازمان‌های دولتی مختلف ایالات متحده، مانند وزارت دفاع و سیا، و شرکت‌هایی مانند آمازون و اپل فروخت. ریزتراشه‌های مخرب یک درب پشتی به سیستم در اختیار دشمنان قرار می‌داد که به آنها اجازه می‌داد به هر شبکه‌ای که حاوی سیستم‌های مورد سوءاستفاده بود دسترسی داشته باشند تا داده‌ها را برای ارسال به دولت چین استخراج کنند.[REF-713]</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "حریف یا به دسترسی فیزیکی نیاز دارد یا می‌تواند اجزای سخت‌افزاری مخرب را به مرکز توسعه محصول عرضه کند."
+            ]
         }
     ],
     "spec_version": "2.0",

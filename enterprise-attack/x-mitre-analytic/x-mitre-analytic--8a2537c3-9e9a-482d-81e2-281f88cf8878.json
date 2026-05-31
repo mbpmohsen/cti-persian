@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0182#AN0513",
-                    "external_id": "AN0513"
+                    "external_id": "AN0513",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0513",
-            "description": "Process or script enumerates network shares via CLI (net view/net share, PowerShell Get-SmbShare/WMI) or OS APIs (NetShareEnum/ srvsvc.NetShareEnumAll RPC) \u2192 bursts of outbound SMB/RPC connections (445/139, \\\\host\\IPC$ / srvsvc) to many hosts inside a short window \u2192 optional follow-on file listing or copy operations.",
+            "description": "Process or script enumerates network shares via CLI (net view/net share, PowerShell Get-SmbShare/WMI) or OS APIs (NetShareEnum/ srvsvc.NetShareEnumAll RPC) → bursts of outbound SMB/RPC connections (445/139, \\\\host\\IPC$ / srvsvc) to many hosts inside a short window → optional follow-on file listing or copy operations.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -61,21 +62,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BurstHostThreshold",
-                    "description": "Minimum number of unique destination hosts over SMB within TimeWindow to treat as scanning (e.g., \u22655)."
+                    "description": "Minimum number of unique destination hosts over SMB within TimeWindow to treat as scanning (e.g., ≥5).",
+                    "description_fa": "حداقل تعداد میزبان‌های مقصد منحصربه‌فرد بر روی SMB در TimeWindow که به عنوان اسکن در نظر گرفته می‌شوند (به عنوان مثال، ≥5)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between the discovery process start and SMB fan-out (default 10m)."
+                    "description": "Correlation window between the discovery process start and SMB fan-out (default 10m).",
+                    "description_fa": "پنجره همبستگی بین شروع فرآیند کشف و خروج SMB (پیش‌فرض 10 متر)."
                 },
                 {
                     "field": "AllowedDiscoveryAccounts",
-                    "description": "Service/admin accounts legitimately running inventory scripts."
+                    "description": "Service/admin accounts legitimately running inventory scripts.",
+                    "description_fa": "حساب‌های سرویس/ادمین که به طور قانونی اسکریپت‌های موجودی را اجرا می‌کنند."
                 },
                 {
                     "field": "PipeNameAllowList",
-                    "description": "Pipes (e.g., \\PIPE\\spoolss) normally accessed by management agents; exclude from alerts."
+                    "description": "Pipes (e.g., \\PIPE\\spoolss) normally accessed by management agents; exclude from alerts.",
+                    "description_fa": "لوله‌ها (به عنوان مثال \\PIPE\\spoolss) که معمولاً توسط عوامل مدیریت قابل دسترسی هستند. حذف از هشدارها"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0513",
+            "description_fa": "فرآیند یا اسکریپت اشتراک‌های شبکه را از طریق CLI (نمایش خالص/اشتراک خالص، PowerShell Get-SmbShare/WMI) یا APIهای سیستم عامل (NetShareEnum/ srvsvc.NetShareEnumAll RPC) → انبوهی از اتصالات SMB/RPC خروجی (445/139/139/139/445/139/139/0/139/139/139/445/139/139/139/139/139/139/139/139/139/139/139/139/139/0/139/139/139/139/00/00/00/00/00/00/00/00/00/00/00/00/00/00/00/05/00/04) یک پنجره کوتاه ← فهرست بندی یا عملیات کپی اختیاری فایل های بعدی."
         }
     ]
 }

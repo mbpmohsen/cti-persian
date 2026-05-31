@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0056#AN0155",
-                    "external_id": "AN0155"
+                    "external_id": "AN0155",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredCommands",
-                    "description": "Commands related to certificate management (e.g., security, profiles) that can be tuned per environment."
+                    "description": "Commands related to certificate management (e.g., security, profiles) that can be tuned per environment.",
+                    "description_fa": "دستورات مربوط به مدیریت گواهی (به عنوان مثال، امنیت، پروفایل ها) که می توانند در هر محیط تنظیم شوند."
                 },
                 {
                     "field": "KeychainBaseline",
-                    "description": "Baseline of expected certificates in System.keychain to reduce false positives from legitimate enterprise certificates."
+                    "description": "Baseline of expected certificates in System.keychain to reduce false positives from legitimate enterprise certificates.",
+                    "description_fa": "پایه گواهینامه های مورد انتظار در System.keychain برای کاهش مثبت کاذب از گواهینامه های سازمانی قانونی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0155",
+            "description_fa": "تشخیص نصب گواهی مخرب از طریق نظارت بر اجرای فرمان «security add-trusted-cert» و تغییرات در زنجیره‌های کلیدی سیستم."
         }
     ]
 }

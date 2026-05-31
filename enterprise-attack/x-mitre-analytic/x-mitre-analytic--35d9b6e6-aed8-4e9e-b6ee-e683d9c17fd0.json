@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0031#AN0090",
-                    "external_id": "AN0090"
+                    "external_id": "AN0090",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CodeSigningStatus",
-                    "description": "Filters such as 'Unsigned', 'NotTrusted', or 'ModifiedSinceSigning' may vary by policy enforcement level"
+                    "description": "Filters such as 'Unsigned', 'NotTrusted', or 'ModifiedSinceSigning' may vary by policy enforcement level",
+                    "description_fa": "فیلترهایی مانند «بدون امضا»، «Notrusted» یا «ModifiedSinceSigning» ممکن است بسته به سطح اجرای خط‌مشی متفاوت باشد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune whether detection applies to all users or excludes trusted admin accounts"
+                    "description": "Tune whether detection applies to all users or excludes trusted admin accounts",
+                    "description_fa": "تنظیم کنید که آیا تشخیص برای همه کاربران اعمال می‌شود یا حساب‌های سرپرست مورد اعتماد را حذف می‌کند"
                 },
                 {
                     "field": "ExecutablePathPrefix",
-                    "description": "Enable tuning for known valid locations (e.g., /Applications) vs. suspicious paths (/Users/Shared)"
+                    "description": "Enable tuning for known valid locations (e.g., /Applications) vs. suspicious paths (/Users/Shared)",
+                    "description_fa": "فعال کردن تنظیم مکان‌های معتبر شناخته شده (مانند /Applications) در مقابل مسیرهای مشکوک (/Users/Shared)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0090",
+            "description_fa": "باینری ها یا برنامه هایی که با امضاهای کد دستکاری شده یا غیرقابل تأیید اجرا می شوند. اغلب به دور زدن دروازه‌بان، انتقال برنامه یا استفاده از دیمون‌های راه‌اندازی بدون امضا توسط کاربران غیرقابل اعتماد مرتبط است."
         }
     ]
 }

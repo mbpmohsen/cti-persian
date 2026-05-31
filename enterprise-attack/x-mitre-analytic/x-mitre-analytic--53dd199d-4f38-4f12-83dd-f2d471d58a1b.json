@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0367#AN1034",
-                    "external_id": "AN1034"
+                    "external_id": "AN1034",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetObject",
-                    "description": "Path to network-based script execution; tuning required for environment-specific network shares."
+                    "description": "Path to network-based script execution; tuning required for environment-specific network shares.",
+                    "description_fa": "مسیر اجرای اسکریپت مبتنی بر شبکه؛ تنظیم مورد نیاز برای اشتراک گذاری شبکه های خاص محیطی."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Initial execution process that launches the script; may vary depending on script language or user context."
+                    "description": "Initial execution process that launches the script; may vary depending on script language or user context.",
+                    "description_fa": "فرآیند اجرای اولیه که اسکریپت را راه اندازی می کند. ممکن است بسته به زبان اسکریپت یا زمینه کاربر متفاوت باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Acceptable time window to correlate Group Policy update with script execution (e.g., 2\u201310 minutes)."
+                    "description": "Acceptable time window to correlate Group Policy update with script execution (e.g., 2–10 minutes).",
+                    "description_fa": "پنجره زمانی قابل قبول برای ارتباط به روز رسانی خط مشی گروه با اجرای اسکریپت (به عنوان مثال، 2 تا 10 دقیقه)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Account initiating execution; useful for filtering known administrative activity."
+                    "description": "Account initiating execution; useful for filtering known administrative activity.",
+                    "description_fa": "شروع اجرای حساب؛ برای فیلتر کردن فعالیت های اداری شناخته شده مفید است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1034",
+            "description_fa": "به‌روزرسانی‌های خط‌مشی گروهی را که اسکریپت‌های ورود به شبکه را با رفتارهای اجرای فایل از راه دور بعدی که توسط ورود کاربر به سیستم ایجاد می‌شوند، پیکربندی می‌کند تا زنجیره‌های تداوم یا اجرای احتمالی مرتبط با دستکاری خصمانه اسکریپت‌های ورود را شناسایی کند."
         }
     ]
 }

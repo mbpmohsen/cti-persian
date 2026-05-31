@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0673#AN1773",
-                    "external_id": "AN1773"
+                    "external_id": "AN1773",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,25 +63,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExpectedAudioAppsBaseline",
-                    "description": "Allow-list of legitimate applications expected to record audio on the device."
+                    "description": "Allow-list of legitimate applications expected to record audio on the device.",
+                    "description_fa": "لیست برنامه‌های قانونی مجاز برای ضبط صدا در دستگاه."
                 },
                 {
                     "field": "BackgroundWakeCorrelationWindow",
-                    "description": "Time window correlating background wake events with microphone activation."
+                    "description": "Time window correlating background wake events with microphone activation.",
+                    "description_fa": "پنجره زمانی مرتبط با رویدادهای بیداری پس‌زمینه با فعال‌سازی میکروفون."
                 },
                 {
                     "field": "MicSessionDurationThreshold",
-                    "description": "Minimum microphone recording duration considered suspicious."
+                    "description": "Minimum microphone recording duration considered suspicious.",
+                    "description_fa": "حداقل مدت زمان ضبط میکروفون مشکوک در نظر گرفته می شود."
                 },
                 {
                     "field": "MicToNetworkCorrelationWindow",
-                    "description": "Time window linking microphone activation to outbound network activity."
+                    "description": "Time window linking microphone activation to outbound network activity.",
+                    "description_fa": "پنجره زمانی که فعال سازی میکروفون را به فعالیت شبکه خروجی مرتبط می کند."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Threshold for outbound traffic volume indicating possible audio upload."
+                    "description": "Threshold for outbound traffic volume indicating possible audio upload.",
+                    "description_fa": "آستانه برای حجم ترافیک خروجی که نشان دهنده آپلود صوتی احتمالی است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1773",
+            "description_fa": "یک مدافع برنامه‌ای با قابلیت میکروفون اعلام شده را مشاهده می‌کند که استفاده از منبع میکروفون را از طریق چارچوب‌های صوتی iOS آغاز می‌کند، به طور بالقوه در طول اجرای پس‌زمینه یا مدت کوتاهی پس از یک رویداد بی‌صدا، و به دنبال آن ضبط صدای پایدار و ترافیک رمزگذاری شده خروجی که نشان‌دهنده جریان یا فعالیت آپلود صدا است."
         }
     ]
 }

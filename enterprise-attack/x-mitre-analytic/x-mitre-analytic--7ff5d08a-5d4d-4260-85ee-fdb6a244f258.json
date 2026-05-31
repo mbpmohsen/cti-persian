@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0307#AN0857",
-                    "external_id": "AN0857"
+                    "external_id": "AN0857",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegexPatterns",
-                    "description": "Patterns like password, secret, token can be expanded or customized"
+                    "description": "Patterns like password, secret, token can be expanded or customized",
+                    "description_fa": "الگوهایی مانند رمز عبور، رمز، رمز را می توان گسترش داد یا سفارشی کرد"
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "Scope of users monitored (e.g., root vs all users)"
+                    "description": "Scope of users monitored (e.g., root vs all users)",
+                    "description_fa": "دامنه کاربران تحت نظارت (به عنوان مثال، ریشه در مقابل همه کاربران)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time between suspicious file access and credential use"
+                    "description": "Time between suspicious file access and credential use",
+                    "description_fa": "زمان بین دسترسی به فایل مشکوک و استفاده از اعتبار"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0857",
+            "description_fa": "فایل‌ها را می‌خواند یا پردازش می‌کند که شامل فایل‌های اعتبارنامه ذخیره‌شده ناامن (مانند فایل‌های پیکربندی با فیلدهای رمز عبور) توسط کاربران غیر ریشه یا غیرعادی و به دنبال آن تلاش‌های احراز هویت ssh است."
         }
     ]
 }

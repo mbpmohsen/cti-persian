@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0146#AN0415",
-                    "external_id": "AN0415"
+                    "external_id": "AN0415",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DatastorePath",
-                    "description": "Targeted deletion of critical VMDKs or VM configuration files."
+                    "description": "Targeted deletion of critical VMDKs or VM configuration files.",
+                    "description_fa": "حذف هدفمند VMDK های حیاتی یا فایل های پیکربندی VM."
                 },
                 {
                     "field": "InitiatingUser",
-                    "description": "Detect deletions from users outside normal maintenance windows."
+                    "description": "Detect deletions from users outside normal maintenance windows.",
+                    "description_fa": "حذف‌های کاربران خارج از پنجره‌های تعمیر و نگهداری معمولی را شناسایی کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0415",
+            "description_fa": "دشمن دیسک‌های مجازی (VMDK)، تصاویر یا ماشین‌های مجازی را با فراخوانی «vim-cmd»، حذف محتویات ذخیره‌گاه داده یا پاک کردن عکس‌های فوری از بین می‌برد."
         }
     ]
 }

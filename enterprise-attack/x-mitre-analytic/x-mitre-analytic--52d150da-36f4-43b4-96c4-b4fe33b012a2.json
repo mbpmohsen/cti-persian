@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0019#AN0056",
-                    "external_id": "AN0056"
+                    "external_id": "AN0056",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StripFlags",
-                    "description": "Flag combinations in compiled binaries indicating symbol table removal"
+                    "description": "Flag combinations in compiled binaries indicating symbol table removal",
+                    "description_fa": "ترکیبات پرچم در باینری های کامپایل شده نشان دهنده حذف جدول نمادها است"
                 },
                 {
                     "field": "DirectoryScope",
-                    "description": "Whitelist compiler output directories to reduce false positives"
+                    "description": "Whitelist compiler output directories to reduce false positives",
+                    "description_fa": "فهرست سفید دایرکتوری های خروجی کامپایلر برای کاهش مثبت کاذب"
                 },
                 {
                     "field": "FileSizeRange",
-                    "description": "Heuristic boundaries for abnormal small or overly large stripped binaries"
+                    "description": "Heuristic boundaries for abnormal small or overly large stripped binaries",
+                    "description_fa": "مرزهای اکتشافی برای باینری های غیرعادی کوچک یا بیش از حد بزرگ"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0056",
+            "description_fa": "فایل های اجرایی یا باینری که بدون جداول نماد یا با بخش های بریده شده ایجاد می شوند، به ویژه توسط فرآیندهای پوسته غیر کاربر یا کامپایلرهایی که خارج از مسیرهای توسعه استاندارد فراخوانی شده اند."
         }
     ]
 }

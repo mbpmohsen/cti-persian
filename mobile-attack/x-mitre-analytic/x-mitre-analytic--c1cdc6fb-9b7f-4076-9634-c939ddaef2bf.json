@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0628#AN1697",
-                    "external_id": "AN1697"
+                    "external_id": "AN1697",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,37 +58,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum span between app install/update event and first suspicious post-delivery behavior."
+                    "description": "Maximum span between app install/update event and first suspicious post-delivery behavior.",
+                    "description_fa": "حداکثر فاصله بین رویداد نصب/به‌روزرسانی برنامه و اولین رفتار مشکوک پس از تحویل."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved apps expected to change permissions, add services, or contact new destinations because of legitimate feature releases."
+                    "description": "Approved apps expected to change permissions, add services, or contact new destinations because of legitimate feature releases.",
+                    "description_fa": "برنامه‌های تأیید شده به دلیل انتشار ویژگی‌های قانونی، انتظار می‌رود مجوزها را تغییر دهند، خدمات اضافه کنند یا با مقصدهای جدید تماس بگیرند."
                 },
                 {
                     "field": "AllowedVersionChangeWindow",
-                    "description": "Grace period after a documented app release during which some behavior drift may be expected."
+                    "description": "Grace period after a documented app release during which some behavior drift may be expected.",
+                    "description_fa": "دوره مهلت پس از انتشار برنامه مستند که در طی آن ممکن است برخی رفتارها پیش‌بینی شود."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether certain behaviors should only be considered suspicious when they occur without visible user interaction."
+                    "description": "Whether certain behaviors should only be considered suspicious when they occur without visible user interaction.",
+                    "description_fa": "اینکه آیا رفتارهای خاصی باید فقط زمانی مشکوک تلقی شوند که بدون تعامل قابل مشاهده با کاربر رخ دهند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Threshold for determining whether immediate post-update activity was user-driven or autonomous."
+                    "description": "Threshold for determining whether immediate post-update activity was user-driven or autonomous.",
+                    "description_fa": "آستانه برای تعیین اینکه آیا فعالیت فوری پس از به‌روزرسانی، کاربر محور بوده یا مستقل است."
                 },
                 {
                     "field": "DestinationAllowList",
-                    "description": "Expected new destinations, APIs, CDNs, or telemetry endpoints associated with approved app updates."
+                    "description": "Expected new destinations, APIs, CDNs, or telemetry endpoints associated with approved app updates.",
+                    "description_fa": "مقاصد جدید مورد انتظار، APIها، CDNها، یا نقاط پایانی تله متری مرتبط با به‌روزرسانی‌های برنامه تأیید شده."
                 },
                 {
                     "field": "CapabilityDriftThreshold",
-                    "description": "Threshold for how many newly added or newly exercised permissions/capabilities are considered abnormal for a known app."
+                    "description": "Threshold for how many newly added or newly exercised permissions/capabilities are considered abnormal for a known app.",
+                    "description_fa": "آستانه تعداد مجوزها/قابلیت‌هایی که جدیداً اضافه شده یا اعمال شده‌اند، برای یک برنامه شناخته شده غیرعادی در نظر گرفته می‌شوند."
                 },
                 {
                     "field": "BehaviorBaselinePopulation",
-                    "description": "Population of prior devices, versions, or user cohorts used to baseline normal app behavior."
+                    "description": "Population of prior devices, versions, or user cohorts used to baseline normal app behavior.",
+                    "description_fa": "جمعیت دستگاه‌ها، نسخه‌ها یا گروه‌های کاربر قبلی که برای خط‌مشی رفتار عادی برنامه استفاده می‌شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1697",
+            "description_fa": "یک برنامه یا به‌روزرسانی برنامه از طریق یک مسیر تحویل مورد انتظار وارد می‌شود یا به‌عنوان یک هویت بسته قانونی شناخته شده ارائه می‌شود، اما رفتار پس از نصب یا پس از به‌روزرسانی آن اساساً به روش‌هایی مغایر با نقش تاریخی آن تغییر می‌کند. مدافع هویت بسته و زمینه نصب/به‌روزرسانی، وضعیت قابلیت جدید گسترش‌یافته، تغییر استفاده از چارچوب زمان اجرا، رفتارهای حسگر یا ذخیره‌سازی جدید و مقصدهای جدید شبکه را در مدت کوتاهی پس از نصب یا به‌روزرسانی برای شناسایی خطر احتمالی زنجیره تأمین به‌جای بارگذاری جانبی مخرب معمولی یا فعالیت‌های پس از سازش نامرتبط، مرتبط می‌کند."
         }
     ]
 }

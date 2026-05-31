@@ -9,52 +9,67 @@
                 {
                     "external_id": "CAPEC-662",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/662.html"
+                    "url": "https://capec.mitre.org/data/definitions/662.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-300",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/300.html"
+                    "url": "http://cwe.mitre.org/data/definitions/300.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-494",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/494.html"
+                    "url": "http://cwe.mitre.org/data/definitions/494.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Man in the Browser",
                     "external_id": "T1185",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1185"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1185",
+                    "description_fa": "مرد در مرورگر",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Man-in-the-browser attack",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Man-in-the-browser_attack"
+                    "url": "https://owasp.org/www-community/attacks/Man-in-the-browser_attack",
+                    "description_fa": "حمله Man-in-the-Browser",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Man-in-the-browser attack, Open Web Application Security Project (OWASP)",
                     "external_id": "REF-629",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-community/attacks/Man-in-the-browser_attack"
+                    "url": "https://owasp.org/www-community/attacks/Man-in-the-browser_attack",
+                    "description_fa": "حمله انسان در مرورگر، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Liviu Arsene, Oil and Gas Spearphishing Campaigns Drop Agent Tesla Spyware in Advance of Historic OPEC+ Deal, 2020--04---21, Bitdefender Labs",
                     "external_id": "REF-630",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://labs.bitdefender.com/2020/04/oil-gas-spearphishing-campaigns-drop-agent-tesla-spyware-in-advance-of-historic-opec-deal/"
+                    "url": "https://labs.bitdefender.com/2020/04/oil-gas-spearphishing-campaigns-drop-agent-tesla-spyware-in-advance-of-historic-opec-deal/",
+                    "description_fa": "Liviu Arsene، کمپین‌های Spearphishing نفت و گاز، جاسوس‌افزار Tesla را در پیشبرد قرارداد تاریخی اوپک پلاس، 2020--04---21، Bitdefender Labs حذف می‌کند.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Amit Klein, Man-in-the-Mobile Attacks Single Out Android, 2012--07---10, SecurityIntelligence",
                     "external_id": "REF-631",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://securityintelligence.com/man-in-the-mobile-attacks-single-out-android/"
+                    "url": "https://securityintelligence.com/man-in-the-mobile-attacks-single-out-android/",
+                    "description_fa": "Amit Klein، Man-in-the-Mobile Attacks Single Out Android، 2012--07---10، Security Intelligence",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Kelly Jackson Higgins, New 'Boy In The Browser' Attacks On The Rise, 2011--02---14, Dark Reading, Informa PLC",
                     "external_id": "REF-632",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.darkreading.com/risk/new-boy-in-the-browser-attacks-on-the-rise/d/d-id/1135247"
+                    "url": "https://www.darkreading.com/risk/new-boy-in-the-browser-attacks-on-the-rise/d/d-id/1135247",
+                    "description_fa": "کلی جکسون هیگینز، جدید «پسر در مرورگر» حملات در حال افزایش، 2011--02---14، خواندن تاریک، Informa PLC",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--558870ad-9433-4e39-a0b0-d9b5c4691862",
@@ -90,6 +105,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -113,11 +141,29 @@
                 "For browser pivoting, the SeDebugPrivilege and a high-integrity process must both exist to execute this attack."
             ],
             "x_capec_skills_required": {
-                "Medium": "Tricking the victim into installing the Trojan is often the most difficult aspect of this attack. Afterwards, the remainder of this attack is fairly trivial."
+                "Medium": "Tricking the victim into installing the Trojan is often the most difficult aspect of this attack. Afterwards, the remainder of this attack is fairly trivial.",
+                "Medium_fa": "فریب دادن قربانی برای نصب تروجان اغلب سخت ترین جنبه این حمله است. پس از آن، باقی مانده این حمله نسبتاً بی اهمیت است."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن از آسیب پذیری های امنیتی یا عملکردهای ذاتی یک مرورگر وب برای دستکاری ترافیک بین دو نقطه پایانی سوء استفاده می کند.</xhtml:p>",
+            "name_fa": "دشمن در مرورگر (AiTB)",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک دشمن یک حمله فیشینگ انجام می دهد و قربانی را فریب می دهد تا یک افزونه مرورگر مخرب نصب کند. سپس دشمن خود را بین قربانی و موسسه بانکی خود قرار می دهد. قربانی با انتقال وجه از پس انداز شخصی خود به حساب جاری شخصی خود شروع می کند. با استفاده از جاوا اسکریپت تزریق شده، دشمن این درخواست را می گیرد و آن را تغییر می دهد تا مقدار بیشتری از وجوه را به حسابی که کنترل می کند، قبل از ارسال آن به بانک تغییر دهد. بانک انتقال را پردازش می کند و اخطاریه تاییدیه را برای قربانی ارسال می کند که در عوض توسط دشمن رهگیری می شود. حریف تأییدیه را تغییر می دهد تا جزئیات تراکنش اصلی را منعکس کند و این پیام تغییر یافته را برای قربانی ارسال می کند. با دریافت تاییدیه، قربانی فرض می‌کند که انتقال موفقیت آمیز بوده است و از اینکه پولش به‌تازگی به دشمن منتقل شده است، بی‌اطلاع است.</xhtml:p>",
+                "<xhtml:p> در سال 2020، بدافزار Agent Tesla برای انجام حملات AiTB علیه سازمان‌ها در بخش‌های گاز، نفت و سایر بخش‌های انرژی مورد استفاده قرار گرفت. این بدافزار از طریق یک کمپین spearphishing تحویل داده شد و دارای قابلیت گرفتن فرم، صفحه کلید، کپی داده‌های کلیپ‌بورد، استخراج اعتبار و گرفتن اسکرین‌شات است. [REF-630]</xhtml:p>",
+                "<xhtml:p> حملات Boy in the browser زیرمجموعه ای از حملات AiTB هستند. مشابه حملات AiTB، دشمن ابتدا باید قربانی را فریب دهد تا یک تروجان را از طریق مهندسی اجتماعی یا حملات درایو به دانلود نصب کند. سپس بدافزار فایل \"میزبان\" قربانی را تغییر می دهد تا ترافیک وب را از یک وب سایت مورد نظر به یک وب سایت کنترل شده توسط دشمن که از وب سایت قانونی تقلید می کند، تغییر مسیر دهد. دشمن اکنون قادر است مانند حمله سنتی دشمن در میانه (CAPEC-94) تمام ترافیک را مشاهده، رهگیری و/یا اصلاح کند. حملات BiTB کم هزینه، آسان برای اجرا و شناسایی دشوارتر هستند زیرا بدافزار اغلب پس از پایان حمله خود را حذف می کند. [REF-631]</xhtml:p>",
+                "<xhtml:p>حملات Man in the Mobile زیرمجموعه ای از حملات AiTB هستند که کاربران دستگاه های تلفن همراه را هدف قرار می دهند. مانند حملات AiTB، دشمن قربانی را متقاعد می کند که یک برنامه تلفن همراه تروجان را روی دستگاه تلفن همراه خود نصب کند، اغلب تحت پوشش امنیتی. هنگامی که قربانی برنامه را نصب کرد، حریف می‌تواند تمام ترافیک پیامک‌ها را برای دور زدن سیستم‌های احراز هویت خارج از باند مبتنی بر پیامک ضبط کند. [REF-632]</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>آزمایش</h3><ol><li> <p> دشمن قربانی را فریب می دهد تا بدافزار اسب تروجان را روی سیستم خود نصب کند. پسوندهای مرورگر مخرب قانونی هستند.</td></tr></tbody></table><li> <p>دشمن خود را وارد کانال ارتباطی می‌کند که در ابتدا به‌عنوان یک پروکسی مسیریابی بین دو مؤلفه مورد نظر عمل می‌کند.</p></li></ol></div><div><h3>از فیلترها، فیلترها، فیلترها، مشاهده‌ها و مشاهده‌های آنها از فیلترها استفاده می‌کند</h3><ol> انتخاب دسترسی به اطلاعات حساس یا دستکاری اقدامات دو جزء هدف برای اهداف خود.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>این حمله ابتدا به دشمن نیاز دارد که قربانی را فریب دهد تا یک برنامه اسب تروجان را روی سیستم خود نصب کند، مانند یک افزونه مرورگر وب مخرب، که سپس دشمن از آن برای نصب حمله استفاده می کند. قربانی با یک برنامه وب، مانند وب سایت بانکی، به صورت عادی و با این فرض که اتصال امن است، تعامل دارد. با این حال، دشمن اکنون می تواند ترافیک بین برنامه مشتری (مانند مرورگر وب) و نقطه پایانی همزمان را تغییر داده و/یا مسیریابی مجدد کند، در حالی که به طور همزمان تراکنش ها و داده های مورد نظر را به کاربر نمایش می دهد. همچنین ممکن است دشمن بتواند کوکی‌ها، جلسات HTTP و گواهی‌های کلاینت SSL را جمع‌آوری کند، که می‌تواند برای چرخش به یک اینترانت تأیید شده استفاده شود. شناسایی AITB اغلب دشوار است، زیرا این حملات حتی زمانی که مکانیسم‌های امنیتی مانند SSL/PKI و احراز هویت چندعاملی وجود داشته باشد، موفقیت‌آمیز هستند، زیرا آنها همچنان در طول حمله همانطور که در نظر گرفته شده عمل می‌کنند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "حریف باید یک کاربر را برای نصب یک تروجان نصب یا متقاعد کند.",
+                "دو جزء وجود دارد که با یکدیگر ارتباط برقرار می کنند.",
+                "یک مهاجم قادر است ماهیت و مکانیسم ارتباط بین دو جزء هدف را شناسایی کند.",
+                "احراز هویت متقابل قوی بین دو مؤلفه هدف استفاده نمی شود که فرصتی برای تداخل خصمانه ایجاد می کند.",
+                "برای چرخش مرورگر، SeDebugPrivilege و یک فرآیند با یکپارچگی بالا هر دو باید برای اجرای این حمله وجود داشته باشند."
+            ]
         }
     ],
     "spec_version": "2.0",

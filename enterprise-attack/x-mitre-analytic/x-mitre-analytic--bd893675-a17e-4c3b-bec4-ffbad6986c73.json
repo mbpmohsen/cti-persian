@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0238#AN0666",
-                    "external_id": "AN0666"
+                    "external_id": "AN0666",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BucketNameRegex",
-                    "description": "Patterns of S3 or GCP buckets used for static website hosting may vary by organization."
+                    "description": "Patterns of S3 or GCP buckets used for static website hosting may vary by organization.",
+                    "description_fa": "الگوهای سطل های S3 یا GCP مورد استفاده برای میزبانی وب سایت استاتیک ممکن است بسته به سازمان متفاوت باشد."
                 },
                 {
                     "field": "IAMRoleContext",
-                    "description": "Some uploads may appear benign unless enriched with user/role metadata."
+                    "description": "Some uploads may appear benign unless enriched with user/role metadata.",
+                    "description_fa": "برخی از آپلودها ممکن است خوش خیم به نظر برسند مگر اینکه با ابرداده های کاربر/نقش غنی شده باشند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0666",
+            "description_fa": "دشمن برای مخدوش کردن محتوای میزبانی شده در سطل‌های S3، Azure Blob Storage یا سطل‌های GCP از اعتبارنامه‌های نمونه یا دسترسی برنامه‌های وب به خطر افتاده استفاده می‌کند."
         }
     ]
 }

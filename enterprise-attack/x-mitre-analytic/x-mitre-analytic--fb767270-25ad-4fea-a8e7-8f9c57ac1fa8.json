@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0383#AN1080",
-                    "external_id": "AN1080"
+                    "external_id": "AN1080",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ContainerContextScope",
-                    "description": "Limit detection to containers with persistent volumes or specific workloads"
+                    "description": "Limit detection to containers with persistent volumes or specific workloads",
+                    "description_fa": "شناسایی را به ظروف با حجم ثابت یا بار کاری خاص محدود کنید"
                 },
                 {
                     "field": "MasqueradePatternList",
-                    "description": "Custom list of commonly abused names to blend into container environments (e.g., kubelet, cronjob_sync)"
+                    "description": "Custom list of commonly abused names to blend into container environments (e.g., kubelet, cronjob_sync)",
+                    "description_fa": "فهرست سفارشی از نام‌هایی که معمولاً مورد سوء استفاده قرار می‌گیرند برای ترکیب در محیط‌های کانتینر (مانند kubelet، cronjob_sync)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1080",
+            "description_fa": "نظارت بر ایجاد حساب‌ها در داخل کانتینرها با استفاده از نام‌هایی که شبیه به ارکستراتور قانونی یا هویت پشتیبان است تا تداوم دشمن را پنهان کند."
         }
     ]
 }

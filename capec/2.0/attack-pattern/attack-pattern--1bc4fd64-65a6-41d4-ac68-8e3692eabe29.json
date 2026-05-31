@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-461",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/461.html"
+                    "url": "https://capec.mitre.org/data/definitions/461.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-328",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/328.html"
+                    "url": "http://cwe.mitre.org/data/definitions/328.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-290",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/290.html"
+                    "url": "http://cwe.mitre.org/data/definitions/290.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Thai Duong, Juliano Rizzo, Flickr's API Signature Forgery Vulnerability, 2009--09---28",
                     "external_id": "REF-398",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://netifera.com/research/flickr_api_signature_forgery.pdf"
+                    "url": "http://netifera.com/research/flickr_api_signature_forgery.pdf",
+                    "description_fa": "Thai Duong، Juliano Rizzo، Flickr's API Signature Forgery Vulnerability، 2009--09---28",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--1bc4fd64-65a6-41d4-ac68-8e3692eabe29",
@@ -59,11 +64,30 @@
                 "\n               <xhtml:p>Access to a function to produce a hash (e.g., MD5, SHA1)</xhtml:p>\n               <xhtml:p>Tools that allow the attacker to intercept a message between the client and the server, specifically the hash that is the signature and the length of the original message concatenated with the secret bytes</xhtml:p>\n            "
             ],
             "x_capec_skills_required": {
-                "Medium": "Medium level of cryptography knowledge, specifically how iterative hash functions work. This is needed to select proper padding."
+                "Medium": "Medium level of cryptography knowledge, specifically how iterative hash functions work. This is needed to select proper padding.",
+                "Medium_fa": "سطح متوسط ​​دانش رمزنگاری، به ویژه نحوه عملکرد توابع هش تکراری. این برای انتخاب بالشتک مناسب لازم است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از یک عملکرد هش پسوند/ضعف padding استفاده می کند تا پارامترهای ارسال شده به وب سرویس درخواست احراز هویت را با ایجاد تماس خود به منظور ایجاد یک هش امضای قانونی (همانطور که در یادداشت ها توضیح داده شده است) تغییر دهد، بدون اطلاع از رمز مخفی که گاهی اوقات توسط وب سرویس ارائه می شود.",
+            "name_fa": "Web Services API Signature Forgery Leveraging Function Hash Extension Weakness",
+            "x_capec_example_instances_fa": [
+                "برای اهرم حمله علیه دارای پسوند تابع/ضعف padding، پیامی را که باید به وب سرویس ارسال شود M در نظر بگیرید (این پیام شامل پارامترهای ارسال شده به وب سرویس است که با رمز / بایت های کلید مخفی ارسال می شود). پیام M هش شده و آن هش به وب سرویس منتقل می شود و برای احراز هویت استفاده می شود. مهاجم M را نمی شناسد، اما می تواند Hash (M) و Length (M) را ببیند. سپس مهاجم می تواند هش (M || Padding (M) || M') را برای هر M' محاسبه کند. مهاجم کل پیام M را نمی‌داند، به ویژه مهاجم بایت‌های مخفی را نمی‌داند، اما این مهم نیست. مهاجم همچنان می‌تواند پیام M' خود را امضا کند و وب سرویس فراخوانده شده را وادار کند صحت پیام را بدون خطا تأیید کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3> کاوش</h3><ol><li> <p> <b>یافتن یک وب سرویس آسیب پذیر: </b> دشمن وب سرویسی را پیدا می کند که از طرح احراز هویت آسیب پذیر استفاده می کند، جایی که یک نشانه احراز هویت با یک درخواست و سپس پارامترها الحاق می شود. hashed</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>برای آشنایی با طرح‌های احراز هویت در حال استفاده، اسناد برنامه را بخوانید</td></tr><tr><td>برای جستجوی احراز هویت آسیب‌پذیر، ترافیک سرویس وب را مشاهده کنید. طرح‌ها</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تلاش برای افزودن padding به پارامترها: </b>یک دشمن آزمایش می‌کند که اگر بتواند به سادگی به پارامترهای یک درخواست بالشتک اضافه کند، به طوری که درخواست به طور فنی تغییر کرده است. همان</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>استفاده از پسوند تابع هش / ضعف بالشتک فقط با استفاده از پد برای تست ضعف</td></tr></tbody></table></ol></div><div><h3>Exploit</h3>malmeter <s><b><b> </b>پارامترهای مخرب را به درخواست ثبت شده علاوه بر موارد موجود اضافه کنید. این کار را با استفاده از ضعف padding تابع هش انجام دهید و درخواست را به وب سرویس ارسال کنید تا باور کند که احراز هویت شده است و بر اساس پارامترهای اضافی عمل می‌کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از تابع هش بهره برداری کنید که با افزودن یک برنامه افزودنی نادرست سرویس به آن، همچنان یک ضعف درخواستی نادرست را اضافه کنید. معتبر</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>وقتی سرویس‌های وب به احراز هویت از تماس‌گیرندگان می‌خواهند، گاهی اوقات یک رمز / رمز را برای تماس‌گیرنده صادر می‌کنند که تماس‌گیرنده قرار است از آن برای امضای تماس‌های سرویس وب خود استفاده کند. در یکی از این طرح‌ها، تماس‌گیرنده، هنگام ساخت یک درخواست، تمام پارامترهای ارسال شده به وب سرویس را با کد احراز هویت ارائه‌شده به هم متصل می‌کند و سپس یک هش از رشته پیوسته ایجاد می‌کند (به عنوان مثال، MD5، SHA1، و غیره). سپس آن هش امضایی را تشکیل می دهد که به وب سرویس ارسال می شود که در سمت سرور برای تأیید صحت و یکپارچگی مبدا پیام استفاده می شود. به دلیل طراحی تکراری تابع هش، تنها از درهم‌سازی یک پیام و طول آن، دشمن می‌تواند با محاسبه هش پیام‌های طولانی‌تری که با پیام اولیه شروع می‌شوند و شامل بالشتک مورد نیاز برای رسیدن پیام اولیه به مضربی از 512 بیت، جعل امضا انجام دهد. توجه به این نکته مهم است که این حمله به MD5 محدود نمی شود و روی سایر توابع هش مانند SHA1 کار می کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "سرویس های وب امضای تماس های API را بررسی می کنند",
+                "نشانه ها / اسرار احراز هویت بین سرور و مشتری قانونی به اشتراک گذاشته می شود",
+                "امضای فراخوانی API با الحاق فهرست پارامترها به راز مشترک و هش کردن نتیجه ایجاد می‌شود.",
+                "یک تابع هش تکراری مانند MD5 و SHA1 استفاده می شود.",
+                "مهاجم می‌تواند اطلاعاتی را که بین مشتری قانونی و سرور ارسال می‌شود را رهگیری کند یا به روشی دیگر به آن دسترسی پیدا کند تا مقدار هش و طول پیام اصلی را بازیابی کند.",
+                "کانال ارتباطی بین مشتری و سرور از طریق امنیت کانال مانند TLS ایمن نیست"
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p>دسترسی به یک تابع برای تولید هش (به عنوان مثال، MD5، SHA1)</xhtml:p>\n               <xhtml:p>ابزارهایی که به مهاجم اجازه می دهد پیامی را بین مشتری و سرور رهگیری کند، به ویژه هش که امضا و طول پیام اصلی است که با بایت های مخفی به هم پیوسته است</xhtml:p>"
+            ]
         }
     ],
     "spec_version": "2.0",

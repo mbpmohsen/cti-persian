@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0430#AN1201",
-                    "external_id": "AN1201"
+                    "external_id": "AN1201",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Correlate cloud API calls with IAM role, user, or service account context"
+                    "description": "Correlate cloud API calls with IAM role, user, or service account context",
+                    "description_fa": "تماس‌های Cloud API را با نقش IAM، کاربر یا زمینه حساب سرویس مرتبط کنید"
                 },
                 {
                     "field": "AccessThreshold",
-                    "description": "Number of secret retrievals within a time window before flagging"
+                    "description": "Number of secret retrievals within a time window before flagging",
+                    "description_fa": "تعداد بازیابی های مخفی در یک پنجره زمانی قبل از پرچم گذاری"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1201",
+            "description_fa": "تلاش‌ها برای دسترسی یا شمارش رمز عبور/سرویس‌های ذخیره‌سازی راز ابری مانند AWS Secrets Manager، Azure Key Vault، یا GCP Secret Manager را شناسایی می‌کند. Monitors API شمارش غیرعادی یا بازیابی انبوه اسرار را فرا می خواند."
         }
     ]
 }

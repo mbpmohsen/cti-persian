@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0232#AN0646",
-                    "external_id": "AN0646"
+                    "external_id": "AN0646",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,22 +41,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExpectedAdminUsers",
-                    "description": "Whitelist of management accounts authorized to use ESXi Guest Ops APIs."
+                    "description": "Whitelist of management accounts authorized to use ESXi Guest Ops APIs.",
+                    "description_fa": "لیست سفید حساب‌های مدیریت مجاز به استفاده از ESXi Guest Ops API."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Business hours during which Guest Ops API usage is expected; activity outside may be suspicious."
+                    "description": "Business hours during which Guest Ops API usage is expected; activity outside may be suspicious.",
+                    "description_fa": "ساعات کاری که طی آن انتظار می رود Guest Ops API استفاده شود. فعالیت در خارج ممکن است مشکوک باشد."
                 },
                 {
                     "field": "OperationThreshold",
-                    "description": "Number of Guest Ops API calls considered anomalous if exceeded in a given timeframe."
+                    "description": "Number of Guest Ops API calls considered anomalous if exceeded in a given timeframe.",
+                    "description_fa": "تعداد تماس‌های Guest Ops API غیرعادی در نظر گرفته می‌شوند که در یک بازه زمانی معین از آن بیشتر شود."
                 },
                 {
                     "field": "AuthorizedVMs",
-                    "description": "List of VMs where Guest Ops usage is permitted; usage on other VMs may indicate malicious activity."
+                    "description": "List of VMs where Guest Ops usage is permitted; usage on other VMs may indicate malicious activity.",
+                    "description_fa": "فهرست ماشین‌های مجازی که در آن‌ها استفاده از Guest Ops مجاز است. استفاده در سایر ماشین های مجازی ممکن است نشان دهنده فعالیت مخرب باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0646",
+            "description_fa": "استفاده غیرعادی از APIهای ESXi Guest Operations مانند StartProgramInGuest، ListProcessesInGuest، ListFileInGuest، یا InitiateFileTransferFromGuest را تشخیص می دهد. دیدگاه Defender بر فرکانس غیرمعمول تماس‌های API مهمان، فراخوانی از حساب‌های مدیریتی غیرمنتظره یا اجرای خارج از ساعات کاری تمرکز دارد. این سیگنال های مرتبط نشان دهنده سوء استفاده خصمانه از سرویس های اداری ESXi برای اجرای دستورات روی ماشین های مجازی مهمان است."
         }
     ]
 }

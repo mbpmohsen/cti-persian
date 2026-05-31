@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0107#AN0301",
-                    "external_id": "AN0301"
+                    "external_id": "AN0301",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0301",
-            "description": "Detection of OAuth consent phishing or malicious login attempts initiated through spearphishing links. Behavior chain includes inbound email with OAuth URL \u2192 consent page visited \u2192 unusual token grants logged in IdP logs.",
+            "description": "Detection of OAuth consent phishing or malicious login attempts initiated through spearphishing links. Behavior chain includes inbound email with OAuth URL → consent page visited → unusual token grants logged in IdP logs.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -41,13 +42,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedApps",
-                    "description": "Whitelisted apps permitted for OAuth consent grants."
+                    "description": "Whitelisted apps permitted for OAuth consent grants.",
+                    "description_fa": "برنامه‌های در فهرست مجاز برای اعطای رضایت OAuth."
                 },
                 {
                     "field": "AnomalousConsentPatterns",
-                    "description": "Patterns of consent from unusual geographies, devices, or unapproved applications."
+                    "description": "Patterns of consent from unusual geographies, devices, or unapproved applications.",
+                    "description_fa": "الگوهای رضایت از مناطق جغرافیایی، دستگاه‌ها یا برنامه‌های غیرمعمول غیرمعمول."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0301",
+            "description_fa": "شناسایی فیشینگ رضایت OAuth یا تلاش های مخرب ورود به سیستم که از طریق پیوندهای spearphishing آغاز شده است. زنجیره رفتار شامل ایمیل ورودی با URL OAuth ← بازدید از صفحه رضایت ← اعطای نشانه غیرمعمول ثبت شده در گزارش های IdP است."
         }
     ]
 }

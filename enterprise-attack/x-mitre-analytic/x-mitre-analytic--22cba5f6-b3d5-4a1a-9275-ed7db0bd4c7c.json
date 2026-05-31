@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0095#AN0263",
-                    "external_id": "AN0263"
+                    "external_id": "AN0263",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ChildProcessName",
-                    "description": "Outlook may spawn mshta.exe, powershell.exe, or wscript.exe depending on attacker payload"
+                    "description": "Outlook may spawn mshta.exe, powershell.exe, or wscript.exe depending on attacker payload",
+                    "description_fa": "Outlook بسته به بار مهاجم ممکن است mshta.exe، powershell.exe یا wscript.exe را ایجاد کند."
                 },
                 {
                     "field": "RuleTriggerCondition",
-                    "description": "Rule execution may depend on message subject, sender, or message header content"
+                    "description": "Rule execution may depend on message subject, sender, or message header content",
+                    "description_fa": "اجرای قانون ممکن است به موضوع پیام، فرستنده یا محتوای سرصفحه پیام بستگی داشته باشد"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Legitimate Outlook activity should not spawn scripting or interpreter processes"
+                    "description": "Legitimate Outlook activity should not spawn scripting or interpreter processes",
+                    "description_fa": "فعالیت قانونی Outlook نباید فرآیندهای اسکریپت یا مفسر را ایجاد کند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Execution may occur with delay after message receipt or folder interaction"
+                    "description": "Execution may occur with delay after message receipt or folder interaction",
+                    "description_fa": "اجرا ممکن است با تأخیر پس از دریافت پیام یا تعامل پوشه رخ دهد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0263",
+            "description_fa": "Adversary از ابزاری مانند Ruler یا MFCMapi برای ایجاد یک قانون Outlook مخرب استفاده می کند که پس از دریافت ایمیل ساخته شده، اجرا را آغاز می کند. هنگام تحویل ایمیل، Outlook این قانون را اجرا می کند که منجر به اجرای کد می شود (به عنوان مثال، راه اندازی mshta.exe یا PowerShell). Outlook یک فرآیند فرزند غیر استاندارد را ایجاد می کند، اغلب بدون مجوز، بدون تعامل کاربر."
         }
     ]
 }

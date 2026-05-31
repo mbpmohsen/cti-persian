@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0648#AN1728",
-                    "external_id": "AN1728"
+                    "external_id": "AN1728",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,33 +53,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between location evaluation, region transition, and guarded execution"
+                    "description": "Correlation window between location evaluation, region transition, and guarded execution",
+                    "description_fa": "پنجره همبستگی بین ارزیابی مکان، انتقال منطقه، و اجرای محافظت شده"
                 },
                 {
                     "field": "RegionMatchThreshold",
-                    "description": "Defines proximity, radius, or duration within region required before subsequent activity is considered geographically gated"
+                    "description": "Defines proximity, radius, or duration within region required before subsequent activity is considered geographically gated",
+                    "description_fa": "مجاورت، شعاع یا مدت زمان لازم را در منطقه قبل از اینکه فعالیت بعدی از نظر جغرافیایی در نظر گرفته شود، تعریف می کند."
                 },
                 {
                     "field": "BackgroundLocationRequired",
-                    "description": "Whether suspiciousness increases when background location permission is present and activity occurs outside foreground use"
+                    "description": "Whether suspiciousness increases when background location permission is present and activity occurs outside foreground use",
+                    "description_fa": "وقتی مجوز مکان پس‌زمینه وجود دارد و فعالیت در خارج از استفاده از پیش‌زمینه رخ می‌دهد، مشکوک بودن افزایش می‌یابد"
                 },
                 {
                     "field": "DormancyThreshold",
-                    "description": "Amount of low-activity or dormant runtime before location-qualified activation"
+                    "description": "Amount of low-activity or dormant runtime before location-qualified activation",
+                    "description_fa": "مقدار زمان اجرای کم فعالیت یا غیرفعال قبل از فعال سازی واجد شرایط مکان"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Baseline of legitimate apps expected to use geofencing or conditional location-based features"
+                    "description": "Baseline of legitimate apps expected to use geofencing or conditional location-based features",
+                    "description_fa": "پایه برنامه‌های قانونی که انتظار می‌رود از ویژگی‌های geofencing یا موقعیت‌محور مشروط استفاده کنند"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether execution should be considered higher fidelity only when it begins from background or without recent user interaction"
+                    "description": "Whether execution should be considered higher fidelity only when it begins from background or without recent user interaction",
+                    "description_fa": "این که آیا اجرا باید فقط زمانی که از پس‌زمینه شروع می‌شود یا بدون تعامل اخیر با کاربر، وفاداری بالاتر در نظر گرفته شود."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound traffic volume used to distinguish meaningful post-match activity from benign telemetry"
+                    "description": "Minimum outbound traffic volume used to distinguish meaningful post-match activity from benign telemetry",
+                    "description_fa": "حداقل حجم ترافیک خروجی که برای تشخیص فعالیت معنی دار بعد از مسابقه از تله متری خوش خیم استفاده می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1728",
+            "description_fa": "مرتبط (1) کسب مجوز مکان پیش زمینه یا پس زمینه برای ارزیابی مستمر موقعیت جغرافیایی، (2) بررسی های مکرر مکان یا ثبت نظارت بر ژئوفنس در پس زمینه یا حالت های کم تعامل، و (3) انتقال به رفتار حساس تنها پس از ورود، خروج یا ماندن دستگاه در یک منطقه جغرافیایی واجد شرایط. مدافع یک زنجیره علّی را مشاهده می کند که در آن یک برنامه کاربردی رفتار مخرب یا پرخطر را تا زمانی که شرایط ناشی از مکان برآورده شود سرکوب می کند، سپس اقدامات بعدی مانند ارتباطات شبکه، پردازش پس زمینه یا دسترسی به منابع محافظت شده را آغاز می کند."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0704#AN1823",
-                    "external_id": "AN1823"
+                    "external_id": "AN1823",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,41 +58,52 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum span between install/update or first launch and the first suspicious behavior drift."
+                    "description": "Maximum span between install/update or first launch and the first suspicious behavior drift.",
+                    "description_fa": "حداکثر فاصله بین نصب/به‌روزرسانی یا اولین راه‌اندازی و اولین تغییر رفتار مشکوک."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to add services, libraries, or destinations because of approved releases."
+                    "description": "Apps legitimately expected to add services, libraries, or destinations because of approved releases.",
+                    "description_fa": "برنامه‌ها به‌دلیل نسخه‌های تأییدشده، به‌طور قانونی انتظار می‌رود سرویس‌ها، کتابخانه‌ها یا مقصدهایی را اضافه کنند."
                 },
                 {
                     "field": "AllowedVersionChangeWindow",
-                    "description": "Grace period after an approved release during which limited behavior drift may be expected."
+                    "description": "Grace period after an approved release during which limited behavior drift may be expected.",
+                    "description_fa": "دوره مهلت پس از انتشار تایید شده که در طی آن ممکن است تغییر رفتار محدودی مورد انتظار باشد."
                 },
                 {
                     "field": "CapabilityDriftThreshold",
-                    "description": "Threshold for how many new permissions or capabilities are tolerated before behavior is considered suspicious."
+                    "description": "Threshold for how many new permissions or capabilities are tolerated before behavior is considered suspicious.",
+                    "description_fa": "آستانه برای تعداد مجوزها یا قابلیت های جدید قبل از اینکه رفتار مشکوک تلقی شود."
                 },
                 {
                     "field": "SensorDriftThreshold",
-                    "description": "Threshold for newly used sensors or privacy-sensitive resources that are tolerated for a known app."
+                    "description": "Threshold for newly used sensors or privacy-sensitive resources that are tolerated for a known app.",
+                    "description_fa": "آستانه برای حسگرهای تازه استفاده شده یا منابع حساس به حریم خصوصی که برای یک برنامه شناخته شده قابل تحمل است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether certain framework or sensor behaviors should only be treated as suspicious when they occur without visible user interaction."
+                    "description": "Whether certain framework or sensor behaviors should only be treated as suspicious when they occur without visible user interaction.",
+                    "description_fa": "این که آیا رفتارهای چارچوب یا حسگر خاصی باید فقط زمانی مشکوک تلقی شوند که بدون تعامل قابل مشاهده با کاربر رخ دهند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Time threshold for distinguishing autonomous post-update execution from normal first-run user activity."
+                    "description": "Time threshold for distinguishing autonomous post-update execution from normal first-run user activity.",
+                    "description_fa": "آستانه زمانی برای متمایز کردن اجرای مستقل پس از به‌روزرسانی از فعالیت کاربر معمولی اولین بار."
                 },
                 {
                     "field": "DestinationAllowList",
-                    "description": "Expected domains, CDNs, telemetry services, or APIs associated with approved app updates and known SDKs."
+                    "description": "Expected domains, CDNs, telemetry services, or APIs associated with approved app updates and known SDKs.",
+                    "description_fa": "دامنه‌های مورد انتظار، CDN، خدمات تله‌متری یا APIهای مرتبط با به‌روزرسانی‌های برنامه تأیید شده و SDK‌های شناخته شده."
                 },
                 {
                     "field": "BehaviorBaselinePopulation",
-                    "description": "Devices, versions, or user cohorts used to define normal behavior for the app."
+                    "description": "Devices, versions, or user cohorts used to define normal behavior for the app.",
+                    "description_fa": "دستگاه‌ها، نسخه‌ها یا گروه‌های کاربر که برای تعریف رفتار عادی برای برنامه استفاده می‌شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1823",
+            "description_fa": "یک برنامه کاربردی یا به‌روزرسانی قانونی از طریق یک مسیر موردانتظار یا قبلاً مورد اعتماد نصب می‌شود، اما مدت کوتاهی پس از اولین اجرا یا به‌روزرسانی، برنامه رفتار زمان اجرا، استفاده از حسگر، مرحله‌بندی فایل یا ارتباطات شبکه‌ای را نشان می‌دهد که با خط پایه تاریخی، نقش مستند یا نسخه قبلی سازگار نیست. مدافع به طور خاص به دنبال رفتارهایی است که معمولاً توسط کتابخانه‌های شخص ثالث در معرض خطر یا ابزارهای ساخت دستکاری شده معرفی می‌شوند، مانند فعال‌سازی غیرمنتظره سرویس پس‌زمینه، استفاده از چارچوبی که برای اولین بار مشاهده می‌شود، مجوزهای جدید اعمال شده، مقصدهای جدید شبکه، یا مصنوعات محلی حذف شده که مطابق با عملکرد مورد انتظار برنامه نیستند."
         }
     ]
 }

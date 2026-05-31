@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0069#AN0186",
-                    "external_id": "AN0186"
+                    "external_id": "AN0186",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BlocklistDeviceStrings",
-                    "description": "Indicators such as 'RubberDucky', 'BadUSB', unfamiliar USB-NIC chipsets."
+                    "description": "Indicators such as 'RubberDucky', 'BadUSB', unfamiliar USB-NIC chipsets.",
+                    "description_fa": "نشانگرهایی مانند 'RubberDucky'، 'BadUSB'، چیپست های USB-NIC ناآشنا."
                 },
                 {
                     "field": "ServerClassesNoUSB",
-                    "description": "Hosts where any USB attach should alert (DCs, hypervisors)."
+                    "description": "Hosts where any USB attach should alert (DCs, hypervisors).",
+                    "description_fa": "میزبان هایی که هر اتصال USB باید هشدار دهد (دی سی ها، هایپروایزر)."
                 },
                 {
                     "field": "DHCPVlanScopes",
-                    "description": "Scopes allowed to issue leases for corp endpoints vs. guest/IoT."
+                    "description": "Scopes allowed to issue leases for corp endpoints vs. guest/IoT.",
+                    "description_fa": "محدوده مجاز به صدور اجاره نامه برای نقاط پایانی شرکت در مقابل مهمان/IoT."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0186",
+            "description_fa": "زنجیره: (1) سیاهههای مربوط به udev / هسته، اتصال داغ را نشان می دهد (USB/Thunderbolt/PCIe). (2) مسدود کردن دستگاه ایجاد شده توسط udisks/diskarbitration. (3) اختیاری: رابط شبکه جدید یا اجاره DHCP مشاهده شد. /var/log/messages|syslog را با هم مرتبط کنید، SYSCALL باز/ایجاد در /dev و DHCP/Zeek حسابرسی کرد."
         }
     ]
 }

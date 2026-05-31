@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0501#AN1381",
-                    "external_id": "AN1381"
+                    "external_id": "AN1381",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Filter for unexpected users (non-dev) launching compilers like csc.exe or msbuild.exe"
+                    "description": "Filter for unexpected users (non-dev) launching compilers like csc.exe or msbuild.exe",
+                    "description_fa": "فیلتر برای کاربران غیرمنتظره (غیر توسعه دهنده) که کامپایلرهایی مانند csc.exe یا msbuild.exe را راه اندازی می کنند."
                 },
                 {
                     "field": "OutputDirectoryPath",
-                    "description": "Adjust paths for sensitive file write zones (e.g., `C:\\Users\\Public\\`, `%TEMP%`, or Desktop)"
+                    "description": "Adjust paths for sensitive file write zones (e.g., `C:\\Users\\Public\\`, `%TEMP%`, or Desktop)",
+                    "description_fa": "مسیرها را برای مناطق حساس نوشتن فایل تنظیم کنید (به عنوان مثال، «C:\\Users\\Public»، «%TEMP%»، یا Desktop)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tune the correlation window between compilation and subsequent execution or C2"
+                    "description": "Tune the correlation window between compilation and subsequent execution or C2",
+                    "description_fa": "پنجره همبستگی بین کامپایل و اجرای بعدی یا C2 را تنظیم کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1381",
+            "description_fa": "فعالیت کامپایل را با استفاده از csc.exe، ilasm.exe یا msbuild.exe که توسط فرآیندهای فضای کاربر خارج از محیط‌های توسعه معمولی آغاز می‌شود، و به دنبال آن اجرا یا فعالیت شبکه از باینری‌های جدید نوشته شده شناسایی می‌کند."
         }
     ]
 }

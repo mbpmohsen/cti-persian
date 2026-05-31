@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0056#AN0153",
-                    "external_id": "AN0153"
+                    "external_id": "AN0153",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedRootHashList",
-                    "description": "Baseline list of root certificate hashes; defenders can tune based on organizational certificate policies."
+                    "description": "Baseline list of root certificate hashes; defenders can tune based on organizational certificate policies.",
+                    "description_fa": "لیست پایه هش های گواهی ریشه؛ مدافعان می توانند بر اساس سیاست های گواهی سازمانی تنظیم شوند."
                 },
                 {
                     "field": "MonitoredProcesses",
-                    "description": "Processes associated with certificate management that should be flagged if executed by non-admin users or in unusual contexts."
+                    "description": "Processes associated with certificate management that should be flagged if executed by non-admin users or in unusual contexts.",
+                    "description_fa": "فرآیندهای مرتبط با مدیریت گواهی که اگر توسط کاربران غیر سرپرست یا در زمینه‌های غیرمعمول اجرا شوند، باید علامت‌گذاری شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for registry modifications, certificate installation, and process creation to strengthen detection."
+                    "description": "Correlation window for registry modifications, certificate installation, and process creation to strengthen detection.",
+                    "description_fa": "پنجره همبستگی برای تغییرات رجیستری، نصب گواهی، و ایجاد فرآیند برای تقویت تشخیص."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0153",
+            "description_fa": "شناسایی تغییرات غیرمجاز در ذخیره‌های گواهی ریشه ویندوز با نظارت بر کلیدهای رجیستری، فرآیندهای نصب گواهی، و ایجاد ورودی‌های گواهی جدید که در لیست‌های مورد اعتماد خط اصلی نیستند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0390#AN1096",
-                    "external_id": "AN1096"
+                    "external_id": "AN1096",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,26 +61,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecCommandPattern",
-                    "description": "Regex or allowlist of expected Exec paths within .desktop files. Deviations may be suspicious."
+                    "description": "Regex or allowlist of expected Exec paths within .desktop files. Deviations may be suspicious.",
+                    "description_fa": "Regex یا لیست مجاز مسیرهای Exec مورد انتظار در فایل‌های دسکتاپ. انحرافات ممکن است مشکوک باشند."
                 },
                 {
                     "field": "AutostartDirectory",
-                    "description": "May vary by user config (e.g., $XDG_CONFIG_HOME). Must enumerate actual values per system."
+                    "description": "May vary by user config (e.g., $XDG_CONFIG_HOME). Must enumerate actual values per system.",
+                    "description_fa": "ممکن است بسته به پیکربندی کاربر متفاوت باشد (به عنوان مثال، $XDG_CONFIG_HOME). باید مقادیر واقعی در هر سیستم را برشمرد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate file creation/mod + exec within login window (e.g., 0\u20135 min of user logon)."
+                    "description": "Correlate file creation/mod + exec within login window (e.g., 0–5 min of user logon).",
+                    "description_fa": "ایجاد فایل مرتبط / mod + exec در پنجره ورود به سیستم (به عنوان مثال، 0-5 دقیقه ورود کاربر)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Should filter to non-system users, as XDG persistence typically targets interactive sessions."
+                    "description": "Should filter to non-system users, as XDG persistence typically targets interactive sessions.",
+                    "description_fa": "باید برای کاربران غیر سیستم فیلتر شود، زیرا تداوم XDG معمولاً جلسات تعاملی را هدف قرار می دهد."
                 },
                 {
                     "field": "PackageOriginBaseline",
-                    "description": "Compare .desktop entries to known package sources (e.g., `dpkg -S`). Unexpected origins may be suspicious."
+                    "description": "Compare .desktop entries to known package sources (e.g., `dpkg -S`). Unexpected origins may be suspicious.",
+                    "description_fa": "ورودی‌های دسک‌تاپ را با منابع بسته شناخته‌شده (مانند «dpkg -S») مقایسه کنید. منشاء غیرمنتظره ممکن است مشکوک باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1096",
+            "description_fa": "ارتباط ایجاد/تغییر فایل‌های «.desktop» در فهرست‌های راه‌اندازی خودکار XDG، و به دنبال آن اجرای فرآیندها در ورود کاربر که توسط محیط دسک‌تاپ آغاز شده است. ورودی های مخرب معمولاً شامل مسیرهای Exec مشکوک یا نام های غیرعادی هستند و با بسته های نصب شده مرتبط نیستند."
         }
     ]
 }

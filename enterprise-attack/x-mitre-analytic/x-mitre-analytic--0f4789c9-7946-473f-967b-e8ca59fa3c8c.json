@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0526#AN1460",
-                    "external_id": "AN1460"
+                    "external_id": "AN1460",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedArchiveUtilities",
-                    "description": "Business-approved applications (e.g., Time Machine, backup agents) that generate archives."
+                    "description": "Business-approved applications (e.g., Time Machine, backup agents) that generate archives.",
+                    "description_fa": "برنامه‌های مورد تأیید کسب‌وکار (مانند Time Machine، عوامل پشتیبان‌گیری) که آرشیو تولید می‌کنند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Threshold for flagging archive creation under privileged or service accounts."
+                    "description": "Threshold for flagging archive creation under privileged or service accounts.",
+                    "description_fa": "آستانه برای پرچم گذاری ایجاد بایگانی تحت حساب های دارای امتیاز یا خدمات."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Entropy threshold for detecting encrypted archives versus standard compressed files."
+                    "description": "Entropy threshold for detecting encrypted archives versus standard compressed files.",
+                    "description_fa": "آستانه آنتروپی برای تشخیص آرشیوهای رمزگذاری شده در مقابل فایل های فشرده استاندارد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1460",
+            "description_fa": "استفاده از ابزارهای آرشیو یا رمزگذاری بومی macOS (zip، ditto، hdiutil) را برای مرحله بندی داده های جمع آوری شده تشخیص می دهد. فراخوانی غیرمنتظره ابزارهای بایگانی توسط برنامه‌های آفیس، مرورگرها یا دیمون‌های پس‌زمینه را شناسایی می‌کند. ایجاد فایل کانتینرهای .zip/.dmg را با ناهنجاری های نسل فرآیند مرتبط می کند."
         }
     ]
 }

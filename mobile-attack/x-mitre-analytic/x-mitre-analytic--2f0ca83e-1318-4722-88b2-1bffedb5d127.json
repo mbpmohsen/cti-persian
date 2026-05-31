@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0643#AN1720",
-                    "external_id": "AN1720"
+                    "external_id": "AN1720",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.376Z",
             "name": "Analytic 1720",
-            "description": "From the defender view: an app accesses UIPasteboard contents, sometimes repeatedly, including in background or immediately after another app copies sensitive text. iOS 14+ shows user notifications when pasting cross-app; unified logs reflect pasteboard access, notification, and optional subsequent persistence/exfil. We correlate: pasteboard access \u2192 optional cross-app notification \u2192 local write (cache/DB) and/or network egress within a short window.",
+            "description": "From the defender view: an app accesses UIPasteboard contents, sometimes repeatedly, including in background or immediately after another app copies sensitive text. iOS 14+ shows user notifications when pasting cross-app; unified logs reflect pasteboard access, notification, and optional subsequent persistence/exfil. We correlate: pasteboard access → optional cross-app notification → local write (cache/DB) and/or network egress within a short window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,29 +58,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time between pasteboard access \u2192 persist/exfil (e.g., 5\u201360s)."
+                    "description": "Max time between pasteboard access → persist/exfil (e.g., 5–60s).",
+                    "description_fa": "حداکثر زمان بین دسترسی به مقوا → ماندگاری/اکسفیل (مثلاً 5 تا 60 ثانیه)."
                 },
                 {
                     "field": "MinReadBurst",
-                    "description": "Minimum reads within window to flag harvesting (e.g., \u22652)."
+                    "description": "Minimum reads within window to flag harvesting (e.g., ≥2).",
+                    "description_fa": "حداقل خواندن در پنجره تا پرچم برداشت (به عنوان مثال، ≥2)."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for paste dumps in app container."
+                    "description": "Regex for paste dumps in app container.",
+                    "description_fa": "Regex برای ریختن خمیر در ظرف برنامه."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Allowlisted analytics/CDN endpoints."
+                    "description": "Allowlisted analytics/CDN endpoints.",
+                    "description_fa": "نقاط پایانی تجزیه و تحلیل لیست مجاز/CDN."
                 },
                 {
                     "field": "ForegroundRequired",
-                    "description": "Require foreground state for benign use; flag background reads."
+                    "description": "Require foreground state for benign use; flag background reads.",
+                    "description_fa": "نیاز به حالت پیش زمینه برای استفاده خوش خیم. پس زمینه پرچم خوانده می شود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Work profile/MDM policy state to scope alerts."
+                    "description": "Work profile/MDM policy state to scope alerts.",
+                    "description_fa": "نمایه کاری/خط مشی وضعیت MDM برای وسعت هشدارها."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1720",
+            "description_fa": "از نمای مدافع: یک برنامه به محتوای UIPPasteboard، گاهی اوقات به طور مکرر، از جمله در پس‌زمینه یا بلافاصله پس از کپی کردن متن حساس توسط یک برنامه دیگر، دسترسی پیدا می‌کند. iOS 14+ اعلان‌های کاربر را هنگام چسباندن برنامه متقابل نشان می‌دهد. گزارش‌های یکپارچه منعکس‌کننده دسترسی مقوا، اعلان و تداوم/exfil بعدی اختیاری هستند. ما با هم ارتباط داریم: دسترسی مقوا → اعلان بین برنامه اختیاری → نوشتن محلی (کش/DB) و/یا خروج شبکه در یک پنجره کوتاه."
         }
     ]
 }

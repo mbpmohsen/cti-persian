@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0224#AN0628",
-                    "external_id": "AN0628"
+                    "external_id": "AN0628",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "COMObjectAllowList",
-                    "description": "Legitimate COM CLSIDs and ProgIDs used by enterprise applications, to reduce false positives."
+                    "description": "Legitimate COM CLSIDs and ProgIDs used by enterprise applications, to reduce false positives.",
+                    "description_fa": "COM CLSID و ProgID های قانونی که توسط برنامه های کاربردی سازمانی استفاده می شوند، برای کاهش مثبت کاذب."
                 },
                 {
                     "field": "ParentProcessExclusions",
-                    "description": "Expected parent-child process relationships (e.g., explorer.exe spawning dllhost.exe)."
+                    "description": "Expected parent-child process relationships (e.g., explorer.exe spawning dllhost.exe).",
+                    "description_fa": "روابط مورد انتظار فرآیند والد-فرزند (به عنوان مثال، explorer.exe ایجاد dllhost.exe)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for correlating COM object execution with subsequent process creation or DLL load."
+                    "description": "Threshold for correlating COM object execution with subsequent process creation or DLL load.",
+                    "description_fa": "آستانه برای ارتباط اجرای شی COM با ایجاد فرآیند بعدی یا بار DLL."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0628",
+            "description_fa": "استفاده غیرعادی از اشیاء COM را برای اجرا تشخیص می دهد، مانند برنامه های آفیس که موتورهای برنامه نویسی را ایجاد می کنند، شمارش رابط های COM از طریق پرس و جوهای رجیستری، یا بارگیری DLL های غیر معمول از طریق فعال سازی COM را پردازش می کند. ایجاد فرآیند، بارهای ماژول و پرس و جوهای رجیستری را برای پرچم گذاری اجرای کد مبتنی بر COM یا ماندگاری مشکوک به هم مرتبط می کند."
         }
     ]
 }

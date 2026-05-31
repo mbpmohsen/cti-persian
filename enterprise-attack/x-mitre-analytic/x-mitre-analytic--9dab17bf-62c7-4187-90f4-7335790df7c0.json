@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0477#AN1313",
-                    "external_id": "AN1313"
+                    "external_id": "AN1313",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines max time between remote shell creation and child process execution (e.g., 60 seconds)"
+                    "description": "Defines max time between remote shell creation and child process execution (e.g., 60 seconds)",
+                    "description_fa": "حداکثر زمان بین ایجاد پوسته از راه دور و اجرای فرآیند فرزند را تعیین می کند (به عنوان مثال 60 ثانیه)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope to unexpected remote user logons (non-admins, service accounts)"
+                    "description": "Scope to unexpected remote user logons (non-admins, service accounts)",
+                    "description_fa": "دامنه ورود غیرمنتظره از راه دور کاربر (غیر سرپرست، حساب‌های سرویس)"
                 },
                 {
                     "field": "CommandLineAnomalyScore",
-                    "description": "Score for suspicious command usage via WinRM (e.g., encoded PowerShell)"
+                    "description": "Score for suspicious command usage via WinRM (e.g., encoded PowerShell)",
+                    "description_fa": "امتیاز استفاده از دستور مشکوک از طریق WinRM (به عنوان مثال، PowerShell کدگذاری شده)"
                 },
                 {
                     "field": "KnownAdminHosts",
-                    "description": "List of trusted systems allowed to use WinRM legitimately"
+                    "description": "List of trusted systems allowed to use WinRM legitimately",
+                    "description_fa": "فهرستی از سیستم های مورد اعتماد که مجاز به استفاده قانونی از WinRM هستند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1313",
+            "description_fa": "دشمنانی که از WinRM برای اجرای دستورات از راه دور، راه اندازی فرآیندهای فرزند یا دسترسی به WMI استفاده می کنند. زنجیره تشخیص شامل استفاده از خدمات، فعالیت شبکه، ورود به جلسه از راه دور و ایجاد فرآیند در یک پنجره زمانی کوتاه است."
         }
     ]
 }

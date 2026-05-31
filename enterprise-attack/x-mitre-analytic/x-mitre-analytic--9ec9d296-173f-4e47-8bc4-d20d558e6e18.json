@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0009#AN0021",
-                    "external_id": "AN0021"
+                    "external_id": "AN0021",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -66,21 +67,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate file write by package manager to first execution and egress (default 90 minutes)."
+                    "description": "Correlate file write by package manager to first execution and egress (default 90 minutes).",
+                    "description_fa": "همبستگی نوشتن فایل توسط مدیر بسته تا اولین اجرا و خروج (پیش‌فرض 90 دقیقه)."
                 },
                 {
                     "field": "ApprovedRegistries",
-                    "description": "Allow-listed registries (e.g., registry.npmjs.org, pypi.org, nuget.org, maven.apache.org, company proxies/CDNs)."
+                    "description": "Allow-listed registries (e.g., registry.npmjs.org, pypi.org, nuget.org, maven.apache.org, company proxies/CDNs).",
+                    "description_fa": "ثبت‌های فهرست شده مجاز (مانند registry.npmjs.org، pypi.org، nuget.org، maven.apache.org، پروکسی‌های شرکت/CDN)."
                 },
                 {
                     "field": "DevHosts",
-                    "description": "Limit analytics to engineering endpoints/CI agents to reduce noise."
+                    "description": "Limit analytics to engineering endpoints/CI agents to reduce noise.",
+                    "description_fa": "برای کاهش نویز، تجزیه و تحلیل را به نقاط پایانی مهندسی / عوامل CI محدود کنید."
                 },
                 {
                     "field": "TrustedPublishers",
-                    "description": "Code-signing publishers acceptable for dev tools."
+                    "description": "Code-signing publishers acceptable for dev tools.",
+                    "description_fa": "ناشران امضای کد برای ابزارهای توسعه دهنده قابل قبول هستند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0021",
+            "description_fa": "دشمن ابزارهای وابستگی/dev مورد استفاده توسط توسعه دهندگان یا CI را دستکاری می کند: یک مدیر بسته (npm/yarn/pnpm، pip/pipenv، nuget/dotnet، chocolatey/winget، maven/gradle) یا یک کامپایلر/IDE محتوا را دانلود یا بازیابی می کند. فایل‌ها تحت مسیرهای پروژه و مسیرهای اجرا (node_modules، بسته‌ها، nuget.، .gradle، .m2، %AppData%\\npm، %UserProfile%\\.cargo\\bin، temp build dirs) نوشته می‌شوند. اولین اجرای کامپوننت‌های تازه نوشته شده، اسکریپت‌ها (پیش‌نصب/پس‌نصب)، تخم‌گذاری پوسته/PowerShell یا DLL‌های لودر را راه‌اندازی می‌کند و به دنبال آن خروج شبکه به رجیستری‌ها/CDN‌های تایید نشده انجام می‌شود."
         }
     ]
 }

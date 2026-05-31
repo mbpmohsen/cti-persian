@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0512#AN1413",
-                    "external_id": "AN1413"
+                    "external_id": "AN1413",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates file access, encryption, and network transmission within a timeframe (e.g., 5 minutes)."
+                    "description": "Correlates file access, encryption, and network transmission within a timeframe (e.g., 5 minutes).",
+                    "description_fa": "دسترسی به فایل، رمزگذاری و انتقال شبکه را در یک بازه زمانی (مثلاً 5 دقیقه) به هم مرتبط می کند."
                 },
                 {
                     "field": "CertificateIssuerDenylist",
-                    "description": "Blocks or flags untrusted certificate authorities in SSL/TLS handshakes."
+                    "description": "Blocks or flags untrusted certificate authorities in SSL/TLS handshakes.",
+                    "description_fa": "مقامات گواهی نامعتبر را در دست دادن SSL/TLS مسدود یا پرچم‌گذاری می‌کند."
                 },
                 {
                     "field": "BinaryAllowlist",
-                    "description": "Whitelist for known-good applications allowed to use encrypted outbound traffic."
+                    "description": "Whitelist for known-good applications allowed to use encrypted outbound traffic.",
+                    "description_fa": "لیست سفید برای برنامه های شناخته شده خوب مجاز به استفاده از ترافیک خروجی رمزگذاری شده است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1413",
+            "description_fa": "فرآیندهای غیر مرورگر را که پس از مرحله بندی داده یا رویداد فشرده سازی، اتصالات خروجی رمزگذاری شده (مانند TLS/SSL) را به مقصدهای ناآشنا یا غیرمعمول برای میزبان/کاربر برقرار می کنند، شناسایی می کند."
         }
     ]
 }

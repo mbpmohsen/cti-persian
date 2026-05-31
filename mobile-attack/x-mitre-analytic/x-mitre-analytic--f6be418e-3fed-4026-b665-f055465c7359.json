@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0638#AN1712",
-                    "external_id": "AN1712"
+                    "external_id": "AN1712",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,29 +58,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between file access or staging, deletion event, and subsequent activity"
+                    "description": "Correlation window between file access or staging, deletion event, and subsequent activity",
+                    "description_fa": "پنجره همبستگی بین دسترسی یا مرحله بندی فایل، رویداد حذف و فعالیت های بعدی"
                 },
                 {
                     "field": "FileScopeSet",
-                    "description": "File paths, storage scopes, and data classes monitored for suspicious deletion, such as documents, databases, media, email stores, or update artifacts"
+                    "description": "File paths, storage scopes, and data classes monitored for suspicious deletion, such as documents, databases, media, email stores, or update artifacts",
+                    "description_fa": "مسیرهای فایل، دامنه‌های ذخیره‌سازی و کلاس‌های داده برای حذف مشکوک نظارت می‌شوند، مانند اسناد، پایگاه‌های اطلاعاتی، رسانه‌ها، فروشگاه‌های ایمیل، یا مصنوعات به‌روزرسانی"
                 },
                 {
                     "field": "DeletionVolumeThreshold",
-                    "description": "Threshold for number, size, or concentration of deleted files required before escalation"
+                    "description": "Threshold for number, size, or concentration of deleted files required before escalation",
+                    "description_fa": "آستانه تعداد، اندازه یا غلظت فایل های حذف شده قبل از تشدید مورد نیاز است"
                 },
                 {
                     "field": "AllowedCleanupApps",
-                    "description": "Legitimate applications expected to rotate, purge, or clean up files in the environment"
+                    "description": "Legitimate applications expected to rotate, purge, or clean up files in the environment",
+                    "description_fa": "برنامه های کاربردی قانونی مورد انتظار برای چرخاندن، پاکسازی یا پاکسازی فایل ها در محیط هستند"
                 },
                 {
                     "field": "ProtectedRoleSet",
-                    "description": "Administrative or rooted control paths that materially increase destructive file deletion capability"
+                    "description": "Administrative or rooted control paths that materially increase destructive file deletion capability",
+                    "description_fa": "مسیرهای کنترلی مدیریتی یا روت شده که به طور قابل توجهی قابلیت حذف فایل های مخرب را افزایش می دهد"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Outbound traffic threshold used to distinguish exfiltration-linked cleanup from benign maintenance activity"
+                    "description": "Outbound traffic threshold used to distinguish exfiltration-linked cleanup from benign maintenance activity",
+                    "description_fa": "آستانه ترافیک خروجی برای تشخیص پاکسازی مرتبط با فیلتراسیون از فعالیت های تعمیر و نگهداری خوش خیم استفاده می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1712",
+            "description_fa": "مرتبط (1) دسترسی برنامه به فایل‌های محلی یا مرحله‌بندی فایل‌های محلی که احتمالاً دارای ارزش عملیاتی، شواهدی یا کاربری هستند، (2) حذف آن فایل‌ها یا اقدامات مخرب مانند پاک کردن از طریق دسترسی به فضای ذخیره‌سازی معمولی، کنترل‌های اداری، یا مسیرهای ممتاز/روت شده، و (3) ادامه فعالیت برنامه یا دستگاه پس از حذف، از جمله پاکسازی، انتقال مخفی یا خارج کردن. مدافع یک زنجیره علّی را مشاهده می‌کند که در آن فایل‌ها ابتدا دسترسی یا آماده می‌شوند، سپس حذف می‌شوند و رفتار سمت دستگاه پس از از بین رفتن شواهد یا داده‌ها ادامه می‌یابد."
         }
     ]
 }

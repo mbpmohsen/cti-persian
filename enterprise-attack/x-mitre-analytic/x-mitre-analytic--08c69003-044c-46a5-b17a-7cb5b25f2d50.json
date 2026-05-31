@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0408#AN1143",
-                    "external_id": "AN1143"
+                    "external_id": "AN1143",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EgressRulePorts",
-                    "description": "Cloud security group rules permitting UDP to reflector protocols"
+                    "description": "Cloud security group rules permitting UDP to reflector protocols",
+                    "description_fa": "قوانین گروه امنیتی ابری که به UDP اجازه می دهد تا پروتکل های بازتابنده را در اختیار بگیرد"
                 },
                 {
                     "field": "OutboundToInboundRatio",
-                    "description": "Ratio threshold to flag traffic as potential reflection behavior"
+                    "description": "Ratio threshold to flag traffic as potential reflection behavior",
+                    "description_fa": "آستانه نسبت به ترافیک به عنوان رفتار بازتابی بالقوه"
                 },
                 {
                     "field": "VMInstanceTagContext",
-                    "description": "Cloud metadata that can help scope anomalous behavior to development, testing, or external-facing services"
+                    "description": "Cloud metadata that can help scope anomalous behavior to development, testing, or external-facing services",
+                    "description_fa": "ابرداده‌های ابری که می‌توانند به گسترش رفتارهای غیرعادی در توسعه، آزمایش یا سرویس‌های خارجی کمک کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1143",
+            "description_fa": "VM یا کانتینر میزبان ابر، درخواست‌های UDP جعلی را برای سرویس‌های شخص ثالث در درگاه‌های تقویت‌کننده شناخته شده، با نسبت ترافیک خروجی به ورودی بالا در گزارش‌های جریان VPC ایجاد می‌کند."
         }
     ]
 }

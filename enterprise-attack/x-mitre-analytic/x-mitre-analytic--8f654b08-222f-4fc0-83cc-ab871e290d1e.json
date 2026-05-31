@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0483#AN1327",
-                    "external_id": "AN1327"
+                    "external_id": "AN1327",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineContent",
-                    "description": "Tune to recognize `launchctl list`, `launchctl print`, or service grep strings."
+                    "description": "Tune to recognize `launchctl list`, `launchctl print`, or service grep strings.",
+                    "description_fa": "برای شناسایی «لیست راه‌اندازی»، «راه‌اندازی چاپ» یا رشته‌های grep سرویس تنظیم کنید."
                 },
                 {
                     "field": "ProcessParent",
-                    "description": "Filter known benign automation or MDM agent invocations."
+                    "description": "Filter known benign automation or MDM agent invocations.",
+                    "description_fa": "فراخوانی های اتوماسیون خوش خیم شناخته شده یا عامل MDM را فیلتر کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1327",
+            "description_fa": "کشف از طریق دستورات launchctl یا شمارش پردازش با استفاده از `ps aux | grep com.apple.` برای شناسایی دیمون ها و سرویس ها."
         }
     ]
 }

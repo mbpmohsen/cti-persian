@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0457#AN1255",
-                    "external_id": "AN1255"
+                    "external_id": "AN1255",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RawSocketExecutionPath",
-                    "description": "Uncommon programs using raw sockets (e.g., netcat, Python, nmap)."
+                    "description": "Uncommon programs using raw sockets (e.g., netcat, Python, nmap).",
+                    "description_fa": "برنامه های غیر معمول با استفاده از سوکت های خام (مانند netcat، Python، nmap)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tunable window for correlating execution with network events (e.g., 2m)."
+                    "description": "Tunable window for correlating execution with network events (e.g., 2m).",
+                    "description_fa": "پنجره قابل تنظیم برای ارتباط اجرا با رویدادهای شبکه (به عنوان مثال، 2 متر)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1255",
+            "description_fa": "ترافیک ICMP یا سوکت خام تولید شده توسط فرآیندهای حالت کاربر مانند bash، Python، یا nc، معمولاً با استفاده از «ping»، «hping3» یا بسته‌های دستکاری شده از طریق libpcap یا scapy."
         }
     ]
 }

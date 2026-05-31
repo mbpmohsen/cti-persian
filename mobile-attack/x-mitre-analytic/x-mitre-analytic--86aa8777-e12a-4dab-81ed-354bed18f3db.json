@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0718#AN1848",
-                    "external_id": "AN1848"
+                    "external_id": "AN1848",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.379Z",
             "name": "Analytic 1848",
-            "description": "The defender correlates an application establishing outbound retrieval to a non-baselined external source with immediate local creation of a new executable, module, staged payload, overlay asset, or secondary file in app-controlled or shared storage, followed by optional load, invocation, handoff, or repeat retrieval behavior. The analytic prioritizes Android-observable effects: network download activity, DownloadManager or direct HTTP retrieval, file creation in package-specific or external paths, and execution context inconsistent with recent user interaction or the app\u2019s declared role.",
+            "description": "The defender correlates an application establishing outbound retrieval to a non-baselined external source with immediate local creation of a new executable, module, staged payload, overlay asset, or secondary file in app-controlled or shared storage, followed by optional load, invocation, handoff, or repeat retrieval behavior. The analytic prioritizes Android-observable effects: network download activity, DownloadManager or direct HTTP retrieval, file creation in package-specific or external paths, and execution context inconsistent with recent user interaction or the app’s declared role.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -62,33 +63,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between remote retrieval, local write, and any follow-on load or transfer completion"
+                    "description": "Correlation window between remote retrieval, local write, and any follow-on load or transfer completion",
+                    "description_fa": "پنجره همبستگی بین بازیابی از راه دور، نوشتن محلی، و هر بار بعدی یا تکمیل انتقال"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to download files such as browsers, enterprise app stores, backup/sync tools, or content delivery apps"
+                    "description": "Apps legitimately expected to download files such as browsers, enterprise app stores, backup/sync tools, or content delivery apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود فایل‌هایی مانند مرورگرها، فروشگاه‌های برنامه سازمانی، ابزارهای پشتیبان‌گیری/همگام‌سازی یا برنامه‌های تحویل محتوا را دانلود کنند."
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Approved software distribution, CDN, MDM, and enterprise update endpoints"
+                    "description": "Approved software distribution, CDN, MDM, and enterprise update endpoints",
+                    "description_fa": "توزیع نرم افزار تایید شده، CDN، MDM، و نقاط پایانی به روز رسانی سازمانی"
                 },
                 {
                     "field": "AllowedPathList",
-                    "description": "Expected local download, cache, and update paths for legitimate app behavior"
+                    "description": "Expected local download, cache, and update paths for legitimate app behavior",
+                    "description_fa": "مسیرهای دانلود محلی، حافظه پنهان و به‌روزرسانی برای رفتار قانونی برنامه مورد انتظار است"
                 },
                 {
                     "field": "IngressBytesThreshold",
-                    "description": "Minimum inbound transfer size consistent with a staged secondary tool or payload"
+                    "description": "Minimum inbound transfer size consistent with a staged secondary tool or payload",
+                    "description_fa": "حداقل اندازه انتقال ورودی مطابق با ابزار ثانویه مرحله‌ای یا محموله"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether file retrieval should occur only during active user-driven workflows"
+                    "description": "Whether file retrieval should occur only during active user-driven workflows",
+                    "description_fa": "اینکه آیا بازیابی فایل باید فقط در جریان‌های کاری فعال کاربر محور انجام شود یا خیر"
                 },
                 {
                     "field": "FileTypeRiskPatterns",
-                    "description": "Environment-specific set of retrieved file classes considered suspicious such as apk, dex, jar, so, zip, html overlay, or opaque blob"
+                    "description": "Environment-specific set of retrieved file classes considered suspicious such as apk, dex, jar, so, zip, html overlay, or opaque blob",
+                    "description_fa": "مجموعه‌ای از کلاس‌های فایل بازیابی شده خاص محیطی که مشکوک در نظر گرفته می‌شوند، مانند apk، dex، jar، so، zip، html overlay یا blob مات"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1848",
+            "description_fa": "مدافع برنامه‌ای را که بازیابی خروجی را ایجاد می‌کند به یک منبع خارجی غیر پایه با ایجاد محلی فوری یک فایل اجرایی جدید، ماژول، بار مرحله‌ای، دارایی همپوشانی یا فایل ثانویه در ذخیره‌سازی کنترل‌شده توسط برنامه یا اشتراک‌گذاری، و به دنبال آن بار اختیاری، فراخوانی، انتقال، یا رفتار بازیابی تکراری مرتبط می‌کند. این تجزیه و تحلیل اثرات قابل مشاهده اندروید را اولویت بندی می کند: فعالیت دانلود شبکه، DownloadManager یا بازیابی مستقیم HTTP، ایجاد فایل در مسیرهای خاص بسته یا خارجی، و زمینه اجرای متناقض با تعامل اخیر کاربر یا نقش اعلام شده برنامه."
         }
     ]
 }

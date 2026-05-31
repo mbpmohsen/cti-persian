@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0340#AN0962",
-                    "external_id": "AN0962"
+                    "external_id": "AN0962",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0962",
-            "description": "A user is socially engineered (web page, email, document) to open Run/PowerShell/CMD and paste an obfuscated one-liner. The chain is: (1) user context active in a browser/email/office app \u2192 (2) process creation of a command interpreter with suspicious arguments (base64/Invoke-Expression/web download/pipeline to shell) \u2192 (3) optional file drop in %TEMP% or %APPDATA% \u2192 (4) outbound network connection to an external domain. Events are correlated within a short window and with consistent user/session.",
+            "description": "A user is socially engineered (web page, email, document) to open Run/PowerShell/CMD and paste an obfuscated one-liner. The chain is: (1) user context active in a browser/email/office app → (2) process creation of a command interpreter with suspicious arguments (base64/Invoke-Expression/web download/pipeline to shell) → (3) optional file drop in %TEMP% or %APPDATA% → (4) outbound network connection to an external domain. Events are correlated within a short window and with consistent user/session.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -61,25 +62,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation horizon from parent app (browser/email/office) to interpreter spawn (e.g., 15 minutes)."
+                    "description": "Correlation horizon from parent app (browser/email/office) to interpreter spawn (e.g., 15 minutes).",
+                    "description_fa": "افق همبستگی از برنامه والد (مرورگر/ایمیل/دفتر) تا ایجاد مترجم (مثلاً 15 دقیقه)."
                 },
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Legitimate automation that spawns PowerShell/CMD from Office/Email/Browser."
+                    "description": "Legitimate automation that spawns PowerShell/CMD from Office/Email/Browser.",
+                    "description_fa": "اتوماسیون قانونی که PowerShell/CMD را از Office/Email/Browser تولید می کند."
                 },
                 {
                     "field": "SuspiciousArgPatterns",
-                    "description": "List of command-line substrings indicating pasted one-liners (e.g., '-enc', 'FromBase64String', 'IEX(', 'DownloadString', 'Invoke-WebRequest', 'curl|wget.*\\|\\s*(sh|bash|powershell)')."
+                    "description": "List of command-line substrings indicating pasted one-liners (e.g., '-enc', 'FromBase64String', 'IEX(', 'DownloadString', 'Invoke-WebRequest', 'curl|wget.*\\|\\s*(sh|bash|powershell)').",
+                    "description_fa": "فهرستی از زیررشته‌های خط فرمان که نشان‌دهنده تک‌خط‌های چسب‌شده هستند (به‌عنوان مثال، '-enc'، 'FromBase64String'، 'IEX('، 'DownloadString'، 'Invoke-WebRequest'، 'curl|wget.*\\|\\s*(sh|bash|powershell)')."
                 },
                 {
                     "field": "WritePaths",
-                    "description": "Directories treated as risky for first-stage drops (%TEMP%, %APPDATA%, %PUBLIC%)."
+                    "description": "Directories treated as risky for first-stage drops (%TEMP%, %APPDATA%, %PUBLIC%).",
+                    "description_fa": "دایرکتوری هایی که برای سقوط در مرحله اول خطرناک هستند (%TEMP%, %APPDATA, %PUBLIC%)."
                 },
                 {
                     "field": "OutboundCIDRBlockList",
-                    "description": "Internet ranges/domains to alert on for first-run egress."
+                    "description": "Internet ranges/domains to alert on for first-run egress.",
+                    "description_fa": "محدوده‌های اینترنتی/دامنه‌ها برای هشدار برای خروج اولین بار."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0962",
+            "description_fa": "یک کاربر به صورت اجتماعی مهندسی شده است (صفحه وب، ایمیل، سند) تا Run/PowerShell/CMD را باز کند و یک خط یک خطی مبهم قرار دهد. این زنجیره عبارت است از: (1) زمینه کاربر فعال در برنامه مرورگر/ایمیل/دفتر ← (2) فرآیند ایجاد یک مفسر فرمان با آرگومان های مشکوک (base64/Invoke-Expression/دانلود وب/خط لوله به پوسته) → (3) کاهش فایل اختیاری در %TEMP% یا %APPDATA% → (4) به یک اتصال دامنه خارجی. رویدادها در یک پنجره کوتاه و با کاربر/جلسه ثابت مرتبط هستند."
         }
     ]
 }

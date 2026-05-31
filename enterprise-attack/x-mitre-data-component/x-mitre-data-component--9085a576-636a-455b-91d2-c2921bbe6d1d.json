@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0068",
-                    "external_id": "DC0068"
+                    "external_id": "DC0068",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -34,7 +35,9 @@
                     "name": "WinEventLog:Security",
                     "channel": "EventCode=4929"
                 }
-            ]
+            ],
+            "name_fa": "حذف شی اکتیو دایرکتوری",
+            "description_fa": "حذف شی در AD (به عنوان مثال، حساب‌های کاربری، گروه‌ها، OU) به‌عنوان شناسه رویداد 5141 ثبت می‌شود. مثال‌ها:\n\n- حساب کاربری: کاربر حذف شده.\n- گروه: گروه امنیتی/توزیع حذف شده.\n- واحد سازمانی (OU): از دست دادن تنظیمات یا خط مشی ها.\n- حساب سرویس: عملیات مختل شده یا مسیرهای پوششی.\n- Trust Object: حذف اعتماد دامنه، اختلال در اتصال.\n\n*اقدامات جمع آوری داده ها:*\n\n- سیاست حسابرسی:\n    - «تغییرات سرویس فهرست راهنمای حسابرسی» (موفقیت و شکست) را فعال کنید.\n    - مسیر: `Computer Configuration > Policies > Windows Settings > Security Settings > Advanced Audit Policy Configuration > Audit Policies > Directory Service Changes`.\n    - رویداد کلیدی: شناسه رویداد 5141.\n- ارسال گزارش: از WEF برای متمرکز کردن گزارش ها برای ابزارهای SIEM (به عنوان مثال، Splunk) استفاده کنید.\n- مانیتورینگ EDR را فعال کنید:\n    - شناسایی فرآیندها یا کاربرانی که حذف غیرمجاز اشیاء را آغاز می کنند.\n    - نظارت بر ابزارها و اسکریپت هایی که ممکن است اشیاء دایرکتوری کلیدی را حذف کنند."
         }
     ]
 }

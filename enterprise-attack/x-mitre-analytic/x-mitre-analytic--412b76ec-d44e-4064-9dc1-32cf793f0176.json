@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0046#AN0128",
-                    "external_id": "AN0128"
+                    "external_id": "AN0128",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Duration between VM discovery commands and payload execution"
+                    "description": "Duration between VM discovery commands and payload execution",
+                    "description_fa": "مدت زمان بین دستورات کشف ماشین مجازی و اجرای بار"
                 },
                 {
                     "field": "CommandArtifactMatchList",
-                    "description": "Command-line regex patterns indicative of sandbox evasion (e.g., grep QEMU, strings vmware)"
+                    "description": "Command-line regex patterns indicative of sandbox evasion (e.g., grep QEMU, strings vmware)",
+                    "description_fa": "الگوهای خط فرمان regex نشان دهنده فرار از جعبه سند (مانند grep QEMU، رشته vmware)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0128",
+            "description_fa": "اجرای دستورات برای شمارش فایل‌ها یا فرآیندهای مرتبط با مجازی‌سازی (به عنوان مثال، '/sys/class/dmi/id/product_name'، dmesg، lscpu، lspci)، یا پرس و جو از رابط‌های Hypervisor قبل از اجرای بدافزار."
         }
     ]
 }

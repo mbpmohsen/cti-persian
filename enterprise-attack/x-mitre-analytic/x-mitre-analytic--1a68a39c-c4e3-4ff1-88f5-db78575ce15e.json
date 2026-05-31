@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0412#AN1158",
-                    "external_id": "AN1158"
+                    "external_id": "AN1158",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntrypointAllowlist",
-                    "description": "Container entrypoints that are permitted to read secrets"
+                    "description": "Container entrypoints that are permitted to read secrets",
+                    "description_fa": "نقاط ورودی کانتینری که مجاز به خواندن اسرار هستند"
                 },
                 {
                     "field": "VolumeMountPath",
-                    "description": "Paths to credentials/secrets inside container images"
+                    "description": "Paths to credentials/secrets inside container images",
+                    "description_fa": "مسیرهایی به اعتبارنامه ها / اسرار داخل تصاویر ظرف"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1158",
+            "description_fa": "دسترسی به لایه‌های تصویر کانتینر یا اسرار نصب‌شده (مثلاً رازهای Docker) توسط فرآیندهایی که به نقطه ورودی یا زمینه ارکستراسیون مرتبط نیستند."
         }
     ]
 }

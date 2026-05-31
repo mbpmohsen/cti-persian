@@ -14,21 +14,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1564/013",
                     "external_id": "T1564.013",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Ahn Lab CoinMiner 2023",
                     "description": "Ahn Lab. (2023, April 24). CoinMiner (KONO DIO DA) Distributed to Linux SSH Servers. Retrieved April 4, 2025.",
                     "url": "https://asec.ahnlab.com/en/51908/",
                     "source_name_fa": "Ahn Lab CoinMiner 2023",
-                    "description_fa": "آزمایشگاه Ahn (2023، 24 آوریل) CoinMiner (KONO DIO DA) به سرورهای SSH لینوکس توزیع شده است. Retrieved 4, 2025."
+                    "description_fa": "آهن لب. (2023، 24 آوریل). CoinMiner (KONO DIO DA) در سرورهای لینوکس SSH توزیع شده است. بازبینی شده در ۴ آوریل ۲۰۲۵."
                 },
                 {
                     "source_name": "Cado Security Commando Cat 2024",
                     "description": "Nate Bill & Matt Muir. (2024, February 1). The Nine Lives of Commando Cat: Analysing a Novel Malware Campaign Targeting Docker. Retrieved April 4, 2025.",
                     "url": "https://www.cadosecurity.com/blog/the-nine-lives-of-commando-cat-analysing-a-novel-malware-campaign-targeting-docker",
                     "source_name_fa": "Cado Security Commando Cat 2024",
-                    "description_fa": "Nate Bill & Matt Muir (2024, فوریه 1) The Nine Lives of Commando Cat: Analysing a Novel Malware Targeting Docker Retrieved 4, 2025."
+                    "description_fa": "نیت بیل و مت مویر (1 فوریه 2024). نه زندگی گربه کماندو: تجزیه و تحلیل یک کمپین بدافزار جدید که داکر را هدف قرار می دهد. بازبینی شده در ۴ آوریل ۲۰۲۵."
                 }
             ],
             "object_marking_refs": [
@@ -57,8 +57,8 @@
                 "Linux"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "کوه های سرخ",
-            "description_fa": "مخالفان ممکن است از پیوند بر روی ساختارهای فایل استفاده کنند تا فعالیت و مصنوعات خود را از خدمات بومی پنهان کنند. یک کوه اتصال یک دایرکتوری یا فایل را از یک مکان در سیستم فایل به دیگری، شبیه به یک میانبر بر روی ویندوز نقشه می کند. معمولا برای دسترسی به فایل ها یا دایرکتوری های خاص در محیط های مختلف مانند داخل ظروف یا محیط های chroot استفاده می شود و نیاز به دسترسی sudo دارد.\n\nمخالفان ممکن است از کوه های متصل برای نقشه برداری یک دایرکتوری خالی یا یک دایرکتوری خوش خیم \"/proc\" به یک دایرکتوری \"/proc\" فرایند مخرب استفاده کنند. با استفاده از دستورات \"mount-oconnect /proc/benign- Process /proc/malicious- Process\" (یا \"mount -B\")، دایرکتوری فرایند مخرب \"/proc\" با محتویات یک دایرکتوری خوش خیم \"/proc\" پر شده است. هنگامی که فعالیت فرآیند جستجوی سیستم، مانند \"ps\" و \"top\"، هسته به دنبال کوه اتصال و ارائه محتوای دایرکتوری خوش خیم به جای دایرکتوری واقعی فرایند مخرب است. در نتیجه، این اطلاعات نشان می دهد که به نظر می رسد از فرایند خوش خیم آمده است، به طور موثر پنهان کردن متاداده فرایند مخرب، اجرایی، و یا سایر مصنوعات از تشخیص.[۹][۵] (Citation: Cado Security Commando Cat 2024) (Citation: Ahn Lab CoinMiner 2023)"
+            "name_fa": "اتصال پایه ها",
+            "description_fa": "دشمنان ممکن است از اتصالات اتصال در ساختارهای فایل سوء استفاده کنند تا فعالیت و مصنوعات خود را از ابزارهای اصلی پنهان کنند. یک bind mount یک فهرست یا فایل را از یک مکان در سیستم فایل به مکان دیگر، شبیه به میانبر در ویندوز، نگاشت می کند. معمولاً برای دسترسی به فایل‌ها یا دایرکتوری‌های خاص در محیط‌های مختلف، مانند داخل کانتینرها یا محیط‌های chroot استفاده می‌شود و به دسترسی sudo نیاز دارد. \n\nدشمنان ممکن است از bind mount برای نگاشت یک دایرکتوری خالی یا یک دایرکتوری خوش خیم «/proc» به دایرکتوری «/proc» یک فرآیند مخرب استفاده کنند. با استفاده از دستورات «mount –o bind /proc/benign-process /proc/malicious-process» (یا «mount –B»)، دایرکتوری «/proc» فرآیند مخرب با محتویات دایرکتوری «/proc» یک فرآیند خوش‌خیم پوشانده می‌شود. هنگامی که ابزارهای سیستم از فعالیت فرآیند پرس و جو می کنند، مانند «ps» و «top»، هسته از bind mount پیروی می کند و محتویات دایرکتوری خوش خیم را به جای دایرکتوری واقعی «/proc» فرآیند مخرب ارائه می دهد. در نتیجه، این ابزارهای کمکی اطلاعاتی را نشان می‌دهند که به نظر می‌رسد از فرآیند خوش‌خیم می‌آیند، و عملاً ابرداده‌ها، قابل اجرا یا سایر مصنوعات فرآیند مخرب را از شناسایی پنهان می‌کنند.(Citation: Cado Security Commando Cat 2024)(Citation: Ahn Lab CoinMiner 2023)"
         }
     ]
 }

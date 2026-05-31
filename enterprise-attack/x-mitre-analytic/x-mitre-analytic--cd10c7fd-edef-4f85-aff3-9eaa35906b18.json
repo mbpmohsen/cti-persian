@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0266#AN0739",
-                    "external_id": "AN0739"
+                    "external_id": "AN0739",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptCommandMatch",
-                    "description": "AppleScript references to Mail.app and delete commands"
+                    "description": "AppleScript references to Mail.app and delete commands",
+                    "description_fa": "AppleScript به Mail.app ارجاع می دهد و دستورات را حذف می کند"
                 },
                 {
                     "field": "LibraryPathMatch",
-                    "description": "Files within ~/Library/Mail/V*/ folders"
+                    "description": "Files within ~/Library/Mail/V*/ folders",
+                    "description_fa": "فایل ها در پوشه های ~/Library/Mail/V*/"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0739",
+            "description_fa": "حذف مصنوعات Apple Mail را از طریق AppleScript یا حذف مستقیم محتوای صندوق پستی در ~/Library/Mail/ شناسایی می کند، به خصوص زمانی که قبل از ورود به سیستم از راه دور یا دسترسی API مربوط به C2 باشد."
         }
     ]
 }

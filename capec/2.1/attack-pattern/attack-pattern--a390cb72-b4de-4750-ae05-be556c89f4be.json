@@ -9,53 +9,64 @@
                 {
                     "external_id": "CAPEC-55",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/55.html"
+                    "url": "https://capec.mitre.org/data/definitions/55.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-261",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/261.html"
+                    "url": "http://cwe.mitre.org/data/definitions/261.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-521",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/521.html"
+                    "url": "http://cwe.mitre.org/data/definitions/521.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-262",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/262.html"
+                    "url": "http://cwe.mitre.org/data/definitions/262.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-263",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/263.html"
+                    "url": "http://cwe.mitre.org/data/definitions/263.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-654",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/654.html"
+                    "url": "http://cwe.mitre.org/data/definitions/654.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-916",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/916.html"
+                    "url": "http://cwe.mitre.org/data/definitions/916.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-308",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/308.html"
+                    "url": "http://cwe.mitre.org/data/definitions/308.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-309",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/309.html"
+                    "url": "http://cwe.mitre.org/data/definitions/309.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Brute Force:Password Cracking",
                     "external_id": "T1110.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1110/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1110/002",
+                    "description_fa": "Brute Force: شکستن رمز عبور",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--a390cb72-b4de-4750-ae05-be556c89f4be",
@@ -86,6 +97,15 @@
                 ],
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -106,11 +126,27 @@
                 "Rainbow table of password hash chains with the right algorithm used. A password cracking tool that leverages this rainbow table will also be required. Hash(es) of the password is required."
             ],
             "x_capec_skills_required": {
-                "Low": "A variety of password cracking tools are available that can leverage a rainbow table. The more difficult part is to obtain the password hash(es) in the first place."
+                "Low": "A variety of password cracking tools are available that can leverage a rainbow table. The more difficult part is to obtain the password hash(es) in the first place.",
+                "Low_fa": "انواع ابزارهای شکستن رمز عبور در دسترس هستند که می توانند از جدول رنگین کمانی استفاده کنند. بخش دشوارتر در وهله اول به دست آوردن هش(های) رمز عبور است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم به جدول پایگاه داده دسترسی پیدا می کند که در آن هش رمزهای عبور ذخیره می شود. سپس از یک جدول رنگین کمانی از زنجیره های هش از پیش محاسبه شده برای جستجوی رمز عبور اصلی استفاده می کنند. هنگامی که رمز اصلی مربوط به هش به دست آمد، مهاجم از رمز عبور اصلی برای دسترسی به سیستم استفاده می کند.",
+            "name_fa": "شکستن رمز عبور جدول رنگین کمان",
+            "x_capec_example_instances_fa": [
+                "BusyBox 1.1.1 از نمک در هنگام تولید رمز عبور استفاده نمی کند، که این امر باعث می شود کاربران محلی بتوانند رمز عبور را از فایل رمز دزدیده شده با استفاده از تکنیک هایی مانند جداول رنگین کمان حدس بزنند. همچنین ببینید: CVE-2006-1058"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین خط‌مشی رمز عبور برنامه/سیستم: </b>خط‌مشی‌های گذرواژه برنامه/سیستم مورد نظر را تعیین کنید.</p></li><table><tbody><tr><th>تکنیک‌های حداقل مجاز و حداکثر رمز عبور</thd><tr>تعیین کنید. طول.</td></tr><tr><td>قالب گذرواژه‌های مجاز را تعیین کنید (اعم از اینکه لازم باشد یا مجاز باشد حاوی اعداد، نویسه‌های خاص و غیره باشد).</td></tr><tr><td>خط‌مشی قفل کردن حساب را تعیین کنید (یک سیاست قفل حساب سخت‌گیرانه از حملات brute force جلوگیری می‌کند).</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table مهاجم به جدول پایگاه داده ای دسترسی پیدا می کند که هش رمزهای عبور را ذخیره می کند یا به طور بالقوه فقط هش یک رمز عبور فردی را کشف می کند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>کپی از جدول پایگاه داده یا فایل مسطح حاوی هش رمز عبور (با شکستن کنترل های دسترسی، استفاده از SQL Injection><trdt, و غیره) بدست آورید. مکان‌های ذخیره‌سازی مخصوص پلتفرم (مانند رجیستری ویندوز)</td></tr><tr><td>بسته‌های شبکه حاوی هش رمز عبور را اسنیف کنید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Run bassword sulmed</b>rainbow tooling-Run ابزاری برای شکستن رمز عبور که از جدول رنگین کمانی محاسبه شده قبلی برای الگوریتم هش مناسب استفاده می کند. اگر مهاجم بداند که سیستم رمز عبور از چه الگوریتم هش استفاده شده است کمک می کند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>ابزار شکستن رمز عبور مبتنی بر جدول رنگین کمان مانند Ophcrack یا RainbowCrack را اجرا کنید. عملکرد کاهش باید به خط مشی رمز عبور برنامه/سیستم بستگی داشته باشد.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>یک جدول رنگین کمان رمز عبور زنجیره های هش را برای رمزهای عبور مختلف ذخیره می کند. یک زنجیره رمز عبور از رمز عبور اصلی، P، از طریق یک تابع کاهش (فشرده‌سازی) R و یک تابع هش H محاسبه می‌شود. یک رابطه تکراری وجود دارد که در آن Xi+1 = R(H(Xi))، X0 = P. سپس زنجیره هش به طول n برای رمز عبور اصلی P می‌تواند تشکیل شود: X1، X2، X3، Xn، Xn. سپس P و H(Xn) با هم در جدول رنگین کمان ذخیره می شوند. ساخت جداول رنگین کمان زمان بسیار زیادی می برد و از نظر محاسباتی گران است. یک جدول جداگانه باید برای الگوریتم های هش مختلف (به عنوان مثال SHA1، MD5 و غیره) ساخته شود. با این حال، هنگامی که جدول رنگین کمان محاسبه می شود، می تواند در شکستن رمزهای عبور هش شده بدون استفاده از نمک بسیار موثر باشد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "هش رمز عبور اصلی در دسترس مهاجم است. برای شانس موفقیت بیشتر، یک مهاجم باید بیش از یک هش از رمز عبور اصلی و در حالت ایده آل کل جدول داشته باشد.",
+                "Salt برای ایجاد هش رمز عبور اصلی استفاده نشده است. در غیر این صورت جداول رنگین کمان باید دوباره محاسبه شوند، که بسیار گران است و حمله را عملا غیرممکن می کند (مخصوصاً اگر نمک در تکرارها اضافه شود).",
+                "این سیستم از احراز هویت مبتنی بر رمز عبور یک عاملی استفاده می کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "جدول Rainbow از زنجیره های هش رمز عبور با الگوریتم مناسب استفاده شده است. یک ابزار شکستن رمز عبور که از این جدول رنگین کمان استفاده می کند نیز مورد نیاز است. هش(های) رمز عبور لازم است."
+            ]
         }
     ],
     "type": "bundle"

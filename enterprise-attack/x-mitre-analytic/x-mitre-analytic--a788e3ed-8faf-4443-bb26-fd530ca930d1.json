@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0289#AN0801",
-                    "external_id": "AN0801"
+                    "external_id": "AN0801",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AdminRoles",
-                    "description": "Define which roles are authorized to stop or modify logging."
+                    "description": "Define which roles are authorized to stop or modify logging.",
+                    "description_fa": "تعیین کنید که کدام نقش ها مجاز به توقف یا تغییر گزارش هستند."
                 },
                 {
                     "field": "RegionScope",
-                    "description": "Adjust monitoring to ensure multi-region logging tampering is caught."
+                    "description": "Adjust monitoring to ensure multi-region logging tampering is caught.",
+                    "description_fa": "نظارت را تنظیم کنید تا اطمینان حاصل شود که دستکاری ورود به سیستم در چند منطقه کشف شده است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0801",
+            "description_fa": "رویدادهای Cloud API که در آن سرویس‌های گزارش‌گیری متوقف، حذف یا اصلاح می‌شوند به نحوی که نمایان بودن حسابرسی را غیرفعال می‌کند. نمای مدافع: عملیات غیرمجاز StopLogging، DeleteTrail یا UpdateSink مرتبط با فعالیت ممتاز کاربر."
         }
     ]
 }

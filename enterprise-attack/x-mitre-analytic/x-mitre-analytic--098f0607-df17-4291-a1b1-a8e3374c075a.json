@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0897#AN2030",
-                    "external_id": "AN2030"
+                    "external_id": "AN2030",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,21 +53,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate multiply discovery activities and file enumeration activities."
+                    "description": "Correlate multiply discovery activities and file enumeration activities.",
+                    "description_fa": "فعالیت‌های کشف ضرب و فعالیت‌های شمارش فایل را به هم مرتبط کنید."
                 },
                 {
                     "field": "DiscoveryActivityThreshold",
-                    "description": "Minimum number of different discovery techniques within time window to trigger detection - balance between false positives and coverage (default: 4 activities)"
+                    "description": "Minimum number of different discovery techniques within time window to trigger detection - balance between false positives and coverage (default: 4 activities)",
+                    "description_fa": "حداقل تعداد تکنیک‌های کشف مختلف در بازه زمانی برای شروع شناسایی - تعادل بین موارد مثبت کاذب و پوشش (پیش‌فرض: 4 فعالیت)"
                 },
                 {
                     "field": "ExclusionTargetList",
-                    "description": "List of extensions or folders considered suspicious when excluded (e.g., .dll, .exe, C:\\\\Program Files\\\\)"
+                    "description": "List of extensions or folders considered suspicious when excluded (e.g., .dll, .exe, C:\\\\Program Files\\\\)",
+                    "description_fa": "فهرست پسوندها یا پوشه‌هایی که در صورت حذف مشکوک در نظر گرفته می‌شوند (به عنوان مثال، .dll، .exe، C:\\\\Program Files\\\\)"
                 },
                 {
                     "field": "AuthorizedExclusionModifiers",
-                    "description": "Whitelist of known system management tools/processes allowed to modify exclusion settings"
+                    "description": "Whitelist of known system management tools/processes allowed to modify exclusion settings",
+                    "description_fa": "لیست سفید ابزارها/فرآیندهای مدیریت سیستم شناخته شده مجاز به تغییر تنظیمات حذف"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 2030",
+            "description_fa": "فرآیندی بدون سابقه قبلی یا خارج از ابزارهای شناخته شده لیست سفید، تغییرات فایل یا رجیستری را برای پیکربندی قوانین حذف برای سیستم‌های آنتی ویروس، پشتیبان‌گیری یا مدیریت فایل آغاز می‌کند. یا یک شمارش سیستم فایل برای نام‌های فایل خاص و پسوندهای حیاتی مانند .dll، .exe، .sys، یا فهرست‌های راهنماهای خاص مانند «Program Files» یا مسیرهای ابزار امنیتی یا کشف اجزای سیستم برای حذف فایل‌ها یا مؤلفه‌ها."
         }
     ]
 }

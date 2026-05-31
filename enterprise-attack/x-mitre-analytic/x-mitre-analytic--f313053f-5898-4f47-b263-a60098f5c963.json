@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0205#AN0581",
-                    "external_id": "AN0581"
+                    "external_id": "AN0581",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "May need to tune based on encoded input or custom extensions (e.g., .jpeg instead of .xsl)."
+                    "description": "May need to tune based on encoded input or custom extensions (e.g., .jpeg instead of .xsl).",
+                    "description_fa": "ممکن است نیاز به تنظیم بر اساس ورودی کدگذاری شده یا پسوندهای سفارشی داشته باشد (به عنوان مثال، jpeg. به جای xsl.)."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Legitimate administrative or developer tools may use msxsl; validate the parent process chain."
+                    "description": "Legitimate administrative or developer tools may use msxsl; validate the parent process chain.",
+                    "description_fa": "ابزارهای اجرایی قانونی یا توسعه دهنده ممکن است از msxsl استفاده کنند. اعتبار زنجیره فرآیند والد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation window between script engine DLL load and suspicious process spawn."
+                    "description": "Temporal correlation window between script engine DLL load and suspicious process spawn.",
+                    "description_fa": "پنجره همبستگی زمانی بین بار DLL موتور اسکریپت و ایجاد فرآیند مشکوک."
                 },
                 {
                     "field": "RemoteXSLDomainWhitelist",
-                    "description": "Filter known safe URLs used by enterprise for XSL transformations."
+                    "description": "Filter known safe URLs used by enterprise for XSL transformations.",
+                    "description_fa": "URL های ایمن شناخته شده مورد استفاده توسط شرکت برای تبدیل های XSL را فیلتر کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0581",
+            "description_fa": "اجرای اسکریپت های XSL از طریق msxsl.exe یا wmic.exe با استفاده از JScript یا VBScript تعبیه شده برای اجرای پروکسی. تشخیص با ایجاد فرآیند، الگوهای خط فرمان و رفتار بارگذاری ماژول اجزای برنامه نویسی (به عنوان مثال jscript.dll) ارتباط دارد."
         }
     ]
 }

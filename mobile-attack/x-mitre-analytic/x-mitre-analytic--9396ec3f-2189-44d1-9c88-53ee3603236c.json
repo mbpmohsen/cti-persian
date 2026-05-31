@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0685#AN1794",
-                    "external_id": "AN1794"
+                    "external_id": "AN1794",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.380Z",
             "name": "Analytic 1794",
-            "description": "A defender observes an application generating application-layer communications that blend with normal traffic (HTTP(S), WebSocket, DNS, mail protocols) but show deviations from enterprise baselines for that bundle ID\u2014such as persistent background network sessions, regular low-volume polling intervals, anomalous SNI/Host destinations, uncommon DNS patterns, or uniform request/response sizing\u2014suggesting command and control over legitimate-looking protocols without relying on tool signatures.",
+            "description": "A defender observes an application generating application-layer communications that blend with normal traffic (HTTP(S), WebSocket, DNS, mail protocols) but show deviations from enterprise baselines for that bundle ID—such as persistent background network sessions, regular low-volume polling intervals, anomalous SNI/Host destinations, uncommon DNS patterns, or uniform request/response sizing—suggesting command and control over legitimate-looking protocols without relying on tool signatures.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,17 +53,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CadenceAnomalyThreshold",
-                    "description": "Defines acceptable deviation in protocol communication timing"
+                    "description": "Defines acceptable deviation in protocol communication timing",
+                    "description_fa": "انحراف قابل قبول در زمان بندی ارتباطات پروتکل را تعریف می کند"
                 },
                 {
                     "field": "SessionPersistenceThreshold",
-                    "description": "Baseline deviation tolerance for long-lived sessions"
+                    "description": "Baseline deviation tolerance for long-lived sessions",
+                    "description_fa": "تحمل انحراف پایه برای جلسات طولانی مدت"
                 },
                 {
                     "field": "AppNetworkBehaviorBaseline",
-                    "description": "Expected mapping of application functionality to protocol usage"
+                    "description": "Expected mapping of application functionality to protocol usage",
+                    "description_fa": "نگاشت مورد انتظار از عملکرد برنامه به استفاده از پروتکل"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1794",
+            "description_fa": "یک مدافع برنامه‌ای را مشاهده می‌کند که ارتباطات لایه برنامه‌ای را ایجاد می‌کند که با ترافیک معمولی ترکیب می‌شود (HTTP(S)، WebSocket، DNS، پروتکل‌های ایمیل) اما انحرافاتی را از خطوط پایه سازمانی برای آن ID بسته نشان می‌دهد - مانند جلسات شبکه پس‌زمینه مداوم، فواصل منظم نظرسنجی با حجم کم، الگوهای غیرعادی SNI/Host DNS یکنواخت یا مقصدهای یکنواخت DNS، uncom، اندازه - پیشنهاد فرمان و کنترل بر پروتکل‌های ظاهری قانونی بدون تکیه بر امضای ابزار."
         }
     ]
 }

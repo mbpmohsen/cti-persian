@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0057#AN0156",
-                    "external_id": "AN0156"
+                    "external_id": "AN0156",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedDebuggers",
-                    "description": "List of authorized debugging tools permitted in dev/test environments"
+                    "description": "List of authorized debugging tools permitted in dev/test environments",
+                    "description_fa": "فهرست ابزارهای اشکال زدایی مجاز مجاز در محیط های توسعه دهنده/تست"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period between memory inspection and Keychain API access"
+                    "description": "Correlation period between memory inspection and Keychain API access",
+                    "description_fa": "دوره همبستگی بین بازرسی حافظه و دسترسی به API Keychain"
                 },
                 {
                     "field": "PrivilegedUsers",
-                    "description": "Expected set of admin accounts with legitimate debugging permissions"
+                    "description": "Expected set of admin accounts with legitimate debugging permissions",
+                    "description_fa": "مجموعه مورد انتظار از حساب های مدیریت با مجوزهای اشکال زدایی قانونی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0156",
+            "description_fa": "تلاش های مشکوک دسترسی به حافظه را شناسایی می کند که فرآیند «امنیت» را هدف قرار می دهد. ابزارهایی را مشاهده می‌کند که عملیات خواندن حافظه فرآیندی (مانند ptrace، task_for_pid) را در برابر «securityd» فراخوانی می‌کنند. با اصل و نسب فرآیند والد غیرعادی، افزایش امتیاز ریشه، یا تلاش‌های مکرر غیرمجاز مرتبط است."
         }
     ]
 }

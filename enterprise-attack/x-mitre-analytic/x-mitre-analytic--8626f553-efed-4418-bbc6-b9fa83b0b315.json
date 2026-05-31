@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0581#AN1599",
-                    "external_id": "AN1599"
+                    "external_id": "AN1599",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DestinationDomain",
-                    "description": "Can tune for popular web services (e.g., googleapis.com, github.com) based on threat actor tooling"
+                    "description": "Can tune for popular web services (e.g., googleapis.com, github.com) based on threat actor tooling",
+                    "description_fa": "می تواند برای سرویس های وب محبوب (مانند googleapis.com، github.com) بر اساس ابزار عامل تهدید تنظیم شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "May adjust temporal window to catch beaconing patterns (e.g., every 10-30 mins)"
+                    "description": "May adjust temporal window to catch beaconing patterns (e.g., every 10-30 mins)",
+                    "description_fa": "ممکن است پنجره زمانی را تنظیم کند تا الگوهای نشانگر را بگیرد (به عنوان مثال، هر 10-30 دقیقه)"
                 },
                 {
                     "field": "ProcessName",
-                    "description": "Environment-specific tuning to exclude expected update or telemetry tools"
+                    "description": "Environment-specific tuning to exclude expected update or telemetry tools",
+                    "description_fa": "تنظیم ویژه محیط برای حذف ابزارهای به روز رسانی مورد انتظار یا تله متری"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1599",
+            "description_fa": "فرآیند مشکوک شروع اتصالات خروجی به سرویس‌های وب بدون پاسخ متناظر یا ترافیک برگشتی، که نشان‌دهنده کانال‌های فرمان یک طرفه است."
         }
     ]
 }

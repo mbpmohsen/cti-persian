@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0114#AN0318",
-                    "external_id": "AN0318"
+                    "external_id": "AN0318",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessName",
-                    "description": "Detection tuning for binaries like `groups`, `getent`, `awk`, or `cut` that may be used in pipelines."
+                    "description": "Detection tuning for binaries like `groups`, `getent`, `awk`, or `cut` that may be used in pipelines.",
+                    "description_fa": "تنظیم تشخیص برای باینری‌هایی مانند «گروه‌ها»، «getent»، «awk» یا «برش» که ممکن است در خطوط لوله استفاده شوند."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Used to determine whether enumeration was triggered by a script or terminal."
+                    "description": "Used to determine whether enumeration was triggered by a script or terminal.",
+                    "description_fa": "برای تعیین اینکه آیا شمارش توسط یک اسکریپت یا پایانه راه اندازی شده است استفاده می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0318",
+            "description_fa": "شمارش گروه‌های محلی را با استفاده از باینری‌های رایج (گروه‌ها، getent، cat /etc/group) یا اسکریپت‌نویسی با اصل و نسب مشکوک تشخیص می‌دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0543#AN1496",
-                    "external_id": "AN1496"
+                    "external_id": "AN1496",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedCryptoProcesses",
-                    "description": "Whitelist browsers, mail clients, or apps expected to use asymmetric crypto."
+                    "description": "Whitelist browsers, mail clients, or apps expected to use asymmetric crypto.",
+                    "description_fa": "مرورگرها، مشتریان ایمیل یا برنامه‌هایی که انتظار می‌رود از رمزنگاری نامتقارن استفاده کنند در لیست سفید قرار دارند."
                 },
                 {
                     "field": "CertificateAuthorityList",
-                    "description": "Baseline CA list for validating abnormal certs."
+                    "description": "Baseline CA list for validating abnormal certs.",
+                    "description_fa": "فهرست پایه CA برای اعتبارسنجی گواهی‌های غیرعادی."
                 },
                 {
                     "field": "HandshakeTimeout",
-                    "description": "Detection of incomplete or malformed handshakes."
+                    "description": "Detection of incomplete or malformed handshakes.",
+                    "description_fa": "تشخیص دست دادن های ناقص یا بد شکل."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1496",
+            "description_fa": "فرآیندهایی که معمولاً با رمزگذاری مرتبط نیستند که کتابخانه‌های رمزنگاری نامتقارن را بارگیری می‌کنند (مانند rsaenh.dll، crypt32.dll) و متعاقباً شروع به اتصالات TLS/SSL خروجی با زنجیره‌های گواهی یا دست دادن غیرعادی می‌کنند. Defender ایجاد فرآیند، بار ماژول و جلسات رمزگذاری شده غیرمعمول را به هم مرتبط می کند."
         }
     ]
 }

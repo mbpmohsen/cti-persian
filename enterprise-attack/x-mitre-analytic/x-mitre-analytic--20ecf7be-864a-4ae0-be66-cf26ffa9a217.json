@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0512#AN1416",
-                    "external_id": "AN1416"
+                    "external_id": "AN1416",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VMToEgressPathWatchlist",
-                    "description": "Expected traffic routes for monitored VMs."
+                    "description": "Expected traffic routes for monitored VMs.",
+                    "description_fa": "مسیرهای ترافیکی مورد انتظار برای ماشین های مجازی نظارت شده"
                 },
                 {
                     "field": "TLSClientAppIdentifier",
-                    "description": "Applications allowed to initiate TLS sessions from hypervisor level."
+                    "description": "Applications allowed to initiate TLS sessions from hypervisor level.",
+                    "description_fa": "برنامه ها اجازه دارند جلسات TLS را از سطح Hypervisor شروع کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1416",
+            "description_fa": "اتصالات خروجی رمزگذاری شده غیرمنتظره را از اجزای مدیریت یا ماشین های مجازی مهمان با استفاده از TLS شناسایی می کند، به ویژه پس از افزایش حجم داده یا هماهنگی مبتنی بر اسکریپت از داخل محیط مهمان."
         }
     ]
 }

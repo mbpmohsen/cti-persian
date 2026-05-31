@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0077#AN0213",
-                    "external_id": "AN0213"
+                    "external_id": "AN0213",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandPattern",
-                    "description": "Match known interface manipulation utilities or driver invocations."
+                    "description": "Match known interface manipulation utilities or driver invocations.",
+                    "description_fa": "ابزارهای دستکاری رابط شناخته شده یا فراخوانی راننده را مطابقت دهید."
                 },
                 {
                     "field": "NetworkDevice",
-                    "description": "Tunable to non-default or rarely used interfaces (e.g., wlan1, hci0)."
+                    "description": "Tunable to non-default or rarely used interfaces (e.g., wlan1, hci0).",
+                    "description_fa": "قابل تنظیم بر روی رابط های غیر پیش فرض یا به ندرت استفاده می شود (به عنوان مثال، wlan1، hci0)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0213",
+            "description_fa": "استفاده از «rfkill»، «nmcli» یا ابزارهای سطح پایین (به عنوان مثال، «iw»، «hcitool»، «pppd») برای فعال کردن رابط‌های جایگزین و به دنبال آن انتقال داده از طریق کارت‌های شبکه غیراصولی."
         }
     ]
 }

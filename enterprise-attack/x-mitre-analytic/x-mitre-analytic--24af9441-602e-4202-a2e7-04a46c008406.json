@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0183#AN0517",
-                    "external_id": "AN0517"
+                    "external_id": "AN0517",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedTools",
-                    "description": "Define legitimate transfer utilities expected in the environment"
+                    "description": "Define legitimate transfer utilities expected in the environment",
+                    "description_fa": "ابزارهای انتقال قانونی مورد انتظار در محیط را تعریف کنید"
                 },
                 {
                     "field": "DestinationDirectories",
-                    "description": "Restrict to suspicious or non-standard directories for transferred files"
+                    "description": "Restrict to suspicious or non-standard directories for transferred files",
+                    "description_fa": "برای فایل های منتقل شده به فهرست های مشکوک یا غیر استاندارد محدود کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0517",
+            "description_fa": "فرآیندهای scp، rsync، curl، sftp یا ftp را که انتقال به سیستم‌های داخلی همراه با رویدادهای ایجاد فایل در دایرکتوری‌های غیرمعمول را آغاز می‌کنند، نظارت کنید. فعالیت انتقال را با اجرای بعدی آن باینری ها مرتبط کنید."
         }
     ]
 }

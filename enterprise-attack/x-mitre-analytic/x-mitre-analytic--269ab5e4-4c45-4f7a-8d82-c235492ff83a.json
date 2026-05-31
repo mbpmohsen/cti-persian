@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0443#AN1224",
-                    "external_id": "AN1224"
+                    "external_id": "AN1224",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AnomalyParentPID",
-                    "description": "Triggering PID used to flag abnormal child adoption (commonly PID 1)"
+                    "description": "Triggering PID used to flag abnormal child adoption (commonly PID 1)",
+                    "description_fa": "راه‌اندازی PID مورد استفاده برای پرچم‌گذاری فرزندخواندگی غیرعادی (معمولاً PID 1)"
                 },
                 {
                     "field": "AllowedServices",
-                    "description": "Allowlist of background daemons legitimately using launchd as parent"
+                    "description": "Allowlist of background daemons legitimately using launchd as parent",
+                    "description_fa": "فهرست مجاز از دیمون‌های پس‌زمینه که به طور قانونی از راه‌اندازی به‌عنوان والد استفاده می‌کنند"
                 },
                 {
                     "field": "ProcessNameEntropy",
-                    "description": "Entropy score threshold for abnormal process names in detached state"
+                    "description": "Entropy score threshold for abnormal process names in detached state",
+                    "description_fa": "آستانه امتیاز آنتروپی برای نام‌های فرآیند غیرعادی در حالت جدا شده"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1224",
+            "description_fa": "الگوهای اجرائی را که در آن فرآیند فرزند از والد اصلی خود جدا می‌شود، شناسایی می‌کند، که اغلب تحت «راه‌اندازی» (PID 1) بدون تبار والدین نشان داده می‌شود. این شکستگی‌ها در درخت فرآیند نشان‌دهنده تکنیک‌های فرار با استفاده از «daemon()»، «fork()» یا پرچم‌های اجرای پس‌زمینه است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0037#AN0105",
-                    "external_id": "AN0105"
+                    "external_id": "AN0105",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,13 +52,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "Browser-specific credential storage paths such as Chrome Login Data, IE Credential Locker"
+                    "description": "Browser-specific credential storage paths such as Chrome Login Data, IE Credential Locker",
+                    "description_fa": "مسیرهای ذخیره اطلاعات اعتبار خاص مرورگر مانند داده ورود به سیستم Chrome، IE Credential Locker"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between file read and process memory/API access"
+                    "description": "Correlation window between file read and process memory/API access",
+                    "description_fa": "پنجره همبستگی بین خواندن فایل و دسترسی به حافظه پردازش/API"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0105",
+            "description_fa": "دسترسی غیرمجاز به فروشگاه‌های اعتبار مرورگر وب (مانند داده‌های ورود Chrome، Edge Credential Locker) را با فرآیندهایی غیر از خود مرورگر شناسایی می‌کند. خواندن فایل پایگاه‌های اطلاعاتی اعتبار را با فراخوان‌های API بعدی به «CryptUnprotectData» یا تلاش‌های بازرسی حافظه مرتبط می‌کند."
         }
     ]
 }

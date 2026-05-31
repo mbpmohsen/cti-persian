@@ -9,48 +9,62 @@
                 {
                     "external_id": "CAPEC-694",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/694.html"
+                    "url": "https://capec.mitre.org/data/definitions/694.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-497",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/497.html"
+                    "url": "http://cwe.mitre.org/data/definitions/497.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "System Language Discovery",
                     "external_id": "T1614",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1614"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1614",
+                    "description_fa": "کشف زبان سیستم",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Language-Specific Registry Entries",
                     "external_id": "REF-727",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/indexsrv/language-specific-registry-entries"
+                    "url": "https://learn.microsoft.com/en-us/previous-versions/windows/desktop/indexsrv/language-specific-registry-entries",
+                    "description_fa": "ورودی های رجیستری خاص زبان",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "winnls.h header",
                     "external_id": "REF-728",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnls/"
+                    "url": "https://learn.microsoft.com/en-us/windows/win32/api/winnls/",
+                    "description_fa": "سربرگ winnls.h",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "local (1p) - Linux Man Pages",
                     "external_id": "REF-729",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.systutorials.com/docs/linux/man/1p-locale/"
+                    "url": "https://www.systutorials.com/docs/linux/man/1p-locale/",
+                    "description_fa": "محلی (1p) - Linux Man Pages",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "vconsole.conf",
                     "external_id": "REF-730",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.freedesktop.org/software/systemd/man/vconsole.conf.html"
+                    "url": "https://www.freedesktop.org/software/systemd/man/vconsole.conf.html",
+                    "description_fa": "vconsole.conf",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "timedatectl",
                     "external_id": "REF-731",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.freedesktop.org/software/systemd/man/timedatectl.html"
+                    "url": "https://www.freedesktop.org/software/systemd/man/timedatectl.html",
+                    "description_fa": "timedatectl",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--296d0305-8a72-4f50-b702-cc56e90a7749",
@@ -68,6 +82,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -83,11 +100,21 @@
                 "The adversary requires access to the target's operating system tools to query relevant system information. On windows, registry queries can be conducted with powershell, wmi, or regedit. On Linux or macOS, queries can be performed with through a shell."
             ],
             "x_capec_skills_required": {
-                "Low": "The adversary must know how to query various system sources of information respective of the system's operating system to obtain the relevant information."
+                "Low": "The adversary must know how to query various system sources of information respective of the system's operating system to obtain the relevant information.",
+                "Low_fa": "حریف باید بداند که چگونه منابع مختلف اطلاعات سیستم مربوط به سیستم عامل سیستم را برای به دست آوردن اطلاعات مربوطه جستجو کند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک حریف در تلاش برای شناسایی موقعیت جغرافیایی سیستم، اطلاعات مربوط به سیستم هدف را جمع آوری می کند.</xhtml:p>\n            <xhtml:p>اطلاعات جمع آوری شده می تواند شامل طرح صفحه کلید، زبان سیستم و منطقه زمانی باشد. این اطلاعات ممکن است برای یک دشمن در تأیید هدف مورد نظر و/یا تطبیق حملات بیشتر مفید باشد.</xhtml:p>",
+            "name_fa": "کشف موقعیت مکانی سیستم",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کشف اطلاعات محلی سیستم: </b> دشمن اطلاعات سیستم را از منابع مختلف مانند رجیستری و توابع API بومی بررسی می‌کند و اطلاعات جمع‌آوری‌شده را برای استنباط موقعیت جغرافیایی هدف بررسی می‌کند. system</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>پرس و جوی رجیستری: کلید رجیستری را جستجو کنید HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\ContentIndex\\Language\\Language\\Language_Dialect,YRRey_Key را در Windows,YRRey_Kontrol LanguageH,YRRey_Komputer LanguageH,YRRey_Kit Layout\\Preload برای به دست آوردن شناسه‌های زبان هگزادسیمال طرح‌بندی‌های صفحه‌کلید از پیش بارگذاری‌شده کاربر فعلی، و Computer\\HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\TimeZoneInformation برای به‌دست آوردن پیکربندی منطقه زمانی سیستم</td></tr></tr><tr>ParPI><td> عملکرد Windows. GetTimeZoneInformation، GetUserDefaultUILanguage، GetSystemDefaultUILanguage، GetKeyboardLayoutList و GetUserDefaultLangID برای به دست آوردن اطلاعاتی درباره زبان‌ها، طرح‌بندی صفحه‌کلید، و مناطق زمانی نصب‌شده در سیستم یا سیستم‌های macOS یا لینوکس، برای به دست آوردن اطلاعات وضعیت و نمایش وضعیت صفحه‌کلید $LANG و نمایش متغیر زمان و نمایش اطلاعات محیطی از صفحه کلید $LANG استفاده کنید. تنظیمات ساعت.</td></tr><tr><td>خواندن فایل‌های پیکربندی: برای سیستم‌های مبتنی بر macOS و لینوکس، فایل /etc/vconsole.conf را مشاهده کنید تا اطلاعاتی در مورد نقشه‌برداری صفحه کلید و فونت کنسول دریافت کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "حریف باید سطحی از دسترسی به سیستم داشته باشد و درک اساسی از سیستم عامل داشته باشد تا بتواند منابع مناسب را برای اطلاعات مربوطه جستجو کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف نیاز به دسترسی به ابزارهای سیستم عامل هدف برای استعلام اطلاعات مربوط به سیستم دارد. در ویندوز، پرس و جوهای رجیستری را می توان با powershell، wmi یا regedit انجام داد. در لینوکس یا macOS، پرس و جوها را می توان از طریق یک پوسته انجام داد."
+            ]
         }
     ],
     "type": "bundle"

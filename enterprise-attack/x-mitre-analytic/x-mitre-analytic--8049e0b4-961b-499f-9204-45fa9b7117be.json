@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0318#AN0896",
-                    "external_id": "AN0896"
+                    "external_id": "AN0896",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WorkHours",
-                    "description": "Baseline normal developer activity periods to reduce false positives."
+                    "description": "Baseline normal developer activity periods to reduce false positives.",
+                    "description_fa": "شروع دوره‌های فعالیت نرمال توسعه‌دهنده برای کاهش مثبت کاذب."
                 },
                 {
                     "field": "RepoDomainList",
-                    "description": "Known allowed internal or external repository domains."
+                    "description": "Known allowed internal or external repository domains.",
+                    "description_fa": "دامنه های مخزن داخلی یا خارجی مجاز شناخته شده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0896",
+            "description_fa": "فرآیندهایی مانند اسکریپت‌های git، curl یا python که دستوراتی را اجرا می‌کنند که فایل‌ها (tar، gzip) را بسته‌بندی می‌کنند و به دنبال آن آپلود HTTPS در نقاط پایانی مخزن کد می‌شوند. نمای مدافع: فعالیت غیرمعمول git push یا درخواست‌های HTTPS اسکریپت‌شده را خارج از ساعات کاری عادی توسعه‌دهنده شناسایی کنید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0146#AN0412",
-                    "external_id": "AN0412"
+                    "external_id": "AN0412",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutablePath",
-                    "description": "Focus on binaries like shred, dd, wipe, custom wipers, or bash execution chains."
+                    "description": "Focus on binaries like shred, dd, wipe, custom wipers, or bash execution chains.",
+                    "description_fa": "روی فایل های باینری مانند shred، dd، wipe، برف پاک کن های سفارشی یا زنجیره های اجرای bash تمرکز کنید."
                 },
                 {
                     "field": "DeletedPathPattern",
-                    "description": "Tune for critical mount points or home/data directories."
+                    "description": "Tune for critical mount points or home/data directories.",
+                    "description_fa": "برای نقاط نصب حیاتی یا فهرست‌های خانه/داده تنظیم کنید."
                 },
                 {
                     "field": "SyscallBurstRate",
-                    "description": "Rate of unlink/unlinkat syscalls to indicate mass deletion in a short period."
+                    "description": "Rate of unlink/unlinkat syscalls to indicate mass deletion in a short period.",
+                    "description_fa": "نرخ unlink/unlinkat syscalls برای نشان دادن حذف انبوه در یک دوره کوتاه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0412",
+            "description_fa": "حذف‌ها یا بازنویسی‌های بازگشتی گسترده از طریق باینری‌های «rm -rf»، «shred»، «dd» یا پاک‌کن. ممکن است شامل لغو پیوند سیستم، حذف مسیرهای پیکربندی/داده شناخته شده یا الگوهای بازنویسی متوالی باشد."
         }
     ]
 }

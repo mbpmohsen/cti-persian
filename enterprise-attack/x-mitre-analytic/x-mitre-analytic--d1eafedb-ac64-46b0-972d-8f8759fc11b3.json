@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0260#AN0718",
-                    "external_id": "AN0718"
+                    "external_id": "AN0718",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TokenLifetimeThreshold",
-                    "description": "Limit the maximum time temporary tokens are valid."
+                    "description": "Limit the maximum time temporary tokens are valid.",
+                    "description_fa": "حداکثر زمان معتبر بودن رمزهای موقت را محدود کنید."
                 },
                 {
                     "field": "ExpectedAuthFlows",
-                    "description": "Define normal authentication flows (e.g., password+MFA) to baseline token issuance."
+                    "description": "Define normal authentication flows (e.g., password+MFA) to baseline token issuance.",
+                    "description_fa": "جریان های عادی احراز هویت (به عنوان مثال رمز عبور + MFA) را برای صدور توکن پایه تعریف کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0718",
+            "description_fa": "اعتبارنامه های وب جعلی ممکن است به صورت صدور غیرعادی توکن SAML، استخراج رمز OpenID Connect یا استفاده از کلید پیش تأیید Zimbra ظاهر شود. مدافعان ممکن است توکن هایی را ببینند که بدون رویدادهای احراز هویت عادی، چندین توکن معتبر تولید شده به طور همزمان، یا ناهنجاری های امضا شده در گزارش های IdP صادر شده اند."
         }
     ]
 }

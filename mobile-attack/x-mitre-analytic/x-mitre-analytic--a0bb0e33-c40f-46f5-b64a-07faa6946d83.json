@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0672#AN1771",
-                    "external_id": "AN1771"
+                    "external_id": "AN1771",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,41 +58,52 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between app state changes and communication with legitimate web-service infrastructure."
+                    "description": "Correlation window between app state changes and communication with legitimate web-service infrastructure.",
+                    "description_fa": "پنجره همبستگی بین تغییرات وضعیت برنامه و ارتباط با زیرساخت خدمات وب قانونی."
                 },
                 {
                     "field": "SupervisedRequired",
-                    "description": "Strongest app context and managed state analytics depend on supervised iOS devices."
+                    "description": "Strongest app context and managed state analytics depend on supervised iOS devices.",
+                    "description_fa": "قوی ترین زمینه برنامه و تجزیه و تحلیل وضعیت مدیریت شده به دستگاه های iOS تحت نظارت بستگی دارد."
                 },
                 {
                     "field": "AllowedManagedApps",
-                    "description": "Approved managed apps and expected business use vary by organization and device profile."
+                    "description": "Approved managed apps and expected business use vary by organization and device profile.",
+                    "description_fa": "برنامه‌های مدیریت‌شده تأییدشده و استفاده تجاری مورد انتظار براساس سازمان و نمایه دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedServiceClasses",
-                    "description": "Some managed apps legitimately communicate with collaboration, cloud-storage, or messaging services."
+                    "description": "Some managed apps legitimately communicate with collaboration, cloud-storage, or messaging services.",
+                    "description_fa": "برخی از برنامه های مدیریت شده به طور قانونی با سرویس های همکاری، فضای ذخیره سازی ابری یا پیام رسانی ارتباط برقرار می کنند."
                 },
                 {
                     "field": "AllowedDestinations",
-                    "description": "Expected Apple, enterprise, SaaS, CDN, and API destinations vary by app and tenant."
+                    "description": "Expected Apple, enterprise, SaaS, CDN, and API destinations vary by app and tenant.",
+                    "description_fa": "مقصدهای مورد انتظار اپل، سازمانی، SaaS، CDN، و API بر اساس برنامه و مستاجر متفاوت است."
                 },
                 {
                     "field": "BackgroundRefreshBaseline",
-                    "description": "Normal background network behavior differs across mail, chat, navigation, and enterprise apps."
+                    "description": "Normal background network behavior differs across mail, chat, navigation, and enterprise apps.",
+                    "description_fa": "رفتار شبکه پس‌زمینه عادی در برنامه‌های ایمیل، چت، ناوبری و سازمانی متفاوت است."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close traffic must be to user activity to be considered expected."
+                    "description": "Defines how close traffic must be to user activity to be considered expected.",
+                    "description_fa": "مشخص می کند که ترافیک چقدر باید به فعالیت کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "BeaconIntervalTolerance",
-                    "description": "Allowed periodicity for sync, push, and refresh traffic varies across app categories."
+                    "description": "Allowed periodicity for sync, push, and refresh traffic varies across app categories.",
+                    "description_fa": "تناوب مجاز برای همگام‌سازی، فشار دادن و به‌روزرسانی ترافیک در دسته‌های برنامه متفاوت است."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Threshold for suspicious transfer volume to legitimate web-service platforms."
+                    "description": "Threshold for suspicious transfer volume to legitimate web-service platforms.",
+                    "description_fa": "آستانه حجم انتقال مشکوک به پلتفرم های خدمات وب قانونی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1771",
+            "description_fa": "مدافع ارتباط را با پلتفرم‌های خدمات وب خارجی قانونی با زمینه برنامه مدیریت‌شده و اطلاعات وضعیت دستگاه مرتبط می‌کند که نشان می‌دهد ترافیک با نقش مورد انتظار برنامه، نمایه بازخوانی پس‌زمینه، یا زمان‌بندی تعامل کاربر مغایرت دارد. در iOS، قوی‌ترین شواهد قابل اعتماد، تله‌متری شبکه است که به برنامه یا دستگاه مدیریت‌شده به‌علاوه وضعیت برنامه و زمینه نظارت مرتبط است، به‌ویژه زمانی که ترافیک به پلتفرم‌های اجتماعی، مشارکتی، فضای ذخیره‌سازی ابری یا عمومی HTTPS اندکی پس از فعالیت پس‌زمینه اتفاق می‌افتد، در حالی که دستگاه قفل است، یا بدون اجرای پیش‌زمینه مورد انتظار کاربر محور. دید مستقیم چارچوب سطح پایین ضعیف‌تر از Android است، بنابراین اطمینان تحلیلی اولیه باید به جای اثبات فرضی در سطح میزبان، به زمینه برنامه نظارت شده و رفتار شبکه متصل شود."
         }
     ]
 }

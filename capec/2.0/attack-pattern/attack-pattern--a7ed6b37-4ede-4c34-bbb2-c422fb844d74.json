@@ -9,36 +9,46 @@
                 {
                     "external_id": "CAPEC-634",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/634.html"
+                    "url": "https://capec.mitre.org/data/definitions/634.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-267",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/267.html"
+                    "url": "http://cwe.mitre.org/data/definitions/267.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Audio Capture",
                     "external_id": "T1123",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1123"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1123",
+                    "description_fa": "ضبط صدا",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Video Capture",
                     "external_id": "T1125",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1125"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1125",
+                    "description_fa": "فیلمبرداری",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Amrita Mitra, What is Car Whisperer?, 2017--03---08, The Security Buddy",
                     "external_id": "REF-653",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.thesecuritybuddy.com/bluetooth-security/what-is-car-whisperer/"
+                    "url": "https://www.thesecuritybuddy.com/bluetooth-security/what-is-car-whisperer/",
+                    "description_fa": "آمریتا میترا، نجواگر ماشین چیست؟، 2017--03---08، رفیق امنیتی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "What is Bluesnarfing?, 2017--03---13, Finjan Mobile",
                     "external_id": "REF-654",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.finjanmobile.com/what-is-bluesnarfing/"
+                    "url": "https://www.finjanmobile.com/what-is-bluesnarfing/",
+                    "description_fa": "Bluesnarfing چیست؟، 2017--03---13، فینجان موبایل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a7ed6b37-4ede-4c34-bbb2-c422fb844d74",
@@ -56,6 +66,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -73,11 +86,22 @@
                 "Knowledge of the target device's or application’s vulnerabilities that can be capitalized on with malicious code. The adversary must be able to place the malicious code on the target device."
             ],
             "x_capec_skills_required": {
-                "High": "To deploy a hidden process or malware on the system to automatically collect audio and video data."
+                "High": "To deploy a hidden process or malware on the system to automatically collect audio and video data.",
+                "High_fa": "برای استقرار یک فرآیند یا بدافزار مخفی در سیستم برای جمع آوری خودکار داده های صوتی و تصویری."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن از عملکردهای صوتی و تصویری سیستم هدف از طریق بدافزار یا کارهای برنامه ریزی شده سوء استفاده می کند. هدف به دست آوردن اطلاعات حساس در مورد هدف برای منافع مالی، شخصی، سیاسی یا سایر موارد است که با جمع‌آوری داده‌های ارتباطی بین دو طرف از طریق استفاده از دستگاه‌های جانبی (مانند میکروفون و وب‌کم) یا برنامه‌های کاربردی با قابلیت‌های صوتی و تصویری (مانند Skype) در یک سیستم انجام می‌شود.",
+            "name_fa": "ابزارهای جانبی صوتی و تصویری را بررسی کنید",
+            "x_capec_example_instances_fa": [
+                "یک دشمن می تواند صدا و تصویر را ضبط کند و ضبط شده را به یک سرور C2 یا قابلیت مشابهی منتقل کند.",
+                "یک دشمن می تواند از طریق حمله Car Whisperer از وسایل جانبی صوتی یک وسیله نقلیه ضبط و ضبط کند. اگر حریف در نزدیکی خودرویی با قابلیت بلوتوث باشد، ممکن است در حالت جفت شدن به سیستم هندزفری متصل شود. با احراز هویت موفقیت‌آمیز، اگر سیستم احراز هویت وجود داشته باشد، دشمن ممکن است بتواند موسیقی/صداهای ضبط شده را پخش کند، همچنین شروع به ضبط و ضبط مکالمات داخل خودرو کند. احراز هویت موفقیت‌آمیز به تنظیم کلید امنیتی جفت‌سازی روی یک مقدار پیش‌فرض یا با استفاده از زور (که ممکن است در یک محیط بیرونی کمتر عملی باشد) متکی است. بسته به حساسیت اطلاعات مورد بحث، این سناریو می‌تواند بسیار خطرناک باشد.",
+                "حریف همچنین ممکن است از تکنیکی به نام Bluebugging استفاده کند که مشابه Bluesnarfing است اما نیاز دارد که حریف بین 10 تا 15 متر از وسیله مورد نظر فاصله داشته باشد. Bluebugging یک درب پشتی برای مهاجم ایجاد می کند تا بتواند تماس های تلفنی را گوش کند/ ضبط کند، تماس ها را فوروارد کند، پیام کوتاه ارسال کند و دفترچه تلفن را بازیابی کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "آگاهی از آسیب‌پذیری‌های دستگاه یا برنامه مورد نظر که می‌توان با کدهای مخرب از آنها استفاده کرد. حریف باید بتواند کد مخرب را روی دستگاه مورد نظر قرار دهد."
+            ]
         }
     ],
     "spec_version": "2.0",

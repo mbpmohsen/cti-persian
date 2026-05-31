@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0171#AN0483",
-                    "external_id": "AN0483"
+                    "external_id": "AN0483",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "GeoVelocityThreshold",
-                    "description": "Flag logins from geographically distant locations in a short timeframe."
+                    "description": "Flag logins from geographically distant locations in a short timeframe.",
+                    "description_fa": "ورود به سیستم را از مکان های جغرافیایی دور در یک بازه زمانی کوتاه علامت گذاری کنید."
                 },
                 {
                     "field": "AuthorizedCookieIssuers",
-                    "description": "Expected systems and services that may legitimately mint session cookies."
+                    "description": "Expected systems and services that may legitimately mint session cookies.",
+                    "description_fa": "سیستم‌ها و خدمات مورد انتظاری که ممکن است به طور قانونی کوکی‌های جلسه را برش دهند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0483",
+            "description_fa": "کوکی‌های جعلی در محیط‌های IaaS ممکن است به‌عنوان تلاش‌هایی برای احراز هویت ظاهر شوند که MFA را دور می‌زنند، از AssumeRole یا Session API با کوکی‌هایی استفاده می‌کنند که هرگز به طور قانونی صادر نشده‌اند. مدافعان باید گزارش‌های ابری را برای جلسات مبتنی بر کوکی بدون احراز هویت معتبر قبلی و اغلب با دسترسی به منابع از آدرس‌های IP ناآشنا مرتبط کنند."
         }
     ]
 }

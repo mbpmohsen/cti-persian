@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0575#AN1588",
-                    "external_id": "AN1588"
+                    "external_id": "AN1588",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the time window in which correlated registry and execution events are considered suspicious (e.g., within 10 minutes)"
+                    "description": "Defines the time window in which correlated registry and execution events are considered suspicious (e.g., within 10 minutes)",
+                    "description_fa": "پنجره زمانی را که در آن رویدادهای رجیستری و اجرا مرتبط مشکوک تلقی می‌شوند (مثلاً ظرف 10 دقیقه) تعریف می‌کند."
                 },
                 {
                     "field": "NetshChildProcessWhitelist",
-                    "description": "List of expected or approved child processes spawned by netsh.exe in the enterprise environment"
+                    "description": "List of expected or approved child processes spawned by netsh.exe in the enterprise environment",
+                    "description_fa": "فهرستی از فرآیندهای فرزند مورد انتظار یا تایید شده توسط netsh.exe در محیط سازمانی"
                 },
                 {
                     "field": "DLLLoadPath",
-                    "description": "Directory or filename heuristics to distinguish benign DLLs from malicious helper DLLs"
+                    "description": "Directory or filename heuristics to distinguish benign DLLs from malicious helper DLLs",
+                    "description_fa": "اکتشافی دایرکتوری یا نام فایل برای تشخیص DLL های خوش خیم از DLL های کمکی مخرب"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1588",
+            "description_fa": "تشخیص بر نظارت بر تغییرات رجیستری تحت HKLM\\SOFTWARE\\Microsoft\\Netsh تمرکز دارد که نشان‌دهنده اضافه شدن DLL‌های کمکی و به دنبال آن فعالیت غیرعادی فرآیند فرزند یا رفتار بارگذاری ماژول است که توسط netsh.exe آغاز شده است. این رفتارها به ندرت مشروع هستند و ممکن است نشان دهنده تداوم یک دشمن باشند."
         }
     ]
 }

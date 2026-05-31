@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0499#AN1376",
-                    "external_id": "AN1376"
+                    "external_id": "AN1376",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,21 +47,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DestinationPort",
-                    "description": "Can be tuned to include unexpected or high-entropy ports not typically associated with the process."
+                    "description": "Can be tuned to include unexpected or high-entropy ports not typically associated with the process.",
+                    "description_fa": "می توان آن را به گونه ای تنظیم کرد که پورت های غیرمنتظره یا با آنتروپی بالا را که معمولاً با این فرآیند مرتبط نیستند، شامل شود."
                 },
                 {
                     "field": "ProcessName",
-                    "description": "Useful to filter benign applications vs suspicious fallback attempts."
+                    "description": "Useful to filter benign applications vs suspicious fallback attempts.",
+                    "description_fa": "برای فیلتر کردن برنامه های کاربردی خوش خیم در مقابل تلاش های بازگشتی مشکوک مفید است."
                 },
                 {
                     "field": "DataVolumeRatio",
-                    "description": "Tunable ratio of sent/received bytes to indicate potential C2 beaconing or exfiltration."
+                    "description": "Tunable ratio of sent/received bytes to indicate potential C2 beaconing or exfiltration.",
+                    "description_fa": "نسبت قابل تنظیم بایت‌های ارسالی/دریافتی برای نشان دادن بالقوه C2 یا خروج."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust temporal window to match likely fallback C2 retries after primary channel fails."
+                    "description": "Adjust temporal window to match likely fallback C2 retries after primary channel fails.",
+                    "description_fa": "پنجره زمانی را برای مطابقت با تلاش های مجدد احتمالی C2 پس از شکست کانال اصلی تنظیم کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1376",
+            "description_fa": "ایجاد اتصالات شبکه بر روی پورت ها یا پروتکل های غیر معمول به دنبال اختلال یا مسدود شدن C2. اغلب توسط فرآیندهایی که معمولاً هیچ فعالیت شبکه ای از خود نشان نمی دهند، اجرا می شوند."
         }
     ]
 }

@@ -12,26 +12,31 @@
             "external_references": [
                 {
                     "source_name": "Deep Instinct BPFDoor 2023",
-                    "description": "Shaul Vilkomir-Preisman and Eliran Nissan. (2023, May 10). BPFDoor Malware Evolves \u2013 Stealthy Sniffing Backdoor Ups Its Game. Retrieved September 19, 2024.",
-                    "url": "https://www.deepinstinct.com/blog/bpfdoor-malware-evolves-stealthy-sniffing-backdoor-ups-its-game"
+                    "description": "Shaul Vilkomir-Preisman and Eliran Nissan. (2023, May 10). BPFDoor Malware Evolves – Stealthy Sniffing Backdoor Ups Its Game. Retrieved September 19, 2024.",
+                    "url": "https://www.deepinstinct.com/blog/bpfdoor-malware-evolves-stealthy-sniffing-backdoor-ups-its-game",
+                    "source_name_fa": "Deep Instinct BPFDoor 2023",
+                    "description_fa": "Shaul Vilkomir-Preisman و Eliran Nissan. (10 مه 2023). بدافزار BPFDoor تکامل می‌یابد – Sniffing Stealthy Sniffing Backdoor Ups Game It. بازبینی شده در 19 سپتامبر 2024."
                 },
                 {
                     "source_name": "Sandfly BPFDoor 2022",
                     "description": "The Sandfly Security Team. (2022, May 11). BPFDoor - An Evasive Linux Backdoor Technical Analysis. Retrieved September 29, 2023.",
-                    "url": "https://sandflysecurity.com/blog/bpfdoor-an-evasive-linux-backdoor-technical-analysis/"
+                    "url": "https://sandflysecurity.com/blog/bpfdoor-an-evasive-linux-backdoor-technical-analysis/",
+                    "source_name_fa": "Sandfly BPFDoor 2022",
+                    "description_fa": "تیم امنیتی سندفلای (2022، 11 مه). BPFDoor - تجزیه و تحلیل فنی درب پشتی لینوکس گریزان. بازبینی شده در 29 سپتامبر 2023."
                 }
             ],
             "object_marking_refs": [
                 "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
             ],
             "modified": "2026-04-29T14:23:06.069Z",
-            "description": "[BPFDoor](https://attack.mitre.org/software/S1161) uses BPF bytecode to attach a filter to a network socket to view ICMP, UDP, or TCP packets coming through ports 22 (ssh), 80 (http), and 443 (https). When [BPFDoor](https://attack.mitre.org/software/S1161)  finds a packet containing its \u201cmagic\u201d bytes, it parses out two fields and forks itself. The parent process continues to monitor filtered traffic while the child process executes the instructions from the parsed fields.(Citation: Sandfly BPFDoor 2022)(Citation: Deep Instinct BPFDoor 2023)",
+            "description": "[BPFDoor](https://attack.mitre.org/software/S1161) uses BPF bytecode to attach a filter to a network socket to view ICMP, UDP, or TCP packets coming through ports 22 (ssh), 80 (http), and 443 (https). When [BPFDoor](https://attack.mitre.org/software/S1161)  finds a packet containing its “magic” bytes, it parses out two fields and forks itself. The parent process continues to monitor filtered traffic while the child process executes the instructions from the parsed fields.(Citation: Sandfly BPFDoor 2022)(Citation: Deep Instinct BPFDoor 2023)",
             "relationship_type": "uses",
             "source_ref": "malware--8d1f89fd-4dde-40ab-80e0-a7b80249162e",
             "target_ref": "attack-pattern--005cc321-08ce-4d17-b1ea-cb5275926520",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "description_fa": "[BPFDoor](https://attack.mitre.org/software/S1161) از بایت کد BPF برای اتصال فیلتر به سوکت شبکه برای مشاهده بسته‌های ICMP، UDP یا TCP که از پورت‌های 22 (ssh)، 80 (http) و 443 (https) می‌آیند، استفاده می‌کند. وقتی [BPFDoor](https://attack.mitre.org/software/S1161) بسته‌ای حاوی بایت‌های «جادویی» خود را پیدا می‌کند، دو فیلد را تجزیه می‌کند و خود را فورک می‌کند. فرآیند والد همچنان به نظارت بر ترافیک فیلتر شده ادامه می‌دهد در حالی که فرآیند فرزند دستورالعمل‌ها را از قسمت‌های تجزیه‌شده اجرا می‌کند.(Citation: Sandfly BPFDoor 2022)[[[CTI_PRESERVE_1]] (Citation: Deep Instinct BPFDoor 2023)"
         }
     ]
 }

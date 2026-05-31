@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0179#AN0507",
-                    "external_id": "AN0507"
+                    "external_id": "AN0507",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineRegex",
-                    "description": "Regex filters for matching suspicious group enumeration commands (e.g., 'net group', 'Get-ADGroupMember')."
+                    "description": "Regex filters for matching suspicious group enumeration commands (e.g., 'net group', 'Get-ADGroupMember').",
+                    "description_fa": "فیلترهای Regex برای مطابقت با دستورات شمارش گروه مشکوک (به عنوان مثال، «گروه شبکه»، «Get-ADGroupMember»)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time threshold for correlating group discovery with subsequent suspicious activity (e.g., lateral movement)."
+                    "description": "Time threshold for correlating group discovery with subsequent suspicious activity (e.g., lateral movement).",
+                    "description_fa": "آستانه زمانی برای ارتباط کشف گروهی با فعالیت مشکوک بعدی (مثلاً حرکت جانبی)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Whether the user performing discovery is in a sensitive group or running under unusual context (e.g., non-admin querying Domain Admins)."
+                    "description": "Whether the user performing discovery is in a sensitive group or running under unusual context (e.g., non-admin querying Domain Admins).",
+                    "description_fa": "این که آیا کاربری که اکتشاف را انجام می دهد در یک گروه حساس قرار دارد یا تحت زمینه غیرمعمول در حال اجرا است (به عنوان مثال، پرس و جوی غیر سرپرست برای سرپرستان دامنه)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0507",
+            "description_fa": "تشخیص شمارش دشمن عضویت در دامنه یا گروه محلی از طریق ابزارهای بومی مانند net.exe، PowerShell یا WMI. این فعالیت ممکن است قبل از حرکت جانبی یا تشدید امتیاز باشد."
         }
     ]
 }

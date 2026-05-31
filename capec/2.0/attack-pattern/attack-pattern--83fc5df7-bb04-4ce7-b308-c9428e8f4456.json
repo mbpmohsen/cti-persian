@@ -9,28 +9,35 @@
                 {
                     "external_id": "CAPEC-48",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/48.html"
+                    "url": "https://capec.mitre.org/data/definitions/48.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-241",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/241.html"
+                    "url": "http://cwe.mitre.org/data/definitions/241.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-706",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/706.html"
+                    "url": "http://cwe.mitre.org/data/definitions/706.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Core Concepts: Attack Patterns",
                     "external_id": "REF-416",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://websec.io/2012/11/26/Core-Concepts-Attack-Patterns.html"
+                    "url": "https://websec.io/2012/11/26/Core-Concepts-Attack-Patterns.html",
+                    "description_fa": "مفاهیم اصلی: الگوهای حمله",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--83fc5df7-bb04-4ce7-b308-c9428e8f4456",
@@ -50,6 +57,12 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -64,11 +77,21 @@
                 "The victim's software must not differentiate between the location and type of reference passed the client software, e.g. browser"
             ],
             "x_capec_skills_required": {
-                "Medium": "Attacker identifies known local files to exploit"
+                "Medium": "Attacker identifies known local files to exploit",
+                "Medium_fa": "مهاجم فایل های محلی شناخته شده را برای بهره برداری شناسایی می کند"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله به کد سمت مشتری برای دسترسی به فایل‌ها و منابع محلی به جای URLها متکی است. هنگامی که مرورگر مشتری انتظار یک رشته URL را دارد، اما در عوض درخواستی برای یک فایل محلی دریافت می‌کند، احتمالاً این اجرا در فضای پردازش مرورگر با اختیار مرورگر برای فایل‌های محلی انجام می‌شود. مهاجم می‌تواند نتایج این درخواست را به فایل‌های محلی به سایتی که کنترل می‌کند ارسال کند. این حمله ممکن است برای سرقت داده های احراز هویت حساس (چه محلی یا از راه دور) یا برای به دست آوردن اطلاعات نمایه سیستم برای انجام حملات بیشتر مورد استفاده قرار گیرد.",
+            "name_fa": "ارسال نام فایل های محلی به توابعی که انتظار URL دارند",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>برنامه‌های J2EE اغلب از فایل‌های .properties برای ذخیره اطلاعات پیکربندی از جمله اتصالات JDBC، رشته‌های اتصال LDAP، اطلاعات پراکسی، گذرواژه‌های سیستم و سایر ابرداده‌های سیستم استفاده می‌کنند که برای مهاجمانی که به دنبال بررسی سیستم یا دور زدن نقاط اجرای خط‌مشی هستند ارزشمند است. هنگامی که این فایل‌ها در فهرست‌های قابل دسترسی عمومی ذخیره می‌شوند و توسط کاربر عمومی مجاز به خواندن می‌شوند، مهاجم می‌تواند فهرست فهرستی را فهرست کند که یک فایل .properties را شناسایی کرده و به سادگی محتویات آن را در مرورگری که محتوای آن را فهرست می‌کند، بارگذاری کند. یک فایل استاندارد خصوصیات Hibernate حاوی</xhtml:p> است\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">hibernate.connection.driver_class = org.postgresql.Driverhibernate.connection.url = jdbc:postgresql://localhost/mydatabasehibernate.connection.username = usernamehibernate.connection.password = passwordhibernate.c3p0.min_size=5hibernate.c3p0.max_size=20</xhtml:div>\n               <xhtml:p>حتی اگر مهاجم نتواند این فایل را بنویسد، اطلاعات زیادی برای دستیابی به دسترسی بیشتر وجود دارد.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>ورودی‌های URL برنامه کاربردی وب را شناسایی کنید: </b>ورودی‌های برنامه را بررسی کنید تا آن‌هایی را که به‌عنوان URL طراحی شده‌اند، پیدا کنید.</p></li><table><tbody><tr><th>تکنیک‌ها</th> نشانی‌های وب.</td></tr><tr><td>از ابزارهای خودکار برای شناسایی نشانی‌های اینترنتی استفاده کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>ورودی‌های URL را شناسایی کنید که اجازه دسترسی محلی را می‌دهد.: </b>برای اجرای هر یک از URL‌های محلی آزمایشی، کدهای URL محلی را اجرا کنید. موفقیت آمیز بود.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک دستور محلی (مانند 'pwd') را به صورت دستی از طریق ورودی های URL اجرا کنید.</td></tr><tr><td>با استفاده از یک ابزار خودکار، هر ورودی URL را آزمایش کنید. ضعف.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>اجرای دستورات مخرب: </b>با استفاده از ورودی های URL شناسایی شده که اجازه اجرای دستور محلی را می دهد، اجرای مخرب دستورات.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>فرمان‌های محلی را از طریق ورودی URL اجرا کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم‌افزار قربانی نباید بین مکان و نوع مرجعی که نرم‌افزار مشتری ارسال می‌شود، تفاوت قائل شود، به عنوان مثال. مرورگر"
+            ]
         }
     ],
     "spec_version": "2.0",

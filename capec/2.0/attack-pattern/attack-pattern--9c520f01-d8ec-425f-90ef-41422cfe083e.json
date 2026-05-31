@@ -9,40 +9,52 @@
                 {
                     "external_id": "CAPEC-285",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/285.html"
+                    "url": "https://capec.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "J. Postel, RFC792 - Internet Control Messaging Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-123",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc792.html"
+                    "url": "http://www.faqs.org/rfcs/rfc792.html",
+                    "description_fa": "J. Postel، RFC792 - پروتکل پیام‌رسانی کنترل اینترنت، 09-1981، آژانس پروژه‌های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "R. Braden, Ed., RFC1122 - Requirements for Internet Hosts - Communication Layers, 1989--10",
                     "external_id": "REF-124",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc1122.html"
+                    "url": "http://www.faqs.org/rfcs/rfc1122.html",
+                    "description_fa": "R. Braden, Ed., RFC1122 - Requirements for Internet Host - Communication Layers, 1989--10",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Mark Wolfgang, Host Discovery with Nmap, 2002--11",
                     "external_id": "REF-125",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://nmap.org/docs/discovery.pdf"
+                    "url": "http://nmap.org/docs/discovery.pdf",
+                    "description_fa": "مارک ولفگانگ، کشف میزبان با Nmap، 2002--11",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-34",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--9c520f01-d8ec-425f-90ef-41422cfe083e",
@@ -59,6 +71,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Other (A successful attack of this kind can identify open ports and available services on a system.)"
+                ],
+                "Confidentiality_fa": [
+                    "سایر (یک حمله موفقیت آمیز از این نوع می تواند پورت های باز و سرویس های موجود در یک سیستم را شناسایی کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -73,11 +88,21 @@
                 "Scanners or utilities that provide the ability to send custom ICMP queries."
             ],
             "x_capec_skills_required": {
-                "Low": "The adversary needs to know certain linux commands for this type of attack."
+                "Low": "The adversary needs to know certain linux commands for this type of attack.",
+                "Low_fa": "حریف باید دستورات لینوکس خاصی را برای این نوع حمله بداند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک درخواست اکو نوع 8 ICMP، که معمولاً به عنوان \"پینگ\" شناخته می شود، ارسال می کند تا مشخص کند که آیا یک سیستم هدف پاسخگو است یا خیر. اگر درخواست توسط فایروال یا ACL مسدود نشود، میزبان هدف با دیتاگرام ICMP Type 0 Echo Reply پاسخ خواهد داد. این نوع مبادله به دلیل وجود ابزار پینگ تقریباً در همه سیستم عامل ها، معمولاً به عنوان \"پینگ\" شناخته می شود. پینگ، همانطور که معمولاً پیاده‌سازی می‌شود، به کاربر اجازه می‌دهد تا میزبان‌های زنده را آزمایش کند، زمان رفت و برگشت را اندازه‌گیری کند و درصد از دست رفتن بسته را اندازه‌گیری کند.",
+            "name_fa": "پینگ درخواست اکو ICMP",
+            "x_capec_extended_description_fa": "<xhtml:p> انجام این عملیات برای طیف وسیعی از میزبان ها در شبکه به عنوان \"پینگ Sweep\" شناخته می شود. در حالی که ابزار Ping برای کشف میزبان در مقیاس کوچک مفید است، برای کشف سریع یا کارآمد میزبان در بلوک های شبکه بزرگ طراحی نشده است. ابزارهای اسکن دیگری ایجاد شده‌اند که انجام پینگ ICMP را آسان‌تر می‌کنند. اکثر شبکه ها پیام های ورودی ICMP 8 را به دلایل امنیتی فیلتر می کنند. روش‌های مختلف دیگری برای انجام پینگ سوئیپ در نتیجه توسعه یافته است. مهم است که هدف امنیتی دشمن را شناسایی کنیم که آیا یک آدرس IP زنده است یا یک میزبان پاسخگو دارد. برای این منظور، تقریباً هر نوع پیام ICMP، همانطور که توسط RFC 792 تعریف شده است، مفید است. یک حریف می‌تواند از طریق انواع مختلف پیام‌های ICMP بچرخد تا مشخص کند که آیا سوراخ‌هایی در پیکربندی فایروال وجود دارد یا خیر. هنگامی که پینگ‌های ICMP نتوانست میزبان‌ها را کشف کند، می‌توان از پروتکل‌های دیگری مانند بخش‌های TCP SYN یا ACK، دیتاگرام‌های UDP ارسال شده به پورت‌های بسته و غیره برای همین منظور استفاده کرد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "امکان ارسال یک درخواست ICMP نوع 8 (درخواست Echo) به یک هدف راه دور و دریافت پیام ICMP نوع 0 (ICMP Echo Reply) در پاسخ. هر فایروال یا لیست های کنترل دسترسی بین فرستنده و گیرنده باید به پیام های ICMP نوع 8 و ICMP نوع 0 اجازه دهد تا عملیات پینگ با موفقیت انجام شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "اسکنرها یا ابزارهایی که امکان ارسال پرس و جوهای سفارشی ICMP را فراهم می کنند."
+            ]
         }
     ],
     "spec_version": "2.0",

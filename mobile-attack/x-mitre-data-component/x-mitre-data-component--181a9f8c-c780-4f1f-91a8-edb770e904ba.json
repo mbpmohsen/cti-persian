@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0082",
-                    "external_id": "DC0082"
+                    "external_id": "DC0082",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T15:12:00.770Z",
             "name": "Network Connection Creation",
-            "description": "The initial establishment of a network session, where a system or process initiates a connection to a local or remote endpoint. This typically involves capturing socket information (source/destination IP, ports, protocol) and tracking session metadata. Monitoring these events helps detect lateral movement, exfiltration, and command-and-control (C2) activities.\n\n*Data Collection Measures:*\n\n- Windows:\n    - Event ID 5156 \u2013 Filtering Platform Connection - Logs network connections permitted by Windows Filtering Platform (WFP).\n    - Sysmon Event ID 3 \u2013 Network Connection Initiated - Captures process, source/destination IP, ports, and parent process.\n- Linux/macOS:\n    - Netfilter (iptables), nftables logs - Tracks incoming and outgoing network connections.\n    - AuditD (`connect` syscall) - Logs TCP, UDP, and ICMP connections.\n    - Zeek (`conn.log`) - Captures protocol, duration, and bytes transferred.\n- Cloud & Network Infrastructure:\n    - AWS VPC Flow Logs / Azure NSG Flow Logs - Logs IP traffic at the network level in cloud environments.\n    - Zeek (conn.log) or Suricata (network events) - Captures packet metadata for detection and correlation.\n- Endpoint Detection & Response (EDR):\n    - Detect anomalous network activity such as new C2 connections or data exfiltration attempts.",
+            "description": "The initial establishment of a network session, where a system or process initiates a connection to a local or remote endpoint. This typically involves capturing socket information (source/destination IP, ports, protocol) and tracking session metadata. Monitoring these events helps detect lateral movement, exfiltration, and command-and-control (C2) activities.\n\n*Data Collection Measures:*\n\n- Windows:\n    - Event ID 5156 – Filtering Platform Connection - Logs network connections permitted by Windows Filtering Platform (WFP).\n    - Sysmon Event ID 3 – Network Connection Initiated - Captures process, source/destination IP, ports, and parent process.\n- Linux/macOS:\n    - Netfilter (iptables), nftables logs - Tracks incoming and outgoing network connections.\n    - AuditD (`connect` syscall) - Logs TCP, UDP, and ICMP connections.\n    - Zeek (`conn.log`) - Captures protocol, duration, and bytes transferred.\n- Cloud & Network Infrastructure:\n    - AWS VPC Flow Logs / Azure NSG Flow Logs - Logs IP traffic at the network level in cloud environments.\n    - Zeek (conn.log) or Suricata (network events) - Captures packet metadata for detection and correlation.\n- Endpoint Detection & Response (EDR):\n    - Detect anomalous network activity such as new C2 connections or data exfiltration attempts.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_domains": [
@@ -424,7 +425,9 @@
                     "name": "WinEventLog:System",
                     "channel": "EventCode=8001"
                 }
-            ]
+            ],
+            "name_fa": "ایجاد اتصال شبکه",
+            "description_fa": "ایجاد اولیه یک جلسه شبکه، که در آن یک سیستم یا فرآیند اتصال به یک نقطه پایانی محلی یا راه دور را آغاز می کند. این معمولاً شامل گرفتن اطلاعات سوکت (آی‌پی منبع/مقصد، پورت‌ها، پروتکل) و ردیابی فراداده‌های جلسه است. نظارت بر این وقایع به تشخیص حرکت جانبی، خروج و فعالیت‌های فرماندهی و کنترل (C2) کمک می‌کند.\n\n*اقدامات جمع آوری داده ها:*\n\n- ویندوز:\n    - شناسه رویداد 5156 - اتصال پلت فرم فیلتر کردن - اتصالات شبکه مجاز توسط Windows Filtering Platform (WFP) را ثبت می کند.\n    - Sysmon Event ID 3 - اتصال شبکه آغاز شد - فرآیند، IP منبع/مقصد، پورت ها و فرآیند والد را ضبط می کند.\n- Linux/macOS:\n    - Netfilter (iptables)، گزارش های nftables - اتصالات شبکه ورودی و خروجی را ردیابی می کند.\n    - AuditD ('connect' syscall) - اتصالات TCP، UDP و ICMP را ثبت می کند.\n    - Zeek ('conn.log') - پروتکل، مدت زمان و بایت های منتقل شده را ضبط می کند.\n- زیرساخت ابر و شبکه:\n    - AWS VPC Flow Logs / Azure NSG Flow Logs - ترافیک IP را در سطح شبکه در محیط های ابری ثبت می کند.\n    - Zeek (conn.log) یا Suricata (رویدادهای شبکه) - ابرداده های بسته را برای شناسایی و همبستگی ضبط می کند.\n- تشخیص و پاسخ نقطه پایانی (EDR):\n    - شناسایی فعالیت های غیرعادی شبکه مانند اتصالات جدید C2 یا تلاش برای استخراج داده ها."
         }
     ]
 }

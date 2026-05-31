@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0435#AN1210",
-                    "external_id": "AN1210"
+                    "external_id": "AN1210",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedEnvVars",
-                    "description": "macOS linker variables like DYLD_INSERT_LIBRARIES. Tunable to development environments where use may be expected."
+                    "description": "macOS linker variables like DYLD_INSERT_LIBRARIES. Tunable to development environments where use may be expected.",
+                    "description_fa": "متغیرهای پیوند دهنده macOS مانند DYLD_INSERT_LIBRARIES. قابل تنظیم برای محیط های توسعه که ممکن است مورد انتظار باشد."
                 },
                 {
                     "field": "BaselineDylibs",
-                    "description": "Known dylibs typically loaded by apps. Deviations highlight potential hijacking."
+                    "description": "Known dylibs typically loaded by apps. Deviations highlight potential hijacking.",
+                    "description_fa": "dylib های شناخته شده معمولاً توسط برنامه ها بارگیری می شوند. انحرافات هواپیماربایی بالقوه را برجسته می کند."
                 },
                 {
                     "field": "MonitoredDirectories",
-                    "description": "Locations where dylibs are monitored for tampering (e.g., /Applications, /System/Library, /tmp)."
+                    "description": "Locations where dylibs are monitored for tampering (e.g., /Applications, /System/Library, /tmp).",
+                    "description_fa": "مکان‌هایی که dylib‌ها برای دستکاری نظارت می‌شوند (به عنوان مثال، /Applications، /System/Library، /tmp)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1210",
+            "description_fa": "مراکز تشخیص در مورد سوء استفاده DYLD_INSERT_LIBRARIES و DYLD_LIBRARY_PATH. دیدگاه مدافع: نظارت بر اصلاح این متغیرهای محیطی در فایل‌های پوسته یا plist، ایجاد فایل‌های dylib در مسیرهای کنترل‌شده توسط کاربر، و همبستگی استفاده از متغیر محیطی با بارهای غیرمنتظره ماژول توسط برنامه‌های کاربر. شاخص‌های مشکوک شامل فرآیندهای با مجموعه DYLD_INSERT_LIBRARIES، اجرای برنامه‌های کاربردی در حال بارگیری dylib‌های غیرقابل اعتماد و ناهنجاری‌ها در تاریخچه بارگذاری ماژول است."
         }
     ]
 }

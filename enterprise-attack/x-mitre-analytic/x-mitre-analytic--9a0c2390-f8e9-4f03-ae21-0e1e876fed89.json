@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0325#AN0923",
-                    "external_id": "AN0923"
+                    "external_id": "AN0923",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Regex or command substring matches indicative of dynamic proxy setup."
+                    "description": "Regex or command substring matches indicative of dynamic proxy setup.",
+                    "description_fa": "Regex یا زیر رشته فرمان منطبق است که نشان دهنده راه اندازی پراکسی پویا است."
                 },
                 {
                     "field": "ExternalIPList",
-                    "description": "Tunable list of IPs or ASNs related to known proxy/VPS abuse."
+                    "description": "Tunable list of IPs or ASNs related to known proxy/VPS abuse.",
+                    "description_fa": "لیست قابل تنظیم IP یا ASN مربوط به سوء استفاده شناخته شده از پروکسی/VPS."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Unexpected users running networking tools (e.g., www-data, apache)."
+                    "description": "Unexpected users running networking tools (e.g., www-data, apache).",
+                    "description_fa": "کاربران غیرمنتظره ای که ابزارهای شبکه را اجرا می کنند (مانند www-data، apache)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0923",
+            "description_fa": "«curl»، «wget»، «ncat»، «socat» یا باینری‌های سفارشی ترافیک خروجی را به پراکسی‌های مبتنی بر اینترنت (مثلاً از طریق VPS یا CDN) آغاز می‌کنند. رفتار ممکن است شامل ساختارهای پوسته معکوس یا بیکن های خروجی مداوم باشد."
         }
     ]
 }

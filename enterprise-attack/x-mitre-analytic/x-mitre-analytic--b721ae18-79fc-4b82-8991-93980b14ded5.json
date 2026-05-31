@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0572#AN1579",
-                    "external_id": "AN1579"
+                    "external_id": "AN1579",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,22 +41,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserAgent",
-                    "description": "Filter expected sources of automated role assignment (e.g., CI/CD tooling)"
+                    "description": "Filter expected sources of automated role assignment (e.g., CI/CD tooling)",
+                    "description_fa": "منابع مورد انتظار تخصیص نقش خودکار را فیلتر کنید (به عنوان مثال، ابزار CI/CD)"
                 },
                 {
                     "field": "RoleName",
-                    "description": "Scope to privileged roles like cluster-admin, edit, admin"
+                    "description": "Scope to privileged roles like cluster-admin, edit, admin",
+                    "description_fa": "محدوده به نقش های ممتاز مانند cluster-admin، edit، admin"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Detect after-hours or irregular-time assignments"
+                    "description": "Detect after-hours or irregular-time assignments",
+                    "description_fa": "تشخیص وظایف پس از ساعت کاری یا زمان نامنظم"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Define known service accounts and privileged operators to reduce noise"
+                    "description": "Define known service accounts and privileged operators to reduce noise",
+                    "description_fa": "حساب های خدمات شناخته شده و اپراتورهای ممتاز را برای کاهش نویز تعریف کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1579",
+            "description_fa": "تخصیص نقش‌های با امتیاز بالا به حساب‌های کاربری یا خدمات را از طریق اشیاء Kubernetes RoleBinding یا ClusterRoleBinding، به‌ویژه خارج از اتوماسیون CI/CD یا از IPهای ناشناخته تشخیص می‌دهد."
         }
     ]
 }

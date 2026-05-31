@@ -9,28 +9,35 @@
                 {
                     "external_id": "CAPEC-492",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/492.html"
+                    "url": "https://capec.mitre.org/data/definitions/492.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-400",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/400.html"
+                    "url": "http://cwe.mitre.org/data/definitions/400.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1333",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1333.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1333.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Regular expression Denial of Service - ReDoS",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS"
+                    "url": "https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS",
+                    "description_fa": "عبارت منظم Denial of Service - ReDoS",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Bryan Sullivan, Regular Expression Denial of Service Attacks and Defenses",
                     "external_id": "REF-421",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://msdn.microsoft.com/en-au/magazine/ff646973.aspx"
+                    "url": "http://msdn.microsoft.com/en-au/magazine/ff646973.aspx",
+                    "description_fa": "برایان سالیوان، بیان منظم انکار حملات و دفاع از سرویس",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--dcf12181-3652-40c9-bb64-b09d367d2fb1",
@@ -52,7 +59,13 @@
                 "This type of an attack requires the ability to identify hosts running a poorly implemented Regex, and the ability to send crafted input to exploit the regular expression."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف ممکن است با انتخاب ورودی که منجر به یک وضعیت شدید برای Regex می شود، حمله ای را بر روی برنامه ای اجرا کند که از پیاده سازی ضعیف Regular Expression (Regex) استفاده می کند. یک موقعیت شدید معمولی در زمان نمایی در مقایسه با اندازه ورودی عمل می کند. دلیل این امر بیشتر پیاده‌سازی‌ها با استفاده از ماشین حالت خودکار محدود غیرقطعی (NFA) است که توسط الگوریتم Regex ساخته می‌شود، زیرا NFA امکان بازگشت به عقب و در نتیجه عبارات منظم پیچیده‌تر را می‌دهد.",
+            "name_fa": "Blowup نمایی با بیان منظم",
+            "x_capec_extended_description_fa": "<xhtml:p> الگوریتم یک ماشین حالت محدود می سازد و بر اساس ورودی ها از تمام حالت ها عبور می کند تا به انتهای ورودی برسد. موتورهای NFA ممکن است هر کاراکتر در رشته ورودی را چندین بار در طول بک ترک ارزیابی کنند. الگوریتم هر مسیر را از طریق NFA یک به یک امتحان می کند تا زمانی که مطابقت پیدا شود. ورودی مخرب ایجاد می شود بنابراین هر مسیری امتحان می شود که منجر به شکست می شود. بهره برداری از Regex منجر به توقف برنامه ها یا زمان بسیار طولانی برای تکمیل می شود. این حملات ممکن است لایه‌های مختلف اینترنت را به دلیل استفاده از عبارات منظم در اعتبارسنجی هدف قرار دهند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "این نوع حمله به توانایی شناسایی میزبان هایی نیاز دارد که یک Regex ضعیف پیاده سازی شده را اجرا می کنند و توانایی ارسال ورودی دستکاری شده برای سوء استفاده از عبارت منظم را دارد."
+            ]
         }
     ],
     "spec_version": "2.0",

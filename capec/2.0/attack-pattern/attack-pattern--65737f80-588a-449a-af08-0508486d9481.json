@@ -9,12 +9,15 @@
                 {
                     "external_id": "CAPEC-398",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/398.html"
+                    "url": "https://capec.mitre.org/data/definitions/398.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--65737f80-588a-449a-af08-0508486d9481",
@@ -36,7 +39,13 @@
                 "The ability to calculate a card checksum and write out a valid checksum value. Some cards are protected by a checksum calculation, therefore it is necessary to determine what algorithm is being used to calculate the checksum and to employ that algorithm to calculate and write a new valid checksum for the card being created."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن داده‌های دو یا چند کارت نوار مغناطیسی را تجزیه و تحلیل می‌کند و می‌تواند کارت‌های جدید حاوی توالی‌های معتبری را تولید کند که اجازه دسترسی غیرمجاز و/یا جعل هویت افراد را می‌دهد.",
+            "name_fa": "حملات نیروی بی رحمانه کارت نوار مغناطیسی",
+            "x_capec_extended_description_fa": "<xhtml:p>اغلب، روش‌های رمزگذاری نوار مغناطیسی از قالب مشترکی برای یک سیستم معین پیروی می‌کنند که در حداکثر سه مسیر تنظیم شده است. یک کارت واحد ممکن است امکان دسترسی به یک مجتمع اداری شرکتی را که توسط چندین شرکت مشترک است، فراهم کند. با تجزیه و تحلیل نحوه ذخیره داده ها در یک کارت، می توان کارت های معتبر را از طریق حملات brute-force نیز ایجاد کرد.</xhtml:p>\n            <xhtml:p>به عنوان مثال، یک کارت واحد می تواند به یک ساختمان، یک طبقه و یک شماره مجموعه دسترسی داشته باشد. خواندن و تجزیه و تحلیل داده‌ها روی کارت‌های متعدد، سپس انجام تجزیه و تحلیل تفاوت بین داده‌های رمزگذاری‌شده بر روی سه کارت مختلف، می‌تواند سرنخ‌هایی را در مورد نحوه تولید کارت‌های معتبر که دسترسی به مناطق محدود یک ساختمان یا سوئیت‌ها/اتاق‌های داخل آن ساختمان را امکان‌پذیر می‌سازد، آشکار کند. داده‌های ذخیره‌شده روی کارت‌های magstripe اغلب رمزگذاری نشده‌اند، بنابراین مقایسه اینکه کدام داده‌ها هنگام تجزیه و تحلیل دو یا چند کارت تغییر می‌کنند، می‌تواند نتایجی به دست آورد که به تعیین ساختار داده‌های کارت کمک می‌کند. یک مثال بی اهمیت می تواند قالب داده های سیستم رایج در یک مسیر داده باشد که باینری شماره مجموعه ساختمانی را که یک کارت باز می کند رمزگذاری می کند. با ایجاد چندین کارت با بخش های رمزگذاری شده باینری متفاوت، امکان ورود به مناطق غیرمجاز یا عبور از ایست های بازرسی که شناسه الکترونیکی افراد دیگر را ارائه می دهند، می شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "امکان محاسبه چک جمع کارت و نوشتن یک مقدار چک جمع معتبر. برخی از کارت‌ها توسط یک محاسبه چک‌سوم محافظت می‌شوند، بنابراین باید مشخص شود که از چه الگوریتمی برای محاسبه چک‌سوم استفاده می‌شود و از آن الگوریتم برای محاسبه و نوشتن یک چک‌سوم معتبر جدید برای کارت در حال ایجاد استفاده شود."
+            ]
         }
     ],
     "spec_version": "2.0",

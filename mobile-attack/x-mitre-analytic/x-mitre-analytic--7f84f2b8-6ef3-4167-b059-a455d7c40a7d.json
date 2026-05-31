@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0621#AN1683",
-                    "external_id": "AN1683"
+                    "external_id": "AN1683",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.379Z",
             "name": "Analytic 1683",
-            "description": "Defender correlates an app escalating file visibility (permissions/flags, legacy storage modes) with enumeration of other apps\u2019 storage or exported ContentProviders, followed by bulk reads/copies from target paths (including shared/external storage) and optional archive/encode then share/upload. Sequence: storage capability/permission gain \u2192 target discovery (provider queries, directory listing) \u2192 high-volume cross-app data reads from writable/shared paths \u2192 archive/encode \u2192 exfil/share within a short window.",
+            "description": "Defender correlates an app escalating file visibility (permissions/flags, legacy storage modes) with enumeration of other apps’ storage or exported ContentProviders, followed by bulk reads/copies from target paths (including shared/external storage) and optional archive/encode then share/upload. Sequence: storage capability/permission gain → target discovery (provider queries, directory listing) → high-volume cross-app data reads from writable/shared paths → archive/encode → exfil/share within a short window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,33 +58,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window to tie discovery \u2192 reads \u2192 package \u2192 exfil (e.g., 15\u2013120s)."
+                    "description": "Correlation window to tie discovery → reads → package → exfil (e.g., 15–120s).",
+                    "description_fa": "پنجره همبستگی برای کشف پیوند ← خواندن ← بسته ← exfil (به عنوان مثال، 15-120s)."
                 },
                 {
                     "field": "ExternalStoragePathRegex",
-                    "description": "Regex for cross-app paths on external/shared storage to monitor."
+                    "description": "Regex for cross-app paths on external/shared storage to monitor.",
+                    "description_fa": "Regex برای مسیرهای متقابل برنامه در حافظه خارجی/اشتراک‌گذاری شده برای نظارت."
                 },
                 {
                     "field": "SuspiciousProviders",
-                    "description": "List of exported/weakly-protected content providers under scrutiny."
+                    "description": "List of exported/weakly-protected content providers under scrutiny.",
+                    "description_fa": "فهرست ارائه دهندگان محتوای صادراتی/ضعیف محافظت شده تحت بررسی."
                 },
                 {
                     "field": "MinBytesRead",
-                    "description": "Lower bound on cumulative read volume to avoid noisy single-file accesses."
+                    "description": "Lower bound on cumulative read volume to avoid noisy single-file accesses.",
+                    "description_fa": "برای جلوگیری از دسترسی‌های تک فایلی پر سر و صدا، کران حجم خواندن تجمعی را کاهش دهید."
                 },
                 {
                     "field": "ArchiveExtensions",
-                    "description": "Extensions considered packaging (.zip,.gz,.7z,.tar,.db copies)."
+                    "description": "Extensions considered packaging (.zip,.gz,.7z,.tar,.db copies).",
+                    "description_fa": "برنامه‌های افزودنی بسته‌بندی در نظر گرفته می‌شوند (کپی‌های zip،.gz،.7z،.tar،.db)."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Known good CDNs/APIs to reduce false positives."
+                    "description": "Known good CDNs/APIs to reduce false positives.",
+                    "description_fa": "CDN/APIهای خوب شناخته شده برای کاهش مثبت کاذب."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground/background, Work Profile, developer mode to scope alerts."
+                    "description": "Foreground/background, Work Profile, developer mode to scope alerts.",
+                    "description_fa": "پیش‌زمینه/پس‌زمینه، نمایه کاری، حالت توسعه‌دهنده برای هشدارهای دامنه."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1683",
+            "description_fa": "Defender قابلیت مشاهده فایل افزایش یافته برنامه (مجوزها/پرچم‌ها، حالت‌های ذخیره‌سازی قدیمی) را با شمارش ذخیره‌سازی سایر برنامه‌ها یا ارائه‌دهنده‌های محتوای صادر شده، به دنبال خواندن/کپی‌های انبوه از مسیرهای هدف (از جمله فضای ذخیره‌سازی مشترک/خارجی) و بایگانی/رمزگذاری اختیاری و سپس اشتراک‌گذاری/بارگذاری مرتبط می‌کند. دنباله: قابلیت ذخیره‌سازی/کسب مجوز ← کشف هدف (پرسمان‌های ارائه‌دهنده، فهرست دایرکتوری) ← داده‌های متقابل برنامه‌ای با حجم بالا از مسیرهای قابل نوشتن/اشتراک‌گذاری ← بایگانی/کدگذاری → exfil/اشتراک‌گذاری در یک پنجره کوتاه خوانده می‌شود."
         }
     ]
 }

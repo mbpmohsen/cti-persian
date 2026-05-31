@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0661#AN1752",
-                    "external_id": "AN1752"
+                    "external_id": "AN1752",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.379Z",
             "name": "Analytic 1752",
-            "description": "Defender correlates a custom keyboard extension activation (optionally with TCC \u2018Full Access\u2019) or abnormal UI text-entry interception with local keylog persistence and/or small egress. Chain: capability/consent (keyboard Full Access/TCC) \u2192 intercept (keyboard commit events or repeated secure text entry edits) \u2192 persist to container \u2192 near-term egress.",
+            "description": "Defender correlates a custom keyboard extension activation (optionally with TCC ‘Full Access’) or abnormal UI text-entry interception with local keylog persistence and/or small egress. Chain: capability/consent (keyboard Full Access/TCC) → intercept (keyboard commit events or repeated secure text entry edits) → persist to container → near-term egress.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time from intercept \u2192 persist/exfil (e.g., 5\u201360s)."
+                    "description": "Max time from intercept → persist/exfil (e.g., 5–60s).",
+                    "description_fa": "حداکثر زمان از intercept → persist/exfil (به عنوان مثال، 5-60s)."
                 },
                 {
                     "field": "MinKeyEventBurst",
-                    "description": "Minimum keyboard commit or editingChanged events (e.g., \u226510)."
+                    "description": "Minimum keyboard commit or editingChanged events (e.g., ≥10).",
+                    "description_fa": "حداقل تعهد صفحه کلید یا ویرایش رویدادهای تغییر یافته (به عنوان مثال، ≥10)."
                 },
                 {
                     "field": "KeyboardFullAccessRequired",
-                    "description": "Require Full Access to elevate severity (true/false)."
+                    "description": "Require Full Access to elevate severity (true/false).",
+                    "description_fa": "نیاز به دسترسی کامل برای افزایش شدت (درست/نادرست)."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for keylog artifacts under container paths."
+                    "description": "Regex for keylog artifacts under container paths.",
+                    "description_fa": "Regex برای مصنوعات keylog در مسیرهای کانتینر."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Allowlisted enterprise/analytics endpoints."
+                    "description": "Allowlisted enterprise/analytics endpoints.",
+                    "description_fa": "نقاط پایانی سازمانی/تحلیلی در فهرست مجاز."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground state, Focus modes, MDM policy."
+                    "description": "Foreground state, Focus modes, MDM policy.",
+                    "description_fa": "حالت پیش زمینه، حالت های فوکوس، خط مشی MDM."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1752",
+            "description_fa": "Defender یک فعال‌سازی پسوند صفحه‌کلید سفارشی (به صورت اختیاری با «دسترسی کامل» TCC) یا رهگیری غیرعادی در ورود متن UI را با تداوم صفحه کلید محلی و/یا خروجی کوچک مرتبط می‌کند. زنجیره: قابلیت/رضایت (دسترسی کامل صفحه‌کلید/TCC) ← رهگیری (ارتکاب رویدادهای صفحه‌کلید یا ویرایش‌های مکرر ورودی متن ایمن) ← ادامه به ظرف ← خروج کوتاه مدت."
         }
     ]
 }

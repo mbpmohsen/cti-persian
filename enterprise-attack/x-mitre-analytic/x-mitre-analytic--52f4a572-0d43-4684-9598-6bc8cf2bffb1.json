@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0384#AN1083",
-                    "external_id": "AN1083"
+                    "external_id": "AN1083",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Non-root use of shell (or root outside maintenance window)."
+                    "description": "Non-root use of shell (or root outside maintenance window).",
+                    "description_fa": "استفاده غیر ریشه ای از پوسته (یا روت خارج از پنجره تعمیر و نگهداری)."
                 },
                 {
                     "field": "CommandPattern",
-                    "description": "Use of \u2018nc\u2019, \u2018wget\u2019, or dropper-like behavior in shell."
+                    "description": "Use of ‘nc’, ‘wget’, or dropper-like behavior in shell.",
+                    "description_fa": "استفاده از «nc»، «wget» یا رفتار شبیه قطره چکان در پوسته."
                 },
                 {
                     "field": "ShellPath",
-                    "description": "Unexpected invocation of BusyBox/ash from mounted ISO or datastore."
+                    "description": "Unexpected invocation of BusyBox/ash from mounted ISO or datastore.",
+                    "description_fa": "فراخوانی غیرمنتظره BusyBox/ash از ISO نصب شده یا datastore."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1083",
+            "description_fa": "اجرای BusyBox یا Ash Shell را از ورودهای غیرمجاز یا اتصالات راه دور تشخیص می دهد. تمرکز بر فراخوانی های پوسته نادر از DCUI، جلسات SSH یا مسیرهای مدیریت از راه دور است. همچنین با استفاده از پوسته به دنبال قطره‌اندازهای محموله یا مصنوعات پایدار است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0011#AN0031",
-                    "external_id": "AN0031"
+                    "external_id": "AN0031",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyScore",
-                    "description": "Adjust based on expected entropy of typical outbound data."
+                    "description": "Adjust based on expected entropy of typical outbound data.",
+                    "description_fa": "بر اساس آنتروپی مورد انتظار داده های خروجی معمولی تنظیم کنید."
                 },
                 {
                     "field": "ProcessWhitelist",
-                    "description": "Exclude known good binaries that generate high network output."
+                    "description": "Exclude known good binaries that generate high network output.",
+                    "description_fa": "باینری های خوب شناخته شده که خروجی شبکه بالایی تولید می کنند را حذف کنید."
                 },
                 {
                     "field": "DataRatioThreshold",
-                    "description": "Minimum ratio of bytes_sent to bytes_received."
+                    "description": "Minimum ratio of bytes_sent to bytes_received.",
+                    "description_fa": "حداقل نسبت bytes_sent به bytes_received."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0031",
+            "description_fa": "ترافیک خروجی با اندازه‌های بار غیرعادی و الگوهای فرآیندهای غیرشبکه‌ای که اغلب از طریق بازرسی بسته‌ها یا گزارش‌های اتصال مشاهده می‌شوند."
         }
     ]
 }

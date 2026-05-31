@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0520#AN1439",
-                    "external_id": "AN1439"
+                    "external_id": "AN1439",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Duration in which process activity and file I/O should be temporally linked."
+                    "description": "Duration in which process activity and file I/O should be temporally linked.",
+                    "description_fa": "مدت زمانی که فعالیت فرآیند و فایل ورودی/خروجی باید به طور موقت به هم مرتبط شوند."
                 },
                 {
                     "field": "LogFilePathPattern",
-                    "description": "Tunable path filter for macOS logs such as /var/log/system.log or /var/log/asl.log."
+                    "description": "Tunable path filter for macOS logs such as /var/log/system.log or /var/log/asl.log.",
+                    "description_fa": "فیلتر مسیر قابل تنظیم برای گزارش‌های macOS مانند /var/log/system.log یا /var/log/asl.log."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Detects higher risk when log deletion is performed by unusual users (e.g., interactive vs. system users)."
+                    "description": "Detects higher risk when log deletion is performed by unusual users (e.g., interactive vs. system users).",
+                    "description_fa": "هنگامی که حذف گزارش توسط کاربران غیرمعمول (به عنوان مثال، کاربران تعاملی در مقابل کاربران سیستم) انجام می شود، خطر بیشتری را تشخیص می دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1439",
+            "description_fa": "پاکسازی فایل‌های گزارش دشمن در macOS را با مرتبط کردن تماس‌ها با ابزارهای پوسته (مانند echo >، rm، کوتاه کردن) که فایل‌ها را در /var/log/ هدف قرار می‌دهند با زمینه غیرعادی (کاربران غیر اداری یا نسل فرآیند غیرعادی) شناسایی می‌کند."
         }
     ]
 }

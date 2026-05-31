@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-203",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/203.html"
+                    "url": "https://capec.mitre.org/data/definitions/203.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-15",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/15.html"
+                    "url": "http://cwe.mitre.org/data/definitions/15.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Modify Registry",
                     "external_id": "T1112",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1112"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1112",
+                    "description_fa": "رجیستری را اصلاح کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Plist Modification",
                     "external_id": "T1647",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1647"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1647",
+                    "description_fa": "اصلاح Plist",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--e283aef8-250b-4ac9-bf8b-34a6a70ed2f4",
@@ -59,11 +65,24 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "High": "The adversary requires privileged credentials or the development/acquiring of a tailored remote access tool."
+                "High": "The adversary requires privileged credentials or the development/acquiring of a tailored remote access tool.",
+                "High_fa": "دشمن به اعتبارنامه های ممتاز یا توسعه/دستیابی به ابزار دسترسی از راه دور مناسب نیاز دارد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف از ضعف در مجوز استفاده می کند تا محتوای یک رجیستری را تغییر دهد (مانند رجیستری ویندوز، Mac plist، رجیستری برنامه). ویرایش اطلاعات رجیستری می تواند به حریف اجازه دهد تا اطلاعات پیکربندی را مخفی کند یا برای سرپوش گذاشتن بر فعالیت، شاخص های سازش را حذف کند. بسیاری از برنامه ها از رجیستری ها برای ذخیره اطلاعات پیکربندی و خدمات استفاده می کنند. به این ترتیب، اصلاح اطلاعات رجیستری می‌تواند بر روی سرویس‌های فردی (بر صورت‌حساب، مجوز، یا حتی اجازه جعل هویت) یا پیکربندی کلی یک برنامه هدف تأثیر بگذارد. برای مثال، هم جاوا RMI و هم SOAP از رجیستری برای ردیابی خدمات موجود استفاده می کنند. تغییر مقادیر رجیستری گاهی اوقات گامی مقدماتی برای تکمیل الگوی حمله دیگری است، اما با توجه به استفاده طولانی مدت از بسیاری از مقادیر رجیستری، دستکاری اطلاعات رجیستری می تواند هدف خود باشد.",
+            "name_fa": "دستکاری اطلاعات رجیستری",
+            "x_capec_example_instances_fa": [
+                "دستکاری اطلاعات ثبت می‌تواند قبل از حمله پیمایش مسیر (درج اصلاح‌کننده‌های مسیر نسبی) یا حمله سرریز بافر (بزرگ‌کردن مقدار رجیستری فراتر از توانایی برنامه برای ذخیره آن) انجام شود."
+            ],
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید به مقادیر ذخیره شده در یک رجیستری متکی باشد.",
+                "حریف باید ابزاری برای افزایش مجوزها داشته باشد تا بتواند به محتوای رجیستری از طریق امتیازات سرپرست (مثلاً دسترسی دارای اعتبار) یا ابزار دسترسی از راه دور که قادر به ویرایش رجیستری از طریق یک API باشد، دسترسی داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

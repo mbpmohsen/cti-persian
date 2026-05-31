@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-632",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/632.html"
+                    "url": "https://capec.mitre.org/data/definitions/632.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1007",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1007.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1007.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--c4e18b3f-0445-49e8-9bf1-d47a23082501",
@@ -42,6 +44,9 @@
             "x_capec_consequences": {
                 "Other": [
                     "Other (Depending on the intention of the adversary, a successful Homograph attack can be leveraged to execute more complex attacks such as cross-site scripting or stealing account credentials.)"
+                ],
+                "Other_fa": [
+                    "سایر موارد (بسته به قصد حریف، یک حمله موفق هوموگراف می تواند برای اجرای حملات پیچیده تری مانند اسکریپت بین سایتی یا سرقت اعتبار حساب کاربری مورد استفاده قرار گیرد.)"
                 ]
             },
             "x_capec_domains": [
@@ -56,11 +61,21 @@
                 "An adversary requires knowledge of popular or high traffic domains, that could be used to deceive potential targets."
             ],
             "x_capec_skills_required": {
-                "Low": "Adversaries must be able to register DNS hostnames/URL’s."
+                "Low": "Adversaries must be able to register DNS hostnames/URL’s.",
+                "Low_fa": "دشمنان باید بتوانند نام هاست DNS/URL را ثبت کنند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف یک نام دامنه حاوی یک هموگلیف را ثبت می‌کند که باعث می‌شود دامنه ثبت‌شده مانند یک دامنه قابل اعتماد ظاهر شود. حمله هموگراف از این واقعیت استفاده می کند که کاراکترهای مختلف در بین مجموعه کاراکترهای مختلف به نظر کاربر یکسان هستند. حملات هوموگراف به طور کلی باید با سایر حملات مانند حملات فیشینگ ترکیب شوند تا ترافیک اینترنت را به مقصدهای تحت کنترل دشمن هدایت کنند.",
+            "name_fa": "حمله هموگراف از طریق هموگلیف",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک دشمن ایمیلی را با جعل هویت bankofamerica.com به کاربر می‌فرستد و بیان می‌کند که به تازگی یک سپرده جدید دریافت کرده است و روی پیوند داده شده برای تأیید سپرده کلیک می‌کند.</xhtml:p>\n               <xhtml:p>با این حال، پیوندی که در ایمیل است bankofamerica.com است، که در آن نویسه‌های «a» و «e» سیریلیک هستند و نه ASCII، به جای bankofamerica.com (همه ASCII)، که کاربر پس از مطالعه دقیق URL، روی آن کلیک می‌کند و مطمئن می‌شود که حملات typosquatting و soundsquatting علیه آن‌ها اعمال نمی‌شود.</html>\n               <xhtml:p> کاربر به وب سایت دشمن هدایت می شود، که به نظر می رسد صفحه ورود قانونی bankofamerica.com است.</xhtml:p>\n               <xhtml:p> کاربر فکر می کند که به حساب خود وارد می شود، اما در واقع اعتبار bankofamerica.com خود را به حریف داده است. دشمن اکنون می‌تواند از اعتبار قانونی کاربر bankofamerica.com برای ورود به حساب کاربر و سرقت هرگونه پولی که ممکن است در حساب باشد استفاده کند.</xhtml:p>\n               <xhtml:p>آسیب‌پذیری هوموگراف به حریف اجازه می‌دهد تا با استفاده از هموگلیف‌ها و فریب دادن کاربر به بازدید از وب‌سایت مخرب برای سرقت اطلاعات کاربری کاربر، جعل هویت یک دامنه مورد اعتماد را جعل کند.</xhtml:p>همچنین ببینید: CVE-2012-0584 CVE-2009-23005 CVE-2009-23005 CVE-2009-23005 CVE-2005-0234 CVE-2005-0235 CVE-2005-0236 CVE-2005-0237 CVE-2005-0238"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین وب‌سایت هدف: </b>دشمن ابتدا تعیین می‌کند که کدام وب‌سایت را جعل کند، معمولاً وب‌سایتی که قابل اعتماد است و میزان ترافیک ثابتی دریافت می‌کند. وب سایت های پر ترافیک.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>جعل هویت دامنه مورد اعتماد: </b>برای جعل هویت دامنه مورد اعتماد، دشمن باید URL حاوی homoglpyh را ثبت کند. نویسه(ها).</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>ثبت دامنه Homograph.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>فریب کاربر برای فریب دادن کاربر به بازدید از دامنه‌ها</b> نیاز دارد. برای بازدید از دامنه Homograph.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک حمله فیشینگ را اجرا کنید و یک ایمیل برای کاربر ارسال کنید تا او را متقاعد کند که روی پیوندی که کاربر را به دامنه مخرب هدایت می‌کند کلیک کند.</td></tr></tbody></table></ol></di",
+            "x_capec_prerequisites_fa": [
+                "یک حریف به دانش دامنه های محبوب یا پرترافیک نیاز دارد که می تواند برای فریب دادن اهداف بالقوه مورد استفاده قرار گیرد."
+            ]
         }
     ],
     "type": "bundle"

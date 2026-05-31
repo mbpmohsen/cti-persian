@@ -14,41 +14,41 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1058",
                     "external_id": "T1058",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/478.html",
                     "external_id": "CAPEC-478",
-                    "source_name_fa": "کلاه"
+                    "source_name_fa": "capec"
                 },
                 {
                     "source_name": "MSDN Registry Key Security",
                     "description": "Microsoft. (n.d.). Registry Key Security and Access Rights. Retrieved March 16, 2017.",
                     "url": "https://msdn.microsoft.com/library/windows/desktop/ms724878.aspx",
-                    "source_name_fa": "MSDN امنیت کلید",
-                    "description_fa": "مایکروسافت (n.d.) امنیت کلید و حقوق دسترسی Retrieved 16 مارس 2017"
+                    "source_name_fa": "امنیت کلید رجیستری MSDN",
+                    "description_fa": "مایکروسافت. (n.d.). امنیت کلید رجیستری و حقوق دسترسی. بازبینی شده در ۱۶ مارس ۲۰۱۷."
                 },
                 {
                     "source_name": "TrustedSignal Service Failure",
                     "description": "Hull, D. (2014, May 3). Kansa: Service related collectors and analysis. Retrieved October 10, 2019.",
                     "url": "https://trustedsignal.blogspot.com/2014/05/kansa-service-related-collectors-and.html",
-                    "source_name_fa": "اعتماد به شکست خدمات",
-                    "description_fa": "Hull, D. (2014, May 3) کانسا: جمع آوری و تجزیه و تحلیل مرتبط Retrieved 10, 2019"
+                    "source_name_fa": "خرابی سرویس TrustedSignal",
+                    "description_fa": "هال، دی (2014، 3 مه). کانسا: جمع آوری و تجزیه و تحلیل مربوط به خدمات. بازیابی شده در 10 اکتبر 2019."
                 },
                 {
                     "source_name": "Twitter Service Recovery Nov 2017",
                     "description": "The Cyber (@r0wdy_). (2017, November 30). Service Recovery Parameters. Retrieved April 9, 2018.",
                     "url": "https://twitter.com/r0wdy_/status/936365549553991680",
-                    "source_name_fa": "Twitter Service Recovery 2017",
-                    "description_fa": "سایبر (r0wdy_) (2017، 30 نوامبر) پارامترهای بازیابی خدمات Retrieved 9 آوریل 2018"
+                    "source_name_fa": "بازیابی سرویس توییتر نوامبر 2017",
+                    "description_fa": "سایبر (@r0wdy_). (30 نوامبر 2017). پارامترهای بازیابی خدمات بازبینی شده در ۹ آوریل ۲۰۱۸."
                 },
                 {
                     "source_name": "TechNet Autoruns",
                     "description": "Russinovich, M. (2016, January 4). Autoruns for Windows v13.51. Retrieved June 6, 2016.",
                     "url": "https://technet.microsoft.com/en-us/sysinternals/bb963902",
                     "source_name_fa": "TechNet Autoruns",
-                    "description_fa": "Russinovich، M. (2016، 4) Autoruns برای ویندوز v13.51 Retrieved ۶ ژوئن ۲۰۱۶"
+                    "description_fa": "روسینوویچ، ام (2016، 4 ژانویه). اجرای خودکار برای ویندوز 13.51. بازبینی شده در ۶ ژوئن ۲۰۱۶."
                 }
             ],
             "object_marking_refs": [
@@ -82,8 +82,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.2",
-            "name_fa": "مجوز ثبت خدمات",
-            "description_fa": "ویندوز اطلاعات پیکربندی خدمات محلی را در رجیستری ذخیره می کند ([CTI_PRESERVE_0]. اطلاعات ذخیره شده در زیر کلیدهای ثبت خدمات می تواند دستکاری شود تا پارامترهای اجرای سرویس را از طریق ابزارهایی مانند کنترل کننده خدمات، اسپلیت، [PowerShell] ([CTI_PRESERVE_5] یا [Reg] ([[CTI_PRE_SERV_E_6]). دسترسی به کلیدهای ثبت شده از طریق لیست های کنترل دسترسی و مجوز کنترل می شود. [[ویرایش]\n\nاگر مجوزهای کاربران و گروه ها به درستی تنظیم نشده و اجازه دسترسی به کلیدهای ثبت شده برای یک سرویس را می دهند، دشمنان می توانند سرویس binPath / ImagePath را تغییر دهند تا به یک اجرای متفاوت تحت کنترل خود اشاره کنند. هنگامی که سرویس شروع می شود یا دوباره راه اندازی می شود، برنامه تحت کنترل دشمن اجرا خواهد شد، اجازه می دهد که دشمن برای به دست آوردن پایداری و / یا افزایش امتیاز به زمینه حساب خدمات تنظیم شده است به اجرا در زیر (حساب محلی / دامنه، سیستم، خدمات محلی یا شبکه خدمات).\n\nمخالفان همچنین ممکن است کلید های رجیستری مربوط به پارامترهای شکست سرویس (مانند [CTI_PRESERVE] را تغییر دهند که ممکن است در هر زمان که سرویس شکست بخورد یا به طور عمدی فاسد شود، اجرا شوند. [[ویرایش] <code>HKLM\\SYSTEM\\CurrentControlSet\\Services</code> <code>FailureCommand</code> (Citation: MSDN Registry Key Security) (Citation: TrustedSignal Service Failure) (Citation: Twitter Service Recovery Nov 2017) https://attack.mitre.org/techniques/T1086 https://attack.mitre.org/software/S0075"
+            "name_fa": "ضعف مجوزهای رجیستری خدمات",
+            "description_fa": "Windows اطلاعات پیکربندی سرویس محلی را در رجیستری در زیر <code>HKLM\\SYSTEM\\CurrentControlSet\\Services</code> ذخیره می‌کند. اطلاعات ذخیره شده در زیر کلیدهای رجیستری یک سرویس را می توان برای تغییر پارامترهای اجرای سرویس از طریق ابزارهایی مانند کنترلر سرویس، sc.exe، [PowerShell](https://attack.mitre.org/techniques/T1086)، یا [Reg](https://attack.mitre.org/software/S0075 دستکاری کرد. دسترسی به کلیدهای رجیستری از طریق لیست های کنترل دسترسی و مجوزها کنترل می شود. (Citation: MSDN Registry Key Security)\n\nاگر مجوزهای کاربران و گروه‌ها به درستی تنظیم نشده باشد و اجازه دسترسی به کلیدهای رجیستری برای یک سرویس را بدهد، دشمنان می‌توانند سرویس binPath/ImagePath را تغییر دهند تا به یک فایل اجرایی دیگر تحت کنترل خود اشاره کنند. هنگامی که سرویس شروع می شود یا مجدداً راه اندازی می شود، برنامه کنترل شده توسط دشمن اجرا می شود و به دشمن اجازه می دهد تداوم داشته باشد و/یا امتیازات را در زمینه حسابی که سرویس قرار است تحت آن اجرا شود (حساب محلی/دامنه، SYSTEM، LocalService یا NetworkService) افزایش دهد.\n\nهمچنین ممکن است دشمنان کلیدهای رجیستری مرتبط با پارامترهای خرابی سرویس را تغییر دهند (مانند <code>FailureCommand</code>) که ممکن است در هر زمانی که سرویس از کار بیفتد یا عمداً خراب شود، در یک زمینه بالا اجرا شود.(Citation: TrustedSignal Service Failure)[[CTI_PRESERVE_4] (Citation: Twitter Service Recovery Nov 2017)"
         }
     ]
 }

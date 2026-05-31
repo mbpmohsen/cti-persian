@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0391#AN1099",
-                    "external_id": "AN1099"
+                    "external_id": "AN1099",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedApps",
-                    "description": "Whitelisted applications expected to handle sensitive runtime data."
+                    "description": "Whitelisted applications expected to handle sensitive runtime data.",
+                    "description_fa": "برنامه‌هایی که در لیست سفید قرار دارند انتظار می‌رود داده‌های زمان اجرا حساس را مدیریت کنند."
                 },
                 {
                     "field": "SignatureEnforcement",
-                    "description": "Policy enforcement for validating application code signing integrity."
+                    "description": "Policy enforcement for validating application code signing integrity.",
+                    "description_fa": "اجرای خط مشی برای اعتبارسنجی یکپارچگی امضای کد برنامه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1099",
+            "description_fa": "با مشاهده تغییرات در بسته‌های برنامه، تغییرات امضای غیرمنتظره و فراخوان‌های API زمان اجرا که نحوه نمایش داده‌ها را تزریق یا تغییر می‌دهند، دستکاری زمان اجرا را کنترل کنید. تشخیص تغییرات در چارچوب های CFNetwork یا CoreFoundation که مسئول ارائه داده ها هستند."
         }
     ]
 }

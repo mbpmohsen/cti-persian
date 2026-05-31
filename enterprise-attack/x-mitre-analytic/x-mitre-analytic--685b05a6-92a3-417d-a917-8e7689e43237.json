@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0522#AN1443",
-                    "external_id": "AN1443"
+                    "external_id": "AN1443",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TicketLifetimeThreshold",
-                    "description": "Threshold for Kerberos TGT lifetimes deviating from domain defaults."
+                    "description": "Threshold for Kerberos TGT lifetimes deviating from domain defaults.",
+                    "description_fa": "آستانه انحراف طول عمر Kerberos TGT از پیش‌فرض دامنه."
                 },
                 {
                     "field": "EncryptionTypes",
-                    "description": "Monitor for downgraded encryption types (e.g., RC4) in Kerberos tickets."
+                    "description": "Monitor for downgraded encryption types (e.g., RC4) in Kerberos tickets.",
+                    "description_fa": "برای انواع رمزگذاری کاهش یافته (مانند RC4) در بلیط های Kerberos نظارت کنید."
                 },
                 {
                     "field": "ProcessAllowlist",
-                    "description": "List of expected processes accessing LSASS; deviations may be suspicious."
+                    "description": "List of expected processes accessing LSASS; deviations may be suspicious.",
+                    "description_fa": "فهرست فرآیندهای مورد انتظار دسترسی به LSASS؛ انحرافات ممکن است مشکوک باشند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1443",
+            "description_fa": "فعالیت‌های غیرعادی Kerberos مانند بلیط‌های جعلی یا دزدیده شده را با همبستگی فیلدهای نادرست در رویدادهای ورود به سیستم، TGT‌های رمزگذاری‌شده با RC4 یا درخواست‌های TGS بدون درخواست‌های TGT مربوطه شناسایی می‌کند. همچنین فرآیندهای مشکوک دسترسی به حافظه LSASS را برای استخراج بلیط شناسایی می کند."
         }
     ]
 }

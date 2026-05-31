@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0065#AN0177",
-                    "external_id": "AN0177"
+                    "external_id": "AN0177",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedAdminUsers",
-                    "description": "Expected admin accounts allowed to use exec commands; anomalies outside this list indicate possible abuse."
+                    "description": "Expected admin accounts allowed to use exec commands; anomalies outside this list indicate possible abuse.",
+                    "description_fa": "حساب‌های مدیریت مورد انتظار مجاز به استفاده از دستورات exec هستند. ناهنجاری های خارج از این لیست نشان دهنده سوء استفاده احتمالی است."
                 },
                 {
                     "field": "ExecFrequencyThreshold",
-                    "description": "Defines how often `docker exec` or `kubectl exec` is normally observed; sudden spikes may indicate adversary behavior."
+                    "description": "Defines how often `docker exec` or `kubectl exec` is normally observed; sudden spikes may indicate adversary behavior.",
+                    "description_fa": "مشخص می‌کند که معمولاً چند بار «docker exec» یا «kubectl exec» مشاهده می‌شود. جهش های ناگهانی ممکن است نشان دهنده رفتار دشمن باشد."
                 },
                 {
                     "field": "SourceIPRange",
-                    "description": "Expected IP ranges for management actions (e.g., cluster control plane). Requests from external/unexpected ranges may indicate compromise."
+                    "description": "Expected IP ranges for management actions (e.g., cluster control plane). Requests from external/unexpected ranges may indicate compromise.",
+                    "description_fa": "محدوده IP مورد انتظار برای اقدامات مدیریتی (به عنوان مثال، صفحه کنترل خوشه). درخواست‌هایی از محدوده‌های خارجی/غیرمنتظره ممکن است نشان دهنده سازش باشد."
                 },
                 {
                     "field": "NamespaceScope",
-                    "description": "Defines which namespaces typically allow exec operations; anomalous activity outside these may indicate lateral movement."
+                    "description": "Defines which namespaces typically allow exec operations; anomalous activity outside these may indicate lateral movement.",
+                    "description_fa": "مشخص می کند که کدام فضاهای نام معمولاً به عملیات exec اجازه می دهند. فعالیت غیرعادی خارج از آنها ممکن است نشان دهنده حرکت جانبی باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0177",
+            "description_fa": "مدافعان ممکن است سوء استفاده از دستورات مدیریت کانتینر را با مشاهده استفاده غیرعادی از ابزارهای مدیریتی ('docker exec'، 'kubectl exec'، یا فراخوانی API به kubelet) که با ایجاد فرآیند غیرمنتظره در داخل کانتینرها مرتبط است، شناسایی کنند. زنجیره‌های رفتاری شامل درخواست‌های API غیرمجاز و به دنبال آن اجرای دستور در پادها یا کانتینرهای در حال اجرا هستند که اغلب از حساب‌های کاربری غیرمعمول، اسکریپت‌های اتوماسیون یا آدرس‌های IP خارج از صفحه مدیریت خوشه مورد انتظار سرچشمه می‌گیرند."
         }
     ]
 }

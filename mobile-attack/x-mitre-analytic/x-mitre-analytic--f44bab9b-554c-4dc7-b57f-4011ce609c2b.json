@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0634#AN1706",
-                    "external_id": "AN1706"
+                    "external_id": "AN1706",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -42,33 +43,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Window to correlate config reads with app state and optional connectivity tests (e.g., 30\u2013300s)."
+                    "description": "Window to correlate config reads with app state and optional connectivity tests (e.g., 30–300s).",
+                    "description_fa": "پنجره ای برای ارتباط خواندن پیکربندی با وضعیت برنامه و تست های اتصال اختیاری (به عنوان مثال، 30-300s)."
                 },
                 {
                     "field": "MinConfigReadEvents",
-                    "description": "Minimum number of network-config read signals before flagging (environment dependent; e.g., \u226510/5m)."
+                    "description": "Minimum number of network-config read signals before flagging (environment dependent; e.g., ≥10/5m).",
+                    "description_fa": "حداقل تعداد سیگنال‌های خواندن پیکربندی شبکه قبل از پرچم‌گذاری (وابسته به محیط؛ به عنوان مثال، ≥10/5 متر)."
                 },
                 {
                     "field": "BackgroundOnly",
-                    "description": "If true, require the app to be backgrounded to reduce legitimate network UI/diagnostic activity."
+                    "description": "If true, require the app to be backgrounded to reduce legitimate network UI/diagnostic activity.",
+                    "description_fa": "اگر درست است، برای کاهش فعالیت‌های UI/تشخیصی مجاز شبکه، به برنامه نیاز دارید که پس‌زمینه باشد."
                 },
                 {
                     "field": "AllowlistedPackages",
-                    "description": "Connectivity/security/MDM apps expected to query network configuration frequently."
+                    "description": "Connectivity/security/MDM apps expected to query network configuration frequently.",
+                    "description_fa": "برنامه های اتصال/امنیت/MDM انتظار می رود مرتباً پیکربندی شبکه را جستجو کنند."
                 },
                 {
                     "field": "PrivilegedRoleFilter",
-                    "description": "If true, elevate severity when an app with device-owner/profile-owner/carrier roles performs bursts."
+                    "description": "If true, elevate severity when an app with device-owner/profile-owner/carrier roles performs bursts.",
+                    "description_fa": "اگر درست است، زمانی که برنامه‌ای با نقش‌های مالک دستگاه/نمایه مالک/حامل دارای انفجار است، شدت آن را افزایش دهید."
                 },
                 {
                     "field": "LocalProbePorts",
-                    "description": "Ports considered 'connectivity tests' (e.g., 53, 80, 443, 8080, 3128) \u2013 tune per environment."
+                    "description": "Ports considered 'connectivity tests' (e.g., 53, 80, 443, 8080, 3128) – tune per environment.",
+                    "description_fa": "پورت‌هایی که «تست‌های اتصال» در نظر گرفته می‌شوند (به‌عنوان مثال، 53، 80، 443، 8080، 3128) – تنظیم در هر محیط."
                 },
                 {
                     "field": "NetworkChangeSuppressionSeconds",
-                    "description": "Suppress alerts shortly after legitimate network transitions (Wi-Fi join, VPN connect) to reduce noise."
+                    "description": "Suppress alerts shortly after legitimate network transitions (Wi-Fi join, VPN connect) to reduce noise.",
+                    "description_fa": "برای کاهش نویز، بلافاصله پس از انتقال قانونی شبکه (پیوستن به Wi-Fi، اتصال VPN) هشدارها را سرکوب کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1706",
+            "description_fa": "Defender برنامه ای (بسته/UID) را مشاهده می کند که به طور مکرر ویژگی های پیکربندی رابط شبکه (نام های IP/MAC/رابط محلی، قابلیت های شبکه فعال، ویژگی های پیوند، تنظیمات پروکسی/DNS، یا شناسه های حامل را در صورت مجاز بودن) در یک پنجره زمانی کوتاه، بدون فعالیت مدیریت شبکه کاربر مربوطه، بازیابی می کند. این الگو با اجرای OS API برای خواندن رابط/پیکربندی همراه با وضعیت پس‌زمینه، زمینه مجوز/نقش (به عنوان مثال، مالک دستگاه/مالک نمایه/شرکت مخابراتی/پیامک پیش‌فرض) و آزمایش‌های اتصال بعدی اختیاری (دروازه/DNS/دسترسی به پروکسی) مشخص می‌شود. بین اجرای API + وضعیت برنامه + کاوشگر محلی (اختیاری) برای شناسایی کشف پیکربندی خودکار شبکه به جای بررسی های معمول اتصال، ارتباط برقرار کنید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0355#AN1009",
-                    "external_id": "AN1009"
+                    "external_id": "AN1009",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MailVolumeThreshold",
-                    "description": "Tunable value for the maximum acceptable emails per minute per user."
+                    "description": "Tunable value for the maximum acceptable emails per minute per user.",
+                    "description_fa": "مقدار قابل تنظیم برای حداکثر ایمیل های قابل قبول در دقیقه برای هر کاربر."
                 },
                 {
                     "field": "AttachmentPatternList",
-                    "description": "List of suspicious attachment extensions that may be abused for repetitive delivery."
+                    "description": "List of suspicious attachment extensions that may be abused for repetitive delivery.",
+                    "description_fa": "فهرستی از پسوندهای پیوست مشکوک که ممکن است برای تحویل مکرر مورد سوء استفاده قرار گیرند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1009",
+            "description_fa": "گزارش های سرور ایمیل (به عنوان مثال، Postfix، Sendmail) را برای اتصالات بیش از حد یا تعداد پیام های ورودی که یک گیرنده را هدف قرار می دهد، نظارت کنید. با ذخیره سازی پیوست تکراری در /var/mail یا /var/spool/mail دایرکتوری ها ارتباط برقرار کنید."
         }
     ]
 }

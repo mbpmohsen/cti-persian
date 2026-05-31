@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-491",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/491.html"
+                    "url": "https://capec.mitre.org/data/definitions/491.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--8f70b1fb-393f-4494-b4ad-67f1a2107975",
@@ -38,6 +40,10 @@
                 "Availability": [
                     "Unreliable Execution (Denial of Service)",
                     "Resource Consumption (Denial of Service)"
+                ],
+                "Availability_fa": [
+                    "اجرای غیرقابل اعتماد (انکار سرویس)",
+                    "مصرف منابع (انکار خدمات)"
                 ]
             },
             "x_capec_domains": [
@@ -51,7 +57,16 @@
                 "This type of attack requires a server that accepts serialization data which supports substitution and parses the data."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از جایگزینی ماکرو مانند برای ایجاد وضعیت انکار سرویس به دلیل تخصیص حافظه بیش از حد برای گسترش کامل داده ها سوء استفاده می کند. نتیجه این انکار سرویس می تواند باعث مسدود شدن یا از کار افتادن برنامه شود. این شامل تعریف یک موجودیت بسیار بزرگ و استفاده از آن چندین بار در یک جایگزین است. CAPEC-197 یک الگوی حمله مشابه است، اما کشف و دفاع در برابر آن آسان تر است. این الگوی حمله جایگزین چند سطحی را انجام نمی دهد و بنابراین به نظر نمی رسد که منابع گسترده ای را مصرف کند.",
+            "name_fa": "گسترش داده های درجه دوم",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در این مثال، مهاجم یک موجودیت بزرگ را تعریف می‌کند و بارها به آن ارجاع می‌دهد.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">>>\n               <xhtml:p>این منجر به یک پیام نسبتاً کوچک 100 کیلوبایتی می شود که به پیامی در محدوده گیگابایت گسترش می یابد.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بررسی هدف: </b>یک حریف جریان داده ورودی را تعیین می کند که توسط تجزیه کننده داده پردازش می شود که از جایگزینی در قربانی پشتیبانی می کند. سمت.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از یک ابزار خودکار برای ثبت تمام نمونه‌های URL برای پردازش درخواست‌ها استفاده کنید.</td></tr><tr><td>از مرورگر برای کاوش دستی وب‌سایت و تجزیه و تحلیل نحوه پردازش برنامه استفاده کنید. درخواست‌ها.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Craft بار مخرب: </b> دشمن پیام مخربی ایجاد می‌کند که حاوی بسط درجه دوم تو در تو است که به طور کامل از منبع </><li> <li> سرور موجود استفاده می‌کند.</p> </b>پیام مخرب ساخته شده را به آدرس اینترنتی مورد نظر ارسال کنید.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "این نوع حمله به سروری نیاز دارد که داده‌های سریال‌سازی را می‌پذیرد که از جایگزینی پشتیبانی می‌کند و داده‌ها را تجزیه می‌کند."
+            ]
         }
     ],
     "spec_version": "2.0",

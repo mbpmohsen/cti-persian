@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0150#AN0428",
-                    "external_id": "AN0428"
+                    "external_id": "AN0428",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,17 +48,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KnownGoodMBRHashes",
-                    "description": "Baseline hashes of clean MBR/VBR sectors for comparison"
+                    "description": "Baseline hashes of clean MBR/VBR sectors for comparison",
+                    "description_fa": "هش های پایه بخش های MBR/VBR تمیز برای مقایسه"
                 },
                 {
                     "field": "ESPFileWhitelist",
-                    "description": "Approved EFI executables within ESP directories"
+                    "description": "Approved EFI executables within ESP directories",
+                    "description_fa": "فایل های اجرایی EFI تایید شده در دایرکتوری های ESP"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between privileged access, raw disk modification, and EFI file creation"
+                    "description": "Correlation window between privileged access, raw disk modification, and EFI file creation",
+                    "description_fa": "پنجره همبستگی بین دسترسی ممتاز، اصلاح دیسک خام و ایجاد فایل EFI"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0428",
+            "description_fa": "تشخیص دسترسی خام به درایوهای فیزیکی، اصلاح رکوردهای بوت (MBR/VBR) و ایجاد یا تغییر فایل مشکوک در پارتیشن سیستم EFI (ESP). اجرای فرآیند ممتاز را با تغییر سطح پایین دیسک و تعاملات غیرمنتظره درایور یا سفت‌افزار مرتبط می‌کند."
         }
     ]
 }

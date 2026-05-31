@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0326#AN0928",
-                    "external_id": "AN0928"
+                    "external_id": "AN0928",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0928",
-            "description": "Shell scripts or binaries implement custom mapping tables (tr/sed/awk/golang/rust/python encode loops), or emit long high-entropy tokens that fail Base64/Hex validation \u2192 correlated with egress showing asymmetric flow, protocol-mismatch payloads, or DNS/HTTP bodies containing low-diversity-but-long custom alphabets.",
+            "description": "Shell scripts or binaries implement custom mapping tables (tr/sed/awk/golang/rust/python encode loops), or emit long high-entropy tokens that fail Base64/Hex validation → correlated with egress showing asymmetric flow, protocol-mismatch payloads, or DNS/HTTP bodies containing low-diversity-but-long custom alphabets.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,25 +52,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyThreshold",
-                    "description": "Payload entropy minimum."
+                    "description": "Payload entropy minimum.",
+                    "description_fa": "حداقل آنتروپی بار."
                 },
                 {
                     "field": "TokenLengthThreshold",
-                    "description": "Length threshold for suspect tokens."
+                    "description": "Length threshold for suspect tokens.",
+                    "description_fa": "آستانه طول برای توکن های مشکوک."
                 },
                 {
                     "field": "BytesOutToInRatio",
-                    "description": "Asymmetry cutoff for flows."
+                    "description": "Asymmetry cutoff for flows.",
+                    "description_fa": "قطع عدم تقارن برای جریان ها."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation join window."
+                    "description": "Correlation join window.",
+                    "description_fa": "پنجره پیوستن همبستگی."
                 },
                 {
                     "field": "KnownEncoders",
-                    "description": "Legitimate internal tools/agents."
+                    "description": "Legitimate internal tools/agents.",
+                    "description_fa": "ابزار / عوامل داخلی قانونی"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0928",
+            "description_fa": "اسکریپت‌های پوسته یا باینری‌ها جداول نگاشت سفارشی را پیاده‌سازی می‌کنند (tr/sed/awk/golang/rust/python حلقه‌های کدگذاری)، یا نشانه‌های طولانی با آنتروپی بالا منتشر می‌کنند که اعتبارسنجی Base64/Hex → مرتبط با خروجی نشان‌دهنده جریان نامتقارن، پروتکل‌های عدم تطابق بارهای سفارشی، یا DNS/HTTP سفارشی حاوی albutphat-long."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0045#AN0126",
-                    "external_id": "AN0126"
+                    "external_id": "AN0126",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspendedProcessWindow",
-                    "description": "Time window in which a process remains in suspended state before being modified. Tunable based on baseline activity in the environment."
+                    "description": "Time window in which a process remains in suspended state before being modified. Tunable based on baseline activity in the environment.",
+                    "description_fa": "پنجره زمانی که در آن یک فرآیند قبل از اصلاح در حالت تعلیق باقی می ماند. قابل تنظیم بر اساس فعالیت پایه در محیط."
                 },
                 {
                     "field": "SensitiveProcesses",
-                    "description": "List of critical processes (e.g., explorer.exe, lsass.exe) where argument spoofing is highly suspicious. Can be customized per organization."
+                    "description": "List of critical processes (e.g., explorer.exe, lsass.exe) where argument spoofing is highly suspicious. Can be customized per organization.",
+                    "description_fa": "فهرستی از فرآیندهای حیاتی (مانند explorer.exe، lsass.exe) که در آن جعل استدلال بسیار مشکوک است. می تواند برای هر سازمان سفارشی شود."
                 },
                 {
                     "field": "BehavioralCorrelationWindow",
-                    "description": "Time span in which to correlate command-line inconsistencies with anomalous behavior such as network activity or registry modification."
+                    "description": "Time span in which to correlate command-line inconsistencies with anomalous behavior such as network activity or registry modification.",
+                    "description_fa": "بازه زمانی که در آن تناقضات خط فرمان با رفتارهای غیرعادی مانند فعالیت شبکه یا اصلاح رجیستری مرتبط می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0126",
+            "description_fa": "ناسازگاری بین آرگومان های خط فرمان فرآیند ثبت شده در زمان ایجاد و رفتار فرآیند بعدی. دیدگاه مدافع: نظارت بر فرآیندهایی که در حالت تعلیق راه‌اندازی می‌شوند و به دنبال آن تغییرات حافظه (به عنوان مثال WriteProcessMemory که PEB را هدف قرار می‌دهد) که آرگومان‌ها را قبل از ازسرگیری اجرا بازنویسی می‌کند. تشخیص همچنین شامل مشاهده رفتارهای غیرعادی از فرآیندهایی است که آرگومان‌های ثبت‌شده آن‌ها با فعالیت اجرا شده همسو نمی‌شوند (به عنوان مثال، اتصالات شبکه، نوشتن فایل، یا تغییرات رجیستری)."
         }
     ]
 }

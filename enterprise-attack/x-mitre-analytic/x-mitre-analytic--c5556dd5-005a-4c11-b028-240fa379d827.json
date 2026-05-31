@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0384#AN1081",
-                    "external_id": "AN1081"
+                    "external_id": "AN1081",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutableName",
-                    "description": "Detect variants like /bin/sh, /usr/local/bin/zsh, /bin/busybox sh."
+                    "description": "Detect variants like /bin/sh, /usr/local/bin/zsh, /bin/busybox sh.",
+                    "description_fa": "انواع مختلفی مانند /bin/sh، /usr/local/bin/zsh، /bin/busybox sh را شناسایی کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Shell used by service accounts, root, or rare accounts."
+                    "description": "Shell used by service accounts, root, or rare accounts.",
+                    "description_fa": "Shell توسط حساب‌های سرویس، روت یا حساب‌های کمیاب استفاده می‌شود."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Shell invoked by unexpected parents (e.g., curl, mail, apache2)."
+                    "description": "Shell invoked by unexpected parents (e.g., curl, mail, apache2).",
+                    "description_fa": "Shell توسط والدین غیرمنتظره (مثلاً curl، mail، apache2) فراخوانی شده است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Execution outside maintenance windows or normal activity periods."
+                    "description": "Execution outside maintenance windows or normal activity periods.",
+                    "description_fa": "اجرای خارج از پنجره های تعمیر و نگهداری یا دوره های فعالیت عادی."
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Flags use of loops, download commands, chaining (|, &&), or reverse shells."
+                    "description": "Flags use of loops, download commands, chaining (|, &&), or reverse shells.",
+                    "description_fa": "استفاده از حلقه‌ها، دستورات دانلود، زنجیر کردن (|، &&)، یا پوسته‌های معکوس را علامت‌گذاری می‌کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1081",
+            "description_fa": "اجرای پوسته bash، sh، zsh یا BusyBox را که از طریق جلسات راه دور، کاربران غیرمجاز، یا تعبیه شده در مفسرهای اسکریپت ثانویه آغاز شده است، شناسایی می کند. تمرکز بر رفتار زنجیره ای است: پوسته > دستورات مشکوک > کشف شبکه یا نشانگرهای پایداری."
         }
     ]
 }

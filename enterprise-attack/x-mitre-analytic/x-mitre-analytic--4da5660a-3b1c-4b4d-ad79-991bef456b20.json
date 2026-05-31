@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0253#AN0701",
-                    "external_id": "AN0701"
+                    "external_id": "AN0701",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,26 +61,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServicePathRegex",
-                    "description": "Regex filters for systemd unit locations (e.g., `/etc/systemd/system/*.service`, `/lib/systemd/system/`)"
+                    "description": "Regex filters for systemd unit locations (e.g., `/etc/systemd/system/*.service`, `/lib/systemd/system/`)",
+                    "description_fa": "فیلترهای Regex برای مکان‌های واحد سیستم (مانند «/etc/systemd/system/*.service»، «/lib/systemd/system/»)"
                 },
                 {
                     "field": "ExecStartPathAllowlist",
-                    "description": "Allowlist of trusted `ExecStart` binary paths (e.g., `/usr/bin/`, `/bin/`)"
+                    "description": "Allowlist of trusted `ExecStart` binary paths (e.g., `/usr/bin/`, `/bin/`)",
+                    "description_fa": "لیست مجاز مسیرهای باینری «ExecStart» مورد اعتماد (به عنوان مثال، «/usr/bin/»، «/bin/»)"
                 },
                 {
                     "field": "UserContextFilter",
-                    "description": "List of usernames that are authorized to define user-level services"
+                    "description": "List of usernames that are authorized to define user-level services",
+                    "description_fa": "فهرست نام‌های کاربری که مجاز به تعریف سرویس‌های سطح کاربر هستند"
                 },
                 {
                     "field": "FileEntropyThreshold",
-                    "description": "Entropy level of binaries referenced in `ExecStart` to detect packed or obfuscated payloads"
+                    "description": "Entropy level of binaries referenced in `ExecStart` to detect packed or obfuscated payloads",
+                    "description_fa": "سطح آنتروپی باینری های ارجاع شده در ExecStart برای شناسایی بارهای بسته بندی شده یا مبهم"
                 },
                 {
                     "field": "SystemctlOperationSet",
-                    "description": "Flags suspicious combinations such as `systemctl enable` + `systemctl start` within short interval"
+                    "description": "Flags suspicious combinations such as `systemctl enable` + `systemctl start` within short interval",
+                    "description_fa": "پرچم‌گذاری ترکیب‌های مشکوک مانند «systemctl enable» + «systemctl start» در فاصله زمانی کوتاه"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0701",
+            "description_fa": "ایجاد یا تغییر فایل‌های واحد «.service» را در فهرست‌های سطح سیستم/کاربر، همراه با اجرای «systemctl»، «service»، یا برنامه‌های drop-in ایجاد شده به صورت پویا از طریق ژنراتورهای systemd شناسایی می‌کند. با تجزیه و تحلیل مسیر «ExecStart»، آنتروپی فایل و استفاده از پیوند نمادین، ماندگاری را تشخیص می‌دهد، به‌ویژه زمانی که با اجرای از «/tmp»، «/dev/shm» یا حجم‌های نصب نشده جفت شود."
         }
     ]
 }

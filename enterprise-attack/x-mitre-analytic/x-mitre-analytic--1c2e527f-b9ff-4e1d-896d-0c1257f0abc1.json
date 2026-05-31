@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0378#AN1066",
-                    "external_id": "AN1066"
+                    "external_id": "AN1066",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilenameExtensionList",
-                    "description": "Tunable to identify uncommon or encrypted file formats (e.g., .enc, .b64, .xz)"
+                    "description": "Tunable to identify uncommon or encrypted file formats (e.g., .enc, .b64, .xz)",
+                    "description_fa": "قابل تنظیم برای شناسایی فرمت‌های فایل غیرمعمول یا رمزگذاری‌شده (مانند، .enc، .b64، .xz.)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune to prioritize unexpected file access by service accounts"
+                    "description": "Tune to prioritize unexpected file access by service accounts",
+                    "description_fa": "برای اولویت‌بندی دسترسی غیرمنتظره به فایل توسط حساب‌های سرویس، تنظیم کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1066",
+            "description_fa": "بر استفاده از آرشیو یا ابزارهای رمزگذاری (zip، openssl) مرتبط با فعالیت های اسکریپت شده توسط کاربر یا فایل های باینری که بارهای رمزگذاری شده را در زیر /Users یا /Volumes می نویسند، نظارت می کند."
         }
     ]
 }

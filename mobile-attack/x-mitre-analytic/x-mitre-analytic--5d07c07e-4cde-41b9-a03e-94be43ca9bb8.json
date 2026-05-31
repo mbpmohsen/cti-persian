@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0692#AN1805",
-                    "external_id": "AN1805"
+                    "external_id": "AN1805",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,21 +53,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IntegritySignalRequired",
-                    "description": "If true, alert only when integrity/jailbreak posture indicates process discovery is feasible."
+                    "description": "If true, alert only when integrity/jailbreak posture indicates process discovery is feasible.",
+                    "description_fa": "اگر درست باشد، فقط زمانی هشدار دهید که وضعیت یکپارچگی/فراموشی نشان می‌دهد که کشف فرآیند امکان‌پذیر است."
                 },
                 {
                     "field": "MinSandboxDenials",
-                    "description": "Threshold for sandbox denials within a window to treat as sustained restricted-access attempts."
+                    "description": "Threshold for sandbox denials within a window to treat as sustained restricted-access attempts.",
+                    "description_fa": "آستانه برای انکار جعبه شنی در یک پنجره تا به عنوان تلاش‌های دسترسی محدود پایدار در نظر گرفته شود."
                 },
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window between integrity signals and sandbox/network events (e.g., 1\u201324 hours)."
+                    "description": "Correlation window between integrity signals and sandbox/network events (e.g., 1–24 hours).",
+                    "description_fa": "پنجره همبستگی بین سیگنال‌های یکپارچگی و رویدادهای جعبه ایمنی/شبکه ​​(مثلاً 1 تا 24 ساعت)."
                 },
                 {
                     "field": "AllowlistedBundles",
-                    "description": "Enterprise monitoring/networking apps that may generate benign sandbox noise."
+                    "description": "Enterprise monitoring/networking apps that may generate benign sandbox noise.",
+                    "description_fa": "برنامه‌های نظارت/شبکه‌سازی سازمانی که ممکن است نویز خوش‌خیم جعبه شنی ایجاد کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1805",
+            "description_fa": "Defender سیگنال‌هایی را مشاهده می‌کند که با فهرست‌بندی فرآیند تلاش شده در iOS سازگار است، جایی که حفاظت‌های سیستم‌عامل مدرن عموماً از شمارش فرآیندهای گسترده برای برنامه‌های غیر ریشه جلوگیری می‌کنند. بنابراین تشخیص‌ها بر روی موارد زیر متمرکز می‌شوند: (1) راه‌اندازی امکان‌پذیری از طریق وضعیت یکپارچگی / فرار از زندان، و (2) ناهنجاری‌های امنیتی/log قابل مشاهده مطابق با تلاش‌ها برای جستجو در جداول پردازش یا رابط‌های محدود سیستم (به عنوان مثال، رد مکرر جعبه سند، تلاش‌های مشکوک دسترسی شبیه sysctl، یا استفاده غیرعادی از چارچوب‌های خصوصی). شاخص‌های به خطر افتادن یکپارچگی را با رویدادهای مکرر دسترسی محدود و رفتارهای بعدی اختیاری (هدف‌گیری سریع بسته‌ها/خدمات خاص یا چراغ‌های شبکه فوری) مرتبط کنید تا اطمینان حاصل کنید که کشف فرآیند در حال رخ دادن است."
         }
     ]
 }

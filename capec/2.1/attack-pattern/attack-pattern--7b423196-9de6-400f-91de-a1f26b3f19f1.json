@@ -9,39 +9,49 @@
                 {
                     "external_id": "CAPEC-112",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/112.html"
+                    "url": "https://capec.mitre.org/data/definitions/112.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-330",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/330.html"
+                    "url": "http://cwe.mitre.org/data/definitions/330.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-326",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/326.html"
+                    "url": "http://cwe.mitre.org/data/definitions/326.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-521",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/521.html"
+                    "url": "http://cwe.mitre.org/data/definitions/521.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Brute Force",
                     "external_id": "T1110",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1110"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1110",
+                    "description_fa": "نیروی بی رحم",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Brute Force",
                     "external_id": "11",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Brute-Force"
+                    "url": "http://projects.webappsec.org/Brute-Force",
+                    "description_fa": "نیروی بی رحم",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Brute force attack",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Brute_force_attack"
+                    "url": "https://owasp.org/www-community/attacks/Brute_force_attack",
+                    "description_fa": "حمله بی رحمانه",
+                    "source_name_fa": "حملات OWASP"
                 }
             ],
             "id": "attack-pattern--7b423196-9de6-400f-91de-a1f26b3f19f1",
@@ -63,6 +73,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -81,11 +101,22 @@
                 "None: No specialized resources are required to execute this type of attack. Ultimately, the speed with which an attacker discovers a secret is directly proportional to the computational resources the attacker has at their disposal. This attack method is resource expensive: having large amounts of computational power do not guarantee timely success, but having only minimal resources makes the problem intractable against all but the weakest secret selection procedures."
             ],
             "x_capec_skills_required": {
-                "Low": "The attack simply requires basic scripting ability to automate the exploration of the search space. More sophisticated attackers may be able to use more advanced methods to reduce the search space and increase the speed with which the secret is located."
+                "Low": "The attack simply requires basic scripting ability to automate the exploration of the search space. More sophisticated attackers may be able to use more advanced methods to reduce the search space and increase the speed with which the secret is located.",
+                "Low_fa": "حمله به سادگی به توانایی اسکریپت نویسی اولیه برای خودکار کردن کاوش در فضای جستجو نیاز دارد. مهاجمان پیچیده تر ممکن است بتوانند از روش های پیشرفته تری برای کاهش فضای جستجو و افزایش سرعت یافتن راز استفاده کنند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این حمله، برخی از دارایی ها (اطلاعات، عملکرد، هویت و غیره) توسط یک مقدار مخفی محدود محافظت می شود. مهاجم سعی می کند با استفاده از آزمون و خطا به این دارایی دسترسی پیدا کند تا تمام مقادیر محرمانه ممکن را به طور کامل کاوش کند به این امید که راز (یا مقداری که از نظر عملکردی معادل است) را پیدا کند که قفل دارایی را باز کند.",
+            "name_fa": "نیروی بی رحم",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین روش آزمایش مخفی: </b>مشخص کنید که چگونه یک حدس احتمالی از راز ممکن است آزمایش شود. این ممکن است با مقایسه برخی از دستکاری راز با یک مقدار شناخته شده، استفاده از راز برای دستکاری مجموعه ای از داده های شناخته شده و تعیین اینکه آیا نتیجه ویژگی های خاصی را نشان می دهد (به عنوان مثال، تبدیل متن رمزنگاری شده به متن ساده)، یا با ارائه راز به یک مرجع خارجی و پاسخ دادن به مرجع خارجی در مورد اینکه آیا مقدار راز صحیح بوده است یا خیر، انجام شود. در حالت ایده‌آل، مهاجم می‌خواهد صحت حدس خود را مستقلاً تعیین کند، زیرا دخالت یک مقام خارجی معمولاً کندتر است و می‌تواند نشانه‌ای به مدافع ارائه دهد که حمله‌ای با نیروی بی‌رحمانه انجام می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>تعیین کنید که آیا راهی برای حمله وجود دارد یا خیر. اکثر حملات brute force می‌توانند از تکنیک‌های موازی با تقسیم فضای جستجو بین منابع موجود بهره ببرند، بنابراین میانگین زمان موفقیت را بر تعداد منابع موجود تقسیم می‌کنند. اگر یک نقطه خفه وجود داشته باشد، مانند نیاز به بررسی پاسخ ها با یک مقام خارجی، موقعیت مهاجمان به طور قابل توجهی تنزل می یابد.</td></tr></tbody></table><li> <p> <b>کاهش فضای جستجو: </b>راه هایی برای کاهش فضای مخفی پیدا کنید. هرچه مهاجم بتواند فضای مورد نیاز خود را برای جستجوی مقدار مخفی ایجاد کند، شانس موفقیت آنها بیشتر است. راه های زیادی وجود دارد که از طریق آنها فضای جستجو را کاهش می دهد.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>در صورت امکان، نحوه انتخاب راز را مشخص کنید. اگر راز به صورت الگوریتمی تعیین شده باشد (مانند یک مولد اعداد تصادفی)، الگوریتم ممکن است دارای الگوها یا وابستگی هایی باشد که اندازه فضای مخفی را کاهش می دهد. اگر راز توسط انسان ایجاد شده باشد، عوامل رفتاری ممکن است، اگر به طور کامل فضا را کاهش ندهند، برخی از انواع اسرار را بیشتر از بقیه محتمل‌تر کنند. (به عنوان مثال، انسان‌ها ممکن است از اسرار یکسانی در مکان‌های مختلف استفاده کنند یا از رازهایی استفاده کنند که به‌نظر می‌آیند یا به نظر آشنا می‌آیند تا به راحتی به خاطر بیاورند). (این درست است حتی اگر راز در رمزنگاری استفاده نشود.) دوره‌ای بودن، نیاز به مقادیر بذر یا ضعف در مولد، همگی می‌توانند منجر به فضای مخفی به‌طور قابل توجهی کوچک‌تر شوند.</td></tr><tr><td>اگر راز توسط شخصی انتخاب شده باشد، مهندسی اجتماعی و جاسوسی ساده می‌تواند نشان‌دهنده الگوهایی در انتخاب مخفی آنها باشد. اگر بتوان اسرار قدیمی را یاد گرفت (و ممکن است یک هدف احساس کند که نیاز کمی به محافظت از رازی که جایگزین شده است) ندارد، می توان نکاتی را در مورد اولویت های انتخابی آنها به دست آورد. اینها می تواند شامل جایگزینی شخصیت هایی باشد که یک هدف به کار می گیرد، الگوهای موجود در منابع (تاریخ، عبارات معروف، اشعار موسیقی، اعضای خانواده و غیره). هنگامی که این الگوها مشخص شدند، تلاش‌های اولیه یک حمله brute-force می‌تواند بر روی این نواحی متمرکز شود.</td></tr><tr><td>برخی از تکنیک‌های الگوریتمی برای انتخاب مخفی ممکن است شاخص‌هایی را به جای بگذارند که نسبتاً آسان برای آنها آزمایش شود و سپس می‌توان از آنها برای حذف مناطق وسیعی از فضای جستجو برای بررسی استفاده کرد. به عنوان مثال، ممکن است بتوان تشخیص داد که یک راز با یک کاراکتر معین بعد از تعداد نسبتاً کمی آزمایش شروع می شود یا نه. از طرف دیگر، ممکن است بتوان طول راز را نسبتاً آسان کشف کرد. این اکتشافات فضای جستجو را به میزان قابل توجهی کاهش می دهد، بنابراین سرعت کشف راز توسط مهاجم را افزایش می دهد.</td></tr></tbody></table><li> <p> <b>شرایط پیروزی را گسترش دهید: </b>گاهی اوقات امکان گسترش شرایط پیروزی وجود دارد. برای مثال، مهاجم ممکن است نیازی به دانستن راز دقیق نداشته باشد، اما فقط به مقداری نیاز دارد که با استفاده از یک تابع یک طرفه، همان نتیجه را ایجاد کند. در حالی که انجام این کار اندازه فضای جستجو را کاهش نمی دهد، وجود شرایط پیروزی چندگانه، مدت زمان احتمالی را که مهاجم برای کاوش در فضا قبل از یافتن یک مقدار قابل اجرا نیاز دارد، کاهش می دهد.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>اطلاعات را جمع آوری کنید تا بتوان اطلاعات لازم را بدون مشورت با موفقیت جمع آوری کرد.: </b> یک مرجع خارجی این را می توان با گرفتن متن رمزنگاری شده (اگر هدف رمزگشایی متن است) یا فرهنگ لغت رمزگذاری شده رمزگذاری شده (اگر هدف یادگیری رمزهای عبور باشد) انجام داد.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>نمونه‌هایی از اسرار می‌تواند شامل رمزهای عبور، کلیدهای رمزگذاری، کلیدهای جستجوی پایگاه داده و مقادیر اولیه برای توابع یک طرفه باشد، اما محدود به آنها نیست. عامل کلیدی در این حمله، توانایی مهاجمان برای کشف سریع فضای مخفی احتمالی است. این، به نوبه خود، تابعی از اندازه فضای مخفی و قدرت محاسباتی است که مهاجم قادر به تحمل مشکل است. اگر مهاجم منابع متوسطی داشته باشد و فضای مخفی بزرگ باشد، چالش پیش روی مهاجم غیرقابل حل است. با فرض یک فضای مخفی محدود، یک حمله brute force در نهایت موفق خواهد شد. مدافع باید به این اطمینان داشته باشد که زمان و منابع لازم برای انجام این کار از ارزش اطلاعات فراتر خواهد رفت.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید بتواند تشخیص دهد که چه زمانی راز را با موفقیت حدس زده است. به این ترتیب، پدهای یکبار مصرف در برابر این نوع حمله مصون هستند، زیرا هیچ راهی برای تعیین درستی حدس وجود ندارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. در نهایت، سرعتی که مهاجم با آن یک راز را کشف می‌کند، با منابع محاسباتی که مهاجم در اختیار دارد، نسبت مستقیم دارد. این روش حمله منابع گران است: داشتن مقادیر زیاد توان محاسباتی موفقیت به موقع را تضمین نمی کند، اما داشتن منابع حداقلی مشکل را در برابر همه به جز ضعیف ترین روش های انتخاب مخفی حل نمی کند."
+            ]
         }
     ],
     "type": "bundle"

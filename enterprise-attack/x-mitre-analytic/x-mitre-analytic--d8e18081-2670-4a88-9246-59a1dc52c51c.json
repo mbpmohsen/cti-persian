@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0010#AN0029",
-                    "external_id": "AN0029"
+                    "external_id": "AN0029",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MacroFunctionNames",
-                    "description": "Names of event-bound functions like Auto_Open that initiate execution"
+                    "description": "Names of event-bound functions like Auto_Open that initiate execution",
+                    "description_fa": "نام توابع مرتبط با رویداد مانند Auto_Open که اجرا را آغاز می کند"
                 },
                 {
                     "field": "TimeDeltaMacroToC2",
-                    "description": "Time threshold to correlate macro execution with outbound connections"
+                    "description": "Time threshold to correlate macro execution with outbound connections",
+                    "description_fa": "آستانه زمانی برای ارتباط اجرای ماکرو با اتصالات خروجی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0029",
+            "description_fa": "ماکروها یا محرک‌های VBA را که برای اجرا در رویدادهای باز یا بسته شدن سند تنظیم شده‌اند، شناسایی می‌کند، که اغلب با بارهای جاسازی شده یا ترافیک C2 در مدت کوتاهی پس از اجرا مرتبط هستند."
         }
     ]
 }

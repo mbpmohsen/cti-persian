@@ -9,25 +9,32 @@
                 {
                     "external_id": "CAPEC-516",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/516.html"
+                    "url": "https://capec.mitre.org/data/definitions/516.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Cristin Goodwin, Joram Borenstein, Guarding against supply chain attacks—Part 2: Hardware risks, 2020--02---03, Microsoft",
                     "external_id": "REF-712",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.microsoft.com/security/blog/2020/02/03/guarding-against-supply-chain-attacks-part-2-hardware-risks/"
+                    "url": "https://www.microsoft.com/security/blog/2020/02/03/guarding-against-supply-chain-attacks-part-2-hardware-risks/",
+                    "description_fa": "کریستین گودوین، جورام بورنشتاین، محافظت در برابر حملات زنجیره تامین - قسمت 2: خطرات سخت افزاری، 2020--02---03، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3129bca1-91e3-4ec0-a117-557c84d2a92c",
@@ -54,11 +61,21 @@
             ],
             "x_capec_skills_required": {
                 "High": "Resources to physically infiltrate supplier.",
-                "Medium": "Intelligence data on victim's purchasing habits."
+                "Medium": "Intelligence data on victim's purchasing habits.",
+                "High_fa": "منابع برای نفوذ فیزیکی تامین کننده",
+                "Medium_fa": "داده های اطلاعاتی در مورد عادات خرید قربانی."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمنی که در طول توسعه خط پایه اختصاص داده شده به اجزای سیستم دسترسی دارد، می‌تواند یک جزء سخت‌افزاری که به‌طور مخرب تغییر یافته را به جای یک جزء پایه در طول مراحل توسعه محصول و تحقیقات جایگزین کند. این می تواند منجر به تنظیمات و کالیبراسیون هایی در محصول شود تا زمانی که محصول نهایی که اکنون حاوی جزء اصلاح شده است، به کار گرفته شود، آنطور که طراحی شده است عمل نکند و برای دشمن سودمند باشد.",
+            "name_fa": "جایگزینی اجزای سخت افزاری در طول پایه گذاری",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک دشمن تسهیلات توسعه محصول یک دستگاه امنیتی شبکه را با یک جزء سخت افزاری که برای شبیه سازی حجم زیادی از ترافیک شبکه استفاده می شود، فراهم می کند. این دستگاه در گزارش‌ها، آمارها و از طریق صفحه نمایش ادعا می‌کند که مقادیر بسیار زیادی از ترافیک شبکه را پمپاژ می‌کند، در حالی که در واقع حجم بسیار پایینی را منتشر می‌کند. محصول توسعه‌یافته به گونه‌ای تنظیم و پیکربندی شده است که بار شبکه سنگینی را تحمل کند، اما وقتی در سایت قربانی مستقر می‌شود، حجم زیادی از ترافیک شبکه به جای پردازش توسط دستگاه امنیتی شبکه، حذف می‌شود. این به دشمن در هنگام حمله به قربانی یک مزیت را می دهد، زیرا ممکن است حضور دشمن توسط دستگاه تشخیص داده نشود.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "حریف یا به دسترسی فیزیکی نیاز دارد یا می‌تواند اجزای سخت‌افزاری مخرب را به مرکز توسعه محصول عرضه کند."
+            ]
         }
     ],
     "spec_version": "2.0",

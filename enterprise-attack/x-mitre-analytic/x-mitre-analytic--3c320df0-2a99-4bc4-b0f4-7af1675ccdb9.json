@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0079#AN0216",
-                    "external_id": "AN0216"
+                    "external_id": "AN0216",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,13 +52,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExpectedUserSessionMap",
-                    "description": "Mapping of users to hosts they are expected to access; deviations indicate possible hijacking."
+                    "description": "Mapping of users to hosts they are expected to access; deviations indicate possible hijacking.",
+                    "description_fa": "نگاشت کاربران به میزبان هایی که انتظار می رود به آنها دسترسی داشته باشند. انحرافات نشان دهنده هواپیماربایی احتمالی است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for detecting rapid pivoting via hijacked sessions."
+                    "description": "Threshold for detecting rapid pivoting via hijacked sessions.",
+                    "description_fa": "آستانه تشخیص چرخش سریع از طریق جلسات ربوده شده."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0216",
+            "description_fa": "شناسایی RDP غیرعادی یا فعالیت جلسه سرویس از راه دور که در آن جلسه ورود به سیستم به جای ایجاد جدید ربوده شده است. شاخص‌ها عبارتند از عدم تطابق اعتبار کاربر در مقابل نشانه‌های جلسه فعال، تصاحب جلسه سرویس بدون رویدادهای ورود موفقیت آمیز مربوطه، یا فعالیت سایه‌زنی RDP بدون رضایت کاربر."
         }
     ]
 }

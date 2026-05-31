@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0080#AN0224",
-                    "external_id": "AN0224"
+                    "external_id": "AN0224",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0224",
-            "description": "Adversary exploits exposed OpenSLP on ESXi or vCenter public endpoints. Chain: inbound request pattern to mgmt service \u2192 hostd/vpxd error/crash/restart \u2192 unexpected process behavior or datastore access \u2192 outbound callback.",
+            "description": "Adversary exploits exposed OpenSLP on ESXi or vCenter public endpoints. Chain: inbound request pattern to mgmt service → hostd/vpxd error/crash/restart → unexpected process behavior or datastore access → outbound callback.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MgmtCIDR",
-                    "description": "Only trusted admin networks should reach ESXi/vCenter."
+                    "description": "Only trusted admin networks should reach ESXi/vCenter.",
+                    "description_fa": "فقط شبکه‌های مدیریت قابل اعتماد باید به ESXi/vCenter برسند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Join errors and inbound flows."
+                    "description": "Join errors and inbound flows.",
+                    "description_fa": "پیوستن به خطاها و جریان های ورودی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0224",
+            "description_fa": "اکسپلویت های دشمن OpenSLP را در نقاط پایانی عمومی ESXi یا vCenter افشا کرد. زنجیره: الگوی درخواست ورودی به سرویس mgmt ← خطای میزبان/vpxd/ خرابی/راه‌اندازی مجدد ← رفتار فرآیند غیرمنتظره یا دسترسی به ذخیره‌گاه داده ← پاسخ به تماس خروجی."
         }
     ]
 }

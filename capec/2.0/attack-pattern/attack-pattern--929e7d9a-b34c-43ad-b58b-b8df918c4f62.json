@@ -9,22 +9,26 @@
                 {
                     "external_id": "CAPEC-477",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/477.html"
+                    "url": "https://capec.mitre.org/data/definitions/477.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-311",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/311.html"
+                    "url": "http://cwe.mitre.org/data/definitions/311.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-319",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/319.html"
+                    "url": "http://cwe.mitre.org/data/definitions/319.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--929e7d9a-b34c-43ad-b58b-b8df918c4f62",
@@ -47,11 +51,18 @@
                 "Recipient is using signature verification software that does not maintain separation between signed and unsigned data once the signature has been verified."
             ],
             "x_capec_skills_required": {
-                "High": "Attacker must be able to create malformed data blobs and know how to insert them in a location that the recipient will visit."
+                "High": "Attacker must be able to create malformed data blobs and know how to insert them in a location that the recipient will visit.",
+                "High_fa": "مهاجم باید بتواند حباب های داده ناقص ایجاد کند و بداند چگونه آنها را در مکانی که گیرنده بازدید می کند وارد کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از پیچیدگی زیربنایی یک ساختار داده سوء استفاده می کند که به محتوای امضا شده و بدون امضا اجازه می دهد تا باعث شود داده های بدون امضا به گونه ای پردازش شوند که گویی داده های امضا شده هستند.",
+            "name_fa": "جعل امضا با ترکیب محتوای امضا شده و بدون امضا",
+            "x_capec_prerequisites_fa": [
+                "امضاکننده و گیرنده از ساختارهای پیچیده ذخیره سازی داده استفاده می کنند که امکان ترکیبی بین داده های امضا شده و بدون امضا را فراهم می کند.",
+                "گیرنده از نرم افزار تأیید امضا استفاده می کند که پس از تأیید امضا، جدایی بین داده های امضا شده و بدون امضا را حفظ نمی کند."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0278#AN0775",
-                    "external_id": "AN0775"
+                    "external_id": "AN0775",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PackageManagerUpdateWhitelist",
-                    "description": "Allowlist of legitimate grub/shim updates via apt, yum, or rpm."
+                    "description": "Allowlist of legitimate grub/shim updates via apt, yum, or rpm.",
+                    "description_fa": "فهرست مجاز به‌روزرسانی‌های قانونی grub/shim از طریق apt، yum، یا rpm."
                 },
                 {
                     "field": "FilesystemPaths",
-                    "description": "Directories (e.g., /boot/efi, /boot/grub) monitored for unauthorized modification."
+                    "description": "Directories (e.g., /boot/efi, /boot/grub) monitored for unauthorized modification.",
+                    "description_fa": "دایرکتوری ها (به عنوان مثال، /boot/efi، /boot/grub) برای تغییرات غیرمجاز نظارت می شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0775",
+            "description_fa": "شناسایی نوشته‌ها در فهرست‌های /boot یا EFI خارج از به‌روزرسانی‌های مورد انتظار مدیریت بسته. نظارت بر گزارش هسته و رویدادهای حسابرسی شده برای تلاش برای بازنویسی باینری های بوت لودر (به عنوان مثال، grub، shim). اجرای غیرمنتظره efibootmgr یا نوشتن dd در دستگاه های /dev/sdX و به دنبال آن تغییرات پارامتر بوت."
         }
     ]
 }

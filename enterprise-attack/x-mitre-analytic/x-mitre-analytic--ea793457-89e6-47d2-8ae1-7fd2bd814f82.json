@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0021#AN0062",
-                    "external_id": "AN0062"
+                    "external_id": "AN0062",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Window between service stop and suspicious file deletion"
+                    "description": "Window between service stop and suspicious file deletion",
+                    "description_fa": "پنجره بین توقف سرویس و حذف مشکوک فایل"
                 },
                 {
                     "field": "ExecUser",
-                    "description": "Username or UID executing service stop command"
+                    "description": "Username or UID executing service stop command",
+                    "description_fa": "نام کاربری یا UID در حال اجرای دستور توقف سرویس"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0062",
+            "description_fa": "دشمن سیستمctl یا توقف سرویس را با هدف قرار دادن خدمات با ارزش بالا (مثلاً mysql، sshd) اجرا می‌کند، که احتمالاً به دنبال آن rm یا خرد کردن در برابر ذخیره‌گاه‌های داده است. زنجیره رفتاری: استفاده sudo/su + دستور توقف + /var/log/messages یا ورودی‌های syslog + دسترسی/حذف فایل."
         }
     ]
 }

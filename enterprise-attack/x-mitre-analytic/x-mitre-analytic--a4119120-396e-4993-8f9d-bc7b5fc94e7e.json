@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0470#AN1296",
-                    "external_id": "AN1296"
+                    "external_id": "AN1296",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessFilter",
-                    "description": "Limit detections to children of suspicious binaries."
+                    "description": "Limit detections to children of suspicious binaries.",
+                    "description_fa": "شناسایی باینری های مشکوک را به کودکان محدود کنید."
                 },
                 {
                     "field": "HeaderAnomalyScore",
-                    "description": "Threshold for deviation from expected headers (User-Agent, Host)."
+                    "description": "Threshold for deviation from expected headers (User-Agent, Host).",
+                    "description_fa": "آستانه انحراف از هدرهای مورد انتظار (کاربر-عامل، میزبان)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1296",
+            "description_fa": "برنامه‌های بدون امضا یا مشکوک که ترافیک شبکه را شروع می‌کنند و ادعا می‌کنند که مرورگر، ایمیل یا کلاینت‌های ابری هستند. جعل هویت را از طریق اثر انگشت TLS و انحراف رشته User-Agent تشخیص می‌دهد."
         }
     ]
 }

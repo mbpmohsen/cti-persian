@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0612#AN1666",
-                    "external_id": "AN1666"
+                    "external_id": "AN1666",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -67,41 +68,52 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking injected actions to target-app navigation, submission, or downstream network effects."
+                    "description": "Correlation window linking injected actions to target-app navigation, submission, or downstream network effects.",
+                    "description_fa": "پنجره همبستگی که اقدامات تزریق شده را به ناوبری برنامه هدف، ارسال یا جلوه های شبکه پایین دستی مرتبط می کند."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved accessibility, autofill, remote-assist, or QA/testing apps vary by organization and device group."
+                    "description": "Approved accessibility, autofill, remote-assist, or QA/testing apps vary by organization and device group.",
+                    "description_fa": "برنامه‌های دسترسی تأیید شده، تکمیل خودکار، کمک از راه دور یا QA/تست بر اساس سازمان و گروه دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedAccessibilityApps",
-                    "description": "Approved accessibility-enabled apps vary by assistive and enterprise workflow."
+                    "description": "Approved accessibility-enabled apps vary by assistive and enterprise workflow.",
+                    "description_fa": "برنامه‌های تأییدشده با قابلیت دسترسی بر اساس گردش کار کمکی و سازمانی متفاوت است."
                 },
                 {
                     "field": "AllowedAutofillApps",
-                    "description": "Approved password managers or autofill-capable apps may legitimately inject text into fields."
+                    "description": "Approved password managers or autofill-capable apps may legitimately inject text into fields.",
+                    "description_fa": "مدیران رمزهای عبور تأیید شده یا برنامه‌های دارای قابلیت تکمیل خودکار ممکن است به طور قانونی متن را به فیلدها تزریق کنند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close an injected action must be to user interaction to be considered expected."
+                    "description": "Defines how close an injected action must be to user interaction to be considered expected.",
+                    "description_fa": "مشخص می کند که یک عمل تزریق شده چقدر باید به تعامل کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "SensitiveForegroundAppCategories",
-                    "description": "Categories such as banking, payments, identity, communications, and enterprise access may warrant higher sensitivity."
+                    "description": "Categories such as banking, payments, identity, communications, and enterprise access may warrant higher sensitivity.",
+                    "description_fa": "مقوله‌هایی مانند بانکداری، پرداخت‌ها، هویت، ارتباطات و دسترسی سازمانی ممکن است حساسیت بیشتری را تضمین کنند."
                 },
                 {
                     "field": "GlobalActionBurstThreshold",
-                    "description": "Threshold for repeated programmatic global actions within a short window."
+                    "description": "Threshold for repeated programmatic global actions within a short window.",
+                    "description_fa": "آستانه برای تکرار اقدامات سراسری برنامه ریزی شده در یک پنجره کوتاه."
                 },
                 {
                     "field": "TextInjectionLengthThreshold",
-                    "description": "Minimum inserted text length or field-population pattern considered suspicious outside approved autofill workflows."
+                    "description": "Minimum inserted text length or field-population pattern considered suspicious outside approved autofill workflows.",
+                    "description_fa": "حداقل طول متن درج شده یا الگوی جمعیت فیلد مشکوک در خارج از گردش کار تکمیل خودکار تأیید شده در نظر گرفته می شود."
                 },
                 {
                     "field": "ConsentOrSetupGracePeriod",
-                    "description": "Grace period allowed after explicit user enablement of approved accessibility or autofill workflows before injection is treated as suspicious."
+                    "description": "Grace period allowed after explicit user enablement of approved accessibility or autofill workflows before injection is treated as suspicious.",
+                    "description_fa": "مهلت مجاز پس از فعال کردن صریح کاربر برای دسترسی تأیید شده یا گردش کار تکمیل خودکار قبل از تزریق مشکوک تلقی می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1666",
+            "description_fa": "مدافع قابلیت دسترسی Android یا رفتار دارای قابلیت اتوماسیون رابط کاربری را از هویت برنامه با اقدامات واسط کاربر تزریق شده که از طرف کاربر در برنامه پیش زمینه دیگری انجام می شود، مرتبط می کند. قوی‌ترین شواهد Android، رفتار برنامه‌ای با قابلیت دسترسی یا دارای امتیاز مشابه است که باعث کلیک‌های برنامه‌ریزی، کنش‌های جهانی یا درج متن در رابط کاربری فعال برنامه دیگری می‌شود، به‌ویژه زمانی که این کنش‌ها بدون تعامل لمسی کاربر مشابه انجام می‌شوند، در حالی که برنامه تزریق پس‌زمینه یا فقط خدمات پیش‌زمینه است، یا زمانی که این دسته از هویت‌ها، برنامه‌های پیش‌زمینه هدف، دسترسی به یک بانک، ارتباطات حساس، دسترسی سازمانی، برنامه‌های پرداخت حساس، متعلق به یک برنامه حساس است. تشخیص زمانی تقویت می‌شود که دنباله ورودی تزریق شده با ناوبری برنامه هدف، ارسال فرم، پیشرفت تراکنش یا فعالیت شبکه از بافت هدف دنبال شود."
         }
     ]
 }

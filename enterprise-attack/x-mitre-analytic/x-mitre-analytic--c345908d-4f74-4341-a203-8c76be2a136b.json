@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0249#AN0693",
-                    "external_id": "AN0693"
+                    "external_id": "AN0693",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0693",
-            "description": "Remote/API driven creation **and** start of a container whose image is not on an allow\u2011list (or is tagged `latest`), executed by a non-admin principal, and/or started with risky runtime attributes (e.g., `--privileged`, host PID/NET namespaces, sensitive host path mounts, capability adds). Correlates *create* \u279c *start* \u279c first network/process actions from that container within a short time window.",
+            "description": "Remote/API driven creation **and** start of a container whose image is not on an allow‑list (or is tagged `latest`), executed by a non-admin principal, and/or started with risky runtime attributes (e.g., `--privileged`, host PID/NET namespaces, sensitive host path mounts, capability adds). Correlates *create* ➜ *start* ➜ first network/process actions from that container within a short time window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -55,26 +56,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "known_images",
-                    "description": "Environment-specific allow-list of approved images (with digests)."
+                    "description": "Environment-specific allow-list of approved images (with digests).",
+                    "description_fa": "لیست مجوزهای خاص محیطی از تصاویر تأیید شده (همراه با خلاصه)."
                 },
                 {
                     "field": "known_admins",
-                    "description": "Service accounts or CI/CD users permitted to deploy containers."
+                    "description": "Service accounts or CI/CD users permitted to deploy containers.",
+                    "description_fa": "حساب‌های سرویس یا کاربران CI/CD مجاز به استقرار کانتینرها هستند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Max time between create, start, and first activity to consider events causally linked (default 5m)."
+                    "description": "Max time between create, start, and first activity to consider events causally linked (default 5m).",
+                    "description_fa": "حداکثر زمان بین ایجاد، شروع و اولین فعالیت برای در نظر گرفتن رویدادها به صورت علّی (پیش‌فرض 5 متر)."
                 },
                 {
                     "field": "RiskThreshold",
-                    "description": "Minimum number of risky attributes (e.g., unknown image + privileged) to alert."
+                    "description": "Minimum number of risky attributes (e.g., unknown image + privileged) to alert.",
+                    "description_fa": "حداقل تعداد مشخصه های مخاطره آمیز (به عنوان مثال، تصویر ناشناخته + دارای امتیاز) برای هشدار."
                 },
                 {
                     "field": "PrivilegedFlags",
-                    "description": "Set of runtime flags considered high risk (e.g., --privileged, --cap-add=SYS_ADMIN, hostPID, hostNetwork, /var/run/docker.sock mount)."
+                    "description": "Set of runtime flags considered high risk (e.g., --privileged, --cap-add=SYS_ADMIN, hostPID, hostNetwork, /var/run/docker.sock mount).",
+                    "description_fa": "مجموعه ای از پرچم های زمان اجرا در نظر گرفته شده با ریسک بالا (به عنوان مثال، --privileged، --cap-add=SYS_ADMIN، hostPID، hostNetwork، /var/run/docker.sock mount)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0693",
+            "description_fa": "ایجاد از راه دور/API مبتنی بر **و** شروع محفظه‌ای که تصویر آن در فهرست مجاز نیست (یا «جدیدترین» برچسب‌گذاری شده است)، توسط یک مدیر غیر سرپرست اجرا شده است، و/یا با ویژگی‌های زمان اجرا پرخطر شروع شده است (مانند «--ممتاز»، فضاهای نام PID/NET میزبان، اضافه کردن مسیرهای میزبانی حساس). ارتباط *ایجاد* ➜ *شروع* ➜ اولین اقدامات شبکه/فرآیند از آن ظرف در یک پنجره زمانی کوتاه."
         }
     ]
 }

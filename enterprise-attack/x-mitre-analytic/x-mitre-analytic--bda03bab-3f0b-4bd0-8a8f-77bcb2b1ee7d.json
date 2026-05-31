@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0497#AN1370",
-                    "external_id": "AN1370"
+                    "external_id": "AN1370",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,13 +48,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AgentServiceNames",
-                    "description": "List of endpoint protection service names (varies across deployments)."
+                    "description": "List of endpoint protection service names (varies across deployments).",
+                    "description_fa": "فهرست نام‌های سرویس حفاظت نقطه پایانی (در استقرارها متفاوت است)."
                 },
                 {
                     "field": "AllowedAdminAccounts",
-                    "description": "Accounts permitted to legitimately stop or reconfigure services."
+                    "description": "Accounts permitted to legitimately stop or reconfigure services.",
+                    "description_fa": "حساب‌هایی که مجاز به توقف یا پیکربندی مجدد خدمات هستند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1370",
+            "description_fa": "دستورات kill/systemctl/service را در برابر فرآیندهای EDR، audited، falco، osquery، rsyslog، journald یا agent تشخیص می‌دهد. ویرایش های پیکربندی غیرفعال کردن راه اندازی. ماژول تخلیه تلاش. توقف ناگهانی گزارش‌ها پس از اجرای پوسته ممتاز."
         }
     ]
 }

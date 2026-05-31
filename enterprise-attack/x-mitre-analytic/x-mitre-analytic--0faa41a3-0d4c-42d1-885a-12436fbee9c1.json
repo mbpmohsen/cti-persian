@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0419#AN1179",
-                    "external_id": "AN1179"
+                    "external_id": "AN1179",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "NXDOMAINThreshold",
-                    "description": "Ratio of failed queries triggering alert (e.g., >40%)"
+                    "description": "Ratio of failed queries triggering alert (e.g., >40%)",
+                    "description_fa": "نسبت پرس و جوهای ناموفق فعال کننده هشدار (به عنوان مثال، > 40%)"
                 },
                 {
                     "field": "DomainAge",
-                    "description": "Flag queries to domains registered in last 7\u201330 days"
+                    "description": "Flag queries to domains registered in last 7–30 days",
+                    "description_fa": "علامت‌گذاری درخواست‌ها به دامنه‌های ثبت‌شده در ۷ تا ۳۰ روز گذشته"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1179",
+            "description_fa": "شناسایی فرآیندهایی که پرس و جوهای مکرر DNS را به دامنه های تصادفی با آنتروپی یا الحاق کلمات غیرعادی صادر می کنند. گزارش‌های حل‌کننده را با نرخ NXDOMAIN بالا و اتصالات سوکت ممیزی شده مرتبط کنید."
         }
     ]
 }

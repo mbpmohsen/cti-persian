@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-489",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/489.html"
+                    "url": "https://capec.mitre.org/data/definitions/489.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Endpoint Denial of Service:Service Exhaustion Flood",
                     "external_id": "T1499.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1499/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1499/002",
+                    "description_fa": "انکار سرویس نقطه پایانی: سیل خستگی سرویس",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--f30a7c37-4d87-41d2-a103-c995948076f3",
@@ -43,7 +47,12 @@
                 "This type of an attack requires the ability to generate a large amount of SSL traffic to send a target server."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن ممکن است با استفاده از پروتکل SSL یک حمله سیلابی را با این هدف که با مصرف تمام منابع موجود در سمت سرور، دسترسی کاربران قانونی به یک سرویس را ممنوع کند، اجرا کند. این حملات از رابطه نامتقارن بین قدرت پردازش استفاده شده توسط مشتری و قدرت پردازش استفاده شده توسط سرور برای ایجاد یک اتصال امن استفاده می کنند. به این ترتیب، مهاجم می‌تواند تعداد زیادی درخواست HTTPS را روی یک ماشین با تدارک پایین انجام دهد تا تعداد نامتناسب زیادی از منابع را روی سرور ببندد. سپس مشتریان به مذاکره مجدد در مورد اتصال SSL ادامه می دهند. وقتی این حمله در تعداد زیادی از ماشین های مهاجم ضرب شود، می تواند منجر به خرابی یا از دست دادن سرویس برای کاربران قانونی شود.",
+            "name_fa": "SSL Flood",
+            "x_capec_prerequisites_fa": [
+                "این نوع حمله نیاز به توانایی تولید حجم زیادی از ترافیک SSL برای ارسال یک سرور هدف دارد."
+            ]
         }
     ],
     "type": "bundle"

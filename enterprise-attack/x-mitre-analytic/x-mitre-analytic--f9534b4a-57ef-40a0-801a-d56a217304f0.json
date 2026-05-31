@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0485#AN1334",
-                    "external_id": "AN1334"
+                    "external_id": "AN1334",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ResolverConfigPaths",
-                    "description": "Whitelist of expected DNS resolvers configured on ESXi"
+                    "description": "Whitelist of expected DNS resolvers configured on ESXi",
+                    "description_fa": "لیست سفید حل‌کننده‌های DNS مورد انتظار پیکربندی شده در ESXi"
                 },
                 {
                     "field": "ExternalDomainWhitelist",
-                    "description": "Known trusted external domains for hypervisor services"
+                    "description": "Known trusted external domains for hypervisor services",
+                    "description_fa": "دامنه های خارجی قابل اعتماد شناخته شده برای خدمات هایپروایزر"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1334",
+            "description_fa": "خروجی‌های ESXi syslog و esxcli را برای رفتار غیرعادی حل‌کننده DNS، مانند تغییرات مکرر دامنه به IP یا تغییرات غیرمجاز تنظیمات DNS که توسط عوامل مدیریت استفاده می‌شود، بررسی کنید. جستجوهای دامنه را با مقادیر کوتاه TTL مرتبط کنید."
         }
     ]
 }

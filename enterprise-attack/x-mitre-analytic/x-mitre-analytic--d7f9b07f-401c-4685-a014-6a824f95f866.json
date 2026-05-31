@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0153#AN0438",
-                    "external_id": "AN0438"
+                    "external_id": "AN0438",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WebhookEndpoints",
-                    "description": "Webhook URLs monitored for exfiltration."
+                    "description": "Webhook URLs monitored for exfiltration.",
+                    "description_fa": "نشانی‌های وب هوک برای استخراج نظارت می‌شوند."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "High entropy payloads may indicate encoded/encrypted exfiltration."
+                    "description": "High entropy payloads may indicate encoded/encrypted exfiltration.",
+                    "description_fa": "محموله های آنتروپی بالا ممکن است نشان دهنده خروج رمزگذاری شده/رمزگذاری شده باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0438",
+            "description_fa": "برنامه‌ها یا اسکریپت‌های غیرمنتظره (osascript، curl، Automator گردش‌های کاری) داده‌ها را از طریق webhooks استخراج می‌کنند. دیدگاه مدافع: همبستگی عملیات خواندن کلیپ بورد/فایل به دنبال ترافیک HTTPS POST به خدمات وب هوک."
         }
     ]
 }

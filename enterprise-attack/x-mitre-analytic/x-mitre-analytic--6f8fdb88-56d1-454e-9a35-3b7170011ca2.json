@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0090#AN0248",
-                    "external_id": "AN0248"
+                    "external_id": "AN0248",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MountPathPattern",
-                    "description": "Typical mount paths to monitor (e.g., /media/usb*, /run/media/username/*)."
+                    "description": "Typical mount paths to monitor (e.g., /media/usb*, /run/media/username/*).",
+                    "description_fa": "مسیرهای نصب معمولی برای نظارت (به عنوان مثال، /media/usb*، /run/media/username/*)."
                 },
                 {
                     "field": "TimeWindowBetweenHosts",
-                    "description": "Tunable detection window to correlate read/write between different hosts within a short interval (e.g., <15m)."
+                    "description": "Tunable detection window to correlate read/write between different hosts within a short interval (e.g., <15m).",
+                    "description_fa": "پنجره تشخیص قابل تنظیم برای ارتباط خواندن/نوشتن بین میزبان های مختلف در یک بازه زمانی کوتاه (مثلاً کمتر از 15 متر)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0248",
+            "description_fa": "تشخیص دسترسی نوشتن فایل به دایرکتوری های نصب USB (به عنوان مثال، /media/، /run/media/) و به دنبال آن دسترسی به فایل مشابه یا اجرا در میزبان دیگری."
         }
     ]
 }

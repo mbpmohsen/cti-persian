@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0080#AN0220",
-                    "external_id": "AN0220"
+                    "external_id": "AN0220",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0220",
-            "description": "Adversary exploits Apache/Nginx/app servers. Chain: (1) suspicious requests in access logs \u2192 (2) spike of 5xx or WAF blocks \u2192 (3) web server or interpreter (apache2/nginx/php-fpm/node/python) spawns /bin/sh, curl, wget, socat, or writes webshell \u2192 (4) outbound callback.",
+            "description": "Adversary exploits Apache/Nginx/app servers. Chain: (1) suspicious requests in access logs → (2) spike of 5xx or WAF blocks → (3) web server or interpreter (apache2/nginx/php-fpm/node/python) spawns /bin/sh, curl, wget, socat, or writes webshell → (4) outbound callback.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WebProcList",
-                    "description": "server/interpreter names to watch (apache2, httpd, nginx, php-fpm, uwsgi, gunicorn, node)."
+                    "description": "server/interpreter names to watch (apache2, httpd, nginx, php-fpm, uwsgi, gunicorn, node).",
+                    "description_fa": "نام های سرور/مترجم برای تماشا (apache2، httpd، nginx، php-fpm، uwsgi، gunicorn، node)."
                 },
                 {
                     "field": "ChildToolList",
-                    "description": "post-exploitation binaries (sh, bash, curl, wget, python, perl, socat, nc)."
+                    "description": "post-exploitation binaries (sh, bash, curl, wget, python, perl, socat, nc).",
+                    "description_fa": "باینری های پس از بهره برداری (sh، bash، curl، wget، python، perl، socat، nc)."
                 },
                 {
                     "field": "BurstThreshold",
-                    "description": "Rate of errors/requests per src_ip/uri to flag reconnaissance/exploit spray."
+                    "description": "Rate of errors/requests per src_ip/uri to flag reconnaissance/exploit spray.",
+                    "description_fa": "میزان خطاها/درخواست‌ها در هر src_ip/uri برای پرچم‌گذاری اسپری شناسایی/ بهره‌برداری."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Exec/network correlation window."
+                    "description": "Exec/network correlation window.",
+                    "description_fa": "پنجره همبستگی Exec/شبکه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0220",
+            "description_fa": "دشمن از سرورهای Apache/Nginx/app سوء استفاده می کند. زنجیره: (1) درخواست‌های مشکوک در گزارش‌های دسترسی → (2) افزایش بلوک‌های 5xx یا WAF → (3) وب سرور یا مفسر (apache2/nginx/php-fpm/node/python) /bin/sh، curl، wget، socat، یا نوشتن webshell → outbound."
         }
     ]
 }

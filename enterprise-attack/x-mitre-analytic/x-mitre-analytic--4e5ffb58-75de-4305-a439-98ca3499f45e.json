@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0503#AN1389",
-                    "external_id": "AN1389"
+                    "external_id": "AN1389",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Flag high-entropy payloads sent over unexpected protocols."
+                    "description": "Flag high-entropy payloads sent over unexpected protocols.",
+                    "description_fa": "بارهای با آنتروپی بالا را که از طریق پروتکل های غیرمنتظره ارسال شده اند، پرچم گذاری کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Define allowable transfer window (e.g., abnormal traffic outside business hours)."
+                    "description": "Define allowable transfer window (e.g., abnormal traffic outside business hours).",
+                    "description_fa": "پنجره نقل و انتقال مجاز را تعریف کنید (به عنوان مثال، ترافیک غیرعادی خارج از ساعات کاری)."
                 },
                 {
                     "field": "ExecutableAllowlist",
-                    "description": "List of known-good binaries for encrypted traffic (e.g., Chrome, Outlook)."
+                    "description": "List of known-good binaries for encrypted traffic (e.g., Chrome, Outlook).",
+                    "description_fa": "فهرستی از باینری های شناخته شده خوب برای ترافیک رمزگذاری شده (به عنوان مثال، Chrome، Outlook)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1389",
+            "description_fa": "اجرای فرآیندهای غیر مرورگر را شناسایی می کند که اتصالات شبکه رمزگذاری شده خروجی را با استفاده از پروتکل های رمزگذاری متقارن غیر معمول (مانند AES از طریق PowerShell یا اسکریپت های سفارشی) برای مقصدهای خارجی جایگزین ایجاد می کند."
         }
     ]
 }

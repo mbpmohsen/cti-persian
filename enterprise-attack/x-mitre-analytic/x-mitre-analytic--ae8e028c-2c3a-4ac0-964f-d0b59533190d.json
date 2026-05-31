@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0493#AN1358",
-                    "external_id": "AN1358"
+                    "external_id": "AN1358",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SocketPathBaseline",
-                    "description": "Expected UNIX socket paths used by system services and applications."
+                    "description": "Expected UNIX socket paths used by system services and applications.",
+                    "description_fa": "مسیرهای سوکت یونیکس مورد انتظار که توسط سرویس ها و برنامه های سیستم استفاده می شود."
                 },
                 {
                     "field": "FIFOAccessPatterns",
-                    "description": "Legitimate processes expected to open pipes in shared directories."
+                    "description": "Legitimate processes expected to open pipes in shared directories.",
+                    "description_fa": "انتظار می رود فرآیندهای قانونی لوله ها را در دایرکتوری های مشترک باز کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1358",
+            "description_fa": "سوء استفاده از سوکت‌ها، لوله‌ها یا صف‌های پیام دامنه یونیکس را برای اجرای کد غیرمجاز شناسایی می‌کند. ایجاد سوکت غیرمنتظره را با باینری های مشکوک، خطوط لوله پوسته غیرعادی، یا فرآیندهای تزریقی که کانال های IPC را ایجاد می کنند، مرتبط می کند."
         }
     ]
 }

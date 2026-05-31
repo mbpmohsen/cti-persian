@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0027#AN0077",
-                    "external_id": "AN0077"
+                    "external_id": "AN0077",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousParentProcess",
-                    "description": "Non-browser parent of web traffic (e.g., AppleScript, bash)"
+                    "description": "Non-browser parent of web traffic (e.g., AppleScript, bash)",
+                    "description_fa": "والد غیر مرورگر ترافیک وب (به عنوان مثال، AppleScript، bash)"
                 },
                 {
                     "field": "URIEntropyThreshold",
-                    "description": "Unusually encoded data in GET/POST URIs"
+                    "description": "Unusually encoded data in GET/POST URIs",
+                    "description_fa": "داده های رمزگذاری شده غیرمعمول در URI های GET/POST"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0077",
+            "description_fa": "برنامه‌هایی مانند Automator، AppleScript یا LaunchDaemons را شناسایی می‌کند که ترافیک HTTP/S را به دامنه‌های غیراستاندارد فراخوانی می‌کنند یا از هدرهای مشکوک استفاده می‌کنند (مانند Base64 در URI یا فیلدهای کوکی)."
         }
     ]
 }

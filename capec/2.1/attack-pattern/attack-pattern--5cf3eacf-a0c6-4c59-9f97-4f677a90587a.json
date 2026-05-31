@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-228",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/228.html"
+                    "url": "https://capec.mitre.org/data/definitions/228.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Ryan Naraine, DoS Flaw in SOAP DTD Parameter, InternetNews.com, 2003--12---15, ITBusiness Edge, Quinstreet Inc.",
                     "external_id": "REF-86",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.internetnews.com/dev-news/article.php/3289191"
+                    "url": "http://www.internetnews.com/dev-news/article.php/3289191",
+                    "description_fa": "رایان نارین، نقص DoS در پارامتر DTD SOAP، InternetNews.com، 2003--12---15، ITBusiness Edge، Quinstreet Inc.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5cf3eacf-a0c6-4c59-9f97-4f677a90587a",
@@ -51,7 +55,13 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم محتوای مخرب را به DTD برنامه تزریق می کند تا تأثیر فنی منفی ایجاد کند. DTD ها برای توصیف نحوه پردازش اسناد XML استفاده می شوند. برخی از DTD های نادرست (به عنوان مثال، آنهایی که با گسترش بیش از حد موجودیت همانطور که در CAPEC 197 توضیح داده شده است) می توانند باعث شوند تجزیه کننده های XML که DTD ها را پردازش می کنند، منابع بیش از حد مصرف کنند که منجر به تخلیه منابع می شود.",
+            "name_fa": "تزریق DTD",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بررسی هدف: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، مهاجم تمام نمونه‌های خدمات وب را برای پردازش درخواست‌های XML ثبت می‌کند.</p></li><tabled><tbody><trquetr><th> ابزاری برای ضبط همه نمونه‌های URL برای پردازش درخواست‌های XML.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب‌سایت و تجزیه و تحلیل نحوه پردازش درخواست‌های XML توسط برنامه استفاده کنید.</td></tr></tbody></table><li> <p> <b>استفاده از XML با DTD‌ها را تعیین کنید: </b>برای شناسایی استفاده از XML در برنامه‌های کاربردی بیشتری قرار دهید. DTDs.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>هر گونه مستندات موجود را برای برنامه‌ای که ورودی XML مورد انتظار را مورد بحث قرار می‌دهد، بررسی کنید.</td></tr><tr><td>برنامه را با استفاده از ورودی XML با و بدون DTD مشخص شده اجرا کنید. شکست بدون DTD احتمالاً نشان‌دهنده استفاده از DTD است.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p>[Craft and inject XML حاوی بار DTD مخرب]</p></li><table><tbody><tr><tr><th>Technique/Technology حمله ای که با استفاده از DTD خود، تأثیر انکار سرویس را بر روی سرور مورد نظر ایجاد می کند.</td></tr><tr><td>حمله XML External Entity (XEE) را وارد کنید که می تواند باعث افشای اطلاعات محرمانه، اجرای کد غیرمجاز، ایجاد انکار سرویس سرور مورد نظر، یا چندین تأثیر مخرب دیگر شود.",
+            "x_capec_prerequisites_fa": [
+                "هدف باید یک برنامه مبتنی بر XML را اجرا کند که از DTD ها استفاده کند."
+            ]
         }
     ],
     "type": "bundle"

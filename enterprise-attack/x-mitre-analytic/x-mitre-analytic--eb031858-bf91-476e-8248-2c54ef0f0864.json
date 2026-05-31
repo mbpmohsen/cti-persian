@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0462#AN1274",
-                    "external_id": "AN1274"
+                    "external_id": "AN1274",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedResponderList",
-                    "description": "Defines expected LLMNR/NBT-NS responders to tune out legitimate services."
+                    "description": "Defines expected LLMNR/NBT-NS responders to tune out legitimate services.",
+                    "description_fa": "پاسخگوهای مورد انتظار LLMNR/NBT-NS را برای تنظیم خدمات قانونی تعریف می کند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period for linking poisoned name resolution with SMB relay attempts."
+                    "description": "Correlation period for linking poisoned name resolution with SMB relay attempts.",
+                    "description_fa": "دوره همبستگی برای پیوند وضوح نام مسموم با تلاش‌های رله SMB."
                 },
                 {
                     "field": "SMBServiceBaseline",
-                    "description": "Normal services and SMB relay patterns in the enterprise environment."
+                    "description": "Normal services and SMB relay patterns in the enterprise environment.",
+                    "description_fa": "خدمات عادی و الگوهای رله SMB در محیط سازمانی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1274",
+            "description_fa": "ترافیک غیرعادی شبکه را در UDP 5355 (LLMNR) و UDP 137 (NBT-NS) همراه با تلاش‌های غیرمجاز رله SMB، تغییرات رجیستری که وضوح نام چندپخشی را دوباره فعال می‌کند، یا ایجاد سرویس مشکوک که نشان‌دهنده رهگیری اعتبارنامه دشمن در وسط است، شناسایی می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0149#AN0427",
-                    "external_id": "AN0427"
+                    "external_id": "AN0427",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProtocolCommandWatchlist",
-                    "description": "Flag commands like `copy`, `archive tar`, or `upload` directed at external hosts."
+                    "description": "Flag commands like `copy`, `archive tar`, or `upload` directed at external hosts.",
+                    "description_fa": "پرچم‌گذاری فرمان‌هایی مانند «کپی»، «بایگانی تار» یا «آپلود» برای میزبان‌های خارجی."
                 },
                 {
                     "field": "DestinationIPBlocklist",
-                    "description": "Define external IP ranges unauthorized to receive router/switch configs."
+                    "description": "Define external IP ranges unauthorized to receive router/switch configs.",
+                    "description_fa": "محدوده های IP خارجی غیر مجاز برای دریافت تنظیمات روتر/سوئیچ را تعریف کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0427",
+            "description_fa": "استفاده از پروتکل‌های رمزگذاری نشده (مانند TFTP، FTP، HTTP) را برای انتقال فایل‌های پیکربندی، جداول مسیریابی یا گزارش‌ها به آدرس‌های IP غیرقابل اعتماد، به‌ویژه با استفاده از دستورات مدیریتی مانند «copy run ftp:» تشخیص می‌دهد."
         }
     ]
 }

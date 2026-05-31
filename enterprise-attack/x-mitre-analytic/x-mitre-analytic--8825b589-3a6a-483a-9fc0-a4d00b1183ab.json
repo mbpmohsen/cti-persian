@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0052#AN0143",
-                    "external_id": "AN0143"
+                    "external_id": "AN0143",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "admin_user_context",
-                    "description": "Define allowed users who may modify sudoers without investigation"
+                    "description": "Define allowed users who may modify sudoers without investigation",
+                    "description_fa": "کاربران مجاز را تعریف کنید که می توانند sudoers را بدون تحقیق تغییر دهند"
                 },
                 {
                     "field": "terminal_restart_window",
-                    "description": "Time window after sudoers file change to monitor for Terminal restarts"
+                    "description": "Time window after sudoers file change to monitor for Terminal restarts",
+                    "description_fa": "پنجره زمانی پس از تغییر فایل sudoers برای نظارت بر راه اندازی مجدد ترمینال"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0143",
+            "description_fa": "شناسایی فعالیت sudo با NOPASSWD در /etc/sudoers یا غیرفعال کردن tty_tickets، و به دنبال آن دستورات ممتاز فوری (به عنوان مثال، پژواک 'Defaults !tty_tickets' >> /etc/sudoers)."
         }
     ]
 }

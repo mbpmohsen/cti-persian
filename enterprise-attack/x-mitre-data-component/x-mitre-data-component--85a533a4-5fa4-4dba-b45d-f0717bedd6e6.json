@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0018",
-                    "external_id": "DC0018"
+                    "external_id": "DC0018",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T15:12:00.775Z",
             "name": "Host Status",
-            "description": "Logging, messaging, and other artifacts that highlight the health and operational state of host-based security sensors, such as Endpoint Detection and Response (EDR) agents, antivirus software, logging services, and system monitoring tools. Monitoring sensor health is essential for detecting misconfigurations, sensor failures, tampering, or deliberate security control evasion by adversaries.\n\n*Data Collection Measures:*\n\n- Windows Event Logs:\n    - Event ID 1074 (System Shutdown): Detects unexpected system reboots/shutdowns.\n    - Event ID 6006 (Event Log Stopped): Logs when Windows event logging is stopped.\n    - Event ID 16 (Sysmon): Detects configuration state changes that may indicate log tampering.\n    - Event ID 12 (Windows Defender Status Change) \u2013 Detects changes in Windows Defender state.\n- Linux/macOS Monitoring:\n    - `/var/log/syslog`, `/var/log/auth.log`, `/var/log/kern.log`\n    - Journald (journalctl) for kernel and system alerts.\n- Endpoint Detection and Response (EDR) Tools:\n    - Monitor agent health status, detect sensor tampering, and alert on missing telemetry.\n- Mobile Threat Intelligence Logs:\n    - Samsung Knox, SafetyNet, iOS Secure Enclave provide sensor health status for mobile endpoints.",
+            "description": "Logging, messaging, and other artifacts that highlight the health and operational state of host-based security sensors, such as Endpoint Detection and Response (EDR) agents, antivirus software, logging services, and system monitoring tools. Monitoring sensor health is essential for detecting misconfigurations, sensor failures, tampering, or deliberate security control evasion by adversaries.\n\n*Data Collection Measures:*\n\n- Windows Event Logs:\n    - Event ID 1074 (System Shutdown): Detects unexpected system reboots/shutdowns.\n    - Event ID 6006 (Event Log Stopped): Logs when Windows event logging is stopped.\n    - Event ID 16 (Sysmon): Detects configuration state changes that may indicate log tampering.\n    - Event ID 12 (Windows Defender Status Change) – Detects changes in Windows Defender state.\n- Linux/macOS Monitoring:\n    - `/var/log/syslog`, `/var/log/auth.log`, `/var/log/kern.log`\n    - Journald (journalctl) for kernel and system alerts.\n- Endpoint Detection and Response (EDR) Tools:\n    - Monitor agent health status, detect sensor tampering, and alert on missing telemetry.\n- Mobile Threat Intelligence Logs:\n    - Samsung Knox, SafetyNet, iOS Secure Enclave provide sensor health status for mobile endpoints.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_domains": [
@@ -231,7 +232,9 @@
                     "name": "WinEventLog:System",
                     "channel": "System shutdowns due to bugcheck (Event ID 1001) or watchdog timer expirations"
                 }
-            ]
+            ],
+            "name_fa": "وضعیت میزبان",
+            "description_fa": "گزارش‌گیری، پیام‌رسانی و سایر مصنوعاتی که سلامت و وضعیت عملیاتی حسگرهای امنیتی مبتنی بر میزبان را برجسته می‌کنند، مانند عوامل تشخیص و پاسخ نقطه پایانی (EDR)، نرم‌افزار آنتی‌ویروس، خدمات گزارش‌گیری و ابزارهای نظارت بر سیستم. نظارت بر سلامت حسگر برای تشخیص پیکربندی نادرست، خرابی حسگر، دستکاری یا فرار عمدی کنترل امنیتی توسط دشمنان ضروری است.\n\n*اقدامات جمع آوری داده ها:*\n\n- گزارش رویدادهای ویندوز:\n    - Event ID 1074 (System Shutdown): راه اندازی مجدد/خاموش غیرمنتظره سیستم را تشخیص می دهد.\n    - Event ID 6006 (Event Log Stopped): هنگامی که ثبت رویدادهای ویندوز متوقف می شود، ثبت می شود.\n    - شناسه رویداد 16 (Sysmon): تغییرات وضعیت پیکربندی را که ممکن است نشان دهنده دستکاری گزارش باشد را تشخیص می دهد.\n    - Event ID 12 (تغییر وضعیت Windows Defender) - تغییرات در وضعیت Windows Defender را تشخیص می دهد.\n- نظارت بر Linux/macOS:\n    - «/var/log/syslog»، «/var/log/auth.log»، «/var/log/kern.log»\n    - Journald (journalctl) برای هشدارهای هسته و سیستم.\n- ابزارهای تشخیص و پاسخ نقطه پایانی (EDR):\n    - نظارت بر وضعیت سلامت عامل، تشخیص دستکاری حسگر، و هشدار در مورد تله متری از دست رفته.\n- گزارش های اطلاعاتی تهدیدات موبایل:\n    - Samsung Knox، SafetyNet، iOS Secure Enclave وضعیت سلامت سنسور را برای نقاط پایانی تلفن همراه ارائه می دهند."
         }
     ]
 }

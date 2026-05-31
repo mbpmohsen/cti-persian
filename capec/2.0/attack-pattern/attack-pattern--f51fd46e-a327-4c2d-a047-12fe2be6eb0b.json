@@ -9,49 +9,62 @@
                 {
                     "external_id": "CAPEC-83",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/83.html"
+                    "url": "https://capec.mitre.org/data/definitions/83.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-91",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/91.html"
+                    "url": "http://cwe.mitre.org/data/definitions/91.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-707",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/707.html"
+                    "url": "http://cwe.mitre.org/data/definitions/707.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "XPath Injection",
                     "external_id": "39",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/XPath-Injection"
+                    "url": "http://projects.webappsec.org/XPath-Injection",
+                    "description_fa": "XPath Injection",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Blind XPath Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Blind_XPath_Injection"
+                    "url": "https://owasp.org/www-community/attacks/Blind_XPath_Injection",
+                    "description_fa": "تزریق XPath کور",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "XPATH Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/XPATH_Injection"
+                    "url": "https://owasp.org/www-community/attacks/XPATH_Injection",
+                    "description_fa": "تزریق XPATH",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-611",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/09-Testing_for_XPath_Injection.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/09-Testing_for_XPath_Injection.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--f51fd46e-a327-4c2d-a047-12fe2be6eb0b",
@@ -75,6 +88,16 @@
                 "Confidentiality": [
                     "Gain Privileges",
                     "Read Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -93,11 +116,25 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Low": "XPath Injection shares the same basic premises with SQL Injection. An attacker must have knowledge of XPath syntax and constructs in order to successfully leverage XPath Injection"
+                "Low": "XPath Injection shares the same basic premises with SQL Injection. An attacker must have knowledge of XPath syntax and constructs in order to successfully leverage XPath Injection",
+                "Low_fa": "XPath Injection همان مقدمات اولیه را با SQL Injection به اشتراک می گذارد. مهاجم باید از نحو و ساختارهای XPath اطلاعات داشته باشد تا بتواند با موفقیت از XPath Injection استفاده کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم می‌تواند ورودی ویژه قابل کنترل توسط کاربر متشکل از عبارات XPath ایجاد کند تا پایگاه داده XML را تزریق کند و احراز هویت را دور بزند یا اطلاعاتی را جمع‌آوری کند که معمولاً قادر به انجام آن نیستند. XPath Injection مهاجم را قادر می سازد تا مستقیماً با پایگاه داده XML صحبت کند، بنابراین برنامه را به طور کامل دور می زند. XPath Injection از شکست یک برنامه کاربردی در پاکسازی صحیح ورودی استفاده شده به عنوان بخشی از عبارات XPath پویا که برای پرس و جو از پایگاه داده XML استفاده می شود، حاصل می شود.",
+            "name_fa": "XPath Injection",
+            "x_capec_example_instances_fa": [
+                "برنامه ای را در نظر بگیرید که از پایگاه داده XML برای احراز هویت کاربران خود استفاده می کند. این برنامه نام کاربری و رمز عبور را از یک درخواست بازیابی می کند و یک عبارت XPath را برای پرس و جو از پایگاه داده تشکیل می دهد. یک مهاجم می‌تواند با موفقیت احراز هویت را دور بزند و بدون اعتبارنامه معتبر از طریق XPath Injection وارد سیستم شود. این را می توان با تزریق پرس و جو به پایگاه داده XML با نحو XPath که باعث می شود بررسی احراز هویت با شکست مواجه شود، به دست آید. اعتبار سنجی نادرست ورودی های قابل کنترل توسط کاربر و استفاده از عبارت XPath غیر پارامتری، مهاجم را قادر می سازد یک عبارت XPath را که باعث دور زدن احراز هویت می شود، تزریق کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بررسی هدف: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، دشمن تمام نمونه‌های ورودی قابل کنترل کاربر را که برای ساخت XPath استفاده می‌شود، ثبت می‌کند. پرس‌وجوها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از یک ابزار خودکار برای ضبط تمام نمونه‌های ورودی قابل کنترل توسط کاربر که برای ساخت جستارهای XPath استفاده می‌شوند، استفاده کنید.</td></tr><tr><td>از یک مرورگر برای کاوش دستی فرآیندها و تجزیه و تحلیل برنامه کاربردی استفاده کنید. ورودی‌ها.</td></tr></tbody></table><li> <p> <b>تعیین ساختار جستجوها: </b>با استفاده از ابزارهای دستی یا خودکار، ورودی‌های یافت شده برای نقاط ضعف XPath را آزمایش کنید. نقاط ضعف.</td></tr><tr><td>به‌صورت دستی ورودی‌ها را با استفاده از نویسه‌هایی مانند نقل قول تکی (') بررسی کنید که می‌تواند باعث خطاهای مرتبط با XPath شود، بنابراین ضعف XPath را نشان می‌دهد. query: </b>محتوای مخرب حاوی عبارات XPath ایجاد کنید که توسط برنامه تأیید نشده و به عنوان بخشی از جستارهای XPath اجرا می شود. مهاجم.</td></tr><tr><td>از ترکیبی از نقل قول واحد (') و عبارات بولی مانند \"یا 1=1\" برای دستکاری منطق XPath استفاده کنید.</td></tr><tr><td>از توابع XPath در محتوای مخرب مانند \"طول رشته\"، \"زیر رشته\"، یا در مورد اطلاعات \"شمارش\" بودن سند استفاده کنید. استفاده می شود.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "پرس و جوهای XPath برای بازیابی اطلاعات ذخیره شده در اسناد XML استفاده می شود",
+                "ورودی قابل کنترل توسط کاربر قبل از استفاده به عنوان بخشی از جستارهای XPath به درستی پاکسازی نشده است"
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

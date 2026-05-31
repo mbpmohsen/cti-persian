@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0521#AN1440",
-                    "external_id": "AN1440"
+                    "external_id": "AN1440",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLine",
-                    "description": "Tunable to detect suspicious prompts like 'Enter your password' or 'CredentialRequired'"
+                    "description": "Tunable to detect suspicious prompts like 'Enter your password' or 'CredentialRequired'",
+                    "description_fa": "قابل تنظیم برای شناسایی درخواست های مشکوک مانند \"گذرواژه خود را وارد کنید\" یا \"CredentialRequired\""
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Tune to flag UI prompts spawned from unexpected processes like cmd.exe or user scripts"
+                    "description": "Tune to flag UI prompts spawned from unexpected processes like cmd.exe or user scripts",
+                    "description_fa": "برای پرچم‌گذاری درخواست‌های رابط کاربری که از فرآیندهای غیرمنتظره مانند cmd.exe یا اسکریپت‌های کاربر ایجاد می‌شوند تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Scope correlation of script execution and prompt appearance"
+                    "description": "Scope correlation of script execution and prompt appearance",
+                    "description_fa": "همبستگی دامنه اجرای اسکریپت و ظاهر سریع"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1440",
+            "description_fa": "استفاده مشکوک از PowerShell، .NET، یا مفسرهای اسکریپت را برای ایجاد فرآیندهایی که درخواست‌های UAC را تقلید می‌کنند، شناسایی می‌کند، اغلب با جعبه‌های گفتگوی ضبط اعتبار که از فرآیندهای والد غیر استاندارد فراخوانی می‌شوند."
         }
     ]
 }

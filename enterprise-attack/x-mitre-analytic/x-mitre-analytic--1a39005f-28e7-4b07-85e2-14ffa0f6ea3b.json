@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0438#AN1215",
-                    "external_id": "AN1215"
+                    "external_id": "AN1215",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Flag if archiving occurs under privileged/system accounts."
+                    "description": "Flag if archiving occurs under privileged/system accounts.",
+                    "description_fa": "اگر بایگانی در حساب‌های دارای امتیاز/سیستم رخ می‌دهد، پرچم‌گذاری کنید."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Entropy score cutoff for identifying custom compressed or encrypted files."
+                    "description": "Entropy score cutoff for identifying custom compressed or encrypted files.",
+                    "description_fa": "برش امتیاز آنتروپی برای شناسایی فایل های فشرده یا رمزگذاری شده سفارشی."
                 },
                 {
                     "field": "AllowedApps",
-                    "description": "Applications legitimately using custom archiving for business purposes."
+                    "description": "Applications legitimately using custom archiving for business purposes.",
+                    "description_fa": "برنامه هایی که به طور قانونی از بایگانی سفارشی برای اهداف تجاری استفاده می کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1215",
+            "description_fa": "با نظارت بر اجرای برنامه‌های Swift/Objective-C یا اسکریپت‌هایی که فایل‌های با آنتروپی بالا با هدرهای غیر استاندارد تولید می‌کنند، بایگانی سفارشی را تشخیص می‌دهد. گزارش های یکپارچه عملیات غیرعادی NSFileHandle/NSData، استفاده از حافظه عملیات XOR/bitwise و رویدادهای ایجاد فایل را به هم مرتبط می کند."
         }
     ]
 }

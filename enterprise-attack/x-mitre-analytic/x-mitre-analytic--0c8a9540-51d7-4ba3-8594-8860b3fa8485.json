@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0325#AN0925",
-                    "external_id": "AN0925"
+                    "external_id": "AN0925",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VMOutboundPatterns",
-                    "description": "Detect when VMs communicate with Internet IPs not in workload profiles."
+                    "description": "Detect when VMs communicate with Internet IPs not in workload profiles.",
+                    "description_fa": "تشخیص اینکه ماشین های مجازی چه زمانی با IP های اینترنت در پروفایل های بار کاری ارتباط برقرار می کنند."
                 },
                 {
                     "field": "ProxyHostPattern",
-                    "description": "Regex for proxy-related tools/scripts executed on the host."
+                    "description": "Regex for proxy-related tools/scripts executed on the host.",
+                    "description_fa": "Regex برای ابزارها/اسکریپت های مرتبط با پروکسی که روی هاست اجرا می شوند."
                 },
                 {
                     "field": "ConnectionDirectionality",
-                    "description": "Outbound only connections from ESXi to new IPs."
+                    "description": "Outbound only connections from ESXi to new IPs.",
+                    "description_fa": "اتصالات فقط خروجی از ESXi به IP های جدید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0925",
+            "description_fa": "پوسته ESXi یا ابزار VM مهمان اتصالات خارجی را از طریق ارسال ترافیک اسکریپت شده به پراکسی های مبتنی بر اینترنت آغاز می کند. توسط فایروال یا گزارش‌های حسابرسی پوسته شناسایی می‌شود که جهش‌های اتصال خروجی را از Hypervisor یا VM مهمان به گره‌های پراکسی راه دور نشان می‌دهد."
         }
     ]
 }

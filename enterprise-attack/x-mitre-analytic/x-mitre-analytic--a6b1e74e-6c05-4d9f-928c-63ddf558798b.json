@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0537#AN1480",
-                    "external_id": "AN1480"
+                    "external_id": "AN1480",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,22 +61,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between install events and first-run activity (default 2h; adjust for staged rollouts)."
+                    "description": "Correlation window between install events and first-run activity (default 2h; adjust for staged rollouts).",
+                    "description_fa": "پنجره همبستگی بین رویدادهای نصب و فعالیت اولین اجرا (پیش‌فرض 2 ساعت؛ تنظیم برای عرضه‌های مرحله‌ای)."
                 },
                 {
                     "field": "TrustedPublishers",
-                    "description": "Publisher/Signer allow-list to suppress expected updates."
+                    "description": "Publisher/Signer allow-list to suppress expected updates.",
+                    "description_fa": "فهرست مجاز ناشر/ امضاکننده برای سرکوب به‌روزرسانی‌های مورد انتظار."
                 },
                 {
                     "field": "TrustedUpdateHosts",
-                    "description": "Known update CDNs/APIs (e.g., download.microsoft.com) to reduce egress false positives."
+                    "description": "Known update CDNs/APIs (e.g., download.microsoft.com) to reduce egress false positives.",
+                    "description_fa": "CDN/APIهای به روز رسانی شناخته شده (مانند download.microsoft.com) برای کاهش موارد مثبت کاذب خروج."
                 },
                 {
                     "field": "RiskScoreThreshold",
-                    "description": "Score cut-off for alerting when combining path, signer, and reputation features."
+                    "description": "Score cut-off for alerting when combining path, signer, and reputation features.",
+                    "description_fa": "برش امتیاز برای هشدار هنگام ترکیب ویژگی‌های مسیر، امضاکننده و شهرت."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1480",
+            "description_fa": "1) نرم افزار جدید یا به روز شده از منابع غیر معمول یا با عدم تطابق امضا/هش تحویل/نصب شده است. 2) نصب کننده/به روز رسانی باینری ها را در مسیرهای غیرمنتظره می نویسد یا فایل های امضا شده موجود را جایگزین می کند. 3) اجرای اول باعث می‌شود که ماژول‌های بدون علامت/امضا غیرعادی بارگیری شوند یا پردازش‌های فرزند اجرا شوند، و به‌طور اختیاری به دنبال خروج شبکه به مقصد جدید است."
         }
     ]
 }

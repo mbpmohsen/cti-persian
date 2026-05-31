@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0251#AN0695",
-                    "external_id": "AN0695"
+                    "external_id": "AN0695",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Scope to anomalous IAM principals or assume-role usage."
+                    "description": "Scope to anomalous IAM principals or assume-role usage.",
+                    "description_fa": "محدوده به اصول غیرعادی IAM یا استفاده از نقش فرضی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate enumeration activity within lateral movement prep windows."
+                    "description": "Correlate enumeration activity within lateral movement prep windows.",
+                    "description_fa": "فعالیت شمارش را در پنجره های آماده سازی حرکت جانبی مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0695",
+            "description_fa": "استفاده خصمانه از APIهای بومی ابری (مانند AWS IAM، Azure RBAC، GCP Identity) را برای شمارش عضویت‌های گروه ابری یا نگاشت خط‌مشی از طریق جلسات یا اسکریپت‌های غیرمجاز شناسایی می‌کند."
         }
     ]
 }

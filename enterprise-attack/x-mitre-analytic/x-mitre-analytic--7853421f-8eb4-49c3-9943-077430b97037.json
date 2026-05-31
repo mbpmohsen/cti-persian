@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0523#AN1447",
-                    "external_id": "AN1447"
+                    "external_id": "AN1447",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PolicyPaths",
-                    "description": "Track configuration files and kernel extensions tied to SIP enforcement"
+                    "description": "Track configuration files and kernel extensions tied to SIP enforcement",
+                    "description_fa": "فایل های پیکربندی و پسوندهای هسته مرتبط با اجرای SIP را ردیابی کنید"
                 },
                 {
                     "field": "AllowedUsers",
-                    "description": "Restrict or expand which privileged accounts are monitored for SIP/CSRUTIL changes"
+                    "description": "Restrict or expand which privileged accounts are monitored for SIP/CSRUTIL changes",
+                    "description_fa": "حساب‌های دارای امتیاز برای تغییرات SIP/CSRUTIL را محدود یا گسترش دهید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Define correlation between csrutil execution and unsigned process activity"
+                    "description": "Define correlation between csrutil execution and unsigned process activity",
+                    "description_fa": "ارتباط بین اجرای csrutil و فعالیت فرآیند بدون علامت را تعریف کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1447",
+            "description_fa": "اصلاحات حفاظت از یکپارچگی سیستم (SIP) یا سیاست های اجرایی امضای کد را از طریق دستکاری متغیرهای csrutil یا هسته شناسایی می کند. اجرای دستورات غیرفعال csrutil را با تغییرات بعدی وضعیت خط مشی و اجرای غیرعادی فرآیند بدون امضا مرتبط می کند."
         }
     ]
 }

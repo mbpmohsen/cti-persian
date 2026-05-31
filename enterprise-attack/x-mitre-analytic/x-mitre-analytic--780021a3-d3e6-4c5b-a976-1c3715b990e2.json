@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0468#AN1290",
-                    "external_id": "AN1290"
+                    "external_id": "AN1290",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedDHCPServers",
-                    "description": "List of known DHCP servers; unexpected sources are suspicious."
+                    "description": "List of known DHCP servers; unexpected sources are suspicious.",
+                    "description_fa": "لیست سرورهای DHCP شناخته شده؛ منابع غیرمنتظره مشکوک هستند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Interval to correlate DHCP OFFER/ACK anomalies with subsequent misconfigurations."
+                    "description": "Interval to correlate DHCP OFFER/ACK anomalies with subsequent misconfigurations.",
+                    "description_fa": "فاصله زمانی برای ارتباط ناهنجاری‌های DHCP OFFER/ACK با پیکربندی‌های نادرست بعدی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1290",
+            "description_fa": "فعالیت سرور DHCP سرکش و پیام‌های غیرعادی DHCP OFFER/ACK را که مقادیر غیرمنتظره DNS یا دروازه را اختصاص می‌دهند، شناسایی می‌کند. تشخیص با تغییرات نقش سرور DHCP، هشدارهای خستگی DHCP و تغییرات پیکربندی شبکه ناگهانی در نقاط پایانی مرتبط است."
         }
     ]
 }

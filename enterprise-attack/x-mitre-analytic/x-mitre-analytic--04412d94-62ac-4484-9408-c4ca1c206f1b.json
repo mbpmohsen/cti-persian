@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0277#AN0771",
-                    "external_id": "AN0771"
+                    "external_id": "AN0771",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,22 +41,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RoleScope",
-                    "description": "IAM Role type or privilege level assigned (e.g., Admin, Billing, Viewer)"
+                    "description": "IAM Role type or privilege level assigned (e.g., Admin, Billing, Viewer)",
+                    "description_fa": "نوع نقش یا سطح امتیاز اختصاص داده شده IAM (به عنوان مثال، سرپرست، صورت‌حساب، نمایشگر)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "User, service account, or external federated identity context performing the action"
+                    "description": "User, service account, or external federated identity context performing the action",
+                    "description_fa": "کاربر، حساب سرویس، یا زمینه هویت فدرال خارجی که این عمل را انجام می دهد"
                 },
                 {
                     "field": "PolicyChangeTimeWindow",
-                    "description": "How quickly multiple roles or policies are added after initial access"
+                    "description": "How quickly multiple roles or policies are added after initial access",
+                    "description_fa": "با چه سرعتی چند نقش یا خط مشی پس از دسترسی اولیه اضافه می شود"
                 },
                 {
                     "field": "ExternalRoleOrigin",
-                    "description": "Cross-account roles from outside trusted tenant list"
+                    "description": "Cross-account roles from outside trusted tenant list",
+                    "description_fa": "نقش های متقابل حساب از لیست مستاجر مورد اعتماد خارجی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0771",
+            "description_fa": "شناسایی نقش‌ها یا خط‌مشی‌های جدید IAM پیوست‌شده به کاربر/سرویس در AWS/GCP/Azure خارج از الگوها یا ساعت‌های عادی، اغلب به دنبال درهم‌رفتن حساب."
         }
     ]
 }

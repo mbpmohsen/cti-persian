@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0247#AN0690",
-                    "external_id": "AN0690"
+                    "external_id": "AN0690",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UnusedRegionList",
-                    "description": "List of regions historically unused by the organization (can vary per tenant/project)"
+                    "description": "List of regions historically unused by the organization (can vary per tenant/project)",
+                    "description_fa": "فهرست مناطقی که از لحاظ تاریخی توسط سازمان استفاده نشده است (ممکن است بر اساس مستاجر/پروژه متفاوت باشد)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time interval for correlating activity following account access"
+                    "description": "Time interval for correlating activity following account access",
+                    "description_fa": "فاصله زمانی برای مرتبط کردن فعالیت پس از دسترسی به حساب"
                 },
                 {
                     "field": "AllowedServiceList",
-                    "description": "Whitelist of services allowed in secondary/DR regions"
+                    "description": "Whitelist of services allowed in secondary/DR regions",
+                    "description_fa": "لیست سفید خدمات مجاز در مناطق ثانویه/DR"
                 },
                 {
                     "field": "OutboundTrafficThreshold",
-                    "description": "Volume threshold to flag suspicious outbound activity"
+                    "description": "Volume threshold to flag suspicious outbound activity",
+                    "description_fa": "آستانه حجم برای پرچم‌گذاری فعالیت مشکوک خروجی"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0690",
+            "description_fa": "ایجاد نمونه‌های ابری، سرویس‌ها یا منابع را در مناطقی که معمولاً استفاده نمی‌شوند یا پشتیبانی نمی‌شوند، به‌ویژه پس از دسترسی اولیه به حساب یا استفاده از اعتبار از مناطق شناخته‌شده، شناسایی می‌کند. تأمین منابع در سراسر مناطق را با عدم استفاده تاریخی و هشدار از خدمات استاندارد گزارش‌گیری مرتبط می‌کند (به عنوان مثال، GuardDuty در آن منطقه فعال نیست)."
         }
     ]
 }

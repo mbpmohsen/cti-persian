@@ -9,35 +9,45 @@
                 {
                     "external_id": "CAPEC-642",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/642.html"
+                    "url": "https://capec.mitre.org/data/definitions/642.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-732",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/732.html"
+                    "url": "http://cwe.mitre.org/data/definitions/732.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Server Software Component: Terminal Services DLL",
                     "external_id": "T1505.005",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1505/005"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1505/005",
+                    "description_fa": "جزء نرم افزار سرور: DLL خدمات ترمینال",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Compromise Client Software Binary",
                     "external_id": "T1554",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1554"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1554",
+                    "description_fa": "باینری نرم افزار Compromise Client",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Hijack Execution Flow:Executable Installer File Permissions Weakness",
                     "external_id": "T1574.005",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/005"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/005",
+                    "description_fa": "Hijack Execution Flow: ضعف مجوزهای فایل نصب کننده اجرایی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Binary planting",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Binary_planting"
+                    "url": "https://owasp.org/www-community/attacks/Binary_planting",
+                    "description_fa": "کاشت باینری",
+                    "source_name_fa": "حملات OWASP"
                 }
             ],
             "id": "attack-pattern--15e6b769-4cbd-4c39-b774-b45673fd55de",
@@ -64,7 +74,16 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمنان می‌دانند که باینری‌های خاصی به‌عنوان بخشی از پردازش عادی به طور منظم اجرا می‌شوند. اگر این باینری ها با مجوزهای سیستم فایل مناسب محافظت نشده باشند، می توان آنها را با بدافزار جایگزین کرد. این بدافزار ممکن است در سطوح بالاتر مجوز سیستم اجرا شود. یکی از انواع این الگو، کشف بسته‌های نصب خودکار استخراج‌شده است که باینری‌ها را در فهرست‌هایی با مجوزهای فایل ضعیف باز می‌کند که به درستی پاک نمی‌شوند. این باینری‌ها را می‌توان با بدافزار جایگزین کرد و سپس می‌توان آن را اجرا کرد.",
+            "name_fa": "باینری ها را جایگزین کنید",
+            "x_capec_example_instances_fa": [
+                "نصب کننده نسخه قبلی فایرفاکس از یک DLL که به طور مخرب در فهرست دانلود پیش فرض قرار داده شده است، به جای DLL موجود در جای دیگر استفاده می کند، احتمالاً به دلیل ربودن DLL. اگر نصب کننده آن امتیازات را داشته باشد، این DLL با امتیازات مدیر اجرا می شود.",
+                "به طور پیش فرض، برنامه محافظ صفحه نمایش Windows SCRNSAVE.exe از فایل اجرایی قابل حمل (PE) scrnsave.scr در C:\\Windows\\system32\\ استفاده می کند. این مقدار در رجیستری در HKEY_CURRENT_USER\\Control Panel\\Desktop تنظیم می‌شود، که می‌تواند توسط یک حریف تغییر کند تا در عوض به یک برنامه مخرب اشاره کند. این برنامه سپس هر زمانی که برنامه SCRNSAVE.exe فعال شود و دارای امتیازات مدیر باشد اجرا می شود. یک دشمن ممکن است مقادیر دیگر رجیستری را در همان مکان تغییر دهد تا برنامه SCRNSAVE.exe را برای اجرای بیشتر تنظیم کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید بتواند باینری مخرب را روی ماشین هدف قرار دهد."
+            ]
         }
     ],
     "type": "bundle"

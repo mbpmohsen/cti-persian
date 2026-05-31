@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0567#AN1565",
-                    "external_id": "AN1565"
+                    "external_id": "AN1565",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time interval to observe post-login message scraping behavior"
+                    "description": "Time interval to observe post-login message scraping behavior",
+                    "description_fa": "فاصله زمانی برای مشاهده رفتار خراش دادن پیام پس از ورود به سیستم"
                 },
                 {
                     "field": "MessageExportThreshold",
-                    "description": "Number of messages or files accessed/downloaded to flag for review"
+                    "description": "Number of messages or files accessed/downloaded to flag for review",
+                    "description_fa": "تعداد پیام‌ها یا فایل‌های دسترسی/دانلود شده برای پرچم‌گذاری برای بررسی"
                 },
                 {
                     "field": "UserContext",
-                    "description": "User privilege level, team membership, or role context to suppress false positives"
+                    "description": "User privilege level, team membership, or role context to suppress false positives",
+                    "description_fa": "سطح امتیاز کاربر، عضویت در تیم، یا زمینه نقش برای سرکوب موارد مثبت کاذب"
                 },
                 {
                     "field": "AccessMethod",
-                    "description": "Direct user access vs API token, OAuth app, or bot interaction"
+                    "description": "Direct user access vs API token, OAuth app, or bot interaction",
+                    "description_fa": "دسترسی مستقیم کاربر در مقابل توکن API، برنامه OAuth یا تعامل ربات"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1565",
+            "description_fa": "دسترسی غیرمعمول به مکالمات Slack یا Teams از طریق APIها، نشانه‌های اتوماسیون یا عملکرد صادرات پیام انبوه، به‌ویژه پس از تصاحب حساب یا الگوی نادر ورود به سیستم. اغلب شامل بازیابی انبوه تاریخچه چت، دانلود محتوای پیام، یا حذف ابرداده فضای کاری/کانال است."
         }
     ]
 }

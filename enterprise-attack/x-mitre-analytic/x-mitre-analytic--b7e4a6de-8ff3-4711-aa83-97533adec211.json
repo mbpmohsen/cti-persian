@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0208#AN0585",
-                    "external_id": "AN0585"
+                    "external_id": "AN0585",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceName",
-                    "description": "Targeted daemon/service such as sshd, nginx, mysql"
+                    "description": "Targeted daemon/service such as sshd, nginx, mysql",
+                    "description_fa": "دیمون/سرویس هدفمند مانند sshd، nginx، mysql"
                 },
                 {
                     "field": "RestartThreshold",
-                    "description": "Number of restarts in short succession to trigger alert"
+                    "description": "Number of restarts in short succession to trigger alert",
+                    "description_fa": "تعداد راه‌اندازی‌های متوالی کوتاه برای راه‌اندازی هشدار"
                 },
                 {
                     "field": "OOMKillCount",
-                    "description": "Count of OOM kills over a time window"
+                    "description": "Count of OOM kills over a time window",
+                    "description_fa": "تعداد کشته های OOM در یک پنجره زمانی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0585",
+            "description_fa": "اسکریپت مخرب یا باینری باعث وحشت مکرر هسته، کشتن OOM یا راه اندازی مجدد سرویس systemd با هدف قرار دادن سرویس هایی مانند nginx، httpd، sshd می شود."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0707#AN1830",
-                    "external_id": "AN1830"
+                    "external_id": "AN1830",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,29 +48,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between scheduler creation, later execution, and follow-on file or network behavior"
+                    "description": "Correlation window between scheduler creation, later execution, and follow-on file or network behavior",
+                    "description_fa": "پنجره همبستگی بین ایجاد زمانبندی، اجرای بعدی و فایل بعدی یا رفتار شبکه"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Managed apps legitimately expected to perform background maintenance or deferred sync behavior"
+                    "description": "Managed apps legitimately expected to perform background maintenance or deferred sync behavior",
+                    "description_fa": "برنامه‌های مدیریت شده به طور قانونی انتظار می‌رود که نگهداری پس‌زمینه یا رفتار همگام‌سازی معوق را انجام دهند"
                 },
                 {
                     "field": "AllowedExecutionIntervals",
-                    "description": "Expected repeating interval or defer window for legitimate background activity"
+                    "description": "Expected repeating interval or defer window for legitimate background activity",
+                    "description_fa": "بازه تکراری یا پنجره به تعویق انداختن مورد انتظار برای فعالیت پس‌زمینه قانونی"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether follow-on behavior from background scheduler execution should require recent user interaction"
+                    "description": "Whether follow-on behavior from background scheduler execution should require recent user interaction",
+                    "description_fa": "اینکه آیا رفتار بعدی از اجرای زمان‌بندی پس‌زمینه باید به تعامل اخیر کاربر نیاز داشته باشد یا خیر"
                 },
                 {
                     "field": "TriggerToNetworkWindow",
-                    "description": "Maximum expected delay between scheduled execution and outbound communication"
+                    "description": "Maximum expected delay between scheduled execution and outbound communication",
+                    "description_fa": "حداکثر تاخیر مورد انتظار بین اجرای برنامه ریزی شده و ارتباط خروجی"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume after scheduled execution to treat network behavior as meaningful"
+                    "description": "Minimum outbound volume after scheduled execution to treat network behavior as meaningful",
+                    "description_fa": "حداقل حجم خروجی پس از اجرای برنامه ریزی شده برای تلقی رفتار شبکه به عنوان معنی دار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1830",
+            "description_fa": "مدافع ایجاد فعالیت زمان‌بندی پس‌زمینه را با اجرای بعدی تکرار یا به تعویق افتادن کار توسط همان برنامه مدیریت شده مرتبط می‌کند، سپس زمانی که فعالیت راه‌اندازی شده باعث ایجاد شبکه، نوشتن محلی یا سایر رفتارهای برنامه‌ای شود که خارج از زمینه مورد انتظار کاربر رخ می‌دهد، اطمینان را افزایش می‌دهد. از آنجایی که iOS قابلیت مشاهده زمان‌بندی مستقیم ضعیف‌تری را در بسیاری از محیط‌های سازمانی نشان می‌دهد، تحلیلی ابتدا روی وضعیت برنامه مدیریت‌شده و جلوه‌های چرخه حیات به شبکه یا چرخه حیات به فایل لنگر می‌اندازد، با رفتارهای مرتبط با NSBackgroundActivityScheduler زمانی که تله‌متری زمان اجرا می‌تواند استفاده از زمان‌بندی پس‌زمینه یا تماس‌های اجرا را مشاهده کند، قوی‌ترین رفتار را نشان می‌دهد."
         }
     ]
 }

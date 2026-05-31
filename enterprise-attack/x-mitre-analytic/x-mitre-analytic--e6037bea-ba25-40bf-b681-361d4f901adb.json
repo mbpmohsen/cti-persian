@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0506#AN1397",
-                    "external_id": "AN1397"
+                    "external_id": "AN1397",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Regex patterns for mshta.exe arguments referencing remote HTA/script content; may need tuning to exclude known-good internal scripts."
+                    "description": "Regex patterns for mshta.exe arguments referencing remote HTA/script content; may need tuning to exclude known-good internal scripts.",
+                    "description_fa": "الگوهای Regex برای آرگومان های mshta.exe که به محتوای راه دور HTA/script ارجاع می دهند. ممکن است برای حذف اسکریپت‌های داخلی خوب نیاز به تنظیم داشته باشد."
                 },
                 {
                     "field": "SuspiciousParentProcesses",
-                    "description": "List of parent processes considered suspicious when spawning mshta.exe (e.g., Office applications, script interpreters)."
+                    "description": "List of parent processes considered suspicious when spawning mshta.exe (e.g., Office applications, script interpreters).",
+                    "description_fa": "فهرستی از فرآیندهای والد که هنگام تخم ریزی mshta.exe مشکوک در نظر گرفته می شوند (به عنوان مثال، برنامه های کاربردی Office، مفسرهای اسکریپت)."
                 },
                 {
                     "field": "AllowedHTASources",
-                    "description": "Whitelist of domains/paths from which legitimate HTAs are executed."
+                    "description": "Whitelist of domains/paths from which legitimate HTAs are executed.",
+                    "description_fa": "لیست سفید دامنه ها/مسیرهایی که HTAهای قانونی از آنها اجرا می شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time threshold for correlating mshta.exe execution with subsequent network connections or file creations."
+                    "description": "Time threshold for correlating mshta.exe execution with subsequent network connections or file creations.",
+                    "description_fa": "آستانه زمانی برای ارتباط اجرای mshta.exe با اتصالات بعدی شبکه یا ایجاد فایل."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1397",
+            "description_fa": "شناسایی اجرای mshta.exe که در آن آرگومان‌های خط فرمان به محتوای HTA/اسکریپت از راه دور یا محلی (VBScript/JScript) ارجاع می‌دهند و به دنبال آن ایجاد فایل، بازیابی شبکه، یا تخم‌ریزی فرآیند که نشان‌دهنده اجرای payload خارج از چارچوب امنیتی استاندارد Internet Explorer است. همبستگی شامل اصل و نسب فرآیند والد، بازرسی خط فرمان، و ایجاد اتصال شبکه به نقاط پایانی نامعتبر یا غیرعادی است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0032#AN0093",
-                    "external_id": "AN0093"
+                    "external_id": "AN0093",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,10 +46,13 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HiddenAttributeScope",
-                    "description": "Restrict detection to non-standard directories where hidden flags are unexpected."
+                    "description": "Restrict detection to non-standard directories where hidden flags are unexpected.",
+                    "description_fa": "شناسایی را به فهرست‌های غیر استاندارد که در آن پرچم‌های پنهان غیرمنتظره هستند، محدود کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0093",
+            "description_fa": "استفاده از دستورات chflags hidden یا SetFile -a V برای مخفی کردن فایل‌ها یا ایجاد فایل‌های مخفی با «.» پیشرو. نمای مدافع: نظارت بر اجرای فرآیند و تغییرات فراداده فایل با تنظیم ویژگی UF_HIDDEN."
         }
     ]
 }

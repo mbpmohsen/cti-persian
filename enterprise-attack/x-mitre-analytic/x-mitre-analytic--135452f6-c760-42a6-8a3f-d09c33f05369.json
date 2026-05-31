@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0329#AN0934",
-                    "external_id": "AN0934"
+                    "external_id": "AN0934",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedFilePaths",
-                    "description": "Modify to include specific OS backup configs or LVM snapshots"
+                    "description": "Modify to include specific OS backup configs or LVM snapshots",
+                    "description_fa": "تغییر دهید تا پیکربندی‌های خاص پشتیبان‌گیری سیستم‌عامل یا عکس‌های فوری LVM را شامل شود"
                 },
                 {
                     "field": "ShellProcessUser",
-                    "description": "Restrict detection to root or sudo users"
+                    "description": "Restrict detection to root or sudo users",
+                    "description_fa": "شناسایی را به کاربران root یا sudo محدود کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0934",
+            "description_fa": "برنامه‌های کاربردی پوسته یا اسکریپت‌هایی که «/etc/systemd/system/rescue.target»، بک‌آپ‌های «/etc/fstab»، یا پارتیشن‌های «/boot/efi» را حذف می‌کنند. chattr برای جلوگیری از بازیابی خودکار عکس فوری استفاده می شود"
         }
     ]
 }

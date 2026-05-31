@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0351#AN0998",
-                    "external_id": "AN0998"
+                    "external_id": "AN0998",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,34 +51,43 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousPermissionValues",
-                    "description": "Octal permission values indicating potential malicious intent - customize based on organizational security policy (default: 777, 755, 4755, 2755, 1755 for sticky/setuid/setgid)"
+                    "description": "Octal permission values indicating potential malicious intent - customize based on organizational security policy (default: 777, 755, 4755, 2755, 1755 for sticky/setuid/setgid)",
+                    "description_fa": "مقادیر مجوز هشتگانه نشان‌دهنده قصد مخرب بالقوه - سفارشی‌سازی بر اساس خط‌مشی امنیتی سازمانی (پیش‌فرض: 777، 755، 4755، 2755، 1755 برای sticky/setuid/setgid)"
                 },
                 {
                     "field": "CriticalSystemPaths",
-                    "description": "Linux filesystem paths requiring enhanced permission change monitoring - adapt to environment-specific critical directories (/etc, /usr/bin, /usr/sbin, /var, /opt, /root, /boot)"
+                    "description": "Linux filesystem paths requiring enhanced permission change monitoring - adapt to environment-specific critical directories (/etc, /usr/bin, /usr/sbin, /var, /opt, /root, /boot)",
+                    "description_fa": "مسیرهای سیستم فایل لینوکس که به نظارت بر تغییر مجوز پیشرفته نیاز دارند - با دایرکتوری های حیاتی خاص محیط سازگار می شوند (/etc، /usr/bin، /usr/sbin، /var، /opt، /root، /boot)"
                 },
                 {
                     "field": "AuthorizedSystemAdministrators",
-                    "description": "User accounts and service accounts authorized for system-level permission modifications - maintain current list of legitimate administrators"
+                    "description": "User accounts and service accounts authorized for system-level permission modifications - maintain current list of legitimate administrators",
+                    "description_fa": "حساب‌های کاربری و حساب‌های سرویس مجاز برای تغییرات مجوز در سطح سیستم - حفظ فهرست فعلی مدیران قانونی"
                 },
                 {
                     "field": "TemporalCorrelationWindow",
-                    "description": "Time window for correlating permission changes with subsequent file access or process execution - adjust based on system performance (default: 300 seconds)"
+                    "description": "Time window for correlating permission changes with subsequent file access or process execution - adjust based on system performance (default: 300 seconds)",
+                    "description_fa": "پنجره زمانی برای ارتباط تغییرات مجوز با دسترسی بعدی به فایل یا اجرای فرآیند - تنظیم بر اساس عملکرد سیستم (پیش‌فرض: 300 ثانیه)"
                 },
                 {
                     "field": "RecursiveOperationThreshold",
-                    "description": "Maximum depth or file count for recursive permission operations before triggering anomaly detection (-R flag monitoring)"
+                    "description": "Maximum depth or file count for recursive permission operations before triggering anomaly detection (-R flag monitoring)",
+                    "description_fa": "حداکثر عمق یا تعداد فایل برای عملیات مجوز بازگشتی قبل از شروع تشخیص ناهنجاری (نظارت پرچم -R)"
                 },
                 {
                     "field": "ACLComplexityBaseline",
-                    "description": "Baseline complexity metrics for setfacl operations to detect anomalous extended ACL configurations"
+                    "description": "Baseline complexity metrics for setfacl operations to detect anomalous extended ACL configurations",
+                    "description_fa": "معیارهای پیچیدگی پایه برای عملیات setfacl برای شناسایی پیکربندی های غیرعادی ACL توسعه یافته"
                 },
                 {
                     "field": "FileAccessFrequencyBaseline",
-                    "description": "Statistical baseline for normal file access patterns post-permission modification to detect privilege abuse"
+                    "description": "Statistical baseline for normal file access patterns post-permission modification to detect privilege abuse",
+                    "description_fa": "پایه آماری برای الگوهای دسترسی عادی به فایل پس از اصلاح مجوز برای شناسایی سوء استفاده از امتیاز"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0998",
+            "description_fa": "زنجیره رفتاری تشدید مجوز لینوکس: (1) فرآیند ایجاد ابزارهای اصلاح مجوز (chmod، chown، chgrp، setfacl) با پارامترهای مشکوک که نشان دهنده قصد افزایش امتیاز است، (2) تجزیه و تحلیل فراخوانی سیستم که دستکاری مستقیم فایل فوق داده را نشان می دهد (chmod، fchmod (fchmod (fchmod)، sychowns, excalt تغییراتی که مسیرهای حیاتی سیستم را هدف قرار می دهند، (4) همبستگی زمانی با دسترسی بعدی به فایل یا اجرای فرآیند از مکان های اصلاح شده، (5) الگوهای مجوز غیرعادی انحراف از خطوط پایه سیستم"
         }
     ]
 }

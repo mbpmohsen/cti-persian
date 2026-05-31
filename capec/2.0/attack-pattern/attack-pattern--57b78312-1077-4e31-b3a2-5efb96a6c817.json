@@ -9,19 +9,24 @@
                 {
                     "external_id": "CAPEC-521",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/521.html"
+                    "url": "https://capec.mitre.org/data/definitions/521.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Marie Prokopets, How To Secure Your Documents, Nira",
                     "external_id": "REF-715",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://nira.com/how-to-secure-your-documents/"
+                    "url": "https://nira.com/how-to-secure-your-documents/",
+                    "description_fa": "ماری پروکوپتس، چگونه اسناد خود را ایمن کنیم، نیرا",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--57b78312-1077-4e31-b3a2-5efb96a6c817",
@@ -48,11 +53,21 @@
                 "Access to the manufacturer's documentation."
             ],
             "x_capec_skills_required": {
-                "High": "Ability to stealthly gain access via remote compromise or physical access to the manufacturer's documentation."
+                "High": "Ability to stealthly gain access via remote compromise or physical access to the manufacturer's documentation.",
+                "High_fa": "امکان دسترسی مخفیانه از طریق سازش از راه دور یا دسترسی فیزیکی به اسناد سازنده."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجمی که به مستندات فرآیند تولید سخت‌افزار یک سازنده دسترسی دارد، مشخصات طراحی را تغییر می‌دهد، که پس از استقرار سیستم، نقص‌هایی را برای مهاجم معرفی می‌کند.",
+            "name_fa": "مشخصات طراحی سخت افزار تغییر کرده است",
+            "x_capec_example_instances_fa": [
+                "برای کارکرد با توانایی کامل، دستگاه تشخیص نفوذ شبکه سازنده باید دارای یک Intel Xeon E7-2820 یا AMD FX-8350 باشد که دارای 8 \"هسته\" در دسترس است، که امکان threading پیشرفته مورد نیاز برای رسیدگی به حجم زیادی از ترافیک شبکه را بدون توسل به حذف بسته ها از فرآیند شناسایی فراهم می کند. مهاجم اسناد را تغییر می‌دهد تا بیان کند که طراحی سیستم باید از Intel Core Duo یا AMD Phenom II X2 استفاده کند که فقط ۲ هسته دارند، که باعث می‌شود سیستم در حین استقرار در یک سایت قربانی با حجم زیادی از ترافیک شبکه، مقادیر زیادی از بسته‌ها را رها کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "دانش پیشرفته از قابلیت های سخت افزاری محصول سازنده.",
+                "دسترسی به اسناد سازنده"
+            ]
         }
     ],
     "spec_version": "2.0",

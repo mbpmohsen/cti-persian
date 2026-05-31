@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0561#AN1550",
-                    "external_id": "AN1550"
+                    "external_id": "AN1550",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1550",
-            "description": "Adversary adds IDE extensions or plugins (VS Code, JetBrains Toolbox/EAP, Eclipse) via GUI or CLI, possibly via managed profiles. Chain: process start with install/update flags \u2192 plist/extension folder changes under ~/Library/Application Support/Code or ~/Library/Application Support/JetBrains \u2192 outbound connections to marketplaces/tunnel services \u2192 optional helper (ssh/node) spawned.",
+            "description": "Adversary adds IDE extensions or plugins (VS Code, JetBrains Toolbox/EAP, Eclipse) via GUI or CLI, possibly via managed profiles. Chain: process start with install/update flags → plist/extension folder changes under ~/Library/Application Support/Code or ~/Library/Application Support/JetBrains → outbound connections to marketplaces/tunnel services → optional helper (ssh/node) spawned.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PlistLocations",
-                    "description": "Per-app preference domains and plugin directories vary by version."
+                    "description": "Per-app preference domains and plugin directories vary by version.",
+                    "description_fa": "دامنه‌های ترجیحی هر برنامه و دایرکتوری‌های افزونه بر اساس نسخه متفاوت است."
                 },
                 {
                     "field": "MDMProfiles",
-                    "description": "If MDM installs extensions, allowlist those events to avoid FPs."
+                    "description": "If MDM installs extensions, allowlist those events to avoid FPs.",
+                    "description_fa": "اگر MDM برنامه‌های افزودنی را نصب می‌کند، آن رویدادها را برای جلوگیری از FP لیست کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation range between install and first beacon."
+                    "description": "Correlation range between install and first beacon.",
+                    "description_fa": "محدوده همبستگی بین نصب و اولین بیکن."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1550",
+            "description_fa": "دشمن افزونه ها یا افزونه های IDE (VS Code، JetBrains Toolbox/EAP، Eclipse) را از طریق رابط کاربری گرافیکی یا CLI، احتمالاً از طریق نمایه های مدیریت شده، اضافه می کند. زنجیره: شروع فرآیند با پرچم‌های نصب/به‌روزرسانی ← تغییرات پوشه plist/extension تحت ~/Library/Application Support/Code یا ~/Library/Application Support/JetBrains → اتصالات خروجی به بازارها/خدمات تونل → کمک اختیاری (ssh/node) ایجاد شده است."
         }
     ]
 }

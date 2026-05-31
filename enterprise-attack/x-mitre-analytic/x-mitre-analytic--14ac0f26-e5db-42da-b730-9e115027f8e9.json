@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0071#AN0195",
-                    "external_id": "AN0195"
+                    "external_id": "AN0195",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RemoteHosts",
-                    "description": "Expected inbound transfer hosts to filter normal activity from staging behavior"
+                    "description": "Expected inbound transfer hosts to filter normal activity from staging behavior",
+                    "description_fa": "میزبان‌های انتقال ورودی مورد انتظار برای فیلتر کردن فعالیت عادی از رفتار مرحله‌بندی"
                 },
                 {
                     "field": "MountTargets",
-                    "description": "Directory destinations used as centralized locations"
+                    "description": "Directory destinations used as centralized locations",
+                    "description_fa": "مقاصد دایرکتوری به عنوان مکان های متمرکز استفاده می شود"
                 },
                 {
                     "field": "TransferVolumeThreshold",
-                    "description": "Threshold of transferred files or data volume over time"
+                    "description": "Threshold of transferred files or data volume over time",
+                    "description_fa": "آستانه فایل های منتقل شده یا حجم داده در طول زمان"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0195",
+            "description_fa": "مانت‌های SCP، rsync یا NFS ورودی را از سیستم‌های راه دور شناسایی می‌کند و سپس فایل‌ها را در مسیرهای مرحله‌بندی شناخته‌شده مانند /mnt/staging یا /var/tmp ادغام می‌کند."
         }
     ]
 }

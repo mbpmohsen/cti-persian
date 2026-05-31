@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0444#AN1227",
-                    "external_id": "AN1227"
+                    "external_id": "AN1227",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SocketParentProcessMatch",
-                    "description": "Non-browser processes opening sockets to external IPs"
+                    "description": "Non-browser processes opening sockets to external IPs",
+                    "description_fa": "غیر مرورگر سوکت ها را به IP های خارجی باز می کند"
                 },
                 {
                     "field": "DataFlowImbalanceRatio",
-                    "description": "High outbound/inbound ratio indicating C2 beacon"
+                    "description": "High outbound/inbound ratio indicating C2 beacon",
+                    "description_fa": "نسبت خروجی / ورودی بالا نشان دهنده چراغ C2 است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1227",
+            "description_fa": "برنامه‌ها را با استفاده از پروتکل‌های غیرعادی یا ترافیک با حجم بالا که قبلاً با تصویر فرآیند مرتبط نبوده‌اند شناسایی می‌کند، مانند فراخوانی سوکت‌های کرل یا پایتون Automator یا AppleScript."
         }
     ]
 }

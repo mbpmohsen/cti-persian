@@ -9,43 +9,52 @@
                 {
                     "external_id": "CAPEC-463",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/463.html"
+                    "url": "https://capec.mitre.org/data/definitions/463.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-209",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/209.html"
+                    "url": "http://cwe.mitre.org/data/definitions/209.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-514",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/514.html"
+                    "url": "http://cwe.mitre.org/data/definitions/514.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-649",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/649.html"
+                    "url": "http://cwe.mitre.org/data/definitions/649.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-347",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/347.html"
+                    "url": "http://cwe.mitre.org/data/definitions/347.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-354",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/354.html"
+                    "url": "http://cwe.mitre.org/data/definitions/354.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-696",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/696.html"
+                    "url": "http://cwe.mitre.org/data/definitions/696.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Juliano Rizzo, Thai Duong, Practical Padding Oracle Attacks, 2010--05---25",
                     "external_id": "REF-400",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.usenix.org/legacy/events/woot10/tech/full_papers/Rizzo.pdf"
+                    "url": "https://www.usenix.org/legacy/events/woot10/tech/full_papers/Rizzo.pdf",
+                    "description_fa": "جولیانو ریزو، تای دوونگ، حملات عملی اوراکل، 2010--05---25",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--63048cb5-6d42-4fa2-a0e1-eeff2ef2a34d",
@@ -77,7 +86,21 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "اگر یک سیستم هدف داده‌ها را درمورد اینکه آیا خطای padding هنگام رمزگشایی متن رمز رخ داده است یا نه، به بیرون درز کند، دشمن می‌تواند بدون دانستن کلید رمزگشایی، داده‌ها را به طور موثر رمزگشایی کند. سیستم هدفی که این نوع اطلاعات را فاش می‌کند، به اوراکل padding تبدیل می‌شود و دشمن می‌تواند از آن اوراکل برای رمزگشایی کارآمد داده‌ها بدون اطلاع از کلید رمزگشایی با صدور میانگین 128*b فراخوانی به اوراکل padding استفاده کند (که b تعداد بایت‌های موجود در بلوک متن رمزی است). علاوه بر انجام رمزگشایی، دشمن همچنین می‌تواند با استفاده از اوراکل padding متن‌های رمزی معتبر تولید کند (یعنی رمزگذاری انجام دهد) بدون اینکه کلید رمزگذاری را بداند.",
+            "name_fa": "Padding Oracle Crypto Attack",
+            "x_capec_example_instances_fa": [
+                "یک دشمن درخواستی حاوی متن رمز شده را به سیستم هدف ارسال می کند. به دلیل همان خط مشی مبدأ مرورگر، حریف قادر به دیدن پاسخ مستقیم نیست، اما می‌تواند از تکنیک‌های نشت اطلاعات بین دامنه‌ای برای دریافت اطلاعات مورد نیاز (به عنوان مثال، اطلاعات در مورد اینکه آیا خطای padding رخ داده است یا خیر) استفاده کند. این را می توان با استفاده از تگ \"img\" به اضافه رویدادهای onerror()/onload() انجام داد. جاوا اسکریپت حریف می تواند مرورگرهای وب ایجاد کند تا یک تصویر را در سایت مورد نظر بارگذاری کنند و بدانند که آیا تصویر بارگذاری شده است یا نه. این اطلاعات 1 بیتی است که برای کار کردن حمله اوراکل padding مورد نیاز است: اگر تصویر بارگذاری شود، آن بالشتک معتبر است، در غیر این صورت نیست."
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p> اگر پیام‌های رمزگذاری‌شده برای اطمینان از اعتبار آنها قبل از رمزگشایی، احراز هویت نشده باشند و سپس اطلاعات مربوط به خطای padding به حریف درز کند، هر سیستم رمزنگاری می‌تواند در برابر حملات padding oracle آسیب‌پذیر باشد. این تکنیک حمله ممکن است به عنوان مثال برای شکستن سیستم های CAPTCHA یا رمزگشایی/تغییر اطلاعات وضعیت ذخیره شده در اشیاء سمت سرویس گیرنده (مانند فیلدهای پنهان یا کوکی ها) استفاده شود. این تکنیک حمله یک حمله کانال جانبی به سیستم رمزنگاری است که از نشت داده از یک روال رمزگشایی که به درستی اجرا نشده است برای واژگونی کامل سیستم رمزنگاری استفاده می‌کند. یک بیت اطلاعاتی که به دشمن می‌گوید آیا خطای padding در طول رمزگشایی رخ داده است، به هر شکلی که باشد، برای دشمن برای شکستن سیستم رمزگذاری کافی است. این بیت اطلاعات می تواند به شکل یک پیام خطای صریح در مورد یک خطای padding، یک صفحه خالی بازگردانده شده، یا حتی پاسخ دادن به سرور (حمله زمانی) بیشتر شود. این حمله می‌تواند در دامنه‌های متقاطع راه‌اندازی شود، جایی که یک دشمن می‌تواند از نشت اطلاعات بین دامنه‌ای برای دریافت بیت‌های اطلاعات از اوراکل padding از یک سیستم/سرویس هدفی که قربانی با آن در ارتباط است، استفاده کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "روال رمزگشایی به درستی پیام را تأیید نمی کند / قبل از انجام عملیات رمزگشایی صحت آن را تأیید نمی کند",
+                "سیستم هدف، اطلاعاتی را درمورد اینکه آیا هنگام تلاش برای رمزگشایی متن رمز، خطای padding رخ داده است یا خیر، افشا می کند.",
+                "اوراکل padding برای زمان کافی در دسترس باقی می ماند / برای هر تعداد درخواستی که دشمن برای رمزگشایی متن رمز نیاز دارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p>قابلیت تشخیص مواردی که یک سیستم هدف در برابر حمله اوراکل padding آسیب پذیر است</xhtml:p>\n               <xhtml:p>دانش و ابزارهای رمزنگاری کافی برای استفاده از حضور اوراکل padding برای انجام رمزگشایی / رمزگذاری داده‌ها بدون کلید</xhtml:p>"
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0004#AN0010",
-                    "external_id": "AN0010"
+                    "external_id": "AN0010",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredShellConfigs",
-                    "description": "Set of shell startup files where PATH changes should be flagged."
+                    "description": "Set of shell startup files where PATH changes should be flagged.",
+                    "description_fa": "مجموعه ای از فایل های راه اندازی پوسته که در آن تغییرات PATH باید علامت گذاری شوند."
                 },
                 {
                     "field": "AllowedUserBins",
-                    "description": "Directories (e.g., /usr/local/bin) considered safe to avoid FP."
+                    "description": "Directories (e.g., /usr/local/bin) considered safe to avoid FP.",
+                    "description_fa": "دایرکتوری ها (به عنوان مثال، /usr/local/bin) برای جلوگیری از FP ایمن در نظر گرفته می شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0010",
+            "description_fa": "تغییر کاربر متغیر محیطی $PATH در فایل های پیکربندی پوسته یا تغییرات مستقیم PATH در زمان اجرا و به دنبال آن اجرای باینری ها از دایرکتوری های کنترل شده توسط کاربر. Defender ویرایش های فایل ~/.bashrc، ~/.profile، یا /etc/paths.d را مشاهده می کند و اجرای فرآیند به مکان های باینری غیرمنتظره حل می شود."
         }
     ]
 }

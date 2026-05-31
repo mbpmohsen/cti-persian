@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0514#AN1420",
-                    "external_id": "AN1420"
+                    "external_id": "AN1420",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SetUIDBinaryList",
-                    "description": "Legitimate SUID binaries vary across distributions; false positives may arise."
+                    "description": "Legitimate SUID binaries vary across distributions; false positives may arise.",
+                    "description_fa": "باینری های SUID قانونی در توزیع ها متفاوت است. ممکن است مثبت کاذب ایجاد شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Allows chaining kernel module load with privilege spike or privilege-sensitive process activity."
+                    "description": "Allows chaining kernel module load with privilege spike or privilege-sensitive process activity.",
+                    "description_fa": "به بارگذاری ماژول هسته زنجیره‌ای با اسپایک امتیاز یا فعالیت فرآیند حساس به امتیاز اجازه می‌دهد."
                 },
                 {
                     "field": "EffectiveUIDThreshold",
-                    "description": "Default is uid=0, but environments may vary with containerized root-like accounts."
+                    "description": "Default is uid=0, but environments may vary with containerized root-like accounts.",
+                    "description_fa": "پیش‌فرض uid=0 است، اما محیط‌ها ممکن است با حساب‌های ریشه‌مانند کانتینری متفاوت باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1420",
+            "description_fa": "تشدید را از طریق باینری‌های آسیب‌پذیر setuid یا ماژول‌های هسته، که اغلب با دسترسی غیرمعمول به /proc/kallsyms یا dev/kmem زنجیره‌ای هستند، تشخیص می‌دهد."
         }
     ]
 }

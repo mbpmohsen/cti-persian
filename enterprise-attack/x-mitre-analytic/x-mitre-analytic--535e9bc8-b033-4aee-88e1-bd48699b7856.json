@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0570#AN1573",
-                    "external_id": "AN1573"
+                    "external_id": "AN1573",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedApps",
-                    "description": "Track processes that normally should not upload data (e.g., Preview, Calculator)."
+                    "description": "Track processes that normally should not upload data (e.g., Preview, Calculator).",
+                    "description_fa": "ردیابی فرآیندهایی که معمولاً نباید داده ها را آپلود کنند (به عنوان مثال، پیش نمایش، ماشین حساب)."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "High-entropy file uploads may indicate encrypted payloads designed for exfiltration."
+                    "description": "High-entropy file uploads may indicate encrypted payloads designed for exfiltration.",
+                    "description_fa": "آپلود فایل‌های با آنتروپی بالا ممکن است نشان‌دهنده بارهای رمزگذاری‌شده باشد که برای استخراج طراحی شده‌اند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1573",
+            "description_fa": "برنامه‌ها یا اسکریپت‌هایی که APIهای ذخیره‌سازی ابری (همگام‌سازی Dropbox، iCloud، سرویس گیرنده Google Drive) را در زمینه‌های غیرمنتظره فراخوانی می‌کنند. دیدگاه مدافع: خواندن فایل های حساس توسط برنامه های غیر استاندارد و به دنبال آن آپلودهای رمزگذاری شده غیرمعمول در حوزه های ذخیره سازی ابری خارجی را شناسایی کنید."
         }
     ]
 }

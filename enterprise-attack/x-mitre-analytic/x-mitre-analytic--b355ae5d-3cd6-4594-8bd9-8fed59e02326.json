@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0090#AN0247",
-                    "external_id": "AN0247"
+                    "external_id": "AN0247",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,17 +53,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RemovableDriveLetter",
-                    "description": "Adjust drive letters used in detection (e.g., E:, F:, G:) depending on enterprise usage."
+                    "description": "Adjust drive letters used in detection (e.g., E:, F:, G:) depending on enterprise usage.",
+                    "description_fa": "حروف درایو مورد استفاده در تشخیص (مانند E:، F:، G:) را بسته به استفاده سازمانی تنظیم کنید."
                 },
                 {
                     "field": "WriteToReadTimeWindow",
-                    "description": "Tunable window for file write on one host followed by file read or execution on another (e.g., within 10 minutes)."
+                    "description": "Tunable window for file write on one host followed by file read or execution on another (e.g., within 10 minutes).",
+                    "description_fa": "پنجره قابل تنظیم برای نوشتن فایل در یک میزبان و سپس خواندن یا اجرای فایل در میزبان دیگر (به عنوان مثال، در عرض 10 دقیقه)."
                 },
                 {
                     "field": "FileNamePattern",
-                    "description": "Common naming schemes for payload, tasking, or exfil files (e.g., task.txt, beacon.log, data.bin)."
+                    "description": "Common naming schemes for payload, tasking, or exfil files (e.g., task.txt, beacon.log, data.bin).",
+                    "description_fa": "طرح‌های نام‌گذاری رایج برای فایل‌های payload، tasking یا exfil (مانند task.txt، beacon.log، data.bin)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0247",
+            "description_fa": "توالی رفتاری که در آن رسانه قابل جابجایی نصب می‌شود، فایل‌ها نوشته/به‌روزرسانی می‌شوند و متعاقباً در یک میزبان جداگانه خوانده/اجرا می‌شوند، که ارتباط رله رسانه‌ای قابل جابجایی را پیشنهاد می‌کند."
         }
     ]
 }

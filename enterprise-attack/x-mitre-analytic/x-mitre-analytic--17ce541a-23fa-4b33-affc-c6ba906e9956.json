@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0306#AN0855",
-                    "external_id": "AN0855"
+                    "external_id": "AN0855",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedAdminIPs",
-                    "description": "Allowlisted IPs/subnets where administrative access is expected (e.g., jump box, VPN mgmt)"
+                    "description": "Allowlisted IPs/subnets where administrative access is expected (e.g., jump box, VPN mgmt)",
+                    "description_fa": "IP/زیر شبکه‌های مجاز فهرست شده که در آن‌ها دسترسی اداری مورد انتظار است (به عنوان مثال، جعبه پرش، VPN mgmt)"
                 },
                 {
                     "field": "ConfigChangeWindow",
-                    "description": "Expected maintenance window (e.g., 02:00\u201304:00 UTC) to filter benign changes"
+                    "description": "Expected maintenance window (e.g., 02:00–04:00 UTC) to filter benign changes",
+                    "description_fa": "پنجره نگهداری مورد انتظار (به عنوان مثال، 02:00-04:00 UTC) برای فیلتر کردن تغییرات خوش خیم"
                 },
                 {
                     "field": "RuleScopeThreshold",
-                    "description": "Number of rules affected or port ranges modified to determine severity"
+                    "description": "Number of rules affected or port ranges modified to determine severity",
+                    "description_fa": "تعداد قوانین تحت تأثیر یا محدوده پورت برای تعیین شدت تغییر یافته است"
                 },
                 {
                     "field": "NewUserPrivilegeThreshold",
-                    "description": "Flag new users making changes without observed privilege elevation path"
+                    "description": "Flag new users making changes without observed privilege elevation path",
+                    "description_fa": "پرچم‌گذاری کاربران جدیدی که تغییراتی را بدون مشاهده مسیر ارتفاع امتیاز انجام می‌دهند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0855",
+            "description_fa": "Defender تغییرات پیکربندی را در دستگاه فایروال/شبکه ​​مشاهده می کند که شامل ایجاد قانون، اصلاح یا حذف از IP های مدیریت غیرعادی یا کانال های غیر کنسولی (مانند CLI از راه دور، API) می شود. اینها اغلب با افزایش در ترافیک خروجی مسدود شده قبلی، قوانین غیرمنتظره مجاز به همه یا حذف قوانین انبوه مرتبط هستند. رفتار اغلب به دنبال ورود غیرمجاز، افزایش امتیازات یا سوء استفاده از API است."
         }
     ]
 }

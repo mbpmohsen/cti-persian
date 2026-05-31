@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0263#AN0732",
-                    "external_id": "AN0732"
+                    "external_id": "AN0732",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for file access volume over short duration (e.g., 10+ repos accessed in <5 min)"
+                    "description": "Threshold for file access volume over short duration (e.g., 10+ repos accessed in <5 min)",
+                    "description_fa": "آستانه برای حجم دسترسی به فایل در مدت زمان کوتاه (به عنوان مثال، بیش از 10 مخزن در کمتر از 5 دقیقه قابل دسترسی است)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Role or permission profile expected to interact with repositories (e.g., developers vs. admins)"
+                    "description": "Role or permission profile expected to interact with repositories (e.g., developers vs. admins)",
+                    "description_fa": "نمایه نقش یا مجوز مورد انتظار برای تعامل با مخازن (به عنوان مثال، توسعه دهندگان در مقابل مدیران)"
                 },
                 {
                     "field": "GeoAnomalyThreshold",
-                    "description": "Distance or variance allowed before a login is flagged as anomalous"
+                    "description": "Distance or variance allowed before a login is flagged as anomalous",
+                    "description_fa": "فاصله یا واریانس مجاز قبل از اینکه یک ورود به سیستم به عنوان غیرعادی علامت گذاری شود"
                 },
                 {
                     "field": "RepoSensitivityTag",
-                    "description": "Whether a repository is labeled sensitive or restricted"
+                    "description": "Whether a repository is labeled sensitive or restricted",
+                    "description_fa": "این که آیا یک مخزن برچسب حساس یا محدود شده است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0732",
+            "description_fa": "فعالیت دانلود غیرعادی یا انبوه از مخازن خصوصی یا محدود توسط حساب‌های غیر توسعه‌دهنده یا دارای امتیاز، که اغلب با رفتار غیرمعمول ورود به سیستم (به عنوان مثال، جغرافیای ناآشنا، استفاده از رمز OAuth، افزایش نرخ API) انجام می‌شود."
         }
     ]
 }

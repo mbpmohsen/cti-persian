@@ -9,53 +9,64 @@
                 {
                     "external_id": "CAPEC-49",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/49.html"
+                    "url": "https://capec.mitre.org/data/definitions/49.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-521",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/521.html"
+                    "url": "http://cwe.mitre.org/data/definitions/521.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-262",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/262.html"
+                    "url": "http://cwe.mitre.org/data/definitions/262.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-263",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/263.html"
+                    "url": "http://cwe.mitre.org/data/definitions/263.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-257",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/257.html"
+                    "url": "http://cwe.mitre.org/data/definitions/257.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-654",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/654.html"
+                    "url": "http://cwe.mitre.org/data/definitions/654.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-307",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/307.html"
+                    "url": "http://cwe.mitre.org/data/definitions/307.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-308",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/308.html"
+                    "url": "http://cwe.mitre.org/data/definitions/308.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-309",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/309.html"
+                    "url": "http://cwe.mitre.org/data/definitions/309.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Brute Force:Password Guessing",
                     "external_id": "T1110.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1110/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1110/001",
+                    "description_fa": "Brute Force: حدس زدن رمز عبور",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--8d88a81c-bde9-4fb3-acbe-901c783d6427",
@@ -90,6 +101,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -117,11 +141,28 @@
                 "A powerful enough computer for the job with sufficient CPU, RAM and HD. Exact requirements will depend on the size of the brute force job and the time requirement for completion. Some brute forcing jobs may require grid or distributed computing (e.g. DES Challenge)."
             ],
             "x_capec_skills_required": {
-                "Low": "A brute force attack is very straightforward. A variety of password cracking tools are widely available."
+                "Low": "A brute force attack is very straightforward. A variety of password cracking tools are widely available.",
+                "Low_fa": "حمله بروت فورس بسیار ساده است. انواع ابزارهای شکستن رمز عبور به طور گسترده در دسترس هستند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف هر مقدار ممکن را برای رمز عبور امتحان می کند تا زمانی که موفق شود. یک حمله brute force، اگر از نظر محاسباتی امکان پذیر باشد، همیشه موفقیت آمیز خواهد بود، زیرا اساساً با توجه به الفبای مورد استفاده (حروف کوچک، حروف بزرگ، اعداد، نمادها و غیره) و حداکثر طول رمز عبور، از تمام رمزهای عبور ممکن عبور می کند.",
+            "name_fa": "رمز عبور بی رحمانه",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک سیستم یک خط مشی رمز عبور قوی اعمال نمی کند و کاربر یک رمز عبور پنج حرفی را انتخاب می کند که فقط از حروف کوچک انگلیسی تشکیل شده است. سیستم هیچ مکانیزمی برای حذف رمز عبور پیاده سازی نمی کند. با فرض اینکه حریف طول رمز عبور کاربران را نمی داند، دشمن می تواند این رمز عبور را در حداکثر 1+26+26^2+26^3+26^4+26^5 = 1 + 26 + 676 + 17576 + 456976 + 11،881،376 + 11،881،376، 11،881،373، نصف بار و 11،881،376، نیم بار و 376 بار تلاش کند. (6,178,316) به طور متوسط. استفاده از سخت افزار مدرن این حمله بی اهمیت است. اگر دشمن فرض می‌کرد که رمز عبور کاربر می‌تواند شامل حروف بزرگ و/یا اعداد باشد (و به حروف بزرگ حساس بود)، تعداد آزمایش‌ها بیشتر می‌شد.</xhtml:p>\n               <xhtml:p> کار دشمن به احتمال زیاد حتی ساده‌تر هم می‌شد، زیرا بسیاری از کاربرانی که گذرواژه‌هایی مانند این را انتخاب می‌کنند، احتمالاً از کلمه‌ای استفاده می‌کنند که در فرهنگ لغت یافت می‌شود. از آنجایی که تعداد کلمات معتبر انگلیسی حاوی حداکثر پنج حرف بسیار کمتر از 12،356،631 است، حمله ای که هر یک از مدخل های فرهنگ لغت انگلیسی را امتحان می کند حتی سریعتر انجام می شود.</xhtml:p>",
+                "یک ضعف در روال تولید رمز عبور خودکار Mailman قبل از 2.1.5 وجود دارد که باعث می شود تنها حدود پنج میلیون رمز عبور مختلف تولید شود. این امر باعث می‌شود که همه کاربرانی که تصمیم گرفتند به Mailman اجازه دهند رمز عبور خود را به‌طور خودکار برای آن‌ها تولید کند، آسان می‌شود. کاربرانی که رمز عبور خود را در طول فرآیند ثبت نام انتخاب کرده اند تحت تأثیر قرار نخواهند گرفت (با فرض اینکه رمز عبور قوی انتخاب کرده باشند). همچنین ببینید: CVE-2004-1143"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین خط‌مشی رمز عبور برنامه/سیستم: </b>خط‌مشی‌های گذرواژه برنامه/سیستم مورد نظر را تعیین کنید.</p></li><table><tbody><tr><th>تکنیک‌های حداقل مجاز و حداکثر رمز عبور</thd><tr>تعیین کنید. طول ها.</td></tr><tr><td>قالب گذرواژه های مجاز را تعیین کنید (اعم از اینکه لازم باشد یا مجاز باشد حاوی اعداد، نویسه های خاص و غیره باشد).</td></tr><tr><td>خط مشی قفل حساب را تعیین کنید (یک سیاست قفل حساب سختگیرانه از زور بی رحمانه جلوگیری می کند. حملات).</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>گذرواژه Brute Force: </b>با توجه به فضای محدود گذرواژه‌های ممکن که توسط خط‌مشی رمز عبور تعیین‌شده در مرحله قبل تعیین شده است، همه گذرواژه‌های ممکن را برای شناسه اعطای کاربر شناخته شده امتحان کنید تا زمانی که برنامه دسترسی داشته باشید.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>به صورت دستی یا خودکار همه رمزهای عبور ممکن را از طریق رابط برنامه/سیستم وارد کنید. در اکثر سیستم‌ها، با کوتاه‌ترین و ساده‌ترین پسوردهای ممکن شروع کنید، زیرا اکثر کاربران تمایل دارند چنین رمزهای عبوری را در صورت اجازه انتخاب کنند.</td></tr><tr><td>یک حمله فرهنگ لغت آفلاین یا حمله جدول رنگین کمان در برابر هش رمز عبور شناخته شده انجام دهید.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>یک سیستم به ویژه در برابر این نوع حمله آسیب پذیر خواهد بود اگر مکانیزم اجرایی مناسبی برای اطمینان از اینکه گذرواژه های انتخاب شده توسط کاربران گذرواژه های قوی و مطابق با یک خط مشی گذرواژه کافی باشد را نداشته باشد. در عمل از حمله brute force خالص به گذرواژه ها به ندرت استفاده می شود، مگر اینکه رمز عبور ضعیف باشد. روش های دیگری برای شکستن رمز عبور وجود دارد که بسیار مؤثرتر هستند (مانند حملات فرهنگ لغت، جداول رنگین کمان و غیره). دانستن خط مشی رمز عبور در سیستم می تواند یک حمله brute force را کارآمدتر کند. برای مثال، اگر خط‌مشی بیان می‌کند که همه گذرواژه‌ها باید از سطح خاصی باشند، نیازی به بررسی نامزدهای کوچک‌تر نیست.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "حریف برای هدف قرار دادن باید یک نام کاربری بداند.",
+                "این سیستم از احراز هویت مبتنی بر رمز عبور به عنوان مکانیزم احراز هویت یک عاملی استفاده می کند.",
+                "یک برنامه دارای مکانیزم کنترل رمز عبور نیست. یک مکانیسم خوب خنثی کردن رمز عبور، از نظر محاسباتی تقریباً غیرممکن می‌کند که به زور یک رمز عبور بی‌رحمانه انجام شود، زیرا ممکن است کاربر را پس از تعداد معینی از تلاش‌های نادرست قفل کند یا دوره‌های زمانی خارج شدن را معرفی کند. هر دوی اینها حمله با نیروی بی رحم را غیرعملی می کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "یک کامپیوتر به اندازه کافی قدرتمند برای کار با CPU، RAM و HD کافی. الزامات دقیق به اندازه کار brute force و زمان مورد نیاز برای تکمیل بستگی دارد. برخی از مشاغل اجباری بی رحم ممکن است به شبکه یا محاسبات توزیع شده نیاز داشته باشند (مانند چالش DES)."
+            ]
         }
     ],
     "type": "bundle"

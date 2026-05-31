@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0044",
-                    "external_id": "DC0044"
+                    "external_id": "DC0044",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,14 +22,16 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Firewall Enumeration",
-            "description": "Querying and extracting a list of available firewalls or their associated configurations and rules. This activity can occur across host systems and cloud control planes, providing insight into the state and configuration of firewalls that protect the environment. Examples: \n\n- Querying Host-Based Firewalls: Using Windows PowerShell commands like `Get-NetFirewallRule` or Linux commands such as `iptables -L` or `firewalld --list-all`.\n- Cloud Firewall Rule Listing: Running commands like `az network firewall list` for Azure or `aws ec2 describe-security-groups` for AWS.\n- Using Management APIs: Leveraging APIs like Google Cloud Firewall's `list` API method or AWS's DescribeSecurityGroups API.\nIdentifying Misconfigurations: Extracting firewall rules to identify \u201callow all\u201d policies or rules that lack logging.\n- Enumerating with CLI Tools: Using CLI commands like `gcloud compute firewall-rules list` to extract firewall settings in Google Cloud.",
+            "description": "Querying and extracting a list of available firewalls or their associated configurations and rules. This activity can occur across host systems and cloud control planes, providing insight into the state and configuration of firewalls that protect the environment. Examples: \n\n- Querying Host-Based Firewalls: Using Windows PowerShell commands like `Get-NetFirewallRule` or Linux commands such as `iptables -L` or `firewalld --list-all`.\n- Cloud Firewall Rule Listing: Running commands like `az network firewall list` for Azure or `aws ec2 describe-security-groups` for AWS.\n- Using Management APIs: Leveraging APIs like Google Cloud Firewall's `list` API method or AWS's DescribeSecurityGroups API.\nIdentifying Misconfigurations: Extracting firewall rules to identify “allow all” policies or rules that lack logging.\n- Enumerating with CLI Tools: Using CLI commands like `gcloud compute firewall-rules list` to extract firewall settings in Google Cloud.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_domains": [
                 "enterprise-attack"
             ],
             "x_mitre_version": "2.0",
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "name_fa": "شمارش فایروال",
+            "description_fa": "جستجو و استخراج لیستی از فایروال های موجود یا تنظیمات و قوانین مرتبط با آنها. این فعالیت می‌تواند در سراسر سیستم‌های میزبان و هواپیماهای کنترل ابری رخ دهد، و بینشی در مورد وضعیت و پیکربندی فایروال‌هایی که از محیط زیست محافظت می‌کنند، فراهم می‌کند. مثال ها: \n\n- پرس و جو از فایروال های مبتنی بر میزبان: استفاده از دستورات Windows PowerShell مانند «Get-NetFirewallRule» یا دستورات لینوکس مانند «iptables -L» یا «firewalld --list-all».\n- فهرست قوانین فایروال ابری: اجرای دستوراتی مانند «لیست فایروال شبکه az» برای Azure یا «aws ec2 describe-security-groups» برای AWS.\n- استفاده از APIهای مدیریت: استفاده از APIهایی مانند روش API «list» Google Cloud Firewall یا DescribeSecurityGroups API AWS.\nشناسایی پیکربندی‌های نادرست: استخراج قوانین فایروال برای شناسایی خط‌مشی‌های «مجاز به همه» یا قوانینی که فاقد ثبت گزارش هستند.\n- شمارش با ابزارهای CLI: استفاده از دستورات CLI مانند «لیست قوانین فایروال محاسبه gcloud» برای استخراج تنظیمات فایروال در Google Cloud."
         }
     ]
 }

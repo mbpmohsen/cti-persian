@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1453",
-                    "external_id": "T1453"
+                    "external_id": "T1453",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Google_AndroidAcsOverview",
                     "description": "Google. (n.d.). Android accessibility overview. Retrieved April 17, 2025.",
-                    "url": "https://support.google.com/accessibility/android/answer/6006564?hl=en&ref_topic=6007234&sjid=9936713164149272548-NA"
+                    "url": "https://support.google.com/accessibility/android/answer/6006564?hl=en&ref_topic=6007234&sjid=9936713164149272548-NA",
+                    "source_name_fa": "Google_AndroidAcsOverview",
+                    "description_fa": "گوگل. (n.d.). نمای کلی دسترسی به اندروید. بازبینی شده در 17 آوریل 2025."
                 },
                 {
                     "source_name": "SahinSRLabs_FluBot_Dec2021",
-                    "description": "\u015eahin, Erdo\u011fan Ya\u011f\u0131z. (2021, December 21). When your phone gets sick: FluBot abuses Accessibility features to steal data. Retrieved April 16, 2025.",
-                    "url": "https://www.srlabs.de/blog-post/flubot-abuses-accessibility-features-to-steal-data"
+                    "description": "Şahin, Erdoğan Yağız. (2021, December 21). When your phone gets sick: FluBot abuses Accessibility features to steal data. Retrieved April 16, 2025.",
+                    "url": "https://www.srlabs.de/blog-post/flubot-abuses-accessibility-features-to-steal-data",
+                    "source_name_fa": "SahinSRLabs_FluBot_Dec2021",
+                    "description_fa": "شاهین، اردوغان یاغیز. (2021، 21 دسامبر). وقتی تلفن شما بیمار می شود: FluBot از ویژگی های دسترسی برای سرقت داده ها سوء استفاده می کند. بازبینی شده در 16 آوریل 2025."
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2026-05-12T15:12:00.622Z",
             "name": "Abuse Accessibility Features",
-            "description": "Adversaries may abuse accessibility features in Android devices to steal sensitive data and to spread malware to other devices. Accessibility features in Android are designed to assist users with disabilities, performing a variety of tasks, such as using Action Blocks to control lightbulbs, and changing the device\u2019s user interface, such as changing the font size and adjusting contract or colors.(Citation: Google_AndroidAcsOverview) \n\nOne example of how adversaries abuse accessibility features is overlaying an HTML object mimicking a legitimate login screen. The user types their credentials in the overlay HTML object, which is then sent to the adversaries.(Citation: SahinSRLabs_FluBot_Dec2021)  \n\nAnother example is a malicious accessibility feature acting as a keylogger. The keylogger monitors changes on the EditText fields and sends it to the adversaries.(Citation: SahinSRLabs_FluBot_Dec2021) This method of attack is also described in [Keylogging](https://attack.mitre.org/techniques/T1417/001); whereas [Abuse Accessibility Features](https://attack.mitre.org/techniques/T1453) captures the overall abuse of accessibility features.  ",
+            "description": "Adversaries may abuse accessibility features in Android devices to steal sensitive data and to spread malware to other devices. Accessibility features in Android are designed to assist users with disabilities, performing a variety of tasks, such as using Action Blocks to control lightbulbs, and changing the device’s user interface, such as changing the font size and adjusting contract or colors.(Citation: Google_AndroidAcsOverview) \n\nOne example of how adversaries abuse accessibility features is overlaying an HTML object mimicking a legitimate login screen. The user types their credentials in the overlay HTML object, which is then sent to the adversaries.(Citation: SahinSRLabs_FluBot_Dec2021)  \n\nAnother example is a malicious accessibility feature acting as a keylogger. The keylogger monitors changes on the EditText fields and sends it to the adversaries.(Citation: SahinSRLabs_FluBot_Dec2021) This method of attack is also described in [Keylogging](https://attack.mitre.org/techniques/T1417/001); whereas [Abuse Accessibility Features](https://attack.mitre.org/techniques/T1453) captures the overall abuse of accessibility features.  ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -44,7 +49,7 @@
             ],
             "x_mitre_attack_spec_version": "3.3.0",
             "x_mitre_contributors": [
-                "Luk\u00e1\u0161 \u0160tefanko, ESET",
+                "Lukáš Štefanko, ESET",
                 "Liran Ravich, CardinalOps"
             ],
             "x_mitre_deprecated": false,
@@ -56,7 +61,9 @@
             "x_mitre_platforms": [
                 "Android"
             ],
-            "x_mitre_version": "3.0"
+            "x_mitre_version": "3.0",
+            "name_fa": "ویژگی های دسترسی سوء استفاده",
+            "description_fa": "ممکن است دشمنان از ویژگی‌های دسترسی در دستگاه‌های Android برای سرقت داده‌های حساس و انتشار بدافزار به دستگاه‌های دیگر سوء استفاده کنند. ویژگی‌های دسترس‌پذیری در Android برای کمک به کاربران دارای معلولیت، انجام انواع وظایف، مانند استفاده از Action Blocks برای کنترل لامپ‌ها، و تغییر رابط کاربری دستگاه، مانند تغییر اندازه قلم و تنظیم قرارداد یا رنگ‌ها، طراحی شده‌اند.(Citation: Google_AndroidAcsOverview) \n\nیک مثال از نحوه سوء استفاده دشمنان از ویژگی‌های دسترسی، پوشاندن یک شی HTML با تقلید از صفحه ورود قانونی است. کاربر اعتبار خود را در شی HTML همپوشانی تایپ می کند، که سپس برای دشمنان ارسال می شود.(Citation: SahinSRLabs_FluBot_Dec2021)  \n\nمثال دیگر یک ویژگی دسترسی مخرب است که به عنوان یک keylogger عمل می کند. کی لاگر تغییرات فیلدهای EditText را رصد می کند و آن را برای دشمنان می فرستد.(Citation: SahinSRLabs_FluBot_Dec2021) این روش حمله همچنین در [Keylogging](https://attack.mitre.org/techniques/T1417/001); در حالی که [Abuse Accessibility Features](https://attack.mitre.org/techniques/T1453) سوء استفاده کلی از ویژگی‌های دسترس‌پذیری را نشان می‌دهد."
         }
     ]
 }

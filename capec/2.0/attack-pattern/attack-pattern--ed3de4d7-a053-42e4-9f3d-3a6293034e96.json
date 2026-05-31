@@ -9,28 +9,34 @@
                 {
                     "external_id": "CAPEC-546",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/546.html"
+                    "url": "https://capec.mitre.org/data/definitions/546.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-284",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/284.html"
+                    "url": "http://cwe.mitre.org/data/definitions/284.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1266",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1266.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1266.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1272",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1272.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1272.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Kopo M. Ramokapane, Awais Rashid, Jose M. Such, Assured Deletion in the Cloud: Requirements, Challenges and Future Directions, Association for Computing Machinery (ACM), Proceedings of the 2016 ACM on Cloud Computing Security Workshop",
                     "external_id": "REF-461",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://nms.kcl.ac.uk/jose.such/pubs/Assured_deletion.pdf"
+                    "url": "https://nms.kcl.ac.uk/jose.such/pubs/Assured_deletion.pdf",
+                    "description_fa": "Kopo M. Ramokapane, Awais Rashid, Jose M. Such, Assured Deletion in the Cloud: Requirements, Challenges and Future Directions, Association for Computing Machinery (ACM), Proceedings of the 2016 ACM on Cloud Computing Security Workshop",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ed3de4d7-a053-42e4-9f3d-3a6293034e96",
@@ -47,6 +53,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (A successful attack that probes application memory will compromise the confidentiality of that data.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (یک حمله موفقیت آمیز که حافظه برنامه را بررسی می کند، محرمانه بودن آن داده ها به خطر می افتد.)"
                 ]
             },
             "x_capec_domains": [
@@ -58,11 +67,17 @@
                 "The cloud provider must not assuredly delete part or all of the sensitive data for which they are responsible.The adversary must have the ability to interact with the system."
             ],
             "x_capec_skills_required": {
-                "Low": "The adversary requires the ability to traverse directory structure."
+                "Low": "The adversary requires the ability to traverse directory structure.",
+                "Low_fa": "حریف به توانایی عبور از ساختار دایرکتوری نیاز دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن به دلیل حذف ناامن یا ناقص داده ها در یک محیط چند مستاجر، اطلاعات غیرمجاز به دست می آورد. اگر یک ارائه‌دهنده ابر نتواند فضای ذخیره‌سازی و داده‌ها را از سیستم‌ها/منابع مستاجران سابق ابری به طور کامل حذف کند، پس از تخصیص این منابع به مستاجران جدید، بالقوه مخرب، این منابع می‌توانند منابع ارائه‌شده را برای اطلاعات حساس که هنوز وجود دارند، بررسی کنند.",
+            "name_fa": "حذف ناقص داده ها در یک محیط چند مستاجر",
+            "x_capec_prerequisites_fa": [
+                "ارائه‌دهنده ابر نباید مطمئناً بخشی یا تمام داده‌های حساسی را که مسئول آن هستند حذف کند. حریف باید توانایی تعامل با سیستم را داشته باشد."
+            ]
         }
     ],
     "spec_version": "2.0",

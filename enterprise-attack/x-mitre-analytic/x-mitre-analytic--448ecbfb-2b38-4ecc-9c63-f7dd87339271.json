@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0201#AN0577",
-                    "external_id": "AN0577"
+                    "external_id": "AN0577",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,22 +61,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedDllPaths",
-                    "description": "Known safe DLL directories to suppress false positives (e.g., C:\\Windows\\System32)."
+                    "description": "Known safe DLL directories to suppress false positives (e.g., C:\\Windows\\System32).",
+                    "description_fa": "دایرکتوری های DLL ایمن شناخته شده برای سرکوب موارد مثبت کاذب (مانند C:\\Windows\\System32)."
                 },
                 {
                     "field": "ProcessAllowList",
-                    "description": "Applications expected to load DLLs from non-standard locations (e.g., development tools)."
+                    "description": "Applications expected to load DLLs from non-standard locations (e.g., development tools).",
+                    "description_fa": "برنامه هایی که انتظار می رود DLL ها را از مکان های غیر استاندارد بارگیری کنند (به عنوان مثال، ابزارهای توسعه)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval between DLL file creation, registry changes, and module load."
+                    "description": "Correlation interval between DLL file creation, registry changes, and module load.",
+                    "description_fa": "فاصله بین ایجاد فایل DLL، تغییرات رجیستری و بارگذاری ماژول."
                 },
                 {
                     "field": "HashBaseline",
-                    "description": "Baseline hashes for legitimate DLLs used to detect substitution."
+                    "description": "Baseline hashes for legitimate DLLs used to detect substitution.",
+                    "description_fa": "هش های پایه برای DLL های قانونی مورد استفاده برای تشخیص جایگزینی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0577",
+            "description_fa": "رفتارهای ربودن DLL شامل بارگیری غیرمنتظره DLL از دایرکتوری های غیر استاندارد، جایگزینی DLL ها، درج DLL فانتوم، ایجاد فایل تغییر مسیر، و جایگزینی DLL های قانونی. Defender تغییرات سیستم فایل، تغییرات رجیستری و تله متری بارگذاری ماژول را برای تشخیص رفتار غیرعادی DLL در فرآیندهای قابل اعتماد به هم مرتبط می کند."
         }
     ]
 }

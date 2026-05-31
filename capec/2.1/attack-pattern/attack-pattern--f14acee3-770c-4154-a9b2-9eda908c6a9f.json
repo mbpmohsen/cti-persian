@@ -9,28 +9,35 @@
                 {
                     "external_id": "CAPEC-107",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/107.html"
+                    "url": "https://capec.mitre.org/data/definitions/107.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-648",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/648.html"
+                    "url": "http://cwe.mitre.org/data/definitions/648.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Cross Site Tracing",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Cross_Site_Tracing"
+                    "url": "https://owasp.org/www-community/attacks/Cross_Site_Tracing",
+                    "description_fa": "ردیابی متقابل سایت",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Jeremiah Grossman, Cross-Site Tracing (XST), 2003, WhiteHat Security",
                     "external_id": "REF-3",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.cgisecurity.com/whitehat-mirror/WH-WhitePaper_XST_ebook.pdf"
+                    "url": "http://www.cgisecurity.com/whitehat-mirror/WH-WhitePaper_XST_ebook.pdf",
+                    "description_fa": "جرمیا گروسمن، ردیابی بین سایتی (XST)، 2003، امنیت WhiteHat",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--f14acee3-770c-4154-a9b2-9eda908c6a9f",
@@ -61,6 +68,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -82,11 +102,28 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Medium": "Understanding of the HTTP protocol and an ability to craft a malicious script"
+                "Medium": "Understanding of the HTTP protocol and an ability to craft a malicious script",
+                "Medium_fa": "درک پروتکل HTTP و توانایی ایجاد یک اسکریپت مخرب"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "Cross Site Tracing (XST) حریف را قادر می‌سازد تا کوکی جلسه قربانی و احتمالاً سایر اعتبارنامه‌های احراز هویت منتقل شده در سربرگ درخواست HTTP را هنگامی که مرورگر قربانی با سرور وب سیستم مقصد ارتباط برقرار می‌کند، بدزدد.",
+            "name_fa": "ردیابی متقابل سایت",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک حریف تشخیص می دهد که یک سیستم خاص در برابر اسکریپت نویسی متقابل منعکس شده (XSS) آسیب پذیر است و تلاش می کند تا از این ضعف برای سرقت کوکی احراز هویت قربانی استفاده کند. یک دشمن متوجه می شود که از آنجایی که ویژگی httpOnly روی کوکی کاربر تنظیم شده است، امکان سرقت مستقیم آن با اسکریپت مخرب او وجود ندارد. در عوض، حریف از اسکریپت خود استفاده می کند که از کنترل XMLHTTP ActiveX در مرورگر اینترنت اکسپلورر قربانی برای صدور HTTP TRACE به سرور سیستم هدف که HTTP TRACE را فعال کرده است، استفاده کند. درخواست اصلی HTTP TRACE حاوی کوکی جلسه و همچنین پاسخ بازتاب داده شده است. حریف کوکی جلسه را از بدنه پاسخ HTTP TRACE انتخاب می کند و آن را برای دشمن ارسال می کند. سپس دشمن از کوکی جلسه قربانی تازه به دست آمده برای جعل هویت قربانی در سیستم هدف استفاده می کند.</xhtml:p>\n               <xhtml:p>در صورت عدم وجود ضعف XSS در سایتی که قربانی با آن تعامل دارد، دشمن می‌تواند اسکریپت را از سایتی که کنترل می‌کند دریافت کند و آن را در مرورگر قربانی اجرا کند (اگر بتواند قربانی را فریب دهد تا از وب‌سایت مخرب خود بازدید کند یا روی پیوندی که ارائه می‌کند کلیک کند). با این حال، در آن صورت، به دلیل همان مکانیزم حفاظت از خط مشی مبدا در مرورگر، اسکریپت مخرب دشمن نمی‌تواند مستقیماً یک درخواست HTTP TRACE را به سرور وب سیستم مقصد صادر کند، زیرا اسکریپت مخرب از آن دامنه منشأ نمی‌گیرد. سپس یک دشمن باید راهی برای سوء استفاده از ضعف دیگری بیابد که آنها را قادر می‌سازد همان حفاظت از سیاست مبدا را دور بزنند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین فعال بودن HTTP Trace: </b>مشخص کنید که آیا HTTP Trace در وب سروری فعال است که قربانی با آن یک جلسه فعال داشته باشد</p></li><table><tbody><ntr><t> حریف ممکن است یک درخواست HTTP Trace را به وب سرور مورد نظر ارسال کند و مشاهده کند که آیا پاسخ با درخواست اصلی در بدنه پاسخ می رسد یا خیر.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>شناسایی مکانیسم برای راه‌اندازی HTTP Trace درخواستی برای اجبار کردن HTTP Trace: درخواست به برنامه مورد نظر.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن آسیب‌پذیری‌های اسکریپت بین سایتی را بررسی می‌کند تا قربانی را مجبور به صدور یک درخواست HTTP Trace کند.</td></tr></tbody></table></ol></h/hExdi <b>یک اسکریپت مخرب ایجاد کنید که سرور وب را با درخواست HTTP TRACE پینگ می کند: </b> دشمن یک اسکریپت مخرب ایجاد می کند که مرورگر قربانی را وادار می کند تا یک درخواست HTTP TRACE را به سرور وب سیستم مقصد صادر کند. اسکریپت بیشتر پاسخ سرور وب را رهگیری می‌کند، اطلاعات حساس را از آن دریافت می‌کند و به سایتی که توسط دشمن کنترل می‌شود ارسال می‌کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>اسکریپت مخرب حریف به‌جای آن، ویژگی httpOnly lee cookie را دور می‌زند که به طور مستقیم از cookie cookie استفاده می‌کند. HTTP TRACE برای گرفتن این اطلاعات از هدر درخواست HTTP پس از بازتاب آن از سرور وب در بدنه پاسخ HTTP TRACE.</td></tr></tbody></table><li> <p> <b>اسکریپت راه‌اندازی HTTP Trace مخرب را اجرا کنید: </b>XSS مخرب execution را تحت فشار قرار می‌دهد. ردیابی اسکریپت راه‌اندازی</p></li><li> <p> <b>توقف پاسخ HTTP TRACE: </b>اسکریپت حریف پاسخ HTTP TRACE را از سرور وب رهگیری می‌کند، اطلاعات حساس آن را نگاه می‌کند و آن اطلاعات را به سروری که توسط دشمن کنترل می‌شود ارسال می‌کند.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> دشمن از یک حمله XSS استفاده می کند تا مرورگر قربانی یک درخواست HTTP TRACE را به یک سرور وب مقصد ارسال کند، که به مرورگر وب قربانی که حاوی درخواست اصلی HTTP در بدنه خود است، باز می گردد. از آنجایی که هدر HTTP درخواست HTTP TRACE اصلی، کوکی جلسه قربانی را در خود داشت، اکنون می‌توان آن کوکی جلسه را از پاسخ HTTP TRACE برداشت و به سایت مخرب حریف فرستاد. XST زمانی مرتبط می شود که دسترسی مستقیم به کوکی جلسه از طریق شی \"document.cookie\" با استفاده از ویژگی httpOnly غیرفعال شود که تضمین می کند کوکی می تواند در درخواست های HTTP منتقل شود اما به روش های دیگر قابل دسترسی نیست. استفاده از SSL در برابر XST محافظت نمی کند. اگر سیستمی که قربانی با آن در تعامل است مستعد XSS باشد، دشمن می‌تواند مستقیماً از این ضعف سوء استفاده کند تا اسکریپت مخرب خود را برای صدور یک درخواست HTTP TRACE به وب سرور سیستم مقصد برساند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "HTTP TRACE در سرور وب فعال است",
+                "سیستم مقصد در برابر XSS مستعد است یا یک دشمن می‌تواند از نقاط ضعف دیگری برای دور زدن سیاست مبدا استفاده کند.",
+                "اسکریپت در مرورگر مشتری فعال است",
+                "HTTP به عنوان پروتکل ارتباطی بین سرور و مشتری استفاده می شود"
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

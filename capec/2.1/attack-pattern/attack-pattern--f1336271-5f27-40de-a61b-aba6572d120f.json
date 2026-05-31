@@ -9,43 +9,53 @@
                 {
                     "external_id": "CAPEC-97",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/97.html"
+                    "url": "https://capec.mitre.org/data/definitions/97.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-327",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/327.html"
+                    "url": "http://cwe.mitre.org/data/definitions/327.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1204",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1204.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1204.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1240",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1240.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1240.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1241",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1241.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1241.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1279",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1279.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1279.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Cryptanalysis",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Cryptanalysis"
+                    "url": "https://owasp.org/www-community/attacks/Cryptanalysis",
+                    "description_fa": "رمزنگاری",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-556",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Cryptanalysis"
+                    "url": "http://en.wikipedia.org/wiki/Cryptanalysis",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--f1336271-5f27-40de-a61b-aba6572d120f",
@@ -66,6 +76,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (In most cases, if cryptanalysis is successful at all, an adversary will not be able to decrypt the entire message, but instead will only be able to deduce some information about the plaintext. However, that may be sufficient for an adversary, depending on the context of the attack.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (در بیشتر موارد، اگر تجزیه و تحلیل رمز کاملاً موفقیت آمیز باشد، دشمن نمی تواند کل پیام را رمزگشایی کند، اما در عوض فقط می تواند برخی از اطلاعات مربوط به متن ساده را استنباط کند. با این حال، بسته به زمینه حمله، ممکن است برای یک دشمن کافی باشد.)"
                 ]
             },
             "x_capec_domains": [
@@ -91,11 +104,27 @@
                 "Computing resource requirements will vary based on the complexity of a given cryptanalysis technique. Access to the encryption/decryption routines of the algorithm is also required."
             ],
             "x_capec_skills_required": {
-                "High": "Cryptanalysis generally requires a very significant level of understanding of mathematics and computation."
+                "High": "Cryptanalysis generally requires a very significant level of understanding of mathematics and computation.",
+                "High_fa": "تحلیل رمز معمولاً به سطح بسیار قابل توجهی از درک ریاضیات و محاسبات نیاز دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "Cryptanalysis فرآیندی است برای یافتن نقاط ضعف در الگوریتم های رمزنگاری و استفاده از این نقاط ضعف برای رمزگشایی متن رمز بدون دانستن کلید مخفی (نمونه کسر). گاهی اوقات ضعف در خود الگوریتم رمزنگاری نیست، بلکه در نحوه استفاده از آن است که باعث موفقیت تحلیل رمزنگاری می شود. مهاجم ممکن است اهداف دیگری نیز داشته باشد، مانند: شکست کل (پیدا کردن کلید مخفی)، کسر جهانی (پیدا کردن یک الگوریتم معادل عملکردی برای رمزگذاری و رمزگشایی که نیازی به دانش کلید مخفی ندارد)، کسر اطلاعات (به دست آوردن اطلاعاتی در مورد متن‌های ساده یا متن‌های رمزی که قبلاً شناخته شده نبوده‌اند) و تمایز (قابلیت تشخیص رمزگذاری توسط مهاجم برای تشخیص الگوریتم رمزگذاری شده است) (متن رمز) از جایگشت تصادفی بیت ها).",
+            "name_fa": "رمزنگاری",
+            "x_capec_example_instances_fa": [
+                "یک مثال بسیار آسان برای درک، یک تکنیک تحلیل رمزی به نام تجزیه و تحلیل فرکانس است که می تواند با موفقیت در الگوریتم های رمزگذاری کلاسیک بسیار ابتدایی که جایگزینی تک الفبایی را انجام می دهند و هر حرف در متن ساده را با حرف نگاشت از پیش تعیین شده آن از همان الفبای جایگزین می کند، اعمال شود. این یک پیشرفت در مقایسه با یک تکنیک اساسی‌تر تلقی می‌شد که به سادگی تمام حروف متن ساده را با تعدادی موقعیت ثابت تغییر می‌داد و حروف اصلی را با حرف جدید با موقعیت الفبای حاصل جایگزین می‌کرد. در حالی که رمزهای جایگزین تک الفبایی در برابر نیروی بی رحمانه مقاوم هستند، آنها را می توان به راحتی با چیزی بیش از یک قلم و کاغذ شکست. تحلیل فرکانس از این واقعیت استفاده می کند که زبان طبیعی تصادفی نیست و جایگزینی تک الفبایی ویژگی های آماری زبان طبیعی را پنهان نمی کند. بنابراین اگر حرف \"E\" در یک زبان انگلیسی با بسامد مشخص مشخصی (حدود 12.7٪) رخ دهد، هر چیزی که \"E\" برای رسیدن به متن رمزی جایگزین شده بود، با بسامد مشابه رخ می دهد. داشتن این اطلاعات فرکانس به رمزنگار اجازه می دهد تا به سرعت جایگزین ها را تعیین کند و متن رمز را رمزگشایی کند. تکنیک های تجزیه و تحلیل فرکانس برای رمزهای مدرن قابل استفاده نیستند زیرا همه آنها در برابر آن مقاوم هستند (مگر اینکه این یک مورد بسیار بد از یک الگوریتم رمزگذاری داخلی باشد). این مثال برای رمزنگاری‌های رمزنگاری مدرن قابل اجرا نیست، اما در اینجا برای نشان دادن یک مثال ابتدایی از تحلیل رمز آمده است."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>یک مهاجم نقطه ضعفی در الگوریتم رمزنگاری یا ضعفی در نحوه اعمال آن به یک قطعه خاص از متن ساده پیدا می‌کند. ضعف در رمزگشایی، رمزگشایی جزئی یا استنتاج برخی از اطلاعات در مورد محتوای پیام رمزگذاری شده را کشف کرد. همه این کارها بدون دانستن کلید مخفی انجام می شود.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار هدف از نوعی الگوریتم رمزنگاری استفاده می کند.",
+                "یک ضعف اساسی یا در الگوریتم رمزنگاری مورد استفاده وجود دارد یا در روشی که بر روی یک تکه خاص از متن ساده اعمال شده است.",
+                "الگوریتم رمزگذاری برای مهاجم شناخته شده است.",
+                "مهاجم به متن رمز دسترسی دارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "نیازهای منابع محاسباتی بر اساس پیچیدگی یک تکنیک تحلیل رمزی داده شده متفاوت خواهد بود. دسترسی به روال های رمزگذاری/رمزگشایی الگوریتم نیز مورد نیاز است."
+            ]
         }
     ],
     "type": "bundle"

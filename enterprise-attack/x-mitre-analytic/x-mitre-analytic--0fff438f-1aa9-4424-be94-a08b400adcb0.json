@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0433#AN1207",
-                    "external_id": "AN1207"
+                    "external_id": "AN1207",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 1207",
-            "description": "Abuse of mavinject.exe to inject DLLs or import descriptors into another running process. Chain: (1) mavinject.exe starts with /INJECTRUNNING or /HMODULE \u2192 (2) mavinject obtains high-access handles to a target process (VM_WRITE/CREATE_THREAD) \u2192 (3) target process loads attacker DLL (module load) \u2192 (4) optional follow-on child activity or network egress from the target process.",
+            "description": "Abuse of mavinject.exe to inject DLLs or import descriptors into another running process. Chain: (1) mavinject.exe starts with /INJECTRUNNING or /HMODULE → (2) mavinject obtains high-access handles to a target process (VM_WRITE/CREATE_THREAD) → (3) target process loads attacker DLL (module load) → (4) optional follow-on child activity or network egress from the target process.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -66,33 +67,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval (e.g., 5\u201310 minutes) linking mavinject start \u2192 ProcessAccess \u2192 module load/network from the target process."
+                    "description": "Correlation interval (e.g., 5–10 minutes) linking mavinject start → ProcessAccess → module load/network from the target process.",
+                    "description_fa": "فاصله همبستگی (به عنوان مثال، 5 تا 10 دقیقه) که شروع mavinject → دسترسی به فرآیند → بارگذاری/شبکه ​​ماژول را از فرآیند هدف مرتبط می کند."
                 },
                 {
                     "field": "DLLPathRegex",
-                    "description": "Patterns for suspicious DLL locations (e.g., %TEMP%, Downloads, UNC shares) to reduce noise from legitimate injections."
+                    "description": "Patterns for suspicious DLL locations (e.g., %TEMP%, Downloads, UNC shares) to reduce noise from legitimate injections.",
+                    "description_fa": "الگوهایی برای مکان‌های DLL مشکوک (مانند %TEMP٪، بارگیری‌ها، اشتراک‌گذاری UNC) برای کاهش نویز ناشی از تزریق‌های قانونی."
                 },
                 {
                     "field": "TargetProcessAllowList",
-                    "description": "Common legitimate targets for App-V (if used) to suppress; flag unusual targets like browsers, LSASS, Winlogon, EDR processes."
+                    "description": "Common legitimate targets for App-V (if used) to suppress; flag unusual targets like browsers, LSASS, Winlogon, EDR processes.",
+                    "description_fa": "اهداف قانونی مشترک برای App-V (در صورت استفاده) برای سرکوب؛ اهداف غیرعادی مانند مرورگرها، LSASS، Winlogon، فرآیندهای EDR را علامت گذاری کنید."
                 },
                 {
                     "field": "MinGrantedAccessSet",
-                    "description": "Set of access rights that imply injection (VM_WRITE, VM_OPERATION, CREATE_THREAD). Tune for your EDR/sysmon formatting."
+                    "description": "Set of access rights that imply injection (VM_WRITE, VM_OPERATION, CREATE_THREAD). Tune for your EDR/sysmon formatting.",
+                    "description_fa": "مجموعه ای از حقوق دسترسی که مستلزم تزریق است (VM_WRITE، VM_OPERATION، CREATE_THREAD). برای قالب بندی EDR/sysmon خود تنظیم کنید."
                 },
                 {
                     "field": "ParentProcessFilter",
-                    "description": "Legitimate parents starting mavinject (e.g., App-V services) vs. suspicious parents (Office, script hosts, browsers)."
+                    "description": "Legitimate parents starting mavinject (e.g., App-V services) vs. suspicious parents (Office, script hosts, browsers).",
+                    "description_fa": "والدین مشروع در مقابل والدین مشکوک (Office، میزبان اسکریپت، مرورگرها) mavinject را شروع می کنند (به عنوان مثال، خدمات App-V)."
                 },
                 {
                     "field": "ExternalIPAllowlist",
-                    "description": "Known enterprise update/CDN ranges to exclude when correlating post-injection network activity."
+                    "description": "Known enterprise update/CDN ranges to exclude when correlating post-injection network activity.",
+                    "description_fa": "محدوده‌های به‌روزرسانی سازمانی/CDN شناخته شده برای حذف در هنگام مرتبط کردن فعالیت شبکه پس از تزریق."
                 },
                 {
                     "field": "SignedToUnsignedTransition",
-                    "description": "Alerting when Microsoft-signed mavinject leads to loading unsigned DLLs in a target process."
+                    "description": "Alerting when Microsoft-signed mavinject leads to loading unsigned DLLs in a target process.",
+                    "description_fa": "هشدار زمانی که mavinject امضا شده توسط مایکروسافت منجر به بارگیری DLL های بدون امضا در یک فرآیند هدف می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1207",
+            "description_fa": "سوء استفاده از mavinject.exe برای تزریق DLL یا وارد کردن توصیفگرها به فرآیند در حال اجرا دیگر. زنجیره: (1) mavinject.exe با /INJECTRUNNING یا /HMODULE شروع می‌شود. (2) mavinject دسته‌هایی با دسترسی بالا به یک فرآیند هدف به دست می‌آورد (VM_WRITE/CREATE_THREAD) ← (3) فرآیند هدف DLL مهاجم را بارگیری می‌کند (بار ماژول) → (4) خروجی اختیاری شبکه از فعالیت هدف یا فرآیند فرزند."
         }
     ]
 }

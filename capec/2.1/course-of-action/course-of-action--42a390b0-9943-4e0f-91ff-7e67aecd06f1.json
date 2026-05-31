@@ -13,7 +13,9 @@
             ],
             "spec_version": "2.1",
             "type": "course-of-action",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>تبدیل 7 به 8 بیت را غیرفعال کنید. این را می توان با حذف پرچم F=9 از تمام مشخصات Mailer در فایل sendmail.cf انجام داد.</xhtml:p>\n               <xhtml:p>به عنوان مثال، فایل sendmail.cf با این تغییرات اعمال شده باید شبیه به (بسته به سیستم و پیکربندی شما) باشد:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">Mlocal، P=/usr/libexec/mail.local، F=lsDFMAw5:/|@qrmn، S=10/30، R=20/40،<xhtml:div style=\"margin-left:1em;\">T=DNS/RFC822/X-Unix $vu>A=mail\n                  Mprog، P=/bin/sh، F=lsDFMoqeu، S=10/30، R=20/40،<xhtml:div style=\"margin-left:1em;\">D=$z:/,T=X-Unix,A=sh -c $u</xhtml:div>\n               </xhtml:div>\n               <xhtml:p>این را می توان برای Mailers \"Mlocal\" و \"Mprog\" با تغییر فایل \".mc\" به منظور شامل خطوط زیر بدست آورد:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">define(`LOCAL_MAILER_FLAGS',<xhtml:div style=\"margin-left:1em;\">ifdef(`LOCAL_MAILER_FLAGS',<xhtml:div style=\"margin-left:1em;\">`translit(LOCAL_MAILER_n'html)\n                  </xhtml:div>\n                  define(`LOCAL_SHELL_FLAGS',<xhtml:div style=\"margin-left:1em;\">ifdef(`LOCAL_SHELL_FLAGS',<xhtml:div style=\"margin-left:1em;\">`translit(LOCAL_SHELL_FLAGS, `9')',`html:div>\n                  </xhtml:div>\n               </xhtml:div>\n               <xhtml:p>و سپس فایل sendmail.cf را با استفاده از m4(1) بازسازی کنید.</xhtml:p>\n               <xhtml:p>از \"نرم افزار بهره برداری\"، لطفاً به مرجع زیر مراجعه کنید.</xhtml:p>",
+            "name_fa": "coa-42-1"
         }
     ],
     "type": "bundle"

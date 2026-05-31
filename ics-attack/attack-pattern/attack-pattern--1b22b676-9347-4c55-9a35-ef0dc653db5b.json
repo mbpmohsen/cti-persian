@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T0814",
-                    "external_id": "T0814"
+                    "external_id": "T0814",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Common Weakness Enumeration January 2019",
                     "description": "Common Weakness Enumeration 2019, January 03 CWE-400: Uncontrolled Resource Consumption Retrieved. 2019/03/14 ",
-                    "url": "http://cwe.mitre.org/data/definitions/400.html"
+                    "url": "http://cwe.mitre.org/data/definitions/400.html",
+                    "source_name_fa": "شمارش نقاط ضعف مشترک ژانویه 2019",
+                    "description_fa": "Common Weakness Enumeration 2019، 03 ژانویه CWE-400: مصرف منابع کنترل نشده بازیابی شد. 2019/03/14"
                 },
                 {
                     "source_name": "ICS-CERT April 2017",
                     "description": "ICS-CERT 2017, April 18 CS Alert (ICS-ALERT-17-102-01A) BrickerBot Permanent Denial-of-Service Attack Retrieved. 2019/10/24 ",
-                    "url": "https://www.us-cert.gov/ics/alerts/ICS-ALERT-17-102-01A"
+                    "url": "https://www.us-cert.gov/ics/alerts/ICS-ALERT-17-102-01A",
+                    "source_name_fa": "ICS-CERT آوریل 2017",
+                    "description_fa": "ICS-CERT 2017، 18 آوریل CS Alert (ICS-ALERT-17-102-01A) BrickerBot Permanent Denial-of-Service Attack بازیابی شد. 2019/10/24"
                 },
                 {
                     "source_name": "ICS-CERT August 2018",
                     "description": "ICS-CERT 2018, August 27 Advisory (ICSA-15-202-01) - Siemens SIPROTEC Denial-of-Service Vulnerability Retrieved. 2019/03/14 ",
-                    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-202-01"
+                    "url": "https://ics-cert.us-cert.gov/advisories/ICSA-15-202-01",
+                    "source_name_fa": "ICS-CERT آگوست 2018",
+                    "description_fa": "ICS-CERT 2018، مشاوره 27 آگوست (ICSA-15-202-01) - آسیب پذیری انکار سرویس Siemens SIPROTEC بازیابی شد. 2019/03/14"
                 },
                 {
                     "source_name": "MITRE March 2018",
                     "description": "MITRE 2018, March 22 CVE-2015-5374 Retrieved. 2019/03/14 ",
-                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5374"
+                    "url": "https://nvd.nist.gov/vuln/detail/CVE-2015-5374",
+                    "source_name_fa": "MITER مارس 2018",
+                    "description_fa": "MITER 2018، 22 مارس CVE-2015-5374 بازیابی شده است. 2019/03/14"
                 }
             ],
             "object_marking_refs": [
@@ -58,7 +67,9 @@
             "x_mitre_platforms": [
                 "None"
             ],
-            "x_mitre_version": "1.1"
+            "x_mitre_version": "1.1",
+            "name_fa": "انکار خدمات",
+            "description_fa": "دشمنان ممکن است حملات Denial-of-Service (DoS) را برای اختلال در عملکرد دستگاه مورد انتظار انجام دهند. نمونه‌هایی از حملات DoS شامل غلبه بر دستگاه هدف با حجم بالایی از درخواست‌ها در مدت زمان کوتاه و ارسال درخواستی به دستگاه مورد نظر که نمی‌داند چگونه رسیدگی کند. ایجاد اختلال در وضعیت دستگاه ممکن است موقتاً آن را بی پاسخ کند و احتمالاً تا زمانی که راه‌اندازی مجدد رخ دهد ادامه پیدا کند. هنگامی که دستگاه ها در این حالت قرار می گیرند، ممکن است قادر به ارسال و دریافت درخواست نباشند و ممکن است عملکردهای پاسخ مورد انتظار را در واکنش به سایر رویدادهای محیط انجام ندهند. \n\nبرخی از دستگاه‌های ICS به ویژه به رویدادهای DoS حساس هستند و ممکن است در واکنش به یک پینگ ساده پاسخگو نباشند. دشمنان همچنین ممکن است تلاش کنند تا یک انکار دائمی سرویس (PDoS) را علیه برخی دستگاه‌ها، مانند بدافزار BrickerBot، اجرا کنند. (Citation: ICS-CERT April 2017) \n\nدشمنان ممکن است با سوء استفاده از یک خطای برنامه‌نویسی در یک برنامه، سرویس یا درون نرم‌افزار سیستم‌عامل یا خود هسته، از یک آسیب‌پذیری نرم‌افزار برای ایجاد انکار سرویس برای اجرای کدهای کنترل‌شده توسط دشمن سوء استفاده کنند. ممکن است آسیب‌پذیری‌هایی در نرم‌افزاری وجود داشته باشد که می‌تواند برای ایجاد شرایط انکار سرویس مورد استفاده قرار گیرد. \n\nممکن است دشمنان از طریق [Remote System Information Discovery] (https://attack.mitre.org/techniques/T0888) اطلاعات قبلی درباره پروتکل‌های صنعتی یا دستگاه‌های کنترلی مورد استفاده در محیط داشته باشند. نمونه‌هایی از دشمنان وجود دارد که از راه دور با استفاده از یک آسیب‌پذیری که باعث مصرف کنترل‌نشده منابع می‌شود، [Device Restart/Shutdown](https://attack.mitre.org/techniques/T0816) ایجاد می‌کنند. (Citation: ICS-CERT August 2018) (Citation: Common Weakness Enumeration January 2019) (Citation: MITRE March 2018)"
         }
     ]
 }

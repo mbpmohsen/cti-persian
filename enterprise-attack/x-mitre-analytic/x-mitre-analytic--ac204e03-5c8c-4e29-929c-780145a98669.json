@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0447#AN1239",
-                    "external_id": "AN1239"
+                    "external_id": "AN1239",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ContainerContext",
-                    "description": "Distinguish between ephemeral containers and long-lived service containers"
+                    "description": "Distinguish between ephemeral containers and long-lived service containers",
+                    "description_fa": "بین ظروف زودگذر و ظروف خدماتی با عمر طولانی تمایز قائل شوید"
                 },
                 {
                     "field": "NamespaceScope",
-                    "description": "Determine if account was added inside host, user, or PID namespace"
+                    "description": "Determine if account was added inside host, user, or PID namespace",
+                    "description_fa": "تعیین کنید که آیا حساب در فضای نام میزبان، کاربر یا PID اضافه شده است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1239",
+            "description_fa": "حساب ایجاد شده در یک محفظه در حال اجرا (به عنوان مثال، از طریق \"useradd\" یا با تغییر مستقیم /etc/passwd). قابل تشخیص از طریق تله متری زمان اجرا (به عنوان مثال، قلاب های Falco یا eBPF)."
         }
     ]
 }

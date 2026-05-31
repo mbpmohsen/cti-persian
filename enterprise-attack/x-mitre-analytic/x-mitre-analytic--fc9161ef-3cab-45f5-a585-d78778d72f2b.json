@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0219#AN0612",
-                    "external_id": "AN0612"
+                    "external_id": "AN0612",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedHostPaths",
-                    "description": "List of directories permitted for hostPath volumes. Any access beyond these paths may be suspicious."
+                    "description": "List of directories permitted for hostPath volumes. Any access beyond these paths may be suspicious.",
+                    "description_fa": "فهرست دایرکتوری های مجاز برای حجم های hostPath. هرگونه دسترسی فراتر از این مسیرها ممکن است مشکوک باشد."
                 },
                 {
                     "field": "PrivilegedContainerThreshold",
-                    "description": "Number of privileged container launches expected in the environment. Exceeding this may indicate adversary behavior."
+                    "description": "Number of privileged container launches expected in the environment. Exceeding this may indicate adversary behavior.",
+                    "description_fa": "تعداد پرتاب کانتینر ممتاز مورد انتظار در محیط. بیش از این ممکن است نشان دهنده رفتار دشمن باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0612",
+            "description_fa": "شناسایی تلاش‌های فرار کانتینر از طریق پایه‌های اتصال، کانتینرهای ممتاز یا سوء استفاده از docker.sock. مدافعان ممکن است پیکربندی‌های تنظیم حجم غیرعادی (مانند hostPath به / یا /proc)، راه‌اندازی کانتینر ممتاز غیرمنتظره یا استفاده از دستورات مدیریت کانتینر برای دسترسی به منابع میزبان را مشاهده کنند. این رویدادها معمولاً با اجرای فرآیند بعدی در میزبان خارج از جداسازی کانتینر معمولی مرتبط هستند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0119#AN0332",
-                    "external_id": "AN0332"
+                    "external_id": "AN0332",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredToolsList",
-                    "description": "Define the list of steganographic or image-parsing tools to alert on (e.g., `steghide`, `imagemagick`)"
+                    "description": "Define the list of steganographic or image-parsing tools to alert on (e.g., `steghide`, `imagemagick`)",
+                    "description_fa": "فهرستی از ابزارهای استگانوگرافی یا تجزیه تصویر را برای هشدار تعریف کنید (به عنوان مثال، \"steghide\"، \"imagemagick\")"
                 },
                 {
                     "field": "ScriptInterpreterMatch",
-                    "description": "Tune to detect script engines accessing media files (e.g., `python script.py image.png`)"
+                    "description": "Tune to detect script engines accessing media files (e.g., `python script.py image.png`)",
+                    "description_fa": "برای شناسایی موتورهای اسکریپت که به فایل‌های رسانه‌ای (مانند «python script.py image.png») دسترسی دارند، تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0332",
+            "description_fa": "دسترسی به فایل‌های رسانه‌ای را شناسایی می‌کند و به دنبال آن اسکریپت‌هایی (bash، Python، و غیره) که به همان فایل‌ها ارجاع می‌دهند، یا ترافیک خروجی که مدت کوتاهی پس از خواندن فایل فعال می‌شود را شناسایی می‌کند. استفاده غیرمعمول از ابزارهایی مانند «steghide»، «exiftool» یا کتابخانه های تصویر را به هم مرتبط می کند."
         }
     ]
 }

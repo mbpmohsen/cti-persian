@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1422",
-                    "external_id": "T1422"
+                    "external_id": "T1422",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "NetworkInterface",
                     "description": "Android. (n.d.). NetworkInterface. Retrieved December 21, 2016.",
-                    "url": "https://developer.android.com/reference/java/net/NetworkInterface.html"
+                    "url": "https://developer.android.com/reference/java/net/NetworkInterface.html",
+                    "source_name_fa": "رابط شبکه",
+                    "description_fa": "اندروید. (n.d.). رابط شبکه بازبینی شده در 21 دسامبر 2016."
                 },
                 {
                     "source_name": "TelephonyManager",
                     "description": "Android. (n.d.). TelephonyManager. Retrieved December 21, 2016.",
-                    "url": "https://developer.android.com/reference/android/telephony/TelephonyManager.html"
+                    "url": "https://developer.android.com/reference/android/telephony/TelephonyManager.html",
+                    "source_name_fa": "مدیر تلفن",
+                    "description_fa": "اندروید. (n.d.). مدیر تلفن. بازبینی شده در 21 دسامبر 2016."
                 }
             ],
             "object_marking_refs": [
@@ -52,7 +57,9 @@
             "x_mitre_version": "2.4",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "کشف پیکربندی شبکه سیستم",
+            "description_fa": "دشمنان ممکن است به دنبال جزئیات مربوط به پیکربندی و تنظیمات شبکه، مانند آدرس‌های IP و/یا MAC، دستگاه‌هایی باشند که به آنها دسترسی دارند یا از طریق کشف اطلاعات سیستم‌های راه دور. \n\nدشمنان ممکن است از اطلاعات [System Network Configuration](https://attack.mitre.org/techniques/T1422) در طول کشف خودکار برای شکل دادن به رفتارهای بعدی، از جمله تعیین دسترسی خاص در شبکه هدف و اقدامات بعدی استفاده کنند. \n\nدر Android، جزئیات رابط‌های شبکه داخلی از طریق کلاس «java.net.NetworkInterface» در دسترس برنامه‌ها است.(Citation: NetworkInterface) قبلاً، کلاس «TelephonyManager» Android می‌توانست برای جمع‌آوری شناسه‌های دستگاه مربوط به تلفن، اطلاعاتی مانند IMSI، IMEI و شماره تلفن استفاده شود. با این حال، با شروع Android 10، فقط برنامه‌های از پیش بارگذاری‌شده، شرکت مخابراتی، پیامک پیش‌فرض، یا برنامه‌های مالک دستگاه و نمایه می‌توانند به شناسه‌های دستگاه مربوط به تلفن دسترسی داشته باشند.(Citation: TelephonyManager) \n\n \n\nدر iOS، جمع آوری اطلاعات پیکربندی شبکه بدون دسترسی روت امکان پذیر نیست. \n\n \n\nدشمنان ممکن است از اطلاعات [System Network Configuration](https://attack.mitre.org/techniques/T1422) در طول کشف خودکار برای شکل دادن به رفتارهای بعدی، از جمله تعیین دسترسی معین در شبکه هدف و اقدامات بعدی استفاده کنند."
         }
     ]
 }

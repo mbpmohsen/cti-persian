@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0058#AN0161",
-                    "external_id": "AN0161"
+                    "external_id": "AN0161",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DestinationIP",
-                    "description": "Identifies unusual IP destinations embedded in traffic"
+                    "description": "Identifies unusual IP destinations embedded in traffic",
+                    "description_fa": "مقصدهای IP غیرمعمول تعبیه شده در ترافیک را شناسایی می کند"
                 },
                 {
                     "field": "Protocol",
-                    "description": "Used to detect uncommon protocols (e.g., DNS over HTTPS)"
+                    "description": "Used to detect uncommon protocols (e.g., DNS over HTTPS)",
+                    "description_fa": "برای شناسایی پروتکل‌های غیر معمول (مانند DNS از طریق HTTPS) استفاده می‌شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Used to correlate outbound web requests with process execution"
+                    "description": "Used to correlate outbound web requests with process execution",
+                    "description_fa": "برای ارتباط درخواست های وب خروجی با اجرای فرآیند استفاده می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0161",
+            "description_fa": "شناسایی یک فرآیند یا اسکریپت که به یک وب سرویس مشترک برای بازیابی محتوای حاوی نشانگرهای مبهم یک سرور C2 ثانویه (رفتار حل کننده قطره مرده) دسترسی دارد."
         }
     ]
 }

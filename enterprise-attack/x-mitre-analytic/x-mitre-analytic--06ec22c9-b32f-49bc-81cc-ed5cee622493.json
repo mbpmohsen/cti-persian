@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0452#AN1247",
-                    "external_id": "AN1247"
+                    "external_id": "AN1247",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CertificatePathList",
-                    "description": "Paths to monitor for changes depending on distro-specific trust locations"
+                    "description": "Paths to monitor for changes depending on distro-specific trust locations",
+                    "description_fa": "مسیرهایی برای نظارت بر تغییرات بسته به مکان‌های اعتماد توزیعی خاص"
                 },
                 {
                     "field": "RegexPatterns",
-                    "description": "Regex patterns for suspicious use of xattr or openssl parameters"
+                    "description": "Regex patterns for suspicious use of xattr or openssl parameters",
+                    "description_fa": "الگوهای Regex برای استفاده مشکوک از پارامترهای xattr یا openssl"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1247",
+            "description_fa": "تشخیص دستکاری ویژگی های گسترده (xattr) را برای حذف قرنطینه یا متادیتای اعتماد، نصب غیرعادی گواهینامه های ریشه در /etc/ssl یا /usr/local/share/ca-certificates و اصلاح غیرمجاز فروشگاه های اعتماد سیستم، نظارت می کند. با اجرای فرآیند غیرمنتظره شامل مدیران بسته یا ابزارهای گواهی سفارشی مرتبط است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0387#AN1091",
-                    "external_id": "AN1091"
+                    "external_id": "AN1091",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedGatewayMAC",
-                    "description": "Expected MAC address for default gateways; deviations may indicate poisoning."
+                    "description": "Expected MAC address for default gateways; deviations may indicate poisoning.",
+                    "description_fa": "آدرس MAC مورد انتظار برای دروازه های پیش فرض. انحراف ممکن است نشان دهنده مسمومیت باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval for repeated unsolicited ARP replies."
+                    "description": "Correlation interval for repeated unsolicited ARP replies.",
+                    "description_fa": "فاصله همبستگی برای پاسخ های مکرر ARP ناخواسته."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1091",
+            "description_fa": "ترافیک غیرعادی ARP یا تغییرات حافظه پنهان را در نقاط انتهایی ویندوز که نشان دهنده مسمومیت ARP هستند را شناسایی می کند. تمرکز رفتاری روی چندین آدرس IP است که به یک MAC یا پاسخ‌های ARP ناخواسته از دستگاه‌های غیرمجاز حل می‌شوند."
         }
     ]
 }

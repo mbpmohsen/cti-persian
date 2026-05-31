@@ -9,47 +9,60 @@
                 {
                     "external_id": "CAPEC-695",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/695.html"
+                    "url": "https://capec.mitre.org/data/definitions/695.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-494",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/494.html"
+                    "url": "http://cwe.mitre.org/data/definitions/494.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
                     "external_id": "T1195.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001",
+                    "description_fa": "مصالحه با زنجیره تامین: وابستگی های نرم افزاری و ابزارهای توسعه را به خطر بیاندازید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Indiana Moreau, Repo Jacking: Exploiting the Dependency Supply Chain, 2020--10---22, Security Innovation",
                     "external_id": "REF-722",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.concretecms.org/about/project-news/security/supply-chain-hack-phpass-repo-jacking"
+                    "url": "https://www.concretecms.org/about/project-news/security/supply-chain-hack-phpass-repo-jacking",
+                    "description_fa": "ایندیانا مورو، Repo Jacking: Exploiting the Dependency Supply Chain، 2020--10---22، نوآوری امنیتی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Theo Burton, CyRC Vulnerability Analysis: Repo jacking in the software supply chain, 2022--08---02, Synopsys",
                     "external_id": "REF-732",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.synopsys.com/blogs/software-security/cyrc-vulnerability-analysis-repo-jacking/"
+                    "url": "https://www.synopsys.com/blogs/software-security/cyrc-vulnerability-analysis-repo-jacking/",
+                    "description_fa": "تئو برتون، تجزیه و تحلیل آسیب پذیری CyRC: جک کردن Repo در زنجیره تامین نرم افزار، 2022--08---02، Synopsys",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jossef Harush, Attacker Caught Hijacking Packages Using Multiple Techniques to Steal AWS Credentials, 2022--05---25, Checkmarx",
                     "external_id": "REF-733",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://checkmarx.com/blog/attacker-caught-hijacking-packages-using-multiple-techniques-to-steal-aws-credentials/"
+                    "url": "https://checkmarx.com/blog/attacker-caught-hijacking-packages-using-multiple-techniques-to-steal-aws-credentials/",
+                    "description_fa": "جوزف هاروش، مهاجم در حال ربودن بسته‌ها با استفاده از تکنیک‌های متعدد برای سرقت اعتبارنامه AWS، 2022--05---25، Checkmarx دستگیر شد.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jossef Harush, GitHub RepoJacking Weakness Exploited in the Wild by Attackers, 2022--05---27, Checkmarx",
                     "external_id": "REF-734",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://checkmarx.com/blog/github-repojacking-weakness-exploited-in-the-wild-by-attackers/"
+                    "url": "https://checkmarx.com/blog/github-repojacking-weakness-exploited-in-the-wild-by-attackers/",
+                    "description_fa": "Jossef Harush، GitHub RepoJacking Weakness مورد سوء استفاده در طبیعت توسط مهاجمان، 2022--05---27، Checkmarx",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a0315bde-71b9-4e1b-9087-c82c3f4c7f36",
@@ -77,6 +90,20 @@
                 "Integrity": [
                     "Read Data",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را بخوانید",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -98,11 +125,24 @@
                 "A repository owner/maintainer who has recently changed their username or deleted their account"
             ],
             "x_capec_skills_required": {
-                "Low": "Ability to create malware that can exploit various software applications."
+                "Low": "Ability to create malware that can exploit various software applications.",
+                "Low_fa": "امکان ایجاد بدافزاری که می تواند از برنامه های نرم افزاری مختلف سوء استفاده کند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن از ویژگی تغییر مسیر مخازن سیستم کنترل نسخه (VCS) با پیوند مستقیم استفاده می‌کند تا کاربران را فریب دهد تا کدهای مخرب را در برنامه‌های خود بگنجانند.</xhtml:p>",
+            "name_fa": "Repo Jacking",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> در ماه مه 2022، بسته CTX Python و بسته PhPass PHP هر دو توسط یک دشمن از طریق حملات Repo Jacking مورد سوء استفاده قرار گرفتند. برای بسته CTX، دشمن از طریق بازنشانی رمز عبور، به دلیل منقضی شدن ایمیل میزبان دامنه، حساب کاربری را تصاحب کرد. حمله به PhPass مستلزم دور زدن احراز هویت GitHub برای مخازن بازنشسته بود. در هر دو مورد، داده های حساس در قالب کلیدهای API و رمزهای عبور، که هر کدام در قالب متغیرهای محیطی ذخیره شده بودند، استخراج شدند. [REF-732] [REF-733]</xhtml:p>",
+                "<xhtml:p>در اکتبر 2021، کتابخانه محبوب جاوا اسکریپت UAParser.js از طریق تصاحب حساب Node Package Manager (NPM) نویسنده مورد سوء استفاده قرار گرفت. بدافزار ارائه شده توسط دشمن، فایل های باینری را از یک سرور راه دور دانلود و اجرا کرد تا استخراج رمزنگاری و استخراج داده های حساس در سیستم های ویندوز را انجام دهد. این یک حمله در مقیاس گسترده بود زیرا بسته 8 تا 9 میلیون بارگیری در هفته دریافت می کند. [REF-732]</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی هدف: </b>دشمن ابتدا باید مخزن هدفی را شناسایی کند که معمولاً استفاده می‌شود و مالک/نگهبان آن نام کاربری خود را تغییر/حذف کرده یا مالکیت مخزن را منتقل کرده و سپس حساب خود را حذف کند. هدف معمولاً باید یک بسته محبوب و پرکاربرد باشد تا دامنه حمله را افزایش دهد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>مسیر مخزن اولیه را دوباره ایجاد کنید: </b>دشمن حسابی را که مجدداً نامگذاری شده/هدف را ایجاد می‌کند/مصرف کننده را مجدداً ایجاد می‌کند/حذف می‌کند. مخزن با کد مخرب برای سوء استفاده از یک برنامه. اگر برای جلوگیری از استفاده مجدد از مخزن، محافظت‌هایی وجود داشته باشد، ممکن است لازم باشد این مراحل به صورت معکوس انجام شوند (یعنی مخزن را دوباره ایجاد کنید و سپس نام حساب موجود را به حساب هدف تغییر دهید). به مخزن اولیه اشاره کنید، که بیشتر به دشمن اجازه می دهد تا حملات بیشتری انجام دهد.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>توسعه‌دهندگان نرم‌افزار ممکن است مستقیماً به یک مخزن VCS (یعنی از طریق یک URL رمزگذاری‌شده) در کد منبع ارجاع دهند تا مخزن را به عنوان یک وابستگی برای برنامه اصلی یکپارچه کنند. اگر صاحب / نگهدارنده مخزن نام مخزن را تغییر دهد، نام کاربری VCS خود را تغییر دهد یا مالکیت مخزن را منتقل کند، VCS تغییر مسیری را به مکان مخزن جدید اجرا می کند تا نرم افزار موجود که به مخزن ارجاع می دهد خراب نشود. با این حال، اگر مکان اصلی مخزن مجدداً ایجاد شود، VCS به حل مسیر کدگذاری شده باز می گردد. بنابراین، دشمنان می‌توانند نام‌های کاربری حذف شده یا استفاده شده قبلی را مجدداً ثبت کنند و مخازن با کد مخرب را مجدداً ایجاد کنند تا برنامه‌هایی را که به مخزن ارجاع می‌دهند آلوده کنند. هنگامی که یک برنامه وابستگی مورد نظر را واکشی می کند، اکنون به مخزن مخرب حریف ارجاع می دهد زیرا مسیر مخزن کدگذاری شده دوباره فعال است. این در نهایت به دشمن اجازه می‌دهد تا برنامه‌های متعددی را آلوده کند، در حالی که به انواع تأثیرات فنی منفی دست می‌یابد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "شناسایی یک مخزن محبوب که ممکن است مستقیماً در برنامه های نرم افزاری متعددی به آن ارجاع داده شود",
+                "مالک/نگهدار مخزن که اخیراً نام کاربری خود را تغییر داده یا حساب خود را حذف کرده است"
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0183#AN0516",
-                    "external_id": "AN0516"
+                    "external_id": "AN0516",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time period between file transfer and execution used to correlate events"
+                    "description": "Time period between file transfer and execution used to correlate events",
+                    "description_fa": "بازه زمانی بین انتقال فایل و اجرا برای مرتبط کردن رویدادها استفاده می شود"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Accounts allowed to perform legitimate administrative transfers"
+                    "description": "Accounts allowed to perform legitimate administrative transfers",
+                    "description_fa": "حساب هایی که مجاز به انجام نقل و انتقالات اداری قانونی هستند"
                 },
                 {
                     "field": "FilePathWhitelist",
-                    "description": "Exclude known legitimate software update directories"
+                    "description": "Exclude known legitimate software update directories",
+                    "description_fa": "فهرست راهنماهای به‌روزرسانی نرم‌افزار قانونی شناخته شده را حذف کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0516",
+            "description_fa": "انتقال فایل‌های مشکوک از طریق اشتراک‌گذاری‌های SMB یا Admin$ را با رویدادهای ایجاد فرآیند (مانند cmd.exe، powershell.exe، certutil.exe) که با رفتار اداری عادی همخوانی ندارند، مرتبط کنید. شناسایی فایل های از راه دور می نویسد و به دنبال آن اجرای باینری های منتقل شده."
         }
     ]
 }

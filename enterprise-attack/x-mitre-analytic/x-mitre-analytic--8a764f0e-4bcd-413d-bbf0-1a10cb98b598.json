@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0290#AN0806",
-                    "external_id": "AN0806"
+                    "external_id": "AN0806",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptPath",
-                    "description": "Match scheduled binary path to trusted directory baseline."
+                    "description": "Match scheduled binary path to trusted directory baseline.",
+                    "description_fa": "مسیر باینری برنامه ریزی شده را با خط پایه دایرکتوری مورد اعتماد مطابقت دهید."
                 },
                 {
                     "field": "CronScheduleSyntax",
-                    "description": "Flags excessive frequency or wildcard-heavy cron expressions."
+                    "description": "Flags excessive frequency or wildcard-heavy cron expressions.",
+                    "description_fa": "فرکانس بیش از حد یا عبارت‌های cron با حروف عامیانه را پرچم‌گذاری می‌کند."
                 },
                 {
                     "field": "InteractiveUserContext",
-                    "description": "Limit cron job writes from interactive shells."
+                    "description": "Limit cron job writes from interactive shells.",
+                    "description_fa": "نوشتن cron job از پوسته های تعاملی را محدود کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0806",
+            "description_fa": "اضافه‌ها یا تغییرات کار crontab را از طریق ابزار «crontab» یا ویرایش‌های مستقیم، به‌ویژه مواردی که توسط کاربران تعاملی که اسکریپت‌های پنهان یا تغییر نام داده شده را اجرا می‌کنند، ایجاد می‌کند."
         }
     ]
 }

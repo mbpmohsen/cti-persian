@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0452#AN1246",
-                    "external_id": "AN1246"
+                    "external_id": "AN1246",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedPublisherList",
-                    "description": "Baseline list of approved certificate authorities that should not change frequently"
+                    "description": "Baseline list of approved certificate authorities that should not change frequently",
+                    "description_fa": "فهرست پایه مقامات گواهی تایید شده که نباید به طور مکرر تغییر کنند"
                 },
                 {
                     "field": "FilePathAllowList",
-                    "description": "Exclusions for legitimate enterprise-signed binaries stored in unusual directories"
+                    "description": "Exclusions for legitimate enterprise-signed binaries stored in unusual directories",
+                    "description_fa": "موارد استثنا برای باینری های قانونی امضا شده توسط سازمانی ذخیره شده در دایرکتوری های غیر معمول"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for registry + file + process activity"
+                    "description": "Correlation window for registry + file + process activity",
+                    "description_fa": "پنجره همبستگی برای رجیستری + فایل + فعالیت فرآیند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1246",
+            "description_fa": "شناسایی با نصب یا اصلاح غیرعادی گواهی‌های امضای ریشه یا کد، ایجاد/تغییر کلیدهای رجیستری مشکوک برای ارائه‌دهندگان اعتماد، و بارگذاری‌های غیرعادی ماژول از مکان‌های غیر استاندارد مرتبط است. فایل های اجرایی بدون امضا یا امضا نادرست را با دور زدن اعلان های اعتماد، همراه با مصنوعات پایدار شناسایی می کند."
         }
     ]
 }

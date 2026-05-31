@@ -9,13 +9,16 @@
                 {
                     "external_id": "CAPEC-631",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/631.html"
+                    "url": "https://capec.mitre.org/data/definitions/631.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Nick Nikiforakis, Marco Balduzzi, Lieven Desmet, Frank Piessens, Wouter Joosen, Soundsquatting: Uncovering the Use of Homophones in Domain Squatting, Trend Micro",
                     "external_id": "REF-491",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.trendmicro.de/cloud-content/us/pdfs/security-intelligence/white-papers/wp-soundsquatting.pdf"
+                    "url": "https://www.trendmicro.de/cloud-content/us/pdfs/security-intelligence/white-papers/wp-soundsquatting.pdf",
+                    "description_fa": "نیک نیکیفوراکیس، مارکو بالدوزی، لیون دزمت، فرانک پیسنز، ووتر جوسن، Soundsquatting: کشف استفاده از هموفون در دامنه اسکوات، Trend Micro",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a2cad567-3a04-4ef3-8b62-25924c93b53f",
@@ -43,6 +46,9 @@
             "x_capec_consequences": {
                 "Other": [
                     "Other (Depending on the intention of the adversary, a successful SoundSquatting attack can be leveraged to execute more complex attacks such as cross-site scripting or stealing account credentials.)"
+                ],
+                "Other_fa": [
+                    "سایر موارد (بسته به قصد حریف، یک حمله موفق SoundSquatting می تواند برای اجرای حملات پیچیده تری مانند اسکریپت بین سایتی یا سرقت اعتبار حساب کاربری مورد استفاده قرار گیرد.)"
                 ]
             },
             "x_capec_domains": [
@@ -57,11 +63,21 @@
                 "An adversary requires knowledge of popular or high traffic domains, that could be used to deceive potential targets."
             ],
             "x_capec_skills_required": {
-                "Low": "Adversaries must be able to register DNS hostnames/URL’s."
+                "Low": "Adversaries must be able to register DNS hostnames/URL’s.",
+                "Low_fa": "دشمنان باید بتوانند نام هاست DNS/URL را ثبت کنند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف نام دامنه ای را ثبت می کند که صدای آن شبیه به دامنه مورد اعتماد است، اما املای متفاوتی دارد. حمله SoundSquatting از اشتباه کاربر در دو کلمه استفاده می کند تا ترافیک اینترنت را به مقصدهای تحت کنترل دشمن هدایت کند. SoundSquatting نیازی به حمله علیه دامنه مورد اعتماد یا مهندسی معکوس پیچیده ندارد.",
+            "name_fa": "SoundSquatting",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک دشمن با جعل هویت وب‌سایت بانکی محبوب garantbanking.com، ایمیلی را برای کاربر ارسال می‌کند و می‌گوید که به تازگی سپرده جدیدی دریافت کرده است و روی پیوند داده شده برای تأیید سپرده کلیک می‌کند.</xhtml:p>\n               <xhtml:p>با این حال، پیوندی که در ایمیل است به جای garantanking.com، guarantybanking.com است که کاربر بدون خواندن کامل پیوند، روی آن کلیک می کند.</xhtml:p>\n               <xhtml:p>کاربر به وب‌سایت حریف هدایت می‌شود، که به نظر می‌رسد صفحه ورود قانونی garantbanking.com است.</xhtml:p>\n               <xhtml:p>کاربر فکر می‌کند که به حساب خود وارد می‌شود، اما در واقع اعتبار تضمین بانکی خود را به حریف داده است. حریف اکنون می‌تواند از اعتبار قانونی تضمین‌بانکینگ.com کاربر برای ورود به حساب کاربر استفاده کند و هرگونه پولی را که ممکن است در حساب موجود باشد به سرقت ببرد.</xhtml:p>همچنین ببینید: آسیب‌پذیری SoundSquatting به دشمن اجازه می‌دهد یک دامنه مورد اعتماد را جعل کند و سردرگمی کاربر را که بین دو کلمه نادرست کاربر تلفظ می‌کنند، ایجاد می‌کند. اعتبارنامه"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین وب‌سایت هدف: </b> دشمن ابتدا تعیین می‌کند که کدام وب‌سایت را جعل کند، معمولاً وب‌سایتی که قابل اعتماد است، مقدار ثابتی از ترافیک دریافت می‌کند، و هموفون.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>در وب‌سایت‌های پربازدید یا پربازدید که هم‌آوانگ هستند، تحقیق کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>معتبر در دامنه مورد اعتماد: <p> <b> دامنه، حریف باید URL SoundSquatted را ثبت کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دامنه SoundSquatted را ثبت کنید.</td></tr></tbody></table></ol></div><div><h3>Exploit <div><h3>Exploit <div><h3>Exploit</h3>Description</h3>Description. </b>در نهایت، دشمن باید کاربر را برای بازدید از دامنه SoundSquatted فریب دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک حمله فیشینگ را اجرا کنید و یک ایمیل برای کاربر ارسال کنید که کاربر را متقاعد کند تا روی پیوندی کلیک کند که کاربر را به دامنه Sound. اینکه کاربر به طور ناخواسته از همفون در URL استفاده می کند و کاربر را به دامنه SoundSquatted هدایت می کند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "یک حریف به دانش دامنه های محبوب یا پرترافیک نیاز دارد که می تواند برای فریب دادن اهداف بالقوه مورد استفاده قرار گیرد."
+            ]
         }
     ],
     "type": "bundle"

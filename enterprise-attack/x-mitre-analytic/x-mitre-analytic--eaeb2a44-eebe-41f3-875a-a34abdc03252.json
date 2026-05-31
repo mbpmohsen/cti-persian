@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0526#AN1458",
-                    "external_id": "AN1458"
+                    "external_id": "AN1458",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ArchiveExtensions",
-                    "description": "List of file extensions treated as suspicious when created outside of expected paths."
+                    "description": "List of file extensions treated as suspicious when created outside of expected paths.",
+                    "description_fa": "فهرست پسوندهای فایل که وقتی خارج از مسیرهای مورد انتظار ایجاد می شوند مشکوک تلقی می شوند."
                 },
                 {
                     "field": "ProcessAllowlist",
-                    "description": "Known business processes permitted to use compression/encryption utilities."
+                    "description": "Known business processes permitted to use compression/encryption utilities.",
+                    "description_fa": "فرآیندهای تجاری شناخته شده مجاز به استفاده از ابزارهای فشرده سازی/رمزگذاری هستند."
                 },
                 {
                     "field": "FileSizeThresholdMB",
-                    "description": "Minimum file size for flagging archive creation to reduce noise from benign small compressions."
+                    "description": "Minimum file size for flagging archive creation to reduce noise from benign small compressions.",
+                    "description_fa": "حداقل اندازه فایل برای پرچم‌گذاری ایجاد آرشیو برای کاهش نویز ناشی از فشرده‌سازی‌های کوچک خوش‌خیم."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1458",
+            "description_fa": "بایگانی متخاصم فایل‌ها را قبل از استخراج با همبستگی اجرای ابزارهای فشرده‌سازی/رمزگذاری (مانند makecab.exe، rar.exe، 7z.exe، powershell Compress-Archive) با ایجاد فایل‌های فشرده یا رمزگذاری‌شده بزرگ شناسایی می‌کند. سلسله فرآیندهای غیرعادی شامل استفاده از crypt32.dll، آرگومان های خط فرمان با احضار سوئیچ های فشرده سازی، و عملیات نوشتن فایل در فهرست های موقت یا مرحله بندی را شناسایی می کند."
         }
     ]
 }

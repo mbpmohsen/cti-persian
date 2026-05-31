@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0221#AN0620",
-                    "external_id": "AN0620"
+                    "external_id": "AN0620",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutableName",
-                    "description": "Capture binaries like arecord, parecord, or ffmpeg."
+                    "description": "Capture binaries like arecord, parecord, or ffmpeg.",
+                    "description_fa": "باینری هایی مانند arecord، parecord یا ffmpeg را ضبط کنید."
                 },
                 {
                     "field": "DevicePath",
-                    "description": "Log attempts to access /dev/snd/*, /dev/dsp, /proc/asound/*."
+                    "description": "Log attempts to access /dev/snd/*, /dev/dsp, /proc/asound/*.",
+                    "description_fa": "گزارش تلاش می کند به /dev/snd/*، /dev/dsp، /proc/asound/* دسترسی پیدا کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Whether the user has audio access rights or is running under elevated privileges."
+                    "description": "Whether the user has audio access rights or is running under elevated privileges.",
+                    "description_fa": "این که آیا کاربر دارای حقوق دسترسی به صدا است یا تحت امتیازات بالا در حال اجرا است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0620",
+            "description_fa": "فرآیندهای دسترسی به دستگاه‌های ALSA/PulseAudio یا اجرای فایل‌های باینری ضبط صدا مانند «arecord» و به دنبال آن ایجاد فایل یا ایجاد فرآیند مشکوک فرزند."
         }
     ]
 }

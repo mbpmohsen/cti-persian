@@ -9,75 +9,93 @@
                 {
                     "external_id": "CAPEC-21",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/21.html"
+                    "url": "https://capec.mitre.org/data/definitions/21.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-290",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/290.html"
+                    "url": "http://cwe.mitre.org/data/definitions/290.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-302",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/302.html"
+                    "url": "http://cwe.mitre.org/data/definitions/302.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-346",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/346.html"
+                    "url": "http://cwe.mitre.org/data/definitions/346.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-539",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/539.html"
+                    "url": "http://cwe.mitre.org/data/definitions/539.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-6",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/6.html"
+                    "url": "http://cwe.mitre.org/data/definitions/6.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-384",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/384.html"
+                    "url": "http://cwe.mitre.org/data/definitions/384.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-664",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/664.html"
+                    "url": "http://cwe.mitre.org/data/definitions/664.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-602",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/602.html"
+                    "url": "http://cwe.mitre.org/data/definitions/602.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-642",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/642.html"
+                    "url": "http://cwe.mitre.org/data/definitions/642.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Access Token Manipulation",
                     "external_id": "T1134",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1134"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1134",
+                    "description_fa": "دستکاری توکن دسترسی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Steal Application Access Token",
                     "external_id": "T1528",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1528"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1528",
+                    "description_fa": "رمز دسترسی برنامه را سرقت کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Steal Web Session Cookie",
                     "external_id": "T1539",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1539"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1539",
+                    "description_fa": "سرقت کوکی جلسه وب",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2351ee64-dd85-4bc3-bb43-aaa2ca5c1228",
@@ -102,6 +120,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -130,11 +161,29 @@
                 "Ability to communicate synchronously or asynchronously with server."
             ],
             "x_capec_skills_required": {
-                "Low": "To achieve a direct connection with the weak or non-existent server session access control, and pose as an authorized user"
+                "Low": "To achieve a direct connection with the weak or non-existent server session access control, and pose as an authorized user",
+                "Low_fa": "برای دستیابی به یک ارتباط مستقیم با کنترل دسترسی به جلسه سرور ضعیف یا ناموجود، و ظاهر شدن به عنوان یک کاربر مجاز"
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن یک شناسه قابل اعتماد (مانند شناسه جلسه، شناسه منبع، کوکی، و غیره) را حدس می‌زند، به دست می‌آورد، یا «سواری» می‌کند تا اقدامات مجاز را تحت پوشش یک کاربر یا سرویس تأیید شده انجام دهد.</xhtml:p>",
+            "name_fa": "بهره برداری از شناسه های مورد اعتماد",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>برنامه های تین کلاینت مانند برنامه های کاربردی وب به ویژه در برابر حملات Session ID آسیب پذیر هستند. از آنجایی که سرور کنترل بسیار کمی بر روی کلاینت دارد، اما همچنان باید جلسات، داده‌ها و اشیاء را در سمت سرور ردیابی کند، کوکی‌ها و مکانیسم‌های دیگر برای ارسال کلید به داده‌های جلسه بین کلاینت و سرور استفاده شده‌اند. هنگامی که این کلیدهای جلسه در معرض خطر قرار می گیرند، برای یک حریف بی اهمیت است که جعل هویت جلسه کاربر در عمل، دارای همان قابلیت های کاربر مجاز باشد. دو راه اصلی برای یک دشمن برای سوء استفاده از شناسه جلسه وجود دارد.</xhtml:p>\n               <xhtml:p> یک حمله brute force شامل یک دشمن است که مکرراً سعی می کند سیستم را با سرصفحه جلسه جعلی در درخواست HTTP پرس و جو کند. وب سروری که از شناسه جلسه کوتاه استفاده می‌کند، می‌تواند به راحتی با آزمایش بسیاری از ترکیب‌های ممکن جعل شود، بنابراین پارامترهای session-ID= 1234 ترکیب‌های احتمالی کمی دارند، و یک دشمن می‌تواند چندین صد یا هزار درخواست را بدون مشکل یا بدون مشکل دوباره امتحان کند.</xhtml:p>\n               <xhtml:p>روش دوم رهگیری است، که در آن ابزاری مانند wireshark برای بو کشیدن سیم و حذف هر گونه شناسه جلسه محافظت نشده استفاده می شود. سپس دشمن می تواند از این متغیرها استفاده کند و به برنامه دسترسی پیدا کند.</xhtml:p>",
+                "به عنوان مثال، در یک سیستم صف پیام که به درخواست کنندگان سرویس اجازه می دهد تا پیام ها را از طریق یک کانال باز (مانند FTP ناشناس) به صف خود ارسال کنند، مجوز از طریق بررسی عضویت گروه یا نقش موجود در پیام ارسال شده انجام می شود. با این حال، هیچ مدرکی وجود ندارد که خود پیام، اطلاعات موجود در پیام (مانند عضویت در گروه یا نقش)، یا فرآیندی که پیام را در صف ارسال کرده است معتبر و مجاز به انجام این کار باشد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3> کاوش</h3><ol><li> <p> <b>بررسی برنامه برای شاخص‌های حساسیت: </b>با استفاده از روش‌های مختلف، تا زمانی که یکی از روش‌ها برای هدف، کاوش‌های دشمن برای کوکی‌ها، نشانه‌های نقطه‌های ورودی که توسط آن‌ها و پس‌ازها استفاده می‌شود، پیدا شود. در مجموع.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>عنکبوت تمام صفحات موجود</td></tr><tr><td>به رابط‌های نامناسب شناخته شده حمله کنید</td></tr><tr><td>جستجوی فایل‌های پیکربندی رو به بیرون و ویژگی‌ها برای شناسه ها.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>نمونه ها را واکشی کنید: </b> دشمن نمونه های زیادی از شناسه ها را واکشی می کند. این ممکن است از طریق دسترسی قانونی (ورود به سیستم، اتصالات قانونی، و غیره) یا از طریق کاوش سیستماتیک باشد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک دشمن بسیاری از اتصالات ناشناس ایجاد می‌کند و شناسه‌های جلسه اختصاص داده شده را ضبط می‌کند.</tdd></trn><tr. نشانه‌ها یا اعتبارنامه‌های صادر شده.</td></tr><tr><td>یک حریف به یک سیستم مجاور (مثلاً در همان شبکه عملیاتی، DMZ یا شبکه محلی) (مشروع یا غیرقانونی) دسترسی پیدا می‌کند و از طریق آن اتصال برقرار می‌کند و تلاش می‌کند امتیازات مشابهی را به دست آورد که یک مورد اعتماد دارد. سیستم.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>جعل هویت: </b>یک دشمن می‌تواند از آزمایش‌ها یا احراز هویت موفقیت‌آمیز برای جعل هویت کاربر یا سیستم مجاز یا حرکت جانبی در یک سیستم یا برنامه استفاده کند. </b>داده های مخرب می توانند توسط یک دشمن به سیستم هدف یا به سیستم کاربر قربانی تزریق شوند. دشمن همچنین می‌تواند به عنوان یک کاربر قانونی برای انجام حملات مهندسی اجتماعی ظاهر شود.</p></li><li> <p> <b>حذف داده‌ها: </b>دشمن می‌تواند داده‌های حساس موجود در سیستم یا برنامه را به دست آورد.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> حملاتی که از شناسه‌های قابل اعتماد استفاده می‌کنند، معمولاً منجر به حرکت طرف مقابل در داخل شبکه محلی می‌شوند، زیرا کاربران اغلب مجاز به احراز هویت به سیستم‌ها/برنامه‌های درون شبکه با استفاده از همان شناسه هستند. این به حریف اجازه می‌دهد تا داده‌های حساس را به دست آورد، بدافزار را دانلود/نصب کند، به عنوان یک کاربر قانونی برای اهداف مهندسی اجتماعی ظاهر شود، و موارد دیگر.</xhtml:p>\n            <xhtml:p> حملات به شناسه‌های قابل اعتماد از این واقعیت استفاده می‌کنند که برخی از نرم‌افزارها ورودی کاربر را بدون تأیید صحت آن می‌پذیرند. بسیاری از فرآیندهای سمت سرور در برابر این حملات آسیب پذیر هستند زیرا ارتباطات سرور به سرور از منظر امنیتی مورد تجزیه و تحلیل قرار نگرفته اند یا فرآیندها به سیستم های دیگر اعتماد دارند زیرا در پشت دیوار آتش قرار دارند. به طور مشابه، سرورهایی که از طرح‌های ساده برای حدس زدن یا جعل برای نمایش هویت دیجیتال استفاده می‌کنند نیز می‌توانند آسیب‌پذیر باشند. چنین سیستم هایی اغلب از طرح هایی بدون رمزنگاری و امضای دیجیتال (یا با رمزنگاری شکسته) استفاده می کنند. شناسه‌ها ممکن است به دلیل تصادفی ناکافی، حفاظت ضعیف (گذرانده/ذخیره شده در فضای واضح)، عدم یکپارچگی (بدون امضا)، یا ارتباط نامناسب با نقاط اجرای سیاست کنترل دسترسی حدس زده یا به دست آیند. فایل‌های پیکربندی و ویژگی‌های افشا شده که حاوی داده‌های حساس هستند، ممکن است اطلاعات مورد نیاز برای به دست آوردن این شناسه‌ها را نیز در اختیار دشمن قرار دهند. دشمن همچنین ممکن است از طریق یک پیوند مخرب یک شناسه را \"سواری\" کند، همانطور که در حملات Cross Site Request Forgery (CSRF) وجود دارد.</xhtml:p>\n            <xhtml:p>صرف نظر از بردار حمله، جعل موفقیت آمیز و جعل هویت اعتبارنامه های قابل اعتماد می تواند منجر به نقض احراز هویت، مجوز، و کنترل های ممیزی توسط سیستم یا برنامه مورد نظر توسط دشمن شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار سرور باید بر روی طرح های اثبات شناسه ضعیف و/یا تاییدیه تکیه کند.",
+                "شناسه ها باید عمر طولانی و قابلیت استفاده مجدد داشته باشند.",
+                "نرم افزار سرور باید اجازه دهد جلسات همزمان وجود داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان استقرار نرم افزار در شبکه",
+                "امکان برقراری ارتباط همزمان یا ناهمزمان با سرور."
+            ]
         }
     ],
     "type": "bundle"

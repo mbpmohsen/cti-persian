@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0097#AN0272",
-                    "external_id": "AN0272"
+                    "external_id": "AN0272",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutableName",
-                    "description": "Common window management utilities can be tuned to reduce noise (e.g., xprop, xwininfo)."
+                    "description": "Common window management utilities can be tuned to reduce noise (e.g., xprop, xwininfo).",
+                    "description_fa": "ابزارهای معمول مدیریت پنجره را می توان برای کاهش نویز تنظیم کرد (مانند xprop، xwininfo)."
                 },
                 {
                     "field": "DisplayContext",
-                    "description": "Restrict detection to processes executing under graphical sessions (e.g., DISPLAY=:0)."
+                    "description": "Restrict detection to processes executing under graphical sessions (e.g., DISPLAY=:0).",
+                    "description_fa": "شناسایی را به فرآیندهایی که در جلسات گرافیکی اجرا می شوند محدود کنید (به عنوان مثال، DISPLAY=:0)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0272",
+            "description_fa": "استفاده اسکریپتی یا باینری از ابزارهای X11 (مانند xdotool، wmctrl) یا نگاشت مستقیم /proc/*/window برای کشف پنجره های رابط کاربری گرافیکی باز و دسکتاپ های فعال."
         }
     ]
 }

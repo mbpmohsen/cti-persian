@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-23",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/23.html"
+                    "url": "https://capec.mitre.org/data/definitions/23.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--521348c2-b1df-492f-ac83-1f3ffe102046",
@@ -43,6 +47,15 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -61,11 +74,22 @@
                 "The adversary must have access to modify files that the target software will consume."
             ],
             "x_capec_skills_required": {
-                "Medium": "How to poison a file with malicious payload that will exploit a vulnerability when the file is opened. The adversary must also know how to place the file onto a system where it will be opened by an unsuspecting party, or force the file to be opened."
+                "Medium": "How to poison a file with malicious payload that will exploit a vulnerability when the file is opened. The adversary must also know how to place the file onto a system where it will be opened by an unsuspecting party, or force the file to be opened.",
+                "Medium_fa": "چگونه یک فایل را با بارگذاری مخرب مسموم کنیم که هنگام باز شدن فایل از یک آسیب پذیری سوء استفاده می کند. حریف همچنین باید بداند که چگونه فایل را در سیستمی قرار دهد که توسط یک طرف ناآگاه باز شود یا فایل را مجبور به باز شدن کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن فایل‌ها را با یک بار مخرب مسموم می‌کند (سیستم‌های فایل قابل دسترسی توسط نرم‌افزار هدف را هدف قرار می‌دهد)، که ممکن است توسط کانال‌های استاندارد مانند ایمیل و محتوای استاندارد وب مانند PDF و فایل‌های چند رسانه‌ای منتقل شود. حریف از آسیب پذیری های شناخته شده یا روال های مدیریت در فرآیندهای هدف سوء استفاده می کند تا از اعتماد میزبان در اجرای محتوای راه دور، از جمله فایل های باینری، سوء استفاده کند.",
+            "name_fa": "تزریق محتوای فایل",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>PHP یک زبان بسیار محبوب است که برای توسعه برنامه های کاربردی وب استفاده می شود. هنگامی که PHP با متغیرهای سراسری استفاده می شود، ممکن است یک آسیب پذیری باز شود که سیستم فایل را تحت تاثیر قرار دهد. یک فرم استاندارد HTML که به کاربران راه دور امکان آپلود فایل‌ها را می‌دهد، همچنین ممکن است آن فایل‌ها را در یک فهرست عمومی قرار دهد که در آن حریف می‌تواند مستقیماً به آنها دسترسی داشته باشد و از طریق مرورگر آنها را اجرا کند. این آسیب‌پذیری به دشمنان راه دور اجازه می‌دهد تا کد دلخواه را روی سیستم اجرا کنند و می‌تواند منجر به این شود که دشمن بتواند شواهد نفوذ را از گزارش‌های سیستم و برنامه‌ها پاک کند.</xhtml:p>"
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p> آسیب پذیری هایی از این نوع در طیف گسترده ای از برنامه های تجاری از Microsoft Office گرفته تا Adobe Acrobat و مرورگر وب Apple Safari یافت شده است. وقتی حریف روال‌های مدیریت استاندارد را می‌داند و می‌تواند آسیب‌پذیری‌ها و نقاط ورودی را شناسایی کند، می‌تواند توسط محتوای به ظاهر عادی مورد سوء استفاده قرار گیرد. هنگامی که حمله اجرا می شود، برنامه دشمن می تواند به دایرکتوری های نسبی مانند C:\\Program Files یا دیگر دایرکتوری های سیستم استاندارد دسترسی پیدا کند تا حملات بعدی را انجام دهد. در بدترین حالت، این برنامه ها با دیگر منطق انتشار ترکیب می شوند و به عنوان یک ویروس کار می کنند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار مورد نظر باید فایل ها را مصرف کند.",
+                "حریف باید به اصلاح فایل هایی که نرم افزار هدف مصرف می کند دسترسی داشته باشد."
+            ]
         }
     ],
     "type": "bundle"

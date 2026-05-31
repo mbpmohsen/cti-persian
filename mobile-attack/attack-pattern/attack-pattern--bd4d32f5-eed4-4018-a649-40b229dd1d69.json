@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1402",
-                    "external_id": "T1402"
+                    "external_id": "T1402",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android Changes to System Broadcasts",
                     "description": "Google. (2019, December 27). Broadcasts Overview. Retrieved January 27, 2020.",
-                    "url": "https://developer.android.com/guide/components/broadcasts#changes-system-broadcasts"
+                    "url": "https://developer.android.com/guide/components/broadcasts#changes-system-broadcasts",
+                    "source_name_fa": "تغییرات اندروید در پخش سیستم",
+                    "description_fa": "گوگل. (27 دسامبر 2019). مروری بر پخش. بازیابی شده در 27 ژانویه 2020."
                 }
             ],
             "object_marking_refs": [
@@ -50,7 +53,9 @@
             "x_mitre_version": "2.0",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "گیرنده های پخش",
+            "description_fa": "Intent پیامی است که بین برنامه اندروید یا اجزای سیستم ارسال می شود. برنامه‌ها می‌توانند برای دریافت هدف‌های پخش در زمان اجرا ثبت نام کنند، این اهداف در کل سیستم هستند که وقتی رویدادهای خاصی روی دستگاه اتفاق می‌افتند، مانند تغییرات شبکه یا باز کردن قفل صفحه توسط کاربر، به هر برنامه تحویل داده می‌شوند. سپس برنامه‌های مخرب می‌توانند اقدامات خاصی را در برنامه انجام دهند که بر اساس آن هدف پخش دریافت شده است.\n\nعلاوه بر این، برنامه‌های مخرب می‌توانند علاوه بر خود سیستم اندروید، برای اهدافی که توسط برنامه‌های دیگر پخش می‌شوند ثبت نام کنند. این به بدافزار اجازه می دهد تا بر اساس اقدامات انجام شده در سایر برنامه ها پاسخ دهد. این رفتار معمولاً نشان دهنده دانش صمیمی تر یا به طور بالقوه هدف قرار دادن دستگاه ها، کاربران یا برنامه های خاص است.\n\nدر Android 8 (سطح API 26)، رفتار هدف پخش تغییر کرد، و اهداف ضمنی را که برنامه‌ها می‌توانند در مانیفست ثبت کنند، محدود می‌کند. در بیشتر موارد، برنامه هایی که از طریق مانیفست ثبت می شوند، دیگر پخش ها را دریافت نمی کنند. اکنون، زمانی که کاربر به طور فعال از برنامه استفاده می‌کند، برنامه‌ها باید گیرنده‌های پخش خاص زمینه را ثبت کنند.(Citation: Android Changes to System Broadcasts)"
         }
     ]
 }

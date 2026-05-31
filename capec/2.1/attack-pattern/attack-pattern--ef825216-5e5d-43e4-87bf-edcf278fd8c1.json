@@ -9,34 +9,44 @@
                 {
                     "external_id": "CAPEC-287",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/287.html"
+                    "url": "https://capec.mitre.org/data/definitions/287.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Defense Advanced Research Projects Agency Information Processing Techniques Office, Information Sciences Institute University of Southern California, RFC793 - Transmission Control Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-128",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc793.html"
+                    "url": "http://www.faqs.org/rfcs/rfc793.html",
+                    "description_fa": "دفتر تکنیک های پردازش اطلاعات آژانس پروژه های تحقیقاتی پیشرفته دفاعی، موسسه علوم اطلاعات دانشگاه کالیفرنیای جنوبی، RFC793 - پروتکل کنترل انتقال، 1981-09، آژانس پروژه های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-34",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, The Art of Port Scanning (Volume: 7, Issue. 51), Phrack Magazine, 1997",
                     "external_id": "REF-130",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://phrack.org/issues/51/11.html"
+                    "url": "http://phrack.org/issues/51/11.html",
+                    "description_fa": "گوردون \"فئودور\" لیون، هنر اسکن بندر (جلد: 7، شماره 51)، مجله Phrack، 1997",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ef825216-5e5d-43e4-87bf-edcf278fd8c1",
@@ -64,6 +74,19 @@
                     "Other (A successful attack of this kind can identify open ports and available services on a system.)",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "سایر (یک حمله موفقیت آمیز از این نوع می تواند پورت های باز و سرویس های موجود در یک سیستم را شناسایی کند.)",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -80,7 +103,17 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از یک اسکن SYN برای تعیین وضعیت پورت ها در هدف راه دور استفاده می کند. اسکن SYN رایج ترین نوع اسکن پورت است که به دلیل مزایا و معایب کم مورد استفاده قرار می گیرد. در نتیجه، مهاجمان تازه کار تمایل دارند در حین انجام شناسایی سیستم، بیش از حد به اسکن SYN اعتماد کنند. به عنوان یک روش اسکن، مزایای اصلی اسکن SYN جهانی بودن و سرعت آن است.",
+            "name_fa": "اسکن TCP SYN",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>آزمایش</h3><ol><li> <p>یک دشمن بسته‌های SYN را به پورت‌هایی که می‌خواهند اسکن کنند ارسال می‌کند و پاسخ را بدون تکمیل دست دادن TCP بررسی می‌کند.</p></li><li> <p>یک حریف از پاسخ وضعیت پورت برای تعیین موقعیت درگاه استفاده می‌کند. حریف می تواند وضعیت یک پورت را بر اساس پاسخ های زیر تعیین کند. هنگامی که یک SYN به یک پورت باز و پورت فیلتر نشده ارسال می شود، یک SYN/ACK ایجاد می شود. هنگامی که یک بسته SYN به یک پورت بسته ارسال می شود، یک RST تولید می شود که نشان می دهد پورت بسته است. هنگامی که اسکن SYN به یک درگاه خاص پاسخی ایجاد نمی کند، یا زمانی که درخواست خطاهای غیرقابل دسترس ICMP نوع 3 را فعال می کند، درگاه فیلتر می شود.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>RFC 793 رفتار مورد نیاز هر دستگاه TCP/IP را به این صورت تعریف می‌کند که یک درخواست اتصال ورودی با یک بسته SYN شروع می‌شود، که به نوبه خود باید توسط یک بسته SYN/ACK از سرویس گیرنده دنبال شود. به همین دلیل، مانند اسکن TCP Connect، اسکن SYN در برابر هر پشته TCP کار می کند. برخلاف اسکن TCP Connect، امکان اسکن هزاران پورت در ثانیه با استفاده از این روش وجود دارد. این نوع اسکن معمولاً به عنوان اسکن نیمه باز شناخته می شود زیرا دست دادن سه طرفه را کامل نمی کند. سرعت اسکن بسیار سریع است زیرا هیچ زمانی برای تکمیل دست دادن یا قطع کردن اتصال تلف نمی شود. این تکنیک به مهاجم اجازه می دهد تا از طریق فایروال های حالت دار اسکن کند، زیرا پیکربندی رایجی که بخش TCP SYN برای اتصال جدید تقریباً برای هر پورتی مجاز است. اسکن TCP SYN همچنین می تواند فوراً 3 نوع از 4 نوع مهم وضعیت پورت را شناسایی کند: باز، بسته و فیلتر شده.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "این نوع اسکن در برخی از سیستم عامل ها (Windows XP SP 2) امکان پذیر نیست. در سیستم‌های لینوکس و یونیکس، برای استفاده از سوکت‌های خام، به حقوق ریشه نیاز است."
+            ],
+            "x_capec_resources_required_fa": [
+                "توانایی ارسال قطعات TCP SYN به یک میزبان در حین شناسایی شبکه از طریق استفاده از نقشه‌بردار یا اسکنر شبکه یا از طریق برنامه‌نویسی سوکت خام در یک زبان برنامه‌نویسی. ابزارهای تزریق بسته نیز برای این منظور مفید هستند. بسته به روش مورد استفاده، ممکن است لازم باشد شبکه را بو کنید تا پاسخ را ببینید."
+            ]
         }
     ],
     "type": "bundle"

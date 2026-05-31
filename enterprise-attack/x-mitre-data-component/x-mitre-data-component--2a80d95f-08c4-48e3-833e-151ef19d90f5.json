@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0075",
-                    "external_id": "DC0075"
+                    "external_id": "DC0075",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,7 +51,9 @@
                     "name": "azure:activity",
                     "channel": "Microsoft.Compute/virtualMachines/read"
                 }
-            ]
+            ],
+            "name_fa": "شمارش نمونه",
+            "description_fa": "فرآیند بازیابی یا جستجوی فهرستی از نمونه‌های ماشین مجازی یا نمونه‌های محاسبه در زیرساخت ابری. این فعالیت نمایی از همه نمونه‌های موجود یا در حال اجرا را ارائه می‌کند، معمولاً شامل ابرداده‌های مرتبط با آنها مانند شناسه نمونه، نام، وضعیت و جزئیات پیکربندی. مثال ها:\n\n- AWS: شمارش نمونه شامل فراخوانی API «DescribeInstances» است که اطلاعات مربوط به اجرا یا توقف نمونه‌های EC2 را بازیابی می‌کند.\n- Azure: شمارش VM را می توان از طریق عملیات «Microsoft.Compute/virtualMachines/read» نظارت کرد.\n- GCP: شمارش نمونه به عنوان یک عملیات 'instance.list' در گزارش های حسابرسی GCP ثبت می شود.\n\n*اقدامات جمع آوری داده ها:*\n\n- AWS CloudTrail: گزارش‌های CloudTrail در S3 ذخیره شده یا به CloudWatch ارسال می‌شوند.\n- گزارش‌های فعالیت Azure: از طریق مانیتور Azure قابل دسترسی است یا به یک حساب ذخیره‌سازی صادر می‌شود.\n- گزارش های حسابرسی GCP: Logs Explorer یا BigQuery."
         }
     ]
 }

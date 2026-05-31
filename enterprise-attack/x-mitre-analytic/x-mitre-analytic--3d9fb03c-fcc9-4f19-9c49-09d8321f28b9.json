@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0128#AN0362",
-                    "external_id": "AN0362"
+                    "external_id": "AN0362",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PlistScope",
-                    "description": "Restrict detection to application plists where UIElement flag is unexpected."
+                    "description": "Restrict detection to application plists where UIElement flag is unexpected.",
+                    "description_fa": "شناسایی را به لیست های برنامه که در آن پرچم UIElement غیرمنتظره است محدود کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Correlate plist modifications with the creating/modifying user to tune results."
+                    "description": "Correlate plist modifications with the creating/modifying user to tune results.",
+                    "description_fa": "تغییرات plist را با کاربر ایجاد/تغییر برای تنظیم نتایج مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0362",
+            "description_fa": "اصلاح فایل‌های plist برای تنظیم apple.awt.UIElement یا پرچم‌های مشابه که نمادها و پنجره‌های برنامه را پنهان می‌کنند، و فعالیت dscl/خط فرمان که دید را کاهش می‌دهد. نمای مدافع: همبستگی تغییرات plist با برنامه های کاربردی پنهان کاربر غیرمنتظره."
         }
     ]
 }

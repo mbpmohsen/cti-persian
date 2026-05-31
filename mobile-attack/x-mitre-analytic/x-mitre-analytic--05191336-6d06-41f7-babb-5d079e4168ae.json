@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0646#AN1725",
-                    "external_id": "AN1725"
+                    "external_id": "AN1725",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,29 +63,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between trust customization activity and outbound TLS connection"
+                    "description": "Correlation window between trust customization activity and outbound TLS connection",
+                    "description_fa": "پنجره همبستگی بین فعالیت سفارشی سازی اعتماد و اتصال TLS خروجی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to implement SSL pinning such as banking, enterprise auth, or secure messaging apps"
+                    "description": "Apps legitimately expected to implement SSL pinning such as banking, enterprise auth, or secure messaging apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود پین کردن SSL مانند بانکداری، تأیید اعتبار سازمانی یا برنامه‌های پیام‌رسان ایمن را اجرا کنند."
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Approved domains, IPs, and service endpoints for managed applications"
+                    "description": "Approved domains, IPs, and service endpoints for managed applications",
+                    "description_fa": "دامنه ها، IP ها و نقاط پایانی سرویس برای برنامه های مدیریت شده تایید شده"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether the application is expected to establish pinned sessions only during active user-driven workflows"
+                    "description": "Whether the application is expected to establish pinned sessions only during active user-driven workflows",
+                    "description_fa": "اینکه آیا انتظار می‌رود که برنامه فقط در طول گردش‌های کاری فعال کاربر محور، جلسات پین شده ایجاد کند یا خیر"
                 },
                 {
                     "field": "InspectionFailureThreshold",
-                    "description": "Number of repeated inspection failures or certificate mismatch events before escalating"
+                    "description": "Number of repeated inspection failures or certificate mismatch events before escalating",
+                    "description_fa": "تعداد خطاهای مکرر بازرسی یا رویدادهای عدم تطابق گواهی قبل از تشدید"
                 },
                 {
                     "field": "RetryPatternWindow",
-                    "description": "Time tolerance for inspection failure followed by retry/direct connection pattern"
+                    "description": "Time tolerance for inspection failure followed by retry/direct connection pattern",
+                    "description_fa": "تحمل زمان برای شکست بازرسی به دنبال الگوی اتصال مجدد/مستقیم"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1725",
+            "description_fa": "مدافع فعالیت سفارشی‌سازی اعتماد برنامه TLS را با جلسات رمزگذاری شده خروجی بعدی مرتبط می‌کند که دید رهگیری سازمانی را دور می‌زند یا فقط در شرایط بازرسی سازمانی شکست می‌خورد. تحلیلگر به دنبال برنامه‌ای می‌گردد که گواهینامه یا منطق اعتماد کلید عمومی خود را ایجاد می‌کند، سپس جلسات HTTPS را به مقصدهایی که با رفتار برنامه تأیید شده همسو نیستند، به‌ویژه از وضعیت پس‌زمینه یا بدون تعامل اخیر کاربر، آغاز می‌کند. مشاهدات با اطمینان بالاتر از تله‌متری زمان اجرا/قاب Android که مدیر اعتماد سفارشی، لغو اعتبار گواهی، یا منطق اعتبارسنجی پین را بلافاصله قبل از تلاش‌های اتصال به شبکه نشان می‌دهد، همراه با شواهد شبکه از الگوهای بازرسی ناموفق یا جلسات TLS مستقیم غیرشفاف به دست می‌آید."
         }
     ]
 }

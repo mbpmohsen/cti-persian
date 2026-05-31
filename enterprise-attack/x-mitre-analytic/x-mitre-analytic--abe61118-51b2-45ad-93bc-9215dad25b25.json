@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0362#AN1029",
-                    "external_id": "AN1029"
+                    "external_id": "AN1029",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetObject",
-                    "description": "Registry path for AppCertDLLs may vary by control set or group policy context"
+                    "description": "Registry path for AppCertDLLs may vary by control set or group policy context",
+                    "description_fa": "مسیر رجیستری برای AppCertDLL ممکن است بسته به مجموعه کنترل یا زمینه خط مشی گروه متفاوت باشد"
                 },
                 {
                     "field": "ImageLoaded",
-                    "description": "Loaded DLLs may differ by malware family or environment"
+                    "description": "Loaded DLLs may differ by malware family or environment",
+                    "description_fa": "DLL های بارگذاری شده ممکن است بسته به خانواده یا محیط بدافزار متفاوت باشند"
                 },
                 {
                     "field": "ParentImage",
-                    "description": "Parent processes to monitor for DLL injection can be tuned to exclude known-good cases"
+                    "description": "Parent processes to monitor for DLL injection can be tuned to exclude known-good cases",
+                    "description_fa": "فرآیندهای والد برای نظارت بر تزریق DLL می توانند تنظیم شوند تا موارد شناخته شده خوب را حذف کنند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation between registry modification and DLL load events may vary"
+                    "description": "Time correlation between registry modification and DLL load events may vary",
+                    "description_fa": "همبستگی زمانی بین تغییرات رجیستری و رویدادهای بارگذاری DLL ممکن است متفاوت باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1029",
+            "description_fa": "تشخیص سوء استفاده از AppCert DLL شامل ارتباط تغییرات رجیستری با کلید AppCertDLLs با رفتار بار DLL غیرمنتظره بعدی در طول رویدادهای ایجاد فرآیند است. به طور خاص، مدافعان می توانند پس از تغییر در مقدار رجیستری «AppCertDLLs» مشاهده کنند که DLL های غیرعادی در فرآیندهای استاندارد ویندوز بارگذاری می شوند. نظارت بر اجرای CreateProcess-family API با DLL های تزریق شده و پیوند دادن آن DLL ها به ویرایش های اخیر رجیستری، کلید شناسایی سوء استفاده است. این اغلب با امتیازات بالا و حرکت جانبی بالقوه یا رفتار کشف همراه است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0025#AN0071",
-                    "external_id": "AN0071"
+                    "external_id": "AN0071",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0071",
-            "description": "Abuse of trusted Electron apps (Teams, Slack, Chrome) to spawn child processes or execute payloads via malicious command-line arguments (e.g., --gpu-launcher) and modified app resources (.asar). Behavior chain: suspicious parent process (Electron app) \u2192 unusual command-line args \u2192 child process creation \u2192 optional DLL/network artifacts.",
+            "description": "Abuse of trusted Electron apps (Teams, Slack, Chrome) to spawn child processes or execute payloads via malicious command-line arguments (e.g., --gpu-launcher) and modified app resources (.asar). Behavior chain: suspicious parent process (Electron app) → unusual command-line args → child process creation → optional DLL/network artifacts.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -56,29 +57,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window tying app launch, file tampering, child process, and network events (5\u201310 minutes typical)."
+                    "description": "Correlation window tying app launch, file tampering, child process, and network events (5–10 minutes typical).",
+                    "description_fa": "راه‌اندازی برنامه پیوند پنجره همبستگی، دستکاری فایل، فرآیند فرزند و رویدادهای شبکه (معمولاً 5 تا 10 دقیقه)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Flag admin/service accounts versus standard users executing Electron apps."
+                    "description": "Flag admin/service accounts versus standard users executing Electron apps.",
+                    "description_fa": "پرچم‌گذاری حساب‌های سرپرست/خدمات در مقابل کاربران استانداردی که برنامه‌های Electron را اجرا می‌کنند."
                 },
                 {
                     "field": "AllowedElectronApps",
-                    "description": "Baseline of Electron-based executables expected in the enterprise."
+                    "description": "Baseline of Electron-based executables expected in the enterprise.",
+                    "description_fa": "خط پایه فایل های اجرایی مبتنی بر الکترون مورد انتظار در شرکت."
                 },
                 {
                     "field": "AllowedChildProcesses",
-                    "description": "Whitelist normal child processes (chrome.exe \u2192 crashpad_handler.exe) versus anomalies (powershell.exe)."
+                    "description": "Whitelist normal child processes (chrome.exe → crashpad_handler.exe) versus anomalies (powershell.exe).",
+                    "description_fa": "فهرست سفید پردازش‌های فرزند عادی (chrome.exe → crashpad_handler.exe) در مقابل ناهنجاری‌ها (powershell.exe)."
                 },
                 {
                     "field": "ElectronAppDomainAllowlist",
-                    "description": "Approved service domains for Teams, Slack, etc. to suppress benign traffic."
+                    "description": "Approved service domains for Teams, Slack, etc. to suppress benign traffic.",
+                    "description_fa": "دامنه های سرویس تایید شده برای Teams، Slack و غیره برای سرکوب ترافیک بی خطر."
                 },
                 {
                     "field": "AsarIntegrityHash",
-                    "description": "Expected hash/signature of app.asar resources to detect tampering."
+                    "description": "Expected hash/signature of app.asar resources to detect tampering.",
+                    "description_fa": "هش/امضای منابع app.asar مورد انتظار برای تشخیص دستکاری."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0071",
+            "description_fa": "سوء استفاده از برنامه‌های مطمئن Electron (Teams، Slack، Chrome) برای ایجاد فرآیندهای فرزند یا اجرای بارهای پرداختی از طریق آرگومان‌های خط فرمان مخرب (مانند -gpu-launcher) و منابع برنامه اصلاح‌شده (asar.). زنجیره رفتار: فرآیند والد مشکوک (برنامه الکترونیکی) ← ارگ های خط فرمان غیرمعمول ← ایجاد فرآیند فرزند ← مصنوعات DLL/شبکه ​​اختیاری."
         }
     ]
 }

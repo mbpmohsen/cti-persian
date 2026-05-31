@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0174#AN0493",
-                    "external_id": "AN0493"
+                    "external_id": "AN0493",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredAccounts",
-                    "description": "High-value accounts (e.g., Domain Admins) for anomalous ticket issuance or replay activity."
+                    "description": "High-value accounts (e.g., Domain Admins) for anomalous ticket issuance or replay activity.",
+                    "description_fa": "حساب‌های با ارزش بالا (به‌عنوان مثال، مدیران دامنه) برای صدور بلیت غیرعادی یا فعالیت مجدد."
                 },
                 {
                     "field": "ReplayDetectionWindow",
-                    "description": "Time window for correlating duplicate or replayed Kerberos authentications."
+                    "description": "Time window for correlating duplicate or replayed Kerberos authentications.",
+                    "description_fa": "پنجره زمانی برای مرتبط کردن احراز هویت تکراری یا پخش مجدد Kerberos."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0493",
+            "description_fa": "بهره برداری دشمن از مکانیسم های احراز هویت یا فرآیندهای تأیید اعتبار را تشخیص می دهد. دیدگاه مدافع شامل بلیط‌های جعلی Kerberos (مانند MS14-068)، دسترسی غیرعادی به حافظه LSASS، تلاش‌های احراز هویت مجدد و خرابی‌های غیرمنتظره سرویس‌های احراز هویت است. تلاش برای بهره برداری از پیوندهای همبستگی چند رویدادی برای ایجاد فرآیند غیرعادی، بی ثباتی سرویس و رویدادهای احراز هویت مشکوک."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0113#AN0316",
-                    "external_id": "AN0316"
+                    "external_id": "AN0316",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PreAuthDisabledAccountsBaseline",
-                    "description": "Baseline of accounts legitimately configured without Kerberos preauthentication; deviations may indicate adversary enumeration."
+                    "description": "Baseline of accounts legitimately configured without Kerberos preauthentication; deviations may indicate adversary enumeration.",
+                    "description_fa": "پایه حساب‌هایی که به‌طور قانونی بدون احراز هویت اولیه Kerberos پیکربندی شده‌اند. انحرافات ممکن است نشان دهنده شمارش دشمن باشد."
                 },
                 {
                     "field": "TGTRequestThreshold",
-                    "description": "Number of AS-REQ/AS-REP exchanges per account within a short timeframe; higher counts may indicate AS-REP roasting."
+                    "description": "Number of AS-REQ/AS-REP exchanges per account within a short timeframe; higher counts may indicate AS-REP roasting.",
+                    "description_fa": "تعداد مبادلات AS-REQ/AS-REP در هر حساب در یک بازه زمانی کوتاه؛ تعداد بالاتر ممکن است نشان دهنده برشته شدن AS-REP باشد."
                 },
                 {
                     "field": "AllowedEncryptionTypes",
-                    "description": "Permitted Kerberos encryption algorithms; RC4 usage (etype 0x17) should be closely monitored."
+                    "description": "Permitted Kerberos encryption algorithms; RC4 usage (etype 0x17) should be closely monitored.",
+                    "description_fa": "الگوریتم های مجاز رمزگذاری Kerberos؛ استفاده از RC4 (نوع 0x17) باید به دقت نظارت شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for linking AS-REQs, AS-REPs, and subsequent service ticket requests."
+                    "description": "Correlation window for linking AS-REQs, AS-REPs, and subsequent service ticket requests.",
+                    "description_fa": "پنجره همبستگی برای پیوند دادن AS-REQ، AS-REP، و درخواست های بلیط خدمات بعدی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0316",
+            "description_fa": "تلاش‌های برشته کردن AS-REP را با نظارت بر الگوهای احراز هویت Kerberos AS-REQ/AS-REP که در آن احراز هویت از قبل غیرفعال است، شناسایی می‌کند (شناسه رویداد 4768 با Pre-Auth Type 0). این درخواست‌ها را با فعالیت بلیط خدمات بعدی (شناسه رویداد 4769) و ناهنجاری‌هایی مانند درخواست‌هایی با استفاده از رمزگذاری ضعیف RC4 (نوع 0x17) مرتبط می‌کند. شمارش بیش از حد حساب‌ها با «نیازی به احراز هویت اولیه Kerberos» تنظیم شده در Active Directory یکی دیگر از نکات کلیدی تشخیص است."
         }
     ]
 }

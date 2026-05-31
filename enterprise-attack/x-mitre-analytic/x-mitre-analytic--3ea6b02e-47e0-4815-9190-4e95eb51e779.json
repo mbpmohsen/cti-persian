@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0290#AN0807",
-                    "external_id": "AN0807"
+                    "external_id": "AN0807",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CrontabFileMonitored",
-                    "description": "Admins may customize paths in hardened deployments."
+                    "description": "Admins may customize paths in hardened deployments.",
+                    "description_fa": "مدیران ممکن است مسیرها را در استقرارهای سخت شده سفارشی کنند."
                 },
                 {
                     "field": "ShellCommandPayload",
-                    "description": "Flag shell-based persistence indicators in local.sh or cron payloads."
+                    "description": "Flag shell-based persistence indicators in local.sh or cron payloads.",
+                    "description_fa": "نشانگرهای پایداری مبتنی بر پوسته را در محموله های local.sh یا cron علامت گذاری کنید."
                 },
                 {
                     "field": "JobInterval",
-                    "description": "Time interval of task repetition for outlier identification."
+                    "description": "Time interval of task repetition for outlier identification.",
+                    "description_fa": "فاصله زمانی تکرار کار برای شناسایی موارد پرت."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0807",
+            "description_fa": "تغییر مستقیم ورودی‌های crontab را در /var/spool/cron/crontabs/root یا /etc/rc.local.d/local.sh و به دنبال اجرای اسکریپت‌های مرتبط با حرکت جانبی یا پایداری بدافزار شناسایی می‌کند."
         }
     ]
 }

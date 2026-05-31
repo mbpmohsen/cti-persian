@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0268#AN0748",
-                    "external_id": "AN0748"
+                    "external_id": "AN0748",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredLibraries",
-                    "description": "List of shared objects linked to compression/encryption."
+                    "description": "List of shared objects linked to compression/encryption.",
+                    "description_fa": "فهرست اشیاء مشترک مرتبط با فشرده سازی/رمزگذاری."
                 },
                 {
                     "field": "ArchivePaths",
-                    "description": "Directories where archive creation is flagged as anomalous."
+                    "description": "Directories where archive creation is flagged as anomalous.",
+                    "description_fa": "دایرکتوری هایی که ایجاد بایگانی به عنوان غیرعادی علامت گذاری شده است."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Entropy level used to distinguish encryption from normal compression."
+                    "description": "Entropy level used to distinguish encryption from normal compression.",
+                    "description_fa": "سطح آنتروپی برای تشخیص رمزگذاری از فشرده سازی معمولی استفاده می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0748",
+            "description_fa": "بایگانی مخالف را توسط اسکریپت ها یا باینری ها که کتابخانه های فشرده سازی را فراخوانی می کنند (libzip، zlib، bzip2) تشخیص می دهد. اجرای پایتون، پرل یا باینری های کامپایل شده را با پیوند پویا به کتابخانه های آرشیو و ایجاد فایل های فشرده در /tmp یا دایرکتوری های کاربر مرتبط می کند."
         }
     ]
 }

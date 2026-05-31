@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0082#AN0230",
-                    "external_id": "AN0230"
+                    "external_id": "AN0230",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetDirectories",
-                    "description": "Paths like /var/www/html, /etc/issue, or /etc/motd may vary across distros"
+                    "description": "Paths like /var/www/html, /etc/issue, or /etc/motd may vary across distros",
+                    "description_fa": "مسیرهایی مانند /var/www/html، /etc/issue، یا /etc/motd ممکن است در توزیع‌ها متفاوت باشد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Non-web-admin users modifying site content or banners should be rare"
+                    "description": "Non-web-admin users modifying site content or banners should be rare",
+                    "description_fa": "کاربران غیر مدیر وب که محتوای سایت یا بنرها را تغییر می دهند، نادر است"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defacement often happens outside normal maintenance hours"
+                    "description": "Defacement often happens outside normal maintenance hours",
+                    "description_fa": "خرابی اغلب خارج از ساعات معمول تعمیر و نگهداری اتفاق می افتد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0230",
+            "description_fa": "دشمن از دسترسی root یا sudo برای تغییر بنرهای سیستم، دایرکتوری های محتوای وب (مانند /var/www/html) یا پیکربندی های ورود (/etc/issue) استفاده می کند. ایجاد یا بازنویسی فایل ممکن است با اجرای مشکوک اسکریپت یا فعالیت cron job همزمان باشد."
         }
     ]
 }

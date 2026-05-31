@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0670#AN1767",
-                    "external_id": "AN1767"
+                    "external_id": "AN1767",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.381Z",
             "name": "Analytic 1767",
-            "description": "The defender correlates recent access to locally collected or protected data with subsequent compression, packaging, or encryption behavior inside the same app context, followed by creation of archive-like or high-entropy output and optional near-term network transmission. The analytic prioritizes Android runtime and storage effects: application data access or sensor-derived collection, compression/encryption framework use, archive/blob creation in app-accessible storage, and background or device-locked execution inconsistent with the app\u2019s declared function.",
+            "description": "The defender correlates recent access to locally collected or protected data with subsequent compression, packaging, or encryption behavior inside the same app context, followed by creation of archive-like or high-entropy output and optional near-term network transmission. The analytic prioritizes Android runtime and storage effects: application data access or sensor-derived collection, compression/encryption framework use, archive/blob creation in app-accessible storage, and background or device-locked execution inconsistent with the app’s declared function.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -62,37 +63,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between data access, package creation, encryption, and optional network upload"
+                    "description": "Correlation window between data access, package creation, encryption, and optional network upload",
+                    "description_fa": "پنجره همبستگی بین دسترسی به داده، ایجاد بسته، رمزگذاری، و آپلود اختیاری شبکه"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to package local data such as backup, cloud sync, file manager, or media editing apps"
+                    "description": "Apps legitimately expected to package local data such as backup, cloud sync, file manager, or media editing apps",
+                    "description_fa": "برنامه هایی که به طور قانونی انتظار می رود داده های محلی مانند پشتیبان گیری، همگام سازی ابری، مدیر فایل یا برنامه های ویرایش رسانه را بسته بندی کنند."
                 },
                 {
                     "field": "AllowedPathList",
-                    "description": "Expected storage paths for legitimate archives, exports, or caches"
+                    "description": "Expected storage paths for legitimate archives, exports, or caches",
+                    "description_fa": "مسیرهای ذخیره‌سازی مورد انتظار برای بایگانی‌های قانونی، صادرات یا حافظه پنهان"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether packaging/export behavior should occur only during active user-driven workflows"
+                    "description": "Whether packaging/export behavior should occur only during active user-driven workflows",
+                    "description_fa": "آیا رفتار بسته‌بندی/صادرات باید فقط در جریان‌های کاری فعال کاربر محور رخ دهد یا خیر"
                 },
                 {
                     "field": "BurstReadThreshold",
-                    "description": "Number of files or records read in a short interval before archive creation"
+                    "description": "Number of files or records read in a short interval before archive creation",
+                    "description_fa": "تعداد فایل ها یا سوابق خوانده شده در فاصله زمانی کوتاه قبل از ایجاد بایگانی"
                 },
                 {
                     "field": "ArchiveSizeThreshold",
-                    "description": "Minimum output size for suspicious packaged blob or archive"
+                    "description": "Minimum output size for suspicious packaged blob or archive",
+                    "description_fa": "حداقل اندازه خروجی برای لکه یا آرشیو بسته بندی مشکوک"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Threshold for identifying encrypted or heavily compressed output"
+                    "description": "Threshold for identifying encrypted or heavily compressed output",
+                    "description_fa": "آستانه برای شناسایی خروجی رمزگذاری شده یا به شدت فشرده"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum upload size consistent with recent archive creation"
+                    "description": "Minimum upload size consistent with recent archive creation",
+                    "description_fa": "حداقل اندازه آپلود مطابق با ایجاد آرشیو اخیر"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1767",
+            "description_fa": "مدافع دسترسی اخیر به داده‌های جمع‌آوری‌شده یا محافظت‌شده محلی را با رفتار فشرده‌سازی، بسته‌بندی، یا رمزگذاری بعدی در داخل همان زمینه برنامه مرتبط می‌کند، و به دنبال آن خروجی‌هایی شبیه بایگانی یا با آنتروپی بالا و انتقال کوتاه‌مدت شبکه اختیاری ایجاد می‌کند. این تحلیل، زمان اجرا و اثرات ذخیره‌سازی اندروید را اولویت‌بندی می‌کند: دسترسی به داده‌های برنامه یا مجموعه مشتق‌شده از حسگر، استفاده از چارچوب فشرده‌سازی/رمزگذاری، ایجاد بایگانی/حباب در فضای ذخیره‌سازی قابل دسترسی برنامه، و اجرای پس‌زمینه یا قفل‌شده توسط دستگاه که با عملکرد اعلام‌شده برنامه سازگار نیست."
         }
     ]
 }

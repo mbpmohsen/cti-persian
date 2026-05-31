@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0386#AN1088",
-                    "external_id": "AN1088"
+                    "external_id": "AN1088",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CallerType",
-                    "description": "Suppress known admin accounts and alert on developer/test/service identities."
+                    "description": "Suppress known admin accounts and alert on developer/test/service identities.",
+                    "description_fa": "حساب های مدیریت شناخته شده را سرکوب کنید و در مورد هویت های توسعه دهنده/تست/سرویس هشدار دهید."
                 },
                 {
                     "field": "CLIUserAgent",
-                    "description": "Correlate unexpected CLI user-agents and geolocation anomalies."
+                    "description": "Correlate unexpected CLI user-agents and geolocation anomalies.",
+                    "description_fa": "عوامل کاربری غیرمنتظره CLI و ناهنجاری های موقعیت جغرافیایی را به هم مرتبط کنید."
                 },
                 {
                     "field": "CloudRegion",
-                    "description": "Suppress noise from known IP ranges or whitelisted accounts per region."
+                    "description": "Suppress noise from known IP ranges or whitelisted accounts per region.",
+                    "description_fa": "سر و صدا را از محدوده IP شناخته شده یا حساب های لیست سفید در هر منطقه سرکوب کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1088",
+            "description_fa": "استفاده از AWS CLI ('aws iam list-users', 'list-roles')، Azure CLI ('az ad user list') یا GCP CLI ('gcloud iam service-accounts list') از نقاط پایانی یا پوسته های ابری که چنین فعالیتی غیرمنتظره است."
         }
     ]
 }

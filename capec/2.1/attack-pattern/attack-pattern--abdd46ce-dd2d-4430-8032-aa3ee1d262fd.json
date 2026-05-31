@@ -9,36 +9,46 @@
                 {
                     "external_id": "CAPEC-471",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/471.html"
+                    "url": "https://capec.mitre.org/data/definitions/471.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-427",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/427.html"
+                    "url": "http://cwe.mitre.org/data/definitions/427.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Hijack Execution Flow:DLL search order hijacking",
                     "external_id": "T1574.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/001",
+                    "description_fa": "جریان اجرای Hijack: ربودن دستور جستجوی DLL",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Hijack Execution Flow: Dylib Hijacking",
                     "external_id": "T1574.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/004",
+                    "description_fa": "جریان اجرای Hijack: Dylib Hijacking",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Hijack Execution Flow: Path Interception by Search Order Hijacking",
                     "external_id": "T1574.008",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/008"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/008",
+                    "description_fa": "جریان اجرای Hijack: Path Interception با جستجوی دستور ربودن",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "M Trends Report, 2011, Mandiant",
                     "external_id": "REF-409",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.mandiant.com"
+                    "url": "https://www.mandiant.com",
+                    "description_fa": "M Trends Report، 2011، Mandiant",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--abdd46ce-dd2d-4430-8032-aa3ee1d262fd",
@@ -65,11 +75,22 @@
                 "Attacker has a mechanism to place its malicious libraries in the needed location on the file system."
             ],
             "x_capec_skills_required": {
-                "Medium": "Ability to create a malicious library."
+                "Medium": "Ability to create a malicious library.",
+                "Medium_fa": "امکان ایجاد یک کتابخانه مخرب."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از ضعف در مشخصات کتابخانه های خارجی یک برنامه برای سوء استفاده از عملکرد بارگیری استفاده می کند که در آن فرآیند بارگیری کتابخانه ابتدا در همان فهرستی که فرآیند باینری در آن قرار دارد و سپس در سایر دایرکتوری ها جستجو می کند. بهره برداری از این ترتیب جستجوی ترجیحی می تواند به مهاجم اجازه دهد تا فرآیند بارگیری را به جای کتابخانه قانونی، کتابخانه سرکش دشمن را بارگیری کند. این حمله را می توان با بسیاری از کتابخانه های مختلف و با بسیاری از فرآیندهای بارگذاری مختلف مورد استفاده قرار داد. هیچ دنباله پزشکی قانونی در رجیستری یا سیستم فایل سیستم باقی نمانده است که یک کتابخانه نادرست بارگیری شده باشد.",
+            "name_fa": "جستجوی سفارش ربودن",
+            "x_capec_example_instances_fa": [
+                "به عنوان مثال، یک مهاجم با دسترسی به سیستم فایل ممکن است یک ntshrui.dll مخرب را در دایرکتوری C:\\Windows قرار دهد. این DLL معمولاً در پوشه System32 قرار دارد. Process explorer.exe که در C:\\Windows نیز قرار دارد، پس از تلاش برای بارگیری ntshrui.dll از پوشه System32، DLL ارائه شده توسط مهاجم را صرفاً به دلیل ترتیب جستجوی ترجیحی بارگیری می کند. از آنجایی که مهاجم ntshrui.dll مخرب خود را در دایرکتوری مشابه با فرآیند بارگیری explorer.exe قرار داده است، DLL ارائه شده توسط مهاجم ابتدا پیدا می شود و بنابراین به جای DLL قانونی بارگذاری می شود. از آنجایی که explorer.exe در چرخه بوت بارگیری می شود، بدافزار مهاجمان تضمین می شود که اجرا شود.",
+                "macOS و OS X از یک روش متداول برای جستجوی کتابخانه‌های پویا مورد نیاز (dylib) برای بارگیری در یک برنامه بر اساس مسیرهای جستجو استفاده می‌کنند. دشمنان می‌توانند از مسیرهای مبهم برای کاشت دیلیب برای افزایش امتیاز یا تداوم استفاده کنند. یک روش متداول این است که ببینید یک برنامه از چه dylib هایی استفاده می کند، سپس یک نسخه مخرب با همین نام را در مسیر جستجو قرار دهید. این معمولا منجر به این می شود که dylib در همان پوشه ای با خود برنامه باشد. اگر برنامه طوری پیکربندی شده باشد که در سطح امتیاز بالاتری نسبت به کاربر فعلی اجرا شود، پس از بارگذاری dylib در برنامه، dylib نیز در آن سطح بالا اجرا خواهد شد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین حساسیت عمومی هدف: </b>یک مهاجم از یک ابزار خودکار استفاده می‌کند یا به صورت دستی می‌یابد که آیا برنامه هدف از کتابخانه‌های پیوندشده به‌صورت پویا و فایل پیکربندی استفاده می‌کند یا جدولی را جستجو می‌کند که به صورت پیوندی قابل پیوند است (مانند پیوندهای پرطرفدار) کتابخانه‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم از ابزاری مانند ابزار OSX \"tool\" استفاده می‌کند یا به صورت دستی بررسی می‌کند که آیا برنامه مورد نظر از کتابخانه‌های پیوند شده به صورت پویا استفاده می‌کند یا خیر.</td></tr><tr><td>مهاجم کتابخانه‌های پیکربندی شده‌ای را که به‌صورت پویا به کتابخانه‌ها پیوند داده شده‌اند و فایل‌های اصلاح‌شده را به کتابخانه‌ها پیوند می‌دهند و حاوی فایل‌های ویرایش شده پویا می‌یابد. به کتابخانه‌های مخربی که مهاجم ساخته است اشاره کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>دستورالعمل کتابخانه‌های مخرب: </b> مهاجم از دانش به‌دست‌آمده در مرحله کاوش استفاده می‌کند تا کتابخانه‌های مخرب را به سمت هدف هدایت کند. این کتابخانه‌های مخرب می‌توانند همان APIهای کتابخانه قانونی و کدهای مخرب اضافی را داشته باشند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم با استفاده از ابزاری مانند dtrace یا FileMon، عملیات فایل انجام‌شده توسط برنامه هدف را نظارت می‌کند. و مهاجم می‌تواند عملیات را با استفاده از \"sleep(2)\" و \"usleep()\" برای آماده کردن شرایط مناسب برای حمله به تعویق بیندازد، یا برنامه را وادار کند بسته به هدف برنامه، وظایف گسترده‌ای (تجزیه فایل‌های بزرگ و غیره) انجام دهد. کتابخانه‌ها به کتابخانه‌های مخرب: </b>مهاجم هدف را به کتابخانه‌های مخربی که در مرحله آزمایش ایجاد کرده است هدایت می‌کند. هنگامی که برنامه تلاش می‌کند به کتابخانه‌های قانونی دسترسی پیدا کند، مهاجم می‌تواند برنامه مورد نظر را مجبور به اجرای کد دلخواه کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم ورودی‌های فایل‌های پیکربندی را تغییر می‌دهد و به کتابخانه‌های مخربی اشاره می‌کند که به کتابخانه‌های مخرب حمله می‌کند. مشکلات symlink/timeing برای تغییر مسیر هدف برای دسترسی به کتابخانه های مخربی که آنها ساخته اند. همچنین ببینید: CAPEC-132.</td></tr><tr><td>مهاجم از مسائل مربوط به ترتیب مسیر جستجوی فایل استفاده می‌کند تا هدف را برای دسترسی به کتابخانه‌های مخربی که ساخته‌اند هدایت کند. همچنین ببینید: CAPEC-38.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم مکانیزمی برای قرار دادن کتابخانه های مخرب خود در مکان مورد نیاز در سیستم فایل دارد."
+            ]
         }
     ],
     "type": "bundle"

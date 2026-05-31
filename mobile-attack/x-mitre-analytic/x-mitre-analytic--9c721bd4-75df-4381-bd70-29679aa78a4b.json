@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0680#AN1785",
-                    "external_id": "AN1785"
+                    "external_id": "AN1785",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.381Z",
             "name": "Analytic 1785",
-            "description": "Defender correlates app attempts to enumerate or infer security/management tooling (ManagedConfiguration/MDM presence, VPN/NEFilter config, AV/EDR app presence via LaunchServices or URL-scheme probing, private APIs) with local inventory persistence and egress. Chain: probe (MDM/NE/VPN/AV presence) \u2192 burst of LS/canOpenURL/ManagedConfiguration calls \u2192 inventory cache write \u2192 small POST.",
+            "description": "Defender correlates app attempts to enumerate or infer security/management tooling (ManagedConfiguration/MDM presence, VPN/NEFilter config, AV/EDR app presence via LaunchServices or URL-scheme probing, private APIs) with local inventory persistence and egress. Chain: probe (MDM/NE/VPN/AV presence) → burst of LS/canOpenURL/ManagedConfiguration calls → inventory cache write → small POST.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -47,29 +48,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time from probe burst to persist/exfil (e.g., 10\u2013120s)."
+                    "description": "Max time from probe burst to persist/exfil (e.g., 10–120s).",
+                    "description_fa": "حداکثر زمان از انفجار کاوشگر تا ماندگاری/اکسفیل (مثلاً 10 تا 120 ثانیه)."
                 },
                 {
                     "field": "MinProbeCount",
-                    "description": "Minimum API/probe count to flag (e.g., \u226525/10s)."
+                    "description": "Minimum API/probe count to flag (e.g., ≥25/10s).",
+                    "description_fa": "حداقل تعداد API/کاوشگر برای پرچم گذاری (به عنوان مثال، ≥25/10s)."
                 },
                 {
                     "field": "SecurityTargetsList",
-                    "description": "Schemes/bundle IDs for AV/EDR/MDM/VPN vendors (regex/prefix)."
+                    "description": "Schemes/bundle IDs for AV/EDR/MDM/VPN vendors (regex/prefix).",
+                    "description_fa": "طرح‌ها/شناسه‌های بسته برای فروشندگان AV/EDR/MDM/VPN (regex/prefix)."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for inventory artifacts in app/extension containers."
+                    "description": "Regex for inventory artifacts in app/extension containers.",
+                    "description_fa": "Regex برای مصنوعات موجودی در ظروف برنامه/افزونه."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Known-good analytics/CDN allowlist."
+                    "description": "Known-good analytics/CDN allowlist.",
+                    "description_fa": "لیست مجاز تجزیه و تحلیل خوب شناخته شده/CDN."
                 },
                 {
                     "field": "JailbreakContext",
-                    "description": "Escalate severity if private APIs used on non-managed devices."
+                    "description": "Escalate severity if private APIs used on non-managed devices.",
+                    "description_fa": "در صورت استفاده از APIهای خصوصی در دستگاه‌های مدیریت نشده، شدت آن افزایش می‌یابد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1785",
+            "description_fa": "Defender تلاش‌های برنامه برای شمارش یا استنتاج ابزارهای امنیتی/مدیریت (حضور ManagedConfiguration/MDM، پیکربندی VPN/NEFilter، حضور برنامه AV/EDR از طریق LaunchServices یا کاوش طرح URL، APIهای خصوصی) را با ماندگاری و خروج موجودی محلی مرتبط می‌کند. زنجیره: کاوشگر (حضور MDM/NE/VPN/AV) ← فراخوانی LS/canOpenURL/ManagedConfiguration ← نوشتن حافظه پنهان موجودی → POST کوچک."
         }
     ]
 }

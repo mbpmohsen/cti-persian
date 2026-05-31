@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0508#AN1399",
-                    "external_id": "AN1399"
+                    "external_id": "AN1399",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccessMask",
-                    "description": "Specific access rights used during process handle acquisition, e.g., PROCESS_VM_WRITE"
+                    "description": "Specific access rights used during process handle acquisition, e.g., PROCESS_VM_WRITE",
+                    "description_fa": "حقوق دسترسی خاص استفاده شده در حین کسب دسته فرآیند، به عنوان مثال، PROCESS_VM_WRITE"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation window between API calls and thread creation events"
+                    "description": "Time correlation window between API calls and thread creation events",
+                    "description_fa": "پنجره همبستگی زمانی بین فراخوانی های API و رویدادهای ایجاد رشته"
                 },
                 {
                     "field": "InjectedProcessList",
-                    "description": "Known high-value targets often abused for injection (e.g., lsass.exe, explorer.exe)"
+                    "description": "Known high-value targets often abused for injection (e.g., lsass.exe, explorer.exe)",
+                    "description_fa": "اهداف شناخته شده با ارزش بالا اغلب برای تزریق مورد سوء استفاده قرار می گیرند (مانند lsass.exe، explorer.exe)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1399",
+            "description_fa": "تزریق فرآیند را با مرتبط کردن تماس‌های API دستکاری حافظه (مانند VirtualAllocEx، WriteProcessMemory)، ایجاد رشته مشکوک (مانند CreateRemoteThread) و بارهای غیرعادی DLL در زمینه فرآیند دیگر تشخیص می‌دهد."
         }
     ]
 }

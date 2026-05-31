@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0561#AN1548",
-                    "external_id": "AN1548"
+                    "external_id": "AN1548",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 1548",
-            "description": "Adversary installs or side-loads an IDE extension (VS Code, IntelliJ/JetBrains, Eclipse) or enables IDE tunneling. Chain: (1) IDE binary starts on a non-developer endpoint or server, often with install/force/tunnel flags \u2192 (2) extension files/registrations appear under user profile \u2192 (3) browser/IDE initiates outbound connections to extension marketplaces, update endpoints, or IDE remote/tunnel services \u2192 (4) optional child tools (ssh, node, powershell) execute under the IDE context.",
+            "description": "Adversary installs or side-loads an IDE extension (VS Code, IntelliJ/JetBrains, Eclipse) or enables IDE tunneling. Chain: (1) IDE binary starts on a non-developer endpoint or server, often with install/force/tunnel flags → (2) extension files/registrations appear under user profile → (3) browser/IDE initiates outbound connections to extension marketplaces, update endpoints, or IDE remote/tunnel services → (4) optional child tools (ssh, node, powershell) execute under the IDE context.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,25 +52,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IDEList",
-                    "description": "Executable names/paths (e.g., code.exe, idea64.exe, eclipse.exe, jetbrains-gateway.exe) vary by version and packaging."
+                    "description": "Executable names/paths (e.g., code.exe, idea64.exe, eclipse.exe, jetbrains-gateway.exe) vary by version and packaging.",
+                    "description_fa": "نام‌ها/مسیرهای اجرایی (مانند code.exe، idea64.exe، eclipse.exe، jetbrains-gateway.exe) بسته به نسخه و بسته‌بندی متفاوت است."
                 },
                 {
                     "field": "SuspiciousCLI",
-                    "description": "Flags such as --install-extension, --force, --disable-extensions, --user-data-dir, --uninstall-extension, tunnel/remote flags are tunable."
+                    "description": "Flags such as --install-extension, --force, --disable-extensions, --user-data-dir, --uninstall-extension, tunnel/remote flags are tunable.",
+                    "description_fa": "پرچم هایی مانند --install-extension، --force، --disable-extensions، --user-data-dir، --uninstall-extension، tunnel/remote flags قابل تنظیم هستند."
                 },
                 {
                     "field": "ServerZones",
-                    "description": "List of hosts where IDEs should never run (prod servers, DCs)."
+                    "description": "List of hosts where IDEs should never run (prod servers, DCs).",
+                    "description_fa": "فهرست میزبان هایی که IDE ها هرگز نباید اجرا شوند (سرورهای تولیدی، DC)."
                 },
                 {
                     "field": "AllowedHosts",
-                    "description": "Approved extension marketplaces/ide services; use to suppress benign traffic."
+                    "description": "Approved extension marketplaces/ide services; use to suppress benign traffic.",
+                    "description_fa": "بازارهای گسترش/خدمات مورد تایید؛ برای سرکوب ترافیک خوش خیم استفاده کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation horizon (e.g., 15\u201330m) between process start, file writes, and outbound IDE/tunnel connections."
+                    "description": "Correlation horizon (e.g., 15–30m) between process start, file writes, and outbound IDE/tunnel connections.",
+                    "description_fa": "افق همبستگی (مثلاً 15 تا 30 متر) بین شروع فرآیند، نوشتن فایل و اتصالات IDE/تونل خروجی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1548",
+            "description_fa": "دشمن یک افزونه IDE (VS Code، IntelliJ/JetBrains، Eclipse) را نصب یا بارگذاری جانبی می کند یا تونل IDE را فعال می کند. زنجیره: (1) باینری IDE در یک نقطه پایانی یا سرور غیر توسعه‌دهنده شروع می‌شود، اغلب با پرچم‌های install/force/tunnel → (2) فایل‌های افزودنی/ثبت‌نام در نمایه کاربر ظاهر می‌شوند → (3) مرورگر/IDE اتصالات خروجی را به بازارهای برنامه‌های افزودنی آغاز می‌کند، نقاط پایانی را به‌روزرسانی می‌کند، یا IDE remote/tunnel را به‌روزرسانی می‌کند، (4) زمینه IDE."
         }
     ]
 }

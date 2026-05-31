@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0431#AN1204",
-                    "external_id": "AN1204"
+                    "external_id": "AN1204",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RecipientSensitivity",
-                    "description": "Allows tuning based on which users (e.g., executives, finance staff) receive stricter spoofing detection policies."
+                    "description": "Allows tuning based on which users (e.g., executives, finance staff) receive stricter spoofing detection policies.",
+                    "description_fa": "تنظیم بر اساس آن دسته از کاربران (به عنوان مثال، مدیران اجرایی، کارکنان مالی) سیاست‌های تشخیص جعل سختگیرانه‌تری را دریافت می‌کنند."
                 },
                 {
                     "field": "HeaderMismatchTolerance",
-                    "description": "Defines tolerance for minor discrepancies in domain alignment, balancing detection with usability."
+                    "description": "Defines tolerance for minor discrepancies in domain alignment, balancing detection with usability.",
+                    "description_fa": "تحمل برای اختلافات جزئی در تراز دامنه تعریف می کند، تشخیص را با قابلیت استفاده متعادل می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1204",
+            "description_fa": "ترافیک ایمیل ورودی مشکوک را در مواردی که احراز هویت SPF/DKIM/DMARC با شکست مواجه می‌شود یا دامنه‌های فرستنده و مسیر برگشت با هم تطابق ندارند، شناسایی می‌کند، که در گزارش‌های یکپارچه Apple Mail یا خطوط لوله ثبت با کنترل MDM قابل مشاهده است."
         }
     ]
 }

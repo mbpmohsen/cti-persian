@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0488#AN1348",
-                    "external_id": "AN1348"
+                    "external_id": "AN1348",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExternalAccountAllowList",
-                    "description": "Cross-account principals permitted to assume roles; used for allow-listing."
+                    "description": "Cross-account principals permitted to assume roles; used for allow-listing.",
+                    "description_fa": "اصول بین حسابی مجاز به ایفای نقش. برای فهرست کردن مجاز استفاده می شود."
                 },
                 {
                     "field": "SensitiveAPIs",
-                    "description": "Provider-specific list of risky APIs for scoring."
+                    "description": "Provider-specific list of risky APIs for scoring.",
+                    "description_fa": "فهرست ویژه ارائه‌دهنده از APIهای پرخطر برای امتیازدهی."
                 },
                 {
                     "field": "GeoVelocityThreshold",
-                    "description": "Detect impossible travel between partner and tenant actions."
+                    "description": "Detect impossible travel between partner and tenant actions.",
+                    "description_fa": "سفر غیرممکن بین اقدامات شریک و مستاجر را شناسایی کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1348",
+            "description_fa": "زنجیره رفتاری: (1) اصل بین حساب یا شخص ثالث نقشی را در مستاجر/اشتراک/پروژه بر عهده می گیرد. (2) تماس های API ممتاز به صورت متوالی انجام می شود. (3) دسترسی از شبکه ها یا geos ناآشنا سرچشمه می گیرد. رویدادهای فرضی نقش/فدراسیون را با استفاده حساس از API مرتبط کنید."
         }
     ]
 }

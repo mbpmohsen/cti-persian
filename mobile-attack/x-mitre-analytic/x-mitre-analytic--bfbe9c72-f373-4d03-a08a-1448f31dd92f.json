@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0639#AN1713",
-                    "external_id": "AN1713"
+                    "external_id": "AN1713",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,37 +63,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum span for correlating connectivity degradation, application retry behavior, and network-session failure into a single denial event."
+                    "description": "Maximum span for correlating connectivity degradation, application retry behavior, and network-session failure into a single denial event.",
+                    "description_fa": "حداکثر بازه برای همبستگی کاهش اتصال، رفتار امتحان مجدد برنامه و شکست جلسه شبکه در یک رویداد انکار."
                 },
                 {
                     "field": "ExpectedMobilityPopulation",
-                    "description": "Users or device populations expected to move through low-coverage zones or transit environments that naturally cause network oscillation."
+                    "description": "Users or device populations expected to move through low-coverage zones or transit environments that naturally cause network oscillation.",
+                    "description_fa": "کاربران یا جمعیت دستگاه انتظار می رود در مناطق کم پوشش یا محیط های ترانزیت که به طور طبیعی باعث نوسان شبکه می شوند حرکت کنند."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps expected to generate frequent retry behavior or maintain persistent sessions under ordinary weak-signal conditions."
+                    "description": "Apps expected to generate frequent retry behavior or maintain persistent sessions under ordinary weak-signal conditions.",
+                    "description_fa": "برنامه‌هایی که انتظار می‌رود رفتار تکرار مکرر ایجاد کنند یا جلسات مداوم را تحت شرایط معمولی سیگنال ضعیف حفظ کنند."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether impacted applications are expected to be actively visible to the user for the analytic to carry high confidence."
+                    "description": "Whether impacted applications are expected to be actively visible to the user for the analytic to carry high confidence.",
+                    "description_fa": "آیا انتظار می رود که برنامه های کاربردی تحت تأثیر به طور فعال برای کاربر قابل مشاهده باشند تا تجزیه و تحلیل اعتماد بالایی داشته باشد."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Time threshold for determining whether connectivity degradation occurred during active device use versus idle background operation."
+                    "description": "Time threshold for determining whether connectivity degradation occurred during active device use versus idle background operation.",
+                    "description_fa": "آستانه زمانی برای تعیین اینکه آیا کاهش اتصال در طول استفاده فعال از دستگاه در مقابل عملکرد پس‌زمینه بی‌حرکت رخ داده است یا خیر."
                 },
                 {
                     "field": "FailureBurstThreshold",
-                    "description": "Threshold for repeated disconnects, resets, DNS failures, or transport failures within the correlation window."
+                    "description": "Threshold for repeated disconnects, resets, DNS failures, or transport failures within the correlation window.",
+                    "description_fa": "آستانه برای قطع ارتباط مکرر، بازنشانی، خرابی DNS، یا خرابی های انتقال در پنجره همبستگی."
                 },
                 {
                     "field": "LocationProviderDependencyList",
-                    "description": "Apps or services expected to rely on GPS or network-based location and therefore likely to exhibit secondary degradation during jamming."
+                    "description": "Apps or services expected to rely on GPS or network-based location and therefore likely to exhibit secondary degradation during jamming.",
+                    "description_fa": "برنامه‌ها یا سرویس‌هایی که انتظار می‌رود به GPS یا موقعیت مکانی مبتنی بر شبکه متکی باشند و بنابراین احتمالاً در طول پارازیت، تخریب ثانویه را نشان می‌دهند."
                 },
                 {
                     "field": "ExpectedCoverageZones",
-                    "description": "Known sites or geographies with weak legitimate coverage that should be baseline-adjusted."
+                    "description": "Known sites or geographies with weak legitimate coverage that should be baseline-adjusted.",
+                    "description_fa": "سایت‌ها یا مناطق جغرافیایی شناخته شده با پوشش قانونی ضعیف که باید براساس خط مبنا تعدیل شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1713",
+            "description_fa": "Defender یک زنجیره علّی خاص اندروید را به هم مرتبط می‌کند که در آن اتصال دستگاه در یک یا چند رادیو کاهش می‌یابد یا نوسان می‌کند، برنامه‌ها دسترسی به شبکه را از دست می‌دهند یا مکرراً تلاش می‌کنند، و الگوی خرابی رادیو یا شبکه با تحرک معمولی، انتقال پوشش، یا رفتار حالت هواپیما که توسط کاربر آغاز می‌شود، ناسازگار است. مدافع حالت رادیویی، رفتار چارچوب اتصال، وضعیت برنامه، خرابی جلسه شبکه و تخریب مکان/ارائه‌دهنده شبکه را به هم مرتبط می‌کند تا اثرات انکار شبکه را از شرایط معمول سیگنال ضعیف تشخیص دهد."
         }
     ]
 }

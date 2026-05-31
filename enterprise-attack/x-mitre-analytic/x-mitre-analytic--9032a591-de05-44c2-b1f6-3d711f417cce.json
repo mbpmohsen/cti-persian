@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0178#AN0505",
-                    "external_id": "AN0505"
+                    "external_id": "AN0505",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ListeningPort",
-                    "description": "Default VNC port (5900) but may vary in config"
+                    "description": "Default VNC port (5900) but may vary in config",
+                    "description_fa": "پورت VNC پیش فرض (5900) اما ممکن است در پیکربندی متفاوت باشد"
                 },
                 {
                     "field": "ProcessNameFilter",
-                    "description": "Filter specific VNC binaries in process execution logs"
+                    "description": "Filter specific VNC binaries in process execution logs",
+                    "description_fa": "باینری های خاص VNC را در گزارش های اجرای فرآیند فیلتر کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope detection to non-service or high-privilege accounts"
+                    "description": "Scope detection to non-service or high-privilege accounts",
+                    "description_fa": "تشخیص محدوده به حساب های غیر خدماتی یا با امتیاز بالا"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0505",
+            "description_fa": "ایجاد فرآیندهای مرتبط با VNC (به عنوان مثال، «x11vnc»، «vncserver») همراه با گزارش‌های احراز هویت و رفتار گوش دادن پورت در TCP 5900."
         }
     ]
 }

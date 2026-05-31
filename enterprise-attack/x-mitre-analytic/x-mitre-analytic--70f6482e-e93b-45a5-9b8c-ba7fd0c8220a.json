@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0515#AN1424",
-                    "external_id": "AN1424"
+                    "external_id": "AN1424",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserAgent",
-                    "description": "May need tuning for known automation tools versus unexpected curl usage"
+                    "description": "May need tuning for known automation tools versus unexpected curl usage",
+                    "description_fa": "ممکن است برای ابزارهای اتوماسیون شناخته شده در مقابل استفاده غیرمنتظره از پیچش نیاز به تنظیم داشته باشد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate retrieval and use of token within expected timeout window"
+                    "description": "Correlate retrieval and use of token within expected timeout window",
+                    "description_fa": "بازیابی و استفاده از رمز را در پنجره مهلت زمانی مورد انتظار مرتبط کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1424",
+            "description_fa": "بازیابی رمز از نقاط پایانی فراداده نمونه مانند AWS IMDS یا Azure IMDS، به دنبال آن استفاده از API با استفاده از رمز به‌دست‌آمده از برنامه‌های غیر استاندارد."
         }
     ]
 }

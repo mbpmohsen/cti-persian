@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0100#AN0277",
-                    "external_id": "AN0277"
+                    "external_id": "AN0277",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "APCTargetProcessList",
-                    "description": "Processes that are rarely or never valid targets for legitimate APC queuing (e.g., lsass.exe, winlogon.exe)"
+                    "description": "Processes that are rarely or never valid targets for legitimate APC queuing (e.g., lsass.exe, winlogon.exe)",
+                    "description_fa": "فرآیندهایی که به ندرت یا هرگز اهداف معتبری برای صف بندی قانونی APC هستند (مانند lsass.exe، winlogon.exe)"
                 },
                 {
                     "field": "ThreadQueueDepthThreshold",
-                    "description": "The number of APCs queued within a short time window that could signal abuse"
+                    "description": "The number of APCs queued within a short time window that could signal abuse",
+                    "description_fa": "تعداد APCهایی که در یک بازه زمانی کوتاه در صف قرار می گیرند که می تواند نشانه سوء استفاده باشد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Expected latency between memory allocation and thread execution through APC"
+                    "description": "Expected latency between memory allocation and thread execution through APC",
+                    "description_fa": "تأخیر مورد انتظار بین تخصیص حافظه و اجرای نخ از طریق APC"
                 },
                 {
                     "field": "UserContextSensitivity",
-                    "description": "Used to filter based on expected vs unexpected user to target process pairings"
+                    "description": "Used to filter based on expected vs unexpected user to target process pairings",
+                    "description_fa": "برای فیلتر کردن بر اساس کاربر مورد انتظار در مقابل غیرمنتظره برای هدف قرار دادن جفت‌های فرآیند استفاده می‌شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0277",
+            "description_fa": "رفتار تزریق مخرب شامل تخصیص حافظه، صف بندی رشته از راه دور از طریق APC (به عنوان مثال، QueueUserAPC) و بافت رشته تغییر یافته در یک فرآیند زنده دیگر برای اجرای کد غیرمجاز در زمینه قانونی را تشخیص می دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0562#AN1552",
-                    "external_id": "AN1552"
+                    "external_id": "AN1552",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,26 +61,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SystemDiscoveryCommandList",
-                    "description": "Linux commands commonly used for system reconnaissance - customize based on environment-specific discovery patterns"
+                    "description": "Linux commands commonly used for system reconnaissance - customize based on environment-specific discovery patterns",
+                    "description_fa": "دستورات لینوکس که معمولاً برای شناسایی سیستم استفاده می شوند - بر اساس الگوهای اکتشاف خاص محیطی سفارشی می شوند"
                 },
                 {
                     "field": "ReconnaissanceBurstThreshold",
-                    "description": "Number of discovery commands within time window indicating reconnaissance burst - tune based on legitimate administrative activity"
+                    "description": "Number of discovery commands within time window indicating reconnaissance burst - tune based on legitimate administrative activity",
+                    "description_fa": "تعداد دستورات کشف در پنجره زمانی که نشان دهنده انفجار شناسایی است - تنظیم بر اساس فعالیت اداری قانونی"
                 },
                 {
                     "field": "EnvironmentalCheckPatterns",
-                    "description": "File paths and system properties commonly validated by environmental keying - adapt to organizational infrastructure"
+                    "description": "File paths and system properties commonly validated by environmental keying - adapt to organizational infrastructure",
+                    "description_fa": "مسیرهای فایل و ویژگی‌های سیستم که معمولاً توسط کلیدهای محیطی تأیید می‌شوند - با زیرساخت سازمانی سازگار می‌شوند"
                 },
                 {
                     "field": "NetworkDiscoveryBaseline",
-                    "description": "Normal network discovery activity patterns to distinguish from malicious reconnaissance"
+                    "description": "Normal network discovery activity patterns to distinguish from malicious reconnaissance",
+                    "description_fa": "الگوهای فعالیت کشف شبکه عادی برای تشخیص از شناسایی مخرب"
                 },
                 {
                     "field": "ConditionalExecutionIndicators",
-                    "description": "Script patterns and conditional logic indicating environment-based execution decisions"
+                    "description": "Script patterns and conditional logic indicating environment-based execution decisions",
+                    "description_fa": "الگوهای اسکریپت و منطق شرطی که تصمیمات اجرایی مبتنی بر محیط را نشان می دهد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1552",
+            "description_fa": "زنجیره رفتاری اعتبارسنجی محیطی لینوکس: (1) شمارش فشرده سیستم از طریق اجرای دستور (نام، نام میزبان، ifconfig، lsblk، mount)، (2) شناسایی سیستم فایل با هدف قرار دادن مسیرهای خاص، پیکربندی های شبکه و بسته های نصب شده، (3) شمارش فرآیند و کاربر برای تأیید ضوابط مبتنی بر معیارهای محیطی فعال یا اسکریپت exedit، (4) (5) اعتبار سنجی اتصال شبکه و وضوح آدرس IP خارجی برای تأیید موقعیت جغرافیایی"
         }
     ]
 }

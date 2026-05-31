@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-493",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/493.html"
+                    "url": "https://capec.mitre.org/data/definitions/493.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "SOAP Array Attack",
                     "external_id": "REF-422",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.ws-attacks.org/index.php/Soap_Array_Attack"
+                    "url": "http://www.ws-attacks.org/index.php/Soap_Array_Attack",
+                    "description_fa": "SOAP Array Attack",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--c0166c89-dd49-46a7-9359-88a2c9d053e3",
@@ -41,7 +45,12 @@
                 "This type of an attack requires the attacker to know the endpoint of the web service, and be able to reach the endpoint with a malicious SOAP message."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف ممکن است به یک سرویس وب که از پیام های SOAP در ارتباطات استفاده می کند حمله کند. با ارسال یک آرایه SOAP بسیار بزرگ به وب سرویس، مهاجم وب سرویس را مجبور می کند تا قبل از تجزیه و تحلیل عناصر آرایه توسط تجزیه کننده XML، فضا را برای عناصر آرایه اختصاص دهد. پیام مهاجم معمولاً از نظر اندازه کوچک است که حاوی یک آرایه بزرگ از مثلاً 1000000 عنصر و چند عنصر آرایه است. این حمله تمام شدن منابع حافظه سرویس وب را هدف قرار می دهد.",
+            "name_fa": "SOAP Array Blowup",
+            "x_capec_prerequisites_fa": [
+                "این نوع حمله مستلزم آن است که مهاجم نقطه پایانی وب سرویس را بداند و بتواند با یک پیام مخرب SOAP به نقطه پایانی برسد."
+            ]
         }
     ],
     "spec_version": "2.0",

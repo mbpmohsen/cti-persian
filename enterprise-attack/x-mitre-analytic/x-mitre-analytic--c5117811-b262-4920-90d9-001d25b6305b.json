@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0444#AN1228",
-                    "external_id": "AN1228"
+                    "external_id": "AN1228",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AppProtocolAbusePattern",
-                    "description": "Detects DNS tunneling, encrypted HTTP C2, or malformed headers"
+                    "description": "Detects DNS tunneling, encrypted HTTP C2, or malformed headers",
+                    "description_fa": "تونل DNS، HTTP C2 رمزگذاری شده یا هدرهای نادرست را تشخیص می دهد"
                 },
                 {
                     "field": "NorthSouthEgressFilter",
-                    "description": "Monitor internal hosts talking externally using internal protocols (e.g., SMB)"
+                    "description": "Monitor internal hosts talking externally using internal protocols (e.g., SMB)",
+                    "description_fa": "با استفاده از پروتکل های داخلی (مانند SMB) میزبان های داخلی را که به صورت خارجی صحبت می کنند نظارت کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1228",
+            "description_fa": "تونل‌سازی لایه برنامه یا پروتکل‌های برنامه غیرمجاز مانند DNS-over-HTTPS، C2 تعبیه‌شده در سرصفحه‌های TLS/HTTP یا استفاده نادرست از ترافیک SMB از VLAN‌ها را شناسایی می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0525#AN1456",
-                    "external_id": "AN1456"
+                    "external_id": "AN1456",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IAMRoleContext",
-                    "description": "Limit detection to non-standard identities performing these calls."
+                    "description": "Limit detection to non-standard identities performing these calls.",
+                    "description_fa": "شناسایی را به هویت های غیر استانداردی که این تماس ها را انجام می دهند محدود کنید."
                 },
                 {
                     "field": "APIFrequency",
-                    "description": "Identify enumeration sweeps by volume."
+                    "description": "Identify enumeration sweeps by volume.",
+                    "description_fa": "جاروهای شمارش را بر اساس حجم شناسایی کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1456",
+            "description_fa": "استفاده از فراخوانی های API ابری (به عنوان مثال، AWS EC2 DescribeInstance، Azure VM Inventory) برای برشمردن پیکربندی های سیستم در میان دارایی ها."
         }
     ]
 }

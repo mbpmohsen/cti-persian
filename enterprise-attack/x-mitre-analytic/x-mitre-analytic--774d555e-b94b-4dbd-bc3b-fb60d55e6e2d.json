@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0501#AN1382",
-                    "external_id": "AN1382"
+                    "external_id": "AN1382",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CompilerBinaryPath",
-                    "description": "Specify path and binaries for detection (e.g., `/usr/bin/gcc`, `/opt/mingw/bin/gcc`)"
+                    "description": "Specify path and binaries for detection (e.g., `/usr/bin/gcc`, `/opt/mingw/bin/gcc`)",
+                    "description_fa": "مسیر و باینری‌ها را برای شناسایی مشخص کنید (به عنوان مثال، «/usr/bin/gcc»، «/opt/mingw/bin/gcc»)"
                 },
                 {
                     "field": "FilePermissionProfile",
-                    "description": "Match uncommon chmod behavior post-compilation (e.g., +x in `/tmp` or home directories)"
+                    "description": "Match uncommon chmod behavior post-compilation (e.g., +x in `/tmp` or home directories)",
+                    "description_fa": "مطابقت با رفتار غیر معمول chmod پس از کامپایل (به عنوان مثال، +x در «/tmp» یا فهرست‌های اصلی)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1382",
+            "description_fa": "GCC یا Clang فراخوانی شده در مسیرهای فایل مشکوک (مانند /tmp/، ~/Downloads) را با خروجی به باینری‌های اجرایی و به دنبال آن اجرا یا ترافیک خروجی از این باینری‌ها شناسایی می‌کند."
         }
     ]
 }

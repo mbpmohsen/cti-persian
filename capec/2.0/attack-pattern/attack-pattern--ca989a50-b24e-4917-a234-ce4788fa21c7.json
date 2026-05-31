@@ -9,22 +9,27 @@
                 {
                     "external_id": "CAPEC-69",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/69.html"
+                    "url": "https://capec.mitre.org/data/definitions/69.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-250",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/250.html"
+                    "url": "http://cwe.mitre.org/data/definitions/250.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-15",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/15.html"
+                    "url": "http://cwe.mitre.org/data/definitions/15.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ca989a50-b24e-4917-a234-ce4788fa21c7",
@@ -61,6 +66,23 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "مصرف منابع (انکار خدمات)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -76,11 +98,22 @@
             ],
             "x_capec_skills_required": {
                 "Low": "An attacker can use a tool to scan and automatically launch an attack against known issues. A tool can also repeat a sequence of instructions and try to brute force the service on the host target, an example of that would be the flooding technique.",
-                "Medium": "More advanced attack may require knowledge of the protocol spoken by the host service."
+                "Medium": "More advanced attack may require knowledge of the protocol spoken by the host service.",
+                "Low_fa": "یک مهاجم می تواند از ابزاری برای اسکن و شروع خودکار حمله در برابر مسائل شناخته شده استفاده کند. یک ابزار همچنین می‌تواند دنباله‌ای از دستورالعمل‌ها را تکرار کند و سعی کند سرویس را بر روی هدف میزبان اعمال کند، نمونه‌ای از آن تکنیک flooding است.",
+                "Medium_fa": "حمله پیشرفته تر ممکن است نیاز به دانش پروتکلی داشته باشد که توسط سرویس میزبان صحبت می شود."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله برنامه هایی را که دارای امتیازات بالا هستند هدف قرار می دهد. حریف سعی می کند از یک آسیب پذیری در برنامه در حال اجرا استفاده کند و کد دلخواه را برای اجرای با امتیازات بالا دریافت کند.",
+            "name_fa": "برنامه های با امتیازات بالا را هدف قرار دهید",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>پیدا کردن برنامه‌هایی با امتیازات بالا: </b> دشمن برای برنامه‌هایی که با امتیازات بالا اجرا می‌شوند بررسی می‌کند. دایرکتوری ها یا کلیدهای رجیستری (مانند HKLM که تعدادی از متغیرهای حیاتی محیط ویندوز را ذخیره می کند). این برنامه ها معمولاً با امتیازات بالا اجرا می شوند و معمولاً با در نظر گرفتن امنیت طراحی نشده اند. چنین برنامه‌هایی اهداف اکسپلویت بسیار خوبی هستند، زیرا هنگام شکستن، قدرت زیادی تولید می‌کنند.</td></tr></tbody></table><li> <p> <b>در برنامه‌های در حال اجرا آسیب‌پذیری را بیابید: </b>دشمن به دنبال آسیب‌پذیری در برنامه در حال اجرا است که امکان اجرای کد دلخواه را با امتیاز برنامه در حال اجرا فراهم می‌کند. برنامه.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>به دنبال اعتبار سنجی ورودی نامناسب باشید</td></tr><tr><td>به دنبال ایمنی نادرست خرابی باشید. به عنوان مثال، هنگامی که یک برنامه با مشکل مواجه می شود، ممکن است دسترسی محدود به هر کسی را مجاز کند.</td></tr><tr><td>به دنبال سرریز بافری باشید که اگر دشمن بتواند داده های نامعتبر را تزریق کند، ممکن است مورد سوء استفاده قرار گیرد.</td></tr></tbody></table></ol></div><div><h3>Exploit <b><li> arbitrary</h3> </b>دشمن از آسیب پذیری که پیدا کرده است سوء استفاده می کند. به عنوان مثال، آنها می توانند سعی کنند کد دلخواه را تزریق و اجرا کنند یا در منابع سیستم عامل بنویسند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدفمند با امتیازات سیستم عامل بالا اجرا می شود.",
+                "برنامه هدف داده های ورودی را از کاربر یا از برنامه دیگری می پذیرد.",
+                "برنامه هدفمند در حال ارائه اطلاعات در مورد خود است. قبل از انجام چنین حمله‌ای، ممکن است یک مهاجم نهایی نیاز به جمع‌آوری اطلاعات در مورد سرویس‌های در حال اجرا بر روی هدف میزبان داشته باشد. هرچه هدف میزبان در مورد سرویس هایی که در حال اجرا هستند (شماره نسخه برنامه و غیره) پرمخاطب تر باشد، مهاجم می تواند اطلاعات بیشتری را جمع آوری کند.",
+                "این حمله اغلب مستلزم برقراری ارتباط مستقیم با سرویس های هدف میزبان است. به عنوان مثال ممکن است Telnet برای برقراری ارتباط با هدف میزبان کافی باشد."
+            ]
         }
     ],
     "spec_version": "2.0",

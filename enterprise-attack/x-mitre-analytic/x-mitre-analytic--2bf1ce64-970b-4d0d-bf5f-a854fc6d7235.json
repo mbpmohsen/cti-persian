@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0108#AN0304",
-                    "external_id": "AN0304"
+                    "external_id": "AN0304",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EncodedCommandLengthThreshold",
-                    "description": "Minimum byte size of encoded strings to treat as suspicious"
+                    "description": "Minimum byte size of encoded strings to treat as suspicious",
+                    "description_fa": "حداقل اندازه بایت رشته های رمزگذاری شده برای مشکوک بودن"
                 },
                 {
                     "field": "SuspiciousProcessChainDepth",
-                    "description": "Number of chained processes within a short window to treat as a correlated behavior"
+                    "description": "Number of chained processes within a short window to treat as a correlated behavior",
+                    "description_fa": "تعداد فرآیندهای زنجیره ای در یک پنجره کوتاه که به عنوان یک رفتار همبسته در نظر گرفته می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0304",
+            "description_fa": "فرآیندها از ابزارهای رمزگذاری داخلی (مانند «base64»، «xxd» یا «plutil») برای رمزگذاری محتوای فایل و سپس انتقال HTTP/HTTPS از طریق برنامه‌های کاربردی curl یا سفارشی استفاده می‌کنند."
         }
     ]
 }

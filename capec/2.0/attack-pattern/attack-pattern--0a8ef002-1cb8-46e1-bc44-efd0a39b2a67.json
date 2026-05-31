@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-699",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/699.html"
+                    "url": "https://capec.mitre.org/data/definitions/699.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1300",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1300.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1300.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "TempestSDR: An SDR Tool For Eavesdropping on Computer Screens Via Unintentionally Radiated RF",
                     "external_id": "REF-744",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.rtl-sdr.com/tempestsdr-a-sdr-tool-for-eavesdropping-on-computer-screens-via-unintentionally-radiated-rf/"
+                    "url": "https://www.rtl-sdr.com/tempestsdr-a-sdr-tool-for-eavesdropping-on-computer-screens-via-unintentionally-radiated-rf/",
+                    "description_fa": "TempestSDR: ابزاری SDR برای استراق سمع صفحه های کامپیوتر از طریق RF ناخواسته تابش شده",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Dan Maloney, Exposing Computer Monitor Side-Channel Vulnerabilities with TempestSDR",
                     "external_id": "REF-745",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://hackaday.com/2020/07/15/exposing-computer-monitor-side-channel-vulnerabilities-with-tempestsdr/"
+                    "url": "https://hackaday.com/2020/07/15/exposing-computer-monitor-side-channel-vulnerabilities-with-tempestsdr/",
+                    "description_fa": "دن مالونی، آسیب‌پذیری‌های کانال جانبی مانیتور رایانه را با TempestSDR افشا می‌کند",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--0a8ef002-1cb8-46e1-bc44-efd0a39b2a67",
@@ -43,6 +49,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_execution_flow": "<h2> Execution Flow </h2><div><h3>Explore</h3><ol><li> <p> <b>Survey Target: </b>The adversary surveys the target location, looking for exposed display cables and locations to hide an SDR. This also includes looking for display cables or monitors placed close to a wall, where the SDR can be in range while behind the wall. The adversary also attempts to discover the resolution and refresh rate of the targeted display.</p></li></ol></div><div><h3>Experiment</h3><ol><li> <p> <b>Find target using SDR: </b>The adversary sets up an SDR near the target display cable or monitor. They use the SDR software to locate the corresponding frequency of the display cable. This is done by looking for interference peaks that change depending on what the screen is showing. The adversary notes down the possible frequencies of unintentional emission.</p></li><table><tbody><tr><th>Techniques</th></tr><tr><td>An adversary can make use of many different commercially available SDR devices which are easy to setup such as a HackRF, Ubertooth, RTL-SDR, and many others.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Visualize Monitor Image: </b>Once the SDR software has been used to identify the target, the adversary will record the transmissions and visualize the monitor image using these transmissions, which allows them to eavesdrop on the information visible on the monitor.</p></li><table><tbody><tr><th>Techniques</th></tr><tr><td>The TempestSDR software can be used in conjunction an SDR device to visualize the monitor image. The adversary will specify the known monitor resolution and refresh rate, or if those are not known they can use the provided auto-correlation graphs to help predict these values. The adversary will then try the different frequencies recorded from the experiment phase, looking for a viewing monitor display. Low pass filters and gain can be manipulated to make the display image clearer.</td></tr></tbody></table></ol></div>",
@@ -58,11 +67,25 @@
             ],
             "x_capec_skills_required": {
                 "Low": "Understanding of computing hardware, to identify the video cable and video ports",
-                "Medium": "Knowledge of how to use the SDR and related software: With this knowledge, the adversary will find the correct frequency where the signal is being leaked"
+                "Medium": "Knowledge of how to use the SDR and related software: With this knowledge, the adversary will find the correct frequency where the signal is being leaked",
+                "Low_fa": "آشنایی با سخت افزار محاسباتی برای شناسایی کابل های ویدئویی و پورت های ویدئویی",
+                "Medium_fa": "دانش نحوه استفاده از SDR و نرم افزارهای مربوطه: با این دانش، حریف فرکانس صحیح را در جایی که سیگنال در حال نشت است پیدا می کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن می‌تواند بدون تغییر کابل یا نصب نرم‌افزار، محتوای یک مانیتور خارجی را از طریق هوا استراق سمع کند، فقط سیگنال منتشر شده توسط کابل یا پورت ویدیویی را ضبط کند، با این کار مهاجم می‌تواند محرمانه بودن داده‌ها را بدون شناسایی توسط ابزارهای امنیتی سنتی تحت تأثیر قرار دهد.",
+            "name_fa": "استراق سمع از مانیتور",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>هدف نظرسنجی: </b>دشمن مکان مورد نظر را بررسی می‌کند و به دنبال کابل‌های نمایش در معرض نمایش و مکان‌هایی برای مخفی کردن SDR می‌گردد. این همچنین شامل جستجوی کابل‌های نمایشگر یا نمایشگرهایی می‌شود که در نزدیکی دیوار قرار گرفته‌اند، جایی که SDR می‌تواند در محدوده زمانی پشت دیوار باشد. دشمن همچنین سعی می‌کند وضوح و نرخ تازه‌سازی نمایشگر مورد نظر را کشف کند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>یافتن هدف با استفاده از SDR: </b>دشمن یک SDR را در نزدیکی کابل نمایشگر یا نمایشگر هدف تنظیم می‌کند. آنها از نرم افزار SDR برای تعیین فرکانس مربوطه کابل نمایشگر استفاده می کنند. این کار با جستجوی پیک های تداخلی انجام می شود که بسته به چیزی که صفحه نمایش نشان می دهد تغییر می کند. دشمن فرکانس‌های احتمالی انتشار ناخواسته را یادداشت می‌کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک دشمن می‌تواند از بسیاری از دستگاه‌های مختلف SDR تجاری موجود استفاده کند که به راحتی قابل تنظیم هستند، مانند HackRF، Ubertooth، RTL-SDR و بسیاری دیگران.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Visualize Monitor Image: </b>زمانی که از نرم افزار SDR برای شناسایی هدف استفاده شد، حریف ارسال ها را ضبط می کند و تصویر مانیتور را با استفاده از این اطلاعات قابل مشاهده روی نمایشگر به تصویر می کشد. مانیتور.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>نرم افزار TempestSDR را می توان به همراه یک دستگاه SDR برای تجسم تصویر مانیتور استفاده کرد. حریف رزولوشن و نرخ تازه سازی مانیتور شناخته شده را مشخص می کند، یا اگر آن ها شناخته شده نیستند، می توانند از نمودارهای همبستگی خودکار ارائه شده برای کمک به پیش بینی این مقادیر استفاده کنند. سپس حریف فرکانس‌های مختلف ثبت‌شده از مرحله آزمایش را امتحان می‌کند و به دنبال نمایشگر نمایشگر می‌گردد. فیلترهای پایین گذر و بهره را می‌توان برای شفاف‌تر کردن تصویر نمایشگر دستکاری کرد.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>این حمله به حریف این امکان را می دهد که یک مانیتور خارجی را با تاخیر ناچیز مشاهده کند. همچنین هیچ نشانه ای از سازش از جانب قربانی روی مانیتور قابل مشاهده نیست.</xhtml:p>\n            <xhtml:p> استراق سمع به دلیل نشتی سیگنال امکان پذیر است که در نقاط مختلف اتصال از جمله پورت منبع، اتصال بین کابل و رایانه شخصی، خود کابل و اتصال بین کابل و مانیتور ایجاد می شود. این نشت سیگنال را می توان در نزدیکی هر یک از نقاط نشتی، اما همچنین در یک مکان نزدیک، مانند اتاق بعدی یا چند متر دورتر، با استفاده از یک دستگاه SDR (رادیو تعریف شده از نرم افزار) و نرم افزار مربوطه، که سیگنال را پردازش و تفسیر می کند تا به مهاجمان نشان دهد که مانیتور چه چیزی را نشان می دهد.</xhtml:p>\n            <xhtml:p> از دیدگاه قربانی، این حمله مشخص شده ممکن است خطر بالایی ایجاد کند، و از سوی دیگر، از نقطه نظر مهاجم، حمله بسیار عالی است، زیرا روش حمله مشخص شده را می توان بدون سرمایه گذاری زیاد یا نیاز به مهارت های زیادی استفاده کرد، تا زمانی که ابزار حمله مناسب در جای مناسب قرار داشته باشد، این به مهاجمان اجازه می دهد تا به طور کامل هویت اطلاعات را به خطر بیندازند. همچنین به مهاجم این مزیت را می دهد که نه تنها توسط محصولات امنیتی سنتی، بلکه از طریق پاکسازی باگ نیز قابل شناسایی نیست زیرا دستگاه SDR در حالت غیرفعال عمل می کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "قربانی باید از دستگاه مانیتور خارجی استفاده کند",
+                "دسترسی فیزیکی به مکان و دستگاه های مورد نظر"
+            ],
+            "x_capec_resources_required_fa": [
+                "دستگاه SDR با آنتن خبرنگار تنظیم شده است",
+                "کامپیوتر با نرم افزار SDR"
+            ]
         }
     ],
     "spec_version": "2.0",

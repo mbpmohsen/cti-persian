@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0529#AN1466",
-                    "external_id": "AN1466"
+                    "external_id": "AN1466",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SyscallType",
-                    "description": "Filter for fork, mmap, ptrace based on context"
+                    "description": "Filter for fork, mmap, ptrace based on context",
+                    "description_fa": "فیلتر برای فورک، mmap، ptrace بر اساس زمینه"
                 },
                 {
                     "field": "ProcessName",
-                    "description": "Whitelist known daemon and scheduled task patterns"
+                    "description": "Whitelist known daemon and scheduled task patterns",
+                    "description_fa": "دیمون های شناخته شده و الگوهای کار برنامه ریزی شده را در لیست سفید قرار دهید"
                 },
                 {
                     "field": "MAPS Path",
-                    "description": "Tune suspicious memory map regions (e.g., /tmp/.evilshmem)"
+                    "description": "Tune suspicious memory map regions (e.g., /tmp/.evilshmem)",
+                    "description_fa": "تنظیم مناطق نقشه حافظه مشکوک (به عنوان مثال /tmp/.evilshmem)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1466",
+            "description_fa": "Userland فرآیندهای فراخوانی کتابخانه‌های سنگین سیستم (libc، glibc) را به دنبال فورک، mmap یا رفتار ptrace که معمولاً با تزریق کد یا دستکاری حافظه مرتبط است، انجام می‌دهد."
         }
     ]
 }

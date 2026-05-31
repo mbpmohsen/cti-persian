@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0295#AN0822",
-                    "external_id": "AN0822"
+                    "external_id": "AN0822",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0822",
-            "description": "Detects hijacking of an existing thread (OpenThread) through a behavioral chain involving thread suspension (SuspendThread), memory modification (VirtualAllocEx + WriteProcessMemory), context manipulation (SetThreadContext), and thread resumption\u2014all within another live process's address space (ResumeThread).",
+            "description": "Detects hijacking of an existing thread (OpenThread) through a behavioral chain involving thread suspension (SuspendThread), memory modification (VirtualAllocEx + WriteProcessMemory), context manipulation (SetThreadContext), and thread resumption—all within another live process's address space (ResumeThread).",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcessList",
-                    "description": "Sensitive processes that should never be targeted for thread hijack attempts"
+                    "description": "Sensitive processes that should never be targeted for thread hijack attempts",
+                    "description_fa": "فرآیندهای حساسی که هرگز نباید برای تلاش برای ربودن نخ مورد هدف قرار گیرند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Expected delay between SuspendThread and ResumeThread events; tight thresholds reduce evasion"
+                    "description": "Expected delay between SuspendThread and ResumeThread events; tight thresholds reduce evasion",
+                    "description_fa": "تاخیر مورد انتظار بین رویدادهای SuspendThread و ResumeThread. آستانه های تنگ فرار را کاهش می دهد"
                 },
                 {
                     "field": "SuspiciousThreadContextRegions",
-                    "description": "Memory regions or offsets that should not be targeted for SetThreadContext"
+                    "description": "Memory regions or offsets that should not be targeted for SetThreadContext",
+                    "description_fa": "مناطق یا افست های حافظه که نباید برای SetThreadContext هدف قرار گیرند"
                 },
                 {
                     "field": "ParentProcessAnomalyThreshold",
-                    "description": "Score deviation of the parent/child relationship in a thread injection chain"
+                    "description": "Score deviation of the parent/child relationship in a thread injection chain",
+                    "description_fa": "انحراف امتیاز رابطه والد/فرزند در زنجیره تزریق نخ"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0822",
+            "description_fa": "ربودن یک رشته موجود (OpenThread) را از طریق یک زنجیره رفتاری شامل تعلیق رشته (SuspendThread)، تغییر حافظه (VirtualAllocEx + WriteProcessMemory)، دستکاری زمینه (SetThreadContext)، و موضوع (Resumption'sadreadreadread) دیگر، و thread resumption's all."
         }
     ]
 }

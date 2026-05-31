@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0310#AN0865",
-                    "external_id": "AN0865"
+                    "external_id": "AN0865",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetGroup",
-                    "description": "Set to detect high-privileged groups like 'Administrators', 'Domain Admins', or 'Remote Desktop Users'"
+                    "description": "Set to detect high-privileged groups like 'Administrators', 'Domain Admins', or 'Remote Desktop Users'",
+                    "description_fa": "تنظیم برای شناسایی گروه‌های دارای امتیاز بالا مانند «مدیران»، «مدیران دامنه» یا «کاربران دسک‌تاپ از راه دور»"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Restrict detections to business hours or approved maintenance windows"
+                    "description": "Restrict detections to business hours or approved maintenance windows",
+                    "description_fa": "شناسایی ها را به ساعات کاری یا پنجره های تعمیر و نگهداری تایید شده محدود کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filter out known automated processes or provisioning systems"
+                    "description": "Filter out known automated processes or provisioning systems",
+                    "description_fa": "فرآیندهای خودکار شناخته شده یا سیستم های تأمین را فیلتر کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0865",
+            "description_fa": "افزودن‌های غیرمجاز کاربران یا حساب‌های ماشینی به گروه‌های محلی یا دامنه ممتاز (مانند مدیران، کاربران دسک‌تاپ از راه دور) را شناسایی می‌کند."
         }
     ]
 }

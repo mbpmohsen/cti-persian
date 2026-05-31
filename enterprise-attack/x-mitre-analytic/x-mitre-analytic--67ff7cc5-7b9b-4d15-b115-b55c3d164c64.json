@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0220#AN0616",
-                    "external_id": "AN0616"
+                    "external_id": "AN0616",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SensitiveFilePathRegex",
-                    "description": "Match data staging or export paths (e.g., *.docx, *.csv, *.db) to USB volume letters."
+                    "description": "Match data staging or export paths (e.g., *.docx, *.csv, *.db) to USB volume letters.",
+                    "description_fa": "مسیرهای مرحله بندی داده یا صادرات (به عنوان مثال *.docx، *.csv، *.db) را به حروف حجم USB مطابقت دهید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Limit to users who do not normally use removable devices (e.g., service accounts)."
+                    "description": "Limit to users who do not normally use removable devices (e.g., service accounts).",
+                    "description_fa": "محدود به کاربرانی که معمولاً از دستگاه‌های قابل جابجایی (مانند حساب‌های سرویس) استفاده نمی‌کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate events within a short period following USB insert (e.g., 5\u201310 minutes)."
+                    "description": "Correlate events within a short period following USB insert (e.g., 5–10 minutes).",
+                    "description_fa": "رویدادها را در مدت کوتاهی پس از درج USB (مثلاً 5 تا 10 دقیقه) به هم مرتبط کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0616",
+            "description_fa": "درج دستگاه USB و به دنبال آن دسترسی به فایل با حجم بالا یا حساس و فعالیت مرحله‌بندی توسط فرآیندها یا حساب‌های مشکوک را تشخیص می‌دهد."
         }
     ]
 }

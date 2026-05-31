@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0695#AN1809",
-                    "external_id": "AN1809"
+                    "external_id": "AN1809",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,33 +58,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking camera access, device state, artifact creation, and optional network transfer."
+                    "description": "Correlation window linking camera access, device state, artifact creation, and optional network transfer.",
+                    "description_fa": "پنجره همبستگی که دسترسی دوربین، وضعیت دستگاه، ایجاد مصنوعات و انتقال اختیاری شبکه را به هم مرتبط می کند."
                 },
                 {
                     "field": "CaptureDurationThreshold",
-                    "description": "Minimum sustained camera session duration considered unusual for the bundle role."
+                    "description": "Minimum sustained camera session duration considered unusual for the bundle role.",
+                    "description_fa": "حداقل مدت زمان ثابت دوربین برای نقش بسته غیرمعمول در نظر گرفته می شود."
                 },
                 {
                     "field": "SupervisedRequired",
-                    "description": "Strongest bundle-baseline and managed-app analytics depend on supervised iOS devices."
+                    "description": "Strongest bundle-baseline and managed-app analytics depend on supervised iOS devices.",
+                    "description_fa": "قوی‌ترین تحلیل‌های مبتنی بر بسته نرم‌افزاری و برنامه مدیریت‌شده به دستگاه‌های iOS تحت نظارت بستگی دارد."
                 },
                 {
                     "field": "AllowedManagedApps",
-                    "description": "Approved managed bundle identities with camera capability vary by organization and device profile."
+                    "description": "Approved managed bundle identities with camera capability vary by organization and device profile.",
+                    "description_fa": "شناسه‌های دسته مدیریت‌شده تأییدشده با قابلیت دوربین بسته به سازمان و نمایه دستگاه متفاوت است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Some managed apps should only access the camera during visible foreground use."
+                    "description": "Some managed apps should only access the camera during visible foreground use.",
+                    "description_fa": "برخی از برنامه‌های مدیریت‌شده فقط باید در هنگام استفاده از پیش‌زمینه قابل مشاهده به دوربین دسترسی داشته باشند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close camera activation must be to user interaction to be considered expected."
+                    "description": "Defines how close camera activation must be to user interaction to be considered expected.",
+                    "description_fa": "مشخص می‌کند که فعال‌سازی دوربین چقدر باید به تعامل کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "AllowedBackgroundCaptureApps",
-                    "description": "Specific approved workflows may legitimately capture media under constrained background-like conditions."
+                    "description": "Specific approved workflows may legitimately capture media under constrained background-like conditions.",
+                    "description_fa": "گردش‌های کاری تأیید شده خاص ممکن است به طور قانونی رسانه‌ها را تحت شرایط پس‌زمینه محدود ضبط کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1809",
+            "description_fa": "مدافع دسترسی به دوربین برنامه مدیریت شده یا دستگاه نظارت شده را با زمینه برنامه و دستگاه مرتبط می کند و نشان می دهد که عکسبرداری با رفتار ضبط مورد انتظار کاربر-محور مطابقت ندارد. قوی‌ترین شواهد iOS دسترسی به دوربین یا فعالیت عکس‌برداری مجاور دوربین و به دنبال آن شواهد وضعیت برنامه مانند پس‌زمینه یا عملکرد کم تعامل، ایجاد مصنوعات رسانه‌ای اختیاری و انتقال اختیاری پس از ضبط شبکه است. از آنجایی که دید مستقیم زمان اجرا در سطح پایین برای بسیاری از شرکت‌ها ضعیف‌تر از اندروید است، تجزیه و تحلیل اولیه iOS باید بر روی زمینه برنامه مدیریت‌شده، وضعیت دستگاه و جلوه‌های پایین‌دستی پیرامون استفاده از دوربین، با تله‌متری زیرسیستم محلی به‌عنوان غنی‌سازی تلقی شود تا اثبات انحصاری."
         }
     ]
 }

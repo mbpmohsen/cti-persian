@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0287#AN0797",
-                    "external_id": "AN0797"
+                    "external_id": "AN0797",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0797",
-            "description": "Cause\u2192effect chain: (1) A client app (browser, Office, PDF/Flash/reader) experiences a crash/abnormal exit or loads from an unusual location, then (2) drops or modifies a file in user-writable paths, and/or (3) spawns an unexpected child (e.g., powershell/cmd/mshta/rundll32/wscript/installer), and (4) establishes outbound C2-like connections shortly after. Correlate application logs, file writes, process lineage, and network egress within a short window.",
+            "description": "Cause→effect chain: (1) A client app (browser, Office, PDF/Flash/reader) experiences a crash/abnormal exit or loads from an unusual location, then (2) drops or modifies a file in user-writable paths, and/or (3) spawns an unexpected child (e.g., powershell/cmd/mshta/rundll32/wscript/installer), and (4) establishes outbound C2-like connections shortly after. Correlate application logs, file writes, process lineage, and network egress within a short window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., 15m) between crash/write/child/network."
+                    "description": "Correlation window (e.g., 15m) between crash/write/child/network.",
+                    "description_fa": "پنجره همبستگی (مثلاً 15 متر) بین خرابی/نوشتن/کودک/شبکه."
                 },
                 {
                     "field": "HighRiskChildren",
-                    "description": "List of child processes that should rarely spawn from Office/browsers (powershell.exe, cmd.exe, wscript.exe, mshta.exe, rundll32.exe, regsvr32.exe, msiexec.exe, curl.exe)."
+                    "description": "List of child processes that should rarely spawn from Office/browsers (powershell.exe, cmd.exe, wscript.exe, mshta.exe, rundll32.exe, regsvr32.exe, msiexec.exe, curl.exe).",
+                    "description_fa": "فهرستی از فرآیندهای فرزندی که به ندرت باید از آفیس/مرورگرها ایجاد شوند (powershell.exe، cmd.exe، wscript.exe، mshta.exe، rundll32.exe، regsvr32.exe، msiexec.exe، curl.exe)."
                 },
                 {
                     "field": "UserPaths",
-                    "description": "Writable paths to watch (Downloads, %TEMP%, %APPDATA%, OneDrive, Office startup folders)."
+                    "description": "Writable paths to watch (Downloads, %TEMP%, %APPDATA%, OneDrive, Office startup folders).",
+                    "description_fa": "مسیرهای قابل نوشتن برای تماشا (دانلود، %TEMP، %APPDATA، OneDrive، پوشه‌های راه‌اندازی آفیس)."
                 },
                 {
                     "field": "AllowedPlugins",
-                    "description": "Known add-ins/extensions and updater binaries to reduce noise."
+                    "description": "Known add-ins/extensions and updater binaries to reduce noise.",
+                    "description_fa": "افزونه‌ها/افزونه‌ها و باینری‌های به‌روزرسانی‌کننده شناخته شده برای کاهش نویز."
                 },
                 {
                     "field": "EgressAllowlist",
-                    "description": "Known update/CDN domains and proxy egress CIDRs for suppression."
+                    "description": "Known update/CDN domains and proxy egress CIDRs for suppression.",
+                    "description_fa": "دامنه‌های به‌روزرسانی/CDN شناخته شده و CIDR‌های پراکسی برای سرکوب خارج می‌شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0797",
+            "description_fa": "زنجیره علت → اثر: (1) یک برنامه مشتری (مرورگر، آفیس، PDF/Flash/خواننده) یک خرابی/خروج غیرعادی را تجربه می کند یا از یک مکان غیرعادی بارگیری می شود، سپس (2) یک فایل را در مسیرهای قابل نوشتن توسط کاربر رها می کند یا تغییر می دهد، و/یا (3) یک فرزند غیرمنتظره ایجاد می کند (به عنوان مثال/cm/cm2/installershell) و (4) در مدت کوتاهی پس از اتصالات C2 مانند خروجی ایجاد می کند. گزارش‌های برنامه، نوشتن فایل، خط و نسب پردازش و خروجی شبکه را در یک پنجره کوتاه به هم مرتبط کنید."
         }
     ]
 }

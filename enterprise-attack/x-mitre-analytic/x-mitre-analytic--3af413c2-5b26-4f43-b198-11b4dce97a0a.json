@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0048#AN0132",
-                    "external_id": "AN0132"
+                    "external_id": "AN0132",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MailAccessVolumeThreshold",
-                    "description": "Number of emails accessed within time window to flag anomaly."
+                    "description": "Number of emails accessed within time window to flag anomaly.",
+                    "description_fa": "تعداد ایمیل‌هایی که در پنجره زمانی برای پرچم‌گذاری غیرعادی به آنها دسترسی پیدا کرده‌اند."
                 },
                 {
                     "field": "OAuthClientIDAllowList",
-                    "description": "Allows tuning based on known app registrations."
+                    "description": "Allows tuning based on known app registrations.",
+                    "description_fa": "تنظیم بر اساس ثبت برنامه های شناخته شده را امکان پذیر می کند."
                 },
                 {
                     "field": "KeywordSearchFrequency",
-                    "description": "Flag high volumes of message searches using suspicious patterns."
+                    "description": "Flag high volumes of message searches using suspicious patterns.",
+                    "description_fa": "با استفاده از الگوهای مشکوک، حجم بالایی از جستجوهای پیام را علامت گذاری کنید."
                 },
                 {
                     "field": "LoginGeolocationVariance",
-                    "description": "Trigger when IP geolocation varies significantly from user's historical profile."
+                    "description": "Trigger when IP geolocation varies significantly from user's historical profile.",
+                    "description_fa": "زمانی فعال می شود که موقعیت جغرافیایی IP به طور قابل توجهی با نمایه تاریخی کاربر متفاوت است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0132",
+            "description_fa": "دسترسی برنامه‌ریزی شده به صندوق‌های پستی کاربر را در سیستم‌های ایمیل مبتنی بر ابر (مانند O365، Exchange Online) با استفاده از API یا نشانه‌ها نظارت می‌کند. بر استفاده نادرست از OAuth، الگوهای مشکوک MailItemsAccessed، جستجوهای کلیدواژه اسکریپت شده، و اتصالات از عوامل یا مکان های نامعتبر تمرکز می کند."
         }
     ]
 }

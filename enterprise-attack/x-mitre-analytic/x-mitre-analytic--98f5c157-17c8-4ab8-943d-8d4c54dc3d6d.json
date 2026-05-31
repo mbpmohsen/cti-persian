@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0262#AN0729",
-                    "external_id": "AN0729"
+                    "external_id": "AN0729",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EphemeralPortRange",
-                    "description": "Configured ephemeral port ranges per environment to reduce false positives"
+                    "description": "Configured ephemeral port ranges per environment to reduce false positives",
+                    "description_fa": "محدوده پورت زودگذر پیکربندی شده در هر محیط برای کاهش مثبت کاذب"
                 },
                 {
                     "field": "ResolverWhitelist",
-                    "description": "Exclude trusted resolvers or internal services from analysis"
+                    "description": "Exclude trusted resolvers or internal services from analysis",
+                    "description_fa": "حل‌کننده‌های مورد اعتماد یا سرویس‌های داخلی را از تجزیه و تحلیل حذف کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0729",
+            "description_fa": "گزارش‌های حل‌کننده و ممیزی را برای فرآیندهایی که اتصالات خروجی به پورت‌های محاسبه‌شده از IPهای پاسخ DNS را آغاز می‌کنند، بررسی کنید. استفاده غیرعادی از پورت زودگذر اندکی پس از پرس و جوهای DNS می تواند رفتار محاسبه DNS را نشان دهد."
         }
     ]
 }

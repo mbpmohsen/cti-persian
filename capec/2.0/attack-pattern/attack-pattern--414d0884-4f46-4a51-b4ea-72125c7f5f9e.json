@@ -9,47 +9,60 @@
                 {
                     "external_id": "CAPEC-196",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/196.html"
+                    "url": "https://capec.mitre.org/data/definitions/196.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-384",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/384.html"
+                    "url": "http://cwe.mitre.org/data/definitions/384.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-664",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/664.html"
+                    "url": "http://cwe.mitre.org/data/definitions/664.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Access Token Manipulation: Create Process with Token",
                     "external_id": "T1134.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1134/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1134/002",
+                    "description_fa": "دستکاری توکن دسترسی: ایجاد فرآیند با توکن",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Access Token Manipulation: Make and Impersonate Token",
                     "external_id": "T1134.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1134/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1134/003",
+                    "description_fa": "دستکاری توکن دسترسی: رمز را بسازید و جعل کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Forge Web Credentials",
                     "external_id": "T1606",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1606"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1606",
+                    "description_fa": "جعل اعتبار وب",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Thomas Schreiber, Session Riding: A Widespread Vulnerability in Today's Web Applications, SecureNet GmbH",
                     "external_id": "REF-62",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://crypto.stanford.edu/cs155old/cs155-spring08/papers/Session_Riding.pdf"
+                    "url": "https://crypto.stanford.edu/cs155old/cs155-spring08/papers/Session_Riding.pdf",
+                    "description_fa": "توماس شرایبر، Session Riding: یک آسیب پذیری گسترده در برنامه های کاربردی وب امروزی، SecureNet GmbH",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Testing Guide (v4), The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-63",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.owasp.org/index.php/Testing_for_Session_Management"
+                    "url": "http://www.owasp.org/index.php/Testing_for_Session_Management",
+                    "description_fa": "راهنمای تست OWASP (v4)، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--414d0884-4f46-4a51-b4ea-72125c7f5f9e",
@@ -90,6 +103,29 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -111,11 +147,24 @@
                 "Attackers may require tools to craft messages containing their forged credentials, and ability to send HTTP request to a web application."
             ],
             "x_capec_skills_required": {
-                "Medium": "Forge the session credential and reply the request."
+                "Medium": "Forge the session credential and reply the request.",
+                "Medium_fa": "اعتبار جلسه را جعل کنید و به درخواست پاسخ دهید."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم برای به دست آوردن یا غصب دسترسی به یک سرویس، یک اعتبار جلسه نادرست اما کاربردی ایجاد می کند. اعتبار جلسه به کاربران این امکان را می دهد که پس از احراز هویت اولیه بدون نیاز به ارسال مجدد اطلاعات احراز هویت (معمولاً نام کاربری و رمز عبور) خود را به یک سرویس شناسایی کنند. اگر یک مهاجم بتواند اعتبار جلسه معتبر را جعل کند، ممکن است بتواند از احراز هویت عبور کند یا جلسه برخی از کاربران احراز هویت شده دیگر را به عقب برگرداند. این حمله با استفاده مجدد از Session ID و حملات Session Sidejacking متفاوت است زیرا در حملات اخیر، مهاجم از اعتبار قبلی یا موجود بدون تغییر استفاده می‌کند، در حالی که در حمله جعل، مهاجم باید اعتبار خود را ایجاد کند، اگرچه ممکن است بر اساس اعتبارنامه‌های مشاهده شده قبلی باشد.",
+            "name_fa": "جعل اعتبار جلسه از طریق جعل",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>این مثال از برنامه نویسی سمت سرویس گیرنده برای تنظیم شناسه جلسه در مرورگر قربانی استفاده می کند. کد جاوا اسکریپت</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">document.cookie=\"sessionid=0123456789\"</xhtml:div>\n               <xhtml:p>یک اعتبار جلسه جعلی را با کمک پیوند URL ساخته شده در مرورگر قربانی ثابت می کند.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">http://www.example.com/<script>document.cookie=\"sessionid=0123456789\";</script></xhtml:div>\n               <xhtml:p>یک مثال مشابه از شناسه جلسه به عنوان آرگومان URL استفاده می کند.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">http://www.example.com/index.php/sessionid=0123456789</xhtml:div>\n               <xhtml:p>هنگامی که قربانی روی پیوندها کلیک کند، مهاجم ممکن است بتواند احراز هویت را دور بزند یا برخی از جلسه های دیگر قربانی احراز هویت شده را بازگرداند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تجزیه و تحلیل و درک شناسه‌های جلسه: </b>مهاجم متوجه می‌شود که برنامه مورد نظر از اعتبار جلسه برای شناسایی کاربران قانونی استفاده می‌کند. اتصالات ناشناس و شناسه‌های جلسه را ضبط می‌کند.</td></tr><tr><td>یک مهاجم اتصالات مجاز ایجاد می‌کند و نشانه‌های جلسه یا اعتبارنامه‌ها را ضبط می‌کند. حاوی اطلاعات کاربری جعلی خود در GET، درخواست POST، سرصفحه‌های HTTP یا کوکی‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم پیام درخواست HTTP را دستکاری می‌کند و شناسه‌های جلسه جعلی خود را به درخواست‌ها یا اضافه می‌کند. کوکی‌ها.</td></tr></tbody></table></ol></div><div><h3>سوءاستفاده</h3><ol><li> <p> <b>سوء استفاده از اعتبار جلسه قربانی: </b> مهاجم هنگام دسترسی قربانی به سیستم، شناسه جلسه جعلی را برای قربانی ثابت می‌کند. هنگامی که قربانی به سطح بالاتری از امتیاز دست یافت، احتمالاً با ورود به برنامه، مهاجم اکنون می‌تواند با استفاده از شناسه جعلی جلسه، جلسه را تصاحب کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم مرورگر یا شناسه داده‌های از پیش تعریف‌شده یا پیش‌بینی‌شده یا مرورگرهای خود را بارگیری می‌کند. عملکرد.</td></tr><tr><td>مهاجم شناسه جلسه از پیش تعریف شده یا پیش بینی شده را در نرم افزار خود بارگیری می کند و از عملکرد با حقوق قربانی استفاده می کند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید از اعتبار جلسه برای شناسایی کاربران قانونی استفاده کند. شناسه‌های جلسه که با تغییر سطوح امتیاز بدون تغییر باقی می‌مانند. شناسه های جلسه قابل پیش بینی"
+            ],
+            "x_capec_resources_required_fa": [
+                "مهاجمان ممکن است به ابزارهایی برای ایجاد پیام هایی که حاوی اعتبار جعلی آنها هستند و توانایی ارسال درخواست HTTP به یک برنامه وب نیاز داشته باشند."
+            ]
         }
     ],
     "spec_version": "2.0",

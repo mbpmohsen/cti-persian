@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0314#AN0876",
-                    "external_id": "AN0876"
+                    "external_id": "AN0876",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InterfaceList",
-                    "description": "Limit analysis to external interfaces (e.g., eth0, wlan0) and exclude virtual adapters."
+                    "description": "Limit analysis to external interfaces (e.g., eth0, wlan0) and exclude virtual adapters.",
+                    "description_fa": "تجزیه و تحلیل را به رابط های خارجی (به عنوان مثال، eth0، wlan0) محدود کنید و آداپتورهای مجازی را حذف کنید."
                 },
                 {
                     "field": "PromiscuousSessionThreshold",
-                    "description": "Raise alerts if interface remains in PROMISC longer than threshold duration."
+                    "description": "Raise alerts if interface remains in PROMISC longer than threshold duration.",
+                    "description_fa": "اگر رابط کاربری بیش از مدت زمان آستانه در PROMISC باقی بماند، هشدارها را افزایش دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0876",
+            "description_fa": "تغییرات حالت رابط را با اجرای ابزارهای sniffing مانند tcpdump، tshark، یا کتابخانه های pcap سفارشی به هم مرتبط می کند. پیکربندی‌های غیرعادی NIC و استفراغ غیرمجاز از جلسات غیر ریشه را تشخیص می‌دهد."
         }
     ]
 }

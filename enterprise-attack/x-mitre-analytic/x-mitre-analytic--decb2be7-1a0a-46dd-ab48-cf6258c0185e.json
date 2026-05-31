@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0329#AN0933",
-                    "external_id": "AN0933"
+                    "external_id": "AN0933",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Used to track rapid recovery feature changes over short intervals"
+                    "description": "Used to track rapid recovery feature changes over short intervals",
+                    "description_fa": "برای ردیابی تغییرات ویژگی بازیابی سریع در فواصل زمانی کوتاه استفاده می شود"
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Can be tuned to catch variations in destructive flags (/all, /quiet, -delete)"
+                    "description": "Can be tuned to catch variations in destructive flags (/all, /quiet, -delete)",
+                    "description_fa": "می توان آن را تنظیم کرد تا تغییرات پرچم های مخرب را دریافت کند (/all، /quiet، -delete)"
                 },
                 {
                     "field": "ParentProcessContext",
-                    "description": "Tune based on common parent-child chains (e.g., powershell \u2192 diskshadow)"
+                    "description": "Tune based on common parent-child chains (e.g., powershell → diskshadow)",
+                    "description_fa": "تنظیم بر اساس زنجیره‌های مشترک والد-فرزند (مثلاً powershell → diskshadow)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0933",
+            "description_fa": "زنجیره‌های پردازشی که از ابزارهای بومی (vssadmin، wbadmin، diskshadow، bcdedit، REAgentC، wmic) با آرگومان‌هایی برای حذف کپی‌های سایه، غیرفعال کردن بازیابی یا حذف کاتالوگ‌های پشتیبان استفاده می‌کنند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0075#AN0207",
-                    "external_id": "AN0207"
+                    "external_id": "AN0207",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CLICommandPattern",
-                    "description": "Watch for chained shell commands building local-to-local connections."
+                    "description": "Watch for chained shell commands building local-to-local connections.",
+                    "description_fa": "مراقب دستورات پوسته زنجیر شده در ساخت اتصالات محلی به محلی باشید."
                 },
                 {
                     "field": "VMInitiator",
-                    "description": "Correlate to which VM initiated the traffic tunnel; unexpected VM behavior may be suspicious."
+                    "description": "Correlate to which VM initiated the traffic tunnel; unexpected VM behavior may be suspicious.",
+                    "description_fa": "ارتباط با کدام VM تونل ترافیک را راه اندازی کرده است. رفتار غیرمنتظره VM ممکن است مشکوک باشد."
                 },
                 {
                     "field": "ConnectionDirectionality",
-                    "description": "Unusual east-west communication patterns among VMs."
+                    "description": "Unusual east-west communication patterns among VMs.",
+                    "description_fa": "الگوهای ارتباطی غیرمعمول شرق و غرب در بین ماشین های مجازی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0207",
+            "description_fa": "اجرای پوسته ESXi از ابزارها/اسکریپت ها (\"nc\"، \"socat\"، \"perl\") که ترافیک شبکه را به میزبان های داخلی دیگر منتقل می کند، به ویژه زمانی که توسط کاربران غیرمجاز یا ماشین های مجازی آغاز شده باشد."
         }
     ]
 }

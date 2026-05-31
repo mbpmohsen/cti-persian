@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0071",
-                    "external_id": "DC0071"
+                    "external_id": "DC0071",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -38,7 +39,9 @@
                     "name": "WinEventLog:Security",
                     "channel": "EventCode=4661"
                 }
-            ]
+            ],
+            "name_fa": "دسترسی به شیء اکتیو دایرکتوری",
+            "description_fa": "دسترسی شیء به فعالیت‌هایی اشاره دارد که در آن اشیاء AD (مانند حساب‌های کاربری، گروه‌ها، خط‌مشی‌ها) مورد دسترسی یا پرس و جو قرار می‌گیرند. مثال: Windows Event ID 4661 تلاش‌های دسترسی به شی را ثبت می‌کند. مثال ها:\n\n- دسترسی به ویژگی: به عنوان مثال، «گذرواژه کاربری»، «ممبرOf»، «مشخص کننده امنیت».\n- شمارش گروه: شمارش اعضای مهم گروه (به عنوان مثال، مدیران دامنه).\n- ویژگی‌های کاربر: ویژگی‌هایی که معمولاً به آنها دسترسی پیدا می‌کند، مانند «samAccountName»، «lastLogonTimestamp».\n- دسترسی به سیاست: دسترسی به GPOها برای درک تنظیمات امنیتی.\n\n*اقدامات جمع آوری داده ها:*\n\n- سیاست های حسابرسی:\n    - «دسترسی به سرویس دایرکتوری حسابرسی» را در زیر خط مشی های حسابرسی پیشرفته (موفقیت و شکست) فعال کنید.\n    - مسیر: `Computer Configuration > Policies > Windows Settings > Security Settings > Advanced Audit Policy Configuration > Audit Policies > Object AccessEnable: Audit Directory Service Access` (موفقیت و شکست).\n    - رویدادهای ضبط شده: شناسه های 4661، 4662.\n- انتقال رویداد: از WEF برای متمرکز کردن گزارش ها برای تجزیه و تحلیل SIEM استفاده کنید.\n- یکپارچه سازی SIEM: با استفاده از ابزارهایی مانند Splunk یا Azure Sentinel، گزارش ها (به عنوان مثال، 4661، 4662) را جمع آوری و تجزیه کنید.\n- فیلتر کردن گزارش:\n- تمرکز بر روی اشیاء/ویژگی های حساس مانند:\n    - گروه \"مدیران دامنه\".\n    - 'userPassword'، 'tSecurityDescriptor'.\n- مانیتورینگ EDR را فعال کنید:\n    - شناسایی فرآیندهای دسترسی به اشیاء حساس AD (به عنوان مثال، samAccountName، SecurityDescriptor).\n    - ثبت همه تلاش‌ها برای برشمردن گروه‌های مهم (به عنوان مثال، \"مدیران دامنه\")."
         }
     ]
 }

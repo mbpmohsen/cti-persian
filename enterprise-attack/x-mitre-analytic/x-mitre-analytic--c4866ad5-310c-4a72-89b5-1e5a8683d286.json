@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0275#AN0768",
-                    "external_id": "AN0768"
+                    "external_id": "AN0768",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,22 +41,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ShellProcessName",
-                    "description": "Shell interpreter may vary (bash, zsh, dash, sh)"
+                    "description": "Shell interpreter may vary (bash, zsh, dash, sh)",
+                    "description_fa": "مفسر پوسته ممکن است متفاوت باشد (bash، zsh، dash، sh)"
                 },
                 {
                     "field": "DecodeUtility",
-                    "description": "May include base64, openssl, gunzip, tar, uudecode"
+                    "description": "May include base64, openssl, gunzip, tar, uudecode",
+                    "description_fa": "ممکن است شامل base64، openssl، gunzip، tar، uudecode باشد"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Expected parent process may vary in attacker chain (e.g., curl, bash, ssh)"
+                    "description": "Expected parent process may vary in attacker chain (e.g., curl, bash, ssh)",
+                    "description_fa": "فرآیند والد مورد انتظار ممکن است در زنجیره مهاجم متفاوت باشد (به عنوان مثال، curl، bash، ssh)"
                 },
                 {
                     "field": "ArgumentPattern",
-                    "description": "Detection regex should support flexible patterning of decode switches"
+                    "description": "Detection regex should support flexible patterning of decode switches",
+                    "description_fa": "Regex تشخیص باید الگوبرداری انعطاف پذیر سوئیچ های رمزگشایی را پشتیبانی کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0768",
+            "description_fa": "دشمن از ابزارهای بومی مانند base64، gzip، tar یا openssl برای رمزگشایی، فشرده‌سازی یا رمزگشایی فایل‌هایی که قبلاً مرحله‌بندی یا دانلود شده‌اند استفاده می‌کند. این ابزارها ممکن است با curl/wget زنجیر شوند و از طریق bash/zsh اجرا شوند، اغلب برای استخراج یک payload تعبیه شده یا اسکریپت پوسته معکوس."
         }
     ]
 }

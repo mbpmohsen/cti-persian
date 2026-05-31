@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0542#AN1495",
-                    "external_id": "AN1495"
+                    "external_id": "AN1495",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Controls how long after registry modification to expect a DLL load into LSASS (e.g., after reboot)"
+                    "description": "Controls how long after registry modification to expect a DLL load into LSASS (e.g., after reboot)",
+                    "description_fa": "مدت زمان پس از اصلاح رجیستری را کنترل می کند تا انتظار بارگذاری DLL در LSASS وجود داشته باشد (به عنوان مثال، پس از راه اندازی مجدد)"
                 },
                 {
                     "field": "DLLSignatureValidation",
-                    "description": "Use to detect unsigned DLLs or those not matching known trusted publisher certificates"
+                    "description": "Use to detect unsigned DLLs or those not matching known trusted publisher certificates",
+                    "description_fa": "برای شناسایی DLL های بدون امضا یا مواردی که با گواهینامه های ناشر مورد اعتماد شناخته شده مطابقت ندارند استفاده کنید"
                 },
                 {
                     "field": "CustomSSPNameList",
-                    "description": "Define allowed SSP values for your org to reduce false positives"
+                    "description": "Define allowed SSP values for your org to reduce false positives",
+                    "description_fa": "مقادیر مجاز SSP را برای سازمان خود تعریف کنید تا مثبت کاذب را کاهش دهید"
                 },
                 {
                     "field": "BootContextCorrelation",
-                    "description": "Whether detection should correlate boot-time registry and process events"
+                    "description": "Whether detection should correlate boot-time registry and process events",
+                    "description_fa": "آیا تشخیص باید با رویدادهای رجیستری و فرآیند بوت زمان مرتبط باشد یا خیر"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1495",
+            "description_fa": "اصلاحات رجیستری در «HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Security Packages» یا «...\\OSConfig\\Security Packages»، به ویژه درج ورودی های جدید DLL را نظارت کنید. این را با بارگذاری‌های بعدی ماژول DLL در «lsass.exe» مرتبط کنید. با استفاده از ممیزی بار تصویر، DLL های بدون امضا یا غیرعادی را که در LSASS بارگذاری می شوند، ردیابی کنید. LSASS DLL بدون امضا را به دلیل پیکربندی رجیستری AuditLevel=8 یا راه اندازی مجدد سیستم و سپس بارگذاری DLL در lsass.exe بارگیری می کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0425#AN1189",
-                    "external_id": "AN1189"
+                    "external_id": "AN1189",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessName",
-                    "description": "To tune for unexpected or uncommon executables initiating network connections"
+                    "description": "To tune for unexpected or uncommon executables initiating network connections",
+                    "description_fa": "برای تنظیم فایل های اجرایی غیرمنتظره یا غیر معمول که اتصالات شبکه را آغاز می کنند"
                 },
                 {
                     "field": "DataTransferThreshold",
-                    "description": "Volume of outbound data in short time window (e.g., >1MB in <5 min)"
+                    "description": "Volume of outbound data in short time window (e.g., >1MB in <5 min)",
+                    "description_fa": "حجم داده های خروجی در پنجره زمانی کوتاه (به عنوان مثال، > 1 مگابایت در کمتر از 5 دقیقه)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Look for connections persisting outside of normal business hours"
+                    "description": "Look for connections persisting outside of normal business hours",
+                    "description_fa": "به دنبال اتصالاتی باشید که خارج از ساعات کاری عادی ادامه دارند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1189",
+            "description_fa": "اتصالات خروجی غیرمعمول به سرویس‌های وب را از فرآیندهای غیرمعمول با استفاده از SSL/TLS، به‌ویژه آنهایی که حجم داده خروجی یا ماندگاری بالایی دارند، شناسایی می‌کند."
         }
     ]
 }

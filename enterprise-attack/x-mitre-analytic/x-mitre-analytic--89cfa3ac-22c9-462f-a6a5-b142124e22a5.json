@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0298#AN0832",
-                    "external_id": "AN0832"
+                    "external_id": "AN0832",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ArchiveCommands",
-                    "description": "List of archiving utilities considered suspicious."
+                    "description": "List of archiving utilities considered suspicious.",
+                    "description_fa": "فهرست ابزارهای بایگانی مشکوک."
                 },
                 {
                     "field": "MonitoredDirectories",
-                    "description": "Paths where archive creation is flagged as unusual (e.g., /tmp, /var/tmp)."
+                    "description": "Paths where archive creation is flagged as unusual (e.g., /tmp, /var/tmp).",
+                    "description_fa": "مسیرهایی که ایجاد بایگانی به‌عنوان غیرعادی پرچم‌گذاری می‌شود (مثلاً /tmp، /var/tmp)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for linking utility execution with archive creation."
+                    "description": "Correlation window for linking utility execution with archive creation.",
+                    "description_fa": "پنجره همبستگی برای پیوند اجرای ابزار با ایجاد آرشیو."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0832",
+            "description_fa": "اجرای ابزارهای بایگانی (tar، gzip، bzip2، xz، zip، openssl) و به دنبال آن ایجاد فایل بایگانی مشکوک را تشخیص می‌دهد. ایجاد بایگانی را در دایرکتوری های موقت یا مرحله بندی با اجرای دستورات شامل گزینه های فشرده سازی یا رمزگذاری مرتبط می کند."
         }
     ]
 }

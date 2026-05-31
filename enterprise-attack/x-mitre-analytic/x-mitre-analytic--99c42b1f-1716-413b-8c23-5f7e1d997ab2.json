@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0369#AN1039",
-                    "external_id": "AN1039"
+                    "external_id": "AN1039",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LoginShellConfigPaths",
-                    "description": "Startup files vary by shell (.bash_profile, .zshrc, etc.)"
+                    "description": "Startup files vary by shell (.bash_profile, .zshrc, etc.)",
+                    "description_fa": "فایل‌های راه‌اندازی براساس پوسته متفاوت هستند (bash_profile، .zshrc، و غیره)"
                 },
                 {
                     "field": "TrapCommandLengthThreshold",
-                    "description": "Short benign traps may differ from longer/multi-command malicious traps"
+                    "description": "Short benign traps may differ from longer/multi-command malicious traps",
+                    "description_fa": "تله های خوش خیم کوتاه ممکن است با تله های مخرب طولانی تر/چند فرمانی متفاوت باشد"
                 },
                 {
                     "field": "ParentProcessAnomalyThreshold",
-                    "description": "Score or detect if new child process deviates from shell\u2019s typical behavior"
+                    "description": "Score or detect if new child process deviates from shell’s typical behavior",
+                    "description_fa": "امتیاز دهید یا تشخیص دهید که آیا فرآیند فرزند جدید از رفتار معمولی پوسته منحرف می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1039",
+            "description_fa": "ثبت نام‌های غیرمجاز دستور «trap» در فایل‌های راه‌اندازی پوسته (مانند zprofile.، .bash_profile، .zshrc.) و به دنبال آن زنجیره‌های اجرا در طول تعامل با ترمینال کاربر را شناسایی کنید. از Logs یکپارچه و تله متری EDR برای ارتباط تجزیه فرمان پوسته و پردازش ناهنجاری های درخت استفاده کنید."
         }
     ]
 }

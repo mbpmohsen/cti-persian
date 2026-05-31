@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0252#AN0698",
-                    "external_id": "AN0698"
+                    "external_id": "AN0698",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PackageManagerList",
-                    "description": "Monitored package managers (e.g., pip, npm, gem, poetry, conda)"
+                    "description": "Monitored package managers (e.g., pip, npm, gem, poetry, conda)",
+                    "description_fa": "مدیران بسته های نظارت شده (مانند پیپ، npm، جم، شعر، کوندا)"
                 },
                 {
                     "field": "InstallWritePaths",
-                    "description": "Directories to watch for post-install execution artifacts (e.g., ~/.local/, /usr/lib/python3.8/site-packages/)"
+                    "description": "Directories to watch for post-install execution artifacts (e.g., ~/.local/, /usr/lib/python3.8/site-packages/)",
+                    "description_fa": "دایرکتوری هایی برای مشاهده مصنوعات اجرایی پس از نصب (به عنوان مثال ~/.local/، /usr/lib/python3.8/site-packages/)"
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "Filter to focus on non-system accounts (e.g., interactive shell users)"
+                    "description": "Filter to focus on non-system accounts (e.g., interactive shell users)",
+                    "description_fa": "فیلتر برای تمرکز روی حساب‌های غیر سیستمی (به عنوان مثال، کاربران پوسته تعاملی)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate install command to subsequent network/file activity (default: 5 min)"
+                    "description": "Correlate install command to subsequent network/file activity (default: 5 min)",
+                    "description_fa": "مرتبط کردن دستور نصب به فعالیت شبکه/فایل بعدی (پیش‌فرض: 5 دقیقه)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0698",
+            "description_fa": "نصب پایتون (pip)، NodeJS (npm) یا کتابخانه های زبان دیگر توسط کاربر، به دنبال آن اتصالات شبکه غیرمنتظره، دسترسی به اعتبار، یا تغییرات فایل راه اندازی. Defender دستورهای «pip install» یا «npm install» را می‌بیند که توسط یک کاربر غیر ریشه اجرا می‌شوند و به‌زودی فایل‌های «.py»، «.sh»، یا «.js» جدید در فهرست‌های مخفی یا اجرای مفسر در طول بوت/ورود به سیستم اجرا می‌شوند."
         }
     ]
 }

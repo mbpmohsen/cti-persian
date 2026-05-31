@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0371#AN1047",
-                    "external_id": "AN1047"
+                    "external_id": "AN1047",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PtraceInvocationThreshold",
-                    "description": "Number of ptrace calls in a time window that should raise suspicion"
+                    "description": "Number of ptrace calls in a time window that should raise suspicion",
+                    "description_fa": "تعداد تماس‌های ptrace در یک پنجره زمانی که باید باعث ایجاد شک شود"
                 },
                 {
                     "field": "DevToolExclusionList",
-                    "description": "Exclude known developer tools and monitoring agents"
+                    "description": "Exclude known developer tools and monitoring agents",
+                    "description_fa": "ابزارهای توسعه دهنده شناخته شده و عوامل نظارتی را حذف کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1047",
+            "description_fa": "شناسایی تماس های مشکوک به sysctl یا ptrace API که برای تعیین اینکه آیا یک فرآیند در حال اشکال زدایی است یا خیر. برای فرآیندهایی که معادل های OutputDebugString را سیل می کنند یا استثناهای غیرعادی ایجاد می کنند تا از تجزیه و تحلیل فرار کنند نظارت کنید."
         }
     ]
 }

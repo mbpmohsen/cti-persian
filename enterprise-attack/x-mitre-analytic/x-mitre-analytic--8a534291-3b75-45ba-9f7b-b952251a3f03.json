@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0269#AN0754",
-                    "external_id": "AN0754"
+                    "external_id": "AN0754",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SessionType",
-                    "description": "Filter by DCUI, SSH, vSphere API"
+                    "description": "Filter by DCUI, SSH, vSphere API",
+                    "description_fa": "فیلتر بر اساس DCUI، SSH، vSphere API"
                 },
                 {
                     "field": "CommandPattern",
-                    "description": "Watch for remote access tool invocations (e.g., netcat, ssh)"
+                    "description": "Watch for remote access tool invocations (e.g., netcat, ssh)",
+                    "description_fa": "مراقب فراخوانی ابزار دسترسی از راه دور (به عنوان مثال، netcat، ssh) باشید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0754",
+            "description_fa": "ورود به سیستم vSphere API (vimService) یا SSH به میزبان ESXi و به دنبال آن دستورات پوسته غیرمجاز یا ورود از راه دور جانبی از میزبان ESXi."
         }
     ]
 }

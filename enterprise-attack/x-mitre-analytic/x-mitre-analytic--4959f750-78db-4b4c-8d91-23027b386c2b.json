@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0441#AN1221",
-                    "external_id": "AN1221"
+                    "external_id": "AN1221",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,21 +62,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines threshold for grouping task creation and associated execution within suspicious time proximity."
+                    "description": "Defines threshold for grouping task creation and associated execution within suspicious time proximity.",
+                    "description_fa": "آستانه ای را برای گروه بندی ایجاد کار و اجرای مرتبط در فاصله زمانی مشکوک تعریف می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filters based on non-standard user accounts or execution under SYSTEM when not typical for the environment."
+                    "description": "Filters based on non-standard user accounts or execution under SYSTEM when not typical for the environment.",
+                    "description_fa": "فیلترها بر اساس حساب‌های کاربری غیر استاندارد یا اجرا تحت SYSTEM زمانی که برای محیط معمولی نیستند."
                 },
                 {
                     "field": "TaskNamePattern",
-                    "description": "Allows defenders to flag obfuscated, randomized, or suspicious task names outside normal conventions."
+                    "description": "Allows defenders to flag obfuscated, randomized, or suspicious task names outside normal conventions.",
+                    "description_fa": "به مدافعان اجازه می‌دهد تا نام‌های مبهم، تصادفی یا مشکوک را خارج از قراردادهای عادی پرچم‌گذاری کنند."
                 },
                 {
                     "field": "CommandLineEntropyThreshold",
-                    "description": "Flags tasks executing heavily obfuscated PowerShell or binary blobs via base64 or encoding."
+                    "description": "Flags tasks executing heavily obfuscated PowerShell or binary blobs via base64 or encoding.",
+                    "description_fa": "پرچم‌گذاری وظایفی که PowerShell یا حباب‌های باینری به شدت مبهم شده را از طریق base64 یا کدگذاری اجرا می‌کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1221",
+            "description_fa": "ایجاد، اصلاح یا حذف وظایف برنامه ریزی شده را از طریق روش های Task Scheduler، WMI، PowerShell یا مبتنی بر API و سپس اجرا از svchost.exe یا taskeng.exe تشخیص می دهد. شامل تشخیص کارهای برنامه ریزی شده پنهان یا غیرعادی، به ویژه آنهایی که تحت سیستم یا زمینه های کاربر مشکوک ایجاد شده اند."
         }
     ]
 }

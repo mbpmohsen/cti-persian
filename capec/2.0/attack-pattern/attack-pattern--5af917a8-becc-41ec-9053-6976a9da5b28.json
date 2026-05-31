@@ -9,19 +9,24 @@
                 {
                     "external_id": "CAPEC-671",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/671.html"
+                    "url": "https://capec.mitre.org/data/definitions/671.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5af917a8-becc-41ec-9053-6976a9da5b28",
@@ -38,6 +43,9 @@
             "x_capec_consequences": {
                 "Integrity": [
                     "Alter Execution Logic"
+                ],
+                "Integrity_fa": [
+                    "تغییر منطق اجرا"
                 ]
             },
             "x_capec_domains": [
@@ -52,11 +60,20 @@
                 "An adversary would need to have access to a foundry’s or chip maker’s requirements management system that stores customer requirements for ASICs, requirements upon which the design of the ASIC is based."
             ],
             "x_capec_skills_required": {
-                "High": "An adversary would need experience in designing chips based on functional requirements in order to manipulate requirements in such a way that deviations would not be detected in subsequent stages of ASIC manufacture and where intended malicious functionality would be available to the adversary once integrated into a system and fielded."
+                "High": "An adversary would need experience in designing chips based on functional requirements in order to manipulate requirements in such a way that deviations would not be detected in subsequent stages of ASIC manufacture and where intended malicious functionality would be available to the adversary once integrated into a system and fielded.",
+                "High_fa": "یک حریف به تجربه در طراحی تراشه‌ها بر اساس الزامات عملکردی نیاز دارد تا بتواند الزامات را به گونه‌ای دستکاری کند که انحرافات در مراحل بعدی ساخت ASIC شناسایی نشوند و در مواردی که عملکرد مخرب مورد نظر پس از ادغام در یک سیستم و فیلد شدن در دسترس دشمن باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن با دسترسی به الزامات عملکردی برای یک مدار مجتمع خاص برنامه (ASIC)، تراشه ای که برای یک کاربرد خاص طراحی شده/سفارشی شده است، به طور مخربی الزامات ناشی از نیازهای قابلیت منشاء را تغییر می دهد. در فرآیند تولید تراشه، الزامات طراحی تراشه را هدایت می‌کنند که وقتی تراشه به طور کامل ساخته می‌شود، می‌تواند منجر به ASIC شود که ممکن است نیازهای کاربر را برآورده نکند، دارای عملکردهای مخرب باشد یا رفتارهای غیرعادی دیگری از خود نشان دهد و در نتیجه بر استفاده مورد نظر از ASIC تأثیر بگذارد.",
+            "name_fa": "الزامات برای عملکرد ASIC به طور مخرب تغییر کرده است",
+            "x_capec_example_instances_fa": [
+                "یک دشمن با دسترسی به الزامات عملکرد ASIC برای مشتریان مختلف، تعداد زیادی از ASIC های سفارش داده شده یک مشتری را با تغییر الزامات عملکردی آن مورد هدف قرار می دهد، به طوری که طراحی ASIC منجر به تولید تراشه ای می شود که نیازهای قابلیت مشتری را برآورده نمی کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "یک حریف باید به سیستم مدیریت نیازمندی های ریخته گری یا سازنده تراشه دسترسی داشته باشد که نیازهای مشتری را برای ASIC ها ذخیره می کند، الزاماتی که طراحی ASIC بر اساس آن ها است."
+            ]
         }
     ],
     "spec_version": "2.0",

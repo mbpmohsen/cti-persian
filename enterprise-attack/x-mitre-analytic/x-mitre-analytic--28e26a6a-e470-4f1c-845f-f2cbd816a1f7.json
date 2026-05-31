@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0372#AN1048",
-                    "external_id": "AN1048"
+                    "external_id": "AN1048",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Delay duration that distinguishes benign scripts from evasive behavior."
+                    "description": "Delay duration that distinguishes benign scripts from evasive behavior.",
+                    "description_fa": "مدت زمان تأخیر که فیلمنامه‌های خوش‌خیم را از رفتار طفره‌آمیز متمایز می‌کند."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Legitimate parent-child combinations may differ across environments."
+                    "description": "Legitimate parent-child combinations may differ across environments.",
+                    "description_fa": "ترکیب‌های قانونی والدین و فرزند ممکن است در محیط‌ها متفاوت باشد."
                 },
                 {
                     "field": "SleepFunctionPattern",
-                    "description": "Different APIs may be used to invoke sleep (e.g., Sleep, NtDelayExecution)."
+                    "description": "Different APIs may be used to invoke sleep (e.g., Sleep, NtDelayExecution).",
+                    "description_fa": "ممکن است از API های مختلف برای فراخوانی خواب استفاده شود (به عنوان مثال، Sleep، NtDelayExecution)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1048",
+            "description_fa": "استفاده مرتبط از مکانیسم‌های خواب/تاخیر (مانند kernel32!Sleep، APIهای NTDLL) در فرآیندهای کوتاه مدت، همراه با فرآیندهای والد که اسکریپت‌های مشکوک را فراخوانی می‌کنند (مانند wscript، powershell) با حداقل تعامل کاربر."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0226#AN0631",
-                    "external_id": "AN0631"
+                    "external_id": "AN0631",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "benign_extensions",
-                    "description": "Linux-targeted masquerade extensions (.jpg, .pdf, .png)"
+                    "description": "Linux-targeted masquerade extensions (.jpg, .pdf, .png)",
+                    "description_fa": "پسوندهای بالماسکه هدفمند لینوکس (jpg، .pdf، .png.)"
                 },
                 {
                     "field": "HeaderInspectionEnabled",
-                    "description": "Whether to parse file signatures or MIME types from file headers"
+                    "description": "Whether to parse file signatures or MIME types from file headers",
+                    "description_fa": "آیا برای تجزیه امضاهای فایل یا انواع MIME از سرصفحه فایل"
                 },
                 {
                     "field": "ExecPathScope",
-                    "description": "Monitored directory scope for adversarial execution (e.g., /tmp/, /home/username/Downloads)"
+                    "description": "Monitored directory scope for adversarial execution (e.g., /tmp/, /home/username/Downloads)",
+                    "description_fa": "دامنه دایرکتوری نظارت شده برای اجرای مخالف (به عنوان مثال، /tmp/، /home/username/Downloads)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0631",
+            "description_fa": "تشخیص می دهد که یک اسکریپت یا باینری با پسوندهای گمراه کننده یا خوش خیم (.jpg، .doc) نامگذاری می شود و سپس از طریق خط فرمان یا یک کار برنامه ریزی شده اجرا می شود. شامل عدم تطابق هدر ELF و ناهماهنگی نوع محتوا روی دیسک است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0580#AN1598",
-                    "external_id": "AN1598"
+                    "external_id": "AN1598",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredRegistryKeys",
-                    "description": "Specific registry keys to monitor for DLL registration (e.g., NetworkProvider Order)."
+                    "description": "Specific registry keys to monitor for DLL registration (e.g., NetworkProvider Order).",
+                    "description_fa": "کلیدهای رجیستری خاص برای نظارت بر ثبت DLL (به عنوان مثال، NetworkProvider Order)."
                 },
                 {
                     "field": "SuspiciousDLLPaths",
-                    "description": "Directories or file name patterns outside of normal system DLL locations."
+                    "description": "Directories or file name patterns outside of normal system DLL locations.",
+                    "description_fa": "دایرکتوری ها یا الگوهای نام فایل خارج از مکان های معمولی DLL سیستم."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window correlating registry modification, DLL creation, and subsequent logon activity."
+                    "description": "Window correlating registry modification, DLL creation, and subsequent logon activity.",
+                    "description_fa": "اصلاح رجیستری مرتبط با پنجره، ایجاد DLL و فعالیت لاگین بعدی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1598",
+            "description_fa": "ثبت DLLهای ارائه‌دهنده شبکه جدید یا اصلاح‌شده را از طریق تغییرات رجیستری، ایجاد فایل‌های غیرعادی DLL در فهرست‌های سیستم و فعالیت‌های فرآیند مشکوک (mpnotify.exe در تعامل با DLL‌های غیر استاندارد) شناسایی می‌کند. همبستگی چند رویدادی، رویدادهای اصلاح رجیستری را به بارگذاری‌های بعدی DLL در طول فعالیت ورود کاربر مرتبط می‌کند."
         }
     ]
 }

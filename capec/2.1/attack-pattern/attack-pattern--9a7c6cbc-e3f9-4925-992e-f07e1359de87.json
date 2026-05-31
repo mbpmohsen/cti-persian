@@ -9,70 +9,87 @@
                 {
                     "external_id": "CAPEC-35",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/35.html"
+                    "url": "https://capec.mitre.org/data/definitions/35.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-94",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/94.html"
+                    "url": "http://cwe.mitre.org/data/definitions/94.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-96",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/96.html"
+                    "url": "http://cwe.mitre.org/data/definitions/96.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-95",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/95.html"
+                    "url": "http://cwe.mitre.org/data/definitions/95.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-97",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/97.html"
+                    "url": "http://cwe.mitre.org/data/definitions/97.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-272",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/272.html"
+                    "url": "http://cwe.mitre.org/data/definitions/272.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-59",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/59.html"
+                    "url": "http://cwe.mitre.org/data/definitions/59.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-282",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/282.html"
+                    "url": "http://cwe.mitre.org/data/definitions/282.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-270",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/270.html"
+                    "url": "http://cwe.mitre.org/data/definitions/270.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Obfuscated Files or Information: HTML Smuggling",
                     "external_id": "T1027.006",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1027/006"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1027/006",
+                    "description_fa": "فایل ها یا اطلاعات مبهم: قاچاق HTML",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Obfuscated Files or Information: Embedded Payloads",
                     "external_id": "T1027.009",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1027/009"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1027/009",
+                    "description_fa": "فایل‌ها یا اطلاعات مبهم: بارهای ذخیره‌سازی شده",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Hide Artifacts: Resource Forking",
                     "external_id": "T1564.009",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1564/009"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1564/009",
+                    "description_fa": "Hide Artifacts: Resource Forking",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--9a7c6cbc-e3f9-4925-992e-f07e1359de87",
@@ -104,6 +121,23 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -127,11 +161,26 @@
                 "Ability to communicate synchronously or asynchronously with server that publishes an over-privileged directory, program, or interface. Optionally, ability to capture output directly through synchronous communication or other method such as FTP."
             ],
             "x_capec_skills_required": {
-                "Low": "To identify and execute against an over-privileged system interface"
+                "Low": "To identify and execute against an over-privileged system interface",
+                "Low_fa": "برای شناسایی و اجرا در برابر یک رابط سیستم بیش از حد مجاز"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حمله ای از این نوع از اعتماد سیستم به پیکربندی و فایل های منبع سوء استفاده می کند. هنگامی که فایل اجرایی منبع را بارگیری می کند (مانند یک فایل تصویری یا فایل پیکربندی)، مهاجم فایل را به گونه ای تغییر داده است که یا به طور مستقیم کد مخرب را اجرا کند یا فرآیند هدف (به عنوان مثال سرور برنامه) را برای اجرا بر اساس پارامترهای پیکربندی مخرب دستکاری کند. از آنجایی که سیستم ها به طور فزاینده ای به هم مرتبط هستند و منابع را از منابع محلی و راه دور جمع می کنند، احتمال وقوع این حمله زیاد است.",
+            "name_fa": "از کدهای اجرایی در فایل های غیر اجرایی استفاده کنید",
+            "x_capec_example_instances_fa": [
+                "تقریباً هر سیستمی که برای رفتار در زمان اجرا به فایل های پیکربندی متکی باشد، برای این بردار حمله باز است. فایل‌های پیکربندی اغلب در مکان‌های قابل پیش‌بینی ذخیره می‌شوند، بنابراین مهاجمی که می‌تواند از فرآیند سرور مانند وب سرور یا سرور پایگاه داده انگشت نگاری کند، می‌تواند به سرعت محل احتمالی ذخیره‌سازی پیکربندی را شناسایی کند. و این البته محدود به فرآیندهای سرور نیست. پوسته های یونیکس برای ذخیره متغیرهای محیطی، مسیرهای جستجو برای برنامه ها و غیره به فایل های نمایه متکی هستند. اگر نام‌های مستعار تغییر کنند، می‌توان یک فرمان استاندارد یونیکس «cp» را به «rm» یا دیگر فرمان‌های استاندارد تغییر مسیر داد تا هدف کاربر براندازی شود.",
+                "این حمله می تواند به سمت یک سیستم کلاینت هدایت شود، مانند ایجاد بیش از حد بافر از طریق بارگذاری فایل های تصویری به ظاهر خوش خیم، همانطور که در بولتن امنیتی مایکروسافت MS04-028 که در آن فایل های JPEG ساخته شده ویژه می توانند پس از بارگیری در مرورگر باعث غلبه بر بافر شوند.",
+                "<xhtml:p>یک مثال دیگر مشتریانی را که فایل‌های pdf را می‌خوانند هدف قرار می‌دهد. در این مورد، مهاجم به سادگی جاوا اسکریپت را به انتهای یک URL قانونی برای یک پی دی اف (http://www.gnucitizen.org/blog/danger-danger-danger/) </xhtml:p> اضافه می کند.\n               <xhtml:p>http://path/to/pdf/file.pdf#whatever_name_you_want=javascript:your_code_here</xhtml:p>\n               <xhtml:p>کاربر فرض می کند که در حال خواندن یک pdf است، اما مهاجم منبع را تغییر داده و جاوا اسکریپت اجرایی را در فرآیند مرورگر مشتری بارگذاری کرده است.</xhtml:p>",
+                "<xhtml:p>این حمله همچنین می تواند فرآیندهای سرور را هدف قرار دهد. مهاجم منبع یا فایل پیکربندی را ویرایش می کند، برای مثال یک فایل web.xml که برای پیکربندی مجوزهای امنیتی برای سرور برنامه J2EE استفاده می شود، با افزودن نام نقش \"عمومی\" به همه کاربران دارای نقش عمومی امکان استفاده از عملکرد مدیریت را می دهد.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">< security-constraint><xhtml:div style=\"margin-left:1em;\"><description>قوانین پردازش امنیتی برای صفحه‌های مدیریت</description><url-pattern>/admin/*</url-pattern><http-method>POST</http-method><http-method>GET</http-vmethod><x style=\"margin-left:1em;\"><auth-constraint><xhtml:div style=\"margin-left:1em;\"><role-name>مدیر</role-name><role-name>عمومی</role-name></xhtml:div>\n                        </auth-constraint></xhtml:div>\n                  </xhtml:div>\n                  </security-constraint></xhtml:div>\n               <xhtml:p>سرور به درستی فایل پیکربندی خود اعتماد دارد، اما زمانی که آنها دستکاری می شوند، مهاجم کنترل کامل را به دست می آورد.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید توانایی اصلاح فایل های غیرقابل اجرا مصرف شده توسط نرم افزار هدف را داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان برقراری ارتباط همزمان یا ناهمزمان با سروری که یک فهرست، برنامه یا رابط دارای امتیاز بیش از حد را منتشر می کند. به صورت اختیاری، امکان گرفتن خروجی مستقیم از طریق ارتباط همزمان یا روش های دیگر مانند FTP."
+            ]
         }
     ],
     "type": "bundle"

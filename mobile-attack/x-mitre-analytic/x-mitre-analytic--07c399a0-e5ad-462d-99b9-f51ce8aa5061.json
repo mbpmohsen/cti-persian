@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0707#AN1829",
-                    "external_id": "AN1829"
+                    "external_id": "AN1829",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,33 +48,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between task registration and later execution, and between execution and follow-on behavior"
+                    "description": "Correlation window between task registration and later execution, and between execution and follow-on behavior",
+                    "description_fa": "پنجره همبستگی بین ثبت کار و اجرای بعدی، و بین اجرا و رفتار بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to use WorkManager, JobScheduler, or AlarmManager such as mail, sync, backup, calendar, or enterprise management apps"
+                    "description": "Apps legitimately expected to use WorkManager, JobScheduler, or AlarmManager such as mail, sync, backup, calendar, or enterprise management apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود از WorkManager، JobScheduler، یا AlarmManager مانند ایمیل، همگام‌سازی، پشتیبان‌گیری، تقویم یا برنامه‌های مدیریت سازمانی استفاده کنند."
                 },
                 {
                     "field": "AllowedConstraintProfiles",
-                    "description": "Expected charging, network, idle, or timing constraints for legitimate scheduled work"
+                    "description": "Expected charging, network, idle, or timing constraints for legitimate scheduled work",
+                    "description_fa": "محدودیت‌های شارژ، شبکه، بی‌حرکتی یا زمان‌بندی مورد انتظار برای کار برنامه‌ریزی شده قانونی"
                 },
                 {
                     "field": "AllowedScheduleIntervals",
-                    "description": "Expected delay or periodic interval ranges for legitimate app behavior"
+                    "description": "Expected delay or periodic interval ranges for legitimate app behavior",
+                    "description_fa": "تاخیر مورد انتظار یا بازه های دوره ای برای رفتار قانونی برنامه"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether follow-on activity from a scheduled task should only occur during active user-driven workflows for a given app"
+                    "description": "Whether follow-on activity from a scheduled task should only occur during active user-driven workflows for a given app",
+                    "description_fa": "آیا فعالیت‌های بعدی از یک کار زمان‌بندی‌شده فقط باید در طول گردش‌های کاری فعال کاربر محور برای یک برنامه خاص رخ دهد یا خیر"
                 },
                 {
                     "field": "TriggerToNetworkWindow",
-                    "description": "Maximum expected delay between scheduled job trigger and outbound communication"
+                    "description": "Maximum expected delay between scheduled job trigger and outbound communication",
+                    "description_fa": "حداکثر تأخیر مورد انتظار بین راه اندازی کار برنامه ریزی شده و ارتباط خروجی"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume after scheduled execution to treat network behavior as meaningful"
+                    "description": "Minimum outbound volume after scheduled execution to treat network behavior as meaningful",
+                    "description_fa": "حداقل حجم خروجی پس از اجرای برنامه ریزی شده برای تلقی رفتار شبکه به عنوان معنی دار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1829",
+            "description_fa": "مدافع ایجاد یا ثبت کار پس‌زمینه معوق، تکراری یا مبتنی بر محدودیت را با اجرای کار بعدی در همان زمینه برنامه مرتبط می‌کند، به‌خصوص زمانی که کار بدون تعامل کاربر اخیر، از وضعیت پس‌زمینه، یا با فایل بعدی، حسگر یا رفتار شبکه ناسازگار با نقش اعلام‌شده برنامه اجرا می‌شود. این تحلیل، اثرات صفحه کنترل قابل مشاهده اندروید را اولویت بندی می کند: عملیات صف بندی WorkManager، زمان بندی JobScheduler یا AlarmManager، بیدار شدن یا اجرای بعدی کار برنامه ریزی شده، و فعالیت های پس از راه اندازی مانند جلسات شبکه، مرحله بندی محلی، یا دسترسی حسگر."
         }
     ]
 }

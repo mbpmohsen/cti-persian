@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0537#AN1481",
-                    "external_id": "AN1481"
+                    "external_id": "AN1481",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApprovedRepos",
-                    "description": "Allow-listed APT/YUM repo URLs and GPG key fingerprints."
+                    "description": "Allow-listed APT/YUM repo URLs and GPG key fingerprints.",
+                    "description_fa": "نشانی‌های اینترنتی مخزن APT/YUM و اثرانگشت کلید GPG فهرست‌شده مجاز."
                 },
                 {
                     "field": "PathScope",
-                    "description": "Directories to watch for new ELF writes (e.g., /usr/bin, /usr/local/bin, /lib*/, /opt/*/bin)."
+                    "description": "Directories to watch for new ELF writes (e.g., /usr/bin, /usr/local/bin, /lib*/, /opt/*/bin).",
+                    "description_fa": "دایرکتوری هایی که باید برای نوشتن ELF جدید تماشا کنید (به عنوان مثال، /usr/bin، /usr/local/bin، /lib*/، /opt/*/bin)."
                 },
                 {
                     "field": "MinBinarySize",
-                    "description": "Ignore tiny helper files; default >16KB."
+                    "description": "Ignore tiny helper files; default >16KB.",
+                    "description_fa": "نادیده گرفتن فایل های کمکی کوچک. پیش فرض > 16 کیلوبایت"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Install\u2192first-run correlation window (default 2h)."
+                    "description": "Install→first-run correlation window (default 2h).",
+                    "description_fa": "نصب → پنجره همبستگی اولین اجرا (پیش فرض 2 ساعت)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1481",
+            "description_fa": "1) Package Manager یا curl/wget نصب/ارتقا از مخازن تایید نشده یا بسته‌های بدون امضا. 2) ELF جدید نوشته شده در فهرست های PATH یا جایگزینی باینری ها/کتابخانه های موجود. 3) اجرای اول منجر به فرآیندهای فرزند غیرمنتظره یا اتصالات خروجی می شود."
         }
     ]
 }

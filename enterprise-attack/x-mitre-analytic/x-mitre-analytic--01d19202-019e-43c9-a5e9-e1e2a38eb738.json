@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0307#AN0860",
-                    "external_id": "AN0860"
+                    "external_id": "AN0860",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CredentialFilePattern",
-                    "description": "Regex to match common credential files (e.g., *.aws/credentials, token.txt)"
+                    "description": "Regex to match common credential files (e.g., *.aws/credentials, token.txt)",
+                    "description_fa": "Regex برای مطابقت با فایل‌های اعتبار رایج (مانند *.aws/credentials، token.txt)"
                 },
                 {
                     "field": "RoleAssumptionScope",
-                    "description": "Adjust scope of roles monitored (e.g., admin, service accounts)"
+                    "description": "Adjust scope of roles monitored (e.g., admin, service accounts)",
+                    "description_fa": "محدوده نقش‌های نظارت شده را تنظیم کنید (به عنوان مثال، سرپرست، حساب‌های سرویس)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation timing between file access and AssumeRole"
+                    "description": "Correlation timing between file access and AssumeRole",
+                    "description_fa": "زمان همبستگی بین دسترسی به فایل و AssumeRole"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0860",
+            "description_fa": "دسترسی به فایل‌های اعتبار/پیکربندی محلی (مانند ~/.aws/credentials) و به دنبال آن فراخوان‌های API ابرداده یا فرضیات نقش ابری."
         }
     ]
 }

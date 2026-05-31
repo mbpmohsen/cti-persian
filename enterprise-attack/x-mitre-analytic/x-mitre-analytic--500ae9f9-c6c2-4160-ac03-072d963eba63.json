@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0254#AN0703",
-                    "external_id": "AN0703"
+                    "external_id": "AN0703",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedProcesses",
-                    "description": "List of processes authorized to handle transmitted data (e.g., sshd, nginx)."
+                    "description": "List of processes authorized to handle transmitted data (e.g., sshd, nginx).",
+                    "description_fa": "فهرستی از فرآیندهای مجاز برای مدیریت داده های ارسال شده (مانند sshd، nginx)."
                 },
                 {
                     "field": "HashCheckInterval",
-                    "description": "Frequency of out-of-band integrity verification checks."
+                    "description": "Frequency of out-of-band integrity verification checks.",
+                    "description_fa": "فراوانی بررسی‌های تأیید صحت خارج از باند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0703",
+            "description_fa": "تغییرات داده های ارسال شده را از طریق سیستم نظارتی («ارسال»، «recv»، «نوشتن») یا رهگیری میان افزار تشخیص دهید. شناسایی هش‌های فایل ناهماهنگ هنگام مقایسه در مبدا و مقصد. مراقب فعالیت های غیرعادی از فرآیندهایی باشید که با سرویس های انتقال ایمن در تعامل هستند (مانند OpenSSL، scp)."
         }
     ]
 }

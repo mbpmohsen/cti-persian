@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0030#AN0088",
-                    "external_id": "AN0088"
+                    "external_id": "AN0088",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetedApplications",
-                    "description": "Specific SaaS or cloud apps most sensitive to conditional access changes."
+                    "description": "Specific SaaS or cloud apps most sensitive to conditional access changes.",
+                    "description_fa": "برنامه‌های SaaS یا ابری خاص که بیشترین حساسیت را نسبت به تغییرات دسترسی مشروط دارند."
                 },
                 {
                     "field": "RiskThresholds",
-                    "description": "Risk scores or signals that may be tuned for anomaly detection in login behavior."
+                    "description": "Risk scores or signals that may be tuned for anomaly detection in login behavior.",
+                    "description_fa": "امتیازهای خطر یا سیگنال هایی که ممکن است برای تشخیص ناهنجاری در رفتار ورود تنظیم شوند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Business roles or expected MFA patterns per user/group to reduce false positives."
+                    "description": "Business roles or expected MFA patterns per user/group to reduce false positives.",
+                    "description_fa": "نقش های تجاری یا الگوهای MFA مورد انتظار برای هر کاربر/گروه برای کاهش مثبت کاذب."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0088",
+            "description_fa": "به‌روزرسانی‌های مشکوک برای دسترسی مشروط یا سیاست‌های اجرایی MFA در ارائه‌دهندگان هویت مانند Entra ID، Okta، یا JumpCloud را شناسایی می‌کند. تمرکز بر حذف بلوک‌های خط‌مشی، افزودن استثناهای گسترده، یا ثبت روش‌های MFA کنترل‌شده توسط دشمن، و به دنبال آن فعالیت غیرعادی ورود به سیستم است که از سیاست‌های اصلاح‌شده استفاده می‌کند."
         }
     ]
 }

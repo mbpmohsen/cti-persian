@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0504#AN1393",
-                    "external_id": "AN1393"
+                    "external_id": "AN1393",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedParentChildPairs",
-                    "description": "Define legitimate parent-child relationships for Office processes to reduce false positives."
+                    "description": "Define legitimate parent-child relationships for Office processes to reduce false positives.",
+                    "description_fa": "روابط مشروع والد-فرزند را برای فرآیندهای Office تعریف کنید تا مثبت کاذب را کاهش دهید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for correlating Office process creation with subsequent command execution via DDE."
+                    "description": "Threshold for correlating Office process creation with subsequent command execution via DDE.",
+                    "description_fa": "آستانه برای ارتباط ایجاد فرآیند آفیس با اجرای دستور بعدی از طریق DDE."
                 },
                 {
                     "field": "SuspiciousDLLList",
-                    "description": "Maintain allow/block list of DLLs that Office is expected to load."
+                    "description": "Maintain allow/block list of DLLs that Office is expected to load.",
+                    "description_fa": "لیست مجوز/مسدود کردن DLLهایی را که انتظار می رود آفیس بارگیری کند، حفظ کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1393",
+            "description_fa": "استفاده غیرعادی از تبادل اطلاعات پویا (DDE) را برای اجرای کد، مانند برنامه‌های آفیس (WINWORD.EXE، EXCEL.EXE) در تولید مفسرهای فرمان یا بارگیری ماژول‌های غیرمعمول از طریق فرمول‌های DDEAUTO/DDE شناسایی می‌کند. روابط مشکوک فرآیند والد-فرزند، کلیدهای رجیستری که DDE را فعال می‌کنند و بارگذاری‌های ماژول ناسازگار با استفاده عادی Office را به هم مرتبط می‌کند."
         }
     ]
 }

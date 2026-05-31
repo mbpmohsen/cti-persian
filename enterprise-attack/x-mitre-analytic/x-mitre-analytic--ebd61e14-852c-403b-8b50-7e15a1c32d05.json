@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0384#AN1082",
-                    "external_id": "AN1082"
+                    "external_id": "AN1082",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptLocation",
-                    "description": "Execution from /Users/Shared, ~/Library/LaunchAgents, /tmp."
+                    "description": "Execution from /Users/Shared, ~/Library/LaunchAgents, /tmp.",
+                    "description_fa": "اجرا از /Users/Shared، ~/Library/LaunchAgents، /tmp."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Shells spawned from Preview, Safari, or AppleScript."
+                    "description": "Shells spawned from Preview, Safari, or AppleScript.",
+                    "description_fa": "پوسته ها از Preview، Safari یا AppleScript ایجاد می شوند."
                 },
                 {
                     "field": "UserRole",
-                    "description": "Detection thresholds may differ for admin vs standard users."
+                    "description": "Detection thresholds may differ for admin vs standard users.",
+                    "description_fa": "آستانه تشخیص ممکن است برای مدیران در مقابل کاربران استاندارد متفاوت باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1082",
+            "description_fa": "استفاده از sh/bash/zsh را در زمینه مشکوک شناسایی می‌کند، مانند اسکریپت‌های کاربر راه‌اندازی شده از برنامه‌های غیر استاندارد (مانند Preview.app)، جاسازی‌شده در LaunchDaemons، یا اجرا شده در خارج از Terminal.app. به دنبال استفاده نادرست در Automator، LaunchAgents، یا NSAppleScript شل اجرا می شود."
         }
     ]
 }

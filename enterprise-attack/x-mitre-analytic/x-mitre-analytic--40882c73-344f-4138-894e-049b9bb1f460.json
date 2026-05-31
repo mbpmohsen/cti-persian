@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0271#AN0757",
-                    "external_id": "AN0757"
+                    "external_id": "AN0757",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0757",
-            "description": "Detects anomalous process access to LSASS on domain controllers, suspicious module loads of authentication DLLs, and registry or file modifications indicative of Skeleton Key\u2013style patching. Correlates LSASS access attempts with subsequent abnormal logon activity patterns.",
+            "description": "Detects anomalous process access to LSASS on domain controllers, suspicious module loads of authentication DLLs, and registry or file modifications indicative of Skeleton Key–style patching. Correlates LSASS access attempts with subsequent abnormal logon activity patterns.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredDLLs",
-                    "description": "Specific authentication DLLs such as cryptdll.dll and samsrv.dll monitored for tampering."
+                    "description": "Specific authentication DLLs such as cryptdll.dll and samsrv.dll monitored for tampering.",
+                    "description_fa": "DLLهای احراز هویت خاص مانند cryptdll.dll و samsrv.dll برای دستکاری نظارت می شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between LSASS memory access, module load, and suspicious logons."
+                    "description": "Correlation window between LSASS memory access, module load, and suspicious logons.",
+                    "description_fa": "پنجره همبستگی بین دسترسی به حافظه LSASS، بارگذاری ماژول و ورودهای مشکوک."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Baseline expected accounts performing domain controller logon operations."
+                    "description": "Baseline expected accounts performing domain controller logon operations.",
+                    "description_fa": "حساب های مورد انتظار پایه که عملیات ورود به سیستم کنترل کننده دامنه را انجام می دهند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0757",
+            "description_fa": "دسترسی فرآیند غیرعادی به LSASS را در کنترل‌کننده‌های دامنه، بارهای ماژول مشکوک DLLهای احراز هویت، و تغییرات رجیستری یا فایل که نشان‌دهنده وصله‌بندی به سبک Skeleton Key است را شناسایی می‌کند. تلاش‌های دسترسی LSASS را با الگوهای فعالیت ورود غیرعادی بعدی مرتبط می‌کند."
         }
     ]
 }

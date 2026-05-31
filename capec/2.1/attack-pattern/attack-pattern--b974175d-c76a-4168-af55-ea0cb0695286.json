@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-614",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/614.html"
+                    "url": "https://capec.mitre.org/data/definitions/614.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-327",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/327.html"
+                    "url": "http://cwe.mitre.org/data/definitions/327.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Karsten Nohl, Rooting SIM Cards, Security Research Labs",
                     "external_id": "REF-486",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://srlabs.de/rooting-sim-cards/"
+                    "url": "https://srlabs.de/rooting-sim-cards/",
+                    "description_fa": "کارستن نول، روت کردن سیم کارت‌ها، آزمایشگاه‌های تحقیقات امنیتی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--b974175d-c76a-4168-af55-ea0cb0695286",
@@ -41,6 +45,12 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -50,11 +60,17 @@
                 "A SIM card that relies on the DES cipher."
             ],
             "x_capec_skills_required": {
-                "Medium": "This is a sophisticated attack, but detailed techniques are published in open literature."
+                "Medium": "This is a sophisticated attack, but detailed techniques are published in open literature.",
+                "Medium_fa": "این یک حمله پیچیده است، اما تکنیک های دقیق در ادبیات باز منتشر شده است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "سیم‌کارت‌ها لنگر اعتماد واقعی دستگاه‌های تلفن همراه در سراسر جهان هستند. این کارت‌ها از هویت تلفن همراه مشترکین محافظت می‌کنند، دستگاه‌ها را با شماره تلفن مرتبط می‌کنند و به طور فزاینده‌ای اعتبار پرداخت را ذخیره می‌کنند، برای مثال در تلفن‌های دارای NFC با کیف پول موبایل. این حمله از به‌روزرسانی‌های هوایی (OTA) استفاده می‌کند که از طریق پیام‌های اس ام اس ایمن رمزنگاری شده برای تحویل کد اجرایی به سیم‌کارت استفاده می‌شود. با شکستن کلید DES، یک مهاجم می‌تواند پیام‌های SMS باینری امضا شده را به دستگاه ارسال کند، که به عنوان اپلت‌های جاوا در نظر گرفته می‌شوند و روی سیم‌کارت اجرا می‌شوند. این اپلت ها اجازه ارسال پیامک، تغییر شماره های پست صوتی، و پرس و جو از موقعیت تلفن، در میان بسیاری از عملکردهای از پیش تعریف شده دیگر را دارند. این قابلیت ها به تنهایی پتانسیل زیادی برای سوء استفاده فراهم می کند.",
+            "name_fa": "روت کردن سیم کارت ها",
+            "x_capec_prerequisites_fa": [
+                "سیم کارتی که به رمز DES متکی است."
+            ]
         }
     ],
     "type": "bundle"

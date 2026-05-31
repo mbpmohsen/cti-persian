@@ -14,21 +14,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1546/006",
                     "external_id": "T1546.006",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Malware Persistence on OS X",
                     "description": "Patrick Wardle. (2015). Malware Persistence on OS X Yosemite. Retrieved July 10, 2017.",
                     "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
-                    "source_name_fa": "بدافزاری که بر OS X پافشاری می کند",
-                    "description_fa": "پاتریک واردل (2015) بدافزار با اصرار بر OS X Yosemite Retrieved 10 ژوئیه 2017"
+                    "source_name_fa": "ماندگاری بدافزار در OS X",
+                    "description_fa": "پاتریک واردل. (2015). ماندگاری بدافزار در OS X Yosemite. بازبینی شده در 10 جولای 2017."
                 },
                 {
                     "source_name": "Writing Bad Malware for OSX",
                     "description": "Patrick Wardle. (2015). Writing Bad @$$ Malware for OS X. Retrieved July 10, 2017.",
                     "url": "https://www.blackhat.com/docs/us-15/materials/us-15-Wardle-Writing-Bad-A-Malware-For-OS-X.pdf",
                     "source_name_fa": "نوشتن بدافزار بد برای OSX",
-                    "description_fa": "پاتریک واردل (2015) نوشتن بد @ $ $ $ برای OS X. Retrieved 10 ژوئیه 2017"
+                    "description_fa": "پاتریک واردل. (2015). بدافزار Writing Bad @$$ برای OS X. بازیابی شده در 10 ژوئیه 2017."
                 }
             ],
             "object_marking_refs": [
@@ -58,8 +58,8 @@
                 "macOS"
             ],
             "x_mitre_version": "1.1",
-            "name_fa": "LC_LOAD_DYLIB Addition",
-            "description_fa": "مخالفان ممکن است با اجرای محتوای مخرب که توسط اجرای بن بست های آلوده ایجاد می شود، پایداری کنند. Mach-O binaries دارای مجموعه ای از هدرهایی هستند که برای انجام برخی عملیات زمانی که یک باینری بارگذاری می شود، استفاده می شوند. هدر LC_LOAD_DYLIB در یک باینری Mach-O به macOS و OS X می گوید که کتابخانه های پویا (dylibs) برای بارگیری در طول زمان اجرا. این ها را می توان به دودویی کامپایل شده اضافه کرد تا زمانی که تنظیمات به بقیه زمینه ها و وابستگی ها انجام شود. [[ویرایش] ابزارهای موجود برای انجام این تغییرات وجود دارد.\n\nمخالفان ممکن است هدرهای باینری Mach-O را برای بارگیری و اجرای تعادل های مخرب هر بار که باینری اجرا می شود تغییر دهند. اگر چه هر گونه تغییرات امضاهای دیجیتال را در باینری اعتبار می دهد، زیرا باینری اصلاح می شود، این می تواند با حذف دستور LC_CODE_SIGNancy از دودویی به طوری که امضا در زمان بارگذاری بررسی نمی شود. [[ویرایش] (Citation: Writing Bad Malware for OSX) (Citation: Malware Persistence on OS X)"
+            "name_fa": "LC_LOAD_DYLIB اضافه",
+            "description_fa": "دشمنان ممکن است با اجرای محتوای مخرب ناشی از اجرای باینری های آلوده، پایداری خود را حفظ کنند. باینری های Mach-O دارای یک سری هدر هستند که برای انجام عملیات خاصی در هنگام بارگذاری یک باینری استفاده می شوند. هدر LC_LOAD_DYLIB در یک باینری Mach-O به macOS و OS X می گوید که کدام کتابخانه های پویا (dylibs) را در طول زمان اجرا بارگیری کنند. اینها را می‌توان به صورت موقت به باینری کامپایل‌شده اضافه کرد تا زمانی که تنظیمات مربوط به بقیه فیلدها و وابستگی‌ها انجام شود.(Citation: Writing Bad Malware for OSX) ابزارهایی برای انجام این تغییرات در دسترس هستند.\n\nدشمنان ممکن است هدرهای باینری Mach-O را تغییر دهند تا هر بار که باینری اجرا می شود، dylib های مخرب را بارگیری و اجرا کنند. اگرچه هر گونه تغییری امضاهای دیجیتال روی باینری ها را باطل می کند زیرا باینری در حال تغییر است، می توان آن را به سادگی با حذف دستور LC_CODE_SIGNATURE از باینری برطرف کرد تا امضا در زمان بارگذاری بررسی نشود.[[[CTI_PRESERVE_1]] (Citation: Malware Persistence on OS X)"
         }
     ]
 }

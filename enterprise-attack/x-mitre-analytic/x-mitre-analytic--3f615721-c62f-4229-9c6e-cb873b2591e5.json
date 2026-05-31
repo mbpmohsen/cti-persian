@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0066#AN0180",
-                    "external_id": "AN0180"
+                    "external_id": "AN0180",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "10\u201330m correlation."
+                    "description": "10–30m correlation.",
+                    "description_fa": "همبستگی 10 تا 30 متر"
                 },
                 {
                     "field": "QuarantinePolicy",
-                    "description": "Alert when com.apple.quarantine missing on newly downloaded executables."
+                    "description": "Alert when com.apple.quarantine missing on newly downloaded executables.",
+                    "description_fa": "هشدار زمانی که com.apple.quarantine در فایل های اجرایی تازه دانلود شده وجود ندارد."
                 },
                 {
                     "field": "SuspiciousTLDs",
-                    "description": "Org-specific risky domains/TLDs."
+                    "description": "Org-specific risky domains/TLDs.",
+                    "description_fa": "دامنه های مخاطره آمیز/TLD های خاص سازمان."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0180",
+            "description_fa": "زنجیره رفتاری: (1) Safari/Chrome/Firefox/Office یک URL را مدیریت می کند. گزارش‌های یکپارچه تخصیص باز/کلیک یا LSQuarantine را نشان می‌دهند، (2) اتصال خروجی به دامنه غیرقابل اعتماد، (3) یک فایل جدید در ~/Downloads یا /private/var/folders/* با پرچم قرنطینه ظاهر می‌شود."
         }
     ]
 }

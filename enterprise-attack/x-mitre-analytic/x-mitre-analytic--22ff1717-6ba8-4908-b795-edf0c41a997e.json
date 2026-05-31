@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0302#AN0842",
-                    "external_id": "AN0842"
+                    "external_id": "AN0842",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0842",
-            "description": "A remote source rapidly touches a short sequence of closed ports (SYN\u2192RST/S0) on a Windows host. Within a short window the host changes firewall state (WFP rule added/modified or service starts listening) and then the same source completes the first successful handshake to the newly opened port.",
+            "description": "A remote source rapidly touches a short sequence of closed ports (SYN→RST/S0) on a Windows host. Within a short window the host changes firewall state (WFP rule added/modified or service starts listening) and then the same source completes the first successful handshake to the newly opened port.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Seconds to correlate knock sequence \u2192 rule change \u2192 successful connect (60\u2013300s typical)."
+                    "description": "Seconds to correlate knock sequence → rule change → successful connect (60–300s typical).",
+                    "description_fa": "چند ثانیه برای همبستگی دنباله ضربه → تغییر قانون → اتصال موفق (معمولاً 60-300 ثانیه)."
                 },
                 {
                     "field": "MinSequenceLen",
-                    "description": "Minimum number of distinct destination ports in the sequence (\u22653 by default)."
+                    "description": "Minimum number of distinct destination ports in the sequence (≥3 by default).",
+                    "description_fa": "حداقل تعداد پورت های مقصد متمایز در ترتیب (≥3 به طور پیش فرض)."
                 },
                 {
                     "field": "RuleChangeAllowList",
-                    "description": "Accounts/processes allowed to adjust Windows Firewall (e.g., update agents)."
+                    "description": "Accounts/processes allowed to adjust Windows Firewall (e.g., update agents).",
+                    "description_fa": "حساب‌ها/فرآیندهایی که مجاز به تنظیم فایروال ویندوز هستند (مثلاً عوامل به‌روزرسانی)."
                 },
                 {
                     "field": "WatchedPorts",
-                    "description": "Ports of interest to flag when opened (e.g., 22,23,2323,8022,3389,8080)."
+                    "description": "Ports of interest to flag when opened (e.g., 22,23,2323,8022,3389,8080).",
+                    "description_fa": "درگاه‌های مورد علاقه برای پرچم‌گذاری هنگام باز شدن (به عنوان مثال، 22,23,2323,8022,3389,8080)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0842",
+            "description_fa": "یک منبع راه دور به سرعت دنباله کوتاهی از پورت های بسته (SYN→RST/S0) را در میزبان ویندوز لمس می کند. در یک پنجره کوتاه، میزبان حالت فایروال را تغییر می دهد (قانون WFP اضافه/اصلاح شد یا سرویس شروع به گوش دادن می کند) و سپس همان منبع اولین دست دادن موفقیت آمیز را به پورت تازه باز شده تکمیل می کند."
         }
     ]
 }

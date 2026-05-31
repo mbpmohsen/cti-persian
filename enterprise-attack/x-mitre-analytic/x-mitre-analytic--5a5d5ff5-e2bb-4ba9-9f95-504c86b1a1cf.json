@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0234#AN0648",
-                    "external_id": "AN0648"
+                    "external_id": "AN0648",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccessMask",
-                    "description": "Set to detect full access rights (0x1F0FFF) or modify based on tool behavior."
+                    "description": "Set to detect full access rights (0x1F0FFF) or modify based on tool behavior.",
+                    "description_fa": "تنظیم کنید تا حقوق دسترسی کامل (0x1F0FFF) را شناسایی کند یا بر اساس رفتار ابزار تغییر دهید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Define how soon access to LSASS is followed by suspicious file or registry activity."
+                    "description": "Define how soon access to LSASS is followed by suspicious file or registry activity.",
+                    "description_fa": "مشخص کنید که دسترسی به LSASS چه مدت با فعالیت مشکوک فایل یا رجیستری همراه است."
                 },
                 {
                     "field": "ParentProcessFilter",
-                    "description": "Allowlist known security tools or system processes accessing LSASS."
+                    "description": "Allowlist known security tools or system processes accessing LSASS.",
+                    "description_fa": "ابزارهای امنیتی شناخته شده یا فرآیندهای سیستمی که به LSASS دسترسی دارند را فهرست کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0648",
+            "description_fa": "فرآیندهای دسترسی به حافظه LSASS یا رجیستری SAM خارج از ابزارهای امنیتی قابل اعتماد، اغلب با ایجاد فایل یا حرکت جانبی دنبال می‌شود. دسترسی غیرمجاز به زیرسیستم های حساس سیستم عامل را برای استخراج اعتبار شناسایی می کند."
         }
     ]
 }

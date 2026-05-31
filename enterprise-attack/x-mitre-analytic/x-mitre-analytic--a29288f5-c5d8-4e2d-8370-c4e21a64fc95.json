@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0437#AN1212",
-                    "external_id": "AN1212"
+                    "external_id": "AN1212",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetObject",
-                    "description": "Target registry paths like HKLM\\SECURITY\\Policy\\Secrets or variants can be tuned depending on OS version or registry redirection settings."
+                    "description": "Target registry paths like HKLM\\SECURITY\\Policy\\Secrets or variants can be tuned depending on OS version or registry redirection settings.",
+                    "description_fa": "مسیرهای رجیستری هدف مانند HKLM\\SECURITY\\Policy\\Secrets یا انواع مختلف را می توان بسته به نسخه سیستم عامل یا تنظیمات تغییر مسیر رجیستری تنظیم کرد."
                 },
                 {
                     "field": "ImageLoaded",
-                    "description": "Module names such as `lsasrv.dll`, `sechost.dll`, or suspicious DLLs loaded by user processes may require tuning for known-good service operations."
+                    "description": "Module names such as `lsasrv.dll`, `sechost.dll`, or suspicious DLLs loaded by user processes may require tuning for known-good service operations.",
+                    "description_fa": "نام‌های ماژول‌هایی مانند «lsasrv.dll»، «sechost.dll»، یا DLL‌های مشکوک بارگیری شده توسط فرآیندهای کاربر ممکن است برای عملیات‌های سرویس خوب نیاز به تنظیم داشته باشند."
                 },
                 {
                     "field": "AccessMask",
-                    "description": "Tuning based on whether processes are using specific sensitive access rights (e.g., 0x2 or 0x4)."
+                    "description": "Tuning based on whether processes are using specific sensitive access rights (e.g., 0x2 or 0x4).",
+                    "description_fa": "تنظیم بر اساس اینکه آیا فرآیندها از حقوق دسترسی حساس خاصی استفاده می کنند (به عنوان مثال، 0x2 یا 0x4)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal window between registry access and command-line tool execution."
+                    "description": "Temporal window between registry access and command-line tool execution.",
+                    "description_fa": "پنجره زمانی بین دسترسی به رجیستری و اجرای ابزار خط فرمان."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1212",
+            "description_fa": "فعالیت های دشمن را با هدف دسترسی به اسرار LSA، از جمله صدور کلید رجیستری HKEY_LOCAL_MACHINE\\SECURITY\\Policy\\Secrets یا حذف حافظه از طریق ابزارهایی مانند Mimikatz یا PowerSploit's Invoke-Mimikatz شناسایی می کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0537#AN1482",
-                    "external_id": "AN1482"
+                    "external_id": "AN1482",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedTeamIDs",
-                    "description": "Apple Developer Team IDs permitted in your fleet."
+                    "description": "Apple Developer Team IDs permitted in your fleet.",
+                    "description_fa": "شناسه‌های تیم توسعه‌دهنده اپل در ناوگان شما مجاز است."
                 },
                 {
                     "field": "TrustedDMGs",
-                    "description": "Known DMG/Pkg sources and hashes."
+                    "description": "Known DMG/Pkg sources and hashes.",
+                    "description_fa": "منابع و هش های شناخته شده DMG/Pkg."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Install\u2192first-run correlation window (default 2h)."
+                    "description": "Install→first-run correlation window (default 2h).",
+                    "description_fa": "نصب → پنجره همبستگی اولین اجرا (پیش فرض 2 ساعت)."
                 },
                 {
                     "field": "RiskScoreThreshold",
-                    "description": "Adjust alert sensitivity based on org tolerance."
+                    "description": "Adjust alert sensitivity based on org tolerance.",
+                    "description_fa": "حساسیت هشدار را بر اساس تحمل سازمان تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1482",
+            "description_fa": "1) نصب pkg/ثبت اسناد رسمی از منابع غیر معمول یا با هشدارهای Gatekeeper/AMFI. 2) Mach-O جدید در مسیرهای /Applications یا ~/Library یا جایگزینی اجزای امضا شده نوشته شده است. 3) برای اولین بار از نصب کننده، فرزندان بدون علامت یا exfil اجرا می شود."
         }
     ]
 }

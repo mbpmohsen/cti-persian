@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0151#AN0431",
-                    "external_id": "AN0431"
+                    "external_id": "AN0431",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuditRulesSyscalls",
-                    "description": "Scope of syscalls (time, clock_gettime, gettimeofday) monitored; may be performance-sensitive."
+                    "description": "Scope of syscalls (time, clock_gettime, gettimeofday) monitored; may be performance-sensitive.",
+                    "description_fa": "محدوده syscalls (time, clock_gettime, gettimeofday) نظارت می شود. ممکن است به عملکرد حساس باشد."
                 },
                 {
                     "field": "AllowedBinaries",
-                    "description": "List of legitimate automation/orchestration tools frequently querying time."
+                    "description": "List of legitimate automation/orchestration tools frequently querying time.",
+                    "description_fa": "فهرستی از ابزارهای قانونی اتوماسیون/ارکستراسیون که اغلب زمان پرس و جو می کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., 5\u201320 minutes) to link time discovery to follow-on cron/at changes."
+                    "description": "Correlation window (e.g., 5–20 minutes) to link time discovery to follow-on cron/at changes.",
+                    "description_fa": "پنجره همبستگی (مثلاً 5 تا 20 دقیقه) برای پیوند دادن زمان کشف به تغییرات بعدی cron/at."
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "Ignore root-owned maintenance agents if desired; focus on interactive or newly created users."
+                    "description": "Ignore root-owned maintenance agents if desired; focus on interactive or newly created users.",
+                    "description_fa": "در صورت تمایل، عوامل تعمیر و نگهداری متعلق به ریشه را نادیده بگیرید. بر روی کاربران تعاملی یا تازه ایجاد شده تمرکز کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0431",
+            "description_fa": "یک فرآیند (اغلب توسط یک پوسته، مفسر، یا کاشت بدافزار ایجاد می‌شود) کشف زمان را از طریق دستورات (تاریخ، timedatectl، hwclock، cat /etc/timezone، /proc/uptime) یا syscalls مستقیم (time()، clock_gettime) اجرا می‌کند و (به صورت اختیاری) در زمان‌بندی زمان‌بندی‌شده، شرط locrotabn/به دنبال آن مشخص می‌شود."
         }
     ]
 }

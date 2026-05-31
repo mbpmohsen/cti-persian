@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0001#AN0001",
-                    "external_id": "AN0001"
+                    "external_id": "AN0001",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust temporal window for correlation of access attempts and SSRF triggers"
+                    "description": "Adjust temporal window for correlation of access attempts and SSRF triggers",
+                    "description_fa": "پنجره زمانی را برای ارتباط تلاش‌های دسترسی و محرک‌های SSRF تنظیم کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune based on expected roles that access metadata APIs (e.g., root, service accounts)"
+                    "description": "Tune based on expected roles that access metadata APIs (e.g., root, service accounts)",
+                    "description_fa": "تنظیم بر اساس نقش‌های مورد انتظاری که به APIهای فراداده (مانند حساب‌های ریشه، سرویس) دسترسی دارند."
                 },
                 {
                     "field": "RequestHeaderMatch",
-                    "description": "Customize detection for HTTP Host headers indicating SSRF"
+                    "description": "Customize detection for HTTP Host headers indicating SSRF",
+                    "description_fa": "سفارشی کردن شناسایی برای سرصفحه های میزبان HTTP که SSRF را نشان می دهد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0001",
+            "description_fa": "تلاش‌های دسترسی به نقاط پایانی ابرداده نمونه ابری (مانند 169.254.169.254) را از ماشین‌های مجازی یا بارهای کاری کانتینری شناسایی می‌کند. این شامل هر دو الگوهای دسترسی مستقیم و بهره برداری SSRF می شود."
         }
     ]
 }

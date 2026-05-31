@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0002#AN0003",
-                    "external_id": "AN0003"
+                    "external_id": "AN0003",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BrokerAllowList",
-                    "description": "Known-good brokers used by approved apps and daemons"
+                    "description": "Known-good brokers used by approved apps and daemons",
+                    "description_fa": "کارگزاران خوب شناخته شده که توسط برنامه ها و شیاطین تایید شده استفاده می شوند"
                 },
                 {
                     "field": "TopicAnomalyScore",
-                    "description": "Payload length, entropy, or topic name patterns"
+                    "description": "Payload length, entropy, or topic name patterns",
+                    "description_fa": "الگوهای طول بار، آنتروپی یا نام موضوع"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0003",
+            "description_fa": "ابزارهای CLI (مانند mosquitto_pub، nc، اسکریپت‌های پایتون) را در تعامل با کارگزاران pub/sub با استفاده از نام‌های موضوعی غیرمعمول، نرخ انتشار با فرکانس بالا، یا بارهای مبهم به میزبان‌های غیر استاندارد تشخیص می‌دهد."
         }
     ]
 }

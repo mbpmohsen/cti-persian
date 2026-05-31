@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0021#AN0063",
-                    "external_id": "AN0063"
+                    "external_id": "AN0063",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceLabel",
-                    "description": "Launch daemon label or name targeted by command"
+                    "description": "Launch daemon label or name targeted by command",
+                    "description_fa": "برچسب یا نام شبح را که توسط دستور مورد هدف قرار گرفته است راه اندازی کنید"
                 },
                 {
                     "field": "LaunchType",
-                    "description": "Whether the command disables or boots out the service"
+                    "description": "Whether the command disables or boots out the service",
+                    "description_fa": "این که آیا این دستور سرویس را غیرفعال یا راه‌اندازی می‌کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0063",
+            "description_fa": "استفاده از launchctl برای متوقف کردن سرویس‌ها یا از بین بردن فرآیندهای پس‌زمینه حیاتی (به عنوان مثال، امن، com.apple.*)، که معمولاً توسط ابزارهای خط فرمان مانند rm یا diskutil دنبال می‌شود. زنجیره رفتاری: پوسته پایانه یا راه دور + راه‌اندازی/غیرفعال کردن راه‌اندازی + خاتمه فرآیند + اصلاح بعدی."
         }
     ]
 }

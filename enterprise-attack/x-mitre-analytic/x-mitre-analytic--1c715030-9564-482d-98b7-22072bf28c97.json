@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0586#AN1611",
-                    "external_id": "AN1611"
+                    "external_id": "AN1611",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetFilePath",
-                    "description": "Tunable for NTDS file location or backup paths if organization uses custom domain controller storage structure."
+                    "description": "Tunable for NTDS file location or backup paths if organization uses custom domain controller storage structure.",
+                    "description_fa": "اگر سازمان از ساختار ذخیره سازی کنترل کننده دامنه سفارشی استفاده می کند، برای مکان فایل NTDS یا مسیرهای پشتیبان قابل تنظیم است."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Can suppress backup-related parent processes to reduce false positives."
+                    "description": "Can suppress backup-related parent processes to reduce false positives.",
+                    "description_fa": "می تواند فرآیندهای والد مربوط به پشتیبان گیری را برای کاهش مثبت کاذب سرکوب کند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation between shadow copy creation and NTDS file access (e.g., 5 min window)."
+                    "description": "Temporal correlation between shadow copy creation and NTDS file access (e.g., 5 min window).",
+                    "description_fa": "همبستگی زمانی بین ایجاد کپی سایه و دسترسی به فایل NTDS (به عنوان مثال، پنجره 5 دقیقه)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune based on expected privileged user/service account behavior."
+                    "description": "Tune based on expected privileged user/service account behavior.",
+                    "description_fa": "بر اساس رفتار حساب کاربری/خدمات ممتاز مورد انتظار تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1611",
+            "description_fa": "با نظارت بر ایجاد کپی سایه، دسترسی فایل مشکوک به %SystemRoot%\\NTDS\\ntds.dit و استفاده از ابزارهایی مانند ntdsutil.exe یا APIهای مدیریت حجم، تلاش‌های تخلیه اعتبار را برای هدف قرار دادن پایگاه داده NTDS.dit شناسایی می‌کند."
         }
     ]
 }

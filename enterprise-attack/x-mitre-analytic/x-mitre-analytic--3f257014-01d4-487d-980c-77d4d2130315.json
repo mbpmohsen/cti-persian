@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0264#AN0733",
-                    "external_id": "AN0733"
+                    "external_id": "AN0733",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcess",
-                    "description": "Execution of wscript.exe, cscript.exe, or mshta.exe from suspicious parent like Excel or Outlook."
+                    "description": "Execution of wscript.exe, cscript.exe, or mshta.exe from suspicious parent like Excel or Outlook.",
+                    "description_fa": "اجرای wscript.exe، cscript.exe یا mshta.exe از والدین مشکوک مانند Excel یا Outlook."
                 },
                 {
                     "field": "ScriptPath",
-                    "description": "Script loaded from %TEMP%, user download folder, or via UNC/web path."
+                    "description": "Script loaded from %TEMP%, user download folder, or via UNC/web path.",
+                    "description_fa": "اسکریپت از %TEMP%، پوشه دانلود کاربر، یا از طریق UNC/مسیر وب بارگیری شده است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Execution of JavaScript during non-business or patch windows."
+                    "description": "Execution of JavaScript during non-business or patch windows.",
+                    "description_fa": "اجرای جاوا اسکریپت در پنجره های غیر تجاری یا پچ."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Execution by accounts not typically authorized for scripting (e.g., non-admin users)."
+                    "description": "Execution by accounts not typically authorized for scripting (e.g., non-admin users).",
+                    "description_fa": "اجرا توسط حساب هایی که معمولاً برای اسکریپت مجاز نیستند (به عنوان مثال، کاربران غیر سرپرست)."
                 },
                 {
                     "field": "EntropyScore",
-                    "description": "Obfuscated JS with high entropy detected by AMSI or ScriptBlock logging."
+                    "description": "Obfuscated JS with high entropy detected by AMSI or ScriptBlock logging.",
+                    "description_fa": "JS مبهم با آنتروپی بالا که توسط ثبت AMSI یا ScriptBlock شناسایی شده است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0733",
+            "description_fa": "اجرای جاوا اسکریپت را از طریق WSH (wscript.exe، cscript.exe) یا HTA (mshta.exe) تشخیص می‌دهد، به‌ویژه زمانی که از ماکروهای Office، مرورگرهای وب یا مسیرهای غیرعادی کاربر ایجاد می‌شود. اجرای اسکریپت را با فعالیت شبکه خروجی یا اصلاح سیستم مرتبط می کند."
         }
     ]
 }

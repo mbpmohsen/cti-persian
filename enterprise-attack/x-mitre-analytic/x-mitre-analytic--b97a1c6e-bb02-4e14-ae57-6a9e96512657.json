@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0359#AN1022",
-                    "external_id": "AN1022"
+                    "external_id": "AN1022",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LaunchdLabel",
-                    "description": "Regex for masking patterns in LaunchAgents with proxy behavior."
+                    "description": "Regex for masking patterns in LaunchAgents with proxy behavior.",
+                    "description_fa": "Regex برای پوشاندن الگوها در LaunchAgents با رفتار پراکسی."
                 },
                 {
                     "field": "UnsignedBinary",
-                    "description": "Allow for exceptions for known unsigned binaries."
+                    "description": "Allow for exceptions for known unsigned binaries.",
+                    "description_fa": "برای باینری های بدون علامت شناخته شده استثنا قائل شوید."
                 },
                 {
                     "field": "SOCKSPortUsage",
-                    "description": "Monitor local 9050/9150 activity and rerouted system traffic."
+                    "description": "Monitor local 9050/9150 activity and rerouted system traffic.",
+                    "description_fa": "فعالیت محلی 9050/9150 و ترافیک سیستم را تغییر مسیر دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1022",
+            "description_fa": "LaunchAgents یا LaunchDaemons، Tor دائمی یا فرآیندهای رله ای را آغاز می کنند که اتصالات خروجی رمزگذاری شده را ایجاد می کند. ممکن است با بای پس های جعبه شنی یا فایل های اجرایی بدون علامت که از طریق پراکسی های SOCKS ارتباط برقرار می کنند، جفت شود."
         }
     ]
 }

@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-499",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/499.html"
+                    "url": "https://capec.mitre.org/data/definitions/499.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-925",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/925.html"
+                    "url": "http://cwe.mitre.org/data/definitions/925.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Erika Chin, Adrienne Porter Felt, Kate Greenwood, David Wagner, Analyzing Inter-Application Communication in Android, 2011, International Conference on Mobile Systems, Applications, and Services (MobiSys)",
                     "external_id": "REF-427",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://people.eecs.berkeley.edu/~daw/papers/intents-mobisys11.pdf"
+                    "url": "https://people.eecs.berkeley.edu/~daw/papers/intents-mobisys11.pdf",
+                    "description_fa": "اریکا چین، آدرین پورتر فلت، کیت گرین‌وود، دیوید واگنر، تجزیه و تحلیل ارتباطات بین برنامه‌ای در اندروید، 2011، کنفرانس بین‌المللی سیستم‌های تلفن همراه، برنامه‌ها و خدمات (MobiSys)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--48f21dcd-2490-49c6-9690-1cb586b201f4",
@@ -44,6 +48,15 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -57,7 +70,13 @@
                 "An adversary must be able install a purpose built malicious application onto the Android device and convince the user to execute it. The malicious application is used to intercept implicit intents."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن، از طریق یک برنامه مخرب نصب شده قبلی، پیام‌های یک برنامه کاربردی مبتنی بر اندروید مورد اعتماد را در تلاش برای دستیابی به اهداف مختلف از جمله رد سرویس، افشای اطلاعات و تزریق داده رهگیری می‌کند. یک هدف ضمنی ارسال شده از یک برنامه قابل اعتماد می تواند توسط هر برنامه ای که فیلتر قصد مناسبی را اعلام کرده باشد دریافت کند. اگر هدف با مجوزی که برنامه مخرب فاقد آن است محافظت نشود، مهاجم می تواند به داده های موجود در intent دسترسی پیدا کند. بعلاوه، قصد را می توان از رسیدن به مقصد مورد نظر مسدود کرد، یا تغییر داد و به طور بالقوه در طول مسیر ارسال کرد.",
+            "name_fa": "رهگیری قصد اندروید",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>پیدا کردن یک برنامه اندرویدی که از مقاصد ضمنی استفاده می‌کند: </b>از آنجایی که این حمله فقط روی برنامه‌های اندرویدی کار می‌کند که از مقاصد ضمنی استفاده می‌کنند، به جای مقاصد صریح، دشمنی که ابتدا از یک برنامه کاربردی استفاده می‌کند. They must also determine what the contents of the intents being sent are such that a malicious application can get sent these intents.</p></li></ol></div><div><h3>Experiment</h3><ol><li> <p> <b>Create a malicious app: </b>The adversary must create a malicious android app meant to intercept implicit intents from a target برنامه</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>نوع هدفی را که می‌خواهید در فایل مانیفست برنامه مخرب رهگیری شود، با استفاده از فیلتر هدف مشخص کنید</td></tr></tbody></table><li> <p> <b>کاربر را وادار کنید تا برنامه را با استفاده از تبلیغات مخرب دانلود کند. برنامه مخرب به هر طریقی که لازم باشد</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Intercept Implicit Intents: </b>هنگامی که برنامه مخرب دانلود شد، دستگاه اندروید هرگونه مقاصد ضمنی را از برنامه مورد نظر به برنامه هدف به برنامه مخرب ارسال می کند تا به برنامه مخرب دسترسی پیدا کند. حریف می‌تواند با استفاده از محتوای intent به هر حمله‌ای ادامه دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مسدود کردن هدف از رسیدن به مکان مورد نظر، باعث انکار سرویس می‌شود</td></tr><tr><td>اطلاعات حساس را از محتوای رهگیری‌شده جمع‌آوری کنید. intent و همراه با برنامه دیگری ارسال کنید</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "دشمن باید بتواند یک برنامه مخرب هدفمند را روی دستگاه اندروید نصب کند و کاربر را متقاعد کند که آن را اجرا کند. برنامه مخرب برای رهگیری مقاصد ضمنی استفاده می شود."
+            ]
         }
     ],
     "type": "bundle"

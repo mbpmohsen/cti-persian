@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0262#AN0728",
-                    "external_id": "AN0728"
+                    "external_id": "AN0728",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,13 +48,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PortDeviationThreshold",
-                    "description": "Deviation from common service ports (e.g., >1024 when DNS resolved service expects 80/443)"
+                    "description": "Deviation from common service ports (e.g., >1024 when DNS resolved service expects 80/443)",
+                    "description_fa": "انحراف از پورت های سرویس رایج (به عنوان مثال، > 1024 هنگامی که سرویس حل شده DNS انتظار 80/443 را دارد)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between DNS response and network connection (e.g., 5 minutes)"
+                    "description": "Correlation window between DNS response and network connection (e.g., 5 minutes)",
+                    "description_fa": "پنجره همبستگی بین پاسخ DNS و اتصال شبکه (به عنوان مثال، 5 دقیقه)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0728",
+            "description_fa": "نتایج جستجوی DNS را در مواردی که اتصالات بعدی از اعداد پورت مشتق شده یا غیرعادی استفاده می کنند نظارت کنید، به خصوص زمانی که به فرآیندهای مشکوک مرتبط هستند. گزارش های DNS Sysmon (شناسه رویداد 22) را با ایجاد فرآیند و فعالیت سوکت مرتبط کنید."
         }
     ]
 }

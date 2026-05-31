@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0376#AN1057",
-                    "external_id": "AN1057"
+                    "external_id": "AN1057",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScanRateThreshold",
-                    "description": "Defines the number of unique destination IPs or ports accessed within a time window that may indicate a scan."
+                    "description": "Defines the number of unique destination IPs or ports accessed within a time window that may indicate a scan.",
+                    "description_fa": "تعداد IP های مقصد یا پورت های منحصر به فرد قابل دسترسی در یک پنجره زمانی را که ممکن است نشان دهنده یک اسکن باشد را تعیین می کند."
                 },
                 {
                     "field": "KnownScannerExeList",
-                    "description": "List of binaries allowed to scan or used by IT (e.g., Nmap, Nessus)."
+                    "description": "List of binaries allowed to scan or used by IT (e.g., Nmap, Nessus).",
+                    "description_fa": "فهرستی از باینری‌های مجاز برای اسکن یا استفاده توسط IT (مانند Nmap، Nessus)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal bounds for correlating sequential connections (e.g., 60 seconds)."
+                    "description": "Temporal bounds for correlating sequential connections (e.g., 60 seconds).",
+                    "description_fa": "مرزهای زمانی برای همبستگی اتصالات متوالی (به عنوان مثال، 60 ثانیه)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1057",
+            "description_fa": "فرآیندهایی را که شمارش شبکه را انجام می دهند (به عنوان مثال، اسکن پورت، کاوش سرویس) با همبستگی ایجاد فرآیند، اتصالات سوکت و کاوش پی در پی مقصد IP در یک پنجره زمانی شناسایی می کند."
         }
     ]
 }

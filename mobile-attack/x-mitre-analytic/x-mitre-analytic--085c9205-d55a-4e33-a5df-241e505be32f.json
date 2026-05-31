@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0658#AN1747",
-                    "external_id": "AN1747"
+                    "external_id": "AN1747",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.375Z",
             "name": "Analytic 1747",
-            "description": "A defender correlates a sudden carrier identity/service state change (SIM/line identifier change or unexpected loss of cellular service) with near-term device messaging/telephony disruption and a concurrent shift in authentication traffic patterns\u2014such as a spike in SMS-based verification flows or account recovery activity from the same user\u2019s identities\u2014indicating the user\u2019s number may have been transferred to a different SIM/device (SIM swap impact).",
+            "description": "A defender correlates a sudden carrier identity/service state change (SIM/line identifier change or unexpected loss of cellular service) with near-term device messaging/telephony disruption and a concurrent shift in authentication traffic patterns—such as a spike in SMS-based verification flows or account recovery activity from the same user’s identities—indicating the user’s number may have been transferred to a different SIM/device (SIM swap impact).",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -36,7 +37,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--56c2b384-77f8-461f-a71a-76f7888ebfb6",
                     "name": "MobileEDR:telemetry",
-                    "channel": "Cellular service state transitions (in-service\u2192no-service), SIM state change, carrier/operator identifier change, or baseband/telephony stack state change observed by agent telemetry"
+                    "channel": "Cellular service state transitions (in-service→no-service), SIM state change, carrier/operator identifier change, or baseband/telephony stack state change observed by agent telemetry"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
@@ -62,29 +63,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceLossDurationThreshold",
-                    "description": "Minimum duration of unexpected cellular service loss before considering it suspicious (reduces noise from transient coverage issues)."
+                    "description": "Minimum duration of unexpected cellular service loss before considering it suspicious (reduces noise from transient coverage issues).",
+                    "description_fa": "حداقل مدت زمان از دست دادن غیرمنتظره سرویس تلفن همراه قبل از اینکه مشکوک در نظر گرفته شود (صدای ناشی از مشکلات پوشش گذرا را کاهش می دهد)."
                 },
                 {
                     "field": "SimStateChangeTypes",
-                    "description": "Which SIM-related state changes to alert on (SIM removed, SIM refresh, operator changed, eSIM profile changed)."
+                    "description": "Which SIM-related state changes to alert on (SIM removed, SIM refresh, operator changed, eSIM profile changed).",
+                    "description_fa": "کدام وضعیت مربوط به سیم‌کارت به هشدار تغییر می‌کند (سیم‌کارت حذف شد، سیم‌کارت تازه‌سازی شد، اپراتور تغییر کرد، نمایه سیم‌کارت تغییر کرد)."
                 },
                 {
                     "field": "SwapCorrelationWindow",
-                    "description": "Time window to correlate SIM/service state change with downstream identity traffic anomalies (e.g., 30m\u20136h)."
+                    "description": "Time window to correlate SIM/service state change with downstream identity traffic anomalies (e.g., 30m–6h).",
+                    "description_fa": "پنجره زمانی برای ارتباط تغییر وضعیت سیم/سرویس با ناهنجاری های ترافیک هویت پایین دستی (مثلاً 30 تا 6 ساعت)."
                 },
                 {
                     "field": "IdentityEndpointAllowList",
-                    "description": "Baseline of expected IdP/banking/crypto identity endpoints for the org; used to reduce false positives."
+                    "description": "Baseline of expected IdP/banking/crypto identity endpoints for the org; used to reduce false positives.",
+                    "description_fa": "خط پایه مورد انتظار IdP/بانک/نقاط پایانی هویت رمزنگاری برای سازمان؛ برای کاهش مثبت کاذب استفاده می شود."
                 },
                 {
                     "field": "AuthTrafficSpikeThreshold",
-                    "description": "Threshold for increase in OTP/MFA/account recovery traffic volume relative to user baseline."
+                    "description": "Threshold for increase in OTP/MFA/account recovery traffic volume relative to user baseline.",
+                    "description_fa": "آستانه افزایش در حجم ترافیک بازیابی OTP/MFA/حساب نسبت به خط پایه کاربر."
                 },
                 {
                     "field": "UserTravelContext",
-                    "description": "Optional enrichment\u2014treat carrier changes as lower risk during known travel/roaming windows."
+                    "description": "Optional enrichment—treat carrier changes as lower risk during known travel/roaming windows.",
+                    "description_fa": "غنی‌سازی اختیاری- تغییرات شرکت مخابراتی را به عنوان خطر کمتر در طول پنجره‌های سفر/رومینگ شناخته شده در نظر بگیرید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1747",
+            "description_fa": "یک مدافع یک تغییر ناگهانی هویت حامل/وضعیت سرویس (تغییر شناسه سیم/خط یا از دست دادن غیرمنتظره سرویس تلفن همراه) را با اختلال کوتاه‌مدت پیام/تلفن دستگاه و تغییر همزمان در الگوهای ترافیک احراز هویت مرتبط می‌کند - مانند افزایش ناگهانی در پیامک مبتنی بر پیامک - ممکن است در جریان‌های راستی‌آزمایی مبتنی بر پیامک یا همان فعالیت‌های بازیابی شماره کاربر شناسایی شده باشد. به سیم/دستگاه دیگری منتقل می شود (تأثیر تعویض سیم کارت)."
         }
     ]
 }

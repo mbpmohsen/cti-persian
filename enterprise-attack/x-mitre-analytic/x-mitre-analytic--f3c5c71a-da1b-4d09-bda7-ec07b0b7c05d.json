@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0197#AN0569",
-                    "external_id": "AN0569"
+                    "external_id": "AN0569",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,26 +61,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SyscallSet",
-                    "description": "Which syscalls to audit (openat, read, ioctl) \u2013 performance sensitive."
+                    "description": "Which syscalls to audit (openat, read, ioctl) – performance sensitive.",
+                    "description_fa": "کدام سیستم برای ممیزی (openat، read، ioctl) - عملکرد حساس است."
                 },
                 {
                     "field": "AllowedCallers",
-                    "description": "Legitimate processes (e.g., motion, Zoom, Chrome) that access /dev/video*."
+                    "description": "Legitimate processes (e.g., motion, Zoom, Chrome) that access /dev/video*.",
+                    "description_fa": "فرآیندهای قانونی (مانند حرکت، زوم، کروم) که به /dev/video* دسترسی دارند."
                 },
                 {
                     "field": "VideoExtensions",
-                    "description": "List of file extensions to flag (.mp4/.avi/.mov/.mkv/.yuv/.h264)."
+                    "description": "List of file extensions to flag (.mp4/.avi/.mov/.mkv/.yuv/.h264).",
+                    "description_fa": "فهرست پسوندهای فایل برای پرچم (.mp4/.avi/.mov/.mkv/.yuv/.h264)."
                 },
                 {
                     "field": "MinContinuousReadCount",
-                    "description": "Minimum read/ioctl count to infer continuous capture."
+                    "description": "Minimum read/ioctl count to infer continuous capture.",
+                    "description_fa": "حداقل تعداد خواندن/ioctl برای استنباط ضبط مداوم."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate device open \u2192 file write \u2192 network exfil (e.g., 30m)."
+                    "description": "Correlate device open → file write → network exfil (e.g., 30m).",
+                    "description_fa": "ارتباط دستگاه باز → نوشتن فایل → شبکه exfil (به عنوان مثال، 30 متر)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0569",
+            "description_fa": "یک فرآیند /dev/video* (V4L2) را باز می‌کند/ می‌خواند، حلقه‌های ioctl/read را انجام می‌دهد، مصنوعات ویدیویی بزرگ/پیوسته را روی دیسک می‌نویسد، و/یا به سرعت اتصالات خروجی را برای خروج ایجاد می‌کند."
         }
     ]
 }

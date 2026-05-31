@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0166#AN0473",
-                    "external_id": "AN0473"
+                    "external_id": "AN0473",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,18 +61,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MailTransportScriptPath",
-                    "description": "Path to custom scripts or filters depends on mail daemon (e.g., /etc/postfix/milter/, /etc/exim4/)."
+                    "description": "Path to custom scripts or filters depends on mail daemon (e.g., /etc/postfix/milter/, /etc/exim4/).",
+                    "description_fa": "مسیر دسترسی به اسکریپت‌ها یا فیلترهای سفارشی به دیمون ایمیل بستگی دارد (به عنوان مثال، /etc/postfix/milter/، /etc/exim4/)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Mail agents may run under different service users (postfix, exim, etc.), which should be scoped."
+                    "description": "Mail agents may run under different service users (postfix, exim, etc.), which should be scoped.",
+                    "description_fa": "عوامل ایمیل ممکن است تحت سرویس های مختلف کاربران (postfix، exim و غیره) اجرا شوند، که باید محدوده داشته باشند."
                 },
                 {
                     "field": "ExecFrequencyThreshold",
-                    "description": "Frequency of filter script re-execution per daemon restart or reload may vary."
+                    "description": "Frequency of filter script re-execution per daemon restart or reload may vary.",
+                    "description_fa": "فرکانس اجرای مجدد اسکریپت فیلتر در هر راه اندازی مجدد یا بارگذاری مجدد دیمون ممکن است متفاوت باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0473",
+            "description_fa": "دشمن فیلترهای محتوای ایمیل یا اسکریپت‌های انتقال را نصب یا تغییر می‌دهد (به عنوان مثال، Postfix milter، Sendmail milter، Exim filters) با استفاده از دسترسی پوسته یا دستکاری پیکربندی."
         }
     ]
 }

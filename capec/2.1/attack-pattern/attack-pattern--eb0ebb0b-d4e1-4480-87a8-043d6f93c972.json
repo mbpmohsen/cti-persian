@@ -9,19 +9,24 @@
                 {
                     "external_id": "CAPEC-584",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/584.html"
+                    "url": "https://capec.mitre.org/data/definitions/584.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Why is it Taking so Long to Secure Internet Routing?, 2014, ACM",
                     "external_id": "REF-465",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://queue.acm.org/detail.cfm?id=2668966"
+                    "url": "https://queue.acm.org/detail.cfm?id=2668966",
+                    "description_fa": "چرا مسیریابی ایمن اینترنت اینقدر طول می کشد؟، 2014، ACM",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Beware of BGP Attacks, 2004, ACM SIGCOMM",
                     "external_id": "REF-466",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.cc.gatech.edu/~dovrolis/Papers/ccr-bgp.pdf"
+                    "url": "http://www.cc.gatech.edu/~dovrolis/Papers/ccr-bgp.pdf",
+                    "description_fa": "مراقب حملات BGP باشید، 2004، ACM SIGCOMM",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--eb0ebb0b-d4e1-4480-87a8-043d6f93c972",
@@ -39,6 +44,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Other (Disabling a network route at the routing infrastructure level denies availability of that route.)"
+                ],
+                "Availability_fa": [
+                    "دیگر (غیرفعال کردن یک مسیر شبکه در سطح زیرساخت مسیریابی، در دسترس بودن آن مسیر را رد می کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -55,7 +63,18 @@
                 "BGP Router"
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن تبلیغات پروتکل دروازه مرزی (BGP) را برای یک مسیر سرکوب می کند تا شبکه زیربنایی را غیرقابل دسترس کند. پروتکل BGP با انتخاب کارآمدترین مسیر بین سیستم‌های خودمختار (AS) یا دامنه‌های مسیریابی به انتقال ترافیک در سراسر اینترنت کمک می‌کند. BGP اساس زیرساخت مسیریابی بین دامنه ای است که ارتباط بین این AS ها را فراهم می کند. با سرکوب تبلیغات مسیریابی AS در نظر گرفته شده و/یا اجبار کردن مسیرهای کمتر مؤثر برای ترافیک به AS، دشمن می تواند دسترسی به شبکه هدف را رد کند.",
+            "name_fa": "غیرفعال کردن مسیر BGP",
+            "x_capec_example_instances_fa": [
+                "Blackholing: دشمن عمداً به تبلیغات مسیریابی نادرست اشاره می کند تا ترافیک را به یک روتر خاص جذب کند تا بتوان آن را حذف کرد."
+            ],
+            "x_capec_prerequisites_fa": [
+                "حریف باید روتری را کنترل کند که می‌تواند به‌روزرسانی‌های جعلی BGP را تغییر دهد، رها کند یا معرفی کند. حریف می‌تواند متقاعد کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "روتر BGP"
+            ]
         }
     ],
     "type": "bundle"

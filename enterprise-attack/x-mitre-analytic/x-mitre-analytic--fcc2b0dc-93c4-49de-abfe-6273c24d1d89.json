@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0322#AN0915",
-                    "external_id": "AN0915"
+                    "external_id": "AN0915",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TempFilePaths",
-                    "description": "Track dropped executables in ~/Library/, /tmp/, or /private/tmp/"
+                    "description": "Track dropped executables in ~/Library/, /tmp/, or /private/tmp/",
+                    "description_fa": "ردیابی فایل های اجرایی حذف شده در ~/Library/، /tmp/، یا /private/tmp/"
                 },
                 {
                     "field": "MachOPaddingThreshold",
-                    "description": "Define padding size or section entropy anomalies in Mach-O file format"
+                    "description": "Define padding size or section entropy anomalies in Mach-O file format",
+                    "description_fa": "اندازه بالشتک یا ناهنجاری های آنتروپی بخش را در قالب فایل Mach-O تعریف کنید"
                 },
                 {
                     "field": "FollowOnPrivilegeEscalation",
-                    "description": "Detects whether the binary attempts privilege escalation within short execution window"
+                    "description": "Detects whether the binary attempts privilege escalation within short execution window",
+                    "description_fa": "تشخیص می دهد که آیا باینری تلاش می کند امتیاز را در پنجره اجرای کوتاه افزایش دهد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0915",
+            "description_fa": "باینری‌های Mach-O را شناسایی می‌کند که در فهرست‌های موقت با اندازه باینری یا الگوهای padding غیرعادی بالا، و به دنبال آن افزایش امتیاز، «exec» یا نگاشت حافظه سایر فرآیندها قرار گرفته‌اند."
         }
     ]
 }

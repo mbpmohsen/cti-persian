@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0200#AN0576",
-                    "external_id": "AN0576"
+                    "external_id": "AN0576",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0576",
-            "description": "Cause\u2192effect chain: (1) A user or service launches an indirection utility (e.g., forfiles.exe, pcalua.exe, wsl.exe, scriptrunner.exe, ssh.exe with -o ProxyCommand/LocalCommand). (2) That utility spawns a secondary program/command (PowerShell, cmd, msiexec, regsvr32, curl, arbitrary EXE) and/or opens outbound network connections. (3) Optional precursor modification of SSH config to persist LocalCommand/ProxyCommand. Correlate process creation, command/script content, file access to %USERPROFILE%\\.ssh\\config, and network connections from the utility or its child.",
+            "description": "Cause→effect chain: (1) A user or service launches an indirection utility (e.g., forfiles.exe, pcalua.exe, wsl.exe, scriptrunner.exe, ssh.exe with -o ProxyCommand/LocalCommand). (2) That utility spawns a secondary program/command (PowerShell, cmd, msiexec, regsvr32, curl, arbitrary EXE) and/or opens outbound network connections. (3) Optional precursor modification of SSH config to persist LocalCommand/ProxyCommand. Correlate process creation, command/script content, file access to %USERPROFILE%\\.ssh\\config, and network connections from the utility or its child.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,25 +52,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between indirect launcher and spawned child/network activity (e.g., 10\u201330 minutes)."
+                    "description": "Correlation window between indirect launcher and spawned child/network activity (e.g., 10–30 minutes).",
+                    "description_fa": "پنجره همبستگی بین راه‌انداز غیرمستقیم و فعالیت فرزند/شبکه ​​ایجاد شده (مثلاً 10 تا 30 دقیقه)."
                 },
                 {
                     "field": "AllowedUtilities",
-                    "description": "Utilities permitted on admin/Jumphosts (forfiles, wsl, ssh) to reduce noise."
+                    "description": "Utilities permitted on admin/Jumphosts (forfiles, wsl, ssh) to reduce noise.",
+                    "description_fa": "برنامه های کاربردی مجاز در admin/Jumphosts (forfiles، wsl، ssh) برای کاهش نویز."
                 },
                 {
                     "field": "HighRiskChildren",
-                    "description": "Child images that indicate abuse (powershell.exe, cmd.exe, rundll32.exe, regsvr32.exe, mshta.exe, msiexec.exe, curl.exe, bitsadmin.exe)."
+                    "description": "Child images that indicate abuse (powershell.exe, cmd.exe, rundll32.exe, regsvr32.exe, mshta.exe, msiexec.exe, curl.exe, bitsadmin.exe).",
+                    "description_fa": "تصاویر کودک که نشان دهنده سوء استفاده است (powershell.exe، cmd.exe، rundll32.exe، regsvr32.exe، mshta.exe، msiexec.exe، curl.exe، bitsadmin.exe)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Raise severity when the actor is a standard/interactive user on a workstation rather than a server or CI agent."
+                    "description": "Raise severity when the actor is a standard/interactive user on a workstation rather than a server or CI agent.",
+                    "description_fa": "وقتی بازیگر یک کاربر استاندارد/تعاملی در یک ایستگاه کاری است نه یک سرور یا عامل CI، شدت را افزایش دهید."
                 },
                 {
                     "field": "DestCIDRs",
-                    "description": "Known-good egress networks for SSH/WSL activity to suppress expected admin automations."
+                    "description": "Known-good egress networks for SSH/WSL activity to suppress expected admin automations.",
+                    "description_fa": "شبکه های خروجی خوب شناخته شده برای فعالیت SSH/WSL برای سرکوب اتوماسیون های مورد انتظار مدیریت."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0576",
+            "description_fa": "زنجیره علت → اثر: (1) یک کاربر یا سرویس یک ابزار غیرمستقیم راه اندازی می کند (به عنوان مثال، forfiles.exe، pcalua.exe، wsl.exe، scriptrunner.exe، ssh.exe با -o ProxyCommand/LocalCommand). (2) این ابزار یک برنامه/فرمان ثانویه (PowerShell، cmd، msiexec، regsvr32، curl، EXE دلخواه) ایجاد می کند و/یا اتصالات شبکه خروجی را باز می کند. (3) اصلاح پیشرو اختیاری پیکربندی SSH برای تداوم LocalCommand/ProxyCommand. ایجاد فرآیند، محتوای دستور/اسکریپت، دسترسی فایل به %USERPROFILE%\\.ssh\\config و اتصالات شبکه از ابزار یا فرزند آن را به هم مرتبط کنید."
         }
     ]
 }

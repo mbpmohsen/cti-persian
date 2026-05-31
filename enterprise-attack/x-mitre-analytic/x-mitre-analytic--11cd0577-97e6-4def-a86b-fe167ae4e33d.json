@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0047#AN0130",
-                    "external_id": "AN0130"
+                    "external_id": "AN0130",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetFilePathPattern",
-                    "description": "Regex or wildcard patterns for sensitive Outlook file paths (.ost/.pst) depending on organizational deployment."
+                    "description": "Regex or wildcard patterns for sensitive Outlook file paths (.ost/.pst) depending on organizational deployment.",
+                    "description_fa": "الگوهای Regex یا wildcard برای مسیرهای حساس فایل Outlook (.ost/.pst) بسته به استقرار سازمانی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Timeframe used to correlate related file access, process creation, and exfiltration events."
+                    "description": "Timeframe used to correlate related file access, process creation, and exfiltration events.",
+                    "description_fa": "بازه زمانی مورد استفاده برای ارتباط دسترسی به فایل مرتبط، ایجاد فرآیند، و رویدادهای استخراج."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Limit detection to user accounts not normally interacting with Outlook file locations (e.g., service accounts, low-privileged users)."
+                    "description": "Limit detection to user accounts not normally interacting with Outlook file locations (e.g., service accounts, low-privileged users).",
+                    "description_fa": "شناسایی را به حساب‌های کاربری محدود کنید که معمولاً با مکان‌های فایل Outlook در تعامل نیستند (به عنوان مثال، حساب‌های خدمات، کاربران با امتیاز پایین)."
                 },
                 {
                     "field": "ProcessAllowList",
-                    "description": "Filter known legitimate Outlook-accessing processes to reduce false positives."
+                    "description": "Filter known legitimate Outlook-accessing processes to reduce false positives.",
+                    "description_fa": "فرآیندهای دسترسی قانونی شناخته شده به Outlook را برای کاهش موارد مثبت کاذب فیلتر کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0130",
+            "description_fa": "تشخیص روی فرآیندهایی تمرکز می‌کند که با استفاده از دسترسی به سیستم فایل، ابزارهای اصلی ویندوز (مانند PowerShell، WMI)، یا ابزارهای دسترسی از راه دور با قابلیت‌های مرور فایل، تلاش می‌کنند تا فایل‌های داده محلی Outlook (pst/.ost) را مکان یابی، دسترسی یا استخراج کنند. زنجیره رفتار شامل شمارش دایرکتوری، دسترسی به فایل، فشرده سازی یا مرحله بندی اختیاری و انتقال شبکه است."
         }
     ]
 }

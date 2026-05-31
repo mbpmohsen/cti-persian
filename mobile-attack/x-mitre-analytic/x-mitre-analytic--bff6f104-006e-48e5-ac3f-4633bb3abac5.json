@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0600#AN1647",
-                    "external_id": "AN1647"
+                    "external_id": "AN1647",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.382Z",
             "name": "Analytic 1647",
-            "description": "Defender correlates attempts to inventory installed apps via LaunchServices/URL-scheme probing or private APIs (e.g., LSApplicationWorkspace) with checks for high-value targets and quick persistence/egress. Chain: capability/attempt (URL scheme spray or LSWorkspace calls) \u2192 large scheme/app probe set \u2192 optional webview hits to brand domains \u2192 local inventory cache \u2192 small egress.",
+            "description": "Defender correlates attempts to inventory installed apps via LaunchServices/URL-scheme probing or private APIs (e.g., LSApplicationWorkspace) with checks for high-value targets and quick persistence/egress. Chain: capability/attempt (URL scheme spray or LSWorkspace calls) → large scheme/app probe set → optional webview hits to brand domains → local inventory cache → small egress.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -41,7 +42,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--9c2fa0ae-7abc-485a-97f6-699e3b6cf9fa",
                     "name": "iOS:unifiedlog",
-                    "channel": "Repeated canOpenURL checks across diverse schemes (\u2265N within short window)"
+                    "channel": "Repeated canOpenURL checks across diverse schemes (≥N within short window)"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--2b3bfe19-d59a-460d-93bb-2f546adc2d2c",
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time from probe burst to persist/exfil (e.g., 10\u2013120s)."
+                    "description": "Max time from probe burst to persist/exfil (e.g., 10–120s).",
+                    "description_fa": "حداکثر زمان از انفجار کاوشگر تا ماندگاری/اکسفیل (مثلاً 10 تا 120 ثانیه)."
                 },
                 {
                     "field": "MinProbeCount",
-                    "description": "Minimum count of scheme/app probes to treat as inventory (e.g., \u226540)."
+                    "description": "Minimum count of scheme/app probes to treat as inventory (e.g., ≥40).",
+                    "description_fa": "حداقل تعداد کاوشگرهای طرح/برنامه به عنوان موجودی (به عنوان مثال، ≥40)."
                 },
                 {
                     "field": "TargetBundleWatchlist",
-                    "description": "Bundle IDs/schemes of sensitive targets (banking/IdP/AV/MDM)."
+                    "description": "Bundle IDs/schemes of sensitive targets (banking/IdP/AV/MDM).",
+                    "description_fa": "بسته‌بندی شناسه‌ها/طرح‌های اهداف حساس (بانکداری/IdP/AV/MDM)."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for inventory artifacts in container."
+                    "description": "Regex for inventory artifacts in container.",
+                    "description_fa": "Regex برای مصنوعات موجودی در ظرف."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Allowlist of enterprise analytics/CDN to reduce FPs."
+                    "description": "Allowlist of enterprise analytics/CDN to reduce FPs.",
+                    "description_fa": "فهرست مجاز تجزیه و تحلیل سازمانی/CDN برای کاهش FPها."
                 },
                 {
                     "field": "JailbreakContext",
-                    "description": "Flag to escalate if private APIs appear on non-managed devices."
+                    "description": "Flag to escalate if private APIs appear on non-managed devices.",
+                    "description_fa": "اگر APIهای خصوصی در دستگاه‌های مدیریت‌نشده ظاهر شدند، پرچم‌گذاری کنید تا تشدید شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1647",
+            "description_fa": "Defender تلاش‌ها برای فهرست‌بندی برنامه‌های نصب‌شده را از طریق کاوش طرح LaunchServices/URL یا APIهای خصوصی (مانند LSApplicationWorkspace) با بررسی اهداف با ارزش بالا و تداوم/خروج سریع مرتبط می‌کند. زنجیره: قابلیت/تلاش (اسپری طرح URL یا تماس‌های LSWorkspace) ← مجموعه کاوشگر طرح/برنامه بزرگ ← بازدید اختیاری مشاهده وب به دامنه‌های برند ← حافظه پنهان موجودی محلی → خروجی کوچک."
         }
     ]
 }

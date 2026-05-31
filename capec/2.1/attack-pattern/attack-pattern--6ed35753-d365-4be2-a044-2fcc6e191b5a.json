@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-691",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/691.html"
+                    "url": "https://capec.mitre.org/data/definitions/691.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-494",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/494.html"
+                    "url": "http://cwe.mitre.org/data/definitions/494.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
                     "external_id": "T1195.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001",
+                    "description_fa": "مصالحه با زنجیره تامین: وابستگی های نرم افزاری و ابزارهای توسعه را به خطر بیاندازید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Supply Chain",
                     "external_id": "T1195.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین نرم افزار به خطر افتاده",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--6ed35753-d365-4be2-a044-2fcc6e191b5a",
@@ -64,6 +70,22 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Accountability_fa": [
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -87,11 +109,21 @@
                 "Identification of a popular open-source component whose metadata is to be spoofed."
             ],
             "x_capec_skills_required": {
-                "Medium": "Ability to spoof a variety of software metadata to convince victims the source is trusted."
+                "Medium": "Ability to spoof a variety of software metadata to convince victims the source is trusted.",
+                "Medium_fa": "امکان جعل انواع متادیتاهای نرم افزاری برای متقاعد کردن قربانیان به منبع قابل اعتماد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن ابرداده نرم‌افزار منبع باز را جعل می‌کند تا نرم‌افزار مخرب را به عنوان محبوب، نگهداری‌شده و قابل اعتماد نشان دهد.</xhtml:p>",
+            "name_fa": "ابرداده نرم افزار منبع باز جعل",
+            "x_capec_example_instances_fa": [
+                "یک حریف یک کتابخانه منبع باز مخرب فراهم می کند و ادعا می کند که ویژگی ها و قابلیت های گزارش گیری گسترده ای را ارائه می دهد و ابرداده را با کتابخانه ای که به طور گسترده مورد استفاده قرار می گیرد، جعل می کند. سپس دشمن قربانیان را فریب می دهد تا این کتابخانه را در برنامه اصلی خود قرار دهند. هنگامی که نرم افزار مخرب در برنامه گنجانده می شود، دشمن می تواند داده های گزارش را دستکاری و استخراج کند."
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p> با توجه به محبوبیت نرم افزار منبع باز، به عنوان یک بردار حمله مطلوب برای دشمنان عمل می کند زیرا یک جزء مخرب منفرد ممکن است منجر به بهره برداری از سیستم ها/برنامه های متعدد شود. بنابراین، دشمنان ممکن است ابرداده‌های مربوط به نرم‌افزار منبع باز را جعل کنند تا قربانیان را برای دانلود و استفاده از نرم‌افزار مخرب خود فریب دهند. نمونه‌هایی از ابرداده‌هایی که ممکن است جعل شوند عبارتند از:</xhtml:p>\n            <xhtml:ul>\n               <xhtml:li>مالک نرم افزار (به عنوان مثال، مخزن یا صاحب بسته)</xhtml:li>\n               <xhtml:li>نویسندگان تعهدات مخزن</xhtml:li>\n               <xhtml:li>فرکانس تعهدات مخزن</xhtml:li>\n               <xhtml:li>تاریخ/زمان تعهدات مخزن</xhtml:li>\n               <xhtml:li>بسته یا مخزن \"ستاره\"</xhtml:li>\n            </xhtml:ul>\n            <xhtml:p> هنگامی که مؤلفه نرم افزار مخرب در یک برنامه اصلی یکپارچه شد یا در یک سیستم اجرا شد، دشمن در نهایت قادر به دستیابی به اثرات فنی منفی متعدد در سیستم/برنامه است. این اغلب بدون هیچ نشانه ای از مصالحه رخ می دهد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "شناسایی یک مؤلفه منبع باز محبوب که ابرداده آن باید جعل شود."
+            ]
         }
     ],
     "type": "bundle"

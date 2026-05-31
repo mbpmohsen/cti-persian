@@ -9,60 +9,75 @@
                 {
                     "external_id": "CAPEC-25",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/25.html"
+                    "url": "https://capec.mitre.org/data/definitions/25.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-412",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/412.html"
+                    "url": "http://cwe.mitre.org/data/definitions/412.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-567",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/567.html"
+                    "url": "http://cwe.mitre.org/data/definitions/567.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-662",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/662.html"
+                    "url": "http://cwe.mitre.org/data/definitions/662.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-667",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/667.html"
+                    "url": "http://cwe.mitre.org/data/definitions/667.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-833",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/833.html"
+                    "url": "http://cwe.mitre.org/data/definitions/833.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1322",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1322.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1322.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Endpoint Denial of Service: Application or System Exploitation",
                     "external_id": "T1499.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1499/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1499/004",
+                    "description_fa": "انکار سرویس نقطه پایانی: برنامه یا سیستم بهره برداری",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-101",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Deadlock"
+                    "url": "http://en.wikipedia.org/wiki/Deadlock",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-609",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/07-Testing_for_XML_Injection.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--36a2f844-0c20-41d7-9a10-66f1e4c43db8",
@@ -77,6 +92,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Resource Consumption (A successful forced deadlock attack compromises the availability of the system by exhausting its available resources.)"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع (یک حمله به بن بست اجباری موفق، در دسترس بودن سیستم را با اتمام منابع موجود به خطر می اندازد.)"
                 ]
             },
             "x_capec_domains": [
@@ -92,11 +110,22 @@
                 "The target host exposes an API to the user."
             ],
             "x_capec_skills_required": {
-                "Medium": "This type of attack may be sophisticated and require knowledge about the system's resources and APIs."
+                "Medium": "This type of attack may be sophisticated and require knowledge about the system's resources and APIs.",
+                "Medium_fa": "این نوع حمله ممکن است پیچیده باشد و نیاز به دانش در مورد منابع و APIهای سیستم داشته باشد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف یک شرط بن بست را در نرم افزار هدف ایجاد می کند و از آن برای ایجاد انکار سرویس استفاده می کند. بن بست زمانی رخ می دهد که دو یا چند عمل رقیب منتظر پایان یکدیگر باشند و در نتیجه هیچ یک از این کارها به پایان نرسد. تشخیص شرایط بن بست ممکن است دشوار باشد.",
+            "name_fa": "بن بست اجباری",
+            "x_capec_example_instances_fa": [
+                "نمونه ای از بن بست که ممکن است در محصولات پایگاه داده رخ دهد به شرح زیر است. برنامه های مشتری که از پایگاه داده استفاده می کنند ممکن است نیاز به دسترسی انحصاری به یک جدول داشته باشند و برای دستیابی به دسترسی انحصاری درخواست قفل می کنند. اگر یکی از برنامه های سرویس گیرنده قفلی را روی یک جدول نگه می دارد و سعی می کند قفل جدول دومی را که قبلاً توسط یک برنامه مشتری دوم نگه داشته شده است به دست آورد، اگر برنامه دوم سعی کند قفلی را که توسط برنامه اول نگهداری می شود به دست آورد، ممکن است منجر به بن بست شود (منبع: ویکی پدیا، http://en.wikipedia.org/wiki/Deadlock)"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>رقیب برای آشنایی با سیستم یک مرحله اکتشافی را آغاز می کند.</p></li><li> <p>دشمن اولین اقدام (مانند نگه داشتن یک منبع) را آغاز می کند و اولین اقدام را شروع می کند که <p><li> اولین اقدام را برای اتمام انجام می دهد. برنامه هدف دارای یک وضعیت بن بست است، برنامه به طور نامحدود منتظر می ماند و منجر به انکار سرویس می شود.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "میزبان هدف دارای شرایط بن بست است. چهار شرط برای وقوع یک بن بست وجود دارد که به شرایط کافمن معروف است. [REF-101]",
+                "میزبان هدف یک API را در معرض دید کاربر قرار می دهد."
+            ]
         }
     ],
     "type": "bundle"

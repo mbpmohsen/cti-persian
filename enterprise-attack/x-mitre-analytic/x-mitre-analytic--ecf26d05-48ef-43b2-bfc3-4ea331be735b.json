@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0595#AN1634",
-                    "external_id": "AN1634"
+                    "external_id": "AN1634",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedBinaries",
-                    "description": "List of critical security daemons (e.g., auditd, falco, AV agents) to monitor for exploitation."
+                    "description": "List of critical security daemons (e.g., auditd, falco, AV agents) to monitor for exploitation.",
+                    "description_fa": "فهرستی از دیمون‌های امنیتی حیاتی (به عنوان مثال، ممیزی، فالکو، عوامل AV) برای نظارت بر بهره‌برداری."
                 },
                 {
                     "field": "CrashPatterns",
-                    "description": "Regex or patterns for kernel/syslog errors correlated with exploitation attempts."
+                    "description": "Regex or patterns for kernel/syslog errors correlated with exploitation attempts.",
+                    "description_fa": "Regex یا الگوهای خطاهای هسته/syslog مرتبط با تلاش‌های بهره‌برداری."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1634",
+            "description_fa": "تلاش‌های بهره‌برداری از هسته یا فضای کاربر را برای هدف قرار دادن عوامل نظارت بر امنیت، دیمون‌های AV یا ممیزی شناسایی می‌کند. مشاهده مدافع شامل خطاهای Segfault های غیرمنتظره، تلاش برای افزایش امتیاز از فرآیندهای با امتیاز پایین، یا تغییرات در باینری های امنیتی است. تلاش‌های بهره‌برداری را با شکاف‌های بعدی در ثبت یا فرآیندهای پایان‌یافته مرتبط می‌کند."
         }
     ]
 }

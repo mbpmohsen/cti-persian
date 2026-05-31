@@ -9,28 +9,36 @@
                 {
                     "external_id": "CAPEC-485",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/485.html"
+                    "url": "https://capec.mitre.org/data/definitions/485.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-330",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/330.html"
+                    "url": "http://cwe.mitre.org/data/definitions/330.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Unsecure Credentials: Private Keys",
                     "external_id": "T1552.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1552/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1552/004",
+                    "description_fa": "اعتبارنامه ناامن: کلیدهای خصوصی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "P.J. Leadbitter, D. Page, N.P. Smart, Attacking DSA Under a Repeated Bits Assumption, 2004--07, http://www.iacr.org/archive/ches2004/31560428/31560428.pdf",
                     "external_id": "REF-419",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "پی جی لیدبیتر، دی پیج، ان.پی. هوشمند، حمله به DSA تحت فرض بیت های تکراری، 07-2004، http://www.iacr.org/archive/ches2004/31560428/31560428.pdf",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Debian Security, DSA-1571-1 openssl -- predictable random number generator, 2008--05---13, http://www.debian.org/security/2008/dsa-1571",
                     "external_id": "REF-420",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "Debian Security، DSA-1571-1 openssl -- مولد اعداد تصادفی قابل پیش بینی، 2008--05---13، http://www.debian.org/security/2008/dsa-1571",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5b01885b-ebb8-4b72-8314-6fb4729eda47",
@@ -53,11 +61,18 @@
                 "An authoritative signer is using a signature algorithm with a direct weakness or with poorly chosen parameters that enable the key to be recovered using signatures from that signer."
             ],
             "x_capec_skills_required": {
-                "High": "Ability to create malformed data blobs and know how to present them directly or indirectly to a victim."
+                "High": "Ability to create malformed data blobs and know how to present them directly or indirectly to a victim.",
+                "High_fa": "توانایی ایجاد حباب های داده نادرست و آگاهی از نحوه ارائه مستقیم یا غیر مستقیم آنها به قربانی."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم با سوء استفاده از ضعف رمزنگاری در الگوریتم امضا یا تولید اعداد شبه تصادفی، کلید امضای خصوصی معتبر یا معتبر امضاکننده را به دست می‌آورد و سپس از این کلید برای جعل امضا از امضاکننده اصلی استفاده می‌کند تا قربانی را به انجام اقداماتی که به نفع مهاجم است گمراه کند.",
+            "name_fa": "جعل امضا توسط Key Recreation",
+            "x_capec_prerequisites_fa": [
+                "یک امضاکننده معتبر از روش ضعیف تولید اعداد تصادفی یا نرم افزار امضای ضعیف استفاده می کند که باعث نشت کلید می شود یا اجازه استنتاج کلید را می دهد.",
+                "یک امضاکننده معتبر از یک الگوریتم امضا با ضعف مستقیم یا با پارامترهای نامناسب استفاده می کند که امکان بازیابی کلید را با استفاده از امضاهای آن امضاکننده فراهم می کند."
+            ]
         }
     ],
     "spec_version": "2.0",

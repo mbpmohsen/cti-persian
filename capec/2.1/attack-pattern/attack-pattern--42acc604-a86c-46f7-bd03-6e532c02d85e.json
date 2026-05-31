@@ -9,34 +9,43 @@
                 {
                     "external_id": "CAPEC-66",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/66.html"
+                    "url": "https://capec.mitre.org/data/definitions/66.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-89",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/89.html"
+                    "url": "http://cwe.mitre.org/data/definitions/89.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1286",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1286.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1286.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "SQL Injection",
                     "external_id": "19",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/SQL-Injection"
+                    "url": "http://projects.webappsec.org/SQL-Injection",
+                    "description_fa": "SQL Injection",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "SQL Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/SQL_Injection"
+                    "url": "https://owasp.org/www-community/attacks/SQL_Injection",
+                    "description_fa": "SQL Injection",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-607",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05-Testing_for_SQL_Injection.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--42acc604-a86c-46f7-bd03-6e532c02d85e",
@@ -69,6 +78,24 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -95,11 +122,26 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Low": "It is fairly simple for someone with basic SQL knowledge to perform SQL injection, in general. In certain instances, however, specific knowledge of the database employed may be required."
+                "Low": "It is fairly simple for someone with basic SQL knowledge to perform SQL injection, in general. In certain instances, however, specific knowledge of the database employed may be required.",
+                "Low_fa": "انجام تزریق SQL به طور کلی برای کسی که دانش اولیه SQL را دارد بسیار ساده است. با این حال، در موارد خاص، ممکن است دانش خاصی از پایگاه داده به کار گرفته شده مورد نیاز باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله از نرم افزار هدف سوء استفاده می کند که عبارات SQL را بر اساس ورودی کاربر می سازد. یک مهاجم رشته‌های ورودی را می‌سازد تا زمانی که نرم‌افزار هدف، دستورات SQL را بر اساس ورودی می‌سازد، دستور SQL حاصل اقداماتی غیر از آنچه برنامه در نظر گرفته است انجام می‌دهد. SQL Injection از عدم موفقیت برنامه در تأیید صحیح ورودی حاصل می شود.",
+            "name_fa": "SQL Injection",
+            "x_capec_example_instances_fa": [
+                "با نسخه‌های PHP-Nuke 7.9 و نسخه‌های قبلی، مهاجم می‌تواند با موفقیت به داده‌ها، از جمله محتویات حساس مانند نام‌های کاربری و هش‌های رمز عبور، دسترسی پیدا کند و آن‌ها را اصلاح کند و برنامه را از طریق SQL Injection به خطر بیاندازد. مکانیسم حفاظتی در برابر تزریق SQL از یک رویکرد انکار برای اعتبار سنجی ورودی استفاده می کند. با این حال، به دلیل یک فهرست رد نامناسب، امکان تزریق محتوایی مانند \"foo'/**/UNION\" یا \"foo UNION/**/\" برای دور زدن اعتبارسنجی و جمع‌آوری اطلاعات حساس از پایگاه داده وجود دارد. همچنین ببینید: CVE-2006-5525"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه نظرسنجی: </b>مهاجم ابتدا فهرستی از عملکردهای ارائه شده توسط برنامه را تهیه می کند.</p></li><table><tbody><tr><th>تکنیک های موجود</th></Spi><tr><dert وب سایت موجود است. پیوندها</td></tr><tr><td>ارتباطات شبکه را با برنامه با استفاده از ابزاری مانند WireShark اسنیف کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین ورودی قابل کنترل کاربر jetrolline the inputine the in-conceptible to</b> مستعد تزریق برای هر ورودی قابل کنترل توسط کاربر که مهاجم مشکوک است که در برابر تزریق SQL آسیب پذیر است، سعی کنید کاراکترهایی را وارد کنید که معنای خاصی در SQL دارند (مانند یک کاراکتر نقل قول تک، یک کاراکتر نقل قول دوگانه، دو خط فاصله، یک پرانتز و غیره). هدف ایجاد یک پرس و جوی SQL با نحو نامعتبر است.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از مرورگر وب برای تزریق ورودی از طریق فیلدهای متنی یا از طریق پارامترهای HTTP GET استفاده کنید.</td></tr><tr><td>از یک ابزار وب برنامه Tamper به عنوان Tamper Debugging,Carab.c استفاده کنید. برای تغییر پارامترهای HTTP POST، فیلدهای مخفی، فیلدهای غیر آزاد و غیره.</td></tr><tr><td>از ابزارهای تزریق بسته در سطح شبکه مانند netcat برای تزریق ورودی استفاده کنید</td></tr><tr><td>استفاده از کلاینت تغییر یافته (تغییر شده توسط مهندسی معکوس.><tli><tr><tli>tdlied) <p> <b>آسیب‌پذیری‌های SQL Injection را آزمایش کنید: </b>بعد از اینکه مشخص شد ورودی داده‌شده در برابر تزریق SQL آسیب‌پذیر است، فرض کنید که پرس و جوی زیربنایی چگونه است. به طور مکرر سعی کنید برای استخراج اطلاعات از پایگاه داده منطق به درخواست اضافه کنید، یا اطلاعات موجود در پایگاه داده را تغییر دهید یا حذف کنید.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از منابع عمومی مانند \"SQL Injection Cheat Sheet\" در [[[CTI_PRESERVE_0 و افزودن رویکردهای مختلف به SQL] استفاده کنید]] پرس و جوها.</td></tr><tr><td>منطق را به پرس و جو اضافه کنید و از پیام های خطای دقیق سرور برای اشکال زدایی پرس و جو استفاده کنید. به عنوان مثال، اگر افزودن یک نقل قول به یک پرس و جو باعث ایجاد یک پیام خطا می شود، سعی کنید: \"' OR 1=1; --\"، یا چیز دیگری که به صورت نحوی یک پرس و جوی فرضی را تکمیل می کند. به طور مکرر پرس و جو را اصلاح کنید.</td></tr><tr><td>از تکنیک های \"Blind SQL Injection\" برای استخراج اطلاعات در مورد طرح پایگاه داده استفاده کنید.</td></tr><tr><td>اگر هدف حمله انکار سرویس است، پرس و جوها را روی هم قرار دهید. این روی همه پلتفرم‌ها کار نمی‌کند (به ویژه در اوراکل یا MySQL کار نمی‌کند). نمونه‌هایی از ورودی‌هایی که باید امتحان کنید عبارتند از: \"'؛ DROP TABLE SYSOBJECTS؛ --\" و \"'؛ DROP TABLE SYSOBJECTS؛ --\". این جستجوهای خاص احتمالاً کار نخواهند کرد زیرا جدول SYSOBJECTS به طور کلی محافظت می شود.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Exploit SQL Injection: </b>بعد از افزودن crafts و exe مختلف به SQL، و SQL را اصلاح کرد. پرس و جو زیربنایی SQL که برای حمله به سیستم هدف استفاده خواهد شد. هدف آشکارسازی، اصلاح و/یا حذف داده های پایگاه داده با استفاده از دانش به دست آمده در مرحله قبل است. در صورتی که هدف حمله انکار سرویس باشد، این می‌تواند مستلزم ایجاد و اجرای چندین جستار SQL باشد. http://ferruh.mavituna.com/makale/sql-injection-cheatsheet/,",
+            "x_capec_extended_description_fa": "<xhtml:p> هنگامی که ورودی کنترل شده توسط کاربر ساخته شده ویژه شامل نحو SQL بدون اعتبار سنجی مناسب به عنوان بخشی از جستارهای SQL استفاده می شود، می توان اطلاعات را از پایگاه داده به روش هایی که در طراحی برنامه پیش بینی نشده است جمع آوری کرد. بسته به پایگاه داده و طراحی برنامه، ممکن است از تزریق اهرمی نیز استفاده شود تا پایگاه داده دستورات مربوط به سیستم را به انتخاب مهاجمان اجرا کند. SQL Injection مهاجم را قادر می سازد تا مستقیماً با پایگاه داده تعامل داشته باشد، بنابراین برنامه را به طور کامل دور می زند. تزریق موفقیت آمیز می تواند باعث افشای اطلاعات و همچنین امکان افزودن یا اصلاح داده ها در پایگاه داده شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "پرس و جوهای SQL که توسط برنامه برای ذخیره، بازیابی یا اصلاح داده ها استفاده می شود.",
+                "ورودی قابل کنترل توسط کاربر که به‌عنوان بخشی از جستارهای SQL توسط برنامه به درستی تأیید نشده است."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

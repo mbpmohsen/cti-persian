@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0607#AN1657",
-                    "external_id": "AN1657"
+                    "external_id": "AN1657",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,37 +48,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between shell-launch method use, Unix shell process creation, and follow-on file or network effects"
+                    "description": "Correlation window between shell-launch method use, Unix shell process creation, and follow-on file or network effects",
+                    "description_fa": "پنجره همبستگی بین استفاده از روش راه‌اندازی پوسته، ایجاد فرآیند پوسته یونیکس و جلوه‌های فایل یا شبکه بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to run shells, such as approved terminal apps, enterprise support tools, device management agents, or developer tooling"
+                    "description": "Apps legitimately expected to run shells, such as approved terminal apps, enterprise support tools, device management agents, or developer tooling",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود پوسته‌ها را اجرا کنند، مانند برنامه‌های ترمینال تایید شده، ابزارهای پشتیبانی سازمانی، عوامل مدیریت دستگاه، یا ابزارهای توسعه‌دهنده"
                 },
                 {
                     "field": "AllowedProcessPatterns",
-                    "description": "Expected shell binaries, parent-child process chains, and helper-process patterns for approved apps"
+                    "description": "Expected shell binaries, parent-child process chains, and helper-process patterns for approved apps",
+                    "description_fa": "باینری های پوسته مورد انتظار، زنجیره های فرآیند والد-فرزند و الگوهای پردازش کمکی برای برنامه های تایید شده"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether Unix shell execution should occur only during active user-driven workflows"
+                    "description": "Whether Unix shell execution should occur only during active user-driven workflows",
+                    "description_fa": "اینکه آیا اجرای پوسته یونیکس باید فقط در جریان‌های کاری فعال کاربر محور رخ دهد یا خیر"
                 },
                 {
                     "field": "CommandArgumentRiskPatterns",
-                    "description": "Environment-specific list of suspicious shell arguments, pipes, redirection, chaining operators, or privilege-escalation references"
+                    "description": "Environment-specific list of suspicious shell arguments, pipes, redirection, chaining operators, or privilege-escalation references",
+                    "description_fa": "فهرست خاص محیطی از آرگومان‌های پوسته مشکوک، لوله‌ها، تغییر مسیر، عملگرهای زنجیره‌ای، یا مراجع افزایش امتیاز"
                 },
                 {
                     "field": "SensitivePathPatterns",
-                    "description": "Environment-specific list of high-value file paths or system locations touched after shell execution"
+                    "description": "Environment-specific list of high-value file paths or system locations touched after shell execution",
+                    "description_fa": "فهرستی خاص محیطی از مسیرهای فایل با ارزش بالا یا مکان‌های سیستم که پس از اجرای پوسته لمس شده‌اند."
                 },
                 {
                     "field": "PostExecutionWriteThreshold",
-                    "description": "Minimum number or size of artifacts created after shell execution to increase confidence"
+                    "description": "Minimum number or size of artifacts created after shell execution to increase confidence",
+                    "description_fa": "حداقل تعداد یا اندازه مصنوعات ایجاد شده پس از اجرای پوسته برای افزایش اطمینان"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume after shell execution to treat network behavior as meaningful"
+                    "description": "Minimum outbound volume after shell execution to treat network behavior as meaningful",
+                    "description_fa": "حداقل حجم خروجی پس از اجرای پوسته برای تلقی رفتار شبکه معنادار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1657",
+            "description_fa": "مدافع رفتار راه‌اندازی پوسته مبتنی بر برنامه را با اجرای بعدی فرآیندهای پوسته یونیکس یا فعالیت پوسته اسکریپت تحت همان زمینه برنامه مرتبط می‌کند، به‌ویژه زمانی که اجرا از حالت پس‌زمینه، بدون تعامل اخیر کاربر، یا با سیستم فایل، افزایش امتیازات، یا اثرات شبکه متناقض با نقش اعلام‌شده برنامه دنبال می‌شود. این تجزیه و تحلیل اثرات صفحه کنترل قابل مشاهده اندروید را اولویت بندی می کند: زمان اجرا یا فراخوانی ProcessBuilder، ایجاد فرآیند sh/toybox/toolbox/su یا فرآیند پوسته معادل، مرحله بندی فایل اسکریپت یا خروجی تغییر مسیر، و شبکه پس از اجرا یا ایجاد آرتیفکت محلی."
         }
     ]
 }

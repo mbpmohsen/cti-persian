@@ -9,28 +9,36 @@
                 {
                     "external_id": "CAPEC-292",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/292.html"
+                    "url": "https://capec.mitre.org/data/definitions/292.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Remote System Discovery",
                     "external_id": "T1018",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1018"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1018",
+                    "description_fa": "کشف سیستم از راه دور",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-34",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--d780db94-413f-402d-a4d9-cf179b316c8c",
@@ -58,6 +66,19 @@
                     "Other",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -85,7 +106,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک کاوشگر را به آدرس IP می فرستد تا مشخص کند میزبان زنده است یا خیر. کشف میزبان یکی از اولین مراحل شناسایی شبکه است. حریف معمولاً با طیف وسیعی از آدرس‌های IP متعلق به یک شبکه هدف شروع می‌کند و از روش‌های مختلفی برای تعیین اینکه آیا میزبان در آن آدرس IP وجود دارد یا خیر، استفاده می‌کند. کشف میزبان معمولاً به عنوان اسکن \"پینگ\" با استفاده از یک قیاس سونار شناخته می شود. هدف ارسال یک بسته به آدرس IP و درخواست پاسخ از میزبان است. به این ترتیب، یک \"پینگ\" می تواند تقریباً هر بسته دستکاری شده ای باشد، مشروط بر اینکه دشمن بتواند یک میزبان عملکردی را بر اساس پاسخ آن شناسایی کند. حمله ای از این نوع معمولاً با یک \"پینگ جاروب\" انجام می شود که در آن نوع خاصی از پینگ به طیفی از آدرس های IP ارسال می شود.",
+            "name_fa": "کشف میزبان",
+            "x_capec_prerequisites_fa": [
+                "حریف برای انجام کشف میزبان نیاز به دسترسی منطقی به شبکه هدف دارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "منابع مورد نیاز بر اساس نوع کشف میزبان متفاوت خواهد بود. معمولاً به دلیل حجم درخواست هایی که باید ایجاد شود، ابزار اسکن شبکه یا اسکریپت اسکن مورد نیاز است."
+            ]
         }
     ],
     "type": "bundle"

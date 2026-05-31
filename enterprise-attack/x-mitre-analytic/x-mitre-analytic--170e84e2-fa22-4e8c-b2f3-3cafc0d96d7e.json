@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0416#AN1170",
-                    "external_id": "AN1170"
+                    "external_id": "AN1170",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TransferSizeThreshold",
-                    "description": "Bytes sent in FTP upload or SCP push"
+                    "description": "Bytes sent in FTP upload or SCP push",
+                    "description_fa": "بایت ها در آپلود FTP یا فشار SCP ارسال می شوند"
                 },
                 {
                     "field": "CommandLinePatternMatch",
-                    "description": "e.g., scp -r /var/log/* or ftp upload scripts"
+                    "description": "e.g., scp -r /var/log/* or ftp upload scripts",
+                    "description_fa": "به عنوان مثال، اسکریپت های آپلود scp -r /var/log/* یا ftp"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1170",
+            "description_fa": "استفاده از FTP، SCP، یا TFTP را توسط پوسته های غیر تعاملی یا اسکریپت های اتوماسیون که حجم داده های زیادی را به IP های نامعتبر منتقل می کنند، تشخیص می دهد."
         }
     ]
 }

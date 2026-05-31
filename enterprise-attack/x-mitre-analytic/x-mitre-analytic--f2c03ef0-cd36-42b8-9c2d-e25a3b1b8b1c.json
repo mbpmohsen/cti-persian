@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0206#AN0582",
-                    "external_id": "AN0582"
+                    "external_id": "AN0582",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "NamespaceScope",
-                    "description": "Kubernetes namespace the job is deployed to\u2014scoping this to known trusted namespaces may reduce noise."
+                    "description": "Kubernetes namespace the job is deployed to—scoping this to known trusted namespaces may reduce noise.",
+                    "description_fa": "فضای نام Kubernetes که کار در آن مستقر می‌شود—محدود کردن آن در فضاهای نام مورد اعتماد شناخته شده ممکن است نویز را کاهش دهد."
                 },
                 {
                     "field": "ImageRepository",
-                    "description": "The container image registry or repository the job pulls from\u2014can be filtered by trusted registries."
+                    "description": "The container image registry or repository the job pulls from—can be filtered by trusted registries.",
+                    "description_fa": "رجیستری یا مخزن تصویر کانتینر که کار از آن خارج می شود — می تواند توسط رجیستری های مورد اعتماد فیلتر شود."
                 },
                 {
                     "field": "ScheduleWindow",
-                    "description": "Time window or frequency of CronJob execution (e.g., \u2018@hourly\u2019)\u2014jobs running at odd hours may be suspicious."
+                    "description": "Time window or frequency of CronJob execution (e.g., ‘@hourly’)—jobs running at odd hours may be suspicious.",
+                    "description_fa": "پنجره زمانی یا تعداد دفعات اجرای CronJob (به عنوان مثال، \"@hourly\") - کارهایی که در ساعات فرد اجرا می شوند ممکن است مشکوک باشند."
                 },
                 {
                     "field": "ExecutionCommand",
-                    "description": "The command or entrypoint executed by the Job\u2014unexpected shell commands or interpreters may warrant inspection."
+                    "description": "The command or entrypoint executed by the Job—unexpected shell commands or interpreters may warrant inspection.",
+                    "description_fa": "فرمان یا نقطه ورودی اجرا شده توسط Job-فرمان‌های پوسته غیرمنتظره یا مفسرها ممکن است بازرسی را تضمین کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0582",
+            "description_fa": "سوء استفاده از پلتفرم‌های سازماندهی کانتینر (به عنوان مثال، Kubernetes) را که در آن دشمنان CronJobs را برای حفظ پایداری یا اجرای مشاغل مخرب در سراسر خوشه ایجاد می‌کنند، شناسایی می‌کند."
         }
     ]
 }

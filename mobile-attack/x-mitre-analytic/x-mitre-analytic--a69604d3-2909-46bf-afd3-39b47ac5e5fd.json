@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0599#AN1645",
-                    "external_id": "AN1645"
+                    "external_id": "AN1645",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,37 +58,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between permission or role change, SMS control activity, message-store modification, and any follow-on network communication"
+                    "description": "Correlation window between permission or role change, SMS control activity, message-store modification, and any follow-on network communication",
+                    "description_fa": "پنجره همبستگی بین مجوز یا تغییر نقش، فعالیت کنترل پیامک، تغییر فروشگاه پیام و هرگونه ارتباط شبکه بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to send or manage SMS, such as default messaging apps, carrier tools, device migration apps, or approved enterprise communications apps"
+                    "description": "Apps legitimately expected to send or manage SMS, such as default messaging apps, carrier tools, device migration apps, or approved enterprise communications apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود پیامک ارسال یا مدیریت کنند، مانند برنامه‌های پیام‌رسانی پیش‌فرض، ابزارهای شرکت مخابراتی، برنامه‌های انتقال دستگاه یا برنامه‌های ارتباطات سازمانی تأییدشده"
                 },
                 {
                     "field": "AllowedDefaultSMSHandlers",
-                    "description": "Approved packages allowed to become the default SMS handler on managed devices"
+                    "description": "Approved packages allowed to become the default SMS handler on managed devices",
+                    "description_fa": "بسته‌های تأیید شده اجازه می‌دهند به مدیریت پیش‌فرض پیامک در دستگاه‌های مدیریت‌شده تبدیل شوند"
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Approved network destinations associated with legitimate messaging synchronization or carrier workflows"
+                    "description": "Approved network destinations associated with legitimate messaging synchronization or carrier workflows",
+                    "description_fa": "مقاصد شبکه تایید شده مرتبط با همگام‌سازی پیام‌رسانی قانونی یا جریان‌های کاری حامل"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether SMS send or message modification should occur only during active user-driven workflows"
+                    "description": "Whether SMS send or message modification should occur only during active user-driven workflows",
+                    "description_fa": "این که آیا ارسال پیامک یا تغییر پیام باید فقط در جریان‌های کاری فعال کاربر محور اتفاق بیفتد"
                 },
                 {
                     "field": "MessageModificationThreshold",
-                    "description": "Number of insert, update, or delete operations against SMS store within a short interval required before alerting"
+                    "description": "Number of insert, update, or delete operations against SMS store within a short interval required before alerting",
+                    "description_fa": "تعداد عملیات درج، به‌روزرسانی یا حذف در فروشگاه پیامک در فاصله زمانی کوتاهی که قبل از هشدار لازم است"
                 },
                 {
                     "field": "SMSSendRateThreshold",
-                    "description": "Maximum expected SMS send frequency for legitimate app behavior"
+                    "description": "Maximum expected SMS send frequency for legitimate app behavior",
+                    "description_fa": "حداکثر فرکانس ارسال پیامک مورد انتظار برای رفتار قانونی برنامه"
                 },
                 {
                     "field": "HighRiskNumberPatterns",
-                    "description": "Environment-specific list of premium-rate, adversary-known, or non-business SMS destination patterns"
+                    "description": "Environment-specific list of premium-rate, adversary-known, or non-business SMS destination patterns",
+                    "description_fa": "فهرست محیطی خاص از الگوهای مقصد پیامک با نرخ حق بیمه، دشمن شناخته شده یا غیرتجاری"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1645",
+            "description_fa": "مدافع وضعیت مجوز مربوط به پیامک یا نقش پیش‌فرض مدیریت پیامک را با ارسال، دریافت رهگیری پیامک غیرمجاز بعدی، اصلاح پایگاه داده پیام، حذف یا پنهان‌سازی رفتار برنامه‌ای خارج از جریان‌های کاری پیام‌رسانی مورد انتظار مرتبط می‌کند. این تحلیل، جلوه‌های صفحه کنترل قابل مشاهده اندروید را اولویت‌بندی می‌کند: قابلیت SEND_SMS یا RECEIVE_SMS، تغییر پیش‌فرض مدیریت پیامک یا اعمال معنایی SMS_DELIVER، تعامل مستقیم با ارائه‌دهنده محتوای SMS یا پایگاه داده پیام‌رسانی، و فعالیت پیامکی که از پس‌زمینه یا وضعیت دستگاه قفل شده بدون تعامل اخیر کاربر رخ می‌دهد."
         }
     ]
 }

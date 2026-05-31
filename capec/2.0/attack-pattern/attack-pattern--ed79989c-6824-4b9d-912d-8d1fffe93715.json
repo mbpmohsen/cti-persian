@@ -9,17 +9,22 @@
                 {
                     "external_id": "CAPEC-598",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/598.html"
+                    "url": "https://capec.mitre.org/data/definitions/598.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "John-Paul Verkamp, Minaxi Gupta, Inferring Mechanics of Web Censorship Around the World, 2012, USENIX",
                     "external_id": "REF-477",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "جان پل ورکامپ، میناکسی گوپتا، مکانیک استنباط سانسور وب در سراسر جهان، 2012، USENIX",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Anonymous, Towards a Comprehensive Picture of the Great Firewall's DNS Censorship, 2014, USENIX",
                     "external_id": "REF-479",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "ناشناس، به سوی تصویری جامع از سانسور DNS دیوار آتش بزرگ، 2014، USENIX",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ed79989c-6824-4b9d-912d-8d1fffe93715",
@@ -44,10 +49,20 @@
                 "On/In Path Device"
             ],
             "x_capec_skills_required": {
-                "Low": "To distribute email"
+                "Low": "To distribute email",
+                "Low_fa": "برای توزیع ایمیل"
             },
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک پاسخ مخرب (\"NXDOMAIN\" (\"No such domain\") یا DNS A record) قبل از اینکه یک حل کننده قانونی بتواند پاسخی به درخواست مسیر هدف ارسال می کند. این تکنیک به یک دستگاه On-path یا In-path نیاز دارد که بتواند درخواست های DNS هدف را نظارت کرده و به آنها پاسخ دهد. تفاوت این حمله با دستکاری BGP در این است که به‌جای آلوده کردن مسیریابی زیرساخت‌های هدف، مستقیماً به درخواست‌های هدف پاسخ می‌دهد.",
+            "name_fa": "جعل DNS",
+            "x_capec_example_instances_fa": [
+                "مسمومیت DNS بازگشتی زیر: هنگامی که یک دستگاه On/In-path بین یک سرور DNS بازگشتی و یک کاربر یک پاسخ مخرب (\"NXDOMAIN\" (\"بدون چنین دامنه\" یا DNS A record ) قبل از اینکه یک حل کننده قانونی بتواند پاسخ دهد.",
+                "مسمومیت DNS بازگشتی بالا: هنگامی که یک دستگاه On/In-path بین یک سرور معتبر (به عنوان مثال، تحت مدیریت دولتی) و یک سرور DNS بازگشتی، قبل از یک حل‌کننده قانونی، یک پاسخ مخرب (\"NXDOMAIN\" (\"همان دامنه وجود ندارد\" یا یک رکورد DNS) را ارسال می‌کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "دستگاه روشن/در مسیر"
+            ]
         }
     ],
     "spec_version": "2.0",

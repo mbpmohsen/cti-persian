@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0191#AN0550",
-                    "external_id": "AN0550"
+                    "external_id": "AN0550",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "The correlation window for dfsvc.exe/rundll32.exe execution and subsequent module loads or child processes (e.g., 0\u201310 minutes)."
+                    "description": "The correlation window for dfsvc.exe/rundll32.exe execution and subsequent module loads or child processes (e.g., 0–10 minutes).",
+                    "description_fa": "پنجره همبستگی برای اجرای dfsvc.exe/rundll32.exe و بارگیری ماژول های بعدی یا پردازش های فرزند (به عنوان مثال، 0-10 دقیقه)."
                 },
                 {
                     "field": "KnownClickOnceApps",
-                    "description": "Whitelist of legitimate ClickOnce applications and paths."
+                    "description": "Whitelist of legitimate ClickOnce applications and paths.",
+                    "description_fa": "لیست سفید برنامه ها و مسیرهای ClickOnce قانونی."
                 },
                 {
                     "field": "SuspiciousChildList",
-                    "description": "Child processes considered abnormal when launched by dfsvc.exe or rundll32.exe."
+                    "description": "Child processes considered abnormal when launched by dfsvc.exe or rundll32.exe.",
+                    "description_fa": "هنگامی که توسط dfsvc.exe یا rundll32.exe راه اندازی می شود، فرآیندهای فرزند غیرعادی در نظر گرفته می شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0550",
+            "description_fa": "سوء استفاده از برنامه‌های ClickOnce که در آن rundll32.exe dfshim.dll را با ShOpenVerbApplication یا dfsvc.exe فراخوانی می‌کند، فرآیندهای فرزند غیرمنتظره ایجاد می‌کند یا ماژول‌های بدون امضا را بارگیری می‌کند."
         }
     ]
 }

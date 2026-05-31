@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0025#AN0073",
-                    "external_id": "AN0073"
+                    "external_id": "AN0073",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedAppBundlePaths",
-                    "description": "Baseline of legitimate Electron app paths under /Applications."
+                    "description": "Baseline of legitimate Electron app paths under /Applications.",
+                    "description_fa": "خط پایه مسیرهای قانونی برنامه Electron در زیر /Applications."
                 },
                 {
                     "field": "SignedToUnsignedTransition",
-                    "description": "Alert when signed Electron parent spawns unsigned child."
+                    "description": "Alert when signed Electron parent spawns unsigned child.",
+                    "description_fa": "هشدار هنگام امضای الکترون، فرزندی بدون علامت ایجاد می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0073",
+            "description_fa": "سوء استفاده از برنامه‌های macOS Electron با تغییر بسته‌های app.asar و ایجاد فرآیندهای فرزند (osascript، curl، sh) از فایل‌های اجرایی Electron."
         }
     ]
 }

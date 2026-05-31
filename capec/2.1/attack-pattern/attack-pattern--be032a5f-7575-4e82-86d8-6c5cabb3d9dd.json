@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-536",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/536.html"
+                    "url": "https://capec.mitre.org/data/definitions/536.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-284",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/284.html"
+                    "url": "http://cwe.mitre.org/data/definitions/284.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--be032a5f-7575-4e82-86d8-6c5cabb3d9dd",
@@ -49,11 +53,22 @@
                 "Advanced knowledge of software and hardware capabilities of a manufacturer's product."
             ],
             "x_capec_skills_required": {
-                "High": "Ability to generate and inject false data into operational data into a system with the intent of causing the victim to alter the configuration of the system."
+                "High": "Ability to generate and inject false data into operational data into a system with the intent of causing the victim to alter the configuration of the system.",
+                "High_fa": "امکان تولید و تزریق داده های نادرست به داده های عملیاتی به یک سیستم با هدف ایجاد تغییر در پیکربندی سیستم توسط قربانی."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجمی که به فایل‌ها و فرآیندهای داده در سیستم قربانی دسترسی دارد، داده‌های مخرب را در طول پیکربندی یا کالیبراسیون مجدد به داده‌های عملیاتی حیاتی تزریق می‌کند و باعث می‌شود که سیستم قربانی به شیوه‌ای غیربهینه عمل کند که به نفع حریف باشد.",
+            "name_fa": "داده های تزریق شده در طول پیکربندی",
+            "x_capec_example_instances_fa": [
+                "یک حریف مایل است یک سیستم امنیتی را دور بزند تا به یک بخش شبکه اضافی که در آن داده های حیاتی نگهداری می شود دسترسی پیدا کند. حریف می‌داند که برخی از پیکربندی‌های سیستم امنیتی امکان دور زدن از راه دور را تحت شرایط خاص، مانند تغییر یک پارامتر خاص به مقدار متفاوت، فراهم می‌کند. حریف می داند که بای پس کار خواهد کرد، اما در داده های ثبت سیستم امنیتی نیز شناسایی خواهد شد. حریف منتظر می ماند تا ارتقاء سیستم امنیتی توسط مدیران سیستم قربانی انجام شود و حریف به یک سیستم ثبت خارجی دسترسی داشته باشد. حریف ورودی های لاگ نادرست را تزریق می کند که باعث می شود مدیران فکر کنند که دو حالت خطای مختلف در سیستم امنیتی وجود دارد - یکی شامل پارامتر خاص و دیگری شامل ورودی های گزارش. پارامتر خاص به مقدار متفاوتی تنظیم می‌شود و سطح ثبت به سطح پایین‌تری کاهش می‌یابد که باعث شناسایی دور زدن دشمن نمی‌شود. دشمن تزریق داده‌های لاگ نادرست را متوقف می‌کند و مدیران سیستم امنیتی معتقدند که مشکلات ناشی از ارتقاء بوده و اکنون حل شده است. سپس دشمن می تواند سیستم امنیتی را دور بزند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین فرآیند پیکربندی: </b>دشمن، از طریق سیستمی که قبلاً در معرض خطر قرار گرفته است، چه از راه دور یا به صورت فیزیکی، تعیین می کند که فرآیند پیکربندی چیست. آن‌ها به فایل‌های پیکربندی، فایل‌های داده و فرآیندهای در حال اجرا در سیستم نگاه می‌کنند تا مناطقی را که می‌توانند داده‌های مخرب را تزریق کنند، شناسایی کنند.</p></li><li> <p> <b>تعیین کنید چه زمانی پیکربندی رخ می‌دهد: </b> سپس دشمن باید تعیین کند که چه زمانی پیکربندی یا کالیبراسیون مجدد یک سیستم انجام می‌شود تا بداند چه زمانی باید مخرب را تزریق کند. داده‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>به‌دنبال یک چرخه به‌روزرسانی هفتگی یا برنامه به‌روزرسانی مکرر بگردید.</td></tr><tr><td>یک فرآیند مخرب را در سیستم هدف وارد کنید که هنگام پیکربندی، به دشمن اطلاع می‌دهد. در حال رخ دادن است.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین داده های مخرب برای تزریق: </b>با مشاهده فرآیند پیکربندی، حریف باید تعیین کند که چه داده های مخربی را می خواهد وارد کند و در کجا قرار دهد. آن.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>افزودن داده‌های گزارش نادرست</td></tr><tr><td>تغییر فایل‌های پیکربندی</td></tr><tr><td>تغییر فایل‌های داده</td></tr></tbody><3><di></tablev></olx> <p> <b>تزریق داده های مخرب: </b>درست قبل یا در حین پیکربندی سیستم، دشمن داده های مخرب را تزریق می کند. این منجر به رفتار سیستم به گونه‌ای می‌شود که برای دشمن سودمند است و اغلب با حملات دیگری دنبال می‌شود.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید قبلاً سیستم های قربانی را به خطر انداخته باشد یا به سیستم های قربانی دسترسی فیزیکی داشته باشد.",
+                "دانش پیشرفته از قابلیت های نرم افزاری و سخت افزاری محصول سازنده."
+            ]
         }
     ],
     "type": "bundle"

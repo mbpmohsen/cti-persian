@@ -13,17 +13,21 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1426",
-                    "external_id": "T1426"
+                    "external_id": "T1426",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android-Build",
                     "description": "Android. (n.d.). Build. Retrieved December 21, 2016.",
-                    "url": "https://developer.android.com/reference/android/os/Build"
+                    "url": "https://developer.android.com/reference/android/os/Build",
+                    "source_name_fa": "Android-Build",
+                    "description_fa": "اندروید. (n.d.). ساخت. بازبینی شده در 21 دسامبر 2016."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-12.html",
-                    "external_id": "APP-12"
+                    "external_id": "APP-12",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +35,7 @@
             ],
             "modified": "2026-05-12T15:12:00.722Z",
             "name": "System Information Discovery",
-            "description": "Adversaries may attempt to get detailed information about a device\u2019s operating system and hardware, including versions, patches, and architecture. Adversaries may use the information from [System Information Discovery](https://attack.mitre.org/techniques/T1426) during automated discovery to shape follow-on behaviors, including whether or not to fully infects the target and/or attempts specific actions. \n\n \n\nOn Android, much of this information is programmatically accessible to applications through the `android.os.Build` class. (Citation: Android-Build) iOS is much more restrictive with what information is visible to applications. Typically, applications will only be able to query the device model and which version of iOS it is running. ",
+            "description": "Adversaries may attempt to get detailed information about a device’s operating system and hardware, including versions, patches, and architecture. Adversaries may use the information from [System Information Discovery](https://attack.mitre.org/techniques/T1426) during automated discovery to shape follow-on behaviors, including whether or not to fully infects the target and/or attempts specific actions. \n\n \n\nOn Android, much of this information is programmatically accessible to applications through the `android.os.Build` class. (Citation: Android-Build) iOS is much more restrictive with what information is visible to applications. Typically, applications will only be able to query the device model and which version of iOS it is running. ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -52,7 +56,9 @@
             "x_mitre_version": "1.2",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "کشف اطلاعات سیستم",
+            "description_fa": "دشمنان ممکن است تلاش کنند اطلاعات دقیقی درباره سیستم عامل و سخت افزار دستگاه، از جمله نسخه ها، وصله ها، و معماری به دست آورند. دشمنان ممکن است از اطلاعات [System Information Discovery](https://attack.mitre.org/techniques/T1426) در طول کشف خودکار برای شکل دادن به رفتارهای بعدی، از جمله اینکه آیا به طور کامل هدف را آلوده می‌کنند و/یا اقدامات خاصی را انجام می‌دهند، استفاده کنند. \n\n \n\nدر Android، بسیاری از این اطلاعات از طریق کلاس «android.os.Build» در دسترس برنامه‌ها قرار دارند. [[[CTI_PRESERVE_0]] iOS در مورد اطلاعات قابل مشاهده برای برنامه‌ها بسیار محدودتر است. به طور معمول، برنامه‌ها فقط می‌توانند مدل دستگاه و نسخه‌ای از iOS را که در حال اجراست استعلام کنند. (Citation: Android-Build)"
         }
     ]
 }

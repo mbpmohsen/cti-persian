@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-651",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/651.html"
+                    "url": "https://capec.mitre.org/data/definitions/651.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Multi-Factor Authentication Interception",
                     "external_id": "T1111",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1111"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1111",
+                    "description_fa": "رهگیری احراز هویت چند عاملی",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--94e596d2-6844-4031-80c3-8522642aaff8",
@@ -37,6 +41,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Other (The adversary gains unauthorized access to information.)"
+                ],
+                "Confidentiality_fa": [
+                    "سایر (دشمن به اطلاعات دسترسی غیرمجاز پیدا می کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -57,7 +64,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن از طریق نرم افزار (مانند میکروفون و برنامه ضبط صدا)، سخت افزار (مثلاً تجهیزات ضبط)، یا وسایل فیزیکی (مثلاً نزدیکی فیزیکی) نوعی ارتباط (مانند متن، صدا، ویدیو) را رهگیری می کند. هدف از استراق سمع معمولاً دسترسی غیرمجاز به اطلاعات حساس در مورد هدف برای منافع مالی، شخصی، سیاسی یا سایر موارد است. استراق سمع با حمله sniffing متفاوت است زیرا در یک کانال ارتباطی مبتنی بر شبکه (به عنوان مثال، ترافیک IP) انجام نمی شود. در عوض، مستلزم گوش دادن به منبع صوتی خام مکالمه بین دو یا چند طرف است.",
+            "name_fa": "استراق سمع کردن",
+            "x_capec_prerequisites_fa": [
+                "دشمن معمولاً به نزدیکی فیزیکی به محیط هدف نیاز دارد، چه برای استراق سمع فیزیکی و چه برای قرار دادن تجهیزات ضبط. این همیشه در مورد استراق سمع مبتنی بر نرم افزار صدق نمی کند، اگر دشمن توانایی نصب بدافزار را بر روی سیستم مورد نظر داشته باشد که می تواند میکروفون را فعال کرده و صدا را به صورت دیجیتال ضبط کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "برای استراق سمع منطقی، ممکن است برخی تجهیزات لازم باشد (مانند میکروفون، ضبط صوت و غیره). برای استراق سمع فیزیکی، فقط نزدیکی لازم است."
+            ]
         }
     ],
     "spec_version": "2.0",

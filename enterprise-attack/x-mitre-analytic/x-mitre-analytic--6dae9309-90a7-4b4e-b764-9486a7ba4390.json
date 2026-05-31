@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0072#AN0199",
-                    "external_id": "AN0199"
+                    "external_id": "AN0199",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,17 +58,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "script_path_keywords",
-                    "description": "Defenders may tune for known script locations such as NETLOGON, SYSVOL, or \\domain\\sysvol\\*.bat/.ps1"
+                    "description": "Defenders may tune for known script locations such as NETLOGON, SYSVOL, or \\domain\\sysvol\\*.bat/.ps1",
+                    "description_fa": "مدافعان ممکن است برای مکان های اسکریپت شناخته شده مانند NETLOGON، SYSVOL یا \\domain\\sysvol\\*.bat/.ps1 تنظیم شوند."
                 },
                 {
                     "field": "execution_time_window",
-                    "description": "May be scoped to user logon hours or first X minutes post-authentication"
+                    "description": "May be scoped to user logon hours or first X minutes post-authentication",
+                    "description_fa": "ممکن است محدوده ساعت ورود کاربر یا اولین X دقیقه پس از احراز هویت باشد"
                 },
                 {
                     "field": "user_context",
-                    "description": "Organizations may focus on specific users/groups with high privilege or remote access"
+                    "description": "Organizations may focus on specific users/groups with high privilege or remote access",
+                    "description_fa": "سازمان ها ممکن است بر روی کاربران/گروه های خاص با امتیاز بالا یا دسترسی از راه دور تمرکز کنند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0199",
+            "description_fa": "استفاده دشمنان از پیکربندی اسکریپت ورود به سیستم را از طریق Group Policy یا ویژگی‌های شی کاربر و به دنبال آن اجرای اسکریپت پس از احراز هویت شناسایی می‌کند. رفتار شامل اصلاح مسیر یا فایل اسکریپت و سپس اجرای فرآیند در زمینه ورود کاربر است."
         }
     ]
 }

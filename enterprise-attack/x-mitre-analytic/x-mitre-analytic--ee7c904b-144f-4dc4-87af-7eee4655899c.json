@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0424#AN1188",
-                    "external_id": "AN1188"
+                    "external_id": "AN1188",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedIPRanges",
-                    "description": "Whitelist approved IP ranges; detect unexpected addition of 0.0.0.0/0 or untrusted CIDRs."
+                    "description": "Whitelist approved IP ranges; detect unexpected addition of 0.0.0.0/0 or untrusted CIDRs.",
+                    "description_fa": "محدوده IP تایید شده در لیست سفید اضافه شدن غیرمنتظره 0.0.0.0/0 یا CIDR های نامعتبر را شناسایی کنید."
                 },
                 {
                     "field": "PortScope",
-                    "description": "Define expected ports for services; flag additions outside this range (e.g., SSH/RDP open to all)."
+                    "description": "Define expected ports for services; flag additions outside this range (e.g., SSH/RDP open to all).",
+                    "description_fa": "تعریف پورت های مورد انتظار برای خدمات؛ اضافه کردن پرچم خارج از این محدوده (به عنوان مثال، SSH/RDP برای همه باز است)."
                 },
                 {
                     "field": "RoleContext",
-                    "description": "Tune alerts based on whether changes are made by break-glass or admin roles versus automation accounts."
+                    "description": "Tune alerts based on whether changes are made by break-glass or admin roles versus automation accounts.",
+                    "description_fa": "هشدارها را بر اساس این که آیا تغییرات به‌وسیله نقش‌های ادمین در مقابل حساب‌های اتوماسیون ایجاد می‌شوند، تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate rule changes with subsequent suspicious network activity to reduce false positives."
+                    "description": "Correlate rule changes with subsequent suspicious network activity to reduce false positives.",
+                    "description_fa": "تغییرات قانون را با فعالیت مشکوک بعدی شبکه مرتبط کنید تا مثبت کاذب را کاهش دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1188",
+            "description_fa": "ایجاد، حذف یا اصلاح گروه‌های امنیتی و قوانین فایروال در گزارش‌های صفحه کنترل ابری که دسترسی به منابع ابری را فراتر از خطوط پایه مورد انتظار گسترش می‌دهد. نمای مدافع: قوانین ورود/خروج غیرمنتظره اجازه 0.0.0.0/0 یا باز کردن پورت های غیر معمول را می دهد که اغلب با نقش ممتاز یا فعالیت کلید API مرتبط است."
         }
     ]
 }

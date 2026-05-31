@@ -14,42 +14,42 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1003/007",
                     "external_id": "T1003.007",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "atomic-red proc file system",
                     "description": "Atomic Red Team. (2023, November). T1003.007 - OS Credential Dumping: Proc Filesystem. Retrieved March 28, 2024.",
                     "url": "https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1003.007/T1003.007.md",
-                    "source_name_fa": "سیستم فایل هسته ای",
-                    "description_fa": "تیم سرخ اتمی (2023، نوامبر) [[ویرایش] سیستم عامل تخلیه: Proc Filesystem Retrieved 28 مارس 2024 T1003.007"
+                    "source_name_fa": "سیستم فایل atomic-red proc",
+                    "description_fa": "تیم قرمز اتمی. (2023، نوامبر). T1003.007 - حذف اعتبار سیستم عامل: Proc Filesystem. بازبینی شده در 28 مارس 2024."
                 },
                 {
                     "source_name": "baeldung Linux proc map 2022",
                     "description": "baeldung. (2022, April 8). Understanding the Linux /proc/id/maps File. Retrieved March 31, 2023.",
                     "url": "https://www.baeldung.com/linux/proc-id-maps",
-                    "source_name_fa": "Beldung Linux Proc نقشه 2022",
-                    "description_fa": "بیلینگونگ (2022، آوریل 8) درک فایل لینوکس /proc/id/maps Retrieved 31 مارس 2023."
+                    "source_name_fa": "نقشه baeldung Linux proc 2022",
+                    "description_fa": "بالدونگ (2022، 8 آوریل). درک فایل Linux /proc/id/maps. بازبینی شده در 31 مارس 2023."
                 },
                 {
                     "source_name": "Polop Linux PrivEsc Gitbook",
                     "description": "Carlos Polop. (2023, March 5). Linux Privilege Escalation. Retrieved March 31, 2023.",
                     "url": "https://book.hacktricks.xyz/linux-hardening/privilege-escalation#proc-usdpid-maps-and-proc-usdpid-mem",
                     "source_name_fa": "Polop Linux PrivEsc Gitbook",
-                    "description_fa": "کارلوس پولپ (۲۰۲۳، مارس ۵) Linux Privilege Escalation Retrieved 31 مارس 2023."
+                    "description_fa": "کارلوس پولوپ (2023، 5 مارس). افزایش امتیاز لینوکس. بازبینی شده در 31 مارس 2023."
                 },
                 {
                     "source_name": "MimiPenguin GitHub May 2017",
                     "description": "Gregal, H. (2017, May 12). MimiPenguin. Retrieved December 5, 2017.",
                     "url": "https://github.com/huntergregal/mimipenguin",
-                    "source_name_fa": "MimiPenguin GitHub 2017",
-                    "description_fa": "Gregal, H. (2017, May 12) MimiPenguin Retrieved 5 دسامبر 2017"
+                    "source_name_fa": "MimiPenguin GitHub می 2017",
+                    "description_fa": "گرگال، اچ (2017، 12 مه). میمی پنگوئن. بازبینی شده در 5 دسامبر 2017."
                 },
                 {
                     "source_name": "Picus Labs Proc cump 2022",
                     "description": "Huseyin Can YUCEEL & Picus Labs. (2022, March 22). Retrieved March 31, 2023.",
                     "url": "https://www.picussecurity.com/resource/the-mitre-attck-t1003-os-credential-dumping-technique-and-its-adversary-use",
-                    "source_name_fa": "Picus Labs Procump 2022",
-                    "description_fa": "Huseyin می تواند YUCEEL و Picus Labs (2022، 22 مارس) Retrieved 31 مارس 2023."
+                    "source_name_fa": "Picus Labs Proc cump 2022",
+                    "description_fa": "Huseyin Can YUCEEL & Picus Labs. (22 مارس 2022). بازبینی شده در 31 مارس 2023."
                 }
             ],
             "object_marking_refs": [
@@ -78,8 +78,8 @@
                 "Linux"
             ],
             "x_mitre_version": "1.2",
-            "name_fa": "Proc Filesystem",
-            "description_fa": "مخالفان ممکن است مدارک را از سیستم پرونده Proc یا ‘/proc’ جمع آوری کنند. سیستم فایل proc یک سیستم شبه فایل است که به عنوان یک رابط برای ساختارهای داده هسته برای سیستم های مبتنی بر لینوکس برای مدیریت حافظه مجازی استفاده می شود. برای هر فرآیند، فایل ‘/proc/<PID>/maps’ نشان می دهد که چگونه حافظه در فضای آدرس مجازی فرآیند نقشه برداری می شود. و <PID>/mem> که در معرض اهداف اشکال زدایی قرار دارد، دسترسی به فضای آدرس مجازی فرایند را فراهم می کند.\n\nهنگام اجرای امتیازات ریشه، دشمنان می توانند این مکان های حافظه را برای تمام فرآیندها در یک سیستم که حاوی الگوهای نشان دهنده اعتبار است جستجو کنند. همچنین می توان از الگوهای regex مانند [CTI_PRESERVE_0] استفاده کرد تا به دنبال رشته های ثابت در ساختارهای حافظه و یا هش های کش شده باشد. هنگام دویدن بدون دسترسی ممتاز، فرآیندها هنوز می توانند مکان های حافظه مجازی خود را ببینند. برخی از خدمات یا برنامه ها ممکن است اعتبار در متن روشن در حافظه فرآیند را ذخیره کنند. [[ویرایش]\n\nاگر در حال اجرا به عنوان یا با مجوز یک مرورگر وب، یک فرایند می تواند مکان های \"/maps\" و \"/mem\" را برای الگوهای معتبر وب سایت مشترک جستجو کند (که همچنین می تواند برای پیدا کردن حافظه مجاور در همان ساختار مورد استفاده قرار گیرد) که در آن هش یا اعتبار متن روشن ممکن است قرار گیرد. <code>grep -E \"^[0-9a-f-]* r\" /proc/\"$pid\"/maps | cut -d' ' -f 1</code> (Citation: Picus Labs Proc cump 2022) (Citation: baeldung Linux proc map 2022) (Citation: atomic-red proc file system) (Citation: MimiPenguin GitHub May 2017) (Citation: Polop Linux PrivEsc Gitbook)"
+            "name_fa": "فایل سیستم Proc",
+            "description_fa": "دشمنان ممکن است اعتبارنامه ها را از سیستم فایل proc یا «/proc» جمع آوری کنند. فایل سیستم proc یک سیستم فایل شبه است که به عنوان رابطی برای هسته ساختارهای داده برای سیستم های مبتنی بر لینوکس که حافظه مجازی را مدیریت می کنند استفاده می شود. برای هر فرآیند، فایل `/proc/<PID>/maps` نشان می‌دهد که چگونه حافظه در فضای آدرس مجازی فرآیند نگاشت می‌شود. و «/proc/<PID>/mem» که برای اهداف اشکال‌زدایی در معرض دید قرار می‌گیرد، دسترسی به فضای آدرس مجازی فرآیند را فراهم می‌کند.(Citation: Picus Labs Proc cump 2022)[[[CTI_PRESERVE_2]]\n\nهنگام اجرا با حقوق ریشه، دشمنان می‌توانند این مکان‌های حافظه را برای همه فرآیندهای یک سیستم که حاوی الگوهای نشان‌دهنده اعتبار هستند جستجو کنند. دشمنان ممکن است از الگوهای regex مانند <code>grep -E \"^[0-9a-f-]* r\" /proc/\"$pid\"/maps | cut -d' ' -f 1</code> برای جستجوی رشته‌های ثابت در ساختارهای حافظه یا هش‌های حافظه پنهان استفاده کنند. برخی از سرویس‌ها یا برنامه‌ها ممکن است اعتبارنامه‌ها را به صورت متن واضح در حافظه فرآیند ذخیره کنند.(Citation: MimiPenguin GitHub May 2017)(Citation: Polop Linux PrivEsc Gitbook)\n\nاگر به‌عنوان یا با مجوزهای یک مرورگر وب اجرا شود، یک فرآیند می‌تواند مکان‌های «/maps» و «/mem» را برای الگوهای اعتبار وب‌سایت رایج (که همچنین می‌تواند برای یافتن حافظه مجاور در همان ساختار مورد استفاده قرار گیرد) که در آن هش‌ها یا اعتبار متن شفاف وجود دارد، جستجو کند. (Citation: baeldung Linux proc map 2022) (Citation: atomic-red proc file system)"
         }
     ]
 }

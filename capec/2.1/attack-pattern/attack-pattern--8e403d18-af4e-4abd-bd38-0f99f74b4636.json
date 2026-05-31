@@ -9,52 +9,63 @@
                 {
                     "external_id": "CAPEC-46",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/46.html"
+                    "url": "https://capec.mitre.org/data/definitions/46.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-118",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/118.html"
+                    "url": "http://cwe.mitre.org/data/definitions/118.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-733",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/733.html"
+                    "url": "http://cwe.mitre.org/data/definitions/733.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--8e403d18-af4e-4abd-bd38-0f99f74b4636",
@@ -81,6 +92,18 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -102,11 +125,24 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a buffer overflow to inject malicious code into the stack of a software system or even the heap can require a higher skill level.",
-                "Low": "An adversary can simply overflow a buffer by inserting a long string into an adversary-modifiable injection vector. The result can be a DoS."
+                "Low": "An adversary can simply overflow a buffer by inserting a long string into an adversary-modifiable injection vector. The result can be a DoS.",
+                "High_fa": "بهره برداری از سرریز بافر برای تزریق کد مخرب به پشته یک سیستم نرم افزاری یا حتی پشته می تواند به سطح مهارت بالاتری نیاز داشته باشد.",
+                "Low_fa": "یک حریف به سادگی می تواند با وارد کردن یک رشته طولانی در یک بردار تزریق قابل تغییر، از یک بافر سرریز شود. نتیجه می تواند یک DoS باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این نوع حمله از استفاده از برچسب ها یا متغیرهای یک داده پیکربندی فرمت شده برای ایجاد سرریز بافر استفاده می کند. حریف یک صفحه یا فایل پیکربندی مخرب HTML ایجاد می کند که شامل رشته های بزرگتر است، بنابراین باعث سرریز می شود.",
+            "name_fa": "سرریز متغیرها و برچسب ها",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک آسیب‌پذیری سرریز بافر در Yamaha MidiPlug وجود دارد که می‌توان از طریق متغیر Text موجود در یک برچسب EMBED به آن دسترسی داشت.</xhtml:p>همچنین ببینید: CVE-1999-0946",
+                "<xhtml:p>سرریز بافر در Exim به کاربران محلی اجازه می‌دهد با ارائه یک گزینه طولانی :include: در یک فایل .forward، امتیازات ریشه را به دست آورند.</xhtml:p>همچنین ببینید: CVE-1999-0971"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه هدف: </b> دشمن برنامه یا برنامه هدف را برای اجرای سرریز بافر در آن شناسایی می کند. دشمنان به دنبال برنامه‌ها یا برنامه‌هایی می‌گردند که فایل‌های قالب‌بندی‌شده مانند فایل‌های پیکربندی را به‌عنوان ورودی می‌پذیرند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>پیدا کردن بردار تزریق: </b> دشمن یک بردار تزریقی را برای ارائه محتوای اضافی مورد نظر شناسایی می‌کند. بافر.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>دشمن با دانستن نوع فایلی که یک برنامه به عنوان ورودی می گیرد، یک فایل ورودی معمولی را می گیرد و یک متغیر یا برچسب را تغییر می دهد تا حاوی مقدار زیادی داده باشد. اگر خرابی رخ دهد، به این معنی است که حمله سرریز بافر ممکن است. حریف به تغییر تک متغیرها یا برچسب ها یک به یک ادامه می دهد تا زمانی که تغییری در رفتار مشاهده کند.</td></tr></tbody></table><li> <p> <b>محتوای سرریز کاردستی: </b>دشمن محتوایی را ایجاد می کند که باید تزریق شود. اگر هدف این است که به سادگی باعث از کار افتادن نرم افزار شود، محتوا فقط باید از مقدار بیش از حد داده های تصادفی تشکیل شود. اگر قصد استفاده از سرریز برای اجرای کد دلخواه باشد، حریف محموله را به گونه‌ای طراحی می‌کند که آدرس بازگشتی رونویسی شده با یکی از گزینه‌های دشمن جایگزین می‌شود. آن را.</td></tr><tr><td>از یک سورتمه NOP در محتوای سرریز استفاده کنید تا راحت‌تر به کد مخرب \"اسلاید\" کنید. این کار به این دلیل انجام می شود که آدرس برگشتی دقیق لازم نباشد درست باشد، فقط در محدوده همه NOP ها</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز از بافر: </b>دشمن فایل caus ساخته شده را در برنامه کاربردی آپلود می کند. سرریز.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف داده های قابل کنترل توسط کاربر را در قالب برچسب ها یا متغیرها مصرف می کند.",
+                "برنامه هدف بررسی مرز کافی را انجام نمی دهد."
+            ]
         }
     ],
     "type": "bundle"

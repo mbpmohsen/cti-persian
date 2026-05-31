@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0096#AN0266",
-                    "external_id": "AN0266"
+                    "external_id": "AN0266",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SudoPath",
-                    "description": "Common sudo or privilege escalation paths (e.g., `/usr/bin/passwd`)."
+                    "description": "Common sudo or privilege escalation paths (e.g., `/usr/bin/passwd`).",
+                    "description_fa": "مسیرهای رایج افزایش امتیاز یا sudo (به عنوان مثال، `/usr/bin/passwd`)."
                 },
                 {
                     "field": "ModifiedShellList",
-                    "description": "Detect if user shell is changed to unusual one (e.g., /bin/sh -> /bin/bash)."
+                    "description": "Detect if user shell is changed to unusual one (e.g., /bin/sh -> /bin/bash).",
+                    "description_fa": "تشخیص دهید که پوسته کاربر به پوسته غیرعادی تغییر کرده است (به عنوان مثال /bin/sh -> /bin/bash)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0266",
+            "description_fa": "استفاده از ابزارهای بومی یا اسکریپت نویسی (به عنوان مثال، «usermod»، «passwd»، «groupmod») برای افزایش مجوزها یا تداوم دسترسی کاربران موجود، مرتبط با رویدادهای ورود یا فرآیند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0387#AN1093",
-                    "external_id": "AN1093"
+                    "external_id": "AN1093",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "GatewayMACBaseline",
-                    "description": "Known MAC addresses for gateways or DHCP servers; used to detect spoofed ARP entries."
+                    "description": "Known MAC addresses for gateways or DHCP servers; used to detect spoofed ARP entries.",
+                    "description_fa": "آدرس های MAC شناخته شده برای دروازه ها یا سرورهای DHCP. برای شناسایی ورودی های ARP جعلی استفاده می شود."
                 },
                 {
                     "field": "CorrelationDepth",
-                    "description": "How many ARP inconsistencies to tolerate before escalating detection."
+                    "description": "How many ARP inconsistencies to tolerate before escalating detection.",
+                    "description_fa": "چند تناقض ARP را باید قبل از تشدید تشخیص تحمل کرد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1093",
+            "description_fa": "تغییرات غیرعادی کش ARP و پخش های ناخواسته ARP را با استفاده از گزارش های یکپارچه و ضبط بسته ها تشخیص می دهد. تشخیص رفتاری شامل آدرس های IP متعددی است که به یک آدرس MAC نگاشت شده و ترافیک ARP بی رویه مکرر می باشد."
         }
     ]
 }

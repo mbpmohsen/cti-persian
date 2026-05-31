@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0177#AN0503",
-                    "external_id": "AN0503"
+                    "external_id": "AN0503",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuditPolicyScope",
-                    "description": "Home Page customization may not be audited unless detailed message or folder auditing is enabled"
+                    "description": "Home Page customization may not be audited unless detailed message or folder auditing is enabled",
+                    "description_fa": "سفارشی‌سازی صفحه اصلی ممکن است مورد بازرسی قرار نگیرد مگر اینکه ممیزی دقیق پیام یا پوشه فعال باشد"
                 },
                 {
                     "field": "FolderAccessRate",
-                    "description": "Anomalous access to folders not usually interacted with can signal triggering of malicious view"
+                    "description": "Anomalous access to folders not usually interacted with can signal triggering of malicious view",
+                    "description_fa": "دسترسی غیرعادی به پوشه‌هایی که معمولاً با آن‌ها ارتباط برقرار نمی‌کنند، می‌تواند نشان دهنده راه‌اندازی نمای مخرب باشد"
                 },
                 {
                     "field": "ExternalURLAllowlist",
-                    "description": "Mail clients may restrict remote Home Page content unless domain is explicitly allowed"
+                    "description": "Mail clients may restrict remote Home Page content unless domain is explicitly allowed",
+                    "description_fa": "مشتریان ایمیل ممکن است محتوای صفحه اصلی از راه دور را محدود کنند مگر اینکه دامنه به صراحت مجاز باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0503",
+            "description_fa": "HTML یا اسکریپت مخرب به عنوان صفحه اصلی برای یک پوشه Outlook خاص ارائه می شود. Outlook به آن پوشه دسترسی پیدا می کند، محتوای راه دور را بارگیری می کند و منطق جاوا اسکریپت یا ActiveX/COM جاسازی شده را اجرا می کند که منجر به اقدامات غیرمجاز یا اجرای محلی می شود."
         }
     ]
 }

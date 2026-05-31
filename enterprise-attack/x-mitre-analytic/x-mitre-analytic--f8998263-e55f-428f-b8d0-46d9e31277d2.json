@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0348#AN0991",
-                    "external_id": "AN0991"
+                    "external_id": "AN0991",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "GuestOSAllowList",
-                    "description": "Limit detection to sensitive or externally-exposed VMs handling confidential data."
+                    "description": "Limit detection to sensitive or externally-exposed VMs handling confidential data.",
+                    "description_fa": "شناسایی را به ماشین های مجازی حساس یا در معرض دید خارجی که داده های محرمانه را مدیریت می کنند محدود کنید."
                 },
                 {
                     "field": "TransferSizeThresholdMB",
-                    "description": "Minimum outbound transfer size before flagging anomalous C2-based exfiltration."
+                    "description": "Minimum outbound transfer size before flagging anomalous C2-based exfiltration.",
+                    "description_fa": "حداقل اندازه انتقال خروجی قبل از علامت گذاری اکسفیلتراسیون غیرعادی مبتنی بر C2."
                 },
                 {
                     "field": "ProtocolAllowList",
-                    "description": "Define expected protocols for outbound data (e.g., disallow FTP/SCP over high ports)."
+                    "description": "Define expected protocols for outbound data (e.g., disallow FTP/SCP over high ports).",
+                    "description_fa": "پروتکل‌های مورد انتظار برای داده‌های خروجی را تعریف کنید (به عنوان مثال، FTP/SCP را روی پورت‌های بالا مجاز نکنید)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0991",
+            "description_fa": "ماشین های مجازی را که ترافیک خروجی را از طریق سرویس های غیر استاندارد یا به مقصدهای ناشناخته ارسال می کنند، تشخیص می دهد. خروج از پوسته های معکوس تونل شده از طریق VMkernel یا بارهای سفارشی که از طریق hostd/vpxa مسیریابی می شوند."
         }
     ]
 }

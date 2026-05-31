@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0667#AN1762",
-                    "external_id": "AN1762"
+                    "external_id": "AN1762",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,25 +63,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between keypair usage and outbound communication"
+                    "description": "Correlation window between keypair usage and outbound communication",
+                    "description_fa": "پنجره همبستگی بین استفاده از جفت کلید و ارتباطات خارجی"
                 },
                 {
                     "field": "AllowedCryptoApps",
-                    "description": "Apps expected to use asymmetric cryptography (e.g., secure messaging, VPN, enterprise auth apps)"
+                    "description": "Apps expected to use asymmetric cryptography (e.g., secure messaging, VPN, enterprise auth apps)",
+                    "description_fa": "برنامه‌هایی که انتظار می‌رود از رمزنگاری نامتقارن استفاده کنند (مانند پیام‌رسانی امن، VPN، برنامه‌های تأیید اعتبار سازمانی)"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether key generation/encryption should occur only during user interaction"
+                    "description": "Whether key generation/encryption should occur only during user interaction",
+                    "description_fa": "اینکه آیا تولید کلید/رمزگذاری باید فقط در طول تعامل با کاربر انجام شود یا خیر"
                 },
                 {
                     "field": "KeyGenerationThreshold",
-                    "description": "Frequency of keypair generation/import events considered anomalous"
+                    "description": "Frequency of keypair generation/import events considered anomalous",
+                    "description_fa": "فراوانی رویدادهای تولید/وارد کردن جفت کلید غیرعادی در نظر گرفته می‌شود"
                 },
                 {
                     "field": "PayloadSizeVariance",
-                    "description": "Expected variability in payload sizes due to asymmetric encryption overhead"
+                    "description": "Expected variability in payload sizes due to asymmetric encryption overhead",
+                    "description_fa": "تنوع مورد انتظار در اندازه بار به دلیل سربار رمزگذاری نامتقارن"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1762",
+            "description_fa": "یک برنامه کاربردی جفت‌های کلید نامتقارن (مانند RSA/ECC) را تولید، وارد می‌کند یا به آنها دسترسی می‌یابد، از یک کلید عمومی برای رمزگذاری داده‌های خروجی یا ایجاد جلسات رمزگذاری شده استفاده می‌کند، و متن رمزی حاصل را در الگوهای ارتباطی ساختاریافته منتقل می‌کند. شناسایی فعالیت چرخه عمر جفت کلید + استفاده نامتقارن از API رمزنگاری + تغییر شکل داده + زمینه اجرای پس‌زمینه + انتقال شبکه را به‌خصوص زمانی که با عملکرد مورد انتظار برنامه مطابقت ندارد، مرتبط می‌کند."
         }
     ]
 }

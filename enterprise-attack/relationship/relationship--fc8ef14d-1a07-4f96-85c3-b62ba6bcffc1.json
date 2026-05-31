@@ -13,7 +13,9 @@
                 {
                     "source_name": "EnableMPRNotifications",
                     "description": "Microsoft. (2023, January 26). Policy CSP - WindowsLogon. Retrieved March 30, 2023.",
-                    "url": "https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-windowslogon"
+                    "url": "https://learn.microsoft.com/en-us/windows/client-management/mdm/policy-csp-windowslogon",
+                    "source_name_fa": "EnableMPRNotifications",
+                    "description_fa": "مایکروسافت. (26 ژانویه 2023). سیاست CSP - WindowsLogon. بازبینی شده در 30 مارس 2023."
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +28,8 @@
             "target_ref": "attack-pattern--f4c1826f-a322-41cd-9557-562100848c84",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "description_fa": "مطمئن شوید که فقط فیلترهای رمز عبور معتبر ثبت شده اند. DLLهای فیلتر باید در فهرست نصب ویندوز (به طور پیش‌فرض «C:\\Windows\\System32») یک کنترل‌کننده دامنه و/یا رایانه محلی با ورودی مربوطه در «HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Notification Packages» وجود داشته باشد. \n\nاز Windows 11 22H2، خط مشی «EnableMPRNotifications» را می توان از طریق Group Policy یا از طریق یک ارائه دهنده سرویس پیکربندی غیرفعال کرد تا از ارسال اعتبارنامه توسط Winlogon به ارائه دهندگان شبکه جلوگیری شود.(Citation: EnableMPRNotifications)"
         }
     ]
 }

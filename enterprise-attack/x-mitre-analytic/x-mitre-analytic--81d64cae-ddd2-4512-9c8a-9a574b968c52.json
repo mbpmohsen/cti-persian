@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0040#AN0115",
-                    "external_id": "AN0115"
+                    "external_id": "AN0115",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LaunchDaemonPath",
-                    "description": "Common plist file paths for persistence: ~/Library/LaunchAgents/*.plist"
+                    "description": "Common plist file paths for persistence: ~/Library/LaunchAgents/*.plist",
+                    "description_fa": "مسیرهای رایج فایل plist برای ماندگاری: ~/Library/LaunchAgents/*.plist"
                 },
                 {
                     "field": "CorrelatedProcessImage",
-                    "description": "Ties deletion to parent process (e.g., suspicious AppleScript runner)"
+                    "description": "Ties deletion to parent process (e.g., suspicious AppleScript runner)",
+                    "description_fa": "حذف را به فرآیند والد مرتبط می کند (به عنوان مثال، اجرا کننده مشکوک AppleScript)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0115",
+            "description_fa": "حذف عوامل راه‌اندازی (~/Library/LaunchAgents/) و راه‌اندازی دیمون‌ها (/Library/LaunchDaemons/) را شناسایی می‌کند، به‌ویژه پس از اجرای فرآیند مشکوک یا زمانی که به روش‌های ماندگاری شناخته شده مرتبط هستند."
         }
     ]
 }

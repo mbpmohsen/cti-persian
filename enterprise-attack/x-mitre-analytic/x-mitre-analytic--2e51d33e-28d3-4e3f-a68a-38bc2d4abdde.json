@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0151#AN0433",
-                    "external_id": "AN0433"
+                    "external_id": "AN0433",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MaintenanceWindow",
-                    "description": "Only alert if outside approved ops windows."
+                    "description": "Only alert if outside approved ops windows.",
+                    "description_fa": "فقط در صورتی هشدار داده شود که ویندوزهای عملیاتی تأیید شده خارجی باشند."
                 },
                 {
                     "field": "PrivilegedAccountsAllowList",
-                    "description": "Suppress alerts for known service accounts."
+                    "description": "Suppress alerts for known service accounts.",
+                    "description_fa": "هشدارهای مربوط به حساب‌های سرویس شناخته شده را سرکوب کنید."
                 },
                 {
                     "field": "RemoteIPAllowList",
-                    "description": "Whitelist management station IPs."
+                    "description": "Whitelist management station IPs.",
+                    "description_fa": "IP های ایستگاه مدیریت لیست سفید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation between esxcli time query and subsequent hostd/vpxa config calls."
+                    "description": "Correlation between esxcli time query and subsequent hostd/vpxa config calls.",
+                    "description_fa": "ارتباط بین پرس و جو زمان esxcli و تماس های پیکربندی میزبان/vpxa بعدی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0433",
+            "description_fa": "فراخوانی تعاملی یا از راه دور پوسته/API ساعت سیستم esxcli دریافت یا پرس و جوی پارامترهای زمان از طریق host/vpxa و به‌زودی بررسی‌های پیکربندی time/ntp یا ایجاد وظایف برنامه‌ریزی‌شده، اجرا شده توسط حساب‌های غیر استاندارد یا پنجره‌های تعمیر و نگهداری خارجی."
         }
     ]
 }

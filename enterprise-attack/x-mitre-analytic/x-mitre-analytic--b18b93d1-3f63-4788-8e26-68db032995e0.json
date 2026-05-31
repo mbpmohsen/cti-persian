@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0107#AN0300",
-                    "external_id": "AN0300"
+                    "external_id": "AN0300",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0300",
-            "description": "Correlation of Mail.app logs with Safari/Chrome activity. Suspicious behavior includes email links \u2192 Safari/Chrome accessing newly registered or lookalike domains \u2192 osascript or Terminal spawned unexpectedly.",
+            "description": "Correlation of Mail.app logs with Safari/Chrome activity. Suspicious behavior includes email links → Safari/Chrome accessing newly registered or lookalike domains → osascript or Terminal spawned unexpectedly.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CertificateAnomalies",
-                    "description": "Flag self-signed or mismatched TLS certificates from spearphishing domains."
+                    "description": "Flag self-signed or mismatched TLS certificates from spearphishing domains.",
+                    "description_fa": "گواهینامه‌های TLS خودامضا یا ناهماهنگ را از دامنه‌های spearphishing پرچم‌گذاری کنید."
                 },
                 {
                     "field": "ExecutionDelayThreshold",
-                    "description": "Suspicious delay between URL click and malicious process spawn."
+                    "description": "Suspicious delay between URL click and malicious process spawn.",
+                    "description_fa": "تاخیر مشکوک بین کلیک URL و ایجاد فرآیند مخرب."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0300",
+            "description_fa": "ارتباط لاگ های Mail.app با فعالیت سافاری/کروم. رفتار مشکوک شامل پیوندهای ایمیل ← Safari/Chrome است که به دامنه‌های تازه ثبت‌شده یا مشابه دسترسی دارد ← osascript یا Terminal که به‌طور غیرمنتظره ایجاد شده است."
         }
     ]
 }

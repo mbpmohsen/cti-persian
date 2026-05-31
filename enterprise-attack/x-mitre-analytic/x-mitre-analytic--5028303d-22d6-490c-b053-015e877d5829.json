@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0225#AN0629",
-                    "external_id": "AN0629"
+                    "external_id": "AN0629",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0629",
-            "description": "Unauthorized creation or modification of DLLs loaded by LSASS, abnormal registry values under LSA extensions, and anomalous DLL load activity into the lsass.exe process context\u2014correlated during boot or logon events.",
+            "description": "Unauthorized creation or modification of DLLs loaded by LSASS, abnormal registry values under LSA extensions, and anomalous DLL load activity into the lsass.exe process context—correlated during boot or logon events.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -66,25 +67,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate DLL file creation/modification with LSASS execution within a configurable timeframe (e.g., 5 min)"
+                    "description": "Correlate DLL file creation/modification with LSASS execution within a configurable timeframe (e.g., 5 min)",
+                    "description_fa": "ایجاد/تغییر فایل DLL با اجرای LSASS در یک بازه زمانی قابل تنظیم (مثلاً 5 دقیقه)"
                 },
                 {
                     "field": "ImagePathPattern",
-                    "description": "Tune based on known legitimate LSASS plugin DLL paths"
+                    "description": "Tune based on known legitimate LSASS plugin DLL paths",
+                    "description_fa": "بر اساس مسیرهای DLL شناخته شده قانونی پلاگین LSASS تنظیم کنید"
                 },
                 {
                     "field": "SignatureValidation",
-                    "description": "Flag unsigned DLLs loaded into lsass.exe or those signed by unexpected publishers"
+                    "description": "Flag unsigned DLLs loaded into lsass.exe or those signed by unexpected publishers",
+                    "description_fa": "DLL های بدون امضا بارگیری شده در lsass.exe یا آنهایی که توسط ناشران غیرمنتظره امضا شده اند را پرچم گذاری کنید."
                 },
                 {
                     "field": "RegistryKeyScope",
-                    "description": "Scope to specific registry keys: HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Authentication Packages"
+                    "description": "Scope to specific registry keys: HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Authentication Packages",
+                    "description_fa": "محدوده کلیدهای رجیستری خاص: HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Authentication Packages"
                 },
                 {
                     "field": "FileHashAllowList",
-                    "description": "Exclude known-good LSASS plugin DLLs based on cryptographic hash"
+                    "description": "Exclude known-good LSASS plugin DLLs based on cryptographic hash",
+                    "description_fa": "DLL های شناخته شده پلاگین LSASS بر اساس هش رمزنگاری را حذف کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0629",
+            "description_fa": "ایجاد یا اصلاح غیرمجاز DLL های بارگیری شده توسط LSASS، مقادیر غیرعادی رجیستری تحت پسوندهای LSA، و فعالیت بارگیری غیرعادی DLL در زمینه فرآیند lsass.exe - که در طول رویدادهای بوت یا ورود به سیستم مرتبط هستند."
         }
     ]
 }

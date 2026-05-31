@@ -9,34 +9,44 @@
                 {
                     "external_id": "CAPEC-307",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/307.html"
+                    "url": "https://capec.mitre.org/data/definitions/307.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "J. Postel, RFC768 - User Datagram Protocol, 1980--08---28",
                     "external_id": "REF-158",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc768.html"
+                    "url": "http://www.faqs.org/rfcs/rfc768.html",
+                    "description_fa": "J. Postel, RFC768 - User Datagram Protocol, 1980--08---28",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-34",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, The Art of Port Scanning (Volume: 7, Issue. 51), Phrack Magazine, 1997",
                     "external_id": "REF-130",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://phrack.org/issues/51/11.html"
+                    "url": "http://phrack.org/issues/51/11.html",
+                    "description_fa": "گوردون \"فئودور\" لیون، هنر اسکن بندر (جلد: 7، شماره 51)، مجله Phrack، 1997",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--6d2a085c-4a06-4bd2-8998-ba78a4302ab0",
@@ -63,6 +73,19 @@
                     "Other",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -79,7 +102,17 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن لیست خدمات RPC را در میزبان یونیکس/لینوکس جستجو می کند.",
+            "name_fa": "اسکن TCP RPC",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>آزمایش</h3><ol><li> <p>یک دشمن بسته‌های RCP را به پورت‌های هدف می‌فرستد.</p></li><li> <p>یک دشمن از پاسخ هدف استفاده می‌کند تا مشخص کند کدام سرویس RPC در آن پورت اجرا می‌شود. بر اساس اینکه کدام سرویس RPC در حال اجرا است، پاسخ ها متفاوت خواهد بود.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> این نوع اسکن را می توان از طریق ابزارهای سیستم عامل بومی یا از طریق اسکنرهای پورت مانند nmap به دست آورد. هنگامی که توسط یک اسکنر انجام می شود، یک دیتاگرام RPC به لیستی از پورت های UDP ارسال می شود و پاسخ ثبت می شود. انواع خاصی از پاسخ ها می تواند نشان دهنده خدمات شناخته شده RPC باشد که بر روی یک پورت UDP اجرا می شوند. کشف سرویس های RPC به دشمن اهداف بالقوه ای برای حمله می دهد، زیرا برخی از سرویس های RPC به طور پیش فرض ناامن هستند.</xhtml:p>\n            <xhtml:p> اسکن‌های مستقیم RPC که portmapper/sunrpc را دور می‌زنند، معمولاً در مقایسه با سایر انواع اسکن کند هستند، به راحتی توسط سیستم‌های IPS/IDS شناسایی می‌شوند و تنها زمانی می‌توانند پورت‌های باز را شناسایی کنند که یک سرویس RPC پاسخ دهد. پاسخ های پیام تشخیصی ICMP می تواند به شناسایی پورت های بسته کمک کند، اما پورت های فیلتر شده و فیلتر نشده را نمی توان از طریق اسکن TCP RPC شناسایی کرد. دو روش کلی برای اسکن RPC وجود دارد: یکی استفاده از یک ابزار سیستم عامل بومی یا اسکریپت برای پرس و جو از برنامه portmapper/rpcbind در حال اجرا در پورت 111. Portmapper لیستی از خدمات RPC ثبت شده را برمی گرداند. متناوبا، می‌توان از اسکنر یا اسکریپت پورت برای اسکن مستقیم سرویس‌های RPC استفاده کرد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "اسکن RPC هنگامی که از طریق یک ابزار سیستمی بومی انجام می شود به هیچ امتیاز خاصی نیاز ندارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "توانایی ایجاد دیتاگرام های سفارشی RPC برای استفاده در هنگام شناسایی شبکه از طریق ابزارهای سیستم عامل بومی یا ابزار اسکن پورت. با تنظیم بایت های تزریق شده، می توان خدمات خاص ثبت شده در RPC را اسکن کرد. بسته به روش مورد استفاده، ممکن است لازم باشد شبکه را بو کنید تا پاسخ را ببینید."
+            ]
         }
     ],
     "spec_version": "2.0",

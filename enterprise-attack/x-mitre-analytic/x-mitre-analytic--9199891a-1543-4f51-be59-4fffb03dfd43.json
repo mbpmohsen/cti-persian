@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0165#AN0468",
-                    "external_id": "AN0468"
+                    "external_id": "AN0468",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Duration after terminal usage where deletion or modification is considered suspicious."
+                    "description": "Duration after terminal usage where deletion or modification is considered suspicious.",
+                    "description_fa": "مدت زمان پس از استفاده از ترمینال که در آن حذف یا اصلاح مشکوک تلقی می شود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Flag unexpected user activity, especially from users who normally don\u2019t use terminal."
+                    "description": "Flag unexpected user activity, especially from users who normally don’t use terminal.",
+                    "description_fa": "فعالیت غیرمنتظره کاربر، به ویژه از سوی کاربرانی که معمولاً از ترمینال استفاده نمی‌کنند، پرچم‌گذاری کنید."
                 },
                 {
                     "field": "HistoryFilePath",
-                    "description": "Zsh or Bash history files under the user's home directory."
+                    "description": "Zsh or Bash history files under the user's home directory.",
+                    "description_fa": "فایل‌های تاریخچه Zsh یا Bash در فهرست اصلی کاربر."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0468",
+            "description_fa": "شناسایی تاریخچه پوسته دشمن با استفاده از «history -c» یا حذف/تغییر ~/.zsh_history یا ~/.bash_history. روی جلساتی با سابقه از دست رفته یا پاک شده تمرکز کنید."
         }
     ]
 }

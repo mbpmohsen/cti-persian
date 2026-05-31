@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0292#AN0812",
-                    "external_id": "AN0812"
+                    "external_id": "AN0812",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutableNameTrailingSpace",
-                    "description": "This detection may vary based on how different shells and file systems treat trailing spaces. Normalize or regex-match file names with trailing space."
+                    "description": "This detection may vary based on how different shells and file systems treat trailing spaces. Normalize or regex-match file names with trailing space.",
+                    "description_fa": "این تشخیص ممکن است بر اساس نحوه برخورد پوسته ها و سیستم های فایل مختلف با فضاهای دنباله دار متفاوت باشد. نام فایل‌ها را با فضای انتهایی عادی یا تطبیق regex کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Monitor for untrusted or lower-privileged users executing suspicious scripts with disguised names."
+                    "description": "Monitor for untrusted or lower-privileged users executing suspicious scripts with disguised names.",
+                    "description_fa": "نظارت بر کاربران نامعتبر یا با امتیاز پایین‌تر که اسکریپت‌های مشکوک را با نام‌های مبدل اجرا می‌کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tune for execution patterns during off-hours to reduce false positives."
+                    "description": "Tune for execution patterns during off-hours to reduce false positives.",
+                    "description_fa": "الگوهای اجرا را در ساعات غیرفعال تنظیم کنید تا مثبت کاذب را کاهش دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0812",
+            "description_fa": "تشخیص اجرای فایل در جایی که نام فایل حاوی یک فضای انتهایی برای تبدیل شدن به یک فایل اجرایی شناخته شده است. دشمنان ممکن است از روشی که مفسرهای خط فرمان نام فایل ها را با فضای خالی انتهایی مدیریت می کنند، سوء استفاده کنند."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0665#AN1758",
-                    "external_id": "AN1758"
+                    "external_id": "AN1758",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.384Z",
             "name": "Analytic 1758",
-            "description": "From the defender\u2019s perspective, this strategy correlates signals that a previously unprivileged Android app or process has gained higher privileges through exploitation rather than normal OS or MDM flows. \nObservable behaviors include: \n(1) unprivileged app processes issuing sensitive syscalls or accessing privileged device interfaces, \n(2) bursts of SELinux denials followed by an unexpected domain or permission change, \n(3) creation of new processes running with system or root UID whose lineage traces back to an app sandbox path, and \n(4) crashes or abnormal restarts of privileged system services followed shortly by a new connection or binder interaction from the same low-privileged app. The focus is on unusual privilege transitions, anomalous process ancestry, and OS security policy violations, not on specific exploit binaries or CVE signatures.",
+            "description": "From the defender’s perspective, this strategy correlates signals that a previously unprivileged Android app or process has gained higher privileges through exploitation rather than normal OS or MDM flows. \nObservable behaviors include: \n(1) unprivileged app processes issuing sensitive syscalls or accessing privileged device interfaces, \n(2) bursts of SELinux denials followed by an unexpected domain or permission change, \n(3) creation of new processes running with system or root UID whose lineage traces back to an app sandbox path, and \n(4) crashes or abnormal restarts of privileged system services followed shortly by a new connection or binder interaction from the same low-privileged app. The focus is on unusual privilege transitions, anomalous process ancestry, and OS security policy violations, not on specific exploit binaries or CVE signatures.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,25 +53,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (for example, 60\u2013300 seconds) between SELinux events, crashes, and privilege changes to reduce noise while still capturing exploit chains."
+                    "description": "Correlation window (for example, 60–300 seconds) between SELinux events, crashes, and privilege changes to reduce noise while still capturing exploit chains.",
+                    "description_fa": "پنجره همبستگی (مثلاً 60 تا 300 ثانیه) بین رویدادهای SELinux، خرابی‌ها و تغییرات امتیاز برای کاهش نویز و در عین حال ضبط زنجیره‌های بهره‌برداری."
                 },
                 {
                     "field": "AppUidRange",
-                    "description": "UID ranges that represent unprivileged application accounts in a specific Android OEM or enterprise deployment."
+                    "description": "UID ranges that represent unprivileged application accounts in a specific Android OEM or enterprise deployment.",
+                    "description_fa": "محدوده‌های UID که حساب‌های برنامه غیرمجاز را در یک OEM خاص Android یا استقرار سازمانی نشان می‌دهند."
                 },
                 {
                     "field": "SensitiveSyscalls",
-                    "description": "List of syscalls considered indicative of privilege escalation attempts; may vary by kernel version, OEM drivers, and threat model."
+                    "description": "List of syscalls considered indicative of privilege escalation attempts; may vary by kernel version, OEM drivers, and threat model.",
+                    "description_fa": "فهرست syscalls در نظر گرفته شده نشان دهنده تلاش برای افزایش امتیاز. ممکن است بسته به نسخه هسته، درایورهای OEM و مدل تهدید متفاوت باشد."
                 },
                 {
                     "field": "PrivilegedServices",
-                    "description": "Set of high-value Android system services where crashes or restarts are particularly suspicious (for example, system_server, mediaserver)."
+                    "description": "Set of high-value Android system services where crashes or restarts are particularly suspicious (for example, system_server, mediaserver).",
+                    "description_fa": "مجموعه ای از خدمات سیستم اندروید با ارزش بالا که در آن خرابی یا راه اندازی مجدد مشکوک است (به عنوان مثال، system_server، مدیا سرور)."
                 },
                 {
                     "field": "PrivilegedUids",
-                    "description": "Enterprise-defined mapping of UIDs considered elevated (for example, root, system, radio) for alert scoping."
+                    "description": "Enterprise-defined mapping of UIDs considered elevated (for example, root, system, radio) for alert scoping.",
+                    "description_fa": "نگاشت تعریف شده سازمانی از UIDها در نظر گرفته شده بالا (به عنوان مثال، ریشه، سیستم، رادیو) برای محدوده هشدار."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1758",
+            "description_fa": "از دیدگاه مدافع، این استراتژی سیگنال‌هایی را به هم مرتبط می‌کند که یک برنامه یا فرآیند اندرویدی که قبلاً فاقد امتیاز است، از طریق بهره‌برداری به جای جریان‌های معمولی سیستم‌عامل یا MDM، امتیازات بالاتری کسب کرده است. \nرفتارهای قابل مشاهده عبارتند از: \n(1) فرآیندهای برنامه غیرمجاز که سیستم‌های تماس حساس صادر می‌کنند یا به رابط‌های دستگاه ممتاز دسترسی دارند، \n(2) انبوهی از انکارهای SELinux به دنبال یک دامنه غیرمنتظره یا تغییر مجوز، \n(3) ایجاد فرآیندهای جدید در حال اجرا با سیستم یا root UID که نسب آنها به یک مسیر سندباکس برنامه بازمی گردد، و \n(4) از کار افتادن یا راه‌اندازی مجدد غیرعادی سرویس‌های سیستم ممتاز و پس از مدت کوتاهی یک اتصال جدید یا تعامل بایندر از همان برنامه با امتیاز پایین. تمرکز بر انتقال امتیاز غیرعادی، اصل و نسب فرآیند غیرعادی، و نقض خط‌مشی امنیتی سیستم‌عامل است، نه بر روی باینری‌های اکسپلویت خاص یا امضاهای CVE."
         }
     ]
 }

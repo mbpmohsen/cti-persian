@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0236#AN0657",
-                    "external_id": "AN0657"
+                    "external_id": "AN0657",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutionDelayThreshold",
-                    "description": "Time delay between attachment download and execution considered suspicious."
+                    "description": "Time delay between attachment download and execution considered suspicious.",
+                    "description_fa": "تأخیر زمانی بین دانلود پیوست و اجرا مشکوک در نظر گرفته شد."
                 },
                 {
                     "field": "SuspiciousParentApps",
-                    "description": "Parent processes expected to rarely spawn child processes (e.g., Mail.app, Preview.app)."
+                    "description": "Parent processes expected to rarely spawn child processes (e.g., Mail.app, Preview.app).",
+                    "description_fa": "انتظار می رود فرآیندهای والد به ندرت باعث ایجاد فرآیندهای فرزند شوند (مانند Mail.app، Preview.app)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0657",
+            "description_fa": "شناسایی پیوست فیشینگ در macOS از طریق همبستگی گزارش‌های برنامه Mail، ایجاد فایل در فهرست‌های کاربر، و اجرای غیرعادی فرآیند (مانند Preview.app یا Mail.app Spawning Terminal یا باینری‌های اسکریپت‌نویسی). ترافیک شبکه پس از تعامل پیوست نیز نظارت می شود."
         }
     ]
 }

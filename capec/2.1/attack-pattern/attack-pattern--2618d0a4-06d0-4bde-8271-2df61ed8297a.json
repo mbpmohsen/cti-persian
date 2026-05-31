@@ -9,54 +9,66 @@
                 {
                     "external_id": "CAPEC-653",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/653.html"
+                    "url": "https://capec.mitre.org/data/definitions/653.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-522",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/522.html"
+                    "url": "http://cwe.mitre.org/data/definitions/522.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-307",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/307.html"
+                    "url": "http://cwe.mitre.org/data/definitions/307.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-308",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/308.html"
+                    "url": "http://cwe.mitre.org/data/definitions/308.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-309",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/309.html"
+                    "url": "http://cwe.mitre.org/data/definitions/309.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-262",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/262.html"
+                    "url": "http://cwe.mitre.org/data/definitions/262.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-263",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/263.html"
+                    "url": "http://cwe.mitre.org/data/definitions/263.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-654",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/654.html"
+                    "url": "http://cwe.mitre.org/data/definitions/654.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Dan Goodin, Attackers can use Zoom to steal users’ Windows credentials with no warning, 2020--04---01, Ars Technica",
                     "external_id": "REF-575",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://arstechnica.com/information-technology/2020/04/unpatched-zoom-bug-lets-attackers-steal-windows-credentials-with-no-warning/"
+                    "url": "https://arstechnica.com/information-technology/2020/04/unpatched-zoom-bug-lets-attackers-steal-windows-credentials-with-no-warning/",
+                    "description_fa": "دن گودین، مهاجمان می‌توانند از Zoom برای سرقت اطلاعات کاربری ویندوز بدون هیچ هشداری استفاده کنند، 2020-04---01، Ars Technica",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jeff Warren, How Attackers are Stealing Your Credentials with Mimikatz, 2017--07---11, STEALTHbits Technologies, Inc.",
                     "external_id": "REF-576",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://blog.stealthbits.com/how-attackers-are-stealing-your-credentials-with-mimikatz/"
+                    "url": "https://blog.stealthbits.com/how-attackers-are-stealing-your-credentials-with-mimikatz/",
+                    "description_fa": "جف وارن، چگونه مهاجمان با Mimikatz اعتبار شما را می دزدند، 2017--07---11، STEALTHbits Technologies, Inc.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2618d0a4-06d0-4bde-8271-2df61ed8297a",
@@ -100,6 +112,22 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -127,11 +155,30 @@
                 "A custom script that leverages a credential list to launch an attack."
             ],
             "x_capec_skills_required": {
-                "Low": "Once an adversary obtains a known credential, leveraging it is trivial."
+                "Low": "Once an adversary obtains a known credential, leveraging it is trivial.",
+                "Low_fa": "هنگامی که یک دشمن اعتبار شناخته شده ای به دست آورد، استفاده از آن بی اهمیت است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف برای دستیابی به احراز هویت و انجام اقدامات مجاز در سیستم، تحت پوشش یک کاربر یا سرویس احراز هویت شده، اعتبار سیستم عامل قانونی (مانند شناسه کاربری/رمز عبور) را حدس می‌زند یا به دست می‌آورد (یعنی سرقت یا خرید). این برای هر سیستم عاملی صدق می کند.",
+            "name_fa": "استفاده از اعتبار سیستم عامل شناخته شده",
+            "x_capec_example_instances_fa": [
+                "دشمنان از برنامه کنفرانس ویدیویی Zoom در طول همه‌گیری COVID-19 2020 برای استخراج اعتبار دامنه ویندوز از یک سیستم هدف سوء استفاده کردند. این حمله مستلزم ارسال مسیرهای کنوانسیون نامگذاری جهانی (UNC) در پنجره چت Zoom یک تماس محافظت نشده Zoom بود. اگر قربانی روی پیوند کلیک می کرد، نام کاربری ویندوز و هش های مربوط به Net-NTLM-v2 به آدرس موجود در پیوند ارسال می شد. سپس حریف قادر به نفوذ و حرکت جانبی در دامنه ویندوز با ارسال اعتبار به دست آمده به منابع شبکه مشترک بود. این امر باعث شد دشمنان به سرورهای Outlook و دستگاه های ذخیره سازی شبکه دسترسی پیدا کنند. [REF-575]",
+                "Mimikatz، یک برداشت کننده اعتبار ویندوز پس از بهره برداری، می تواند برای جمع آوری و بهره برداری از اعتبار ویندوز استفاده شود. این بدافزار در چندین حمله سایبری شناخته شده مانند حملات Petya Ransomeware استفاده شده است. [REF-576]"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کسب اعتبار سیستم عامل شناخته شده: </b> دشمن باید اعتبار سیستم عامل شناخته شده را به دست آورد تا بتواند به سیستم، برنامه یا سرویس هدف در دامنه دسترسی داشته باشد.</p></li><tableth><tni><trque خریدهای دشمن، ترکیب نام کاربری/گذرواژه سیستم عامل را نقض کرده یا گذرواژه‌های هش شده را از وب تاریک به بیرون درز کرده است.</td></tr><tr><td>یک حریف از یک لاگر کلید یا حمله فیشینگ استفاده می‌کند تا اعتبار کاربر را همانطور که ارائه می‌شود بدزدد. منتقل می شود.</td></tr><tr><td>یک حریف به یک سیستم/فایل ها دسترسی پیدا می کند و هش رمز عبور را حذف می کند.</td></tr><tr><td>یک دشمن فایل های پیکربندی و ویژگی های رو به بیرون را بررسی می کند تا کدهای سخت را کشف کند. اعتبارنامه.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تلاش برای احراز هویت: </b>هر اعتبار سیستم عامل را در برابر سیستم‌ها، برنامه‌ها و سرویس‌های مختلف در دامنه امتحان کنید تا زمانی که هدف اعطا شود دسترسی داشته باشید.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>به صورت دستی یا خودکار هر اعتبارنامه را از طریق رابط هدف وارد کنید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>آزمایشی موفقیت آمیز است. احراز هویت برای جعل هویت کاربر یا سیستم مجاز، یا حرکت جانبی در داخل شبکه</p></li><li> <p> <b>جعل: </b>داده های مخرب را می توان به سیستم هدف یا سایر سیستم های موجود در شبکه تزریق کرد. دشمن همچنین می‌تواند به عنوان یک کاربر قانونی برای انجام حملات مهندسی اجتماعی ظاهر شود.</p></li><li> <p> <b>حذف داده‌ها: </b>دشمن می‌تواند داده‌های حساس موجود در فایل‌های سیستم یا پیکربندی برنامه را به دست آورد.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>این حمله زمانی می تواند بسیار مضر باشد که اعتبار سیستم عامل مورد استفاده برای یک کاربر ریشه یا مدیر باشد. هنگامی که یک حریف با استفاده از اعتبارنامه‌هایی با امتیازات بالا دسترسی پیدا کرد، می‌تواند فایل‌های مهم سیستم را تغییر دهد که می‌تواند بر سایر کاربرانی که ممکن است از سیستم یا سایر کاربران در شبکه سیستم استفاده کنند تأثیر بگذارد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "سیستم/برنامه از احراز هویت مبتنی بر رمز عبور یک عاملی، SSO، و/یا احراز هویت مبتنی بر ابر استفاده می‌کند.",
+                "سیستم/برنامه دارای خط مشی رمز عبور صحیحی نیست که در حال اجرا باشد.",
+                "سیستم/برنامه یک مکانیسم موثر برای حذف رمز عبور پیاده سازی نمی کند.",
+                "دشمن دارای فهرستی از حساب های کاربری شناخته شده و رمزهای عبور مربوطه است که ممکن است روی هدف وجود داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "لیستی از اعتبارنامه های شناخته شده برای دامنه مورد نظر.",
+                "یک اسکریپت سفارشی که از یک لیست اعتبار برای راه اندازی یک حمله استفاده می کند."
+            ]
         }
     ],
     "type": "bundle"

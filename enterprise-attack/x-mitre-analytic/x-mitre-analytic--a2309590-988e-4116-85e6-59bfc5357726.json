@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0512#AN1414",
-                    "external_id": "AN1414"
+                    "external_id": "AN1414",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ConnectionDestinationScope",
-                    "description": "Restrict outbound connections to non-corporate domains or IPs."
+                    "description": "Restrict outbound connections to non-corporate domains or IPs.",
+                    "description_fa": "اتصالات خروجی را به دامنه ها یا IP های غیر شرکتی محدود کنید."
                 },
                 {
                     "field": "FileAccessExtensionList",
-                    "description": "List of extensions considered sensitive or exfil-worthy (e.g., .zip, .db, .xlsx)."
+                    "description": "List of extensions considered sensitive or exfil-worthy (e.g., .zip, .db, .xlsx).",
+                    "description_fa": "فهرست برنامه‌های افزودنی که حساس یا دارای ارزش exfil در نظر گرفته می‌شوند (به عنوان مثال، .zip، .db، .xlsx)."
                 },
                 {
                     "field": "SSLClientProcessBaseline",
-                    "description": "Define normal encrypted-traffic-capable binaries."
+                    "description": "Define normal encrypted-traffic-capable binaries.",
+                    "description_fa": "باینری های عادی رمزگذاری شده با قابلیت ترافیک را تعریف کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1414",
+            "description_fa": "دسترسی مرحله‌ای به فایل (مثلاً بایگانی یا مبهم)، و به دنبال آن یک اتصال خروجی رمزگذاری شده (TLS/HTTPS) را از فرآیندهای غیرمعمول مانند curl/wget، اسکریپت‌های پایتون یا باینری‌های سفارشی تشخیص می‌دهد."
         }
     ]
 }

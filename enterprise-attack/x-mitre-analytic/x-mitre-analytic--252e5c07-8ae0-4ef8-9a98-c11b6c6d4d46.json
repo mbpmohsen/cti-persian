@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0151#AN0432",
-                    "external_id": "AN0432"
+                    "external_id": "AN0432",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LaunchdPaths",
-                    "description": "Organization-specific list of allowed launchd write locations to filter benign agents."
+                    "description": "Organization-specific list of allowed launchd write locations to filter benign agents.",
+                    "description_fa": "فهرست ویژه سازمان از مکان‌های نوشتن مجاز راه‌اندازی شده برای فیلتر کردن عوامل خوش‌خیم."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window to link time discovery to launchd persistence/scheduling."
+                    "description": "Correlation window to link time discovery to launchd persistence/scheduling.",
+                    "description_fa": "پنجره همبستگی برای پیوند کشف زمان به تداوم/برنامه ریزی راه اندازی شده."
                 },
                 {
                     "field": "AllowedCallers",
-                    "description": "Known management agents (e.g., JAMF) that legitimately call systemsetup/date."
+                    "description": "Known management agents (e.g., JAMF) that legitimately call systemsetup/date.",
+                    "description_fa": "عوامل مدیریت شناخته شده (به عنوان مثال، JAMF) که به طور قانونی systemetup/date را فراخوانی می کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0432",
+            "description_fa": "اجرای فرآیند/اسکریپت systemetup -gettimezone، تاریخ، ioreg یا استفاده از API (timeIntervalSinceNow، gettimeofday) و به دنبال آن زمان‌بندی مبتنی بر زمان (اصلاح فهرست راه‌اندازی) یا اجرای مبتنی بر خواب."
         }
     ]
 }

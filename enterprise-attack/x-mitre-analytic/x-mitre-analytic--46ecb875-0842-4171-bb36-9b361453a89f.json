@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0070#AN0191",
-                    "external_id": "AN0191"
+                    "external_id": "AN0191",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessList",
-                    "description": "Parent processes expected to execute child processes (e.g., Office apps)."
+                    "description": "Parent processes expected to execute child processes (e.g., Office apps).",
+                    "description_fa": "انتظار می‌رود فرآیندهای والد، فرآیندهای فرزند را اجرا کنند (مانند برنامه‌های آفیس)."
                 },
                 {
                     "field": "MacroExecutionThreshold",
-                    "description": "Threshold for number of macros executed before raising alerts."
+                    "description": "Threshold for number of macros executed before raising alerts.",
+                    "description_fa": "آستانه تعداد ماکروهای اجرا شده قبل از افزایش هشدارها."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0191",
+            "description_fa": "فیشینگ از طریق اسناد Office حاوی ماکروهای جاسازی شده یا پیوندهایی که فرآیندها را ایجاد می کنند. تشخیص متکی به مرتبط کردن گزارش‌های برنامه Office با اجرای فرآیند مشکوک فرزند و اتصالات شبکه خروجی است."
         }
     ]
 }

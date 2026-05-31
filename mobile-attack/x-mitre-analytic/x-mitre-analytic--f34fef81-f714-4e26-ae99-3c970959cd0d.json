@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0675#AN1777",
-                    "external_id": "AN1777"
+                    "external_id": "AN1777",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.383Z",
             "name": "Analytic 1777",
-            "description": "Defender correlates an application\u2019s location authorization level (When-In-Use vs Always) and entitlement posture with observed location sensor activity that occurs without proximate user interaction, including background updates, followed by periodic outbound network sessions aligned to location update timing\u2014suggesting covert or policy-violating location tracking.",
+            "description": "Defender correlates an application’s location authorization level (When-In-Use vs Always) and entitlement posture with observed location sensor activity that occurs without proximate user interaction, including background updates, followed by periodic outbound network sessions aligned to location update timing—suggesting covert or policy-violating location tracking.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -47,17 +48,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ForegroundLocationExpectation",
-                    "description": "Defines legitimate location usage relative to app state"
+                    "description": "Defines legitimate location usage relative to app state",
+                    "description_fa": "استفاده مشروع از مکان را نسبت به وضعیت برنامه تعریف می کند"
                 },
                 {
                     "field": "LocationAccessDurationThreshold",
-                    "description": "Baseline deviation tolerance for sustained location tracking"
+                    "description": "Baseline deviation tolerance for sustained location tracking",
+                    "description_fa": "تحمل انحراف پایه برای ردیابی مکان پایدار"
                 },
                 {
                     "field": "LocationToTransmissionWindow",
-                    "description": "Temporal threshold linking location access to network activity"
+                    "description": "Temporal threshold linking location access to network activity",
+                    "description_fa": "آستانه زمانی که دسترسی مکان را به فعالیت شبکه مرتبط می کند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1777",
+            "description_fa": "Defender سطح مجوز مکان یک برنامه کاربردی (هنگام استفاده در مقابل همیشه) و وضعیت استحقاق را با فعالیت حسگر مکان مشاهده شده که بدون تعامل نزدیک با کاربر، از جمله به‌روزرسانی‌های پس‌زمینه، و به دنبال آن جلسات دوره‌ای شبکه خروجی همسو با زمان‌بندی به‌روزرسانی مکان انجام می‌شود، مرتبط می‌کند - که ردیابی موقعیت مکانی مخفی یا ناقض خط مشی را پیشنهاد می‌کند."
         }
     ]
 }

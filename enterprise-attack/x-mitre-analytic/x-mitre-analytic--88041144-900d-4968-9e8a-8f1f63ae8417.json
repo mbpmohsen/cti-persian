@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0574#AN1586",
-                    "external_id": "AN1586"
+                    "external_id": "AN1586",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ESXCommandPattern",
-                    "description": "Match specific diag/debug commands abused for recon"
+                    "description": "Match specific diag/debug commands abused for recon",
+                    "description_fa": "دستورات دیاگ/اشکال‌زدایی خاصی را که برای بازیابی مورد سوء استفاده قرار گرفته‌اند مطابقت دهید"
                 },
                 {
                     "field": "RemoteUserShell",
-                    "description": "Detect unauthorized shell use or user context (e.g., root over SSH)"
+                    "description": "Detect unauthorized shell use or user context (e.g., root over SSH)",
+                    "description_fa": "شناسایی استفاده غیرمجاز از پوسته یا زمینه کاربر (به عنوان مثال، ریشه روی SSH)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1586",
+            "description_fa": "دسترسی پوسته ESXi یا SSH با صدور «پینگ دیاگ شبکه esxcli» یا مشاهده جداول مسیریابی برای شناسایی میزبان‌های متصل."
         }
     ]
 }

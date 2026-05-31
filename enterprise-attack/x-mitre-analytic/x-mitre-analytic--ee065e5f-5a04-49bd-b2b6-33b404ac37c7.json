@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0447#AN1236",
-                    "external_id": "AN1236"
+                    "external_id": "AN1236",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BinaryPath",
-                    "description": "Account creation may be scripted via shell scripts, cron jobs, or remote shells"
+                    "description": "Account creation may be scripted via shell scripts, cron jobs, or remote shells",
+                    "description_fa": "ایجاد حساب ممکن است از طریق اسکریپت های پوسته، کرون جابز یا پوسته های راه دور تنظیم شود."
                 },
                 {
                     "field": "ExecutionSource",
-                    "description": "Flag if commands are issued from remote sessions (e.g., sshd)"
+                    "description": "Flag if commands are issued from remote sessions (e.g., sshd)",
+                    "description_fa": "اگر دستورات از جلسات راه دور صادر می شوند (مثلاً sshd) پرچم گذاری کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1236",
+            "description_fa": "حساب‌های کاربری محلی از طریق باینری‌هایی مانند «useradd»، «adduser» یا با ویرایش passwd/shadow ایجاد می‌شوند. زنجیره رفتار شامل اجرای باینری های مدیریت کاربر یا اصلاح فایل های پایگاه داده کاربر است."
         }
     ]
 }

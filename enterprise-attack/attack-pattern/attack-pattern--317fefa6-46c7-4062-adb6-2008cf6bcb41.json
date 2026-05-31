@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1103",
                     "external_id": "T1103",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Elastic Process Injection July 2017",
                     "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017.",
                     "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process",
-                    "source_name_fa": "Elastic Process injection جولای 2017",
-                    "description_fa": "حسینی، A. (2017، 18 ژوئیه) ده تکنیک تزریق فرایند: یک بررسی فنی از تکنیک های تزریق معمول و روندی. Retrieved 7 دسامبر 2017"
+                    "source_name_fa": "Elastic Process Injection جولای 2017",
+                    "description_fa": "حسینی، ع (۱۳۹۶، ۲۷ تیر). ده تکنیک تزریق فرآیند: بررسی فنی تکنیک های رایج و پرطرفدار فرآیند تزریق. بازبینی شده در 7 دسامبر 2017."
                 },
                 {
                     "source_name": "AppInit Registry",
                     "description": "Microsoft. (2006, October). Working with the AppInit_DLLs registry value. Retrieved July 15, 2015.",
                     "url": "https://support.microsoft.com/en-us/kb/197571",
-                    "source_name_fa": "AppInit Registry",
-                    "description_fa": "مایکروسافت (2006، اکتبر) کار با ارزش ثبت نام AppInit_DLLs Retrieved ۱۵ ژوئیه ۲۰۱۵"
+                    "source_name_fa": "رجیستری AppInit",
+                    "description_fa": "مایکروسافت. (2006، اکتبر). کار با مقدار رجیستری AppInit_DLLs. بازبینی شده در 15 جولای 2015."
                 },
                 {
                     "source_name": "AppInit Secure Boot",
                     "description": "Microsoft. (n.d.). AppInit DLLs and Secure Boot. Retrieved July 15, 2015.",
                     "url": "https://msdn.microsoft.com/en-us/library/dn280412",
                     "source_name_fa": "AppInit Secure Boot",
-                    "description_fa": "مایکروسافت (n.d.) AppInit DLLs و Secure Boot Retrieved ۱۵ ژوئیه ۲۰۱۵"
+                    "description_fa": "مایکروسافت. (n.d.). DLL های AppInit و Secure Boot. بازبینی شده در 15 جولای 2015."
                 },
                 {
                     "source_name": "TechNet Autoruns",
                     "description": "Russinovich, M. (2016, January 4). Autoruns for Windows v13.51. Retrieved June 6, 2016.",
                     "url": "https://technet.microsoft.com/en-us/sysinternals/bb963902",
                     "source_name_fa": "TechNet Autoruns",
-                    "description_fa": "Russinovich، M. (2016، 4) Autoruns برای ویندوز v13.51 Retrieved ۶ ژوئن ۲۰۱۶"
+                    "description_fa": "روسینوویچ، ام (2016، 4 ژانویه). اجرای خودکار برای ویندوز 13.51. بازبینی شده در ۶ ژوئن ۲۰۱۶."
                 }
             ],
             "object_marking_refs": [
@@ -72,8 +72,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.1",
-            "name_fa": "AppInit DLLs",
-            "description_fa": "کتابخانه های Dynamic-link (DLLs) که در AppInit_DLLs ارزش در کلیدهای رجیستری (CTI_PRESERVE_0) مشخص شده اند یا ([CTI_PRESERVE] توسط کاربر32.dll به هر فرایندی که کاربر32.dll را بارگذاری می کند بارگیری می شوند. در عمل این تقریبا هر برنامه است، زیرا کاربر32.dll یک کتابخانه بسیار رایج است. [[ویرایش] همانند [Process injection] ([[I_PRESERVE_5])، این مقادیر را می توان برای به دست آوردن پایداری و افزایش امتیاز با ایجاد DLL مخرب برای بارگذاری و اجرا در زمینه فرآیندهای جداگانه بر روی کامپیوتر مورد استفاده قرار داد. [[ویرایش]\n\nعملکرد DLL AppInit در ویندوز 8 و نسخه های بعدی هنگامی که بوت امن فعال می شود غیرفعال می شود. [[ویرایش] <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows</code> <code>HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows</code> (Citation: Elastic Process Injection July 2017) (Citation: AppInit Registry) (Citation: AppInit Secure Boot) https://attack.mitre.org/techniques/T1055"
+            "name_fa": "DLL های AppInit",
+            "description_fa": "کتابخانه‌های پیوند پویا (DLL) که در مقدار AppInit_DLLs در کلیدهای رجیستری <code>HKEY_LOCAL_MACHINE\\Software\\Microsoft\\Windows NT\\CurrentVersion\\Windows</code> یا <code>HKEY_LOCAL_MACHINE\\Software\\Wow6432Node\\Microsoft\\Windows NT\\CurrentVersion\\Windows</code> مشخص شده‌اند توسط user32.dll در هر فرآیندی که user32.dll بارگیری می‌شود، بارگیری می‌شوند. در عمل این تقریباً همه برنامه ها است، زیرا user32.dll یک کتابخانه بسیار رایج است. (Citation: Elastic Process Injection July 2017) مشابه [Process Injection](https://attack.mitre.org/techniques/T1055)، از این مقادیر می‌توان برای به دست آوردن تداوم و افزایش امتیاز با بارگیری و اجرای یک DLL مخرب در زمینه فرآیندهای جداگانه در رایانه سوء استفاده کرد. (Citation: AppInit Registry)\n\nعملکرد AppInit DLL در ویندوز 8 و نسخه‌های جدیدتر وقتی بوت امن فعال باشد غیرفعال می‌شود. (Citation: AppInit Secure Boot)"
         }
     ]
 }

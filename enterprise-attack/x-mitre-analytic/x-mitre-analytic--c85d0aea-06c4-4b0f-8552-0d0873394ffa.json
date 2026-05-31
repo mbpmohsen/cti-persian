@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0008#AN0019",
-                    "external_id": "AN0019"
+                    "external_id": "AN0019",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DevicePlatformMismatch",
-                    "description": "Raise alerts on login from CLI when user typically uses web-only"
+                    "description": "Raise alerts on login from CLI when user typically uses web-only",
+                    "description_fa": "هنگامی که کاربر معمولاً فقط از وب استفاده می کند، هنگام ورود به سیستم از CLI هشدارها را افزایش دهید"
                 },
                 {
                     "field": "SensitiveDocumentAccessPattern",
-                    "description": "Track access to documents labeled as internal/confidential"
+                    "description": "Track access to documents labeled as internal/confidential",
+                    "description_fa": "ردیابی دسترسی به اسناد با برچسب داخلی/محرمانه"
                 },
                 {
                     "field": "AccessFrequencyThreshold",
-                    "description": "Tune for high-volume document reads post login"
+                    "description": "Tune for high-volume document reads post login",
+                    "description_fa": "تنظیم برای سند با حجم بالا خواندن پست ورود به سیستم"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0019",
+            "description_fa": "از ابزارهای CLI یا IPهای منبع غیرمنتظره به M365 یا Google Workspace وارد شوید و به دنبال آن دسترسی به صندوق پست یا سند"
         }
     ]
 }

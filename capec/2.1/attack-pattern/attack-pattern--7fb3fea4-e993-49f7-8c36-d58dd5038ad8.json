@@ -9,25 +9,32 @@
                 {
                     "external_id": "CAPEC-537",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/537.html"
+                    "url": "https://capec.mitre.org/data/definitions/537.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Cristin Goodwin, Joram Borenstein, Guarding against supply chain attacks—Part 2: Hardware risks, 2020--02---03, Microsoft",
                     "external_id": "REF-712",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.microsoft.com/security/blog/2020/02/03/guarding-against-supply-chain-attacks-part-2-hardware-risks/"
+                    "url": "https://www.microsoft.com/security/blog/2020/02/03/guarding-against-supply-chain-attacks-part-2-hardware-risks/",
+                    "description_fa": "کریستین گودوین، جورام بورنشتاین، محافظت در برابر حملات زنجیره تامین - قسمت 2: خطرات سخت افزاری، 2020--02---03، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--7fb3fea4-e993-49f7-8c36-d58dd5038ad8",
@@ -57,11 +64,23 @@
             ],
             "x_capec_skills_required": {
                 "High": "Development skills to construct malicious attachments that can be used to exploit vulnerabilities in typical desktop applications or system configurations. The malicious attachments should be crafted well enough to bypass typical defensive systems (IDS, anti-virus, etc)",
-                "Medium": "Intelligence about the manufacturer's operating environment and infrastructure."
+                "Medium": "Intelligence about the manufacturer's operating environment and infrastructure.",
+                "High_fa": "مهارت‌های توسعه برای ساخت پیوست‌های مخرب که می‌توانند برای سوءاستفاده از آسیب‌پذیری‌ها در برنامه‌های معمولی دسکتاپ یا پیکربندی‌های سیستم مورد استفاده قرار گیرند. پیوست های مخرب باید به اندازه کافی ساخته شوند تا از سیستم های دفاعی معمولی (IDS، آنتی ویروس و غیره) عبور کنند.",
+                "Medium_fa": "اطلاعات در مورد محیط عملیاتی و زیرساخت سازنده."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن، با استفاده از توانایی دستکاری اجزای سیستم‌ها و ابزارهای پشتیبانی اولیه در محیط‌های توسعه و تولید، نرم‌افزارهای مخرب را در محیط توسعه سخت‌افزار و/یا سفت‌افزار وارد می‌کند. هدف نفوذ، تغییر اجزای سخت افزاری توسعه یافته در سیستمی است که برای استقرار در سازمان قربانی به منظور ایجاد اختلال یا سازش بیشتر در نظر گرفته شده است.",
+            "name_fa": "نفوذ به محیط توسعه سخت افزار",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> حریف، با علم به اینکه سازنده ایمیل را بر روی سیستمی مجاور سیستم‌های توسعه سخت‌افزاری که برای طراحی سخت‌افزار و/یا سیستم‌افزار استفاده می‌شود، اجرا می‌کند، یک ایمیل فیشینگ با یک پیوست مخرب برای سازنده ارسال می‌کند. هنگام مشاهده، پیوست مخرب یک درب پشتی نصب می کند که به دشمن اجازه می دهد از راه دور سیستم توسعه سخت افزار مجاور را از ایستگاه کاری سازنده به خطر بیاندازد. سپس دشمن می‌تواند داده‌های حساس روی سیستم سخت‌افزاری را استخراج کرده و تغییر دهد و به محض استقرار سیستم توسعه‌یافته در محل قربانی، امکان سازش در آینده را فراهم کند.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "قربانی باید از ایمیل یا رسانه‌های قابل جابجایی سیستم‌هایی که IDE را اجرا می‌کنند (یا سیستم‌های مجاور سیستم‌های IDE) استفاده کند.",
+                "قربانی باید دارای سیستمی باشد که برنامه های کاربردی قابل بهره برداری و/یا پیکربندی آسیب پذیر را اجرا می کند تا امکان نفوذ اولیه را فراهم کند.",
+                "حریف باید دانش کاری در مورد برخی از اجزای درگیر در سیستم IDE و همچنین زیرساخت داشته باشد."
+            ]
         }
     ],
     "type": "bundle"

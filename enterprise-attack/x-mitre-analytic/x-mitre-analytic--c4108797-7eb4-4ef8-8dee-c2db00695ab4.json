@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0032#AN0092",
-                    "external_id": "AN0092"
+                    "external_id": "AN0092",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,10 +46,13 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DirectoryScope",
-                    "description": "Restrict detection to critical directories to avoid noise from benign hidden files like .ssh or .config."
+                    "description": "Restrict detection to critical directories to avoid noise from benign hidden files like .ssh or .config.",
+                    "description_fa": "شناسایی را به دایرکتوری های مهم محدود کنید تا از نویز ناشی از فایل های مخفی خوش خیم مانند .ssh یا .config جلوگیری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0092",
+            "description_fa": "ایجاد فایل ها یا دایرکتوری ها با علامت '.' در دایرکتوری های دارای امتیاز (/etc، /var، /usr/bin). نمای مدافع: نظارت بر گزارش‌های حسابرسی شده برای ایجاد فایل‌هایی که نام آن با '.' شروع می‌شود. و با بافت کاربر/فرایند غیرمعمول مرتبط است."
         }
     ]
 }

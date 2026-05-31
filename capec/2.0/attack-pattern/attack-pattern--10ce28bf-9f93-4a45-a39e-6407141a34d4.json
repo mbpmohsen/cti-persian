@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-501",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/501.html"
+                    "url": "https://capec.mitre.org/data/definitions/501.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-923",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/923.html"
+                    "url": "http://cwe.mitre.org/data/definitions/923.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Erika Chin, Adrienne Porter Felt, Kate Greenwood, David Wagner, Analyzing Inter-Application Communication in Android, 2011, International Conference on Mobile Systems, Applications, and Services (MobiSys)",
                     "external_id": "REF-427",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://people.eecs.berkeley.edu/~daw/papers/intents-mobisys11.pdf"
+                    "url": "https://people.eecs.berkeley.edu/~daw/papers/intents-mobisys11.pdf",
+                    "description_fa": "اریکا چین، آدرین پورتر فلت، کیت گرین‌وود، دیوید واگنر، تجزیه و تحلیل ارتباطات بین برنامه‌ای در اندروید، 2011، کنفرانس بین‌المللی سیستم‌های تلفن همراه، برنامه‌ها و خدمات (MobiSys)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--10ce28bf-9f93-4a45-a39e-6407141a34d4",
@@ -38,6 +42,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -52,11 +59,21 @@
                 "Malware capable of acting on the adversary's objectives."
             ],
             "x_capec_skills_required": {
-                "High": "The adversary must typically overcome network and host defenses in order to place malware on the system."
+                "High": "The adversary must typically overcome network and host defenses in order to place malware on the system.",
+                "High_fa": "حریف معمولاً باید بر دفاع از شبکه و میزبان غلبه کند تا بدافزار را روی سیستم قرار دهد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن قصد ضمنی ارسال شده برای راه اندازی یک فعالیت قابل اعتماد مبتنی بر اندروید را رهگیری می کند و در عوض یک فعالیت تقلبی را در جای خود راه اندازی می کند. سپس از فعالیت مخرب برای تقلید از رابط کاربری فعالیت مورد اعتماد استفاده می‌شود و هدف را ترغیب می‌کند تا داده‌های حساس را وارد کند، گویی که با فعالیت مورد اعتماد در تعامل است.",
+            "name_fa": "ربایش فعالیت اندروید",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>پیدا کردن یک برنامه اندرویدی که از مقاصد ضمنی استفاده می‌کند: </b>از آنجایی که این حمله فقط بر روی برنامه‌های اندرویدی که از مقاصد ضمنی استفاده می‌کنند، به جای اهداف صریح، کار می‌کند، دشمنی که برای شناسایی ضمنی یک برنامه Android و bas استفاده می‌کند، ابتدا باید یک برنامه کاربردی را به طور ضمنی شناسایی کند. این فعالیت چیست.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>ایجاد یک برنامه مخرب: </b> دشمن باید یک برنامه اندرویدی مخرب ایجاد کند که هدف آن رهگیری اهداف ضمنی برای راه‌اندازی یک فعالیت مورد اعتماد مبتنی بر Adroid است. این برنامه مخرب رابط کاربری فعال مورد اعتماد را تقلید می‌کند تا کاربر را وادار به وارد کردن داده‌های حساس کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>نوع هدفی را که می‌خواهید در فایل مانیفست بدن برنامه مخرب رهگیری شود، با استفاده از فیلتر intent</tdli></><p><b></><p>user</tdli></><p></tdli></><p>تخصیص دهید. برای دانلود برنامه مخرب: </b>دشمن باید کاربر را با استفاده از برنامه هدفمند وادار کند تا برنامه مخرب را به هر طریقی که لازم است دانلود کند</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>جمع آوری داده های حساس از طریق برنامه مخرب: </b>پس از راه اندازی برنامه مخرب، برنامه مخرب هدف راه اندازی می شود. در عوض به نظر می رسد با رابط آن فعالیت یکسان است. وقتی کاربر اطلاعات حساسی را وارد می‌کند، توسط برنامه مخرب ضبط می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>اطلاعات ورود به سیستم را از یک کاربر با استفاده از یک برنامه مخرب جمع‌آوری کنید</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "حریف باید قبلاً برنامه مخرب را روی دستگاه Android نصب کرده باشد که به جای فعالیت مورد اعتماد اجرا می شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "بدافزاری که قادر به عمل بر روی اهداف دشمن است."
+            ]
         }
     ],
     "spec_version": "2.0",

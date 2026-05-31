@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0296#AN0823",
-                    "external_id": "AN0823"
+                    "external_id": "AN0823",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredRegistryPaths",
-                    "description": "Specific network stack and DNS registry keys that vary by enterprise configuration."
+                    "description": "Specific network stack and DNS registry keys that vary by enterprise configuration.",
+                    "description_fa": "پشته شبکه خاص و کلیدهای رجیستری DNS که بسته به پیکربندی سازمانی متفاوت است."
                 },
                 {
                     "field": "DowngradeCipherList",
-                    "description": "List of weak/legacy ciphers tuned per environment for TLS downgrade detection."
+                    "description": "List of weak/legacy ciphers tuned per environment for TLS downgrade detection.",
+                    "description_fa": "فهرست رمزهای ضعیف/ قدیمی که در هر محیط برای تشخیص تنزل رتبه TLS تنظیم شده‌اند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period between config changes and abnormal network connections."
+                    "description": "Correlation period between config changes and abnormal network connections.",
+                    "description_fa": "دوره همبستگی بین تغییرات پیکربندی و اتصالات غیرعادی شبکه."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0823",
+            "description_fa": "تلاش‌های مشکوک برای مسمومیت با DNS/ARP، تغییرات غیرمجاز در پیکربندی رجیستری/شبکه، یا فعالیت‌های کاهش رتبه TLS غیرعادی را شناسایی می‌کند. تغییرات در پیکربندی سیستم را با جریان های شبکه غیرمعمول بعدی یا رویدادهای احراز هویت مرتبط می کند."
         }
     ]
 }

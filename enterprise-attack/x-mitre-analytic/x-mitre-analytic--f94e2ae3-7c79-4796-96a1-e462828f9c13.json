@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0321#AN0909",
-                    "external_id": "AN0909"
+                    "external_id": "AN0909",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VirtualizationBinaryWhitelist",
-                    "description": "Exclude known administrative VM software usage in enterprise environments."
+                    "description": "Exclude known administrative VM software usage in enterprise environments.",
+                    "description_fa": "استفاده از نرم افزار VM اداری شناخته شده در محیط های سازمانی را حذف کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate registry and service modifications with VM process starts within a narrow time frame."
+                    "description": "Correlate registry and service modifications with VM process starts within a narrow time frame.",
+                    "description_fa": "ارتباط تغییرات رجیستری و سرویس با فرآیند VM در یک بازه زمانی محدود شروع می شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0909",
+            "description_fa": "اجرای غیرمعمول باینری های مجازی سازی (VBoxManage.exe، vmware-vmx.exe، vmwp.exe) با آرگومان های اعلان بدون سر یا سرکوب شده. تغییرات رجیستری و سرویس مرتبط با نصب های مجازی سازی. نمای مدافع: ناهنجاری‌هایی در ایجاد فرآیند، ابرداده‌های سرویس و نوشته‌های رجیستری با فعال کردن ماشین‌های مجازی مخفی مرتبط هستند."
         }
     ]
 }

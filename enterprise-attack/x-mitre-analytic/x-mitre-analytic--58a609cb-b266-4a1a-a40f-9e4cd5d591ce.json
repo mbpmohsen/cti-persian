@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0284#AN0790",
-                    "external_id": "AN0790"
+                    "external_id": "AN0790",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DatastoreExfilThreshold",
-                    "description": "Threshold of bytes exfiltrated from ESXi datastore files."
+                    "description": "Threshold of bytes exfiltrated from ESXi datastore files.",
+                    "description_fa": "آستانه بایت های استخراج شده از فایل های ذخیره داده ESXi."
                 },
                 {
                     "field": "ApprovedDestinations",
-                    "description": "Whitelist of domains approved for API communication to prevent false positives."
+                    "description": "Whitelist of domains approved for API communication to prevent false positives.",
+                    "description_fa": "لیست سفید دامنه های تایید شده برای ارتباط API برای جلوگیری از مثبت کاذب."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0790",
+            "description_fa": "سرویس‌های ESXi (vmx، hostd) درخواست‌های HTTPS POST خروجی را به سایت‌های ذخیره‌سازی متن ایجاد می‌کنند. دیدگاه مدافع: ذخیره داده یا گزارش غیرعادی که با ترافیک به مقاصدی مشابه pastebin می‌خواند."
         }
     ]
 }

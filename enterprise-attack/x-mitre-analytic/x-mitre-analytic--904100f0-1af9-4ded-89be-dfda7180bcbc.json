@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0124#AN0346",
-                    "external_id": "AN0346"
+                    "external_id": "AN0346",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0346",
-            "description": "Shell/utility (base64, xxd -p, od, openssl enc -base64, python/perl base64 libraries) encodes data \u2192 subsequent outbound connections (curl/wget/bash TCP, socat, python requests) with high asymmetry or Base64/MIME blobs in HTTP/DNS payloads.",
+            "description": "Shell/utility (base64, xxd -p, od, openssl enc -base64, python/perl base64 libraries) encodes data → subsequent outbound connections (curl/wget/bash TCP, socat, python requests) with high asymmetry or Base64/MIME blobs in HTTP/DNS payloads.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EncodingToolsAllowList",
-                    "description": "Build/backup jobs that legitimately call base64/openssl."
+                    "description": "Build/backup jobs that legitimately call base64/openssl.",
+                    "description_fa": "ایجاد/پشتیبان گیری کارهایی که به طور قانونی با base64/openssl تماس می گیرند."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Shannon entropy for payloads (e.g., >4.5)."
+                    "description": "Shannon entropy for payloads (e.g., >4.5).",
+                    "description_fa": "آنتروپی شانون برای محموله ها (به عنوان مثال، > 4.5)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Join window between exec and egress (default 10m)."
+                    "description": "Join window between exec and egress (default 10m).",
+                    "description_fa": "پیوستن به پنجره بین exec و egress (پیش‌فرض 10 متر)."
                 },
                 {
                     "field": "OutInRatio",
-                    "description": "Bytes_out / bytes_in threshold (default 4)."
+                    "description": "Bytes_out / bytes_in threshold (default 4).",
+                    "description_fa": "Bytes_out / bytes_in آستانه (پیش‌فرض 4)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0346",
+            "description_fa": "Shell/Uility (base64، xxd -p، od، openssl enc -base64، کتابخانه‌های python/perl base64) داده‌ها → اتصالات خروجی بعدی (curl/wget/bash TCP، socat، python درخواست‌ها) را با عدم تقارن بالا یا Base64 inloads/MITTP."
         }
     ]
 }

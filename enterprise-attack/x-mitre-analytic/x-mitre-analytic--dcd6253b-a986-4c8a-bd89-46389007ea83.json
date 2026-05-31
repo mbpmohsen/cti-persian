@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0478#AN1314",
-                    "external_id": "AN1314"
+                    "external_id": "AN1314",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 1314",
-            "description": "Cause\u2192effect chain: (1) User-facing app (Office/PDF/archiver/browser) records an open/click or abnormal event, then (2) a downloaded file is created in a user-writable path and/or decompressed, (3) the parent user app spawns a living-off-the-land binary (e.g., powershell/cmd/mshta/rundll32/msiexec/wscript/expand/zip) or installer, and (4) immediate outbound HTTP(S)/DNS/SMB from the same lineage.",
+            "description": "Cause→effect chain: (1) User-facing app (Office/PDF/archiver/browser) records an open/click or abnormal event, then (2) a downloaded file is created in a user-writable path and/or decompressed, (3) the parent user app spawns a living-off-the-land binary (e.g., powershell/cmd/mshta/rundll32/msiexec/wscript/expand/zip) or installer, and (4) immediate outbound HTTP(S)/DNS/SMB from the same lineage.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., 15 minutes) from document open to child/egress."
+                    "description": "Correlation window (e.g., 15 minutes) from document open to child/egress.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، 15 دقیقه) از سند باز به فرزند/خروج."
                 },
                 {
                     "field": "HighRiskParents",
-                    "description": "Apps that should rarely spawn OS utilities (winword.exe, excel.exe, powerpnt.exe, acrord32.exe, chrome/msedge/firefox, 7zFM.exe, winrar.exe, explorer.exe)."
+                    "description": "Apps that should rarely spawn OS utilities (winword.exe, excel.exe, powerpnt.exe, acrord32.exe, chrome/msedge/firefox, 7zFM.exe, winrar.exe, explorer.exe).",
+                    "description_fa": "برنامه هایی که به ندرت باید ابزارهای سیستم عامل را ایجاد کنند (winword.exe، excel.exe، powerpnt.exe، acrord32.exe، chrome/msedge/firefox، 7zFM.exe، winrar.exe، explorer.exe)."
                 },
                 {
                     "field": "HighRiskChildren",
-                    "description": "LOLBIN list: powershell.exe, cmd.exe, wscript.exe, cscript.exe, mshta.exe, rundll32.exe, regsvr32.exe, msiexec.exe, curl.exe, bitsadmin.exe, pcalua.exe, expand.exe, tar.exe."
+                    "description": "LOLBIN list: powershell.exe, cmd.exe, wscript.exe, cscript.exe, mshta.exe, rundll32.exe, regsvr32.exe, msiexec.exe, curl.exe, bitsadmin.exe, pcalua.exe, expand.exe, tar.exe.",
+                    "description_fa": "لیست LOLBIN: powershell.exe، cmd.exe، wscript.exe، cscript.exe، mshta.exe، rundll32.exe، regsvr32.exe، msiexec.exe، curl.exe، bitsadmin.exe، pcalua.exe، expand.exe، tar.exe."
                 },
                 {
                     "field": "UserPaths",
-                    "description": "Writable paths to watch: %USERPROFILE%\\Downloads, %TEMP%, %APPDATA%\\*, OneDrive/Teams cache, Office startup folders."
+                    "description": "Writable paths to watch: %USERPROFILE%\\Downloads, %TEMP%, %APPDATA%\\*, OneDrive/Teams cache, Office startup folders.",
+                    "description_fa": "مسیرهای قابل نوشتن برای تماشا: %USERPROFILE%\\Downloads، %TEMP%, %APPDATA%\\*، حافظه پنهان OneDrive/Teams، پوشه‌های راه‌اندازی Office."
                 },
                 {
                     "field": "EgressAllowList",
-                    "description": "Corporate update/CDN domains and proxy egress CIDRs to suppress benign updater traffic."
+                    "description": "Corporate update/CDN domains and proxy egress CIDRs to suppress benign updater traffic.",
+                    "description_fa": "دامنه‌های به‌روزرسانی/CDN شرکتی و CIDR‌های پراکسی را برای سرکوب ترافیک به‌روزرسانی‌کننده‌های خوش‌خیم خارج می‌کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1314",
+            "description_fa": "زنجیره علت → اثر: (1) برنامه رو به روی کاربر (Office/PDF/بایگانی/مرورگر) یک رویداد باز/کلیک یا غیرعادی را ضبط می‌کند، سپس (2) یک فایل دانلود شده در مسیری قابل نوشتن توسط کاربر ایجاد می‌شود و/یا فشرده می‌شود، (3) برنامه کاربر والد یک باینری زنده خارج از زمین ایجاد می‌کند (مثلا. powershell/cmd/mshta/rundll32/msiexec/wscript/expand/zip) یا نصب‌کننده، و (4) HTTP(S)/DNS/SMB فوری خروجی از همان تبار."
         }
     ]
 }

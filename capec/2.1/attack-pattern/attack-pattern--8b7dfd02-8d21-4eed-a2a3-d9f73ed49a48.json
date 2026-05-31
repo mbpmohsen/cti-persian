@@ -9,29 +9,37 @@
                 {
                     "external_id": "CAPEC-310",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/310.html"
+                    "url": "https://capec.mitre.org/data/definitions/310.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Defense Advanced Research Projects Agency Information Processing Techniques Office, Information Sciences Institute University of Southern California, RFC793 - Transmission Control Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-128",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc793.html"
+                    "url": "http://www.faqs.org/rfcs/rfc793.html",
+                    "description_fa": "دفتر تکنیک های پردازش اطلاعات آژانس پروژه های تحقیقاتی پیشرفته دفاعی، موسسه علوم اطلاعات دانشگاه کالیفرنیای جنوبی، RFC793 - پروتکل کنترل انتقال، 1981-09، آژانس پروژه های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, The Art of Port Scanning (Volume: 7, Issue. 51), Phrack Magazine, 1997",
                     "external_id": "REF-130",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://phrack.org/issues/51/11.html"
+                    "url": "http://phrack.org/issues/51/11.html",
+                    "description_fa": "گوردون \"فئودور\" لیون، هنر اسکن بندر (جلد: 7، شماره 51)، مجله Phrack، 1997",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--8b7dfd02-8d21-4eed-a2a3-d9f73ed49a48",
@@ -59,6 +67,19 @@
                     "Other",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -72,11 +93,21 @@
                 "Probing requires the ability to interactively send and receive data from a target, whereas passive listening requires a sufficient understanding of the protocol to analyze a preexisting channel of communication."
             ],
             "x_capec_skills_required": {
-                "Medium": "To probe a system remotely without detection requires careful planning and patience."
+                "Medium": "To probe a system remotely without detection requires careful planning and patience.",
+                "Medium_fa": "بررسی یک سیستم از راه دور بدون شناسایی نیاز به برنامه ریزی دقیق و صبر دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم برای یافتن نسخه‌ها یا انواع نرم‌افزار آسیب‌پذیر، مانند نسخه‌های سیستم‌عامل یا سرویس‌های شبکه، درگیر فعالیت‌های اسکن می‌شود. پیکربندی‌های شبکه آسیب‌پذیر یا قابل بهره‌برداری، مانند سیستم‌های فایروال نادرست، یا سیستم‌های پیکربندی نادرست در DMZ یا شبکه خارجی، فرصت‌هایی را برای مهاجم فراهم می‌کنند. انواع متداول نرم افزارهای آسیب پذیر شامل سیستم عامل ها یا سرویس های وصله نشده (مانند FTP، Telnet، SMTP، SNMP) در حال اجرا بر روی پورت های باز است که مهاجم شناسایی کرده است. مهاجمان معمولاً زمانی که شبکه خارجی پورت اسکن شد و اهداف بالقوه آشکار شد، جستجو برای نرم افزار آسیب پذیر را آغاز می کنند.",
+            "name_fa": "اسکن نرم افزارهای آسیب پذیر",
+            "x_capec_prerequisites_fa": [
+                "دسترسی به شبکه ای که سیستم مورد نظر در آن قرار دارد.",
+                "ابزارهای نرم افزاری که برای بررسی سیستم ها در محدوده ای از پورت ها و پروتکل ها استفاده می شوند."
+            ],
+            "x_capec_resources_required_fa": [
+                "کاوش به توانایی ارسال و دریافت تعاملی داده از یک هدف نیاز دارد، در حالی که گوش دادن غیرفعال به درک کافی از پروتکل برای تجزیه و تحلیل یک کانال ارتباطی موجود نیاز دارد."
+            ]
         }
     ],
     "type": "bundle"

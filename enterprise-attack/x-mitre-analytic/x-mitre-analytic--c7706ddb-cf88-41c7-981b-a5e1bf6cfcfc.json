@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0210#AN0590",
-                    "external_id": "AN0590"
+                    "external_id": "AN0590",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Tune for detection of off-hours or abnormal logon spikes."
+                    "description": "Tune for detection of off-hours or abnormal logon spikes.",
+                    "description_fa": "برای تشخیص ساعات غیرفعال یا جهش های ورود غیرعادی تنظیم کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope to sensitive domain accounts (e.g., Domain Admins)."
+                    "description": "Scope to sensitive domain accounts (e.g., Domain Admins).",
+                    "description_fa": "دامنه دسترسی به حساب های دامنه حساس (به عنوان مثال، مدیران دامنه)."
                 },
                 {
                     "field": "LogonType",
-                    "description": "Distinguish between interactive, service, and network logons."
+                    "description": "Distinguish between interactive, service, and network logons.",
+                    "description_fa": "بین ورودهای تعاملی، خدماتی و شبکه تفاوت قائل شوید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0590",
+            "description_fa": "تشخیص رفتار ورود مشکوک با استفاده از حساب‌های دامنه معتبر در چندین میزبان، ساعات غیرفعال یا جلسات همزمان از مکان‌های جغرافیایی دور."
         }
     ]
 }

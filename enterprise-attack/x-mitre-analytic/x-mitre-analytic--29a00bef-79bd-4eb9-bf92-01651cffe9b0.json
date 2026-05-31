@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0273#AN0763",
-                    "external_id": "AN0763"
+                    "external_id": "AN0763",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PortProfiles",
-                    "description": "Define expected TLS port usage to flag anomalies."
+                    "description": "Define expected TLS port usage to flag anomalies.",
+                    "description_fa": "استفاده از پورت TLS مورد انتظار را برای پرچم‌گذاری ناهنجاری‌ها تعریف کنید."
                 },
                 {
                     "field": "TrafficAsymmetryRatio",
-                    "description": "Sent/received byte thresholds to catch hidden C2."
+                    "description": "Sent/received byte thresholds to catch hidden C2.",
+                    "description_fa": "آستانه بایت ارسال/دریافت برای گرفتن C2 پنهان."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0763",
+            "description_fa": "تونل‌های غیرمعمول TLS از طریق پورت‌هایی که معمولاً رمزگذاری نشده‌اند (به عنوان مثال، TLS در پورت 8080، 53). Defender NetFlow/IPFIX یا بازرسی بسته را می بیند که حجم ترافیک با آنتروپی بالا و نسبت های مبادله مشتری/سرور نامتقارن را نشان می دهد."
         }
     ]
 }

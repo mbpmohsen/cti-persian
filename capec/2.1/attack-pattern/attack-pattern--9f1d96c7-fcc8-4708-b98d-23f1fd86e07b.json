@@ -9,17 +9,20 @@
                 {
                     "external_id": "CAPEC-234",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/234.html"
+                    "url": "https://capec.mitre.org/data/definitions/234.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-732",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/732.html"
+                    "url": "http://cwe.mitre.org/data/definitions/732.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-648",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/648.html"
+                    "url": "http://cwe.mitre.org/data/definitions/648.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--9f1d96c7-fcc8-4708-b98d-23f1fd86e07b",
@@ -46,7 +49,16 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف کنترل فرآیندی را به دست می‌آورد که به آن امتیازات بالاتری نسبت داده می‌شود تا کد دلخواه را با آن امتیازات اجرا کند. به برخی از فرآیندها، معمولاً از طریق ارتباط با یک کاربر، گروه یا نقش خاص، امتیازات بالایی در یک سیستم عامل اختصاص داده می شود. اگر مهاجم بتواند این فرآیند را هک کند، می‌تواند سطح امتیاز آن را برای اجرای کد خود در نظر بگیرد.",
+            "name_fa": "ربودن یک فرآیند ممتاز",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>پیدا کردن فرآیند با امتیازات بالا: </b>دشمن برای فرآیندهایی که با امتیازات بالا اجرا می‌شوند بررسی می‌کند.</p></li><table><tbody><tr><th>تکنیک‌ها کاوش می‌کنند <tr><tr><d>تکنیک‌ها از امنیت ویندوز استفاده می‌کنند. برای مشاهده اینکه آیا فرآیندی با امتیازات مدیر اجرا می‌شود یا نه.</td></tr><tr><td>در لینوکس، از دستور ps برای مشاهده فرآیندهای در حال اجرا استفاده کنید و خروجی را به جستجوی یک کاربر خاص یا کاربر اصلی منتقل کنید. </b>دشمن به دنبال آسیب‌پذیری در فرآیند در حال اجرا است که امکان اجرای کد دلخواه با امتیاز فرآیند در حال اجرا را فراهم می‌کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>به‌دنبال اعتبار سنجی ورودی نادرست بگردید</td></tr><tr><tr> داده های نامعتبر.</td></tr><tr><td>از ابزارهای سیستمی استفاده کنید که از کنترل فرآیند پشتیبانی می کنند که به اندازه کافی ایمن نشده اند</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>کد دلخواه را اجرا می کند و vulnerloit می کند. فرآیند در حال اجرا.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "فرآیند یا سیستم عامل هدفمند باید دارای اشکالی باشد که به مهاجمان اجازه می دهد فرآیند هدف را هک کنند."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

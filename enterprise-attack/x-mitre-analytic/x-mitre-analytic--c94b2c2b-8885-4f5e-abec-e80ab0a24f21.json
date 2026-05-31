@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0166#AN0472",
-                    "external_id": "AN0472"
+                    "external_id": "AN0472",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,17 +62,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "May need tuning based on frequency of Exchange agent updates in environment."
+                    "description": "May need tuning based on frequency of Exchange agent updates in environment.",
+                    "description_fa": "ممکن است نیاز به تنظیم بر اساس فراوانی به‌روزرسانی‌های عامل Exchange در محیط داشته باشد."
                 },
                 {
                     "field": "AssemblyPath",
-                    "description": "Specific DLL paths used by Exchange for registered agents may vary between deployments."
+                    "description": "Specific DLL paths used by Exchange for registered agents may vary between deployments.",
+                    "description_fa": "مسیرهای DLL خاصی که توسط Exchange برای عوامل ثبت شده استفاده می شود ممکن است در بین استقرارها متفاوت باشد."
                 },
                 {
                     "field": "CmdletInvocationThreshold",
-                    "description": "Tunable threshold for repeated use of transport agent management cmdlets."
+                    "description": "Tunable threshold for repeated use of transport agent management cmdlets.",
+                    "description_fa": "آستانه قابل تنظیم برای استفاده مکرر از cmdlet های مدیریت عامل حمل و نقل."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0472",
+            "description_fa": "دشمن یک عامل انتقال مخرب Microsoft Exchange DLL (مجموعه دات نت) را ثبت می کند، آن را از طریق PowerShell یا Exchange Management Shell پیکربندی می کند و با دستکاری منطق پردازش ایمیل بر اساس قوانین یا هدرها، اجرای کد را ادامه می دهد."
         }
     ]
 }

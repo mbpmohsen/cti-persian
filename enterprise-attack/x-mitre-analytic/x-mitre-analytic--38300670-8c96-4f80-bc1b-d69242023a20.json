@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0431#AN1203",
-                    "external_id": "AN1203"
+                    "external_id": "AN1203",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SenderDomainWhitelist",
-                    "description": "Defines approved sender domains to suppress alerts for expected mismatches, reducing false positives."
+                    "description": "Defines approved sender domains to suppress alerts for expected mismatches, reducing false positives.",
+                    "description_fa": "دامنه های فرستنده تایید شده را برای سرکوب هشدارها برای عدم تطابق مورد انتظار، کاهش مثبت کاذب تعریف می کند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Sets correlation period for repeated spoofing attempts to flag campaigns vs. isolated misconfigurations."
+                    "description": "Sets correlation period for repeated spoofing attempts to flag campaigns vs. isolated misconfigurations.",
+                    "description_fa": "دوره همبستگی را برای تلاش‌های مکرر جعل برای پرچم‌گذاری کمپین‌ها در مقابل پیکربندی‌های اشتباه جدا شده تنظیم می‌کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1203",
+            "description_fa": "ایمیل‌های جعلی را با تجزیه و تحلیل گزارش‌های سرور ایمیل (به عنوان مثال، Postfix، Sendmail) برای فیلدهای سرصفحه ناهمخوان، بررسی‌های ناموفق SPF/DKIM و ناهنجاری‌ها در گزارش‌های پروکسی SMTP شناسایی می‌کند. Defender تفاوت هایی را بین دامنه ارسال، دامنه مسیر بازگشت و ابرداده پیام مشاهده می کند."
         }
     ]
 }

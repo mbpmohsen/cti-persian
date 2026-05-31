@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0531#AN1469",
-                    "external_id": "AN1469"
+                    "external_id": "AN1469",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MFABypassMechanism",
-                    "description": "App password or legacy auth activity bypassing MFA policies."
+                    "description": "App password or legacy auth activity bypassing MFA policies.",
+                    "description_fa": "گذرواژه برنامه یا فعالیت تأیید اعتبار قدیمی با دور زدن خط‌مشی‌های MFA."
                 },
                 {
                     "field": "SourceIPAllowlist",
-                    "description": "Expected IPs allowed to perform admin identity operations."
+                    "description": "Expected IPs allowed to perform admin identity operations.",
+                    "description_fa": "IP های مورد انتظار مجاز به انجام عملیات هویت ادمین هستند."
                 },
                 {
                     "field": "ApplicationCredentialType",
-                    "description": "Track types like `client_secret`, `certificate`, `password`, `federated`."
+                    "description": "Track types like `client_secret`, `certificate`, `password`, `federated`.",
+                    "description_fa": "انواع ردیابی مانند «مشتری_محرمانه»، «گواهینامه»، «گذرواژه»، «فدرال»."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1469",
+            "description_fa": "افزودن اعتبارنامه ها (کلیدها، رمزهای عبور برنامه، گواهی های x.509) به حساب های ابری موجود، اصول سرویس، یا برنامه های OAuth از طریق پورتال یا API توسط هویت های غیر استاندارد یا محدوده IP."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0050#AN0138",
-                    "external_id": "AN0138"
+                    "external_id": "AN0138",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UnsignedAddInBehavior",
-                    "description": "Admins may allow or block unsigned add-ins depending on GPO configuration"
+                    "description": "Admins may allow or block unsigned add-ins depending on GPO configuration",
+                    "description_fa": "بسته به پیکربندی GPO، مدیران ممکن است افزونه‌های بدون امضا را مجاز یا مسدود کنند"
                 },
                 {
                     "field": "OfficeProductVersion",
-                    "description": "Different Office versions store trusted paths and add-in configs in version-specific locations"
+                    "description": "Different Office versions store trusted paths and add-in configs in version-specific locations",
+                    "description_fa": "نسخه‌های مختلف آفیس مسیرهای قابل اعتماد و تنظیمات افزودنی را در مکان‌های مخصوص نسخه ذخیره می‌کنند"
                 },
                 {
                     "field": "AddInTrigger",
-                    "description": "Some add-ins only load on specific actions (new document, open file, etc.)"
+                    "description": "Some add-ins only load on specific actions (new document, open file, etc.)",
+                    "description_fa": "برخی از افزونه‌ها فقط روی اقدامات خاصی بارگیری می‌شوند (سند جدید، فایل باز و غیره)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0138",
+            "description_fa": "افزونه های مخرب آفیس که از طریق مسیرهای بارگیری خودکار VSTO، COM یا VBA بارگیری می شوند. پس از راه اندازی Word/Excel/Outlook، افزونه کد را بدون اقدام کاربر اجرا می کند. افزونه در فهرست قابل اعتماد قرار دارد یا از طریق زیرسیستم Office COM/VBE ثبت شده است. رفتار شامل اجرای بدون علامت، زمینه بار غیرعادی، یا فرآیند مفسر تخم ریزی افزودنی است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0111#AN0309",
-                    "external_id": "AN0309"
+                    "external_id": "AN0309",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegexPatterns",
-                    "description": "Customizable credential-detection regex (e.g., API_KEY=, bearer token formats) depending on enterprise apps in use"
+                    "description": "Customizable credential-detection regex (e.g., API_KEY=, bearer token formats) depending on enterprise apps in use",
+                    "description_fa": "Regex شناسایی اعتبار قابل تنظیم (به عنوان مثال، API_KEY=، قالب‌های توکن حامل) بسته به برنامه‌های سازمانی در حال استفاده"
                 },
                 {
                     "field": "AllowedDomains",
-                    "description": "Exclude known trusted domains or automated system-to-system messages"
+                    "description": "Exclude known trusted domains or automated system-to-system messages",
+                    "description_fa": "دامنه های مورد اعتماد شناخته شده یا پیام های خودکار سیستم به سیستم را حذف کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust correlation period for bulk credential sharing events"
+                    "description": "Adjust correlation period for bulk credential sharing events",
+                    "description_fa": "دوره همبستگی را برای رویدادهای اشتراک‌گذاری اعتبار انبوه تنظیم کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0309",
+            "description_fa": "شناسایی رویدادهای پیام را در ایمیل و ابزارهای همکاری (مانند Outlook، Teams) که شامل الگوهای regex مانند شبیه اعتبارنامه‌ها، کلیدهای API یا نشانه‌ها هستند، مرتبط می‌کند. فعالیت ارسال غیرعادی یا کپی انبوه محتوای چت/ایمیل حاوی اسرار پرچم گذاری شده است. رفتار مشکوک شامل چسباندن اسرار کاربران به پیام‌های مستقیم یا پیوست کردن فایل‌های پیکربندی با رمز عبور است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0596#AN1639",
-                    "external_id": "AN1639"
+                    "external_id": "AN1639",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time range to correlate post-SSH activities (e.g., 45s)"
+                    "description": "Time range to correlate post-SSH activities (e.g., 45s)",
+                    "description_fa": "محدوده زمانی برای مرتبط کردن فعالیت‌های پس از SSH (به عنوان مثال، 45 ثانیه)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Define authorized users to reduce false positives"
+                    "description": "Define authorized users to reduce false positives",
+                    "description_fa": "کاربران مجاز را برای کاهش موارد مثبت کاذب تعریف کنید"
                 },
                 {
                     "field": "CommandLineKeywords",
-                    "description": "Suspicious terms like reverse shells, base64, curl"
+                    "description": "Suspicious terms like reverse shells, base64, curl",
+                    "description_fa": "اصطلاحات مشکوک مانند پوسته معکوس، base64، curl"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1639",
+            "description_fa": "ورود به سیستم SSH از طریق گزارش‌های یکپارچه شناسایی می‌شود و به دنبال آن اجرای فرآیند غیرعادی، به‌ویژه خارج از الگوهای رفتار عادی کاربر انجام می‌شود."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0333#AN0945",
-                    "external_id": "AN0945"
+                    "external_id": "AN0945",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AtPermissions",
-                    "description": "Whether `at.allow` and `at.deny` are properly configured."
+                    "description": "Whether `at.allow` and `at.deny` are properly configured.",
+                    "description_fa": "اینکه «at.allow» و «at.deny» به درستی پیکربندی شده باشند."
                 },
                 {
                     "field": "ExecutionCommand",
-                    "description": "Target binary executed via the at job."
+                    "description": "Target binary executed via the at job.",
+                    "description_fa": "باینری هدف از طریق at job اجرا می شود."
                 },
                 {
                     "field": "RunUser",
-                    "description": "Detection of root user scheduling job with unusual command."
+                    "description": "Detection of root user scheduling job with unusual command.",
+                    "description_fa": "تشخیص کار برنامه ریزی کاربر ریشه با دستور غیر معمول."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0945",
+            "description_fa": "فراخوانی کاربر یا ریشه دستور «at» را برای برنامه‌ریزی یک کار، و به دنبال آن اجرای کار با استفاده از LaunchServices و فعالیت در /usr/lib/cron/at شناسایی می‌کند."
         }
     ]
 }

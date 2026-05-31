@@ -14,21 +14,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1138",
                     "external_id": "T1138",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Elastic Process Injection July 2017",
                     "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017.",
                     "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process",
-                    "source_name_fa": "Elastic Process injection جولای 2017",
-                    "description_fa": "حسینی، A. (2017، 18 ژوئیه) ده تکنیک تزریق فرایند: یک بررسی فنی از تکنیک های تزریق معمول و روندی. Retrieved 7 دسامبر 2017"
+                    "source_name_fa": "Elastic Process Injection جولای 2017",
+                    "description_fa": "حسینی، ع (۱۳۹۶، ۲۷ تیر). ده تکنیک تزریق فرآیند: بررسی فنی تکنیک های رایج و پرطرفدار فرآیند تزریق. بازبینی شده در 7 دسامبر 2017."
                 },
                 {
                     "source_name": "Black Hat 2015 App Shim",
                     "description": "Pierce, Sean. (2015, November). Defending Against Malicious Application Compatibility Shims. Retrieved June 22, 2017.",
                     "url": "https://www.blackhat.com/docs/eu-15/materials/eu-15-Pierce-Defending-Against-Malicious-Application-Compatibility-Shims-wp.pdf",
                     "source_name_fa": "Black Hat 2015 App Shim",
-                    "description_fa": "پیرس، شان (2015، نوامبر) دفاع از سوء استفاده از Malicious Application Compatibility Shims Retrieved 22 ژوئن 2017"
+                    "description_fa": "پیرس، شان. (2015، نوامبر). Defending Against Malicious App Compatibility Shims. بازبینی شده در ۲۲ ژوئن ۲۰۱۷."
                 }
             ],
             "object_marking_refs": [
@@ -58,8 +58,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.1",
-            "name_fa": "استفاده از Shimming",
-            "description_fa": "Microsoft Windows Application Compatibility Infrastructure/Framework ( Application Shim) برای اجازه سازگاری معکوس نرم افزار به عنوان سیستم عامل تغییر در طول زمان ایجاد شد. به عنوان مثال، ویژگی شیمینگ برنامه به توسعه دهندگان اجازه می دهد تا برای برنامه های کاربردی (بدون کد بازنویسی) که برای ویندوز XP ایجاد شده اند، درخواست کنند تا با ویندوز 10 کار کنند. [[ویرایش] در چارچوب، شیم ها برای عمل به عنوان یک بافر بین برنامه (یا به طور خاص، جدول آدرس واردات) و سیستم عامل ویندوز ایجاد می شوند. هنگامی که یک برنامه اجرا می شود، کش شیم برای تعیین اینکه آیا برنامه نیاز به استفاده از پایگاه داده شیم دارد (.sdb). اگر چنین باشد، پایگاه داده شیم (Hooking) استفاده می کند ([CTI_PRESERVE_5] برای هدایت کد به منظور برقراری ارتباط با سیستم عامل.\n\nلیستی از تمام شیم هایی که در حال حاضر توسط نصب کننده ویندوز پیش فرض (sdbinst.exe) نصب شده اند در:\n\n[[ویرایش]\n[[ویرایش]\n\nپایگاه داده های سفارشی در:\n\n[[ویرایش]\n[[ویرایش]\n\nبرای ایمن نگه داشتن شیم ها، ویندوز آنها را برای اجرای در حالت کاربر طراحی کرد تا آنها نمیتوانند هسته را تغییر دهند و شما باید امتیازات مدیر برای نصب یک شیم داشته باشید. با این حال، برخی از شیم ها را می توان به [کنترل حساب کاربری] ([CTI_PRESERVE_6] (UAC) (RedirectEXE)، DLLها را به فرآیندها (InjectDLL) تزریق کرد، جلوگیری از اجرای داده ها (DisableNX) و ساختار (DisableSEH)، و آدرس های ردیابی حافظه (AddresscAddress). مانند [Hooking] [[[[I_PRESERVE_7]]]، استفاده از این شیم ها ممکن است اجازه دهد یک دشمن برای انجام چندین عمل مخرب مانند امتیازات بالا، نصب درب پشتی، غیر فعال کردن دفاع مانند ویندوز Defender، و غیره. <code>%WINDIR%\\AppPatch\\sysmain.sdb</code> <code>hklm\\software\\microsoft\\windows nt\\currentversion\\appcompatflags\\installedsdb</code> <code>%WINDIR%\\AppPatch\\custom & %WINDIR%\\AppPatch\\AppPatch64\\Custom</code> <code>hklm\\software\\microsoft\\windows nt\\currentversion\\appcompatflags\\custom</code> (Citation: Elastic Process Injection July 2017) https://attack.mitre.org/techniques/T1179 https://attack.mitre.org/techniques/T1088 https://attack.mitre.org/techniques/T1179"
+            "name_fa": "نرم افزار Shimming",
+            "description_fa": "زیرساخت / چارچوب سازگاری برنامه مایکروسافت ویندوز (Application Shim) ایجاد شد تا با تغییر پایگاه کد سیستم عامل در طول زمان، امکان سازگاری با نرم افزار را فراهم کند. به عنوان مثال، ویژگی شیمینگ برنامه به توسعه دهندگان اجازه می دهد تا اصلاحاتی را برای برنامه هایی که برای ویندوز XP ایجاد شده اند (بدون بازنویسی کد) اعمال کنند تا با ویندوز 10 کار کند. هنگامی که یک برنامه اجرا می شود، به حافظه نهان شیم ارجاع داده می شود تا مشخص شود آیا برنامه به استفاده از پایگاه داده شیم (sdb.) نیاز دارد یا خیر. اگر چنین است، پایگاه داده شیم از [Hooking](https://attack.mitre.org/techniques/T1179) برای تغییر مسیر کد در صورت لزوم به منظور برقراری ارتباط با سیستم عامل استفاده می کند. \n\nلیستی از تمام شیم های نصب شده در حال حاضر توسط نصب کننده پیش فرض ویندوز (sdbinst.exe) در موارد زیر نگهداری می شود:\n\n* <code>%WINDIR%\\AppPatch\\sysmain.sdb</code>\n* <code>hklm\\software\\microsoft\\windows nt\\currentversion\\appcompatflags\\installedsdb</code>\n\nپایگاه داده های سفارشی در موارد زیر ذخیره می شوند:\n\n* <code>%WINDIR%\\AppPatch\\custom & %WINDIR%\\AppPatch\\AppPatch64\\Custom</code>\n* <code>hklm\\software\\microsoft\\windows nt\\currentversion\\appcompatflags\\custom</code>\n\nبرای ایمن نگه داشتن شیم ها، ویندوز آنها را طوری طراحی کرده که در حالت کاربر اجرا شوند، بنابراین نمی توانند هسته را تغییر دهند و برای نصب شیم باید از امتیازات مدیر برخوردار باشید. با این حال، شیم‌های خاصی را می‌توان برای [Bypass User Account Control](https://attack.mitre.org/techniques/T1088) (UAC) (RedirectEXE)، تزریق DLL به فرآیندها (InjectDLL)، غیرفعال کردن پیشگیری از اجرای داده‌ها (DisableNX) و Structure Exception Handling (DisableSEH addresses) و حافظه‌های interdressetPro استفاده کرد. مشابه [Hooking](https://attack.mitre.org/techniques/T1179)، استفاده از این شیم‌ها ممکن است به دشمن اجازه دهد چندین عمل مخرب مانند افزایش امتیازات، نصب درهای پشتی، غیرفعال کردن دفاع‌هایی مانند Windows Defender و غیره را انجام دهد. (Citation: Elastic Process Injection July 2017)"
         }
     ]
 }

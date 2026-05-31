@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0266#AN0737",
-                    "external_id": "AN0737"
+                    "external_id": "AN0737",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MailstorePath",
-                    "description": "Outlook files in AppData\\Local\\Comms\\Unistore\\data"
+                    "description": "Outlook files in AppData\\Local\\Comms\\Unistore\\data",
+                    "description_fa": "فایل های Outlook در AppData\\Local\\Comms\\Unistore\\data"
                 },
                 {
                     "field": "TransportRuleNames",
-                    "description": "Target suspicious rule changes (e.g., header removal)"
+                    "description": "Target suspicious rule changes (e.g., header removal)",
+                    "description_fa": "تغییرات قانون مشکوک را هدف قرار دهید (به عنوان مثال، حذف سرصفحه)"
                 },
                 {
                     "field": "PowerShellCommandMatch",
-                    "description": "Regex match on `Remove-MailboxExportRequest` and similar Exchange cmdlets"
+                    "description": "Regex match on `Remove-MailboxExportRequest` and similar Exchange cmdlets",
+                    "description_fa": "مطابقت Regex در «Remove-MailboxExportRequest» و cmdlet های Exchange مشابه"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0737",
+            "description_fa": "دستکاری یا حذف صندوق پستی را از طریق PowerShell (به عنوان مثال، Remove-MailboxExportRequest)، حذف فایل از فروشگاه های داده Outlook (Unistore.db) یا دستکاری در گزارش های نامه قرنطینه شده شناسایی می کند."
         }
     ]
 }

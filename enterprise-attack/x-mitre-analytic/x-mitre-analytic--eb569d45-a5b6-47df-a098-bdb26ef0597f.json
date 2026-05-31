@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0549#AN1516",
-                    "external_id": "AN1516"
+                    "external_id": "AN1516",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilePathRegex",
-                    "description": "Regex for matching key file extensions (.pem, .pfx, .ppk, etc.) or known certificate directories like C:\\Users\\*\\.ssh\\"
+                    "description": "Regex for matching key file extensions (.pem, .pfx, .ppk, etc.) or known certificate directories like C:\\Users\\*\\.ssh\\",
+                    "description_fa": "Regex برای تطبیق پسوندهای فایل کلیدی (pem، .pfx، .ppk، و غیره) یا دایرکتوری های گواهی شناخته شده مانند C:\\Users\\*\\.ssh\\"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Set of known benign certificate management tools to exclude (e.g., certutil.exe, ssh.exe)"
+                    "description": "Set of known benign certificate management tools to exclude (e.g., certutil.exe, ssh.exe)",
+                    "description_fa": "مجموعه ای از ابزارهای شناخته شده مدیریت گواهی خوش خیم برای حذف (مانند certutil.exe، ssh.exe)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1516",
+            "description_fa": "یک فرآیند (غیر سیستمی یا آغاز شده توسط کاربر) به فایل‌های کلید خصوصی در مسیرهای نمایه کاربر یا فروشگاه‌های گواهی سیستم و به دنبال آن اتصالات شبکه بالقوه یا فعالیت فشرده‌سازی دسترسی پیدا می‌کند."
         }
     ]
 }

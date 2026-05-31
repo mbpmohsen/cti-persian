@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0112#AN0311",
-                    "external_id": "AN0311"
+                    "external_id": "AN0311",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetObject",
-                    "description": "Registry path that may vary by user or policy configuration."
+                    "description": "Registry path that may vary by user or policy configuration.",
+                    "description_fa": "مسیر رجیستری که ممکن است بسته به پیکربندی کاربر یا خط مشی متفاوت باشد."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Can be tuned to known parent processes to reduce false positives."
+                    "description": "Can be tuned to known parent processes to reduce false positives.",
+                    "description_fa": "می توان با فرآیندهای والد شناخته شده تنظیم کرد تا مثبت کاذب را کاهش دهد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Logon activity clustered during specific user shifts."
+                    "description": "Logon activity clustered during specific user shifts.",
+                    "description_fa": "فعالیت ورود به سیستم در طول جابجایی های کاربر خاص دسته بندی شده است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0311",
+            "description_fa": "نظارت بر اصلاح و اجرای اسکریپت های ورود کاربر یا سیستم مانند کلیدهای اجرای رجیستری یا پوشه های راه اندازی."
         }
     ]
 }

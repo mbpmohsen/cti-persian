@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0161#AN0456",
-                    "external_id": "AN0456"
+                    "external_id": "AN0456",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "Exact PAM/QoP config files used by your distro (Debian vs. RHEL paths differ)."
+                    "description": "Exact PAM/QoP config files used by your distro (Debian vs. RHEL paths differ).",
+                    "description_fa": "فایل های پیکربندی دقیق PAM/QoP که توسط توزیع شما استفاده می شود (مسیرهای دبیان در مقابل RHEL متفاوت است)."
                 },
                 {
                     "field": "ServiceAccountsExclude",
-                    "description": "System daemons that legitimately parse policies on boot."
+                    "description": "System daemons that legitimately parse policies on boot.",
+                    "description_fa": "دیون های سیستمی که به طور قانونی سیاست ها را در بوت تجزیه می کنند."
                 },
                 {
                     "field": "TerminalType",
-                    "description": "TTY vs. non-interactive\u2014raise risk for non-interactive remote execution."
+                    "description": "TTY vs. non-interactive—raise risk for non-interactive remote execution.",
+                    "description_fa": "TTY در مقابل غیر تعاملی - خطر را برای اجرای غیر تعاملی از راه دور افزایش می دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0456",
+            "description_fa": "زنجیره: (1) «chage -l» تعاملی/غیر تعاملی، «grep»/»cat» پیکربندی PAM (به عنوان مثال، «/etc/pam.d/common-password»، «/etc/security/pwquality.conf»). (2) خواندن اختیاری «/etc/login.defs». (3) همان کاربر بلافاصله پس از آن اقدام به شمارش حساب یا تغییر رمز عبور می کند. از «execve» ممیزی شده و رویدادهای خواندن فایل به اضافه مجموعه تاریخچه پوسته استفاده کنید."
         }
     ]
 }

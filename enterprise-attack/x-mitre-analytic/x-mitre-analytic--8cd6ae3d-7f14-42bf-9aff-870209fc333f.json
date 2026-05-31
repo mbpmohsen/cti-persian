@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0214#AN0601",
-                    "external_id": "AN0601"
+                    "external_id": "AN0601",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptFormatType",
-                    "description": "Run-only AppleScripts or signed scripting payloads may require scoped detection"
+                    "description": "Run-only AppleScripts or signed scripting payloads may require scoped detection",
+                    "description_fa": "AppleScript‌های اجرا شده یا محموله‌های اسکریپت امضا شده ممکن است به تشخیص محدوده نیاز داشته باشند"
                 },
                 {
                     "field": "DroppedBinaryCount",
-                    "description": "Threshold on number of binaries created by the parent payload"
+                    "description": "Threshold on number of binaries created by the parent payload",
+                    "description_fa": "آستانه تعداد باینری های ایجاد شده توسط بار اصلی"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Allows focusing on suspicious interpreter or staging tools"
+                    "description": "Allows focusing on suspicious interpreter or staging tools",
+                    "description_fa": "اجازه می دهد تا بر روی مترجم یا ابزارهای صحنه سازی مشکوک تمرکز کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0601",
+            "description_fa": "شناسایی باینری‌های Mach-O یا AppleScript‌هایی که حاوی محموله‌های تودرتو، کدگذاری‌شده یا فقط در اجرا هستند که در زمان اجرا کاهش یافته‌اند."
         }
     ]
 }

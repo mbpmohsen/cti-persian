@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-274",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/274.html"
+                    "url": "https://capec.mitre.org/data/definitions/274.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-302",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/302.html"
+                    "url": "http://cwe.mitre.org/data/definitions/302.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-654",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/654.html"
+                    "url": "http://cwe.mitre.org/data/definitions/654.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Arshan Dabirsiaghi, Bypassing Web Authentication and Authorization with HTTP Verb Tampering: How to inadvertently allow attackers full access to your web application, Aspect Security",
                     "external_id": "REF-118",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://mirror.transact.net.au/sourceforge/w/project/wa/waspap/waspap/Core/Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf"
+                    "url": "http://mirror.transact.net.au/sourceforge/w/project/wa/waspap/waspap/Core/Bypassing_VBAAC_with_HTTP_Verb_Tampering.pdf",
+                    "description_fa": "آرشان دبیرسیاقی، دور زدن احراز هویت و مجوز وب با دستکاری فعل HTTP: چگونه به مهاجمان اجازه دسترسی کامل به برنامه وب شما، جنبه امنیتی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--13d1d169-0023-41e2-952f-7d794844733b",
@@ -51,7 +56,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم فعل HTTP (به عنوان مثال GET، PUT، TRACE، و غیره) را تغییر می دهد تا محدودیت های دسترسی را دور بزند. برخی از محیط‌های وب به مدیران اجازه می‌دهند تا دسترسی را بر اساس فعل HTTP مورد استفاده در درخواست‌ها محدود کنند. با این حال، مهاجمان اغلب می‌توانند یک فعل HTTP متفاوت ارائه دهند، یا حتی یک رشته تصادفی را به عنوان فعل ارائه کنند تا از این حفاظت‌ها عبور کنند. این به مهاجم اجازه می دهد تا به داده هایی که در غیر این صورت باید محافظت شوند، دسترسی پیدا کند.",
+            "name_fa": "دستکاری فعل HTTP",
+            "x_capec_prerequisites_fa": [
+                "سیستم هدف باید سعی کند دسترسی را بر اساس فعل HTTP مورد استفاده در درخواست ها فیلتر کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "مهاجم به ابزاری نیاز دارد که به آنها اجازه می دهد فعل HTTP مورد استفاده برای ارسال پیام به سرور مورد نظر را به صورت دستی کنترل کنند."
+            ]
         }
     ],
     "type": "bundle"

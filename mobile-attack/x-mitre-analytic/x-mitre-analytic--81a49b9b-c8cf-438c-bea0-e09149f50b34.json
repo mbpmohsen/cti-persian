@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0645#AN1724",
-                    "external_id": "AN1724"
+                    "external_id": "AN1724",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,37 +48,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum allowed span between locked or inactive device state, suspicious app/service activity, and interactive transition."
+                    "description": "Maximum allowed span between locked or inactive device state, suspicious app/service activity, and interactive transition.",
+                    "description_fa": "حداکثر فاصله مجاز بین حالت قفل یا غیرفعال دستگاه، فعالیت مشکوک برنامه/سرویس، و انتقال تعاملی."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps allowed to wake, foreground, or access protected resources near legitimate authentication events."
+                    "description": "Apps allowed to wake, foreground, or access protected resources near legitimate authentication events.",
+                    "description_fa": "برنامه‌ها اجازه بیدار کردن، پیش‌زمینه یا دسترسی به منابع محافظت‌شده در نزدیکی رویدادهای احراز هویت قانونی را دارند."
                 },
                 {
                     "field": "SupervisedOnly",
-                    "description": "Whether the analytic should only apply to supervised devices with high-confidence MDM policy telemetry."
+                    "description": "Whether the analytic should only apply to supervised devices with high-confidence MDM policy telemetry.",
+                    "description_fa": "اینکه آیا تجزیه و تحلیل باید فقط برای دستگاه‌های تحت نظارت با تله‌متری خط‌مشی MDM با اطمینان بالا اعمال شود یا خیر."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Time threshold for treating the transition as expected and user-driven."
+                    "description": "Time threshold for treating the transition as expected and user-driven.",
+                    "description_fa": "آستانه زمانی برای برخورد با انتقال به صورت مورد انتظار و مبتنی بر کاربر."
                 },
                 {
                     "field": "ExpectedUnlockPopulation",
-                    "description": "User or device groups expected to use atypical enterprise lockscreen workflows, kiosk-like modes, or accessibility accommodations."
+                    "description": "User or device groups expected to use atypical enterprise lockscreen workflows, kiosk-like modes, or accessibility accommodations.",
+                    "description_fa": "انتظار می‌رود گروه‌های کاربر یا دستگاه از جریان‌های کاری صفحه قفل سازمانی غیرمعمول، حالت‌های کیوسک مانند یا امکانات دسترسی استفاده کنند."
                 },
                 {
                     "field": "SensorUseAllowList",
-                    "description": "Apps expected to access camera or biometric-adjacent resources near the authentication boundary."
+                    "description": "Apps expected to access camera or biometric-adjacent resources near the authentication boundary.",
+                    "description_fa": "برنامه‌هایی که انتظار می‌رود به دوربین یا منابع بیومتریک مجاور نزدیک مرز احراز هویت دسترسی داشته باشند."
                 },
                 {
                     "field": "TrustedDestinationAllowList",
-                    "description": "Expected destinations contacted immediately after legitimate app activation post-authentication."
+                    "description": "Expected destinations contacted immediately after legitimate app activation post-authentication.",
+                    "description_fa": "مقاصد مورد انتظار بلافاصله پس از فعال‌سازی قانونی برنامه پس از احراز هویت تماس گرفته می‌شوند."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Threshold for suspicious immediate outbound traffic after suspicious unlock-adjacent activity."
+                    "description": "Threshold for suspicious immediate outbound traffic after suspicious unlock-adjacent activity.",
+                    "description_fa": "آستانه برای ترافیک خروجی مشکوک و فوری پس از باز کردن قفل مشکوک - فعالیت مجاور."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1724",
+            "description_fa": "Defender یک زنجیره اطمینان کاهش یافته مخصوص iOS را که در آن یک دستگاه تحت نظارت یا مدیریت شده از حالت قفل یا غیرفعال به حالت تعاملی یا فعال در برنامه تغییر می کند، با شواهد ضعیفی از احراز هویت مورد انتظار کاربر، که اغلب با تغییر وضعیت محافظت شده غیرعادی، تغییر وضعیت اعتماد، بیدار شدن غیرمنتظره برنامه، استفاده از حسگر یا ارتباط فوری پایین دست همراه است، مرتبط می کند. از آنجایی که دید مستقیم به مکانیک بای پس قفل صفحه در iOS محدود است، تحلیلی به جای اینکه وانمود کند که روش بای پس دقیق را مشاهده می کند، اثرات قوی وضعیت دستگاه و رفتار پس از باز کردن قفل را در اولویت قرار می دهد."
         }
     ]
 }

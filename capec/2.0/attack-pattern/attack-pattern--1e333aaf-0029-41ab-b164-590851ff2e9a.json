@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-621",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/621.html"
+                    "url": "https://capec.mitre.org/data/definitions/621.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-201",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/201.html"
+                    "url": "http://cwe.mitre.org/data/definitions/201.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--1e333aaf-0029-41ab-b164-590851ff2e9a",
@@ -31,6 +33,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (Derive sensitive information about encrypted data.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (اطلاعات حساس در مورد داده های رمزگذاری شده را بدست آورید.)"
                 ]
             },
             "x_capec_domains": [
@@ -42,11 +47,17 @@
                 "Use of untrusted communication paths enables an attacker to intercept and log communications, including metadata such as packet timing and sizes."
             ],
             "x_capec_skills_required": {
-                "High": "These attacks generally require sophisticated machine learning techniques and require traffic capture as a prerequisite."
+                "High": "These attacks generally require sophisticated machine learning techniques and require traffic capture as a prerequisite.",
+                "High_fa": "این حملات عموماً به تکنیک‌های یادگیری ماشینی پیچیده نیاز دارند و به جذب ترافیک به عنوان پیش‌نیاز نیاز دارند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم ممکن است انتقالات رمزگذاری شده را به منظور تجزیه و تحلیل ابرداده ها مانند زمان بندی و اندازه بسته ها رهگیری و ثبت کند. اگرچه داده های واقعی ممکن است رمزگذاری شده باشند، این ابرداده ممکن است اطلاعات ارزشمندی را برای یک مهاجم نشان دهد. توجه داشته باشید که این حمله برای داده‌های VOIP و همچنین داده‌های برنامه کاربردی است، به‌ویژه برای برنامه‌های تعاملی که به زمان‌بندی دقیق و تأخیر کم نیاز دارند (مانند thin-client).",
+            "name_fa": "تجزیه و تحلیل زمان بندی و اندازه بسته ها",
+            "x_capec_prerequisites_fa": [
+                "استفاده از مسیرهای ارتباطی نامعتبر، مهاجم را قادر می سازد تا ارتباطات، از جمله ابرداده ها مانند زمان بندی و اندازه بسته ها را رهگیری و ثبت کند."
+            ]
         }
     ],
     "spec_version": "2.0",

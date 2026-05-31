@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-117",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/117.html"
+                    "url": "https://capec.mitre.org/data/definitions/117.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-319",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/319.html"
+                    "url": "http://cwe.mitre.org/data/definitions/319.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--bdc2219a-ebe0-4372-90b8-841dd7bd4c8e",
@@ -28,6 +30,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -49,7 +54,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف جریان داده به هدف یا از هدف را برای اهداف جمع آوری اطلاعات نظارت می کند. این حمله ممکن است صرفاً برای جمع آوری اطلاعات حساس یا حمایت از حمله بیشتر علیه هدف انجام شود. این الگوی حمله می تواند شامل شنود ترافیک شبکه و همچنین انواع دیگر جریان های داده (به عنوان مثال رادیو) باشد. حریف می تواند تلاش کند تا یک جریان داده را راه اندازی کند یا به طور منفعلانه ارتباطات را در حین آشکار شدن مشاهده کند. در تمام انواع این حمله، دشمن گیرنده مورد نظر جریان داده نیست. برخلاف سایر روش‌های جمع‌آوری اطلاعات (به عنوان مثال، هدف قرار دادن نشت داده‌ها)، حریف باید به طور فعال خود را به گونه‌ای قرار دهد که کانال‌های داده صریح (مانند ترافیک شبکه) را مشاهده کند و محتوا را بخواند. با این حال، این حمله با حمله Adversary-In-the-Middle (CAPEC-94) متفاوت است، زیرا دشمن محتوای ارتباطات را تغییر نمی دهد و داده ها را به گیرنده مورد نظر ارسال نمی کند.",
+            "name_fa": "رهگیری",
+            "x_capec_prerequisites_fa": [
+                "هدف باید داده ها را از طریق رسانه ای که برای حریف قابل دسترسی است، منتقل کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید فناوری لازم برای رهگیری اطلاعات عبوری بین گره های یک شبکه را داشته باشد. برای TCP/IP، قابلیت اجرای tcpdump، ethereal و غیره می تواند مفید باشد. بسته به داده هایی که مورد هدف قرار می گیرند، الزامات فن آوری تغییر می کند."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0063#AN0175",
-                    "external_id": "AN0175"
+                    "external_id": "AN0175",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutionSource",
-                    "description": "Script loaded from mounted datastore, SSH upload, or dropped via guest-to-host tools."
+                    "description": "Script loaded from mounted datastore, SSH upload, or dropped via guest-to-host tools.",
+                    "description_fa": "اسکریپت بارگیری شده از دیتا استور نصب شده، آپلود SSH، یا از طریق ابزارهای مهمان به میزبان رها شده است."
                 },
                 {
                     "field": "HostUser",
-                    "description": "Python launched under root or unknown user."
+                    "description": "Python launched under root or unknown user.",
+                    "description_fa": "پایتون تحت روت یا کاربر ناشناس راه اندازی شد."
                 },
                 {
                     "field": "InstallPath",
-                    "description": "Custom Python binaries or packages in non-default paths (/tmp/python/bin/python3)."
+                    "description": "Custom Python binaries or packages in non-default paths (/tmp/python/bin/python3).",
+                    "description_fa": "باینری ها یا بسته های سفارشی پایتون در مسیرهای غیر پیش فرض (/tmp/python/bin/python3)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0175",
+            "description_fa": "اجرای اسکریپت یا مفسر پایتون را در میزبان‌های ESXi از طریق پوسته‌های BusyBox تعبیه‌شده، نصب‌های تودرتو، یا فایل‌های حذف‌شده از طریق SSH یا مانت ذخیره‌گاه داده شناسایی می‌کند. اسکریپت‌نویسی غیرمعمول یا رفتار شمارش پس از سازش را علامت‌گذاری می‌کند."
         }
     ]
 }

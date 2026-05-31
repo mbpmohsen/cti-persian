@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0123#AN0343",
-                    "external_id": "AN0343"
+                    "external_id": "AN0343",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MountPointPattern",
-                    "description": "Monitor mount points like /media, /mnt, or /run/media."
+                    "description": "Monitor mount points like /media, /mnt, or /run/media.",
+                    "description_fa": "نقاط نصب مانند /media، /mnt یا /run/media را مانیتور کنید."
                 },
                 {
                     "field": "UserGroupScope",
-                    "description": "Restrict detection to non-root or unexpected users."
+                    "description": "Restrict detection to non-root or unexpected users.",
+                    "description_fa": "شناسایی را به کاربران غیر روت یا غیرمنتظره محدود کنید."
                 },
                 {
                     "field": "AccessVolumeThreshold",
-                    "description": "Alert on large file access or copy events."
+                    "description": "Alert on large file access or copy events.",
+                    "description_fa": "هشدار در مورد دسترسی به فایل های بزرگ یا کپی رویدادها."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0343",
+            "description_fa": "دستگاه های خارجی نصب شده (از طریق /media یا /mnt) و به دنبال آن عملیات خواندن یا کپی فایل های بزرگ توسط اسکریپت های پوسته، کاربران غیرمجاز، یا ابزارهای مرحله بندی (مانند tar، rsync) را شناسایی می کند."
         }
     ]
 }

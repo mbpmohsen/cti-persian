@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0320#AN0904",
-                    "external_id": "AN0904"
+                    "external_id": "AN0904",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UtilityNameList",
-                    "description": "List of binaries used for discovery (e.g., netstat, ss, lsof)."
+                    "description": "List of binaries used for discovery (e.g., netstat, ss, lsof).",
+                    "description_fa": "فهرست باینری های مورد استفاده برای کشف (به عنوان مثال، netstat، ss، lsof)."
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "Limit detection to non-administrative or service accounts performing enumeration."
+                    "description": "Limit detection to non-administrative or service accounts performing enumeration.",
+                    "description_fa": "شناسایی را به حساب های غیر اداری یا خدماتی که شمارش را انجام می دهند محدود کنید."
                 },
                 {
                     "field": "ExecutionFrequencyThreshold",
-                    "description": "Unusual number of executions within a short time window."
+                    "description": "Unusual number of executions within a short time window.",
+                    "description_fa": "تعداد غیرمعمول اعدام ها در یک پنجره زمانی کوتاه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0904",
+            "description_fa": "استفاده از netstat، ss، lsof، یا اسکریپت های پوسته سفارشی را برای فهرست کردن اتصالات شبکه فعلی تشخیص می دهد. اغلب با افزایش امتیاز یا مرحله‌بندی همراه است."
         }
     ]
 }

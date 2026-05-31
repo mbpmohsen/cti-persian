@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0320#AN0906",
-                    "external_id": "AN0906"
+                    "external_id": "AN0906",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutionOriginCheck",
-                    "description": "Detect commands executed outside normal management interfaces (e.g., SSH or root shell)."
+                    "description": "Detect commands executed outside normal management interfaces (e.g., SSH or root shell).",
+                    "description_fa": "تشخیص دستورات اجرا شده خارج از رابط های مدیریت عادی (مانند SSH یا پوسته ریشه)."
                 },
                 {
                     "field": "ExpectedAdminAccessWindow",
-                    "description": "Timeframe when host connection audits are expected (e.g., maintenance windows)."
+                    "description": "Timeframe when host connection audits are expected (e.g., maintenance windows).",
+                    "description_fa": "بازه زمانی زمانی که ممیزی اتصال میزبان انتظار می رود (به عنوان مثال، پنجره های تعمیر و نگهداری)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0906",
+            "description_fa": "استفاده از پوسته یا API «لیست اتصال IP شبکه esxcli» یا «netstat» را برای شمارش اتصالات میزبان ESXi تشخیص می‌دهد."
         }
     ]
 }

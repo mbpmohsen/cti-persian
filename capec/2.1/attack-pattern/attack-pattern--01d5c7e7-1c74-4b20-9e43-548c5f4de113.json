@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-131",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/131.html"
+                    "url": "https://capec.mitre.org/data/definitions/131.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-404",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/404.html"
+                    "url": "http://cwe.mitre.org/data/definitions/404.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Endpoint Denial of Service",
                     "external_id": "T1499",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1499"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1499",
+                    "description_fa": "انکار سرویس نقطه پایانی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Denial of Service",
                     "external_id": "10",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Denial-of-Service"
+                    "url": "http://projects.webappsec.org/Denial-of-Service",
+                    "description_fa": "انکار خدمات",
+                    "source_name_fa": "WASC"
                 }
             ],
             "id": "attack-pattern--01d5c7e7-1c74-4b20-9e43-548c5f4de113",
@@ -42,6 +48,10 @@
                 "Availability": [
                     "Unreliable Execution (A successful resource leak exposure attack compromises the availability of the target system's services.)",
                     "Resource Consumption (A successful resource leak exposure attack compromises the availability of the target system's services.)"
+                ],
+                "Availability_fa": [
+                    "اجرای غیرقابل اعتماد (یک حمله موفق در معرض نشت منابع، در دسترس بودن خدمات سیستم هدف را به خطر می اندازد.)",
+                    "مصرف منابع (یک حمله موفق در معرض نشت منابع، در دسترس بودن خدمات سیستم هدف را به خطر می اندازد.)"
                 ]
             },
             "x_capec_domains": [
@@ -57,7 +67,16 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از نشت منبع در هدف استفاده می کند تا مقدار منبع موجود را برای سرویس دهی به درخواست های قانونی کاهش دهد.",
+            "name_fa": "قرار گرفتن در معرض نشت منابع",
+            "x_capec_extended_description_fa": "<xhtml:p>نشت منبع اغلب به شکل نشت حافظه است که در آن حافظه تخصیص داده می شود اما پس از رسیدن به هدف خود هرگز آزاد نمی شود، با این حال، از نظر تئوری، هر منبع دیگری که می تواند رزرو شود می تواند در صورتی که هدف نتواند رزرو را آزاد کند زمانی که دیگر به بلوک منبع رزرو شده نیاز نیست، هدف قرار گیرد.</xhtml:p>\n            <xhtml:p>در این حمله، حریف تعیین می‌کند که چه فعالیتی منجر به افشای منابع می‌شود و سپس آن فعالیت را روی هدف آغاز می‌کند. از آنجایی که برخی از نشت ها ممکن است کوچک باشند، ممکن است نیاز به تعداد زیادی درخواست از طرف دشمن داشته باشد. با این حال، این حمله با یک حمله سیلابی متفاوت است زیرا نرخ درخواست ها معمولاً قابل توجه نیست. این به این دلیل است که منابع از دست رفته به دلیل نشت تا زمانی که هدف تنظیم مجدد شود، معمولاً با راه اندازی مجدد آن جمع می شود. بنابراین، دشمنی که از نظر منابع ضعیف است و نمی‌تواند هدف را سیل کند، همچنان می‌تواند از این حمله استفاده کند.</xhtml:p>\n            <xhtml:p>کاهش منبع از طریق نشت با کاهش منابع از طریق تخصیص متفاوت است، زیرا در حالت اول، دشمن ممکن است نتواند اندازه هر تخصیص درز شده را کنترل کند، اما در عوض اجازه می‌دهد نشت جمع شود تا زمانی که به اندازه کافی بزرگ باشد که بر عملکرد هدف تأثیر بگذارد. هنگام تخلیه منابع از طریق تخصیص، منبع تخصیص یافته ممکن است در نهایت توسط هدف آزاد شود، بنابراین حمله به اطمینان از اینکه اندازه تخصیص خود مانع از عملیات عادی توسط هدف است، متکی است.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "هدف باید نشت منبعی داشته باشد که دشمن بتواند مکرراً آن را ایجاد کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

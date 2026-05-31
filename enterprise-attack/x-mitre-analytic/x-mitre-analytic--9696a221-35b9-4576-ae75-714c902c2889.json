@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0535#AN1475",
-                    "external_id": "AN1475"
+                    "external_id": "AN1475",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1475",
-            "description": "Malicious VIB installation for persistence via `esxcli software vib install` using `--force` or `--no-sig-check`, enabling custom startup scripts or firewall rules. Behavior chain: (1) unsigned/suspicious VIB installation \u2192 (2) startup script or binary placed in persistent boot path \u2192 (3) persistence across reboot via /etc/rc.local.d or other boot hook).",
+            "description": "Malicious VIB installation for persistence via `esxcli software vib install` using `--force` or `--no-sig-check`, enabling custom startup scripts or firewall rules. Behavior chain: (1) unsigned/suspicious VIB installation → (2) startup script or binary placed in persistent boot path → (3) persistence across reboot via /etc/rc.local.d or other boot hook).",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AcceptanceLevel",
-                    "description": "Some environments may intentionally permit CommunitySupported or unsigned VIBs\u2014filter by known allowed publishers."
+                    "description": "Some environments may intentionally permit CommunitySupported or unsigned VIBs—filter by known allowed publishers.",
+                    "description_fa": "برخی از محیط‌ها ممکن است عمداً به VIB‌های حمایت‌شده یا بدون امضا اجازه دهند — فیلتر توسط ناشران مجاز شناخته‌شده."
                 },
                 {
                     "field": "InstallCommandThreshold",
-                    "description": "Set alerting thresholds for frequency of VIB install attempts per host/user/time window."
+                    "description": "Set alerting thresholds for frequency of VIB install attempts per host/user/time window.",
+                    "description_fa": "آستانه های هشدار را برای دفعات تلاش های نصب VIB در هر میزبان/کاربر/پنجره زمانی تنظیم کنید."
                 },
                 {
                     "field": "StartupPathRegex",
-                    "description": "Tune regex for monitoring startup file locations based on ESXi image customization."
+                    "description": "Tune regex for monitoring startup file locations based on ESXi image customization.",
+                    "description_fa": "تنظیم regex برای نظارت بر مکان های فایل راه اندازی بر اساس سفارشی سازی تصویر ESXi."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1475",
+            "description_fa": "نصب مخرب VIB برای پایداری از طریق «نرم افزار esxcli vib install» با استفاده از «--force» یا «--no-sig-check»، فعال کردن اسکریپت های راه اندازی سفارشی یا قوانین فایروال. زنجیره رفتار: (1) نصب VIB بدون علامت/مشکوک → (2) اسکریپت راه اندازی یا باینری قرار داده شده در مسیر راه اندازی دائمی → (3) پایداری در سراسر راه اندازی مجدد از طریق /etc/rc.local.d یا سایر قلاب راه اندازی)."
         }
     ]
 }

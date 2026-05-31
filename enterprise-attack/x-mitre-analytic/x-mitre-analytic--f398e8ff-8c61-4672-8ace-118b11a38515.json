@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0406#AN1135",
-                    "external_id": "AN1135"
+                    "external_id": "AN1135",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "XattrNamespaces",
-                    "description": "Namespaces monitored for suspicious activity (user., trusted., security.). Organizations may tune to reduce noise from benign use."
+                    "description": "Namespaces monitored for suspicious activity (user., trusted., security.). Organizations may tune to reduce noise from benign use.",
+                    "description_fa": "فضای نام برای فعالیت مشکوک نظارت می شود (کاربر، مورد اعتماد، امنیت.). سازمان ها ممکن است برای کاهش نویز ناشی از استفاده خوش خیم تنظیم کنند."
                 },
                 {
                     "field": "PayloadSizeThreshold",
-                    "description": "Size of xattr values above which they should be considered anomalous (e.g., >1KB)."
+                    "description": "Size of xattr values above which they should be considered anomalous (e.g., >1KB).",
+                    "description_fa": "اندازه مقادیر xattr که بالاتر از آن باید غیرعادی در نظر گرفته شوند (به عنوان مثال، > 1 کیلوبایت)."
                 },
                 {
                     "field": "CorrelationWindow",
-                    "description": "Time window to correlate xattr modification with process execution from the same file."
+                    "description": "Time window to correlate xattr modification with process execution from the same file.",
+                    "description_fa": "پنجره زمانی برای ارتباط اصلاح xattr با اجرای فرآیند از همان فایل."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1135",
+            "description_fa": "سوء استفاده از ویژگی های توسعه یافته (xattrs) برای جاسازی بارهای مخفی در فایل های قانونی. دیدگاه مدافع: تشخیص استفاده غیرعادی از دستورات setfattr یا getfattr یا syscalls مستقیم (setxattr، getxattr) که در آن ویژگی ها به طور غیرعادی بزرگ هستند یا حاوی داده های رمزگذاری شده هستند. زنجیره رفتار شامل: (1) اجرای setfattr با فضاهای نام مشکوک (کاربر، مورد اعتماد)، (2) اصلاح فراداده فایل ناسازگار با اندازه فایل/هش، و (3) ویژگی های خواندن اجرای فرآیند بعدی و به دنبال آن فعالیت رمزگشایی."
         }
     ]
 }

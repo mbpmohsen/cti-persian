@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-643",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/643.html"
+                    "url": "https://capec.mitre.org/data/definitions/643.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-267",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/267.html"
+                    "url": "http://cwe.mitre.org/data/definitions/267.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Network Share Discovery",
                     "external_id": "T1135",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1135"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1135",
+                    "description_fa": "کشف اشتراک شبکه",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--9d08b257-08f6-42e3-ad7e-41aaf07789a1",
@@ -48,6 +53,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (The adversary is potentially able to identify the location of sensitive information or lateral pathways through the network.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (رقیب به طور بالقوه قادر به شناسایی مکان اطلاعات حساس یا مسیرهای جانبی از طریق شبکه است.)"
                 ]
             },
             "x_capec_domains": [
@@ -61,11 +69,20 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Low": "Once the adversary has logical access (which can potentially require high knowledge and skill level), the adversary needs only the capability and facility to navigate the system through the OS graphical user interface or the command line. The adversary, or their malware, can simply employ a set of commands that search for shared drives on the system (e.g., net view \\\\remote system or net share)."
+                "Low": "Once the adversary has logical access (which can potentially require high knowledge and skill level), the adversary needs only the capability and facility to navigate the system through the OS graphical user interface or the command line. The adversary, or their malware, can simply employ a set of commands that search for shared drives on the system (e.g., net view \\\\remote system or net share).",
+                "Low_fa": "هنگامی که حریف دسترسی منطقی داشته باشد (که به طور بالقوه می تواند به دانش و مهارت بالایی نیاز داشته باشد)، دشمن فقط به قابلیت و امکانات لازم برای هدایت سیستم از طریق رابط کاربر گرافیکی سیستم عامل یا خط فرمان نیاز دارد. حریف یا بدافزار آنها می‌توانند به سادگی مجموعه‌ای از دستورات را به کار گیرند که درایوهای مشترک را در سیستم جستجو می‌کنند (مثلاً مشاهده خالص \\\\ سیستم از راه دور یا اشتراک خالص)."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن با استفاده از روش استاندارد سیستم هدف برای آشکار کردن آنها در مناطق قابل جستجو و مشترک، ارتباط بین سیستم ها را کشف می کند. از طریق شناسایی پوشه‌ها/درایوهای مشترک بین سیستم‌ها، حریف ممکن است به اهداف خود در مکان‌یابی و جمع‌آوری اطلاعات/فایل‌های حساس کمک کند یا مسیرهای بالقوه را برای حرکت جانبی در شبکه ترسیم کند.",
+            "name_fa": "شناسایی فایل ها/دایرکتوری های مشترک در سیستم",
+            "x_capec_prerequisites_fa": [
+                "حریف باید به روشی (مثلاً از طریق اعتبار به دست آمده یا نصب بدافزار در سیستم) به سیستم دسترسی منطقی داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

@@ -14,28 +14,28 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1647",
                     "external_id": "T1647",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "eset_osx_flashback",
                     "description": "ESET. (2012, January 1). OSX/Flashback. Retrieved April 19, 2022.",
                     "url": "https://www.welivesecurity.com/wp-content/uploads/200x/white-papers/osx_flashback.pdf",
                     "source_name_fa": "eset_osx_flashback",
-                    "description_fa": "ESET OSX/Flashback Retrieved ۱۹۲۲."
+                    "description_fa": "ESET. (2012، 1 ژانویه). OSX/Flashback. بازبینی شده در 19 آوریل 2022."
                 },
                 {
                     "source_name": "fileinfo plist file description",
                     "description": "FileInfo.com team. (2019, November 26). .PLIST File Extension. Retrieved October 12, 2021.",
                     "url": "https://fileinfo.com/extension/plist",
-                    "source_name_fa": "فایلinfo plist",
-                    "description_fa": "گروه Fileinfo.com (2019، 26 نوامبر) پسوند File Extension Retrieved 12 اکتبر 2021."
+                    "source_name_fa": "fileinfo plist توضیحات فایل",
+                    "description_fa": "تیم FileInfo.com. (26 نوامبر 2019). پسوند فایل PLIST. بازبینی شده در 12 اکتبر 2021."
                 },
                 {
                     "source_name": "wardle chp2 persistence",
                     "description": "Patrick Wardle. (2022, January 1). The Art of Mac Malware Volume 0x1:Analysis. Retrieved April 19, 2022.",
                     "url": "https://taomm.org/PDFs/vol1/CH%200x02%20Persistence.pdf",
-                    "source_name_fa": "دانلود بازی Rep2",
-                    "description_fa": "پاتریک واردل (۲۰۲۲، ۱ ژانویه) هنر Mac Malware Volume 0x1:Analysis Retrieved ۱۹۲۲."
+                    "source_name_fa": "wardle chp2 پایداری",
+                    "description_fa": "پاتریک واردل. (1 ژانویه 2022). The Art of Mac Malware Volume 0x1: Analysis. بازبینی شده در 19 آوریل 2022."
                 }
             ],
             "object_marking_refs": [
@@ -61,8 +61,8 @@
                 "macOS"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "Plist File Reification",
-            "description_fa": "عوامل جانبی ممکن است فایل های لیست اموال (فایل های لیست) را برای فعال کردن فعالیت های مخرب دیگر تغییر دهند، در حالی که به طور بالقوه تبخیر و دور زدن سیستم های دفاعی. برنامه های macOS از فایل های plist مانند فایل [CTI_PRESERVE_0] استفاده می کنند تا ویژگی ها و تنظیمات پیکربندی را ذخیره کنند که به سیستم عامل اطلاع می دهد که چگونه برنامه را در زمان اجرا مدیریت کند. فایل های Plist متاداده در جفت های ارزش کلیدی فرمت شده در XML بر اساس بنیاد Core اپل DTD است. فایل های Plist را می توان در متن یا فرمت باینری ذخیره کرد. [[ویرایش]\n\n[[رده ها]] می توانند فایل های با ارزش کلیدی را تغییر دهند تا بر رفتارهای سیستم تأثیر بگذارند؛ مانند پنهان کردن اجرای یک برنامه (به عنوان مثال [Hidden Window] ([CTI_PRESERVE_7]) یا اجرای دستورات اضافی برای پایداری (ex: [p] [CT_P_SERV_E8]\n\nبه عنوان مثال، دشمنان می توانند یک مسیر برنامه مخرب را به فایل `~/Library/Preferences/com.apple.dock.plist اضافه کنند که اپلیکیشن هایی را که در Dock ظاهر می شوند، کنترل می کند. همچنین می تواند فایل (CTI_PRESERVE) را در یک فایل کاربردی تغییر دهد. همچنین می توان از طریق [[Dynamic Linker Hijacking]] استفاده کرد. [۱۰] <code>info.plist</code> <code>LSUIElement</code> <code>info.plist</code> <code>LSEnvironment</code> (Citation: fileinfo plist file description) (Citation: wardle chp2 persistence) (Citation: eset_osx_flashback) https://attack.mitre.org/techniques/T1564/003 https://attack.mitre.org/techniques/T1543/001 https://attack.mitre.org/techniques/T1543/004 https://attack.mitre.org/techniques/T1547/007 https://attack.mitre.org/techniques/T1574/006"
+            "name_fa": "اصلاح فایل Plist",
+            "description_fa": "دشمنان ممکن است فایل‌های فهرست دارایی (فایل‌های plist) را برای فعال کردن سایر فعالیت‌های مخرب تغییر دهند، در حالی که به طور بالقوه از دفاع سیستم فرار کرده و دور می‌زنند. برنامه‌های macOS از فایل‌های plist، مانند فایل <code>info.plist</code> برای ذخیره ویژگی‌ها و تنظیمات پیکربندی استفاده می‌کنند که به سیستم عامل اطلاع می‌دهد که چگونه برنامه را در زمان اجرا مدیریت کند. فایل‌های Plist، ابرداده‌های ساختاریافته در جفت‌های کلید-مقدار هستند که در XML بر اساس Core Foundation DTD اپل قالب‌بندی شده‌اند. فایل‌های Plist را می‌توان در قالب متنی یا باینری ذخیره کرد.(Citation: fileinfo plist file description) \n\nدشمنان می‌توانند جفت‌های کلید-مقدار را در فایل‌های plist تغییر دهند تا بر رفتارهای سیستم تأثیر بگذارند، مانند پنهان کردن اجرای یک برنامه (به عنوان مثال [پنجره پنهان](https://attack.mitre.org/techniques/T1564/003) یا اجرای دستورات اضافی برای ماندگاری (مثلاً: [Launch Agent] ([[[CTI_PRESERVE]]VE_) Daemon](https://attack.mitre.org/techniques/T1543/004) یا [برنامه‌های بازگشایی شده](https://attack.mitre.org/techniques/T1547/007)).\n\nبرای مثال، دشمنان می‌توانند یک مسیر برنامه مخرب را به فایل «~/Library/Preferences/com.apple.dock.plist» اضافه کنند که برنامه‌هایی را که در Dock ظاهر می‌شوند را کنترل می‌کند. دشمنان همچنین می‌توانند کلید [[CTI_PRESERVE_1]]] را در فایل <code>info.plist</code> یک برنامه تغییر دهند تا برنامه در پس‌زمینه اجرا شود. دشمنان همچنین می‌توانند برای درج متغیرهای محیطی، مانند <code>LSEnvironment</code>، جفت‌های کلید-مقدار را وارد کنند تا پایداری را از طریق [ربایش پیوندگر پویا] فعال کنند (https://attack.mitre.org/techniques/T1574/006).[[CTI_PRESERVE_11]]]. <code>LSUIElement</code> (Citation: wardle chp2 persistence) (Citation: eset_osx_flashback) https://attack.mitre.org/techniques/T1543/001"
         }
     ]
 }

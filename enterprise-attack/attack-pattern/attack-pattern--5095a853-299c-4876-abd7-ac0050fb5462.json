@@ -13,21 +13,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1547/005",
                     "external_id": "T1547.005",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Graeber 2014",
                     "description": "Graeber, M. (2014, October). Analysis of Malicious Security Support Provider DLLs. Retrieved March 1, 2017.",
                     "url": "http://docplayer.net/20839173-Analysis-of-malicious-security-support-provider-dlls.html",
                     "source_name_fa": "Graeber 2014",
-                    "description_fa": "گرابر، M. (2014، اکتبر) تجزیه و تحلیل ارائه دهندگان پشتیبانی امنیتی Malicious DLLs Retrieved 1 مارس 2017"
+                    "description_fa": "Graeber, M. (2014, اکتبر). تجزیه و تحلیل DLL های ارائه دهنده پشتیبانی امنیتی مخرب. بازیابی شده در 1 مارس 2017."
                 },
                 {
                     "source_name": "Microsoft Configure LSA",
                     "description": "Microsoft. (2013, July 31). Configuring Additional LSA Protection. Retrieved June 24, 2015.",
                     "url": "https://technet.microsoft.com/en-us/library/dn408187.aspx",
-                    "source_name_fa": "Microsoft Configure LSA",
-                    "description_fa": "مایکروسافت (2013، 31 ژوئیه) آشنایی با حفاظت اضافی LSA Retrieved ۲۴ ژوئن ۲۰۱۵"
+                    "source_name_fa": "مایکروسافت LSA را پیکربندی کنید",
+                    "description_fa": "مایکروسافت. (2013، 31 ژوئیه). پیکربندی حفاظت LSA اضافی. بازبینی شده در ۲۴ ژوئن ۲۰۱۵."
                 }
             ],
             "object_marking_refs": [
@@ -57,8 +57,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.1",
-            "name_fa": "پشتیبانی امنیتی",
-            "description_fa": "مخالفان ممکن است از ارائه دهندگان پشتیبانی امنیتی (SSP) برای اجرای DLL ها در هنگام بوت سیستم استفاده کنند. ویندوز SSP DLL ها در فرآیند امنیت محلی (LSA) در شروع سیستم بارگذاری می شوند. هنگامی که در LSA بارگذاری می شود، SSP DLL ها به پسوردهای رمزگذاری شده و متن ساده دسترسی دارند که در ویندوز ذخیره می شوند، مانند هر رمز عبور دامنه کاربر یا PIN های کارت هوشمند.\n\nدر این میان، در دو کلید ثبت شده ذخیره می شود. یک دشمن ممکن است این کلید های رجیستری را برای اضافه کردن SSP های جدید تغییر دهد، که بعداً بوت های سیستم را بارگذاری می کند یا هنگامی که تابع AddSecurityPackage Windows API نامیده می شود. [[ویرایش] <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Security Packages</code> <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\OSConfig\\Security Packages</code> (Citation: Graeber 2014)"
+            "name_fa": "ارائه دهنده پشتیبانی امنیتی",
+            "description_fa": "هنگامی که سیستم بوت می شود، دشمنان ممکن است از ارائه دهندگان پشتیبانی امنیتی (SSP) برای اجرای DLL سوء استفاده کنند. Windows SSP DLL ها در فرآیند Local Security Authority (LSA) در شروع سیستم بارگذاری می شوند. پس از بارگیری در LSA، DLLهای SSP به گذرواژه‌های رمزگذاری‌شده و متن ساده‌ای که در ویندوز ذخیره می‌شوند، مانند رمز عبور دامنه یا پین‌های کارت هوشمند هر کاربر وارد شده دسترسی دارند.\n\nپیکربندی SSP در دو کلید رجیستری ذخیره می‌شود: <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Security Packages</code> و <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\OSConfig\\Security Packages</code>. یک دشمن ممکن است این کلیدهای رجیستری را تغییر دهد تا SSPهای جدید اضافه کند، که دفعه بعد که سیستم بوت می شود، یا زمانی که عملکرد AddSecurityPackage Windows API فراخوانی می شود، بارگیری می شود.(Citation: Graeber 2014)"
         }
     ]
 }

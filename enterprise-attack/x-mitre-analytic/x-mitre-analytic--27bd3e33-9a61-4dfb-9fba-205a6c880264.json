@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0035#AN0100",
-                    "external_id": "AN0100"
+                    "external_id": "AN0100",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Timeframe for evaluating multiple network connections tied to the same process"
+                    "description": "Timeframe for evaluating multiple network connections tied to the same process",
+                    "description_fa": "بازه زمانی برای ارزیابی چندین اتصال شبکه مرتبط با یک فرآیند"
                 },
                 {
                     "field": "DomainPattern",
-                    "description": "Regex or string patterns used to identify common Web service infrastructure (e.g., *.googleapis.com)"
+                    "description": "Regex or string patterns used to identify common Web service infrastructure (e.g., *.googleapis.com)",
+                    "description_fa": "الگوهای Regex یا رشته‌ای که برای شناسایی زیرساخت‌های رایج سرویس وب (مانند *.googleapis.com) استفاده می‌شوند."
                 },
                 {
                     "field": "PayloadSizeThreshold",
-                    "description": "Minimum data upload size before flagging anomaly"
+                    "description": "Minimum data upload size before flagging anomaly",
+                    "description_fa": "حداقل اندازه آپلود داده قبل از پرچم گذاری ناهنجاری"
                 },
                 {
                     "field": "ProcessNameExclusionList",
-                    "description": "Known benign updaters or service processes to reduce false positives"
+                    "description": "Known benign updaters or service processes to reduce false positives",
+                    "description_fa": "به روز رسانی های خوش خیم شناخته شده یا فرآیندهای خدماتی برای کاهش مثبت کاذب"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0100",
+            "description_fa": "فرآیندهای مشکوکی که اتصالات HTTPS رمزگذاری شده را به دامنه‌های سرویس وب رایج آغاز می‌کند، به دنبال آن رفتار آپلود غیرعادی داده یا رفتار پست خودکار نشان‌دهنده ترافیک دوطرفه C2 است."
         }
     ]
 }

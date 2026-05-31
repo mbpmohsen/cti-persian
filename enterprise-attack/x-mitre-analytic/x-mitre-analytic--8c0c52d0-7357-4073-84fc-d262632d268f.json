@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0095#AN0264",
-                    "external_id": "AN0264"
+                    "external_id": "AN0264",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuditPolicyScope",
-                    "description": "Mailbox rule changes may not be captured unless advanced audit logging is enabled"
+                    "description": "Mailbox rule changes may not be captured unless advanced audit logging is enabled",
+                    "description_fa": "تغییرات قوانین صندوق پستی ممکن است ثبت نشود مگر اینکه ثبت حسابرسی پیشرفته فعال باشد"
                 },
                 {
                     "field": "RuleProviderName",
-                    "description": "Malicious rules may use spoofed or non-standard PR_RULE_MSG_PROVIDER values"
+                    "description": "Malicious rules may use spoofed or non-standard PR_RULE_MSG_PROVIDER values",
+                    "description_fa": "قوانین مخرب ممکن است از مقادیر PR_RULE_MSG_PROVIDER جعلی یا غیر استاندارد استفاده کنند"
                 },
                 {
                     "field": "TriggerSubjectKeywords",
-                    "description": "Triggering emails may contain uncommon but benign-looking subjects"
+                    "description": "Triggering emails may contain uncommon but benign-looking subjects",
+                    "description_fa": "ایمیل‌های راه‌اندازی ممکن است حاوی موضوعات غیر معمول اما خوش‌خیم باشند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Target user account may be inactive or high-value (e.g., VIP, service account)"
+                    "description": "Target user account may be inactive or high-value (e.g., VIP, service account)",
+                    "description_fa": "حساب کاربری هدف ممکن است غیرفعال یا با ارزش بالا باشد (به عنوان مثال، VIP، حساب خدمات)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0264",
+            "description_fa": "Adversary با استفاده از MFCMapi یا Ruler یک قانون Outlook جدید با ویژگی‌های PR_RULE_MSG_NAME و PR_RULE_MSG_PROVIDER اصلاح شده یا مبهم اضافه می‌کند. قانون زمانی که ایمیل می رسد، در حال اجرای کد تعبیه شده یا خارجی فعال می شود. گزارش‌های حسابرسی صندوق پستی یا گزارش حسابرسی یکپارچه، عملکرد خودکار راه‌اندازی شده توسط قوانین را بدون تعامل کاربر نشان می‌دهد."
         }
     ]
 }

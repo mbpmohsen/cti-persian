@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0581#AN1600",
-                    "external_id": "AN1600"
+                    "external_id": "AN1600",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcess",
-                    "description": "May tune to detect unknown parents like custom scripts or reverse shells"
+                    "description": "May tune to detect unknown parents like custom scripts or reverse shells",
+                    "description_fa": "ممکن است برای شناسایی والدین ناشناس مانند اسکریپت های سفارشی یا پوسته های معکوس تنظیم شود"
                 },
                 {
                     "field": "CommandLineArgs",
-                    "description": "May adjust based on known curl/wget C2 behaviors"
+                    "description": "May adjust based on known curl/wget C2 behaviors",
+                    "description_fa": "ممکن است بر اساس رفتارهای شناخته شده curl/wget C2 تنظیم شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1600",
+            "description_fa": "کلاینت‌های کرل، wget یا سفارشی HTTP که توسط حساب‌های کاربری غیرمعمول یا کارهای cron به سرویس‌های وب محبوب راه‌اندازی شده‌اند، بدون منطق تجزیه پاسخ مشاهده‌شده."
         }
     ]
 }

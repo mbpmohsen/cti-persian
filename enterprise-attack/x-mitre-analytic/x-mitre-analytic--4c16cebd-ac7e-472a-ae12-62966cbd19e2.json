@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0248#AN0691",
-                    "external_id": "AN0691"
+                    "external_id": "AN0691",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0691",
-            "description": "CONTAINERS (Docker/K8s/containerd): A user pulls an untrusted image from a public/unknown registry and then creates/starts a container from that image. Shortly after start, the container spawns unexpected utilities (e.g., curl/wget/bash/python), or makes outbound network connections atypical for the namespace/workload. The analytic correlates Image Creation/Download \u2192 Container Creation \u2192 Container Start \u2192 Command Execution/Network activity within a short window and with a consistent image digest.",
+            "description": "CONTAINERS (Docker/K8s/containerd): A user pulls an untrusted image from a public/unknown registry and then creates/starts a container from that image. Shortly after start, the container spawns unexpected utilities (e.g., curl/wget/bash/python), or makes outbound network connections atypical for the namespace/workload. The analytic correlates Image Creation/Download → Container Creation → Container Start → Command Execution/Network activity within a short window and with a consistent image digest.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -44,7 +45,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--5fe82895-28e5-4aac-845e-dc886b63be2e",
                     "name": "kubernetes:events",
-                    "channel": "start: ContainerStarted or Pulling image \u2192 Started container"
+                    "channel": "start: ContainerStarted or Pulling image → Started container"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--685f917a-e95e-4ba0-ade1-c7d354dae6e0",
@@ -60,26 +61,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ImageRegistryAllowList",
-                    "description": "Approved registries/namespaces (e.g., ECR/GCR/ACR org repos)."
+                    "description": "Approved registries/namespaces (e.g., ECR/GCR/ACR org repos).",
+                    "description_fa": "رجیستری‌ها/فضاهای نام تأیید شده (مانند مخازن سازمانی ECR/GCR/ACR)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window from image pull to container activity (e.g., \u226415m)."
+                    "description": "Correlation window from image pull to container activity (e.g., ≤15m).",
+                    "description_fa": "پنجره همبستگی از کشش تصویر به فعالیت ظرف (به عنوان مثال، ≤15 متر)."
                 },
                 {
                     "field": "SuspiciousBinaries",
-                    "description": "Executables treated as high-risk when run in app containers (bash, sh, curl, wget, nc, powershell for Windows containers)."
+                    "description": "Executables treated as high-risk when run in app containers (bash, sh, curl, wget, nc, powershell for Windows containers).",
+                    "description_fa": "هنگام اجرا در کانتینرهای برنامه (bash، sh، curl، wget، nc، powershell برای کانتینرهای Windows) برنامه‌های اجرایی به‌عنوان پرخطر در نظر گرفته می‌شوند."
                 },
                 {
                     "field": "NamespaceScope",
-                    "description": "K8s namespaces that should never pull from Internet or run mutable tags."
+                    "description": "K8s namespaces that should never pull from Internet or run mutable tags.",
+                    "description_fa": "فضاهای نام K8s که هرگز نباید از اینترنت خارج شوند یا برچسب های قابل تغییر را اجرا کنند."
                 },
                 {
                     "field": "OutboundCIDRBlockList",
-                    "description": "Destination networks/domains that should not be contacted by containers."
+                    "description": "Destination networks/domains that should not be contacted by containers.",
+                    "description_fa": "شبکه های مقصد/دامنه هایی که نباید توسط کانتینرها با آنها تماس گرفته شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0691",
+            "description_fa": "CONTAINERS (Docker/K8s/containerd): کاربر یک تصویر غیرقابل اعتماد را از یک رجیستری عمومی/ناشناخته می کشد و سپس یک محفظه از آن تصویر ایجاد/شروع می کند. مدت کوتاهی پس از شروع، کانتینر ابزارهای غیرمنتظره ای را ایجاد می کند (مانند curl/wget/bash/python)، یا اتصالات شبکه خروجی را برای فضای نام/بار کاری غیر معمول می کند. تجزیه و تحلیل ایجاد/دانلود تصویر → ایجاد کانتینر → شروع کانتینر → اجرای فرمان/فعالیت شبکه در یک پنجره کوتاه و با خلاصه تصویری منسجم مرتبط است."
         }
     ]
 }

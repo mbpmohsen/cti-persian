@@ -9,39 +9,49 @@
                 {
                     "external_id": "CAPEC-182",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/182.html"
+                    "url": "https://capec.mitre.org/data/definitions/182.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-184",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/184.html"
+                    "url": "http://cwe.mitre.org/data/definitions/184.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stefano Di Paola, Finding Vulnerabilities in Flash Applications, OWASP Appsec 2007, 2007--11---15",
                     "external_id": "REF-46",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استفانو دی پائولا، یافتن آسیب‌پذیری‌ها در برنامه‌های فلش، OWASP Appsec 2007، 2007--11---15",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Rudra K. Sinha Roy, A Lazy Pen Tester's Guide to Testing Flash Applications, iViz",
                     "external_id": "REF-47",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.ivizsecurity.com/blog/web-application-security/testing-flash-applications-pen-tester-guide/"
+                    "url": "http://www.ivizsecurity.com/blog/web-application-security/testing-flash-applications-pen-tester-guide/",
+                    "description_fa": "Rudra K. Sinha Roy, A Lazy Pen Tester's Guide to Testing Flash Applications, iViz",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Peleus Uhley, Creating More Secure SWF Web Application, Adobe Systems Incorporated",
                     "external_id": "REF-48",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.adobe.com/devnet/flashplayer/articles/secure_swf_apps.html"
+                    "url": "http://www.adobe.com/devnet/flashplayer/articles/secure_swf_apps.html",
+                    "description_fa": "Peleus Uhley، ایجاد برنامه وب امن تر SWF، Adobe Systems Incorporated",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2a8824eb-4fd0-45a4-9c3c-af3fd7c5e0ca",
@@ -80,6 +90,30 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "سایر موارد (نشت اطلاعات)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -102,11 +136,24 @@
                 "None: No specialized resources are required to execute this type of attack. The attacker may need to be able to serve the injected Flash content."
             ],
             "x_capec_skills_required": {
-                "Medium": "The attacker needs to have knowledge of Flash, especially how to insert content the executes commands."
+                "Medium": "The attacker needs to have knowledge of Flash, especially how to insert content the executes commands.",
+                "Medium_fa": "مهاجم باید دانش فلش را داشته باشد، به خصوص اینکه چگونه محتوا را در دستورات اجرا می کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم قربانی را فریب می دهد تا محتوای فلش مخربی را اجرا کند که دستورات را اجرا می کند یا تماس های فلش مشخص شده توسط مهاجم را برقرار می کند. یکی از نمونه های این حمله، چشمک زدن بین سایتی است، پارامتری که مهاجم کنترل می شود تا یک تماس مرجع از محتوای مشخص شده توسط مهاجم بارگیری شود.",
+            "name_fa": "تزریق فلاش",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در مثال زیر، فایل SWF حاوی</xhtml:p> است\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">getURL('javascript:SomeFunc(\"someValue\")','','GET')</xhtml:div>\n               <xhtml:p>یک درخواست مانند</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">http://example.com/noundef.swf?a=0:0;alert('XSS')</xhtml:div>\n               <xhtml:p>می شود</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">javascript:SomeFunc(\"someValue\")?a=0:0;alert(123)</xhtml:div>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>نقاط ورودی تزریق را بیابید: </b> مهاجم ابتدا فهرستی از نقاط ورودی برنامه را تهیه می‌کند.</p></li><table><tbody><tr><th>تکنیک‌های موجود در وب‌سایت که به فلش ارجاع می‌دهند. برنامه.</td></tr><tr><td>همه متغیرهای جهانی اولیه (مانند _root.*، _global.*، _level0.*) را در ActionScript، متغیرهای سراسری ثبت شده در فایل‌های موجود، بارگذاری متغیرها در فیلم‌های خارجی فهرست کنید.</td></tr></tbody></table></ol></h> <p> <b>تعیین حساسیت برنامه به تزریق فلش: </b>میزان حساسیت برنامه به تزریق فلش را تعیین کنید. برای هر URL شناسایی‌شده در مرحله کاوش، مهاجم سعی می‌کند از تکنیک‌های مختلفی مانند عملکرد بارگذاری مستقیم، صفحه/میزبان شیطانی کنترل‌شده، تزریق Flash HTML و تزریق DOM استفاده کند تا مشخص کند آیا برنامه مستعد تزریق فلش است یا نه. getURL,javascript:gotRoot(\"\")///d.jpg</td></tr><tr><td>صفحه را با استفاده از صفحه/میزبان شیطانی کنترل شده آزمایش کنید، http://example.com/evil.swf</td></tr><tr><td>Test صفحه را با استفاده از تزریق HTML Flash، \"'><img src='asfunction:getURL,(\"Javascript:got:\"/ ></td></tr><tr><td>صفحه را با استفاده از تزریق DOM آزمایش کنید، (gotRoot(''))</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>تزریق محتوای مخرب به target: </b>Inject inject malicious in target: </b>Inject inject malicious in target. مرحله آزمایش</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "هدف باید قابلیت اجرای برنامه های فلش را داشته باشد. در برخی موارد، قربانی باید یک پیوند ارائه شده توسط مهاجم را دنبال کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. مهاجم ممکن است نیاز داشته باشد که بتواند محتوای Flash تزریق شده را ارائه دهد."
+            ]
         }
     ],
     "type": "bundle"

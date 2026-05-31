@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0161#AN0458",
-                    "external_id": "AN0458"
+                    "external_id": "AN0458",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CloudReadOnlyApps",
-                    "description": "Approved security tooling principals that routinely read policy."
+                    "description": "Approved security tooling principals that routinely read policy.",
+                    "description_fa": "اصول ابزار امنیتی تایید شده که به طور معمول خط مشی را می خوانند."
                 },
                 {
                     "field": "ApiClientIPAllowList",
-                    "description": "Corporate egress IPs for administrative API access."
+                    "description": "Corporate egress IPs for administrative API access.",
+                    "description_fa": "IP های خروجی شرکت برای دسترسی به API اداری."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0458",
+            "description_fa": "زنجیره: (1) فراخوانی های API ابری که خط مشی رمز عبور مستاجر/سازمان را واکشی می کنند (به عنوان مثال، AWS «GetAccountPasswordPolicy»، معادل های GCP/OCI یا تنظیمات IAM خوانده می شود). (2) در یک پنجره کوتاه، همان اصلی کاربران را ایجاد می کند، اعتبارنامه ها را می چرخاند یا تنظیمات احراز هویت را تغییر می دهد. از گزارش های حسابرسی ابری استفاده کنید."
         }
     ]
 }

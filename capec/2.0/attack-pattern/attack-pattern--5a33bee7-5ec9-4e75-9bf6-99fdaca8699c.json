@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-253",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/253.html"
+                    "url": "https://capec.mitre.org/data/definitions/253.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Remote File Inclusion",
                     "external_id": "05",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Remote-File-Inclusion"
+                    "url": "http://projects.webappsec.org/Remote-File-Inclusion",
+                    "description_fa": "گنجاندن فایل از راه دور",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-614",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.2-Testing_for_Remote_File_Inclusion.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5a33bee7-5ec9-4e75-9bf6-99fdaca8699c",
@@ -55,7 +61,12 @@
                 "Target application server must allow remote files to be included.The malicious file must be placed on the remote machine previously."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم یک برنامه را مجبور می کند تا فایل های کد دلخواه را از یک مکان راه دور بارگیری کند. مهاجم می‌تواند از این برای بارگیری نسخه‌های قدیمی فایل‌های کتابخانه که دارای آسیب‌پذیری‌های شناخته شده هستند، برای بارگیری فایل‌های مخربی که مهاجم بر روی دستگاه راه دور قرار داده است، یا تغییر عملکرد برنامه مورد نظر به روش‌های غیرمنتظره استفاده کند.",
+            "name_fa": "گنجاندن کد از راه دور",
+            "x_capec_prerequisites_fa": [
+                "سرور برنامه هدف باید اجازه دهد فایل های راه دور گنجانده شوند. فایل مخرب باید قبلاً روی دستگاه راه دور قرار داده شود."
+            ]
         }
     ],
     "spec_version": "2.0",

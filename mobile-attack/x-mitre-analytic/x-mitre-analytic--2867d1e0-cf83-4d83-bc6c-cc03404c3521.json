@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0676#AN1778",
-                    "external_id": "AN1778"
+                    "external_id": "AN1778",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.376Z",
             "name": "Analytic 1778",
-            "description": "Defender correlates an app preparing to phish (gaining overlay/notification/accessibility capability) with precise foreground targeting (reading activity in front via accessibility/focus) and then presenting a look-alike UI (overlay window or activity-on-top) immediately before local storage or small-burst egress of entered data. Chain: capability/permission \u2192 target app in foreground detected \u2192 overlay/activity-on-top or fake notification tap \u2192 local prompt input write \u2192 near-term network egress.",
+            "description": "Defender correlates an app preparing to phish (gaining overlay/notification/accessibility capability) with precise foreground targeting (reading activity in front via accessibility/focus) and then presenting a look-alike UI (overlay window or activity-on-top) immediately before local storage or small-burst egress of entered data. Chain: capability/permission → target app in foreground detected → overlay/activity-on-top or fake notification tap → local prompt input write → near-term network egress.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -62,29 +63,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time from overlay/activity to persist/exfil (e.g., 5\u201360s)."
+                    "description": "Max time from overlay/activity to persist/exfil (e.g., 5–60s).",
+                    "description_fa": "حداکثر زمان از همپوشانی/فعالیت تا ماندگاری/اکسفیل (مثلاً 5 تا 60 ثانیه)."
                 },
                 {
                     "field": "OverlayRequired",
-                    "description": "Require overlay evidence unless activity-on-top is observed (true/false)."
+                    "description": "Require overlay evidence unless activity-on-top is observed (true/false).",
+                    "description_fa": "به شواهد همپوشانی نیاز دارید مگر اینکه فعالیت روی بالا مشاهده شود (درست/نادرست)."
                 },
                 {
                     "field": "TargetPkgWatchlist",
-                    "description": "List of high-value target packages (banking, identity) to raise severity."
+                    "description": "List of high-value target packages (banking, identity) to raise severity.",
+                    "description_fa": "لیست بسته های هدف با ارزش (بانکداری، هویت) برای افزایش شدت."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for local prompt data artifacts."
+                    "description": "Regex for local prompt data artifacts.",
+                    "description_fa": "Regex برای مصنوعات داده فوری محلی."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Known-good analytics/CDN/service domains to suppress FPs."
+                    "description": "Known-good analytics/CDN/service domains to suppress FPs.",
+                    "description_fa": "حوزه های تجزیه و تحلیل/CDN/سرویس شناخته شده برای سرکوب FP ها."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Work Profile/Kiosk mode/Accessibility allowlist to scope benign cases."
+                    "description": "Work Profile/Kiosk mode/Accessibility allowlist to scope benign cases.",
+                    "description_fa": "نمایه کاری/حالت کیوسک/فهرست اجازه دسترسی برای گستره موارد خوش خیم."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1778",
+            "description_fa": "Defender برنامه‌ای را که برای فیش آماده می‌شود (به‌دست آوردن قابلیت همپوشانی/اعلان/دسترسی) با هدف‌یابی پیش‌زمینه دقیق (خواندن فعالیت از جلو از طریق قابلیت دسترسی/فوکوس) و سپس ارائه یک رابط کاربری مشابه (پنجره همپوشانی یا فعالیت روی بالا) بلافاصله قبل از ذخیره‌سازی محلی یا خروج سریع داده‌های وارد شده، مرتبط می‌کند. زنجیره: قابلیت/مجوز ← برنامه هدف در پیش زمینه شناسایی شد ← همپوشانی/فعالیت روی بالا یا ضربه زدن به اعلان جعلی ← نوشتن ورودی فوری محلی ← خروج کوتاه مدت از شبکه."
         }
     ]
 }

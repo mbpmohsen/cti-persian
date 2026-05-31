@@ -9,37 +9,45 @@
                 {
                     "external_id": "CAPEC-388",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/388.html"
+                    "url": "https://capec.mitre.org/data/definitions/388.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-471",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/471.html"
+                    "url": "http://cwe.mitre.org/data/definitions/471.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-345",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/345.html"
+                    "url": "http://cwe.mitre.org/data/definitions/345.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-346",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/346.html"
+                    "url": "http://cwe.mitre.org/data/definitions/346.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-602",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/602.html"
+                    "url": "http://cwe.mitre.org/data/definitions/602.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-311",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/311.html"
+                    "url": "http://cwe.mitre.org/data/definitions/311.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Tom Stracener, Sean Barnum, So Many Ways [...]: Exploiting Facebook and YoVille, 2010, Defcon 18",
                     "external_id": "REF-327",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "تام استریسنر، شان بارنوم، راه های زیادی [...]: بهره برداری از فیس بوک و یوویل، 2010، دفکون 18",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--9c41b3f7-76fa-4864-9b1d-304327dcd55c",
@@ -69,7 +77,18 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم داده های خروجی یا ورودی از یک کلاینت را در چارچوب برنامه دستکاری می کند تا مقصد و/یا محتوای دکمه های نمایش داده شده به کاربر در پیام های API را تغییر دهد. انجام این حمله به مهاجم این امکان را می‌دهد که محتوا را به گونه‌ای دستکاری کند که پیام‌ها یا محتوایی تولید کند که معتبر به نظر می‌رسد اما حاوی دکمه‌هایی است که به مقصدی که مهاجم کنترل می‌شود اشاره می‌کند.",
+            "name_fa": "ربودن دکمه API برنامه",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک رویداد درون بازی رخ می دهد و مهاجم نتیجه را به دام می اندازد، که معلوم می شود فرمی است که در نمایه اصلی آنها پر می شود. مهاجم با استفاده از یک پروکسی MITM، داده های زیر را مشاهده می کند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">[Button][Claim_Item]Sourdough_Cookie[URL_IMG]foo[/URL_IMG][Claim_Link]bar[/Claim_Link]</xhtml:div>\n               <xhtml:p>با تغییر مقصد \"Claim_Link\" برای اشاره به سرور مهاجمان، می‌توان قربانی ناخواسته را برای کلیک روی پیوند ترغیب کرد. مثال دیگر این است که مهاجم مقصدهای دکمه را برای یک رویداد بازنویسی کند، به طوری که کلیک کردن روی \"بله\" یا \"خیر\" باعث شود کاربر کد مهاجم را بارگیری کند.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "نرم افزار هدفمند از APIهای چارچوب برنامه کاربردی استفاده می کند"
+            ],
+            "x_capec_resources_required_fa": [
+                "یک برنامه نرم افزاری که امکان استفاده از ارتباطات دشمن در وسط (CAPEC-94) را بین مشتری و سرور فراهم می کند، مانند یک پراکسی دشمن در وسط (CAPEC-94)."
+            ]
         }
     ],
     "type": "bundle"

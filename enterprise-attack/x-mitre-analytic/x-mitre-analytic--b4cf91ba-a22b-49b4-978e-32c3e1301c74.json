@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0196#AN0566",
-                    "external_id": "AN0566"
+                    "external_id": "AN0566",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UnsignedBinary",
-                    "description": "Helps tune detection when unsigned apps initiate fronted sessions."
+                    "description": "Helps tune detection when unsigned apps initiate fronted sessions.",
+                    "description_fa": "هنگامی که برنامه‌های بدون امضا جلسات جلویی را شروع می‌کنند، به شناسایی تنظیم کمک می‌کند."
                 },
                 {
                     "field": "HostHeaderMatch",
-                    "description": "Threshold to flag inconsistent domain targeting in encrypted sessions."
+                    "description": "Threshold to flag inconsistent domain targeting in encrypted sessions.",
+                    "description_fa": "آستانه برای پرچم‌گذاری هدف‌یابی دامنه ناسازگار در جلسات رمزگذاری‌شده."
                 },
                 {
                     "field": "SOCKSPortAnomaly",
-                    "description": "Alert on unusual ports used in HTTPS+SOCKS activity patterns."
+                    "description": "Alert on unusual ports used in HTTPS+SOCKS activity patterns.",
+                    "description_fa": "هشدار در مورد پورت های غیرعادی مورد استفاده در الگوهای فعالیت HTTPS+SOCKS."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0566",
+            "description_fa": "برنامه‌های بدون امضا یا فضای کاربر، اتصالات TLS را با یک نام میزبان و هدرهای HTTP که دامنه متفاوتی را درخواست می‌کنند، آغاز می‌کنند، که معمولاً در تکنیک‌های جلویی دامنه ساکن CDN مورد سوء استفاده قرار می‌گیرد."
         }
     ]
 }

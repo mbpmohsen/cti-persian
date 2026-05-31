@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0273#AN0760",
-                    "external_id": "AN0760"
+                    "external_id": "AN0760",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WhitelistedDaemons",
-                    "description": "Legitimate system services expected to use TLS (e.g., package updates)."
+                    "description": "Legitimate system services expected to use TLS (e.g., package updates).",
+                    "description_fa": "انتظار می‌رود سرویس‌های سیستم قانونی از TLS استفاده کنند (مانند به‌روزرسانی‌های بسته)."
                 },
                 {
                     "field": "CertificateAuthorities",
-                    "description": "Trusted CAs; flag self-signed or unrecognized certs."
+                    "description": "Trusted CAs; flag self-signed or unrecognized certs.",
+                    "description_fa": "CAهای مورد اعتماد؛ گواهینامه های خودامضا یا ناشناس را پرچم گذاری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0760",
+            "description_fa": "فرآیندهایی مانند curl، wget، python، socat، یا باینری های سفارشی که جلسات TLS/SSL را به مقصدهای غیر استاندارد آغاز می کنند. Defender سیستم‌های غیرعادی را برای connect()، بارگیری کتابخانه‌های libssl، و ترافیک رمزگذاری‌شده خروجی دائمی از دیمون‌هایی که معمولاً به صورت خارجی ارتباط برقرار نمی‌کنند، می‌بیند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0094#AN0262",
-                    "external_id": "AN0262"
+                    "external_id": "AN0262",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StartupScriptName",
-                    "description": "Filename not matching expected initialization scripts."
+                    "description": "Filename not matching expected initialization scripts.",
+                    "description_fa": "نام فایل با اسکریپت های اولیه سازی مورد انتظار مطابقت ندارد."
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Commands run from unexpected SSH sessions or elevated shells."
+                    "description": "Commands run from unexpected SSH sessions or elevated shells.",
+                    "description_fa": "دستورات از جلسات SSH غیرمنتظره یا پوسته های بالا اجرا می شوند."
                 },
                 {
                     "field": "PersistenceInterval",
-                    "description": "Rare scheduling triggers (e.g., @reboot + hourly repetition)."
+                    "description": "Rare scheduling triggers (e.g., @reboot + hourly repetition).",
+                    "description_fa": "محرک های زمان بندی نادر (به عنوان مثال، @ reboot + تکرار ساعتی)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0262",
+            "description_fa": "تغییرات ESXi cron jobs، اسکریپت‌های local.sh یا تماس‌های برنامه‌ریزی‌شده API را برای تداوم باینری‌های سفارشی یا اسکریپت‌های پوسته تشخیص می‌دهد."
         }
     ]
 }

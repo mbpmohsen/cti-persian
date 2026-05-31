@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0301#AN0841",
-                    "external_id": "AN0841"
+                    "external_id": "AN0841",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DriveLetterMatch",
-                    "description": "Detect activity on mounted drives typically used by USB (e.g., E:, F:, G:). Tune based on enterprise usage."
+                    "description": "Detect activity on mounted drives typically used by USB (e.g., E:, F:, G:). Tune based on enterprise usage.",
+                    "description_fa": "شناسایی فعالیت در درایوهای نصب شده که معمولاً توسط USB استفاده می‌شوند (به عنوان مثال، E:، F:، G:). تنظیم بر اساس استفاده سازمانی."
                 },
                 {
                     "field": "FileExecutionWindow",
-                    "description": "Set timing threshold for execution shortly after drive mount (e.g., < 5 minutes)."
+                    "description": "Set timing threshold for execution shortly after drive mount (e.g., < 5 minutes).",
+                    "description_fa": "آستانه زمان‌بندی را برای اجرا بلافاصله پس از نصب درایو تنظیم کنید (مثلاً کمتر از 5 دقیقه)."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Restrict detection to suspicious process lineage like explorer.exe, powershell.exe, or unsigned binaries."
+                    "description": "Restrict detection to suspicious process lineage like explorer.exe, powershell.exe, or unsigned binaries.",
+                    "description_fa": "شناسایی را به دودمان فرآیند مشکوک مانند explorer.exe، powershell.exe یا باینری های بدون علامت محدود کنید."
                 },
                 {
                     "field": "FileEntropy",
-                    "description": "Use entropy thresholding to detect packed/obfuscated payloads dropped to removable media."
+                    "description": "Use entropy thresholding to detect packed/obfuscated payloads dropped to removable media.",
+                    "description_fa": "از آستانه آنتروپی برای شناسایی محموله های بسته بندی شده/مبهم که به رسانه های قابل جابجایی افتاده اند استفاده کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0841",
+            "description_fa": "اجرای فایل‌هایی که از رسانه‌های قابل جابجایی پس از نصب درایو، با ارتباط با فعالیت نوشتن فایل، استفاده از اجرای خودکار، یا گسترش جانبی از طریق ابزارهای مرحله‌ای، منشا می‌گیرند."
         }
     ]
 }

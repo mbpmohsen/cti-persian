@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0525#AN1455",
-                    "external_id": "AN1455"
+                    "external_id": "AN1455",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SessionOrigin",
-                    "description": "Track SSH or console-based entry points."
+                    "description": "Track SSH or console-based entry points.",
+                    "description_fa": "SSH یا نقاط ورودی مبتنی بر کنسول را ردیابی کنید."
                 },
                 {
                     "field": "CommandString",
-                    "description": "Customize detection for expected CLI queries."
+                    "description": "Customize detection for expected CLI queries.",
+                    "description_fa": "سفارشی کردن تشخیص برای درخواست های CLI مورد انتظار."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1455",
+            "description_fa": "اجرای دستورات 'esxcli system hostname get'، 'esxcli system version get' یا 'esxcli hardware' از طریق SSH یا پوسته محلی."
         }
     ]
 }

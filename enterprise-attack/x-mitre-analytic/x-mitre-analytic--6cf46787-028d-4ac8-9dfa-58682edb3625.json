@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0560#AN1544",
-                    "external_id": "AN1544"
+                    "external_id": "AN1544",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Identify logins to root or sudoers not aligned with normal usage profiles."
+                    "description": "Identify logins to root or sudoers not aligned with normal usage profiles.",
+                    "description_fa": "ورود به روت یا sudoers که با نمایه‌های استفاده معمولی تراز نیستند را شناسایی کنید."
                 },
                 {
                     "field": "HostDensityThreshold",
-                    "description": "Number of unique systems a user authenticates to in a time window."
+                    "description": "Number of unique systems a user authenticates to in a time window.",
+                    "description_fa": "تعداد سیستم های منحصر به فردی که کاربر در یک پنجره زمانی به آنها احراز هویت می کند."
                 },
                 {
                     "field": "LoginMethod",
-                    "description": "Trigger on rarely used access methods such as password instead of SSH key."
+                    "description": "Trigger on rarely used access methods such as password instead of SSH key.",
+                    "description_fa": "راه‌اندازی در روش‌های دسترسی به ندرت مانند رمز عبور به جای کلید SSH."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1544",
+            "description_fa": "تشخیص سوء استفاده از حساب معتبر از طریق ورود به سیستم SSH، سوء استفاده sudo/su، و ناهنجاری های حساب سرویس خارج از الگوهای مورد انتظار."
         }
     ]
 }

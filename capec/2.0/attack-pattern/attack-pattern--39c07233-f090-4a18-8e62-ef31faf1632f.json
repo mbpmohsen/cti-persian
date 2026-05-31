@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-702",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/702.html"
+                    "url": "https://capec.mitre.org/data/definitions/702.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1296",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1296.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1296.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Hewlett-Packard Journal, Overview of the Test Access Port, 1994--12",
                     "external_id": "REF-748",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.hpl.hp.com/hpjournal/94dec/dec94a7a.pdf"
+                    "url": "https://www.hpl.hp.com/hpjournal/94dec/dec94a7a.pdf",
+                    "description_fa": "مجله هیولت پاکارد، مروری بر درگاه دسترسی آزمایشی، 1994--12",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Finding Faults with the Test Access Port (TAP), 2017--06---12",
                     "external_id": "REF-749",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://flynn.com/2017/06/12/finding-faults-with-the-test-access-port-tap/"
+                    "url": "https://flynn.com/2017/06/12/finding-faults-with-the-test-access-port-tap/",
+                    "description_fa": "یافتن خطاها با درگاه دسترسی آزمایشی (TAP)، 2017--06---12",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Technical Guide to JTAG",
                     "external_id": "REF-750",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.xjtag.com/about-jtag/jtag-a-technical-overview/"
+                    "url": "https://www.xjtag.com/about-jtag/jtag-a-technical-overview/",
+                    "description_fa": "راهنمای فنی JTAG",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--39c07233-f090-4a18-8e62-ef31faf1632f",
@@ -58,6 +66,18 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -79,11 +99,27 @@
                 "A device to communicate on a TAP or JTAG interface, such as a BusPirate"
             ],
             "x_capec_skills_required": {
-                "Medium": "Ability to operate devices to scan and connect to an exposed debug interface"
+                "Medium": "Ability to operate devices to scan and connect to an exposed debug interface",
+                "Medium_fa": "توانایی کار با دستگاه ها برای اسکن و اتصال به یک رابط اشکال زدایی در معرض"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن از زنجیره یا دانه بندی نادرست اجزای اشکال زدایی سخت افزار برای دسترسی غیرمجاز به عملکرد اشکال زدایی روی یک تراشه سوء استفاده می کند. این زمانی اتفاق می‌افتد که مجوز بر اساس هر تابع بررسی نمی‌شود و برای زنجیره یا گروهی از عملکردهای اشکال‌زدایی در نظر گرفته می‌شود.</xhtml:p>",
+            "name_fa": "بهره برداری از زنجیره یا دانه بندی نادرست اجزای اشکال زدایی سخت افزار",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک سیستم روی تراشه (SoC) ممکن است به کاربران عادی امکان دسترسی به TAP سطح SoC را بدهد، اما نمی‌خواهد به همه TAP‌های داخلی (به عنوان مثال، هسته) دسترسی داشته باشد. اگر هر یک از TAPهای داخلی به اشتباه به TAP در سطح SoC زنجیر شده باشد، این امر به کاربران عادی امکان دسترسی به TAPهای داخلی را می دهد و به آنها اجازه می دهد تا دستورات را در آنجا اجرا کنند.</xhtml:p>",
+                "<xhtml:p> فرض کنید سلسله مراتبی از TAPها وجود دارد (TAP_A به TAP_B و TAP_C متصل است، سپس TAP_B به TAP_D و TAP_E وصل شده است، سپس TAP_C به TAP_F و TAP_G و غیره متصل می شود). معماری الزام می‌کند که کاربر یک مجموعه اعتبار برای دسترسی به TAP_A، مجموعه دیگری از اعتبارنامه‌ها برای دسترسی به TAP_B و TAP_C و غیره داشته باشد. با این حال، اگر در حین اجرا، طراح به اشتباه یک TAP زنجیره‌دار را پیاده‌سازی کند که در آن همه TAP‌ها در یک زنجیره TAP واحد به هم متصل شده‌اند، بدون ساختار سلسله‌مراتبی حمله‌کننده، ساختار سلسله مراتبی پیاده‌سازی شده است. می تواند دسترسی غیرمجاز به دست آورد.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>پیدا کردن و اسکن رابط اشکال‌زدایی: </b> دشمن ابتدا باید یک رابط اشکال‌زدایی را پیدا کرده و اسکن کند تا مشخص کند که مجاز به استفاده از چه چیزی هستند و چه دستگاه‌هایی به آن متصل شده‌اند. رابط.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از JTAGulator در رابط JTAG برای تعیین پیکربندی صحیح پین، نرخ باود و تعداد دستگاه‌های موجود در زنجیره استفاده کنید</td></tr></tbody></table></ol></div><div><ment</h3>Ex رابط اشکال زدایی: </b>در مرحله بعد، حریف یک دستگاه را با استفاده از ویژگی های موجود در مرحله کاوش به رابط JTAG متصل می کند تا بتواند دستورات را ارسال کند. حریف دستورات آزمایشی را برای اطمینان از کارکرد اتصال ارسال می‌کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دستگاهی مانند BusPirate یا UM232H را به رابط JTAG وصل کنید و با استفاده از طرح‌بندی پین که از JTAGulator</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>حرکت در امتداد زنجیره اشکال زدایی: </b>هنگامی که حریف به رابط اصلی TAP یا JTAG متصل شد، در امتداد زنجیره TAP حرکت می‌کند تا ببیند چه چیزی ممکن است اشکال زدایی داشته باشد. زنجیره ای.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>برای مشاهده اینکه چه TAPهایی در زنجیره موجود است، فرمانی مانند \"scan_chain\" را اجرا کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> طراحان تراشه اغلب عناصر طراحی را برای اشکال زدایی و عیب یابی در یک تراشه می گنجانند مانند:</xhtml:p>\n            <xhtml:ul>\n               <xhtml:li>درگاه‌های دسترسی آزمایشی مختلف (TAP) که اجازه می‌دهند دستورات اسکن مرزی اجرا شوند.</xhtml:li>\n               <xhtml:li> سلول‌هایی را اسکن کنید که به تراشه اجازه می‌دهد به عنوان مکانیزم \"محرک و پاسخ\" برای اسکن اجزای داخلی یک تراشه استفاده شود.</xhtml:li>\n               <xhtml:li>روش های سفارشی برای مشاهده اجزای داخلی تراشه های آنها با قرار دادن هاب های ردیابی مختلف در تراشه و ایجاد ساختارهای سلسله مراتبی یا به هم پیوسته در بین آن هاب ها.</xhtml:li>\n            </xhtml:ul>\n            <xhtml:p> از آنجایی که دستگاه‌ها معمولاً دارای تراشه‌های متعدد و اجزای اشکال‌زدایی هستند، طراحان اجزای اشکال‌زدایی را به هم متصل می‌کنند و آنها را از طریق یک رابط خارجی که به آن «زنجیره‌سازی» گفته می‌شود، نشان می‌دهند. خطاهای منطقی در طول طراحی یا سنتز می‌تواند زنجیره‌بندی اجزای اشکال‌زدایی را به اشتباه پیکربندی کند، که می‌تواند دسترسی ناخواسته را امکان‌پذیر کند. TAP ها معمولاً به عنوان رابط های JTAG نیز شناخته می شوند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "دستگاه سخت افزاری دارای یک رابط اشکال زدایی آشکار است"
+            ],
+            "x_capec_resources_required_fa": [
+                "دستگاهی برای اسکن رابط TAP یا JTAG، مانند JTAGulator",
+                "دستگاهی برای برقراری ارتباط بر روی یک رابط TAP یا JTAG، مانند BusPirate"
+            ]
         }
     ],
     "spec_version": "2.0",

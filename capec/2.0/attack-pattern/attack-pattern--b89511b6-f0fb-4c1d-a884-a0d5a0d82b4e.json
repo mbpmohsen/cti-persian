@@ -9,51 +9,64 @@
                 {
                     "external_id": "CAPEC-105",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/105.html"
+                    "url": "https://capec.mitre.org/data/definitions/105.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-113",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/113.html"
+                    "url": "http://cwe.mitre.org/data/definitions/113.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-138",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/138.html"
+                    "url": "http://cwe.mitre.org/data/definitions/138.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-436",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/436.html"
+                    "url": "http://cwe.mitre.org/data/definitions/436.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "HTTP Request Splitting",
                     "external_id": "24",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/HTTP-Request-Splitting"
+                    "url": "http://projects.webappsec.org/HTTP-Request-Splitting",
+                    "description_fa": "تقسیم درخواست HTTP",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "HTTP Response Smuggling, Beyond Security",
                     "external_id": "REF-117",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.securiteam.com/securityreviews/5CP0L0AHPC.html"
+                    "url": "http://www.securiteam.com/securityreviews/5CP0L0AHPC.html",
+                    "description_fa": "HTTP Response Smugging، فراتر از امنیت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-617",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/15-Testing_for_HTTP_Splitting_Smuggling.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/15-Testing_for_HTTP_Splitting_Smuggling.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Robert Auger, HTTP Request Splitting, 2011, The Web Application Security Consortium",
                     "external_id": "REF-679",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://projects.webappsec.org/w/page/13246929/HTTP%20Request%20Splitting"
+                    "url": "http://projects.webappsec.org/w/page/13246929/HTTP%20Request%20Splitting",
+                    "description_fa": "رابرت اوگر، تقسیم درخواست HTTP، 2011، کنسرسیوم امنیت برنامه های وب",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--b89511b6-f0fb-4c1d-a884-a0d5a0d82b4e",
@@ -93,6 +106,24 @@
                 "Integrity": [
                     "Execute Unauthorized Commands",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -118,11 +149,28 @@
                 "Tools capable of crafting malicious HTTP messages and monitoring HTTP messages responses."
             ],
             "x_capec_skills_required": {
-                "Medium": "Possess knowledge on the exact details in the discrepancies between several targeted HTTP agents in path of an HTTP message in parsing its message structure and individual headers."
+                "Medium": "Possess knowledge on the exact details in the discrepancies between several targeted HTTP agents in path of an HTTP message in parsing its message structure and individual headers.",
+                "Medium_fa": "داشتن دانش در مورد جزئیات دقیق در اختلاف بین چندین عامل HTTP هدفمند در مسیر یک پیام HTTP در تجزیه ساختار پیام و سرصفحه های فردی."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک دشمن از انعطاف‌پذیری و مغایرت‌ها در تجزیه و تفسیر پیام‌های درخواست HTTP توسط عوامل HTTP واسطه‌های مختلف (مانند متعادل‌کننده بار، پراکسی معکوس، پراکسی‌های کش وب، فایروال‌های برنامه و غیره) سوء استفاده می‌کند تا یک درخواست HTTP را به یک درخواست HTTP مخرب به یک درخواست HTTP مخرب به یک HTTP unautious unautous تقسیم کند. (به عنوان مثال، وب سرور).</xhtml:p>\n            <xhtml:p>برای پیامدهای احتمالی به روابط CanPrecede مراجعه کنید.</xhtml:p>",
+            "name_fa": "تقسیم درخواست HTTP",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>نسخه‌های Microsoft Internet Explorer 5.01 SP4 و قبل، 6.0 SP2 و قبلی، و 7.0 دارای آسیب‌پذیری هستند که می‌تواند به یک دشمن احراز هویت نشده و از راه دور اجازه دهد تا حملات تقسیم درخواست HTTP و حملات قاچاق را انجام دهد. این آسیب‌پذیری به دلیل یک خطای اعتبارسنجی ورودی در مرورگر است که به دشمنان اجازه می‌دهد تا هدرهای خاصی را دستکاری کنند تا مرورگر را در معرض تقسیم درخواست HTTP و حملات قاچاق قرار دهند. حملات ممکن است شامل اسکریپت بین سایتی، مسمومیت حافظه پنهان پراکسی و ثابت کردن جلسه باشد. در موارد خاص، یک اکسپلویت می تواند به حریف اجازه دهد که فایروال برنامه های وب یا سایر دستگاه های فیلتر را دور بزند. مایکروسافت این آسیب‌پذیری را تأیید کرده و به‌روزرسانی‌های نرم‌افزاری را منتشر کرده است.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3> کاوش</h3><ol><li> <p> <b>شبکه بررسی برای شناسایی هدف: </b> دشمن با نظارت بر ترافیک مربوطه برای شناسایی مسیر شبکه و تجزیه پیام‌های HTTP با هدف شناسایی بالقوه، شناسایی شبکه را انجام می‌دهد. هدف‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>شبکه‌ها را اسکن کنید تا زیرساخت‌های HTTP اثر انگشت را بررسی کنند و ترافیک HTTP را برای شناسایی مسیر شبکه HTTP با ابزاری مانند تحلیل‌گر پروتکل شبکه بررسی کنید.</td></tr></tbody></table></ol></3hExol> <b>شناسایی آسیب‌پذیری‌ها در زیرساخت‌ها و فناوری‌های HTTP هدفمند: </b> دشمن انواع درخواست‌های HTTP خوش‌خیم/مبهم را برای مشاهده پاسخ‌ها از زیرساخت HTTP ارسال می‌کند تا تفاوت‌ها/اختلاف‌ها را در تفسیر و تجزیه درخواست‌های HTTP با بررسی نسخه‌های پروتکل بررسی HTTP پشتیبانی شده و نسخه‌های HTTP بررسی همگام‌سازی، شناسایی کند. فیلتر کردن.</p></li><li> <p> <b>با آزمایش آسیب‌پذیری‌های درخواست HTTP شناسایی‌شده باعث پاسخ‌های HTTP متفاوت می‌شود: </b>دشمن درخواست‌های HTTP مخرب ساخته‌شده را با رشته‌های سفارشی و اسکریپت‌های وب تعبیه‌شده و اشیاء در HTTP با هدرهای تجزیه‌کننده پس‌انداز HTTP و زیرساخت‌های تداخلی پس‌انداز ارسال می‌کند. درخواست HTTP عادی/خوش خیم از طرف حریف یا یک کاربر تصادفی. پیامدهای مورد نظر درخواست‌های HTTP مخرب در پاسخ زیرساخت HTTP به درخواست HTTP معمولی/خوش‌خیم مشاهده می‌شود تا کاربرد آسیب‌پذیری‌های شناسایی‌شده در طرح حمله دشمن را تأیید کند.\n                  <xhtml:p>از توالی های مختلف کاراکترهای خاص (CR - Carriage Return، LF - Line Feed، HT - Horizontal Tab، SP - Space و غیره) برای دور زدن فیلترینگ و رمزگذاری back-end و برای جاسازی استفاده کنید:</xhtml:p>\n                  <xhtml:ul>\n                     <xhtml:li>درخواست‌های HTTP اضافی با هدرهای خاص خود</xhtml:li>\n                     <xhtml:li>اسکریپت های وب مخرب در پارامترهای هدرهای درخواست HTTP (به عنوان مثال، کوکی های مرورگر مانند Set-Cookie یا پارامترهای شی وب/مرورگر Ajax مانند XMLHttpRequest)</xhtml:li>\n                     <xhtml:li>رمزگذاری انتخابی دشمن (به عنوان مثال، UTF-7)</xhtml:li>\n                  </xhtml:ul>\n                  <xhtml:p>برای استفاده از کاراکترهای ویژه اضافی (مانند > و <) فیلتر شده توسط عامل HTTP هدف.</xhtml:p>\n                  <xhtml:p>توجه داشته باشید که برخی از نویسه‌های خاص و رمزگذاری کاراکترها ممکن است فقط برای عوامل واسطه و فرانت‌اند با پیکربندی‌های نادر یا سازگار با RFC نیستند.</xhtml:p>\n               </td></tr><tr><td>دنبال کردن سرصفحه HTTP ناشناخته (گاهی با RFC سازگار) همراه با درخواست HTTP بعدی، به طور بالقوه باعث نادیده گرفتن درخواست HTTP و تفسیر به عنوان بخشی از HTTP قبلی شود. درخواست کنید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>انجام حمله تقسیم درخواست HTTP: </b>با استفاده از دانش کشف شده در بخش آزمایش بالا، پیامی را قاچاق کنید تا یکی از موارد را ایجاد کنید. عواقب",
+            "x_capec_extended_description_fa": "<xhtml:p>این امر مستلزم تزریق ورودی کاربر مخرب توسط دشمن به سربرگ‌های HTTP مختلف استاندارد و/یا تعریف‌شده توسط کاربر در یک درخواست HTTP از طریق ورودی کاربر از Carriage Return (CR)، Line Feed (LF)، Tab افقی (HT)، Space (SP) و همچنین سایر نویسه‌های منحصربه‌فرد enco کاراکتر معتبر/RFC است. این ورودی کاربر مخرب اجازه می دهد تا اسکریپت وب در هدرهای HTTP و همچنین به کوکی های مرورگر یا پارامترهای شی وب/مرورگر Ajax مانند XMLHttpRequest در طول اجرای درخواست های ناهمزمان تزریق شود.</xhtml:p>\n            <xhtml:p>این حمله معمولاً نتیجه استفاده از نسخه‌های پروتکل HTTP قدیمی یا ناسازگار و همچنین عدم بررسی نحو و فیلتر کردن ورودی کاربر در عوامل HTTP است که پیام‌های HTTP را در مسیر دریافت می‌کنند.</xhtml:p>\n            <xhtml:p>این با تقسیم پاسخ HTTP CAPEC-34 متفاوت است، که معمولاً تلاشی برای به خطر انداختن یک عامل مشتری (مانند مرورگر وب) با ارسال محتوای مخرب در پاسخ‌های HTTP از زیرساخت HTTP پشتیبان است. تقسیم درخواست HTTP تلاشی برای به خطر انداختن یک<xhtml:i>عامل HTTP پشتیبان</xhtml:i>از طریق پیام‌های درخواست HTTP است.</xhtml:p>\n            <xhtml:p>قاچاق HTTP (CAPEC-33 و CAPEC-273) با تقسیم HTTP متفاوت است، زیرا به اختلافات در تفسیر سرصفحه‌های مختلف HTTP و اندازه پیام بستگی دارد و نه تنها ورودی کاربر از نویسه‌های خاص و رمزگذاری کاراکترها. قاچاق HTTP برای دور زدن اقدامات کاهشی علیه تکنیک‌های تقسیم درخواست HTTP ایجاد شد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "یک عامل واسطه HTTP اضافی مانند یک فایروال برنامه یا یک پروکسی کش وب بین دشمن و عامل دوم مانند یک وب سرور، که چندین پیام HTTP را از طریق یک اتصال شبکه ارسال می کند.",
+                "تفاوت در روشی که دو عامل HTTP درخواست های HTTP و هدرهای آن را تجزیه و تفسیر می کنند.",
+                "هدرهای HTTP با قابلیت دستکاری توسط کاربر.",
+                "عوامل HTTP که روی HTTP/1.0 یا HTTP/1.1 اجرا می‌شوند و حالت Keep Alive، پرس‌و‌جوهای Pipelined، و پرسش‌ها و پاسخ‌های تکه‌ای را امکان‌پذیر می‌کنند."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزارهایی که قادر به ساخت پیام های HTTP مخرب و نظارت بر پاسخ های پیام های HTTP هستند."
+            ]
         }
     ],
     "spec_version": "2.0",

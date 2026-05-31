@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0021#AN0061",
-                    "external_id": "AN0061"
+                    "external_id": "AN0061",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time span between elevated privilege use and critical service stop"
+                    "description": "Time span between elevated privilege use and critical service stop",
+                    "description_fa": "فاصله زمانی بین استفاده از امتیاز بالا و توقف حیاتی سرویس"
                 },
                 {
                     "field": "ServiceName",
-                    "description": "Service names of interest (e.g., MSExchangeIS, SQLSERVERAGENT)"
+                    "description": "Service names of interest (e.g., MSExchangeIS, SQLSERVERAGENT)",
+                    "description_fa": "نام خدمات مورد علاقه (به عنوان مثال، MSExchangeIS، SQLSERVERAGENT)"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Upstream process lineage leading to service stop"
+                    "description": "Upstream process lineage leading to service stop",
+                    "description_fa": "نسب فرآیند بالادستی که منجر به توقف خدمات می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0061",
+            "description_fa": "دشمن خدمات مهم (مانند Exchange، SQL، AV، نظارت نقطه پایانی) را با استفاده از ابزارهای بومی یا تماس‌های API غیرفعال یا متوقف می‌کند، که اغلب قبل از اقدامات مخرب (T1485، T1486 است). زنجیره رفتاری: زمینه اجرای بالا + سرویس توقف یا sc.exe یا ChangeServiceConfigW + سرویس پایان یافته یا غیرفعال + امکان دستکاری فایل بعدی."
         }
     ]
 }

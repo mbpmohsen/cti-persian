@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0524#AN1451",
-                    "external_id": "AN1451"
+                    "external_id": "AN1451",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1451",
-            "description": "Crafted \u2018synful knock\u2019 patterns toward routers/switches (same src hits interface/broadcast/network address on same port in short order) followed by ACL/telnet/SSH enablement or module change. Detect device image/ACL updates then a new mgmt session.",
+            "description": "Crafted ‘synful knock’ patterns toward routers/switches (same src hits interface/broadcast/network address on same port in short order) followed by ACL/telnet/SSH enablement or module change. Detect device image/ACL updates then a new mgmt session.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MgmtPortSet",
-                    "description": "Ports whose sudden enablement should alert (23, 22, 2323, 80/443, 4786)."
+                    "description": "Ports whose sudden enablement should alert (23, 22, 2323, 80/443, 4786).",
+                    "description_fa": "پورت هایی که فعال شدن ناگهانی آنها باید هشدار دهد (23، 22، 2323، 80/443، 4786)."
                 },
                 {
                     "field": "DeviceRole",
-                    "description": "Applies different thresholds to core/edge/branch devices."
+                    "description": "Applies different thresholds to core/edge/branch devices.",
+                    "description_fa": "آستانه های مختلف را برای دستگاه های هسته / لبه / شاخه اعمال می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1451",
+            "description_fa": "الگوهای \"تقوع همگام\" به سمت روترها/سوئیچ ها (همان src به رابط/پخش/آدرس شبکه در همان پورت به ترتیب کوتاه برخورد می کند) به دنبال فعال سازی ACL/telnet/SSH یا تغییر ماژول. به‌روزرسانی‌های تصویر/ACL دستگاه را شناسایی کنید و سپس یک جلسه mgmt جدید."
         }
     ]
 }

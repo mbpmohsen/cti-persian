@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0003#AN0006",
-                    "external_id": "AN0006"
+                    "external_id": "AN0006",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Detection triggers when Event ID 4720 follows a suspicious process within 2 minutes."
+                    "description": "Detection triggers when Event ID 4720 follows a suspicious process within 2 minutes.",
+                    "description_fa": "شناسایی زمانی فعال می‌شود که شناسه رویداد 4720 یک فرآیند مشکوک را در عرض 2 دقیقه دنبال کند."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Allow filtering of known admin tools vs adversarial misuse (e.g., net.exe, powershell.exe)."
+                    "description": "Allow filtering of known admin tools vs adversarial misuse (e.g., net.exe, powershell.exe).",
+                    "description_fa": "فیلتر کردن ابزارهای مدیریت شناخته شده در مقابل استفاده نادرست متخاصم (مانند net.exe، powershell.exe) مجاز است."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filter accounts with domain admin privileges creating new users vs standard helpdesk roles."
+                    "description": "Filter accounts with domain admin privileges creating new users vs standard helpdesk roles.",
+                    "description_fa": "اکانت‌ها را با امتیازات مدیریت دامنه فیلتر کنید تا کاربران جدید را در مقابل نقش‌های دفتر راهنمای استاندارد ایجاد کنید."
                 },
                 {
                     "field": "HostRole",
-                    "description": "Restrict to only domain controller hosts to reduce noise from workstations."
+                    "description": "Restrict to only domain controller hosts to reduce noise from workstations.",
+                    "description_fa": "برای کاهش نویز از ایستگاه های کاری، فقط به میزبان های کنترل کننده دامنه محدود شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0006",
+            "description_fa": "Adversary از ابزارهای داخلی مانند 'net user /add /domain' یا PowerShell برای ایجاد یک حساب کاربری دامنه استفاده می کند. زنجیره رفتار شامل موارد زیر است: (1) اجرای فرآیند مشکوک روی یک کنترل کننده دامنه و به دنبال آن (2) رویداد ایجاد حساب کاربری (شناسه رویداد 4720) در همان میزبان."
         }
     ]
 }

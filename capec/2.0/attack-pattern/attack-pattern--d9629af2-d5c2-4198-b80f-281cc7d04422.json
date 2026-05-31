@@ -9,35 +9,45 @@
                 {
                     "external_id": "CAPEC-331",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/331.html"
+                    "url": "https://capec.mitre.org/data/definitions/331.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-204",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/204.html"
+                    "url": "http://cwe.mitre.org/data/definitions/204.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "J. Postel, RFC792 - Internet Control Messaging Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-123",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc792.html"
+                    "url": "http://www.faqs.org/rfcs/rfc792.html",
+                    "description_fa": "J. Postel، RFC792 - پروتکل پیام‌رسانی کنترل اینترنت، 09-1981، آژانس پروژه‌های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "R. Braden, Ed., RFC1122 - Requirements for Internet Hosts - Communication Layers, 1989--10",
                     "external_id": "REF-124",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc1122.html"
+                    "url": "http://www.faqs.org/rfcs/rfc1122.html",
+                    "description_fa": "R. Braden, Ed., RFC1122 - Requirements for Internet Host - Communication Layers, 1989--10",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Ofir Arkin, A Remote Active OS Fingerprinting Tool using ICMP, 2002--04, The Sys-Security Group",
                     "external_id": "REF-262",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://ofirarkin.files.wordpress.com/2008/11/login.pdf"
+                    "url": "http://ofirarkin.files.wordpress.com/2008/11/login.pdf",
+                    "description_fa": "Ofir Arkin، ابزار انگشت نگاری فعال سیستم عامل از راه دور با استفاده از ICMP، 04-2002، گروه Sys-Security",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--d9629af2-d5c2-4198-b80f-281cc7d04422",
@@ -64,6 +74,19 @@
                     "Read Data",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -79,7 +102,16 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک بسته UDP را به یک پورت بسته در ماشین مورد نظر می فرستد تا مقدار فیلد طول کل IP Header را در پیام خطای بازتاب یافته \"Port Unreachable\" درخواست کند. این نوع رفتار برای ایجاد یک پایه امضا از پاسخ های سیستم عامل مفید است، به ویژه زمانی که پیام های خطا حاوی انواع دیگری از اطلاعات هستند که برای شناسایی پاسخ های سیستم عامل خاص مفید است.",
+            "name_fa": "پروب فیلد طول کل IP ICMP",
+            "x_capec_extended_description_fa": "<xhtml:p>RFC1122 مشخص می کند که هنگام ارسال خطایی در پاسخ، سرصفحه درخواست باید بازتاب داده شود، اما برخی از سیستم عامل ها و سیستم عامل ها یکپارچگی هدر اصلی را تغییر می دهند. پیاده سازی های غیر استاندارد ICMP/IP منجر به پاسخ هایی می شوند که برای جداسازی نسخه های سیستم عامل راه دور یا سیستم عامل روتر مفید هستند. چهار نوع پاسخ کلی وجود دارد که می‌توان برای تفکیک سیستم‌های عامل از یکدیگر استفاده کرد: 1) فیلد طول کل IP ممکن است به درستی محاسبه شود، 2) یک سیستم عامل ممکن است 20 بایت یا بیشتر به محاسبه طول اضافه کند، 3) سیستم عامل ممکن است 20 بایت یا بیشتر از طول صحیح فیلد کم کند یا 4) فیلد طول کل IP با هر مقدار دیگری محاسبه می‌شود.",
+            "x_capec_prerequisites_fa": [
+                "توانایی نظارت و تعامل با ارتباطات شبکه. دسترسی به حداقل یک میزبان، و امتیازات برای رابط با کارت رابط شبکه."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزاری که قادر به ارسال/دریافت بسته‌های دیتاگرام UDP از یک سیستم راه دور به یک پورت بسته و دریافت پیام خطای ICMP نوع 3، \"Port Unreachable\" است."
+            ]
         }
     ],
     "spec_version": "2.0",

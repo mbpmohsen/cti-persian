@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0259#AN0714",
-                    "external_id": "AN0714"
+                    "external_id": "AN0714",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "Image",
-                    "description": "RMM software can vary; defenders should update rules to account for additional binaries (e.g., ConnectWise, Zoho Assist)"
+                    "description": "RMM software can vary; defenders should update rules to account for additional binaries (e.g., ConnectWise, Zoho Assist)",
+                    "description_fa": "نرم افزار RMM می تواند متفاوت باشد. مدافعان باید قوانین را به‌روزرسانی کنند تا باینری‌های اضافی را در نظر بگیرند (مانند ConnectWise، Zoho Assist)"
                 },
                 {
                     "field": "DestinationPort",
-                    "description": "RMM software may use configurable or random high ports outside of standard (e.g., 7070, 5650)"
+                    "description": "RMM software may use configurable or random high ports outside of standard (e.g., 7070, 5650)",
+                    "description_fa": "نرم افزار RMM ممکن است از پورت های بالا قابل تنظیم یا تصادفی خارج از استاندارد استفاده کند (به عنوان مثال، 7070، 5650)"
                 },
                 {
                     "field": "ParentImage",
-                    "description": "Expected parent process may vary in different enterprise contexts"
+                    "description": "Expected parent process may vary in different enterprise contexts",
+                    "description_fa": "فرآیند والد مورد انتظار ممکن است در زمینه های مختلف سازمانی متفاوت باشد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for install-to-beacon or process-to-network event should match operational environment"
+                    "description": "Correlation window for install-to-beacon or process-to-network event should match operational environment",
+                    "description_fa": "پنجره همبستگی برای رویداد install-to-beacon یا فرآیند به شبکه باید با محیط عملیاتی مطابقت داشته باشد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0714",
+            "description_fa": "نصب یا استفاده دشمن از نرم‌افزار RMM (به عنوان مثال، TeamViewer، AnyDesk، ScreenConnect) و به دنبال آن نشان‌دادن خروجی یا ایجاد جلسه از راه دور"
         }
     ]
 }

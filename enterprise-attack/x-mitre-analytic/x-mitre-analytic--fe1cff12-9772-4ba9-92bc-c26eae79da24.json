@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0510#AN1409",
-                    "external_id": "AN1409"
+                    "external_id": "AN1409",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptEngines",
-                    "description": "Scriptable binaries such as osascript, jsc, JavaScriptCore \u2013 may vary by OS version"
+                    "description": "Scriptable binaries such as osascript, jsc, JavaScriptCore – may vary by OS version",
+                    "description_fa": "باینری های قابل اسکریپت مانند osascript، jsc، JavaScriptCore – ممکن است بسته به نسخه سیستم عامل متفاوت باشد"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Restrict to non-system users or only specific login sessions"
+                    "description": "Restrict to non-system users or only specific login sessions",
+                    "description_fa": "محدود به کاربران غیر سیستمی یا فقط جلسات ورود به سیستم خاص"
                 },
                 {
                     "field": "EmbeddedContentIndicators",
-                    "description": "SVGs embedded inside PDFs or HTML with script-based triggers"
+                    "description": "SVGs embedded inside PDFs or HTML with script-based triggers",
+                    "description_fa": "SVG های تعبیه شده در فایل های PDF یا HTML با محرک های مبتنی بر اسکریپت"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1409",
+            "description_fa": "SVG های دانلود شده از طریق مرورگر را شناسایی می کند که فرآیندهای AppleScript، osascript یا JavaScriptCore را فراخوانی می کنند و به دنبال آن خروج از شبکه یا رها شدن فایل به LaunchAgents یا ~/Library انجام می شود."
         }
     ]
 }

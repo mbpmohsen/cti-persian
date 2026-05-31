@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0228#AN0639",
-                    "external_id": "AN0639"
+                    "external_id": "AN0639",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Detect activity outside normal user behavior (e.g., automation or daemon context)"
+                    "description": "Detect activity outside normal user behavior (e.g., automation or daemon context)",
+                    "description_fa": "شناسایی فعالیت خارج از رفتار عادی کاربر (به عنوان مثال، اتوماسیون یا زمینه دیمون)"
                 },
                 {
                     "field": "EntropyScore",
-                    "description": "Optional for detecting encoded payloads delivered via stage 1"
+                    "description": "Optional for detecting encoded payloads delivered via stage 1",
+                    "description_fa": "اختیاری برای تشخیص محموله های رمزگذاری شده تحویل داده شده از طریق مرحله 1"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0639",
+            "description_fa": "فرآیند اولیه با استفاده از NSURLSession یا API های مشابه به دامنه های مرحله بندی شناخته شده می رسد و به دنبال آن یک پوسته معکوس یا RAT ایجاد می شود که به سرور نامرتبط دوم متصل می شود."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0214#AN0599",
-                    "external_id": "AN0599"
+                    "external_id": "AN0599",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "OverlaySizeThreshold",
-                    "description": "Threshold in bytes where appended sections to binaries are considered suspicious"
+                    "description": "Threshold in bytes where appended sections to binaries are considered suspicious",
+                    "description_fa": "آستانه در بایت که در آن بخش های ضمیمه شده به باینری ها مشکوک در نظر گرفته می شوند"
                 },
                 {
                     "field": "ProcessTreeDepth",
-                    "description": "Controls how far child process lineage is analyzed for dropped embedded payloads"
+                    "description": "Controls how far child process lineage is analyzed for dropped embedded payloads",
+                    "description_fa": "کنترل می‌کند که تا چه اندازه دودمان پردازش فرزند برای محموله‌های تعبیه‌شده کاهش یافته تحلیل می‌شود"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation interval between file write and process execution"
+                    "description": "Defines correlation interval between file write and process execution",
+                    "description_fa": "فاصله همبستگی بین نوشتن فایل و اجرای فرآیند را تعریف می کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0599",
+            "description_fa": "تشخیص فایل های اجرایی یا اسکریپت های حاوی منابع جاسازی شده پنهان یا بارهای ثانویه، اغلب با ناهنجاری در اندازه فایل در مقابل عملکرد یا باینری های فرزند حذف شده."
         }
     ]
 }

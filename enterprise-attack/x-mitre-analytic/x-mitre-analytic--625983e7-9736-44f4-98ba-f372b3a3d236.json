@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0034#AN0095",
-                    "external_id": "AN0095"
+                    "external_id": "AN0095",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Used to scope suspicious discovery from non-interactive or non-standard parent processes like Office macros, WMI, or script engines"
+                    "description": "Used to scope suspicious discovery from non-interactive or non-standard parent processes like Office macros, WMI, or script engines",
+                    "description_fa": "مورد استفاده برای کشف مشکوک از فرآیندهای والد غیر تعاملی یا غیر استاندارد مانند ماکروهای Office، WMI، یا موتورهای اسکریپت"
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Adversaries may obfuscate or vary process discovery commands (e.g., aliases, PowerShell variants)"
+                    "description": "Adversaries may obfuscate or vary process discovery commands (e.g., aliases, PowerShell variants)",
+                    "description_fa": "دشمنان ممکن است دستورات کشف فرآیند را مبهم یا تغییر دهند (به عنوان مثال، نام مستعار، انواع PowerShell)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Helps detect bursty discovery behavior within a short timeframe"
+                    "description": "Helps detect bursty discovery behavior within a short timeframe",
+                    "description_fa": "به تشخیص رفتار اکتشاف انفجاری در یک بازه زمانی کوتاه کمک می کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0095",
+            "description_fa": "رفتار دشمن را شناسایی می کند که دستورات را راه اندازی می کند یا API ها را برای برشمردن فرآیندهای فعال فرا می خواند (مانند tasklist.exe، Get-Process یا CreateToolhelp32Snapshot). اجرای ترکیب شده با اصل و نسب فرآیند والد، زمینه جلسه شبکه یا مبدا از راه دور را تشخیص می دهد."
         }
     ]
 }

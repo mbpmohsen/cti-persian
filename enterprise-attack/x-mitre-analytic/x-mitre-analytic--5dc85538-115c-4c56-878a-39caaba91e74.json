@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0137#AN0384",
-                    "external_id": "AN0384"
+                    "external_id": "AN0384",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessWhitelist",
-                    "description": "Legitimate disk imaging or backup tools may trigger raw disk access \u2014 must be excluded per environment."
+                    "description": "Legitimate disk imaging or backup tools may trigger raw disk access — must be excluded per environment.",
+                    "description_fa": "ابزارهای تصویربرداری قانونی یا پشتیبان‌گیری از دیسک ممکن است دسترسی خام به دیسک را راه‌اندازی کنند - در هر محیط باید حذف شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate disk access, driver load, and process execution within a short timeframe to minimize false positives."
+                    "description": "Correlate disk access, driver load, and process execution within a short timeframe to minimize false positives.",
+                    "description_fa": "دسترسی دیسک، بار درایور و اجرای فرآیند را در یک بازه زمانی کوتاه به هم مرتبط کنید تا مثبت کاذب را به حداقل برسانید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0384",
+            "description_fa": "تلاش‌های غیرمعمول برای دسترسی مستقیم به دیسک (به عنوان مثال، استفاده از نماد \\\\.\\PhysicalDrive)، نوشتن غیرعادی در بخش‌های MBR/boot، و نصب درایورهای هسته که به دیسک خام دسترسی می‌دهند. ایجاد فرآیند غیرعادی را با تلاش‌های اصلاح دیسک و بارهای درایور مرتبط کنید."
         }
     ]
 }

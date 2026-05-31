@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0370#AN1040",
-                    "external_id": "AN1040"
+                    "external_id": "AN1040",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineRegex",
-                    "description": "Allows tuning based on tools/scripts used for enumeration (e.g., tree, dir /s /b)"
+                    "description": "Allows tuning based on tools/scripts used for enumeration (e.g., tree, dir /s /b)",
+                    "description_fa": "تنظیم بر اساس ابزارها/اسکریپت های مورد استفاده برای شمارش (به عنوان مثال درخت، dir /s /b) اجازه می دهد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scoping for standard vs elevated or service accounts"
+                    "description": "Scoping for standard vs elevated or service accounts",
+                    "description_fa": "محدوده بندی برای حساب های استاندارد در مقابل حساب های خدماتی"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines burst activity over short periods (e.g., >50 directory queries in 30s)"
+                    "description": "Defines burst activity over short periods (e.g., >50 directory queries in 30s)",
+                    "description_fa": "فعالیت پشت سر هم را در دوره‌های کوتاه تعریف می‌کند (به عنوان مثال، بیش از 50 درخواست فهرست در 30 ثانیه)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1040",
+            "description_fa": "اجرای دستورات شمارش فایل (به عنوان مثال، \"dir\"، \"درخت\") از فرآیندهای غیر استاندارد یا زمینه های کاربر غیر معمول، و به دنبال آن پیمایش دایرکتوری بازگشتی یا دسترسی به مکان های حساس."
         }
     ]
 }

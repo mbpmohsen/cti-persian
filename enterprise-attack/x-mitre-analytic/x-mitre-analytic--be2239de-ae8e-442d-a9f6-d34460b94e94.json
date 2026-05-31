@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0199#AN0574",
-                    "external_id": "AN0574"
+                    "external_id": "AN0574",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExpectedAdminAccounts",
-                    "description": "Defines which accounts are authorized to execute VM discovery commands."
+                    "description": "Defines which accounts are authorized to execute VM discovery commands.",
+                    "description_fa": "تعریف می کند که کدام حساب ها مجاز به اجرای دستورات کشف VM هستند."
                 },
                 {
                     "field": "RoutineScripts",
-                    "description": "Whitelist of approved administrative scripts that legitimately invoke VM enumeration."
+                    "description": "Whitelist of approved administrative scripts that legitimately invoke VM enumeration.",
+                    "description_fa": "لیست سفید اسکریپت های اداری تایید شده که به طور قانونی شمارش VM را فراخوانی می کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0574",
+            "description_fa": "شمارش ماشین های مجازی را با استفاده از PowerShell (\"Get-VM\")، ایستگاه کاری VMware (\"vmrun.exe\") یا Hyper-V (\"VBoxManage.exe\") تشخیص می دهد. Defender خطوط فرمان مشکوکی را مشاهده می کند که توسط کاربران غیرمنتظره یا خارج از جلسات اداری عادی اجرا می شوند."
         }
     ]
 }

@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1553/005",
                     "external_id": "T1553.005",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Beek Use of VHD Dec 2020",
                     "description": "Beek, C. (2020, December 3). Investigating the Use of VHD Files By Cybercriminals. Retrieved November 17, 2024.",
                     "url": "https://web.archive.org/web/20201203131725/https://christiaanbeek.medium.com/investigating-the-use-of-vhd-files-by-cybercriminals-3f1f08304316",
-                    "source_name_fa": "استفاده از VHD دسامبر 2020",
-                    "description_fa": "Beek، C. (2020، دسامبر 3) بررسی استفاده از فایل های VHD توسط مجرمان سایبری Retrieved ۱۷ نوامبر ۲۰۲۴"
+                    "source_name_fa": "استفاده Beek از VHD دسامبر 2020",
+                    "description_fa": "Beek, C. (2020، 3 دسامبر). بررسی استفاده از فایل های VHD توسط مجرمان سایبری. بازبینی شده در 17 نوامبر 2024."
                 },
                 {
                     "source_name": "Outflank MotW 2020",
                     "description": "Hegt, S. (2020, March 30). Mark-of-the-Web from a red team’s perspective. Retrieved February 22, 2021.",
                     "url": "https://outflank.nl/blog/2020/03/30/mark-of-the-web-from-a-red-teams-perspective/",
                     "source_name_fa": "Outflank MotW 2020",
-                    "description_fa": "Hegt، S. (2020، 30 مارس) مارک وب از دیدگاه یک تیم قرمز Retrieved 22، 2021."
+                    "description_fa": "هگت، اس. (2020، 30 مارس). علامت گذاری وب از دیدگاه یک تیم قرمز. بازبینی شده در 22 فوریه 2021."
                 },
                 {
                     "source_name": "Intezer Russian APT Dec 2020",
                     "description": "Kennedy, J. (2020, December 9). A Zebra in Gopher's Clothing: Russian APT Uses COVID-19 Lures to Deliver Zebrocy. Retrieved February 22, 2021.",
                     "url": "https://www.intezer.com/blog/research/russian-apt-uses-covid-19-lures-to-deliver-zebrocy/",
-                    "source_name_fa": "دانلود بازی Intezer Russian APT 2020",
-                    "description_fa": "کندی، J. (2020، دسامبر 9) APT روسیه از COVID-19 Lures برای تحویل Zebrocy استفاده می کند. Retrieved 22، 2021."
+                    "source_name_fa": "Intezer Russian APT دسامبر 2020",
+                    "description_fa": "کندی، جی (2020، 9 دسامبر). گورخری در لباس Gopher: APT روسی از فریب های COVID-19 برای ارائه Zebrocy استفاده می کند. بازبینی شده در 22 فوریه 2021."
                 },
                 {
                     "source_name": "Microsoft Zone.Identifier 2020",
                     "description": "Microsoft. (2020, August 31). Zone.Identifier Stream Name. Retrieved February 22, 2021.",
                     "url": "https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-fscc/6e3f7352-d11c-4d76-8c39-2516a9df36e8",
                     "source_name_fa": "Microsoft Zone.Identifier 2020",
-                    "description_fa": "مایکروسافت (2020، 31 آگوست) منطقه نام بازی Identifier Stream Retrieved 22، 2021."
+                    "description_fa": "مایکروسافت. (31 اوت 2020). Zone.Identifier نام جریان. بازبینی شده در 22 فوریه 2021."
                 }
             ],
             "object_marking_refs": [
@@ -71,8 +71,8 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "دانلود بازی Mark-of-Web Bypass",
-            "description_fa": "مخالفان ممکن است از فرمت های فایل خاص برای کنترل های مارک-of-Web (MOTW) استفاده کنند. در ویندوز، هنگامی که فایل ها از اینترنت دانلود می شوند، آنها با یک جریان داده جایگزین NTFS پنهان (ADS) به نام [CTI_PRESERVE_0] با یک ارزش خاص به نام MOTW برچسب زده می شوند. [[ویرایش] فایل هایی که با MOTW تگ شده اند محافظت می شوند و نمی توانند اقدامات خاصی را انجام دهند. به عنوان مثال، شروع در MS Office 10، اگر یک فایل MS Office دارای MOTW باشد، در View محافظت شده باز خواهد شد. Executables با MOTW توسط Windows Defender SmartScreen پردازش می شود که فایل ها را با یک لیست از اجرایی های شناخته شده مقایسه می کند. اگر این فایل شناخته نشده باشد، SmartScreen از اجرای آن جلوگیری می کند و به کاربر هشدار می دهد که آن را اجرا نکند.\n\nمخالفان ممکن است از فایل های container مانند فشرده /archive (.arj، .gzip) و / یا تصویر دیسک (.iso، .vhd) برای تحویل محموله های مخرب استفاده کنند که ممکن است با MOTW برچسب زده نشوند. فایل های کانتینری که از اینترنت بارگیری می شوند با MOTW مشخص می شوند اما فایل های داخل آن ممکن است MOTW را پس از استخراج فایل های container و / یا نصب نشوند. MOTW یک ویژگی NTFS است و بسیاری از فایل های container از جریان داده های جایگزین NTFS پشتیبانی نمی کنند. پس از اینکه یک فایل container استخراج می شود و یا نصب شده است، فایل های موجود در داخل آنها ممکن است به عنوان فایل های محلی بر روی دیسک و بدون محافظت اجرا شوند. [[ویرایش] <code>Zone.Identifier</code> (Citation: Microsoft Zone.Identifier 2020) (Citation: Beek Use of VHD Dec 2020) (Citation: Outflank MotW 2020) (Citation: Intezer Russian APT Dec 2020) (Citation: Beek Use of VHD Dec 2020) (Citation: Outflank MotW 2020)"
+            "name_fa": "دور زدن علامت وب",
+            "description_fa": "ممکن است دشمنان از فرمت‌های فایل خاص برای براندازی کنترل‌های Mark-of-the-Web (MOTW) سوء استفاده کنند. در ویندوز، هنگامی که فایل‌ها از اینترنت دانلود می‌شوند، با یک جریان داده جایگزین NTFS (ADS) به نام <code>Zone.Identifier</code> با یک مقدار مشخص به نام MOTW برچسب‌گذاری می‌شوند.(Citation: Microsoft Zone.Identifier 2020) فایل‌هایی که با MOTW برچسب‌گذاری شده‌اند، محافظت می‌شوند و نمی‌توانند اقدامات خاصی را انجام دهند. برای مثال، با شروع در MS Office 10، اگر فایل MS Office دارای MOTW باشد، در نمای محافظت شده باز می شود. فایل های اجرایی برچسب گذاری شده با MOTW توسط Windows Defender SmartScreen پردازش می شوند که فایل ها را با لیست مجاز فایل های اجرایی شناخته شده مقایسه می کند. اگر فایل شناخته شده/معتمد نباشد، SmartScreen از اجرا جلوگیری می کند و به کاربر هشدار می دهد که آن را اجرا نکند.(Citation: Beek Use of VHD Dec 2020)(Citation: Outflank MotW 2020)(Citation: Intezer Russian APT Dec 2020)\n\nدشمنان ممکن است از فایل‌های کانتینری مانند فرمت‌های فایل فشرده/بایگانی (.arj، .gzip) و/یا تصویر دیسک (.iso، .vhd) برای ارائه بارهای مخربی که ممکن است با MOTW برچسب‌گذاری نشده باشند، سوء استفاده کنند. فایل‌های کانتینری که از اینترنت دانلود می‌شوند با MOTW علامت‌گذاری می‌شوند، اما فایل‌های درون ممکن است پس از استخراج و/یا نصب فایل‌های ظرف، MOTW را به ارث نبرند. MOTW یک ویژگی NTFS است و بسیاری از فایل های کانتینری از جریان های داده جایگزین NTFS پشتیبانی نمی کنند. پس از استخراج و/یا نصب فایل کانتینری، ممکن است فایل‌های موجود در آن به‌عنوان فایل‌های محلی روی دیسک تلقی شوند و بدون محافظت اجرا شوند.(Citation: Beek Use of VHD Dec 2020)(Citation: Outflank MotW 2020)"
         }
     ]
 }

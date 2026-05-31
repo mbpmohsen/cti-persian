@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-648",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/648.html"
+                    "url": "https://capec.mitre.org/data/definitions/648.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-267",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/267.html"
+                    "url": "http://cwe.mitre.org/data/definitions/267.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Screen Capture",
                     "external_id": "T1113",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1113"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1113",
+                    "description_fa": "تصویربرداری از صفحه نمایش",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Screen Capture",
                     "external_id": "T1513",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1513"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1513",
+                    "description_fa": "تصویربرداری از صفحه نمایش",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--140142cc-28cb-4506-bce6-b44128b7b9a7",
@@ -43,6 +49,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (The adversary is able to capture potentially sensitive information and processes as they appear on the screen.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (دشمن می تواند اطلاعات و فرآیندهای بالقوه حساس را همانطور که روی صفحه نمایش داده می شود ضبط کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -56,11 +65,20 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Low": "Once the adversary has logical access (which can potentially require high knowledge and skill level), the adversary needs only to leverage the relevant command for screen capture."
+                "Low": "Once the adversary has logical access (which can potentially require high knowledge and skill level), the adversary needs only to leverage the relevant command for screen capture.",
+                "Low_fa": "هنگامی که حریف دسترسی منطقی داشته باشد (که به طور بالقوه می تواند به دانش و مهارت بالایی نیاز داشته باشد)، دشمن فقط باید از دستور مربوطه برای ضبط صفحه استفاده کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف با بهره برداری از قابلیت ضبط صفحه نمایش سیستم، اطلاعات حساس را جمع آوری می کند. از طریق اسکرین شات ها، دشمن هدفش را می بیند که در طول یک عملیات روی صفحه چه اتفاقی می افتد. دشمن می تواند از اطلاعات جمع آوری شده برای انجام حملات بیشتر استفاده کند.",
+            "name_fa": "جمع آوری داده ها از عکسبرداری از صفحه",
+            "x_capec_prerequisites_fa": [
+                "حریف باید به روشی (مثلاً از طریق اعتبار به دست آمده یا نصب بدافزار در سیستم) به سیستم دسترسی منطقی داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

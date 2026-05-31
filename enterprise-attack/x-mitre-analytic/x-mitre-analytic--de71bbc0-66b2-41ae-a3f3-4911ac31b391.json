@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0256#AN0711",
-                    "external_id": "AN0711"
+                    "external_id": "AN0711",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0711",
-            "description": "Unusual access to SSH agent sockets in /tmp/ or /private/tmp, process access to another user\u2019s $SSH_AUTH_SOCK, and lateral SSH activity without corresponding login events. Defender view: correlation of socket access with anomalous network flows to internal systems.",
+            "description": "Unusual access to SSH agent sockets in /tmp/ or /private/tmp, process access to another user’s $SSH_AUTH_SOCK, and lateral SSH activity without corresponding login events. Defender view: correlation of socket access with anomalous network flows to internal systems.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SocketPathScope",
-                    "description": "Limit detection to monitored SSH agent socket directories."
+                    "description": "Limit detection to monitored SSH agent socket directories.",
+                    "description_fa": "شناسایی محدود به دایرکتوری های سوکت عامل SSH نظارت شده."
                 },
                 {
                     "field": "BaselineUsers",
-                    "description": "Establish normal SSH agent ownership and expected usage for tuning."
+                    "description": "Establish normal SSH agent ownership and expected usage for tuning.",
+                    "description_fa": "مالکیت عامل SSH عادی و استفاده مورد انتظار برای تنظیم را ایجاد کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0711",
+            "description_fa": "دسترسی غیرمعمول به سوکت‌های عامل SSH در /tmp/ یا /private/tmp، دسترسی پردازشی به $SSH_AUTH_SOCK کاربر دیگر و فعالیت جانبی SSH بدون رویدادهای ورود مربوطه. نمای مدافع: همبستگی دسترسی سوکت با جریان های غیرعادی شبکه به سیستم های داخلی."
         }
     ]
 }

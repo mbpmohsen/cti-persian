@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0222#AN0622",
-                    "external_id": "AN0622"
+                    "external_id": "AN0622",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0622",
-            "description": "Abuse of mmc.exe to execute non-Microsoft or user-staged .msc files and malicious COM CLSIDs. Behavioral chain: (1) suspicious mmc.exe invocation with /a or -Embedding and non-standard .msc path \u2192 (2) COM activation of non-baseline CLSIDs by mmc.exe \u2192 (3) mmc.exe loads non-baseline DLLs (user-writable/UNC/unsigned) \u2192 (4) optional network/DNS activity from mmc.exe.",
+            "description": "Abuse of mmc.exe to execute non-Microsoft or user-staged .msc files and malicious COM CLSIDs. Behavioral chain: (1) suspicious mmc.exe invocation with /a or -Embedding and non-standard .msc path → (2) COM activation of non-baseline CLSIDs by mmc.exe → (3) mmc.exe loads non-baseline DLLs (user-writable/UNC/unsigned) → (4) optional network/DNS activity from mmc.exe.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -76,33 +77,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., 5\u201310 minutes) tying .msc creation \u2192 mmc.exe start \u2192 module loads \u2192 COM/net activity."
+                    "description": "Correlation window (e.g., 5–10 minutes) tying .msc creation → mmc.exe start → module loads → COM/net activity.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، 5 تا 10 دقیقه) با ایجاد msc. → شروع mmc.exe → بارگذاری ماژول → فعالیت COM/net."
                 },
                 {
                     "field": "AllowedMSCList",
-                    "description": "Set of Microsoft-supplied .msc names/paths allowed in the environment to suppress noise."
+                    "description": "Set of Microsoft-supplied .msc names/paths allowed in the environment to suppress noise.",
+                    "description_fa": "مجموعه ای از نام ها/مسیرهای .msc ارائه شده توسط مایکروسافت که در محیط برای سرکوب نویز مجاز هستند."
                 },
                 {
                     "field": "SuspiciousMSCPathRegex",
-                    "description": "Regex for user-writable and network paths indicating risky .msc staging (Users, AppData, Downloads, Desktop, UNC)."
+                    "description": "Regex for user-writable and network paths indicating risky .msc staging (Users, AppData, Downloads, Desktop, UNC).",
+                    "description_fa": "Regex برای مسیرهای قابل نوشتن توسط کاربر و مسیرهای شبکه که نشان‌دهنده مرحله‌بندی مخاطره‌آمیز msc. (کاربران، AppData، دانلودها، دسکتاپ، UNC)."
                 },
                 {
                     "field": "AllowedCLSIDs",
-                    "description": "Baseline of CLSIDs expected to be activated by mmc.exe; alert on unknown/new."
+                    "description": "Baseline of CLSIDs expected to be activated by mmc.exe; alert on unknown/new.",
+                    "description_fa": "خط پایه CLSIDهایی که انتظار می رود توسط mmc.exe فعال شوند. هشدار در مورد ناشناخته/جدید."
                 },
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Expected parents for mmc.exe (explorer.exe, services) vs. unusual (powershell, wscript, office apps)."
+                    "description": "Expected parents for mmc.exe (explorer.exe, services) vs. unusual (powershell, wscript, office apps).",
+                    "description_fa": "والدین مورد انتظار برای mmc.exe (explorer.exe، خدمات) در مقابل غیرمعمول (powershell، wscript، برنامه‌های آفیس)."
                 },
                 {
                     "field": "SignedToUnsignedTransition",
-                    "description": "Flag when signed mmc.exe results in loading unsigned DLLs."
+                    "description": "Flag when signed mmc.exe results in loading unsigned DLLs.",
+                    "description_fa": "پرچم گذاری هنگام امضای mmc.exe منجر به بارگیری DLL های بدون امضا می شود."
                 },
                 {
                     "field": "ExternalIPAllowlist",
-                    "description": "Approved external ranges/domains to exclude when mmc.exe makes network requests."
+                    "description": "Approved external ranges/domains to exclude when mmc.exe makes network requests.",
+                    "description_fa": "محدوده/دامنه های خارجی تایید شده برای حذف زمانی که mmc.exe درخواست های شبکه می کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0622",
+            "description_fa": "سوء استفاده از mmc.exe برای اجرای فایل‌های msc. غیر مایکروسافت یا مرحله‌بندی شده توسط کاربر و COM CLSIDهای مخرب. زنجیره رفتاری: (1) فراخوانی مشکوک mmc.exe با /a یا -Embedding و مسیر msc. غیر استاندارد ← (2) فعال سازی COM CLSID های غیر پایه توسط mmc.exe → (3) mmc.exe DLL های غیر پایه را بارگیری می کند (شبکه قابل نوشتن با قابلیت نوشتن کاربر/فعالیت4/UNC اختیاری) mmc.exe."
         }
     ]
 }

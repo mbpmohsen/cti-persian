@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0299#AN0834",
-                    "external_id": "AN0834"
+                    "external_id": "AN0834",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,21 +62,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation window for linking permission modification with subsequent access attempts (default: 300 seconds)"
+                    "description": "Temporal correlation window for linking permission modification with subsequent access attempts (default: 300 seconds)",
+                    "description_fa": "پنجره همبستگی زمانی برای پیوند دادن اصلاح مجوز با تلاش‌های بعدی دسترسی (پیش‌فرض: 300 ثانیه)"
                 },
                 {
                     "field": "SensitivePathList",
-                    "description": "Environment-specific critical file and directory paths requiring permission change monitoring"
+                    "description": "Environment-specific critical file and directory paths requiring permission change monitoring",
+                    "description_fa": "مسیرهای فایل حیاتی و دایرکتوری خاص محیطی که نیاز به نظارت بر تغییر مجوز دارند"
                 },
                 {
                     "field": "TrustedUserContext",
-                    "description": "Administrative accounts authorized to perform legitimate permission modifications"
+                    "description": "Administrative accounts authorized to perform legitimate permission modifications",
+                    "description_fa": "حساب‌های اداری مجاز به انجام اصلاحات مجوز قانونی هستند"
                 },
                 {
                     "field": "BusinessHoursThreshold",
-                    "description": "Time-based threshold for elevated alerting on permission changes outside business hours"
+                    "description": "Time-based threshold for elevated alerting on permission changes outside business hours",
+                    "description_fa": "آستانه مبتنی بر زمان برای افزایش هشدار در مورد تغییرات مجوز خارج از ساعات کاری"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0834",
+            "description_fa": "زنجیره رفتاری متوالی تشدید امتیاز از طریق اصلاح مجوز: (1) فرآیند ایجاد ابزارهای اصلاح کننده مجوز (icacls، takeown، attrib، cacls)، (2) ارتباط با زمینه یا زمان‌بندی غیرمعمول کاربر، (3) رویدادهای اصلاح DACL که فایل‌ها/دایرکتوری‌های حساس را هدف قرار می‌دهند، (4) تلاش‌های موفقیت‌آمیز برای اصلاح فایل‌های dica."
         }
     ]
 }

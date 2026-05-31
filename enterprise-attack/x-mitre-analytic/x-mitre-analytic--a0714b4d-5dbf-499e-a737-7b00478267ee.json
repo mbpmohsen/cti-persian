@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0094#AN0258",
-                    "external_id": "AN0258"
+                    "external_id": "AN0258",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TaskAuthor",
-                    "description": "Unexpected user or account context initiating the task."
+                    "description": "Unexpected user or account context initiating the task.",
+                    "description_fa": "کاربر یا زمینه حساب غیرمنتظره کار را آغاز می کند."
                 },
                 {
                     "field": "CommandLineRegex",
-                    "description": "Suspicious binaries or script usage tied to scheduled tasks."
+                    "description": "Suspicious binaries or script usage tied to scheduled tasks.",
+                    "description_fa": "باینری های مشکوک یا استفاده از اسکریپت مرتبط با وظایف برنامه ریزی شده."
                 },
                 {
                     "field": "ExecutionWindow",
-                    "description": "Lookback window to correlate process execution after task registration."
+                    "description": "Lookback window to correlate process execution after task registration.",
+                    "description_fa": "پنجره نگاه به همبستگی اجرای فرآیند پس از ثبت وظیفه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0258",
+            "description_fa": "ایجاد یا اصلاح وظایف برنامه ریزی شده را با استفاده از اشیاء schtasks.exe، at.exe یا COM و به دنبال آن اجرای فرآیندهای پرت مرتبط با کار برنامه ریزی شده شناسایی می کند."
         }
     ]
 }

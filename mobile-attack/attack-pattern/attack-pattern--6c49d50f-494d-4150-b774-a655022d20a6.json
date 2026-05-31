@@ -13,17 +13,21 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1407",
-                    "external_id": "T1407"
+                    "external_id": "T1407",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "FireEye-JSPatch",
                     "description": "Jing Xie, Zhaofeng Chen, Jimmy Su. (2016, January 27). HOT OR NOT? THE BENEFITS AND RISKS OF IOS REMOTE HOT PATCHING. Retrieved December 9, 2016.",
-                    "url": "https://www.fireeye.com/blog/threat-research/2016/01/hot_or_not_the_bene.html"
+                    "url": "https://www.fireeye.com/blog/threat-research/2016/01/hot_or_not_the_bene.html",
+                    "source_name_fa": "FireEye-JSPatch",
+                    "description_fa": "جینگ شی، ژائوفنگ چن، جیمی سو. (27 ژانویه 2016). داغ یا نه؟ مزایا و خطرات وصله داغ از راه دور IOS. بازبینی شده در 9 دسامبر 2016."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-20.html",
-                    "external_id": "APP-20"
+                    "external_id": "APP-20",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +35,7 @@
             ],
             "modified": "2026-05-12T15:12:00.640Z",
             "name": "Download New Code at Runtime",
-            "description": "Adversaries may download and execute dynamic code not included in the original application package after installation. This technique is primarily used to evade static analysis checks and pre-publication scans in official app stores. In some cases, more advanced dynamic or behavioral analysis techniques could detect this behavior. However, in conjunction with [Execution Guardrails](https://attack.mitre.org/techniques/T1627) techniques, detecting malicious code downloaded after installation could be difficult.\n\nOn Android, dynamic code could include native code, Dalvik code, or JavaScript code that utilizes Android WebView\u2019s `JavascriptInterface` capability. \n\nOn iOS, dynamic code could be downloaded and executed through 3rd party libraries such as JSPatch. (Citation: FireEye-JSPatch) ",
+            "description": "Adversaries may download and execute dynamic code not included in the original application package after installation. This technique is primarily used to evade static analysis checks and pre-publication scans in official app stores. In some cases, more advanced dynamic or behavioral analysis techniques could detect this behavior. However, in conjunction with [Execution Guardrails](https://attack.mitre.org/techniques/T1627) techniques, detecting malicious code downloaded after installation could be difficult.\n\nOn Android, dynamic code could include native code, Dalvik code, or JavaScript code that utilizes Android WebView’s `JavascriptInterface` capability. \n\nOn iOS, dynamic code could be downloaded and executed through 3rd party libraries such as JSPatch. (Citation: FireEye-JSPatch) ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -52,7 +56,9 @@
             "x_mitre_version": "1.5",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "دانلود کد جدید در زمان اجرا",
+            "description_fa": "پس از نصب، دشمنان ممکن است کد پویا را که در بسته اصلی برنامه موجود نیست دانلود و اجرا کنند. این تکنیک در درجه اول برای فرار از بررسی های تحلیل استاتیک و اسکن های قبل از انتشار در فروشگاه های برنامه رسمی استفاده می شود. در برخی موارد، تکنیک‌های تحلیل دینامیکی یا رفتاری پیشرفته‌تر می‌توانند این رفتار را تشخیص دهند. با این حال، در ارتباط با تکنیک‌های [Execution Guardrails](https://attack.mitre.org/techniques/T1627)، شناسایی کدهای مخرب دانلود شده پس از نصب ممکن است دشوار باشد.\n\nدر اندروید، کد پویا می‌تواند شامل کد بومی، کد Dalvik یا کد جاوا اسکریپت باشد که از قابلیت JavascriptInterface Android WebView استفاده می‌کند. \n\nدر iOS، کد پویا را می توان از طریق کتابخانه های شخص ثالث مانند JSPatch دانلود و اجرا کرد. (Citation: FireEye-JSPatch)"
         }
     ]
 }

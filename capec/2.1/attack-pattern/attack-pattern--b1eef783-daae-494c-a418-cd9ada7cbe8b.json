@@ -9,45 +9,57 @@
                 {
                     "external_id": "CAPEC-588",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/588.html"
+                    "url": "https://capec.mitre.org/data/definitions/588.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-79",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/79.html"
+                    "url": "http://cwe.mitre.org/data/definitions/79.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-83",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/83.html"
+                    "url": "http://cwe.mitre.org/data/definitions/83.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Reflected DOM Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Reflected_DOM_Injection"
+                    "url": "https://owasp.org/www-community/attacks/Reflected_DOM_Injection",
+                    "description_fa": "تزریق DOM منعکس شده",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Amit Klein, DOM Based Cross Site Scripting or XSS of the Third Kind",
                     "external_id": "REF-471",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.webappsec.org/projects/articles/071105.shtml"
+                    "url": "http://www.webappsec.org/projects/articles/071105.shtml",
+                    "description_fa": "آمیت کلاین، اسکریپت نویسی متقاطع سایت مبتنی بر DOM یا XSS از نوع سوم",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jakob Kallin, Irene Lobo Valbuena, A comprehensive tutorial on cross-site scripting",
                     "external_id": "REF-472",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://excess-xss.com/"
+                    "url": "https://excess-xss.com/",
+                    "description_fa": "Jakob Kallin، Irene Lobo Valbuena، یک آموزش جامع در مورد اسکریپت نویسی بین سایتی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-618",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/11-Client-side_Testing/01-Testing_for_DOM-based_Cross_Site_Scripting.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--b1eef783-daae-494c-a418-cd9ada7cbe8b",
@@ -80,6 +92,24 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (A successful DOM-based XSS attack can enable an adversary run arbitrary code of their choosing, thus enabling a complete compromise of the application.)",
                     "Modify Data (A successful DOM-based XSS attack can allow an adversary to tamper with application data.)"
+                ],
+                "Access_Control_fa": [
+                    "به دست آوردن امتیازات (یک حمله موفق XSS مبتنی بر DOM می‌تواند به دشمن امکان دهد سطح امتیاز و عملکرد دسترسی خود را افزایش دهد که در غیر این صورت نباید اجازه دسترسی داشته باشد.)"
+                ],
+                "Authorization_fa": [
+                    "به دست آوردن امتیازات (یک حمله موفق XSS مبتنی بر DOM می‌تواند به دشمن امکان دهد سطح امتیاز و عملکرد دسترسی خود را افزایش دهد که در غیر این صورت نباید اجازه دسترسی داشته باشد.)"
+                ],
+                "Availability_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (یک حمله موفق XSS مبتنی بر DOM می‌تواند کد دلخواه دشمن را به انتخاب خود اجرا کند، بنابراین امکان به خطر افتادن کامل برنامه را فراهم می‌کند.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (یک حمله موفق XSS مبتنی بر DOM می تواند به دشمن اجازه دهد اطلاعات حساس را از برنامه استخراج کند.)",
+                    "به دست آوردن امتیازات (یک حمله موفق XSS مبتنی بر DOM می‌تواند به دشمن امکان دهد سطح امتیاز و عملکرد دسترسی خود را افزایش دهد که در غیر این صورت نباید اجازه دسترسی داشته باشد.)",
+                    "دستورات غیرمجاز را اجرا کنید (یک حمله موفق XSS مبتنی بر DOM می‌تواند کد دلخواه دشمن را به انتخاب خود اجرا کند، بنابراین امکان به خطر افتادن کامل برنامه را فراهم می‌کند.)"
+                ],
+                "Integrity_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (یک حمله موفق XSS مبتنی بر DOM می‌تواند کد دلخواه دشمن را به انتخاب خود اجرا کند، بنابراین امکان به خطر افتادن کامل برنامه را فراهم می‌کند.)",
+                    "اصلاح داده ها (یک حمله موفق XSS مبتنی بر DOM می تواند به دشمن اجازه دهد داده های برنامه را دستکاری کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -111,11 +141,27 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Medium": "Requires the ability to write scripts of some complexity and to inject it through user controlled fields in the system."
+                "Medium": "Requires the ability to write scripts of some complexity and to inject it through user controlled fields in the system.",
+                "Medium_fa": "به توانایی نوشتن اسکریپت هایی با پیچیدگی و تزریق آن از طریق فیلدهای کنترل شده توسط کاربر در سیستم نیاز دارد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این نوع حمله شکلی از Cross-Site Scripting (XSS) است که در آن یک اسکریپت مخرب در HTML سمت کلاینت که توسط مرورگر وب تجزیه می‌شود، وارد می‌شود. محتوای ارائه شده توسط یک برنامه وب آسیب پذیر شامل کد اسکریپت مورد استفاده برای دستکاری مدل شیء سند (DOM) است. این کد اسکریپت یا ورودی را به درستی اعتبار سنجی نمی کند، یا کدگذاری خروجی مناسبی را انجام نمی دهد، بنابراین فرصتی را برای دشمن ایجاد می کند تا یک اسکریپت مخرب را به حمله XSS تزریق کند. یک تمایز کلیدی بین سایر حملات XSS و حملات مبتنی بر DOM این است که در سایر حملات XSS، اسکریپت مخرب زمانی اجرا می شود که صفحه وب آسیب پذیر در ابتدا بارگذاری می شود، در حالی که حمله مبتنی بر DOM مدتی پس از بارگیری صفحه اجرا می شود. تمایز دیگر حملات مبتنی بر DOM این است که در برخی موارد، اسکریپت مخرب هرگز به سرور وب آسیب‌پذیر ارسال نمی‌شود. حمله ای مانند این تضمین می شود که از هر گونه تلاش فیلتر سمت سرور برای محافظت از کاربران عبور کند.",
+            "name_fa": "XSS مبتنی بر DOM",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک برنامه وب را در نظر بگیرید که برخی از فیلدهای یک فرم را در صفحه از طریق استفاده از پارامتر حالت ارائه شده در رشته جستجو فعال یا غیرفعال می کند.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">http://my.site.com/aform.html?mode=full</xhtml:div>\n               <xhtml:p>کد سمت کلاینت برنامه ممکن است بخواهد این مقدار حالت را روی صفحه چاپ کند تا به کاربران بفهمد در چه حالتی هستند. در این مثال، جاوا اسکریپت برای استخراج مقدار از URL و به روز رسانی HTML با دستکاری پویا DOM از طریق یک فراخوان document.write () استفاده می شود.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><script>document.write(\"<p>حالت این است: \" + document.location.href.substring(document.location.href.indexOf('mode=') + 5) + \"</p>\");</script></xhtml:div>\n               <xhtml:p>توجه کنید که چگونه مقدار ارائه شده در URL مستقیماً بدون تأیید ورودی انجام شده و هیچ کدگذاری خروجی در محل استفاده می شود. بنابراین می‌توان یک URL ساخته‌شده مخرب به‌گونه‌ای تشکیل داد که اگر قربانی روی URL کلیک کند، یک اسکریپت مخرب توسط مرورگر قربانی اجرا شود:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">http://my.site.com/aform.html?mode=<script>alert('hi');</script></xhtml:div>",
+                "<xhtml:p>در برخی از حملات مبتنی بر DOM، اسکریپت مخرب هرگز به سرور وب ارسال نمی‌شود، بنابراین هرگونه حفاظت از سمت سرور را که ممکن است وجود داشته باشد دور می‌زند. برنامه وب استفاده شده قبلی را در نظر بگیرید که مقدار حالت را نشان می دهد. از آنجایی که HTML به صورت پویا از طریق دستکاری های DOM تولید می شود، می توان از یک قطعه URL (به عنوان مثال، بخشی از یک URL بعد از کاراکتر '#') استفاده کرد.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">http://my.site.com/aform.html#mode=<script>alert('hi')</script></xhtml:div>\n               <xhtml:p>در این نوع حمله XSS مبتنی بر DOM، اسکریپت مخرب به سرور وب ارسال نمی‌شود، بلکه توسط مرورگر قربانی مدیریت می‌شود و همچنان برای کد اسکریپت سمت سرویس گیرنده در دسترس است.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه را برای ورودی‌های قابل کنترل کاربر بررسی کنید: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، دشمن همه پیوندها و اقدامات عمومی را در یک وب‌سایت دنبال می‌کند. آنها همه پیوندها، فرم‌ها، منابع دسترسی‌یافته و سایر نقاط ورودی بالقوه را برای برنامه وب ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها و تجزیه و تحلیل صفحات وب برای یافتن نقاط ورودی استفاده کنید. هر پیوندی را که شامل پارامترهایی در URL است یادداشت ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ضبط همه پیوندهای بازدید شده در طول پیمایش دستی برنامه وب استفاده کنید.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب سایت و تجزیه و تحلیل نحوه ساخت آن استفاده کنید. افزونه‌های بسیاری از مرورگرها برای تسهیل تجزیه و تحلیل یا خودکارسازی کشف در دسترس هستند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>کاوشگر نقاط ورودی بالقوه را برای آسیب‌پذیری XSS مبتنی بر DOM شناسایی کرد: </b>نقاط ورودی به عنوان یک لیست هدف، در مرحله جمع‌آوری شده و از نقطه‌های هدف استفاده می‌کند. بارهای مختلف اسکریپت رایج و کاراکترهای ویژه را تزریق می کند تا مشخص کند آیا یک نقطه ورودی واقعاً یک آسیب پذیری را نشان می دهد یا خیر و مشخص می کند که تا چه حد می توان از آسیب پذیری مورد سوء استفاده قرار داد. به ویژه برای XSS مبتنی بر DOM، دشمن به دنبال مناطقی است که از ورودی برای تغییر مستقیم DOM استفاده می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از فهرستی از رشته‌های پروب XSS برای تزریق اسکریپت در پارامترهای URLهای شناخته شده استفاده کنید. در صورت امکان، رشته های کاوشگر حاوی یک شناسه منحصر به فرد هستند.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت نتایج ورودی دستی پروب های XSS در URL های شناخته شده استفاده کنید.</td></tr><tr><td>از لیستی از نویسه های خاص HTML برای تزریق به پارامترهای URL های شناخته شده استفاده کنید و بررسی کنید که آیا آنها به درستی فیلتر شده، جایگزین شده اند یا encod شده اند. out.</td></tr></tbody></table><li> <p> <b>ساخت URL مخرب XSS: </b>هنگامی که حریف مشخص کرد کدام پارامترها در برابر XSS آسیب پذیر هستند، یک URL مخرب حاوی اکسپلویت XSS ایجاد می کند. دشمن می‌تواند اهداف زیادی داشته باشد، از سرقت شناسه‌های جلسه، کوکی‌ها، اعتبارنامه‌ها و محتوای صفحه از قربانی. در XSS مبتنی بر DOM، اسکریپت مخرب ممکن است حتی به سرور ارسال نشود، زیرا مرورگر قربانی خود DOM را دستکاری می کند. این می‌تواند به جلوگیری از مکانیسم‌های تشخیص سمت سرویس کمک کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک پارامتر URL را تغییر دهید تا شامل یک برچسب اسکریپت مخرب باشد.</td></tr><tr><td>یک قطعه URL را برای تغییر مقدار اطلاعات <d><d آدرس مورد انتظار سند مورد انتظار جمع‌آوری می‌کنید.</td></tr><tr><td>یک قطعه URL اضافه کنید. اسکریپت به یک نقطه پایانی راه دور.</td></tr></tbody></table></ol></div><div><h3>استثمار</h3><ol><li> <p> <b>قرار دهید قربانی روی URL کلیک کند: </b>برای موفقیت آمیز بودن حمله، قربانی باید به موارد مخرب دسترسی داشته باشد. URL.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک ایمیل فیشینگ حاوی URL مخرب برای قربانی ارسال کنید. این را می توان در یک ابرپیوند پنهان کرد تا نشانی اینترنتی کامل نشان داده نشود، که ممکن است باعث شک شود.</td></tr><tr><td>نشانی اینترنتی مخرب را در یک انجمن عمومی قرار دهید، جایی که بسیاری از قربانیان ممکن است به طور تصادفی روی پیوند کلیک کنند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه ای که از مرورگر وب سمت کلاینت با فعال بودن اسکریپت استفاده می کند.",
+                "برنامه ای که DOM را از طریق برنامه نویسی سمت کلاینت دستکاری می کند.",
+                "برنامه‌ای که نمی‌تواند ورودی نامعتبر را به اندازه کافی پاکسازی یا رمزگذاری کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

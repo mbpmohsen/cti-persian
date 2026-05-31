@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0257#AN0712",
-                    "external_id": "AN0712"
+                    "external_id": "AN0712",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedExtensions",
-                    "description": "Adjust monitored file types (e.g., .iso, .vhd, .zip, .gz, .rar) based on enterprise usage"
+                    "description": "Adjust monitored file types (e.g., .iso, .vhd, .zip, .gz, .rar) based on enterprise usage",
+                    "description_fa": "انواع فایل های نظارت شده (به عنوان مثال، .iso، .vhd، .zip، .gz، .rar) را بر اساس استفاده سازمانی تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window between extraction/mount and first execution of inner files"
+                    "description": "Defines correlation window between extraction/mount and first execution of inner files",
+                    "description_fa": "پنجره همبستگی بین استخراج/mount و اولین اجرای فایل های داخلی را تعریف می کند"
                 },
                 {
                     "field": "TrustedExtractionTools",
-                    "description": "Whitelist known enterprise archivers and deployment mechanisms to reduce false positives"
+                    "description": "Whitelist known enterprise archivers and deployment mechanisms to reduce false positives",
+                    "description_fa": "فهرست سفید بایگانی‌های سازمانی شناخته شده و مکانیسم‌های استقرار برای کاهش موارد مثبت کاذب"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0712",
+            "description_fa": "استخراج یا نصب فایل‌های کانتینر/بایگانی (به عنوان مثال، .iso، .vhd، .zip.) را که از اینترنت سرچشمه می‌گیرند اما فایل‌های حاوی آن فاقد برچسب MOTW Zone.Identifier هستند را شناسایی می‌کند. ابرداده ایجاد فایل را با اجرای بعدی باینری های بدون امضا یا نامعتبر که خارج از SmartScreen یا Protected View راه اندازی شده اند، مرتبط می کند."
         }
     ]
 }

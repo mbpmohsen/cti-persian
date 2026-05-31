@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0105#AN0292",
-                    "external_id": "AN0292"
+                    "external_id": "AN0292",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,17 +58,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HashToolName",
-                    "description": "Match execution against known cracking toolnames like hashcat.exe, john.exe, etc."
+                    "description": "Match execution against known cracking toolnames like hashcat.exe, john.exe, etc.",
+                    "description_fa": "اجرای مطابقت با نام ابزار کرک شناخته شده مانند hashcat.exe، john.exe و غیره."
                 },
                 {
                     "field": "FilePathIndicators",
-                    "description": "Watch for access to common hash dump locations (e.g., SAM, SYSTEM, NTDS.dit)"
+                    "description": "Watch for access to common hash dump locations (e.g., SAM, SYSTEM, NTDS.dit)",
+                    "description_fa": "برای دسترسی به مکان‌های تخلیه هش رایج (مانند SAM، SYSTEM، NTDS.dit) مراقب باشید."
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Run context: local interactive user vs. scheduled task or remote session"
+                    "description": "Run context: local interactive user vs. scheduled task or remote session",
+                    "description_fa": "اجرای زمینه: کاربر تعاملی محلی در مقابل وظیفه برنامه ریزی شده یا جلسه راه دور"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0292",
+            "description_fa": "استفاده از ابزارهای هش‌کرک (مانند جان چاک‌کننده، Hashcat) پس از تخلیه اعتبار، همراه با استفاده زیاد از CPU یا فراخوانی GPU از طریق باینری‌های بدون امضا برای دسترسی به فایل‌های هش رمز عبور"
         }
     ]
 }

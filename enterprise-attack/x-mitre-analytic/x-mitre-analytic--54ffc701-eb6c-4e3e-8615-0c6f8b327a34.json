@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0352#AN1000",
-                    "external_id": "AN1000"
+                    "external_id": "AN1000",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,17 +62,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the correlation window between TGT request (4768) and TGS request (4769)"
+                    "description": "Defines the correlation window between TGT request (4768) and TGS request (4769)",
+                    "description_fa": "پنجره همبستگی بین درخواست TGT (4768) و درخواست TGS (4769) را تعریف می کند."
                 },
                 {
                     "field": "HostContextScope",
-                    "description": "Adjusts the host scoping for correlation of authentication chains and ticket injection"
+                    "description": "Adjusts the host scoping for correlation of authentication chains and ticket injection",
+                    "description_fa": "محدوده میزبان را برای ارتباط زنجیره های احراز هویت و تزریق بلیط تنظیم می کند"
                 },
                 {
                     "field": "LSASSAccessAnomalyThreshold",
-                    "description": "Allows tuning of alerts for ticket injection attempts via LSASS memory access"
+                    "description": "Allows tuning of alerts for ticket injection attempts via LSASS memory access",
+                    "description_fa": "امکان تنظیم هشدارها برای تلاش‌های تزریق بلیط از طریق دسترسی به حافظه LSASS"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1000",
+            "description_fa": "تزریق غیرمجاز بلیط Kerberos را با مرتبط کردن درخواست‌های بلیط خدمات (TGS - 4769) با عدم ورود به حساب مربوطه (4624) و فعالیت قبلی Ticket Granting Ticket (TGT - 4768) شناسایی می‌کند. زنجیره‌های تولید بلیط خدمات غیرعادی شامل کاربران، میزبان‌ها یا زمان‌های غیرمنتظره و تزریق مشکوک بلیت‌ها از طریق ابزارهای mimikatz مانند به حافظه LSASS را برجسته می‌کند. رفتار همچنین شامل حرکت جانبی شبکه با استفاده از احراز هویت Kerberos بدون الگوهای ورود تعاملی مورد انتظار است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0291#AN0808",
-                    "external_id": "AN0808"
+                    "external_id": "AN0808",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserAgentFilter",
-                    "description": "Allowlist/denylist of user agents to distinguish browser-based vs. CLI/API sessions"
+                    "description": "Allowlist/denylist of user agents to distinguish browser-based vs. CLI/API sessions",
+                    "description_fa": "فهرست مجاز/فهرست رد عوامل کاربر برای تشخیص جلسات مبتنی بر مرورگر از CLI/API"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum time delta between login and suspicious GUI activity"
+                    "description": "Maximum time delta between login and suspicious GUI activity",
+                    "description_fa": "حداکثر دلتای زمانی بین ورود به سیستم و فعالیت مشکوک رابط کاربری گرافیکی"
                 },
                 {
                     "field": "PrivilegedSessionThreshold",
-                    "description": "Login attempts to dashboard using elevated IAM roles"
+                    "description": "Login attempts to dashboard using elevated IAM roles",
+                    "description_fa": "ورود به داشبورد با استفاده از نقش های IAM بالا تلاش می کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0808",
+            "description_fa": "رویدادهای ورود به کنسول وب و به دنبال آن فعالیت بازیابی فقط خواندنی یا فراداده از منابع رابط کاربری گرافیکی (مانند جلسه مرورگر، سرویس گیرنده تلفن همراه) به جای منابع API/CLI را شناسایی می کند. بین CloudTrail، گزارش‌های هویت IAM، و زمینه عامل کاربر ارتباط دارد."
         }
     ]
 }

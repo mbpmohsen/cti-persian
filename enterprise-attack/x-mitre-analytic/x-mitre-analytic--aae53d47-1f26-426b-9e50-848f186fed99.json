@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0395#AN1111",
-                    "external_id": "AN1111"
+                    "external_id": "AN1111",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BinaryReputationList",
-                    "description": "Allow list of trusted binaries invoking elevation prompts"
+                    "description": "Allow list of trusted binaries invoking elevation prompts",
+                    "description_fa": "فهرستی از باینری‌های قابل اعتماد با فراخوانی درخواست‌های ارتفاع مجاز است"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation threshold between API call and credential prompt"
+                    "description": "Temporal correlation threshold between API call and credential prompt",
+                    "description_fa": "آستانه همبستگی زمانی بین تماس API و درخواست اعتبار"
                 },
                 {
                     "field": "PromptContextValidation",
-                    "description": "Heuristic filters to determine whether a prompt context matches known legitimate installers"
+                    "description": "Heuristic filters to determine whether a prompt context matches known legitimate installers",
+                    "description_fa": "فیلترهای اکتشافی برای تعیین اینکه آیا یک زمینه سریع با نصب کننده های قانونی شناخته شده مطابقت دارد یا خیر"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1111",
+            "description_fa": "سوء استفاده از AuthorizationExecuteWithPrivileges API را برای به دست آوردن امتیازات بالا از طریق درخواست های اعتبار کاربر، معمولاً از طریق فراخوانی /usr/libexec/security_authtrampoline تشخیص می دهد. تشخیص شامل همبستگی استفاده از API، شهرت باینری و زمینه سریع است."
         }
     ]
 }

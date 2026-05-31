@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0027#AN0076",
-                    "external_id": "AN0076"
+                    "external_id": "AN0076",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePatternMatch",
-                    "description": "curl or wget in scripts with suspicious domains or silent flags"
+                    "description": "curl or wget in scripts with suspicious domains or silent flags",
+                    "description_fa": "curl یا wget در اسکریپت های دارای دامنه های مشکوک یا پرچم های بی صدا"
                 },
                 {
                     "field": "BeaconIntervalWindow",
-                    "description": "Fixed-timed HTTP callbacks with 60\u00b15s jitter"
+                    "description": "Fixed-timed HTTP callbacks with 60±5s jitter",
+                    "description_fa": "تماس های HTTP با زمان ثابت با لرزش 5±60 ثانیه"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0076",
+            "description_fa": "درخواست‌های curl، wget، Python، یا کلاینت‌های HTTP سفارشی را که از طریق پورت‌های غیراستاندارد با الگوهای تکراری یا بیکن‌مانند یا رفتارهای سنگین POST برای دامنه‌های نادر ارتباط برقرار می‌کنند، تشخیص می‌دهد."
         }
     ]
 }

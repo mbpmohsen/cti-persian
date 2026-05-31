@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0024#AN0069",
-                    "external_id": "AN0069"
+                    "external_id": "AN0069",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CcachePathBaseline",
-                    "description": "Expected directories or environment variable (KRB5CCNAME) paths for ccache files in the environment."
+                    "description": "Expected directories or environment variable (KRB5CCNAME) paths for ccache files in the environment.",
+                    "description_fa": "مسیرهای مسیرهای دایرکتوری یا متغیر محیطی (KRB5CCNAME) مورد انتظار برای فایل های حافظه پنهان در محیط."
                 },
                 {
                     "field": "AllowedProcesses",
-                    "description": "Baseline list of processes legitimately interacting with ccache (e.g., klist, kinit)."
+                    "description": "Baseline list of processes legitimately interacting with ccache (e.g., klist, kinit).",
+                    "description_fa": "فهرست پایه فرآیندهایی که به طور قانونی با حافظه پنهان در تعامل هستند (به عنوان مثال، klist، kinit)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for linking file access, process execution, and Kerberos requests."
+                    "description": "Correlation window for linking file access, process execution, and Kerberos requests.",
+                    "description_fa": "پنجره همبستگی برای پیوند دادن دسترسی به فایل، اجرای فرآیند و درخواست‌های Kerberos."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0069",
+            "description_fa": "دسترسی غیرمجاز، کپی، یا اصلاح فایل‌های حافظه پنهان Kerberos (krb5cc_%UID% یا krb5.ccache) را در /tmp یا مسیرهای سفارشی تعریف‌شده توسط KRB5CCNAME شناسایی می‌کند. دسترسی به فایل را با فرآیندهای مشکوک (مانند ابزارهای تخلیه اعتبار) و درخواست‌های تأیید اعتبار غیرعادی Kerberos از فرآیندهای غیر استاندارد مرتبط می‌کند."
         }
     ]
 }

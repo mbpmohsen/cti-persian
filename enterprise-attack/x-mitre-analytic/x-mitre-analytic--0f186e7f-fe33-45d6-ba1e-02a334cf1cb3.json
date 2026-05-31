@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0009#AN0023",
-                    "external_id": "AN0023"
+                    "external_id": "AN0023",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedTeamIDs",
-                    "description": "Apple Developer Team IDs for approved dev tools (Xcode, JetBrains, etc.)."
+                    "description": "Apple Developer Team IDs for approved dev tools (Xcode, JetBrains, etc.).",
+                    "description_fa": "شناسه‌های تیم توسعه‌دهنده اپل برای ابزارهای توسعه‌دهنده تأیید شده (Xcode، JetBrains و غیره)."
                 },
                 {
                     "field": "BrewTapsAllowList",
-                    "description": "Homebrew taps allowed in your environment."
+                    "description": "Homebrew taps allowed in your environment.",
+                    "description_fa": "شیرهای Homebrew در محیط شما مجاز است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Default 90 minutes."
+                    "description": "Default 90 minutes.",
+                    "description_fa": "90 دقیقه پیش فرض"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0023",
+            "description_fa": "ابزارهای توسعه دهنده (Homebrew، pip، npm/yarn، Xcode builds) وابستگی ها را نصب یا به روز می کنند. Mach-O یا اسکریپت‌های جدید در /usr/local، /opt/homebrew، ~/Library/Application Support، پروژه‌ها (node_modules/.bin، venv/bin) ظاهر می‌شوند. اولین اجرا، sh/zsh/osascript/curl و جریان های خروجی جدید را ایجاد می کند. Gatekeeper/AMFI ممکن است اجزای بدون علامت را علامت گذاری کند."
         }
     ]
 }

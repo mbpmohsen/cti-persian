@@ -9,22 +9,27 @@
                 {
                     "external_id": "CAPEC-168",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/168.html"
+                    "url": "https://capec.mitre.org/data/definitions/168.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-212",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/212.html"
+                    "url": "http://cwe.mitre.org/data/definitions/212.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-69",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/69.html"
+                    "url": "http://cwe.mitre.org/data/definitions/69.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Windows alternate data stream",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Windows_alternate_data_stream"
+                    "url": "https://owasp.org/www-community/attacks/Windows_alternate_data_stream",
+                    "description_fa": "جریان داده متناوب ویندوز",
+                    "source_name_fa": "حملات OWASP"
                 }
             ],
             "id": "attack-pattern--0d2d1e18-6e28-4c58-b442-c5450e6c1112",
@@ -50,7 +55,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از عملکرد مایکروسافت NTFS Alternate Data Streams (ADS) برای تضعیف امنیت سیستم سوء استفاده می کند. ADS اجازه می دهد تا چندین \"فایل\" در یک ورودی دایرکتوری که به عنوان filename:streamname ارجاع شده است، ذخیره شوند. یک یا چند جریان داده جایگزین ممکن است در هر فایل یا دایرکتوری ذخیره شود. ابزارهای عادی مایکروسافت وجود یک جریان ADS متصل به یک فایل را نشان نمی دهند. فضای اضافی برای ADS در اندازه فایل نمایش داده شده ثبت نمی شود. فضای اضافی برای ADS در فضای استفاده شده روی حجم در نظر گرفته می شود. ADS می تواند هر نوع فایلی باشد. ADS توسط ابزارهای استاندارد مایکروسافت بین حجم های NTFS کپی می شود. ADS می تواند توسط یک مهاجم یا مزاحم برای مخفی کردن ابزارها، اسکریپت ها و داده ها از شناسایی توسط ابزارهای عادی سیستم استفاده شود. بسیاری از برنامه های ضد ویروس ADS را بررسی یا اسکن نمی کنند. ویندوز ویستا دارای یک سوئیچ (-R) در دستور DIR خط فرمان است که جریان های متناوب را نمایش می دهد.",
+            "name_fa": "Windows ::DATA جریان داده جایگزین",
+            "x_capec_prerequisites_fa": [
+                "هدف باید سیستم فایل Microsoft NTFS را اجرا کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "مهاجم باید خط فرمان یا دسترسی برنامه‌ای به سیستم فایل هدف با مجوز نوشتن/خواندن داشته باشد."
+            ]
         }
     ],
     "type": "bundle"

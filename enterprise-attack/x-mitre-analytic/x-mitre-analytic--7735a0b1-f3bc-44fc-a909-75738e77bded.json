@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0146#AN0416",
-                    "external_id": "AN0416"
+                    "external_id": "AN0416",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MountPoint",
-                    "description": "Identify when deletions occur inside persistent or shared volume paths."
+                    "description": "Identify when deletions occur inside persistent or shared volume paths.",
+                    "description_fa": "شناسایی زمانی که حذف در مسیرهای حجم دائمی یا مشترک رخ می دهد."
                 },
                 {
                     "field": "ContainerImage",
-                    "description": "Correlate destructive behavior with unknown or untrusted container sources."
+                    "description": "Correlate destructive behavior with unknown or untrusted container sources.",
+                    "description_fa": "رفتار مخرب را با منابع کانتینری ناشناخته یا نامعتبر مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0416",
+            "description_fa": "فرآیند Container عملیات مخرب فایل را در داخل ولوم mount یا مسیرهای میزبان اجرا می کند. شامل «rm -rf /mnt/volumes/»، شکست کانتینر و به دنبال آن تلاش‌های حذف میزبان است."
         }
     ]
 }

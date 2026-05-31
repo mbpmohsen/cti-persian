@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0143#AN0401",
-                    "external_id": "AN0401"
+                    "external_id": "AN0401",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedCryptoLibs",
-                    "description": "Baseline expected crypto libraries to suppress false positives."
+                    "description": "Baseline expected crypto libraries to suppress false positives.",
+                    "description_fa": "پیش‌بینی می‌شود که کتابخانه‌های رمزنگاری موارد مثبت کاذب را سرکوب کنند."
                 },
                 {
                     "field": "TrafficAsymmetryRatio",
-                    "description": "Ratio of sent/received bytes indicating possible hidden C2."
+                    "description": "Ratio of sent/received bytes indicating possible hidden C2.",
+                    "description_fa": "نسبت بایت های ارسالی/دریافتی نشان دهنده C2 ​​پنهان احتمالی است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0401",
+            "description_fa": "فرآیندهای غیرمنتظره (مانند bash، python، باینری های سفارشی) به صورت پویا libcrypto را بارگذاری می کنند یا عملیات رمزگذاری AES/RC4 را انجام می دهند، سپس جلسات خروجی را با آنتروپی بایت غیرعادی یا الگوهای ترافیک نامتقارن آغاز می کنند."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0673#AN1772",
-                    "external_id": "AN1772"
+                    "external_id": "AN1772",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,17 +63,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RecordingDurationThreshold",
-                    "description": "Minimum microphone session duration before triggering detection to reduce noise from short legitimate captures."
+                    "description": "Minimum microphone session duration before triggering detection to reduce noise from short legitimate captures.",
+                    "description_fa": "حداقل مدت زمان جلسه میکروفون قبل از شروع تشخیص برای کاهش نویز ناشی از عکس‌برداری‌های قانونی کوتاه مدت."
                 },
                 {
                     "field": "BackgroundCapturePolicy",
-                    "description": "Environment-specific baseline for legitimate background microphone usage"
+                    "description": "Environment-specific baseline for legitimate background microphone usage",
+                    "description_fa": "خط پایه مخصوص محیط برای استفاده قانونی از میکروفون پس زمینه"
                 },
                 {
                     "field": "CaptureToNetworkTimeWindow",
-                    "description": "Time window correlating microphone activation with outbound network traffic."
+                    "description": "Time window correlating microphone activation with outbound network traffic.",
+                    "description_fa": "پنجره زمانی مرتبط با فعال سازی میکروفون با ترافیک شبکه خروجی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1772",
+            "description_fa": "یک مدافع برنامه‌ای را مشاهده می‌کند که قابلیت ضبط میکروفون را در اختیار دارد که از طریق APIهای صوتی Android (مانند MediaRecorder یا AudioRecord) به استفاده از منبع میکروفون فعال تبدیل می‌شود، به دنبال آن ضبط مداوم در حالی که برنامه در پس‌زمینه است یا دستگاه قفل است، و ترافیک شبکه خروجی بعدی که حاکی از خروج یا پخش صدا بالقوه است."
         }
     ]
 }

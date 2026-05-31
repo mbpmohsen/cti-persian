@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0531#AN1470",
-                    "external_id": "AN1470"
+                    "external_id": "AN1470",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CallerIdentityContext",
-                    "description": "Track root, federated identities, and STS tokens separately."
+                    "description": "Track root, federated identities, and STS tokens separately.",
+                    "description_fa": "ریشه، هویت های فدرال، و توکن های STS را به طور جداگانه پیگیری کنید."
                 },
                 {
                     "field": "NewCredentialUsageWindow",
-                    "description": "Time between key creation and first use (default: 5 min)."
+                    "description": "Time between key creation and first use (default: 5 min).",
+                    "description_fa": "زمان بین ایجاد کلید و اولین استفاده (پیش‌فرض: 5 دقیقه)."
                 },
                 {
                     "field": "IAMRoleBaseline",
-                    "description": "Expected services/accounts allowed to create keys."
+                    "description": "Expected services/accounts allowed to create keys.",
+                    "description_fa": "خدمات/حساب‌های مورد انتظار مجاز به ایجاد کلید هستند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1470",
+            "description_fa": "استفاده از Cloud API برای ایجاد/وارد کردن کلیدهای SSH یا تولید کلیدهای دسترسی جدید (CreateAccessKey، ImportKeyPair، CreateLoginProfile) از دسترسی غیر کنسولی یا اصول غیر معمول."
         }
     ]
 }

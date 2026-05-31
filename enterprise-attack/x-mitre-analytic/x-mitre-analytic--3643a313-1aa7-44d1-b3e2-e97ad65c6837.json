@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0051#AN0141",
-                    "external_id": "AN0141"
+                    "external_id": "AN0141",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AVExclusionPaths",
-                    "description": "Paths ignored by AV/XProtect that should be monitored for abnormal writes."
+                    "description": "Paths ignored by AV/XProtect that should be monitored for abnormal writes.",
+                    "description_fa": "مسیرهای نادیده گرفته شده توسط AV/XProtect که باید برای نوشتن غیرعادی نظارت شوند."
                 },
                 {
                     "field": "ProcessContext",
-                    "description": "Expected user or application context writing to excluded directories."
+                    "description": "Expected user or application context writing to excluded directories.",
+                    "description_fa": "نوشتن متن مورد انتظار کاربر یا برنامه در دایرکتوری های حذف شده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0141",
+            "description_fa": "ایجاد یا اصلاح فایل مشکوک در دایرکتوری‌ها که توسط XProtect یا AV حذف شده‌اند (مانند ~/Library، فهرست‌های حافظه موقت). دیدگاه مدافع: رویدادهای فایل را در مسیرهای نادیده گرفته شده با همبستگی با اجرا یا فعالیت پایدار نظارت کنید."
         }
     ]
 }

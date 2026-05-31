@@ -9,54 +9,67 @@
                 {
                     "external_id": "CAPEC-100",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/100.html"
+                    "url": "https://capec.mitre.org/data/definitions/100.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-131",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/131.html"
+                    "url": "http://cwe.mitre.org/data/definitions/131.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-129",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/129.html"
+                    "url": "http://cwe.mitre.org/data/definitions/129.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-805",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/805.html"
+                    "url": "http://cwe.mitre.org/data/definitions/805.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Buffer Overflow",
                     "external_id": "07",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Buffer-Overflow"
+                    "url": "http://projects.webappsec.org/Buffer-Overflow",
+                    "description_fa": "سرریز بافر",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Buffer overflow attack",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Buffer_overflow_attack"
+                    "url": "https://owasp.org/www-community/attacks/Buffer_overflow_attack",
+                    "description_fa": "حمله سرریز بافر",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "OWASP Vulnerabilities, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-620",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-community/vulnerabilities/Buffer_Overflow"
+                    "url": "https://owasp.org/www-community/vulnerabilities/Buffer_Overflow",
+                    "description_fa": "آسیب پذیری های OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--77e51461-7843-411c-a90e-852498957f76",
@@ -88,6 +101,23 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -123,11 +153,28 @@
             ],
             "x_capec_skills_required": {
                 "High": "In cases of directed overflows, where the motive is to divert the flow of the program or application as per the adversaries' bidding, high level skills are required. This may involve detailed knowledge of the target system architecture and kernel.",
-                "Low": "In most cases, overflowing a buffer does not require advanced skills beyond the ability to notice an overflow and stuff an input variable with content."
+                "Low": "In most cases, overflowing a buffer does not require advanced skills beyond the ability to notice an overflow and stuff an input variable with content.",
+                "High_fa": "در موارد سرریزهای هدایت شده، که در آن انگیزه منحرف کردن جریان برنامه یا برنامه مطابق با پیشنهاد مخالفان است، مهارت های سطح بالایی مورد نیاز است. این ممکن است شامل دانش دقیق معماری و هسته سیستم هدف باشد.",
+                "Low_fa": "در بیشتر موارد، سرریز کردن بافر به مهارت های پیشرفته ای فراتر از توانایی مشاهده سرریز و پر کردن یک متغیر ورودی با محتوا نیاز ندارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حملات سرریز بافر محدودیت‌های نامناسب یا گمشده را هدف قرار می‌دهند و عملیات بافر را بررسی می‌کنند، که معمولاً توسط ورودی تزریق شده توسط دشمن ایجاد می‌شود. در نتیجه، یک حریف می‌تواند از مرزهای مناطق بافر اختصاص‌یافته در حافظه بنویسد، که باعث خرابی برنامه یا تغییر مسیر بالقوه اجرا طبق انتخاب دشمنان می‌شود.",
+            "name_fa": "بافرهای سرریز",
+            "x_capec_example_instances_fa": [
+                "ساده‌ترین مثال، برنامه‌ای است که ورودی کاربر را می‌خواند و آن را در یک بافر داخلی ذخیره می‌کند، اما بررسی نمی‌کند که اندازه داده‌های ورودی کمتر یا برابر با اندازه بافر باشد. اگر کاربر داده های طول بیش از حد را وارد کند، ممکن است بافر سرریز شود که منجر به خرابی برنامه شود، یا بدتر از آن، کاربر را قادر می سازد تا باعث اجرای کد تزریق شده شود.",
+                "بسیاری از وب سرورها با استفاده از افزونه های فیلتر، امنیت را در برنامه های کاربردی تحت وب اعمال می کنند. یک مثال پلاگین SiteMinder است که برای احراز هویت استفاده می شود. سرریز در چنین افزونه‌ای، احتمالاً از طریق یک URL طولانی یا پارامتر تغییر مسیر، می‌تواند به دشمن اجازه دهد نه تنها از بررسی‌های امنیتی عبور کند، بلکه کد دلخواه را در وب سرور مورد نظر در زمینه کاربری که فرآیند وب سرور را اجرا می‌کند، اجرا کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه هدف: </b> دشمن برنامه یا برنامه هدف را برای اجرای سرریز بافر در آن شناسایی می کند. دشمنان اغلب به دنبال برنامه‌هایی هستند که ورودی کاربر را می‌پذیرند و مدیریت حافظه را به صورت دستی انجام می‌دهند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>پیدا کردن بردار تزریق: </b> دشمن یک بردار تزریق را شناسایی می‌کند تا محتوای بیش از حد را به برنامه مورد نظر تحویل دهد. بافر.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>به یک برنامه یا برنامه ورودی بزرگ ارائه دهید و رفتار را مشاهده کنید. اگر خرابی وجود داشته باشد، به این معنی است که حمله سرریز بافر امکان پذیر است.</td></tr></tbody></table><li> <p> <b>محتوای سرریز ساختگی: </b>دشمن محتوایی را می سازد که باید تزریق شود. اگر هدف این است که به سادگی باعث از کار افتادن نرم افزار شود، محتوا فقط باید از مقدار بیش از حد داده های تصادفی تشکیل شود. اگر قصد استفاده از سرریز برای اجرای کد دلخواه باشد، حریف محموله را به گونه‌ای طراحی می‌کند که آدرس بازگشتی رونویسی شده با یکی از گزینه‌های دشمن جایگزین می‌شود. آن را.</td></tr><tr><td>از یک سورتمه NOP در محتوای سرریز استفاده کنید تا راحت‌تر به کد مخرب \"اسلاید\" کنید. این کار به این دلیل انجام می شود که آدرس برگشتی دقیق لازم نباشد درست باشد، فقط در محدوده همه NOP ها</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز از بافر: </b>با استفاده از بردار تزریق، محتوای دشمن را بیش از حد وارد می کند. بافر.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار هدفمند عملیات بافر را انجام می دهد.",
+                "نرم‌افزار هدف‌گذاری شده به‌اندازه کافی محدودیت‌ها را بر روی عملیات بافر انجام نمی‌دهد.",
+                "دشمن این قابلیت را دارد که بر ورودی عملیات بافر تأثیر بگذارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. شناسایی و بهره برداری از سرریز بافر به هیچ منبعی فراتر از دانش و دسترسی به سیستم هدف نیاز ندارد."
+            ]
         }
     ],
     "type": "bundle"

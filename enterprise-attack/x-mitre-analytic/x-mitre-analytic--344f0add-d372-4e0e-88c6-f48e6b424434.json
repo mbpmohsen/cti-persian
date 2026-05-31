@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0293#AN0814",
-                    "external_id": "AN0814"
+                    "external_id": "AN0814",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,13 +53,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedServices",
-                    "description": "Hybrid identity services monitored for tampering, e.g., PTA agent, AD FS."
+                    "description": "Hybrid identity services monitored for tampering, e.g., PTA agent, AD FS.",
+                    "description_fa": "خدمات هویت ترکیبی برای دستکاری نظارت می شود، به عنوان مثال، عامل PTA، AD FS."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window correlating DLL/module load events with logon anomalies."
+                    "description": "Window correlating DLL/module load events with logon anomalies.",
+                    "description_fa": "پنجره ای که رویدادهای بارگذاری DLL/ماژول را با ناهنجاری های ورود به سیستم مرتبط می کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0814",
+            "description_fa": "تزریق یا دستکاری DLL ها را در عوامل هویت ترکیبی (مانند AzureADConnectAuthenticationAgentService)، تغییرات رجیستری یا پیکربندی مرتبط با PTA/AD FS، و بارهای غیرعادی ماژول LSASS یا AD FS که با ناهنجاری های احراز هویت مرتبط است، تشخیص می دهد."
         }
     ]
 }

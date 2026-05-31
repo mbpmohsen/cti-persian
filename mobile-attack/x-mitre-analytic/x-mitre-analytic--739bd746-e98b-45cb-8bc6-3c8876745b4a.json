@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0720#AN1852",
-                    "external_id": "AN1852"
+                    "external_id": "AN1852",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.378Z",
             "name": "Analytic 1852",
-            "description": "Defender correlates a sandboxed app downloading or receiving opaque/encoded blobs, writing high-entropy content into container/tmp, performing decode/decompress/reassembly, and then executing/loaded as Mach-O or bundle (dlopen) or leveraging JIT/RWX pages to run the decoded payload. Sequence: opaque download or IPC \u2192 high-entropy writes/split-file bursts \u2192 decode/unarchive \u2192 new Mach-O/bundle in tmp \u2192 dlopen/posix_spawn or RWX region activity.",
+            "description": "Defender correlates a sandboxed app downloading or receiving opaque/encoded blobs, writing high-entropy content into container/tmp, performing decode/decompress/reassembly, and then executing/loaded as Mach-O or bundle (dlopen) or leveraging JIT/RWX pages to run the decoded payload. Sequence: opaque download or IPC → high-entropy writes/split-file bursts → decode/unarchive → new Mach-O/bundle in tmp → dlopen/posix_spawn or RWX region activity.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -62,29 +63,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max interval to link write\u2192decode\u2192load/exec (e.g., 5\u201345s depending on device and iOS version)."
+                    "description": "Max interval to link write→decode→load/exec (e.g., 5–45s depending on device and iOS version).",
+                    "description_fa": "حداکثر فاصله زمانی برای پیوند نوشتن → رمزگشایی → بارگیری / اجرا (به عنوان مثال، 5 تا 45 ثانیه بسته به دستگاه و نسخه iOS)."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Entropy threshold to consider a file obfuscated/packed (e.g., \u2265 7.3)."
+                    "description": "Entropy threshold to consider a file obfuscated/packed (e.g., ≥ 7.3).",
+                    "description_fa": "آستانه آنتروپی برای در نظر گرفتن یک فایل مبهم/بسته شده (به عنوان مثال، ≥ 7.3)."
                 },
                 {
                     "field": "SplitWriteBurstMin",
-                    "description": "Minimum count of small sequential writes to flag reassembly behaviors."
+                    "description": "Minimum count of small sequential writes to flag reassembly behaviors.",
+                    "description_fa": "حداقل تعداد نوشته‌های متوالی کوچک برای پرچم‌گذاری رفتارهای مونتاژ مجدد."
                 },
                 {
                     "field": "AppContainerPaths",
-                    "description": "Container subpaths to monitor (tmp, Library/Caches, Documents) vary by policy."
+                    "description": "Container subpaths to monitor (tmp, Library/Caches, Documents) vary by policy.",
+                    "description_fa": "مسیرهای فرعی کانتینر برای نظارت (tmp، کتابخانه/حافظه پنهان، اسناد) بسته به خط مشی متفاوت است."
                 },
                 {
                     "field": "KnownGoodBundles",
-                    "description": "Allowlist of legitimate dynamically loaded bundles/plugins to reduce FPs."
+                    "description": "Allowlist of legitimate dynamically loaded bundles/plugins to reduce FPs.",
+                    "description_fa": "فهرست مجاز بسته‌ها/افزونه‌های بارگذاری شده پویا برای کاهش FPها."
                 },
                 {
                     "field": "PerAppVPNAllowlist",
-                    "description": "Known enterprise services carrying opaque archives to avoid false alerts."
+                    "description": "Known enterprise services carrying opaque archives to avoid false alerts.",
+                    "description_fa": "سرویس‌های سازمانی شناخته شده که بایگانی‌های غیرشفاف را برای جلوگیری از هشدارهای نادرست حمل می‌کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1852",
+            "description_fa": "Defender با دانلود یا دریافت حباب‌های غیرشفاف/رمزگذاری‌شده، نوشتن محتوای با آنتروپی بالا در کانتینر/tmp، انجام رمزگشایی/فشرده‌کردن/مجموعه مجدد، و سپس اجرا/بارگذاری به‌عنوان Mach-O یا بسته‌ای (dlopen) یا استفاده از صفحات JIT/RWX برای بارگذاری رمزگشایی‌شده، یک برنامه sandboxed را به هم مرتبط می‌کند. دنباله: دانلود غیرشفاف یا IPC ← نوشتن با آنتروپی بالا/ انقباض فایل ← رمزگشایی/بازسازی ← Mach-O/Bundle جدید در tmp ← فعالیت ناحیه dlopen/posix_spawn یا RWX."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0237#AN0658",
-                    "external_id": "AN0658"
+                    "external_id": "AN0658",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "script_path",
-                    "description": "Specific path of init script (e.g., /etc/rc.local, /etc/init.d/*) may vary by distribution"
+                    "description": "Specific path of init script (e.g., /etc/rc.local, /etc/init.d/*) may vary by distribution",
+                    "description_fa": "مسیر خاص اسکریپت init (به عنوان مثال، /etc/rc.local، /etc/init.d/*) ممکن است بر اساس توزیع متفاوت باشد"
                 },
                 {
                     "field": "user_context",
-                    "description": "Root vs. non-root modification context depending on configuration"
+                    "description": "Root vs. non-root modification context depending on configuration",
+                    "description_fa": "متن اصلاح ریشه در مقابل غیر ریشه بسته به پیکربندی"
                 },
                 {
                     "field": "time_window",
-                    "description": "Tuning window for script creation or modification relative to system boot"
+                    "description": "Tuning window for script creation or modification relative to system boot",
+                    "description_fa": "پنجره تنظیم برای ایجاد یا اصلاح اسکریپت نسبت به بوت سیستم"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0658",
+            "description_fa": "شناسایی اسکریپت های /etc/rc.local یا /etc/init.d تغییر یافته یا تازه ایجاد شده و به دنبال آن اجرای مشکوک در هنگام راه اندازی سیستم."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0243#AN0681",
-                    "external_id": "AN0681"
+                    "external_id": "AN0681",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedKeyLengths",
-                    "description": "Defines the minimum acceptable encryption key sizes; tunable to organizational policy."
+                    "description": "Defines the minimum acceptable encryption key sizes; tunable to organizational policy.",
+                    "description_fa": "حداقل اندازه کلید رمزگذاری قابل قبول را تعریف می کند. قابل تنظیم با خط مشی سازمانی"
                 },
                 {
                     "field": "CipherSuiteBaseline",
-                    "description": "Baseline list of approved cipher suites for network sessions; deviations may indicate tampering."
+                    "description": "Baseline list of approved cipher suites for network sessions; deviations may indicate tampering.",
+                    "description_fa": "فهرست پایه مجموعه های رمز تایید شده برای جلسات شبکه. انحرافات ممکن است نشان دهنده دستکاری باشد."
                 },
                 {
                     "field": "AuthorizedAdminAccounts",
-                    "description": "Whitelisted accounts for executing crypto configuration changes; ensures alerts only trigger on unauthorized actions."
+                    "description": "Whitelisted accounts for executing crypto configuration changes; ensures alerts only trigger on unauthorized actions.",
+                    "description_fa": "حساب های در لیست سفید برای اجرای تغییرات پیکربندی کریپتو؛ اطمینان حاصل می کند که هشدارها فقط در مورد اقدامات غیرمجاز ایجاد می شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation period between configuration change and anomalous traffic downgrade; adjustable to reduce noise."
+                    "description": "Time correlation period between configuration change and anomalous traffic downgrade; adjustable to reduce noise.",
+                    "description_fa": "دوره همبستگی زمانی بین تغییر پیکربندی و کاهش ترافیک غیرعادی. قابل تنظیم برای کاهش نویز"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0681",
+            "description_fa": "مدافعان ممکن است تلاش‌هایی را برای تغییر تنظیمات رمزنگاری در دستگاه‌های شبکه مشاهده کنند که قدرت کلید یا مجموعه‌های رمز مجاز را کاهش می‌دهد. شاخص‌های مشکوک شامل تغییرات پیکربندی است که الگوریتم‌های رمزگذاری، پارامترهای طول کلید، یا غیرفعال کردن رمزگذاری قوی به نفع رمزهای قدیمی را کاهش می‌دهد. این فعالیت‌ها اغلب به‌عنوان دستورات CLI که خط‌مشی‌های رمزنگاری را تغییر می‌دهند، تغییرات سفت‌افزاری که بر کتابخانه‌های رمزنگاری تأثیر می‌گذارد یا به‌روزرسانی‌های غیرمنتظره فایل‌های مدیریت کلید ظاهر می‌شوند. همبستگی بین گزارش‌های پیکربندی دستگاه و تجزیه و تحلیل ترافیک که رمزهای ضعیف‌تر را نشان می‌دهد، اطمینان بیشتری از کاهش فضای کلید مخرب ایجاد می‌کند."
         }
     ]
 }

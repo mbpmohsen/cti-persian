@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0539#AN1487",
-                    "external_id": "AN1487"
+                    "external_id": "AN1487",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PrivilegedUserList",
-                    "description": "Defines which accounts are authorized to consent or register applications; deviations indicate possible adversary persistence."
+                    "description": "Defines which accounts are authorized to consent or register applications; deviations indicate possible adversary persistence.",
+                    "description_fa": "تعریف می کند که کدام حساب ها مجاز به موافقت یا ثبت برنامه ها هستند. انحرافات نشان دهنده تداوم احتمالی دشمن است."
                 },
                 {
                     "field": "ApplicationScopeThreshold",
-                    "description": "Defines which OAuth scopes are considered risky (e.g., Mail.ReadWrite, Files.ReadWrite.All)."
+                    "description": "Defines which OAuth scopes are considered risky (e.g., Mail.ReadWrite, Files.ReadWrite.All).",
+                    "description_fa": "تعریف می کند که کدام حوزه های OAuth خطرناک در نظر گرفته می شوند (به عنوان مثال، Mail.ReadWrite، Files.ReadWrite.All)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1487",
+            "description_fa": "ادغام‌های مشکوک برنامه OAuth را در محیط‌های Office 365 یا Google Workspace، مانند ثبت‌نام برنامه‌های جدید، اعطای رضایت غیرمنتظره، یا تخصیص امتیازات شناسایی می‌کند. مدافعان باید بین رویدادهای ایجاد/تغییر برنامه و فعالیت اصلی کاربر یا سرویس مرتبط با هم ارتباط برقرار کنند تا پایداری را از طریق ادغام برنامه شناسایی کنند."
         }
     ]
 }

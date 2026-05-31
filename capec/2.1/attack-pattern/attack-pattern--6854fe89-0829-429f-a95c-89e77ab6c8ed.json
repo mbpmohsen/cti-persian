@@ -9,40 +9,51 @@
                 {
                     "external_id": "CAPEC-125",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/125.html"
+                    "url": "https://capec.mitre.org/data/definitions/125.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-404",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/404.html"
+                    "url": "http://cwe.mitre.org/data/definitions/404.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Network Denial of Service: Direct Network Flood",
                     "external_id": "T1498.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1498/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1498/001",
+                    "description_fa": "شبکه انکار سرویس: سیل مستقیم شبکه",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Endpoint Denial of Service",
                     "external_id": "T1499",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1499"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1499",
+                    "description_fa": "انکار سرویس نقطه پایانی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Denial of Service",
                     "external_id": "10",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Denial-of-Service"
+                    "url": "http://projects.webappsec.org/Denial-of-Service",
+                    "description_fa": "انکار خدمات",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Traffic flood",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Traffic_flood"
+                    "url": "https://owasp.org/www-community/attacks/Traffic_flood",
+                    "description_fa": "سیل ترافیک",
+                    "source_name_fa": "حملات OWASP"
                 }
             ],
             "id": "attack-pattern--6854fe89-0829-429f-a95c-89e77ab6c8ed",
@@ -58,6 +69,10 @@
                 "Availability": [
                     "Unreliable Execution (A successful flooding attack compromises the availability of the target system's service by exhausting its available resources.)",
                     "Resource Consumption (A successful flooding attack compromises the availability of the target system's service by exhausting its available resources.)"
+                ],
+                "Availability_fa": [
+                    "اجرای غیرقابل اعتماد (یک حمله سیلابی موفقیت آمیز، در دسترس بودن سرویس سیستم هدف را با اتمام منابع موجود به خطر می اندازد.)",
+                    "مصرف منابع (یک حمله سیلابی موفقیت آمیز، در دسترس بودن سرویس سیستم هدف را با اتمام منابع موجود به خطر می اندازد.)"
                 ]
             },
             "x_capec_domains": [
@@ -83,7 +98,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن با درگیر شدن سریع در تعداد زیادی از تعاملات با هدف، منابع یک هدف را مصرف می کند. این نوع حمله به طور کلی ضعف در محدود کردن سرعت یا جریان را نشان می دهد. در صورت موفقیت آمیز بودن این حمله از دسترسی کاربران قانونی به سرویس جلوگیری می کند و می تواند باعث سقوط هدف شود. این حمله با کاهش منابع از طریق نشت یا تخصیص متفاوت است، زیرا حملات اخیر بر حجم درخواست‌های ارسال شده به هدف متکی نیستند، بلکه بر روی دستکاری عملیات هدف تمرکز می‌کنند. عامل کلیدی در حمله سیل، تعداد درخواست هایی است که دشمن می تواند در یک بازه زمانی معین انجام دهد. هر چه این تعداد بیشتر باشد، احتمال موفقیت یک حمله در برابر یک هدف معین بیشتر است.",
+            "name_fa": "سیل",
+            "x_capec_prerequisites_fa": [
+                "هر هدفی که خدمات درخواست کند در سطحی از مقیاس در برابر این حمله آسیب پذیر است."
+            ],
+            "x_capec_resources_required_fa": [
+                "یک اسکریپت یا برنامه ای که قادر به ایجاد درخواست های بیشتر از آنچه هدف می تواند باشد، یا شبکه یا خوشه ای از اشیاء که همگی قادر به ایجاد درخواست های همزمان هستند."
+            ]
         }
     ],
     "type": "bundle"

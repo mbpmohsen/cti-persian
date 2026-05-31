@@ -9,52 +9,63 @@
                 {
                     "external_id": "CAPEC-9",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/9.html"
+                    "url": "https://capec.mitre.org/data/definitions/9.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-118",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/118.html"
+                    "url": "http://cwe.mitre.org/data/definitions/118.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-733",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/733.html"
+                    "url": "http://cwe.mitre.org/data/definitions/733.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--b6a2983b-1d97-4698-b210-961ed0523f33",
@@ -90,6 +101,25 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "اجرای غیر قابل اعتماد"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -106,11 +136,23 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a buffer overflow to inject malicious code into the stack of a software system or even the heap can require a higher skill level.",
-                "Low": "An adversary can simply overflow a buffer by inserting a long string into an adversary-modifiable injection vector. The result can be a DoS."
+                "Low": "An adversary can simply overflow a buffer by inserting a long string into an adversary-modifiable injection vector. The result can be a DoS.",
+                "High_fa": "بهره برداری از سرریز بافر برای تزریق کد مخرب به پشته یک سیستم نرم افزاری یا حتی پشته می تواند به سطح مهارت بالاتری نیاز داشته باشد.",
+                "Low_fa": "یک حریف به سادگی می تواند با وارد کردن یک رشته طولانی در یک بردار تزریق قابل تغییر، از یک بافر سرریز شود. نتیجه می تواند یک DoS باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله ابزارهای خط فرمان موجود در تعدادی پوسته را هدف قرار می دهد. یک حریف می‌تواند از آسیب‌پذیری موجود در ابزار خط فرمان استفاده کند تا امتیاز را به روت افزایش دهد.",
+            "name_fa": "سرریز بافر در ابزارهای محلی Command-line Utilities",
+            "x_capec_example_instances_fa": [
+                "<xhtml:div style=\"margin-left:1em;\">\n                  <xhtml:b>مثال حمله: HPUX passwd</xhtml:b>\n                  <xhtml:div>سرریز بافر در دستور HPUX passwd به کاربران محلی اجازه می‌دهد از طریق یک گزینه خط فرمان، امتیازات ریشه را به دست آورند.</xhtml:div>\n               </xhtml:div>\n               <xhtml:div style=\"margin-left:1em;\">\n                  <xhtml:b>مثال حمله: Solaris getopt</xhtml:b>\n                  <xhtml:div>یک سرریز بافر در دستور getopt Solaris (که در libc یافت می شود) به کاربران محلی اجازه می دهد از طریق argv طولانی[0] امتیازات ریشه را به دست آورند.</xhtml:div>\n               </xhtml:div>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی سیستم هدف: </b> دشمن ابتدا سیستم هدفی را پیدا می‌کند که می‌خواهد امتیازات بالاتری در آن به دست آورد. این می‌تواند سیستمی باشد که آن‌ها قبلاً به آن دسترسی دارند یا سیستمی باشد که با استفاده از ابزارهای دیگر با امتیاز کمتری به آن دسترسی غیرمجاز به دست می‌آورند.</p></li><li> <p> <b>پیدا کردن بردار تزریق: </b> دشمن ابزارهای خط فرمانی را شناسایی می‌کند که توسط میزبان هدف در معرض دید قرار می‌گیرند و حاوی آسیب‌پذیری‌های سرریز بافر هستند. حریف احتمالاً می‌داند کدام ابزارهای کمکی این آسیب‌پذیری‌ها را دارند و نسخه‌های تأثیرگذار کدامند، بنابراین شماره نسخه‌های این ابزارها را نیز به دست خواهند آورد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>دستور سرریز Craft: </b>زمانی که تبلیغ‌کننده‌ها از آسیب‌پذیری‌شان استفاده کنند، می‌توانند از آن استفاده کنند. آسیب‌پذیری برای ایجاد دستوری که از سرریز بافر سوء استفاده می‌کند.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز کردن بافر: </b>با استفاده از بردار تزریق، حریف دستور دستکاری‌شده را اجرا می‌کند.><ve prileges on/vli thelevated",
+            "x_capec_prerequisites_fa": [
+                "میزبان هدف یک ابزار خط فرمان را در معرض دید کاربر قرار می دهد.",
+                "ابزار خط فرمان که توسط میزبان هدف در معرض دید قرار می‌گیرد، دارای یک آسیب‌پذیری سرریز بافر است که می‌تواند مورد سوء استفاده قرار گیرد."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0699#AN1815",
-                    "external_id": "AN1815"
+                    "external_id": "AN1815",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,29 +48,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between motion-state inference and subsequent deferred execution"
+                    "description": "Correlation window between motion-state inference and subsequent deferred execution",
+                    "description_fa": "پنجره همبستگی بین استنتاج حالت حرکت و اجرای معوق بعدی"
                 },
                 {
                     "field": "IdleThreshold",
-                    "description": "Threshold defining when device motion or interaction is considered low enough to permit hidden execution"
+                    "description": "Threshold defining when device motion or interaction is considered low enough to permit hidden execution",
+                    "description_fa": "آستانه تعیین زمانی که حرکت یا تعامل دستگاه به اندازه کافی پایین در نظر گرفته می شود تا امکان اجرای پنهان را فراهم کند"
                 },
                 {
                     "field": "InteractionSignalSet",
-                    "description": "Environment-specific set of motion or activity signals used to infer user presence"
+                    "description": "Environment-specific set of motion or activity signals used to infer user presence",
+                    "description_fa": "مجموعه‌ای از سیگنال‌های حرکت یا فعالیت خاص محیطی که برای استنباط حضور کاربر استفاده می‌شود"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Baseline of legitimate applications expected to use motion or activity sensing while also conditionally changing behavior"
+                    "description": "Baseline of legitimate applications expected to use motion or activity sensing while also conditionally changing behavior",
+                    "description_fa": "پایه برنامه‌های کاربردی قانونی که انتظار می‌رود از حس حرکت یا فعالیت استفاده کنند و در عین حال رفتار را به‌طور مشروط تغییر دهند"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether suspiciousness increases when deferred activity starts from background or with no recent foreground interaction"
+                    "description": "Whether suspiciousness increases when deferred activity starts from background or with no recent foreground interaction",
+                    "description_fa": "وقتی فعالیت معوق از پس‌زمینه شروع می‌شود یا بدون تعامل پیش‌زمینه اخیر، مشکوک بودن افزایش می‌یابد."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound traffic threshold used to distinguish meaningful deferred operation from benign maintenance traffic"
+                    "description": "Minimum outbound traffic threshold used to distinguish meaningful deferred operation from benign maintenance traffic",
+                    "description_fa": "حداقل آستانه ترافیک خروجی که برای تشخیص عملیات معوق معنی دار از ترافیک تعمیر و نگهداری بی خطر استفاده می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1815",
+            "description_fa": "ارتباط (1) استفاده مداوم یا مکرر از حرکت یا سیگنال‌های استنتاج تعاملی که نیازی به درخواست‌های دسترسی آشکار به کاربر ندارند، (2) سرکوب رفتار پرخطر در حین استنباط حضور کاربر یا مدیریت فعال، و (3) ازسرگیری اجرای پس‌زمینه، استفاده از حسگر، مدیریت داده‌های محلی، یا فعالیت‌های شبکه بینابینی فقط زمانی که دستگاه در زیر دستگاه قرار می‌گیرد. مدافع یک زنجیره علّی را مشاهده می کند که در آن یک برنامه کاربردی وضعیت تعامل کاربر/دستگاه را حس می کند و عمداً رفتارهای مخرب را به دوره های غیرفعال کاربر منتقل می کند."
         }
     ]
 }

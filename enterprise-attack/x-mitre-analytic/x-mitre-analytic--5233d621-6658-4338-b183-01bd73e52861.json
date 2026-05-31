@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0480#AN1320",
-                    "external_id": "AN1320"
+                    "external_id": "AN1320",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredFilePaths",
-                    "description": "Target login-related files (e.g., /var/www/html/login.php) for integrity monitoring"
+                    "description": "Target login-related files (e.g., /var/www/html/login.php) for integrity monitoring",
+                    "description_fa": "فایل‌های مرتبط با ورود (به عنوان مثال، /var/www/html/login.php) را برای نظارت بر یکپارچگی هدف قرار دهید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tune detection to correlate file edits and web access within a short duration"
+                    "description": "Tune detection to correlate file edits and web access within a short duration",
+                    "description_fa": "شناسایی را تنظیم کنید تا ویرایش‌های فایل و دسترسی به وب را در مدت زمان کوتاهی به هم مرتبط کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1320",
+            "description_fa": "تغییرات غیرمجاز در فایل‌های سرور وب (مانند index.php، login.js) که معمولاً به پورتال‌های VPN، SSO یا اینترانت مرتبط هستند را شناسایی می‌کند. تغییرات مشکوک فایل را با مصنوعات دسترسی از راه دور یا رفتار پوسته وب مرتبط می کند."
         }
     ]
 }

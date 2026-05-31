@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0483#AN1325",
-                    "external_id": "AN1325"
+                    "external_id": "AN1325",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessName",
-                    "description": "Can be tuned to specific binaries used for service enumeration (e.g., `sc.exe`, `tasklist.exe`)."
+                    "description": "Can be tuned to specific binaries used for service enumeration (e.g., `sc.exe`, `tasklist.exe`).",
+                    "description_fa": "می‌تواند روی باینری‌های خاصی که برای شمارش سرویس استفاده می‌شوند تنظیم شود (مانند «sc.exe»، «tasklist.exe»)."
                 },
                 {
                     "field": "CommandLineMatch",
-                    "description": "Filters for variations like `sc query`, `net start`, `Get-Service`."
+                    "description": "Filters for variations like `sc query`, `net start`, `Get-Service`.",
+                    "description_fa": "فیلترهایی برای تغییراتی مانند «پرس و جوی sc»، «شروع خالص»، «دریافت سرویس»."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Used to suppress known admin scripts or automation jobs."
+                    "description": "Used to suppress known admin scripts or automation jobs.",
+                    "description_fa": "برای سرکوب اسکریپت های مدیریت شناخته شده یا کارهای اتوماسیون استفاده می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1325",
+            "description_fa": "شمارش خدمات از طریق ابزارهای CLI بومی (به عنوان مثال، \"sc query\"، \"tasklist /svc\"، \"net start\") یا تماس‌های API از طریق PowerShell و WMI."
         }
     ]
 }

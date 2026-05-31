@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0457#AN1254",
-                    "external_id": "AN1254"
+                    "external_id": "AN1254",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessContextAllowList",
-                    "description": "Processes normally allowed to use ICMP/UDP (e.g., ping.exe, DNS resolver)."
+                    "description": "Processes normally allowed to use ICMP/UDP (e.g., ping.exe, DNS resolver).",
+                    "description_fa": "فرآیندهایی که معمولاً مجاز به استفاده از ICMP/UDP هستند (به عنوان مثال، ping.exe، حل‌کننده DNS)."
                 },
                 {
                     "field": "ByteTransferAnomalyThreshold",
-                    "description": "Suspicion if client sends much more data than it receives (e.g., >90%)."
+                    "description": "Suspicion if client sends much more data than it receives (e.g., >90%).",
+                    "description_fa": "مشکوک اگر مشتری داده‌های بسیار بیشتری از آنچه دریافت می‌کند ارسال کند (به عنوان مثال، بیش از 90٪)."
                 },
                 {
                     "field": "ProtocolUsageBaseline",
-                    "description": "Baseline which protocols are normal per host or segment (ICMP, UDP, etc.)."
+                    "description": "Baseline which protocols are normal per host or segment (ICMP, UDP, etc.).",
+                    "description_fa": "خط مبنا که پروتکل ها در هر میزبان یا بخش نرمال هستند (ICMP، UDP، و غیره)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1254",
+            "description_fa": "استفاده غیرعادی از ICMP یا UDP توسط فرآیندهای خدمات غیر شبکه ای برای استخراج داده یا کنترل از راه دور، به خصوص اگر ترافیک زیرساخت پروکسی را دور بزند یا الگوهای جریان غیرعادی را نشان دهد."
         }
     ]
 }

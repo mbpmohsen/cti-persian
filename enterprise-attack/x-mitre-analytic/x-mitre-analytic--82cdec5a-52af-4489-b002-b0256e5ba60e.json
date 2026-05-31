@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0234#AN0649",
-                    "external_id": "AN0649"
+                    "external_id": "AN0649",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcessName",
-                    "description": "Define sensitive targets (e.g., sshd, login) being memory-read."
+                    "description": "Define sensitive targets (e.g., sshd, login) being memory-read.",
+                    "description_fa": "اهداف حساس (به عنوان مثال، sshd، ورود به سیستم) را برای خواندن حافظه تعریف کنید."
                 },
                 {
                     "field": "ToolProcessName",
-                    "description": "Flag use of memory dump tools like gcore, gdb, pmap."
+                    "description": "Flag use of memory dump tools like gcore, gdb, pmap.",
+                    "description_fa": "پرچم استفاده از ابزارهای تخلیه حافظه مانند gcore، gdb، pmap."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0649",
+            "description_fa": "فرآیندهای باز کردن /proc/*/mem یا /proc/*/maps را با هدف قرار دادن خدمات ذخیره‌سازی اعتبار مانند sshd یا login انجام می‌دهد. رفتار اغلب شامل افزایش امتیاز بالا و ابزارهای بازرسی حافظه مانند gcore یا gdb است."
         }
     ]
 }

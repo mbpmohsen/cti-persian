@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0640#AN1715",
-                    "external_id": "AN1715"
+                    "external_id": "AN1715",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -42,29 +43,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between visibility suppression and later hidden execution or network activity"
+                    "description": "Correlation window between visibility suppression and later hidden execution or network activity",
+                    "description_fa": "پنجره همبستگی بین حذف قابلیت مشاهده و اجرای پنهان یا فعالیت شبکه"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Baseline of legitimate apps allowed to hide launcher presence or disable user-facing components"
+                    "description": "Baseline of legitimate apps allowed to hide launcher presence or disable user-facing components",
+                    "description_fa": "پایه برنامه‌های قانونی مجاز به پنهان کردن حضور راه‌انداز یا غیرفعال کردن اجزای رو به رو کاربر"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether post-hide activity is only suspicious when no foreground interaction occurs"
+                    "description": "Whether post-hide activity is only suspicious when no foreground interaction occurs",
+                    "description_fa": "اینکه آیا فعالیت پس از پنهان کردن تنها زمانی مشکوک است که هیچ تعامل پیش زمینه ای رخ ندهد"
                 },
                 {
                     "field": "HiddenComponentThreshold",
-                    "description": "Threshold for number or type of launcher-visible components disabled before raising suspicion"
+                    "description": "Threshold for number or type of launcher-visible components disabled before raising suspicion",
+                    "description_fa": "آستانه برای تعداد یا نوع اجزای قابل مشاهده پرتابگر که قبل از ایجاد شک غیرفعال شده است"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound traffic volume used to distinguish meaningful hidden operation from benign background telemetry"
+                    "description": "Minimum outbound traffic volume used to distinguish meaningful hidden operation from benign background telemetry",
+                    "description_fa": "حداقل حجم ترافیک خروجی که برای تشخیص عملیات پنهان معنادار از تله متری پس زمینه خوش خیم استفاده می شود"
                 },
                 {
                     "field": "SensorAfterHideThreshold",
-                    "description": "Threshold for sensor access frequency after visibility suppression"
+                    "description": "Threshold for sensor access frequency after visibility suppression",
+                    "description_fa": "آستانه فرکانس دسترسی حسگر پس از سرکوب دید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1715",
+            "description_fa": "مرتبط (1) تغییرات در دید برنامه یا حضور کاربر مانند غیرفعال کردن مؤلفه راه‌انداز، حذف نماد یا کاهش قابلیت کشف، (2) ادامه اجرای برنامه یا فعالیت چارچوب ممتاز پس از آن کاهش دید، و (3) رفتارهای بعدی مانند ارتباطات شبکه پس‌زمینه، دسترسی حسگر، یا انتقال وضعیت مرتبط با تداوم. مدافع یک زنجیره علّی را مشاهده می کند که در آن یک برنامه کاربردی در حالی که فعالیت عملیاتی خود را حفظ یا افزایش می دهد برای کاربر کمتر قابل مشاهده است."
         }
     ]
 }

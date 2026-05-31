@@ -9,28 +9,34 @@
                 {
                     "external_id": "CAPEC-462",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/462.html"
+                    "url": "https://capec.mitre.org/data/definitions/462.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-385",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/385.html"
+                    "url": "http://cwe.mitre.org/data/definitions/385.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-352",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/352.html"
+                    "url": "http://cwe.mitre.org/data/definitions/352.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-208",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/208.html"
+                    "url": "http://cwe.mitre.org/data/definitions/208.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Chris Evans, Cross-Domain Search Timing, 2009--12---11",
                     "external_id": "REF-399",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://scarybeastsecurity.blogspot.com/2009/12/cross-domain-search-timing.html"
+                    "url": "http://scarybeastsecurity.blogspot.com/2009/12/cross-domain-search-timing.html",
+                    "description_fa": "کریس ایوانز، زمان بندی جستجوی بین دامنه، 2009--12---11",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5871f734-1898-4509-860c-f418cdf6b2ac",
@@ -47,6 +53,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -61,11 +70,22 @@
                 "Ability to issue GET / POST requests cross domain"
             ],
             "x_capec_skills_required": {
-                "Low": "Some knowledge of Java Script"
+                "Low": "Some knowledge of Java Script",
+                "Low_fa": "آشنایی با جاوا اسکریپت"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم درخواست‌های HTTP/GET متقاطع دامنه را آغاز می‌کند و پاسخ‌های سرور را زمان‌بندی می‌کند. زمان این پاسخ ها ممکن است اطلاعات مهمی را در مورد آنچه در سرور اتفاق می افتد به بیرون درز کند. خط مشی مبدأ یکسان مرورگر مانع از خواندن مستقیم پاسخ های سرور توسط مهاجم می شود (در صورت عدم وجود هر گونه ضعف دیگری)، اما مهاجم را از زمان بندی پاسخ به درخواست هایی که مهاجم متقاطع صادر کرده است، باز نمی دارد.",
+            "name_fa": "زمان بندی جستجوی بین دامنه",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین سرویس برای ارسال درخواست‌های متقاطع دامنه به: </b>دشمن ابتدا تعیین می‌کند که درخواست‌ها را به کدام سرویس ارسال کند</p></li></ol></div><div><h3>مقطع دامنه <b><h3> آزمایشی درخواست‌ها: </b>دشمنان انواع درخواست‌های متقابل دامنه را به هدف ارسال می‌کنند و زمان پاسخگویی هدف را تعیین می‌کنند. اگرچه آنها قادر به خواندن پاسخ نخواهند بود، اما حریف می‌تواند از زمان برای استنباط اطلاعات در مورد کارهایی که سرویس پس از دریافت درخواست انجام داده است، استفاده کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>با استفاده از درخواست GET، از برچسب \"img\" همراه با \"onload()/arror time(رویدادهای) java( استفاده کنید. answer</td></tr><tr><td>با استفاده از یک درخواست POST، عنصر \"iframe\" را به کار بگیرید و از رویداد \"onload()\" برای زمان‌بندی پاسخ استفاده کنید</td></tr></tbody></table></ol></div><div><h3>استفاده از</h3><ol><li> <p> <b>استنتاج زمان‌های مختلف پاسخ، زمان‌های مختلف پاسخ را بدست آورید. دشمن این زمان ها را با هم مقایسه می کند و اطلاعات بالقوه حساس را استنباط می کند. نمونه ای از این می تواند درخواست از یک سرویس برای بازیابی اطلاعات و نام های کاربری تصادفی باشد. اگر پردازش یک درخواست بیشتر طول بکشد، احتمالاً کاربری با آن نام کاربری وجود دارد که می‌تواند برای دشمن دانش مفیدی باشد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مقایسه زمان‌بندی درخواست‌های مختلف برای استنتاج اطلاعات بالقوه حساس در مورد یک سرویس هدف</td></tr></></tbodyol></td",
+            "x_capec_extended_description_fa": "<xhtml:p> برای درخواست‌های GET، برای مثال، مهاجم می‌تواند از تگ \"img\" در ارتباط با رویدادهای جاوا اسکریپت \"onload() / onerror()\" استفاده کند. برای درخواست‌های POST، مهاجم می‌تواند از عنصر \"iframe\" و رویداد \"onload()\" استفاده کند. هیچ چیزی در مدل امنیتی مرورگر فعلی وجود ندارد که مانع از استفاده مهاجم از این روش‌ها برای زمان‌بندی پاسخ‌ها به درخواست‌های متقاطع مهاجمان شود. زمان برای این پاسخ ها اطلاعات درز می کند. به عنوان مثال، اگر قربانی یک جلسه فعال با حساب ایمیل آنلاین خود داشته باشد، مهاجم می تواند درخواست های جستجو را در صندوق پستی قربانی صادر کند. در حالی که مهاجم قادر به مشاهده پاسخ‌ها نیست، بر اساس زمان‌بندی پاسخ‌ها، مهاجم می‌تواند در مورد محتوای ایمیل‌های قربانی، چه کسی ایمیل ارسال کرده، چه زمانی و غیره سؤالاتی بله/خیر بپرسد. این فقط یک مثال است. سناریوهای دیگری وجود دارد که در آن مهاجم می‌تواند اطلاعات حساس بالقوه را از درخواست‌های متقاطع با زمان‌بندی پاسخ‌ها و در عین حال پرسیدن سؤالات مناسب که اطلاعات درز می‌کند، استنتاج کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "امکان صدور درخواست‌های GET/POST متقاطع دامنه جاوا اسکریپت در مرورگر قربانی فعال است قربانی یک جلسه فعال با سایت دارد که مهاجم می‌خواهد اطلاعاتی را از آن دریافت کند، سایت قربانی از عملکرد جستجو با محافظت از جعل درخواست متقابل (CSRF) محافظت نمی‌کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان صدور درخواست های GET / POST متقاطع دامنه"
+            ]
         }
     ],
     "spec_version": "2.0",

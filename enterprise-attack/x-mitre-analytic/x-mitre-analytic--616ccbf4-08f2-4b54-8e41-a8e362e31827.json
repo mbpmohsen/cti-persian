@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0096#AN0267",
-                    "external_id": "AN0267"
+                    "external_id": "AN0267",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ModifiedUserList",
-                    "description": "Track known non-system user UIDs or service accounts."
+                    "description": "Track known non-system user UIDs or service accounts.",
+                    "description_fa": "UIDهای کاربر غیر سیستمی شناخته شده یا حساب های سرویس را ردیابی کنید."
                 },
                 {
                     "field": "GroupMembershipChanges",
-                    "description": "List of sensitive groups (admin, _developer, _analyticsd)."
+                    "description": "List of sensitive groups (admin, _developer, _analyticsd).",
+                    "description_fa": "لیست گروه های حساس (admin، _developer، _analyticsd)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0267",
+            "description_fa": "تغییرات در حساب‌های کاربر از طریق «dscl»، «pwpolicy»، یا System Preferences CLI («sysadminctl») که گروه‌های کاربر را تغییر می‌دهند، Root را فعال می‌کنند یا محدودیت‌های MDM را دور می‌زنند."
         }
     ]
 }

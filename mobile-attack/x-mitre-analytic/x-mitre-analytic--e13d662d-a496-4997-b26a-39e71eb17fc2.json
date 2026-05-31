@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0687#AN1797",
-                    "external_id": "AN1797"
+                    "external_id": "AN1797",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between configuration change, telemetry degradation, and subsequent activity"
+                    "description": "Correlation window between configuration change, telemetry degradation, and subsequent activity",
+                    "description_fa": "پنجره همبستگی بین تغییر پیکربندی، تخریب تله متری و فعالیت های بعدی"
                 },
                 {
                     "field": "ExpectedTelemetrySources",
-                    "description": "Baseline set of telemetry sources expected to report continuously (EDR, sensor feeds, monitoring services)"
+                    "description": "Baseline set of telemetry sources expected to report continuously (EDR, sensor feeds, monitoring services)",
+                    "description_fa": "مجموعه پایه منابع تله متری که انتظار می رود به طور مداوم گزارش شوند (EDR، فید حسگر، خدمات نظارت)"
                 },
                 {
                     "field": "TelemetryGapThreshold",
-                    "description": "Duration or volume threshold defining abnormal loss of telemetry"
+                    "description": "Duration or volume threshold defining abnormal loss of telemetry",
+                    "description_fa": "مدت یا آستانه حجم که از دست دادن غیر طبیعی تله متری را تعیین می کند"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Applications legitimately capable of modifying device configuration or security posture"
+                    "description": "Applications legitimately capable of modifying device configuration or security posture",
+                    "description_fa": "برنامه هایی که به طور قانونی قادر به تغییر پیکربندی دستگاه یا وضعیت امنیتی هستند"
                 },
                 {
                     "field": "CriticalControlSet",
-                    "description": "Set of security-relevant controls considered high-impact if altered (EDR, accessibility, admin APIs)"
+                    "description": "Set of security-relevant controls considered high-impact if altered (EDR, accessibility, admin APIs)",
+                    "description_fa": "مجموعه‌ای از کنترل‌های مرتبط با امنیت که در صورت تغییر، تأثیر زیادی در نظر گرفته می‌شوند (EDR، دسترسی، APIهای مدیریت)"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Outbound traffic threshold used to confirm continued activity during telemetry loss"
+                    "description": "Outbound traffic threshold used to confirm continued activity during telemetry loss",
+                    "description_fa": "آستانه ترافیک خروجی برای تأیید ادامه فعالیت در طول از دست دادن تله متری استفاده می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1797",
+            "description_fa": "مرتبط است (1) تغییر وضعیت امنیتی دستگاه یا قابلیت نظارت بر اساس برنامه (مانند سوء استفاده از دسترسی، غیرفعال کردن اجزای برنامه امنیتی، تغییر پیکربندی نظارت)، (2) تخریب یا توقف فوری منابع تله متری مورد انتظار مانند EDR تلفن همراه، دید حسگر، یا نظارت بر سیستم، و (3) نظارت بعدی با کاهش فعالیت برنامه کاربردی. مدافع یک زنجیره علّی را مشاهده می‌کند که در آن ابتدا دید دفاعی یا اجرای آن تغییر می‌کند، و به دنبال آن اجرا تحت شرایط نظارت کاهش یافته ادامه می‌یابد."
         }
     ]
 }

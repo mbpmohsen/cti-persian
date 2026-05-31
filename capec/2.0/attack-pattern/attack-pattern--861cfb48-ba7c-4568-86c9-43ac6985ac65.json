@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-216",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/216.html"
+                    "url": "https://capec.mitre.org/data/definitions/216.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-306",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/306.html"
+                    "url": "http://cwe.mitre.org/data/definitions/306.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--861cfb48-ba7c-4568-86c9-43ac6985ac65",
@@ -36,6 +38,14 @@
                     "Read Data (The adversary's injection of additional content into a communication channel negatively impacts the integrity of that channel.)",
                     "Modify Data (The adversary's injection of additional content into a communication channel negatively impacts the integrity of that channel.)",
                     "Other (The adversary's injection of additional content into a communication channel negatively impacts the integrity of that channel.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (یک حمله موفقیت آمیز دستکاری کانال ارتباطی می تواند منجر به قرار گرفتن در معرض اطلاعات حساس در برابر حریف شود و در نتیجه محرمانه بودن کانال ارتباطی به خطر بیفتد.)"
+                ],
+                "Integrity_fa": [
+                    "خواندن داده (تزریق محتوای اضافی توسط دشمن به کانال ارتباطی بر یکپارچگی آن کانال تأثیر منفی می‌گذارد.)",
+                    "اصلاح داده ها (تزریق محتوای اضافی توسط دشمن به کانال ارتباطی بر یکپارچگی آن کانال تأثیر منفی می گذارد.)",
+                    "دیگر (تزریق محتوای اضافی توسط دشمن به کانال ارتباطی بر یکپارچگی آن کانال تأثیر منفی می‌گذارد.)"
                 ]
             },
             "x_capec_domains": [
@@ -53,7 +63,16 @@
                 "A tool that is capable of viewing network traffic and generating custom inputs to be used in the attack."
             ],
             "x_capec_status": "Stable",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن تنظیمات یا پارامتری را در کانال ارتباطی به منظور به خطر انداختن امنیت آن دستکاری می کند. این می تواند منجر به قرار گرفتن در معرض اطلاعات، درج/حذف اطلاعات از جریان ارتباطات، و/یا احتمال به خطر افتادن سیستم شود.",
+            "name_fa": "دستکاری کانال های ارتباطی",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید از یک کانال ارتباطی باز استفاده کند.",
+                "کانالی که هدف در آن ارتباط برقرار می کند باید در برابر رهگیری آسیب پذیر باشد (به عنوان مثال، دشمن در حمله میانی - CAPEC-94)."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزاری که قادر به مشاهده ترافیک شبکه و تولید ورودی های سفارشی برای استفاده در حمله است."
+            ]
         }
     ],
     "spec_version": "2.0",

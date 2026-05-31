@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0426#AN1194",
-                    "external_id": "AN1194"
+                    "external_id": "AN1194",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandScope",
-                    "description": "Limit detection to volume-level commands (e.g., `format`, `copy`, `mount`, `erase`)."
+                    "description": "Limit detection to volume-level commands (e.g., `format`, `copy`, `mount`, `erase`).",
+                    "description_fa": "تشخیص را به دستورات سطح صدا محدود کنید (مانند «قالب»، «کپی»، «mount»، «پاک کردن»)."
                 },
                 {
                     "field": "DeviceTypeFilter",
-                    "description": "Filter by internal vs. removable volume interactions (e.g., flash, SD card)."
+                    "description": "Filter by internal vs. removable volume interactions (e.g., flash, SD card).",
+                    "description_fa": "بر اساس فعل و انفعالات حجم داخلی و قابل جابجایی (به عنوان مثال، فلش، کارت SD) فیلتر کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1194",
+            "description_fa": "CLI یا ابزارهای خودکاری که مستقیماً به حجم های دستگاه خام یا حافظه فلش دسترسی دارند (به عنوان مثال، از طریق دستورات «کپی فلش:»، «فرمت» یا «پارتیشن»)."
         }
     ]
 }

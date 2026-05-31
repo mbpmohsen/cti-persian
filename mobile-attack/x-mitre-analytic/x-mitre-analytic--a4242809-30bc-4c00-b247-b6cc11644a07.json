@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0655#AN1741",
-                    "external_id": "AN1741"
+                    "external_id": "AN1741",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,33 +48,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between command-launch method use, process creation, and follow-on file or network effects"
+                    "description": "Correlation window between command-launch method use, process creation, and follow-on file or network effects",
+                    "description_fa": "پنجره همبستگی بین استفاده از روش راه‌اندازی فرمان، ایجاد فرآیند و فایل‌های بعدی یا اثرات شبکه"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to run shell-like or administrative commands, such as enterprise support tools, terminal apps, approved EMM agents, or developer tooling"
+                    "description": "Apps legitimately expected to run shell-like or administrative commands, such as enterprise support tools, terminal apps, approved EMM agents, or developer tooling",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود دستورات پوسته‌مانند یا اداری را اجرا کنند، مانند ابزارهای پشتیبانی سازمانی، برنامه‌های ترمینال، عوامل تایید شده EMM یا ابزارهای توسعه‌دهنده"
                 },
                 {
                     "field": "AllowedProcessPatterns",
-                    "description": "Expected command interpreters, process names, or parent-child execution chains for approved apps"
+                    "description": "Expected command interpreters, process names, or parent-child execution chains for approved apps",
+                    "description_fa": "مفسرهای فرمان مورد انتظار، نام‌های فرآیند یا زنجیره‌های اجرای والد-فرزند برای برنامه‌های تأیید شده"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether command execution should occur only during active user-driven workflows"
+                    "description": "Whether command execution should occur only during active user-driven workflows",
+                    "description_fa": "آیا اجرای دستور باید فقط در جریان کار کاربر محور فعال انجام شود یا خیر"
                 },
                 {
                     "field": "CommandArgumentRiskPatterns",
-                    "description": "Environment-specific list of suspicious command arguments, redirection usage, chaining operators, or shell-control syntax"
+                    "description": "Environment-specific list of suspicious command arguments, redirection usage, chaining operators, or shell-control syntax",
+                    "description_fa": "فهرستی از آرگومان‌های فرمان مشکوک، استفاده از تغییر جهت، عملگرهای زنجیره‌ای، یا نحو کنترل پوسته مخصوص محیط"
                 },
                 {
                     "field": "PostExecutionWriteThreshold",
-                    "description": "Minimum number or size of file artifacts created after interpreter execution to increase confidence"
+                    "description": "Minimum number or size of file artifacts created after interpreter execution to increase confidence",
+                    "description_fa": "حداقل تعداد یا اندازه مصنوعات فایل ایجاد شده پس از اجرای مفسر برای افزایش اطمینان"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume after command execution to treat network behavior as meaningful"
+                    "description": "Minimum outbound volume after command execution to treat network behavior as meaningful",
+                    "description_fa": "حداقل حجم خروجی پس از اجرای دستور برای تلقی رفتار شبکه معنادار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1741",
+            "description_fa": "مدافع تنظیم اجرای فرمان یا پوسته مبتنی بر برنامه را با ایجاد فرآیند بعدی، فراخوانی دستور، یا رفتار دنباله‌روی مبتنی بر اسکریپت در همان زمینه برنامه مرتبط می‌کند، به‌ویژه زمانی که اجرای فرمان از حالت پس‌زمینه، بدون تعامل اخیر کاربر، یا بلافاصله پس از بازیابی بار یا مرحله‌بندی محلی انجام می‌شود. این تحلیل، جلوه‌های صفحه کنترل قابل مشاهده اندروید را اولویت‌بندی می‌کند: Java Runtime یا استفاده از روش اجرای فرمان مشابه، ایجاد فرآیند shell یا sh-like، قابلیت مشاهده پارامتر فرمان در صورت وجود، و جلوه‌های فایل یا شبکه فوری تولید شده توسط مفسر."
         }
     ]
 }

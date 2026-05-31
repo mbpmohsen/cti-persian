@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0071#AN0194",
-                    "external_id": "AN0194"
+                    "external_id": "AN0194",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StagingDirectory",
-                    "description": "Common directories such as C:\\Temp, Downloads, or hidden folders used for remote staging"
+                    "description": "Common directories such as C:\\Temp, Downloads, or hidden folders used for remote staging",
+                    "description_fa": "دایرکتوری های رایج مانند C:\\Temp، Downloads یا پوشه های مخفی که برای مرحله بندی از راه دور استفاده می شوند"
                 },
                 {
                     "field": "RemotePathPatterns",
-                    "description": "UNC paths like \\\\10.* or \\\\domain\\share indicating lateral data staging"
+                    "description": "UNC paths like \\\\10.* or \\\\domain\\share indicating lateral data staging",
+                    "description_fa": "مسیرهای UNC مانند \\\\10.* یا \\\\domain\\share که نشان‌دهنده مرحله‌بندی داده جانبی است"
                 },
                 {
                     "field": "CopyToolPatterns",
-                    "description": "Usage of robocopy, xcopy, copy-item, or scheduled tasks performing cross-host copies"
+                    "description": "Usage of robocopy, xcopy, copy-item, or scheduled tasks performing cross-host copies",
+                    "description_fa": "استفاده از Robocopy، xcopy، copy-item، یا وظایف برنامه ریزی شده برای انجام کپی های متقابل میزبان"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0194",
+            "description_fa": "انتقال فایل یا عملیات نصب را از میزبان های راه دور و به دنبال آن اقدامات نوشتن در یک فهرست راهنما محلی، اغلب با استفاده از SMB یا فعالیت پوسته راه دور شناسایی می کند."
         }
     ]
 }

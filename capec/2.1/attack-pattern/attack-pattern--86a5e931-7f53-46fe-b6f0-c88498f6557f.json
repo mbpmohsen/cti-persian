@@ -9,27 +9,32 @@
                 {
                     "external_id": "CAPEC-20",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/20.html"
+                    "url": "https://capec.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-326",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/326.html"
+                    "url": "http://cwe.mitre.org/data/definitions/326.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-327",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/327.html"
+                    "url": "http://cwe.mitre.org/data/definitions/327.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1204",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1204.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1204.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--86a5e931-7f53-46fe-b6f0-c88498f6557f",
@@ -53,6 +58,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -71,11 +79,25 @@
                 "\n               <xhtml:p>A powerful enough computer for the job with sufficient CPU, RAM and HD. Exact requirements will depend on the size of the brute force job and the time requirement for completion. Some brute forcing jobs may require grid or distributed computing (e.g. DES Challenge).</xhtml:p>\n               <xhtml:p>On average, for a binary key of size N, 2^(N/2) trials will be needed to find the key that would decrypt the ciphertext to obtain the original plaintext.</xhtml:p>\n               <xhtml:p>Obviously as N gets large the brute force approach becomes infeasible.</xhtml:p>\n            "
             ],
             "x_capec_skills_required": {
-                "Low": "Brute forcing encryption does not require much skill."
+                "Low": "Brute forcing encryption does not require much skill.",
+                "Low_fa": "رمزگذاری اجباری بی رحمانه به مهارت زیادی نیاز ندارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم، مسلح به متن رمز و الگوریتم رمزگذاری مورد استفاده، یک جستجوی جامع (بی رحمانه) در فضای کلید انجام می دهد تا کلیدی را که متن رمز را رمزگشایی می کند تا متن ساده را به دست آورد.",
+            "name_fa": "Encryption Brute Forcing",
+            "x_capec_example_instances_fa": [
+                "در سال 1997، چالش اصلی DES از محاسبات شبکه توزیع شده استفاده کرد تا کلید رمزگذاری را به صورت بی رحمانه و رمزگشایی از متن رمزگشایی برای به دست آوردن متن اصلی اصلی استفاده کند. به هر دستگاه بخش مخصوص به خود از فضای کلید برای پوشش داده شد. متن رمز در 96 روز رمزگشایی شد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>متن رمزی و الگوریتم رمزگذاری را تعیین کنید.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p>یک کاندید فضایی، اجباری و جستجوی اجباری را انجام دهید. مشاهده کنید که آیا آنها منطقی هستند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "متن رمزی شناخته شده است.",
+                "الگوریتم رمزگذاری و اندازه کلید مشخص است."
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p> یک کامپیوتر به اندازه کافی قدرتمند برای کار با CPU، RAM و HD کافی. الزامات دقیق به اندازه کار brute force و زمان مورد نیاز برای تکمیل بستگی دارد. برخی از کارهای اجباری بی رحم ممکن است به شبکه یا محاسبات توزیع شده نیاز داشته باشند (مثلاً چالش DES).</xhtml:p>\n               <xhtml:p>به طور متوسط، برای یک کلید باینری با اندازه N، 2^(N/2) آزمایش لازم است تا کلیدی را پیدا کند که متن رمز را رمزگشایی کند تا متن اصلی اصلی به دست آید.</xhtml:p>\n               <xhtml:p>بدیهی است که با بزرگ شدن N، رویکرد brute force غیرممکن می شود.</xhtml:p>"
+            ]
         }
     ],
     "type": "bundle"

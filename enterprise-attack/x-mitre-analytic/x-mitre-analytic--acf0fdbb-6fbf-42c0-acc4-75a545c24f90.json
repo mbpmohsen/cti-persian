@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0340#AN0964",
-                    "external_id": "AN0964"
+                    "external_id": "AN0964",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentAppScope",
-                    "description": "Terminal apps to treat as user-paste origins (Terminal, iTerm2, VSCode integrated terminal)."
+                    "description": "Terminal apps to treat as user-paste origins (Terminal, iTerm2, VSCode integrated terminal).",
+                    "description_fa": "برنامه‌های پایانه‌ای که به‌عنوان منشاء چسباندن کاربر (Terminal، iTerm2، ترمینال یکپارچه VSCode) در نظر گرفته می‌شوند."
                 },
                 {
                     "field": "CommandPatternList",
-                    "description": "macOS-specific one-liner traits (pbpaste|base64 -D|curl ... | sh)."
+                    "description": "macOS-specific one-liner traits (pbpaste|base64 -D|curl ... | sh).",
+                    "description_fa": "ویژگی های تک خطی مخصوص macOS (pbpaste|base64 -D|curl ... | sh)."
                 },
                 {
                     "field": "AllowListedDevUsers",
-                    "description": "Developers/automation accounts expected to run such commands."
+                    "description": "Developers/automation accounts expected to run such commands.",
+                    "description_fa": "توسعه دهندگان/حساب های اتوماسیون انتظار دارند چنین دستوراتی را اجرا کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0964",
+            "description_fa": "کاربر یک دستور مبهم را در Terminal.app/iTerm2 قرار می دهد که کد را رمزگشایی یا دانلود کرده و اجرا می کند. ترمینال/iTerm2 تخم ریزی bash/zsh/python را با الگوهای مشکوک خط لوله/base64 به دنبال نوشتن فایل در ~/Library یا /tmp و اتصالات شبکه خروجی شناسایی می کند."
         }
     ]
 }

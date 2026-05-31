@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0035#AN0101",
-                    "external_id": "AN0101"
+                    "external_id": "AN0101",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UploadDirectionality",
-                    "description": "Bias detection toward sessions with larger upload vs download volume"
+                    "description": "Bias detection toward sessions with larger upload vs download volume",
+                    "description_fa": "تشخیص سوگیری نسبت به جلسات با حجم بارگذاری بیشتر در مقابل دانلود"
                 },
                 {
                     "field": "HostnameRegexList",
-                    "description": "List of known public Web services used for dead drops or C2 (e.g., GitHub, Twitter)"
+                    "description": "List of known public Web services used for dead drops or C2 (e.g., GitHub, Twitter)",
+                    "description_fa": "فهرست سرویس‌های وب عمومی شناخته شده مورد استفاده برای دراپ‌های مرده یا C2 (مانند GitHub، Twitter)"
                 },
                 {
                     "field": "ScriptParentName",
-                    "description": "Shell interpreter or automated job parent used for filtering (e.g., /usr/bin/python)"
+                    "description": "Shell interpreter or automated job parent used for filtering (e.g., /usr/bin/python)",
+                    "description_fa": "مفسر پوسته یا والد شغلی خودکار که برای فیلتر کردن استفاده می‌شود (مثلاً /usr/bin/python)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0101",
+            "description_fa": "سیستم غیرتعاملی، اتصالات HTTPS رمزگذاری شده را به سرویس‌های وب معروف و به دنبال حجم ترافیک خروجی بالا یا الگوهای آپلود اسکریپت‌شده، پردازش می‌کند."
         }
     ]
 }

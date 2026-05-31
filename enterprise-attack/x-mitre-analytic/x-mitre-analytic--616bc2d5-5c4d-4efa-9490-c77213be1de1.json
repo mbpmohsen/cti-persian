@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0550#AN1520",
-                    "external_id": "AN1520"
+                    "external_id": "AN1520",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Duration over which bulk CRM queries occur (e.g., 1 minute, 5 minutes); varies by organization usage pattern"
+                    "description": "Duration over which bulk CRM queries occur (e.g., 1 minute, 5 minutes); varies by organization usage pattern",
+                    "description_fa": "مدت زمانی که درخواست های CRM انبوه رخ می دهد (به عنوان مثال، 1 دقیقه، 5 دقیقه). بر اساس الگوی استفاده سازمان متفاوت است"
                 },
                 {
                     "field": "UserContext",
-                    "description": "User's CRM role, department, or job function (e.g., non-sales user accessing customer PII)"
+                    "description": "User's CRM role, department, or job function (e.g., non-sales user accessing customer PII)",
+                    "description_fa": "نقش، بخش، یا عملکرد شغلی CRM کاربر (به عنوان مثال، دسترسی کاربر غیرفروشنده به PII مشتری)"
                 },
                 {
                     "field": "AnomalousExportThreshold",
-                    "description": "Number of CRM objects (contacts, deals, logs) accessed or exported above normal"
+                    "description": "Number of CRM objects (contacts, deals, logs) accessed or exported above normal",
+                    "description_fa": "تعداد اشیاء CRM (مخاطبین، معاملات، گزارش‌ها) که بالاتر از حد معمول به آنها دسترسی پیدا کرده یا صادر شده‌اند"
                 },
                 {
                     "field": "SourceLocation",
-                    "description": "Rare or impossible geolocation/IP address for legitimate CRM user access"
+                    "description": "Rare or impossible geolocation/IP address for legitimate CRM user access",
+                    "description_fa": "آدرس جغرافیایی/IP نادر یا غیرممکن برای دسترسی قانونی کاربر CRM"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1520",
+            "description_fa": "دسترسی غیرعادی با حجم بالا به سوابق مشتری در نرم افزار CRM توسط یک حساب کاربری غیر مدیر CRM، به ویژه پس از احراز هویت اولیه از یک مکان یا دستگاه نادر. رفتار شامل دسترسی غیرعادی به فیلدهای PII یا صادرات داده در یک پنجره زمانی کوتاه است."
         }
     ]
 }

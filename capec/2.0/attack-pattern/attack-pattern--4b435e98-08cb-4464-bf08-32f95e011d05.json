@@ -9,45 +9,57 @@
                 {
                     "external_id": "CAPEC-136",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/136.html"
+                    "url": "https://capec.mitre.org/data/definitions/136.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-77",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/77.html"
+                    "url": "http://cwe.mitre.org/data/definitions/77.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-90",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/90.html"
+                    "url": "http://cwe.mitre.org/data/definitions/90.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "LDAP Injection",
                     "external_id": "29",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/LDAP-Injection"
+                    "url": "http://projects.webappsec.org/LDAP-Injection",
+                    "description_fa": "تزریق LDAP",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "LDAP Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/LDAP_Injection"
+                    "url": "https://owasp.org/www-community/attacks/LDAP_Injection",
+                    "description_fa": "تزریق LDAP",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "WASC Threat Classification 2.0, 2010, The Web Application Security Consortium (WASC)",
                     "external_id": "REF-17",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://projects.webappsec.org/LDAP-Injection"
+                    "url": "http://projects.webappsec.org/LDAP-Injection",
+                    "description_fa": "WASC Threat Classification 2.0، 2010، کنسرسیوم امنیت برنامه های وب (WASC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-608",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/06-Testing_for_LDAP_Injection.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/06-Testing_for_LDAP_Injection.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--4b435e98-08cb-4464-bf08-32f95e011d05",
@@ -87,6 +99,32 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -101,11 +139,21 @@
                 "The target application must accept a string as user input, fail to sanitize characters that have a special meaning in LDAP queries in the user input, and insert the user-supplied string in an LDAP query which is then processed."
             ],
             "x_capec_skills_required": {
-                "Medium": "The attacker needs to have knowledge of LDAP, especially its query syntax."
+                "Medium": "The attacker needs to have knowledge of LDAP, especially its query syntax.",
+                "Medium_fa": "مهاجم نیاز به دانش LDAP، به ویژه نحو پرس و جو آن دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم یک پرس و جو LDAP را با هدف تضعیف امنیت هدف دستکاری یا ایجاد می کند. برخی از برنامه ها از ورودی کاربر برای ایجاد کوئری های LDAP استفاده می کنند که توسط سرور LDAP پردازش می شوند. به عنوان مثال، یک کاربر ممکن است نام کاربری خود را در حین احراز هویت ارائه کند و نام کاربری ممکن است در یک کوئری LDAP در طول فرآیند احراز هویت درج شود. یک مهاجم می تواند از این ورودی برای تزریق دستورات اضافی به یک کوئری LDAP استفاده کند که می تواند اطلاعات حساس را فاش کند. به عنوان مثال، وارد کردن یک * در پرس و جوی فوق ممکن است اطلاعات مربوط به همه کاربران در سیستم را بازگرداند. این حمله بسیار شبیه به یک حمله تزریق SQL است زیرا یک پرس و جو را برای جمع آوری اطلاعات اضافی یا وادار کردن یک مقدار بازگشتی خاص دستکاری می کند.",
+            "name_fa": "تزریق LDAP",
+            "x_capec_example_instances_fa": [
+                "PowerDNS قبل از 2.9.18، هنگامی که با یک Backend LDAP اجرا می شود، به درستی از پرس و جوهای LDAP فرار نمی کند، که به مهاجمان راه دور اجازه می دهد تا خدمات را رد کنند (عدم پاسخگویی به سؤالات ldap) و احتمالاً یک حمله تزریق LDAP را انجام دهند. همچنین ببینید: CVE-2005-2301"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه بررسی: </b> مهاجم فهرستی از نقاط ورودی برنامه را تهیه می کند.</p></li><table><tbody><tr><th>تکنیک های موجود</th></tr><pi><td> برای همه سایت های موجود پیوندها</td></tr><tr><td>ارتباطات شبکه را با برنامه با استفاده از ابزاری مانند WireShark اسنیف کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین ورودی قابل کنترل توسط کاربر که LD-APconsceptible input to user</-APconjetible in: مهاجم مظنون به تزریق LDAP آسیب پذیر است، سعی کنید کاراکترهایی را که معنای خاصی در LDAP دارند (مانند یک کاراکتر نقل قول واحد و غیره) تزریق کنید. هدف ایجاد یک جستجوی LDAP با نحو نامعتبر است</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از مرورگر وب برای تزریق ورودی از طریق فیلدهای متنی یا از طریق پارامترهای HTTP GET استفاده کنید</td></tr><tr><td>از ابزار اشکال‌زدایی وب اپلیکیشن‌های وب مانند Tamper, Tamper,Carab. برای تغییر پارامترهای HTTP POST، فیلدهای مخفی، فیلدهای غیر آزاد یا سایر هدرهای HTTP.</td></tr><tr><td>از کلاینت اصلاح شده (تغییر شده توسط مهندسی معکوس) برای تزریق ورودی استفاده کنید.</td></tr></tbody></table><li> <p> vulnerability </b>Introduction: با تعیین اینکه یک ورودی داده شده در برابر تزریق LDAP آسیب پذیر است، فرض کنید که پرس و جو زیربنایی چگونه به نظر می رسد. احتمالاً با استفاده از یک ابزار، به طور مکرر سعی کنید منطق را به پرس و جو اضافه کنید تا اطلاعات را از LDAP استخراج کنید، یا اطلاعات را در LDAP تغییر دهید یا حذف کنید. از ابزارهای خودکار می‌توان برای تولید رشته‌های تزریق LDAP استفاده کرد.</td></tr><tr><td>از ابزار اشکال‌زدایی برنامه‌های وب مانند Tamper Data، TamperIE، WebScarab و غیره استفاده کنید. برای تغییر پارامترهای HTTP POST، فیلدهای پنهان، فیلدهای غیر آزاد یا سایر هدرهای HTTP.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید رشته ای را به عنوان ورودی کاربر بپذیرد، کاراکترهایی را که معنای خاصی در جستارهای LDAP دارند در ورودی کاربر پاکسازی نکند، و رشته ارائه شده توسط کاربر را در یک کوئری LDAP وارد کند که سپس پردازش می شود."
+            ]
         }
     ],
     "spec_version": "2.0",

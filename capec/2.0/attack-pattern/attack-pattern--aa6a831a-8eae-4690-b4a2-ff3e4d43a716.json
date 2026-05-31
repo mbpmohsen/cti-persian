@@ -9,33 +9,40 @@
                 {
                     "external_id": "CAPEC-250",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/250.html"
+                    "url": "https://capec.mitre.org/data/definitions/250.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-91",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/91.html"
+                    "url": "http://cwe.mitre.org/data/definitions/91.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-707",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/707.html"
+                    "url": "http://cwe.mitre.org/data/definitions/707.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "XML Injection",
                     "external_id": "23",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/XML-Injection"
+                    "url": "http://projects.webappsec.org/XML-Injection",
+                    "description_fa": "تزریق XML",
+                    "source_name_fa": "WASC"
                 }
             ],
             "id": "attack-pattern--aa6a831a-8eae-4690-b4a2-ff3e4d43a716",
@@ -59,6 +66,16 @@
                 "Confidentiality": [
                     "Gain Privileges",
                     "Read Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -82,10 +99,24 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Low": "An attacker must have knowledge of XML syntax and constructs in order to successfully leverage XML Injection"
+                "Low": "An attacker must have knowledge of XML syntax and constructs in order to successfully leverage XML Injection",
+                "Low_fa": "مهاجم باید از نحو و ساختارهای XML دانش داشته باشد تا بتواند با موفقیت از تزریق XML استفاده کند."
             },
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از ورودی XML ساخته شده قابل کنترل توسط کاربر برای بررسی، حمله و تزریق داده ها به پایگاه داده XML با استفاده از تکنیک های مشابه تزریق SQL استفاده می کند. ورودی قابل کنترل توسط کاربر می‌تواند امکان مشاهده غیرمجاز داده‌ها، دور زدن احراز هویت یا برنامه جلویی برای دسترسی مستقیم به پایگاه داده XML و احتمالاً تغییر اطلاعات پایگاه داده را فراهم کند.",
+            "name_fa": "تزریق XML",
+            "x_capec_example_instances_fa": [
+                "برنامه ای را در نظر بگیرید که از پایگاه داده XML برای احراز هویت کاربران خود استفاده می کند. این برنامه نام کاربری و رمز عبور را از یک درخواست بازیابی می کند و یک عبارت XPath را برای پرس و جو از پایگاه داده تشکیل می دهد. یک مهاجم می‌تواند با موفقیت احراز هویت را دور بزند و بدون اعتبارنامه معتبر از طریق XPath Injection وارد سیستم شود. این را می توان با تزریق پرس و جو به پایگاه داده XML با نحو XPath که باعث می شود بررسی احراز هویت با شکست مواجه شود، به دست آید. اعتبار سنجی نادرست ورودی های قابل کنترل توسط کاربر و استفاده از عبارت XPath غیر پارامتری، مهاجم را قادر می سازد یک عبارت XPath را که باعث دور زدن احراز هویت می شود، تزریق کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بررسی هدف: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، دشمن تمام نمونه‌های ورودی قابل کنترل توسط کاربر را که برای ساخت XML استفاده می‌شود، ثبت می‌کند. پرسش‌ها</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از یک ابزار خودکار برای ضبط همه نمونه‌های ورودی قابل کنترل توسط کاربر که برای ساخت پرس‌و‌جوهای XML استفاده می‌شوند استفاده کنید.</td></tr><tr><td>از مرورگر برای کاوش دستی وب‌سایت و تجزیه و تحلیل نحوه پردازش برنامه استفاده کنید. ورودی‌ها.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین ساختار پرسش‌ها: </b>با استفاده از ابزارهای دستی یا خودکار، ورودی‌های یافت شده برای XML را آزمایش کنید. نقاط ضعف.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از نویسه‌ها یا کلمات رزرو شده XML، احتمالاً با سایر داده‌های ورودی برای ایجاد نتایج غیرمنتظره و شناسایی اعتبار نامناسب ورودی استفاده کنید. <p> <b>تزریق محتوا به درخواست‌های XML: </b>محتوای مخرب حاوی عبارات XML ایجاد کنید که توسط برنامه تأیید نشده و به عنوان بخشی از جستارهای XML اجرا می‌شوند. اطلاعات به مهاجم.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "پرس و جوهای XML برای پردازش ورودی کاربر و بازیابی اطلاعات ذخیره شده در اسناد XML استفاده می شود",
+                "ورودی قابل کنترل توسط کاربر به درستی ضد عفونی نشده است"
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

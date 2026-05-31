@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-40",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/40.html"
+                    "url": "https://capec.mitre.org/data/definitions/40.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-77",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/77.html"
+                    "url": "http://cwe.mitre.org/data/definitions/77.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--326dfb79-2d81-406a-9977-79e67d8de6e2",
@@ -51,6 +55,23 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -68,11 +89,24 @@
                 "Access to a terminal on the target network"
             ],
             "x_capec_skills_required": {
-                "Low": "Ability to discover permissions on terminal devices. Of course, brute force can also be used."
+                "Low": "Ability to discover permissions on terminal devices. Of course, brute force can also be used.",
+                "Low_fa": "امکان کشف مجوزها در دستگاه های ترمینال. البته می توان از نیروی بی رحم نیز استفاده کرد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله از دستگاه‌های پایانه‌ای سوء استفاده می‌کند که به خود اجازه می‌دهند توسط کاربران دیگر نوشته شوند. مهاجم رشته های فرمان را به دستگاه ترمینال هدف می فرستد به این امید که کاربر هدف اینتر را زده و در نتیجه دستور مخرب را با امتیازات خود اجرا کند. مهاجم می تواند نتایج (مانند کپی کردن /etc/passwd) را به یک دایرکتوری شناخته شده بفرستد و پس از موفقیت در حمله جمع آوری کند.",
+            "name_fa": "دستکاری دستگاه های پایانه قابل نوشتن",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>\"هر سیستمی که به دیگر همتایان اجازه می‌دهد مستقیماً در فرآیند ترمینال خود بنویسند، در برابر این نوع حمله آسیب‌پذیر است. اگر پایانه‌ها به دلیل داشتن امتیاز بیش از حد (به عنوان مثال در جهان قابل نوشتن) در دسترس باشند یا مهاجم یک مدیر باشد، می‌توان از یک سری دستورات در این قالب برای بازتاب دستورات به پایانه‌های قربانی استفاده کرد.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\"$echo -e \"\\033[30m\\033\\132\" > /dev/ttyXX</xhtml:div>\n               <xhtml:p> که در آن XX عدد tty کاربر مورد حمله است. با این کار کاراکترها در ترمینال دیگری (tty) قرار می گیرند. توجه داشته باشید که این تکنیک تنها در صورتی کار می‌کند که tty قربانی قابل نوشتن جهانی باشد (که ممکن است اینطور نباشد). این یکی از دلایلی است که چرا برنامه هایی مانند write(1) و talk(1) در سیستم های یونیکس نیاز به اجرای setuid دارند.\" [REF-1]</xhtml:p>\n               <xhtml:p>اگر قربانی همچنان به زدن \"enter\" و اجرای دستورات ادامه دهد، منبع بی‌پایانی از بردارها در دسترس مهاجم است، فایل‌ها را کپی می‌کند، اتصالات شبکه را باز می‌کند، ftp به سرورها می‌دهد و غیره.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>ترمینال‌های قابل نوشتن توسط مهاجم را شناسایی کنید: </b>تعیین کنید که آیا TTY‌های کاربران توسط مهاجم قابل نوشتن هستند یا خیر. روی سیستم هر چیزی که به کاربر اجازه می‌دهد در TTY بنویسد، ممکن است آسیب‌پذیر باشد.</td></tr><tr><td>تلاش کنید برای TTY‌های دیگر کاربر بنویسید. این رویکرد می‌تواند دنباله‌ای باقی بگذارد یا به کاربر هشدار دهد.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>اجرای دستورات مخرب: </b>با استفاده از یک یا چند TTY آسیب‌پذیر، دستورات را برای دستیابی به انواع مختلف اجرا کنید. تأثیرات.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>فرمان‌هایی که اجازه خواندن یا نوشتن فایل‌های کاربر نهایی را می‌دهند می‌توانند اجرا شوند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "پایانه های کاربر باید یک کنترل دسترسی مجاز مانند جهان قابل نوشتن داشته باشند که به کاربران عادی اجازه می دهد تا داده ها را در پایانه های دیگر کاربران کنترل کنند."
+            ],
+            "x_capec_resources_required_fa": [
+                "دسترسی به ترمینال در شبکه هدف"
+            ]
         }
     ],
     "type": "bundle"

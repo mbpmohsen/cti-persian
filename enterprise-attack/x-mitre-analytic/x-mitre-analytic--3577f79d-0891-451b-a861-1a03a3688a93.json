@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0549#AN1517",
-                    "external_id": "AN1517"
+                    "external_id": "AN1517",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilePathRegex",
-                    "description": "Directory/file path regex for ~/.ssh, *.pem, *.key, *.p12"
+                    "description": "Directory/file path regex for ~/.ssh, *.pem, *.key, *.p12",
+                    "description_fa": "Regex مسیر دایرکتوری/فایل برای ~/.ssh، *.pem، *.key، *.p12"
                 },
                 {
                     "field": "CommandLineMatch",
-                    "description": "Script or user agent seen accessing keys (e.g., cat ~/.ssh/id_rsa, tar ~/.gnupg)"
+                    "description": "Script or user agent seen accessing keys (e.g., cat ~/.ssh/id_rsa, tar ~/.gnupg)",
+                    "description_fa": "اسکریپت یا عامل کاربر در حال مشاهده کلیدهای دسترسی (مانند cat ~/.ssh/id_rsa، tar ~/.gnupg)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1517",
+            "description_fa": "دسترسی کاربر یا مبتنی بر اسکریپت به ~/.ssh یا سایر دایرکتوری های حاوی کلیدهای خصوصی و به دنبال آن فعالیت پوسته یا اتصالات شبکه غیرمعمول."
         }
     ]
 }

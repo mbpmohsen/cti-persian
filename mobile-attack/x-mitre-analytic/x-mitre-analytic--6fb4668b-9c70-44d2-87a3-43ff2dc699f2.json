@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0720#AN1851",
-                    "external_id": "AN1851"
+                    "external_id": "AN1851",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.378Z",
             "name": "Analytic 1851",
-            "description": "Defender correlates a sandboxed app writing high-entropy or encoded artifacts (often in app-private or shared storage), performing decode/decompress/reassembly, then dynamically loading/execing the resulting code (DexClassLoader/JNI dlopen) or spawning a helper process. Sequence: high-entropy file writes \u2192 decode/unpack bursts \u2192 new .dex/.so/.jar creation in temp/obfuscated paths \u2192 dynamic load or shell spawn within a tight window.",
+            "description": "Defender correlates a sandboxed app writing high-entropy or encoded artifacts (often in app-private or shared storage), performing decode/decompress/reassembly, then dynamically loading/execing the resulting code (DexClassLoader/JNI dlopen) or spawning a helper process. Sequence: high-entropy file writes → decode/unpack bursts → new .dex/.so/.jar creation in temp/obfuscated paths → dynamic load or shell spawn within a tight window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -62,33 +63,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max interval to correlate write\u2192decode\u2192load stages (e.g., 5\u201360s depending on device performance)."
+                    "description": "Max interval to correlate write→decode→load stages (e.g., 5–60s depending on device performance).",
+                    "description_fa": "حداکثر فاصله برای همبستگی مراحل نوشتن → رمزگشایی → بارگذاری (به عنوان مثال، 5 تا 60 ثانیه بسته به عملکرد دستگاه)."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Shannon entropy threshold to flag likely obfuscated blobs (e.g., \u2265 7.2)."
+                    "description": "Shannon entropy threshold to flag likely obfuscated blobs (e.g., ≥ 7.2).",
+                    "description_fa": "آستانه آنتروپی شانون برای پرچم‌گذاری حباب‌های احتمالا مبهم (مثلاً 7.2 ≥)."
                 },
                 {
                     "field": "SuspiciousWriteDirs",
-                    "description": "Directories to monitor (e.g., app /files, cache, /sdcard/Download). OEMs vary."
+                    "description": "Directories to monitor (e.g., app /files, cache, /sdcard/Download). OEMs vary.",
+                    "description_fa": "دایرکتوری هایی برای نظارت (به عنوان مثال، برنامه / فایل ها، حافظه پنهان، /sdcard/Download). OEM ها متفاوت هستند."
                 },
                 {
                     "field": "ChunkCountThreshold",
-                    "description": "Minimum count of small sequential writes (split payload reassembly)."
+                    "description": "Minimum count of small sequential writes (split payload reassembly).",
+                    "description_fa": "حداقل تعداد نوشته های متوالی کوچک (مجموعه مجدد محموله تقسیمی)."
                 },
                 {
                     "field": "NetworkCDNAllowlist",
-                    "description": "Benign CDNs/hosts for large opaque downloads to reduce FPs."
+                    "description": "Benign CDNs/hosts for large opaque downloads to reduce FPs.",
+                    "description_fa": "CDN/میزبان‌های خوش‌خیم برای بارگیری‌های غیرشفاف بزرگ برای کاهش FP."
                 },
                 {
                     "field": "ExecPathRegex",
-                    "description": "Regex for newly loaded .dex/.so/.jar/temp artifacts."
+                    "description": "Regex for newly loaded .dex/.so/.jar/temp artifacts.",
+                    "description_fa": "Regex برای مصنوعات .dex/.so/.jar/temp که به تازگی بارگذاری شده اند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground/background or developer mode context to suppress test noise."
+                    "description": "Foreground/background or developer mode context to suppress test noise.",
+                    "description_fa": "پیش زمینه/پس زمینه یا زمینه حالت توسعه دهنده برای سرکوب نویز تست."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1851",
+            "description_fa": "Defender یک برنامه sandboxed را با آنتروپی بالا یا مصنوعات رمزگذاری شده (اغلب در فضای ذخیره سازی برنامه-خصوصی یا مشترک)، انجام رمزگشایی/فشرده کردن/مجموعه مجدد، سپس بارگیری/اجرای پویا کد حاصل (DexClassLoader/JNI dlopen) یا ایجاد یک فرآیند کمکی مرتبط می کند. دنباله: فایل با آنتروپی بالا می نویسد → رمزگشایی/بازکردن بسته بندی انفجاری → ایجاد .dex/.so/.jar جدید در مسیرهای موقت/مبهم → بارگذاری پویا یا پوسته در یک پنجره تنگ."
         }
     ]
 }

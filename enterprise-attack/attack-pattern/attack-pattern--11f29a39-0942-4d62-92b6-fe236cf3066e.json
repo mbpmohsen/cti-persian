@@ -14,21 +14,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1036/007",
                     "external_id": "T1036.007",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "SOCPrime DoubleExtension",
                     "description": "Eugene Tkachenko. (2020, May 1). Rule of the Week: Possible Malicious File Double Extension. Retrieved July 27, 2021.",
                     "url": "https://socprime.com/blog/rule-of-the-week-possible-malicious-file-double-extension/",
                     "source_name_fa": "SOCPrime DoubleExtension",
-                    "description_fa": "یوجین Tkachenko (2020, May 1) قانون هفته: امکان تمدید فایل دو جانبه Retrieved ۲۷ ژوئیه ۲۰۲۱"
+                    "description_fa": "یوجین تکاچنکو. (1 مه 2020). قانون هفته: پسوند دوبار فایل مخرب احتمالی. بازبینی شده در 27 ژوئیه 2021."
                 },
                 {
                     "source_name": "PCMag DoubleExtension",
                     "description": "PCMag. (n.d.). Encyclopedia: double extension. Retrieved August 4, 2021.",
                     "url": "https://www.pcmag.com/encyclopedia/term/double-extension",
                     "source_name_fa": "PCMag DoubleExtension",
-                    "description_fa": "PCMag دایره المعارف: دو گسترش Retrieved 4، 2021."
+                    "description_fa": "PCMag. (n.d.). دایره المعارف: پسوند دوگانه. بازبینی شده در ۴ اوت ۲۰۲۱."
                 }
             ],
             "object_marking_refs": [
@@ -54,8 +54,8 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "Double File Extension",
-            "description_fa": "مخالفان ممکن است از یک پسوند دوگانه در نام فایل به عنوان وسیله ای برای استخراج نوع فایل واقعی استفاده کنند. یک نام فایل ممکن است شامل یک فرمت فایل ثانویه باشد که تنها باعث می شود اولین پسوند نمایش داده شود (ex: [CTI_PRESERVE_0] ممکن است در برخی از دیدگاه ها به عنوان (CTI_PRESERVE). با این حال، افزونه دوم نوع فایل واقعی است که تعیین می کند که چگونه فایل باز و اجرا می شود. پسوند فایل واقعی ممکن است توسط سیستم عامل در مرورگر فایل (ex: Explorer.exe) و همچنین در هر نرم افزار پیکربندی شده با استفاده یا شبیه به سیاست های سیستم پنهان شود. [[ویرایش]\n\nمخالفان ممکن است از افزونه های دوگانه برای تلاش برای پنهان کردن انواع فایل های خطرناک استفاده کنند. یک استفاده بسیار رایج شامل فریب دادن کاربر به باز کردن آنچه که فکر می کنند یک نوع فایل خوش خیم است اما در واقع کد اجرایی است. این فایل ها اغلب به عنوان پیوست های ایمیل ایجاد می شوند و اجازه می دهند که یک دشمن به دست آورد ([۱۰] [[۱۰]] [[۱۰]]] [۷]]] به سیستم کاربر از طریق [Spearphishing Attachment] ([۱۰] به عنوان مثال، یک فایل اجرایی به نام [CTI_PRESERVE_2] ممکن است به عنوان [CTI_PRESERVE_3] به یک کاربر نمایش داده شود. کاربر ممکن است آن را به عنوان یک فایل متن خوش خیم مشاهده کند و آن را باز کند، به طور ناخواسته اجرای بدافزار پنهان. [[ویرایش]\n\nانواع فایل های رایج، مانند فایل های متنی (.txt، .doc و غیره) و فایل های تصویری (.jpg، .gif و غیره) به طور معمول به عنوان اولین پسوند برای ظاهر خوش خیم استفاده می شوند. افزونه های حذف شده معمولا به عنوان خطرناک شناخته می شوند، مانند .exe، .lnk، .hta و .scr اغلب به عنوان دومین پسوند و نوع فایل واقعی ظاهر می شوند. <code>File.txt.exe</code> <code>File.txt</code> <code>Evil.txt.exe</code> <code>Evil.txt</code> (Citation: PCMag DoubleExtension) (Citation: SOCPrime DoubleExtension) (Citation: SOCPrime DoubleExtension) https://attack.mitre.org/tactics/TA0001 https://attack.mitre.org/techniques/T1566/001 https://attack.mitre.org/techniques/T1204"
+            "name_fa": "پسوند فایل دوگانه",
+            "description_fa": "دشمنان ممکن است از یک پسوند دوگانه در نام فایل به عنوان وسیله ای برای پنهان کردن نوع فایل واقعی سوء استفاده کنند. نام فایل ممکن است شامل یک پسوند نوع فایل ثانویه باشد که ممکن است باعث شود فقط پسوند اول نمایش داده شود (مثلاً: <code>File.txt.exe</code> ممکن است در برخی نماها فقط به عنوان <code>File.txt</code> نمایش داده شود). با این حال، پسوند دوم نوع فایل واقعی است که نحوه باز شدن و اجرای فایل را تعیین می کند. پسوند فایل واقعی ممکن است توسط سیستم عامل در مرورگر فایل (مثلا: explorer.exe)، و همچنین در هر نرم افزاری که با استفاده از خط‌مشی‌های سیستم پیکربندی شده یا شبیه به آن است، پنهان شود.(Citation: PCMag DoubleExtension)(Citation: SOCPrime DoubleExtension) \n\nدشمنان ممکن است از پسوندهای مضاعف برای پنهان کردن انواع فایل های خطرناک محموله ها سوء استفاده کنند. یک استفاده بسیار رایج شامل فریب دادن کاربر برای باز کردن فایلی است که فکر می‌کند یک نوع فایل خوش خیم است اما در واقع کد قابل اجرا است. چنین فایل‌هایی اغلب به‌عنوان پیوست‌های ایمیل ظاهر می‌شوند و به دشمن اجازه می‌دهند [دسترسی اولیه](https://attack.mitre.org/tactics/TA0001) را به سیستم کاربر از طریق [پیوست Spearphishing](https://attack.mitre.org/techniques/T1566/001) سپس [User Execution](https://attack.mitre.org/tactics/TA0001) به سیستم کاربر وارد کند. برای مثال، یک فایل پیوست فایل اجرایی با نام <code>Evil.txt.exe</code> ممکن است به صورت [[CTI_PRESERVE_3]]] برای یک کاربر نمایش داده شود. سپس کاربر می‌تواند آن را به‌عنوان یک فایل متنی خوش‌خیم ببیند و آن را باز کند و به‌طور ناخواسته بدافزار پنهان را اجرا کند.(Citation: SOCPrime DoubleExtension)\n\nانواع فایل های رایج، مانند فایل های متنی (txt.، .doc، و غیره) و فایل های تصویری (.jpg، .gif، و غیره) معمولاً به عنوان اولین پسوندی که خوش خیم به نظر می رسد استفاده می شوند. پسوندهای اجرایی که معمولاً خطرناک در نظر گرفته می شوند، مانند exe.، lnk.، .hta، و .scr، اغلب به عنوان پسوند دوم و نوع فایل واقعی ظاهر می شوند. <code>Evil.txt</code> https://attack.mitre.org/techniques/T1204"
         }
     ]
 }

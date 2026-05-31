@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0686#AN1795",
-                    "external_id": "AN1795"
+                    "external_id": "AN1795",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.377Z",
             "name": "Analytic 1795",
-            "description": "OLD: Application vetting services could look for `android.permission.READ_SMS` in an Android application\u2019s manifest. Most applications do not need access to SMS messages, so extra scrutiny could be applied to those that request it. \nOn Android, the user can manage which applications have permission to access SMS messages through the device settings screen, revoking the permission if necessary.\n\nNEW: A defender observes an Android application requesting for `android.permission. READ_SMS` and/or ` android.permission. RECEIVE_SMS `, which may also be listed in the application's manifest file. ",
+            "description": "OLD: Application vetting services could look for `android.permission.READ_SMS` in an Android application’s manifest. Most applications do not need access to SMS messages, so extra scrutiny could be applied to those that request it. \nOn Android, the user can manage which applications have permission to access SMS messages through the device settings screen, revoking the permission if necessary.\n\nNEW: A defender observes an Android application requesting for `android.permission. READ_SMS` and/or ` android.permission. RECEIVE_SMS `, which may also be listed in the application's manifest file. ",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "2.0",
@@ -38,7 +39,9 @@
                     "name": "android:MDMLog",
                     "channel": "Application granted or retaining the READ_SMS or RECEIVE_SMS permission."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1795",
+            "description_fa": "قدیمی: سرویس‌های بررسی برنامه می‌توانند «android.permission.READ_SMS» را در مانیفست برنامه Android جستجو کنند. اکثر برنامه ها نیازی به دسترسی به پیامک ندارند، بنابراین می توان برای کسانی که آن را درخواست می کنند، بررسی دقیق بیشتری اعمال کرد. \nدر اندروید، کاربر می‌تواند مدیریت کند که کدام برنامه‌ها مجوز دسترسی به پیام‌های SMS را از طریق صفحه تنظیمات دستگاه دارند و در صورت لزوم مجوز را لغو می‌کنند.\n\nجدید: یک مدافع یک برنامه اندروید را مشاهده می کند که درخواست «android.permission» می کند. READ_SMS» و/یا «android.permission. RECEIVE_SMS `، که ممکن است در فایل مانیفست برنامه نیز فهرست شده باشد."
         }
     ]
 }

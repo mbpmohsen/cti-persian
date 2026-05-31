@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0314#AN0878",
-                    "external_id": "AN0878"
+                    "external_id": "AN0878",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MirrorSourceList",
-                    "description": "Identify VMs or containers where mirror sessions are abnormal or unexpected."
+                    "description": "Identify VMs or containers where mirror sessions are abnormal or unexpected.",
+                    "description_fa": "ماشین های مجازی یا محفظه هایی را که جلسات آینه ای غیرعادی یا غیرمنتظره هستند، شناسایی کنید."
                 },
                 {
                     "field": "TargetIAMRole",
-                    "description": "Monitor whether mirror target roles match administrative expectations."
+                    "description": "Monitor whether mirror target roles match administrative expectations.",
+                    "description_fa": "نظارت کنید که آیا نقش‌های هدف آینه با انتظارات اداری مطابقت دارند یا خیر."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0878",
+            "description_fa": "ایجاد جلسات آینه‌سازی ترافیک (مانند AWS VPC Traffic Mirroring، Azure vTAP) را که ترافیک را از دارایی‌های حیاتی به دیگر نمونه‌های مجازی هدایت می‌کنند، که اغلب با ایجاد فایل یا ایجاد جلسه دنبال می‌شود، شناسایی می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0502#AN1385",
-                    "external_id": "AN1385"
+                    "external_id": "AN1385",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DirectoryScope",
-                    "description": "Restrict hidden file detection to privileged system directories."
+                    "description": "Restrict hidden file detection to privileged system directories.",
+                    "description_fa": "شناسایی فایل های مخفی را به دایرکتوری های سیستمی محدود کنید."
                 },
                 {
                     "field": "AttributeFlags",
-                    "description": "Tune for specific chattr flags (+i immutable, +a append-only) most abused for persistence."
+                    "description": "Tune for specific chattr flags (+i immutable, +a append-only) most abused for persistence.",
+                    "description_fa": "برای تداوم پرچم‌های خاص چت (+i غیرقابل تغییر، + فقط یک ضمیمه) تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1385",
+            "description_fa": "ایجاد فایل مخفی با استفاده از '.' یا ویژگی فایل با chattr تغییر می کند (پرچم های تغییرناپذیر/مخفی). نمای مدافع: اجرای ناهنجاری‌های chattr، lsattr و فایل‌های پنهان غیرعادی که در فهرست‌های سیستم ظاهر می‌شوند را تشخیص می‌دهد."
         }
     ]
 }

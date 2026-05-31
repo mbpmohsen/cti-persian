@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0182#AN0515",
-                    "external_id": "AN0515"
+                    "external_id": "AN0515",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BurstHostThreshold",
-                    "description": "Minimum unique SMB destinations (e.g., \u22653\u20135 in smaller mac fleets)."
+                    "description": "Minimum unique SMB destinations (e.g., ≥3–5 in smaller mac fleets).",
+                    "description_fa": "حداقل مقصدهای منحصر به فرد SMB (به عنوان مثال، ≥3-5 در ناوگان مک کوچکتر)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between exec and SMB connections (default 10m)."
+                    "description": "Correlation window between exec and SMB connections (default 10m).",
+                    "description_fa": "پنجره همبستگی بین اتصالات exec و SMB (پیش‌فرض 10 متر)."
                 },
                 {
                     "field": "AllowedMgmtTools",
-                    "description": "Jamf/IT scripts legitimately running smbutil/mount_smbfs."
+                    "description": "Jamf/IT scripts legitimately running smbutil/mount_smbfs.",
+                    "description_fa": "اسکریپت های Jamf/IT به طور قانونی smbutil/mount_smbfs را اجرا می کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0515",
+            "description_fa": "استفاده از ابزارهای بومی/مک (اشتراک‌گذاری -l، نمای smbutil، mount_smbfs) یا اسکریپت‌ها برای شمارش اشتراک‌های SMB در بسیاری از میزبان‌ها، و به دنبال آن اتصالات SMB خروجی مشاهده شده در گزارش‌های PF/Zeek."
         }
     ]
 }

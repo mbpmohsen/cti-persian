@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0307#AN0856",
-                    "external_id": "AN0856"
+                    "external_id": "AN0856",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FileNamePattern",
-                    "description": "Patterns like *.env, *credential* can be tuned to reduce noise or catch custom implementations"
+                    "description": "Patterns like *.env, *credential* can be tuned to reduce noise or catch custom implementations",
+                    "description_fa": "الگوهایی مانند *.env، *credential* را می‌توان برای کاهش نویز تنظیم کرد یا پیاده‌سازی‌های سفارشی را دریافت کرد."
                 },
                 {
                     "field": "ProcessAccessScope",
-                    "description": "Defines scope of access (e.g., only untrusted parent processes or high-risk processes)"
+                    "description": "Defines scope of access (e.g., only untrusted parent processes or high-risk processes)",
+                    "description_fa": "محدوده دسترسی را تعریف می کند (به عنوان مثال، فقط فرآیندهای والد غیرقابل اعتماد یا فرآیندهای پرخطر)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time delta between credential file access and use in logon attempt"
+                    "description": "Time delta between credential file access and use in logon attempt",
+                    "description_fa": "دلتای زمانی بین دسترسی به فایل اعتبارنامه و استفاده در تلاش برای ورود به سیستم"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0856",
+            "description_fa": "دسترسی فایل های مرتبط به فایل های اعتبارنامه ناامن (مانند *.env، *.xml، *.ps1) و به دنبال آن اجرای فرآیند مشکوک یا احراز هویت با استفاده از اعتبارنامه های بازیابی شده. از طریق سیاهههای مربوط به سیستم Sysmon و سیاهههای مربوط به رویداد امنیتی ویندوز شناسایی می شود."
         }
     ]
 }

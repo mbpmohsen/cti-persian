@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-194",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/194.html"
+                    "url": "https://capec.mitre.org/data/definitions/194.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-287",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/287.html"
+                    "url": "http://cwe.mitre.org/data/definitions/287.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "URL Redirector Abuse",
                     "external_id": "38",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/URL-Redirector-Abuse"
+                    "url": "http://projects.webappsec.org/URL-Redirector-Abuse",
+                    "description_fa": "سوء استفاده از تغییر مسیر URL",
+                    "source_name_fa": "WASC"
                 }
             ],
             "id": "attack-pattern--862d18f1-a87c-4f1b-acc2-882697d5d6e5",
@@ -44,6 +48,11 @@
                     "Alter Execution Logic (By faking the source of data or services, an adversary can cause a target to make incorrect decisions about how to proceed.)",
                     "Gain Privileges (By impersonating identities that have an increased level of access, an adversary gain privilege that they many not have otherwise had.)",
                     "Hide Activities (Faking the source of data or services can be used to create a false trail in logs as the target will associate any actions with the impersonated identity instead of the adversary.)"
+                ],
+                "Integrity_fa": [
+                    "تغییر منطق اجرایی (با جعل منبع داده ها یا خدمات، دشمن می تواند باعث شود تا یک هدف تصمیمات نادرستی در مورد چگونگی ادامه بگیرد.)",
+                    "به دست آوردن امتیازات (با جعل هویت‌هایی که سطح دسترسی بالایی دارند، حریف امتیازی را به دست می‌آورد که بسیاری از آنها در غیر این صورت نداشتند.)",
+                    "مخفی کردن فعالیت‌ها (جعل منبع داده یا خدمات می‌تواند برای ایجاد یک دنباله نادرست در گزارش‌ها استفاده شود، زیرا هدف به جای حریف، هر اقدامی را با هویت جعل شده مرتبط می‌کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -67,7 +76,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از احراز هویت نامناسب برای ارائه داده ها یا خدمات تحت هویت جعلی استفاده می کند. هدف از استفاده از هویت جعلی ممکن است جلوگیری از قابلیت ردیابی داده های ارائه شده یا به عهده گرفتن حقوقی باشد که به فرد دیگری اعطا شده است. یکی از ساده‌ترین اشکال این حمله، ایجاد یک پیام ایمیل با فیلد «از» تغییر یافته است تا نشان داده شود که پیام از جانب شخصی غیر از فرستنده واقعی ارسال شده است. ریشه حمله (در این مورد سیستم ایمیل) نمی تواند منبع را به درستی احراز هویت کند و این باعث می شود خواننده عملکرد دستور داده شده را اشتباه انجام دهد. نتایج حمله بسته به جزئیات حمله متفاوت است، اما نتایج رایج عبارتند از افزایش امتیاز، مبهم سازی سایر حملات، و خرابی/دستکاری داده ها.",
+            "name_fa": "جعل منبع داده",
+            "x_capec_prerequisites_fa": [
+                "این حمله تنها زمانی قابل اجرا است که یک نهاد آسیب پذیر داده ها یا خدمات را با یک هویت مرتبط کند. بدون چنین ارتباطی، دلیلی برای جعل منبع وجود نخواهد داشت."
+            ],
+            "x_capec_resources_required_fa": [
+                "منابع مورد نیاز بسته به ماهیت حمله متفاوت است. ابزارهای احتمالی مورد نیاز یک مهاجم می‌تواند شامل ابزارهایی برای ایجاد بسته‌های شبکه سفارشی، نرم‌افزار مشتری خاص و ابزارهایی برای ضبط ترافیک شبکه باشد. با این حال، بسیاری از انواع این حمله به منابع مهاجم نیاز ندارند."
+            ]
         }
     ],
     "type": "bundle"

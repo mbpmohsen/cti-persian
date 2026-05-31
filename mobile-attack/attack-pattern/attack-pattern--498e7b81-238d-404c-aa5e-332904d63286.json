@@ -13,12 +13,15 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1627",
-                    "external_id": "T1627"
+                    "external_id": "T1627",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "SWB Exodus March 2019",
                     "description": "Security Without Borders. (2019, March 29). Exodus: New Android Spyware Made in Italy. Retrieved November 17, 2024.",
-                    "url": "https://web.archive.org/web/20200314194610/https://securitywithoutborders.org/blog/2019/03/29/exodus.html"
+                    "url": "https://web.archive.org/web/20200314194610/https://securitywithoutborders.org/blog/2019/03/29/exodus.html",
+                    "source_name_fa": "SWB Exodus مارس 2019",
+                    "description_fa": "امنیت بدون مرز. (29 مارس 2019). Exodus: جاسوس افزار جدید اندروید ساخت ایتالیا. بازبینی شده در 17 نوامبر 2024."
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +29,7 @@
             ],
             "modified": "2026-05-12T15:12:00.630Z",
             "name": "Execution Guardrails",
-            "description": "Adversaries may use execution guardrails to constrain execution or actions based on adversary supplied and environment specific conditions that are expected to be present on the target. Guardrails ensure that a payload only executes against an intended target and reduces collateral damage from an adversary\u2019s campaign. Values an adversary can provide about a target system or environment to use as guardrails may include environment information such as location.(Citation: SWB Exodus March 2019)\n\nGuardrails can be used to prevent exposure of capabilities in environments that are not intended to be compromised or operated within. This use of guardrails is distinct from typical [System Checks](https://attack.mitre.org/techniques/T1633/001). While use of [System Checks](https://attack.mitre.org/techniques/T1633/001) may involve checking for known sandbox values and continuing with execution only if there is no match, the use of guardrails will involve checking for an expected target-specific value and only continuing with execution if there is such a match.",
+            "description": "Adversaries may use execution guardrails to constrain execution or actions based on adversary supplied and environment specific conditions that are expected to be present on the target. Guardrails ensure that a payload only executes against an intended target and reduces collateral damage from an adversary’s campaign. Values an adversary can provide about a target system or environment to use as guardrails may include environment information such as location.(Citation: SWB Exodus March 2019)\n\nGuardrails can be used to prevent exposure of capabilities in environments that are not intended to be compromised or operated within. This use of guardrails is distinct from typical [System Checks](https://attack.mitre.org/techniques/T1633/001). While use of [System Checks](https://attack.mitre.org/techniques/T1633/001) may involve checking for known sandbox values and continuing with execution only if there is no match, the use of guardrails will involve checking for an expected target-specific value and only continuing with execution if there is such a match.",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -47,7 +50,9 @@
             "x_mitre_version": "1.1",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "گاردریل های اعدام",
+            "description_fa": "دشمنان ممکن است از حفاظ‌های اجرایی برای محدود کردن اجرا یا اقدامات بر اساس شرایط محیطی خاص و عرضه شده توسط دشمن استفاده کنند که انتظار می‌رود روی هدف وجود داشته باشد. گاردریل ها تضمین می کنند که یک محموله فقط در برابر هدف مورد نظر اجرا می شود و آسیب های جانبی ناشی از کمپین دشمن را کاهش می دهد. مقادیری که یک دشمن می‌تواند در مورد یک سیستم یا محیط هدف برای استفاده به عنوان نرده‌های محافظ ارائه دهد، ممکن است شامل اطلاعات محیطی مانند مکان باشد.(Citation: SWB Exodus March 2019)\n\nنرده‌های محافظ می‌توانند برای جلوگیری از قرار گرفتن در معرض قابلیت‌ها در محیط‌هایی که قرار نیست در معرض خطر قرار گیرند یا در داخل آن‌ها کار کنند، استفاده شوند. این استفاده از نرده‌های محافظ با [بررسی سیستم] (https://attack.mitre.org/techniques/T1633/001) معمولی متمایز است. در حالی که استفاده از [System Checks](https://attack.mitre.org/techniques/T1633/001) ممکن است شامل بررسی مقادیر شناخته شده sandbox و ادامه اجرا فقط در صورت عدم تطابق باشد، استفاده از گاردریل شامل بررسی مقدار مورد انتظار برای هدف خاص است و فقط در صورت وجود چنین تطابقی، اجرا را ادامه می‌دهد."
         }
     ]
 }

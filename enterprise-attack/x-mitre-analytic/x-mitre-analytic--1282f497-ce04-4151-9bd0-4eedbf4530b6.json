@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0132#AN0372",
-                    "external_id": "AN0372"
+                    "external_id": "AN0372",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "mutex_name_entropy_threshold",
-                    "description": "Filter out common benign mutex names; highlight suspicious high-entropy/dynamic names."
+                    "description": "Filter out common benign mutex names; highlight suspicious high-entropy/dynamic names.",
+                    "description_fa": "نام‌های خوش‌خیم mutex را فیلتر کنید. نام‌های مشکوک با آنتروپی/دینامیک بالا را برجسته کنید."
                 },
                 {
                     "field": "parent_process_path",
-                    "description": "Limit alerting to non-standard parent-child relationships indicative of malware staging or self-spawning."
+                    "description": "Limit alerting to non-standard parent-child relationships indicative of malware staging or self-spawning.",
+                    "description_fa": "هشدار را به روابط غیراستاندارد والدین و فرزند محدود کنید که نشان‌دهنده مرحله‌بندی بدافزار یا خود تخم‌ریزی است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate mutex creation + rapid process exit or lack of further activity within a short timeframe."
+                    "description": "Correlate mutex creation + rapid process exit or lack of further activity within a short timeframe.",
+                    "description_fa": "ارتباط ایجاد mutex + خروج سریع از فرآیند یا عدم فعالیت بیشتر در یک بازه زمانی کوتاه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0372",
+            "description_fa": "mutex نامگذاری شده توسط دشمن با استفاده از APIهای سیستم (به عنوان مثال CreateMutexW) و به دنبال آن خاتمه فرآیند مشروط یا مسیر کد جایگزین ایجاد شده است که نشان می دهد بدافزار از آلوده شدن مجدد جلوگیری می کند."
         }
     ]
 }

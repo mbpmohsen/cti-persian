@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0465#AN1285",
-                    "external_id": "AN1285"
+                    "external_id": "AN1285",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccountList",
-                    "description": "Organizations may rename or rotate default IAM accounts; detection logic should be updated with any renamed or aliased default identities."
+                    "description": "Organizations may rename or rotate default IAM accounts; detection logic should be updated with any renamed or aliased default identities.",
+                    "description_fa": "سازمان‌ها ممکن است حساب‌های پیش‌فرض IAM را تغییر نام داده یا بچرخانند. منطق تشخیص باید با هر هویت پیش فرض تغییر نام یا مستعار به روز شود."
                 },
                 {
                     "field": "GeoLocation",
-                    "description": "Authentication attempts from unusual geographic regions should trigger anomaly detection."
+                    "description": "Authentication attempts from unusual geographic regions should trigger anomaly detection.",
+                    "description_fa": "تلاش‌های احراز هویت از مناطق جغرافیایی غیرمعمول باید باعث تشخیص ناهنجاری شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1285",
+            "description_fa": "استفاده از حساب‌های سرویس پیش‌فرض شناخته‌شده یا حساب‌های ابری سطح ریشه که احراز هویت یا تغییر در خط‌مشی IAM را انجام می‌دهند."
         }
     ]
 }

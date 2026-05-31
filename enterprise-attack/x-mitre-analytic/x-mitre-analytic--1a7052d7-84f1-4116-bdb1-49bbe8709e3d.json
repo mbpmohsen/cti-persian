@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0188#AN0537",
-                    "external_id": "AN0537"
+                    "external_id": "AN0537",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TTY_type",
-                    "description": "Detection can exclude interactive TTY sessions to reduce false positives from admin usage"
+                    "description": "Detection can exclude interactive TTY sessions to reduce false positives from admin usage",
+                    "description_fa": "تشخیص می‌تواند جلسات TTY تعاملی را برای کاهش موارد مثبت کاذب از استفاده سرپرست حذف کند"
                 },
                 {
                     "field": "shell_parent",
-                    "description": "Differentiate between interactive user shells vs. script-based execution"
+                    "description": "Differentiate between interactive user shells vs. script-based execution",
+                    "description_fa": "بین پوسته های تعاملی کاربر در مقابل اجرای مبتنی بر اسکریپت تفاوت قائل شوید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0537",
+            "description_fa": "استفاده غیرعادی از «lsblk»، «fdisk -l»، «lshw -class disk» یا «parted» توسط کاربران غیر سرپرست یا در پوسته‌های غیرتعاملی نشان‌دهنده فعالیت مشکوک در شمارش دیسک است."
         }
     ]
 }

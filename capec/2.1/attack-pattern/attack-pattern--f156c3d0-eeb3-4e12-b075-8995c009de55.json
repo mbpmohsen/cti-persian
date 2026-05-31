@@ -9,52 +9,63 @@
                 {
                     "external_id": "CAPEC-73",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/73.html"
+                    "url": "https://capec.mitre.org/data/definitions/73.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-184",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/184.html"
+                    "url": "http://cwe.mitre.org/data/definitions/184.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-96",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/96.html"
+                    "url": "http://cwe.mitre.org/data/definitions/96.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-348",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/348.html"
+                    "url": "http://cwe.mitre.org/data/definitions/348.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-116",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/116.html"
+                    "url": "http://cwe.mitre.org/data/definitions/116.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-350",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/350.html"
+                    "url": "http://cwe.mitre.org/data/definitions/350.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-86",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/86.html"
+                    "url": "http://cwe.mitre.org/data/definitions/86.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--f156c3d0-eeb3-4e12-b075-8995c009de55",
@@ -90,6 +101,24 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "تغییر منطق اجرا"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -105,11 +134,22 @@
             "x_capec_skills_required": {
                 "High": "Exploiting a client side vulnerability to inject malicious scripts into the browser's executable process.",
                 "Low": "To achieve a redirection and use of less trusted source, an attacker can simply edit data that the host uses to build the filename",
-                "Medium": "Deploying a malicious \"look-a-like\" site (such as a site masquerading as a bank or online auction site) that the user enters their authentication data into."
+                "Medium": "Deploying a malicious \"look-a-like\" site (such as a site masquerading as a bank or online auction site) that the user enters their authentication data into.",
+                "High_fa": "بهره برداری از آسیب پذیری سمت سرویس گیرنده برای تزریق اسکریپت های مخرب به فرآیند اجرایی مرورگر.",
+                "Low_fa": "برای دستیابی به تغییر مسیر و استفاده از منبع کمتر قابل اعتماد، مهاجم می تواند به سادگی داده هایی را که میزبان برای ساخت نام فایل استفاده می کند ویرایش کند.",
+                "Medium_fa": "استقرار یک سایت مخرب \"شبیه به نظر\" (مانند سایتی که به عنوان یک بانک یا سایت حراج آنلاین ظاهر می شود) که کاربر داده های احراز هویت خود را در آن وارد می کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حمله ای از این نوع شامل وارد کردن کاراکترهای مخرب (مانند تغییر مسیر XSS) به نام فایل توسط دشمن است، به طور مستقیم یا غیرمستقیم که سپس توسط نرم افزار مورد نظر برای تولید متن HTML یا سایر محتوای بالقوه قابل اجرا استفاده می شود. بسیاری از وب سایت ها به محتوای تولید شده توسط کاربر متکی هستند و به صورت پویا منابعی مانند فایل ها، نام فایل ها و پیوندهای URL را مستقیماً از داده های ارائه شده توسط کاربر ایجاد می کنند. در این الگوی حمله، مهاجم کدی را آپلود می‌کند که می‌تواند در مرورگر مشتری اجرا شود و/یا مرورگر مشتری را به سایتی که مالک آن مهاجم است هدایت کند. همه انواع حملات XSS می توانند برای عبور و بهره برداری از این آسیب پذیری ها استفاده شوند.",
+            "name_fa": "نام فایل کنترل شده توسط کاربر",
+            "x_capec_example_instances_fa": [
+                "حملات فیشینگ متکی به کلیک کاربر بر روی پیوندهایی است که توسط مهاجمانی که خود را به عنوان یک منبع قابل اعتماد مانند بانک یا سایت حراج آنلاین در اختیار او قرار می دهند، ارائه می شود. سرویس گیرنده ایمیل کاربر نهایی نام منبع ارائه شده را در این مورد از طریق ایمیل میزبانی می کند. با این حال، نام منبع ممکن است 1) مرورگر سرویس گیرنده را به یک سایت مخرب هدایت کند تا اعتبارنامه ها را به سرقت ببرد و/یا 2) کدی را روی ماشین کلاینت اجرا کند تا سیستم میزبان و محیط شبکه قربانی را بررسی کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "قربانی باید به نام و محل نام فایل های کنترل شده توسط کاربر اعتماد کند."
+            ]
         }
     ],
     "type": "bundle"

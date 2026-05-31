@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0538#AN1483",
-                    "external_id": "AN1483"
+                    "external_id": "AN1483",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedTools",
-                    "description": "Whitelist legitimate tunneling tools (e.g., used by admins)."
+                    "description": "Whitelist legitimate tunneling tools (e.g., used by admins).",
+                    "description_fa": "ابزارهای تونل زنی قانونی را در لیست سفید قرار دهید (به عنوان مثال، استفاده شده توسط مدیران)."
                 },
                 {
                     "field": "DataAsymmetryThreshold",
-                    "description": "Ratio of sent vs received bytes that indicates tunneling activity."
+                    "description": "Ratio of sent vs received bytes that indicates tunneling activity.",
+                    "description_fa": "نسبت بایت های ارسالی به بایت های دریافتی که فعالیت تونل زنی را نشان می دهد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate process creation with network connection within N seconds."
+                    "description": "Correlate process creation with network connection within N seconds.",
+                    "description_fa": "ایجاد فرآیند را با اتصال شبکه در عرض N ثانیه مرتبط کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1483",
+            "description_fa": "فرآیندهایی مانند plink.exe، ssh.exe یا netsh.exe که اتصالات شبکه خروجی را ایجاد می‌کنند که در آن الگوهای ترافیک پروتکل‌های کپسوله‌شده را نشان می‌دهند (مانند RDP روی SSH). مشاهدات مدافع شامل روابط غیرعادی فرآیند به شبکه، جریان های نامتقارن بزرگ داده، و عدم تطابق استفاده از پورت است."
         }
     ]
 }

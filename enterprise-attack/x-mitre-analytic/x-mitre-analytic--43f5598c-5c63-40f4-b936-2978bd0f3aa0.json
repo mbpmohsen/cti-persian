@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0427#AN1195",
-                    "external_id": "AN1195"
+                    "external_id": "AN1195",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredServiceKeys",
-                    "description": "Registry subkeys for critical services (ImagePath, ServiceDll, FailureCommand, Parameters)."
+                    "description": "Registry subkeys for critical services (ImagePath, ServiceDll, FailureCommand, Parameters).",
+                    "description_fa": "کلیدهای فرعی رجیستری برای خدمات مهم (ImagePath، ServiceDll، FailureCommand، پارامترها)."
                 },
                 {
                     "field": "BaselineServiceConfig",
-                    "description": "Known good service registry configurations and paths for comparison."
+                    "description": "Known good service registry configurations and paths for comparison.",
+                    "description_fa": "پیکربندی‌ها و مسیرهای رجیستری خدمات خوب برای مقایسه."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval between registry/service modifications and service execution."
+                    "description": "Correlation interval between registry/service modifications and service execution.",
+                    "description_fa": "فاصله همبستگی بین تغییرات رجیستری/سرویس و اجرای سرویس."
                 },
                 {
                     "field": "PrivilegedAccounts",
-                    "description": "Accounts permitted to modify service configurations."
+                    "description": "Accounts permitted to modify service configurations.",
+                    "description_fa": "حساب‌ها مجاز به تغییر تنظیمات سرویس هستند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1195",
+            "description_fa": "تغییر غیرمجاز کلیدهای رجیستری مرتبط با سرویس مانند کلیدهای ImagePath، FailureCommand، ServiceDll یا Performance/Parameters. Defender تغییرات رجیستری، تغییرات غیرعادی فراداده سرویس و اجرای فرآیندهای خدمات بعدی را که از پیکربندی های پایه منحرف می شوند، مرتبط می کند."
         }
     ]
 }

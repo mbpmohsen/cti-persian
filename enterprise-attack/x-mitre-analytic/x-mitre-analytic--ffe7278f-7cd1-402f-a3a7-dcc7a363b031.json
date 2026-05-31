@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0026#AN0074",
-                    "external_id": "AN0074"
+                    "external_id": "AN0074",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate Registry + DLL Write + Module Load within a short boot or spooler restart window (e.g., 5 minutes)."
+                    "description": "Correlate Registry + DLL Write + Module Load within a short boot or spooler restart window (e.g., 5 minutes).",
+                    "description_fa": "همبستگی رجیستری + نوشتن DLL + بارگذاری ماژول در یک پنجره راه‌اندازی مجدد کوتاه یا اسپولر (مثلاً 5 دقیقه)."
                 },
                 {
                     "field": "PrintProcessorDirectory",
-                    "description": "System-specific path derived from GetPrintProcessorDirectory API call; may differ across Windows versions or configurations."
+                    "description": "System-specific path derived from GetPrintProcessorDirectory API call; may differ across Windows versions or configurations.",
+                    "description_fa": "مسیر خاص سیستم که از تماس API GetPrintProcessorDirectory مشتق شده است. ممکن است در نسخه ها یا تنظیمات ویندوز متفاوت باشد."
                 },
                 {
                     "field": "DLLNamePattern",
-                    "description": "Some environments may use custom or non-standard DLL naming conventions for print processors. Allowlist known values."
+                    "description": "Some environments may use custom or non-standard DLL naming conventions for print processors. Allowlist known values.",
+                    "description_fa": "برخی از محیط ها ممکن است از قراردادهای نامگذاری DLL سفارشی یا غیر استاندارد برای پردازنده های چاپ استفاده کنند. مقادیر شناخته شده مجاز را فهرست کنید."
                 },
                 {
                     "field": "SignedImageValidation",
-                    "description": "Check Authenticode signature and issuer chain for loaded DLLs to reduce false positives."
+                    "description": "Check Authenticode signature and issuer chain for loaded DLLs to reduce false positives.",
+                    "description_fa": "امضای Authenticode و زنجیره صادرکننده را برای DLL های بارگذاری شده بررسی کنید تا مثبت کاذب را کاهش دهید."
                 },
                 {
                     "field": "ServiceRestartTrigger",
-                    "description": "Monitor for spoolsv.exe restart events that trigger malicious print processor loading."
+                    "description": "Monitor for spoolsv.exe restart events that trigger malicious print processor loading.",
+                    "description_fa": "رویدادهای راه اندازی مجدد spoolsv.exe را که باعث بارگیری مخرب پردازنده چاپ می شوند، نظارت کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0074",
+            "description_fa": "تغییرات رجیستری مرتبط در مسیر Print Processors، به دنبال ایجاد فایل DLL در فهرست راهنمای پردازنده پرینت سیستم و بارگیری DLL توسط spoolsv.exe. اجرای مخرب اغلب در هنگام راه اندازی مجدد سرویس یا بوت شدن سیستم، با امتیازات سطح سیستم اتفاق می افتد."
         }
     ]
 }

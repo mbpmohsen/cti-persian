@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0439#AN1219",
-                    "external_id": "AN1219"
+                    "external_id": "AN1219",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StartupConfigPath",
-                    "description": "Targeted config folders like flash:/startup-config or nvram:"
+                    "description": "Targeted config folders like flash:/startup-config or nvram:",
+                    "description_fa": "پوشه های پیکربندی هدفمند مانند flash:/startup-config یا nvram:"
                 },
                 {
                     "field": "CommandPatternMatch",
-                    "description": "e.g., `copy tftp flash`, `rename`, `move flash:/old.bin flash:/new.bin`"
+                    "description": "e.g., `copy tftp flash`, `rename`, `move flash:/old.bin flash:/new.bin`",
+                    "description_fa": "به عنوان مثال، «کپی فلش tftp»، «تغییر نام»، «فلش انتقال:/old.bin فلش:/new.bin»"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1219",
+            "description_fa": "تلاش‌های جابه‌جایی میان‌افزار یا اسکریپت (مانند «کپی»، «انتقال» یا «تغییر نام» مبتنی بر CLI) را بین پارتیشن‌های موقت و پوشه‌های راه‌اندازی پیکربندی در روترها یا سوئیچ‌ها شناسایی می‌کند."
         }
     ]
 }

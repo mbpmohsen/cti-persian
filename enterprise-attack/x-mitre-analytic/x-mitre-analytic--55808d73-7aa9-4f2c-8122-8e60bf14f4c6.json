@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0046#AN0127",
-                    "external_id": "AN0127"
+                    "external_id": "AN0127",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time range in which multiple discovery processes or sleep/delay operations are executed to avoid sandbox detonation."
+                    "description": "Time range in which multiple discovery processes or sleep/delay operations are executed to avoid sandbox detonation.",
+                    "description_fa": "محدوده زمانی که در آن چندین فرآیند کشف یا عملیات خواب/تأخیر اجرا می‌شود تا از انفجار جعبه ماسه‌بازی جلوگیری شود."
                 },
                 {
                     "field": "KnownVMArtifactList",
-                    "description": "Registry paths, DLLs, services or device names indicative of sandbox/VM environments."
+                    "description": "Registry paths, DLLs, services or device names indicative of sandbox/VM environments.",
+                    "description_fa": "مسیرهای رجیستری، DLL ها، سرویس ها یا نام دستگاه هایی که نشان دهنده محیط های جعبه ایمنی/VM هستند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0127",
+            "description_fa": "اجرای دستورات اکتشاف یا API برای مصنوعات مجازی سازی (مانند کلیدهای رجیستری، درایورهای دستگاه، سرویس ها)، رفتار اجرای خواب/پرداخت، یا DLL های فرار از جعبه شنی پیش از استقرار محموله فراخوانی می کند."
         }
     ]
 }

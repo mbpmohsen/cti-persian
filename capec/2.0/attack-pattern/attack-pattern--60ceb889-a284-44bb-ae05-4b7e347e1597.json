@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-637",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/637.html"
+                    "url": "https://capec.mitre.org/data/definitions/637.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-267",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/267.html"
+                    "url": "http://cwe.mitre.org/data/definitions/267.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Clipboard Data",
                     "external_id": "T1115",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1115"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1115",
+                    "description_fa": "داده های کلیپ بورد",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--60ceb889-a284-44bb-ae05-4b7e347e1597",
@@ -37,6 +41,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -48,11 +55,18 @@
                 "The adversary must have a means (i.e., a pre-installed tool or background process) by which to collect data from the clipboard and store it. That is, when the target copies data to the clipboard (e.g., to paste into another application), the adversary needs some means of capturing that data in a third location."
             ],
             "x_capec_skills_required": {
-                "High": "To deploy a hidden process or malware on the system to automatically collect clipboard data."
+                "High": "To deploy a hidden process or malware on the system to automatically collect clipboard data.",
+                "High_fa": "برای استقرار یک فرآیند یا بدافزار مخفی در سیستم برای جمع آوری خودکار داده های کلیپ بورد."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن از برنامه ای سوء استفاده می کند که امکان کپی کردن داده ها یا اطلاعات حساس را با جمع آوری اطلاعات کپی شده در کلیپ بورد فراهم می کند. داده‌های کپی‌شده در کلیپ‌بورد را می‌توان توسط برنامه‌های کاربردی دیگر، مانند بدافزارهایی که برای استخراج یا ثبت محتوای کلیپ‌بورد به‌صورت دوره‌ای ساخته شده‌اند، دسترسی داشت. از این طریق، هدف دشمن جمع‌آوری اطلاعاتی است که به آنها غیرمجاز است.",
+            "name_fa": "جمع آوری داده ها از کلیپ بورد",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه‌ای را بیابید که امکان کپی داده‌های حساس را در کلیپ‌برد فراهم می‌کند: </b>یک حریف ابتدا باید برنامه‌ای را پیدا کند که امکان کپی و چسباندن اطلاعات حساس را فراهم کند. این می‌تواند برنامه‌ای باشد که گذرواژه‌های موقتی را روی صفحه، آدرس‌های ایمیل خصوصی، یا هر اطلاعات یا داده حساس دیگری چاپ می‌کند</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>کاربران هدف برنامه: </b>یک حریف کاربران برنامه را در دوره‌ای از clip خود هدف قرار می‌دهد تا اطلاعات را در صفحه دریافت کند. اصول</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>نصب بدافزار بر روی سیستم کاربر که برای ثبت‌نام دوره‌ای محتویات کلیپ‌بورد طراحی شده است</td></tr><tr><td>کاربر را وادار کنید روی پیوند مخربی کلیک کند که او را به برنامه‌ای می‌برد تا محتویات آن را ثبت کند. کلیپ بورد</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>حمله بعدی: </b>از هرگونه اطلاعات حساس یافت شده برای انجام یک حمله بعدی استفاده کنید</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "حریف باید وسیله ای داشته باشد (یعنی یک ابزار از پیش نصب شده یا فرآیند پس زمینه) که به وسیله آن داده ها را از کلیپ بورد جمع آوری و ذخیره کند. یعنی زمانی که هدف داده ها را در کلیپ بورد کپی می کند (مثلاً برای چسباندن در برنامه دیگری)، دشمن به ابزاری برای گرفتن آن داده ها در مکان سوم نیاز دارد."
+            ]
         }
     ],
     "spec_version": "2.0",

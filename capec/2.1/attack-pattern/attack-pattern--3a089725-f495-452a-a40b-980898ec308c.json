@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-500",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/500.html"
+                    "url": "https://capec.mitre.org/data/definitions/500.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-749",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/749.html"
+                    "url": "http://cwe.mitre.org/data/definitions/749.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-940",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/940.html"
+                    "url": "http://cwe.mitre.org/data/definitions/940.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Tongbo Luo, Hao Hao, Wenliang Du, Yifei Wang, Heng Yin, Attacks on WebView in the Android System, 2011, Annual Computer Security Applications Conference (ACSAC)",
                     "external_id": "REF-430",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.cis.syr.edu/~wedu/Research/paper/webview_acsac2011.pdf"
+                    "url": "http://www.cis.syr.edu/~wedu/Research/paper/webview_acsac2011.pdf",
+                    "description_fa": "Tongbo Luo، Hao Hao، Wenliang Du، Yifei Wang، Heng Yin، حملات به WebView در سیستم اندروید، 2011، کنفرانس سالانه برنامه های کاربردی امنیت رایانه (ACSAC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3a089725-f495-452a-a40b-980898ec308c",
@@ -48,7 +53,13 @@
                 "An adversary must be able install a purpose built malicious application onto the device and convince the user to execute it. The malicious application is designed to target a specific web application and is used to load the target web pages via the WebView component. For example, an adversary may develop an application that interacts with Facebook via WebView and adds a new feature that a user desires. The user would install this 3rd party app instead of the Facebook app."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن، از طریق یک برنامه مخرب نصب شده قبلی، کد را به متن یک صفحه وب که توسط یک مؤلفه WebView نمایش داده می شود، تزریق می کند. از طریق کد تزریق شده، یک دشمن قادر است درخت DOM و کوکی‌های صفحه را دستکاری کند، اطلاعات حساس را در معرض دید قرار دهد و می‌تواند حملاتی را علیه برنامه وب از داخل صفحه وب انجام دهد.",
+            "name_fa": "WebView Injection",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین برنامه وب هدف: </b>یک حریف ابتدا باید مشخص کند که چه برنامه وب را می‌خواهد هدف قرار دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></T><ar><tr><d>برنامه‌های کاربردی حساس وارد شوند. اطلاعات.</td></tr><tr><td>برنامه‌های وب را هدف قرار دهید که دشمن می‌خواهد از طرف یک کاربر وارد سیستم شده عمل کند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>یک برنامه مخرب برای تلفن همراه ایجاد کنید: </td></tr></tbody></table></ol></div><div><h3> مؤلفه WebView برای نمایش برنامه وب مورد نظر. این برنامه مخرب باید توسط یک کاربر دانلود شود، بنابراین دشمنان این برنامه را به نحوی مفید می‌سازند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک برنامه شخص ثالث ایجاد کنید که عملکرد مفیدی را به برنامه وب مورد نظر اضافه کند. قربانیان برنامه را به عنوان وسیله ای برای استفاده از برنامه وب هدفمند دانلود می کنند.</td></tr><tr><td>یک بازی سرگرم کننده ایجاد کنید که در برخی مواقع کاربر را به برنامه وب مورد نظر هدایت می کند. به عنوان مثال، با هدایت کاربر به PayPal، از کاربر بخواهید با ارز بازی خریداری کند.</td></tr></tbody></table><li> <p> <b>از قربانی بخواهید برنامه را دانلود و اجرا کند: </b>یک دشمن باید قربانی را وادار کند تا با میل خود برنامه را دانلود و اجرا کند. تبلیغات</td></tr><tr><td>برنامه را در رسانه‌های اجتماعی تبلیغ کنید، چه از طریق حساب‌های ایجاد شده توسط دشمن یا با پرداخت هزینه برای حساب‌های دیگر برای تبلیغات. برنامه و صفحه وب مورد نظر را در مؤلفه WebView مشاهده می کند، برنامه مخرب کد جاوا اسکریپت مخرب را به برنامه وب تزریق می کند. این کار با استفاده از API loadURL() WebView انجام می شود که می تواند کد جاوا اسکریپت دلخواه را به صفحات بارگذاری شده توسط مؤلفه WebView با امتیازات یکسان تزریق کند. این اغلب با افزودن یک تگ اسکریپت به بدنه سند با یک مقصد src به یک مکان راه دور که کدهای مخرب جاوا اسکریپت را ارائه می‌کند، انجام می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>عملیات را در صفحه وب مورد نظر از طرف یک کاربر تأیید شده <ie><i>cookstr></t> اجرا کنید. قربانی.</td></tr><tr><td>در تلاش برای واداشتن کاربر به افشای اطلاعات حساس، فیلدهای اضافی را به DOM اضافه کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "یک دشمن باید بتواند یک برنامه مخرب هدفمند را روی دستگاه نصب کند و کاربر را متقاعد کند که آن را اجرا کند. برنامه مخرب برای هدف قرار دادن یک برنامه وب خاص طراحی شده است و برای بارگیری صفحات وب مورد نظر از طریق مؤلفه WebView استفاده می شود. به عنوان مثال، یک دشمن ممکن است برنامه ای ایجاد کند که از طریق WebView با فیس بوک تعامل داشته باشد و ویژگی جدیدی را که کاربر می خواهد اضافه کند. کاربر این برنامه شخص ثالث را به جای برنامه فیس بوک نصب می کند."
+            ]
         }
     ],
     "type": "bundle"

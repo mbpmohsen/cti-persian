@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0037#AN0107",
-                    "external_id": "AN0107"
+                    "external_id": "AN0107",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PrivilegedUsers",
-                    "description": "Expected user context authorized to unlock Keychain or browser databases"
+                    "description": "Expected user context authorized to unlock Keychain or browser databases",
+                    "description_fa": "زمینه کاربر مورد انتظار مجاز به باز کردن قفل Keychain یا پایگاه داده مرورگر است"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for process execution and credential file access"
+                    "description": "Correlation window for process execution and credential file access",
+                    "description_fa": "پنجره همبستگی برای اجرای فرآیند و دسترسی به فایل اعتبار"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0107",
+            "description_fa": "دسترسی غیرعادی به فروشگاه‌های اعتبار سافاری (با پشتیبانی از Keychain) یا پایگاه‌های داده ورود به سیستم Chrome/Firefox را تشخیص می‌دهد. فرآیندهای اجرای «security dump-keychain» یا خواندن مستقیم فایل‌های اعتبارنامه در «~/Library/Application Support» را مشاهده می‌کند. دسترسی به فایل را با اصل و نسب فرآیند مشکوک یا باینری های بدون علامت مرتبط می کند."
         }
     ]
 }

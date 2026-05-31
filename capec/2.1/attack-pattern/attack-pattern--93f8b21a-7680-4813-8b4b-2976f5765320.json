@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-293",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/293.html"
+                    "url": "https://capec.mitre.org/data/definitions/293.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--93f8b21a-7680-4813-8b4b-2976f5765320",
@@ -37,6 +41,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Other"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر"
                 ]
             },
             "x_capec_domains": [
@@ -50,7 +57,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از ابزار traceroute برای ترسیم مسیری که داده ها از طریق شبکه در مسیر به مقصد مورد نظر جریان می یابد، استفاده می کند. ردیابی می‌تواند به دشمن اجازه دهد تا با فهرست کردن سیستم‌هایی که داده‌ها از طریق آن‌ها در مسیرشان به سمت ماشین مورد نظر عبور می‌کنند، یک توپولوژی کاری از سیستم‌ها و مسیریاب‌ها ایجاد کند. این حمله بسته به نوع ردیابی انجام شده می تواند نتایج متفاوتی را به همراه داشته باشد. Traceroute با ارسال بسته ها به یک هدف و در عین حال افزایش فیلد Time-to-Live در هدر بسته کار می کند. همانطور که بسته از هر پرش در مسیر خود به مقصد عبور می کند، TTL آن منقضی می شود و یک پیام تشخیصی ICMP ایجاد می کند که محل انقضای بسته را مشخص می کند. تکنیک‌های سنتی برای ردیابی شامل استفاده از ICMP و UDP بود، اما با شروع فیلتر کردن فایروال‌های بیشتر ICMP ورودی، روش‌های ردیابی با استفاده از TCP توسعه یافتند.",
+            "name_fa": "شمارش مسیر Traceroute",
+            "x_capec_prerequisites_fa": [
+                "شبکه ای که قادر است بسته های مهاجم را به شبکه مقصد هدایت کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "یک نسخه خط فرمان از traceroute یا ابزار مشابه که شمارش مسیر را انجام می دهد."
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0085#AN0235",
-                    "external_id": "AN0235"
+                    "external_id": "AN0235",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Detectable variations include `reg save`, `reg.exe save`, or PowerShell equivalents for dumping SAM/SYSTEM hives."
+                    "description": "Detectable variations include `reg save`, `reg.exe save`, or PowerShell equivalents for dumping SAM/SYSTEM hives.",
+                    "description_fa": "تغییرات قابل شناسایی شامل «reg save»، «reg.exe save» یا معادل‌های PowerShell برای ریختن کندوهای SAM/SYSTEM است."
                 },
                 {
                     "field": "TargetFilePath",
-                    "description": "Defenders can tune based on dump file path patterns (e.g., `%TEMP%\\sam.save`, `C:\\Users\\Public\\*.dmp`)."
+                    "description": "Defenders can tune based on dump file path patterns (e.g., `%TEMP%\\sam.save`, `C:\\Users\\Public\\*.dmp`).",
+                    "description_fa": "مدافعان می‌توانند بر اساس الگوهای مسیر فایل dump تنظیم کنند (مانند «%TEMP%\\sam.save»، «C:\\Users\\Public\\*.dmp»)."
                 },
                 {
                     "field": "RegistryPath",
-                    "description": "Tune for HKLM\\SAM, HKLM\\SYSTEM or access via direct \\Device\\Harddisk paths."
+                    "description": "Tune for HKLM\\SAM, HKLM\\SYSTEM or access via direct \\Device\\Harddisk paths.",
+                    "description_fa": "برای HKLM\\SAM، HKLM\\SYSTEM یا دسترسی از طریق مسیرهای مستقیم \\Device\\Harddisk تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal gap between SAM and SYSTEM hive dumping can be tuned (e.g., 3 minutes)."
+                    "description": "Temporal gap between SAM and SYSTEM hive dumping can be tuned (e.g., 3 minutes).",
+                    "description_fa": "فاصله زمانی بین تخلیه کندو SAM و SYSTEM را می توان تنظیم کرد (به عنوان مثال، 3 دقیقه)."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Useful for suppressing known-good access (e.g., backup tools)."
+                    "description": "Useful for suppressing known-good access (e.g., backup tools).",
+                    "description_fa": "برای سرکوب دسترسی خوب شناخته شده (به عنوان مثال، ابزارهای پشتیبان) مفید است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0235",
+            "description_fa": "دشمنی که با امتیازات سطح سیستم اجرا می‌شود، دستورات را اجرا می‌کند یا به کلیدهای رجیستری دسترسی پیدا می‌کند تا SAM hive را تخلیه کند یا مستقیماً فایل‌های محلی حساس را از فهرست پیکربندی می‌خواند. این رفتار اغلب شامل دسترسی متوالی به HKLM\\SAM، HKLM\\SYSTEM و ایجاد فایل‌های .save یا .dmp است که استخراج هش آفلاین را امکان‌پذیر می‌کند."
         }
     ]
 }

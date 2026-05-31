@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0591#AN1627",
-                    "external_id": "AN1627"
+                    "external_id": "AN1627",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredCommandList",
-                    "description": "Commands like `touch -r`, `debugfs`, `stat` used in sequence"
+                    "description": "Commands like `touch -r`, `debugfs`, `stat` used in sequence",
+                    "description_fa": "دستوراتی مانند «touch -r»، «debugfs»، «stat» به ترتیب استفاده می‌شوند"
                 },
                 {
                     "field": "FilePathRegex",
-                    "description": "Suspicious paths like `/tmp/`, `/var/lib/`, `/mnt/esxi/`"
+                    "description": "Suspicious paths like `/tmp/`, `/var/lib/`, `/mnt/esxi/`",
+                    "description_fa": "مسیرهای مشکوک مانند `/tmp/`, `/var/lib/`, `/mnt/esxi/`"
                 },
                 {
                     "field": "DeltaThreshold",
-                    "description": "Mismatch between timestamp and file activity time"
+                    "description": "Mismatch between timestamp and file activity time",
+                    "description_fa": "عدم تطابق بین مهر زمانی و زمان فعالیت فایل"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1627",
+            "description_fa": "استفاده از دستورات تغییر مُهر زمان مانند «touch -a -m -t» یا «touch -r» را تشخیص می‌دهد، به‌ویژه زمانی که توسط کاربران غیرمعمول یا در فهرست‌های مشکوک اجرا می‌شوند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0472#AN1303",
-                    "external_id": "AN1303"
+                    "external_id": "AN1303",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegistryPath",
-                    "description": "Specific registry path monitored for modification (e.g., HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Notification Packages)."
+                    "description": "Specific registry path monitored for modification (e.g., HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Notification Packages).",
+                    "description_fa": "مسیر رجیستری خاص برای اصلاح نظارت می شود (به عنوان مثال، HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\Notification Packages)."
                 },
                 {
                     "field": "AllowedDLLs",
-                    "description": "Known and approved password filter DLLs; deviations from baseline may indicate malicious injection."
+                    "description": "Known and approved password filter DLLs; deviations from baseline may indicate malicious injection.",
+                    "description_fa": "DLL های فیلتر رمز عبور شناخته شده و تایید شده. انحراف از خط پایه ممکن است نشان دهنده تزریق مخرب باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time window for correlating registry modification, file creation, and module load events."
+                    "description": "Time window for correlating registry modification, file creation, and module load events.",
+                    "description_fa": "پنجره زمانی برای ارتباط تغییرات رجیستری، ایجاد فایل و رویدادهای بارگذاری ماژول."
                 },
                 {
                     "field": "FilePathPatterns",
-                    "description": "Expected directories for legitimate password filter DLLs; anomalous paths may signal compromise."
+                    "description": "Expected directories for legitimate password filter DLLs; anomalous paths may signal compromise.",
+                    "description_fa": "دایرکتوری های مورد انتظار برای DLL های فیلتر رمز عبور قانونی. مسیرهای غیرعادی ممکن است نشانه سازش باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1303",
+            "description_fa": "ثبت مشکوک DLL های فیلتر رمز عبور جدید را در فرآیند احراز هویت شناسایی می کند. تغییرات رجیستری را با بسته‌های اعلان LSASS با رویدادهای بعدی ایجاد DLL و بارگیری مرتبط می‌کند. قرار دادن فایل های غیرعادی DLL ها را در فهرست های سیستم مشاهده می کند و به دنبال آن LSASS فیلتر جدید را در طول فعالیت تغییر ورود به سیستم/رمز عبور بارگیری می کند."
         }
     ]
 }

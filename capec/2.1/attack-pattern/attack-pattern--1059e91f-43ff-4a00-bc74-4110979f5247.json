@@ -9,35 +9,45 @@
                 {
                     "external_id": "CAPEC-329",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/329.html"
+                    "url": "https://capec.mitre.org/data/definitions/329.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "J. Postel, RFC792 - Internet Control Messaging Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-123",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc792.html"
+                    "url": "http://www.faqs.org/rfcs/rfc792.html",
+                    "description_fa": "J. Postel، RFC792 - پروتکل پیام‌رسانی کنترل اینترنت، 09-1981، آژانس پروژه‌های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "R. Braden, Ed., RFC1122 - Requirements for Internet Hosts - Communication Layers, 1989--10",
                     "external_id": "REF-124",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc1122.html"
+                    "url": "http://www.faqs.org/rfcs/rfc1122.html",
+                    "description_fa": "R. Braden, Ed., RFC1122 - Requirements for Internet Host - Communication Layers, 1989--10",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Ofir Arkin, A Remote Active OS Fingerprinting Tool using ICMP, 2002--04, The Sys-Security Group",
                     "external_id": "REF-262",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://ofirarkin.files.wordpress.com/2008/11/login.pdf"
+                    "url": "http://ofirarkin.files.wordpress.com/2008/11/login.pdf",
+                    "description_fa": "Ofir Arkin، ابزار انگشت نگاری فعال سیستم عامل از راه دور با استفاده از ICMP، 04-2002، گروه Sys-Security",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--1059e91f-43ff-4a00-bc74-4110979f5247",
@@ -65,6 +75,19 @@
                     "Read Data",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -80,7 +103,16 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از تکنیکی برای تولید پیام خطای ICMP (درگاه غیرقابل دسترسی، مقصد غیرقابل دسترسی، تغییر مسیر، خاموش کردن منبع، تجاوز از زمان، مشکل پارامتر) از یک هدف استفاده می‌کند و سپس مقدار داده‌های برگشتی یا «نقل‌شده» از درخواست مبدأ را که پیام خطای ICMP را ایجاد کرده است، تجزیه و تحلیل می‌کند.",
+            "name_fa": "کاوشگر نقل قول پیام خطای ICMP",
+            "x_capec_extended_description_fa": "<xhtml:p> برای این منظور اغلب از پیام‌های خطای \"Port Unreachable\" استفاده می‌شود، زیرا برای تولید آن‌ها دشمن باید یک دیتاگرام UDP را به یک پورت بسته در هدف ارسال کند. هدف از این تجزیه و تحلیل، استنتاج در مورد نوع سیستم عامل یا سیستم عاملی است که پیام خطا را در پاسخ ارسال کرده است.</xhtml:p>\n            <xhtml:p>این برای شناسایی ویژگی‌های منحصربه‌فرد سیستم‌عامل‌ها مفید است زیرا رفتار مورد انتظار RFC-1122 چنین می‌گوید: \"هر پیام خطای ICMP شامل سرصفحه اینترنت و حداقل 8 اکتت داده اول دیتاگرام است که باعث ایجاد خطا شده است؛ بیش از 8 اکتت ممکن است ارسال شود [...].\" این در تضاد با رفتار مورد انتظار RFC-792 است که متن نقل قول را به 64 بیت (8 اکتت) محدود می کرد. با توجه به عرض جغرافیایی در مشخصات، پیاده‌سازی‌های پشته RFC-1122 حاصل اغلب با درجه بالایی از تنوع در مقدار داده‌های نقل‌شده در پیام خطا پاسخ می‌دهند، زیرا پشته‌های «قدیمی‌تر» یا «قدیمی» ممکن است با مشخصات RFC-792 مطابقت داشته باشند، در حالی که پشته‌های دیگر ممکن است قالب طولانی‌تری مطابق با RFC-1122 انتخاب کنند. به عنوان یک قاعده کلی، اکثر سیستم عامل ها یا سیستم عامل ها 8 بایت اول دیتاگرام را نقل قول می کنند که باعث بروز خطا می شود، اما برخی از پشته های IP بیش از 8 بایت اول داده را نقل قول می کنند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "توانایی نظارت و تعامل با ارتباطات شبکه. دسترسی به حداقل یک میزبان و امتیازات رابط با کارت رابط شبکه."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزاری که قادر به ارسال/دریافت بسته های دیتاگرام UDP از یک سیستم راه دور به یک پورت بسته و دریافت پیغام خطای ICMP نوع 3، \"Port Unreachable."
+            ]
         }
     ],
     "type": "bundle"

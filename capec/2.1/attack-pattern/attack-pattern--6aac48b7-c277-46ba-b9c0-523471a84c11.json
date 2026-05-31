@@ -9,29 +9,37 @@
                 {
                     "external_id": "CAPEC-402",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/402.html"
+                    "url": "https://capec.mitre.org/data/definitions/402.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Oliver Tennert, Using the ATA security features of modern hard disks and SSDs, 2014, Admin Magazine",
                     "external_id": "REF-701",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.admin-magazine.com/Archive/2014/19/Using-the-ATA-security-features-of-modern-hard-disks-and-SSDs"
+                    "url": "https://www.admin-magazine.com/Archive/2014/19/Using-the-ATA-security-features-of-modern-hard-disks-and-SSDs",
+                    "description_fa": "الیور تنرت، با استفاده از ویژگی های امنیتی ATA هارد دیسک ها و SSD های مدرن، 2014، مجله Admin",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Breaking ATA Password Security, The University of Texas at Austin Information Security Office",
                     "external_id": "REF-702",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://security.utexas.edu/education-outreach/BreakingATA"
+                    "url": "https://security.utexas.edu/education-outreach/BreakingATA",
+                    "description_fa": "شکستن امنیت رمز عبور ATA، دفتر امنیت اطلاعات دانشگاه تگزاس در آستین",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--6aac48b7-c277-46ba-b9c0-523471a84c11",
@@ -59,7 +67,16 @@
                 "Access to the system containing the ATA Drive so that the drive can be physically removed from the system."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن از ضعف امنیت ATA در درایو برای دسترسی به اطلاعات موجود در درایو بدون ارائه اعتبار مناسب استفاده می کند. ATA Security اغلب برای محافظت از اطلاعات هارد دیسک در برابر دسترسی غیرمجاز استفاده می شود. این مکانیسم از کاربر می‌خواهد تا قبل از اینکه بایوس به محتویات درایو دسترسی پیدا کند، رمز عبور را تایپ کند. برخی از پیاده سازی های امنیتی ATA دستور ATA را برای به روز رسانی رمز عبور بدون احراز هویت کاربر با بایوس می پذیرند. این به این دلیل رخ می دهد که مکانیسم امنیتی فرض می کند که کاربر ابتدا از طریق BIOS احراز هویت را قبل از ارسال دستورات به درایو انجام داده است. روش‌های مختلفی برای بهره‌برداری از این نقص وجود دارد که رایج‌ترین آنها نصب درایو محافظت‌شده ATA در سیستمی است که فاقد ویژگی‌های امنیتی ATA (معروف به مبادله داغ) است. هنگامی که درایو در سیستم جدید نصب می شود، بایوس می تواند برای تنظیم مجدد رمز عبور درایو استفاده شود.",
+            "name_fa": "دور زدن امنیت رمز عبور ATA",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>ابزار A-FF Repair Station یک ابزار بازیابی اطلاعات است که می تواند برای حذف رمز عبور ATA (در سطح بالا و حداکثر) و بازیابی ناحیه سیستم عامل استفاده شود. دشمنی که به این ابزار دسترسی دارد می تواند رمز عبور ATA را برای دور زدن این ویژگی امنیتی و باز کردن قفل هارد دیسک بازنشانی کند. سپس حریف می تواند هر داده ای را که در درایو موجود است به دست آورد. [REF-702]</xhtml:p>",
+                "<xhtml:p>یک دشمن به هارد دیسک مورد نظر دسترسی فیزیکی پیدا می کند و آن را در سیستمی نصب می کند که از ویژگی های امنیتی ATA پشتیبانی نمی کند. هنگامی که درایو در سیستم فاقد ویژگی نصب می شود، حریف می تواند رمز عبور هارد دیسک را از طریق بایوس بازنشانی کند. در نتیجه، دشمن می‌تواند امنیت رمز عبور ATA را دور بزند و به محتوای درایو دسترسی پیدا کند.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "به سیستم حاوی درایو ATA دسترسی داشته باشید تا درایو به صورت فیزیکی از سیستم حذف شود."
+            ]
         }
     ],
     "type": "bundle"

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0644#AN1721",
-                    "external_id": "AN1721"
+                    "external_id": "AN1721",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.378Z",
             "name": "Analytic 1721",
-            "description": "From the defender view: a sandboxed process receives/creates a high-entropy Mach-O/bundle or encrypted segment, performs in-memory decrypt/unpack (mmap/mprotect RW\u2192RX or RWX), optionally drops a transient image in app-writable dirs, then loads it through dyld/dlopen or spawns it. We correlate: (1) opaque blob write/arrival \u2192 (2) kernel memory protection changes \u2192 (3) dyld/dlopen from app-writable path or posix_spawn of a recently created image \u2192 (4) (optional) code-sign evaluation anomalies for the new image.",
+            "description": "From the defender view: a sandboxed process receives/creates a high-entropy Mach-O/bundle or encrypted segment, performs in-memory decrypt/unpack (mmap/mprotect RW→RX or RWX), optionally drops a transient image in app-writable dirs, then loads it through dyld/dlopen or spawns it. We correlate: (1) opaque blob write/arrival → (2) kernel memory protection changes → (3) dyld/dlopen from app-writable path or posix_spawn of a recently created image → (4) (optional) code-sign evaluation anomalies for the new image.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window from write\u2192rwx\u2192load/exec (e.g., 5\u201345s)."
+                    "description": "Correlation window from write→rwx→load/exec (e.g., 5–45s).",
+                    "description_fa": "پنجره همبستگی از write→rwx→load/exec (به عنوان مثال، 5-45s)."
                 },
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Entropy to flag packed blobs (e.g., \u2265 7.3)."
+                    "description": "Entropy to flag packed blobs (e.g., ≥ 7.3).",
+                    "description_fa": "آنتروپی برای پرچم گذاری حباب های بسته بندی شده (به عنوان مثال، ≥ 7.3)."
                 },
                 {
                     "field": "RWXPageMinKB",
-                    "description": "Minimum RWX allocation size (e.g., \u2265 32KB)."
+                    "description": "Minimum RWX allocation size (e.g., ≥ 32KB).",
+                    "description_fa": "حداقل اندازه تخصیص RWX (به عنوان مثال، ≥ 32 کیلوبایت)."
                 },
                 {
                     "field": "KnownJITAllowlist",
-                    "description": "Bundle IDs legitimately using JIT to avoid RWX false positives."
+                    "description": "Bundle IDs legitimately using JIT to avoid RWX false positives.",
+                    "description_fa": "برای جلوگیری از مثبت کاذب RWX، شناسه‌های مشروع را با استفاده از JIT ببندید."
                 },
                 {
                     "field": "WritableLoadPathRegex",
-                    "description": "Regex for app-writable load paths (tmp, Caches) outside app bundle."
+                    "description": "Regex for app-writable load paths (tmp, Caches) outside app bundle.",
+                    "description_fa": "Regex برای مسیرهای بار قابل نوشتن برنامه (tmp، Cache) در خارج از بسته برنامه."
                 },
                 {
                     "field": "UnsignedExecPolicy",
-                    "description": "Tuning if enterprise/dev provisioning allows non-App Store binaries."
+                    "description": "Tuning if enterprise/dev provisioning allows non-App Store binaries.",
+                    "description_fa": "تنظیم اگر تدارک سازمانی/ برنامه‌نویس به باینری‌های غیر App Store اجازه می‌دهد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1721",
+            "description_fa": "از دیدگاه مدافع: یک فرآیند sandboxed یک Mach-O/Bundle یا بخش رمزگذاری شده با آنتروپی بالا را دریافت/ایجاد می‌کند، رمزگشایی/بازکردن بسته درون حافظه (mmap/mprotect RW→ RX یا RWX) را انجام می‌دهد، به صورت اختیاری یک تصویر گذرا را در فهرست‌های قابل نوشتن برنامه رها می‌کند، سپس آن را از طریق dyld/dlopen یا spawn بارگیری می‌کند. ما همبستگی را انجام می دهیم: (1) نوشتن/رسیدن لکه های مات → (2) تغییرات حفاظت از حافظه هسته → (3) dyld/dlopen از مسیر قابل نوشتن برنامه یا posix_spawn یک تصویر اخیرا ایجاد شده → (4) (اختیاری) ناهنجاری های ارزیابی علامت کد برای تصویر جدید."
         }
     ]
 }

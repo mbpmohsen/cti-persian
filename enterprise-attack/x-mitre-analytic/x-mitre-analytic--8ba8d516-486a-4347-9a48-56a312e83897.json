@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0368#AN1035",
-                    "external_id": "AN1035"
+                    "external_id": "AN1035",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,18 +61,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BaselineFirmwareVersion",
-                    "description": "Expected firmware/BIOS version for each hardware model."
+                    "description": "Expected firmware/BIOS version for each hardware model.",
+                    "description_fa": "نسخه سیستم عامل/BIOS مورد انتظار برای هر مدل سخت افزاری."
                 },
                 {
                     "field": "BaselineDriverList",
-                    "description": "Approved boot-start drivers."
+                    "description": "Approved boot-start drivers.",
+                    "description_fa": "درایورهای بوت استارت تایید شده"
                 },
                 {
                     "field": "IntegrityCheckInterval",
-                    "description": "Frequency of integrity checks (e.g., daily, weekly)."
+                    "description": "Frequency of integrity checks (e.g., daily, weekly).",
+                    "description_fa": "دفعات بررسی یکپارچگی (به عنوان مثال، روزانه، هفتگی)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1035",
+            "description_fa": "سخت افزار یا سیستم عامل دستکاری شده را از طریق تله متری وضعیت میزبان غیرعادی تشخیص می دهد. زنجیره رفتاری: (1) اجزای پیش سیستم عامل یا سفت‌افزار تغییرات نسخه غیرمنتظره، خرابی امضا، یا مسیرهای بوت اصلاح شده را نشان می‌دهند. (2) ابزارهای مدیریت سیستم/سیستم‌افزار ورود به سیستم رانش موجودی سخت‌افزار. (3) تله متری سلامت حسگر یا رویدادهای تأیید بوت در بررسی های پایه شکست می خورند. (4) اجرای فرآیند از طریق سیستم عامل تغییر یافته یا درایورهای ناشناخته پس از بوت شدن."
         }
     ]
 }

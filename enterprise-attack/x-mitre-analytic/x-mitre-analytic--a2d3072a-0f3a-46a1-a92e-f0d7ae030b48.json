@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0458#AN1260",
-                    "external_id": "AN1260"
+                    "external_id": "AN1260",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,21 +47,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "OperationName",
-                    "description": "Identify rare trust-modification operations (SetDomainAuthentication, Update-MsolFederatedDomain)."
+                    "description": "Identify rare trust-modification operations (SetDomainAuthentication, Update-MsolFederatedDomain).",
+                    "description_fa": "عملیات اصلاح اعتماد نادر (SetDomainAuthentication، Update-MsolFederatedDomain) را شناسایی کنید."
                 },
                 {
                     "field": "InitiatedBy",
-                    "description": "Flag federated trust changes performed by unknown users, service principals, or tokens."
+                    "description": "Flag federated trust changes performed by unknown users, service principals, or tokens.",
+                    "description_fa": "پرچم گذاری تغییرات اعتماد فدرال انجام شده توسط کاربران ناشناس، مدیران سرویس یا نشانه ها."
                 },
                 {
                     "field": "UserAgent",
-                    "description": "Separate scripted/API interactions from GUI-based administrative changes."
+                    "description": "Separate scripted/API interactions from GUI-based administrative changes.",
+                    "description_fa": "تعاملات اسکریپت/API را از تغییرات اداری مبتنی بر رابط کاربری گرافیکی جدا کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate trust change to federated login or SAML token injection within short window."
+                    "description": "Correlate trust change to federated login or SAML token injection within short window.",
+                    "description_fa": "تغییر اعتماد را به ورود فدرال یا تزریق توکن SAML در یک پنجره کوتاه مرتبط کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1260",
+            "description_fa": "Adversary ارائه دهنده هویت فدرال (IdP) را اضافه می کند یا احراز هویت دامنه مستاجر را از مدیریت به فدرال تغییر می دهد. از طریق API، PowerShell یا پورتال مدیریت از طریق رویدادهای فدراسیون مانند «تنظیم احراز هویت دامنه»، «افزودن ارائه‌دهنده هویت فدرال» یا «Update-MsolFederatedDomain» شناسایی می‌شود."
         }
     ]
 }

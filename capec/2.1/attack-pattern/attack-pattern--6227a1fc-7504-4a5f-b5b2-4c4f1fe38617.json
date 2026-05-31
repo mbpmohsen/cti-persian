@@ -9,40 +9,52 @@
                 {
                     "external_id": "CAPEC-312",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/312.html"
+                    "url": "https://capec.mitre.org/data/definitions/312.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "System Information Discovery",
                     "external_id": "T1082",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1082"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1082",
+                    "description_fa": "کشف اطلاعات سیستم",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Defense Advanced Research Projects Agency Information Processing Techniques Office, Information Sciences Institute University of Southern California, RFC793 - Transmission Control Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-128",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc793.html"
+                    "url": "http://www.faqs.org/rfcs/rfc793.html",
+                    "description_fa": "دفتر تکنیک های پردازش اطلاعات آژانس پروژه های تحقیقاتی پیشرفته دفاعی، موسسه علوم اطلاعات دانشگاه کالیفرنیای جنوبی، RFC793 - پروتکل کنترل انتقال، 1981-09، آژانس پروژه های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC",
                     "external_id": "REF-212",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, The Art of Port Scanning (Volume: 7, Issue. 51), Phrack Magazine, 1997",
                     "external_id": "REF-130",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://phrack.org/issues/51/11.html"
+                    "url": "http://phrack.org/issues/51/11.html",
+                    "description_fa": "گوردون \"فئودور\" لیون، هنر اسکن بندر (جلد: 7، شماره 51)، مجله Phrack، 1997",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--6227a1fc-7504-4a5f-b5b2-4c4f1fe38617",
@@ -67,6 +79,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -99,7 +121,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن با بازجویی از دستگاه، سرور یا پلتفرم با یک کاوشگر طراحی شده برای درخواست رفتاری که اطلاعات مربوط به سیستم عامل یا سیستم عامل موجود در محیط را آشکار می کند، درگیر فعالیتی برای شناسایی سیستم عامل یا نسخه سیستم عامل یک هدف راه دور می شود. تشخیص سیستم عامل ممکن است زیرا پیاده سازی پروتکل های رایج (مانند IP یا TCP) به روش های متفاوتی متفاوت است. در حالی که تفاوت‌های پیاده‌سازی برای شکستن سازگاری با پروتکل کافی نیست، تفاوت‌ها قابل تشخیص هستند زیرا هدف به روش‌های منحصربه‌فردی به فعالیت‌های کاوشگر خاصی که قوانین معنایی یا منطقی ساخت بسته برای یک پروتکل را نقض می‌کند، پاسخ می‌دهد. سیستم‌عامل‌های مختلف پاسخ منحصربه‌فردی به ورودی غیرعادی خواهند داشت و مبنایی برای اثرانگشت رفتار سیستم‌عامل فراهم می‌کند. این نوع انگشت نگاری سیستم عامل می تواند بین انواع و نسخه های سیستم عامل تمایز قائل شود.",
+            "name_fa": "اثر انگشت سیستم عامل فعال",
+            "x_capec_prerequisites_fa": [
+                "توانایی نظارت و تعامل با ارتباطات شبکه. دسترسی به حداقل یک میزبان و امتیازات رابط با کارت رابط شبکه."
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p> هر نوع کاوش فعالی که شامل هدرهای بسته غیراستاندارد باشد، نیاز به استفاده از سوکت های خام دارد که در سیستم عامل های خاصی (مثلاً Microsoft Windows XP SP 2) در دسترس نیست. دستکاری سوکت خام در یونیکس/لینوکس به امتیازات ریشه نیاز دارد.</xhtml:p>\n               <xhtml:p>ابزاری که قادر به ارسال و دریافت بسته ها از یک سیستم راه دور است.</xhtml:p>"
+            ]
         }
     ],
     "type": "bundle"

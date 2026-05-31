@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0453#AN1249",
-                    "external_id": "AN1249"
+                    "external_id": "AN1249",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedAdminIPs",
-                    "description": "Expected IP ranges allowed to query SNMP. Deviation indicates possible misuse."
+                    "description": "Expected IP ranges allowed to query SNMP. Deviation indicates possible misuse.",
+                    "description_fa": "محدوده های IP مورد انتظار مجاز به درخواست SNMP هستند. انحراف نشان دهنده سوء استفاده احتمالی است."
                 },
                 {
                     "field": "NormalSNMPQueryRate",
-                    "description": "Baseline frequency and volume of SNMP queries; anomalies above threshold may indicate dumping."
+                    "description": "Baseline frequency and volume of SNMP queries; anomalies above threshold may indicate dumping.",
+                    "description_fa": "فرکانس پایه و حجم پرس و جوهای SNMP. ناهنجاری های بالاتر از آستانه ممکن است نشان دهنده دامپینگ باشد."
                 },
                 {
                     "field": "CommunityStringPatterns",
-                    "description": "Expected community strings (e.g., hashed or custom values). Unrecognized strings may signal abuse."
+                    "description": "Expected community strings (e.g., hashed or custom values). Unrecognized strings may signal abuse.",
+                    "description_fa": "رشته های جامعه مورد انتظار (مثلاً مقادیر هش شده یا سفارشی). رشته های ناشناخته ممکن است نشانه سوء استفاده باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time periods during which SNMP queries are authorized. Queries outside these hours may be malicious."
+                    "description": "Time periods during which SNMP queries are authorized. Queries outside these hours may be malicious.",
+                    "description_fa": "دوره های زمانی که در طی آن درخواست های SNMP مجاز هستند. جستجوهای خارج از این ساعات ممکن است مخرب باشند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1249",
+            "description_fa": "مدافعان ممکن است شمارش SNMP MIB مشکوک را از طریق جستارهای غیرعادی برای مجموعه‌های بزرگ OID، درخواست‌های مکرر SNMP GETBULK/GETNEXT، یا درخواست‌هایی که از آدرس‌های IP غیر اداری منشأ می‌گیرند، مشاهده کنند. استفاده غیرعادی از رشته های جامعه، خرابی های احراز هویت، یا فعالیت شمارش در خارج از پنجره های تعمیر و نگهداری نیز ممکن است نشان دهنده تلاش برای تخلیه محتویات MIB باشد. همبستگی بین داده‌های ممیزی syslog، NetFlow و SNMP می‌تواند زنجیره‌های رفتاری مانند شکست‌های مکرر احراز هویت و به دنبال آن بازیابی موفقیت‌آمیز OID در مقیاس بزرگ را نشان دهد."
         }
     ]
 }

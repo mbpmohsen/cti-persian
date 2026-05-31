@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-96",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/96.html"
+                    "url": "https://capec.mitre.org/data/definitions/96.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-589",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/589.html"
+                    "url": "http://cwe.mitre.org/data/definitions/589.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--807e5b36-9da9-4be8-9f6e-5d8c7258cff5",
@@ -41,6 +43,19 @@
                 "Confidentiality": [
                     "Other",
                     "Bypass Protection Mechanism"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Availability_fa": [
+                    "تغییر منطق اجرا"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن"
                 ]
             },
             "x_capec_domains": [
@@ -56,11 +71,22 @@
                 "An attacker has the privileges to block application access to external libraries."
             ],
             "x_capec_skills_required": {
-                "Low": "Knowledge of how to block access to libraries, as well as knowledge of how to leverage the resulting state of the application based on the failed call."
+                "Low": "Knowledge of how to block access to libraries, as well as knowledge of how to leverage the resulting state of the application based on the failed call.",
+                "Low_fa": "دانش در مورد نحوه مسدود کردن دسترسی به کتابخانه ها، و همچنین دانش نحوه استفاده از وضعیت حاصل از برنامه بر اساس تماس ناموفق."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک برنامه معمولاً با توابعی که بخشی از کتابخانه های خارج از برنامه هستند تماس می گیرد. این کتابخانه ها ممکن است بخشی از سیستم عامل یا کتابخانه های شخص ثالث باشند. این امکان وجود دارد که برنامه به درستی موقعیت هایی را که دسترسی به این کتابخانه ها مسدود شده است، مدیریت نکند. بسته به رسیدگی به خطا در برنامه، دسترسی مسدود شده به کتابخانه ها ممکن است سیستم را در وضعیت ناامنی قرار دهد که می تواند توسط یک مهاجم نفوذ کند.",
+            "name_fa": "دسترسی به کتابخانه ها را مسدود کنید",
+            "x_capec_example_instances_fa": [
+                "یک سیستم مبتنی بر وب از یک کتابخانه تولید اعداد تصادفی رمزنگاری شخص ثالث استفاده می کند که آنتروپی را از سخت افزار ماشین استخراج می کند. این کتابخانه در تولید شناسه های جلسه کاربر مورد استفاده توسط برنامه استفاده می شود. اگر کتابخانه غیرقابل دسترسی باشد، برنامه در عوض از یک کتابخانه تولید اعداد تصادفی ضعیف مبتنی بر نرم افزار استفاده می کند. یک مهاجم سیستم دسترسی برنامه را به کتابخانه تولید اعداد تصادفی رمزنگاری شخص ثالث (با تغییر نام آن) مسدود می کند. این برنامه به نوبه خود از کتابخانه تولید اعداد تصادفی شبه ضعیف برای تولید شناسه های جلسه که قابل پیش بینی هستند استفاده می کند. سپس یک مهاجم از این ضعف استفاده می کند تا شناسه جلسه کاربر دیگر را حدس بزند تا یک افزایش افقی امتیاز را انجام دهد و به حساب کاربر دیگر دسترسی پیدا کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش کنید</h3><ol><li> <p>تعیین کنید برنامه به چه کتابخانه‌های خارجی دسترسی دارد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p>دسترسی به کتابخانه‌های خارجی را که برنامه به آن دسترسی دارد را مسدود کنید </li> رفتار سیستم را مشاهده کنید. به حالت ناامن/ناسازگار می رود.</p></li><li> <p>اگر سیستم به حالت ناامن/ناسازگار می رود، از آن برای به دست آوردن اطلاعات مربوط به عملکرد یا داده های سیستم، ارتقاء کنترل دسترسی و غیره استفاده کنید. بقیه این حمله به زمینه و هدف مورد نظر بستگی دارد.</p></li></ol></v>",
+            "x_capec_prerequisites_fa": [
+                "یک برنامه نیاز به دسترسی به کتابخانه های خارجی دارد.",
+                "مهاجم این امتیاز را دارد که دسترسی برنامه ها به کتابخانه های خارجی را مسدود کند."
+            ]
         }
     ],
     "spec_version": "2.0",

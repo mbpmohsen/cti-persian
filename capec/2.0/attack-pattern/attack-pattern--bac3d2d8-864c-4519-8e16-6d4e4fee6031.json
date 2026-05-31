@@ -9,7 +9,8 @@
                 {
                     "external_id": "CAPEC-604",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/604.html"
+                    "url": "https://capec.mitre.org/data/definitions/604.html",
+                    "source_name_fa": "capec"
                 }
             ],
             "id": "attack-pattern--bac3d2d8-864c-4519-8e16-6d4e4fee6031",
@@ -27,6 +28,10 @@
                 "Availability": [
                     "Other (A successful attack will deny the availability of the Wi-fi network to authorized users.)",
                     "Resource Consumption (The attacker's goal is to prevent users from accessing the wireless network. Denying connectivity to the wireless network prevents the user from being able to transmit or receive any data, which also prevents VOIP calls, however this attack poses no threat to data confidentiality.)"
+                ],
+                "Availability_fa": [
+                    "دیگر (یک حمله موفقیت آمیز در دسترس بودن شبکه Wi-Fi را برای کاربران مجاز رد می کند.)",
+                    "مصرف منابع (هدف مهاجم جلوگیری از دسترسی کاربران به شبکه بی سیم است. عدم اتصال به شبکه بی سیم باعث می شود کاربر نتواند هر گونه داده ای را ارسال یا دریافت کند، که از تماس های VOIP نیز جلوگیری می کند، با این حال این حمله هیچ تهدیدی برای محرمانه بودن داده ها ایجاد نمی کند)."
                 ]
             },
             "x_capec_domains": [
@@ -38,11 +43,18 @@
                 "Lack of authentication on deauthentication/disassociation packets on 802.11-based networks"
             ],
             "x_capec_skills_required": {
-                "Low": "This attack can be performed by low capability attackers with freely available tools. Commercial tools are also available that can target select networks or all WiFi networks within a range of several miles."
+                "Low": "This attack can be performed by low capability attackers with freely available tools. Commercial tools are also available that can target select networks or all WiFi networks within a range of several miles.",
+                "Low_fa": "این حمله می تواند توسط مهاجمان کم توان و با ابزارهای رایگان در دسترس انجام شود. ابزارهای تجاری نیز در دسترس هستند که می توانند شبکه های منتخب یا تمام شبکه های WiFi را در محدوده چند مایلی هدف قرار دهند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این سناریوی حمله، مهاجم به طور فعال روی کانال Wi-Fi ارسال می کند تا از انتقال یا دریافت داده توسط کاربران از شبکه Wi-Fi مورد نظر جلوگیری کند. چندین تکنیک شناخته شده برای انجام این حمله وجود دارد - به عنوان مثال: مهاجم ممکن است نقطه دسترسی Wi-Fi (به عنوان مثال دستگاه ارسال مجدد) را با فریم های احراز هویت پر کند. روش دیگر انتقال سطوح بالای نویز در باند RF مورد استفاده شبکه Wi-Fi است.",
+            "name_fa": "پارازیت وای فای",
+            "x_capec_prerequisites_fa": [
+                "عدم وجود ویژگی های ضد جم در 802.11",
+                "عدم احراز هویت در بسته های احراز هویت/جداسازی در شبکه های مبتنی بر 802.11"
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -9,42 +9,51 @@
                 {
                     "external_id": "CAPEC-75",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/75.html"
+                    "url": "https://capec.mitre.org/data/definitions/75.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-349",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/349.html"
+                    "url": "http://cwe.mitre.org/data/definitions/349.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-99",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/99.html"
+                    "url": "http://cwe.mitre.org/data/definitions/99.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-77",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/77.html"
+                    "url": "http://cwe.mitre.org/data/definitions/77.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-346",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/346.html"
+                    "url": "http://cwe.mitre.org/data/definitions/346.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-353",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/353.html"
+                    "url": "http://cwe.mitre.org/data/definitions/353.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-354",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/354.html"
+                    "url": "http://cwe.mitre.org/data/definitions/354.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--08c74bd3-c5ad-4d6c-a8bb-bb93d7503ddb",
@@ -68,6 +77,15 @@
                 ],
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -81,11 +99,20 @@
                 "Configuration files must be modifiable by the attacker"
             ],
             "x_capec_skills_required": {
-                "Medium": "To identify vulnerable configuration files, and understand how to manipulate servers and erase forensic evidence"
+                "Medium": "To identify vulnerable configuration files, and understand how to manipulate servers and erase forensic evidence",
+                "Medium_fa": "برای شناسایی فایل های پیکربندی آسیب پذیر و درک نحوه دستکاری سرورها و پاک کردن شواهد پزشکی قانونی"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "عموماً این فایل‌ها به صورت دستی ویرایش شده‌اند که در پیش‌نمایش مدیران سیستم نیستند، هر گونه توانایی از طرف مهاجمان برای تغییر این فایل‌ها، به عنوان مثال در یک مخزن CVS، دسترسی غیرمجاز را مستقیماً به برنامه، مانند کاربران مجاز، می‌دهد.",
+            "name_fa": "دستکاری فایل های پیکربندی قابل نوشتن",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>سرور BEA Weblogic از یک فایل config.xml برای ذخیره داده های پیکربندی استفاده می کند. اگر این فایل به درستی توسط کنترل دسترسی سیستم محافظت نشود، مهاجم می تواند اطلاعات پیکربندی را بنویسد تا خروجی سرور را از طریق گزارش های سیستم، اتصالات پایگاه داده، URL های مخرب و غیره هدایت کند. دسترسی به سرور Weblogic ممکن است از یک قلمرو به اصطلاح سفارشی باشد که مجوزهای احراز هویت و مجوز را از طرف مدیران اصلی کاربر مدیریت می کند. با توجه به دسترسی به نوشتن، مهاجم می تواند یک اشاره گر را به یک فایل jar قلمرو سفارشی در config.xml</xhtml:p> وارد کند.\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">< CustomRealm<xhtml:div style=\"margin-left:1em;\">ConfigurationData=\"java.util.Properties\"Name=\"CustomRealm\"RealmClassName=\"Maliciousrealm.jar\"/></xhtml:div>\n               </xhtml:div>\n               <xhtml:p>مشکل اصلی فایل‌های پیکربندی این است که مهاجم می‌تواند از تمام عملکردهای مشابه سرور استفاده کند، اما برای ابزارهای مخرب. با توجه به پیچیدگی پیکربندی سرور، تشخیص این تغییرات برای مدیران ممکن است بسیار سخت باشد.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "فایل های پیکربندی باید توسط مهاجم قابل تغییر باشند"
+            ]
         }
     ],
     "type": "bundle"

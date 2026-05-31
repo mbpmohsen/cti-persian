@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0092#AN0251",
-                    "external_id": "AN0251"
+                    "external_id": "AN0251",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "Image",
-                    "description": "Path of browser or IDE launching subprocesses\u2014may vary depending on installed applications"
+                    "description": "Path of browser or IDE launching subprocesses—may vary depending on installed applications",
+                    "description_fa": "مسیر زیرفرایندهای راه‌اندازی مرورگر یا IDE—ممکن است بسته به برنامه‌های نصب شده متفاوت باشد"
                 },
                 {
                     "field": "ParentImage",
-                    "description": "Legitimate parent-child process relationships for known safe extensions"
+                    "description": "Legitimate parent-child process relationships for known safe extensions",
+                    "description_fa": "روابط فرآیند مشروع والدین و فرزند برای برنامه های افزودنی ایمن شناخته شده"
                 },
                 {
                     "field": "RegistryPath",
-                    "description": "Expected registry keys under HKCU/HKLM for installed extensions"
+                    "description": "Expected registry keys under HKCU/HKLM for installed extensions",
+                    "description_fa": "کلیدهای رجیستری مورد انتظار تحت HKCU/HKLM برای برنامه های افزودنی نصب شده"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tunable interval to correlate extension install with follow-on C2 traffic"
+                    "description": "Tunable interval to correlate extension install with follow-on C2 traffic",
+                    "description_fa": "فاصله زمانی قابل تنظیم برای ارتباط نصب برنامه افزودنی با ترافیک بعدی C2"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0251",
+            "description_fa": "نصب یا اجرای یک مرورگر مخرب یا برنامه افزودنی IDE، به دنبال آن ورودی های غیرعادی رجیستری یا اتصالات شبکه خروجی از برنامه میزبان"
         }
     ]
 }

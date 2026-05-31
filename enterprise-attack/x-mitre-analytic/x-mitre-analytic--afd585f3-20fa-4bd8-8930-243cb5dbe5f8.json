@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0590#AN1625",
-                    "external_id": "AN1625"
+                    "external_id": "AN1625",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "bucket_name",
-                    "description": "Website bucket name varies per org"
+                    "description": "Website bucket name varies per org",
+                    "description_fa": "نام سطل وب سایت در هر سازمان متفاوت است"
                 },
                 {
                     "field": "region",
-                    "description": "Adversary may target multi-region failover setups"
+                    "description": "Adversary may target multi-region failover setups",
+                    "description_fa": "دشمن ممکن است تنظیمات خرابی چند منطقه ای را هدف قرار دهد"
                 },
                 {
                     "field": "IAMRole",
-                    "description": "Attack may leverage stolen cross-account roles or elevated policies"
+                    "description": "Attack may leverage stolen cross-account roles or elevated policies",
+                    "description_fa": "حمله ممکن است نقش های دزدیده شده بین حساب ها یا خط مشی های بالا را تحت تاثیر قرار دهد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1625",
+            "description_fa": "دشمن با دسترسی به کنسول‌های مدیریتی یا APIها و آپلود فایل‌های تغییریافته HTML/JS، محتوا را در وب‌سایت‌های میزبان ابری (مانند سایت‌های دارای پشتیبانی AWS S3، سایت‌های میزبانی شده Azure Blob) تغییر می‌دهد."
         }
     ]
 }

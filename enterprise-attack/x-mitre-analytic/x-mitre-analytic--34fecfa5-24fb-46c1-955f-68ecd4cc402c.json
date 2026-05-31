@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0276#AN0770",
-                    "external_id": "AN0770"
+                    "external_id": "AN0770",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,22 +61,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Window (seconds) between nTDSDSA object creation and subsequent replication traffic from same host (default 300s)."
+                    "description": "Window (seconds) between nTDSDSA object creation and subsequent replication traffic from same host (default 300s).",
+                    "description_fa": "پنجره (ثانیه) بین ایجاد شی nTDSDSA و ترافیک تکراری بعدی از همان میزبان (پیش‌فرض 300s)."
                 },
                 {
                     "field": "AllowedReplicationPartners",
-                    "description": "List of legitimate DCs authorized for replication to reduce false positives."
+                    "description": "List of legitimate DCs authorized for replication to reduce false positives.",
+                    "description_fa": "فهرست DCهای مجاز مجاز برای تکرار برای کاهش مثبت کاذب."
                 },
                 {
                     "field": "SuspiciousSPNs",
-                    "description": "SPNs indicating replication service usage (GC/, GUID E3514235-4B06-11D1-AB04-00C04FC2DCD2)."
+                    "description": "SPNs indicating replication service usage (GC/, GUID E3514235-4B06-11D1-AB04-00C04FC2DCD2).",
+                    "description_fa": "SPN هایی که استفاده از سرویس تکرار را نشان می دهند (GC/, GUID E3514235-4B06-11D1-AB04-00C04FC2DCD2)."
                 },
                 {
                     "field": "NonDCObjectCreationAlert",
-                    "description": "Trigger alerts only when AD object creation is by accounts not in Domain Admins or Enterprise Admins groups."
+                    "description": "Trigger alerts only when AD object creation is by accounts not in Domain Admins or Enterprise Admins groups.",
+                    "description_fa": "هشدارها را فقط زمانی فعال کنید که ایجاد شی AD توسط حساب‌هایی باشد که در گروه‌های Domain Admins یا Enterprise Admins نیستند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0770",
+            "description_fa": "تشخیص ثبت نام سرکش Domain Controller و سوء استفاده از کپی اکتیو دایرکتوری با همبستگی: (1) ایجاد/تغییر nTDSDSA و اشیاء سرور در پارتیشن پیکربندی، (2) استفاده غیرمنتظره از SPN های خدمات Replication Directory (GC/ یا E3514235-4B06-14D00-replication)، (3B06-14D00-replication) تماس‌های RPC (DrsAddEntry، DrsReplicaAdd، GetNCChanges) از میزبان‌های غیرDC و (4) احراز هویت Kerberos توسط ماشین‌های غیرDC با استفاده از SPN‌های مرتبط با DRS. این رویدادها در ترکیب، به ویژه از میزبان های خارج از Domain Controllers OU، ممکن است نشان دهنده فعالیت DCShadow یا سرکش DC باشد."
         }
     ]
 }

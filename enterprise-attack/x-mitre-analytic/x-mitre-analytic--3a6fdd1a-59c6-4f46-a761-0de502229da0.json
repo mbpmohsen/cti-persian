@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0478#AN1317",
-                    "external_id": "AN1317"
+                    "external_id": "AN1317",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1317",
-            "description": "Cause\u2192effect chain in CI/dev desktops: (1) user triggers container run/pull after opening a doc/link/script, (2) newly created image/container uses unexpected external registry or entrypoint, (3) container starts and immediately egresses to suspicious destinations.",
+            "description": "Cause→effect chain in CI/dev desktops: (1) user triggers container run/pull after opening a doc/link/script, (2) newly created image/container uses unexpected external registry or entrypoint, (3) container starts and immediately egresses to suspicious destinations.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedRegistries",
-                    "description": "Approved registries/namespaces."
+                    "description": "Approved registries/namespaces.",
+                    "description_fa": "رجیستری / فضاهای نام تایید شده"
                 },
                 {
                     "field": "AllowedEntrypoints",
-                    "description": "Expected CMD/ENTRYPOINT for known images."
+                    "description": "Expected CMD/ENTRYPOINT for known images.",
+                    "description_fa": "CMD/ENTRYPOINT مورد انتظار برای تصاویر شناخته شده."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate user action \u2192 docker/podman run within 10 minutes."
+                    "description": "Correlate user action → docker/podman run within 10 minutes.",
+                    "description_fa": "همبستگی عملکرد کاربر → اجرای docker/podman در مدت 10 دقیقه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1317",
+            "description_fa": "زنجیره علت → اثر در دسک‌تاپ‌های CI/dev: (1) کاربر پس از باز کردن یک سند/پیوند/اسکریپت، کانتینر اجرا/کشیدن را فعال می‌کند، (2) تصویر/کانتینر جدید ایجاد شده از رجیستری خارجی یا نقطه ورودی غیرمنتظره‌ای استفاده می‌کند، (3) ظرف شروع می‌شود و بلافاصله به مقصدهای مشکوک خارج می‌شود."
         }
     ]
 }

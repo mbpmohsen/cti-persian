@@ -9,25 +9,32 @@
                 {
                     "external_id": "CAPEC-522",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/522.html"
+                    "url": "https://capec.mitre.org/data/definitions/522.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Cristin Goodwin, Joram Borenstein, Guarding against supply chain attacks—Part 2: Hardware risks, 2020--02---03, Microsoft",
                     "external_id": "REF-712",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.microsoft.com/security/blog/2020/02/03/guarding-against-supply-chain-attacks-part-2-hardware-risks/"
+                    "url": "https://www.microsoft.com/security/blog/2020/02/03/guarding-against-supply-chain-attacks-part-2-hardware-risks/",
+                    "description_fa": "کریستین گودوین، جورام بورنشتاین، محافظت در برابر حملات زنجیره تامین - قسمت 2: خطرات سخت افزاری، 2020--02---03، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--556f08be-d926-448c-b2c2-88a817a170a4",
@@ -54,11 +61,21 @@
                 "Physical access to the system after it has left the manufacturer but before it is deployed at the victim location."
             ],
             "x_capec_skills_required": {
-                "High": "Hardware creation and manufacture of replacement components."
+                "High": "Hardware creation and manufacture of replacement components.",
+                "High_fa": "ایجاد سخت افزار و ساخت قطعات جایگزین."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن سخت‌افزار قانونی را در سیستم با سخت‌افزار تقلبی یا دستکاری شده معیوب در کانال توزیع زنجیره تامین جایگزین می‌کند، با هدف ایجاد اختلال مخرب یا اجازه دادن به خطرات اضافی در هنگام استقرار سیستم.",
+            "name_fa": "جایگزینی اجزای سخت افزاری مخرب",
+            "x_capec_example_instances_fa": [
+                "در حین حمل و نقل، حریف می‌تواند سیستمی را که قربانی خریداری کرده است، رهگیری کند و کارت پردازشگر ریاضی را جایگزین کند که دقیقاً مانند کارت اصلی عمل می‌کند، اما دارای قابلیت مخرب پیشرفته است. پس از استقرار، سیستم به صورت عادی عمل می کند، اما به دشمن اجازه می دهد تا از راه دور با سیستم ارتباط برقرار کند و از آن به عنوان مجرای برای مصالحه بیشتر در محیط قربانی استفاده کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3> کاوش</h3><ol><li> <p> <b>تعیین سخت افزار هدف: </b> دشمن ابتدا باید سیستمی را که می خواهد هدف قرار دهد و یک جزء سخت افزاری خاص را شناسایی کند که بتواند آن را با یک مخرب جایگزین کند. جایگزینی.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>به دنبال برگه‌های اطلاعاتی حاوی شماتیک‌های سیستم باشید که می‌تواند به شناسایی سخت‌افزار هدف احتمالی کمک کند.</td></tr><tr><td>یک سیستم را تهیه کرده و به صورت دستی آن را بازرسی کنید، و به دنبال اهداف احتمالی اجزای سخت‌افزاری باشید. شناسه‌های سازنده روی تراشه‌های سخت‌افزار یا شناسه‌های FCC روی تراشه‌های بی‌سیم را جستجو کنید تا عملکرد آنها را مشخص کنید.</td></tr></tbody></table><li> <p> <b>کشف آسیب‌پذیری در زنجیره تامین: </b>دشمن، زنجیره تامین را برای سیستم مورد نظر ترسیم می‌کند. آن‌ها به دنبال فرصت‌هایی برای دسترسی فیزیکی به سیستم پس از خروج از سازنده، اما قبل از استقرار آن برای قربانی می‌گردند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک سیستم را تهیه کنید و مراحلی را که در فرآیند حمل و نقل طی می‌کند مشاهده کنید. تولید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تست جایگزینی یک مؤلفه مخرب: </b>قبل از انجام حمله در طبیعت، یک حریف مطمئن می شود که حمله را روی سیستمی آزمایش می کند تا محصول مورد نظر را تهیه کند. به دست آمده است.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک جزء سخت‌افزاری مخرب طراحی کنید که عملکردی مشابه مولفه مورد نظر داشته باشد، اما دارای عملکردهای اضافی نیز باشد.</td></tr><tr><td>جزئیات مخرب از قبل طراحی‌شده را دریافت کنید که فقط باید در آن قرار داده شوند. سیستم.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>جزئیات جایگزین در زنجیره تامین: </b>با استفاده از آسیب پذیری در زنجیره تامین سیستم کشف شده در مرحله کاوش، جزء مخرب مورد هدف جایگزین جزء مخرب می شود. این منجر به دسترسی ناخواسته دشمن به سیستم ها پس از رسیدن به قربانی می شود و می تواند منجر به انواع حملات بعدی شود.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "دسترسی فیزیکی به سیستم پس از خروج از سازنده اما قبل از استقرار در محل قربانی."
+            ]
         }
     ],
     "spec_version": "2.0",

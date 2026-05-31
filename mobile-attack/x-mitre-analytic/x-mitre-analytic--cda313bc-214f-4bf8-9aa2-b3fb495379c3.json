@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0677#AN1780",
-                    "external_id": "AN1780"
+                    "external_id": "AN1780",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.382Z",
             "name": "Analytic 1780",
-            "description": "Defender correlates an app's opaque media ingress (download/IPC) with high-entropy or anomalous edits to image/audio/video files in app-writable storage (e.g., bursts of bitmap/codec operations, EXIF/IPTC/XMP mutation, suspicious container growth), followed by decoding/extraction behavior (new non-media artifact derived from the edited media) and optional exfiltration/sharing of the stego media. Focus is on: (1) opaque media arrival \u2192 (2) rapid metadata or pixel-domain mutations with atypical size/entropy deltas \u2192 (3a) decoded payload creation or dynamic load from decoded path, and/or (3b) upload/share of the modified media within a tight window.",
+            "description": "Defender correlates an app's opaque media ingress (download/IPC) with high-entropy or anomalous edits to image/audio/video files in app-writable storage (e.g., bursts of bitmap/codec operations, EXIF/IPTC/XMP mutation, suspicious container growth), followed by decoding/extraction behavior (new non-media artifact derived from the edited media) and optional exfiltration/sharing of the stego media. Focus is on: (1) opaque media arrival → (2) rapid metadata or pixel-domain mutations with atypical size/entropy deltas → (3a) decoded payload creation or dynamic load from decoded path, and/or (3b) upload/share of the modified media within a tight window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,37 +53,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time between media download/ingress, edit, and payload use/share (e.g., 10\u2013120s depending on device performance)."
+                    "description": "Max time between media download/ingress, edit, and payload use/share (e.g., 10–120s depending on device performance).",
+                    "description_fa": "حداکثر زمان بین دانلود/ورود، ویرایش، و استفاده/اشتراک‌گذاری محموله رسانه (به عنوان مثال، 10 تا 120 ثانیه بسته به عملکرد دستگاه)."
                 },
                 {
                     "field": "PayloadEntropyThresholdMediaSegment",
-                    "description": "Minimum Shannon entropy for edited media regions or container deltas (e.g., \u2265 7.1) to flag likely embedded payloads."
+                    "description": "Minimum Shannon entropy for edited media regions or container deltas (e.g., ≥ 7.1) to flag likely embedded payloads.",
+                    "description_fa": "حداقل آنتروپی شانون برای مناطق رسانه ویرایش شده یا دلتاهای کانتینری (مثلاً 7.1 ≥) برای پرچم‌گذاری محموله‌های احتمالی تعبیه‌شده."
                 },
                 {
                     "field": "SizeDeltaRatio",
-                    "description": "Minimum growth ratio between pre/post edit media (e.g., \u2265 1.25) to reduce noise from normal compression."
+                    "description": "Minimum growth ratio between pre/post edit media (e.g., ≥ 1.25) to reduce noise from normal compression.",
+                    "description_fa": "حداقل نسبت رشد بین رسانه های قبل/پس از ویرایش (به عنوان مثال ≥ 1.25) برای کاهش نویز ناشی از فشرده سازی معمولی."
                 },
                 {
                     "field": "EditBurstWriteCount",
-                    "description": "Minimum sequential small-write count to indicate chunked embedding or re-encode bursts."
+                    "description": "Minimum sequential small-write count to indicate chunked embedding or re-encode bursts.",
+                    "description_fa": "حداقل تعداد نوشتارهای کوچک متوالی برای نشان دادن جاسازی تکه تکه یا رمزگذاری مجدد انفجارها."
                 },
                 {
                     "field": "SuspiciousMimeTransitions",
-                    "description": "List of atypical MIME/container transitions (e.g., PNG\u2192JPEG with EXIF injection, WAV\u2192M4A) for local tuning."
+                    "description": "List of atypical MIME/container transitions (e.g., PNG→JPEG with EXIF injection, WAV→M4A) for local tuning.",
+                    "description_fa": "فهرستی از انتقال‌های غیر معمول MIME/کانتینر (مانند PNG→JPEG با تزریق EXIF، WAV→M4A) برای تنظیم محلی."
                 },
                 {
                     "field": "KnownGoodMediaAppsAllowlist",
-                    "description": "Trusted editors/camera apps allowed to perform frequent edits without alerting."
+                    "description": "Trusted editors/camera apps allowed to perform frequent edits without alerting.",
+                    "description_fa": "ویراستاران/برنامه‌های دوربین مورد اعتماد مجاز به انجام ویرایش‌های مکرر بدون هشدار هستند."
                 },
                 {
                     "field": "NetworkCDNAllowlist",
-                    "description": "CDNs/domains expected to host user media for the enterprise; suppresses FP for legitimate apps."
+                    "description": "CDNs/domains expected to host user media for the enterprise; suppresses FP for legitimate apps.",
+                    "description_fa": "CDN ها/دامنه هایی که انتظار می رود میزبان رسانه های کاربر برای شرکت باشند. FP را برای برنامه های قانونی سرکوب می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground, Work Profile, developer mode flags used to scope analytics."
+                    "description": "Foreground, Work Profile, developer mode flags used to scope analytics.",
+                    "description_fa": "پیش زمینه، نمایه کاری، پرچم‌های حالت توسعه‌دهنده که برای تجزیه و تحلیل دامنه استفاده می‌شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1780",
+            "description_fa": "Defender ورودی رسانه غیرشفاف برنامه (دانلود/IPC) را با آنتروپی بالا یا ویرایش‌های غیرعادی فایل‌های تصویر/صوت/ویدئو در ذخیره‌سازی قابل نوشتن برنامه (به عنوان مثال، انفجارهای عملیات بیت مپ/کدک، جهش EXIF/IPTC/XMP، رفتار مشکوک (رشد کانتینر غیرفعال) به دنبال آن) مرتبط می‌کند. از رسانه ویرایش شده) و استخراج/اشتراک اختیاری رسانه استگو. تمرکز بر روی موارد زیر است: (1) ورود رسانه غیر شفاف ← (2) جهش‌های سریع ابرداده یا دامنه پیکسل با دلتاهای اندازه/آنتروپی غیر معمول ← (3a) ایجاد بار رمزگشایی شده یا بار پویا از مسیر رمزگشایی شده، و/یا (3b) آپلود/اشتراک‌گذاری رسانه اصلاح‌شده در یک پنجره تنگ."
         }
     ]
 }

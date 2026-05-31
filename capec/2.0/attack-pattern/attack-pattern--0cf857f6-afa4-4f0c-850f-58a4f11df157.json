@@ -9,36 +9,46 @@
                 {
                     "external_id": "CAPEC-170",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/170.html"
+                    "url": "https://capec.mitre.org/data/definitions/170.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-497",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/497.html"
+                    "url": "http://cwe.mitre.org/data/definitions/497.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Saumil Shah, An Introduction to HTTP fingerprinting",
                     "external_id": "REF-36",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.net-square.com/httprint_paper.html"
+                    "url": "http://www.net-square.com/httprint_paper.html",
+                    "description_fa": "سائومیل شاه، مقدمه ای بر انگشت نگاری HTTP",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide (v4 [DRAFT]), The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-37",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework"
+                    "url": "https://www.owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework",
+                    "description_fa": "راهنمای تست امنیت وب OWASP (v4 [DRAFT])، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "HTTP 1.1 Specification (RFC 2616), IETF RFC",
                     "external_id": "REF-38",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.ietf.org/rfc/rfc2616.txt"
+                    "url": "http://www.ietf.org/rfc/rfc2616.txt",
+                    "description_fa": "مشخصات HTTP 1.1 (RFC 2616)، IETF RFC",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "WASC Threat Classification 2.0, 2010, The Web Application Security Consortium (WASC)",
                     "external_id": "REF-39",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://projects.webappsec.org/Fingerprinting"
+                    "url": "http://projects.webappsec.org/Fingerprinting",
+                    "description_fa": "WASC Threat Classification 2.0، 2010، کنسرسیوم امنیت برنامه های وب (WASC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--0cf857f6-afa4-4f0c-850f-58a4f11df157",
@@ -55,6 +65,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Other (Information Leakage)"
+                ],
+                "Confidentiality_fa": [
+                    "سایر موارد (نشت اطلاعات)"
                 ]
             },
             "x_capec_domains": [
@@ -72,11 +85,24 @@
                 "While simple fingerprinting can be accomplished with only a web browser, for more thorough fingerprinting an attacker requires a variety of tools to collect information about the target. These tools might include protocol analyzers, web-site crawlers, and fuzzing tools. Footprinting a service adequately may also take a few days if the attacker wishes the footprinting attempt to go undetected."
             ],
             "x_capec_skills_required": {
-                "Low": "Attacker knows how to send HTTP request, SQL query to a web application."
+                "Low": "Attacker knows how to send HTTP request, SQL query to a web application.",
+                "Low_fa": "مهاجم می داند که چگونه درخواست HTTP، پرس و جوی SQL را به یک برنامه وب ارسال کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم یک سری از کاوشگرها را به یک برنامه وب می فرستد تا رفتارهای وابسته به نسخه و نوع را که به شناسایی هدف کمک می کند، ایجاد کند. مهاجم می‌تواند اطلاعاتی مانند نسخه‌های نرم‌افزار، صفحات خطا، و سرصفحه‌های پاسخ، تغییرات در پیاده‌سازی پروتکل HTTP، ساختارهای دایرکتوری و سایر اطلاعات مشابه در مورد سرویس مورد نظر را بیاموزد. سپس این اطلاعات می تواند توسط مهاجم برای تدوین یک برنامه حمله هدفمند استفاده شود. اگرچه هدف از انگشت نگاری برنامه های وب آسیب رسان نیست (اگرچه برخی از فعالیت ها، مانند اسکن های شبکه، گاهی اوقات می توانند به طور ناخواسته باعث اختلال در برنامه های آسیب پذیر شوند)، اغلب ممکن است راه را برای حملات مخرب تر هموار کند.",
+            "name_fa": "اثر انگشت اپلیکیشن وب",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک مهاجم درخواست‌های نادرست یا درخواست‌های صفحاتی که وجود ندارند را به سرور ارسال می‌کند. پاسخ های HTTP زیر را در نظر بگیرید.</xhtml:p>\n               <xhtml:b>پاسخ از Apache 1.3.23</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">$ nc apache.server.com80 GET / HTTP/3.0\n                  HTTP/1.1 400 Bad RequestDate: Sun, 15 Jun 2003 17:12: 37 GMTServer: Apache/1.3.23Connection: closeTransfer: chunkedContent-Type: text/HTML; charset=iso-8859-1</xhtml:div>\n               <xhtml:b>پاسخ از IIS 5.0</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">$ nc iis.server.com 80GET / HTTP/3.0\n                  HTTP/1.1 200 OKServer: Microsoft-IIS/5.0Content-Location: http://iis.example.com/Default.htmDate: جمعه، 01 ژانویه 1999 20:14: 02 GMTContent-Type: text/HTMLAccept-Ranges: بایت های اصلاح شده: 19 ژانویه 1999 آخرین 20:14: 02 GMTET برچسب: W/e0d362a4c335be1: ae1Content-Length: 133</xhtml:div>\n               <xhtml:p>[REF-37]</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>درخواست انگشت نگاری: </b>از ابزارهای خودکار استفاده کنید یا دستورات اختصاصی وب سرور را به وب سرور ارسال کنید و منتظر پاسخ سرور باشید.</p></li><table><tbody><tr><t><d>تکنیک‌ها یا سرورهای خودکار ارسال کنید. دستورات خاص به وب سرور و سپس دریافت پاسخ سرور.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>افزایش دقت انگشت نگاری سرور از سرورهای وب: </b> مهاجم معمولاً نیاز به ارسال چندین دستور مختلف وب سرور برای شناسایی دقیق دارد. مهاجم همچنین می تواند از ابزارهای خودکار برای ارسال درخواست به سرور استفاده کند. پاسخ‌های سرور ممکن است از نظر رفتار پروتکل متفاوت باشد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>به ترتیب چندین سرصفحه پاسخ HTTP توجه کنید. ترتیب هدر هر سرور ممکن است هویت منحصر به فردی داشته باشد.</td></tr><tr><td>درخواست‌های بد یا درخواست‌های صفحات غیرموجود را به سرور ارسال کنید.</td></tr><tr><td>مهاجم از ابزارهای خودکار موجود استفاده می‌کند تا نوع و نسخه وب سرور در حال استفاده را تشخیص دهد.</td></tr></tbody> <b></tr></tbody> نرم افزار: </b>پس از شناسایی نرم افزار پلت فرم وب سرور، مهاجم شروع به شناسایی فناوری های کاربردی وب مانند ASP، .NET، PHP و جاوا در سرور می کند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>پسوند نام فایل را در URL مورد بررسی قرار دهید، برای مثال با رابط PHP . سرور.</td></tr><tr><td>سرصفحه‌های پاسخ HTTP را بررسی کنید. ممکن است اطلاعات مربوط به امضاهای نرم‌افزار درز کند</td></tr><tr><td>کوکی‌هایی را که ممکن است حاوی اطلاعات نرم‌افزار سرور باشند را بررسی کنید.</td></tr><tr><td>صفحه‌های خطا را بررسی کنید.</td></tr></tbody></table><li> <p> <b>تشخیص پایگاه داده Backend Determ می‌تواند با موفقیت به نوع پایگاه داده exe حمله کند: </b> تزریق SQL. برخی از APIهای پایگاه داده مانند ODBC در هنگام گزارش خطا، نوع پایگاه داده را به عنوان بخشی از اطلاعات درایور نشان می دهند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از ابزارهایی برای ارسال پرس و جوی SQL ساختگی به سرور و بررسی صفحات خطا استفاده کنید.",
+            "x_capec_prerequisites_fa": [
+                "هر برنامه وب را می توان انگشت نگاری کرد. با این حال، برخی از گزینه‌های پیکربندی می‌توانند اطلاعات مفیدی را که مهاجم ممکن است در طول حمله اثر انگشت جمع‌آوری کند، محدود کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "در حالی که انگشت نگاری ساده تنها با یک مرورگر وب قابل انجام است، برای انگشت نگاری دقیق تر، مهاجم به ابزارهای مختلفی برای جمع آوری اطلاعات در مورد هدف نیاز دارد. این ابزارها ممکن است شامل تحلیلگرهای پروتکل، خزنده های وب سایت و ابزارهای فازی باشند. اگر مهاجم بخواهد تلاش برای ردیابی به اندازه کافی شناسایی نشود، ممکن است چند روز طول بکشد."
+            ]
         }
     ],
     "spec_version": "2.0",

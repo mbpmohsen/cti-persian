@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0568#AN1569",
-                    "external_id": "AN1569"
+                    "external_id": "AN1569",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedAppleScripts",
-                    "description": "Whitelist of AppleScripts expected in the environment, to minimize false positives."
+                    "description": "Whitelist of AppleScripts expected in the environment, to minimize false positives.",
+                    "description_fa": "لیست سفید AppleScript های مورد انتظار در محیط، برای به حداقل رساندن موارد مثبت کاذب."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Timeframe between HID injection and script execution considered suspicious."
+                    "description": "Timeframe between HID injection and script execution considered suspicious.",
+                    "description_fa": "بازه زمانی بین تزریق HID و اجرای اسکریپت مشکوک در نظر گرفته شد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1569",
+            "description_fa": "شمارش غیرعادی دستگاه HID را از طریق I/O Registry (ioreg -p IOUSB) و تزریق ضربه کلید با هدف قرار دادن معادل‌های AppleScript، osascript یا PowerShell تشخیص می‌دهد. Defender اتصالات دستگاه USB جدید را با اجرای سریع اسکریپت مرتبط می کند."
         }
     ]
 }

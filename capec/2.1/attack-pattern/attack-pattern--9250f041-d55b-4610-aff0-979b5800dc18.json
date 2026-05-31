@@ -9,40 +9,50 @@
                 {
                     "external_id": "CAPEC-475",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/475.html"
+                    "url": "https://capec.mitre.org/data/definitions/475.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-347",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/347.html"
+                    "url": "http://cwe.mitre.org/data/definitions/347.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-327",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/327.html"
+                    "url": "http://cwe.mitre.org/data/definitions/327.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-295",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/295.html"
+                    "url": "http://cwe.mitre.org/data/definitions/295.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Kenn White, Microsoft's Chain of Fools, 2020--01---15, First Principles",
                     "external_id": "REF-562",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://blog.lessonslearned.org/chain-of-fools/"
+                    "url": "https://blog.lessonslearned.org/chain-of-fools/",
+                    "description_fa": "کن وایت، زنجیره احمق های مایکروسافت، 2020--01---15، اولین اصول",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Patch Critical Cryptographic Vulnerability in Microsoft Windows Clients and Servers, 2020--01---14, National Security Agency (NSA)",
                     "external_id": "REF-563",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://media.defense.gov/2020/Jan/14/2002234275/-1/-1/0/CSA-WINDOWS-10-CRYPT-LIB-20190114.PDF"
+                    "url": "https://media.defense.gov/2020/Jan/14/2002234275/-1/-1/0/CSA-WINDOWS-10-CRYPT-LIB-20190114.PDF",
+                    "description_fa": "وصله آسیب‌پذیری رمزنگاری بحرانی در مشتریان و سرورهای Microsoft Windows، 2020-01---14، آژانس امنیت ملی (NSA)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Thomas Ptacek, Thomas Pornin, Analysis of REF-563, Hacker News",
                     "external_id": "REF-564",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://news.ycombinator.com/item?id=22048619"
+                    "url": "https://news.ycombinator.com/item?id=22048619",
+                    "description_fa": "توماس پتاچک، توماس پورنین، تحلیل REF-563، اخبار هکر",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--9250f041-d55b-4610-aff0-979b5800dc18",
@@ -72,11 +82,21 @@
                 "Recipient is using a weak cryptographic signature verification algorithm or a weak implementation of a cryptographic signature verification algorithm, or the configuration of the recipient's application accepts the use of keys generated using cryptographically weak signature verification algorithms."
             ],
             "x_capec_skills_required": {
-                "High": "Reverse engineering and cryptanalysis of signature verification algorithm implementation"
+                "High": "Reverse engineering and cryptanalysis of signature verification algorithm implementation",
+                "High_fa": "مهندسی معکوس و تحلیل رمز اجرای الگوریتم تأیید امضا"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از ضعف رمزنگاری در اجرای الگوریتم تأیید امضا برای ایجاد یک امضای معتبر بدون دانستن کلید استفاده می‌کند.",
+            "name_fa": "جعل امضا با اعتبارسنجی نادرست",
+            "x_capec_example_instances_fa": [
+                "نشان داده شد که Windows CryptoAPI (Crypt32.dll) به دلیل عدم تأیید صحیح گواهینامه های رمزنگاری منحنی بیضی (ECC) در برابر جعل امضا آسیب پذیر است. اگر اعتبار سنجی امضای CryptoAPI اجازه تعیین یک نقطه پایه غیراستاندارد (G) را بدهد: \"یک حریف می تواند یک گواهی ECDSA سفارشی با امضای منحنی بیضوی (ECC) ایجاد کند که به نظر می رسد با منحنی استاندارد شناخته شده مطابقت دارد، مانند P-256 که شامل یک کلید عمومی برای یک مرجع گواهی معتبر شناخته شده موجود است، اما در واقع توسط آن مجوز عمومی تایید نشده است، و در واقع منحنی های دیگر توسط آن گواهی نامه تایید نشده است. ثابت پارامتر ژنراتور نقطه پایه (G) که در واقع منحنی را ایجاد می کند\" [REF-562]. بهره‌برداری از این آسیب‌پذیری به دشمن اجازه می‌دهد تا از یک گواهی جعلی استفاده کند تا اتصالات شبکه قابل اعتماد را فریب دهد و کد مخرب را تحویل/اجرا کند، در حالی که به‌عنوان موجودیت قابل اعتماد ظاهر می‌شود [REF-563]. این در نهایت قربانی را فریب می دهد تا باور کند وب سایت مخرب یا فایل اجرایی قانونی است و از یک منبع به درستی تأیید شده سرچشمه می گیرد. همچنین ببینید: CVE-2020-0601"
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p>الگوریتم‌های تأیید امضا معمولاً برای تعیین اینکه آیا یک گواهی یا قطعه کد (مثلاً قابل اجرا، باینری و غیره) دارای امضای معتبر است و می‌توان به آن اعتماد کرد، استفاده می‌شود.</xhtml:p>\n            <xhtml:p>اگر الگوریتم اهرمی وجود یک امضای معتبر را تأیید کند، پایه‌ای از اعتماد ایجاد می‌کند که در هنگام تعامل با یک وب‌سایت یا برنامه، بیشتر به کاربر نهایی منتقل می‌شود. با این حال، اگر الگوریتم تأیید امضا به‌طور نامناسبی امضا را تأیید کند، یا با عدم تأیید امضا یا عدم تأیید کامل امضا، می‌تواند منجر به ایجاد امضای جعلی توسط دشمن شود و به عنوان یک موجودیت قانونی طبقه‌بندی شود. بهره‌برداری موفقیت‌آمیز از چنین ضعفی می‌تواند به دشمن این امکان را بدهد که کاربران را به سایت‌های مخرب تغییر مسیر دهد، فایل‌ها را بدزدد، میکروفون‌ها را فعال کند، کلیدها و رمزهای عبور را ضبط کند، دیسک‌ها را پاک کند، بدافزارها را نصب کند و موارد دیگر.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "گیرنده از الگوریتم تأیید امضای رمزنگاری ضعیف یا اجرای ضعیف الگوریتم تأیید امضای رمزنگاری استفاده می‌کند، یا پیکربندی برنامه گیرنده استفاده از کلیدهایی را می‌پذیرد که با استفاده از الگوریتم‌های تأیید امضای رمزنگاری ضعیف تولید شده‌اند."
+            ]
         }
     ],
     "type": "bundle"

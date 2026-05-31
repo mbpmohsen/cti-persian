@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0320#AN0905",
-                    "external_id": "AN0905"
+                    "external_id": "AN0905",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ShellCommandWatchlist",
-                    "description": "Matches terminal commands like `lsof -i`, `netstat`, or scripts issued via Automator or AppleScript."
+                    "description": "Matches terminal commands like `lsof -i`, `netstat`, or scripts issued via Automator or AppleScript.",
+                    "description_fa": "با دستورات ترمینال مانند «lsof -i»، «netstat» یا اسکریپت‌های صادر شده از طریق Automator یا AppleScript مطابقت دارد."
                 },
                 {
                     "field": "TerminalBinaryDenylist",
-                    "description": "Tracks execution of networking discovery tools by apps outside Terminal.app or iTerm."
+                    "description": "Tracks execution of networking discovery tools by apps outside Terminal.app or iTerm.",
+                    "description_fa": "اجرای ابزارهای کشف شبکه توسط برنامه های خارج از Terminal.app یا iTerm را ردیابی می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0905",
+            "description_fa": "شمارش اتصالات فعال مبتنی بر پوسته را با استفاده از «netstat»، «lsof -i» یا کشف سیستم مبتنی بر AppleScript شناسایی می‌کند."
         }
     ]
 }

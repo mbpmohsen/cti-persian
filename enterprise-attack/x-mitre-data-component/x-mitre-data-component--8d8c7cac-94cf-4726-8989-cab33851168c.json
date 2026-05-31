@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0105",
-                    "external_id": "DC0105"
+                    "external_id": "DC0105",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -34,7 +35,9 @@
                     "name": "m365:sharepoint",
                     "channel": "Enumerate ACLs/role bindings"
                 }
-            ]
+            ],
+            "name_fa": "فراداده گروهی",
+            "description_fa": "فراداده گروه شامل ویژگی‌هایی مانند نام، مجوزها، هدف، و حساب‌ها یا نقش‌های کاربری مرتبط است که ممکن است دشمنان از آنها برای افزایش امتیاز سوء استفاده کنند. مثال ها:\n\n- Active Directory: `Get-ADGroup -Identity \"Domain Admins\" -Properties Members, Description\"\n- Azure AD: `Get-AzureADGroup -ObjectId <GroupId>`\n- Google Workspace: «دریافت https://admin.googleapis.com/admin/directory/v1/groups/<groupKey>`\n- AWS IAM: `aws iam list-group-policies --group-name <group_name>`\n- Office 365: «دریافت https://graph.microsoft.com/v1.0/groups/<id>`\n\n*اقدامات جمع آوری داده ها:*\n\n- ثبت ابر:\n    - AWS CloudTrail برای فعالیت های مرتبط با گروه IAM.\n    - لاگ ورود به سیستم/حساب Azure AD برای تغییرات ابرداده.\n    - گزارش‌های فعالیت مدیریت Google برای تماس‌های API.\n- ثبت دایرکتوری: دسترسی به ابرداده گزارش (به عنوان مثال، Windows Event ID 4662).\n- مانیتورینگ API: تماس‌های API را ثبت کنید تا متادیتای گروه را تغییر دهید (مانند Microsoft Graph API).\n- یکپارچه سازی SIEM: سیاهههای مربوط به ابرداده های گروه را برای تجزیه و تحلیل متمرکز کنید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0517#AN1433",
-                    "external_id": "AN1433"
+                    "external_id": "AN1433",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcesses",
-                    "description": "List of monitored .NET host processes (e.g., powershell.exe, w3wp.exe, svchost.exe)."
+                    "description": "List of monitored .NET host processes (e.g., powershell.exe, w3wp.exe, svchost.exe).",
+                    "description_fa": "فهرستی از فرآیندهای میزبان دات نت تحت نظارت (مانند powershell.exe، w3wp.exe، svchost.exe)."
                 },
                 {
                     "field": "AssemblyWhitelist",
-                    "description": "Known benign .NET assemblies expected to load via AppDomainManager."
+                    "description": "Known benign .NET assemblies expected to load via AppDomainManager.",
+                    "description_fa": "انتظار می رود مجموعه های خوش خیم دات نت شناخته شده از طریق AppDomainManager بارگیری شوند."
                 },
                 {
                     "field": "ConfigFilePaths",
-                    "description": "Directory paths where configuration tampering should be monitored (application directories, system32, program files)."
+                    "description": "Directory paths where configuration tampering should be monitored (application directories, system32, program files).",
+                    "description_fa": "مسیرهای دایرکتوری که در آن دستکاری پیکربندی باید نظارت شود (دایرکتوری های برنامه، system32، فایل های برنامه)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period between file modification of config/environment settings and subsequent anomalous module load."
+                    "description": "Correlation period between file modification of config/environment settings and subsequent anomalous module load.",
+                    "description_fa": "دوره همبستگی بین اصلاح فایل تنظیمات پیکربندی/محیط و بارگذاری غیرعادی ماژول بعدی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1433",
+            "description_fa": "تشخیص روی دستکاری غیرمجاز رفتار .NET AppDomainManager تمرکز دارد. مدافعان ممکن است ایجاد مشکوک AppDomain های جدید را در فرآیندهای قابل اعتماد، بارگیری غیرعادی مجموعه ها از طریق فایل های پیکربندی غیر استاندارد، یا تغییرات متغیر رجیستری/محیط که AppDomainManager را به مجموعه های مخرب هدایت می کند، مشاهده کنند. رویدادهای مرتبط شامل دستکاری فایل پیکربندی، ایجاد فرآیند جدید فرآیندهای میزبان دات نت (به عنوان مثال، w3wp.exe، powershell.exe) با پارامترهای زمان اجرا اصلاح شده، و بارهای ماژول از DLL های دات نت غیر معمول یا بدون علامت است."
         }
     ]
 }

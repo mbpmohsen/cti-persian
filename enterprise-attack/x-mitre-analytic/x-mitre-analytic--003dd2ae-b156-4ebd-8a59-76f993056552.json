@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0317#AN0887",
-                    "external_id": "AN0887"
+                    "external_id": "AN0887",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceList",
-                    "description": "Adjust monitored security service names depending on host configuration."
+                    "description": "Adjust monitored security service names depending on host configuration.",
+                    "description_fa": "نام سرویس های امنیتی نظارت شده را بسته به پیکربندی میزبان تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate multiple kill/stop events in short succession."
+                    "description": "Correlate multiple kill/stop events in short succession.",
+                    "description_fa": "چندین رویداد کشتن/توقف را به صورت متوالی به هم مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0887",
+            "description_fa": "اجرای دستوراتی که فرآیندهای مرتبط با لاگ یا دیمون های امنیتی را متوقف یا از بین می برند (auditd، syslog، falco). تشخیص تغییرات در iptables یا غیرفعال کردن SELinux/AppArmor enforcement. زمینه sudo/root را با توقف ناگهانی سرویس مرتبط کنید."
         }
     ]
 }

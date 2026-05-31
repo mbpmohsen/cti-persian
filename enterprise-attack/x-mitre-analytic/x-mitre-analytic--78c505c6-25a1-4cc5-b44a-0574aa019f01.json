@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0082#AN0229",
-                    "external_id": "AN0229"
+                    "external_id": "AN0229",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilePathPattern",
-                    "description": "Location of web content or system UI config files that may vary across deployments (e.g., %SystemRoot%\\Web, %APPDATA%\\wallpaper.jpg)"
+                    "description": "Location of web content or system UI config files that may vary across deployments (e.g., %SystemRoot%\\Web, %APPDATA%\\wallpaper.jpg)",
+                    "description_fa": "مکان محتوای وب یا فایل‌های پیکربندی رابط کاربری سیستم که ممکن است در بین استقرارها متفاوت باشد (به عنوان مثال، %SystemRoot%\\Web، %APPDATA%\\wallpaper.jpg)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Allowed hours for file/content modification events; defacement likely occurs during off-hours"
+                    "description": "Allowed hours for file/content modification events; defacement likely occurs during off-hours",
+                    "description_fa": "ساعات مجاز برای رویدادهای اصلاح فایل/محتوا؛ تغییر چهره احتمالاً در ساعات غیرفعال رخ می دهد"
                 },
                 {
                     "field": "UserContext",
-                    "description": "System or domain accounts used to perform the modifications may be anomalous"
+                    "description": "System or domain accounts used to perform the modifications may be anomalous",
+                    "description_fa": "حساب‌های سیستم یا دامنه مورد استفاده برای انجام تغییرات ممکن است غیرعادی باشند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0229",
+            "description_fa": "دشمن با ایجاد یا تغییر فایل‌های محتوا با استفاده از اسکریپت‌ها یا دسترسی غیرمجاز، پیام‌های رابط کاربری داخلی (مانند بنرهای ورود، تصاویر پس‌زمینه دسکتاپ) یا صفحات وب اینترانت میزبانی شده را تغییر می‌دهد. غالباً با افزایش امتیاز یا استقرار پوسته وب پیش می‌آید."
         }
     ]
 }

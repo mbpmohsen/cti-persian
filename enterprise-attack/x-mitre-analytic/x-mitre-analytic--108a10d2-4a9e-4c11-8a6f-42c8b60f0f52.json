@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0036#AN0103",
-                    "external_id": "AN0103"
+                    "external_id": "AN0103",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ActorUserPrincipalName",
-                    "description": "Define expected admin users to exclude known enrollment behavior"
+                    "description": "Define expected admin users to exclude known enrollment behavior",
+                    "description_fa": "کاربران مورد انتظار سرپرست را تعریف کنید تا رفتار ثبت نام شناخته شده را حذف کنند"
                 },
                 {
                     "field": "IP Address",
-                    "description": "Scope internal vs. external device enrollment sources"
+                    "description": "Scope internal vs. external device enrollment sources",
+                    "description_fa": "محدوده منابع ثبت نام دستگاه داخلی در مقابل خارجی"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust for expected hours of legitimate self-enrollment"
+                    "description": "Adjust for expected hours of legitimate self-enrollment",
+                    "description_fa": "برای ساعات مورد انتظار ثبت نام قانونی خود تنظیم کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0103",
+            "description_fa": "Adversary دستگاه‌های جدید را در حساب‌های کاربری در معرض خطر ثبت می‌کند تا از طریق درگاه‌های ثبت‌نام خود Azure Entra ID، Okta یا Duo خط‌مشی‌های MFA یا دسترسی مشروط را دور بزند."
         }
     ]
 }

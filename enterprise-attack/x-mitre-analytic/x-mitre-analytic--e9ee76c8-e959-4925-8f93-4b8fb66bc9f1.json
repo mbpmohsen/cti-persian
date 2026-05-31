@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0014#AN0041",
-                    "external_id": "AN0041"
+                    "external_id": "AN0041",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StagingDirectoryList",
-                    "description": "e.g., /tmp/, /var/tmp/, /mnt/"
+                    "description": "e.g., /tmp/, /var/tmp/, /mnt/",
+                    "description_fa": "به عنوان مثال، /tmp/، /var/tmp/، /mnt/"
                 },
                 {
                     "field": "ArchivingCommandPatterns",
-                    "description": "grep for 'tar', 'zip', 'gzip', '7z'"
+                    "description": "grep for 'tar', 'zip', 'gzip', '7z'",
+                    "description_fa": "grep برای 'tar'، 'zip'، 'gzip'، '7z'"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Interactive or elevated shells running archiving commands"
+                    "description": "Interactive or elevated shells running archiving commands",
+                    "description_fa": "پوسته های تعاملی یا مرتفع دستورات بایگانی را اجرا می کنند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0041",
+            "description_fa": "اسکریپت یا فعالیت کاربر را که فایل‌ها را کپی می‌کند در دایرکتوری temp یا mnt/به دنبال ابزارهای بایگانی/فشرده‌سازی شناسایی می‌کند."
         }
     ]
 }

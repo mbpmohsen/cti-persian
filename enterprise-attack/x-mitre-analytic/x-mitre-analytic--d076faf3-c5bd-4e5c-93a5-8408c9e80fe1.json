@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0559#AN1541",
-                    "external_id": "AN1541"
+                    "external_id": "AN1541",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccountRole",
-                    "description": "Administrative account context validation."
+                    "description": "Administrative account context validation.",
+                    "description_fa": "اعتبار سنجی زمینه حساب اداری"
                 },
                 {
                     "field": "MaintenanceWindow",
-                    "description": "Expected times for reboot/shutdown behavior."
+                    "description": "Expected times for reboot/shutdown behavior.",
+                    "description_fa": "زمان های مورد انتظار برای رفتار راه اندازی مجدد/خاموش کردن."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1541",
+            "description_fa": "دستوراتی مانند 'sxcli system shutdown' یا 'vim-cmd vmsvc/power.shutdown' که خارج از پنجره های تعمیر و نگهداری یا از طریق کاربران غیر معمول اجرا می شوند را شناسایی کنید. گزارش‌های راه‌اندازی مجدد در hostd.log و لاگ‌های پوسته باید با هم مرتبط باشند."
         }
     ]
 }

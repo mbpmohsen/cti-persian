@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0668#AN1764",
-                    "external_id": "AN1764"
+                    "external_id": "AN1764",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -72,41 +73,52 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking capture-path invocation, foreground-app context, artifact creation, and optional upload."
+                    "description": "Correlation window linking capture-path invocation, foreground-app context, artifact creation, and optional upload.",
+                    "description_fa": "پنجره همبستگی که فراخوانی مسیر ضبط، زمینه برنامه پیش‌زمینه، ایجاد مصنوع و آپلود اختیاری را به هم پیوند می‌دهد."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved screen-recording, accessibility, remote-support, or QA/testing apps vary by organization and device group."
+                    "description": "Approved screen-recording, accessibility, remote-support, or QA/testing apps vary by organization and device group.",
+                    "description_fa": "برنامه‌های تأیید شده ضبط صفحه، قابلیت دسترسی، پشتیبانی از راه دور یا QA/تست بر اساس سازمان و گروه دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedAccessibilityApps",
-                    "description": "Approved accessibility-enabled apps vary by assistive and enterprise workflow."
+                    "description": "Approved accessibility-enabled apps vary by assistive and enterprise workflow.",
+                    "description_fa": "برنامه‌های تأییدشده با قابلیت دسترسی بر اساس گردش کار کمکی و سازمانی متفاوت است."
                 },
                 {
                     "field": "AllowedForegroundServiceCaptureApps",
-                    "description": "Some approved apps may legitimately use foreground services during screen recording."
+                    "description": "Some approved apps may legitimately use foreground services during screen recording.",
+                    "description_fa": "برخی از برنامه های تایید شده ممکن است به طور قانونی از خدمات پیش زمینه در طول ضبط صفحه استفاده کنند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close capture initiation must be to user interaction to be considered expected."
+                    "description": "Defines how close capture initiation must be to user interaction to be considered expected.",
+                    "description_fa": "مشخص می‌کند که شروع ضبط چقدر باید به تعامل کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "SensitiveForegroundAppCategories",
-                    "description": "Categories such as banking, identity, messaging, or enterprise apps may warrant higher sensitivity during capture."
+                    "description": "Categories such as banking, identity, messaging, or enterprise apps may warrant higher sensitivity during capture.",
+                    "description_fa": "مقوله‌هایی مانند برنامه‌های بانکی، هویت، پیام‌رسانی یا سازمانی ممکن است حساسیت بالاتری را در حین ضبط تضمین کنند."
                 },
                 {
                     "field": "ArtifactWriteThreshold",
-                    "description": "Minimum screenshot/video/cache write volume indicating probable screen-capture output."
+                    "description": "Minimum screenshot/video/cache write volume indicating probable screen-capture output.",
+                    "description_fa": "حداقل حجم نوشتن اسکرین شات/فیلم/حافظه کش که خروجی احتمالی تصویربرداری از صفحه را نشان می دهد."
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Threshold for suspicious outbound transfer after capture."
+                    "description": "Threshold for suspicious outbound transfer after capture.",
+                    "description_fa": "آستانه انتقال مشکوک به بیرون پس از گرفتن."
                 },
                 {
                     "field": "ConsentInteractionGracePeriod",
-                    "description": "Grace period allowed for expected user consent or explicit initiation before capture is treated as suspicious."
+                    "description": "Grace period allowed for expected user consent or explicit initiation before capture is treated as suspicious.",
+                    "description_fa": "مهلت مجاز برای رضایت مورد انتظار کاربر یا شروع صریح قبل از ضبط مشکوک تلقی می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1764",
+            "description_fa": "مدافع رفتار با قابلیت ضبط صفحه اندروید را از هویت برنامه با زمینه زمان اجرا مرتبط می کند که نشان می دهد محتوای پیش زمینه از یک برنامه دیگر خارج از جریان های کاری مورد انتظار کاربر محور گرفته می شود. قوی‌ترین شواهد اندرویدی شروع تصویربرداری مانند MediaProjection، مشاهده محتوای رابط کاربری پیش‌زمینه با کمک دسترسی، یا رفتار ممتاز صفحه نمایش یا ضبط صفحه، و به دنبال آن ایجاد عکس از صفحه یا مصنوع ویدیو، رشد بافر یا انتقال به بیرون است. تشخیص زمانی تقویت می‌شود که برنامه عکس‌برداری در پس‌زمینه باشد، به‌عنوان یک سرویس پیش‌زمینه بدون هدف ضبط واضح کاربر محور عمل کند، در حالی که برنامه حساس دیگری در پیش‌زمینه است، عکس‌برداری می‌کند، با قابلیت دسترسی یا دسترسی بالا که با نقش آن سازگار نیست اجرا می‌شود، یا تصویربرداری را بدون تعامل اخیر کاربر انجام می‌دهد."
         }
     ]
 }

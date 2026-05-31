@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0345#AN0976",
-                    "external_id": "AN0976"
+                    "external_id": "AN0976",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0976",
-            "description": "Monitor audit logs for setuid/setgid bit changes, executions where UID \u2260 EUID (indicative of sudo or privilege escalation), and high-integrity binaries launched by unprivileged users.",
+            "description": "Monitor audit logs for setuid/setgid bit changes, executions where UID ≠ EUID (indicative of sudo or privilege escalation), and high-integrity binaries launched by unprivileged users.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -39,7 +40,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--ee575f4a-2d4f-48f6-b18b-89067760adc1",
                     "name": "auditd:SYSCALL",
-                    "channel": "execve with UID \u2260 EUID"
+                    "channel": "execve with UID ≠ EUID"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--9bde2f9d-a695-4344-bfac-f2dce13d121e",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedDirectories",
-                    "description": "Paths where unauthorized setuid binaries may be dropped"
+                    "description": "Paths where unauthorized setuid binaries may be dropped",
+                    "description_fa": "مسیرهایی که ممکن است باینری های setuid غیرمجاز رها شوند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Which users are allowed to run sudo/pkexec or modify binaries"
+                    "description": "Which users are allowed to run sudo/pkexec or modify binaries",
+                    "description_fa": "کدام کاربران مجاز به اجرای sudo/pkexec یا اصلاح باینری ها هستند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Duration between file permission change and elevated command execution"
+                    "description": "Duration between file permission change and elevated command execution",
+                    "description_fa": "مدت زمان بین تغییر مجوز فایل و اجرای فرمان بالا"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0976",
+            "description_fa": "گزارش های حسابرسی را برای تغییرات بیت setuid/setgid، اجراهایی که در آن UID ≠ EUID (نشان دهنده افزایش sudo یا امتیاز است)، و باینری های با یکپارچگی بالا که توسط کاربران غیرمجاز راه اندازی شده اند، نظارت کنید."
         }
     ]
 }

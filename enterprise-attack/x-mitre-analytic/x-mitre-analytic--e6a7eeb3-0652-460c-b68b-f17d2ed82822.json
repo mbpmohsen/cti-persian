@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0023#AN0066",
-                    "external_id": "AN0066"
+                    "external_id": "AN0066",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "To scope detections to suspicious parent-child process relationships typical of loaders or droppers."
+                    "description": "To scope detections to suspicious parent-child process relationships typical of loaders or droppers.",
+                    "description_fa": "برای گسترش تشخیص‌ها به روابط مشکوک فرآیند والدین و فرزند که نمونه‌ای از لودرها یا قطره چکان‌ها هستند."
                 },
                 {
                     "field": "AllocationSizeThreshold",
-                    "description": "To tune for unusually large virtual memory allocations that might indicate unpacked payloads."
+                    "description": "To tune for unusually large virtual memory allocations that might indicate unpacked payloads.",
+                    "description_fa": "برای تنظیم تخصیص حافظه مجازی غیرمعمول بزرگ که ممکن است محموله های بسته بندی نشده را نشان دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0066",
+            "description_fa": "تشخیص رفتار باز کردن بسته‌بندی از طریق تخصیص حافظه غیرعادی، به دنبال آن تزریق کد اجرایی و اجرا از بخش‌های غیر تصویری."
         }
     ]
 }

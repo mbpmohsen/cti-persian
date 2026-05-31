@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0315#AN0880",
-                    "external_id": "AN0880"
+                    "external_id": "AN0880",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,25 +62,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegistryPath",
-                    "description": "Path to 'Office test\\Special\\Perf' may vary by Office version, 32/64-bit, or architecture (HKCU vs HKLM)"
+                    "description": "Path to 'Office test\\Special\\Perf' may vary by Office version, 32/64-bit, or architecture (HKCU vs HKLM)",
+                    "description_fa": "مسیر \"تست آفیس\\Special\\Perf\" ممکن است بسته به نسخه آفیس، 32/64 بیتی یا معماری متفاوت باشد (HKCU در مقابل HKLM)"
                 },
                 {
                     "field": "DLLPath",
-                    "description": "Injected DLL may reside in different user-writable locations (e.g., %APPDATA%, %TEMP%, or network shares)"
+                    "description": "Injected DLL may reside in different user-writable locations (e.g., %APPDATA%, %TEMP%, or network shares)",
+                    "description_fa": "DLL تزریق شده ممکن است در مکان‌های مختلف قابل نوشتن توسط کاربر قرار داشته باشد (به عنوان مثال، %APPDATA، %TEMP، یا اشتراک‌های شبکه)"
                 },
                 {
                     "field": "OfficeProcessName",
-                    "description": "Process name (e.g., winword.exe, excel.exe) may vary by Office deployment and usage"
+                    "description": "Process name (e.g., winword.exe, excel.exe) may vary by Office deployment and usage",
+                    "description_fa": "نام فرآیند (به عنوان مثال، winword.exe، excel.exe) ممکن است بسته به استقرار و استفاده از Office متفاوت باشد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time between DLL registry creation and first Office execution may vary depending on user activity"
+                    "description": "Time between DLL registry creation and first Office execution may vary depending on user activity",
+                    "description_fa": "زمان بین ایجاد رجیستری DLL و اولین اجرای Office ممکن است بسته به فعالیت کاربر متفاوت باشد"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Malicious DLL may target only specific users, necessitating correlation with interactive logon sessions"
+                    "description": "Malicious DLL may target only specific users, necessitating correlation with interactive logon sessions",
+                    "description_fa": "DLL مخرب ممکن است فقط کاربران خاصی را هدف قرار دهد، که نیاز به همبستگی با جلسات ورود تعاملی دارد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0880",
+            "description_fa": "دشمنان کلید رجیستری \"Office Test\\Special\\Perf\" را ایجاد می کنند و یک مسیر DLL مخرب را مشخص می کنند که هنگام شروع برنامه آفیس به طور خودکار بارگیری می شود. این DLL به فضای حافظه پردازش آفیس تزریق می شود و می تواند اجرای مداوم را بدون نیاز به فعال سازی ماکرو ارائه دهد."
         }
     ]
 }

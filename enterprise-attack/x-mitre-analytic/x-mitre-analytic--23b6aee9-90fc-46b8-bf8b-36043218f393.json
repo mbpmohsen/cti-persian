@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0193#AN0557",
-                    "external_id": "AN0557"
+                    "external_id": "AN0557",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FileIntegrityBaseline",
-                    "description": "Baseline hash values or metadata for stored data files to detect manipulation."
+                    "description": "Baseline hash values or metadata for stored data files to detect manipulation.",
+                    "description_fa": "مقادیر هش پایه یا ابرداده برای فایل های داده ذخیره شده برای تشخیص دستکاری."
                 },
                 {
                     "field": "AllowedEditors",
-                    "description": "Whitelisted applications permitted to update stored data (e.g., Outlook, MySQL)."
+                    "description": "Whitelisted applications permitted to update stored data (e.g., Outlook, MySQL).",
+                    "description_fa": "برنامه‌های در لیست سفید مجاز به به‌روزرسانی داده‌های ذخیره‌شده (مانند Outlook، MySQL) هستند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0557",
+            "description_fa": "فایل‌های داده حساس مانند ذخیره‌سازی مبتنی بر plist، بایگانی‌های ایمیل یا فایل‌های Office را برای تغییرات غیرمنتظره نظارت کنید. شناسایی فرآیندهای غیرعادی که داده های ذخیره شده را خارج از چرخه های به روز رسانی مورد انتظار تغییر می دهند با استفاده از FSEvents و Unified Logs."
         }
     ]
 }

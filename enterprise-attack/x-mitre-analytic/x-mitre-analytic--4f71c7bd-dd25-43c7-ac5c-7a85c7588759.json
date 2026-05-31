@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0161#AN0457",
-                    "external_id": "AN0457"
+                    "external_id": "AN0457",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MDMProfileIDs",
-                    "description": "Approved profiles reading/updating auth policies."
+                    "description": "Approved profiles reading/updating auth policies.",
+                    "description_fa": "نمایه‌های تایید شده در حال خواندن/به‌روزرسانی خط‌مشی‌های احراز هویت."
                 },
                 {
                     "field": "AdminConsoleHosts",
-                    "description": "Jamf or management hosts where queries are expected."
+                    "description": "Jamf or management hosts where queries are expected.",
+                    "description_fa": "Jamf یا میزبان های مدیریتی که در آن پرس و جو مورد انتظار است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0457",
+            "description_fa": "زنجیره: (1) اجرای «pwpolicy» یا MDM/DirectoryService خط‌مشی‌های حساب را می‌خواند. (2) خواندن اختیاری «/Library/Preferences/com.apple.loginwindow» یا نمایه‌های پیکربندی؛ (3) بررسی اعتبار یا حرکت جانبی توسط همان کاربر/جلسه. از گزارش های یکپارچه و تله متری فرآیند استفاده کنید."
         }
     ]
 }

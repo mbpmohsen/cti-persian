@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0184#AN0521",
-                    "external_id": "AN0521"
+                    "external_id": "AN0521",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "Adjust based on syslog/auditd file paths (/var/log/messages, /var/log/audit/audit.log)"
+                    "description": "Adjust based on syslog/auditd file paths (/var/log/messages, /var/log/audit/audit.log)",
+                    "description_fa": "تنظیم بر اساس مسیرهای فایل syslog/auditd (/var/log/messages، /var/log/audit/audit.log)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope to root/sudo usage or anomalous user behavior"
+                    "description": "Scope to root/sudo usage or anomalous user behavior",
+                    "description_fa": "دامنه استفاده از root/sudo یا رفتار غیرعادی کاربر"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0521",
+            "description_fa": "حذف یا رونویسی تاریخچه bash، syslog، گزارش های حسابرسی، و ابرداده های .ssh را به دنبال افزایش امتیاز یا ایجاد فرآیند مشکوک تشخیص می دهد."
         }
     ]
 }

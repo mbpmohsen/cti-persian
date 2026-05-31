@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-666",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/666.html"
+                    "url": "https://capec.mitre.org/data/definitions/666.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-404",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/404.html"
+                    "url": "http://cwe.mitre.org/data/definitions/404.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Network Denial of Service: Direct Network Flood",
                     "external_id": "T1498.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1498/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1498/001",
+                    "description_fa": "شبکه انکار سرویس: سیل مستقیم شبکه",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Endpoint Denial of Service: OS Exhaustion Flood",
                     "external_id": "T1499.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1499/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1499/001",
+                    "description_fa": "انکار سرویس نقطه پایانی: سیل خستگی سیستم عامل",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Amrita Mitra, What is BlueSmack Attack?, 2017--03---08, The Security Buddy",
                     "external_id": "REF-655",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.thesecuritybuddy.com/bluetooth-security/what-is-bluesmack-attack/"
+                    "url": "https://www.thesecuritybuddy.com/bluetooth-security/what-is-bluesmack-attack/",
+                    "description_fa": "آمریتا میترا، حمله بلواسمک چیست؟، 2017--03---08، دوست امنیتی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--c3ce7043-a2cc-4686-945c-cf3b605b7c90",
@@ -50,6 +58,10 @@
                 "Availability": [
                     "Unreliable Execution",
                     "Resource Consumption"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "مصرف منابع"
                 ]
             },
             "x_capec_domains": [
@@ -62,11 +74,18 @@
                 "The system/application has Bluetooth enabled."
             ],
             "x_capec_skills_required": {
-                "Low": "An adversary only needs a Linux machine along with a Bluetooth adapter, which is extremely common."
+                "Low": "An adversary only needs a Linux machine along with a Bluetooth adapter, which is extremely common.",
+                "Low_fa": "دشمن فقط به یک ماشین لینوکس به همراه آداپتور بلوتوث نیاز دارد که بسیار رایج است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از بلوتوث flooding برای انتقال بسته های بزرگ به دستگاه های دارای بلوتوث از طریق پروتکل L2CAP با هدف ایجاد DoS استفاده می کند. این حمله باید در نزدیکی دستگاه دارای بلوتوث انجام شود.",
+            "name_fa": "BlueSmacking",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>اسکن دستگاه‌های دارای بلوتوث: </b>با استفاده از BlueZ همراه با آنتن، دشمن دستگاه‌های دارای بلوتوث روشن را جستجو می‌کند.</p></li><table><tbody><tr><th>تکنیک آدرس دستگاه MAC. می‌خواهید حمله کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تغییر طول بسته L2CAP: </b> دشمن باید طول بسته L2CAP را تغییر دهد تا بسته‌هایی ایجاد کند که بلوتوث را تحت تأثیر قرار دهد. دستگاه.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یکی از دشمنان BlueZ، بسته استاندارد ابزار بلوتوث برای لینوکس را دانلود و نصب می‌کند.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li>Send بسته‌ها را به دستگاه مورد نظر ارسال می‌کند و آن را تا زمانی که عملکرد کاهش یابد، سیل می‌کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "سیستم/برنامه دارای بلوتوث فعال است."
+            ]
         }
     ],
     "spec_version": "2.0",

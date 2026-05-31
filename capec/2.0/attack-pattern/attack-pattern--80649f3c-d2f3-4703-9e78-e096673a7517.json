@@ -9,36 +9,46 @@
                 {
                     "external_id": "CAPEC-661",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/661.html"
+                    "url": "https://capec.mitre.org/data/definitions/661.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-489",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/489.html"
+                    "url": "http://cwe.mitre.org/data/definitions/489.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "San-Tsai Sun, Andrea Cuadros, Konstantin Beznosov, Android Rooting: Methods, Detection, and Evasion, 2019--06---17, Technische Universität Braunschweig",
                     "external_id": "REF-625",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://lersse-dl.ece.ubc.ca/record/310/files/p3.pdf?subformat=pdfa"
+                    "url": "http://lersse-dl.ece.ubc.ca/record/310/files/p3.pdf?subformat=pdfa",
+                    "description_fa": "San-Tsai Sun، Andrea Cuadros، Konstantin Beznosov، Android Rooting: Methods, Detection, and Evasion، 2019--06---17، Technische Universität Braunschweig",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Jose Lopes, Who owns your runtime?, 2015--10---12, Nettitude Labs",
                     "external_id": "REF-626",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://labs.nettitude.com/blog/ios-and-android-runtime-and-anti-debugging-protections/#hooking"
+                    "url": "https://labs.nettitude.com/blog/ios-and-android-runtime-and-anti-debugging-protections/#hooking",
+                    "description_fa": "خوزه لوپس، زمان اجرای شما متعلق به چه کسی است؟، 2015--10---12، Nettitude Labs",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Suresh Khutale, Android Root Detection Bypass by Reverse Engineering APK, 2018--03---06, InfoSec Institute",
                     "external_id": "REF-627",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://resources.infosecinstitute.com/topic/android-root-detection-bypass-reverse-engineering-apk/"
+                    "url": "https://resources.infosecinstitute.com/topic/android-root-detection-bypass-reverse-engineering-apk/",
+                    "description_fa": "Suresh Khutale، بای پس تشخیص ریشه اندروید توسط Reverse Engineering APK، 2018--03---06، موسسه InfoSec",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Manuel Egele, Christopher Kruegel, Engin Kirda, Giovanni Vigna, PiOS: Detecting Privacy Leaks in iOS Applications, 2011--02---09",
                     "external_id": "REF-628",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.ndss-symposium.org/wp-content/uploads/2017/09/egel.pdf"
+                    "url": "https://www.ndss-symposium.org/wp-content/uploads/2017/09/egel.pdf",
+                    "description_fa": "Manuel Egele, Christopher Kruegel, Engin Kirda, Giovanni Vigna, PiOS: Detecting Privacy Leaks in iOS Applications, 2011--02---09",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--80649f3c-d2f3-4703-9e78-e096673a7517",
@@ -70,6 +80,20 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Through Root/Jailbreak Detection Evasion via Debugging, the adversary compromises the integrity of the application.)"
+                ],
+                "Access_Control_fa": [
+                    "خواندن داده ها (یک حریف ممکن است از Root/Jailbreak Detection Evasion از طریق Debugging برای به دست آوردن اطلاعات حساس استفاده کند.)"
+                ],
+                "Authorization_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (از طریق Root/Jailbreak Detection Evasion از طریق Debugging، حریف یکپارچگی برنامه را به خطر می اندازد.)",
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "خواندن داده ها (یک حریف ممکن است از Root/Jailbreak Detection Evasion از طریق Debugging برای به دست آوردن اطلاعات حساس استفاده کند.)"
+                ],
+                "Integrity_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (از طریق Root/Jailbreak Detection Evasion از طریق Debugging، حریف یکپارچگی برنامه را به خطر می اندازد.)"
                 ]
             },
             "x_capec_domains": [
@@ -89,11 +113,25 @@
             ],
             "x_capec_skills_required": {
                 "High": "Knowledge about Root/Jailbreak detection and evasion techniques.",
-                "Medium": "Knowledge about runtime debugging."
+                "Medium": "Knowledge about runtime debugging.",
+                "High_fa": "دانش در مورد شناسایی ریشه / فرار از زندان و تکنیک های فرار.",
+                "Medium_fa": "دانش در مورد اشکال زدایی زمان اجرا"
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک دیباگر را در نقطه ورود برنامه یک برنامه تلفن همراه قرار می دهد تا باینری برنامه را تغییر دهد، با هدف فرار از تشخیص ریشه/ فرار از زندان. کاربران دستگاه های تلفن همراه اغلب دستگاه های خود را به منظور به دست آوردن کنترل اداری بر روی سیستم عامل تلفن همراه و/یا نصب برنامه های تلفن همراه شخص ثالث که توسط فروشگاه های برنامه های کاربردی مجاز ارائه نشده اند (مانند فروشگاه Google Play و Apple App Store) روت یا جیلبریک می کنند. روت کردن/Jailbreaking یک دستگاه تلفن همراه همچنین به کاربران امکان دسترسی به دیباگرها و جداکننده‌های سیستم را می‌دهد، که می‌توان با تخلیه حافظه برنامه در زمان اجرا به منظور حذف یا دور زدن روش‌های تأیید امضا، از آنها برای سوء استفاده از برنامه‌ها استفاده کرد. این بیشتر به حریف اجازه می‌دهد تا از مکانیسم‌های شناسایی Root/Jailbreak فرار کند، که می‌تواند منجر به اجرای دستورات اداری، به‌دست‌آوردن داده‌های محرمانه، جعل هویت کاربران قانونی برنامه و موارد دیگر شود.",
+            "name_fa": "Root/Jailbreak Detection Evasion از طریق Debugging",
+            "x_capec_example_instances_fa": [
+                "یک دشمن در تلاش برای به خطر انداختن اطلاعات حساس کاربر، یک برنامه بانکی iOS را هدف قرار می دهد. دشمن برنامه را با دیباگر iOS راه‌اندازی می‌کند و پس از تأیید امضای برنامه، یک نقطه شکست در نقطه ورود برنامه تعیین می‌کند. در مرحله بعد، دشمن ناحیه حافظه را که حاوی کد رمزگشایی شده است از فضای آدرس باینری تخلیه می کند. سپس پرچم \"محدود کردن\" از برنامه حذف می شود و حریف با یک گواهی امضا شده از برنامه استعفا می دهد. این برنامه اکنون بدون پرچم \"محدود کردن\" اجرا می شود، در حالی که به گواهی نامه خودامضا به مشروع بودن اعتماد دارید. با این حال، دشمن اکنون می‌تواند از شناسایی فرار از زندان از طریق قلاب کردن کد یا روش‌های دیگر فرار کند و می‌تواند اعتبار کاربر و/یا جزئیات تراکنش را جمع‌آوری کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه با پتانسیل حمله: </b>دشمن یک برنامه تلفن همراه را جستجو و شناسایی می‌کند که می‌تواند برای اهداف مخرب (مانند بانکداری، رای‌گیری، یا پزشکی) مورد سوء استفاده قرار گیرد. برنامه‌ها).</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>جستجوی فروشگاه‌های برنامه‌های کاربردی برای برنامه‌های تلفن همراه که ارزش بهره‌برداری را دارند</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>برنامه‌ها را در adbugger قرار دهید: نقطه ورود برنامه برنامه تلفن همراه، پس از شناسایی امضای برنامه، برای تخلیه محتویات حافظه آن.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>اشکال‌زدا را در نقطه ورود برنامه تلفن همراه، پس از شناسایی امضای برنامه، وارد کنید. فضای آدرس باینری.</td></tr></tbody></table><li> <p> <b>روش‌های تأیید امضای برنامه را حذف کنید: </b>روش‌های تأیید امضا را از کد رمزگشایی شده حذف کنید و برنامه را با یک گواهی خودامضا شده استعفا دهید. روش‌های تشخیص ریشه/ فرار از زندان: </b>برنامه با گواهی امضا شده اجرا می‌شود، در حالی که معتقد است حاوی یک گواهی قابل اعتماد است. این اکنون به دشمن امکان می‌دهد از شناسایی Root/Jailbreak از طریق قلاب کردن کد یا روش‌های دیگر فرار کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>اختیاری: کد را به برنامه هدف قلاب کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "یک دیباگر باید بتواند در برنامه هدف قرار داده شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید یک دستگاه تلفن همراه Rooted/Jailbroken با قابلیت اشکال زدایی داشته باشد."
+            ]
         }
     ],
     "spec_version": "2.0",

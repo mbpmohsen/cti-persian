@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0478#AN1316",
-                    "external_id": "AN1316"
+                    "external_id": "AN1316",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1316",
-            "description": "Cause\u2192effect chain: (1) unified logs show application open/click or crash for Safari/Chrome/Office/Preview/archiver, (2) file write/extraction into ~/Downloads, /private/var/folders/* or ~/Library, (3) parent app spawns osascript/bash/zsh/curl/python or opens a quarantined app with Gatekeeper prompts, (4) network egress from child.",
+            "description": "Cause→effect chain: (1) unified logs show application open/click or crash for Safari/Chrome/Office/Preview/archiver, (2) file write/extraction into ~/Downloads, /private/var/folders/* or ~/Library, (3) parent app spawns osascript/bash/zsh/curl/python or opens a quarantined app with Gatekeeper prompts, (4) network egress from child.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "10\u201330 minute correlation window."
+                    "description": "10–30 minute correlation window.",
+                    "description_fa": "پنجره همبستگی 10 تا 30 دقیقه ای."
                 },
                 {
                     "field": "HighRiskChildren",
-                    "description": "osascript, bash, zsh, curl, python, open -a Terminal, installer, tccutil misuse."
+                    "description": "osascript, bash, zsh, curl, python, open -a Terminal, installer, tccutil misuse.",
+                    "description_fa": "osascript، bash، zsh، curl، python، open -a Terminal، installer، tccutil سوء استفاده."
                 },
                 {
                     "field": "QuarantineSignals",
-                    "description": "Flag new apps lacking com.apple.quarantine or with quarantine='0081' (downloaded then auto-opened)."
+                    "description": "Flag new apps lacking com.apple.quarantine or with quarantine='0081' (downloaded then auto-opened).",
+                    "description_fa": "برنامه‌های جدید فاقد com.apple.quarantine یا با quarantine='0081' (دانلود و سپس به‌طور خودکار باز می‌شود) پرچم‌گذاری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1316",
+            "description_fa": "زنجیره علت → اثر: (1) گزارش‌های یکپارچه برنامه را برای Safari/Chrome/Office/Preview/Archiver نشان می‌دهند که باز/کلیک یا خراب می‌شود، (2) نوشتن/استخراج فایل در ~/Downloads، /private/var/folders/* یا ~/Library، (3) app والد spawns/bashpysshon/osa برنامه قرنطینه شده با درخواست Gatekeeper، (4) خروج از شبکه از کودک."
         }
     ]
 }

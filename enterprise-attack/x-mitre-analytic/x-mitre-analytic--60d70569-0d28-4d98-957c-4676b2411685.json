@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0202#AN0578",
-                    "external_id": "AN0578"
+                    "external_id": "AN0578",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Cmd.exe launched from uncommon parents (e.g., msedge.exe, winword.exe) may indicate abuse."
+                    "description": "Cmd.exe launched from uncommon parents (e.g., msedge.exe, winword.exe) may indicate abuse.",
+                    "description_fa": "Cmd.exe که از والدین غیر معمول راه اندازی شده است (مانند msedge.exe، winword.exe) ممکن است نشان دهنده سوء استفاده باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Cmd or .bat execution during non-working hours may indicate automation or C2 activity."
+                    "description": "Cmd or .bat execution during non-working hours may indicate automation or C2 activity.",
+                    "description_fa": "اجرای Cmd یا bat. در ساعات غیر کاری ممکن است نشان دهنده اتوماسیون یا فعالیت C2 باشد."
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Flags suspicious switches (e.g., /c ping, /k whoami) or command chaining (&&, ^)."
+                    "description": "Flags suspicious switches (e.g., /c ping, /k whoami) or command chaining (&&, ^).",
+                    "description_fa": "سوئیچ های مشکوک (به عنوان مثال، /c ping، /k whoami) یا زنجیره فرمان (&&، ^) را پرچم گذاری می کند."
                 },
                 {
                     "field": "ScriptStoragePath",
-                    "description": "Batch file execution from %TEMP%, C:\\Users\\Public, or external drives."
+                    "description": "Batch file execution from %TEMP%, C:\\Users\\Public, or external drives.",
+                    "description_fa": "اجرای دسته‌ای فایل از %TEMP%, C:\\Users\\Public یا درایوهای خارجی."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Flags admin-level users executing cmd outside expected baselines."
+                    "description": "Flags admin-level users executing cmd outside expected baselines.",
+                    "description_fa": "کاربران سطح سرپرستی را که cmd را خارج از خطوط پایه مورد انتظار اجرا می کنند پرچم گذاری می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0578",
+            "description_fa": "سوء استفاده تعاملی یا اسکریپتی از cmd.exe، فایل های دسته ای یا زنجیره های فراخوانی پوسته را تشخیص می دهد. بر روابط والد-فرزند (مثلاً cmd.exe راه‌اندازی شده از والدین غیرعادی)، پارامترهای خط فرمان غیرعادی، و زنجیره‌سازی با کشف، دسترسی به اعتبار یا رفتارهای حرکت جانبی تمرکز می‌کند."
         }
     ]
 }

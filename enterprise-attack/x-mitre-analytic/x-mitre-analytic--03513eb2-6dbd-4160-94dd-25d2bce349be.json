@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0003#AN0008",
-                    "external_id": "AN0008"
+                    "external_id": "AN0008",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EnrollmentStatus",
-                    "description": "Only flag on AD-bound systems with valid LDAP context"
+                    "description": "Only flag on AD-bound systems with valid LDAP context",
+                    "description_fa": "فقط در سیستم های متصل به AD با زمینه LDAP معتبر پرچم گذاری کنید"
                 },
                 {
                     "field": "AccountType",
-                    "description": "Distinguish between user accounts and computer accounts"
+                    "description": "Distinguish between user accounts and computer accounts",
+                    "description_fa": "بین حساب های کاربری و حساب های کامپیوتری تمایز قائل شوید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0008",
+            "description_fa": "کلاینت‌های macOS که از طریق LDAP به AD ملحق شده‌اند، ممکن است از طریق اسکریپت‌های «dsconfigad»، «dscl» یا LDAP اسکریپت تهیه کنند. تشخیص زمانی اتفاق می‌افتد که چنین ابزارهایی روی یک سیستم متصل به دامنه اجرا می‌شوند و به دنبال آن تلاش‌هایی برای احراز هویت توسط حسابی که قبلاً دیده نشده بود، انجام می‌شود."
         }
     ]
 }

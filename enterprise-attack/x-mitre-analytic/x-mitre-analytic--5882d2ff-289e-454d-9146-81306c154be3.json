@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0040#AN0113",
-                    "external_id": "AN0113"
+                    "external_id": "AN0113",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetRegistryPathRegex",
-                    "description": "Filters known persistence keys like Run/RunOnce, Image File Execution Options"
+                    "description": "Filters known persistence keys like Run/RunOnce, Image File Execution Options",
+                    "description_fa": "کلیدهای ماندگار شناخته شده مانند Run/RunOnce، گزینه های اجرای فایل تصویری را فیلتر می کند."
                 },
                 {
                     "field": "DeletedScheduledTaskName",
-                    "description": "Monitors known or suspicious task names deleted post-persistence"
+                    "description": "Monitors known or suspicious task names deleted post-persistence",
+                    "description_fa": "مانیتورهایی که نام کارهای شناخته شده یا مشکوک را پس از ماندگاری حذف کردند"
                 },
                 {
                     "field": "DeletedAccountGroupScope",
-                    "description": "Focuses on highly privileged or recently created accounts"
+                    "description": "Focuses on highly privileged or recently created accounts",
+                    "description_fa": "بر روی حساب های دارای امتیاز بالا یا اخیراً ایجاد شده تمرکز می کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0113",
+            "description_fa": "فعالیت دشمن را شناسایی می کند که مصنوعات پایدار مانند سرویس ها، کلیدهای رجیستری، وظایف برنامه ریزی شده، حساب های کاربری و فایل های باینری را از طریق دستوراتی مانند «sc delete»، «schtasks /delete» یا «reg delete» حذف می کند."
         }
     ]
 }

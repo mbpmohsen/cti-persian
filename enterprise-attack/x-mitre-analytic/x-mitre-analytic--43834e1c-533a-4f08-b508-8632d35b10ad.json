@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0278#AN0776",
-                    "external_id": "AN0776"
+                    "external_id": "AN0776",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedBootUtilities",
-                    "description": "Known Apple-signed processes responsible for firmware updates."
+                    "description": "Known Apple-signed processes responsible for firmware updates.",
+                    "description_fa": "فرآیندهای شناخته شده امضا شده توسط اپل که مسئول به روز رسانی سیستم عامل هستند."
                 },
                 {
                     "field": "BootParamBaseline",
-                    "description": "Baseline set of allowed NVRAM boot parameters for anomaly detection."
+                    "description": "Baseline set of allowed NVRAM boot parameters for anomaly detection.",
+                    "description_fa": "مجموعه پایه از پارامترهای راه‌اندازی مجاز NVRAM برای تشخیص ناهنجاری."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0776",
+            "description_fa": "اصلاح غیرعادی باینری‌های میان‌افزار EFI در /System/Library/CoreServices/ یا پارامترهای NVRAM که با به‌روزرسانی‌های سیستم عامل مرتبط نیستند. گزارش‌های یکپارچه که تماس‌هایی را برای برکت یا دستورات nvram اجرا شده از فرآیندهای والد نامعتبر ضبط می‌کند. بارگیری ناگهانی kext بدون علامت پس از دستکاری متغیر EFI."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0400#AN1122",
-                    "external_id": "AN1122"
+                    "external_id": "AN1122",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SubdomainEntropyScore",
-                    "description": "Detects encoded payloads or randomness in DNS labels"
+                    "description": "Detects encoded payloads or randomness in DNS labels",
+                    "description_fa": "بارهای رمزگذاری شده یا تصادفی را در برچسب های DNS تشخیص می دهد"
                 },
                 {
                     "field": "DaemonAllowList",
-                    "description": "Allowlisted system daemons expected to perform frequent lookups"
+                    "description": "Allowlisted system daemons expected to perform frequent lookups",
+                    "description_fa": "انتظار می‌رود که دیمون‌های سیستم فهرست مجاز جستجوهای مکرر انجام دهند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1122",
+            "description_fa": "دیمون‌ها یا اسکریپت‌های محلی را شناسایی می‌کند که جستارهای DNS خروجی را با زیر دامنه‌های طولانی یا مکرر ایجاد می‌کنند، که نشان‌دهنده تونل‌سازی DNS از طریق ابزارهایی مانند «iodine»، «dnscat2» یا «dig» از cronjobs یا پوسته‌های معکوس است."
         }
     ]
 }

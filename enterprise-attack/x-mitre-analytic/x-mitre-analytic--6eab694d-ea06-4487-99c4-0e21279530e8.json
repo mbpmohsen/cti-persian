@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0366#AN1033",
-                    "external_id": "AN1033"
+                    "external_id": "AN1033",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,26 +46,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "benign_extensions",
-                    "description": "List of extensions typically used to masquerade malicious files (.txt, .jpg, .doc, .pdf)"
+                    "description": "List of extensions typically used to masquerade malicious files (.txt, .jpg, .doc, .pdf)",
+                    "description_fa": "فهرست پسوندهایی که معمولاً برای مخفی کردن فایل‌های مخرب استفاده می‌شوند (txt.، jpg، .doc، .pdf)"
                 },
                 {
                     "field": "dangerous_extensions",
-                    "description": "List of true executable extensions that may be abused (.exe, .scr, .hta, .lnk)"
+                    "description": "List of true executable extensions that may be abused (.exe, .scr, .hta, .lnk)",
+                    "description_fa": "فهرست پسوندهای اجرایی واقعی که ممکن است مورد سوء استفاده قرار گیرند (exe.، .scr، hta.، lnk.)"
                 },
                 {
                     "field": "monitored_paths",
-                    "description": "Specific directories to focus on (e.g., Downloads folder, %TEMP%, Desktop)"
+                    "description": "Specific directories to focus on (e.g., Downloads folder, %TEMP%, Desktop)",
+                    "description_fa": "دایرکتوری های خاص برای تمرکز (به عنوان مثال، پوشه دانلودها، %TEMP، دسکتاپ)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Duration between file creation and process execution to correlate activity"
+                    "description": "Duration between file creation and process execution to correlate activity",
+                    "description_fa": "مدت زمان بین ایجاد فایل و اجرای فرآیند برای مرتبط کردن فعالیت"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Whether the behavior occurs in a standard user session or elevated context"
+                    "description": "Whether the behavior occurs in a standard user session or elevated context",
+                    "description_fa": "این که آیا این رفتار در یک جلسه کاربر استاندارد رخ می دهد یا در زمینه بالا"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1033",
+            "description_fa": "رفتار دشمن را در جایی که فایلی با پسوند اول خوش‌خیم (مانند txt.، .jpg) با پسوند دوم خطرناک (مانند exe.، .scr) خاتمه می‌یابد و سپس اجرا می‌شود، شناسایی می‌کند. زنجیره رفتار شامل ایجاد فایل با نامگذاری گمراه کننده و اجرای فرآیند توسط کاربر یا سیستم از فایل پنهان شده است."
         }
     ]
 }

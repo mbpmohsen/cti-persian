@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0445#AN1231",
-                    "external_id": "AN1231"
+                    "external_id": "AN1231",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetDomain",
-                    "description": "Identify suspicious domains often associated with CDN-routed or anonymized endpoints (e.g., Cloudflare, Fastly)."
+                    "description": "Identify suspicious domains often associated with CDN-routed or anonymized endpoints (e.g., Cloudflare, Fastly).",
+                    "description_fa": "دامنه های مشکوک را که اغلب با نقاط پایانی مسیریابی شده یا ناشناس CDN مرتبط هستند (مانند Cloudflare، Fastly) شناسایی کنید."
                 },
                 {
                     "field": "AppleScriptUsage",
-                    "description": "Alert when AppleScript or Automator tools are used for network tunneling tasks."
+                    "description": "Alert when AppleScript or Automator tools are used for network tunneling tasks.",
+                    "description_fa": "هشدار زمانی که از ابزارهای AppleScript یا Automator برای کارهای تونل زنی شبکه استفاده می شود."
                 },
                 {
                     "field": "LaunchAgentSource",
-                    "description": "Monitor for LaunchAgents executing proxy tools or dynamic ports."
+                    "description": "Monitor for LaunchAgents executing proxy tools or dynamic ports.",
+                    "description_fa": "مانیتور برای LaunchAgents که ابزارهای پراکسی یا پورت های پویا را اجرا می کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1231",
+            "description_fa": "AppleScript، LaunchAgents، یا سرویس‌های ورود از راه دور («ssh»، «networksetup») که تونل‌های پراکسی یا پورت پویا را به IPهای خارجی یا میزبان‌های محلی جایگزین ایجاد می‌کنند."
         }
     ]
 }

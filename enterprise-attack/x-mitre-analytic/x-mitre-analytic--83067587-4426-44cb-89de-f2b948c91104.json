@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0523#AN1446",
-                    "external_id": "AN1446"
+                    "external_id": "AN1446",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredExecutables",
-                    "description": "Expand or restrict monitored utilities (e.g., bcdedit.exe, reg.exe) based on enterprise usage"
+                    "description": "Expand or restrict monitored utilities (e.g., bcdedit.exe, reg.exe) based on enterprise usage",
+                    "description_fa": "توسعه یا محدود کردن ابزارهای نظارت شده (مانند bcdedit.exe، reg.exe) بر اساس استفاده سازمانی"
                 },
                 {
                     "field": "RegistryPaths",
-                    "description": "Customize registry paths tied to Driver Signing enforcement depending on OS version"
+                    "description": "Customize registry paths tied to Driver Signing enforcement depending on OS version",
+                    "description_fa": "بسته به نسخه سیستم عامل، مسیرهای رجیستری مرتبط با اجرای امضای درایور را سفارشی کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between registry modification and subsequent unsigned binary execution"
+                    "description": "Correlation window between registry modification and subsequent unsigned binary execution",
+                    "description_fa": "پنجره همبستگی بین اصلاح رجیستری و اجرای باینری بدون علامت بعدی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1446",
+            "description_fa": "اجرای ابزارهای مدیریتی (مانند bcdedit.exe) یا تغییرات رجیستری که اجرای امضای راننده (DSE) را غیرفعال می‌کنند یا امضای تست را فعال می‌کنند، نظارت می‌کند. فعالیت های خط فرمان، تغییرات رجیستری و اجرای فرآیندهای بعدی که اجرای امضا را دور می زند، مرتبط می کند."
         }
     ]
 }

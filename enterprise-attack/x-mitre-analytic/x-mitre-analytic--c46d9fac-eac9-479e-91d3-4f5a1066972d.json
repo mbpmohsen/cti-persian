@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0429#AN1197",
-                    "external_id": "AN1197"
+                    "external_id": "AN1197",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "directory_path",
-                    "description": "Specific paths to monitor may differ across macOS versions or enterprise baselines."
+                    "description": "Specific paths to monitor may differ across macOS versions or enterprise baselines.",
+                    "description_fa": "مسیرهای خاص برای نظارت ممکن است در نسخه‌های macOS یا خطوط پایه سازمانی متفاوت باشد."
                 },
                 {
                     "field": "user_context",
-                    "description": "Different users may have unique LaunchAgents folders\u2014tuning may be required."
+                    "description": "Different users may have unique LaunchAgents folders—tuning may be required.",
+                    "description_fa": "کاربران مختلف ممکن است پوشه های LaunchAgents منحصر به فردی داشته باشند—ممکن است نیاز به تنظیم باشد."
                 },
                 {
                     "field": "time_window",
-                    "description": "The correlation time between file creation and process execution may need to be adjusted for boot persistence."
+                    "description": "The correlation time between file creation and process execution may need to be adjusted for boot persistence.",
+                    "description_fa": "زمان همبستگی بین ایجاد فایل و اجرای فرآیند ممکن است برای ماندگاری بوت تنظیم شود."
                 },
                 {
                     "field": "process_name",
-                    "description": "Specific startup binaries (e.g., bash, osascript) may vary across implementations."
+                    "description": "Specific startup binaries (e.g., bash, osascript) may vary across implementations.",
+                    "description_fa": "باینری‌های راه‌اندازی خاص (مانند bash، osascript) ممکن است در پیاده‌سازی‌ها متفاوت باشند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1197",
+            "description_fa": "تغییر یا اضافه شدن Launch Agents یا Startup Item ها را برای ایجاد پایداری تشخیص می دهد. دشمنان ممکن است فایل‌های plist یا اجرایی را در ~/Library/LaunchAgents/، /Library/StartupItems/ یا دایرکتوری‌های مشابه بنویسند و آن‌ها را برای اجرا در هنگام بوت شدن کاربر یا سیستم پیکربندی کنند. تشخیص نیاز به ارتباط ایجاد یا اصلاح رویدادها با ورود کاربر بعدی یا اجرای فرآیند در زمان بوت دارد."
         }
     ]
 }

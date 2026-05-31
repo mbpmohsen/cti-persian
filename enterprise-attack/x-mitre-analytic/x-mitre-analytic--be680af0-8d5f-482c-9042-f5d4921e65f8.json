@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0303#AN0848",
-                    "external_id": "AN0848"
+                    "external_id": "AN0848",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLine",
-                    "description": "Monitor dscl . list /Users, dscacheutil -q user, id -un."
+                    "description": "Monitor dscl . list /Users, dscacheutil -q user, id -un.",
+                    "description_fa": "مانیتور dscl لیست /کاربران، کاربر dscacheutil -q، id -un."
                 },
                 {
                     "field": "InteractiveSession",
-                    "description": "Focus on enumeration from non-console users or untrusted apps."
+                    "description": "Focus on enumeration from non-console users or untrusted apps.",
+                    "description_fa": "بر شمارش کاربران غیر کنسولی یا برنامه های نامعتبر تمرکز کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0848",
+            "description_fa": "شمارش کاربران محلی macOS با استفاده از دسترسی dscl، id، dscacheutil یا /etc/passwd."
         }
     ]
 }

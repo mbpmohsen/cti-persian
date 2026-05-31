@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0509#AN1403",
-                    "external_id": "AN1403"
+                    "external_id": "AN1403",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CookieFilePatterns",
-                    "description": "Regex paths to known browser cookie locations"
+                    "description": "Regex paths to known browser cookie locations",
+                    "description_fa": "مسیرهای Regex به مکان های شناخته شده کوکی مرورگر"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlated time range between cookie read and web upload or process injection"
+                    "description": "Correlated time range between cookie read and web upload or process injection",
+                    "description_fa": "محدوده زمانی مرتبط بین خواندن کوکی و آپلود وب یا تزریق فرآیند"
                 },
                 {
                     "field": "BrowserProcPatterns",
-                    "description": "Expected names for browser processes being accessed"
+                    "description": "Expected names for browser processes being accessed",
+                    "description_fa": "نام های مورد انتظار برای فرآیندهای مرورگر در حال دسترسی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1403",
+            "description_fa": "دسترسی به فایل‌های کوکی مرورگر شناخته شده (مانند «~/.mozilla/firefox/*.default/cookies.sqlite»، «~/.config/google-chrome/») و خواندن مشکوک حافظه مرورگر را از طریق «/proc/[pid]/mem» یا ptrace تشخیص می‌دهد."
         }
     ]
 }

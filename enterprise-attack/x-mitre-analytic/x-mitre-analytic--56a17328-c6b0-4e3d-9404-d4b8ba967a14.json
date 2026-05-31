@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0179#AN0508",
-                    "external_id": "AN0508"
+                    "external_id": "AN0508",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLine",
-                    "description": "Variations of enumeration commands tailored to different Linux distros (e.g., 'getent group', 'cut -d' in /etc/group parsing)."
+                    "description": "Variations of enumeration commands tailored to different Linux distros (e.g., 'getent group', 'cut -d' in /etc/group parsing).",
+                    "description_fa": "تغییراتی از دستورات شمارش متناسب با توزیع‌های مختلف لینوکس (به عنوان مثال، \"گروه getent\"، \"cut -d\" در /etc/گروه تجزیه)."
                 },
                 {
                     "field": "TTYSession",
-                    "description": "TTY context or source terminal (remote shell vs local login) to reduce noise."
+                    "description": "TTY context or source terminal (remote shell vs local login) to reduce noise.",
+                    "description_fa": "زمینه TTY یا ترمینال منبع (پوسته از راه دور در مقابل ورود محلی) برای کاهش نویز."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0508",
+            "description_fa": "تشخیص شمارش گروه با استفاده از دستوراتی مانند 'id'، 'groups' یا 'getent group'، که اغلب با افزایش امتیاز یا حرکت جانبی SSH دنبال می شود."
         }
     ]
 }

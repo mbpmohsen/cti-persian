@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0086#AN0236",
-                    "external_id": "AN0236"
+                    "external_id": "AN0236",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines temporal correlation range between WMI creation and child process execution"
+                    "description": "Defines temporal correlation range between WMI creation and child process execution",
+                    "description_fa": "محدوده همبستگی زمانی بین ایجاد WMI و اجرای فرآیند فرزند را تعریف می کند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune for specific accounts (e.g., SYSTEM or attacker-controlled users)"
+                    "description": "Tune for specific accounts (e.g., SYSTEM or attacker-controlled users)",
+                    "description_fa": "برای حساب‌های خاص (مانند SYSTEM یا کاربران تحت کنترل مهاجم) تنظیم کنید."
                 },
                 {
                     "field": "ProcessNameAllowlist",
-                    "description": "Used to exclude known benign consumers triggered via WMI (e.g., backup tools)"
+                    "description": "Used to exclude known benign consumers triggered via WMI (e.g., backup tools)",
+                    "description_fa": "برای حذف مصرف کنندگان خوش خیم شناخته شده که از طریق WMI (به عنوان مثال، ابزارهای پشتیبان) فعال می شوند، استفاده می شود."
                 },
                 {
                     "field": "ParentProcessAnomalyThreshold",
-                    "description": "Defines what constitutes anomalous spawning from WmiPrvSE.exe"
+                    "description": "Defines what constitutes anomalous spawning from WmiPrvSE.exe",
+                    "description_fa": "تعریف می کند که چه چیزی تخم ریزی غیرعادی را از WmiPrvSE.exe تشکیل می دهد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0236",
+            "description_fa": "برای ایجاد اشیاء WMI EventFilter، EventConsumer و FilterToConsumerBinding از طریق اجرای فایل WMI یا MOF نظارت کنید. اجرای خط فرمان «mofcomp.exe»، استفاده از «Register-WmiEvent» از طریق PowerShell و فرآیندهای فرزند غیرعادی «WmiPrvSE.exe» را که نشان‌دهنده اجرای راه‌اندازی است، شناسایی کنید. به دنبال ناهنجاری های جانبی در خط فرآیند و کانال های ثبت WMI باشید."
         }
     ]
 }

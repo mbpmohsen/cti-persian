@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0399#AN1118",
-                    "external_id": "AN1118"
+                    "external_id": "AN1118",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Duration threshold to consider a connection repetitive (e.g., same hour daily)"
+                    "description": "Duration threshold to consider a connection repetitive (e.g., same hour daily)",
+                    "description_fa": "آستانه مدت برای در نظر گرفتن یک اتصال تکراری (به عنوان مثال، یک ساعت در روز)"
                 },
                 {
                     "field": "DestIPAllowlist",
-                    "description": "Known external destinations to exclude (e.g., approved SFTP/backup servers)"
+                    "description": "Known external destinations to exclude (e.g., approved SFTP/backup servers)",
+                    "description_fa": "مقاصد خارجی شناخته شده برای حذف (به عنوان مثال، SFTP/سرورهای پشتیبان تایید شده)"
                 },
                 {
                     "field": "ParentProcessBaseline",
-                    "description": "Allowlisted job runners or scripts known to schedule legitimate transfers"
+                    "description": "Allowlisted job runners or scripts known to schedule legitimate transfers",
+                    "description_fa": "فهرست‌های مجاز کار یا اسکریپت‌هایی که برای برنامه‌ریزی نقل و انتقالات قانونی شناخته شده‌اند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1118",
+            "description_fa": "نفوذ شبکه تکراری که توسط فرآیندهای برنامه‌ریزی‌شده یا مبتنی بر اسکریپت آغاز می‌شود که نظم مبتنی بر زمان و مقاصد خارجی ثابت را نشان می‌دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0252#AN0700",
-                    "external_id": "AN0700"
+                    "external_id": "AN0700",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "StartupAgentPaths",
-                    "description": "Filter user persistence plist directories like ~/Library/LaunchAgents"
+                    "description": "Filter user persistence plist directories like ~/Library/LaunchAgents",
+                    "description_fa": "دایرکتوری های plist پایداری کاربر مانند ~/Library/LaunchAgents را فیلتر کنید"
                 },
                 {
                     "field": "UnsignedBinaryAlerting",
-                    "description": "Enable alerting for new binaries lacking Apple or organization signature"
+                    "description": "Enable alerting for new binaries lacking Apple or organization signature",
+                    "description_fa": "فعال کردن هشدار برای باینری های جدید فاقد امضای اپل یا سازمان"
                 },
                 {
                     "field": "InstallToNetWindow",
-                    "description": "Correlate install action to interpreter-based network behavior"
+                    "description": "Correlate install action to interpreter-based network behavior",
+                    "description_fa": "عملکرد نصب را با رفتار شبکه مبتنی بر مفسر مرتبط کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0700",
+            "description_fa": "اجرای Homebrew، pip3، npm، یا PKG های دانلود شده به صورت دستی از ترمینال یا پوسته، به دنبال ایجاد عوامل راه اندازی، ایجاد مفسر، یا اتصالات خروجی به دامنه های ناآشنا. Defender دستورات ترمینال را به ایجاد plist، راه‌اندازی‌های باینری بدون علامت، و فرآیندهای «python3» یا «node» که به نقاط پایانی راه دور متصل می‌شوند، پیوند می‌دهد."
         }
     ]
 }

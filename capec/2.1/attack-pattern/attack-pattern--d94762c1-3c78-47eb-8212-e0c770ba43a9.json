@@ -9,34 +9,42 @@
                 {
                     "external_id": "CAPEC-473",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/473.html"
+                    "url": "https://capec.mitre.org/data/definitions/473.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-327",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/327.html"
+                    "url": "http://cwe.mitre.org/data/definitions/327.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-290",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/290.html"
+                    "url": "http://cwe.mitre.org/data/definitions/290.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Masquerading: Invalid Code Signature",
                     "external_id": "T1036.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1036/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1036/001",
+                    "description_fa": "پنهان کردن: امضای کد نامعتبر",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Subvert Trust Controls: Code Signing",
                     "external_id": "T1553.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1553/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1553/002",
+                    "description_fa": "براندازی کنترل های اعتماد: امضای کد",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--d94762c1-3c78-47eb-8212-e0c770ba43a9",
@@ -57,6 +65,12 @@
                 ],
                 "Authentication": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -80,10 +94,21 @@
                 "The validation can be bypassed via an attacker-provided signature that makes it appear that the legitimate authoritative or reputable source provided the signature."
             ],
             "x_capec_skills_required": {
-                "High": "Technical understanding of how signature verification algorithms work with data and applications"
+                "High": "Technical understanding of how signature verification algorithms work with data and applications",
+                "High_fa": "درک فنی نحوه کار الگوریتم های تأیید امضا با داده ها و برنامه ها"
             },
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم یک پیام یا بلوک داده ایجاد می کند که باعث می شود گیرنده باور کند که پیام یا بلوک داده توسط یک منبع معتبر یا معتبر تولید و به صورت رمزنگاری امضا شده است و سیستم عامل قربانی یا قربانی را گمراه می کند تا اقدامات مخربی انجام دهد.",
+            "name_fa": "جعل امضا",
+            "x_capec_example_instances_fa": [
+                "مهاجم با امضای فایل اجرایی با یک کلید رمزنگاری جعلی، یک فایل اجرایی مخرب را به قربانی ارائه می‌دهد که به عنوان یک فایل اجرایی قانونی از یک نرم‌افزار معتبر پنهان شده است. سیستم عامل قربانی تلاش می کند تا فایل اجرایی را با بررسی امضا تأیید کند، امضا معتبر در نظر گرفته می شود و فایل اجرایی مخرب مهاجمان اجرا می شود.",
+                "یک مهاجم از نقاط ضعف یک الگوریتم رمزنگاری سوء استفاده می کند تا یک کلید خصوصی برای یک فروشنده نرم افزار قانونی بازسازی شود، نرم افزار مخرب ایجاد شده توسط مهاجم به صورت رمزنگاری شده با کلید بازسازی شده امضا می شود و توسط سیستم عامل قربانی که به عنوان یک به روز رسانی نرم افزار قانونی از فروشنده نرم افزار پنهان شده است، نصب می شود."
+            ],
+            "x_capec_prerequisites_fa": [
+                "سیستم قربانی یا قربانی برای تأیید اعتبار یک یا چند رویداد یا اقدام امنیتی به یک سیستم تأیید مبتنی بر امضای رمزنگاری وابسته است.",
+                "اعتبار سنجی را می توان از طریق امضای ارائه شده توسط مهاجم دور زد که به نظر می رسد منبع معتبر یا معتبر امضا را ارائه کرده است."
+            ]
         }
     ],
     "type": "bundle"

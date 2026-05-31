@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0030",
-                    "external_id": "DC0030"
+                    "external_id": "DC0030",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,14 +22,16 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Pod Modification",
-            "description": "Changes made to a pod\u2019s configuration or control data within a containerized cluster. This can include updating settings such as resource limits, environment variables, annotations, labels, or even the containers running within the pod. Pod modifications are often executed using commands like kubectl set, kubectl patch, or kubectl edit.\n\n*Data Collection Measures:* \n\n- Kubernetes API Server Audit Logs:\n    - Capture all API calls related to pod modification, such as PATCH, PUT, or UPDATE methods on v1/pods.\n- Runtime Security Tools:\n    - Tools like Falco, Sysdig, and Kube-bench can monitor pod modifications at runtime and alert on policy violations.\n- Container Orchestration Logs:\n    - Monitor events logged by Kubernetes itself (e.g., `kubectl logs -n kube-system kube-controller-manager`).\n- SIEM and EDR Solutions:\n    - Use SIEM platforms (e.g., Splunk) to aggregate API server logs and detect patterns of unauthorized or suspicious pod modifications.\n    - Endpoint Detection and Response (EDR) tools configured with container visibility can monitor commands like `kubectl` set or `kubectl patch`.\n- Host-Based Monitoring:\n    - Collect and analyze logs for processes executing `kubectl` commands or interacting with Kubernetes configuration files (e.g., `.kube/config`).",
+            "description": "Changes made to a pod’s configuration or control data within a containerized cluster. This can include updating settings such as resource limits, environment variables, annotations, labels, or even the containers running within the pod. Pod modifications are often executed using commands like kubectl set, kubectl patch, or kubectl edit.\n\n*Data Collection Measures:* \n\n- Kubernetes API Server Audit Logs:\n    - Capture all API calls related to pod modification, such as PATCH, PUT, or UPDATE methods on v1/pods.\n- Runtime Security Tools:\n    - Tools like Falco, Sysdig, and Kube-bench can monitor pod modifications at runtime and alert on policy violations.\n- Container Orchestration Logs:\n    - Monitor events logged by Kubernetes itself (e.g., `kubectl logs -n kube-system kube-controller-manager`).\n- SIEM and EDR Solutions:\n    - Use SIEM platforms (e.g., Splunk) to aggregate API server logs and detect patterns of unauthorized or suspicious pod modifications.\n    - Endpoint Detection and Response (EDR) tools configured with container visibility can monitor commands like `kubectl` set or `kubectl patch`.\n- Host-Based Monitoring:\n    - Collect and analyze logs for processes executing `kubectl` commands or interacting with Kubernetes configuration files (e.g., `.kube/config`).",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_domains": [
                 "enterprise-attack"
             ],
             "x_mitre_version": "2.0",
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "name_fa": "اصلاح پاد",
+            "description_fa": "تغییراتی که در پیکربندی غلاف یا داده های کنترلی در یک خوشه کانتینری ایجاد شده است. این می‌تواند شامل به‌روزرسانی تنظیمات مانند محدودیت‌های منابع، متغیرهای محیطی، حاشیه‌نویسی‌ها، برچسب‌ها یا حتی ظروف در حال اجرا در پاد باشد. اصلاحات پاد اغلب با استفاده از دستوراتی مانند kubectl set، kubectl patch یا kubectl edit اجرا می شوند.\n\n*اقدامات جمع آوری داده ها:* \n\n- گزارش های حسابرسی سرور Kubernetes API:\n    - همه تماس‌های API مربوط به اصلاح پادها، مانند روش‌های PATCH، PUT یا UPDATE را در v1/pods ضبط کنید.\n- ابزارهای امنیتی زمان اجرا:\n    - ابزارهایی مانند Falco، Sysdig و Kube-bench می‌توانند تغییرات pod را در زمان اجرا نظارت کنند و در مورد نقض خط‌مشی هشدار دهند.\n- گزارش های ارکستراسیون کانتینر:\n    - نظارت بر رویدادهای ثبت شده توسط خود Kubernetes (به عنوان مثال، \"kubectl logs -n kube-system kube-controller-manager\").\n- راه حل های SIEM و EDR:\n    - از پلتفرم های SIEM (مانند Splunk) برای جمع آوری گزارش های سرور API و شناسایی الگوهای تغییرات غیرمجاز یا مشکوک غلاف استفاده کنید.\n    - ابزارهای تشخیص و پاسخ نقطه پایانی (EDR) که با قابلیت مشاهده کانتینر پیکربندی شده‌اند، می‌توانند دستوراتی مانند مجموعه «kubectl» یا «وصله kubectl» را کنترل کنند.\n- مانیتورینگ مبتنی بر میزبان:\n    - گزارش‌های مربوط به فرآیندهای اجرای دستورات «kubectl» یا تعامل با فایل‌های پیکربندی Kubernetes را جمع‌آوری و تجزیه و تحلیل کنید (مثلاً «.kube/config»)."
         }
     ]
 }

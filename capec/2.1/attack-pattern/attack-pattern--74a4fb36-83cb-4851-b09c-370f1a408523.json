@@ -9,29 +9,37 @@
                 {
                     "external_id": "CAPEC-11",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/11.html"
+                    "url": "https://capec.mitre.org/data/definitions/11.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-430",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/430.html"
+                    "url": "http://cwe.mitre.org/data/definitions/430.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Masquerading: Space after Filename",
                     "external_id": "T1036.006",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1036/006"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1036/006",
+                    "description_fa": "Masquerading: فاصله بعد از نام فایل",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Orion Application Server JSP Source Disclosure Vulnerability (Bugtraq ID: 17204), SecurityFocus",
                     "external_id": "REF-6",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.securityfocus.com/bid/17204/info"
+                    "url": "http://www.securityfocus.com/bid/17204/info",
+                    "description_fa": "آسیب پذیری افشای منبع JSP سرور برنامه Orion (شناسه Bugtraq: 17204)، SecurityFocus",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--74a4fb36-83cb-4851-b09c-370f1a408523",
@@ -56,6 +64,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -76,11 +94,27 @@
             ],
             "x_capec_skills_required": {
                 "Low": "To modify file name or file extension",
-                "Medium": "To use misclassification to force the Web server to disclose configuration information, source, or binary data"
+                "Medium": "To use misclassification to force the Web server to disclose configuration information, source, or binary data",
+                "Low_fa": "برای تغییر نام فایل یا پسوند فایل",
+                "Medium_fa": "استفاده از طبقه بندی نادرست برای وادار کردن وب سرور به افشای اطلاعات پیکربندی، منبع یا داده های باینری"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حمله ای از این نوع از تصمیم سرور وب برای انجام اقدام بر اساس نام فایل یا پسوند فایل سوء استفاده می کند. از آنجایی که انواع فایل های مختلف توسط فرآیندهای سرور مختلف مدیریت می شوند، طبقه بندی نادرست ممکن است وب سرور را مجبور به انجام اقدامات غیرمنتظره یا اقدامات مورد انتظار در یک توالی غیرمنتظره کند. این ممکن است باعث شود سرور منابع را تخلیه کند، دیباگ یا داده های سیستم را به مهاجم ارائه دهد، یا یک مهاجم را به یک فرآیند راه دور متصل کند.",
+            "name_fa": "علت طبقه بندی اشتباه وب سرور",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> سرورهای برنامه J2EE قرار است صفحات سرور جاوا (JSP) را اجرا کنند. مشکلات افشای مربوط به Orion Application Server وجود دارد، جایی که مهاجمی که یک نقطه (.) یا نویسه های فاصله را به انتهای یک درخواست قانونی Http اضافه می کند، سپس سرور کد منبع کامل را در مرورگر وب مهاجمان نمایش می دهد.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">http://victim.site/login.jsp.</xhtml:div>\n               <xhtml:p>از آنجایی که دسترسی به داده های راه دور و دایرکتوری ممکن است مستقیماً از JSP قابل دسترسی باشد، این یک مشکل بالقوه بسیار جدی است.</xhtml:p>\n               <xhtml:p>[REF-6]</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بردارهای ورودی فایل ردپای: </b>به‌صورت دستی یا با استفاده از یک ابزار خودکار، مهاجم تمام مکان‌های ورودی را جستجو می‌کند که در آن کاربر کنترل نام فایل یا انواع MIME فایل‌های ارسال شده به وب را دارد. سرور.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم به‌طور دستی برنامه را برای شناسایی ورودی‌های فایل می‌خزد</td></tr><tr><td>مهاجم از یک ابزار خودکار برای خزیدن برنامه برای شناسایی ورودی‌های فایل استفاده می‌کند</td></tr><tr><tacker به‌طور دستی از دسترسی کاربر به فایل‌های قدرتمند محافظت می‌کند. کنترل</td></tr><tr><td>مهاجم پتانسیل ارسال فایل‌ها را مستقیماً به سرور وب از طریق درخواست‌های HTTP ساخته‌شده به‌طور مستقل بررسی می‌کند</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تغییر طبقه‌بندی فایل به حمله کننده و تغییر طبقه‌بندی فایل به حمله کننده </b> انواع MIME معمولاً توسط سرورهای وب پردازش می‌شوند و به دنبال رفتار غیرعادی هستند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم فایل‌هایی را با پسوندهای سوئیچ‌شده (مثلاً .php در یک فایل jsp.) به سرور وب ارسال می‌کند.</td></tr><ttackers. پسوند فایل) به نام فایل‌های ارسال‌شده به وب سرور.</td></tr></tbody></table><li> <p> <b>تشخیص طبقه‌بندی اشتباه فایل: </b>با درک نحوه پردازش انواع فایل‌های خاص توسط وب سرورها، مهاجم حجم‌های مختلف فایل را ایجاد می‌کند و پسوند فایل خود را تغییر می‌دهد که اگر نوع سرور MIME آن از نوع وب هدف باشد، آن را به گونه‌ای تغییر می‌دهد طبقه بندی نادرست از آن نوع.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک بار فایل مخرب ایجاد کنید، پسوند فایل را به نوع فایل مورد نظر تغییر دهید و آن را به وب سرور ارسال کنید.</td></tr><tr><td>یک فایل مخرب بسازید و نوع فایل مخرب MI را برای آن تغییر دهید تا فایل MI مربوط به آن را تغییر دهید. سرور.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>افشای اطلاعات: </b>مهاجم با دستکاری پسوند فایل یا نوع MIME قادر است سرور وب را وادار کند اطلاعات خام را بازگرداند (نه اجرا شد).</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>نام فایل‌هایی را که به صراحت به سرور ارسال می‌شوند دستکاری کنید.</td></tr><tr><td>MIME ارسال‌شده را به منظور گیج‌کردن سرور وب دستکاری کنید.</td></></t></t></tol/tol",
+            "x_capec_extended_description_fa": "<xhtml:p> این نوع آسیب‌پذیری در بسیاری از سرورهای پرکاربرد از جمله IIS، Lotus Domino و Orion یافت شده است. کار مهاجم در این مورد ساده است، پروتکل‌ها و روش‌های ارتباطی استاندارد استفاده می‌شوند و عموماً با اطلاعات مخرب در انتهای یک درخواست مشروع اضافه می‌شوند. بار حمله متفاوت است، اما می تواند کاراکترهای خاصی مانند نقطه یا به سادگی اضافه کردن یک برچسب باشد که معنای خاصی برای عملیات در سمت سرور مانند jsp. برای یک سرور برنامه جاوا دارد. ماهیت این حمله این است که مهاجم سرور را برای اجرای عملکرد بر اساس نام درخواست، یعنی login.jsp فریب می دهد، نه محتویات.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار وب سرور باید برای پردازش به نام فایل یا پسوند فایل متکی باشد.",
+                "مهاجم باید بتواند درخواست های HTTP را به وب سرور ارسال کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

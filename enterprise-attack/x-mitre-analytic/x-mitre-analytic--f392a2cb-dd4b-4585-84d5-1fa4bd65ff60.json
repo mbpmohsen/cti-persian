@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0063#AN0172",
-                    "external_id": "AN0172"
+                    "external_id": "AN0172",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,26 +46,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcess",
-                    "description": "Non-standard processes spawning python.exe (e.g., winword.exe, mshta.exe)."
+                    "description": "Non-standard processes spawning python.exe (e.g., winword.exe, mshta.exe).",
+                    "description_fa": "فرآیندهای غیر استاندارد ایجاد python.exe (به عنوان مثال، winword.exe، mshta.exe)."
                 },
                 {
                     "field": "ScriptPath",
-                    "description": "Execution of .py from temp directories or user profile paths."
+                    "description": "Execution of .py from temp directories or user profile paths.",
+                    "description_fa": "اجرای py. از دایرکتوری های موقت یا مسیرهای نمایه کاربر."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Execution outside maintenance or patch windows."
+                    "description": "Execution outside maintenance or patch windows.",
+                    "description_fa": "اجرای خارج از تعمیر و نگهداری یا وصله ویندوز."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Execution by low-privileged or service accounts."
+                    "description": "Execution by low-privileged or service accounts.",
+                    "description_fa": "اجرا توسط حساب های خدماتی یا کم امتیاز."
                 },
                 {
                     "field": "ChildProcess",
-                    "description": "Python spawning suspicious binaries or scripts (e.g., PowerShell, certutil)."
+                    "description": "Python spawning suspicious binaries or scripts (e.g., PowerShell, certutil).",
+                    "description_fa": "پایتون باینری ها یا اسکریپت های مشکوک را تولید می کند (به عنوان مثال، PowerShell، certutil)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0172",
+            "description_fa": "اجرای پایتون را از طریق python.exe یا py.exe با اصل و نسب والد غیرعادی (مانند ماکروهای Office، LOLBAS)، اجرا از دایرکتوری‌های غیرمعمول یا فعالیت‌های زنجیره‌ای شبکه/PowerShell/سطح سیستم شناسایی می‌کند."
         }
     ]
 }

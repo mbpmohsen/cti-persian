@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0680#AN1784",
-                    "external_id": "AN1784"
+                    "external_id": "AN1784",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.379Z",
             "name": "Analytic 1784",
-            "description": "Defender observes an app enumerating installed security/management controls (AV/EDR/MDM/VPN/Play Protect) via PackageManager, DevicePolicyManager, AppOps, and Settings queries or shell \u2018pm list\u2019 usage, optionally probing Accessibility/Device Admin state. Enumeration is followed by local inventory artifact creation and/or small egress. Chain: capability to query \u2192 burst of security-focused checks (packages/permissions/policies) \u2192 optional foreground targeting \u2192 artifact write \u2192 quick POST.",
+            "description": "Defender observes an app enumerating installed security/management controls (AV/EDR/MDM/VPN/Play Protect) via PackageManager, DevicePolicyManager, AppOps, and Settings queries or shell ‘pm list’ usage, optionally probing Accessibility/Device Admin state. Enumeration is followed by local inventory artifact creation and/or small egress. Chain: capability to query → burst of security-focused checks (packages/permissions/policies) → optional foreground targeting → artifact write → quick POST.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -62,29 +63,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time from discovery burst to persist/exfil (e.g., 10\u2013120s)."
+                    "description": "Max time from discovery burst to persist/exfil (e.g., 10–120s).",
+                    "description_fa": "حداکثر زمان از انفجار اکتشاف تا تداوم/اکسفیل (مثلاً 10-120 ثانیه)."
                 },
                 {
                     "field": "MinEnumCount",
-                    "description": "Minimum API calls/rows indicating inventory (e.g., \u226530 in 10s)."
+                    "description": "Minimum API calls/rows indicating inventory (e.g., ≥30 in 10s).",
+                    "description_fa": "حداقل تماس‌ها/ردیف‌های API که موجودی را نشان می‌دهند (به عنوان مثال ≥30 در 10 ثانیه)."
                 },
                 {
                     "field": "SecurityTargetsList",
-                    "description": "Regex/prefix list of AV/EDR/MDM/VPN packages & services to elevate severity."
+                    "description": "Regex/prefix list of AV/EDR/MDM/VPN packages & services to elevate severity.",
+                    "description_fa": "فهرست Regex/پیشوند بسته‌ها و خدمات AV/EDR/MDM/VPN برای افزایش شدت."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for local inventory artifacts (DB/JSON/TXT) in app container."
+                    "description": "Regex for local inventory artifacts (DB/JSON/TXT) in app container.",
+                    "description_fa": "Regex برای مصنوعات موجودی محلی (DB/JSON/TXT) در ظرف برنامه."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Allowlisted analytics/endpoints to suppress FPs."
+                    "description": "Allowlisted analytics/endpoints to suppress FPs.",
+                    "description_fa": "تجزیه و تحلیل/نقاط پایانی فهرست شده برای سرکوب FPها."
                 },
                 {
                     "field": "WorkProfileOnly",
-                    "description": "Scope to Work Profile events to reduce personal-profile noise."
+                    "description": "Scope to Work Profile events to reduce personal-profile noise.",
+                    "description_fa": "رویدادهای Scope to Work Profile برای کاهش نویز نمایه شخصی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1784",
+            "description_fa": "Defender برنامه‌ای را مشاهده می‌کند که کنترل‌های امنیتی/مدیریت نصب‌شده (AV/EDR/MDM/VPN/Play Protect) را از طریق PackageManager، DevicePolicyManager، AppOps و Settings یا استفاده از پوسته «لیست pm» را برمی‌شمارد و به‌صورت اختیاری وضعیت دسترسی/دسترسی دستگاه را بررسی می‌کند. شمارش با ایجاد مصنوع موجودی محلی و/یا خروج کوچک دنبال می‌شود. زنجیره: قابلیت پرس و جو ← انبوه چک های متمرکز بر امنیت (بسته ها/مجوزها/خط مشی ها) ← هدف گیری پیش زمینه اختیاری → نوشتن مصنوع → ارسال سریع."
         }
     ]
 }

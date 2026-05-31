@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0131#AN0369",
-                    "external_id": "AN0369"
+                    "external_id": "AN0369",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProtocolUnusualnessScore",
-                    "description": "Weight rarely-used protocols in user space."
+                    "description": "Weight rarely-used protocols in user space.",
+                    "description_fa": "وزن پروتکل هایی که به ندرت در فضای کاربر استفاده می شوند."
                 },
                 {
                     "field": "ExecutableBaselining",
-                    "description": "Track which binaries usually call curl/nc and alert on deviation."
+                    "description": "Track which binaries usually call curl/nc and alert on deviation.",
+                    "description_fa": "ردیابی کنید که باینری‌ها معمولاً curl/nc را صدا می‌زنند و در صورت انحراف هشدار می‌دهند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0369",
+            "description_fa": "انتقال فایل غیر بومی را از طریق curl، اسکریپت‌های پایتون یا AppleScript با استفاده از پروتکل‌های غیرمعمول مانند FTP، SMTP یا استخراج DNS از طریق سوء استفاده از mDNSResponder تشخیص می‌دهد."
         }
     ]
 }

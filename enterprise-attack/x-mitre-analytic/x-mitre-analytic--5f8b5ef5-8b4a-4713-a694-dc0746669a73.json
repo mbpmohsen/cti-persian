@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0313#AN0874",
-                    "external_id": "AN0874"
+                    "external_id": "AN0874",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "QuarantineFlagCheck",
-                    "description": "Whether downloaded file has a quarantine flag and is bypassed via Gatekeeper"
+                    "description": "Whether downloaded file has a quarantine flag and is bypassed via Gatekeeper",
+                    "description_fa": "آیا فایل دانلود شده دارای پرچم قرنطینه است و از طریق Gatekeeper دور زده می شود"
                 },
                 {
                     "field": "BlobKeywordAlertList",
-                    "description": "JavaScript strings that may indicate smuggling: msSaveBlob, download.href, createObjectURL"
+                    "description": "JavaScript strings that may indicate smuggling: msSaveBlob, download.href, createObjectURL",
+                    "description_fa": "رشته های جاوا اسکریپت که ممکن است نشان دهنده قاچاق باشد: msSaveBlob، download.href، createObjectURL"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0874",
+            "description_fa": "تشخیص دانلودهای مبتنی بر HTML از طریق Safari/Chrome که فایل‌های مبهم (مانند .zip، .app، .js) را در فهرست‌های راهنمای کاربر ایجاد می‌کنند و با اجرای مشکوک از خدمات پیش‌نمایش یا راه‌اندازی دنبال می‌شوند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0398#AN1116",
-                    "external_id": "AN1116"
+                    "external_id": "AN1116",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Tune based on expected Office process tree (e.g., WINWORD.EXE spawning cmd.exe)"
+                    "description": "Tune based on expected Office process tree (e.g., WINWORD.EXE spawning cmd.exe)",
+                    "description_fa": "تنظیم بر اساس درخت فرآیند آفیس مورد انتظار (به عنوان مثال، WINWORD.EXE تخم ریزی cmd.exe)"
                 },
                 {
                     "field": "RegistryPath",
-                    "description": "Specific keys related to Office startup such as Outlook Today, AddIns, or Template Macros"
+                    "description": "Specific keys related to Office startup such as Outlook Today, AddIns, or Template Macros",
+                    "description_fa": "کلیدهای خاص مربوط به راه اندازی آفیس مانند Outlook Today، AddIns یا ماکروهای الگو"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window of process execution after user login or Outlook launch"
+                    "description": "Window of process execution after user login or Outlook launch",
+                    "description_fa": "پنجره اجرای فرآیند پس از ورود کاربر یا راه اندازی Outlook"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Detect persistence within high-value user mailboxes (e.g., admin, finance, C-suite)"
+                    "description": "Detect persistence within high-value user mailboxes (e.g., admin, finance, C-suite)",
+                    "description_fa": "شناسایی تداوم در صندوق‌های پستی کاربر با ارزش (مانند مدیریت، امور مالی، C-suite)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1116",
+            "description_fa": "تداوم مبتنی بر آفیس از طریق ماکروهای قالب آفیس، فرم‌ها/قوانین/صفحه اصلی Outlook یا اسکریپت‌های پایدار در رجیستری. دشمن کلیدهای رجیستری یا دایرکتوری های برنامه های Office را برای بارگیری اسکریپت های مخرب در هنگام راه اندازی تغییر می دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0174#AN0495",
-                    "external_id": "AN0495"
+                    "external_id": "AN0495",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedAPIs",
-                    "description": "List of authentication and Keychain-related APIs to monitor for unauthorized access."
+                    "description": "List of authentication and Keychain-related APIs to monitor for unauthorized access.",
+                    "description_fa": "فهرستی از احراز هویت و APIهای مرتبط با Keychain برای نظارت بر دسترسی غیرمجاز."
                 },
                 {
                     "field": "CrashCorrelationWindow",
-                    "description": "Time window for correlating authentication service crashes with subsequent suspicious access."
+                    "description": "Time window for correlating authentication service crashes with subsequent suspicious access.",
+                    "description_fa": "پنجره زمانی مربوط به خرابی سرویس احراز هویت با دسترسی مشکوک بعدی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0495",
+            "description_fa": "تلاش‌های بهره‌برداری علیه چارچوب‌های احراز هویت macOS مانند OpenDirectory یا Keychain را شناسایی می‌کند. دیدگاه Defender شامل خرابی‌های غیرعادی در opendirectoryd، استفاده غیرمجاز از Keychain API و رویدادهای غیرعادی sudo یا ورود به سیستم است. همبستگی رفتار فرآیند غیرمنتظره را با ناهنجاری های دسترسی به اعتبار پیوند می دهد."
         }
     ]
 }

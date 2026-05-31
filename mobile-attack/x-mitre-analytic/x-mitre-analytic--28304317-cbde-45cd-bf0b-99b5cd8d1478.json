@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0653#AN1738",
-                    "external_id": "AN1738"
+                    "external_id": "AN1738",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between context checks and guarded execution"
+                    "description": "Correlation window between context checks and guarded execution",
+                    "description_fa": "پنجره همبستگی بین بررسی زمینه و اجرای محافظت شده"
                 },
                 {
                     "field": "TargetContextSet",
-                    "description": "Expected environment properties used for gating, such as location region, locale, SSID/network context, device lock state, or user activity timing"
+                    "description": "Expected environment properties used for gating, such as location region, locale, SSID/network context, device lock state, or user activity timing",
+                    "description_fa": "ویژگی‌های محیط مورد انتظار مورد استفاده برای گیتینگ، مانند منطقه مکان، منطقه محلی، SSID/زمینه شبکه، وضعیت قفل دستگاه یا زمان‌بندی فعالیت کاربر"
                 },
                 {
                     "field": "DormancyThreshold",
-                    "description": "Duration of inactivity before guarded behavior begins"
+                    "description": "Duration of inactivity before guarded behavior begins",
+                    "description_fa": "مدت زمان عدم فعالیت قبل از شروع رفتار محافظت شده"
                 },
                 {
                     "field": "ExpectedBackgroundModes",
-                    "description": "Baseline of legitimate apps whose feature activation is context-dependent in background execution"
+                    "description": "Baseline of legitimate apps whose feature activation is context-dependent in background execution",
+                    "description_fa": "خط پایه برنامه‌های قانونی که فعال‌سازی ویژگی آن‌ها در اجرای پس‌زمینه وابسته به زمینه است"
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Expected destinations for apps whose network activity legitimately begins only in certain contexts"
+                    "description": "Expected destinations for apps whose network activity legitimately begins only in certain contexts",
+                    "description_fa": "مقصدهای مورد انتظار برای برنامه هایی که فعالیت شبکه آنها به طور قانونی فقط در زمینه های خاصی شروع می شود"
                 },
                 {
                     "field": "UserInteractionThreshold",
-                    "description": "Acceptable recency of user interaction before guarded execution is considered suspicious"
+                    "description": "Acceptable recency of user interaction before guarded execution is considered suspicious",
+                    "description_fa": "تازگی قابل قبول تعامل کاربر قبل از اجرای محافظت شده مشکوک تلقی می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1738",
+            "description_fa": "اجرای مشروط را با همبستگی (1) دسترسی برنامه به سیگنال‌های محیطی محدود مانند مکان، منطقه، زمینه شبکه، وضعیت دستگاه یا زمان‌بندی تعامل کاربر، (2) عدم فعالیت طولانی‌مدت یا سرکوب ویژگی با وجود مجوزهای موجود، و (3) شروع ناگهانی رفتار پرخطر فقط زمانی که زمینه مورد انتظار وجود دارد، تشخیص می‌دهد. از آنجایی که مشاهده مستقیم برخی از منطق تصمیم گیری زمان اجرا در iOS ضعیف تر است، مدافع بیشتر به چرخه عمر، سنسور و اثرات شبکه پایین دستی پس از هم ترازی با شرایط هدف متکی است."
         }
     ]
 }

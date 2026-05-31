@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0063#AN0174",
-                    "external_id": "AN0174"
+                    "external_id": "AN0174",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptDir",
-                    "description": "Script invoked from /tmp, /var/tmp, or .hidden/ folders."
+                    "description": "Script invoked from /tmp, /var/tmp, or .hidden/ folders.",
+                    "description_fa": "اسکریپت از پوشه های /tmp، /var/tmp یا .hidden/ فراخوانی شده است."
                 },
                 {
                     "field": "ScheduledContext",
-                    "description": "Execution from user cron or systemd timers outside of approved scripts."
+                    "description": "Execution from user cron or systemd timers outside of approved scripts.",
+                    "description_fa": "اجرا توسط کاربر cron یا systemd timer خارج از اسکریپت های تایید شده."
                 },
                 {
                     "field": "NetworkActivity",
-                    "description": "Python performing HTTP/HTTPS without package updates."
+                    "description": "Python performing HTTP/HTTPS without package updates.",
+                    "description_fa": "پایتون HTTP/HTTPS را بدون به‌روزرسانی بسته انجام می‌دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0174",
+            "description_fa": "اجرای پایتون را از زمینه‌های کاربر غیر استاندارد یا کارهای cron که ترافیک خروجی را فراخوانی می‌کنند، به فایل‌های حساس دسترسی دارند یا تزریق فرآیند را انجام می‌دهند (مانند نقشه‌های حافظه ptrace یا /proc) شناسایی می‌کند."
         }
     ]
 }

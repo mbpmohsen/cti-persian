@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0450#AN1244",
-                    "external_id": "AN1244"
+                    "external_id": "AN1244",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DeveloperIDAllowlist",
-                    "description": "Approved developer IDs whose kexts should not trigger alerts"
+                    "description": "Approved developer IDs whose kexts should not trigger alerts",
+                    "description_fa": "شناسه‌های برنامه‌نویس تأیید شده که kext‌های آن نباید هشدارها را راه‌اندازی کند"
                 },
                 {
                     "field": "KextLoadTimeWindow",
-                    "description": "Threshold for detecting kext loads outside standard install/update operations"
+                    "description": "Threshold for detecting kext loads outside standard install/update operations",
+                    "description_fa": "آستانه برای تشخیص بارهای kext خارج از عملیات نصب/به‌روزرسانی استاندارد"
                 },
                 {
                     "field": "SignatureCheckFlag",
-                    "description": "Flag to enforce strict signing checks depending on SIP status"
+                    "description": "Flag to enforce strict signing checks depending on SIP status",
+                    "description_fa": "برای اجرای چک های امضای سختگیرانه بسته به وضعیت SIP، پرچم گذاری کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1244",
+            "description_fa": "دستورات یا تغییرات kextload توسط کاربر را در /Library/Extensions شناسایی کنید. با تغییرات پایگاه داده KextPolicy یا شناسه‌های امضاکننده غیرمجاز توسعه‌دهنده ارتباط برقرار کنید. هشدار در مورد تلاش برای غیرفعال کردن SIP یا بارگیری پسوندهای قدیمی از منابع بدون امضا."
         }
     ]
 }

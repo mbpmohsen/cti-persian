@@ -9,33 +9,40 @@
                 {
                     "external_id": "CAPEC-230",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/230.html"
+                    "url": "https://capec.mitre.org/data/definitions/230.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-112",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/112.html"
+                    "url": "http://cwe.mitre.org/data/definitions/112.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-674",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/674.html"
+                    "url": "http://cwe.mitre.org/data/definitions/674.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Shlomo, Yona, XML Parser Attacks: A summary of ways to attack an XML Parser, 2007",
                     "external_id": "REF-89",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://yeda.cs.technion.ac.il/~yona/talks/xml_parser_attacks/slides/slide2.html"
+                    "url": "http://yeda.cs.technion.ac.il/~yona/talks/xml_parser_attacks/slides/slide2.html",
+                    "description_fa": "Shlomo, Yona, XML Parser Attacks: خلاصه ای از راه های حمله به XML Parser, 2007",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--8abd01d1-b2a2-4b86-a640-7d3d3b61d27f",
@@ -71,6 +78,24 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع",
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "اجرای دستورات غیرمجاز",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -89,7 +114,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "برنامه‌ها اغلب نیاز دارند که داده‌ها را با استفاده از یک تجزیه‌کننده به داخل و خارج از قالب داده (مانند XML و YAML) تبدیل کنند. ممکن است برای یک حریف امکان تزریق داده‌هایی وجود داشته باشد که ممکن است اثر نامطلوبی بر تجزیه‌کننده در هنگام پردازش داشته باشد. بسیاری از زبان‌های قالب داده، امکان تعریف ساختارهای کلان مانند را فراهم می‌کنند که می‌توان از آنها برای ساده‌سازی ایجاد ساختارهای پیچیده استفاده کرد. با تودرتو کردن این ساختارها، که باعث می شود داده ها به طور مکرر جایگزین شوند، یک دشمن می تواند باعث شود تجزیه کننده منابع بیشتری را در حین پردازش مصرف کند و باعث مصرف بیش از حد حافظه و استفاده از CPU شود.",
+            "name_fa": "داده های سریالی با بارهای تودرتو",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>یک دشمن جریان داده ورودی را تعیین می‌کند که توسط تجزیه‌کننده داده پردازش می‌شود که از جایگزینی در سمت قربانی پشتیبانی می‌کند. داده‌هایی که ممکن است هنگام تجزیه داده‌ها در سیستم قربانی تأثیر نامطلوبی بر عملکرد تجزیه‌کننده داشته باشند.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>هدف دشمن این است که از شکست تجزیه کننده به نفع خود استفاده کند. در بیشتر موارد این نوع حمله به دلیل ناپایدار شدن، انجماد یا خراب شدن برنامه منجر به انکار سرویس می شود. با این حال ممکن است باعث خرابی شود که منجر به اجرای کد دلخواه شود که منجر به پرش از صفحه داده به صفحه کنترل [REF-89] شود.</xhtml:p>\n            <xhtml:p>این حمله بیشترین ارتباط را با سرویس‌های وب با استفاده از SOAP یا Rest API دارد، زیرا درخواست‌کنندگان سرویس از راه دور می‌توانند بارهای مخرب را به ارائه‌دهنده سرویس ارسال کنند. ضعف اصلی این است که ارائه دهنده خدمات به طور کلی باید پیام ها را برای تعیین مسیریابی، گردش کار، ملاحظات امنیتی و غیره بازرسی، تجزیه و اعتبارسنجی کند. دقیقاً این روال‌های بازرسی، تجزیه و اعتبارسنجی است که این حمله هدف قرار می‌گیرد. این حمله از ماهیت اتصال آزاد سرویس های وب سوء استفاده می کند، جایی که ارائه دهنده خدمات کنترل کمی بر درخواست کننده سرویس و هر پیامی که درخواست کننده سرویس ارسال می کند، ندارد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "داده های قابل کنترل توسط کاربر برنامه به زبانی بیان می شود که از جایگزینی پشتیبانی می کند.",
+                "یک برنامه برای اطمینان از اینکه داده های قابل کنترل توسط کاربر مخرب نیستند، اعتبارسنجی کافی را انجام نمی دهد."
+            ]
         }
     ],
     "type": "bundle"

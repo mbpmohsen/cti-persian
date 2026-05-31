@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0551#AN1521",
-                    "external_id": "AN1521"
+                    "external_id": "AN1521",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the period in which multiple failed attempts are aggregated (e.g., 10 minutes)"
+                    "description": "Defines the period in which multiple failed attempts are aggregated (e.g., 10 minutes)",
+                    "description_fa": "دوره ای را تعریف می کند که در آن چندین تلاش ناموفق جمع می شوند (مثلاً 10 دقیقه)"
                 },
                 {
                     "field": "UsernamePattern",
-                    "description": "Filter for common account naming conventions, e.g., service accounts or administrator variants"
+                    "description": "Filter for common account naming conventions, e.g., service accounts or administrator variants",
+                    "description_fa": "برای قراردادهای نام‌گذاری حساب‌های رایج، به عنوان مثال، حساب‌های سرویس یا انواع سرپرست، فیلتر کنید"
                 },
                 {
                     "field": "SourceIPThreshold",
-                    "description": "Limit on unique IPs trying to authenticate against a single account"
+                    "description": "Limit on unique IPs trying to authenticate against a single account",
+                    "description_fa": "محدود کردن IP های منحصر به فرد در تلاش برای احراز هویت در برابر یک حساب واحد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1521",
+            "description_fa": "مجموعه‌ای از خرابی‌های احراز هویت (شناسه رویداد 4625) که حساب‌های کاربری مشابه یا مشابه را در طول زمان از یک یا چند IP راه دور هدف قرار می‌دهند."
         }
     ]
 }

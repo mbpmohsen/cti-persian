@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0146#AN0411",
-                    "external_id": "AN0411"
+                    "external_id": "AN0411",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetFilename",
-                    "description": "Filter file deletion activity to sensitive locations (e.g., %System32%, Documents, DB paths)."
+                    "description": "Filter file deletion activity to sensitive locations (e.g., %System32%, Documents, DB paths).",
+                    "description_fa": "فعالیت حذف فایل را در مکان های حساس فیلتر کنید (به عنوان مثال، %System32٪، اسناد، مسیرهای DB)."
                 },
                 {
                     "field": "ProcessCommandLine",
-                    "description": "Tune for aggressive overwrite flags (e.g., /w, /q, /s) or temp file overwrites."
+                    "description": "Tune for aggressive overwrite flags (e.g., /w, /q, /s) or temp file overwrites.",
+                    "description_fa": "برای پرچم‌های بازنویسی تهاجمی (مانند /w، /q، /s) یا بازنویسی‌های فایل موقت تنظیم کنید."
                 },
                 {
                     "field": "VolumeThreshold",
-                    "description": "Threshold of unique file deletions or modifications within time window."
+                    "description": "Threshold of unique file deletions or modifications within time window.",
+                    "description_fa": "آستانه حذف یا تغییرات منحصر به فرد فایل در پنجره زمانی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate rapid file delete/overwrite behavior from same process/user."
+                    "description": "Correlate rapid file delete/overwrite behavior from same process/user.",
+                    "description_fa": "رفتار حذف/بازنویسی سریع فایل را از همان فرآیند/کاربر مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0411",
+            "description_fa": "دشمن ابزارهای خط فرمان (مانند del، cipher /w، SDele) یا اسکریپت‌ها را برای حذف بازگشتی یا بازنویسی فایل‌های کاربر/سیستم ایجاد می‌کند. این ممکن است با فعالیت غیرعادی IO فایل، نوشتن رجیستری یا دستکاری در دایرکتوری های سیستم مهم مرتبط باشد."
         }
     ]
 }

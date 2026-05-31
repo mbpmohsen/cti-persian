@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0516#AN1429",
-                    "external_id": "AN1429"
+                    "external_id": "AN1429",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InterpreterName",
-                    "description": "Regex to identify which interpreters (bash, python, ruby) to monitor based on typical usage."
+                    "description": "Regex to identify which interpreters (bash, python, ruby) to monitor based on typical usage.",
+                    "description_fa": "Regex برای تشخیص اینکه کدام مفسرها (bash، python، ruby) بر اساس استفاده معمولی نظارت شوند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope to users or service accounts not expected to run interpreters interactively."
+                    "description": "Scope to users or service accounts not expected to run interpreters interactively.",
+                    "description_fa": "دامنه به کاربران یا حساب‌های خدماتی که انتظار نمی‌رود مترجمان را به صورت تعاملی اجرا کنند."
                 },
                 {
                     "field": "ExecutionChainLength",
-                    "description": "Defines maximum process tree depth to correlate interpreter execution with its effects."
+                    "description": "Defines maximum process tree depth to correlate interpreter execution with its effects.",
+                    "description_fa": "حداکثر عمق درخت فرآیند را برای ارتباط اجرای مفسر با اثرات آن تعریف می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1429",
+            "description_fa": "استفاده از مفسرهای پوسته (مانند bash، sh، python، perl) را که توسط کاربران یا فرآیندهایی که معمولاً آنها را اجرا نمی‌کنند، آغاز کرده‌اند، تشخیص می‌دهد، به‌ویژه زمانی که ابزارهای مشکوک مانند netcat، curl، یا ssh را زنجیره‌ای می‌کنند."
         }
     ]
 }

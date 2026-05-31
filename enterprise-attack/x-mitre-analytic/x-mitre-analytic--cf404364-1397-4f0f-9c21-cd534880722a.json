@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0077#AN0212",
-                    "external_id": "AN0212"
+                    "external_id": "AN0212",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InterfaceType",
-                    "description": "Filter for specific interface categories (e.g., WiFi, Bluetooth, 4G)."
+                    "description": "Filter for specific interface categories (e.g., WiFi, Bluetooth, 4G).",
+                    "description_fa": "فیلتر برای دسته های رابط خاص (به عنوان مثال، WiFi، بلوتوث، 4G)."
                 },
                 {
                     "field": "FileSizeThreshold",
-                    "description": "Tunable for environment-specific large file access events pre-transfer."
+                    "description": "Tunable for environment-specific large file access events pre-transfer.",
+                    "description_fa": "قابل تنظیم برای پیش از انتقال رویدادهای دسترسی به فایل های بزرگ خاص محیطی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation window for file read followed by network activity."
+                    "description": "Temporal correlation window for file read followed by network activity.",
+                    "description_fa": "پنجره همبستگی زمانی برای خواندن فایل و به دنبال آن فعالیت شبکه."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0212",
+            "description_fa": "اجرای انتقال فایل یا فعالیت دسترسی به شبکه از طریق رابط های غیراصلی (مانند WiFi، بلوتوث، سلولی) توسط فرآیندهایی که معمولاً با چنین رفتاری مرتبط نیستند (مانند rundll32، powershell، regsvr32)."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0149#AN0426",
-                    "external_id": "AN0426"
+                    "external_id": "AN0426",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VMConfigAccessPathWatchlist",
-                    "description": "Locations of VMX/CFG/SNAPSHOT files that should not be accessed by non-admin shells."
+                    "description": "Locations of VMX/CFG/SNAPSHOT files that should not be accessed by non-admin shells.",
+                    "description_fa": "مکان فایل‌های VMX/CFG/SNAPSHOT که نباید توسط پوسته‌های غیرمدیر دسترسی داشته باشند."
                 },
                 {
                     "field": "OutboundProtocolProfile",
-                    "description": "Expected network protocols for guest and host interfaces."
+                    "description": "Expected network protocols for guest and host interfaces.",
+                    "description_fa": "پروتکل های شبکه مورد انتظار برای رابط های مهمان و میزبان."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0426",
+            "description_fa": "اسکریپت های مبتنی بر پوسته را شناسایی می کند که به فایل های پیکربندی یا عکس های فوری دسترسی دارند و آنها را از طریق پروتکل های رمزگذاری نشده مانند FTP یا HTTP به IP های غیر مدیریتی ارسال می کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0446#AN1234",
-                    "external_id": "AN1234"
+                    "external_id": "AN1234",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,21 +47,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "exe",
-                    "description": "Executable name used to access credentials (e.g., cat, cp, awk); can vary across environments"
+                    "description": "Executable name used to access credentials (e.g., cat, cp, awk); can vary across environments",
+                    "description_fa": "نام اجرایی مورد استفاده برای دسترسی به اعتبارنامه ها (به عنوان مثال، cat، cp، awk)؛ می تواند در محیط ها متفاوت باشد"
                 },
                 {
                     "field": "user",
-                    "description": "User context under which the access occurs; typically root, but can be non-standard in attacks"
+                    "description": "User context under which the access occurs; typically root, but can be non-standard in attacks",
+                    "description_fa": "زمینه کاربر که تحت آن دسترسی رخ می دهد. معمولاً روت هستند، اما می توانند در حملات غیر استاندارد باشند"
                 },
                 {
                     "field": "PATH",
-                    "description": "Target file paths (e.g., /etc/passwd, /etc/shadow); may vary in containerized or customized systems"
+                    "description": "Target file paths (e.g., /etc/passwd, /etc/shadow); may vary in containerized or customized systems",
+                    "description_fa": "مسیرهای فایل هدف (به عنوان مثال، /etc/passwd، /etc/shadow)؛ ممکن است در سیستم های کانتینری یا سفارشی متفاوت باشد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation threshold for chaining access and execution events"
+                    "description": "Time correlation threshold for chaining access and execution events",
+                    "description_fa": "آستانه همبستگی زمانی برای زنجیره دسترسی و رویدادهای اجرا"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1234",
+            "description_fa": "دشمنان سعی می کنند فایل های حساسی مانند /etc/passwd و /etc/shadow را برای تخلیه اعتبار بخوانند. این ممکن است شامل دسترسی مستقیم به فایل ها از طریق ابزارهای خط فرمان (به عنوان مثال، cat، کمتر)، ایجاد نسخه های پشتیبان، یا تجزیه از طریق چارچوب های پس از بهره برداری باشد. همبستگی چند رویدادی شامل اجرای فرآیند بالا، دسترسی/خواندن فایل در مسیرهای حساس، و رفتارهای خواندن غیرعادی مرتبط با کاربران غیر ریشه یا غیرعادی است."
         }
     ]
 }

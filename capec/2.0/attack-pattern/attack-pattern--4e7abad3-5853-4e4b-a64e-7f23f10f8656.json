@@ -9,39 +9,49 @@
                 {
                     "external_id": "CAPEC-101",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/101.html"
+                    "url": "https://capec.mitre.org/data/definitions/101.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-97",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/97.html"
+                    "url": "http://cwe.mitre.org/data/definitions/97.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "SSI Injection",
                     "external_id": "36",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/SSI-Injection"
+                    "url": "http://projects.webappsec.org/SSI-Injection",
+                    "description_fa": "تزریق SSI",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Server-Side Includes (SSI) Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Server-Side_Includes_(SSI)_Injection"
+                    "url": "https://owasp.org/www-community/attacks/Server-Side_Includes_(SSI)_Injection",
+                    "description_fa": "سمت سرور شامل تزریق (SSI).",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-610",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/08-Testing_for_SSI_Injection.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/08-Testing_for_SSI_Injection.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--4e7abad3-5853-4e4b-a64e-7f23f10f8656",
@@ -68,6 +78,16 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -86,11 +106,25 @@
                 "None: No specialized resources are required to execute this type of attack. Determining whether the server supports SSI does not require special tools, and nor does injecting directives that get executed. Spidering tools can make the task of finding and following links easier."
             ],
             "x_capec_skills_required": {
-                "Medium": "The attacker needs to be aware of SSI technology, determine the nature of injection and be able to craft input that results in the SSI directives being executed."
+                "Medium": "The attacker needs to be aware of SSI technology, determine the nature of injection and be able to craft input that results in the SSI directives being executed.",
+                "Medium_fa": "مهاجم باید از فناوری SSI آگاه باشد، ماهیت تزریق را تعیین کند و بتواند ورودی هایی ایجاد کند که منجر به اجرای دستورالعمل های SSI شود."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم می تواند از تزریق سمت سرور (SSI) برای ارسال کد به یک برنامه وب استفاده کند که سپس توسط وب سرور اجرا می شود. انجام این کار مهاجم را قادر می سازد تا به نتایج مشابهی با Cross Site Scripting، یعنی اجرای کد دلخواه و افشای اطلاعات دست یابد، البته در مقیاس محدودتر، زیرا دستورالعمل های SSI به اندازه یک زبان اسکریپت نویسی کامل قدرتمند نیستند. با این وجود، مهاجم می تواند به راحتی به فایل های حساس مانند فایل های رمز عبور دسترسی پیدا کند و دستورات پوسته را اجرا کند.",
+            "name_fa": "تزریق در سمت سرور (SSI).",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> وب‌سایتی را در نظر بگیرید که روی سروری میزبانی می‌شود که به سرورهای جانبی (SSI) اجازه می‌دهد، مانند Apache که دستورالعمل «Options Includes» را فعال کرده است.</xhtml:p>\n               <xhtml:p> هر زمان که خطایی رخ می دهد، سرصفحه های HTTP به همراه کل درخواست ثبت می شوند، که سپس می توانند در صفحه ای نمایش داده شوند که امکان بررسی چنین خطاهایی را فراهم می کند. یک کاربر مخرب می تواند دستورالعمل های SSI را در سرصفحه های HTTP درخواستی که برای ایجاد خطا طراحی شده است، تزریق کند.</xhtml:p>\n               <xhtml:p>وقتی این گزارش‌ها در نهایت بررسی می‌شوند، سرور دستورالعمل‌های SSI را تجزیه و اجرا می‌کند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین قابلیت کاربرد: </b> دشمن تعیین می‌کند که آیا شامل سمت سرور در سرور وب هدف فعال باشد یا خیر. مهاجم به دنبال .shtml، .shtm، .asp، .aspx، و سایر رشته های شناخته شده در URL ها می گردد تا به تعیین اینکه آیا عملکرد SSI فعال است یا خیر.</td></tr><tr><td>فایل htaccess. را واکشی کنید. در نصب سرور وب آپاچی، فایل htaccess. ممکن است شامل سمت سرور در مکان های خاص را فعال کند. در این موارد، فایل htaccess. درون دایرکتوری که SSI در آن فعال است، زندگی می‌کند و از نظر تئوری از سرور وب قابل دریافت است. اگرچه اکثر وب سرورها واکشی فایل htaccess. را انکار می کنند، سرور با پیکربندی نادرست به آن اجازه می دهد. بنابراین، مهاجم اغلب آن را امتحان می‌کند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>نقطه تزریق را بیابید: </b>به‌دنبال ورودی‌های قابل کنترل کاربر، از جمله سرصفحه‌های HTTP، باشید که می‌تواند دستورالعمل‌های شامل سمت سرور را به سمت سرور منتقل کند. سرور.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها استفاده کنید. هر پیوندی را که شامل پارامترهایی در URL است یادداشت ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ضبط همه پیوندهای بازدید شده در طول پیمایش دستی برنامه وب استفاده کنید. هر پیوندی که شامل پارامترهایی در URL است را یادداشت ویژه داشته باشید. پیمایش دستی از این نوع اغلب برای شناسایی فرم‌هایی که فرم‌های متد GET هستند به جای فرم‌های POST ضروری است.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Inject SSI: </b>با استفاده از کدهای یافت شده توسط سرورهای مورد نظر در نقطه تزریق دلخواه در برنامه ارسال می‌شود. سمت آنها ممکن است نیاز داشته باشند صفحه خاصی را مشاهده کنند تا سرور دستور شامل را اجرا کند و دستوری را اجرا کند یا فایلی را از طرف دشمن باز کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "وب سروری که از سمت سرور پشتیبانی می کند شامل و آنها را فعال می کند",
+                "ورودی قابل کنترل توسط کاربر که می تواند حمل کند شامل دستورالعمل هایی به وب سرور است"
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. تعیین اینکه آیا سرور از SSI پشتیبانی می‌کند یا خیر، به ابزار خاصی نیاز ندارد، و همچنین نیازی به تزریق دستورالعمل‌هایی نیست که اجرا می‌شوند. ابزارهای Spidering می توانند کار یافتن و دنبال کردن پیوندها را آسان تر کنند."
+            ]
         }
     ],
     "spec_version": "2.0",

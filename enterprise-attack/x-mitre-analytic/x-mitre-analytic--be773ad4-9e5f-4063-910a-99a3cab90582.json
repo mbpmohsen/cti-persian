@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0588#AN1620",
-                    "external_id": "AN1620"
+                    "external_id": "AN1620",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExpectedRDPHosts",
-                    "description": "Whitelist of systems and accounts authorized to use RDP; deviations indicate possible hijacking."
+                    "description": "Whitelist of systems and accounts authorized to use RDP; deviations indicate possible hijacking.",
+                    "description_fa": "لیست سفید سیستم ها و حساب های مجاز برای استفاده از RDP؛ انحرافات نشان دهنده هواپیماربایی احتمالی است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time threshold for correlating logon events with session reassignment and process execution."
+                    "description": "Time threshold for correlating logon events with session reassignment and process execution.",
+                    "description_fa": "آستانه زمانی برای ارتباط رویدادهای ورود به سیستم با تخصیص مجدد جلسه و اجرای فرآیند."
                 },
                 {
                     "field": "SessionIDMapping",
-                    "description": "Environment-specific mapping of user accounts to session IDs; inconsistencies may reveal hijacking."
+                    "description": "Environment-specific mapping of user accounts to session IDs; inconsistencies may reveal hijacking.",
+                    "description_fa": "نگاشت محیطی خاص از حساب های کاربری به شناسه های جلسه. تناقضات ممکن است هواپیماربایی را نشان دهد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1620",
+            "description_fa": "تشخیص استفاده مشکوک از «tscon.exe» یا روش‌های مشابه برای ربودن جلسات قانونی RDP. مدافعان می توانند ناهنجاری هایی مانند تخصیص مجدد جلسه بدون احراز هویت مربوطه، فرآیندهای ایجاد شده در زمینه جلسات ربوده شده یا جریان های ترافیک شبکه RDP غیرعادی که از خطوط پایه مورد انتظار منحرف می شوند را مشاهده کنند."
         }
     ]
 }

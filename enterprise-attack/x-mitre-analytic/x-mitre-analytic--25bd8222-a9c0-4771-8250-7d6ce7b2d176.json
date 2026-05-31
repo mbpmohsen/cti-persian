@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0373#AN1051",
-                    "external_id": "AN1051"
+                    "external_id": "AN1051",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,22 +41,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DelegatePermissionLevel",
-                    "description": "Threshold for unexpected delegate roles such as FullAccess or SendAs."
+                    "description": "Threshold for unexpected delegate roles such as FullAccess or SendAs.",
+                    "description_fa": "آستانه برای نقش های غیرمنتظره نمایندگی مانند FullAccess یا SendAs."
                 },
                 {
                     "field": "FolderTargetScope",
-                    "description": "Mailbox folder targeted by delegation (Inbox, Root, Calendar, etc.)."
+                    "description": "Mailbox folder targeted by delegation (Inbox, Root, Calendar, etc.).",
+                    "description_fa": "پوشه صندوق پستی که توسط نمایندگی مورد هدف قرار گرفته است (صندوق ورودی، ریشه، تقویم و غیره)."
                 },
                 {
                     "field": "DelegatorToDelegatePairing",
-                    "description": "Pairings of delegate and delegator users that are expected."
+                    "description": "Pairings of delegate and delegator users that are expected.",
+                    "description_fa": "جفت‌هایی از کاربران نماینده و نماینده که انتظار می‌رود."
                 },
                 {
                     "field": "MailflowAnomalyThreshold",
-                    "description": "Spike in outbound mail after delegate addition, used to catch phishing or mass exfil."
+                    "description": "Spike in outbound mail after delegate addition, used to catch phishing or mass exfil.",
+                    "description_fa": "اسپک در نامه‌های خروجی پس از اضافه کردن نماینده، که برای گرفتن فیشینگ یا exfil انبوه استفاده می‌شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1051",
+            "description_fa": "شناسایی فعالیت های غیرمجاز یا غیرمجاز تفویض صندوق پستی (به عنوان مثال، مجوز افزودن صندوق پستی، مجوزهای صندوق پست پیش فرض/ناشناس، تنظیم تفویض اختیار Gmail)."
         }
     ]
 }

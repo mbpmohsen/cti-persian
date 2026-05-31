@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0066#AN0179",
-                    "external_id": "AN0179"
+                    "external_id": "AN0179",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Typical 10\u201320m between click and write."
+                    "description": "Typical 10–20m between click and write.",
+                    "description_fa": "معمولاً 10 تا 20 متر بین کلیک و نوشتن."
                 },
                 {
                     "field": "UserPaths",
-                    "description": "$HOME/Downloads, /tmp, ~/.cache, ~/.local/share."
+                    "description": "$HOME/Downloads, /tmp, ~/.cache, ~/.local/share.",
+                    "description_fa": "$HOME/Downloads، /tmp، ~/.cache، ~/.local/share."
                 },
                 {
                     "field": "HighRiskExtensions",
-                    "description": "exe, elf, sh, js, py, jar, iso, img, zip, rar, xlsm, docm, xll."
+                    "description": "exe, elf, sh, js, py, jar, iso, img, zip, rar, xlsm, docm, xll.",
+                    "description_fa": "exe، elf، sh، js، py، jar، iso، img، zip، rar، xlsm، docm، xll."
                 },
                 {
                     "field": "DomainRiskScore",
-                    "description": "Heuristic or TI score threshold for domains."
+                    "description": "Heuristic or TI score threshold for domains.",
+                    "description_fa": "آستانه امتیاز اکتشافی یا TI برای دامنه ها."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0179",
+            "description_fa": "زنجیره رفتاری: (1) سرویس گیرنده ایمیل مرورگر/دفتر/GUI یک URL را باز می کند، (2) اتصال خروجی به دامنه غیرقابل اعتماد، (3) یک فایل جدید بلافاصله پس از آن در $HOME/Downloads، /tmp یا حافظه پنهان ذخیره می شود."
         }
     ]
 }

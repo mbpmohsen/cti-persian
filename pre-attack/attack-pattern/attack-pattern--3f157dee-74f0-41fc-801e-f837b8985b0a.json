@@ -12,16 +12,21 @@
                 {
                     "source_name": "mitre-pre-attack",
                     "url": "https://attack.mitre.org/techniques/T1340",
-                    "external_id": "T1340"
+                    "external_id": "T1340",
+                    "source_name_fa": "میتر قبل از حمله"
                 },
                 {
                     "source_name": "CiscoAngler",
                     "description": "Nick Biasini. (2015, March 3). Threat Spotlight: Angler Lurking in the Domain Shadows. Retrieved March 6, 2017.",
-                    "url": "https://blogs.cisco.com/security/talos/angler-domain-shadowing"
+                    "url": "https://blogs.cisco.com/security/talos/angler-domain-shadowing",
+                    "source_name_fa": "سیسکو آنگلر",
+                    "description_fa": "نیک بیاسینی. (2015، 3 مارس). Threat Spotlight: Angler Lurking in the Domain Shadows. بازبینی شده در ۶ مارس ۲۰۱۷."
                 },
                 {
                     "source_name": "ProofpointDomainShadowing",
-                    "description": "Proofpoint Staff. (2015, December 15). The shadow knows: Malvertising campaigns use domain shadowing to pull in Angler EK. Retrieved March 6, 2017."
+                    "description": "Proofpoint Staff. (2015, December 15). The shadow knows: Malvertising campaigns use domain shadowing to pull in Angler EK. Retrieved March 6, 2017.",
+                    "source_name_fa": "ProofpointDomain Shadowing",
+                    "description_fa": "کارکنان پروف پوینت (2015، 15 دسامبر). سایه می‌داند: کمپین‌های بدافزار از سایه‌زنی دامنه برای جذب Angler EK استفاده می‌کنند. بازبینی شده در ۶ مارس ۲۰۱۷."
                 }
             ],
             "object_marking_refs": [
@@ -42,7 +47,11 @@
             "x_mitre_difficulty_for_adversary": "Yes",
             "x_mitre_detectable_by_common_defenses_explanation": "Detection of this technique requires individuals to monitor their domain registrant accounts routinely.  In addition, defenders have had success with blacklisting sites or IP addresses, but an adversary can defeat this by rotating either the subdomains or the IP addresses associated with the campaign.",
             "x_mitre_detectable_by_common_defenses": "Partial",
-            "x_mitre_deprecated": true
+            "x_mitre_deprecated": true,
+            "name_fa": "سایه DNS",
+            "description_fa": "این شی منسوخ شده است زیرا محتوای آن در دامنه سازمانی ادغام شده است. لطفاً ماتریس [PRE](http://attack.mitre.org/matrices/enterprise/pre/) را برای جایگزینی آن ببینید. محتوای قبلی این صفحه [اینجا] (https://attack.mitre.org/versions/v7/techniques/T1340) حفظ شده است.\n\nفرآیند جمع‌آوری اعتبارنامه‌های حساب دامنه به منظور ایجاد بی‌صدا زیر دامنه‌هایی که به سمت سرورهای مخرب هدایت می‌شوند، بدون اینکه از مالک واقعی خبر داده شود. (Citation: CiscoAngler) (Citation: ProofpointDomainShadowing)",
+            "x_mitre_difficulty_for_adversary_explanation_fa": "برای انجام موفقیت آمیز این حمله، دشمن معمولاً فردی را که پشت حساب ثبت کننده دامنه است فیش می کند، با اعتبارنامه وارد می شود و تعداد زیادی زیر دامنه ایجاد می کند.",
+            "x_mitre_detectable_by_common_defenses_explanation_fa": "تشخیص این تکنیک افراد را ملزم می‌کند تا حساب‌های ثبت‌کننده دامنه خود را به‌طور معمول نظارت کنند.  علاوه بر این، مدافعان با قرار دادن سایت‌ها یا آدرس‌های IP در لیست سیاه موفق بوده‌اند، اما دشمن می‌تواند با چرخاندن زیر دامنه‌ها یا آدرس‌های IP مرتبط با کمپین، این مشکل را شکست دهد."
         }
     ]
 }

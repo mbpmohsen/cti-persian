@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0131#AN0368",
-                    "external_id": "AN0368"
+                    "external_id": "AN0368",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,18 +61,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProtocolType",
-                    "description": "Flag unexpected protocols (e.g., HTTP on port 53 or FTP traffic from non-standard tools)."
+                    "description": "Flag unexpected protocols (e.g., HTTP on port 53 or FTP traffic from non-standard tools).",
+                    "description_fa": "پروتکل‌های غیرمنتظره را پرچم‌گذاری کنید (مانند HTTP در پورت 53 یا ترافیک FTP از ابزارهای غیر استاندارد)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope for privilege escalation or service account behavior."
+                    "description": "Scope for privilege escalation or service account behavior.",
+                    "description_fa": "محدوده برای افزایش امتیاز یا رفتار حساب سرویس."
                 },
                 {
                     "field": "FileExtensionSensitivity",
-                    "description": "Track movement of file types of interest (e.g., `.csv`, `.sql`, `.key`)."
+                    "description": "Track movement of file types of interest (e.g., `.csv`, `.sql`, `.key`).",
+                    "description_fa": "ردیابی حرکت انواع فایل مورد علاقه (مانند «.csv»، «.sql»، «.key»)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0368",
+            "description_fa": "استخراج فایل را با استفاده از ابزارهایی مانند curl، scp یا باینری های سفارشی از طریق پروتکل هایی مانند FTP، HTTP/S یا تونل سازی DNS، به ویژه رفتارهای خارج از خط اولیه کاربر، تشخیص می دهد."
         }
     ]
 }

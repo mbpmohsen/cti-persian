@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0242#AN0678",
-                    "external_id": "AN0678"
+                    "external_id": "AN0678",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CloudSyncDomainList",
-                    "description": "FQDNs of sync services used to detect likely outbound DB leakages"
+                    "description": "FQDNs of sync services used to detect likely outbound DB leakages",
+                    "description_fa": "FQDN های سرویس های همگام سازی که برای تشخیص نشت احتمالی DB خروجی استفاده می شود"
                 },
                 {
                     "field": "UserPrivilegeLevel",
-                    "description": "Whether to treat low-privilege users accessing DB tools as higher risk"
+                    "description": "Whether to treat low-privilege users accessing DB tools as higher risk",
+                    "description_fa": "این که آیا کاربران با امتیاز پایین دسترسی به ابزارهای DB را به عنوان ریسک بالاتر در نظر بگیریم"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0678",
+            "description_fa": "اجرای ابزارهای پایگاه داده مبتنی بر جاوا یا CLI (به عنوان مثال، DBeaver، Beekeeper، mysql، psql) از نمایه‌های کاربر که به نقش‌های توسعه‌دهنده/مدیر مرتبط نیستند، به‌ویژه زمانی که با نوشتن فایل و فعالیت همگام‌سازی ابری همراه باشد. Defender راه اندازی ابزار رابط کاربری گرافیکی، رویدادهای نوشتن فایل در ~/Downloads یا ~/Documents، و تماس های API خروجی به سرویس های ابری شناخته شده را به هم مرتبط می کند."
         }
     ]
 }

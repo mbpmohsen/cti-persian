@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0611#AN1665",
-                    "external_id": "AN1665"
+                    "external_id": "AN1665",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,25 +53,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between notification interception and subsequent data write or network transmission varies by app behavior"
+                    "description": "Correlation window between notification interception and subsequent data write or network transmission varies by app behavior",
+                    "description_fa": "پنجره همبستگی بین شنود اعلان و نوشتن داده های بعدی یا انتقال شبکه بر اساس رفتار برنامه متفاوت است"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Enterprise-approved apps with legitimate notification access (e.g., accessibility tools, wearables)"
+                    "description": "Enterprise-approved apps with legitimate notification access (e.g., accessibility tools, wearables)",
+                    "description_fa": "برنامه‌های مورد تأیید سازمانی با دسترسی قانونی به اعلان‌ها (مانند ابزارهای دسترسی، ابزارهای پوشیدنی)"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether notification access is expected only when the app is foregrounded"
+                    "description": "Whether notification access is expected only when the app is foregrounded",
+                    "description_fa": "اینکه آیا دسترسی به اعلان تنها زمانی که برنامه پیش‌زمینه است، مورد انتظار است یا خیر"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Threshold for small outbound payloads indicative of notification content exfiltration"
+                    "description": "Threshold for small outbound payloads indicative of notification content exfiltration",
+                    "description_fa": "آستانه برای بارهای کوچک خروجی که نشان دهنده نفوذ محتوای اعلان است"
                 },
                 {
                     "field": "SensitiveSourceApps",
-                    "description": "Apps whose notifications are considered sensitive (SMS, email, authenticator apps)"
+                    "description": "Apps whose notifications are considered sensitive (SMS, email, authenticator apps)",
+                    "description_fa": "برنامه‌هایی که اعلان‌هایشان حساس تلقی می‌شوند (پیامک، ایمیل، برنامه‌های احراز هویت)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1665",
+            "description_fa": "به یک برنامه اجازه داده می‌شود یا دسترسی شنونده اعلان‌ها را حفظ می‌کند، محتوای اعلان‌ها را از سایر برنامه‌ها (از جمله منابع حساس مانند برنامه‌های پیام کوتاه/ایمیل/2FA) مشاهده می‌کند، بارهای اعلان‌ها را پردازش یا ذخیره می‌کند، و به صورت اختیاری اعلان‌ها را سرکوب می‌کند یا از طریق برنامه‌نویسی با آن‌ها تعامل می‌کند (محرک‌های رد کردن/اقدام) بدون تعامل کاربر پیش‌زمینه مربوطه. تشخیص با وضعیت مجوز دسترسی ویژه + رهگیری رویداد اعلان + وضعیت پس‌زمینه برنامه + استفاده پایین دستی داده (نوشتن محلی یا انتقال شبکه) ارتباط دارد."
         }
     ]
 }

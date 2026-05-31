@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0540#AN1492",
-                    "external_id": "AN1492"
+                    "external_id": "AN1492",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ImageSource",
-                    "description": "May vary depending on where the image is pulled from (registry or custom URL)."
+                    "description": "May vary depending on where the image is pulled from (registry or custom URL).",
+                    "description_fa": "ممکن است بسته به جایی که تصویر از کجا کشیده شده است (رجیستری یا URL سفارشی) متفاوت باشد."
                 },
                 {
                     "field": "Namespace",
-                    "description": "Helps differentiate attacker-created namespaces."
+                    "description": "Helps differentiate attacker-created namespaces.",
+                    "description_fa": "به تمایز فضاهای نام ایجاد شده توسط مهاجم کمک می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1492",
+            "description_fa": "نمونه‌سازی کانتینر زودگذر یا غیرمجاز با استفاده از تصاویر عمومی (مثلاً از DockerHub) که باعث استفاده زیاد از CPU در مدت کوتاهی پس از راه‌اندازی می‌شود. اغلب از طریق سوء استفاده از سوکت Kubernetes یا Docker برنامه ریزی می شود."
         }
     ]
 }

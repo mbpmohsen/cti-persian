@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0210#AN0593",
-                    "external_id": "AN0593"
+                    "external_id": "AN0593",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccountType",
-                    "description": "Prioritize detection on accounts with elevated access."
+                    "description": "Prioritize detection on accounts with elevated access.",
+                    "description_fa": "تشخیص را در حساب‌های با دسترسی بالا اولویت دهید."
                 },
                 {
                     "field": "LoginInterface",
-                    "description": "Distinguish interactive UI login from API or SSH access."
+                    "description": "Distinguish interactive UI login from API or SSH access.",
+                    "description_fa": "ورود به رابط کاربری تعاملی را از دسترسی API یا SSH متمایز کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0593",
+            "description_fa": "با استفاده از حساب‌های دامنه، به‌ویژه آنهایی که با vpxuser یا عضویت‌های گروهی غیرمنتظره مرتبط هستند، به میزبان‌های vSphere یا ESXi وارد شوید."
         }
     ]
 }

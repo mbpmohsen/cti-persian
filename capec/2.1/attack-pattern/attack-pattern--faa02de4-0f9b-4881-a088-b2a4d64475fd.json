@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-696",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/696.html"
+                    "url": "https://capec.mitre.org/data/definitions/696.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1342",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1342.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1342.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Jo Van Bulck, Daniel Moghimi, Michael Schwarz, Moritz Lipp, Marina Minkin, Daniel Genkin, Yuval Yarom, Berk Sunar, Daniel Gruss, Frank Piessens, LVI - Hijacking Transient Execution with Load Value Injection",
                     "external_id": "REF-735",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://lviattack.eu/"
+                    "url": "https://lviattack.eu/",
+                    "description_fa": "جو ون بولک، دانیل مقیمی، مایکل شوارتز، موریتز لیپ، مارینا مینکین، دانیل جنکین، یووال یاروم، برک سونار، دانیل گراس، فرانک پیسنز، LVI - ربودن اجرای گذرا با تزریق ارزش بار",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Load Value Injection, 2020--01---27, Intel",
                     "external_id": "REF-736",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/technical-documentation/load-value-injection.html"
+                    "url": "https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/technical-documentation/load-value-injection.html",
+                    "description_fa": "Load Value Injection، 2020--01---27، Intel",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--faa02de4-0f9b-4881-a088-b2a4d64475fd",
@@ -50,6 +56,15 @@
                 ],
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -67,11 +82,22 @@
                 "Code gadgets exist that allow the adversary to hijack transient execution and encode secrets into the microarchitectural state."
             ],
             "x_capec_skills_required": {
-                "High": "The ability to provoke faulting or assisted loads in legitimate execution."
+                "High": "The ability to provoke faulting or assisted loads in legitimate execution.",
+                "High_fa": "توانایی تحریک بارهای خطا یا کمک در اجرای قانونی."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از یک نقص طراحی سخت افزاری در اجرای دستورات گذرا در اجرای CPU استفاده می کند که در آن یک دستورالعمل خطا یا بار کمکی به طور موقت داده های کنترل شده توسط دشمن را از بافرهای ریزمعماری ارسال می کند. با القای خطای صفحه یا کمک میکروکد در طول اجرای قربانی، یک دشمن می‌تواند اعدام قانونی قربانی را مجبور کند که روی داده‌های کنترل شده توسط دشمن که در بافرهای ریزمعماری ذخیره می‌شوند، عمل کند. سپس دشمن می‌تواند از ابزارهای کد موجود و تحلیل کانال‌های جانبی برای کشف اسرار قربانی که هنوز از حالت ریزمعماری پاک نشده‌اند استفاده کند یا جریان کنترل سیستم را ربوده باشد.",
+            "name_fa": "تزریق ارزش بار",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه هدف نظرسنجی و کتابخانه‌های کد مشترک سیستم‌عامل مربوطه: </b>دشمن مجموعه‌های دستورالعمل گذرای آسیب‌پذیر و کد/عملکرد فراخوانی‌ها را شناسایی می‌کند (مجموعه‌های ga یا قطعات کد) برای اجرای دستورالعمل‌ها. حریف به دنبال ابزارهای کدی است که به آنها اجازه می دهد یک مقدار کنترل شده توسط دشمن را در حافظه قابل اعتماد بارگذاری کنند. آنها همچنین به دنبال ابزارک‌هایی هستند که ممکن است بر روی این مقدار کنترل‌شده کار کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزارهای Disassembler و Debugger برای بررسی و ردیابی اجرای مجموعه دستورالعمل کد منبع و کتابخانه‌های کد مشترک در یک سیستم.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>پر کردن بافر ریزمعماری با مقدار کنترل‌شده: </b>دشمن از ابزار کد پیدا شده از مرحله قبل برای بارگذاری یک مقدار در یک ریزمعماری استفاده می‌کند. بافر.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن می‌تواند مقدار کنترل‌شده را به عنوان آدرس حافظه اطلاعات حساسی که می‌خواهد سیستم به آن دسترسی داشته باشد انتخاب کند</td></tr><tr><td>متخاصم می‌تواند مقدار کنترل‌شده را به عنوان آدرس حافظه سایر ابزارک‌های کد execute که می‌خواهند از طریق hijack کردن گجت‌های کد execute کنترل شده انتخاب کند. system</td></tr></tbody></table><li> <p> <b>تنظیم دستورالعمل برای خطای صفحه یا کمک میکروکد: </b> دشمن باید سیستم را طوری دستکاری کند که هنگام اجرای یک دستورالعمل معتبر، خطای صفحه یا کمک میکروکد رخ دهد. اگر دستورالعملی که انجام نمی‌شود نزدیک به جایی است که مقدار کنترل‌شده توسط دشمن بارگیری شده است، سیستم ممکن است این مقدار را از بافر ریزمعماری به اشتباه ارسال کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>هنگامی که هدف قرار دادن Intel SGX enclaves، دشمنانی می‌توانند برای دستکاری صفحه‌های محصور SGX، حریفانی را تحریک کنند که دارای استثنا هستند. میکروکد کمک می کند.</td></tr><tr><td>هنگام هدف قرار دادن Intel SGX enclave، دشمنان می توانند به طور غیرمستقیم مجوزهای کد enclave را از طریق فراخوانی سیستم \"mprotec\" لغو کنند</td></tr><tr><td>یک حریف می تواند صفحات حافظه مجازی منتخب را با استفاده از رابط های قدیمی، <trhent یک حافظه فیزیکی و یا با افزایش حمله به حافظه فیزیکی Windows-tr> حذف کند. صبر کنید تا سیستم عامل بیت PTE مورد دسترسی را پاک کند. هنگامی که به صفحه بعدی دسترسی پیدا کرد، CPU همیشه یک کمک میکروکد برای تنظیم مجدد این بیت صادر می‌کند</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>بر روی داده‌های کنترل‌شده توسط دشمن کار کنید: </b>هنگامی که سیستم microcode را راه‌اندازی کرد و حمله را انجام داد. داده‌های کنترل‌شده توسط دشمن.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>سیستم را تحت تأثیر قرار دهید تا اطلاعات حساس را در حالت ریزمعماری بارگذاری کند که می‌تواند توسط دشمن با استفاده از ابزارکد خوانده شود.</td></tr><tr><td>ربودن مرحله دوم در آدرس‌دهی ابزارها با پرش کردن ابزارها به آدرس اجرای مرحله دوم. با استفاده از برنامه نویسی بازگشت گرا، این می تواند اسبابک ها را به هم متصل کند و به دشمن اجازه دهد تا مجموعه ای از ابزارها را اجرا کند.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "این حمله ترکیبی از تکنیک های مورد استفاده در حملات سنتی Meltdown و Spectre است. از نشت داده های ریزمعماری همراه با سوء استفاده از ابزارکد استفاده می کند. اینتل تشخیص داده است که این حمله در سناریوهایی که سیستم عامل و VMM (مدیر حافظه مجازی) هر دو مورد اعتماد هستند، قابل اجرا نیست. به همین دلیل، Intel SGX یک هدف اصلی برای این حمله است زیرا فرض می کند که سیستم عامل یا VMM ممکن است مخرب باشد.",
+            "x_capec_prerequisites_fa": [
+                "حریف حداقل به دسترسی اجرای کاربر به یک سیستم و یک برنامه/برنامه/فرآیند مخرب ساخته شده با کد غیرمجاز برای سوء استفاده از اجرای مجموعه دستورات گذرا CPU نیاز دارد.",
+                "CPU به طور نادرست مقادیر را از بافرهای ریزمعماری پس از خطا یا بارهای کمکی ارسال می کند.",
+                "حریف به توانایی القای خطاهای صفحه یا کمک های میکروکد در سیستم هدف نیاز دارد.",
+                "ابزارهای کدی وجود دارند که به حریف اجازه می‌دهند تا اجرای گذرا را ربوده و اسرار را در حالت ریزمعماری رمزگذاری کند."
+            ]
         }
     ],
     "type": "bundle"

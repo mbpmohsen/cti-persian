@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0140#AN0393",
-                    "external_id": "AN0393"
+                    "external_id": "AN0393",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PathRegex",
-                    "description": "Pattern matching known attacker staging directories or hidden file paths."
+                    "description": "Pattern matching known attacker staging directories or hidden file paths.",
+                    "description_fa": "الگوی تطبیق با دایرکتوری های مرحله بندی مهاجم شناخته شده یا مسیرهای فایل مخفی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Deletion shortly after process execution or privilege escalation."
+                    "description": "Deletion shortly after process execution or privilege escalation.",
+                    "description_fa": "حذف مدت کوتاهی پس از اجرای فرآیند یا افزایش امتیاز."
                 },
                 {
                     "field": "SecureDeletionTool",
-                    "description": "Uncommon presence or use of `shred`, `wipe`, or `srm`."
+                    "description": "Uncommon presence or use of `shred`, `wipe`, or `srm`.",
+                    "description_fa": "وجود یا استفاده غیرمعمول از «shred»، «wipe» یا «srm»."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0393",
+            "description_fa": "حذف فایل‌های مشکوک (مانند بارگذاری‌ها، نسخه‌های موقت، اسکریپت‌ها) را از طریق «rm»، «unlink» یا ابزارهای حذف امن مانند «shred» شناسایی می‌کند، به‌ویژه زمانی که توسط کاربران غیرمنتظره یا مدت کوتاهی پس از اجرا انجام شود."
         }
     ]
 }

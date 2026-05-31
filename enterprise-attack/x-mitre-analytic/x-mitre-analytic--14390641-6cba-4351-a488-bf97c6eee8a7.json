@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0551#AN1522",
-                    "external_id": "AN1522"
+                    "external_id": "AN1522",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PortScope",
-                    "description": "Can be tuned to non-standard ports if SSH is moved from default"
+                    "description": "Can be tuned to non-standard ports if SSH is moved from default",
+                    "description_fa": "در صورتی که SSH از حالت پیش‌فرض خارج شود، می‌تواند روی پورت‌های غیر استاندارد تنظیم شود"
                 },
                 {
                     "field": "UserScope",
-                    "description": "Filter high-value or restricted users (e.g., root, service)"
+                    "description": "Filter high-value or restricted users (e.g., root, service)",
+                    "description_fa": "فیلتر کردن کاربران با ارزش بالا یا محدود (به عنوان مثال، ریشه، سرویس)"
                 },
                 {
                     "field": "AttemptThreshold",
-                    "description": "Number of consecutive failures before flagging (e.g., >5 in 2 minutes)"
+                    "description": "Number of consecutive failures before flagging (e.g., >5 in 2 minutes)",
+                    "description_fa": "تعداد خرابی های متوالی قبل از پرچم گذاری (به عنوان مثال، > 5 در 2 دقیقه)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1522",
+            "description_fa": "تلاش‌های ناموفق برای ورود به سیستم SSH و به دنبال آن موفقیت احتمالی از همان میزبان راه دور"
         }
     ]
 }

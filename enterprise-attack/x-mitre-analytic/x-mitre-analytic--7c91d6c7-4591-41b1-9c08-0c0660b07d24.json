@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0178#AN0504",
-                    "external_id": "AN0504"
+                    "external_id": "AN0504",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate VNC process with user logon activity within defined time span"
+                    "description": "Correlate VNC process with user logon activity within defined time span",
+                    "description_fa": "فرآیند VNC را با فعالیت ورود کاربر در بازه زمانی تعریف شده مرتبط کنید"
                 },
                 {
                     "field": "VNCBinaryList",
-                    "description": "Trackable VNC executable names (e.g., vncserver.exe, winvnc.exe)"
+                    "description": "Trackable VNC executable names (e.g., vncserver.exe, winvnc.exe)",
+                    "description_fa": "نام‌های اجرایی VNC قابل ردیابی (مانند vncserver.exe، winvnc.exe)"
                 },
                 {
                     "field": "LogonType",
-                    "description": "Limit detection to interactive logons (type 10)"
+                    "description": "Limit detection to interactive logons (type 10)",
+                    "description_fa": "شناسایی محدود به لاگین های تعاملی (نوع 10)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0504",
+            "description_fa": "شناسایی سرویس VNC یا فایل اجرایی که به طور غیرمنتظره شروع می شود، به دنبال آن ایجاد جلسه کاربر و فعالیت دسکتاپ تعاملی (شبیه سازی ماوس/صفحه کلید)."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0284#AN0788",
-                    "external_id": "AN0788"
+                    "external_id": "AN0788",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedTools",
-                    "description": "Whitelist of tools (e.g., curl for package repos) to reduce false positives."
+                    "description": "Whitelist of tools (e.g., curl for package repos) to reduce false positives.",
+                    "description_fa": "لیست سفید ابزارها (به عنوان مثال، حلقه برای مخزن بسته) برای کاهش مثبت کاذب."
                 },
                 {
                     "field": "WorkHours",
-                    "description": "Expected time ranges for developer interactions with external paste sites."
+                    "description": "Expected time ranges for developer interactions with external paste sites.",
+                    "description_fa": "محدوده زمانی مورد انتظار برای تعامل توسعه‌دهنده با سایت‌های چسباندن خارجی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0788",
+            "description_fa": "استفاده از اسکریپت های curl، wget یا سفارشی برای ارسال داده ها به سرویس های pastebin مانند. دیدگاه مدافع: رفتار زنجیره‌ای را شناسایی کنید که در آن فایل‌ها فشرده/خوانده می‌شوند و به دنبال آن درخواست‌های HTTPS POST به نقاط پایانی اشتراک‌گذاری متن انجام می‌شود."
         }
     ]
 }

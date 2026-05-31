@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1448",
-                    "external_id": "T1448"
+                    "external_id": "T1448",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Google Bread",
                     "description": "A. Guertin, V. Kotov, Android Security & Privacy Team. (2020, January 9). PHA Family Highlights: Bread (and Friends) . Retrieved April 27, 2020.",
-                    "url": "https://security.googleblog.com/2020/01/pha-family-highlights-bread-and-friends.html"
+                    "url": "https://security.googleblog.com/2020/01/pha-family-highlights-bread-and-friends.html",
+                    "source_name_fa": "نان گوگل",
+                    "description_fa": "A. Guertin، V. Kotov، تیم امنیت و حریم خصوصی Android. (9 ژانویه 2020). نکات مهم خانواده PHA: نان (و دوستان). بازبینی شده در 27 آوریل 2020."
                 },
                 {
                     "source_name": "AndroidSecurity2014",
                     "description": "Google. (2014). Android Security 2014 Year in Review. Retrieved December 12, 2016.",
-                    "url": "https://static.googleusercontent.com/media/source.android.com/en//security/reports/Google_Android_Security_2014_Report_Final.pdf"
+                    "url": "https://static.googleusercontent.com/media/source.android.com/en//security/reports/Google_Android_Security_2014_Report_Final.pdf",
+                    "source_name_fa": "AndroidSecurity2014",
+                    "description_fa": "گوگل. (2014). Android Security 2014 سال در حال بررسی. بازبینی شده در 12 دسامبر 2016."
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2025-10-24T17:49:05.648Z",
             "name": "Carrier Billing Fraud",
-            "description": "A malicious app may trigger fraudulent charges on a victim\u2019s carrier billing statement in several different ways, including SMS toll fraud and SMS shortcodes that make purchases.\n\nPerforming SMS fraud relies heavily upon the fact that, when making SMS purchases, the carriers perform device verification but not user verification. This allows adversaries to make purchases on behalf of the user, with little or no user interaction.(Citation: Google Bread)\n\nMalicious applications may also perform toll billing, which occurs when carriers provide payment endpoints over a web page. The application connects to the web page over cellular data so the carrier can directly verify the number, or the application must retrieve a code sent via SMS and enter it into the web page.(Citation: Google Bread)\n\nOn iOS, apps cannot send SMS messages.\n\nOn Android, apps must hold the `SEND_SMS` permission to send SMS messages. Additionally, Android version 4.2 and above has mitigations against this threat by requiring user consent before allowing SMS messages to be sent to premium numbers (Citation: AndroidSecurity2014).",
+            "description": "A malicious app may trigger fraudulent charges on a victim’s carrier billing statement in several different ways, including SMS toll fraud and SMS shortcodes that make purchases.\n\nPerforming SMS fraud relies heavily upon the fact that, when making SMS purchases, the carriers perform device verification but not user verification. This allows adversaries to make purchases on behalf of the user, with little or no user interaction.(Citation: Google Bread)\n\nMalicious applications may also perform toll billing, which occurs when carriers provide payment endpoints over a web page. The application connects to the web page over cellular data so the carrier can directly verify the number, or the application must retrieve a code sent via SMS and enter it into the web page.(Citation: Google Bread)\n\nOn iOS, apps cannot send SMS messages.\n\nOn Android, apps must hold the `SEND_SMS` permission to send SMS messages. Additionally, Android version 4.2 and above has mitigations against this threat by requiring user consent before allowing SMS messages to be sent to premium numbers (Citation: AndroidSecurity2014).",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -51,7 +56,9 @@
             "x_mitre_version": "2.0",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "تقلب در صورت‌حساب شرکت مخابراتی",
+            "description_fa": "یک برنامه مخرب ممکن است به روش‌های مختلف، از جمله کلاهبرداری عوارض پیامکی و کدهای کوتاه پیامکی که خرید را انجام می‌دهند، هزینه‌های جعلی را در صورت‌حساب شرکت مخابراتی قربانی ایجاد کند.\n\nانجام کلاهبرداری پیامکی به شدت به این واقعیت بستگی دارد که هنگام خرید پیامکی، اپراتورها تأیید دستگاه را انجام می دهند اما تأیید کاربر را انجام نمی دهند. این به دشمنان اجازه می‌دهد تا از طرف کاربر، با تعامل کم یا بدون تعامل کاربر، خرید کنند.(Citation: Google Bread)\n\nبرنامه‌های مخرب ممکن است صورت‌حساب عوارض را نیز انجام دهند، که زمانی اتفاق می‌افتد که شرکت‌های مخابراتی نقاط پایانی پرداخت را در یک صفحه وب ارائه می‌کنند. برنامه از طریق داده های تلفن همراه به صفحه وب متصل می شود، بنابراین شرکت مخابراتی می تواند مستقیماً شماره را تأیید کند، یا برنامه باید یک کد ارسال شده از طریق پیامک را بازیابی کند و آن را در صفحه وب وارد کند.(Citation: Google Bread)\n\nدر iOS، برنامه ها نمی توانند پیامک ارسال کنند.\n\nدر Android، برنامه‌ها برای ارسال پیامک باید مجوز «SEND_SMS» را داشته باشند. علاوه بر این، نسخه Android نسخه 4.2 و بالاتر با درخواست رضایت کاربر قبل از ارسال پیامک‌ها به شماره‌های برتر (Citation: AndroidSecurity2014)، اقداماتی برای کاهش این تهدید دارد."
         }
     ]
 }

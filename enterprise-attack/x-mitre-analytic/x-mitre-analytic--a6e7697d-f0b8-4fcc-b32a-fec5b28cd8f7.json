@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0478#AN1315",
-                    "external_id": "AN1315"
+                    "external_id": "AN1315",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1315",
-            "description": "Cause\u2192effect chain: (1) User app/browser/archiver logs an open/click or abnormal exit, (2) new executable/script/archive extracted into $HOME/Downloads, /tmp, or ~/.cache, (3) parent app spawns shell/interpreter (bash/sh/python/node/curl/wget) or desktop file, and (4) new outbound connection(s) from the child lineage.",
+            "description": "Cause→effect chain: (1) User app/browser/archiver logs an open/click or abnormal exit, (2) new executable/script/archive extracted into $HOME/Downloads, /tmp, or ~/.cache, (3) parent app spawns shell/interpreter (bash/sh/python/node/curl/wget) or desktop file, and (4) new outbound connection(s) from the child lineage.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -65,22 +66,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "5\u201320 minute correlation window."
+                    "description": "5–20 minute correlation window.",
+                    "description_fa": "پنجره همبستگی 5-20 دقیقه ای."
                 },
                 {
                     "field": "UserPaths",
-                    "description": "$HOME/Downloads, /tmp, ~/.cache, ~/.config/autostart, ~/.local/share."
+                    "description": "$HOME/Downloads, /tmp, ~/.cache, ~/.config/autostart, ~/.local/share.",
+                    "description_fa": "$HOME/Downloads، /tmp، ~/.cache، ~/.config/autostart، ~/.local/share."
                 },
                 {
                     "field": "HighRiskChildren",
-                    "description": "bash, sh, zsh, python*, perl, node, curl, wget, xdg-open, kde-open, gio open, unzip/tar extraction leading to exec."
+                    "description": "bash, sh, zsh, python*, perl, node, curl, wget, xdg-open, kde-open, gio open, unzip/tar extraction leading to exec.",
+                    "description_fa": "bash، sh، zsh، python*، perl، node، curl، wget، xdg-open، kde-open، gio open، unzip/tar استخراج منجر به exec."
                 },
                 {
                     "field": "PkgUpdaters",
-                    "description": "Allow-list snap/flatpak/packagekit/apt workers to reduce false positives."
+                    "description": "Allow-list snap/flatpak/packagekit/apt workers to reduce false positives.",
+                    "description_fa": "برای کاهش موارد مثبت کاذب، به کارگران اسنپ/فلتپک/بسته کیت/آفت لیست اجازه دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1315",
+            "description_fa": "زنجیره علت → اثر: (1) برنامه کاربر/مرورگر/بایگانی یک خروجی باز/کلیک یا غیرعادی را ثبت می‌کند، (2) فایل اجرایی/اسکریپت/بایگانی جدید استخراج شده در $HOME/Downloads، /tmp، یا ~/.cache، (3) برنامه والد پوسته/مفسر، دسکتاپ/مفسر، دسک‌تاپ/مترجم، یا دسکتاپ، 4/desktop، و 4/Curnoget/py اتصال(های) خروجی جدید از اصل و نسب فرزند."
         }
     ]
 }

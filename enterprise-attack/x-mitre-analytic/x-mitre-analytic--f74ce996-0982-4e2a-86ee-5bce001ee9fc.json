@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0386#AN1087",
-                    "external_id": "AN1087"
+                    "external_id": "AN1087",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TokenScope",
-                    "description": "Flags excessive or abnormal use of directory read scopes by unexpected principals."
+                    "description": "Flags excessive or abnormal use of directory read scopes by unexpected principals.",
+                    "description_fa": "استفاده بیش از حد یا غیرعادی از دامنه های خواندن دایرکتوری توسط مدیران غیرمنتظره را علامت گذاری می کند."
                 },
                 {
                     "field": "AppContext",
-                    "description": "Differentiate authorized automation from rogue access tokens or external tools."
+                    "description": "Differentiate authorized automation from rogue access tokens or external tools.",
+                    "description_fa": "اتوماسیون مجاز را از توکن های دسترسی سرکش یا ابزارهای خارجی متمایز کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Trigger correlation across short bursts of high-volume enumeration."
+                    "description": "Trigger correlation across short bursts of high-volume enumeration.",
+                    "description_fa": "همبستگی را در میان دوره‌های کوتاه شمارش با حجم بالا ایجاد می‌کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1087",
+            "description_fa": "شمارش نقش‌های هویتی و کاربران از طریق تماس‌های API مانند «Get-MsolRoleMember»، «لیست کاربر آگهی az» یا نشانه‌های Graph API از کاربران غیرمجاز یا حساب‌های خودکار."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0661#AN1751",
-                    "external_id": "AN1751"
+                    "external_id": "AN1751",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.380Z",
             "name": "Analytic 1751",
-            "description": "Defender correlates an app acquiring input-capture capability (AccessibilityService enablement or default IME set) with high-frequency text-change/IME commit callbacks sourced from other packages, followed by local keylog persistence and/or small, immediate network egress. Chain: capability/permission \u2192 intercept (accessibility \u2018TYPE_VIEW_TEXT_CHANGED\u2019 or IME commitText/onStartInput bursts) \u2192 persist to container \u2192 near-term egress.",
+            "description": "Defender correlates an app acquiring input-capture capability (AccessibilityService enablement or default IME set) with high-frequency text-change/IME commit callbacks sourced from other packages, followed by local keylog persistence and/or small, immediate network egress. Chain: capability/permission → intercept (accessibility ‘TYPE_VIEW_TEXT_CHANGED’ or IME commitText/onStartInput bursts) → persist to container → near-term egress.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -57,29 +58,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time between intercept \u2192 persist/exfil (e.g., 5\u201345s)."
+                    "description": "Max time between intercept → persist/exfil (e.g., 5–45s).",
+                    "description_fa": "حداکثر زمان بین intercept → persist/exfil (مثلاً 5-45 ثانیه)."
                 },
                 {
                     "field": "MinKeyEventBurst",
-                    "description": "Minimum input events in window to flag (e.g., \u226510)."
+                    "description": "Minimum input events in window to flag (e.g., ≥10).",
+                    "description_fa": "حداقل رویدادهای ورودی در پنجره به پرچم (به عنوان مثال، ≥10)."
                 },
                 {
                     "field": "RequireA11yOrIME",
-                    "description": "Only alert when capability is via Accessibility or IME (true/false)."
+                    "description": "Only alert when capability is via Accessibility or IME (true/false).",
+                    "description_fa": "فقط زمانی هشدار دهید که قابلیت از طریق Accessibility یا IME (درست/نادرست) باشد."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for keylog artifacts in app container."
+                    "description": "Regex for keylog artifacts in app container.",
+                    "description_fa": "Regex برای مصنوعات keylog در کانتینر برنامه."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Enterprise/analytics endpoints to suppress FPs."
+                    "description": "Enterprise/analytics endpoints to suppress FPs.",
+                    "description_fa": "نقاط پایانی سازمانی/تحلیلی برای سرکوب FP ها."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground/Work Profile/Kiosk to scope alerts."
+                    "description": "Foreground/Work Profile/Kiosk to scope alerts.",
+                    "description_fa": "پیش زمینه / نمایه کاری / کیوسک برای دامنه هشدارها."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1751",
+            "description_fa": "Defender برنامه‌ای را که قابلیت ضبط ورودی (فعال‌سازی سرویس دسترسی یا تنظیم IME پیش‌فرض) را به دست می‌آورد، با تماس‌های متقابل تغییر متن/IME با فرکانس بالا که از بسته‌های دیگر منبع می‌شوند، و به دنبال آن تداوم صفحه کلید محلی و/یا خروجی کوچک و فوری از شبکه، مرتبط می‌کند. زنجیره: قابلیت/مجوز ← رهگیری (دسترسی «TYPE_VIEW_TEXT_CHANGED» یا IME commitText/onStartInput bursts) ← ادامه به کانتینر → خروج کوتاه مدت."
         }
     ]
 }

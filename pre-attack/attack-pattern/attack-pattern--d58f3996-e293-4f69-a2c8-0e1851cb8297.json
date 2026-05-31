@@ -12,23 +12,32 @@
                 {
                     "source_name": "mitre-pre-attack",
                     "url": "https://attack.mitre.org/techniques/T1392",
-                    "external_id": "T1392"
+                    "external_id": "T1392",
+                    "source_name_fa": "میتر قبل از حمله"
                 },
                 {
                     "source_name": "Apple Developer Enterprise Porgram Apps",
-                    "description": "Apple Inc.. (2016). Distributing Apple Developer Enterprise Program Apps. Retrieved April 12, 2017."
+                    "description": "Apple Inc.. (2016). Distributing Apple Developer Enterprise Program Apps. Retrieved April 12, 2017.",
+                    "source_name_fa": "برنامه‌های برنامه‌نویس پورگرام شرکت اپل",
+                    "description_fa": "شرکت اپل (2016). توزیع برنامه‌های برنامه‌نویس شرکتی اپل. بازبینی شده در 12 آوریل 2017."
                 },
                 {
                     "source_name": "Fruit vs Zombies",
-                    "description": "Claud Xiao. (2016). Fruit vs Zombies: Defeat Non-jailbroken iOS Malware. Retrieved April 12, 2017."
+                    "description": "Claud Xiao. (2016). Fruit vs Zombies: Defeat Non-jailbroken iOS Malware. Retrieved April 12, 2017.",
+                    "source_name_fa": "میوه در مقابل زامبی ها",
+                    "description_fa": "کلود شیائو. (2016). میوه در مقابل زامبی ها: بدافزار iOS غیر جیلبریک شده را شکست دهید. بازبینی شده در 12 آوریل 2017."
                 },
                 {
                     "source_name": "WIRELURKER",
-                    "description": "Claud Xiao. (2014). WIRELURKER:  A New Era in iOS and OS X Malware. Retrieved April 12, 2017."
+                    "description": "Claud Xiao. (2014). WIRELURKER:  A New Era in iOS and OS X Malware. Retrieved April 12, 2017.",
+                    "source_name_fa": "WIRELURKER",
+                    "description_fa": "کلود شیائو. (2014). WIRELURKER: عصر جدیدی در بدافزار iOS و OS X. بازبینی شده در 12 آوریل 2017."
                 },
                 {
                     "source_name": "Sideloading Change",
-                    "description": "David Richardson. (2015, September 10). Change to sideloading apps in iOS 9 is a security win. Retrieved April 12, 2017."
+                    "description": "David Richardson. (2015, September 10). Change to sideloading apps in iOS 9 is a security win. Retrieved April 12, 2017.",
+                    "source_name_fa": "تغییر بارگذاری جانبی",
+                    "description_fa": "دیوید ریچاردسون (10 سپتامبر 2015). تغییر در بارگذاری جانبی برنامه ها در iOS 9 یک پیروزی امنیتی است. بازبینی شده در 12 آوریل 2017."
                 }
             ],
             "object_marking_refs": [
@@ -49,7 +58,11 @@
             ],
             "modified": "2020-10-26T13:42:49.342Z",
             "created": "2017-12-14T16:46:06.044Z",
-            "x_mitre_deprecated": true
+            "x_mitre_deprecated": true,
+            "name_fa": "جفت کلید توزیع سازمانی Apple iOS و گواهینامه را دریافت کنید",
+            "description_fa": "این شی منسوخ شده است زیرا محتوای آن در دامنه سازمانی ادغام شده است. لطفاً ماتریس [PRE](http://attack.mitre.org/matrices/enterprise/pre/) را برای جایگزینی آن ببینید. محتوای قبلی این صفحه [اینجا] (https://attack.mitre.org/versions/v7/techniques/T1392) حفظ شده است.\n\nحریف می‌تواند یک جفت کلید توزیع سازمانی Apple iOS و گواهی دریافت کند و از آن برای توزیع مستقیم برنامه‌های مخرب در دستگاه‌های Apple iOS بدون نیاز به انتشار برنامه‌ها در Apple App Store (جایی که برنامه‌ها به طور بالقوه قابل شناسایی هستند) استفاده کند. (Citation: Apple Developer Enterprise Porgram Apps) (Citation: Fruit vs Zombies) (Citation: WIRELURKER) (Citation: Sideloading Change)",
+            "x_mitre_detectable_by_common_defenses_explanation_fa": "با شروع iOS 9، اپل رابط کاربری را هنگام نصب برنامه ها تغییر داده است تا پیامدهای احتمالی نصب برنامه های امضا شده توسط کلید توزیع سازمانی را به جای اپ استور اپل بهتر به کاربران نشان دهد و نصب سهوی این برنامه ها را برای کاربران دشوارتر کند. علاوه بر این، کنترل‌های مدیریت سازمانی در دسترس هستند که می‌توانند برای جلوگیری از نصب این برنامه‌ها اعمال شوند. همچنین، سیستم های مدیریت تحرک سازمانی / مدیریت دستگاه تلفن همراه (EMM/MDM) را می توان برای اسکن وجود برنامه های ناخواسته در دستگاه های تلفن همراه سازمانی استفاده کرد.",
+            "x_mitre_difficulty_for_adversary_explanation_fa": "اپل برای دریافت گواهی توزیع سازمانی به شماره DUNS، اسناد شرکتی و 299 دلار نیاز دارد. علاوه بر این، اپل در صورت کشف استفاده مخرب، گواهی ها را باطل می کند.  با این حال، اطلاعات ثبت‌نام می‌تواند توسط یک حریف برای اپل جعل شود، یا یک حریف می‌تواند گواهی توزیع سازمانی موجود (و کلید خصوصی مربوطه) را از کسب‌وکاری که قبلاً دارای یک گواهی است بدزدد."
         }
     ]
 }

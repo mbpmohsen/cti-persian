@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0149#AN0423",
-                    "external_id": "AN0423"
+                    "external_id": "AN0423",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UnencryptedProtocolList",
-                    "description": "Set of protocols considered suspicious for outbound data exfiltration (e.g., FTP, HTTP)."
+                    "description": "Set of protocols considered suspicious for outbound data exfiltration (e.g., FTP, HTTP).",
+                    "description_fa": "مجموعه‌ای از پروتکل‌هایی که برای استخراج داده‌های خروجی مشکوک در نظر گرفته می‌شوند (مانند FTP، HTTP)."
                 },
                 {
                     "field": "DataTransferSizeThreshold",
-                    "description": "Defines what amount of outbound data is considered abnormal for a host/user."
+                    "description": "Defines what amount of outbound data is considered abnormal for a host/user.",
+                    "description_fa": "تعیین می کند چه مقدار از داده های خروجی برای یک میزبان/کاربر غیرعادی در نظر گرفته می شود."
                 },
                 {
                     "field": "ParentProcessDenylist",
-                    "description": "Processes that should not launch FTP/HTTP clients (e.g., winword.exe launching ftp.exe)."
+                    "description": "Processes that should not launch FTP/HTTP clients (e.g., winword.exe launching ftp.exe).",
+                    "description_fa": "فرآیندهایی که نباید کلاینت های FTP/HTTP را راه اندازی کنند (به عنوان مثال، winword.exe ftp.exe را راه اندازی می کند)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0423",
+            "description_fa": "دسترسی به داده یا مرحله‌بندی رویدادها و به دنبال آن جریان‌های داده خروجی را با استفاده از پروتکل‌های رمزگذاری نشده (مانند FTP، HTTP) که توسط فرآیندهای غیرمنتظره یا به مقصدهای نادر آغاز می‌شوند، شناسایی می‌کند."
         }
     ]
 }

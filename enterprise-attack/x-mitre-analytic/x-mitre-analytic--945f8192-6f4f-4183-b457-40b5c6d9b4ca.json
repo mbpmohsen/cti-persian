@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0239#AN0667",
-                    "external_id": "AN0667"
+                    "external_id": "AN0667",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredETWProviders",
-                    "description": "List of ETW providers to baseline and monitor for unexpected removal."
+                    "description": "List of ETW providers to baseline and monitor for unexpected removal.",
+                    "description_fa": "فهرست ارائه‌دهندگان ETW برای حذف غیرمنتظره خط مقدم و نظارت."
                 },
                 {
                     "field": "AuthorizedConfigChanges",
-                    "description": "Whitelist of expected admin actions modifying Sysmon or ETW configurations."
+                    "description": "Whitelist of expected admin actions modifying Sysmon or ETW configurations.",
+                    "description_fa": "لیست سفید اقدامات مورد انتظار سرپرست که پیکربندی های Sysmon یا ETW را تغییر می دهند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0667",
+            "description_fa": "تغییرات رجیستری را با کلیدهای EventLog یا WMI Autologger، استفاده مشکوک از Set-EtwTraceProvider و تغییرات پیکربندی Sysmon مرتبط می کند. Defender وقفه یا تغییر مسیر ETW و مجموعه رویدادهای گزارش را می بیند."
         }
     ]
 }

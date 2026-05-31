@@ -13,17 +13,23 @@
                 {
                     "source_name": "Microsoft Create Token",
                     "description": "Brower, N., Lich, B. (2017, April 19). Create a token object. Retrieved December 19, 2017.",
-                    "url": "https://docs.microsoft.com/windows/device-security/security-policy-settings/create-a-token-object"
+                    "url": "https://docs.microsoft.com/windows/device-security/security-policy-settings/create-a-token-object",
+                    "source_name_fa": "مایکروسافت ایجاد توکن",
+                    "description_fa": "Brower, N., Lich, B. (2017, 19 آوریل). یک شی نشانه ایجاد کنید. بازبینی شده در 19 دسامبر 2017."
                 },
                 {
                     "source_name": "Microsoft Replace Process Token",
                     "description": "Brower, N., Lich, B. (2017, April 19). Replace a process level token. Retrieved December 19, 2017.",
-                    "url": "https://docs.microsoft.com/windows/device-security/security-policy-settings/replace-a-process-level-token"
+                    "url": "https://docs.microsoft.com/windows/device-security/security-policy-settings/replace-a-process-level-token",
+                    "source_name_fa": "رمز فرآیند جایگزینی مایکروسافت",
+                    "description_fa": "Brower, N., Lich, B. (2017, 19 آوریل). یک نشانه سطح فرآیند را جایگزین کنید. بازبینی شده در 19 دسامبر 2017."
                 },
                 {
                     "source_name": "Microsoft runas",
                     "description": "Microsoft TechNet. (n.d.). Runas. Retrieved April 21, 2017.",
-                    "url": "https://technet.microsoft.com/en-us/library/bb490994.aspx"
+                    "url": "https://technet.microsoft.com/en-us/library/bb490994.aspx",
+                    "source_name_fa": "اجراهای مایکروسافت",
+                    "description_fa": "Microsoft TechNet. (n.d.). روناس. بازبینی شده در ۲۱ آوریل ۲۰۱۷."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +42,8 @@
             "target_ref": "attack-pattern--86850eff-2729-40c3-b85e-c4af26da4a2d",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "description_fa": "مجوزها را محدود کنید تا کاربران و گروه های کاربری نتوانند توکن ایجاد کنند. این تنظیم باید فقط برای حساب سیستم محلی تعریف شود. GPO: پیکربندی رایانه > [خط مشی ها] > تنظیمات ویندوز > تنظیمات امنیتی > سیاست های محلی > واگذاری حقوق کاربر: یک شی نشانه ایجاد کنید. (Citation: Microsoft Create Token) همچنین تعیین کنید چه کسی می‌تواند یک نشانه سطح فرآیند را فقط برای سرویس محلی و شبکه از طریق GPO ایجاد کند: پیکربندی رایانه > [خط‌مشی‌ها] > تنظیمات ویندوز > تنظیمات امنیتی > سیاست‌های محلی > تخصیص حقوق کاربر: جایگزین کد سطح فرآیند شود.[[[CTI_PRESERVE_2]]\n\nمدیران باید به عنوان یک کاربر استاندارد وارد سیستم شوند اما ابزارهای خود را با امتیازات سرپرست با استفاده از دستور دستکاری نشانه دسترسی داخلی <code>runas</code> اجرا کنند.(Citation: Microsoft runas) (Citation: Microsoft Replace Process Token)"
         }
     ]
 }

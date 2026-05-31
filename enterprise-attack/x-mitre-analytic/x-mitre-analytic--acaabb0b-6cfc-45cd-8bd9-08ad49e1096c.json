@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0123#AN0344",
-                    "external_id": "AN0344"
+                    "external_id": "AN0344",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VolumeNamePattern",
-                    "description": "Detect suspicious or unrecognized drive labels (e.g., UNTITLED, BACKUP_VOL)."
+                    "description": "Detect suspicious or unrecognized drive labels (e.g., UNTITLED, BACKUP_VOL).",
+                    "description_fa": "برچسب‌های درایو مشکوک یا ناشناخته را شناسایی کنید (به‌عنوان مثال، UNTITLED، BACKUP_VOL)."
                 },
                 {
                     "field": "ProcessOrigin",
-                    "description": "Detect CLI-based copy operations vs. expected GUI usage."
+                    "description": "Detect CLI-based copy operations vs. expected GUI usage.",
+                    "description_fa": "شناسایی عملیات کپی مبتنی بر CLI در مقایسه با استفاده از رابط کاربری گرافیکی مورد انتظار."
                 },
                 {
                     "field": "UserSessionCheck",
-                    "description": "Alert if process and session context are mismatched (e.g., script from screensaver context)."
+                    "description": "Alert if process and session context are mismatched (e.g., script from screensaver context).",
+                    "description_fa": "در صورت عدم تطابق فرآیند و بافت جلسه (به عنوان مثال، اسکریپت از زمینه محافظ صفحه نمایش) هشدار دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0344",
+            "description_fa": "نصب حجم های خارجی و به دنبال آن دسترسی به فایل های با حجم بالا یا حساس از طریق Finder، ترمینال یا برنامه های شخص ثالث (مانند rsync، zip) را تشخیص می دهد."
         }
     ]
 }

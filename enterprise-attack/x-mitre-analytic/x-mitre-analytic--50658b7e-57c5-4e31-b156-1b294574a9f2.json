@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0282#AN0785",
-                    "external_id": "AN0785"
+                    "external_id": "AN0785",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedDLLPaths",
-                    "description": "Directories where DLL loading via regsvr32.exe is expected (e.g., C:\\Windows\\System32)."
+                    "description": "Directories where DLL loading via regsvr32.exe is expected (e.g., C:\\Windows\\System32).",
+                    "description_fa": "دایرکتوری هایی که در آن DLL بارگیری از طریق regsvr32.exe انتظار می رود (به عنوان مثال، C:\\Windows\\System32)."
                 },
                 {
                     "field": "ScriptletExtensions",
-                    "description": "File extensions considered suspicious when executed by regsvr32.exe (e.g., .sct, .ocx)."
+                    "description": "File extensions considered suspicious when executed by regsvr32.exe (e.g., .sct, .ocx).",
+                    "description_fa": "پسوندهای فایل هنگام اجرا توسط regsvr32.exe مشکوک در نظر گرفته می شوند (به عنوان مثال، .sct، .ocx)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Timeframe to correlate regsvr32.exe process creation with subsequent module loads and network connections."
+                    "description": "Timeframe to correlate regsvr32.exe process creation with subsequent module loads and network connections.",
+                    "description_fa": "بازه زمانی برای ارتباط ایجاد فرآیند regsvr32.exe با بارهای ماژول بعدی و اتصالات شبکه."
                 },
                 {
                     "field": "ParentProcessWhitelist",
-                    "description": "Parent processes from which regsvr32.exe is expected (e.g., explorer.exe during legitimate COM object registration)."
+                    "description": "Parent processes from which regsvr32.exe is expected (e.g., explorer.exe during legitimate COM object registration).",
+                    "description_fa": "فرآیندهای والد که از آنها regsvr32.exe انتظار می رود (به عنوان مثال، explorer.exe در طول ثبت نام مشروع شی COM)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0785",
+            "description_fa": "تشخیص بر شناسایی اجراهای غیرعادی regsvr32.exe که از استفاده عادی اداری یا سیستمی منحرف می‌شوند تمرکز دارد. مدافعان ممکن است بارگیری اسکریپت‌ها یا DLL‌های regsvr32.exe را از مسیرهای غیرمعمول (مخصوصاً دایرکتوری‌های موقت یا نشانی‌های اینترنتی راه دور)، آرگومان‌های خط فرمان که /i یا /u را با ارجاع‌های فایل مشکوک فراخوانی می‌کنند، اتصالات شبکه آغاز شده توسط regsvr32.exe، و DLL‌های بدون علامت یا غیرقابل اعتماد را مشاهده کنند. توالی های مرتبط شامل ایجاد فرآیند regsvr32.exe، بارگذاری ماژول DLL/scriptlet، و ترافیک شبکه خروجی اختیاری است."
         }
     ]
 }

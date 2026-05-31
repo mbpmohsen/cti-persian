@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0416#AN1172",
-                    "external_id": "AN1172"
+                    "external_id": "AN1172",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TransferTargetDomainOrIP",
-                    "description": "Public IPs or domains not belonging to known ESXi mgmt infra"
+                    "description": "Public IPs or domains not belonging to known ESXi mgmt infra",
+                    "description_fa": "IP های عمومی یا دامنه هایی که به ESXi mgmt infra شناخته شده نیستند"
                 },
                 {
                     "field": "SourceDirectoryFilter",
-                    "description": "Monitor transfers from /tmp/, /etc/, /vmfs/volumes/"
+                    "description": "Monitor transfers from /tmp/, /etc/, /vmfs/volumes/",
+                    "description_fa": "نظارت بر انتقال از /tmp/، /etc/، /vmfs/volumes/"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1172",
+            "description_fa": "حرکت فایل یا انتقال خروجی TFTP/FTP از میزبان ESXi را که از طریق دستورات پوسته یا اسکریپت‌های تزریق شده، به‌ویژه از پارتیشن‌های اولیه یا tmp/ آغاز می‌شود، تشخیص می‌دهد."
         }
     ]
 }

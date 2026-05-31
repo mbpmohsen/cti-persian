@@ -9,30 +9,38 @@
                 {
                     "external_id": "CAPEC-457",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/457.html"
+                    "url": "https://capec.mitre.org/data/definitions/457.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1299",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1299.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1299.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Replication Through Removable Media",
                     "external_id": "T1091",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1091"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1091",
+                    "description_fa": "تکرار از طریق رسانه های قابل جابجایی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Communication Through Removable Media",
                     "external_id": "T1092",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1092"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1092",
+                    "description_fa": "ارتباط از طریق رسانه های قابل جابجایی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Jon Boyens, Angela Smith, Nadya Bartol, Kris Winkler, Alex Holbrook, Matthew Fallon, Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations (2nd Draft), 2021--10---28, National Institute of Standards and Technology (NIST)",
                     "external_id": "REF-379",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-draft2.pdf"
+                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-draft2.pdf",
+                    "description_fa": "جان بوینز، آنجلا اسمیت، نادیا بارتول، کریس وینکلر، الکس هالبروک، متیو فالون، شیوه‌های مدیریت ریسک زنجیره تامین امنیت سایبری برای سیستم‌ها و سازمان‌ها (پیش‌نویس دوم)، 2021--10---28، موسسه ملی استاندارد و فناوری (NIST)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a55491b8-b521-44f4-a905-a6ed82b8e7e8",
@@ -62,7 +70,14 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن کدهای مخرب را روی یک حافظه USB بارگذاری می کند تا هر سیستمی را که دستگاه به آن وصل است آلوده کند. درایوهای USB خطر امنیتی قابل توجهی برای سازمان های تجاری و دولتی دارند. با توجه به قابلیت ادغام عملکردهای بی سیم در یک USB، می توان بدافزاری طراحی کرد که نه تنها داده های محرمانه را می دزدد، بلکه شبکه را بو می کند یا ضربه های کلید را نظارت می کند و سپس داده های دزدیده شده را در خارج از سایت از طریق یک اتصال بی سیم استخراج می کند. همچنین، ویروس‌ها را می‌توان از طریق رابط USB و بدون استفاده از مموری استیک منتقل کرد. حملات از دستگاه‌های USB اغلب چنان پیچیده هستند که کارشناسان به این نتیجه می‌رسند که این حملات توسط افراد مجرد انجام نمی‌شود، بلکه پیشنهاد حمایت دولتی است. این حملات می تواند توسط یک دشمن با دسترسی مستقیم به سیستم هدف انجام شود یا از طریق ابزارهایی مانند یو اس بی دراپ اتک اجرا شود.",
+            "name_fa": "حملات حافظه USB",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3> کاوش</h3><ol><li> <p> <b>تعیین سیستم هدف: </b>در موارد خاص، دشمن شبکه سازمان را برای تعیین یک ماشین هدف خاص برای بهره برداری بر اساس اطلاعات موجود در آن یا امتیازاتی که کاربر اصلی ممکن است شناسایی کند، کاوش می کند. دارند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>در صورت نیاز، دشمن شبکه سازمان را بررسی می‌کند تا مشخص کند آیا سیستم‌های مورد علاقه خاصی وجود دارد یا خیر. دستگاه: </b> دشمن نرم‌افزار مخرب لازم برای سوء استفاده از سیستم هدف را توسعه می‌دهد یا به دست می‌آورد، سپس آن را بر روی یک دستگاه USB خارجی مانند درایو فلش USB نصب می‌کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>متخاصم می‌تواند بدافزاری را برای انجام انواع وظایف نظارت بر شبکه یا نظارت بر ترافیک شبکه ایجاد کند یا به دست آورد. ضربه زدن به کلید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>اتصال یا فریب کاربر برای اتصال دستگاه USB آلوده: </b>هنگامی که بدافزار بر روی یک دستگاه USB خارجی قرار داده شد، سیستم مورد نظر کاربر را به دستگاه مورد نظر به دستگاه USB متصل می کند. مانند حمله دراپ USB.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن دستگاه USB را به یک سیستم هدف مشخص وصل می‌کند یا یک یو‌اس‌بی Drop Attack انجام می‌دهد، به این امید که کاربر خودش دستگاه USB را پیدا و متصل کند. پس از اتصال دستگاه، بدافزار اجرا می‌شود و به حریف اجازه دسترسی به ترافیک شبکه، اعتبارنامه‌ها و غیره را می‌دهد.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "سطحی از دسترسی فیزیکی به دستگاه مورد حمله.",
+                "اطلاعات مربوط به سازمان مورد نظر در مورد نحوه اجرای بهترین حمله USB Drop."
+            ]
         }
     ],
     "type": "bundle"

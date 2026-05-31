@@ -9,23 +9,29 @@
                 {
                     "external_id": "CAPEC-242",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/242.html"
+                    "url": "https://capec.mitre.org/data/definitions/242.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-94",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/94.html"
+                    "url": "http://cwe.mitre.org/data/definitions/94.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Code Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Code_Injection"
+                    "url": "https://owasp.org/www-community/attacks/Code_Injection",
+                    "description_fa": "تزریق کد",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-612",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11-Testing_for_Code_Injection.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11-Testing_for_Code_Injection.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--7f0f7de2-bf09-4f60-86bb-6933192b7128",
@@ -45,6 +51,15 @@
                 ],
                 "Integrity": [
                     "Other (Code Injection attack patterns can result in a wide variety of consequences and negatively affect all three elements of the security triad.)"
+                ],
+                "Availability_fa": [
+                    "سایر موارد (الگوهای حمله کد تزریق می تواند پیامدهای مختلفی را به همراه داشته باشد و بر هر سه عنصر سه گانه امنیتی تأثیر منفی بگذارد.)"
+                ],
+                "Confidentiality_fa": [
+                    "سایر موارد (الگوهای حمله کد تزریق می تواند پیامدهای مختلفی را به همراه داشته باشد و بر هر سه عنصر سه گانه امنیتی تأثیر منفی بگذارد.)"
+                ],
+                "Integrity_fa": [
+                    "سایر موارد (الگوهای حمله کد تزریق می تواند پیامدهای مختلفی را به همراه داشته باشد و بر هر سه عنصر سه گانه امنیتی تأثیر منفی بگذارد.)"
                 ]
             },
             "x_capec_domains": [
@@ -63,7 +78,12 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از ضعف در اعتبار سنجی ورودی در هدف برای تزریق کد جدید به آنچه در حال اجراست استفاده می کند. این با گنجاندن کد متفاوت است زیرا گنجاندن کد شامل افزودن یا جایگزینی یک مرجع به یک فایل کد است که متعاقباً توسط هدف بارگیری می شود و به عنوان بخشی از کد برخی از برنامه ها استفاده می شود.",
+            "name_fa": "تزریق کد",
+            "x_capec_prerequisites_fa": [
+                "نرم‌افزار هدف، ورودی‌های کنترل‌شده توسط کاربر را تأیید نمی‌کند، به طوری که اجرای یک فرآیند ممکن است با ارسال کد از طریق کانال‌های داده قانونی، بدون استفاده از هیچ مکانیسم دیگری، تغییر یابد."
+            ]
         }
     ],
     "spec_version": "2.0",

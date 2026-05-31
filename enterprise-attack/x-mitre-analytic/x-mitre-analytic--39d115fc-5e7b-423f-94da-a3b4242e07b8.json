@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0479#AN1319",
-                    "external_id": "AN1319"
+                    "external_id": "AN1319",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedProfilers",
-                    "description": "List of known good COR_PROFILER CLSIDs and DLLs expected in developer or monitoring environments."
+                    "description": "List of known good COR_PROFILER CLSIDs and DLLs expected in developer or monitoring environments.",
+                    "description_fa": "لیستی از CLSIDها و DLLهای COR_PROFILER خوب شناخته شده مورد انتظار در محیط های توسعه دهنده یا نظارت."
                 },
                 {
                     "field": "ProcessScope",
-                    "description": "Processes expected to load COR_PROFILER (e.g., Visual Studio) for baseline comparison."
+                    "description": "Processes expected to load COR_PROFILER (e.g., Visual Studio) for baseline comparison.",
+                    "description_fa": "پردازش‌هایی که انتظار می‌رود COR_PROFILER (مانند Visual Studio) را برای مقایسه پایه بارگیری کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Interval between registry modification or file creation and profiler DLL load into .NET processes."
+                    "description": "Interval between registry modification or file creation and profiler DLL load into .NET processes.",
+                    "description_fa": "فاصله بین اصلاح رجیستری یا ایجاد فایل و بارگیری DLL پروفایلر در فرآیندهای NET."
                 },
                 {
                     "field": "ProfilerDllPaths",
-                    "description": "Directories considered legitimate for profiler DLLs; deviations should raise alerts."
+                    "description": "Directories considered legitimate for profiler DLLs; deviations should raise alerts.",
+                    "description_fa": "دایرکتوری هایی که برای DLL های نمایه ساز قانونی در نظر گرفته می شوند. انحرافات باید هشدارها را افزایش دهند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1319",
+            "description_fa": "تغییر متغیرهای محیطی مرتبط با COR_PROFILER یا کلیدهای رجیستری (COR_ENABLE_PROFILING، COR_PROFILER، COR_PROFILER_PATH)، همراه با ایجاد فرآیند غیرعادی .NET یا بارهای DLL مدیریت نشده. Defender تغییرات رجیستری، ایجاد فرآیند مشکوک با متغیرهای محیط تغییریافته، و DLL های پروفایلر را مشاهده می کند که به طور غیرمنتظره در فرآیندهای NET CLR بارگذاری شده اند."
         }
     ]
 }

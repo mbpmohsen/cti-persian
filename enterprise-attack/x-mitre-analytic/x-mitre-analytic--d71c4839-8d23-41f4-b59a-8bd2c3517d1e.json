@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0049#AN0133",
-                    "external_id": "AN0133"
+                    "external_id": "AN0133",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetPathRegex",
-                    "description": "Filter file/registry paths like *\\Terminal Server Client\\* or *Default.rdp*"
+                    "description": "Filter file/registry paths like *\\Terminal Server Client\\* or *Default.rdp*",
+                    "description_fa": "فیلتر کردن مسیرهای فایل/رجیستری مانند *\\Terminal Server Client\\* یا *Default.rdp*"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate command/registry edits within close proximity to suspicious connection activity"
+                    "description": "Correlate command/registry edits within close proximity to suspicious connection activity",
+                    "description_fa": "ویرایش‌های دستور/رجیستری را در نزدیکی فعالیت اتصال مشکوک به هم مرتبط کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Detect cleanup behavior from non-interactive or SYSTEM accounts"
+                    "description": "Detect cleanup behavior from non-interactive or SYSTEM accounts",
+                    "description_fa": "رفتار پاکسازی را از حساب‌های غیر تعاملی یا SYSTEM شناسایی کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0133",
+            "description_fa": "تلاش‌ها برای پاک کردن تاریخچه RDP/شبکه ​​و اصلاح مصنوعات پیکربندی شبکه را از طریق اجرای دستور، حذف کلید رجیستری، تغییرات قانون دیوار آتش، و حذف‌های مشکوک فایل (مانند Default.rdp، ویرایش‌های رجیستری در کلیدهای سرویس گیرنده ترمینال سرور) شناسایی می‌کند."
         }
     ]
 }

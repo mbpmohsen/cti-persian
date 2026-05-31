@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0303#AN0849",
-                    "external_id": "AN0849"
+                    "external_id": "AN0849",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandPattern",
-                    "description": "Look for 'esxcli system account list' and API calls from unusual sources."
+                    "description": "Look for 'esxcli system account list' and API calls from unusual sources.",
+                    "description_fa": "به دنبال «لیست حساب سیستم esxcli» و تماس‌های API از منابع غیرمعمول باشید."
                 },
                 {
                     "field": "SessionType",
-                    "description": "Restrict detection to interactive sessions vs. maintenance/automation jobs."
+                    "description": "Restrict detection to interactive sessions vs. maintenance/automation jobs.",
+                    "description_fa": "شناسایی را به جلسات تعاملی در مقابل کارهای تعمیر و نگهداری/اتوماسیون محدود کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0849",
+            "description_fa": "شمارش حساب های محلی ESXi با استفاده از esxcli یا vSphere API از جلسات غیرمجاز."
         }
     ]
 }

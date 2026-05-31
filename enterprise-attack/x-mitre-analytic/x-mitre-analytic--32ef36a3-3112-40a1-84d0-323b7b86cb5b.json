@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0118#AN0330",
-                    "external_id": "AN0330"
+                    "external_id": "AN0330",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServicePortSet",
-                    "description": "22, 5900, 8080/8443 by default."
+                    "description": "22, 5900, 8080/8443 by default.",
+                    "description_fa": "22، 5900، 8080/8443 به طور پیش فرض."
                 },
                 {
                     "field": "AllowedAdmins",
-                    "description": "MDM/jump-host IPs allowed to manage endpoints."
+                    "description": "MDM/jump-host IPs allowed to manage endpoints.",
+                    "description_fa": "IPهای MDM/jump-host مجاز به مدیریت نقاط پایانی هستند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Default: 10 minutes."
+                    "description": "Default: 10 minutes.",
+                    "description_fa": "پیش فرض: 10 دقیقه"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0330",
+            "description_fa": "دسترسی ورودی به سرویس‌های در معرض نمایش (ARD/VNC 5900، SSH 22، ScreenSharing، سرویس‌های وب) را با خرابی‌های فرآیند در گزارش‌های یکپارچه و فرآیندهای فرزند غیرعادی ایجاد شده در این سرویس‌ها (مانند bash، curl) به منظور نشان دادن بهره‌برداری مرتبط می‌کند."
         }
     ]
 }

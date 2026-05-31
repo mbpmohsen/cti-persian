@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0438#AN1213",
-                    "external_id": "AN1213"
+                    "external_id": "AN1213",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyThreshold",
-                    "description": "Minimum entropy level that flags suspicious custom archives."
+                    "description": "Minimum entropy level that flags suspicious custom archives.",
+                    "description_fa": "حداقل سطح آنتروپی که آرشیوهای سفارشی مشکوک را علامت گذاری می کند."
                 },
                 {
                     "field": "AllowedProcesses",
-                    "description": "Known business processes performing encryption or compression."
+                    "description": "Known business processes performing encryption or compression.",
+                    "description_fa": "فرآیندهای تجاری شناخته شده که رمزگذاری یا فشرده سازی را انجام می دهند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation timeframe between script execution and file creation."
+                    "description": "Correlation timeframe between script execution and file creation.",
+                    "description_fa": "بازه زمانی همبستگی بین اجرای اسکریپت و ایجاد فایل."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1213",
+            "description_fa": "روال‌های فشرده‌سازی/رمزگذاری سفارشی مشکوک را از طریق اسکریپت غیرعادی یا اجرای باینری که فایل‌های با آنتروپی بالا را بدون ابزارهای بایگانی استاندارد تولید می‌کند، شناسایی می‌کند. اجرای اسکریپت، استفاده از API حافظه (عملیات بیتی، فراخوانی های CryptoAPI) و ایجاد فایل های آرشیو مانند با هدرهای غیر معمول را به هم مرتبط می کند."
         }
     ]
 }

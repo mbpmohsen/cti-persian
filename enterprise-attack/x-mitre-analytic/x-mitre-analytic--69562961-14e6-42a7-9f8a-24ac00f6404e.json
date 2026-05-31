@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0237#AN0660",
-                    "external_id": "AN0660"
+                    "external_id": "AN0660",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "script_section",
-                    "description": "Tunable script section edited by adversary (beginning, end, inline)"
+                    "description": "Tunable script section edited by adversary (beginning, end, inline)",
+                    "description_fa": "بخش اسکریپت قابل تنظیم که توسط دشمن ویرایش شده است (شروع، پایان، درون خطی)"
                 },
                 {
                     "field": "command_type",
-                    "description": "Nature of embedded command or payload affects detection scope"
+                    "description": "Nature of embedded command or payload affects detection scope",
+                    "description_fa": "ماهیت فرمان جاسازی شده یا محموله بر دامنه تشخیص تأثیر می گذارد"
                 },
                 {
                     "field": "execution_trigger",
-                    "description": "Boot vs. manual script re-invocation"
+                    "description": "Boot vs. manual script re-invocation",
+                    "description_fa": "بوت در مقابل فراخوانی مجدد اسکریپت دستی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0660",
+            "description_fa": "تشخیص تغییرات /etc/rc.local.d/local.sh یا rc.local در طول اجرای اسکریپت پس از بوت با دستورات یا اضافات غیرعادی."
         }
     ]
 }

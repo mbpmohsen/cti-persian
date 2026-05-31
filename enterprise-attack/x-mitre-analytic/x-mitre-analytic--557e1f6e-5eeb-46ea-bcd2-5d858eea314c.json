@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0226#AN0630",
-                    "external_id": "AN0630"
+                    "external_id": "AN0630",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,26 +46,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "benign_extensions",
-                    "description": "List of non-executable file types commonly used to mask payloads (.jpg, .txt, .gif)"
+                    "description": "List of non-executable file types commonly used to mask payloads (.jpg, .txt, .gif)",
+                    "description_fa": "فهرست انواع فایل های غیرقابل اجرا که معمولاً برای پوشاندن بارهای پرداختی استفاده می شوند (jpg، txt.، .gif)"
                 },
                 {
                     "field": "monitored_directories",
-                    "description": "Targeted directories for initial access and downloads (e.g., %TEMP%, Downloads, AppData)"
+                    "description": "Targeted directories for initial access and downloads (e.g., %TEMP%, Downloads, AppData)",
+                    "description_fa": "دایرکتوری های هدفمند برای دسترسی اولیه و دانلودها (به عنوان مثال، %TEMP٪، دانلودها، AppData)"
                 },
                 {
                     "field": "MagicByteMismatchThreshold",
-                    "description": "Detection tolerance for mismatches between extension and file signature (magic bytes)"
+                    "description": "Detection tolerance for mismatches between extension and file signature (magic bytes)",
+                    "description_fa": "تحمل تشخیص عدم تطابق بین پسوند و امضای فایل (بایت های جادویی)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time range between file creation and first execution"
+                    "description": "Time range between file creation and first execution",
+                    "description_fa": "بازه زمانی بین ایجاد فایل و اولین اجرا"
                 },
                 {
                     "field": "ParentProcessAnomalyScore",
-                    "description": "Anomaly score threshold for suspicious parent-child process combinations"
+                    "description": "Anomaly score threshold for suspicious parent-child process combinations",
+                    "description_fa": "آستانه نمره ناهنجاری برای ترکیبات فرآیندی مشکوک والد-فرزند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0630",
+            "description_fa": "رفتاری را تشخیص می‌دهد که فایل‌هایی با پسوندهای غیرقابل اجرا یا گمراه‌کننده (مانند .jpg، .txt) ایجاد یا تغییر می‌کنند اما متعاقباً به‌صورت باینری بر اساس سرصفحه‌های فایل داخلی یا نسل فرآیند والد غیرعادی اجرا می‌شوند. این شامل شناسایی فایل‌های چند زبانه یا بایت‌های جادویی نادرست است که نشان‌دهنده تلاش‌های مخفیانه است."
         }
     ]
 }

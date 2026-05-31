@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0124#AN0347",
-                    "external_id": "AN0347"
+                    "external_id": "AN0347",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0347",
-            "description": "Processes use base64/xxd/openssl/python Objective\u2011C APIs to encode data (seen in EndpointSecurity exec events or Unified Logs) \u2192 quick outbound connections with large bytes_out or HTTP POSTs carrying Base64/MIME bodies.",
+            "description": "Processes use base64/xxd/openssl/python Objective‑C APIs to encode data (seen in EndpointSecurity exec events or Unified Logs) → quick outbound connections with large bytes_out or HTTP POSTs carrying Base64/MIME bodies.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedDeveloperIDs",
-                    "description": "Signed/allowed developer binaries routinely using encoding."
+                    "description": "Signed/allowed developer binaries routinely using encoding.",
+                    "description_fa": "باینری های توسعه دهنده امضا/مجاز به طور معمول با استفاده از رمزگذاری."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Payload entropy cutoff."
+                    "description": "Payload entropy cutoff.",
+                    "description_fa": "قطع آنتروپی بار."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Exec \u2192 egress window."
+                    "description": "Exec → egress window.",
+                    "description_fa": "Exec → پنجره خروج."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0347",
+            "description_fa": "فرآیندها از base64/xxd/openssl/python Objective-C برای رمزگذاری داده‌ها استفاده می‌کنند (که در رویدادهای Exec EndpointSecurity یا گزارش‌های یکپارچه دیده می‌شود) ← اتصالات خروجی سریع با بایت‌های_out بزرگ یا HTTP POST‌هایی که بدنه‌های Base64/MIME را حمل می‌کنند."
         }
     ]
 }

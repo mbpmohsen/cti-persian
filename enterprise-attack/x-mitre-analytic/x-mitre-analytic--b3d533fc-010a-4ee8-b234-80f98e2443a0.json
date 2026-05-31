@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0184#AN0523",
-                    "external_id": "AN0523"
+                    "external_id": "AN0523",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LogMountPaths",
-                    "description": "Tune based on how logs are exported (bind-mount, overlay)"
+                    "description": "Tune based on how logs are exported (bind-mount, overlay)",
+                    "description_fa": "تنظیم بر اساس نحوه صدور گزارش‌ها (bind-mount، overlay)"
                 },
                 {
                     "field": "ContainerLabelScope",
-                    "description": "Limit detection to suspicious containers or runtime classes"
+                    "description": "Limit detection to suspicious containers or runtime classes",
+                    "description_fa": "شناسایی را به کانتینرهای مشکوک یا کلاس های زمان اجرا محدود کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0523",
+            "description_fa": "مانیتورهایی که در لاگ‌های حسابرسی، حجم‌ها یا ذخیره‌سازی نصب‌شده اغلب برای گزارش‌گیری کانال جانبی (مانند /var/log در داخل کانتینرها) استفاده می‌شوند، پس از سازش استفاده می‌کنند."
         }
     ]
 }

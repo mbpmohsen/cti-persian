@@ -9,52 +9,63 @@
                 {
                     "external_id": "CAPEC-14",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/14.html"
+                    "url": "https://capec.mitre.org/data/definitions/14.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-353",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/353.html"
+                    "url": "http://cwe.mitre.org/data/definitions/353.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-118",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/118.html"
+                    "url": "http://cwe.mitre.org/data/definitions/118.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--c4a0c765-e4ca-43c2-996e-08ce13ae8f80",
@@ -84,6 +95,18 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع (انکار خدمات)",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -100,11 +123,23 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a buffer overflow to inject malicious code into the stack of a software system or even the heap requires a more in-depth knowledge and higher skill level.",
-                "Low": "To achieve a denial of service, an attacker can simply overflow a buffer by inserting a long string into an attacker-modifiable injection vector."
+                "Low": "To achieve a denial of service, an attacker can simply overflow a buffer by inserting a long string into an attacker-modifiable injection vector.",
+                "High_fa": "بهره برداری از سرریز بافر برای تزریق کد مخرب به پشته یک سیستم نرم افزاری یا حتی پشته نیاز به دانش عمیق تر و سطح مهارت بالاتری دارد.",
+                "Low_fa": "برای دستیابی به انکار سرویس، یک مهاجم به سادگی می تواند با وارد کردن یک رشته طولانی در یک بردار تزریق قابل تغییر توسط مهاجم، یک بافر را سرریز کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این نوع حمله از آسیب‌پذیری سرریز بافر در نرم‌افزار مشتری هدفمند از طریق تزریق محتوای مخرب از یک سرویس خصمانه ساخته‌شده، سوء استفاده می‌کند. این سرویس خصمانه برای ارائه محتوای صحیح به نرم افزار مشتری ایجاد شده است. به عنوان مثال، اگر برنامه سمت سرویس گیرنده یک مرورگر باشد، این سرویس میزبان یک صفحه وب است که مرورگر آن را بارگیری می کند.",
+            "name_fa": "سرریز بافر ناشی از تزریق توسط مشتری",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>نویسندگان اغلب از تگ های <EMBED> در اسناد HTML استفاده می کنند. به عنوان مثال</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\"><EMBED TYPE=\"audio/midi\" SRC=\"/path/file.mid\" AUTOSTART=\"true\"></xhtml:div>\n               <xhtml:p>در اینترنت اکسپلورر 4.0 یک مهاجم حریف یک مسیر بسیار طولانی را در دستور العمل SRC= ارائه می دهد، مؤلفه mshtml.dll دچار سرریز بافر می شود. این یک نمونه استاندارد از محتوای یک صفحه وب است که برای سوء استفاده از یک ماژول معیوب در سیستم هدایت می شود. به طور بالقوه هزاران روش مختلف وجود دارد که داده ها می توانند در یک سیستم خاص منتشر شوند، بنابراین این نوع حملات همچنان در طبیعت یافت می شوند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه سمت سرویس گیرنده هدف: </b>دشمن برنامه سمت کلاینت هدف را برای اجرای سرریز بافر در آن شناسایی می کند. رایج ترین آنها مرورگرها هستند. اگر یک آسیب‌پذیری شناخته شده مرورگر وجود داشته باشد، دشمن می‌تواند آن را هدف قرار دهد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>پیدا کردن بردار تزریق: </b> دشمن یک بردار تزریق را شناسایی می‌کند تا محتوای بیش از حد را به برنامه‌های مورد نظر تحویل دهد. بافر.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>بسیاری اوقات برنامه‌های سمت سرویس گیرنده منبع باز خواهند بود، بنابراین دشمن می‌تواند کد منبع را برای شناسایی بردارهای تزریق احتمالی بررسی کند.</td></tr><tr><td>APIهای برنامه سمت کلاینت را بررسی کنید و به دنبال مناطقی باشید که ممکن است جریان بافر وجود داشته باشد. ممکن است.</td></tr></tbody></table><li> <p> <b>ایجاد سرویس خصمانه: </b> دشمن یک سرویس خصمانه ایجاد می کند که محتوا را به برنامه سمت سرویس گیرنده ارائه می دهد. اگر هدف این است که به سادگی باعث از کار افتادن نرم افزار شود، محتوا فقط باید از مقدار بیش از حد داده های تصادفی تشکیل شود. اگر قصد استفاده از سرریز برای اجرای کد دلخواه باشد، حریف محموله را به گونه‌ای طراحی می‌کند که آدرس برگشتی رونویسی شده با یکی از گزینه‌های دشمن جایگزین می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>اگر مرورگر یک سرویس مخرب در سمت سرویس گیرنده ایجاد می‌کند، یک برنامه مخرب در سمت مشتری ایجاد می‌کند. صفحه وب به مرورگر.</td></tr><tr><td>یک کد پوسته مخرب ایجاد کنید که با بازگشت اجرای برنامه به آن اجرا شود.</td></tr><tr><td>از یک NOP-sled در محتوای سرریز استفاده کنید تا راحت‌تر به کد مخرب \"اسلاید\" کنید. این کار به گونه‌ای انجام می‌شود که آدرس برگشتی دقیق لازم نباشد درست باشد، فقط در محدوده همه NOPها</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز از بافر: </b>با استفاده از بردار تزریقی، برنامه با استفاده از جریان تزریقی، برنامه را با استفاده از سرویس گیرنده از روی میزبان ارائه می‌کند. بافر.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>اگر حریف یک برنامه محلی سمت سرویس گیرنده را هدف قرار می‌دهد، فقط باید خودش از این سرویس استفاده کند.</td></tr><tr><td>اگر حریف تلاش می‌کند باعث سرریز شدن برخی از کاربر خارجی شود، باید سرویس را از طریق کاربر دیگر به اپلیکیشن سمت مشتری متصل کند. این می تواند باعث شود کاربر از صفحه وب متخاصم خود بازدید کند تا مرورگر کاربر را هدف قرار دهد.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار مشتری هدف با یک سرور خارجی ارتباط برقرار می کند.",
+                "نرم افزار کلاینت هدفمند دارای آسیب پذیری سرریز بافر است."
+            ]
         }
     ],
     "type": "bundle"

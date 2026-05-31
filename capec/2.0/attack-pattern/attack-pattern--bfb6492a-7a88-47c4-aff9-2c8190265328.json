@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-641",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/641.html"
+                    "url": "https://capec.mitre.org/data/definitions/641.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-706",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/706.html"
+                    "url": "http://cwe.mitre.org/data/definitions/706.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Hijack Execution Flow:DLL Side-Loading",
                     "external_id": "T1574.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/002",
+                    "description_fa": "Hijack Execution Flow:DLL Side-Loading",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Stewart A., DLL SIDE-LOADING: A Thorn in the Side of the Anti-Virus Industry, FireEye",
                     "external_id": "REF-501",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/rpt-dll-sideloading.pdf"
+                    "url": "https://www.fireeye.com/content/dam/fireeye-www/global/en/current-threats/pdfs/rpt-dll-sideloading.pdf",
+                    "description_fa": "Stewart A.، DLL SIDE-LOADING: A Thorn in Side of Anti-Virus Industry, FireEye",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--bfb6492a-7a88-47c4-aff9-2c8190265328",
@@ -44,6 +50,10 @@
                 "Integrity": [
                     "Execute Unauthorized Commands",
                     "Bypass Protection Mechanism"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "مکانیسم حفاظت دور زدن"
                 ]
             },
             "x_capec_domains": [
@@ -54,11 +64,17 @@
                 "The target must fail to verify the integrity of the DLL before using them."
             ],
             "x_capec_skills_required": {
-                "High": "Trick the operating system in loading a malicious DLL instead of a legitimate DLL."
+                "High": "Trick the operating system in loading a malicious DLL instead of a legitimate DLL.",
+                "High_fa": "سیستم عامل را فریب دهید تا یک DLL مخرب را به جای یک DLL قانونی بارگیری کند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن نسخه مخرب یک کتابخانه Dynamic-Link (DLL) را در فهرست Windows Side-by-Side (WinSxS) قرار می دهد تا سیستم عامل را فریب دهد تا به جای یک DLL قانونی، این DLL مخرب را بارگیری کند. برنامه ها مکان DLL ها را برای بارگیری از طریق استفاده از مانیفست های WinSxS یا تغییر مسیر DLL مشخص می کنند و اگر از آنها استفاده نمی شود، ویندوز در مجموعه ای از دایرکتوری های از پیش تعریف شده جستجو می کند تا فایل را پیدا کند. اگر برنامه‌ها به‌طور نادرست DLL مورد نیاز را مشخص کنند یا مانیفست‌های WinSxS در مورد ویژگی‌های DLL بارگیری شونده صریح نباشند، می‌توانند در برابر بارگذاری جانبی آسیب‌پذیر باشند.",
+            "name_fa": "بارگذاری جانبی DLL",
+            "x_capec_prerequisites_fa": [
+                "هدف باید قبل از استفاده از DLL یکپارچگی را تأیید نکند."
+            ]
         }
     ],
     "spec_version": "2.0",

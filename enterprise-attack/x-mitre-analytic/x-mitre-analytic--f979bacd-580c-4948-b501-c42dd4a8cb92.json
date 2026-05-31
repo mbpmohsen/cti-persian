@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0108#AN0302",
-                    "external_id": "AN0302"
+                    "external_id": "AN0302",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PayloadEntropyThreshold",
-                    "description": "Adjust to accommodate legitimate compression or encryption patterns in normal web traffic"
+                    "description": "Adjust to accommodate legitimate compression or encryption patterns in normal web traffic",
+                    "description_fa": "برای تطبیق الگوهای فشرده سازی یا رمزگذاری قانونی در ترافیک عادی وب، تنظیم کنید"
                 },
                 {
                     "field": "ProcessAllowlist",
-                    "description": "Define expected processes initiating outbound traffic to reduce false positives"
+                    "description": "Define expected processes initiating outbound traffic to reduce false positives",
+                    "description_fa": "تعریف فرآیندهای مورد انتظار برای شروع ترافیک خروجی برای کاهش مثبت کاذب"
                 },
                 {
                     "field": "AnomalyScoreThreshold",
-                    "description": "Set threshold for how far traffic deviates from baseline protocol structure or size"
+                    "description": "Set threshold for how far traffic deviates from baseline protocol structure or size",
+                    "description_fa": "آستانه را برای میزان انحراف ترافیک از ساختار یا اندازه پروتکل پایه تنظیم کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0302",
+            "description_fa": "فرآیندهای غیر معمول (مانند powershell.exe، regsvr32.exe) ترافیک خروجی بزرگی را با استفاده از Base64 یا سایر رمزگذاری‌های کاراکتر رمزگذاری می‌کنند. این ترافیک از طریق پورت‌های غیر معمول ارسال می‌شود یا در فیلدهای پروتکل تعبیه شده است (به عنوان مثال، کوکی‌های HTTP یا هدر)."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0488#AN1347",
-                    "external_id": "AN1347"
+                    "external_id": "AN1347",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedPartnerTenantIDs",
-                    "description": "Tenant IDs of approved partners; any others are suspicious."
+                    "description": "Tenant IDs of approved partners; any others are suspicious.",
+                    "description_fa": "شناسه مستاجر شرکای تایید شده؛ بقیه مشکوک هستند"
                 },
                 {
                     "field": "RequiredMFA",
-                    "description": "Require MFA for partner sessions; alert on bypass or step-up failure."
+                    "description": "Require MFA for partner sessions; alert on bypass or step-up failure.",
+                    "description_fa": "نیاز به MFA برای جلسات شریک. هشدار در مورد خرابی بای پس یا افزایش سرعت."
                 },
                 {
                     "field": "RoleScopeAllowList",
-                    "description": "Roles third-parties may hold (e.g., Helpdesk Admin); flag broader scopes."
+                    "description": "Roles third-parties may hold (e.g., Helpdesk Admin); flag broader scopes.",
+                    "description_fa": "نقش هایی که ممکن است اشخاص ثالث داشته باشند (به عنوان مثال، مدیر دفتر مرکزی)؛ پرچم گذاری دامنه های گسترده تر"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1347",
+            "description_fa": "زنجیره رفتاری: (1) مدیر تفویض شده یا هویت خارجی جلسه را ایجاد می کند (به عنوان مثال، شریک/فروشنده DAP، مهمان B2B، اعتماد SAML/OAuth). (2) ارتقای نقش یا اعطای رضایت/مجوز برنامه؛ (3) اقدامات ممتاز پایین دستی در مستاجر. ورود به سیستم IdP، انتساب سرپرست/نقش، و رویدادهای رضایت/سرپرست از طرف سرپرست را به هم مرتبط کنید."
         }
     ]
 }

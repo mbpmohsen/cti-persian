@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0045",
-                    "external_id": "DC0045"
+                    "external_id": "DC0045",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -35,7 +36,9 @@
                     "name": "Windows Registry",
                     "channel": "None"
                 }
-            ]
+            ],
+            "name_fa": "حذف کلید رجیستری ویندوز",
+            "description_fa": "حذف یک کلید رجیستری در سیستم عامل ویندوز.\n\n*اقدامات جمع آوری داده ها:*\n\n- گزارش رویدادهای ویندوز\n    - Event ID 4658 - Registry Key Handle Closed: هنگامی که دستگیره کلید رجیستری بسته است، عکس می گیرد که ممکن است نشان دهنده حذف باشد.\n    - Event ID 4660 - Object Deleted: هنگامی که یک کلید رجیستری حذف می شود، ثبت می شود.\n- Sysmon (سیستم مانیتور) برای ویندوز\n    - Sysmon Event ID 12 - Registry Key Deleted: هنگامی که یک کلید رجیستری حذف می شود، ثبت می شود.\n    - Sysmon Event ID 13 - Registry Value Deleted: حذف مقادیر خاص رجیستری را ضبط می کند.\n- راه حل های تشخیص و پاسخ نقطه پایانی (EDR).\n    - حذف رجیستری را برای رفتار مشکوک نظارت کنید."
         }
     ]
 }

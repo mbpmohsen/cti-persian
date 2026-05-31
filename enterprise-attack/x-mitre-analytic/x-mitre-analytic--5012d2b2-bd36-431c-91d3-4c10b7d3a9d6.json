@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0570#AN1572",
-                    "external_id": "AN1572"
+                    "external_id": "AN1572",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedTools",
-                    "description": "Known tools used legitimately for backups (rclone, gsutil). Deviations raise suspicion."
+                    "description": "Known tools used legitimately for backups (rclone, gsutil). Deviations raise suspicion.",
+                    "description_fa": "ابزارهای شناخته شده ای که به طور قانونی برای پشتیبان گیری استفاده می شوند (rclone، gsutil). انحرافات باعث ایجاد شک می شود."
                 },
                 {
                     "field": "WorkHours",
-                    "description": "Baseline normal data transfer hours to reduce false positives."
+                    "description": "Baseline normal data transfer hours to reduce false positives.",
+                    "description_fa": "ساعت‌های عادی انتقال داده‌ها را برای کاهش مثبت‌های کاذب شروع کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1572",
+            "description_fa": "فرآیندهایی مانند curl، wget، rclone یا اسکریپت های سفارشی که آپلودها را در نقاط پایانی ذخیره سازی ابری اجرا می کنند. دیدگاه مدافع: رویدادهای زنجیره‌ای را که در آن tar/gzip برای فشرده‌سازی فایل‌ها و به دنبال آن درخواست‌های HTTPS PUT/POST به سرویس‌های ذخیره‌سازی شناخته شده اجرا می‌شود، شناسایی کنید."
         }
     ]
 }

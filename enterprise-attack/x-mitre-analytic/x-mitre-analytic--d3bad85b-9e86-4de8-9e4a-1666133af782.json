@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0011#AN0033",
-                    "external_id": "AN0033"
+                    "external_id": "AN0033",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TLSFingerprintMismatch",
-                    "description": "Detects mismatched TLS client behavior vs expected for hostd/vpxa."
+                    "description": "Detects mismatched TLS client behavior vs expected for hostd/vpxa.",
+                    "description_fa": "عدم تطابق رفتار کلاینت TLS در مقابل مورد انتظار میزبان/vpxa را تشخیص می دهد."
                 },
                 {
                     "field": "UnusualDestinationPorts",
-                    "description": "Highlight traffic from ESXi hosts to uncommon ports outside vCenter ranges."
+                    "description": "Highlight traffic from ESXi hosts to uncommon ports outside vCenter ranges.",
+                    "description_fa": "ترافیک از میزبان های ESXi به پورت های غیر معمول خارج از محدوده vCenter را برجسته کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0033",
+            "description_fa": "ترافیک غیرعادی از دیمون های مدیریت میزبان ESXi (مانند میزبان یا vpxa) که بارهای غیر استاندارد را در پروتکل های مدیریتی (مانند HTTPS) یا رفتار beaconing جاسازی می کنند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0220#AN0617",
-                    "external_id": "AN0617"
+                    "external_id": "AN0617",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MountPath",
-                    "description": "Look for /media/, /mnt/, /run/media/ paths associated with removable storage."
+                    "description": "Look for /media/, /mnt/, /run/media/ paths associated with removable storage.",
+                    "description_fa": "به دنبال مسیرهای /media/، /mnt/، /run/media/ مرتبط با حافظه قابل جابجایی بگردید."
                 },
                 {
                     "field": "CopyCommandSignature",
-                    "description": "Detect rsync, cp, tar, zip activity writing to USB mount point."
+                    "description": "Detect rsync, cp, tar, zip activity writing to USB mount point.",
+                    "description_fa": "شناسایی فعالیت های rsync، cp، tar، zip در نقطه اتصال USB."
                 },
                 {
                     "field": "AccessRateThreshold",
-                    "description": "Define abnormal access patterns (e.g., >100 files in <5 min)."
+                    "description": "Define abnormal access patterns (e.g., >100 files in <5 min).",
+                    "description_fa": "الگوهای دسترسی غیرعادی را تعریف کنید (به عنوان مثال، بیش از 100 فایل در کمتر از 5 دقیقه)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0617",
+            "description_fa": "اتصال دستگاه بلوک USB و به دنبال آن دسترسی به فایل در دایرکتوری های حساس یا عملیات کپی با حجم بالا توسط فرآیندهای کنترل شده توسط کاربر را تشخیص می دهد."
         }
     ]
 }

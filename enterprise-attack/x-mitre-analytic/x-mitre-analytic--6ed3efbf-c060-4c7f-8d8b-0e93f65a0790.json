@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0324#AN0920",
-                    "external_id": "AN0920"
+                    "external_id": "AN0920",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WriteExecThreshold",
-                    "description": "Tune to alert on write followed by chmod + exec in quick succession."
+                    "description": "Tune to alert on write followed by chmod + exec in quick succession.",
+                    "description_fa": "برای هشدار هنگام نوشتن و به دنبال آن chmod + exec به صورت متوالی تنظیم کنید."
                 },
                 {
                     "field": "FileEntropyDeviation",
-                    "description": "Detect high deviation from average entropy score of baseline ELF/script files."
+                    "description": "Detect high deviation from average entropy score of baseline ELF/script files.",
+                    "description_fa": "تشخیص انحراف زیاد از میانگین امتیاز آنتروپی فایل‌های ELF/script خط پایه."
                 },
                 {
                     "field": "ExecutionFrequency",
-                    "description": "Abnormal burst executions of file with identical functionality but varying hash."
+                    "description": "Abnormal burst executions of file with identical functionality but varying hash.",
+                    "description_fa": "اجرای غیرعادی پشت سر هم فایل با عملکرد یکسان اما هش متفاوت."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0920",
+            "description_fa": "فایل‌ها یا فرآیندهایی را شناسایی می‌کند که در آن اجرا منجر به ایجاد مجدد یا اصلاح مکرر باینری‌های ELF یا اسکریپت‌های مفسر، اغلب با استفاده از chmod + execve با آنتروپی غیرعادی می‌شود."
         }
     ]
 }

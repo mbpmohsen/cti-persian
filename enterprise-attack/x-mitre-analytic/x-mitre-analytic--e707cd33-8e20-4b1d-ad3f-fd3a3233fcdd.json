@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0478#AN1318",
-                    "external_id": "AN1318"
+                    "external_id": "AN1318",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1318",
-            "description": "Cause\u2192effect chain in cloud consoles: (1) user clicks link then invokes instance/image creation via API, (2) instance/image originates from external AMI or unknown image, (3) instance immediately egresses or retrieves payloads.",
+            "description": "Cause→effect chain in cloud consoles: (1) user clicks link then invokes instance/image creation via API, (2) instance/image originates from external AMI or unknown image, (3) instance immediately egresses or retrieves payloads.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApprovedImages",
-                    "description": "AMI/image allow-list with owners."
+                    "description": "AMI/image allow-list with owners.",
+                    "description_fa": "فهرست مجاز AMI/تصویر با صاحبان."
                 },
                 {
                     "field": "UserContext",
-                    "description": "High-risk identities (federated, external IdP)."
+                    "description": "High-risk identities (federated, external IdP).",
+                    "description_fa": "هویت های پرخطر (فدرال، IdP خارجی)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "5\u201330 minutes from console/API action to network egress."
+                    "description": "5–30 minutes from console/API action to network egress.",
+                    "description_fa": "5 تا 30 دقیقه از عملکرد کنسول/API تا خروج از شبکه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1318",
+            "description_fa": "زنجیره علت → اثر در کنسول‌های ابری: (1) کاربر روی پیوند کلیک می‌کند و سپس نمونه/تصویر را از طریق API فراخوانی می‌کند، (2) نمونه/تصویر از AMI خارجی یا تصویر ناشناخته سرچشمه می‌گیرد، (3) نمونه فوراً بارها را خارج یا بازیابی می‌کند."
         }
     ]
 }

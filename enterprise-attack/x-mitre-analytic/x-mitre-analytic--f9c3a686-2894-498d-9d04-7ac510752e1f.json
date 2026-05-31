@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0560#AN1543",
-                    "external_id": "AN1543"
+                    "external_id": "AN1543",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,17 +53,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LogonType",
-                    "description": "Flag unexpected logon types (e.g., Type 10 for remote interactive logins) for sensitive accounts."
+                    "description": "Flag unexpected logon types (e.g., Type 10 for remote interactive logins) for sensitive accounts.",
+                    "description_fa": "انواع ورود غیرمنتظره (مثلاً نوع 10 برای ورودهای تعاملی از راه دور) را برای حساب‌های حساس علامت‌گذاری کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Define acceptable hours for interactive logon activity (e.g., 9AM-6PM local)."
+                    "description": "Define acceptable hours for interactive logon activity (e.g., 9AM-6PM local).",
+                    "description_fa": "ساعات قابل قبولی را برای فعالیت ورود به سیستم تعاملی تعریف کنید (به عنوان مثال، 9 صبح تا 6 بعد از ظهر محلی)."
                 },
                 {
                     "field": "GeoIPMismatch",
-                    "description": "Trigger on location anomalies based on prior user behavior or policy."
+                    "description": "Trigger on location anomalies based on prior user behavior or policy.",
+                    "description_fa": "بر اساس رفتار یا خط‌مشی قبلی کاربر، ناهنجاری‌های مکان را فعال کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1543",
+            "description_fa": "شناسایی حساب‌های معتبر در معرض خطر یا سوء استفاده از طریق الگوهای ورود غیرعادی، انواع غیرعادی ورود به سیستم، و فعالیت‌های جغرافیایی یا زمانی ناسازگار در نقاط پایانی ویندوز."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0151#AN0434",
-                    "external_id": "AN0434"
+                    "external_id": "AN0434",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedAdminSubnets",
-                    "description": "Only alert on access from outside the NOC/management subnets."
+                    "description": "Only alert on access from outside the NOC/management subnets.",
+                    "description_fa": "فقط در صورت دسترسی از خارج از زیرشبکه های NOC/مدیریت هشدار دهید."
                 },
                 {
                     "field": "KnownMaintenanceUsers",
-                    "description": "Whitelist known automation/orchestration accounts."
+                    "description": "Whitelist known automation/orchestration accounts.",
+                    "description_fa": "لیست سفید حساب های شناخته شده اتوماسیون/سازمان دهی."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between time query and config change."
+                    "description": "Correlation window between time query and config change.",
+                    "description_fa": "پنجره همبستگی بین پرس و جو زمان و تغییر پیکربندی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0434",
+            "description_fa": "کاربران/مکان‌های غیر استاندارد یا نادر دستورات CLI مانند «نمایش جزئیات ساعت» یا «نمایش منطقه زمانی» را صادر می‌کنند. به صورت اختیاری با پیکربندی زمان/منطقه زمانی یا منابع NTP دنبال می شود. حسابداری AAA/TACACS+ و syslog اجرا را با هویت، IP منبع و سطح امتیاز مرتبط می‌کند."
         }
     ]
 }

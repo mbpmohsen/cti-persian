@@ -9,64 +9,80 @@
                 {
                     "external_id": "CAPEC-77",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/77.html"
+                    "url": "https://capec.mitre.org/data/definitions/77.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-15",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/15.html"
+                    "url": "http://cwe.mitre.org/data/definitions/15.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-94",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/94.html"
+                    "url": "http://cwe.mitre.org/data/definitions/94.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-96",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/96.html"
+                    "url": "http://cwe.mitre.org/data/definitions/96.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-302",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/302.html"
+                    "url": "http://cwe.mitre.org/data/definitions/302.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-473",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/473.html"
+                    "url": "http://cwe.mitre.org/data/definitions/473.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1321",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1321.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1321.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Artur Maj, Securing PHP: Step-by-Step, 2003--06---22, Security Focus",
                     "external_id": "REF-520",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.securityfocus.com/infocus/1706"
+                    "url": "http://www.securityfocus.com/infocus/1706",
+                    "description_fa": "Artur Maj, Securing PHP: Step-by-Step, 2003--06---22, Security Focus",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Clancy Malcolm, Ten Security Checks for PHP, Part 1, 2003--03---20",
                     "external_id": "REF-521",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "کلنسی مالکوم، ده بررسی امنیتی برای PHP، قسمت 1، 2003--03---20",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "PHP Manual, The PHP Group",
                     "external_id": "REF-522",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.php.net/manual/en/security.globals.php"
+                    "url": "http://www.php.net/manual/en/security.globals.php",
+                    "description_fa": "راهنمای PHP، گروه PHP",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5e4a268e-f89f-445a-aa42-395922f56bf0",
@@ -99,6 +115,24 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -121,11 +155,25 @@
             ],
             "x_capec_skills_required": {
                 "Low": "The malicious user can easily try some well-known global variables and find one which matches.",
-                "Medium": "The adversary can use automated tools to probe for variables that they can control."
+                "Medium": "The adversary can use automated tools to probe for variables that they can control.",
+                "Low_fa": "کاربر مخرب می تواند به راحتی برخی از متغیرهای جهانی شناخته شده را امتحان کند و یکی را که مطابقت دارد پیدا کند.",
+                "Medium_fa": "حریف می تواند از ابزارهای خودکار برای بررسی متغیرهایی که می تواند کنترل کند استفاده کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله متغیرهای کنترل شده توسط کاربر (DEBUG=1، PHP Globals و So Forth) را هدف قرار می دهد. یک حریف می‌تواند با استفاده از متغیرهای پرس و جوی غیرقابل اعتماد ارائه‌شده توسط کاربر، که مستقیماً در سرور برنامه استفاده می‌شوند، بدون هیچ گونه پاکسازی داده، متغیرها را نادیده بگیرد. در موارد شدید، حریف می تواند متغیرهای کنترل کننده منطق تجاری برنامه را تغییر دهد. به عنوان مثال، در زبان هایی مانند PHP، تعدادی از تنظیمات پیش فرض ضعیف ممکن است به کاربر اجازه دهد تا متغیرها را لغو کند.",
+            "name_fa": "دستکاری متغیرهای کنترل شده توسط کاربر",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>PHP یک مطالعه در امنیت بد است. ایده اصلی فراگیر در PHP «آسانی استفاده» است و این عبارت «از برنامه‌نویس مجبور به انجام کار اضافی برای انجام کارها نکنید» در همه موارد اعمال می‌شود. این امر در PHP با حذف فرمالیسم از زبان، امکان اعلان متغیرها در اولین استفاده، مقداردهی اولیه همه چیز با مقادیر از پیش تعیین شده، و گرفتن هر متغیر معنی دار از یک تراکنش و در دسترس قرار دادن آن انجام می شود. در موارد برخورد با چیزهای فنی تر، ساده تقریباً همیشه در PHP غالب است.</xhtml:p>\n               <xhtml:p>یکی از پیامدهای همه اینها این است که PHP به کاربران یک برنامه وب اجازه می دهد تا متغیرهای محیطی را با متغیرهای پرس و جوی غیرقابل اعتماد ارائه شده توسط کاربر نادیده بگیرند. بنابراین، مقادیر حیاتی مانند CWD و مسیر جستجو را می توان بازنویسی کرد و مستقیماً توسط یک کاربر ناشناس از راه دور کنترل شد.</xhtml:p>\n               <xhtml:p>یک پیامد مشابه دیگر این است که متغیرها را می توان مستقیماً از مقادیر کنترل شده توسط کاربر ارائه شده در فیلدهای درخواست GET و POST کنترل و تخصیص داد. بنابراین کدهای به ظاهر عادی مانند این، کارهای عجیب و غریب انجام می دهند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">while($count < 10){// کاری انجام دهید$count++;}</xhtml:div>\n               <xhtml:p>به طور معمول، این حلقه بدنه خود را ده بار اجرا می کند. اولین تکرار یک صفر تعریف نشده خواهد بود، و سفرهای بیشتر با وجود حلقه منجر به افزایش متغیر $count خواهد شد. مشکل این است که کدگذار قبل از وارد شدن به حلقه، متغیر را صفر نمی کند. این خوب است زیرا PHP متغیر را در اعلان مقداردهی اولیه می کند. نتیجه کدی است که به نظر می رسد بدون در نظر گرفتن بد بودن کار می کند. مشکل این است که کاربر برنامه وب می تواند درخواستی مانند</xhtml:p> را ارائه کند\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">GET /login.php?count=9</xhtml:div>\n               <xhtml:p>و باعث می شود $count از مقدار 9 شروع شود، که منجر به تنها یک سفر در حلقه می شود. Yerg.</xhtml:p>\n               <xhtml:p> بسته به پیکربندی، PHP ممکن است متغیرهای ارائه شده توسط کاربر را به جای متغیرهای محیطی بپذیرد. PHP متغیرهای سراسری را برای همه متغیرهای محیط فرآیند، مانند $PATH و $HOSTNAME، مقداردهی اولیه می‌کند. این متغیرها اهمیت حیاتی دارند زیرا ممکن است در عملیات فایل یا شبکه استفاده شوند. اگر دشمن بتواند یک متغیر $PATH جدید (مانند PATH='/var') ارائه کند، برنامه ممکن است قابل سوء استفاده باشد.</xhtml:p>\n               <xhtml:p>PHP همچنین ممکن است تگ های فیلد ارائه شده در درخواست های GET/POST را بگیرد و آنها را به متغیرهای سراسری تبدیل کند. این مورد در مورد متغیر $count است که در مثال قبلی خود بررسی کردیم.</xhtml:p>\n               <xhtml:p> مثال دیگری از این مشکل را در نظر بگیرید که در آن یک برنامه متغیری به نام $tempfile را تعریف می کند. یک دشمن می تواند یک فایل موقت جدید مانند $tempfile = \"/etc/passwd\" ارائه کند. سپس فایل موقت ممکن است بعداً از طریق فراخوانی برای unlink ($tempfile) پاک شود. اکنون فایل passwd پاک شده است - در واقع یک چیز بد در اکثر سیستم عامل ها.</xhtml:p>\n               <xhtml:p>همچنین در نظر بگیرید که استفاده از include() و require() ابتدا $PATH را جستجو می کند، و استفاده از فراخوانی به پوسته ممکن است برنامه های مهمی مانند ls را اجرا کند. به این ترتیب، ls ممکن است \"Trojaned\" باشد (رقیب می تواند $PATH را تغییر دهد تا باعث شود یک نسخه تروجان از ls ​​بارگذاری شود). اگر $LD_LIBRARY_PATH اصلاح شود، این نوع حمله می‌تواند برای کتابخانه‌های قابل بارگیری نیز اعمال شود.</xhtml:p>\n               <xhtml:p>در نهایت، برخی از نسخه‌های PHP ممکن است داده‌های کاربر را به‌عنوان یک رشته قالب به syslog ارسال کنند، بنابراین برنامه در معرض سرریز بافر رشته قالب قرار می‌گیرد.</xhtml:p>همچنین ببینید: آپلود فایل اجازه می‌دهد تا فایل دلخواه با تنظیم متغیرهای فرم پنهان برای مطابقت با نام متغیرهای داخلی (CVE-2000-08) خوانده شود."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه هدف کاوشگر: </b>دشمن ابتدا برنامه هدف را بررسی می کند تا اطلاعات مهم در مورد هدف را تعیین کند. این اطلاعات می‌تواند شامل انواع نرم‌افزارهای مورد استفاده، نسخه‌های نرم‌افزار، ورودی‌های کاربر که برنامه مصرف می‌کند و غیره باشد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>متغیرهای کنترل‌شده توسط کاربر را بیابید: </b>با استفاده از اطلاعاتی که با کاوش در برنامه یافت می‌شود، دشمن تلاش می‌کند تا اثرات متغیر را در برنامه کنترل کند. اگر حریف متوجه تغییرات قابل توجهی در برنامه کاربردی شود، می‌داند که متغیر خاصی برای برنامه کاربردی مفید است.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمنان سعی می‌کنند نام متغیرهای متداول مانند \"count\"، \"tempFile\"، \"i\" و غیره را تغییر دهند. بدون اینکه بدانند برنامه می‌تواند جریان داشته باشد. کار درونی.</td></tr><tr><td>دشمنان سعی خواهند کرد متغیرهای محیط شناخته شده را تغییر دهند.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>دستکاری متغیرهای کنترل‌شده توسط کاربر که متغیرهای کنترل‌شده توسط کاربر را پیدا کرده است: </b> برای برنامه مهم است، آنها آن را دستکاری می کنند تا رفتار عادی را به گونه ای تغییر دهند که به نفع حریف باشد.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "یک متغیر مصرف شده توسط سرور برنامه در معرض مشتری قرار می گیرد.",
+                "یک متغیر مصرف شده توسط سرور برنامه می تواند توسط کاربر بازنویسی شود.",
+                "سرور برنامه به داده های ارائه شده توسط کاربر برای محاسبه منطق تجاری اعتماد می کند.",
+                "سرور برنامه اعتبار سنجی ورودی مناسب را انجام نمی دهد."
+            ]
         }
     ],
     "type": "bundle"

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0013#AN0037",
-                    "external_id": "AN0037"
+                    "external_id": "AN0037",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetPathRegex",
-                    "description": "Location of browser data folders like %APPDATA%\\Google\\Chrome\\User Data or %APPDATA%\\Mozilla\\Firefox"
+                    "description": "Location of browser data folders like %APPDATA%\\Google\\Chrome\\User Data or %APPDATA%\\Mozilla\\Firefox",
+                    "description_fa": "مکان پوشه های داده مرورگر مانند %APPDATA%\\Google\\Chrome\\User Data یا %APPDATA%\\Mozilla\\Firefox"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Used to exclude known browser maintenance or backup processes"
+                    "description": "Used to exclude known browser maintenance or backup processes",
+                    "description_fa": "برای حذف فرآیندهای نگهداری یا پشتیبان گیری شناخته شده مرورگر استفاده می شود"
                 },
                 {
                     "field": "ScriptBlockPattern",
-                    "description": "Used to detect suspicious PowerShell commands targeting browser data"
+                    "description": "Used to detect suspicious PowerShell commands targeting browser data",
+                    "description_fa": "برای شناسایی دستورات مشکوک PowerShell که داده های مرورگر را هدف قرار می دهند استفاده می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0037",
+            "description_fa": "دسترسی به مکان‌های مصنوع مرورگر (مانند کروم، اج، فایرفاکس) با فرآیندهایی مانند PowerShell، cmd.exe یا ابزارهای ناشناخته، و به دنبال آن عملیات خواندن، رمزگشایی، یا صادرات فایل که شمارش نشانک‌ها، تکمیل خودکار یا پایگاه‌های داده سابقه را نشان می‌دهد."
         }
     ]
 }

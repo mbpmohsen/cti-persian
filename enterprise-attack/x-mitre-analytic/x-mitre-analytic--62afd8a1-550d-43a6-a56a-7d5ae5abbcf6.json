@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0281#AN0784",
-                    "external_id": "AN0784"
+                    "external_id": "AN0784",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DecompressionPathMatch",
-                    "description": "Target unusual extraction paths (~/Library/, /tmp/, /private/tmp/)"
+                    "description": "Target unusual extraction paths (~/Library/, /tmp/, /private/tmp/)",
+                    "description_fa": "مسیرهای استخراج غیرعادی را هدف قرار دهید (~/Library/، /tmp/، /private/tmp/)"
                 },
                 {
                     "field": "ToolBinaryNames",
-                    "description": "List of decompression utilities used in the environment"
+                    "description": "List of decompression utilities used in the environment",
+                    "description_fa": "فهرست ابزارهای رفع فشار مورد استفاده در محیط"
                 },
                 {
                     "field": "FollowOnExecutionDelta",
-                    "description": "Time between decompression and first binary execution"
+                    "description": "Time between decompression and first binary execution",
+                    "description_fa": "زمان بین رفع فشار و اولین اجرای باینری"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0784",
+            "description_fa": "ابزارهای بایگانی (مانند ditto، unzip، xar، pkgutil) را که برای استخراج بارها به مسیرهای غیراستاندارد استفاده می‌شوند، شناسایی می‌کند، سپس با تغییرات اجرا یا مجوز فایل (مثلاً «chmod +x») مرتبط می‌شود و تولیدات را از مکان فشرده‌شده پردازش می‌کند."
         }
     ]
 }

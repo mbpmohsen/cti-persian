@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0500#AN1380",
-                    "external_id": "AN1380"
+                    "external_id": "AN1380",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Can be adjusted to focus on specific high-privilege or rarely-used service accounts"
+                    "description": "Can be adjusted to focus on specific high-privilege or rarely-used service accounts",
+                    "description_fa": "می توان آن را تنظیم کرد تا روی حساب های خدماتی خاص با امتیاز بالا یا به ندرت استفاده شود"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the aggregation period for multiple download events (e.g., 10 minutes)"
+                    "description": "Defines the aggregation period for multiple download events (e.g., 10 minutes)",
+                    "description_fa": "دوره تجمع را برای چندین رویداد دانلود (مثلاً 10 دقیقه) تعریف می کند."
                 },
                 {
                     "field": "DownloadThreshold",
-                    "description": "Minimum number of documents accessed/downloaded to trigger alert"
+                    "description": "Minimum number of documents accessed/downloaded to trigger alert",
+                    "description_fa": "حداقل تعداد اسناد قابل دسترسی/دانلود برای ایجاد هشدار"
                 },
                 {
                     "field": "SiteScope",
-                    "description": "Limit detection to sensitive SharePoint sites such as HR, Finance, Engineering"
+                    "description": "Limit detection to sensitive SharePoint sites such as HR, Finance, Engineering",
+                    "description_fa": "شناسایی را به سایت های حساس شیرپوینت مانند HR، Finance، Engineering محدود کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1380",
+            "description_fa": "حساب‌های دارای امتیاز یا به ندرت استفاده می‌شوند که دسترسی انبوه به فایل‌های شیرپوینت یا ابرداده را در یک پنجره زمانی کوتاه انجام می‌دهند، که نشان‌دهنده مجموعه‌ای بالقوه اسکریپت اسناد داخلی حساس است."
         }
     ]
 }

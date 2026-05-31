@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0341#AN0967",
-                    "external_id": "AN0967"
+                    "external_id": "AN0967",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ClipboardCommand",
-                    "description": "Tool used (xclip, xsel, custom clipboard-read binary)."
+                    "description": "Tool used (xclip, xsel, custom clipboard-read binary).",
+                    "description_fa": "ابزار مورد استفاده (xclip، xsel، باینری سفارشی خواندن کلیپ بورد)."
                 },
                 {
                     "field": "CorrelationWindow",
-                    "description": "Temporal window to chain staging or network activity with clipboard access."
+                    "description": "Temporal window to chain staging or network activity with clipboard access.",
+                    "description_fa": "پنجره زمانی برای مرحله بندی زنجیره ای یا فعالیت شبکه با دسترسی به کلیپ بورد."
                 },
                 {
                     "field": "TTYLinked",
-                    "description": "Was access linked to interactive user TTY?"
+                    "description": "Was access linked to interactive user TTY?",
+                    "description_fa": "آیا دسترسی به کاربر تعاملی TTY مرتبط بود؟"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0967",
+            "description_fa": "تشخیص دسترسی xclip یا xsel به بافرهای کلیپ بورد خارج از زمینه ترمینال کاربر، به ویژه هنگامی که به مرحله بندی (gzip، base64) یا خروج از شبکه (curl، scp) متصل است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0384#AN1084",
-                    "external_id": "AN1084"
+                    "external_id": "AN1084",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "Interface",
-                    "description": "Flags command line access via remote console (telnet/SSH/API) from non-whitelisted source."
+                    "description": "Flags command line access via remote console (telnet/SSH/API) from non-whitelisted source.",
+                    "description_fa": "دسترسی به خط فرمان را از طریق کنسول راه دور (تلنت/SSH/API) از منبع غیر فهرست سفید علامت‌گذاری می‌کند."
                 },
                 {
                     "field": "CommandString",
-                    "description": "Monitors rare/privileged shell commands (e.g., enable, tftp, firmware mod)."
+                    "description": "Monitors rare/privileged shell commands (e.g., enable, tftp, firmware mod).",
+                    "description_fa": "دستورات پوسته کمیاب/ممتاز (به عنوان مثال، فعال کردن، tftp، حالت سفت‌افزار) را رصد می‌کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1084",
+            "description_fa": "استفاده از پوسته یونیکس را در وسایل شبکه (به عنوان مثال، روترها، فایروال ها، لینوکس جاسازی شده) از طریق دستورات کنسول نادر، رابط های CLI یا تزریق اسکریپت از طریق API های در معرض یا SSH تشخیص می دهد."
         }
     ]
 }

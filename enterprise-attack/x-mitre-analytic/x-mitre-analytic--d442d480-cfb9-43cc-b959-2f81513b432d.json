@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0137#AN0385",
-                    "external_id": "AN0385"
+                    "external_id": "AN0385",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetDevices",
-                    "description": "Tune to exclude removable drives or test partitions commonly written by administrators."
+                    "description": "Tune to exclude removable drives or test partitions commonly written by administrators.",
+                    "description_fa": "تنظیم کنید تا درایوهای قابل جابجایی یا پارتیشن‌های آزمایشی که معمولاً توسط مدیران نوشته می‌شوند حذف شوند."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Detects large blocks of pseudorandom data being written; may need tuning for backup/crypto workloads."
+                    "description": "Detects large blocks of pseudorandom data being written; may need tuning for backup/crypto workloads.",
+                    "description_fa": "شناسایی بلوک های بزرگی از داده های شبه تصادفی در حال نوشتن. ممکن است برای بارهای کاری پشتیبان/کریپتو نیاز به تنظیم داشته باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0385",
+            "description_fa": "فرآیندهای فراخوانی دستورات مخرب (dd، shred، wipe) با اهداف خام دستگاه (به عنوان مثال، /dev/sda، /dev/nvme0n1). شناسایی مستقیم نوشتن روی پارتیشن های دیسک و تغییرات غیرعادی سوپر بلوک یا بوت لودر. ارتباط اجرای پوسته با ورودی/خروجی دستگاه بلوک بعدی."
         }
     ]
 }

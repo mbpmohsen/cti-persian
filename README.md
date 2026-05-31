@@ -84,10 +84,15 @@ Useful flags:
 - `--limit N`: process only first N files
 - `--paths ...`: override translated JSON paths
 - `--provider argos_offline`: fully free local translation after model install
+- `--provider googletrans`: use unofficial free `googletrans` backend (install with `pip install googletrans==4.0.2`)
+- `--provider google_public`: usually more stable than `googletrans` for long runs
 - `--no-argos-auto-install`: disable automatic Argos model download/install
 - `--argos-package-path /path/to/translate-en_fa.argosmodel`: import model from local file
 - `--skip-existing`: resume interrupted runs (for in-place+suffix it skips files already containing `*_fa`)
 - `--cache-provider-fallbacks google_public`: reuse existing cached translations from another provider
+- `--progress-every 25 --progress-seconds 10`: print progress more frequently so long runs don’t look frozen
+
+Note: `googletrans` is unofficial and may intermittently fail with JSON decode or rate-limit errors. The script now continues on those errors, but if failure rate is high prefer `--provider google_public`.
 
 Performance tips:
 

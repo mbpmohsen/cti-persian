@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0025#AN0072",
-                    "external_id": "AN0072"
+                    "external_id": "AN0072",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AsarIntegrityCheck",
-                    "description": "Baseline of expected asar package signatures per app."
+                    "description": "Baseline of expected asar package signatures per app.",
+                    "description_fa": "پایه امضاهای بسته asar مورد انتظار در هر برنامه."
                 },
                 {
                     "field": "SuspiciousChildProcesses",
-                    "description": "Flag shells/python spawned from Electron parent."
+                    "description": "Flag shells/python spawned from Electron parent.",
+                    "description_fa": "پوسته پرچم/پایتون از والد الکترون تولید شده است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0072",
+            "description_fa": "سوء استفاده از باینری های Linux Electron با تغییر app.asar یا پیکربندی فایل های JS و ایجاد فرآیندهای فرزند غیرمنتظره (bash، curl، python)."
         }
     ]
 }

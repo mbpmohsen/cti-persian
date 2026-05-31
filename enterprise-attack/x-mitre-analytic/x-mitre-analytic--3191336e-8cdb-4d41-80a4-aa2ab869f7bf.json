@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0127#AN0356",
-                    "external_id": "AN0356"
+                    "external_id": "AN0356",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DropLocationPattern",
-                    "description": "Directories where new binaries are suspicious (e.g., /tmp)"
+                    "description": "Directories where new binaries are suspicious (e.g., /tmp)",
+                    "description_fa": "دایرکتوری هایی که باینری های جدید مشکوک هستند (به عنوان مثال، /tmp)"
                 },
                 {
                     "field": "FilenameAnomalies",
-                    "description": "Regex for Unicode/RLO/space abuse in filenames"
+                    "description": "Regex for Unicode/RLO/space abuse in filenames",
+                    "description_fa": "Regex برای سوء استفاده از Unicode/RLO/فضا در نام فایل ها"
                 },
                 {
                     "field": "ExecutionDelayWindow",
-                    "description": "Time range between file write and execution used for joining"
+                    "description": "Time range between file write and execution used for joining",
+                    "description_fa": "محدوده زمانی بین نوشتن فایل و اجرای مورد استفاده برای پیوستن"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0356",
+            "description_fa": "دشمن باینری های تغییر نام یافته را در دایرکتوری های غیر معمول حذف می کند (به عنوان مثال، /tmp، /dev/shm) یا از کاراکترهای ویژه در نام ها استفاده می کند (مانند فضای انتهایی، Unicode RLO). اجرا یا ثبت cronjob مدت کوتاهی پس از رها کردن فایل انجام می شود."
         }
     ]
 }

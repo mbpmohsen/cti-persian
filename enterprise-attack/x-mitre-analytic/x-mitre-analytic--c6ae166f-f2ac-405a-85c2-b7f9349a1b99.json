@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0040#AN0116",
-                    "external_id": "AN0116"
+                    "external_id": "AN0116",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptRemovalPath",
-                    "description": "e.g., /etc/rc.local, /etc/init.d/custom.sh"
+                    "description": "e.g., /etc/rc.local, /etc/init.d/custom.sh",
+                    "description_fa": "به عنوان مثال، /etc/rc.local، /etc/init.d/custom.sh"
                 },
                 {
                     "field": "StartupEntryClearance",
-                    "description": "Wipe or truncate of persistence locations"
+                    "description": "Wipe or truncate of persistence locations",
+                    "description_fa": "مکان های ماندگار را پاک یا کوتاه کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0116",
+            "description_fa": "حذف دشمنان ایمپلنت های ماندگار (مانند ورودی های rc.local یا تزریق کرونتاب) از طریق CLI («rm»، «sed»، «crontab -r») و حذف اسکریپت های راه اندازی یا مدیریت را تشخیص می دهد."
         }
     ]
 }

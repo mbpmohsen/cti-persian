@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0353#AN1001",
-                    "external_id": "AN1001"
+                    "external_id": "AN1001",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccountScope",
-                    "description": "Restrict monitoring to privileged or unexpected accounts."
+                    "description": "Restrict monitoring to privileged or unexpected accounts.",
+                    "description_fa": "نظارت را به حساب های دارای امتیاز یا غیرمنتظره محدود کنید."
                 },
                 {
                     "field": "BaselineHiddenUsers",
-                    "description": "Whitelist accounts that are intentionally hidden by administrators."
+                    "description": "Whitelist accounts that are intentionally hidden by administrators.",
+                    "description_fa": "لیست سفید حساب هایی که به عمد توسط مدیران پنهان شده اند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1001",
+            "description_fa": "تغییرات رجیستری در HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList تنظیم دید کاربر روی 0 یا ایجاد حساب‌های کاربری که در صفحه ورود نمایش داده نمی‌شوند. نمای مدافع: ارتباط ایجاد حساب با ویرایش های رجیستری که کاربران را پنهان می کند."
         }
     ]
 }

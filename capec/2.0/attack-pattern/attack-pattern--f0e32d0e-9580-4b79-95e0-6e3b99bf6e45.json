@@ -9,28 +9,34 @@
                 {
                     "external_id": "CAPEC-109",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/109.html"
+                    "url": "https://capec.mitre.org/data/definitions/109.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-89",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/89.html"
+                    "url": "http://cwe.mitre.org/data/definitions/89.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-564",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/564.html"
+                    "url": "http://cwe.mitre.org/data/definitions/564.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-4",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection"
+                    "url": "http://www.owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/05.7-Testing_for_ORM_Injection",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--f0e32d0e-9580-4b79-95e0-6e3b99bf6e45",
@@ -63,6 +69,25 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -82,11 +107,26 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Medium": "Knowledge of general SQL injection techniques and subtleties of the ORM framework is needed"
+                "Medium": "Knowledge of general SQL injection techniques and subtleties of the ORM framework is needed",
+                "Medium_fa": "دانش تکنیک های عمومی تزریق SQL و ظرافت های چارچوب ORM مورد نیاز است"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از ضعف موجود در کد لایه دسترسی به پایگاه داده تولید شده با ابزار Object Relational Mapping (ORM) یا ضعفی در روشی استفاده می کند که یک توسعه دهنده از یک چارچوب ماندگاری برای تزریق دستورات SQL خود برای اجرا در برابر پایگاه داده زیربنایی استفاده می کند. حمله در اینجا شبیه تزریق SQL ساده است، با این تفاوت که برنامه از JDBC برای صحبت مستقیم با پایگاه داده استفاده نمی کند، بلکه در عوض از یک لایه دسترسی به داده تولید شده توسط ابزار یا چارچوب ORM (به عنوان مثال Hibernate) استفاده می کند. در حالی که اکثر اوقات کدهای تولید شده توسط یک ابزار ORM حاوی روش های دسترسی ایمن هستند که در برابر تزریق SQL مصون هستند، گاهی اوقات یا به دلیل ضعف در کد تولید شده یا به دلیل این واقعیت که توسعه دهنده نتوانسته است از روش های دسترسی تولید شده به درستی استفاده کند، تزریق SQL همچنان امکان پذیر است.",
+            "name_fa": "تزریق نگاشت رابطه ای شی",
+            "x_capec_example_instances_fa": [
+                "هنگام استفاده از Hibernate، می توان از متد session.find() برای اجرای پرس و جوها در پایگاه داده استفاده کرد. این یک روش بیش از حد بارگذاری شده است که تسهیلاتی را برای انجام اتصال بین داده‌های کاربر ارائه‌شده و نگه‌دارنده‌ها در پرس‌وجوی تعریف‌شده استاتیک فراهم می‌کند. با این حال، استفاده از متد ()sesion.find بدون استفاده از هیچ یک از این اضافه‌بارهای اتصال پرس و جو نیز ممکن است، از این رو به طور موثر داده‌های ارائه‌شده کاربر را با بقیه پرس و جوی SQL مرتبط می‌کند و در نتیجه امکان تزریق SQL ایجاد می‌شود. در حالی که این چارچوب ممکن است مکانیسم‌هایی برای استفاده از روش‌های مصون از تزریق SQL فراهم کند، اما همچنین ممکن است شامل راه‌هایی باشد که مصون نیستند و ممکن است توسط توسعه‌دهنده انتخاب شوند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین چارچوب استفاده شده از پایداری: </b>یک مهاجم سعی می کند تعیین کند که چه چارچوب ماندگاری توسط برنامه مورد استفاده قرار می گیرد تا از ضعفی در لایه دسترسی به داده تولید شده استفاده کند که ممکن است لایه ضعیفی در کد لایه دسترسی به داده استفاده شده باشد. توسعه‌دهنده.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک مهاجم در تلاش برای القای صفحه خطایی که نشان‌دهنده لایه دسترسی خودکار داده‌های استفاده‌شده است، ورودی‌هایی را به برنامه ارائه می‌کند. یا یک مهاجم ممکن است به سادگی حدس‌های آموزنده‌ای بزند و مثلا فرض کند که Hibernate استفاده می‌شود و سعی می‌کند از آنجا حمله ایجاد کند.</td></tr></tbody></table><li> <p> <b>بررسی آسیب‌پذیری‌های ORM Injection: </b>مهاجم ممکن است داده‌های ORM را در صورتی که syntax قابل ویرایش ORM را در داده‌های کاربر وارد می‌کند، به آن تزریق می‌کند. ساختار و محتوای پرس و جو.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>انجام SQL Injection از طریق لایه دسترسی به داده های تولید شده: </b>یک مهاجم به سوء استفاده از یک نقطه ضعف در روش های دسترسی به داده های تولید شده ادامه می دهد که ممکن است به درستی برنامه کنترلی را به طور بالقوه از یک داده جدا نکرده باشد، یا برنامه کنترل بالقوه را به طور مناسب از یک داده جدا کند. کد، برای تغییر ساختار کوئری های SQL اجرا شده و/یا تزریق پرس و جوهای SQL کاملاً جدید.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک مهاجم از تکنیک های معمولی تزریق SQL استفاده می کند و آنها را به گونه ای تنظیم می کند که نوع چارچوب تولید لایه دسترسی به داده را منعکس کند. برنامه.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "یک برنامه از لایه دسترسی به داده تولید شده توسط ابزار یا چارچوب ORM استفاده می کند",
+                "یک برنامه از داده های ارائه شده توسط کاربر در پرس و جوهایی که در مقابل پایگاه داده اجرا می شود استفاده می کند",
+                "جداسازی بین صفحه داده و صفحه کنترل، از طریق خطای توسعه دهنده یا ضعف اساسی در چارچوب تولید کد لایه دسترسی به داده، تضمین نمی شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

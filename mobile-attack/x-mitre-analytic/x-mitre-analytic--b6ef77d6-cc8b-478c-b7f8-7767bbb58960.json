@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0706#AN1827",
-                    "external_id": "AN1827"
+                    "external_id": "AN1827",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -77,37 +78,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedProtocolPortMappings",
-                    "description": "Approved protocol-to-port pairings vary by app, business workflow, proxy architecture, and enterprise policy."
+                    "description": "Approved protocol-to-port pairings vary by app, business workflow, proxy architecture, and enterprise policy.",
+                    "description_fa": "جفت‌های پروتکل به پورت تأیید شده براساس برنامه، گردش کار تجاری، معماری پروکسی و خط‌مشی سازمانی متفاوت است."
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Approved app identities vary by organization, role, and device group."
+                    "description": "Approved app identities vary by organization, role, and device group.",
+                    "description_fa": "هویت برنامه های تأیید شده بر اساس سازمان، نقش و گروه دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedServiceClasses",
-                    "description": "Expected external service classes differ across app categories and enterprise mobile workflows."
+                    "description": "Expected external service classes differ across app categories and enterprise mobile workflows.",
+                    "description_fa": "کلاس‌های خدمات خارجی مورد انتظار در دسته‌های برنامه‌ها و گردش‌های کاری تلفن همراه سازمانی متفاوت است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking non-standard-port sessions with lifecycle, framework, or local state changes."
+                    "description": "Correlation window linking non-standard-port sessions with lifecycle, framework, or local state changes.",
+                    "description_fa": "پنجره همبستگی که جلسات پورت غیر استاندارد را با تغییرات چرخه حیات، چارچوب یا وضعیت محلی مرتبط می کند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close a session must be to user activity to be considered expected."
+                    "description": "Defines how close a session must be to user activity to be considered expected.",
+                    "description_fa": "تعیین می‌کند که یک جلسه چقدر باید به فعالیت کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "BeaconIntervalTolerance",
-                    "description": "Allowed recurrence interval for benign polling, sync, or persistent sessions differs by app type."
+                    "description": "Allowed recurrence interval for benign polling, sync, or persistent sessions differs by app type.",
+                    "description_fa": "فاصله مجاز تکرار برای جلسه‌های نظرسنجی، همگام‌سازی یا مداوم بر اساس نوع برنامه متفاوت است."
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Some apps should only initiate certain outbound communications while foregrounded."
+                    "description": "Some apps should only initiate certain outbound communications while foregrounded.",
+                    "description_fa": "برخی از برنامه‌ها فقط باید ارتباطات خروجی خاصی را در حالی که پیش‌زمینه هستند آغاز کنند."
                 },
                 {
                     "field": "EnterpriseExceptionList",
-                    "description": "Known developer tools, enterprise proxies, VPNs, relays, and security products may legitimately use uncommon ports."
+                    "description": "Known developer tools, enterprise proxies, VPNs, relays, and security products may legitimately use uncommon ports.",
+                    "description_fa": "ابزارهای توسعه‌دهنده شناخته شده، پروکسی‌های سازمانی، VPN، رله‌ها و محصولات امنیتی ممکن است به طور قانونی از پورت‌های غیر معمول استفاده کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1827",
+            "description_fa": "مدافع جلسات خروجی منتسب به برنامه را به هم مرتبط می کند که در آن شاخص های پروتکل مانند دست دادن TLS، روش HTTP و الگوهای سرصفحه، معنای DNS، یا سایر ویژگی های لایه برنامه بر روی یک پورت مقصد خارج از خط پایه تایید شده برای آن پروتکل و نقش برنامه مشاهده می شود. قوی‌ترین شواهد Android، ترافیک منتسب به برنامه‌های مکرر یا مداوم با استفاده از HTTPS-، HTTP-، DNS-، WebSocket-، یا سایر رفتارهای قابل تشخیص برنامه روی پورت‌های مقصد غیرمعمول است، به‌ویژه زمانی که برنامه در پس‌زمینه است، در حالی که دستگاه قفل است، بدون تعامل اخیر کاربر، یا زمانی که برنامه مدیریت نشده یا برای آن پروتکل تأیید نشده است."
         }
     ]
 }

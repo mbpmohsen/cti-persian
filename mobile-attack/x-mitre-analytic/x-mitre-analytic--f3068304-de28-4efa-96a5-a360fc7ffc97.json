@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0641#AN1716",
-                    "external_id": "AN1716"
+                    "external_id": "AN1716",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,25 +58,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation between crypto operation and outbound network transmission"
+                    "description": "Time correlation between crypto operation and outbound network transmission",
+                    "description_fa": "همبستگی زمانی بین عملیات کریپتو و انتقال شبکه خروجی"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Threshold for detecting encoded/encrypted payloads based on entropy scoring"
+                    "description": "Threshold for detecting encoded/encrypted payloads based on entropy scoring",
+                    "description_fa": "آستانه برای تشخیص محموله های رمزگذاری شده/رمزگذاری شده بر اساس امتیاز دهی آنتروپی"
                 },
                 {
                     "field": "AllowedCryptoApps",
-                    "description": "Apps expected to perform encryption (e.g., VPNs, messaging apps)"
+                    "description": "Apps expected to perform encryption (e.g., VPNs, messaging apps)",
+                    "description_fa": "برنامه‌هایی که انتظار می‌رود رمزگذاری را انجام دهند (مانند VPN، برنامه‌های پیام‌رسان)"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether encryption + transmission should only occur during user interaction"
+                    "description": "Whether encryption + transmission should only occur during user interaction",
+                    "description_fa": "اینکه آیا رمزگذاری + انتقال باید فقط در طول تعامل کاربر اتفاق بیفتد"
                 },
                 {
                     "field": "BeaconIntervalVariance",
-                    "description": "Expected jitter/interval for legitimate app traffic vs beaconing patterns"
+                    "description": "Expected jitter/interval for legitimate app traffic vs beaconing patterns",
+                    "description_fa": "جیتر/فاصله مورد انتظار برای ترافیک قانونی برنامه در مقابل الگوهای beaconing"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1716",
+            "description_fa": "یک برنامه کاربردی عملیات رمزنگاری صریح (مانند روال های رمزگذاری متقارن/نامتقارن) را روی داده های جمع آوری یا تولید شده به صورت محلی انجام می دهد و به دنبال آن ارتباطات شبکه خروجی ساختاریافته ای که با رفتار برنامه مورد انتظار همخوانی ندارد، به ویژه زمانی که در پس زمینه یا بدون تعامل کاربر رخ می دهد. تشخیص با استفاده از API کریپتو + مرحله‌بندی داده + وضعیت برنامه + الگوهای انتقال شبکه ارتباط دارد."
         }
     ]
 }

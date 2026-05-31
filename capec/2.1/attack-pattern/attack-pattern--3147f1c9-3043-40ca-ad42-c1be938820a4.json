@@ -9,33 +9,40 @@
                 {
                     "external_id": "CAPEC-65",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/65.html"
+                    "url": "https://capec.mitre.org/data/definitions/65.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-319",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/319.html"
+                    "url": "http://cwe.mitre.org/data/definitions/319.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-311",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/311.html"
+                    "url": "http://cwe.mitre.org/data/definitions/311.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-318",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/318.html"
+                    "url": "http://cwe.mitre.org/data/definitions/318.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Network Sniffing",
                     "external_id": "T1040",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1040"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1040",
+                    "description_fa": "استشمام شبکه",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--3147f1c9-3043-40ca-ad42-c1be938820a4",
@@ -63,6 +70,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -84,11 +101,27 @@
                 "\n               <xhtml:p>The Attacker needs the ability to capture communications between the client being updated and the server providing the update.</xhtml:p>\n               <xhtml:p>In the case that encryption obscures client/server communication the attacker will either need to lift key material from the client.</xhtml:p>\n            "
             ],
             "x_capec_skills_required": {
-                "Medium": "The attacker needs to setup a sniffer for a sufficient period of time so as to capture meaningful quantities of code. The presence of the sniffer should not be detected on the network. Also if the attacker plans to employ an adversary-in-the-middle attack (CAPEC-94), the client or server must not realize this. Finally, the attacker needs to regenerate source code from binary code if the need be."
+                "Medium": "The attacker needs to setup a sniffer for a sufficient period of time so as to capture meaningful quantities of code. The presence of the sniffer should not be detected on the network. Also if the attacker plans to employ an adversary-in-the-middle attack (CAPEC-94), the client or server must not realize this. Finally, the attacker needs to regenerate source code from binary code if the need be.",
+                "Medium_fa": "مهاجم باید یک sniffer را برای مدت زمان کافی راه اندازی کند تا بتواند مقادیر معنی داری از کد را بگیرد. حضور sniffer نباید در شبکه شناسایی شود. همچنین اگر مهاجم قصد دارد از یک حمله دشمن در وسط (CAPEC-94) استفاده کند، کلاینت یا سرور نباید این را متوجه شود. در نهایت، مهاجم باید در صورت نیاز، کد منبع را از کد باینری بازسازی کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن به طور غیر فعال ارتباطات شبکه را بو می کند و کد برنامه را که برای یک کلاینت مجاز محدود شده است، می گیرد. پس از به دست آوردن، آنها می توانند آن را همانطور که هست استفاده کنند، یا از طریق مهندسی معکوس اطلاعات حساس را جمع آوری کنند یا از رابطه اعتماد بین مشتری و سرور سوء استفاده کنند. چنین کدی ممکن است متعلق به یک به‌روزرسانی پویا برای کلاینت باشد، وصله‌ای که روی یک مؤلفه مشتری اعمال می‌شود یا هر تعاملی از این قبیل که در آن مشتری مجاز به برقراری ارتباط با سرور است.",
+            "name_fa": "کد برنامه Sniff",
+            "x_capec_example_instances_fa": [
+                "مهاجم اعلانی دریافت می‌کند که رایانه/سیستم‌عامل/برنامه به‌روزرسانی در دسترس است، ابزار شناسایی شبکه را بارگیری می‌کند و داده‌های به‌روزرسانی را از ارتباطات بعدی استخراج می‌کند. سپس مهاجم به مهندسی معکوس جریان ضبط شده برای به دست آوردن اطلاعات حساس مانند کلیدهای رمزگذاری، الگوریتم های اعتبارسنجی، وصله های برنامه ها و غیره اقدام می کند.",
+                "کدهای ساده مانند اپلت ها یا جاوا اسکریپت نیز بخشی از برنامه اجرایی است. اگر چنین کدی بدون محافظت منتقل شود، مهاجم می‌تواند کد را ضبط کند و احتمالاً آن را مهندسی معکوس کند تا اطلاعات حساسی مانند کلیدهای رمزگذاری، الگوریتم‌های اعتبارسنجی و مواردی از این دست به دست آورد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تنظیم یک sniffer: </b> دشمن یک sniffer را در مسیر بین سرور و کلاینت تنظیم می‌کند و ترافیک را تماشا می‌کند. یک sniffer در مسیر بین سرور و کلاینت.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p>[Capturing Application Code Bound در حین وصله] دشمن می داند که رایانه/OS/برنامه می تواند برنامه های جدید را برای بررسی به روز رسانی یا نصب آن درخواست کند. حریف sniffer راه اندازی شده را در مرحله کاوش بارگذاری می کند و کد برنامه را از ارتباطات بعدی استخراج می کند. سپس دشمن به مهندسی معکوس کد گرفته شده ادامه می‌دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن، sniffer را بارگیری می‌کند تا کد برنامه محدود شده را در طول یک به‌روزرسانی پویا ضبط کند. کد.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید این توانایی را داشته باشد که خود را در مسیر ارتباطی بین مشتری و سرور قرار دهد.",
+                "برنامه هدف باید مقداری کد برنامه را از سرور دریافت کند. به عنوان مثال، به روز رسانی های پویا، وصله ها، اپلت ها یا اسکریپت ها.",
+                "مهاجم باید بتواند بدون شناسایی شدن از یک sniffer در شبکه استفاده کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p> مهاجم به توانایی ضبط ارتباطات بین کلاینت در حال به روز رسانی و سرور ارائه دهنده به روز رسانی نیاز دارد.</xhtml:p>\n               <xhtml:p>در صورتی که رمزگذاری ارتباط سرویس گیرنده/سرور را مخفی کند، مهاجم یا باید مطالب کلیدی را از مشتری خارج کند.</xhtml:p>"
+            ]
         }
     ],
     "type": "bundle"

@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-252",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/252.html"
+                    "url": "https://capec.mitre.org/data/definitions/252.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "OWASP Vulnerabilities, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-621",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-community/vulnerabilities/PHP_File_Inclusion"
+                    "url": "https://owasp.org/www-community/vulnerabilities/PHP_File_Inclusion",
+                    "description_fa": "آسیب پذیری های OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--d56469be-4ebc-4443-b85a-3097193df4c4",
@@ -46,7 +50,16 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم یک فایل PHP محلی دلخواه را روی یک ماشین هدف بارگیری و اجرا می کند. مهاجم می‌تواند از این برای بارگذاری نسخه‌های قدیمی فایل‌های PHP که دارای آسیب‌پذیری‌های شناخته‌شده هستند، برای بارگیری فایل‌های PHP که مهاجم در طول حمله قبلی روی ماشین محلی قرار داده است، استفاده کند، یا به‌طور غیرمنتظره‌ای عملکرد برنامه مورد نظر را تغییر دهد.",
+            "name_fa": "گنجاندن فایل محلی PHP",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه بررسی: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، دشمن همه پیوندهای عمومی را در یک وب سایت دنبال می کند. آنها تمام لینک هایی را که پیدا می کنند ضبط می کنند. حریف به دنبال نشانی‌های اینترنتی است که نشان می‌دهد از گنجاندن فایل PHP استفاده شده است، که می‌تواند چیزی شبیه به \"[[CTI_PRESERVE_0]]] یک ابزار عنکبوتی برای دنبال کردن و ضبط همه پیوندها باشد. هر پیوندی را که شامل پارامترهایی در URL است، یادداشت ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی بازدید کننده ویژه استفاده کنید، نه در طول یک پیوند، از ابزار بازدید دستی وب استفاده کنید تا همه پیوندها را ضبط کنید. پیوندهایی که شامل پارامترهایی در URL هستند، اغلب برای شناسایی فرم هایی که فرم های روش GET هستند، به جای فرم های POST، ضروری است کشف.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تلاش برای تغییرات پارامترهای ورودی: </b>هنگامی که حریف URL آسیب‌پذیری را پیدا می‌کند که ورودی فایل را دریافت می‌کند، سعی می‌کند تا روش‌های مختلفی را برای نمایش محتوای مسیر برای دریافت برنامه کاربردی پیمایش کند. یک فایل PHP متفاوت که قبلاً به صورت محلی در سرور ذخیره شده است.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از فهرستی از رشته‌های کاوشگر برای تزریق در پارامترهای URLهای شناخته شده استفاده کنید. بررسی های گنجاندن فایل های محلی در URL های شناخته شده.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>شامل فایل محلی مورد نظر: </b>زمانی که حریف تشخیص داد که کدام تکنیک های پیمایش مسیر می تواند با موفقیت با فایل های محلی به عنوان یک برنامه آسیب پذیر کار کند \"/etc/passwd\"، \"/etc/shadow\"، یا فایل‌های پیکربندی برای برنامه‌ای که ممکن است اطلاعات حساس را در معرض نمایش بگذارد.</p></li></ol></div> http://vulnerable-website/file.php?file=index.php\".</p></li><table><tbody><tr><th>Techniques</th></tr><tr><td>Use",
+            "x_capec_prerequisites_fa": [
+                "برنامه PHP هدف باید دارای یک اشکال باشد که به مهاجم اجازه می دهد تا کنترل کند کدام فایل کد در مقطعی بارگذاری می شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "مهاجم باید دسترسی کافی به برنامه هدف داشته باشد تا هویت فایل PHP موجود در محلی را کنترل کند."
+            ]
         }
     ],
     "spec_version": "2.0",

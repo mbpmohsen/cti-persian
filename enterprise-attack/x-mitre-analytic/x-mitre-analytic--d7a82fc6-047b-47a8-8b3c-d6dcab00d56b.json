@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0116#AN0323",
-                    "external_id": "AN0323"
+                    "external_id": "AN0323",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SafeBootRegistryPaths",
-                    "description": "Customize monitored registry paths for safe mode service additions."
+                    "description": "Customize monitored registry paths for safe mode service additions.",
+                    "description_fa": "مسیرهای رجیستری نظارت شده را برای اضافه شدن سرویس حالت ایمن سفارشی کنید."
                 },
                 {
                     "field": "AllowedAdminTools",
-                    "description": "Whitelist legitimate administrative use of bcdedit/bootcfg for troubleshooting."
+                    "description": "Whitelist legitimate administrative use of bcdedit/bootcfg for troubleshooting.",
+                    "description_fa": "استفاده اداری قانونی از bcdedit/bootcfg برای عیب‌یابی را در لیست سفید قرار دهید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate registry modifications and boot configuration commands within a short timeframe."
+                    "description": "Correlate registry modifications and boot configuration commands within a short timeframe.",
+                    "description_fa": "تغییرات رجیستری و دستورات پیکربندی بوت را در یک بازه زمانی کوتاه به هم مرتبط کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0323",
+            "description_fa": "سوء استفاده از حالت امن از طریق اصلاح BCD، ابزارهای پیکربندی بوت (bcdedit.exe، bootcfg.exe)، و تداوم رجیستری در زیر کلیدهای SafeBoot. نمای مدافع: تغییرات مشکوک پیکربندی بوت مرتبط با ویرایش های رجیستری است که تداوم دشمن را فعال می کند یا دفاع را غیرفعال می کند."
         }
     ]
 }

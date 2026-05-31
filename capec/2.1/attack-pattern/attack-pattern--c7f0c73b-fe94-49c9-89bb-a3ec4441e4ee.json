@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-609",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/609.html"
+                    "url": "https://capec.mitre.org/data/definitions/609.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-311",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/311.html"
+                    "url": "http://cwe.mitre.org/data/definitions/311.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Multi-Factor Authentication Interception",
                     "external_id": "T1111",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1111"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1111",
+                    "description_fa": "رهگیری احراز هویت چند عاملی",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--c7f0c73b-fe94-49c9-89bb-a3ec4441e4ee",
@@ -38,6 +42,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (Capture all cellular and RF traffic from mobile and retransmission devices. Move bulk traffic capture to storage area for cryptanalysis of encrypted traffic, and telemetry analysis of non-encrypted data. (packet headers, cellular power data, signal strength, etc.))"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده (تمام ترافیک تلفن همراه و RF را از دستگاه های تلفن همراه و ارسال مجدد ضبط کنید. برای تحلیل رمز ترافیک رمزگذاری شده و تجزیه و تحلیل تله متری داده های غیررمزگذاری شده، ضبط ترافیک انبوه را به منطقه ذخیره سازی منتقل کنید. (سرصفحه های بسته، داده های برق سلولی، قدرت سیگنال و غیره))"
                 ]
             },
             "x_capec_domains": [
@@ -47,11 +54,17 @@
                 "None"
             ],
             "x_capec_skills_required": {
-                "Medium": "Adversaries can purchase hardware and software solutions, or create their own solutions, to capture/intercept cellular radio traffic. The cost of a basic Base Transceiver Station (BTS) to broadcast to local mobile cellular radios in mobile devices has dropped to very affordable costs. The ability of commercial cellular providers to monitor for \"rogue\" BTS stations is poor in many areas and it is assumed that \"rogue\" BTS stations exist in urban areas."
+                "Medium": "Adversaries can purchase hardware and software solutions, or create their own solutions, to capture/intercept cellular radio traffic. The cost of a basic Base Transceiver Station (BTS) to broadcast to local mobile cellular radios in mobile devices has dropped to very affordable costs. The ability of commercial cellular providers to monitor for \"rogue\" BTS stations is poor in many areas and it is assumed that \"rogue\" BTS stations exist in urban areas.",
+                "Medium_fa": "دشمنان می‌توانند راه‌حل‌های سخت‌افزاری و نرم‌افزاری را خریداری کنند یا راه‌حل‌های خود را ایجاد کنند تا ترافیک رادیویی سلولی را ضبط یا رهگیری کنند. هزینه یک ایستگاه پایه فرستنده گیرنده (BTS) برای پخش به رادیوهای سلولی سیار محلی در دستگاه های تلفن همراه به هزینه های بسیار مقرون به صرفه کاهش یافته است. توانایی ارائه دهندگان تلفن همراه تجاری برای نظارت بر ایستگاه های BTS \"سرکش\" در بسیاری از مناطق ضعیف است و فرض بر این است که ایستگاه های BTS \"سرکش\" در مناطق شهری وجود دارند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "ترافیک تلفن همراه برای صدا و داده از دستگاه های تلفن همراه و دستگاه های ارسال مجدد را می توان از طریق روش های متعدد رهگیری کرد. عوامل مخرب می توانند تجهیزات برج سلولی خود را مستقر کرده و ترافیک سلولی را به طور مخفیانه رهگیری کنند. علاوه بر این، سازمان‌های دولتی متخاصم و عوامل مخرب می‌توانند ترافیک تلفن همراه را از طریق ستون فقرات مخابراتی که ترافیک تلفن همراه از طریق آن منتقل می‌شود، رهگیری کنند.",
+            "name_fa": "رهگیری ترافیک سلولی",
+            "x_capec_prerequisites_fa": [
+                "هیچ کدام"
+            ]
         }
     ],
     "type": "bundle"

@@ -13,37 +13,49 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1429",
-                    "external_id": "T1429"
+                    "external_id": "T1429",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Manifest.permission",
                     "description": "Android Developers. (2022, March 17). Voice Call. Retrieved April 1, 2022.",
-                    "url": "https://developer.android.com/reference/android/media/MediaRecorder.AudioSource#VOICE_CALL"
+                    "url": "https://developer.android.com/reference/android/media/MediaRecorder.AudioSource#VOICE_CALL",
+                    "source_name_fa": "مانیفست.اجازه",
+                    "description_fa": "توسعه دهندگان اندروید (2022، 17 مارس). تماس صوتی. بازبینی شده در ۱ آوریل ۲۰۲۲."
                 },
                 {
                     "source_name": "Requesting Auth-Media Capture",
                     "description": "Apple Developers. (n.d.). Requesting Authorization for Media Capture on iOS. Retrieved April 1, 2022.",
-                    "url": "https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/requesting_authorization_for_media_capture_on_ios"
+                    "url": "https://developer.apple.com/documentation/avfoundation/cameras_and_media_capture/requesting_authorization_for_media_capture_on_ios",
+                    "source_name_fa": "درخواست Auth-Media Capture",
+                    "description_fa": "توسعه دهندگان اپل (n.d.). درخواست مجوز برای ضبط رسانه در iOS. بازبینی شده در ۱ آوریل ۲۰۲۲."
                 },
                 {
                     "source_name": "Android Permissions",
                     "description": "Google. (2021, August 11). Manifest.permission. Retrieved September 22, 2021.",
-                    "url": "https://developer.android.com/reference/android/Manifest.permission"
+                    "url": "https://developer.android.com/reference/android/Manifest.permission",
+                    "source_name_fa": "مجوزهای اندروید",
+                    "description_fa": "گوگل. (2021، 11 اوت). مانیفست.اجازه. بازبینی شده در 22 سپتامبر 2021."
                 },
                 {
                     "source_name": "Android Privacy Indicators",
                     "description": "Google. (n.d.). Privacy Indicators. Retrieved April 20, 2022.",
-                    "url": "https://source.android.com/devices/tech/config/privacy-indicators"
+                    "url": "https://source.android.com/devices/tech/config/privacy-indicators",
+                    "source_name_fa": "اندیکاتورهای حریم خصوصی اندروید",
+                    "description_fa": "گوگل. (n.d.). شاخص های حریم خصوصی بازبینی شده در 20 آوریل 2022."
                 },
                 {
                     "source_name": "iOS Mic Spyware",
                     "description": "ZecOps Research Team. (2021, November 4). How iOS Malware Can Spy on Users Silently. Retrieved April 1, 2022.",
-                    "url": "https://blog.zecops.com/research/how-ios-malware-can-spy-on-users-silently/"
+                    "url": "https://blog.zecops.com/research/how-ios-malware-can-spy-on-users-silently/",
+                    "source_name_fa": "نرم افزار جاسوسی میکروفون iOS",
+                    "description_fa": "تیم تحقیقاتی ZecOps (2021، 4 نوامبر). چگونه بدافزارهای iOS می‌توانند بی‌صدا از کاربران جاسوسی کنند. بازبینی شده در ۱ آوریل ۲۰۲۲."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-19.html",
-                    "external_id": "APP-19"
+                    "external_id": "APP-19",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -72,7 +84,9 @@
             "x_mitre_version": "3.1",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "ضبط صدا",
+            "description_fa": "دشمنان ممکن است با استفاده از APIهای سیستم عامل استاندارد یک دستگاه تلفن همراه، صدا را برای جمع آوری اطلاعات ضبط کنند. نمونه هایی از اطلاعات صوتی که دشمنان ممکن است هدف قرار دهند شامل مکالمات کاربر، محیط اطراف، تماس های تلفنی یا سایر اطلاعات حساس است. \n\n \n\nاندروید و iOS به‌طور پیش‌فرض نیاز دارند که برنامه‌ها دسترسی میکروفون دستگاه را از کاربر درخواست کنند.  \n\n \n\nدر دستگاه‌های Android، برنامه‌ها باید مجوز «RECORD_AUDIO» را برای دسترسی به میکروفون یا مجوز «CAPTURE_AUDIO_OUTPUT» برای دسترسی به خروجی صدا داشته باشند. از آنجایی که Android به طور پیش‌فرض به برنامه‌های شخص ثالث اجازه نمی‌دهد مجوز «CAPTURE_AUDIO_OUTPUT» را داشته باشند، فقط برنامه‌های دارای امتیاز، مانند برنامه‌هایی که توسط Google یا فروشنده دستگاه توزیع شده‌اند، می‌توانند به خروجی صوتی دسترسی داشته باشند. با مجوز «CAPTURE_AUDIO_OUTPUT»، دشمنان می‌توانند ثابت «MediaRecorder.AudioSource.VOICE_CALL» را به «MediaRecorder.setAudioOutput» منتقل کنند، که امکان ضبط هر دو لینک بالا و پایین تماس صوتی را فراهم می‌کند.[[[CTI_PRESERVE_1]] \n\n \n\nدر دستگاه‌های iOS، برنامه‌ها برای دسترسی به میکروفون باید کلید «NSMicrophoneUsageDescription» را در فایل «Info.plist» خود قرار دهند.(Citation: Requesting Auth-Media Capture) (Citation: Android Permissions) (Citation: Manifest.permission)"
         }
     ]
 }

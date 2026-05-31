@@ -9,38 +9,47 @@
                 {
                     "external_id": "CAPEC-42",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/42.html"
+                    "url": "https://capec.mitre.org/data/definitions/42.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "CERT Advisory CA-1997-05 MIME Conversion Buffer Overflow in Sendmail Versions 8.8.3 and 8.8.4, Software Engineering Institute: Carnegie Mellon University",
                     "external_id": "REF-364",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.cert.org/advisories/CA-1997-05.html"
+                    "url": "http://www.cert.org/advisories/CA-1997-05.html",
+                    "description_fa": "CERT Advisory CA-1997-05 MIME Conversion Buffer Overflow در Sendmail نسخه های 8.8.3 و 8.8.4، موسسه مهندسی نرم افزار: دانشگاه کارنگی ملون",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3c08bb9d-43b5-4468-8b38-387c6cb60da7",
@@ -72,6 +81,24 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "اجرای غیر قابل اعتماد"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -88,11 +115,23 @@
             ],
             "x_capec_skills_required": {
                 "High": "Causing arbitrary code to execute on the target system.",
-                "Low": "It may be trivial to cause a DoS via this attack pattern"
+                "Low": "It may be trivial to cause a DoS via this attack pattern",
+                "High_fa": "باعث اجرای کد دلخواه در سیستم هدف می شود.",
+                "Low_fa": "ممکن است ایجاد DoS از طریق این الگوی حمله بی اهمیت باشد"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از یک ضعف در روال تبدیل MIME برای ایجاد سرریز بافر و به دست آوردن کنترل بر دستگاه سرور ایمیل سوء استفاده می کند. سیستم MIME طوری طراحی شده است که امکان تفسیر و ارسال فرمت های مختلف اطلاعات از طریق ایمیل را فراهم می کند. نقاط حمله زمانی وجود دارند که داده ها به فرمت سازگار با MIME تبدیل شوند و برگردند.",
+            "name_fa": "تبدیل MIME",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک سرریز بافر تبدیل MIME در نسخه های Sendmail 8.8.3 و 8.8.4 وجود دارد. Sendmail نسخه های 8.8.3 و 8.8.4 در برابر سرریز بافر در کد مدیریت MIME آسیب پذیر هستند. با ارسال پیامی با هدرهای ساخته شده ویژه به سرور، یک مهاجم از راه دور می تواند یک بافر را سرریز کند و دستورات دلخواه را روی سیستم با امتیازات ریشه اجرا کند.</xhtml:p>\n               <xhtml:p>Sendmail یک تبدیل 7 بیتی به 8 بیتی را در پیام های ایمیل انجام می دهد. این آسیب‌پذیری به این دلیل است که هنگام انجام این تبدیل‌ها، بررسی کرانه‌ها ناکافی است. این به مهاجم فرصتی داد تا پشته داخلی sendmail را در حالی که با حقوق ریشه در حال اجرا است، بازنویسی کند. یک مهاجم ابتدا سیستم هدف را بررسی می کند تا بفهمد چه ایمیل سروری در سیستم استفاده می شود و چه نسخه ای. سپس مهاجم می‌تواند در اوقات فراغت خود این اکسپلویت را روی دستگاه خود که همان نسخه سرور ایمیل را اجرا می‌کند، قبل از استفاده از آن در طبیعت آزمایش کند.</xhtml:p>همچنین ببینید: CVE-1999-0047"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی سرور ایمیل هدف: </b> دشمن سرور ایمیل هدفی را که می‌خواهد به آن حمله کند شناسایی می‌کند. سرویس.</td></tr></tbody></table><li> <p> <b>قابلیت حمله را تعیین کنید: </b>تعیین کنید که آیا سرور ایمیل اصلاح نشده است و به طور بالقوه در برابر یکی از سرریزهای بافر تبدیل MIME شناخته شده آسیب پذیر است (مانند Sendmail 8.8.3 و 8.8.4).</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>بردار تزریق را بیابید: </b>مکان‌هایی را در سیستم شناسایی کنید که از روال‌های تبدیل MIME آسیب‌پذیر ممکن است استفاده شود.</p></li><li> </bmail overflow: e-mail: پیام هایی با هدرهای خاص که باعث سرریز بافر برای روال تبدیل MIME آسیب پذیر می شود. هدف از این حمله استفاده از سرریز برای اجرای کد دلخواه و دسترسی به ماشین سرور ایمیل است، بنابراین دشمن ایمیلی ایجاد می کند که نه تنها بافر مورد نظر را سرریز می کند، بلکه این کار را به گونه ای انجام می دهد که آدرس برگشتی رونویسی شده با یکی از آدرس های حریف جایگزین می شود. انتخاب کنید.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک کد پوسته مخرب ایجاد کنید که زمانی که اجرای برنامه به آن بازگردانده می‌شود، اجرا می‌شود.</td></tr><tr><td>از یک NOP-sled در محتوای سرریز استفاده کنید تا راحت‌تر \"کد مخرب\" را به داخل آن اسلاید کنید. این کار به این دلیل انجام می‌شود که آدرس برگشتی دقیق لازم نباشد درست باشد، فقط در محدوده همه NOPها</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز کردن بافر: </b>پیام‌های ایمیلی را به سیستم هدف exe بافر سرریز کنید و پیام‌های الکترونیکی را به هدیت exe را با سرریزهای ویژه ارسال کنید. کد.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "سیستم هدف از یک سرور ایمیل استفاده می کند.",
+                "فروشنده سرور ایمیل وصله ای برای روال تبدیل MIME منتشر نکرده است، خود وصله دارای یک حفره امنیتی است یا مشکل اصلی را برطرف نمی کند، یا وصله روی سیستم کاربر اعمال نشده است."
+            ]
         }
     ],
     "spec_version": "2.0",

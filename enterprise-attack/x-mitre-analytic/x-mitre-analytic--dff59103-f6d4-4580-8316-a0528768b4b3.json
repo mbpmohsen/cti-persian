@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0266#AN0740",
-                    "external_id": "AN0740"
+                    "external_id": "AN0740",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CmdletFilter",
-                    "description": "Include `New-TransportRule`, `Set-TransportRule`, `Remove-*` actions"
+                    "description": "Include `New-TransportRule`, `Set-TransportRule`, `Remove-*` actions",
+                    "description_fa": "شامل اقدامات «New-TransportRule»، «Set-TransportRule»، «Remove-*»"
                 },
                 {
                     "field": "UserRoleScope",
-                    "description": "Track role assignments for admins performing deletions"
+                    "description": "Track role assignments for admins performing deletions",
+                    "description_fa": "ردیابی تکالیف نقش برای ادمین هایی که حذف را انجام می دهند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0740",
+            "description_fa": "تغییرات قوانین حمل و نقل Exchange Online یا on-prem (به عنوان مثال، حذف هدر) و پاکسازی صادرات صندوق پستی از طریق «Remove-MailboxExportRequest» و همچنین اقدامات سرپرست از طریق جلسات Exchange PowerShell را شناسایی می کند."
         }
     ]
 }

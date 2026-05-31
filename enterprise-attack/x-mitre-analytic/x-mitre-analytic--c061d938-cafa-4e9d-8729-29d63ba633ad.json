@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0136#AN0383",
-                    "external_id": "AN0383"
+                    "external_id": "AN0383",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedSIDHistoryChanges",
-                    "description": "Approved migration windows or known SID-History population events."
+                    "description": "Approved migration windows or known SID-History population events.",
+                    "description_fa": "پنجره های مهاجرت تایید شده یا رویدادهای جمعیتی SID-History شناخته شده."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between attribute change and suspicious logon activity (default 15\u201330 minutes)."
+                    "description": "Correlation window between attribute change and suspicious logon activity (default 15–30 minutes).",
+                    "description_fa": "پنجره همبستگی بین تغییر ویژگی و فعالیت مشکوک ورود به سیستم (پیش‌فرض 15 تا 30 دقیقه)."
                 },
                 {
                     "field": "PrivilegedSIDList",
-                    "description": "List of sensitive SIDs (e.g., Enterprise Admins, Domain Admins) that should never appear in SID-History."
+                    "description": "List of sensitive SIDs (e.g., Enterprise Admins, Domain Admins) that should never appear in SID-History.",
+                    "description_fa": "فهرست SIDهای حساس (به عنوان مثال، مدیران سازمانی، سرپرستان دامنه) که هرگز نباید در تاریخچه SID ظاهر شوند."
                 },
                 {
                     "field": "UserContextFilter",
-                    "description": "Exclude trusted migration service accounts or pre-approved administrative tasks."
+                    "description": "Exclude trusted migration service accounts or pre-approved administrative tasks.",
+                    "description_fa": "حساب‌های خدمات انتقال قابل اعتماد یا کارهای اداری از پیش تأیید شده را حذف کنید."
                 },
                 {
                     "field": "AnomalousSIDCountThreshold",
-                    "description": "Raise alerts when a token contains more than X SID-History entries (default X=2)."
+                    "description": "Raise alerts when a token contains more than X SID-History entries (default X=2).",
+                    "description_fa": "هنگامی که یک نشانه حاوی بیش از X ورودی تاریخچه SID (پیش‌فرض X=2) باشد، هشدارها را افزایش دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0383",
+            "description_fa": "تشخیص تغییر غیرمجاز ویژگی های SID-History Active Directory برای افزایش امتیازات. این زنجیره شامل: (1) عملیات ممتاز یا فراخوانی های API به DsAddSidHistory یا توابع اصلاح AD مرتبط، (2) تغییرات مشخصه مشاهده شده در SID-History (شناسه رویداد 5136)، (3) جلسات ورود به سیستم جدید که در آن توکن شامل مقادیر غیرمنتظره یا ممتاز SID-History است که با استفاده از مقادیر دسترسی مجدد و مستثنی شده از SID-History (4). تزریق سابقه SID."
         }
     ]
 }

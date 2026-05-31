@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0110#AN0307",
-                    "external_id": "AN0307"
+                    "external_id": "AN0307",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Track execution of setuid binaries where UID != EUID or executed from unexpected user context"
+                    "description": "Track execution of setuid binaries where UID != EUID or executed from unexpected user context",
+                    "description_fa": "ردیابی اجرای باینری‌های setuid که در آن UID != EUID یا از بافت غیرمنتظره کاربر اجرا شده است."
                 },
                 {
                     "field": "FilePathScope",
-                    "description": "Restrict detection to non-standard locations (e.g., /tmp, /home/*, /var/tmp)"
+                    "description": "Restrict detection to non-standard locations (e.g., /tmp, /home/*, /var/tmp)",
+                    "description_fa": "شناسایی را به مکان‌های غیر استاندارد محدود کنید (مانند /tmp، /home/*، /var/tmp)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time delta between chmod setting setuid/gid and process execution to define a suspicious window"
+                    "description": "Time delta between chmod setting setuid/gid and process execution to define a suspicious window",
+                    "description_fa": "دلتای زمانی بین تنظیم chmod setuid/gid و اجرای فرآیند برای تعریف پنجره مشکوک"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0307",
+            "description_fa": "همبستگی عملیات chmod که بیت‌های setuid/setgid را به دنبال اجرای فرآیند ممتاز (EUID != UID)، به‌ویژه از مسیرهای قابل نوشتن توسط کاربر یا غیرعادی تنظیم می‌کند."
         }
     ]
 }

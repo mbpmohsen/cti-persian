@@ -9,38 +9,47 @@
                 {
                     "external_id": "CAPEC-383",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/383.html"
+                    "url": "https://capec.mitre.org/data/definitions/383.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-311",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/311.html"
+                    "url": "http://cwe.mitre.org/data/definitions/311.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-319",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/319.html"
+                    "url": "http://cwe.mitre.org/data/definitions/319.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-419",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/419.html"
+                    "url": "http://cwe.mitre.org/data/definitions/419.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-602",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/602.html"
+                    "url": "http://cwe.mitre.org/data/definitions/602.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Input Capture: Credential API Hooking",
                     "external_id": "T1056.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1056/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1056/004",
+                    "description_fa": "ضبط ورودی: اعتبار API Hooking",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Tom Stracener, Sean Barnum, So Many Ways [...]: Exploiting Facebook and YoVille, 2010, Defcon 18",
                     "external_id": "REF-327",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "تام استریسنر، شان بارنوم، راه های زیادی [...]: بهره برداری از فیس بوک و یوویل، 2010، دفکون 18",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--2a8a634e-cf1f-4b2e-9a71-1ab8e6bb16d0",
@@ -61,6 +70,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (The adversary is able to gather information to potentially support further nefarious activities.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (رقیب قادر به جمع آوری اطلاعات برای پشتیبانی بالقوه از فعالیت های پلید بیشتر است.)"
                 ]
             },
             "x_capec_domains": [
@@ -73,7 +85,12 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک رویداد را در چارچوب برنامه میزبانی می‌کند و سپس داده‌های مبادله شده در طول رویداد را به منظور جمع‌آوری داده‌های مهمی که در طول تراکنش‌ها به بیرون درز کرده است، نظارت می‌کند. یک مثال می تواند جمع آوری لیستی از نام های کاربری یا شناسه های کاربری به منظور ارسال پیام های هرزنامه به آن کاربران باشد. یک نمونه از این نوع حمله شامل ایجاد یک رویداد در زیر برنامه توسط دشمن است. فرض کنید حریف میزبان «فروش مجازی» اقلام کمیاب است. هنگامی که سایر کاربران وارد رویداد می شوند، مهاجم از طریق پراکسی AiTM (CAPEC-94) شناسه های کاربری و نام کاربری هرکسی را که شرکت می کند، ثبت می کند. سپس دشمن می‌تواند با استفاده از یک اسکریپت خودکار، آن کاربران را در داخل برنامه اسپم کند.",
+            "name_fa": "برداشت اطلاعات از طریق API Event Monitoring",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار مورد نظر از APIهای فریمورک کاربردی استفاده می کند"
+            ]
         }
     ],
     "type": "bundle"

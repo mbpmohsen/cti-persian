@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0439#AN1218",
-                    "external_id": "AN1218"
+                    "external_id": "AN1218",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetBundlePathPattern",
-                    "description": "Monitor relocation to .app/Contents/MacOS/ or ~/Library/Launch*"
+                    "description": "Monitor relocation to .app/Contents/MacOS/ or ~/Library/Launch*",
+                    "description_fa": "نظارت بر جابجایی به .app/Contents/MacOS/ یا ~/Library/Launch*"
                 },
                 {
                     "field": "QuarantineFlagCheck",
-                    "description": "Check for disappearance of com.apple.quarantine attribute post-move"
+                    "description": "Check for disappearance of com.apple.quarantine attribute post-move",
+                    "description_fa": "ناپدید شدن ویژگی com.apple.quarantine پس از انتقال را بررسی کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1218",
+            "description_fa": "حرکت باینری ها را به «~/Library/»، «/System/» یا مکان های بسته برنامه، به ویژه پس از اجرای اولیه یا دانلود از Safari یا Mail، تشخیص می دهد."
         }
     ]
 }

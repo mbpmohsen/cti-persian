@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0522#AN1445",
-                    "external_id": "AN1445"
+                    "external_id": "AN1445",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TicketRequestPatterns",
-                    "description": "Expected sequence of TGT followed by TGS requests; deviations may indicate forgery."
+                    "description": "Expected sequence of TGT followed by TGS requests; deviations may indicate forgery.",
+                    "description_fa": "دنباله مورد انتظار TGT به دنبال درخواست های TGS. انحراف ممکن است نشان دهنده جعل باشد."
                 },
                 {
                     "field": "TicketLifetime",
-                    "description": "Expected ticket lifetimes; anomalies may indicate Golden or Silver Tickets."
+                    "description": "Expected ticket lifetimes; anomalies may indicate Golden or Silver Tickets.",
+                    "description_fa": "طول عمر بلیط مورد انتظار؛ ناهنجاری ها ممکن است نشان دهنده بلیط های طلایی یا نقره ای باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1445",
+            "description_fa": "تلاش‌ها برای جعل یا پخش مجدد بلیط‌های Kerberos را با نظارت بر گزارش‌های یکپارچه برای فعالیت‌های غیرعادی kinit/klist و مرتبط کردن توالی‌های احراز هویت غیرمعمول شناسایی می‌کند."
         }
     ]
 }

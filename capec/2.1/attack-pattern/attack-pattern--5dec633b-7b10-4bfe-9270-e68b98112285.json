@@ -9,17 +9,20 @@
                 {
                     "external_id": "CAPEC-89",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/89.html"
+                    "url": "https://capec.mitre.org/data/definitions/89.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-346",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/346.html"
+                    "url": "http://cwe.mitre.org/data/definitions/346.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-350",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/350.html"
+                    "url": "http://cwe.mitre.org/data/definitions/350.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--5dec633b-7b10-4bfe-9270-e68b98112285",
@@ -46,6 +49,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -64,11 +70,25 @@
                 "None: No specialized resources are required to execute this type of attack. Having knowledge of the way the target site has been structured, in order to create a fake version, is required. Poisoning the resolver requires knowledge of a vulnerability that can be exploited."
             ],
             "x_capec_skills_required": {
-                "Medium": "The attacker needs to be able to poison the resolver - DNS entries or local hosts file or router entry pointing to a trusted DNS server - in order to successfully carry out a pharming attack. Setting up a fake website, identical to the targeted one, does not require special skills."
+                "Medium": "The attacker needs to be able to poison the resolver - DNS entries or local hosts file or router entry pointing to a trusted DNS server - in order to successfully carry out a pharming attack. Setting up a fake website, identical to the targeted one, does not require special skills.",
+                "Medium_fa": "مهاجم باید بتواند حل‌کننده را مسموم کند - ورودی‌های DNS یا فایل میزبان محلی یا ورودی روتر که به یک سرور DNS قابل اعتماد اشاره می‌کند - تا بتواند با موفقیت یک حمله فارمینگ را انجام دهد. راه اندازی یک وب سایت جعلی، مشابه وب سایت مورد نظر، به مهارت خاصی نیاز ندارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حمله فارمینگ زمانی اتفاق می‌افتد که قربانی فریب داده شود و داده‌های حساس را در مکان‌های ظاهراً قابل اعتماد وارد کند، مانند یک سایت بانک آنلاین یا یک پلت فرم معاملاتی. یک مهاجم می‌تواند این سایت‌های ظاهراً مورد اعتماد را جعل کند و قربانی را به جای سایت مورد نظر خود هدایت کند. Pharming برای موفقیت حمله نیازی به تزریق اسکریپت یا کلیک روی پیوندهای مخرب ندارد.",
+            "name_fa": "داروسازی",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک وب‌سایت بانک آنلاین از کاربران می‌خواهد که شناسه مشتری و رمز عبور خود را برای ورود به سیستم ارائه کنند، اما از یک اتصال امن استفاده نمی‌کند.</xhtml:p>\n               <xhtml:p>یک مهاجم می‌تواند یک سایت جعلی مشابه راه‌اندازی کند و از فارمینگ برای جمع‌آوری این اطلاعات از قربانیان ناآگاه استفاده کند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> Execution Flow </h2><div><h3>Exploit</h3><ol><li> <p>Atacker سیستمی را راه اندازی می کند که سیستم مورد اعتماد کاربران را مسخره می کند. این معمولاً وب‌سایتی است که به اطلاعات حساس نیاز دارد یا به آن رسیدگی می‌کند.</p></li><li> <p>پس از آن مهاجم، حل‌کننده سایت مورد نظر را مسموم می‌کند. این امر با مسموم کردن سرور DNS، یا فایل میزبان محلی، که کاربر را به وب‌سایت اصلی هدایت می‌کند، به دست می‌آید</p></li><li> <p>وقتی قربانی URL سایت را درخواست می‌کند، سوابق مسموم قربانی را به جای سیستم اصلی، به سیستم مهاجمان هدایت می‌کنند.</p></li><li> <p>به‌دلیل اینکه سایت اصلی و مهاجم، ماهیت اصلی و حمله‌کننده را کنترل می‌کند، همچنان آدرس اصلی را کنترل می‌کند. یکی، قربانی به وب‌سایت دسترسی اعتماد دارد و مهاجم اکنون می‌تواند اطلاعات حساسی مانند اعتبارنامه یا شماره حساب را «مزرعه» کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم‌افزار DNS آسیب‌پذیر یا فایل میزبان یا روتر محافظت‌شده نامناسب که می‌تواند مسموم شود",
+                "وب‌سایتی که اطلاعات حساس را مدیریت می‌کند، اما از اتصال امن و گواهی معتبر استفاده نمی‌کند، مستعد داروسازی است."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. داشتن آگاهی از نحوه ساختار سایت مورد نظر برای ایجاد نسخه جعلی الزامی است. مسموم کردن حل کننده مستلزم دانش یک آسیب پذیری است که می توان از آن سوء استفاده کرد."
+            ]
         }
     ],
     "type": "bundle"

@@ -9,13 +9,16 @@
                 {
                     "external_id": "CAPEC-611",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/611.html"
+                    "url": "https://capec.mitre.org/data/definitions/611.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Artem Dinaburg, Bitsquatting: DNS Hijacking without exploitation, Raytheon",
                     "external_id": "REF-485",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://media.blackhat.com/bh-us-11/Dinaburg/BH_US_11_Dinaburg_Bitsquatting_WP.pdf"
+                    "url": "http://media.blackhat.com/bh-us-11/Dinaburg/BH_US_11_Dinaburg_Bitsquatting_WP.pdf",
+                    "description_fa": "Artem Dinaburg، Bitsquatting: DNS Hijacking بدون بهره برداری، Raytheon",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a69b641a-dff7-4dad-b9b1-e00f80b083a2",
@@ -39,6 +42,9 @@
             "x_capec_consequences": {
                 "Other": [
                     "Other (Depending on the intention of the adversary, a successful BitSquatting attack can be leveraged to execute more complex attacks such as cross-site scripting or stealing account credentials.)"
+                ],
+                "Other_fa": [
+                    "سایر موارد (بسته به قصد حریف، یک حمله موفقیت آمیز BitSquatting می تواند برای اجرای حملات پیچیده تری مانند اسکریپت بین سایتی یا سرقت اعتبار حساب کاربری مورد استفاده قرار گیرد.)"
                 ]
             },
             "x_capec_domains": [
@@ -50,11 +56,18 @@
                 "An adversary requires knowledge of popular or high traffic domains, that could be used to deceive potential targets."
             ],
             "x_capec_skills_required": {
-                "Low": "Adversaries must be able to register DNS hostnames/URL’s."
+                "Low": "Adversaries must be able to register DNS hostnames/URL’s.",
+                "Low_fa": "دشمنان باید بتوانند نام هاست DNS/URL را ثبت کنند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک نام دامنه را یک بیت متفاوت از یک دامنه قابل اعتماد ثبت می کند. حمله BitSquatting از خطاهای تصادفی در حافظه استفاده می کند تا ترافیک اینترنت را به مقصدهای تحت کنترل دشمن هدایت کند. BitSquatting به هیچ بهره برداری یا مهندسی معکوس پیچیده ای نیاز ندارد و سیستم عامل و معماری آگنوستیک است. مشاهدات تجربی نشان می‌دهد که وب‌سایت‌های محبوب BitSquatting می‌توانند مقادیر غیر ضروری ترافیک اینترنت را به یک موجودیت مخرب هدایت کنند.",
+            "name_fa": "BitSquatting",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین وب‌سایت هدف: </b>دشمن ابتدا تعیین می‌کند که کدام وب‌سایت را جعل کند، معمولاً وب‌سایتی که قابل اعتماد است و میزان ترافیک ثابتی دریافت می‌کند. وب سایت های پر بازدید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>جعل هویت دامنه مورد اعتماد: </b>برای جعل هویت دامنه مورد اعتماد، دشمن باید BitSquatted را ثبت کند. URL.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دامنه BitSquatted را ثبت کنید.</td></tr></tbody></table></ol></div><div><h3>بهره‌برداری کنید</h3><ol><li> <p> <b>برای بازدید از دامنه، منتظر بمانید تا یک کاربر از دامنه بازدید کند. کاربر به طور ناخواسته به دامنه BitSquatted هدایت می شود.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>به سادگی منتظر بروز خطا در حافظه باشید و کاربر را به دامنه مخرب هدایت کنید.</td></tr></tbody></tablev></ol></di",
+            "x_capec_prerequisites_fa": [
+                "یک حریف به دانش دامنه های محبوب یا پرترافیک نیاز دارد که می تواند برای فریب دادن اهداف بالقوه مورد استفاده قرار گیرد."
+            ]
         }
     ],
     "spec_version": "2.0",

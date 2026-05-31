@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-478",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/478.html"
+                    "url": "https://capec.mitre.org/data/definitions/478.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-284",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/284.html"
+                    "url": "http://cwe.mitre.org/data/definitions/284.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Hijack Execution Flow:Service Registry Permissions Weakness",
                     "external_id": "T1574.011",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/011"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/011",
+                    "description_fa": "جریان اجرای ربایش: ضعف مجوزهای رجیستری سرویس",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Create or Modify System Process:Windows Service",
                     "external_id": "T1543.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1543/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1543/003",
+                    "description_fa": "ایجاد یا اصلاح فرآیند سیستم: سرویس ویندوز",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--93bedd5b-70cc-48a0-a7c9-09b3800bd6bc",
@@ -44,6 +50,9 @@
             "x_capec_consequences": {
                 "Integrity": [
                     "Execute Unauthorized Commands (By altering specific configuration settings for the service, the adversary could run arbitrary code to be executed.)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (با تغییر تنظیمات پیکربندی خاص برای سرویس، حریف می تواند کد دلخواه را برای اجرا اجرا کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -59,7 +68,16 @@
             ],
             "x_capec_status": "Usable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از ضعف در کنترل دسترسی برای تغییر پارامترهای اجرای یک سرویس ویندوز سوء استفاده می کند. هدف از این حمله اجرای یک باینری مخرب به جای یک سرویس موجود است.",
+            "name_fa": "تغییر پیکربندی سرویس ویندوز",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین سیستم هدف: </b> دشمن ابتدا باید سیستمی را که می‌خواهد رجیستری آن را تغییر دهد، تعیین کند. این باید یک ماشین ویندوز باشد زیرا این حمله فقط روی رجیستری ویندوز کار می کند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>دسترسی به سیستم داشته باشید: </b>دشمن باید به نحوی به سیستم دسترسی پیدا کند تا بتواند ویندوز را تغییر دهد. رجیستری.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از طریق گشت و گذار در یک رمز عبور یا دسترسی به سیستمی که قفل نشده است، به سیستم دسترسی فیزیکی پیدا کنید.</td></tr><tr><td>دسترسی از راه دور به یک سیستم از طریق انواع مختلف به دست آورید. یعنی.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>تغییر رجیستری ویندوز: </b>دشمن با تغییر تنظیمات پیکربندی یک سرویس، رجیستری ویندوز را تغییر می‌دهد. به طور خاص، حریف تنظیمات مسیر را تغییر می‌دهد تا مسیری را به یک باینری مخرب برای اجرا تعریف کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "حریف باید قابلیت نوشتن در رجیستری ویندوز در سیستم مورد نظر را داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

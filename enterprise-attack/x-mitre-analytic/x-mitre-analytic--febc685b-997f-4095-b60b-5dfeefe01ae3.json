@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0317#AN0886",
-                    "external_id": "AN0886"
+                    "external_id": "AN0886",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessWhitelist",
-                    "description": "Exclude authorized administrative tools that stop services during maintenance."
+                    "description": "Exclude authorized administrative tools that stop services during maintenance.",
+                    "description_fa": "ابزارهای اداری مجاز که خدمات را در حین تعمیر و نگهداری متوقف می کنند، حذف کنید."
                 },
                 {
                     "field": "ServiceNamePatterns",
-                    "description": "Refine which services are considered security-critical (e.g., AV, EDR, firewall)."
+                    "description": "Refine which services are considered security-critical (e.g., AV, EDR, firewall).",
+                    "description_fa": "مشخص کنید کدام سرویس‌ها برای امنیت حیاتی در نظر گرفته می‌شوند (مانند AV، EDR، فایروال)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0886",
+            "description_fa": "رویدادهای غیرمعمول توقف سرویس، خاتمه فرآیندهای AV/EDR، تغییرات رجیستری که ابزارهای امنیتی را غیرفعال می‌کند، و تغییرات پیکربندی فایروال/مدافع. ایجاد فرآیند را با درخواست های توقف سرویس و ویرایش های رجیستری مرتبط کنید."
         }
     ]
 }

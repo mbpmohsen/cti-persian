@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0474#AN1305",
-                    "external_id": "AN1305"
+                    "external_id": "AN1305",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -71,33 +72,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DiscoveryTimeWindow",
-                    "description": "Time window for correlating multiple discovery activities as part of environmental assessment - adjust based on observed attack patterns and system performance (default: 300 seconds)"
+                    "description": "Time window for correlating multiple discovery activities as part of environmental assessment - adjust based on observed attack patterns and system performance (default: 300 seconds)",
+                    "description_fa": "پنجره زمانی برای همبستگی چندین فعالیت اکتشافی به عنوان بخشی از ارزیابی محیطی - تنظیم بر اساس الگوهای حمله مشاهده شده و عملکرد سیستم (پیش‌فرض: 300 ثانیه)"
                 },
                 {
                     "field": "CriticalDiscoveryThreshold",
-                    "description": "Minimum number of distinct discovery techniques within time window to trigger detection - tune based on environment's normal administrative activity levels"
+                    "description": "Minimum number of distinct discovery techniques within time window to trigger detection - tune based on environment's normal administrative activity levels",
+                    "description_fa": "حداقل تعداد تکنیک‌های کشف متمایز در بازه زمانی برای شروع شناسایی - تنظیم بر اساس سطوح فعالیت اداری عادی محیط"
                 },
                 {
                     "field": "TargetSpecificArtifacts",
-                    "description": "Organization-specific environmental elements that adversaries might target (domain names, network shares, specific hostnames, software versions)"
+                    "description": "Organization-specific environmental elements that adversaries might target (domain names, network shares, specific hostnames, software versions)",
+                    "description_fa": "عناصر محیطی خاص سازمان که ممکن است دشمنان هدف قرار دهند (نام دامنه، اشتراک شبکه، نام میزبان خاص، نسخه نرم افزار)"
                 },
                 {
                     "field": "CryptographicIndicatorPatterns",
-                    "description": "Process names, command lines, and API calls indicating potential decryption operations - customize based on observed cryptographic tool usage in environment"
+                    "description": "Process names, command lines, and API calls indicating potential decryption operations - customize based on observed cryptographic tool usage in environment",
+                    "description_fa": "نام‌های فرآیند، خطوط فرمان، و فراخوان‌های API که عملیات رمزگشایی بالقوه را نشان می‌دهند - سفارشی‌سازی بر اساس استفاده از ابزار رمزنگاری مشاهده شده در محیط"
                 },
                 {
                     "field": "LegitimateAdminAccounts",
-                    "description": "User accounts authorized to perform extensive system discovery - maintain current list to reduce false positives from legitimate administrative activities"
+                    "description": "User accounts authorized to perform extensive system discovery - maintain current list to reduce false positives from legitimate administrative activities",
+                    "description_fa": "حساب های کاربری مجاز به انجام اکتشاف گسترده سیستم - حفظ لیست فعلی برای کاهش مثبت های نادرست از فعالیت های اداری قانونی"
                 },
                 {
                     "field": "BusinessHoursBaseline",
-                    "description": "Normal business hours for risk scoring adjustment - discovery activities outside these hours receive higher risk scores"
+                    "description": "Normal business hours for risk scoring adjustment - discovery activities outside these hours receive higher risk scores",
+                    "description_fa": "ساعات کاری عادی برای تعدیل امتیازدهی ریسک - فعالیت های اکتشافی در خارج از این ساعات امتیازات ریسک بالاتری دریافت می کنند"
                 },
                 {
                     "field": "WMIQueryComplexityThreshold",
-                    "description": "Complexity metric for WMI queries to identify sophisticated environmental assessment versus simple system checks"
+                    "description": "Complexity metric for WMI queries to identify sophisticated environmental assessment versus simple system checks",
+                    "description_fa": "متریک پیچیدگی برای پرس و جوهای WMI برای شناسایی ارزیابی محیطی پیچیده در مقابل بررسی های ساده سیستم"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1305",
+            "description_fa": "زنجیره رفتاری کلیدهای محیطی ویژه ویندوز: (1) کشف سریع اطلاعات سیستم از طریق چندین تکنیک (پرس و جوهای WMI، شمارش رجیستری، کشف سهم شبکه، بررسی نام میزبان/دامنه)، (2) اعتبارسنجی هدف از طریق مجموعه مصنوعات محیطی خاص (عضویت دامنه AD، توپولوژی شبکه، نسخه‌های نرم‌افزار نصب شده)، (3) رمزگشایی ارزش رمزگذاری شده بر اساس بارگذاری محیطی جمع‌آوری شده اجرای کد مخرب بعدی پس از تایید موفق محیطی"
         }
     ]
 }

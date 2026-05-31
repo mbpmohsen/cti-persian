@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-528",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/528.html"
+                    "url": "https://capec.mitre.org/data/definitions/528.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-770",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/770.html"
+                    "url": "http://cwe.mitre.org/data/definitions/770.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Endpoint Denial of Service:Service Exhaustion Flood",
                     "external_id": "T1499.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1499/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1499/002",
+                    "description_fa": "انکار سرویس نقطه پایانی: سیل خستگی سرویس",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Network Denial of Service:Direct Network Flood",
                     "external_id": "T1498.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1498/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1498/001",
+                    "description_fa": "انکار سرویس شبکه: سیل شبکه مستقیم",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--ad3913be-6ca6-48e6-9e3b-7b67e4162612",
@@ -46,6 +52,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Resource Consumption"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع"
                 ]
             },
             "x_capec_domains": [
@@ -65,11 +74,23 @@
                 "An adverssary must possess the ability to generate a large amount of XML based messages to send to the target service."
             ],
             "x_capec_skills_required": {
-                "Low": "Denial of service"
+                "Low": "Denial of service",
+                "Low_fa": "انکار خدمات"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن ممکن است با استفاده از پیام‌های XML یک حمله سیل‌آمیز را با هدف ممانعت از دسترسی کاربران قانونی به یک سرویس وب اجرا کند. این حملات با ارسال تعداد زیادی درخواست مبتنی بر XML و اجازه دادن به سرویس برای تجزیه هر یک انجام می شود. در بسیاری از موارد این نوع حمله منجر به انکار سرویس XML (XDoS) به دلیل ناپایدار شدن، انجماد یا خراب شدن برنامه می شود.",
+            "name_fa": "XML Flood",
+            "x_capec_example_instances_fa": [
+                "مورد حمله انجام شده علیه وب سرویس createCustomerBillingAccount برای یک فروشگاه آنلاین را در نظر بگیرید. در این مورد، وب سرویس createCustomerBillingAccount تعداد زیادی درخواست همزمان دریافت می کند که حاوی اطلاعات ایجاد حساب صورتحساب بی معنی (پیام های کوچک XML) است. خدمات وب سایت createCustomerBillingAccount ممکن است پیام ها را برای پردازش به سایر سرویس های وب ارسال کند. برنامه از حجم بالایی از درخواست ها رنج می برد، که به طور بالقوه منجر به از دست دادن کامل در دسترس بودن سرویس وب درگیر می شود."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بررسی هدف: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، مهاجم تمام نمونه‌های خدمات وب را برای پردازش درخواست‌های XML ثبت می‌کند.</p></li><tabled><tbody><trquetr><th> ابزاری برای ضبط همه نمونه‌های URL برای پردازش درخواست‌های XML.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب‌سایت و تجزیه و تحلیل نحوه پردازش درخواست‌های XML توسط برنامه استفاده کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> ممکن است داده‌های وب را بر روی یک آگهی تأثیر بگذارد. <p> هنگامی که داده‌های XML به سرویس ارسال می‌شوند، سرویس می‌دهند.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>راه‌اندازی یک حمله کاهش منابع: </b>مهاجم تعداد زیادی پیام XML را به آدرس‌های اینترنتی هدف یافت شده در مرحله کاوش با سرعت کافی تحویل می‌دهد. این باعث انکار سرویس به برنامه هدف می‌شود.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>تعداد زیادی از پیام‌های XML ساخته‌شده را به URL هدف ارسال کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>XDoS بیشترین ارتباط را با سرویس‌های وب، SOAP و Rest دارد، زیرا درخواست‌کنندگان سرویس از راه دور می‌توانند بارهای مخرب XML را به ارائه‌دهنده سرویس ارسال کنند که برای تخلیه حافظه، CPU و/یا فضای دیسک ارائه‌دهنده خدمات طراحی شده است. ضعف اصلی در XDoS این است که ارائه‌دهنده خدمات عموماً باید پیام‌های XML را برای تعیین مسیریابی، گردش کار، ملاحظات امنیتی و غیره بازرسی، تجزیه و اعتبارسنجی کند. دقیقاً این روال‌های بازرسی، تجزیه و اعتبارسنجی است که XDoS هدف قرار می‌دهد. این حمله از ماهیت اتصال آزاد سرویس های وب سوء استفاده می کند، جایی که ارائه دهنده خدمات کنترل کمی بر درخواست کننده سرویس و هر پیامی که درخواست کننده سرویس ارسال می کند، ندارد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "هدف باید تراکنش های XML را دریافت و پردازش کند.",
+                "حریف باید توانایی تولید مقدار زیادی پیام مبتنی بر XML برای ارسال به سرویس هدف را داشته باشد."
+            ]
         }
     ],
     "spec_version": "2.0",

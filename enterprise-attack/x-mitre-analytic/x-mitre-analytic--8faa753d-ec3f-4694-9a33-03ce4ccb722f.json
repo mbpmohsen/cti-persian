@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0137#AN0387",
-                    "external_id": "AN0387"
+                    "external_id": "AN0387",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PrivilegedUsers",
-                    "description": "Tune to exclude approved maintenance sessions by known administrators."
+                    "description": "Tune to exclude approved maintenance sessions by known administrators.",
+                    "description_fa": "تنظیم کنید تا جلسات تعمیر و نگهداری تایید شده توسط مدیران شناخته شده حذف شود."
                 },
                 {
                     "field": "CommandPatterns",
-                    "description": "Adjust monitored destructive command list depending on device vendor and OS."
+                    "description": "Adjust monitored destructive command list depending on device vendor and OS.",
+                    "description_fa": "لیست دستورات مخرب نظارت شده را بسته به فروشنده دستگاه و سیستم عامل تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0387",
+            "description_fa": "اجرای دستورات مخرب CLI مانند 'erase startup-config'، 'erase flash:' یا 'format disk' در روترها/سوئیچ ها. تشدید سطح امتیاز قبل از دستورات مخرب را تشخیص دهید."
         }
     ]
 }

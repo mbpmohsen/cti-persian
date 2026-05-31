@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0185#AN0526",
-                    "external_id": "AN0526"
+                    "external_id": "AN0526",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "GeoIPDistanceThreshold",
-                    "description": "Distance between token creation and resource use locations"
+                    "description": "Distance between token creation and resource use locations",
+                    "description_fa": "فاصله بین مکان های ایجاد توکن و استفاده از منابع"
                 },
                 {
                     "field": "RoleScope",
-                    "description": "Limit scope of acceptable role assumptions by account type"
+                    "description": "Limit scope of acceptable role assumptions by account type",
+                    "description_fa": "محدوده مفروضات نقش قابل قبول را بر اساس نوع حساب محدود کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0526",
+            "description_fa": "استفاده از AWS STS یا GCP IAM API برای درخواست توکن‌های موقت یا جلسات فدراسیون که با فعالیت عادی حساب، از جمله از اصول یا مناطق غیرمنتظره، مطابقت ندارد."
         }
     ]
 }

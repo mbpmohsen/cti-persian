@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0349#AN0992",
-                    "external_id": "AN0992"
+                    "external_id": "AN0992",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredExtensions",
-                    "description": "File extensions to flag (exe, dll, js, vbs, sh, etc.)."
+                    "description": "File extensions to flag (exe, dll, js, vbs, sh, etc.).",
+                    "description_fa": "پسوند فایل برای پرچم (exe، dll، js، vbs، sh و غیره)."
                 },
                 {
                     "field": "SuspiciousParentProcesses",
-                    "description": "Browser processes (chrome.exe, firefox.exe, edge.exe, etc.) monitored as possible parents for malicious activity."
+                    "description": "Browser processes (chrome.exe, firefox.exe, edge.exe, etc.) monitored as possible parents for malicious activity.",
+                    "description_fa": "فرآیندهای مرورگر (chrome.exe، firefox.exe، edge.exe، و غیره) به عنوان والدین احتمالی برای فعالیت های مخرب نظارت می شوند."
                 },
                 {
                     "field": "RedirectList",
-                    "description": "List of suspicious domains or URLs used for malicious redirects."
+                    "description": "List of suspicious domains or URLs used for malicious redirects.",
+                    "description_fa": "فهرست دامنه ها یا URL های مشکوک مورد استفاده برای تغییر مسیرهای مخرب."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0992",
+            "description_fa": "ایجاد فایل‌های مشکوک و اجرای فرآیندهای ناشی از فعالیت مرورگر را شناسایی کنید (به عنوان مثال، بارهای تزریقی که در فهرست‌های %AppData% یا Temp نوشته شده و سپس اجرا می‌شوند). ناهنجاری های شبکه را با ایجاد فرآیند محلی بعدی یا اجرای اسکریپت مرتبط کنید."
         }
     ]
 }

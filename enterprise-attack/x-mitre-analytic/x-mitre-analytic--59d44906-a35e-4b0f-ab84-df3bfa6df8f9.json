@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0099#AN0275",
-                    "external_id": "AN0275"
+                    "external_id": "AN0275",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedFirmwareUpdateTools",
-                    "description": "Legitimate vendor tools permitted to perform firmware flashing or BIOS updates."
+                    "description": "Legitimate vendor tools permitted to perform firmware flashing or BIOS updates.",
+                    "description_fa": "ابزارهای فروشنده قانونی مجاز به انجام فلش میان افزار یا به روز رسانی بایوس هستند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Expected time periods for approved firmware updates, used for correlating suspicious activity outside patch cycles."
+                    "description": "Expected time periods for approved firmware updates, used for correlating suspicious activity outside patch cycles.",
+                    "description_fa": "دوره‌های زمانی مورد انتظار برای به‌روزرسانی‌های میان‌افزار تأییدشده، که برای مرتبط کردن فعالیت‌های مشکوک در خارج از چرخه‌های وصله استفاده می‌شود."
                 },
                 {
                     "field": "KnownGoodFirmwareHashes",
-                    "description": "Baseline hashes of vendor BIOS/UEFI firmware for integrity comparison."
+                    "description": "Baseline hashes of vendor BIOS/UEFI firmware for integrity comparison.",
+                    "description_fa": "هش‌های پایه میان‌افزار BIOS/UEFI فروشنده برای مقایسه یکپارچگی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0275",
+            "description_fa": "عملیات نوشتن غیرمنتظره در مناطق میان‌افزار BIOS/UEFI یا پارتیشن‌های راه‌اندازی EFI که با به‌روزرسانی‌های میان‌افزار معتبر فروشنده مرتبط نیستند. تماس‌های API یا ابزارهای کمکی مانند fwupdate.exe یا ابزارهای فلش فروشنده که از حساب‌های مدیریت غیر اداری یا غیر IT اجرا می‌شوند. دیسک خام مشکوک با هدف قرار دادن پارتیشن‌های System Firmware GUID و به دنبال آن دنباله‌های راه‌اندازی مجدد غیرعادی می‌نویسد."
         }
     ]
 }

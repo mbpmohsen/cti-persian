@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-158",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/158.html"
+                    "url": "https://capec.mitre.org/data/definitions/158.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-311",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/311.html"
+                    "url": "http://cwe.mitre.org/data/definitions/311.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Network Sniffing",
                     "external_id": "T1040",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1040"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1040",
+                    "description_fa": "استشمام شبکه",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Multi-Factor Authentication Interception",
                     "external_id": "T1111",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1111"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1111",
+                    "description_fa": "رهگیری احراز هویت چند عاملی",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--897a5506-45bb-4f6f-96e7-55f4c0b9021a",
@@ -47,6 +53,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -61,11 +70,21 @@
                 "A tool with the capability of presenting network communication traffic (e.g., Wireshark, tcpdump, Cain and Abel, etc.)."
             ],
             "x_capec_skills_required": {
-                "Low": "Adversaries can obtain and set up open-source network sniffing tools easily."
+                "Low": "Adversaries can obtain and set up open-source network sniffing tools easily.",
+                "Low_fa": "دشمنان می توانند به راحتی ابزارهای شنود شبکه منبع باز را بدست آورند و راه اندازی کنند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این الگوی حمله، حریف ترافیک شبکه را بین گره‌های یک شبکه عمومی یا چندپخشی در تلاش برای گرفتن اطلاعات حساس در سطح پروتکل نظارت می‌کند. برنامه‌های sniffing شبکه می‌توانند TCP/IP، DNS، Ethernet و سایر اطلاعات ارتباطی شبکه سطح پایین را آشکار کنند. دشمن در این الگوی حمله نقشی منفعل بر عهده می گیرد و به سادگی ترافیک را مشاهده و تحلیل می کند. حریف ممکن است بر محتوای تراکنش مشاهده شده تأثیر بگذارد یا به طور غیرمستقیم بر آن تأثیر بگذارد، اما هرگز گیرنده مورد نظر اطلاعات هدف نیست.",
+            "name_fa": "Sniffing ترافیک شبکه",
+            "x_capec_prerequisites_fa": [
+                "هدف باید در یک پروتکل شبکه قابل مشاهده توسط یک برنامه sniffing شبکه باشد.",
+                "حریف باید موقعیت منطقی در شبکه را از رهگیری ترافیک شبکه هدف به دست آورد. بسته به توپولوژی شبکه، شناسایی ترافیک ممکن است ساده یا چالش برانگیز باشد. اگر فرستنده و گیرنده هدف هر دو عضو یک زیرشبکه واحد باشند، حریف نیز باید در آن زیرشبکه باشد تا ارتباطات ترافیکی آنها را ببیند."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزاری با قابلیت ارائه ترافیک ارتباطی شبکه (به عنوان مثال، Wireshark، tcpdump، Cain و Abel و غیره)."
+            ]
         }
     ],
     "type": "bundle"

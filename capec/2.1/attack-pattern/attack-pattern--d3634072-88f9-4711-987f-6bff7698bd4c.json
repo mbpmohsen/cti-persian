@@ -9,27 +9,33 @@
                 {
                     "external_id": "CAPEC-44",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/44.html"
+                    "url": "https://capec.mitre.org/data/definitions/44.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--d3634072-88f9-4711-987f-6bff7698bd4c",
@@ -55,6 +61,16 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -72,11 +88,23 @@
                 "Target software contains a buffer overflow vulnerability reachable through input from a user-controllable binary resource file."
             ],
             "x_capec_skills_required": {
-                "Medium": "To modify file, deceive client into downloading, locate and exploit remote stack or heap vulnerability"
+                "Medium": "To modify file, deceive client into downloading, locate and exploit remote stack or heap vulnerability",
+                "Medium_fa": "برای اصلاح فایل، فریب مشتری برای دانلود، مکان یابی و سوء استفاده از آسیب پذیری پشته یا پشته از راه دور"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حمله ای از این نوع از آسیب پذیری سرریز بافر در مدیریت منابع باینری سوء استفاده می کند. منابع باینری ممکن است شامل فایل های موسیقی مانند MP3، فایل های تصویری مانند فایل های JPEG و هر فایل باینری دیگری باشد. این حملات ممکن است از طریق استفاده معمولی از فایل‌ها، مانند مرورگری که یک فایل JPEG به ظاهر بی‌گناه را بارگذاری می‌کند، بدون توجه به ماشین کلاینت منتقل شود. این می تواند به دشمن اجازه دسترسی به پشته اجرا و اجرای کد دلخواه در فرآیند هدف را بدهد.",
+            "name_fa": "سرریز فایل منبع باینری",
+            "x_capec_example_instances_fa": [
+                "فایل‌های باینری مانند فایل‌های موسیقی و ویدیو با داده‌های اضافی اضافه می‌شوند تا باعث سرریز بافر در سیستم‌های هدف شوند. از آنجایی که این فایل‌ها ممکن است با محتوای پرطرفدار دیگری پر شده باشند، دشمن یک برداری عالی برای توزیع گسترده دارد. موارد متعددی وجود داشته است، به عنوان مثال محافظ صفحه نمایش مخرب برای تیم های ورزشی که در رویداد قهرمانی تیم توزیع می شود."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>نرم افزار هدف را شناسایی کنید: </b> دشمن نرم افزاری را شناسایی می کند که از فایل های باینری خارجی به نحوی استفاده می کند. این می‌تواند آپلود فایل، دانلود فایل از یک مکان مشترک یا ابزارهای دیگر باشد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>پیدا کردن بردار تزریق: </b>دشمن یک فایل باینری مخرب ایجاد می‌کند تا هدر را کوتاه‌تر از ظاهر شدن فایل کند. بایت های اضافی به انتهای فایل اضافه می شوند تا در محل سرریز شده قرار گیرند. سپس دشمن فایل را در نرم افزار مستقر می کند تا تعیین کند که آیا سرریز بافر موفقیت آمیز بوده است یا خیر.</p></li><li> <p> <b>محتوای سرریز کاردستی: </b>هنگامی که دشمن تشخیص داد که این حمله قابل اجرا است، به طور خاص فایل باینری را به گونه ای ایجاد می کند که به رفتار مورد نظر دست یابد. اگر کد منبع در دسترس باشد، حریف می‌تواند فایل مخرب را با دقت بسازد تا آدرس برگشتی به مقدار مورد نظر بازنویسی شود. اگر کد منبع در دسترس نباشد، حریف به طور مکرر فایل را تغییر می‌دهد تا آدرس برگشتی را به‌درستی بازنویسی کند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک کد پوسته مخرب ایجاد کنید که وقتی اجرای برنامه به آن بازگردانده شد، اجرا شود. برای راحت تر \"لغزش\" به کد مخرب. این کار به این دلیل انجام می شود که آدرس برگشتی دقیق لازم نباشد درست باشد، فقط در محدوده همه NOP ها</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز از بافر: </b>هنگامی که حریف به طور موثر نرم افزار مورد نظر را بر روی یک فایل هدف قرار می دهد. فایل در نرم افزار مستقر می شود، یا با ارائه مستقیم آن به نرم افزار یا قرار دادن آن در یک مکان مشترک برای قربانی برای بارگیری در نرم افزار.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "این الگوی حمله، نوعی از حمله سرریز بافر استاندارد است که از یک بردار غیرمنتظره (فایل های باینری) برای بسته بندی حمله و باز کردن یک بردار حمله جدید استفاده می کند. حریف موظف است یا مستقیماً محتوای باینری را به قربانی ارائه دهد یا آن را در محلی مانند برنامه اشتراک‌گذاری MP3 برای بارگیری قربانی قرار دهد. سپس هنگام دانلود به حریف اطلاع داده می شود یا آسیب پذیری باز شده توسط سرریز بافر را پیدا می کند.",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار هدف فایل های منبع باینری را پردازش می کند.",
+                "نرم افزار هدف حاوی یک آسیب پذیری سرریز بافر است که از طریق ورودی فایل منبع باینری قابل کنترل توسط کاربر قابل دسترسی است."
+            ]
         }
     ],
     "type": "bundle"

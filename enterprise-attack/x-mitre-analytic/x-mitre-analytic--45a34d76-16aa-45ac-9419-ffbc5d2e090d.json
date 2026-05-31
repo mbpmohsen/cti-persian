@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0540#AN1490",
-                    "external_id": "AN1490"
+                    "external_id": "AN1490",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLine",
-                    "description": "The miner's execution path and options may vary by campaign."
+                    "description": "The miner's execution path and options may vary by campaign.",
+                    "description_fa": "مسیر و گزینه‌های اجرای ماینر ممکن است بسته به کمپین متفاوت باشد."
                 },
                 {
                     "field": "CPUThreshold",
-                    "description": "Environment-specific definition of anomalous CPU usage."
+                    "description": "Environment-specific definition of anomalous CPU usage.",
+                    "description_fa": "تعریف محیطی خاص از استفاده غیرعادی از CPU."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1490",
+            "description_fa": "فرآیندهای طولانی مدت غیرمعمولی که چرخه های بالای CPU را مصرف می کنند (به عنوان مثال، از طریق \"top\" یا \"ps\") که از طریق cron، اسکریپت های پوسته یا Docker آغاز می شوند. اتصال به استخرهای استخراج شناخته شده یا DNS از طریق استفاده از HTTPS به عنوان فرار."
         }
     ]
 }

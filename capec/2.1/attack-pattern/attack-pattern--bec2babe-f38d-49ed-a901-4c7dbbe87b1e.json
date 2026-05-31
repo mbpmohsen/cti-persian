@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-633",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/633.html"
+                    "url": "https://capec.mitre.org/data/definitions/633.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-287",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/287.html"
+                    "url": "http://cwe.mitre.org/data/definitions/287.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1270",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1270.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1270.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Access Token Manipulation",
                     "external_id": "T1134",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1134"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1134",
+                    "description_fa": "دستکاری توکن دسترسی",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--bec2babe-f38d-49ed-a901-4c7dbbe87b1e",
@@ -45,6 +50,11 @@
                     "Alter Execution Logic (By faking the source of data or services, an adversary can cause a target to make incorrect decisions about how to proceed.)",
                     "Gain Privileges (By impersonating identities that have an increased level of access, an adversary gain privilege that they many not have otherwise had.)",
                     "Hide Activities (Faking the source of data or services can be used to create a false trail in logs as the target will associated any actions with the impersonated identity instead of the adversary.)"
+                ],
+                "Integrity_fa": [
+                    "تغییر منطق اجرایی (با جعل منبع داده ها یا خدمات، دشمن می تواند باعث شود تا یک هدف تصمیمات نادرستی در مورد چگونگی ادامه بگیرد.)",
+                    "به دست آوردن امتیازات (با جعل هویت‌هایی که سطح دسترسی بالایی دارند، حریف امتیازی را به دست می‌آورد که بسیاری از آنها در غیر این صورت نداشتند.)",
+                    "پنهان کردن فعالیت‌ها (جعل منبع داده یا خدمات می‌تواند برای ایجاد یک دنباله نادرست در گزارش‌ها استفاده شود، زیرا هدف به جای حریف، هر اقدامی را با هویت جعل شده مرتبط می‌کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -56,7 +66,12 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از ضعف در احراز هویت برای ایجاد یک نشانه دسترسی (یا معادل) که جعل موجودیت دیگری را جعل می‌کند، سوء استفاده می‌کند و سپس یک فرآیند/رشته را به آن رمز جعل هویت مرتبط می‌کند. این اقدام باعث می شود که کاربر پایین دستی تصمیم یا اقدامی را اتخاذ کند که بر اساس هویت مفروض باشد و نه پاسخی که حریف را مسدود می کند.",
+            "name_fa": "جعل هویت رمزی",
+            "x_capec_prerequisites_fa": [
+                "این الگوی حمله تنها زمانی قابل اجرا است که یک کاربر پایین دستی از توکن ها برای تأیید هویت استفاده کند و سپس بر اساس آن هویت اقدام کند."
+            ]
         }
     ],
     "type": "bundle"

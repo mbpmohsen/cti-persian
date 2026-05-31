@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0377#AN1063",
-                    "external_id": "AN1063"
+                    "external_id": "AN1063",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KextSignatureStatus",
-                    "description": "Allowable level of unsigned/3rd-party kernel extensions varies by organization."
+                    "description": "Allowable level of unsigned/3rd-party kernel extensions varies by organization.",
+                    "description_fa": "سطح مجاز برنامه‌های افزودنی هسته بدون امضا/شخص ثالث بر اساس سازمان متفاوت است."
                 },
                 {
                     "field": "KextLoadOrigin",
-                    "description": "Detect whether the extension was loaded by an untrusted process or non-root user."
+                    "description": "Detect whether the extension was loaded by an untrusted process or non-root user.",
+                    "description_fa": "تشخیص دهید که آیا برنامه افزودنی توسط یک فرآیند نامعتبر بارگذاری شده است یا کاربر غیر ریشه."
                 },
                 {
                     "field": "AnomalousLaunchAgent",
-                    "description": "Detection tuned based on deviation from known/approved LaunchDaemon plist files."
+                    "description": "Detection tuned based on deviation from known/approved LaunchDaemon plist files.",
+                    "description_fa": "تشخیص بر اساس انحراف از فایل های LaunchDaemon plist شناخته شده/تأیید شده تنظیم شده است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1063",
+            "description_fa": "اجرای برنامه‌های افزودنی هسته بدون امضا (KEXT)، دستکاری در LaunchDaemons یا قلاب‌های فضای کاربر در کتابخانه‌های سیستم."
         }
     ]
 }

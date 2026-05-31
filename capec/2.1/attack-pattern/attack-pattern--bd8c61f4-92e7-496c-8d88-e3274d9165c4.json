@@ -9,34 +9,44 @@
                 {
                     "external_id": "CAPEC-299",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/299.html"
+                    "url": "https://capec.mitre.org/data/definitions/299.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Defense Advanced Research Projects Agency Information Processing Techniques Office, Information Sciences Institute University of Southern California, RFC793 - Transmission Control Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-128",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc793.html"
+                    "url": "http://www.faqs.org/rfcs/rfc793.html",
+                    "description_fa": "دفتر تکنیک های پردازش اطلاعات آژانس پروژه های تحقیقاتی پیشرفته دفاعی، موسسه علوم اطلاعات دانشگاه کالیفرنیای جنوبی، RFC793 - پروتکل کنترل انتقال، 1981-09، آژانس پروژه های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-34",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Mark Wolfgang, Host Discovery with Nmap, 2002--11",
                     "external_id": "REF-125",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://nmap.org/docs/discovery.pdf"
+                    "url": "http://nmap.org/docs/discovery.pdf",
+                    "description_fa": "مارک ولفگانگ، کشف میزبان با Nmap، 2002--11",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--bd8c61f4-92e7-496c-8d88-e3274d9165c4",
@@ -64,6 +74,19 @@
                     "Other",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -77,11 +100,21 @@
                 "SYN pings can be performed via the use of a port scanner or by raw socket manipulation using a scripting or programming language. Packet injection tools are also useful for this purpose. Depending upon the technique used it may also be necessary to sniff the network in order to see the response."
             ],
             "x_capec_skills_required": {
-                "Low": "The adversary needs to know how to craft and send protocol commands from the command line or within a tool."
+                "Low": "The adversary needs to know how to craft and send protocol commands from the command line or within a tool.",
+                "Low_fa": "حریف باید بداند که چگونه دستورات پروتکل را از خط فرمان یا درون یک ابزار بسازد و ارسال کند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از بسته های TCP SYN به عنوان وسیله ای برای کشف میزبان استفاده می کند. رفتار معمولی RFC 793 مشخص می‌کند که وقتی یک پورت TCP باز است، یک میزبان باید با تکمیل مرحله دوم از «دست دادن سه‌طرفه» - با ارسال یک SYN/ACK در پاسخ، به بسته «همگام‌سازی» SYN ورودی پاسخ دهد. هنگامی که یک پورت بسته است، رفتار RFC 793 با یک بسته \"تنظیم مجدد\" RST پاسخ می دهد. این رفتار را می توان برای \"پینگ\" کردن یک هدف برای بررسی زنده بودن آن با ارسال یک بسته TCP SYN به یک پورت و سپس جستجوی یک بسته RST یا ACK در پاسخ استفاده کرد.",
+            "name_fa": "پینگ TCP SYN",
+            "x_capec_extended_description_fa": "<xhtml:p> با توجه به پاسخ‌های متفاوت پورت‌های باز و بسته، می‌توان از بسته‌های SYN برای تعیین وضعیت راه دور پورت استفاده کرد. پینگ TCP SYN نیز برای کشف میزبان های زنده محافظت شده توسط فایروال حالت دار مفید است. در مواردی که یک قانون فایروال خاص دسترسی به یک پورت را مسدود نمی‌کند، یک بسته SYN می‌تواند از فایروال به میزبان عبور کند و از یک پورت باز یا بسته پاسخ بخواهد. هنگامی که یک فایروال حالت وجود دارد، پینگ های SYN به پینگ های ACK ترجیح داده می شوند زیرا یک فایروال حالت دار معمولاً تمام بسته های ACK ناخواسته را حذف می کند زیرا آنها بخشی از یک اتصال موجود یا جدید نیستند. پینگ های TCP SYN اغلب زمانی که یک ACL بدون حالت یا فایروال برای فیلتر کردن بسته های ورودی به پورت پیکربندی شده است، از کار می افتند. دستگاه فایروال هر بسته SYN را به یک پورت مسدود شده دور می‌اندازد. اغلب، یک دشمن بین پینگ های SYN و ACK به طور متناوب می گوید آیا میزبان زنده است یا نه.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "توانایی ارسال بسته TCP SYN به یک هدف راه دور. بسته به سیستم عامل، توانایی ساخت بسته های SYN ممکن است به امتیازات بالایی نیاز داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "پینگ های SYN را می توان از طریق استفاده از اسکنر پورت یا با دستکاری سوکت خام با استفاده از یک زبان برنامه نویسی یا برنامه نویسی انجام داد. ابزارهای تزریق بسته نیز برای این منظور مفید هستند. بسته به تکنیک مورد استفاده، ممکن است لازم باشد شبکه را بو کنید تا پاسخ را ببینید."
+            ]
         }
     ],
     "type": "bundle"

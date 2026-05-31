@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0571#AN1576",
-                    "external_id": "AN1576"
+                    "external_id": "AN1576",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServicePathRegex",
-                    "description": "Path-based filters to identify service unit files or init scripts"
+                    "description": "Path-based filters to identify service unit files or init scripts",
+                    "description_fa": "فیلترهای مبتنی بر مسیر برای شناسایی فایل‌های واحد خدمات یا اسکریپت‌های init"
                 },
                 {
                     "field": "UserContextList",
-                    "description": "List of expected user contexts that normally perform service changes"
+                    "description": "List of expected user contexts that normally perform service changes",
+                    "description_fa": "فهرستی از زمینه های کاربر مورد انتظار که معمولاً تغییرات سرویس را انجام می دهند"
                 },
                 {
                     "field": "CommandNameList",
-                    "description": "Binaries used to register/modify services"
+                    "description": "Binaries used to register/modify services",
+                    "description_fa": "باینری ها برای ثبت/تغییر سرویس ها استفاده می شوند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1576",
+            "description_fa": "ایجاد یا اصلاح واحدهای سرویس سیستم، افزودن کارهای cron که باینری‌ها را در هنگام راه‌اندازی فراخوانی می‌کنند یا نوشته‌های مشکوک در «/etc/init.d/» را تشخیص می‌دهد. مسیرهای اجرای «chmod +x» و «systemctl» را، به‌ویژه از فرآیندهای والد غیر ریشه، نظارت می‌کند."
         }
     ]
 }

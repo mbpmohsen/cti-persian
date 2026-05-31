@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0461#AN1273",
-                    "external_id": "AN1273"
+                    "external_id": "AN1273",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPlistPaths",
-                    "description": "Adjust to target only relevant plist files linked to volume mounting."
+                    "description": "Adjust to target only relevant plist files linked to volume mounting.",
+                    "description_fa": "تنظیم کنید تا فقط فایل‌های plist مرتبط مرتبط با نصب حجم را هدف قرار دهید."
                 },
                 {
                     "field": "ProcessScope",
-                    "description": "Restrict monitoring to sensitive processes like diskutil and hdiutil."
+                    "description": "Restrict monitoring to sensitive processes like diskutil and hdiutil.",
+                    "description_fa": "نظارت را به فرآیندهای حساس مانند diskutil و hdiutil محدود کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1273",
+            "description_fa": "استفاده از سیستم فایل مخفی از طریق کانتینرهای APFS یا پیکربندی plist سفارشی. نمای مدافع: استفاده غیرعادی از hdiutil یا diskutil برای اتصال پارتیشن های مخفی، اصلاح ورودی های plist مرتبط با حجم های سیستم، یا دسترسی مشکوک به دیسک خام."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0403#AN1132",
-                    "external_id": "AN1132"
+                    "external_id": "AN1132",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -34,7 +35,7 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--a7f22107-02e5-4982-9067-6625d4a1765a",
                     "name": "networkdevice:syslog",
-                    "channel": "Config change: CLI/NETCONF/SNMP \u2013 'monitor session', 'mirror port'"
+                    "channel": "Config change: CLI/NETCONF/SNMP – 'monitor session', 'mirror port'"
                 },
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--181a9f8c-c780-4f1f-91a8-edb770e904ba",
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ConfigChangeType",
-                    "description": "Tune based on accepted interface config changes (e.g., audit only mirror session creation)"
+                    "description": "Tune based on accepted interface config changes (e.g., audit only mirror session creation)",
+                    "description_fa": "تنظیم بر اساس تغییرات پیکربندی رابط پذیرفته شده (مثلاً ایجاد جلسه آینه فقط ممیزی)"
                 },
                 {
                     "field": "MirrorDestinationPort",
-                    "description": "Define high-risk ports used for exfil (e.g., 4443, 8443, 2055)"
+                    "description": "Define high-risk ports used for exfil (e.g., 4443, 8443, 2055)",
+                    "description_fa": "پورت های پرخطر مورد استفاده برای exfil را تعریف کنید (به عنوان مثال، 4443، 8443، 2055)"
                 },
                 {
                     "field": "DeviceRole",
-                    "description": "Define whether mirroring is expected on edge vs core vs distribution devices"
+                    "description": "Define whether mirroring is expected on edge vs core vs distribution devices",
+                    "description_fa": "مشخص کنید که آیا انعکاس روی لبه در مقابل هسته در مقابل دستگاه های توزیع مورد انتظار است یا خیر"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1132",
+            "description_fa": "جلسات انعکاسی غیرمجاز در مسیریاب‌ها/سوئیچ‌ها (مثلاً از طریق «جلسه مانیتور»، «درگاه آینه») همراه با ترافیک خروجی از رابط آینه‌ای به مقصدهای غیرمنتظره آغاز می‌شوند."
         }
     ]
 }

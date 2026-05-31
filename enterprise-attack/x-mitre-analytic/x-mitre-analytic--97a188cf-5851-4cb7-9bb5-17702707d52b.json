@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0378#AN1067",
-                    "external_id": "AN1067"
+                    "external_id": "AN1067",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyThreshold",
-                    "description": "Adjust threshold to reduce false positives in compressed but benign data"
+                    "description": "Adjust threshold to reduce false positives in compressed but benign data",
+                    "description_fa": "آستانه را برای کاهش مثبت کاذب در داده های فشرده اما خوش خیم تنظیم کنید"
                 },
                 {
                     "field": "ProtocolScope",
-                    "description": "Refine by enabling inspection of specific exfil vectors (e.g., FTP, HTTP POST)"
+                    "description": "Refine by enabling inspection of specific exfil vectors (e.g., FTP, HTTP POST)",
+                    "description_fa": "با فعال کردن بازرسی بردارهای exfil خاص (مانند FTP، HTTP POST) اصلاح کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1067",
+            "description_fa": "انتقال فایل های base64، uenecod شده یا با آنتروپی بالا را از طریق پروتکل های HTTP، FTP یا سفارشی در جریان های حرکت جانبی یا خروج شناسایی می کند."
         }
     ]
 }

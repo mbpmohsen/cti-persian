@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/013",
                     "external_id": "T1055.013",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "BlackHat Process Doppelgänging Dec 2017",
                     "description": "Liberman, T. & Kogan, E. (2017, December 7). Lost in Transaction: Process Doppelgänging. Retrieved December 20, 2017.",
                     "url": "https://www.blackhat.com/docs/eu-17/materials/eu-17-Liberman-Lost-In-Transaction-Process-Doppelganging.pdf",
-                    "source_name_fa": "BlackHat Process Doppelgänging دسامبر 2017",
-                    "description_fa": "لیبرمن، T. & Kogan، E. (2017، دسامبر 7) از دست رفته در معاملات: فرآیند Doppelgänging Retrieved 20 دسامبر 2017"
+                    "source_name_fa": "Doppelgänging فرآیند BlackHat دسامبر 2017",
+                    "description_fa": "لیبرمن، تی و کوگان، ای. (2017، 7 دسامبر). گمشده در تراکنش: فرآیند Doppelgänging. بازبینی شده در 20 دسامبر 2017."
                 },
                 {
                     "source_name": "Microsoft Basic TxF Concepts",
                     "description": "Microsoft. (n.d.). Basic TxF Concepts. Retrieved December 20, 2017.",
                     "url": "https://msdn.microsoft.com/library/windows/desktop/dd979526.aspx",
-                    "source_name_fa": "Microsoft Basic TxF Concepts",
-                    "description_fa": "مایکروسافت (n.d.) مفاهیم پایه TxF Retrieved 20 دسامبر 2017"
+                    "source_name_fa": "مفاهیم پایه TxF مایکروسافت",
+                    "description_fa": "مایکروسافت. (n.d.). مفاهیم اولیه TxF بازبینی شده در 20 دسامبر 2017."
                 },
                 {
                     "source_name": "Microsoft TxF",
                     "description": "Microsoft. (n.d.). Transactional NTFS (TxF). Retrieved December 20, 2017.",
                     "url": "https://msdn.microsoft.com/library/windows/desktop/bb968806.aspx",
-                    "source_name_fa": "Microsoft TxF",
-                    "description_fa": "مایکروسافت (n.d.) NTFS تراکنشی (TxF) Retrieved 20 دسامبر 2017"
+                    "source_name_fa": "مایکروسافت TxF",
+                    "description_fa": "مایکروسافت. (n.d.). NTFS تراکنش (TxF). بازبینی شده در 20 دسامبر 2017."
                 },
                 {
                     "source_name": "Microsoft Where to use TxF",
                     "description": "Microsoft. (n.d.). When to Use Transactional NTFS. Retrieved December 20, 2017.",
                     "url": "https://msdn.microsoft.com/library/windows/desktop/aa365738.aspx",
-                    "source_name_fa": "Microsoft استفاده از TxF",
-                    "description_fa": "مایکروسافت (n.d.) هنگام استفاده از NTFS تراکنشی Retrieved 20 دسامبر 2017"
+                    "source_name_fa": "مایکروسافت کجا از TxF استفاده کنیم",
+                    "description_fa": "مایکروسافت. (n.d.). زمان استفاده از تراکنش NTFS بازبینی شده در 20 دسامبر 2017."
                 }
             ],
             "object_marking_refs": [
@@ -73,7 +73,7 @@
             ],
             "x_mitre_version": "2.0",
             "name_fa": "فرآیند Doppelgänging",
-            "description_fa": "مخالفان ممکن است کد مخرب را از طریق فرایند doppelgänging تزریق کنند تا از دفاع مبتنی بر فرایند و همچنین احتمالا امتیازات بالا ببرند. فرآیند doppelgänging یک روش برای اجرای کد های خودسرانه در فضای آدرس یک فرایند زندگی جداگانه است.\n\nWindows Transactional NTFS (TxF) در ویستا به عنوان یک روش برای انجام عملیات فایل امن معرفی شد. [[ویرایش] برای اطمینان از یکپارچگی داده ها، TxF تنها یک دستور کار را برای نوشتن به یک فایل در یک زمان معین فراهم می کند. تا زمانی که معامله نوشتن خاتمه یابد، تمام دسته های دیگر از نویسنده جدا می شوند و تنها می توانند نسخه متعهد فایل را که در آن زمان وجود داشت بخوانند. [[ویرایش] برای جلوگیری از فساد، TxF اگر سیستم یا برنامه در طول یک معامله نوشتن شکست بخورد، یک رول اتوماتیک انجام می دهد. [[ویرایش]\n\nاگر چه deprecated، رابط برنامه نویسی TxF (API) هنوز به عنوان ویندوز 10 فعال است. [[ویرایش]\n\nدر صورتی که به صورت غیر قانونی از آن بهره مند شوند، می توان آن را با استفاده از آن به کار برد. همانند [Process Hollowing] ([[CTI_PRESERVE_10])، فرایند doppelgänging شامل جایگزینی حافظه یک فرایند قانونی است که امکان اجرای حجاب کد مخرب را فراهم می کند که ممکن است از دفاع و تشخیص فرار کند. پردازش doppelgänging استفاده از TxF همچنین از استفاده از توابع API بسیار نظارت شده مانند [CTI_PRESERVE_0] جلوگیری می کند. [[ویرایش] و [[ویرایش] [[ویرایش]\n\nدر چهار مرحله اجرا می شود.\n\n• Transact – ایجاد یک معامله TxF با استفاده از یک اجرای قانونی سپس بازنویسی فایل با کد مخرب. این تغییرات جدا شده و تنها در چارچوب معامله قابل مشاهده خواهد بود.\n* Load - ایجاد یک بخش مشترک از حافظه و بارگذاری اجرایی مخرب.\n* Rollback - تغییرات Undo در اجرایی اصلی، به طور موثر حذف کد مخرب از سیستم فایل.\n• Animate – ایجاد یک فرایند از بخش لکه دار حافظه و شروع اعدام.\n\nاین رفتار احتمالا منجر به امتیازات بالا نخواهد شد زیرا فرآیند تزریق از (و در نتیجه زمینه امنیتی) فرآیند تزریق ایجاد شده است. با این حال، اعدام از طریق فرایند doppelgänging ممکن است از تشخیص از محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. <code>NtUnmapViewOfSection</code> <code>VirtualProtectEx</code> <code>SetThreadContext</code> (Citation: Microsoft TxF) (Citation: Microsoft Basic TxF Concepts) (Citation: Microsoft Where to use TxF) (Citation: BlackHat Process Doppelgänging Dec 2017) (Citation: BlackHat Process Doppelgänging Dec 2017) (Citation: BlackHat Process Doppelgänging Dec 2017) https://attack.mitre.org/techniques/T1055 https://attack.mitre.org/techniques/T1055/012"
+            "description_fa": "دشمنان ممکن است کدهای مخرب را از طریق فرآیند doppelgänging به فرآیند تزریق کنند تا از دفاع های مبتنی بر فرآیند و همچنین احتمالاً افزایش امتیازات جلوگیری کنند. فرآیند doppelgänging روشی برای اجرای کد دلخواه در فضای آدرس یک فرآیند زنده جداگانه است. \n\nWindows Transaction NTFS (TxF) در ویستا به عنوان روشی برای انجام عملیات فایل ایمن معرفی شد. (Citation: Microsoft TxF) برای اطمینان از یکپارچگی داده‌ها، TxF تنها یک دسته تراکنش‌شده را قادر می‌سازد تا در یک زمان معین در یک فایل بنویسد. تا زمانی که تراکنش دستگیره نوشتن خاتمه یابد، همه دسته‌های دیگر از نویسنده جدا می‌شوند و ممکن است فقط نسخه تعهد شده فایل را بخوانند که در زمان باز شدن دستگیره وجود داشته است. (Citation: Microsoft Basic TxF Concepts) برای جلوگیری از فساد، اگر سیستم یا برنامه در حین تراکنش نوشتن از کار بیفتد، TxF یک بازگشت خودکار انجام می‌دهد. (Citation: Microsoft Where to use TxF)\n\nاگرچه منسوخ شده است، اما رابط برنامه نویسی برنامه TxF (API) همچنان از ویندوز 10 فعال است. (Citation: BlackHat Process Doppelgänging Dec 2017)\n\nدشمنان ممکن است از TxF برای اجرای یک تغییر بدون فایل از [Process Injection] (https://attack.mitre.org/techniques/T1055) سوء استفاده کنند. شبیه به [حفره‌سازی فرآیند](https://attack.mitre.org/techniques/T1055/012)، جابه‌جایی فرآیند شامل جایگزینی حافظه یک فرآیند قانونی است که امکان اجرای پنهان کد مخربی را فراهم می‌کند که ممکن است از دفاع و شناسایی فرار کند. استفاده فرآیند doppelgänging از TxF همچنین از استفاده از توابع API بسیار نظارت شده مانند <code>NtUnmapViewOfSection</code>، <code>VirtualProtectEx</code> و <code>SetThreadContext</code> جلوگیری می‌کند. (Citation: BlackHat Process Doppelgänging Dec 2017)\n\nفرآیند Doppelgänging در 4 مرحله اجرا می‌شود (Citation: BlackHat Process Doppelgänging Dec 2017):\n\n* تراکنش - با استفاده از یک فایل اجرایی قانونی یک تراکنش TxF ایجاد کنید و سپس فایل را با کد مخرب بازنویسی کنید. این تغییرات جدا شده و تنها در زمینه تراکنش قابل مشاهده خواهند بود.\n* بارگذاری - یک بخش مشترک از حافظه ایجاد کنید و فایل اجرایی مخرب را بارگیری کنید.\n* بازگشت - لغو تغییرات به فایل اجرایی اصلی، به طور موثر حذف کد مخرب از سیستم فایل.\n* متحرک - یک فرآیند از بخش آلوده حافظه ایجاد کنید و اجرا را آغاز کنید.\n\nاین رفتار احتمالاً منجر به امتیازات بالا نمی شود زیرا فرآیند تزریق شده از فرآیند تزریق (و بنابراین زمینه امنیتی را به ارث می برد) ایجاد شده است. با این حال، اجرا از طریق فرآیند doppelgänging ممکن است از شناسایی محصولات امنیتی جلوگیری کند زیرا اجرا تحت یک فرآیند قانونی پوشانده شده است."
         }
     ]
 }

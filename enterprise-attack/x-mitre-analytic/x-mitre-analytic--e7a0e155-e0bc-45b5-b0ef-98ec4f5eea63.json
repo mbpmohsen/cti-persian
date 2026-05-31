@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0431#AN1205",
-                    "external_id": "AN1205"
+                    "external_id": "AN1205",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MessageVolumeThreshold",
-                    "description": "Defines thresholds for spoofed messages volume before alerts trigger, reducing noise for isolated misconfigs."
+                    "description": "Defines thresholds for spoofed messages volume before alerts trigger, reducing noise for isolated misconfigs.",
+                    "description_fa": "آستانه‌هایی را برای حجم پیام‌های جعلی قبل از شروع هشدارها تعریف می‌کند و نویز را برای پیکربندی‌های اشتباه جدا شده کاهش می‌دهد."
                 },
                 {
                     "field": "TargetedUserGroups",
-                    "description": "Restricts higher-sensitivity detection to high-value groups (executives, admins, finance) for efficiency."
+                    "description": "Restricts higher-sensitivity detection to high-value groups (executives, admins, finance) for efficiency.",
+                    "description_fa": "تشخیص با حساسیت بالاتر را به گروه های با ارزش (مدیران، مدیران، امور مالی) برای کارایی محدود می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1205",
+            "description_fa": "گزارش‌های حسابرسی Office 365 یا Google Workspace را برای آدرس‌های فرستنده جعلی، احراز هویت ناموفق ایمیل، و ناهنجاری‌ها در فراداده تحویل پیام مرتبط می‌کند. Defender بررسی های ناموفق SPF/DKIM و عدم تطابق دامنه مرتبط با کمپین های مشکوک را مشاهده می کند."
         }
     ]
 }

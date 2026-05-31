@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0654#AN1739",
-                    "external_id": "AN1739"
+                    "external_id": "AN1739",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.383Z",
             "name": "Analytic 1739",
-            "description": "Correlates anomalous modifications to boot-time or logon-time initialization artifacts (for example, init.rc, vendor init scripts, app_process or shell hijacks, and malicious BOOT_COMPLETED BroadcastReceivers) with subsequent unauthorized script execution after boot. From the defender\u2019s perspective this appears as integrity or attestation failures on the system partition, unexpected writes to protected init paths, new apps registering for boot events, and privileged processes invoking scripts or binaries from non-standard locations shortly after the device boots.",
+            "description": "Correlates anomalous modifications to boot-time or logon-time initialization artifacts (for example, init.rc, vendor init scripts, app_process or shell hijacks, and malicious BOOT_COMPLETED BroadcastReceivers) with subsequent unauthorized script execution after boot. From the defender’s perspective this appears as integrity or attestation failures on the system partition, unexpected writes to protected init paths, new apps registering for boot events, and privileged processes invoking scripts or binaries from non-standard locations shortly after the device boots.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -67,25 +68,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between boot/attestation event and suspicious script execution (for example, 0\u201310 minutes after BOOT_COMPLETED)."
+                    "description": "Correlation window between boot/attestation event and suspicious script execution (for example, 0–10 minutes after BOOT_COMPLETED).",
+                    "description_fa": "پنجره همبستگی بین رویداد بوت/تأیید و اجرای مشکوک اسکریپت (به عنوان مثال، 0 تا 10 دقیقه پس از BOOT_COMPLETED)."
                 },
                 {
                     "field": "AuthorizedBootReceivers",
-                    "description": "Enterprise-specific allow list of packages expected to register BOOT_COMPLETED receivers."
+                    "description": "Enterprise-specific allow list of packages expected to register BOOT_COMPLETED receivers.",
+                    "description_fa": "لیستی از بسته‌هایی که انتظار می‌رود گیرنده‌های BOOT_COMPLETED را ثبت کنند، مخصوص شرکت است."
                 },
                 {
                     "field": "ProtectedPaths",
-                    "description": "OEM- and ROM-specific list of system and vendor init script locations that should be immutable in production devices."
+                    "description": "OEM- and ROM-specific list of system and vendor init script locations that should be immutable in production devices.",
+                    "description_fa": "لیستی از مکان‌های اسکریپت اولیه سیستم و فروشنده که باید در دستگاه‌های تولید تغییرناپذیر باشند، OEM و ROM خاص."
                 },
                 {
                     "field": "ExpectedAttestationState",
-                    "description": "Expected Verified Boot, SafetyNet, and OEM attestation states for enrolled devices. Custom ROM or dev devices may need relaxed thresholds."
+                    "description": "Expected Verified Boot, SafetyNet, and OEM attestation states for enrolled devices. Custom ROM or dev devices may need relaxed thresholds.",
+                    "description_fa": "حالت‌های تأیید بوت، SafetyNet و OEM برای دستگاه‌های ثبت‌شده مورد انتظار است. ROM سفارشی یا دستگاه های توسعه دهنده ممکن است به آستانه های آرام نیاز داشته باشند."
                 },
                 {
                     "field": "IntegrityFailureThreshold",
-                    "description": "Number or rate of attestation failures before escalating to a high-severity incident."
+                    "description": "Number or rate of attestation failures before escalating to a high-severity incident.",
+                    "description_fa": "تعداد یا میزان شکست در گواهی قبل از تبدیل شدن به یک حادثه با شدت بالا."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1739",
+            "description_fa": "تغییرات غیرعادی در زمان راه‌اندازی یا آرتیفکت‌های اولیه ورود به سیستم (به عنوان مثال، init.rc، اسکریپت‌های init فروشنده، ربایش‌های app_process یا پوسته، و مخرب BOOT_COMPLETED BroadcastReceivers) را با اجرای غیرمجاز اسکریپت بعدی پس از راه‌اندازی مرتبط می‌کند. از دیدگاه مدافع، این به‌عنوان نقص یکپارچگی یا تأیید در پارتیشن سیستم، نوشتن غیرمنتظره در مسیرهای اولیه محافظت‌شده، برنامه‌های جدید ثبت‌شده برای رویدادهای بوت، و فرآیندهای ممتازی که اسکریپت‌ها یا باینری‌ها را از مکان‌های غیر استاندارد بلافاصله پس از بوت شدن دستگاه فراخوانی می‌کنند، به نظر می‌رسد."
         }
     ]
 }

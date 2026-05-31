@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0327#AN0931",
-                    "external_id": "AN0931"
+                    "external_id": "AN0931",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal threshold to correlate login with post-login activity (e.g., 5 minutes)"
+                    "description": "Temporal threshold to correlate login with post-login activity (e.g., 5 minutes)",
+                    "description_fa": "آستانه زمانی برای ارتباط ورود به سیستم با فعالیت پس از ورود (به عنوان مثال، 5 دقیقه)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune for non-admin users or service accounts expected to use RDP"
+                    "description": "Tune for non-admin users or service accounts expected to use RDP",
+                    "description_fa": "برای کاربران غیر سرپرست یا حساب‌های خدماتی که انتظار می‌رود از RDP استفاده کنند، تنظیم کنید"
                 },
                 {
                     "field": "ProcessList",
-                    "description": "Define suspicious post-login processes such as cmd.exe, powershell.exe, certutil.exe"
+                    "description": "Define suspicious post-login processes such as cmd.exe, powershell.exe, certutil.exe",
+                    "description_fa": "تعریف فرآیندهای پس از ورود مشکوک مانند cmd.exe، powershell.exe، certutil.exe"
                 },
                 {
                     "field": "HostAccessPatterns",
-                    "description": "Scope detection to uncommon or first-time access between source and destination hosts"
+                    "description": "Scope detection to uncommon or first-time access between source and destination hosts",
+                    "description_fa": "تشخیص دامنه برای دسترسی غیرمعمول یا برای اولین بار بین میزبان منبع و مقصد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0931",
+            "description_fa": "ورود به سیستم دسکتاپ از راه دور (RDP) توسط کاربر و به دنبال آن اجرای غیرعادی فرآیند، دسترسی به فایل یا فعالیت حرکت جانبی در یک بازه زمانی کوتاه."
         }
     ]
 }

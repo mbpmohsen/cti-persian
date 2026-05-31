@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0242#AN0679",
-                    "external_id": "AN0679"
+                    "external_id": "AN0679",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IAMAccessPatterns",
-                    "description": "Define which IAM roles/accounts are allowed DB operations"
+                    "description": "Define which IAM roles/accounts are allowed DB operations",
+                    "description_fa": "تعریف کنید که کدام نقش ها/حساب های IAM مجاز به انجام عملیات DB هستند"
                 },
                 {
                     "field": "S3ExportThreshold",
-                    "description": "Size threshold (MB) or file pattern for S3-based exfil monitoring"
+                    "description": "Size threshold (MB) or file pattern for S3-based exfil monitoring",
+                    "description_fa": "آستانه اندازه (MB) یا الگوی فایل برای نظارت بر exfil مبتنی بر S3"
                 },
                 {
                     "field": "DBQueryVerbosityThreshold",
-                    "description": "Number of rows/columns or duration to flag long-running queries"
+                    "description": "Number of rows/columns or duration to flag long-running queries",
+                    "description_fa": "تعداد ردیف‌ها/ستون‌ها یا مدت زمان پرچم‌گذاری درخواست‌های طولانی‌مدت"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0679",
+            "description_fa": "شمارش پایگاه داده و فعالیت صادراتی (به عنوان مثال، «انتخاب * از»، «نمایش پایگاه‌های داده») که از طریق VMهای موقت، APIهای سرپرست یا پوسته ابری از حساب‌های غیر نظارتی صادر شده است. Defender گزارش‌های حسابرسی (CloudTrail، GCP Admin، AzureDiagnostics)، عملیات نوشتن ذخیره‌سازی، و انتقال‌های بین منطقه‌ای را با هویت‌هایی که به عملیات DB مرتبط نیستند، مرتبط می‌کند."
         }
     ]
 }

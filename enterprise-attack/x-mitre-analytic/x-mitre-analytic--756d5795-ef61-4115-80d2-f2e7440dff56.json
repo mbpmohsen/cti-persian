@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0073#AN0200",
-                    "external_id": "AN0200"
+                    "external_id": "AN0200",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,18 +56,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "Paths to monitor for service unit files, typically /etc/systemd/system and /usr/lib/systemd/system. Adversaries may use uncommon locations such as /tmp."
+                    "description": "Paths to monitor for service unit files, typically /etc/systemd/system and /usr/lib/systemd/system. Adversaries may use uncommon locations such as /tmp.",
+                    "description_fa": "مسیرهایی برای نظارت بر فایل های واحد خدمات، معمولا /etc/systemd/system و /usr/lib/systemd/system. دشمنان ممکن است از مکان های غیر معمول مانند /tmp استفاده کنند."
                 },
                 {
                     "field": "SuspiciousSubcommands",
-                    "description": "Focus on systemctl subcommands start, enable, or daemon-reload when used outside expected change windows."
+                    "description": "Focus on systemctl subcommands start, enable, or daemon-reload when used outside expected change windows.",
+                    "description_fa": "هنگامی که در خارج از پنجره‌های تغییر مورد انتظار استفاده می‌شود، روی دستورات فرعی systemctl تمرکز کنید، شروع، فعال یا بارگذاری مجدد دیمون انجام دهید."
                 },
                 {
                     "field": "CorrelationWindow",
-                    "description": "Time window to correlate service file modification with subsequent systemctl execution."
+                    "description": "Time window to correlate service file modification with subsequent systemctl execution.",
+                    "description_fa": "پنجره زمانی برای ارتباط اصلاح فایل سرویس با اجرای systemctl بعدی."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0200",
+            "description_fa": "سوء استفاده از systemctl برای اجرای دستورات یا مدیریت سرویس های systemd. دیدگاه مدافع: ایجاد یا اصلاح سرویس مشکوک را با اجرای دستورات فرعی systemctl مانند start، enable یا status مرتبط کنید. مواردی را که از systemctl برای بارگیری سرویس‌ها از مکان‌های غیرمعمول استفاده می‌شود (به عنوان مثال /tmp، /dev/shm) یا جایی که واحدهای سرویس جدید خارج از جریان‌های کاری مدیریتی مورد انتظار ایجاد می‌شوند، شناسایی کنید."
         }
     ]
 }

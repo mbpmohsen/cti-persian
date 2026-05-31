@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0422#AN1186",
-                    "external_id": "AN1186"
+                    "external_id": "AN1186",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time delta for correlating registry modification and debugger-triggered execution"
+                    "description": "Time delta for correlating registry modification and debugger-triggered execution",
+                    "description_fa": "دلتای زمان برای همبستگی اصلاح رجیستری و اجرای راه اندازی شده توسط دیباگر"
                 },
                 {
                     "field": "TargetBinary",
-                    "description": "Specific executables that trigger defenders\u2019 alerts when IFEO values are set"
+                    "description": "Specific executables that trigger defenders’ alerts when IFEO values are set",
+                    "description_fa": "فایل های اجرایی خاصی که هنگام تنظیم مقادیر IFEO هشدارهای مدافعان را راه اندازی می کنند"
                 },
                 {
                     "field": "ParentProcessAnomaly",
-                    "description": "Tunable logic for detecting parent-child anomalies (e.g., non-standard parent processes)"
+                    "description": "Tunable logic for detecting parent-child anomalies (e.g., non-standard parent processes)",
+                    "description_fa": "منطق قابل تنظیم برای تشخیص ناهنجاری های والد-فرزند (به عنوان مثال، فرآیندهای غیر استاندارد والدین)"
                 },
                 {
                     "field": "TokenElevationContext",
-                    "description": "May require tuning based on normal SYSTEM or admin process elevation patterns"
+                    "description": "May require tuning based on normal SYSTEM or admin process elevation patterns",
+                    "description_fa": "ممکن است نیاز به تنظیم بر اساس SYSTEM معمولی یا الگوهای ارتفاع فرآیند مدیریت داشته باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1186",
+            "description_fa": "تغییرات کلید رجیستری در مسیرهای IFEO (به عنوان مثال، مقدار Debugger تنظیم شده در گزینه های اجرای فایل تصویر)، به ویژه برای باینری های مرتبط با امنیت یا دسترسی، و به دنبال آن اجرای غیرعادی فرآیند با پرچم های دیباگر یا دسترسی در سطح سیستم در هنگام ورود به سیستم. با ارتباط تغییرات رجیستری، ایجاد فرآیند و ناهنجاری‌های والد-فرزند با استفاده غیرعادی از خط فرمان یا توکن‌های دسترسی قابل تشخیص است."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0274#AN0765",
-                    "external_id": "AN0765"
+                    "external_id": "AN0765",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilePath",
-                    "description": "Organizations may use different init systems or custom startup paths"
+                    "description": "Organizations may use different init systems or custom startup paths",
+                    "description_fa": "سازمان ها ممکن است از سیستم های اولیه مختلف یا مسیرهای راه اندازی سفارشی استفاده کنند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Autostart scripts should run as root or system users; deviations are suspect"
+                    "description": "Autostart scripts should run as root or system users; deviations are suspect",
+                    "description_fa": "اسکریپت های شروع خودکار باید به عنوان کاربران ریشه یا سیستم اجرا شوند. انحرافات مشکوک هستند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0765",
+            "description_fa": "ایجاد/تغییر فایل‌های سرویس systemd یا اسکریپت‌های /etc/init.d را با رفتار پردازش پرت در هنگام بوت مرتبط می‌کند."
         }
     ]
 }

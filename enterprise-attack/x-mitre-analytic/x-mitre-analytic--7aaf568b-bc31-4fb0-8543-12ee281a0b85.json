@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0216#AN0607",
-                    "external_id": "AN0607"
+                    "external_id": "AN0607",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates binary modification and dylib load within a defined time interval (e.g., 1 hour)"
+                    "description": "Correlates binary modification and dylib load within a defined time interval (e.g., 1 hour)",
+                    "description_fa": "تغییرات باینری و بار dylib را در یک بازه زمانی مشخص (به عنوان مثال، 1 ساعت) به هم مرتبط می کند."
                 },
                 {
                     "field": "DylibPathRegex",
-                    "description": "Regular expression to match known malicious or uncommon library paths"
+                    "description": "Regular expression to match known malicious or uncommon library paths",
+                    "description_fa": "عبارت منظم برای مطابقت با مسیرهای مخرب یا غیر معمول کتابخانه شناخته شده"
                 },
                 {
                     "field": "UnsignedDylibThreshold",
-                    "description": "Number of unsigned or unrecognized dylibs mapped into memory per process"
+                    "description": "Number of unsigned or unrecognized dylibs mapped into memory per process",
+                    "description_fa": "تعداد dylibهای بدون علامت یا ناشناخته نگاشت شده در حافظه در هر فرآیند"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope monitoring to non-admin users or sensitive system directories"
+                    "description": "Scope monitoring to non-admin users or sensitive system directories",
+                    "description_fa": "نظارت بر دامنه برای کاربران غیر مدیر یا دایرکتوری های حساس سیستم"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0607",
+            "description_fa": "تشخیص بر اصلاح غیرمجاز باینری‌های Mach-O تمرکز می‌کند تا شامل سرصفحه‌های LC_LOAD_DYLIB باشد که به dylib‌های مخرب اشاره می‌کنند. رفتار از طریق زنجیره ای از تغییرات فراداده فایل، حذف امضاهای کد و بارهای غیرعادی dylib بعدی در زمان اجرا شناسایی می شود. ارتباط تغییرات فایل با عدم به روز رسانی مجاز و نگاشت حافظه فرآیند کتابخانه های ناشناخته یا بدون امضا بسیار مهم است."
         }
     ]
 }

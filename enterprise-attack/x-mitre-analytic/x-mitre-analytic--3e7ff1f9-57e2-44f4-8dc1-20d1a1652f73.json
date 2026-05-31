@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0378#AN1065",
-                    "external_id": "AN1065"
+                    "external_id": "AN1065",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandRegex",
-                    "description": "Customize for tools seen in environment (e.g., gzip, bzip2, xz)"
+                    "description": "Customize for tools seen in environment (e.g., gzip, bzip2, xz)",
+                    "description_fa": "برای ابزارهایی که در محیط دیده می شوند سفارشی کنید (مانند gzip، bzip2، xz)"
                 },
                 {
                     "field": "SensitivePathList",
-                    "description": "Specify file paths likely targeted for obfuscation (e.g., /etc/, /home/)"
+                    "description": "Specify file paths likely targeted for obfuscation (e.g., /etc/, /home/)",
+                    "description_fa": "مسیرهای فایل را مشخص کنید که احتمالاً برای مبهم سازی هدف قرار می گیرند (به عنوان مثال، /etc/، /home/)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1065",
+            "description_fa": "استفاده از gzip، base64، tar، یا openssl را در اسکریپت‌ها یا دستوراتی که فایل‌ها را پس از مرحله‌بندی فایل یا شمارش سیستم رمزگذاری/رمزگذاری می‌کنند، تشخیص می‌دهد."
         }
     ]
 }

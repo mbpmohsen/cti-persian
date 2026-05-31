@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0344#AN0974",
-                    "external_id": "AN0974"
+                    "external_id": "AN0974",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PathPrefix",
-                    "description": "Shared memory mount path used (e.g., /dev/shm/ or /run/shm/)"
+                    "description": "Shared memory mount path used (e.g., /dev/shm/ or /run/shm/)",
+                    "description_fa": "مسیر نصب حافظه مشترک استفاده شده (به عنوان مثال /dev/shm/ یا /run/shm/)"
                 },
                 {
                     "field": "FilenameRegex",
-                    "description": "Regex to match non-standard, suspicious, or encoded filenames"
+                    "description": "Regex to match non-standard, suspicious, or encoded filenames",
+                    "description_fa": "Regex برای مطابقت با نام فایل های غیر استاندارد، مشکوک یا کدگذاری شده"
                 },
                 {
                     "field": "ExecCorrelationWindow",
-                    "description": "Time window to correlate process execution from shared memory directories"
+                    "description": "Time window to correlate process execution from shared memory directories",
+                    "description_fa": "پنجره زمانی برای همبستگی اجرای فرآیند از دایرکتوری های حافظه مشترک"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0974",
+            "description_fa": "استفاده از دایرکتوری‌های حافظه مشترک (/dev/shm، /run/shm) را برای ذخیره‌سازی موقت داده‌های مبهم، کدگذاری‌شده یا اجرایی بدون ماندگاری روی دیسک تشخیص می‌دهد."
         }
     ]
 }

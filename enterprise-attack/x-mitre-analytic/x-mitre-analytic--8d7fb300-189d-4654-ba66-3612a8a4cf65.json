@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0461#AN1271",
-                    "external_id": "AN1271"
+                    "external_id": "AN1271",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredRegistryKeys",
-                    "description": "Specify registry paths for mount points and hidden partition configs."
+                    "description": "Specify registry paths for mount points and hidden partition configs.",
+                    "description_fa": "مسیرهای رجیستری را برای نقاط اتصال و تنظیمات پارتیشن مخفی مشخص کنید."
                 },
                 {
                     "field": "DiskIOThreshold",
-                    "description": "Tune thresholds for raw disk access outside expected drivers."
+                    "description": "Tune thresholds for raw disk access outside expected drivers.",
+                    "description_fa": "آستانه ها را برای دسترسی به دیسک خام خارج از درایورهای مورد انتظار تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate boot-time anomalies with hidden file system mounting activity."
+                    "description": "Correlate boot-time anomalies with hidden file system mounting activity.",
+                    "description_fa": "ناهنجاری‌های زمان راه‌اندازی را با فعالیت نصب فایل پنهان در سیستم مرتبط کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1271",
+            "description_fa": "ایجاد یا نصب غیرعادی پارتیشن های مخفی یا سیستم فایل مجازی. نمای مدافع: تشخیص تغییرات رجیستری مرتبط با سیستم های فایل غیر استاندارد، الگوهای مشکوک ورودی/خروجی دیسک، یا رفتار بوت کیت مانند که در آن حجم های مخفی خارج از API های سیستم فایل معمولی قابل دسترسی هستند."
         }
     ]
 }

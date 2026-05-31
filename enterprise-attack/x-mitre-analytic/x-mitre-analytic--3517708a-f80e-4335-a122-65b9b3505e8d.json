@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0256#AN0710",
-                    "external_id": "AN0710"
+                    "external_id": "AN0710",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Tune alerts for cross-user access to SSH agent sockets."
+                    "description": "Tune alerts for cross-user access to SSH agent sockets.",
+                    "description_fa": "هشدارها را برای دسترسی متقابل کاربر به سوکت های عامل SSH تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate lack of authentication with lateral SSH activity within a short timeframe."
+                    "description": "Correlate lack of authentication with lateral SSH activity within a short timeframe.",
+                    "description_fa": "ارتباط عدم احراز هویت با فعالیت جانبی SSH در یک بازه زمانی کوتاه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0710",
+            "description_fa": "استفاده مجدد مشکوک از سوکت های عامل SSH در چندین کاربر یا فرآیند، دسترسی غیرعادی به سوکت های ~/.ssh/ یا /tmp/ssh-* و الگوهای غیرعادی حرکت جانبی از طریق SSH بدون رویدادهای احراز هویت جدید. نمای مدافع: تشخیص زمانی که یک فرآیند به عامل SSH کاربر دیگر دسترسی پیدا می کند یا زمانی که یک اتصال SSH موجود برای چرخش غیرمنتظره استفاده می شود."
         }
     ]
 }

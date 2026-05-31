@@ -9,39 +9,48 @@
                 {
                     "external_id": "CAPEC-88",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/88.html"
+                    "url": "https://capec.mitre.org/data/definitions/88.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-78",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/78.html"
+                    "url": "http://cwe.mitre.org/data/definitions/78.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-88",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/88.html"
+                    "url": "http://cwe.mitre.org/data/definitions/88.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "OS Commanding",
                     "external_id": "31",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/OS-Commanding"
+                    "url": "http://projects.webappsec.org/OS-Commanding",
+                    "description_fa": "فرمان سیستم عامل",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Secunia Advisory SA16869: Firefox Command Line URL Shell Command Injection, Secunia Advisories, 2005--09---20, Secunia",
                     "external_id": "REF-543",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://secunia.com/advisories/16869/"
+                    "url": "http://secunia.com/advisories/16869/",
+                    "description_fa": "Secunia Advisory SA16869: URL خط فرمان Firefox Shell Command Injection, Secunia Advisories, 2005--09---20, Secunia",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--bfdeb5d3-c9da-44eb-bfd3-d3db719acfb3",
@@ -75,6 +84,26 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -89,11 +118,21 @@
                 "User controllable input used as part of commands to the underlying operating system."
             ],
             "x_capec_skills_required": {
-                "High": "The attacker needs to have knowledge of not only the application to exploit but also the exact nature of commands that pertain to the target operating system. This may involve, though not always, knowledge of specific assembly commands for the platform."
+                "High": "The attacker needs to have knowledge of not only the application to exploit but also the exact nature of commands that pertain to the target operating system. This may involve, though not always, knowledge of specific assembly commands for the platform.",
+                "High_fa": "مهاجم باید نه تنها از برنامه کاربردی برای بهره برداری، بلکه از ماهیت دقیق دستورات مربوط به سیستم عامل هدف نیز آگاهی داشته باشد. این ممکن است شامل آگاهی از دستورات اسمبلی خاص برای پلتفرم باشد، البته نه همیشه."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در این نوع حمله، یک دشمن دستورات سیستم عامل را به توابع برنامه موجود تزریق می کند. برنامه‌ای که از ورودی نامعتبر برای ساخت رشته‌های فرمان استفاده می‌کند، آسیب‌پذیر است. یک دشمن می‌تواند از تزریق فرمان سیستم‌عامل در یک برنامه برای افزایش امتیازات، اجرای دستورات دلخواه و به خطر انداختن سیستم عامل اصلی استفاده کند.",
+            "name_fa": "OS Command Injection",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک سیستم پردازش تراکنش به کد نوشته شده در تعدادی از زبان ها متکی است. برای دسترسی به این قابلیت، سیستم اطلاعات تراکنش را در خط فرمان سیستم ارسال می کند.</xhtml:p>\n               <xhtml:p>یک مهاجم می‌تواند به خط فرمان سیستم دسترسی پیدا کند و با تزریق این دستورات در داده‌های تراکنش، دستورات مخرب را اجرا کند. در صورت موفقیت، مهاجم می‌تواند اطلاعات را بدزدد، درهای پشتی نصب کند و فعالیت‌های شرورانه دیگری را انجام دهد که می‌تواند سیستم و داده‌های آن را به خطر بیندازد.</xhtml:p>همچنین ببینید: یک آسیب‌پذیری در مرورگر Mozilla Firefox 1.x به مهاجم اجازه می‌دهد تا دستورات دلخواه را در سیستم عامل یونیکس/لینوکس اجرا کند. این آسیب‌پذیری به دلیل اسکریپت پوسته‌ای است که برای راه‌اندازی دستورات پوسته تجزیه فایرفاکس استفاده می‌شود که در داخل تیک‌های برگشتی در URL ارائه‌شده از طریق خط فرمان محصور شده‌اند. این می تواند برای اجرای دستورات پوسته دلخواه با فریب دادن کاربر برای دنبال کردن یک پیوند مخرب در یک برنامه خارجی که از فایرفاکس به عنوان مرورگر پیش فرض استفاده می کند (مثلاً مشتری ایمیل Evolution در Red Hat Enterprise Linux 4) مورد سوء استفاده قرار گیرد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی ورودی‌های دستورات سیستم‌عامل: </b>مهاجم ورودی‌های قابل کنترل کاربر را تعیین می‌کند که به عنوان بخشی از یک فرمان به سیستم عامل اصلی ارسال می‌شود. نقشه برداری پورت هایی را که سیستم به آنها گوش می دهد شناسایی کنید و سعی کنید ورودی ها و انواع پروتکل ها را در آن پورت ها شناسایی کنید.</td></tr><tr><td>اثرانگشت TCP/IP. مهاجم از نرم افزارهای مختلف برای ایجاد اتصالات یا اتصالات جزئی و مشاهده پاسخ های خاص از سیستم عامل استفاده می کند. با استفاده از این پاسخ‌ها، آن‌ها سعی می‌کنند سیستم عامل واقعی را حدس بزنند.</td></tr><tr><td>برای یافتن پیام‌های خطای آموزنده خطا ایجاد می‌کند</td></tr></tbody></table><li> <p> <b>بررسی برنامه: </b>مهاجم برنامه مورد نظر را بررسی می‌کند، احتمالاً به عنوان یک معتبر و معتبر است. کاربر</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>وب‌سایت‌های عنکبوتی برای همه پیوندهای موجود</td></tr><tr><td>موجودی همه ورودی‌های برنامه</td></tr></tbody></table></ol></div><div><h3>در جستجوی آزمایش‌ها نتایج مخرب.: </b>بسته به اینکه برنامه مورد سوء استفاده از راه دور یا محلی باشد، مهاجم ورودی مخرب مناسب را ایجاد می کند که حاوی دستورات سیستم عامل است تا به برنامه ارسال شود</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>Inject (nenet delimiters, catsisme, network tools) و غیره)</td></tr><tr><td>تزریق جداکننده‌های فرمان با استفاده از چارچوب‌های تست وب (پراکسی‌ها، TamperData، برنامه‌های سفارشی، و غیره)</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>مکانیسم‌های مخرب دسترسی، مکانیزم‌های مخرب را اجرا می‌کند. امتیازات را افزایش دهید یا به روش دیگری سیستم را به خطر بیندازید.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم فرمانی را اجرا می‌کند که اطلاعات حساس را در مکانی ذخیره می‌کند که بتواند بعداً آن‌ها را بازیابی کند (شاید با استفاده از تزریق دستور متفاوت).",
+            "x_capec_prerequisites_fa": [
+                "ورودی قابل کنترل توسط کاربر به عنوان بخشی از دستورات سیستم عامل اصلی استفاده می شود."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -9,41 +9,52 @@
                 {
                     "external_id": "CAPEC-640",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/640.html"
+                    "url": "https://capec.mitre.org/data/definitions/640.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-114",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/114.html"
+                    "url": "http://cwe.mitre.org/data/definitions/114.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Server Software Component: Terminal Services DLL",
                     "external_id": "T1505.005",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1505/005"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1505/005",
+                    "description_fa": "جزء نرم افزار سرور: DLL خدمات ترمینال",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Hijack Execution Flow: Dynamic Linker Hijacking",
                     "external_id": "T1574.006",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/006"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/006",
+                    "description_fa": "جریان اجرای Hijack: ربودن پیوند دهنده پویا",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Hijack Execution Flow: KernelCallbackTable",
                     "external_id": "T1574.013",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/013"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/013",
+                    "description_fa": "Hijack Execution Flow: KernelCallbackTable",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Reflective Code Loading",
                     "external_id": "T1620",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1620"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1620",
+                    "description_fa": "بارگذاری کد بازتابی",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--8bb5fe8b-4746-4b90-9e89-b65c4daa21e4",
@@ -65,6 +76,14 @@
                 "Integrity": [
                     "Execute Unauthorized Commands",
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -76,11 +95,18 @@
                 "The targeted application fails to verify the integrity of the running process that allows an adversary to execute arbitrary code."
             ],
             "x_capec_skills_required": {
-                "High": "Knowledge of how to load malicious code into the memory space of a running process, as well as the ability to have the running process execute this code. For example, with DLL injection, the adversary must know how to load a DLL into the memory space of another running process, and cause this process to execute the code inside of the DLL."
+                "High": "Knowledge of how to load malicious code into the memory space of a running process, as well as the ability to have the running process execute this code. For example, with DLL injection, the adversary must know how to load a DLL into the memory space of another running process, and cause this process to execute the code inside of the DLL.",
+                "High_fa": "آگاهی از نحوه بارگذاری کدهای مخرب در فضای حافظه یک فرآیند در حال اجرا و همچنین توانایی اجرای این کد در فرآیند در حال اجرا. به عنوان مثال، با تزریق DLL، حریف باید بداند که چگونه یک DLL را در فضای حافظه یک فرآیند در حال اجرا دیگر بارگذاری کند و باعث شود این فرآیند کد را در داخل DLL اجرا کند."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف از یک باگ در برنامه ای که نمی تواند یکپارچگی فرآیند در حال اجرا را تأیید کند برای اجرای کد دلخواه در فضای آدرس یک فرآیند زنده جداگانه استفاده می کند. حریف می‌تواند از کد در حال اجرا در زمینه فرآیند دیگری برای دسترسی به حافظه فرآیند، منابع سیستم/شبکه ​​و غیره استفاده کند. هدف این حمله فرار از دفاع شناسایی و افزایش امتیازات با پنهان کردن کد مخرب تحت یک فرآیند قانونی موجود است. نمونه‌هایی از رویکردها عبارتند از: تزریق کتابخانه پیوند پویا (DLL)، تزریق قابل حمل اجرایی، ربودن اجرای نخ، فراخوانی سیستم ptrace، ربودن VDSO، هوک کردن تابع، بارگذاری کد بازتابی و موارد دیگر.",
+            "name_fa": "گنجاندن کد در فرآیند موجود",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین فرآیند هدف: </b>دشمن فرآیندی را با امتیازات کافی که می‌خواهد کد را در آن گنجانده باشد، تعیین می‌کند. ببینید آیا فرآیندی با امتیازات سرپرست اجرا می‌شود یا نه.</td></tr><tr><td>در لینوکس، از دستور ps برای مشاهده فرآیندهای در حال اجرا استفاده کنید و خروجی را به جستجویی برای یک کاربر خاص یا کاربر اصلی منتقل کنید. </b>دشمن سعی می‌کند کد بسیار ساده‌ای را در فرآیند موجود گنجاند تا تعیین کند که آیا گنجاندن کد کار می‌کند یا خیر. کد بر اساس رویکردی که برای گنجاندن کد در یک فرآیند موجود استفاده می‌شود، متفاوت خواهد بود.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>شامل کد دلخواه در فرآیند موجود: </b>زمانی که یک دشمن تشخیص داد که گنجاندن کد در فرآیند موجود امکان‌پذیر است، کدهایی را برای دسترسی به آن فرآیند هدفمند شامل می‌شود. حافظه.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف در تأیید یکپارچگی فرآیند در حال اجرا که به حریف اجازه می دهد کد دلخواه را اجرا کند، ناکام است."
+            ]
         }
     ],
     "spec_version": "2.0",

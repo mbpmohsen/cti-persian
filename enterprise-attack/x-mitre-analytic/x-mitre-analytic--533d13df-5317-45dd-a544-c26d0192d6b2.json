@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0516#AN1431",
-                    "external_id": "AN1431"
+                    "external_id": "AN1431",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ShellEnabledFlag",
-                    "description": "Control alerting based on whether ESXi shell access is typically disabled."
+                    "description": "Control alerting based on whether ESXi shell access is typically disabled.",
+                    "description_fa": "بر اساس اینکه آیا دسترسی پوسته ESXi معمولاً غیرفعال است یا خیر، هشدار را کنترل کنید."
                 },
                 {
                     "field": "SSHContext",
-                    "description": "Scope detection to SSH session origins or internal vs. remote access."
+                    "description": "Scope detection to SSH session origins or internal vs. remote access.",
+                    "description_fa": "تشخیص دامنه به مبدا جلسه SSH یا دسترسی داخلی در مقابل از راه دور."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1431",
+            "description_fa": "استفاده از «سیستم esxcli» یا دستورات مفسر مستقیم (به عنوان مثال، پوسته busybox) را که به طور غیرمنتظره از ترمینال SSH یا میزبان فراخوانی می‌شوند، تشخیص می‌دهد."
         }
     ]
 }

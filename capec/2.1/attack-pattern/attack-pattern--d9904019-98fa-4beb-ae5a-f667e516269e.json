@@ -9,17 +9,20 @@
                 {
                     "external_id": "CAPEC-12",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/12.html"
+                    "url": "https://capec.mitre.org/data/definitions/12.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-201",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/201.html"
+                    "url": "http://cwe.mitre.org/data/definitions/201.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-306",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/306.html"
+                    "url": "http://cwe.mitre.org/data/definitions/306.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--d9904019-98fa-4beb-ae5a-f667e516269e",
@@ -44,6 +47,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -65,11 +78,25 @@
                 "The adversary needs the ability to control source code or application configuration responsible for selecting which message/channel id is absorbed from the public distribution means."
             ],
             "x_capec_skills_required": {
-                "Low": "All the adversary needs to discover is the format of the messages on the channel/distribution means and the particular identifier used within the messages."
+                "Low": "All the adversary needs to discover is the format of the messages on the channel/distribution means and the particular identifier used within the messages.",
+                "Low_fa": "تنها چیزی که دشمن باید کشف کند، قالب پیام‌های موجود در کانال/وسایل توزیع و شناسه خاص مورد استفاده در پیام‌ها است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این الگوی حمله با انتخاب پیام‌هایی که از طریق کانال‌های اطلاعاتی چندپخشی یا عمومی توزیع می‌شوند، تعریف می‌شود که با تعیین مقدار پارامتر تخصیص یافته به مشتری برای مشتری دیگر در نظر گرفته شده است. این حمله به حریف اجازه می دهد تا به اطلاعات بالقوه ممتاز دسترسی پیدا کند و احتمالاً حملات دیگری را از طریق ابزارهای توزیع با جعل هویت انجام دهد. اگر کانال/پیام در حال دستکاری یک مکانیسم ورودی به جای خروجی برای سیستم باشد (مانند یک گذرگاه فرمان)، از این سبک حمله می توان برای تغییر شناسه حریف به یک شناسه برتر استفاده کرد.",
+            "name_fa": "انتخاب شناسه پیام",
+            "x_capec_example_instances_fa": [
+                "یک رابط B2B خاص در یک برنامه کاربردی بزرگ، برای پیام‌هایی که از یک صف MQSeries ارسال می‌شوند، در یک کانال «شریک» واحد. پیام‌های موجود در کد آن کانال برای مقصد مشتری بر اساس یک فیلد partner_ID که توسط هر پیام نگهداری می‌شود. آن فیلد یک عدد صحیح ساده است. دشمنانی که به آن کانال دسترسی دارند، شاید یک شریک فضول خاص، به سادگی می توانند پیام های شناسه شریک دیگر را ذخیره کنند و آن ها را همانطور که می خواهند بخوانند. توجه داشته باشید که احراز هویت مانع از استفاده شریک از این حمله به شرکای دیگر نمی شود. این به سادگی به دشمنان بدون وضعیت شریک اجازه انجام این حمله را نمی دهد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین ماهیت پیام‌ها: </b>ماهیت پیام‌هایی که منتقل می‌شوند و همچنین شناسه‌هایی که به عنوان بخشی از حمله استفاده می‌شوند را تعیین کنید</p></li></ol><h/3hExv> <b>تأیید هویت: </b>در صورت نیاز، در کانال توزیع احراز هویت شوید</p></li><li> <p> <b>شناسه های مشتری شناخته شده را شناسایی کنید: </b>اگر اطلاعات هر مشتری خاص از طریق یک کانال کنترلی در دسترس همه کاربران باشد، دشمن شناسه های خاصی را برای این کانال از طریق این کانال/li><li> درخواست مشتریان هدفمند می کند</li> از طریق این اطلاعات مشتری هدف را مشاهده می کند. <p> <b>تغییر شناسه پیام: </b>دشمنانی که دسترسی کلاینت به کانال‌های خروجی دارند، می‌توانند شناسه کانال خود را تغییر دهند و داده‌های شخص دیگری (شاید ممتازتر) را ببینند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "اطلاعات و داده های حساس به مشتری (و خاص مشتری) باید از طریق یک کانال توزیع در دسترس همه کاربران باشد.",
+                "ابزارهای توزیع باید (از طریق کانال، شناسه‌های پیام یا قرارداد) مقصد پیام را به گونه‌ای که در خود وسیله توزیع (مانند کانال کنترل) یا در خود پیام‌ها قابل مشاهده باشد، کدگذاری کنند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف به توانایی کنترل کد منبع یا پیکربندی برنامه که مسئول انتخاب شناسه پیام/کانال از ابزار توزیع عمومی است، نیاز دارد."
+            ]
         }
     ],
     "type": "bundle"

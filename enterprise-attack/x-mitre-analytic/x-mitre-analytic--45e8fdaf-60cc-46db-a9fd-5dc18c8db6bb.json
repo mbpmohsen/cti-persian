@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0447#AN1237",
-                    "external_id": "AN1237"
+                    "external_id": "AN1237",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UsernamePattern",
-                    "description": "Accounts like 'svc*', 'backup*' may blend into legit naming patterns"
+                    "description": "Accounts like 'svc*', 'backup*' may blend into legit naming patterns",
+                    "description_fa": "حساب‌هایی مانند 'svc*'، 'backup*' ممکن است با الگوهای نام‌گذاری قانونی ترکیب شوند"
                 },
                 {
                     "field": "SessionOrigin",
-                    "description": "Identify if dscl was run locally, via ARD, or Terminal.app"
+                    "description": "Identify if dscl was run locally, via ARD, or Terminal.app",
+                    "description_fa": "مشخص کنید که آیا dscl به صورت محلی، از طریق ARD یا Terminal.app اجرا شده است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1237",
+            "description_fa": "ایجاد حساب با استفاده از \"dscl -create\" یا از طریق ابزارهای رابط کاربری گرافیکی. تشخیص شامل اجرای دستور و تغییرات فایل در پایگاه داده خدمات دایرکتوری محلی است."
         }
     ]
 }

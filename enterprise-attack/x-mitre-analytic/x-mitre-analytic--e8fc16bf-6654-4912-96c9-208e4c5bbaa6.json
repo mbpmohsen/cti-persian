@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0218#AN0611",
-                    "external_id": "AN0611"
+                    "external_id": "AN0611",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedDylibPaths",
-                    "description": "Baseline directories for dylib loading."
+                    "description": "Baseline directories for dylib loading.",
+                    "description_fa": "دایرکتوری های پایه برای بارگذاری dylib."
                 },
                 {
                     "field": "PlistMonitors",
-                    "description": "Specific plist files used for persistence monitoring."
+                    "description": "Specific plist files used for persistence monitoring.",
+                    "description_fa": "فایل‌های plist خاص که برای نظارت بر پایداری استفاده می‌شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0611",
+            "description_fa": "سوء استفاده از DYLD_INSERT_LIBRARIES یا ربودن مسیرهای چارچوب برای کتابخانه های مخرب. Defender فرآیندهایی را مشاهده می کند که به dylib های غیرعادی، فایل های plist اصلاح شده یا ورودی های ماندگار اشاره می کنند که به باینری های تغییر یافته اشاره می کنند."
         }
     ]
 }

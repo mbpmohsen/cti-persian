@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0162#AN0462",
-                    "external_id": "AN0462"
+                    "external_id": "AN0462",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -66,21 +67,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Seconds to correlate inbound trigger \u2192 process library load/driver start \u2192 outbound connect (default 120s)."
+                    "description": "Seconds to correlate inbound trigger → process library load/driver start → outbound connect (default 120s).",
+                    "description_fa": "چند ثانیه برای مرتبط کردن محرک ورودی → بارگذاری کتابخانه فرآیند/شروع درایور → اتصال خروجی (پیش‌فرض 120 ثانیه)."
                 },
                 {
                     "field": "CaptureLibIndicators",
-                    "description": "DLL/driver names to match (wpcap.dll, packet.dll, npcap.sys, npf.sys) \u2013 extend for EDR drivers in your fleet."
+                    "description": "DLL/driver names to match (wpcap.dll, packet.dll, npcap.sys, npf.sys) – extend for EDR drivers in your fleet.",
+                    "description_fa": "نام‌های DLL/درایور برای مطابقت (wpcap.dll، packet.dll، npcap.sys، npf.sys) - برای درایورهای EDR در ناوگان شما گسترش می‌یابد."
                 },
                 {
                     "field": "AllowedInstallers",
-                    "description": "Signed/expected processes allowed to install/start Npcap (software distribution tools)."
+                    "description": "Signed/expected processes allowed to install/start Npcap (software distribution tools).",
+                    "description_fa": "فرآیندهای امضا شده/مورد انتظار اجازه نصب/شروع Npcap (ابزارهای توزیع نرم افزار) را دارند."
                 },
                 {
                     "field": "ReversePorts",
-                    "description": "Likely egress ports to watch after trigger (4444, 53, 80/443, 8080, high ephemeral)."
+                    "description": "Likely egress ports to watch after trigger (4444, 53, 80/443, 8080, high ephemeral).",
+                    "description_fa": "پورت های خروجی احتمالی برای تماشای پس از ماشه (4444، 53، 80/443، 8080، زودگذر بالا)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0462",
+            "description_fa": "دشمن قابلیت packet-capture یا raw-socket (WinPcap/Npcap، wpcap/packet DLL یا سوکت خام) را نصب می کند/استفاده می کند و یک فیلتر تنظیم می کند. یک بسته ورودی دستکاری شده مشاهده می شود. در یک پنجره کوتاه، فرآیند میزبان که کتابخانه‌های ضبط را بارگیری می‌کند، یک اتصال خروجی (به عنوان مثال، پوسته معکوس) به مبدا بسته را آغاز می‌کند."
         }
     ]
 }

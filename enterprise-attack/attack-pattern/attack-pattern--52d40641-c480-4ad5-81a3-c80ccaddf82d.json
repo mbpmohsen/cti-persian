@@ -14,28 +14,28 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1131",
                     "external_id": "T1131",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "MSDN Authentication Packages",
                     "description": "Microsoft. (n.d.). Authentication Packages. Retrieved March 1, 2017.",
                     "url": "https://msdn.microsoft.com/library/windows/desktop/aa374733.aspx",
-                    "source_name_fa": "بسته های تأیید اعتبار MSDN",
-                    "description_fa": "مایکروسافت (n.d.) بسته های اعتباری Retrieved 1 مارس 2017"
+                    "source_name_fa": "بسته های احراز هویت MSDN",
+                    "description_fa": "مایکروسافت. (n.d.). بسته های احراز هویت بازیابی شده در 1 مارس 2017."
                 },
                 {
                     "source_name": "Graeber 2014",
                     "description": "Graeber, M. (2014, October). Analysis of Malicious Security Support Provider DLLs. Retrieved March 1, 2017.",
                     "url": "http://docplayer.net/20839173-Analysis-of-malicious-security-support-provider-dlls.html",
                     "source_name_fa": "Graeber 2014",
-                    "description_fa": "گرابر، M. (2014، اکتبر) تجزیه و تحلیل ارائه دهندگان پشتیبانی امنیتی Malicious DLLs Retrieved 1 مارس 2017"
+                    "description_fa": "Graeber, M. (2014, اکتبر). تجزیه و تحلیل DLL های ارائه دهنده پشتیبانی امنیتی مخرب. بازیابی شده در 1 مارس 2017."
                 },
                 {
                     "source_name": "Microsoft Configure LSA",
                     "description": "Microsoft. (2013, July 31). Configuring Additional LSA Protection. Retrieved June 24, 2015.",
                     "url": "https://technet.microsoft.com/en-us/library/dn408187.aspx",
-                    "source_name_fa": "Microsoft Configure LSA",
-                    "description_fa": "مایکروسافت (2013، 31 ژوئیه) آشنایی با حفاظت اضافی LSA Retrieved ۲۴ ژوئن ۲۰۱۵"
+                    "source_name_fa": "مایکروسافت LSA را پیکربندی کنید",
+                    "description_fa": "مایکروسافت. (2013، 31 ژوئیه). پیکربندی حفاظت LSA اضافی. بازبینی شده در ۲۴ ژوئن ۲۰۱۵."
                 }
             ],
             "object_marking_refs": [
@@ -61,8 +61,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.1",
-            "name_fa": "بسته اعتباری",
-            "description_fa": "بسته های تأیید اعتبار ویندوز توسط اداره امنیت محلی (LSA) در شروع سیستم بارگذاری می شوند. آنها پشتیبانی از فرآیندهای متعدد لوگو و چندین پروتکل امنیتی را به سیستم عامل ارائه می دهند. [[ویرایش]\n\nمخالفان می توانند از مکانیزم خودکار استارت استفاده کنند که توسط بسته های تأیید اعتبار LSA برای پایداری با قرار دادن مرجع به دودویی در محل ثبت ویندوز (CTI_PRESERVE_0) با ارزش کلیدی [CTI_PRESERVE] استفاده کنند. سپس باینری توسط سیستم اجرا می شود زمانی که بسته های تأییدیه بارگیری می شوند. <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\</code> <code>\"Authentication Packages\"=<target binary></code> (Citation: MSDN Authentication Packages)"
+            "name_fa": "بسته احراز هویت",
+            "description_fa": "DLLهای بسته احراز هویت ویندوز در هنگام شروع سیستم توسط فرآیند محلی امنیت محلی (LSA) بارگیری می شوند. آنها از چندین فرآیند ورود به سیستم و چندین پروتکل امنیتی برای سیستم عامل پشتیبانی می کنند. (Citation: MSDN Authentication Packages)\n\nدشمنان می توانند با قرار دادن ارجاع به یک باینری در مکان رجیستری ویندوز <code>HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa\\</code> با مقدار کلیدی <code>\"Authentication Packages\"=<target binary></code> از مکانیسم شروع خودکار ارائه شده توسط بسته های احراز هویت LSA برای تداوم استفاده کنند. پس از بارگیری بسته های احراز هویت، باینری توسط سیستم اجرا می شود."
         }
     ]
 }

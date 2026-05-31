@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0212#AN0595",
-                    "external_id": "AN0595"
+                    "external_id": "AN0595",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetDLLPath",
-                    "description": "Defenders may tune for non-standard DLLs loaded by svchost.exe or termsrv.exe processes."
+                    "description": "Defenders may tune for non-standard DLLs loaded by svchost.exe or termsrv.exe processes.",
+                    "description_fa": "مدافعان ممکن است برای DLL های غیر استاندارد بارگیری شده توسط فرآیندهای svchost.exe یا Termsrv.exe تنظیم کنند."
                 },
                 {
                     "field": "RegistryKeyTarget",
-                    "description": "Environment-specific variations in the path to `ServiceDll` registry key (e.g., nested group policies)."
+                    "description": "Environment-specific variations in the path to `ServiceDll` registry key (e.g., nested group policies).",
+                    "description_fa": "تغییرات خاص محیط در مسیر کلید رجیستری «ServiceDll» (به عنوان مثال، خط‌مشی‌های گروه تودرتو)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation time window for registry change followed by DLL load or svchost restart."
+                    "description": "Correlation time window for registry change followed by DLL load or svchost restart.",
+                    "description_fa": "پنجره زمان همبستگی برای تغییر رجیستری و به دنبال آن بارگذاری DLL یا راه اندازی مجدد svchost."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Some environments may spawn registry changes from automation tools or administrative scripts."
+                    "description": "Some environments may spawn registry changes from automation tools or administrative scripts.",
+                    "description_fa": "برخی از محیط ها ممکن است تغییرات رجیستری را از ابزارهای اتوماسیون یا اسکریپت های اداری ایجاد کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0595",
+            "description_fa": "دشمن DLL خدمات ترمینال («termsrv.dll») را تغییر داده یا جایگزین می‌کند یا مقدار رجیستری «ServiceDll» مرتبط را تغییر می‌دهد تا یک DLL دلخواه یا وصله‌شده را بارگیری کند که دسترسی RDP دائمی و پیشرفته را امکان‌پذیر می‌کند. این ممکن است شامل جایگزینی باینری، دستکاری رجیستری، و بارگیری غیرمنتظره ماژول توسط فرآیند `svchost.exe -ktermvcs` باشد."
         }
     ]
 }

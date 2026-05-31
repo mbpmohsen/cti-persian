@@ -13,17 +13,22 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1676",
-                    "external_id": "T1676"
+                    "external_id": "T1676",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Signal_LinkedDevices_NoDate",
                     "description": "Signal. (n.d.). Linked Devices. Retrieved May 9, 2025.",
-                    "url": "https://support.signal.org/hc/en-us/articles/360007320551-Linked-Devices"
+                    "url": "https://support.signal.org/hc/en-us/articles/360007320551-Linked-Devices",
+                    "source_name_fa": "Signal_LinkedDevices_NoDate",
+                    "description_fa": "سیگنال. (n.d.). دستگاه های مرتبط بازبینی شده در 9 مه 2025."
                 },
                 {
                     "source_name": "WhatsApp_LinkDevice_NoDate",
                     "description": "WhatsApp. (n.d.). How to link a device. Retrieved May 9, 2025.",
-                    "url": "https://faq.whatsapp.com/1317564962315842/?helpref=faq_content&cms_platform=web"
+                    "url": "https://faq.whatsapp.com/1317564962315842/?helpref=faq_content&cms_platform=web",
+                    "source_name_fa": "WhatsApp_LinkDevice_NoDate",
+                    "description_fa": "واتس اپ. (n.d.). نحوه اتصال یک دستگاه بازبینی شده در 9 مه 2025."
                 }
             ],
             "object_marking_refs": [
@@ -31,7 +36,7 @@
             ],
             "modified": "2025-05-19T20:03:02.656Z",
             "name": "Linked Devices",
-            "description": "Adversaries may abuse the \u201clinked devices\u201d feature on messaging applications, such as Signal and WhatsApp, to register the user\u2019s account to an adversary-controlled device. By abusing the \u201clinked devices\u201d feature, adversaries may achieve and maintain persistence through the user\u2019s account, may collect information, such as the user\u2019s messages and contacts list, and may send future messages from the linked device.\n\nSignal is a messaging application that uses the open-source Signal Protocol to encrypt messages and calls; similarly, WhatsApp is a messaging application that has end-to-end encryption and other security measures to protect messages and calls. Both applications have a \u201clinked devices\u201d feature that allows users to access their Signal and/or WhatsApp accounts from different devices, such as a Windows or Mac desktop, an iPad or an Android tablet.(Citation: WhatsApp_LinkDevice_NoDate)(Citation: Signal_LinkedDevices_NoDate)\n\nAdversaries may use [Phishing](https://attack.mitre.org/techniques/T1660) techniques to trick the user into scanning a quick-response (QR) code, which is used to link the user\u2019s Signal and/or WhatsApp account to an adversary-controlled device. For example, adversaries may masquerade QR codes as group invites, security alerts or as legitimate instructions for pairing linked devices. \nUpon scanning the QR code in Signal, users may click on the \u201cTransfer Message History\u201d option to sync the linked devices, which may allow adversaries to collect more information about the user. Upon scanning the QR code in WhatsApp, the user\u2019s device will automatically send an end-to-end encrypted copy of recent message history to the adversary-controlled device. ",
+            "description": "Adversaries may abuse the “linked devices” feature on messaging applications, such as Signal and WhatsApp, to register the user’s account to an adversary-controlled device. By abusing the “linked devices” feature, adversaries may achieve and maintain persistence through the user’s account, may collect information, such as the user’s messages and contacts list, and may send future messages from the linked device.\n\nSignal is a messaging application that uses the open-source Signal Protocol to encrypt messages and calls; similarly, WhatsApp is a messaging application that has end-to-end encryption and other security measures to protect messages and calls. Both applications have a “linked devices” feature that allows users to access their Signal and/or WhatsApp accounts from different devices, such as a Windows or Mac desktop, an iPad or an Android tablet.(Citation: WhatsApp_LinkDevice_NoDate)(Citation: Signal_LinkedDevices_NoDate)\n\nAdversaries may use [Phishing](https://attack.mitre.org/techniques/T1660) techniques to trick the user into scanning a quick-response (QR) code, which is used to link the user’s Signal and/or WhatsApp account to an adversary-controlled device. For example, adversaries may masquerade QR codes as group invites, security alerts or as legitimate instructions for pairing linked devices. \nUpon scanning the QR code in Signal, users may click on the “Transfer Message History” option to sync the linked devices, which may allow adversaries to collect more information about the user. Upon scanning the QR code in WhatsApp, the user’s device will automatically send an end-to-end encrypted copy of recent message history to the adversary-controlled device. ",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -56,7 +61,9 @@
                 "Android",
                 "iOS"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "دستگاه های مرتبط",
+            "description_fa": "ممکن است دشمنان از ویژگی «دستگاه‌های مرتبط» در برنامه‌های پیام‌رسانی مانند سیگنال و واتس‌اپ برای ثبت حساب کاربر در دستگاهی که توسط دشمن کنترل می‌شود، سوء استفاده کنند. با سوء استفاده از ویژگی «دستگاه‌های مرتبط»، دشمنان ممکن است از طریق حساب کاربر تداوم داشته باشند، ممکن است اطلاعاتی مانند پیام‌ها و فهرست مخاطبین کاربر را جمع‌آوری کنند، و ممکن است پیام‌های بعدی را از دستگاه مرتبط ارسال کنند.\n\nسیگنال یک برنامه پیام رسانی است که از پروتکل سیگنال منبع باز برای رمزگذاری پیام ها و تماس ها استفاده می کند. به طور مشابه، WhatsApp یک برنامه پیام رسانی است که دارای رمزگذاری سرتاسر و سایر اقدامات امنیتی برای محافظت از پیام ها و تماس ها است. هر دو برنامه دارای ویژگی «دستگاه‌های مرتبط» هستند که به کاربران امکان می‌دهد از دستگاه‌های مختلف مانند دسک‌تاپ Windows یا Mac، iPad یا رایانه لوحی Android به حساب‌های سیگنال و/یا WhatsApp خود دسترسی داشته باشند.(Citation: WhatsApp_LinkDevice_NoDate)(Citation: Signal_LinkedDevices_NoDate)\n\nدشمنان ممکن است از تکنیک‌های [فیشینگ](https://attack.mitre.org/techniques/T1660) استفاده کنند تا کاربر را فریب دهند تا یک کد پاسخ سریع (QR) را اسکن کند، که برای پیوند دادن سیگنال و/یا حساب WhatsApp کاربر به یک دستگاه کنترل‌شده توسط دشمن استفاده می‌شود. برای مثال، دشمنان ممکن است کدهای QR را به‌عنوان دعوت‌های گروهی، هشدارهای امنیتی یا دستورالعمل‌های قانونی برای جفت کردن دستگاه‌های مرتبط، مخفی کنند. \nپس از اسکن کد QR در سیگنال، کاربران ممکن است بر روی گزینه \"Transfer Message History\" کلیک کنند تا دستگاه های مرتبط را همگام کنند، که ممکن است به دشمنان اجازه دهد اطلاعات بیشتری در مورد کاربر جمع آوری کنند. پس از اسکن کد QR در واتس اپ، دستگاه کاربر به طور خودکار یک نسخه رمزگذاری شده سرتاسر تاریخچه پیام اخیر را به دستگاه کنترل شده توسط دشمن ارسال می کند."
         }
     ]
 }

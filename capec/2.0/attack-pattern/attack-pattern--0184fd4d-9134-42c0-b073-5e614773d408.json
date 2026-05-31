@@ -9,29 +9,37 @@
                 {
                     "external_id": "CAPEC-587",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/587.html"
+                    "url": "https://capec.mitre.org/data/definitions/587.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1021",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1021.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1021.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Cross Frame Scripting",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Cross_Frame_Scripting"
+                    "url": "https://owasp.org/www-community/attacks/Cross_Frame_Scripting",
+                    "description_fa": "اسکریپت Cross Frame",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Cross Frame Scripting, 2016, OWASP",
                     "external_id": "REF-469",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/index.php/Cross_Frame_Scripting"
+                    "url": "https://www.owasp.org/index.php/Cross_Frame_Scripting",
+                    "description_fa": "Cross Frame Scripting، 2016، OWASP",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gustave Rydstedt, Elie Bursztein, Dan Boneh, and Collin Jackson, Busting Frame Busting: a Study of Clickjacking Vulnerabilities on Popular Sites, 2010--07---20",
                     "external_id": "REF-470",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://seclab.stanford.edu/websec/framebusting/framebust.pdf"
+                    "url": "https://seclab.stanford.edu/websec/framebusting/framebust.pdf",
+                    "description_fa": "Gustave Rydstedt، Elie Bursztein، Dan Boneh و Collin Jackson، Busting Frame Busting: a Study of Clickjacking vulnerabilities on Popular Sites, 2010--07---20",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--0184fd4d-9134-42c0-b073-5e614773d408",
@@ -48,6 +56,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (Cross Frame Scripting allows an adversary to steal sensitive data from a legitimate site.)"
+                ],
+                "Confidentiality_fa": [
+                    "Read Data (Cross Frame Scripting به دشمن اجازه می دهد تا داده های حساس را از یک سایت قانونی بدزدد.)"
                 ]
             },
             "x_capec_domains": [
@@ -62,7 +73,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این الگوی حمله جاوا اسکریپت مخرب و یک صفحه وب قانونی بارگذاری شده در یک iframe پنهان را ترکیب می کند. سپس جاوا اسکریپت مخرب می تواند با یک صفحه وب قانونی به شیوه ای ناشناخته برای کاربر تعامل برقرار کند. این حمله معمولاً برخی از عناصر مهندسی اجتماعی را تحت تأثیر قرار می دهد، زیرا مهاجم باید کاربر را متقاعد کند که از صفحه وب که مهاجم کنترل می کند بازدید کند.",
+            "name_fa": "اسکریپت کراس فریم (XFS)",
+            "x_capec_example_instances_fa": [
+                "یک صفحه وب کنترل شده توسط دشمن حاوی جاوا اسکریپت مخرب و یک iframe پنهان حاوی ورود به وب سایت قانونی است (یعنی iframe پنهان باعث می شود به نظر برسد که وب سایت قانونی واقعی بارگیری شده است). هنگامی که کاربر با وب سایت قانونی در iframe تعامل می کند، جاوا اسکریپت مخرب آن اطلاعات حساس را جمع آوری می کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "مرورگر کاربر باید دارای آسیب‌پذیری‌هایی در اجرای سیاست همان مبدا باشد. این اجازه می دهد تا داده های خاصی در یک صفحه بارگذاری شده از سرورها / دامنه های مختلف منشاء بگیرند."
+            ]
         }
     ],
     "spec_version": "2.0",

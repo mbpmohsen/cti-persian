@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0203#AN0579",
-                    "external_id": "AN0579"
+                    "external_id": "AN0579",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcessNameFilter",
-                    "description": "List of sensitive or rarely-debugged processes (e.g., sshd, systemd, container daemons) to alert on if ptraced"
+                    "description": "List of sensitive or rarely-debugged processes (e.g., sshd, systemd, container daemons) to alert on if ptraced",
+                    "description_fa": "فهرستی از فرآیندهای حساس یا به ندرت اشکال زدایی شده (مانند sshd، systemd، دیمون های کانتینری) برای هشدار در صورت ردیابی"
                 },
                 {
                     "field": "TimeWindowBetweenPtraceAndMemoryWrite",
-                    "description": "Threshold time (e.g., <10 seconds) between ptrace attach and pokedata syscall"
+                    "description": "Threshold time (e.g., <10 seconds) between ptrace attach and pokedata syscall",
+                    "description_fa": "زمان آستانه (به عنوان مثال، <10 ثانیه) بین ptrace attach و pokedata syscall"
                 },
                 {
                     "field": "UserContextMismatch",
-                    "description": "Flag when UID of tracer differs from UID of target process (e.g., privilege escalation or container breakout)"
+                    "description": "Flag when UID of tracer differs from UID of target process (e.g., privilege escalation or container breakout)",
+                    "description_fa": "زمانی که UID ردیاب با UID فرآیند هدف متفاوت است (مثلاً افزایش امتیاز یا شکست کانتینر) پرچم‌گذاری کنید."
                 },
                 {
                     "field": "ProcessRelationshipConstraint",
-                    "description": "Allowlist relationships (e.g., parent-child) under which ptrace is considered benign"
+                    "description": "Allowlist relationships (e.g., parent-child) under which ptrace is considered benign",
+                    "description_fa": "روابط فهرست مجاز (مثلاً والد-کودک) که تحت آن ptrace خوش خیم در نظر گرفته می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0579",
+            "description_fa": "تزریق فرآیند مبتنی بر ptrace را با مرتبط کردن گزارش‌های ممیزی سیستم‌های ptrace، تغییرات حافظه (مانند poketext، pokedata) و دستکاری ثبت مشکوک در فرآیند هدفی که معمولاً توسط مبدأ اشکال‌زدایی نمی‌شود، شناسایی می‌کند. هشدارهایی در مورد فرآیندهایی که سعی در ردیابی فرآیندهای غیرکودک یا ممتاز دارند، به ویژه آنهایی که به دنبال آن حافظه یا رفتار اجرایی غیرعادی است."
         }
     ]
 }

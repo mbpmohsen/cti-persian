@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0363#AN1030",
-                    "external_id": "AN1030"
+                    "external_id": "AN1030",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,25 +62,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccessMask",
-                    "description": "Set to 0x1F0FFF to detect full memory access attempts; can be scoped down to reduce noise."
+                    "description": "Set to 0x1F0FFF to detect full memory access attempts; can be scoped down to reduce noise.",
+                    "description_fa": "برای شناسایی تلاش‌های دسترسی کامل به حافظه، روی 0x1F0FFF تنظیم کنید. می توان محدوده را برای کاهش نویز کاهش داد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines time between LSASS access and dump file creation or registry modification (e.g., 5 minutes)."
+                    "description": "Defines time between LSASS access and dump file creation or registry modification (e.g., 5 minutes).",
+                    "description_fa": "زمان بین دسترسی LSASS و ایجاد فایل dump یا اصلاح رجیستری را تعیین می کند (به عنوان مثال، 5 دقیقه)."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Allowlist known legitimate tools (e.g., AV/EDR) accessing lsass.exe."
+                    "description": "Allowlist known legitimate tools (e.g., AV/EDR) accessing lsass.exe.",
+                    "description_fa": "ابزارهای قانونی شناخته شده (مانند AV/EDR) برای دسترسی به lsass.exe را فهرست کنید."
                 },
                 {
                     "field": "DumpFilePath",
-                    "description": "Paths where memory dumps are written, e.g., %TEMP%, C:\\Windows\\Temp."
+                    "description": "Paths where memory dumps are written, e.g., %TEMP%, C:\\Windows\\Temp.",
+                    "description_fa": "مسیرهایی که حافظه خالی نوشته شده است، به عنوان مثال، %TEMP%, C:\\Windows\\Temp."
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Common dumping syntax like rundll32, procdump, comsvcs.dll, Invoke-Mimikatz."
+                    "description": "Common dumping syntax like rundll32, procdump, comsvcs.dll, Invoke-Mimikatz.",
+                    "description_fa": "نحو رایج دامپینگ مانند rundll32، procdump، comsvcs.dll، Invoke-Mimikatz."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1030",
+            "description_fa": "یک فرآیند غیرمجاز یا غیرعادی تلاش می‌کند دسته‌ای با دسترسی کامل (0x1F0FFF) به lsass.exe باز کند و متعاقباً حذف حافظه، ایجاد فایل یا اصلاح رجیستری را فراخوانی می‌کند که نشان‌دهنده خراش اعتبارنامه است. این زنجیره رفتار منعکس کننده فعالیت سرقت مدارک مرحله ای است."
         }
     ]
 }

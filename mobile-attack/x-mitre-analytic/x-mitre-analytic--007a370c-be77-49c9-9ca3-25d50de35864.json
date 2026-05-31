@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0654#AN1740",
-                    "external_id": "AN1740"
+                    "external_id": "AN1740",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.375Z",
             "name": "Analytic 1740",
-            "description": "Correlates unauthorized alterations to launchd configuration (LaunchDaemons/LaunchAgents plists), background execution entitlements, or sideloaded app containers with suspicious auto-start behavior during device boot or user unlock. From the defender\u2019s view this shows up as new or modified plist files in launchd directories, launchd starting binaries from non-Apple or non-AppStore locations, and apps with unexpected background modes that remain active immediately after boot/unlock.",
+            "description": "Correlates unauthorized alterations to launchd configuration (LaunchDaemons/LaunchAgents plists), background execution entitlements, or sideloaded app containers with suspicious auto-start behavior during device boot or user unlock. From the defender’s view this shows up as new or modified plist files in launchd directories, launchd starting binaries from non-Apple or non-AppStore locations, and apps with unexpected background modes that remain active immediately after boot/unlock.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,21 +53,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "JailbreakIndicators",
-                    "description": "List of filesystem paths or process names that identify intentionally jailbroken lab devices and should be handled differently."
+                    "description": "List of filesystem paths or process names that identify intentionally jailbroken lab devices and should be handled differently.",
+                    "description_fa": "فهرستی از مسیرهای سیستم فایل یا نام‌های فرآیندی که دستگاه‌های آزمایشگاهی عمداً جیلبریک شده را شناسایی می‌کنند و باید به گونه‌ای متفاوت با آنها رفتار شود."
                 },
                 {
                     "field": "LaunchdWhitelist",
-                    "description": "Organization-specific list of allowed launchd job labels and binary paths."
+                    "description": "Organization-specific list of allowed launchd job labels and binary paths.",
+                    "description_fa": "فهرست ویژه سازمان از برچسب‌های کار راه‌اندازی مجاز و مسیرهای باینری."
                 },
                 {
                     "field": "AllowedBackgroundModes",
-                    "description": "Per-app allow list for background execution modes (for example, VOIP, location) to reduce noise."
+                    "description": "Per-app allow list for background execution modes (for example, VOIP, location) to reduce noise.",
+                    "description_fa": "لیست اجازه هر برنامه برای حالت های اجرای پس زمینه (به عنوان مثال، VOIP، مکان) برای کاهش نویز."
                 },
                 {
                     "field": "BootUnlockWindow",
-                    "description": "Time window after boot or unlock within which unexpected launchd auto-starts are considered high risk."
+                    "description": "Time window after boot or unlock within which unexpected launchd auto-starts are considered high risk.",
+                    "description_fa": "پنجره زمانی پس از راه‌اندازی یا باز کردن قفل که در آن راه‌اندازی‌های خودکار غیرمنتظره در آن با خطر بالا در نظر گرفته می‌شوند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1740",
+            "description_fa": "تغییرات غیرمجاز در پیکربندی راه‌اندازی شده (لیست‌های LaunchDaemons/LaunchAgents)، حقوق اجرای پس‌زمینه، یا محفظه‌های برنامه جانبی را با رفتار شروع خودکار مشکوک در هنگام بوت شدن دستگاه یا باز کردن قفل کاربر مرتبط می‌کند. از دید مدافع، این به صورت فایل‌های plist جدید یا اصلاح‌شده در فهرست‌های راه‌اندازی، باینری‌های راه‌اندازی شده از مکان‌های غیر اپل یا غیر AppStore، و برنامه‌هایی با حالت‌های پس‌زمینه غیرمنتظره که بلافاصله پس از راه‌اندازی/باز کردن قفل فعال باقی می‌مانند نشان داده می‌شود."
         }
     ]
 }

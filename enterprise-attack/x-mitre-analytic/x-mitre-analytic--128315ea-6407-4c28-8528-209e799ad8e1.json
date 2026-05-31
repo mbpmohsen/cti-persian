@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0359#AN1020",
-                    "external_id": "AN1020"
+                    "external_id": "AN1020",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DomainCategory",
-                    "description": "Can be tuned to `.onion`, I2P, or suspicious CDN domains."
+                    "description": "Can be tuned to `.onion`, I2P, or suspicious CDN domains.",
+                    "description_fa": "می‌توان روی «.onion»، I2P یا دامنه‌های مشکوک CDN تنظیم کرد."
                 },
                 {
                     "field": "ProcessParent",
-                    "description": "Detect known-good vs. abnormal launching binaries (e.g., mshta spawning Tor)."
+                    "description": "Detect known-good vs. abnormal launching binaries (e.g., mshta spawning Tor).",
+                    "description_fa": "باینری‌های راه‌اندازی شناخته‌شده-خوب در مقابل غیرعادی (به عنوان مثال، mshta در حال تخم‌ریزی Tor) را شناسایی کنید."
                 },
                 {
                     "field": "ConnectionDuration",
-                    "description": "Threshold for persistent connections over known relay ports (e.g., 9050)."
+                    "description": "Threshold for persistent connections over known relay ports (e.g., 9050).",
+                    "description_fa": "آستانه برای اتصالات دائمی روی پورت های رله شناخته شده (به عنوان مثال، 9050)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1020",
+            "description_fa": "فرآیندهای مشکوک (مانند کلاینت‌های Tor، رله‌ها، باینری‌های ناشناخته) با ترافیک خروجی رمزگذاری‌شده پایدار به زیرساخت‌های ناشناس شناخته شده (مانند Tor، I2P) راه‌اندازی می‌شوند و ممکن است از طریق پروکسی معکوس، تونل ICMP یا ارسال سوکت به سیستم‌های داخلی اضافی منتقل شوند."
         }
     ]
 }

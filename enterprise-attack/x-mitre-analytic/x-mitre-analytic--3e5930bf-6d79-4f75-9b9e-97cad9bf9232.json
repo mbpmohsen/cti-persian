@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0543#AN1500",
-                    "external_id": "AN1500"
+                    "external_id": "AN1500",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PortProfiles",
-                    "description": "Define expected ports for asymmetric cryptography (e.g., 443, 993)."
+                    "description": "Define expected ports for asymmetric cryptography (e.g., 443, 993).",
+                    "description_fa": "پورت های مورد انتظار را برای رمزنگاری نامتقارن تعریف کنید (به عنوان مثال، 443، 993)."
                 },
                 {
                     "field": "CertValidationPolicy",
-                    "description": "Thresholds for rejecting untrusted/self-signed certs."
+                    "description": "Thresholds for rejecting untrusted/self-signed certs.",
+                    "description_fa": "آستانه برای رد گواهینامه های نامعتبر/خود امضا شده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1500",
+            "description_fa": "جلسات رمزگذاری شده با ناهنجاری‌های مبادله کلید نامتقارن در پورت‌های غیر استاندارد یا با گواهی‌های نامعتبر/بد شکل شناسایی شده‌اند. Defender NetFlow/IPFIX را با IDS/IPS که مبادلات RSA را خارج از جریان های مورد انتظار TLS شناسایی می کند، مرتبط می کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0414#AN1164",
-                    "external_id": "AN1164"
+                    "external_id": "AN1164",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,26 +41,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptInvocationParent",
-                    "description": "Identify rare or suspicious parent processes launching AppleScript (e.g., Safari, Mail, msedge)."
+                    "description": "Identify rare or suspicious parent processes launching AppleScript (e.g., Safari, Mail, msedge).",
+                    "description_fa": "شناسایی فرآیندهای والد کمیاب یا مشکوک که AppleScript را راه‌اندازی می‌کنند (مانند Safari، Mail، msedge)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Flag AppleScript execution during user-inactive hours, especially for automation frameworks."
+                    "description": "Flag AppleScript execution during user-inactive hours, especially for automation frameworks.",
+                    "description_fa": "پرچم‌گذاری اجرای AppleScript در ساعات غیرفعال کاربر، به‌ویژه برای چارچوب‌های اتوماسیون."
                 },
                 {
                     "field": "AppleEventActionType",
-                    "description": "Filter AppleEvent-based automation involving UI interaction, keystrokes, or remote control."
+                    "description": "Filter AppleEvent-based automation involving UI interaction, keystrokes, or remote control.",
+                    "description_fa": "اتوماسیون مبتنی بر AppleEvent شامل تعامل رابط کاربری، فشار دادن کلید یا کنترل از راه دور را فیلتر کنید."
                 },
                 {
                     "field": "TargetApplicationSet",
-                    "description": "Scope AppleScript use toward security-sensitive apps (e.g., Terminal, ssh, Keychain Access)."
+                    "description": "Scope AppleScript use toward security-sensitive apps (e.g., Terminal, ssh, Keychain Access).",
+                    "description_fa": "دامنه استفاده از AppleScript برای برنامه های حساس به امنیت (به عنوان مثال، ترمینال، ssh، دسترسی به زنجیره کلید)."
                 },
                 {
                     "field": "ExecutionPathRegex",
-                    "description": "Restrict to unusual paths like /tmp/, ~/Library/, or embedded in Automator workflows."
+                    "description": "Restrict to unusual paths like /tmp/, ~/Library/, or embedded in Automator workflows.",
+                    "description_fa": "محدود به مسیرهای غیرعادی مانند /tmp/، ~/Library/، یا تعبیه شده در گردش کار Automator."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1164",
+            "description_fa": "اجرای AppleScript را از طریق 'osascript'، NSAppleScript/OSAScript APIها و رویدادهای کنترل برنامه غیرعادی در جلسات کاربر تشخیص می دهد. بر زنجیره‌های علّی مانند فرآیندهای فرزند تخم‌ریزی osascript، ضربه‌های کلید ناشی از اسکریپت، یا جعل گفت‌وگوهای مبتنی بر API تمرکز می‌کند."
         }
     ]
 }

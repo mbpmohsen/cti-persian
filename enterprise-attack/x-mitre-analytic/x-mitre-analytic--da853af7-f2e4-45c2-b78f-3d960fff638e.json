@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0577#AN1593",
-                    "external_id": "AN1593"
+                    "external_id": "AN1593",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1593",
-            "description": "Unexpected modification of the KernelCallbackTable in a process\u2019s PEB followed by invocation of modified callback functions (e.g., fnCOPYDATA) through Windows messages. Defender observes suspicious API call chains such as NtQueryInformationProcess \u2192 WriteProcessMemory \u2192 abnormal GUI callback execution, often correlating to anomalous process behavior such as network activity or code injection.",
+            "description": "Unexpected modification of the KernelCallbackTable in a process’s PEB followed by invocation of modified callback functions (e.g., fnCOPYDATA) through Windows messages. Defender observes suspicious API call chains such as NtQueryInformationProcess → WriteProcessMemory → abnormal GUI callback execution, often correlating to anomalous process behavior such as network activity or code injection.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredProcesses",
-                    "description": "GUI applications (e.g., explorer.exe, notepad.exe) where KernelCallbackTable abuse is more likely."
+                    "description": "GUI applications (e.g., explorer.exe, notepad.exe) where KernelCallbackTable abuse is more likely.",
+                    "description_fa": "برنامه های رابط کاربری گرافیکی (مانند explorer.exe، notepad.exe) که در آنها سوء استفاده از KernelCallbackTable بیشتر است."
                 },
                 {
                     "field": "CallbackFunctions",
-                    "description": "Specific callback functions (e.g., fnCOPYDATA, fnDWORD) expected to remain stable."
+                    "description": "Specific callback functions (e.g., fnCOPYDATA, fnDWORD) expected to remain stable.",
+                    "description_fa": "انتظار می رود عملکردهای برگشت به تماس خاص (مانند fnCOPYDATA، fnDWORD) ثابت باقی بماند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval between WriteProcessMemory calls and execution of modified callback functions."
+                    "description": "Correlation interval between WriteProcessMemory calls and execution of modified callback functions.",
+                    "description_fa": "فاصله همبستگی بین فراخوانی WriteProcessMemory و اجرای توابع پاسخ به تماس اصلاح شده."
                 },
                 {
                     "field": "AccessMaskThresholds",
-                    "description": "Access rights values that should be flagged when targeting GUI processes."
+                    "description": "Access rights values that should be flagged when targeting GUI processes.",
+                    "description_fa": "به مقادیر حقوقی دسترسی پیدا کنید که هنگام هدف قرار دادن فرآیندهای رابط کاربری گرافیکی باید علامت گذاری شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1593",
+            "description_fa": "تغییر غیرمنتظره KernelCallbackTable در PEB فرآیند و به دنبال آن فراخوانی توابع پاسخ به تماس اصلاح شده (مانند fnCOPYDATA) از طریق پیام های ویندوز. Defender زنجیره های فراخوانی API مشکوک مانند NtQueryInformationProcess → WriteProcessMemory → اجرای غیرعادی فراخوانی رابط کاربری گرافیکی را مشاهده می کند که اغلب با رفتار فرآیند غیرعادی مانند فعالیت شبکه یا تزریق کد مرتبط است."
         }
     ]
 }

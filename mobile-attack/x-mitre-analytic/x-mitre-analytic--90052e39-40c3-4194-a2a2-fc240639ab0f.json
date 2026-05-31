@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0689#AN1800",
-                    "external_id": "AN1800"
+                    "external_id": "AN1800",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,21 +48,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window across multiple applications invoking affected APIs"
+                    "description": "Correlation window across multiple applications invoking affected APIs",
+                    "description_fa": "پنجره همبستگی بین چندین برنامه کاربردی که APIهای تحت تأثیر را فراخوانی می کند"
                 },
                 {
                     "field": "SensitiveAPISet",
-                    "description": "Set of APIs monitored for integrity (e.g., location, telephony, permission checks)"
+                    "description": "Set of APIs monitored for integrity (e.g., location, telephony, permission checks)",
+                    "description_fa": "مجموعه ای از API های نظارت شده برای یکپارچگی (به عنوان مثال، مکان، تلفن، بررسی مجوز)"
                 },
                 {
                     "field": "CrossAppConsistencyThreshold",
-                    "description": "Number of applications required to exhibit anomalous API behavior to trigger detection"
+                    "description": "Number of applications required to exhibit anomalous API behavior to trigger detection",
+                    "description_fa": "تعداد برنامه‌های مورد نیاز برای نشان دادن رفتار غیرعادی API برای شناسایی"
                 },
                 {
                     "field": "ExpectedAPIBaseline",
-                    "description": "Baseline of expected API return values or behavior patterns per device state"
+                    "description": "Baseline of expected API return values or behavior patterns per device state",
+                    "description_fa": "خط پایه مقادیر بازگشتی مورد انتظار API یا الگوهای رفتاری در هر وضعیت دستگاه"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1800",
+            "description_fa": "(1) اصلاح یا جایگزینی کتابخانه‌های زمان اجرا سیستم یا مسیرهای وضوح API، (2) فراخوانی مکرر APIهای ربوده شده در چندین برنامه، و (3) خروجی‌های ناسازگار یا سرکوب شده از آن APIها در مقایسه با رفتارهای مورد انتظار سیستم عامل. مدافع یک زنجیره علّی را مشاهده می‌کند که در آن رفتار API در سطح سیستم تغییر می‌کند، و در نتیجه چندین برنامه ناهنجاری‌های ثابتی را در دسترسی حسگر، بررسی‌های مجوز، یا گزارش وضعیت سیستم نشان می‌دهند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0036#AN0104",
-                    "external_id": "AN0104"
+                    "external_id": "AN0104",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DeviceNamePattern",
-                    "description": "Adjust pattern matching logic for unusual or non-corporate device names"
+                    "description": "Adjust pattern matching logic for unusual or non-corporate device names",
+                    "description_fa": "منطق تطبیق الگو را برای نام‌های دستگاه غیرعادی یا غیرشرکتی تنظیم کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Correlate with prior logon location or device usage behavior"
+                    "description": "Correlate with prior logon location or device usage behavior",
+                    "description_fa": "با مکان ورود به سیستم قبلی یا رفتار استفاده از دستگاه مرتبط باشد"
                 },
                 {
                     "field": "EnrollmentMethod",
-                    "description": "Distinguish between MDM vs manual onboarding vs automated scripts"
+                    "description": "Distinguish between MDM vs manual onboarding vs automated scripts",
+                    "description_fa": "بین MDM در مقابل نصب دستی در مقابل اسکریپت های خودکار تمایز قائل شوید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0104",
+            "description_fa": "Adversary یک دستگاه ویندوز را در Entra ID ثبت می کند یا با افزودن دستگاه از طریق خط لوله ثبت Intune با استفاده از اعتبار دزدیده شده، دسترسی مشروط را دور می زند."
         }
     ]
 }

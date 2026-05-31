@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-54",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/54.html"
+                    "url": "https://capec.mitre.org/data/definitions/54.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-209",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/209.html"
+                    "url": "http://cwe.mitre.org/data/definitions/209.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--49132d37-44e8-458c-a06e-0e5b9ac9bbd6",
@@ -32,6 +34,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -57,11 +62,25 @@
                 "\n               <xhtml:p>The Attacker needs the ability to probe application functionality and provide it erroneous directives or data without triggering intrusion detection schemes or making enough of an impact on application logging that steps are taken against the adversary.</xhtml:p>\n               <xhtml:p>The Attack does not need special hardware, software, skills, or access.</xhtml:p>\n            "
             ],
             "x_capec_skills_required": {
-                "Medium": "Although fuzzing parameters is not difficult, and often possible with automated fuzzers, interpreting the error conditions and modifying the parameters so as to move further in the process of mapping the application requires detailed knowledge of target platform, the languages and packages used as well as software design."
+                "Medium": "Although fuzzing parameters is not difficult, and often possible with automated fuzzers, interpreting the error conditions and modifying the parameters so as to move further in the process of mapping the application requires detailed knowledge of target platform, the languages and packages used as well as software design.",
+                "Medium_fa": "اگر چه فازی کردن پارامترها دشوار نیست و اغلب با فوزرهای خودکار امکان پذیر است، تفسیر شرایط خطا و اصلاح پارامترها به منظور حرکت بیشتر در روند نقشه برداری برنامه نیاز به دانش دقیق پلت فرم هدف، زبان ها و بسته های مورد استفاده و همچنین طراحی نرم افزار دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف که از موقعیت مکانی برنامه آگاه است (و احتمالاً مجاز به استفاده از برنامه است)، ساختار برنامه را بررسی می کند و با ارسال درخواست ها و بررسی پاسخ ها، استحکام آن را ارزیابی می کند. اغلب، این کار با ارسال انواع پرس‌و‌جوهای مورد انتظار انجام می‌شود، به این امید که این پرسش‌های اصلاح‌شده ممکن است اطلاعاتی فراتر از آنچه مجموعه پرس‌و‌جوهای مورد انتظار ارائه می‌دهند، برگردانند.",
+            "name_fa": "سیستم پرس و جو برای اطلاعات",
+            "x_capec_example_instances_fa": [
+                "تزریق SQL کور نمونه ای از این تکنیک است که برای اکسپلویت موفق اعمال می شود. همچنین ببینید: CVE-2006-4705",
+                "<xhtml:p>مهاجم داده‌های بدی را به سرورهای مختلف در یک سیستم J2EE ارسال می‌کند، ردیابی‌های پشته استثنای بازگشتی را ثبت می‌کند و عملکرد برنامه را نقشه‌برداری می‌کند.</xhtml:p>\n               <xhtml:p>علاوه بر این، این تکنیک به مهاجمان اجازه می‌دهد تا سرورهای مورد استفاده را با بسته‌های منبع باز (و احتمالاً شماره‌های نسخه) که آنها را ارائه می‌کنند مرتبط کنند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین پارامترها: </b>همه پارامترهای قابل کنترل توسط کاربر برنامه را با جستجو یا با یافتن مستندات تعیین کنید</p></li></ol></div><periv><h3> <b> <b> شرط خطا: </b>هر پارامتر را با محتوایی که باعث بروز شرایط خطا می‌شود تزریق کنید</p></li><li> <p> <b>تغییر پارامترها: </b>محتوای هر پارامتر را مطابق با شرایط خطای مشاهده‌شده تغییر دهید</p></li></ol></div><div><h3>Exploit</h3><ol><li><b>Oploit</h3><ol><li> اگر با پارامترهای کافی تکرار شود، برنامه به اندازه کافی ترسیم خواهد شد. سپس دشمن می تواند یک حمله مورد نظر (مثلاً Blind SQL Injection) را راه اندازی کند</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "این دسته از حملات به شدت نیازی به دسترسی مجاز به برنامه ندارند. از آنجایی که مهاجمان از این فرآیند حمله برای طبقه‌بندی، نقشه‌برداری و شناسایی جنبه‌های آسیب‌پذیر برنامه استفاده می‌کنند، به سادگی به تأیید فرضیه‌ها، تعامل با برنامه و زمان برای انجام فعالیت‌های آزمون و خطا نیاز دارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p> مهاجم به توانایی بررسی عملکرد برنامه و ارائه دستورالعمل‌ها یا داده‌های اشتباه به آن نیاز دارد، بدون اینکه طرح‌های تشخیص نفوذ را راه‌اندازی کند یا تأثیر کافی بر گزارش‌گیری برنامه‌ها بگذارد تا اقداماتی علیه دشمن انجام شود.</xhtml:p>\n               <xhtml:p> حمله به سخت افزار، نرم افزار، مهارت یا دسترسی خاصی نیاز ندارد.</xhtml:p>"
+            ]
         }
     ],
     "type": "bundle"

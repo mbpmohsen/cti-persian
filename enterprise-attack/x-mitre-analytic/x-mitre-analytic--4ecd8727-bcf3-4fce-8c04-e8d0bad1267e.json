@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0268#AN0749",
-                    "external_id": "AN0749"
+                    "external_id": "AN0749",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedProcesses",
-                    "description": "Applications allowed to load compression libraries (e.g., backup agents)."
+                    "description": "Applications allowed to load compression libraries (e.g., backup agents).",
+                    "description_fa": "برنامه‌های کاربردی مجاز به بارگیری کتابخانه‌های فشرده‌سازی (مانند عوامل پشتیبان‌گیری) هستند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Flag archiving under privileged or system accounts as suspicious."
+                    "description": "Flag archiving under privileged or system accounts as suspicious.",
+                    "description_fa": "بایگانی تحت حساب‌های دارای امتیاز یا سیستم را مشکوک علامت‌گذاری کنید."
                 },
                 {
                     "field": "FileExtensionFilter",
-                    "description": "Targeted monitoring of sensitive file formats or compressed containers."
+                    "description": "Targeted monitoring of sensitive file formats or compressed containers.",
+                    "description_fa": "نظارت هدفمند بر فرمت های فایل حساس یا ظروف فشرده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0749",
+            "description_fa": "بایگانی مخرب را از طریق سیستم یا کتابخانه های شخص ثالث (libz، libarchive) که توسط باینری های Python، Swift یا Objective-C احضار شده اند، شناسایی می کند. گزارش های یکپارچه بارهای کتابخانه را با ایجاد آرشیوهای فشرده یا رمزگذاری شده (zip.، .gz، bz2.، .dmg.) مرتبط می کند."
         }
     ]
 }

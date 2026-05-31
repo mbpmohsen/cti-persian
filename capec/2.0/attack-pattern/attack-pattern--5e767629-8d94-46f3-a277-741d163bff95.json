@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-586",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/586.html"
+                    "url": "https://capec.mitre.org/data/definitions/586.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-502",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/502.html"
+                    "url": "http://cwe.mitre.org/data/definitions/502.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Deserialization of Untrusted Data, 2017--01, OWASP",
                     "external_id": "REF-468",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "سریال زدایی از داده های غیرقابل اعتماد، 01-2017، OWASP",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5e767629-8d94-46f3-a277-741d163bff95",
@@ -39,6 +43,15 @@
                 ],
                 "Integrity": [
                     "Modify Data (Attackers can modify objects or data that was assumed to be safe from modification.)"
+                ],
+                "Authorization_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (توابعی که اطلاعات موجود در شیء deserialized را معتبر فرض می کنند، می توانند مورد سوء استفاده قرار گیرند.)"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع (اگر تابعی بر اساس یک نگهبان در یک رشته فرضی را در مورد زمان خاتمه ایجاد کند، هرگز نمی تواند به راحتی منابع موجود را خاتمه داده و تمام کند.)"
+                ],
+                "Integrity_fa": [
+                    "اصلاح داده ها (مهاجمین می توانند اشیاء یا داده هایی را که تصور می شد از تغییر در امان هستند، تغییر دهند.)"
                 ]
             },
             "x_capec_domains": [
@@ -50,7 +63,12 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن سعی می کند از یک برنامه با تزریق محتوای مخرب اضافی در طول پردازش اشیاء سریال شده، سوء استفاده کند. توسعه‌دهندگان از سریال‌سازی استفاده می‌کنند تا داده‌ها یا حالت‌ها را به یک قالب ثابت و باینری برای ذخیره روی دیسک یا انتقال از طریق شبکه تبدیل کنند. این اشیاء سپس در صورت نیاز برای بازیابی داده ها/وضعیت از حالت سریال خارج می شوند. با تزریق یک شی بدشکل به یک برنامه آسیب پذیر، یک دشمن به طور بالقوه می تواند برنامه را با دستکاری فرآیند deserialization به خطر بیاندازد. این می تواند منجر به تعدادی از نتایج ناخواسته، از جمله اجرای کد از راه دور شود.",
+            "name_fa": "تزریق شی",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید داده ها را قبل از اعتبار سنجی غیر سریالی کند."
+            ]
         }
     ],
     "spec_version": "2.0",

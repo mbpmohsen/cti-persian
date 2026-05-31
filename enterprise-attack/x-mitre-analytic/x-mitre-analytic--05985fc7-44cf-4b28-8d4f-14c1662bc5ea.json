@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0252#AN0699",
-                    "external_id": "AN0699"
+                    "external_id": "AN0699",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedParentProcesses",
-                    "description": "Filter expected automation tools (e.g., enterprise installers, known IDEs)"
+                    "description": "Filter expected automation tools (e.g., enterprise installers, known IDEs)",
+                    "description_fa": "فیلتر کردن ابزارهای اتوماسیون مورد انتظار (به عنوان مثال، نصب کنندگان سازمانی، IDE های شناخته شده)"
                 },
                 {
                     "field": "InstallPathsToWatch",
-                    "description": "Suspicious post-install write paths (e.g., %APPDATA%, %TEMP%)"
+                    "description": "Suspicious post-install write paths (e.g., %APPDATA%, %TEMP%)",
+                    "description_fa": "مسیرهای نوشتن مشکوک پس از نصب (به عنوان مثال، %APPDATA، %TEMP%)"
                 },
                 {
                     "field": "ExecutableEntropyThreshold",
-                    "description": "Used for evaluating if dropped files are packed/obfuscated"
+                    "description": "Used for evaluating if dropped files are packed/obfuscated",
+                    "description_fa": "برای ارزیابی اینکه آیا فایل های حذف شده بسته بندی یا مبهم هستند استفاده می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0699",
+            "description_fa": "اجرای «pip.exe»، «npm.cmd»، یا نصب‌کننده‌های MSI در چارچوب کاربر، به دنبال راه‌اندازی مفسر اسکریپت (مانند python.exe) یا PowerShell با پردازش‌های فرزند غیرمعمول یا نوشتن فایل در «%APPDATA%»، «%TEMP%»، یا «%LOCALAPPDATA%». Defender ابزارهای نصب خط فرمان را با Sysmon و Event Logs برای ردیابی رفتار پایین دست مرتبط می کند."
         }
     ]
 }

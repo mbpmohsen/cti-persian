@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0587#AN1612",
-                    "external_id": "AN1612"
+                    "external_id": "AN1612",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,17 +53,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Match variations in enumeration commands like 'net user', 'Get-ADUser', 'dsquery'."
+                    "description": "Match variations in enumeration commands like 'net user', 'Get-ADUser', 'dsquery'.",
+                    "description_fa": "تغییرات در دستورات شمارش مانند 'کاربر خالص'، 'Get-ADUser'، 'dsquery' را مطابقت دهید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Short burst of account enumeration commands may indicate automation."
+                    "description": "Short burst of account enumeration commands may indicate automation.",
+                    "description_fa": "پشت سر هم کوتاه دستورات شمارش حساب ممکن است نشان دهنده اتوماسیون باشد."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Restrict to non-admin accounts or unexpected users executing enumeration commands."
+                    "description": "Restrict to non-admin accounts or unexpected users executing enumeration commands.",
+                    "description_fa": "محدود به حساب‌های غیر سرپرست یا کاربران غیرمنتظره‌ای که دستورات شمارش را اجرا می‌کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1612",
+            "description_fa": "شناسایی فرآیندهایی که شمارش حساب های محلی یا دامنه را با فراخوانی پرس و جوهای دایرکتوری حساب یا API های امنیتی و به دنبال آن خروجی ساختاریافته لیست حساب ها انجام می دهند. مدافع اجرای فرمان یا الگوهای فراخوانی API را مشاهده می کند که اطلاعات حساب را بازیابی می کند و اندکی پس از آن مصنوعات شمارش را تولید می کند."
         }
     ]
 }

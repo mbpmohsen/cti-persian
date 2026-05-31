@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0345#AN0975",
-                    "external_id": "AN0975"
+                    "external_id": "AN0975",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ElevatedProcessPath",
-                    "description": "Paths to monitor for unsigned or unexpected elevated binaries"
+                    "description": "Paths to monitor for unsigned or unexpected elevated binaries",
+                    "description_fa": "مسیرهایی برای نظارت بر باینری های بدون علامت یا غیرمنتظره"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Parent-child execution chains that are suspicious in the local environment"
+                    "description": "Parent-child execution chains that are suspicious in the local environment",
+                    "description_fa": "زنجیره های اعدام والد-فرزند که در محیط محلی مشکوک هستند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time between registry modification and elevated process spawn"
+                    "description": "Time between registry modification and elevated process spawn",
+                    "description_fa": "زمان بین اصلاح رجیستری و تخم ریزی فرآیند بالا"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0975",
+            "description_fa": "تغییرات رجیستری (به عنوان مثال، کلیدهای رجیستری بای پس UAC)، روابط غیر معمول فرآیند والد-فرزند (به عنوان مثال، control.exe در حال ایجاد cmd.exe)، و اجرای فرآیند بالا بدون علامت با نشانه های غیر استاندارد یا پرچم های ارتفاع مرتبط کنید."
         }
     ]
 }

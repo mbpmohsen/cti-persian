@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0350#AN0995",
-                    "external_id": "AN0995"
+                    "external_id": "AN0995",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedInterpreterVersions",
-                    "description": "Defines which versions of interpreters like PowerShell are permitted in the environment."
+                    "description": "Defines which versions of interpreters like PowerShell are permitted in the environment.",
+                    "description_fa": "تعریف می کند که کدام نسخه از مفسرانی مانند PowerShell در محیط مجاز است."
                 },
                 {
                     "field": "RegistryDefenderKeys",
-                    "description": "Specific registry paths for monitoring Defender/HVCI configurations that may vary by Windows version."
+                    "description": "Specific registry paths for monitoring Defender/HVCI configurations that may vary by Windows version.",
+                    "description_fa": "مسیرهای رجیستری خاص برای نظارت بر پیکربندی های Defender/HVCI که ممکن است بسته به نسخه ویندوز متفاوت باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0995",
+            "description_fa": "شناسایی فرآیندهایی که نسخه‌های پاورشل کاهش‌یافته (مانند نسخه ۲) یا سایر باینری‌های قدیمی را راه‌اندازی می‌کنند که فاقد گزارش یا ویژگی‌های امنیتی هستند. آرگومان های خط فرمان، فراداده های پردازش و فیلدهای نسخه را به هم مرتبط می کند. تغییرات رجیستری به کلیدهای Defender یا HVCI را که می تواند نشان دهنده کاهش عمدی باشد، نظارت می کند."
         }
     ]
 }

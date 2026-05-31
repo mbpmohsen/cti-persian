@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0211#AN0594",
-                    "external_id": "AN0594"
+                    "external_id": "AN0594",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates cloud login to host activity within a reasonable time span (e.g., < 60 seconds)"
+                    "description": "Correlates cloud login to host activity within a reasonable time span (e.g., < 60 seconds)",
+                    "description_fa": "ارتباط ورود ابر به فعالیت میزبان در یک بازه زمانی معقول (به عنوان مثال، <60 ثانیه)"
                 },
                 {
                     "field": "CloudAuthMethod",
-                    "description": "Filters based on access vector: SSH key, SSM session, or Console connect"
+                    "description": "Filters based on access vector: SSH key, SSM session, or Console connect",
+                    "description_fa": "فیلترها بر اساس بردار دسترسی: کلید SSH، جلسه SSM یا اتصال کنسول"
                 },
                 {
                     "field": "SessionOriginRegion",
-                    "description": "Identifies sessions from out-of-region or untrusted networks"
+                    "description": "Identifies sessions from out-of-region or untrusted networks",
+                    "description_fa": "جلسات را از شبکه های خارج از منطقه یا غیرقابل اعتماد شناسایی می کند"
                 },
                 {
                     "field": "TargetInstanceTags",
-                    "description": "Filters sensitive systems or production assets for alert tuning"
+                    "description": "Filters sensitive systems or production assets for alert tuning",
+                    "description_fa": "سیستم های حساس یا دارایی های تولیدی را برای تنظیم هشدار فیلتر می کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0594",
+            "description_fa": "ورود مستقیم به ماشین‌های مجازی میزبان ابر از طریق روش‌های دسترسی بومی ابری (مانند EC2 Instance Connect، کنسول سریال Azure، SSM)، و به دنبال آن اجرای فرمان یا افزایش امتیاز در VM"
         }
     ]
 }

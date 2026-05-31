@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0617#AN1675",
-                    "external_id": "AN1675"
+                    "external_id": "AN1675",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -66,31 +67,38 @@
                 {
                     "x_mitre_data_component_ref": "x-mitre-data-component--b1e0bb80-23d4-44f2-b919-7e9c54898f43",
                     "name": "android:MDMLog",
-                    "channel": "App initiating resolver\u2192pivot sequence was unmanaged or not authorized to communicate with detected web-service class or external infrastructure"
+                    "channel": "App initiating resolver→pivot sequence was unmanaged or not authorized to communicate with detected web-service class or external infrastructure"
                 }
             ],
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum allowed time between resolver retrieval and pivot connection (e.g., 5\u201360 seconds)."
+                    "description": "Maximum allowed time between resolver retrieval and pivot connection (e.g., 5–60 seconds).",
+                    "description_fa": "حداکثر زمان مجاز بین بازیابی حل‌کننده و اتصال محوری (مثلاً 5 تا 60 ثانیه)."
                 },
                 {
                     "field": "NewDomainThreshold",
-                    "description": "Defines what qualifies as a previously unseen or rare destination for the app or device."
+                    "description": "Defines what qualifies as a previously unseen or rare destination for the app or device.",
+                    "description_fa": "مشخص می کند چه چیزی به عنوان مقصدی که قبلاً دیده نشده یا نادر برای برنامه یا دستگاه است."
                 },
                 {
                     "field": "AllowedServiceToDestinationMapping",
-                    "description": "Legitimate mappings between apps and expected downstream services."
+                    "description": "Legitimate mappings between apps and expected downstream services.",
+                    "description_fa": "نگاشت قانونی بین برنامه ها و خدمات پایین دستی مورد انتظار."
                 },
                 {
                     "field": "UserInteractionThreshold",
-                    "description": "Defines acceptable delay between user interaction and network activity."
+                    "description": "Defines acceptable delay between user interaction and network activity.",
+                    "description_fa": "تأخیر قابل قبولی را بین تعامل کاربر و فعالیت شبکه تعریف می کند."
                 },
                 {
                     "field": "PayloadSizeThreshold",
-                    "description": "Small resolver responses followed by larger pivot traffic can indicate extraction behavior."
+                    "description": "Small resolver responses followed by larger pivot traffic can indicate extraction behavior.",
+                    "description_fa": "پاسخ های حل کننده کوچک و به دنبال آن ترافیک محوری بزرگتر می تواند رفتار استخراج را نشان دهد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1675",
+            "description_fa": "مدافع یک درخواست منتسب به برنامه را به یک پلتفرم وب عمومی قانونی با یک اتصال خروجی بعدی به یک مقصد تازه مشتق شده یا قبلاً دیده نشده در یک پنجره زمانی کوتاه مرتبط می کند. این رفتار زمانی تقویت می‌شود که درخواست اولیه محتوای ساختاریافته یا رمزگذاری‌شده را بازیابی می‌کند و به دنبال آن یک محور به دامنه یا IP دیگری که قبلاً برنامه با آن تماس نداشته است، بازیابی می‌شود، به‌ویژه زمانی که بدون تعامل کاربر، در حالت پس‌زمینه، یا بلافاصله پس از شروع اولیه برنامه یا اجرای برنامه‌ریزی‌شده رخ می‌دهد. این دنباله بازیابی حل کننده و به دنبال آن وضوح C2 پویا را منعکس می کند."
         }
     ]
 }

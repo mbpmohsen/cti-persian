@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0528#AN1464",
-                    "external_id": "AN1464"
+                    "external_id": "AN1464",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineRegex",
-                    "description": "Detects 'script:' moniker with HTTP/HTTPS URI as argument to pubprn.vbs"
+                    "description": "Detects 'script:' moniker with HTTP/HTTPS URI as argument to pubprn.vbs",
+                    "description_fa": "نام \"اسکریپت:\" را با URI HTTP/HTTPS به عنوان آرگومان pubprn.vbs شناسایی می کند."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "May vary between cscript.exe, wscript.exe, or cmd.exe depending on execution method"
+                    "description": "May vary between cscript.exe, wscript.exe, or cmd.exe depending on execution method",
+                    "description_fa": "بسته به روش اجرا، ممکن است بین cscript.exe، wscript.exe یا cmd.exe متفاوت باشد"
                 },
                 {
                     "field": "NetworkDestinationDomain",
-                    "description": "Used to detect external domains being contacted for remote scriptlet execution"
+                    "description": "Used to detect external domains being contacted for remote scriptlet execution",
+                    "description_fa": "برای شناسایی دامنه های خارجی که برای اجرای اسکریپت از راه دور با آنها تماس گرفته می شود استفاده می شود"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Maximum allowed time delta between pubprn.vbs invocation and network connection or child process"
+                    "description": "Maximum allowed time delta between pubprn.vbs invocation and network connection or child process",
+                    "description_fa": "حداکثر دلتای زمان مجاز بین فراخوانی pubprn.vbs و اتصال شبکه یا فرآیند فرزند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1464",
+            "description_fa": "اجرای PubPrn.vbs از طریق cscript.exe با استفاده از نام \"script:\" برای بارگیری و اجرای فایل اسکریپت .sct راه دور، دور زدن اعتبارسنجی امضا و پراکسی کردن بارهای از راه دور از طریق میزبان امضا شده اسکریپت مایکروسافت."
         }
     ]
 }

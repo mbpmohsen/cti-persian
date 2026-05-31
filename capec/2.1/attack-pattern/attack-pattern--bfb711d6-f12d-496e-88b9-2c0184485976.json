@@ -9,19 +9,24 @@
                 {
                     "external_id": "CAPEC-539",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/539.html"
+                    "url": "https://capec.mitre.org/data/definitions/539.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--bfb711d6-f12d-496e-88b9-2c0184485976",
@@ -49,11 +54,21 @@
                 "Advanced knowledge about the ASIC installed within the target system."
             ],
             "x_capec_skills_required": {
-                "High": "Able to develop and manufacture malicious subroutines for an ASIC environment without degradation of existing functions and processes."
+                "High": "Able to develop and manufacture malicious subroutines for an ASIC environment without degradation of existing functions and processes.",
+                "High_fa": "قادر به توسعه و تولید زیرروال های مخرب برای یک محیط ASIC بدون تخریب عملکردها و فرآیندهای موجود است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم با دسترسی به فرآیند محیط توسعه یک مدار مجتمع ویژه برنامه (ASIC) برای یک سیستم قربانی که پس از استقرار اولیه توسعه یا نگهداری می‌شود، می‌تواند عملکرد مخربی را به منظور ایجاد اختلال یا به خطر انداختن بیشتر در سیستم وارد کند.",
+            "name_fa": "ASIC با عملکرد مخرب",
+            "x_capec_example_instances_fa": [
+                "یک سازنده سخت افزار به طور دوره ای ASIC خود را با ویژگی های جدید به روز می کند. مهاجم که می‌داند سازنده ایمیل را روی سیستمی مجاور سیستم‌های توسعه سخت‌افزاری که برای طراحی ASIC استفاده می‌شود اجرا می‌کند، یک ایمیل فیشینگ با یک پیوست مخرب برای سازنده ارسال می‌کند. هنگام مشاهده، پیوست مخرب یک درب پشتی نصب می‌کند که به مهاجم اجازه می‌دهد از راه دور سیستم توسعه ASIC مجاور را به خطر بیاندازد. سپس مهاجم می‌تواند داده‌های حساس سیستم ASIC را استخراج کرده و تغییر دهد و به محض استقرار یک AISC جدید در محل قربانی، امکان سازش در آینده را فراهم کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید دانش کاری در مورد برخی از اجزای درگیر در سیستم هدف و همچنین زیرساخت و محیط توسعه سازنده داشته باشد.",
+                "دانش پیشرفته در مورد ASIC نصب شده در سیستم هدف."
+            ]
         }
     ],
     "type": "bundle"

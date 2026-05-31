@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0082#AN0232",
-                    "external_id": "AN0232"
+                    "external_id": "AN0232",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LoginBannerFilePath",
-                    "description": "Target file paths (e.g., /etc/motd) may be changed via symbolic link or override"
+                    "description": "Target file paths (e.g., /etc/motd) may be changed via symbolic link or override",
+                    "description_fa": "مسیرهای فایل هدف (به عنوان مثال، /etc/motd) ممکن است از طریق پیوند نمادین یا لغو تغییر کنند."
                 },
                 {
                     "field": "AccessOrigin",
-                    "description": "ESXi hostd vs. SSH-based defacement origin may affect visibility"
+                    "description": "ESXi hostd vs. SSH-based defacement origin may affect visibility",
+                    "description_fa": "میزبان ESXi در مقابل منشاء تخریب مبتنی بر SSH ممکن است روی دید تأثیر بگذارد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0232",
+            "description_fa": "دشمن بنر ورود میزبان ESXi یا فایل MOTD (/etc/motd) را از طریق دسترسی SSH یا کنسول میزبان تغییر می‌دهد. ممکن است شامل بازنویسی فایل پیکربندی یا تماس‌های API از کلاینت‌های در معرض خطر vSphere باشد."
         }
     ]
 }

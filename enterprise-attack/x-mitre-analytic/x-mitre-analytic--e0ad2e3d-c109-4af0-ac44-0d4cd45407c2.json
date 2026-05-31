@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0229#AN0642",
-                    "external_id": "AN0642"
+                    "external_id": "AN0642",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "APIQueryVolume",
-                    "description": "Set thresholds for excessive use of 'users.list' or recursive group enumerations."
+                    "description": "Set thresholds for excessive use of 'users.list' or recursive group enumerations.",
+                    "description_fa": "آستانه هایی را برای استفاده بیش از حد از 'users.list' یا شمارش های گروهی بازگشتی تنظیم کنید."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Flag non-admin or previously unseen user agents requesting directory information."
+                    "description": "Flag non-admin or previously unseen user agents requesting directory information.",
+                    "description_fa": "عامل‌های غیرمدیر یا قبلاً دیده نشده کاربر که اطلاعات فهرست را درخواست می‌کنند، پرچم‌گذاری کنید."
                 },
                 {
                     "field": "AppSource",
-                    "description": "Distinguish between sanctioned sync tools and unauthorized scripts or OAuth tokens."
+                    "description": "Distinguish between sanctioned sync tools and unauthorized scripts or OAuth tokens.",
+                    "description_fa": "بین ابزارهای همگام‌سازی تحریم‌شده و اسکریپت‌های غیرمجاز یا نشانه‌های OAuth تمایز قائل شوید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0642",
+            "description_fa": "پرس‌وجو مشکوک از داده‌های فهرست سازمانی از طریق Google Workspace Directory API یا همگام‌سازی Outlook GAL با حجم بالا از کاربران غیرعادی، حساب‌های سرویس یا زمینه‌های دستگاه ناشناخته."
         }
     ]
 }

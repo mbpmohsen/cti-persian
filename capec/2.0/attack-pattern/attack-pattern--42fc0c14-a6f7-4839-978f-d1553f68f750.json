@@ -9,37 +9,48 @@
                 {
                     "external_id": "CAPEC-443",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/443.html"
+                    "url": "https://capec.mitre.org/data/definitions/443.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Supply Chain",
                     "external_id": "T1195.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین نرم افزار به خطر افتاده",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Jon Boyens, Angela Smith, Nadya Bartol, Kris Winkler, Alex Holbrook, Matthew Fallon, Cybersecurity Supply Chain Risk Management Practices for Systems and Organizations (2nd Draft), 2021--10---28, National Institute of Standards and Technology (NIST)",
                     "external_id": "REF-379",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-draft2.pdf"
+                    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-161r1-draft2.pdf",
+                    "description_fa": "جان بوینز، آنجلا اسمیت، نادیا بارتول، کریس وینکلر، الکس هالبروک، متیو فالون، شیوه‌های مدیریت ریسک زنجیره تامین امنیت سایبری برای سیستم‌ها و سازمان‌ها (پیش‌نویس دوم)، 2021--10---28، موسسه ملی استاندارد و فناوری (NIST)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Ax Sharma, Dev corrupts NPM libs 'colors' and 'faker' breaking thousands of apps, 2022--01---09, BleepingComputer",
                     "external_id": "REF-704",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/"
+                    "url": "https://www.bleepingcomputer.com/news/security/dev-corrupts-npm-libs-colors-and-faker-breaking-thousands-of-apps/",
+                    "description_fa": "Axe Sharma، Dev Libs NPM \"رنگ ها\" و \"جعلی\" را خراب می کند و هزاران برنامه را می شکند، 2022--01---09، BleepingComputer",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Alberto Pellitteri, Malicious modifications to open source projects affecting thousands, 2022--01---12, SysDig",
                     "external_id": "REF-705",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://sysdig.com/blog/malicious-modifications-detection-sysdig/"
+                    "url": "https://sysdig.com/blog/malicious-modifications-detection-sysdig/",
+                    "description_fa": "آلبرتو پلیتری، تغییرات مخرب در پروژه های منبع باز که هزاران نفر را تحت تاثیر قرار می دهد، 2022--01---12، SysDig",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--42fc0c14-a6f7-4839-978f-d1553f68f750",
@@ -56,6 +67,9 @@
             "x_capec_consequences": {
                 "Authorization": [
                     "Execute Unauthorized Commands"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -74,7 +88,17 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از موقعیت ممتاز خود در یک سازمان توسعه مجاز برای تزریق منطق مخرب به یک پایگاه کد یا محصول استفاده می کند.",
+            "name_fa": "منطق مخرب توسط برنامه نویس مجاز در محصول وارد شده است",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در ژانویه 2022، نویسنده بسته‌های محبوب جاوا اسکریپت \"Faker\" و \"colors\" که به ترتیب برای تولید داده‌های ساختگی و شامل متن رنگی در کنسول‌های NodeJS استفاده می‌شوند، کد مخربی را معرفی کرد که منجر به انکار سرویس (DoS) از طریق یک حلقه بی‌نهایت شد. وقتی برنامه‌هایی که از این بسته‌ها استفاده می‌کردند به نسخه مخرب به‌روزرسانی می‌شدند، برنامه‌های آن‌ها حلقه بی‌نهایت را اجرا می‌کردند و کاراکترهای ASCI بی‌نهایت خروجی می‌دادند. این منجر به غیرقابل استفاده بودن برنامه تا زمانی که یک نسخه پایدار از بسته به دست آمد، شد. [REF-705]</xhtml:p>",
+                "در طول توسعه اولیه، یک توسعه‌دهنده سخت‌افزار مجاز یک میکروکنترلر مخرب را در یک دستگاه اینترنت اشیا (IOT) کاشت و میکروکنترلر را برای برقراری ارتباط با دستگاه آسیب‌پذیر برنامه‌ریزی می‌کند. هر بار که دستگاه مقداردهی اولیه می‌کند، کد میکروکنترلر مخرب اجرا می‌شود که در نهایت به دشمن امکان دسترسی درب پشتی به دستگاه آسیب‌پذیر را می‌دهد. این می‌تواند به دشمن اجازه دهد تا ترافیک شبکه را شناسایی کند، تاریخ را استخراج کند، دستورات غیرمجاز را اجرا کند و/یا به دستگاه‌های آسیب‌پذیر دیگر منتقل شود."
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p>تشخیص حملات زنجیره تامین از سوی توسعه دهندگان تایید شده یا مورد اعتماد بسیار دشوار است، زیرا به طور کلی فرض می شود که کنترل کیفیت و اقدامات امنیت داخلی این سازمان ها با بهترین شیوه ها مطابقت دارد. در برخی موارد، منطق مخرب عمدی است که توسط یک کارمند، برنامه نویس یا فردی ناراضی با دستور کار پنهان دیگری تعبیه شده است. در موارد دیگر، یکپارچگی محصول به طور تصادفی به خطر می افتد (مثلاً با از بین رفتن امنیت داخلی سازمان که منجر به آلوده شدن محصول می شود). در موارد دیگر، توسعه‌دهنده یک درب پشتی را در محصول تعبیه می‌کند تا اهدافی مانند پشتیبانی محصول را انجام دهد، اما کشف درب پشتی منجر به استفاده مخرب آن توسط دشمنان می‌شود. همچنین شایان ذکر است که این حمله می تواند در طول توسعه محصول اولیه یا در طول مدت نگهداری محصول رخ دهد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "دسترسی به محصول در طول توسعه اولیه یا مستمر."
+            ]
         }
     ],
     "spec_version": "2.0",

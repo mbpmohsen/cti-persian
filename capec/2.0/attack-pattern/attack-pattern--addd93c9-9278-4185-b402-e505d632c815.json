@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-50",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/50.html"
+                    "url": "https://capec.mitre.org/data/definitions/50.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-522",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/522.html"
+                    "url": "http://cwe.mitre.org/data/definitions/522.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-640",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/640.html"
+                    "url": "http://cwe.mitre.org/data/definitions/640.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Advisory: Unauthorized password recovery in phpBannerExchange, 2006, RedTeam Pentesting GmbH",
                     "external_id": "REF-429",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.redteam-pentesting.de/advisories/rt-sa-2006-005.txt"
+                    "url": "http://www.redteam-pentesting.de/advisories/rt-sa-2006-005.txt",
+                    "description_fa": "مشاوره: بازیابی غیرمجاز رمز عبور در phpBannerExchange، 2006، RedTeam Pentesting GmbH",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--addd93c9-9278-4185-b402-e505d632c815",
@@ -55,6 +60,15 @@
                 ],
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -78,11 +92,30 @@
             ],
             "x_capec_skills_required": {
                 "Low": "Brute force attack",
-                "Medium": "Social engineering and more sophisticated technical attacks."
+                "Medium": "Social engineering and more sophisticated technical attacks.",
+                "Low_fa": "حمله بی رحمانه",
+                "Medium_fa": "مهندسی اجتماعی و حملات فنی پیچیده تر."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم ممکن است از ویژگی برنامه برای کمک به کاربران برای بازیابی رمزهای عبور فراموش شده خود برای دسترسی به سیستم با همان امتیازات کاربر اصلی استفاده کند. به طور کلی طرح های بازیابی رمز عبور ضعیف و ناامن هستند.",
+            "name_fa": "بهره برداری بازیابی رمز عبور",
+            "x_capec_example_instances_fa": [
+                "مهاجم بر روی \"رمز عبور فراموش شده\" کلیک می کند و با یک سوال امنیتی مواجه می شود. سوال در مورد نام اولین سگ کاربر است. این سیستم تعداد تلاش برای ارائه نام سگ را محدود نمی کند. یک مهاجم لیستی از 100 نام محبوب ترین سگ را مرور می کند و نام مناسب را پیدا می کند، بنابراین می تواند رمز عبور را بازنشانی کند و به سیستم دسترسی پیدا کند.",
+                "<xhtml:p>phpBanner Exchange یک اسکریپت PHP (با استفاده از پایگاه داده mySQL) است که اجرای یک مبادله بنر را بدون دانش گسترده از PHP یا mySQL تسهیل می کند.</xhtml:p>\n               <xhtml:p>یک تزریق SQL در ماژول بازیابی رمز عبور سیستم کشف شد که امکان بازیابی رمز عبور یک کاربر دلخواه و کنترل حساب آنها را فراهم می کند. مشکل به دلیل پاکسازی ورودی معیوب در phpBannerExchange، به ویژه آدرس ایمیل کاربر است که توسط ماژول بازیابی رمز عبور درخواست شده است.</xhtml:p>\n               <xhtml:p>آدرس ایمیل درخواست شده توسط ماژول بازیابی رمز عبور در صفحه resetpw.php. این آدرس ایمیل با عبارت منظم زیر تأیید می شود:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">if(!eregi(\"^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@[a-z0-9-]+(\\.[a-z0-9-]+)*<xhtml:div style=\"margin-left:1em;\">(\\.[a-z0-9-]+(\n               </xhtml:div>\n               <xhtml:p>یک اشکال در اجرای eregi() اجازه می دهد تا با استفاده از یک بایت تهی \"\\0\" کاراکترهای اضافی را منتقل کنید. از آنجایی که eregi() در C پیاده سازی می شود، متغیر $email به عنوان یک رشته با پایانه صفر در نظر گرفته می شود. تمام کاراکترهای زیر بایت تهی توسط عبارت منظم تشخیص داده نمی شوند. بنابراین یک آدرس ایمیل می تواند ارائه شود که شامل کاراکتر ویژه \" \" برای شکستن پرس و جوی SQL زیر باشد (و به دلیل ترفند بایت تهی توسط عبارت معمولی رد نمی شود). بنابراین یک تزریق SQL ممکن می شود:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">$get_info=mysql_query(\"select * from banneruser where<xhtml:div style=\"margin-left:1em;\">email='$email' \");</xhtml:div>\n               </xhtml:div>\n               <xhtml:p>این پرس و جو یک مجموعه نتایج غیر صفر را برمی گرداند، حتی اگر ایمیل ارائه شده (ایمیل مهاجم) در پایگاه داده نباشد.</xhtml:p>\n               <xhtml:p>سپس یک رمز عبور جدید برای کاربر ایجاد می‌شود و به آدرس ایمیل $، آدرس ایمیلی که توسط مهاجم کنترل می‌شود، ارسال می‌شود. سپس یک مهاجم می تواند وارد سیستم شود.</xhtml:p>همچنین ببینید: CVE-2006-3013"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش کنید</h3><ol><li> <p>مکانیسم بازیابی رمز عبور و نحوه عملکرد آن را بدانید.</p></li></ol></div><div><h3>استفاده کنید</h3><ol><li> <p>یک نقطه ضعف در مکانیسم بازیابی رمز عبور پیدا کنید و آن را کشف کنید. به عنوان مثال، ممکن است یک نقطه ضعف این باشد که از یک سؤال امنیتی واحد استاندارد با پاسخی آسان برای تعیین آن استفاده شود.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> بیشتر آنها فقط از یک سوال امنیتی استفاده می کنند. به عنوان مثال، نام خانوادگی مادر معمولاً یک نام نسبتاً محبوب است. متأسفانه در بسیاری از موارد یافتن این اطلاعات چندان سخت نیست، به خصوص اگر مهاجم کاربر قانونی را بشناسد. این سؤالات امنیتی عمومی نیز در بسیاری از برنامه‌ها مجدداً مورد استفاده قرار می‌گیرند، بنابراین آنها را ناامن‌تر می‌کند. برای مثال، یک مهاجم می‌تواند شنیده شود که یک همکار با نماینده بانک در محل کار صحبت می‌کند و نام دختر مادرش را برای اهداف راستی‌آزمایی ارائه می‌کند. سپس یک مهاجم می‌تواند سعی کند به یکی از حساب‌های قربانی وارد شود، روی «رمز عبور را فراموش کرده‌ام» کلیک کند و احتمال زیادی وجود دارد که سؤال امنیتی در آنجا برای ارائه نام مادر وجود داشته باشد. یک طرح بازیابی رمز عبور ضعیف به طور کامل اثربخشی یک طرح رمز عبور قوی را تضعیف می کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "این سیستم به کاربران اجازه می دهد تا رمزهای عبور خود را بازیابی کنند و دوباره به سیستم دسترسی پیدا کنند.",
+                "مکانیزم بازیابی رمز عبور به صورت ناامن طراحی یا اجرا شده است.",
+                "مکانیسم بازیابی رمز عبور فقط بر چیزی است که کاربر می داند و نه چیزی که کاربر دارد.",
+                "هیچ مداخله شخص ثالثی برای استفاده از مکانیسم بازیابی رمز عبور لازم نیست."
+            ],
+            "x_capec_resources_required_fa": [
+                "برای حمله بروت فورس به ماشینی با CPU، RAM و HD کافی نیاز است."
+            ]
         }
     ],
     "spec_version": "2.0",

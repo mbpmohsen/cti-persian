@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0195#AN0560",
-                    "external_id": "AN0560"
+                    "external_id": "AN0560",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Match regex for variations in enumeration syntax (e.g., `ip -4 addr show`)"
+                    "description": "Match regex for variations in enumeration syntax (e.g., `ip -4 addr show`)",
+                    "description_fa": "تطبیق regex برای تغییرات در نحو شمارش (به عنوان مثال، \"ip -4 addr show\")"
                 },
                 {
                     "field": "InteractiveShellIndicator",
-                    "description": "Differentiate scripted versus interactive sessions"
+                    "description": "Differentiate scripted versus interactive sessions",
+                    "description_fa": "جلسات اسکریپت شده را در مقابل جلسات تعاملی متمایز کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0560",
+            "description_fa": "اجرای «ifconfig»، «ip a» یا دسترسی به «/proc/net/» که مجموعه‌ای از رابط محلی و پیکربندی مسیر را نشان می‌دهد."
         }
     ]
 }

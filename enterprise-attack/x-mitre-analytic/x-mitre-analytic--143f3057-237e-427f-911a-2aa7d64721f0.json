@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0439#AN1216",
-                    "external_id": "AN1216"
+                    "external_id": "AN1216",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousTargetPathRegex",
-                    "description": "Patterns like \\Windows\\*, \\System32\\*, or temp+execution directories"
+                    "description": "Patterns like \\Windows\\*, \\System32\\*, or temp+execution directories",
+                    "description_fa": "الگوهایی مانند \\Windows\\*، \\System32\\* یا دایرکتوری های temp+execution"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate copy+rename+delete chains within 5-minute window"
+                    "description": "Correlate copy+rename+delete chains within 5-minute window",
+                    "description_fa": "زنجیره های کپی+تغییرنام+حذف را در عرض 5 دقیقه به هم مرتبط کنید"
                 },
                 {
                     "field": "FileExtensionFilter",
-                    "description": "Limit to .exe, .dll, .js, .bat unless context suggests otherwise"
+                    "description": "Limit to .exe, .dll, .js, .bat unless context suggests otherwise",
+                    "description_fa": "محدود به exe.، .dll، .js، bat. مگر اینکه متن چیز دیگری را پیشنهاد کند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1216",
+            "description_fa": "جابه‌جایی فایل‌های اجرایی مخرب را از طریق اقدامات کپی/انتقال در پوشه‌های مشکوک (مثلاً از دانلودها به System32)، به دنبال حذف منبع اصلی یا تغییر نام برای ترکیب باینری‌های قانونی تشخیص می‌دهد."
         }
     ]
 }

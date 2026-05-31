@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0076#AN0211",
-                    "external_id": "AN0211"
+                    "external_id": "AN0211",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InterpreterPath",
-                    "description": "Mono/.NET Core binary location may differ per distro or Docker container."
+                    "description": "Mono/.NET Core binary location may differ per distro or Docker container.",
+                    "description_fa": "مکان باینری Mono/.NET Core ممکن است در هر توزیع یا ظرف داکر متفاوت باشد."
                 },
                 {
                     "field": "FileExtension",
-                    "description": ".vbs, .vb, or .vba run under non-standard interpreters."
+                    "description": ".vbs, .vb, or .vba run under non-standard interpreters.",
+                    "description_fa": "vbs، .vb یا vba. تحت مفسرهای غیر استاندارد اجرا می شود."
                 },
                 {
                     "field": "ExecContext",
-                    "description": "Execution by low-privilege users or from /tmp/."
+                    "description": "Execution by low-privilege users or from /tmp/.",
+                    "description_fa": "اجرا توسط کاربران با امتیاز پایین یا از /tmp/."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0211",
+            "description_fa": "سوء استفاده از محیط های Mono/.NET Core را برای اجرای اسکریپت های VB مانند، اغلب در محیط هایی با شبیه سازی Office یا WINE تشخیص می دهد. تمرکز بر فراخوانی‌های نادر میزبان‌های اسکریپت‌نویسی مانند پوسته‌های mono.exe یا .NET است که اغلب در فیلتر کردن هرزنامه یا آزمایشگاه‌های پزشکی قانونی با پشتیبانی Office دیده می‌شوند."
         }
     ]
 }

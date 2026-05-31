@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0219#AN0613",
-                    "external_id": "AN0613"
+                    "external_id": "AN0613",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SyscallWhitelist",
-                    "description": "Expected syscalls by containerized workloads. Deviations may signal an escape attempt."
+                    "description": "Expected syscalls by containerized workloads. Deviations may signal an escape attempt.",
+                    "description_fa": "syscals های مورد انتظار توسط بارهای کاری کانتینری. انحرافات ممکن است نشانه تلاش برای فرار باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window (e.g., 60s) between suspicious syscalls and follow-on host process activity."
+                    "description": "Defines correlation window (e.g., 60s) between suspicious syscalls and follow-on host process activity.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، دهه 60) بین syscalls مشکوک و فعالیت فرآیند میزبان بعدی را تعریف می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0613",
+            "description_fa": "شناسایی تلاش‌های فرار از کانتینر لینوکس از طریق syscalls («unshare»، «keyctl»، «mount») یا اجرای فرآیند در خارج از فضای نام کانتینر. مدافعان ممکن است فراخوانی های غیرمعمول سیستم از فرآیندهای کانتینری را با ایجاد فرآیند بعدی در میزبان یا اصلاح منابع میزبان مرتبط کنند."
         }
     ]
 }

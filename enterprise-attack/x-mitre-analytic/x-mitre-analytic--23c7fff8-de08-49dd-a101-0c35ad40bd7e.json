@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0460#AN1268",
-                    "external_id": "AN1268"
+                    "external_id": "AN1268",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PodAccessScope",
-                    "description": "Detect attempts across multiple pods/namespaces using same IP"
+                    "description": "Detect attempts across multiple pods/namespaces using same IP",
+                    "description_fa": "شناسایی تلاش‌ها در چندین غلاف/فضای نام با استفاده از IP یکسان"
                 },
                 {
                     "field": "CredentialSetSize",
-                    "description": "Number of username/password pairs used in attack attempt"
+                    "description": "Number of username/password pairs used in attack attempt",
+                    "description_fa": "تعداد جفت نام کاربری/رمز عبور استفاده شده در تلاش برای حمله"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1268",
+            "description_fa": "تلاش‌های پر کردن اعتبار علیه Kubernetes API یا پوسته‌های لاگین کانتینری با استفاده از اطلاعات کاربری سرقت شده یا لو رفته"
         }
     ]
 }

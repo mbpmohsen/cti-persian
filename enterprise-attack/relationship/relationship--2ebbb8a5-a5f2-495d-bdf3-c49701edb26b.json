@@ -13,22 +13,30 @@
                 {
                     "source_name": "Microsoft Trust Considerations Nov 2014",
                     "description": "Microsoft. (2014, November 19). Security Considerations for Trusts. Retrieved November 30, 2017.",
-                    "url": "https://technet.microsoft.com/library/cc755321.aspx"
+                    "url": "https://technet.microsoft.com/library/cc755321.aspx",
+                    "source_name_fa": "ملاحظات اعتماد مایکروسافت نوامبر 2014",
+                    "description_fa": "مایکروسافت. (2014، 19 نوامبر). ملاحظات امنیتی برای تراست ها بازبینی شده در 30 نوامبر 2017."
                 },
                 {
                     "source_name": "Microsoft SID Filtering Quarantining Jan 2009",
                     "description": "Microsoft. (n.d.). Configuring SID Filter Quarantining on External Trusts. Retrieved November 30, 2017.",
-                    "url": "https://technet.microsoft.com/library/cc794757.aspx"
+                    "url": "https://technet.microsoft.com/library/cc794757.aspx",
+                    "source_name_fa": "قرنطینه فیلتر SID مایکروسافت ژانویه 2009",
+                    "description_fa": "مایکروسافت. (n.d.). پیکربندی قرنطینه فیلتر SID در Trustهای خارجی. بازبینی شده در 30 نوامبر 2017."
                 },
                 {
                     "source_name": "Microsoft Netdom Trust Sept 2012",
                     "description": "Microsoft. (2012, September 11). Command-Line Reference - Netdom Trust. Retrieved November 30, 2017.",
-                    "url": "https://technet.microsoft.com/library/cc835085.aspx"
+                    "url": "https://technet.microsoft.com/library/cc835085.aspx",
+                    "source_name_fa": "Microsoft Netdom Trust سپتامبر 2012",
+                    "description_fa": "مایکروسافت. (2012، 11 سپتامبر). مرجع خط فرمان - Netdom Trust. بازبینی شده در 30 نوامبر 2017."
                 },
                 {
                     "source_name": "AdSecurity Kerberos GT Aug 2015",
                     "description": "Metcalf, S. (2015, August 7). Kerberos Golden Tickets are Now More Golden. Retrieved December 1, 2017.",
-                    "url": "https://adsecurity.org/?p=1640"
+                    "url": "https://adsecurity.org/?p=1640",
+                    "source_name_fa": "AdSecurity Kerberos GT آگوست 2015",
+                    "description_fa": "متکالف، اس. (2015، 7 اوت). بلیط‌های طلایی Kerberos اکنون طلایی‌تر شده‌اند. بازیابی شده در 1 دسامبر 2017."
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +49,8 @@
             "target_ref": "attack-pattern--b7dc639b-24cd-482d-a7f1-8897eda21023",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "description_fa": "پس از تکمیل انتقال قانونی حساب، ویژگی های SID-History را پاک کنید.\n\nبرای حذف SID-History از درخواست‌های دسترسی به منابع دامنه، SID Filtering را در تراست‌های بین جنگلی، مانند تراست‌های جنگلی و تراست‌های خارجی اعمال کنید. فیلتر SID تضمین می‌کند که هر درخواست احراز هویت روی یک اعتماد فقط حاوی SIDهای اصول امنیتی از دامنه مورد اعتماد باشد (یعنی جلوگیری از ادعای عضویت کاربر در گروه‌های خارج از دامنه توسط دامنه مورد اعتماد).\n\nSID فیلتر کردن تراست‌های جنگلی به‌طور پیش‌فرض فعال است، اما ممکن است در برخی موارد غیرفعال شده باشد تا به یک دامنه فرزند اجازه داده شود که به‌طور موقت به اعتمادهای جنگل دسترسی داشته باشد. SID فیلتر کردن تراست های خارجی به طور خودکار در تمام تراست های خارجی ایجاد شده با استفاده از کنترل کننده های دامنه سرور 2003 یا جدیدتر فعال می شود. (Citation: Microsoft Trust Considerations Nov 2014) (Citation: Microsoft SID Filtering Quarantining Jan 2009) با این حال توجه داشته باشید که فیلتر SID به طور خودکار برای تراست های قدیمی اعمال نمی شود یا ممکن است عمداً غیرفعال شده باشد تا دسترسی بین دامنه به منابع را امکان پذیر کند.\n\nفیلتر SID را می توان توسط: (Citation: Microsoft Netdom Trust Sept 2012) اعمال کرد\n\n* غیرفعال کردن SIDHistory در تراست های جنگلی با استفاده از ابزار شبکه (<code>netdom trust /domain: /EnableSIDHistory:no</code> در کنترل کننده دامنه)\n\n* اعمال قرنطینه فیلتر SID برای تراست های خارجی با استفاده از ابزار شبکه (<code>netdom trust <TrustingDomainName> /domain:<TrustedDomainName> /quarantine:yes</code> در کنترل کننده دامنه)\n\n* اعمال فیلتر SID در تراست های دامنه در یک جنگل منفرد توصیه نمی شود زیرا یک پیکربندی پشتیبانی نشده است و می تواند باعث شکسته شدن تغییرات شود. (Citation: Microsoft Netdom Trust Sept 2012) (Citation: AdSecurity Kerberos GT Aug 2015) اگر دامنه ای در جنگل غیرقابل اعتماد باشد، نباید عضوی از جنگل باشد. در این شرایط لازم است ابتدا دامنه های قابل اعتماد و نامعتبر به جنگل های جداگانه تقسیم شوند که در آن فیلتر SID می تواند در یک تراست بین جنگلی اعمال شود."
         }
     ]
 }

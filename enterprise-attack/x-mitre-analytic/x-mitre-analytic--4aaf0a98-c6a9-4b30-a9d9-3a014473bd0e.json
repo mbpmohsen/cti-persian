@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0287#AN0799",
-                    "external_id": "AN0799"
+                    "external_id": "AN0799",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0799",
-            "description": "Cause\u2192effect chain: (1) App crash/abnormal termination in unified logs for Safari/Chrome/Office/Preview, (2) new files/scripts in ~/Library, ~/Downloads, /private/var/folders/*, (3) unexpected child (osascript, zsh, bash, curl) spawned by those apps, (4) new outbound connections.",
+            "description": "Cause→effect chain: (1) App crash/abnormal termination in unified logs for Safari/Chrome/Office/Preview, (2) new files/scripts in ~/Library, ~/Downloads, /private/var/folders/*, (3) unexpected child (osascript, zsh, bash, curl) spawned by those apps, (4) new outbound connections.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "10\u201330m correlation window."
+                    "description": "10–30m correlation window.",
+                    "description_fa": "پنجره همبستگی 10 تا 30 متر."
                 },
                 {
                     "field": "HighRiskChildren",
-                    "description": "osascript, bash, zsh, curl, python, pbpaste/pbcopy, open -a Terminal."
+                    "description": "osascript, bash, zsh, curl, python, pbpaste/pbcopy, open -a Terminal.",
+                    "description_fa": "osascript، bash، zsh، curl، python، pbpaste/pbcopy، open -a Terminal."
                 },
                 {
                     "field": "UserPaths",
-                    "description": "~/Library/LaunchAgents, ~/Library/Containers/*/Data, /private/var/folders/*."
+                    "description": "~/Library/LaunchAgents, ~/Library/Containers/*/Data, /private/var/folders/*.",
+                    "description_fa": "~/Library/LaunchAgents، ~/Library/Containers/*/Data، /private/var/folders/*."
                 },
                 {
                     "field": "QuarantineBypass",
-                    "description": "Flag files with missing com.apple.quarantine extended attribute when sourced from internet."
+                    "description": "Flag files with missing com.apple.quarantine extended attribute when sourced from internet.",
+                    "description_fa": "وقتی از اینترنت تهیه می‌شوند، فایل‌های دارای ویژگی com.apple.quarantine توسعه‌یافته را پرچم‌گذاری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0799",
+            "description_fa": "زنجیره علت → پیامد: (1) خرابی برنامه/خاتمه غیرعادی در گزارش‌های یکپارچه برای Safari/Chrome/Office/Preview، (2) فایل‌ها/اسکریپت‌های جدید در ~/Library، ~/دانلودها، /private/var/folders/*، (3) فرزند غیرمنتظره (osascript، zshound، بسته شده) اتصالات"
         }
     ]
 }

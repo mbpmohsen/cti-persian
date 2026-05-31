@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0482#AN1324",
-                    "external_id": "AN1324"
+                    "external_id": "AN1324",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1324",
-            "description": "Detection of token duplication and impersonation attempts by correlating suspicious command-line executions (e.g., runas) with API calls to DuplicateToken, DuplicateTokenEx, ImpersonateLoggedOnUser, or SetThreadToken. The chain includes the initial command execution or in-memory API invocation \u2192 token handle duplication or thread token assignment \u2192 a new or existing process assuming the impersonated user's context.",
+            "description": "Detection of token duplication and impersonation attempts by correlating suspicious command-line executions (e.g., runas) with API calls to DuplicateToken, DuplicateTokenEx, ImpersonateLoggedOnUser, or SetThreadToken. The chain includes the initial command execution or in-memory API invocation → token handle duplication or thread token assignment → a new or existing process assuming the impersonated user's context.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedSystemProcesses",
-                    "description": "Whitelist of known processes that legitimately duplicate tokens (e.g., services.exe)."
+                    "description": "Whitelist of known processes that legitimately duplicate tokens (e.g., services.exe).",
+                    "description_fa": "لیست سفید فرآیندهای شناخته شده ای که به طور قانونی توکن ها را کپی می کنند (مانند services.exe)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time interval between API call and subsequent impersonated process (e.g., 5m)."
+                    "description": "Time interval between API call and subsequent impersonated process (e.g., 5m).",
+                    "description_fa": "فاصله زمانی بین تماس API و فرآیند جعل هویت بعدی (به عنوان مثال، 5 متر)."
                 },
                 {
                     "field": "UserContextFilter",
-                    "description": "Filter for service accounts or known administrative accounts that perform legitimate impersonation."
+                    "description": "Filter for service accounts or known administrative accounts that perform legitimate impersonation.",
+                    "description_fa": "برای حساب‌های سرویس یا حساب‌های اداری شناخته شده که جعل هویت مشروع را انجام می‌دهند، فیلتر کنید."
                 },
                 {
                     "field": "ParentProcessAnomalyThreshold",
-                    "description": "Threshold for parent-child process lineage anomalies indicating token theft."
+                    "description": "Threshold for parent-child process lineage anomalies indicating token theft.",
+                    "description_fa": "آستانه برای ناهنجاری های نسب فرآیند والد-فرزند که نشان دهنده سرقت توکن است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1324",
+            "description_fa": "شناسایی تلاش‌های تکراری و جعل هویت از طریق مرتبط کردن اجرای خط فرمان مشکوک (مانند runs) با فراخوان‌های API به DuplicateToken، DuplicateTokenEx، ImpersonateLoggedOnUser، یا SetThreadToken. این زنجیره شامل اجرای دستور اولیه یا فراخوانی API در حافظه ← تکراری شدن دسته نشانه یا تخصیص نشانه رشته ← یک فرآیند جدید یا موجود با فرض بافت کاربر جعل شده است."
         }
     ]
 }

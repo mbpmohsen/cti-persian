@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0027#AN0075",
-                    "external_id": "AN0075"
+                    "external_id": "AN0075",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessNameExclusions",
-                    "description": "Filter out legitimate browser/network utilities"
+                    "description": "Filter out legitimate browser/network utilities",
+                    "description_fa": "ابزارهای قانونی مرورگر/شبکه ​​را فیلتر کنید"
                 },
                 {
                     "field": "UserAgentAnomalies",
-                    "description": "Detect non-browser user-agents or spoofed headers"
+                    "description": "Detect non-browser user-agents or spoofed headers",
+                    "description_fa": "عوامل کاربر غیر مرورگر یا هدرهای جعلی را شناسایی کنید"
                 },
                 {
                     "field": "OutboundByteRatioThreshold",
-                    "description": "Flag when outbound > inbound volume by 90%+"
+                    "description": "Flag when outbound > inbound volume by 90%+",
+                    "description_fa": "پرچم‌گذاری هنگام خروج > حجم ورودی با %90+"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0075",
+            "description_fa": "ارتباطات HTTP/S/WebSocket غیرمنتظره یا با حجم بالا را از فرآیندهای مشکوک (مانند PowerShell، rundll32) با استفاده از عوامل کاربر غیر معمول یا تقلید از ترافیک مرورگر به دامنه‌ها یا IPهای غیرمعمول شناسایی می‌کند."
         }
     ]
 }

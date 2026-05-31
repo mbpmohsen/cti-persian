@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0515#AN1427",
-                    "external_id": "AN1427"
+                    "external_id": "AN1427",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1427",
-            "description": "Programmatic access to user content via stolen access tokens in platforms like Slack, GitHub, Google Workspace \u2014 especially from new IPs, apps, or excessive resource access.",
+            "description": "Programmatic access to user content via stolen access tokens in platforms like Slack, GitHub, Google Workspace — especially from new IPs, apps, or excessive resource access.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "GeoVelocity",
-                    "description": "Flag when token use appears across geographically distant logins"
+                    "description": "Flag when token use appears across geographically distant logins",
+                    "description_fa": "زمانی که استفاده از رمز در ورودی های جغرافیایی دور ظاهر می شود، پرچم گذاری کنید"
                 },
                 {
                     "field": "OAuthScopeSensitivity",
-                    "description": "Weight certain scopes (admin, file.read) as higher risk"
+                    "description": "Weight certain scopes (admin, file.read) as higher risk",
+                    "description_fa": "وزن محدوده های خاص (admin، file.read) به عنوان خطر بالاتر"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1427",
+            "description_fa": "دسترسی برنامه‌ریزی شده به محتوای کاربر از طریق نشانه‌های دسترسی به سرقت رفته در پلتفرم‌هایی مانند Slack، GitHub، Google Workspace - به‌ویژه از IPهای جدید، برنامه‌ها یا دسترسی بیش از حد به منابع."
         }
     ]
 }

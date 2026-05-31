@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0138#AN0388",
-                    "external_id": "AN0388"
+                    "external_id": "AN0388",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "InstallUtilPathRegex",
-                    "description": "Regex pattern for InstallUtil.exe in .NET directories; tune to exclude known good administrative scripts"
+                    "description": "Regex pattern for InstallUtil.exe in .NET directories; tune to exclude known good administrative scripts",
+                    "description_fa": "الگوی Regex برای InstallUtil.exe در دایرکتوری های NET. تنظیم برای حذف اسکریپت های اداری خوب شناخته شده"
                 },
                 {
                     "field": "AssemblyPathRegex",
-                    "description": "Patterns for identifying suspicious assemblies (e.g., in temp folders, user profiles)"
+                    "description": "Patterns for identifying suspicious assemblies (e.g., in temp folders, user profiles)",
+                    "description_fa": "الگوهایی برای شناسایی مجموعه های مشکوک (به عنوان مثال، در پوشه های موقت، نمایه های کاربر)"
                 },
                 {
                     "field": "ChildProcessList",
-                    "description": "List of suspicious child processes spawned from InstallUtil.exe (e.g., cmd.exe, powershell.exe, rundll32.exe)"
+                    "description": "List of suspicious child processes spawned from InstallUtil.exe (e.g., cmd.exe, powershell.exe, rundll32.exe)",
+                    "description_fa": "فهرستی از فرآیندهای فرزند مشکوک ایجاد شده از InstallUtil.exe (مانند cmd.exe، powershell.exe، rundll32.exe)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation window between file creation of assembly and its execution via InstallUtil.exe"
+                    "description": "Time correlation window between file creation of assembly and its execution via InstallUtil.exe",
+                    "description_fa": "پنجره همبستگی زمانی بین ایجاد فایل اسمبلی و اجرای آن از طریق InstallUtil.exe"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0388",
+            "description_fa": "اجرای InstallUtil.exe از دایرکتوری های فریمورک دات نت با آرگومان هایی که مجموعه های غیراستاندارد یا ارائه شده توسط مهاجم را مشخص می کند، به ویژه زمانی که به دنبال ایجاد فرآیند فرزند مشکوک یا اجرای اسکریپت باشد. تشخیص همچنین شامل همبستگی باینری های جدید ایجاد شده قبل از فراخوانی InstallUtil و استفاده غیرعادی از خط فرمان در مقایسه با خطوط پایه تاریخی است."
         }
     ]
 }

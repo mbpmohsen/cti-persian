@@ -9,36 +9,46 @@
                 {
                     "external_id": "CAPEC-199",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/199.html"
+                    "url": "https://capec.mitre.org/data/definitions/199.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-87",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/87.html"
+                    "url": "http://cwe.mitre.org/data/definitions/87.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "OWASP Cheatsheets, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-69",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.owasp.org/www-community/xss-filter-evasion-cheatsheet"
+                    "url": "https://www.owasp.org/www-community/xss-filter-evasion-cheatsheet",
+                    "description_fa": "OWASP Cheatsheets، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Testing Guide (v2), The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-70",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.owasp.org/index.php/Testing_for_Cross_site_scripting"
+                    "url": "http://www.owasp.org/index.php/Testing_for_Cross_site_scripting",
+                    "description_fa": "راهنمای تست OWASP (v2)، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Non-alphanumeric XSS cheat sheet",
                     "external_id": "REF-71",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://sla.ckers.org/forum/read.php?24,28687"
+                    "url": "http://sla.ckers.org/forum/read.php?24,28687",
+                    "description_fa": "برگه تقلب XSS غیر الفبایی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "WASC Threat Classification 2.0, 2010, The Web Application Security Consortium (WASC)",
                     "external_id": "REF-72",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://projects.webappsec.org/Cross-Site+Scripting"
+                    "url": "http://projects.webappsec.org/Cross-Site+Scripting",
+                    "description_fa": "WASC Threat Classification 2.0، 2010، کنسرسیوم امنیت برنامه های وب (WASC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--b703f007-6e24-4365-b5f7-c5d249253b33",
@@ -77,6 +87,29 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -97,11 +130,25 @@
             ],
             "x_capec_skills_required": {
                 "High": "To bypass non trivial filters in the application",
-                "Low": "To inject the malicious payload in a web page"
+                "Low": "To inject the malicious payload in a web page",
+                "High_fa": "برای دور زدن فیلترهای غیر پیش پا افتاده در برنامه",
+                "Low_fa": "برای تزریق بار مخرب در یک صفحه وب"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف از فرم‌های جایگزینی از کلیدواژه‌ها یا دستورات استفاده می‌کند که منجر به عملکردی مشابه فرم اولیه می‌شود، اما ممکن است توسط فیلترها دستگیر نشود. به عنوان مثال، بسیاری از کلمات کلیدی به روشی غیر حساس پردازش می شوند. اگر الگوریتم فیلتر وب سایت همه برچسب ها را قبل از مقایسه با کلمات کلیدی ممنوعه به یک مورد ثابت تبدیل نکند، می توان با استفاده از ساختار حروف متناوب از فیلترها (به عنوان مثال، لیست سیاه ناقص) عبور کرد. به عنوان مثال، برچسب \"script\" با استفاده از فرم های جایگزین \"Script\" یا \"ScRiPt\" ممکن است فیلترهایی را دور بزند که در آن \"script\" تنها فرم آزمایش شده است. انواع دیگر با استفاده از نمایش های نحوی مختلف نیز امکان پذیر است و همچنین از متا کاراکترها یا موجودیت های آلودگی استفاده می شود که در نهایت توسط موتور رندر نادیده گرفته می شوند. این حمله می تواند منجر به اجرای عملکردی شود که در غیر این صورت ممنوع است.",
+            "name_fa": "XSS با استفاده از نحو جایگزین",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در این مثال، دشمن تلاش می‌کند تا <script>alert(1)</script> را توسط مرورگر قربانی اجرا کند. برنامه هدف از عبارات منظم استفاده می کند تا مطمئن شود هیچ اسکریپتی از طریق برنامه به صفحه وب منتقل نمی شود. چنین عبارت منظمی می تواند ((?i)script) باشد، و برنامه تمام مطابقت های این regex را با رشته خالی جایگزین می کند. سپس یک دشمن یک بار ویژه برای دور زدن این فیلتر ایجاد می کند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\"><scriscriptpt>هشدار(1)</scscriptript></xhtml:div>\n               <xhtml:p>وقتی برنامه‌ها این رشته ورودی را دریافت می‌کنند، تمام \"اسکریپت\" (غیرحساس به حروف کوچک) با رشته خالی جایگزین می‌شود و ورودی حاصل بردار مورد نظر حریف خواهد بود:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"result\"><script>alert(1)</script></xhtml:div>\n               <xhtml:p>در این مثال، فرض می‌کنیم که برنامه باید یک رشته خاص را در زمینه جاوا اسکریپت سمت کلاینت بنویسد (به عنوان مثال، <script>HERE</script>). برای اینکه حریف بتواند همان payload را مانند مثال قبلی اجرا کند، در صورت عدم وجود فیلتر، باید هشدار (1) را ارسال کند. برنامه از عبارت منظم زیر به عنوان فیلتر</xhtml:p> استفاده می کند\n               <xhtml:div style=\"margin-left:1em;\" class=\"mitigation\">((\\w+)\\s*\\(.*\\)|هشدار|eval|عملکرد|سند)</xhtml:div>\n               <xhtml:p> و تمام موارد منطبق را با رشته خالی جایگزین می کند. به عنوان مثال، هر رخداد alert()، eval()، foo() یا حتی رشته \"alert\" حذف می شود. سپس یک دشمن یک بار ویژه برای دور زدن این فیلتر ایجاد می کند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">این['al' + 'ert'](1)</xhtml:div>\n               <xhtml:p>وقتی برنامه‌ها این رشته ورودی را دریافت می‌کنند، جایگزین چیزی نمی‌شود و این قطعه از جاوا اسکریپت دقیقاً همان معنای زمان اجرا (1) را دارد. دشمن همچنین می توانست از بردارهای غیرالفبایی XSS برای دور زدن فیلتر استفاده کند. برای مثال،</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"attack\">($=[$=[]][(__=!$+$)[_=-~-~-~$]+({}+$)[_/_]+($$=($_=!''+$)[_/_]+$_[+$])])()[__[_/_]+__[_+~$]+\n               <xhtml:p> توسط موتور جاوا اسکریپت مانند alert(1) اجرا می شود.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه را برای ورودی‌های قابل کنترل کاربر بررسی کنید: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، دشمن همه پیوندها و اقدامات عمومی را در یک وب‌سایت دنبال می‌کند. آنها همه پیوندها، فرم‌ها، منابع دسترسی و سایر نقاط ورود بالقوه را برای برنامه وب ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها استفاده کنید. هر پیوندی را که شامل پارامترهایی در URL است یادداشت ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ضبط همه پیوندهای بازدید شده در طول پیمایش دستی برنامه وب استفاده کنید. هر پیوندی که شامل پارامترهایی در URL است را یادداشت ویژه داشته باشید. پیمایش دستی از این نوع اغلب برای شناسایی فرم هایی که فرم های متد GET هستند به جای فرم های POST ضروری است.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب سایت و تجزیه و تحلیل نحوه ساخت آن استفاده کنید. بسیاری از افزونه‌های مرورگر برای تسهیل تجزیه و تحلیل یا خودکار کردن کشف URL در دسترس هستند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>بررسی نقاط ورودی بالقوه برای آسیب‌پذیری XSS: </b>احتمالاً با استفاده از یک ابزار بررسی خودکار، آنها را با استفاده از یک ابزار بررسی خودکار در یک ابزار بررسی قرار می‌دهند. با استفاده از نحو جایگزین این ورودی‌ها برای دور زدن فیلتر ناقص (به عنوان مثال، کدگذاری ناقص HTML و غیره) طراحی شده‌اند و انواع مختلفی از تزریق کاراکترها را امتحان می‌کنند که بار XSS را فعال می‌کند. آنها تمام پاسخ‌های سرور را که شامل نسخه‌های اصلاح‌نشده اسکریپتشان است، ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از فهرستی از رشته‌های پروب XSS برای تزریق در پارامترهای URLهای شناخته شده استفاده کنید. در صورت امکان، رشته های پروب حاوی یک شناسه منحصر به فرد هستند. سعی کنید تغییرات متعددی بر اساس شکل، قالب، نحو و رمزگذاری انجام دهید.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت نتایج ورودی دستی پروب های XSS در URL های شناخته شده استفاده کنید.</td></tr></tbody></table><li> <p> <b>Craft مخرب XSS، هنگامی که آدرس XSS مخرب را مشخص می کند: </b>هنگامی که URL های XSS مخرب را مشخص کنند یک URL مخرب حاوی اکسپلویت XSS ایجاد کنید. حریف می‌تواند اهداف زیادی داشته باشد، از سرقت شناسه‌های جلسه، کوکی‌ها، اعتبارنامه‌ها و محتوای صفحه از قربانی.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک پارامتر URL را تغییر دهید تا شامل یک تگ اسکریپت مخرب ایجاد شده با استفاده از نحو جایگزین برای جمع‌آوری اطلاعات <d><t><tbody><tbody><tr><tr><td. اسکریپت به یک نقطه پایانی راه دور.</td></tr></tbody></table></ol></div><div><h3>استثمار</h3><ol><li> <p> <b>قرار دهید قربانی روی URL کلیک کند: </b>برای موفقیت آمیز بودن حمله، قربانی باید به موارد مخرب دسترسی داشته باشد. URL.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک ایمیل فیشینگ حاوی URL مخرب برای قربانی ارسال کنید. این را می توان در یک ابرپیوند پنهان کرد تا نشانی اینترنتی کامل نشان داده نشود، که ممکن است باعث شک شود.</td></tr><tr><td>نشانی اینترنتی مخرب را در یک انجمن عمومی قرار دهید، جایی که بسیاری از قربانیان ممکن است به طور تصادفی روی پیوند کلیک کنند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار مشتری هدف باید اجازه اسکریپت نویسی مانند جاوا اسکریپت را بدهد."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان ارسال درخواست HTTP به برنامه تحت وب."
+            ]
         }
     ],
     "spec_version": "2.0",

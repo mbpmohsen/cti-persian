@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0115#AN0320",
-                    "external_id": "AN0320"
+                    "external_id": "AN0320",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredServices",
-                    "description": "List of third-party services (e.g., Gmail, LinkedIn, Dropbox) relevant to the organization\u2019s threat profile."
+                    "description": "List of third-party services (e.g., Gmail, LinkedIn, Dropbox) relevant to the organization’s threat profile.",
+                    "description_fa": "فهرست خدمات شخص ثالث (به عنوان مثال، Gmail، LinkedIn، Dropbox) مرتبط با نمایه تهدید سازمان."
                 },
                 {
                     "field": "SuspiciousProcessPatterns",
-                    "description": "Process lineage and parent-child execution relationships considered abnormal (e.g., outlook.exe \u2192 powershell.exe)."
+                    "description": "Process lineage and parent-child execution relationships considered abnormal (e.g., outlook.exe → powershell.exe).",
+                    "description_fa": "نسب فرآیند و روابط اجرای والد-فرزند غیرعادی در نظر گرفته می‌شوند (به عنوان مثال، outlook.exe → powershell.exe)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates file creation and outbound connection activity within a tunable time period after message receipt."
+                    "description": "Correlates file creation and outbound connection activity within a tunable time period after message receipt.",
+                    "description_fa": "ایجاد فایل و فعالیت اتصال خروجی را در یک بازه زمانی قابل تنظیم پس از دریافت پیام به هم مرتبط می کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0320",
+            "description_fa": "تلاش‌های spearphishing ورودی از طریق سرویس‌های شخص ثالث (به عنوان مثال، پیام‌های Gmail، LinkedIn) که منجر به دانلود فایل‌های مخرب یا اجرای اسکریپت توسط مرورگر می‌شود. نمای Defender شامل ارتباط ورودهای سرویس خارجی، عملیات نوشتن فایل غیرمنتظره، و فرآیندهای مشکوک نواده ناشی از بهره‌وری یا برنامه‌های مرورگر است."
         }
     ]
 }

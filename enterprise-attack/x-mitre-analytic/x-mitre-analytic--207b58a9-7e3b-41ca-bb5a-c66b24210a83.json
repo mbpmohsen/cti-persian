@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0134#AN0378",
-                    "external_id": "AN0378"
+                    "external_id": "AN0378",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "Credential Locker paths such as %Systemdrive%\\Users\\*\\AppData\\Local\\Microsoft\\Credentials and %Systemdrive%\\Users\\*\\AppData\\Local\\Microsoft\\Vault"
+                    "description": "Credential Locker paths such as %Systemdrive%\\Users\\*\\AppData\\Local\\Microsoft\\Credentials and %Systemdrive%\\Users\\*\\AppData\\Local\\Microsoft\\Vault",
+                    "description_fa": "مسیرهای Credential Locker مانند %Systemdrive%\\Users\\*\\AppData\\Local\\Microsoft\\Credentials و %Systemdrive%\\Users\\*\\AppData\\Local\\Microsoft\\Vault"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between process execution, file access, and API calls"
+                    "description": "Correlation window between process execution, file access, and API calls",
+                    "description_fa": "پنجره همبستگی بین اجرای فرآیند، دسترسی به فایل و فراخوانی های API"
                 },
                 {
                     "field": "PrivilegedUsers",
-                    "description": "Baseline of expected administrative/service accounts with legitimate Credential Manager access"
+                    "description": "Baseline of expected administrative/service accounts with legitimate Credential Manager access",
+                    "description_fa": "پایه حساب‌های اداری/خدماتی مورد انتظار با دسترسی قانونی Credential Manager"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0378",
+            "description_fa": "دسترسی غیرمجاز به مدیر اعتبار ویندوز را از طریق اجرای فرآیند غیرعادی (vaultcmd.exe، rundll32.exe keymgr.dll)، تماس‌های مشکوک API (CredEnumerateA)، یا دسترسی مستقیم فایل به فایل‌های Credential Locker شناسایی می‌کند. ایجاد فرآیند را با خواندن فایل های بعدی فایل های .vcrd/.vpol در دایرکتوری های Credential Locker کاربر مرتبط می کند."
         }
     ]
 }

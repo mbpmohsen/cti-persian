@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0172#AN0488",
-                    "external_id": "AN0488"
+                    "external_id": "AN0488",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,38 +61,48 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between developer utility execution, payload write, and network egress (e.g., 0\u201330 minutes)."
+                    "description": "Correlation window between developer utility execution, payload write, and network egress (e.g., 0–30 minutes).",
+                    "description_fa": "پنجره همبستگی بین اجرای برنامه توسعه دهنده، نوشتن بار و خروجی شبکه (به عنوان مثال، 0 تا 30 دقیقه)."
                 },
                 {
                     "field": "AllowedUtilitiesList",
-                    "description": "Org-specific list of dev utilities legitimately used on build/dev hosts to suppress noise."
+                    "description": "Org-specific list of dev utilities legitimately used on build/dev hosts to suppress noise.",
+                    "description_fa": "فهرست سازمانی خاص از ابزارهای توسعه دهنده که به طور قانونی در میزبان های build/dev برای سرکوب نویز استفاده می شوند."
                 },
                 {
                     "field": "DeveloperHosts",
-                    "description": "List of known developer/build systems where these tools are expected; raise severity off-host."
+                    "description": "List of known developer/build systems where these tools are expected; raise severity off-host.",
+                    "description_fa": "فهرستی از سیستم‌های توسعه‌دهنده/ساخت شناخته‌شده که این ابزارها مورد انتظار هستند. افزایش شدت خارج از میزبان"
                 },
                 {
                     "field": "SuspiciousChildList",
-                    "description": "Child processes considered high-risk when spawned by dev utilities (powershell.exe, rundll32.exe, regsvr32.exe, cmd.exe, wscript.exe, mshta.exe)."
+                    "description": "Child processes considered high-risk when spawned by dev utilities (powershell.exe, rundll32.exe, regsvr32.exe, cmd.exe, wscript.exe, mshta.exe).",
+                    "description_fa": "فرآیندهای کودک زمانی که توسط ابزارهای توسعه‌دهنده (powershell.exe، rundll32.exe، regsvr32.exe، cmd.exe، wscript.exe، mshta.exe) ایجاد می‌شوند، پرخطر در نظر گرفته می‌شوند."
                 },
                 {
                     "field": "RarePathRegex",
-                    "description": "Regex of user-writable or atypical paths (e.g., %TEMP%, %APPDATA%, recycle bin, public profile) for payload drops."
+                    "description": "Regex of user-writable or atypical paths (e.g., %TEMP%, %APPDATA%, recycle bin, public profile) for payload drops.",
+                    "description_fa": "Regex مسیرهای قابل نوشتن توسط کاربر یا غیر معمول (به عنوان مثال، %TEMP، %APPDATA، سطل بازیافت، نمایه عمومی) برای افت بار."
                 },
                 {
                     "field": "UnsignedOrInvalidSignatureOnly",
-                    "description": "Toggle to alert only when child/payload is unsigned or signature invalid to reduce noise."
+                    "description": "Toggle to alert only when child/payload is unsigned or signature invalid to reduce noise.",
+                    "description_fa": "برای کاهش نویز، فقط زمانی که فرزند/بار محموله بدون امضا یا امضا نامعتبر است، هشدار را تغییر دهید."
                 },
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Known orchestrators (e.g., CI/CD agents) that often run these utilities legitimately."
+                    "description": "Known orchestrators (e.g., CI/CD agents) that often run these utilities legitimately.",
+                    "description_fa": "ارکسترهای شناخته شده (مانند عوامل CI/CD) که اغلب این برنامه ها را به طور قانونی اجرا می کنند."
                 },
                 {
                     "field": "NetworkReputationThreshold",
-                    "description": "Heuristic for rare/unknown destination (no DNS reputation, new domain, geo outside region)."
+                    "description": "Heuristic for rare/unknown destination (no DNS reputation, new domain, geo outside region).",
+                    "description_fa": "اکتشافی برای مقصد نادر/ناشناخته (بدون شهرت DNS، دامنه جدید، منطقه جغرافیایی خارج از کشور)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0488",
+            "description_fa": "یک ابزار توسعه‌دهنده قابل اعتماد/امضا (والد) در یک زمینه غیر توسعه‌دهنده اجرا می‌شود و (الف) فرزندان مشکوک را ایجاد می‌کند (مانند powershell.exe، cmd.exe، rundll32.exe، regsvr32.exe، wscript.exe)، (ب) یک DPE بدون علامت/نویسنده و سپس نوشتن (نوشته‌شده توسط کاربر) را بارگیری می‌کند. مسیرهای قابل نوشتن توسط کاربر، و/یا (د) بلافاصله اتصالات شبکه خروجی را ایجاد می کند."
         }
     ]
 }

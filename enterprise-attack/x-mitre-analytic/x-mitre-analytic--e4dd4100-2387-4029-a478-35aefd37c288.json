@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0083#AN0233",
-                    "external_id": "AN0233"
+                    "external_id": "AN0233",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,22 +61,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedUserAgents",
-                    "description": "List of CI/CD pipeline runners, SRE tools, or cluster mgmt agents allowed to invoke API/CLI commands in containers."
+                    "description": "List of CI/CD pipeline runners, SRE tools, or cluster mgmt agents allowed to invoke API/CLI commands in containers.",
+                    "description_fa": "فهرست راه‌اندازهای خط لوله CI/CD، ابزارهای SRE یا عوامل mgmt خوشه‌ای که مجاز به فراخوانی دستورات API/CLI در کانتینرها هستند."
                 },
                 {
                     "field": "NewImageThreshold",
-                    "description": "Threshold for alerting on unseen container images pulled and executed. Adjust to reduce noise from frequent deploys."
+                    "description": "Threshold for alerting on unseen container images pulled and executed. Adjust to reduce noise from frequent deploys.",
+                    "description_fa": "آستانه برای هشدار در مورد تصاویر کانتینر دیده نشده کشیده و اجرا شده است. برای کاهش نویز ناشی از استقرار مکرر تنظیم کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal window to correlate container exec with shell spawn and network activity (default: 2 minutes)."
+                    "description": "Temporal window to correlate container exec with shell spawn and network activity (default: 2 minutes).",
+                    "description_fa": "پنجره زمانی برای ارتباط exec کانتینر با تخم ریزی پوسته و فعالیت شبکه (پیش فرض: 2 دقیقه)."
                 },
                 {
                     "field": "InteractiveSessionExpectation",
-                    "description": "Set whether shell spawns without TTY or PTY should be flagged \u2014 based on org deployment model."
+                    "description": "Set whether shell spawns without TTY or PTY should be flagged — based on org deployment model.",
+                    "description_fa": "تنظیم کنید که آیا پوسته بدون TTY یا PTY باید علامت گذاری شود - بر اساس مدل استقرار سازمان."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0233",
+            "description_fa": "اجرای دستورات هماهنگ سازی کانتینر (به عنوان مثال، \"docker exec\"، \"kubectl exec\") یا تعاملات مبتنی بر API با کانتینرهای در حال اجرا از میزبان های غیرمجاز یا زمینه های کاربر غیر استاندارد. Defender اجرای دستورات برنامه‌ای یا تعاملی را در کانتینرهایی خارج از ابزارهای CI/CD یا چارچوب‌های اتوماسیون مورد انتظار می‌بیند که اغلب با نوشتن فایل، افزایش امتیاز یا کشف جانبی دنبال می‌شود."
         }
     ]
 }

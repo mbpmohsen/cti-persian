@@ -9,22 +9,27 @@
                 {
                     "external_id": "CAPEC-4",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/4.html"
+                    "url": "https://capec.mitre.org/data/definitions/4.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-291",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/291.html"
+                    "url": "http://cwe.mitre.org/data/definitions/291.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-173",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/173.html"
+                    "url": "http://cwe.mitre.org/data/definitions/173.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--00d91a4c-2645-4bf1-8db7-e7448ef25f17",
@@ -47,6 +52,15 @@
                 ],
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -65,11 +79,26 @@
                 "The adversary needs to have knowledge of an alternative IP address encoding that bypasses the access control policy of an application. Alternatively, the adversary can simply try to brute-force various encoding possibilities."
             ],
             "x_capec_skills_required": {
-                "Low": "The adversary has only to try IP address format combinations."
+                "Low": "The adversary has only to try IP address format combinations.",
+                "Low_fa": "حریف فقط باید ترکیبات قالب آدرس IP را امتحان کند.",
+                "Low_fa_fa": "حریف فقط باید ترکیبات قالب آدرس IP را امتحان کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله به دشمن متکی است که از فرمت های غیرمنتظره برای نشان دادن آدرس های IP استفاده می کند. برنامه های کاربردی شبکه ممکن است انتظار اطلاعات موقعیت شبکه را در قالب خاصی داشته باشند، مانند نام دامنه های کاملاً واجد شرایط (FQDN)، URL، آدرس IP، یا محدوده آدرس IP. اگر اطلاعات مکان در برابر انواع رمزگذاری‌ها و قالب‌های مختلف اعتبارسنجی نشود، حریف می‌تواند از یک قالب جایگزین برای دور زدن کنترل دسترسی برنامه‌ها استفاده کند.",
+            "name_fa": "استفاده از کدگذاری آدرس IP جایگزین",
+            "x_capec_example_instances_fa": [
+                "یک دشمن سرور برنامه ای را شناسایی می کند که یک خط مشی امنیتی بر اساس دامنه و نام برنامه اعمال می کند. برای مثال، خط‌مشی کنترل دسترسی، احراز هویت و مجوز را برای هر کسی که به http://example.domain:8080/application. دسترسی دارد را پوشش می‌دهد، اما، با استفاده از آدرس IP میزبان به جای آن (http://192.168.0.1:8080/application)، ممکن است کنترل‌های احراز هویت و مجوز برنامه دور زده شوند. حریف به اعمال خط مشی قربانی برای انتزاع فضای نام و نداشتن خط مشی انکار پیش فرض برای مدیریت استثناها متکی است."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>بررسی برنامه برای آدرس‌های IP به عنوان ورودی کاربر: </b>با استفاده از یک مرورگر، یک ابزار خودکار یا با بازرسی برنامه، دشمن همه نقاط ورودی برنامه را که آدرس‌های IP در آن قرار دارد، ثبت می‌کند. استفاده می شود.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها و تجزیه و تحلیل صفحات وب برای یافتن نقاط ورودی استفاده کنید. به پیوندهایی که شامل پارامترهایی در URL می‌شوند، توجه ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت تمام نقاط ورودی کاربر که در طول پیمایش دستی برنامه وب بازدید شده‌اند استفاده کنید.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب‌سایت و تجزیه و تحلیل نحوه ساخت آن استفاده کنید. افزونه‌های بسیاری از مرورگرها برای تسهیل تجزیه و تحلیل یا خودکار کردن کشف در دسترس هستند.</td></tr><tr><td>برنامه را به صورت دستی بازرسی کنید تا نقاط ورودی را بیابید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>نقاط ورودی را کاوش می‌کند</b> در مرحله \"کاوش\" به عنوان یک لیست هدف جمع آوری می شود و سعی می کند کدگذاری آدرس IP جایگزین را با مشاهده رفتار برنامه انجام دهد. دشمن همچنین سعی می‌کند از طریق یک کدگذاری آدرس IP جایگزین به برنامه دسترسی پیدا کند تا ببیند آیا کنترل دسترسی تغییر می‌کند</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>به‌جای استفاده از URL، از آدرس IP استفاده کنید که نشانی اینترنتی تعیین می‌کند</td></tr><tr><td>یک پورت را مستقیماً به URL اضافه کنید <tr><mitt</t> اضافه کنید یا وارد کنید. \"http://\" یا \"[[CTI_PRESERVE_1]]] به یک URL برای دیدن اینکه آیا برنامه کاربردی متفاوت عمل می‌کند</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>کنترل آدرس IP جایگزین</b> کنار زدن آدرس IP یا به برنامه دسترسی پیدا می کند یا رمزگذاری جایگزین را به عنوان ورودی ارائه می دهد و محدودیت های کنترل دسترسی را دور می زند.</p></li></ol></div> https://\"",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار مورد نظر باید نتواند تمام رمزگذاری های معتبر ممکن یک آدرس IP/وب را پیش بینی کند.",
+                "حریف باید توانایی برقراری ارتباط با سرور را داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید از یک کدگذاری آدرس IP جایگزین که سیاست کنترل دسترسی یک برنامه کاربردی را دور می زند، اطلاعات داشته باشد. از طرف دیگر، حریف می‌تواند به سادگی تلاش کند تا احتمالات مختلف رمزگذاری را اعمال کند."
+            ]
         }
     ],
     "spec_version": "2.0",

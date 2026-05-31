@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0718#AN1849",
-                    "external_id": "AN1849"
+                    "external_id": "AN1849",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,33 +63,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between remote retrieval, local staging, and any follow-on file handling"
+                    "description": "Correlation window between remote retrieval, local staging, and any follow-on file handling",
+                    "description_fa": "پنجره همبستگی بین بازیابی از راه دور، مرحله بندی محلی، و هر گونه مدیریت فایل بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Managed apps legitimately expected to download secondary content or updates"
+                    "description": "Managed apps legitimately expected to download secondary content or updates",
+                    "description_fa": "برنامه‌های مدیریت‌شده به‌طور قانونی انتظار می‌رود محتوا یا به‌روزرسانی‌های ثانویه را دانلود کنند"
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Approved content, MDM, enterprise, and application-update endpoints"
+                    "description": "Approved content, MDM, enterprise, and application-update endpoints",
+                    "description_fa": "محتوای تأیید شده، MDM، سازمانی، و نقاط پایانی به‌روزرسانی برنامه"
                 },
                 {
                     "field": "AllowedContainerPatterns",
-                    "description": "Expected app-container paths for legitimate downloaded assets"
+                    "description": "Expected app-container paths for legitimate downloaded assets",
+                    "description_fa": "مسیرهای برنامه-کانتینر مورد انتظار برای دارایی های دانلود شده قانونی"
                 },
                 {
                     "field": "IngressBytesThreshold",
-                    "description": "Minimum inbound transfer volume consistent with secondary tool or payload retrieval"
+                    "description": "Minimum inbound transfer volume consistent with secondary tool or payload retrieval",
+                    "description_fa": "حداقل حجم انتقال ورودی مطابق با ابزار ثانویه یا بازیابی بار"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether retrieval should happen only in active user-driven workflows"
+                    "description": "Whether retrieval should happen only in active user-driven workflows",
+                    "description_fa": "اینکه آیا بازیابی باید فقط در گردش‌های کاری فعال کاربر محور اتفاق بیفتد یا خیر"
                 },
                 {
                     "field": "ArtifactRiskPatterns",
-                    "description": "Environment-specific file or content patterns considered suspicious such as staged dylib-like resources, html overlays, archives, or opaque blobs"
+                    "description": "Environment-specific file or content patterns considered suspicious such as staged dylib-like resources, html overlays, archives, or opaque blobs",
+                    "description_fa": "فایل‌های خاص محیطی یا الگوهای محتوای مشکوک در نظر گرفته می‌شوند، مانند منابع مرحله‌ای مانند dylib، پوشش‌های html، بایگانی‌ها، یا حباب‌های غیر شفاف"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1849",
+            "description_fa": "مدافع بازیابی شبکه برنامه مدیریت شده از یک منبع خارجی غیر پایه را با ایجاد فوری یک مصنوع محلی جدید، منبع مرحله‌ای، فایل ماژول‌مانند، یا محموله غیرشفاف در داخل کانتینر برنامه، و به دنبال آن بارگذاری پویا اختیاری، انتقال یا تکرار رفتار بازیابی، مرتبط می‌کند. از آنجایی که iOS در بسیاری از محیط‌ها، دید مستقیم ضعیف‌تری را در بخش‌های داخلی مرحله‌بندی ابزار نسبت به Android ارائه می‌کند، تحلیلی ابتدا بر روی جذب شبکه به همراه هویت برنامه مدیریت‌شده لنگر می‌آورد و سپس با ایجاد فایل یا جلوه‌های فعالیت فرآیند در جایی که تله‌متری موبایل در دسترس است، اعتماد را تقویت می‌کند."
         }
     ]
 }

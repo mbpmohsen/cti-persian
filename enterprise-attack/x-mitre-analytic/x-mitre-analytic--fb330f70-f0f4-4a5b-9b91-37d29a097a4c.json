@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0527#AN1461",
-                    "external_id": "AN1461"
+                    "external_id": "AN1461",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilenamePattern",
-                    "description": "RTLO variants such as \\u202E, %E2%80%AE, or byte-encoded forms"
+                    "description": "RTLO variants such as \\u202E, %E2%80%AE, or byte-encoded forms",
+                    "description_fa": "انواع RTLO مانند \\u202E، %E2%80%AE، یا فرم‌های رمزگذاری‌شده بایتی"
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Allows tuning for untrusted sources, e.g., browser downloads or email attachments"
+                    "description": "Allows tuning for untrusted sources, e.g., browser downloads or email attachments",
+                    "description_fa": "به تنظیم منابع نامعتبر مانند بارگیری مرورگر یا پیوست‌های ایمیل اجازه می‌دهد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation between file creation and process execution"
+                    "description": "Defines correlation between file creation and process execution",
+                    "description_fa": "ارتباط بین ایجاد فایل و اجرای فرآیند را تعریف می کند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1461",
+            "description_fa": "اجرای فایل‌های حاوی نویسه‌های بازنویسی از راست به چپ (U+202E) برای مخفی کردن پسوند فایل واقعی. اغلب در محموله های فیشینگ یا دانلود فایل یافت می شود."
         }
     ]
 }

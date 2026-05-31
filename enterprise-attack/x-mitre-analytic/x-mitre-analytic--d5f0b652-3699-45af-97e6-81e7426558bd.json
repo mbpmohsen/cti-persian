@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0371#AN1045",
-                    "external_id": "AN1045"
+                    "external_id": "AN1045",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApiCallFrequencyThreshold",
-                    "description": "Number of repeated debug-related API calls allowed before raising an alert"
+                    "description": "Number of repeated debug-related API calls allowed before raising an alert",
+                    "description_fa": "تعداد تماس‌های مکرر API مرتبط با اشکال‌زدایی قبل از اعلام هشدار مجاز است"
                 },
                 {
                     "field": "ProcessAllowList",
-                    "description": "Legitimate debuggers or developer tools that may trigger similar behaviors"
+                    "description": "Legitimate debuggers or developer tools that may trigger similar behaviors",
+                    "description_fa": "اشکال زداهای قانونی یا ابزارهای توسعه دهنده که ممکن است رفتارهای مشابهی را تحریک کنند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1045",
+            "description_fa": "نظارت بر استفاده مشکوک از فراخوان‌های Windows API مانند IsDebuggerPresent() و NtQueryInformationProcess()، یا فرآیندهایی که به صورت دستی پرچم BeingDebugged در بلوک محیط فرآیند (PEB) را بررسی می‌کنند. توالی فراخوانی های OutputDebugStringW() را در فواصل زمانی کوتاه شناسایی کنید که ممکن است نشان دهنده تلاش های سیل زدایی دیباگر باشد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0118#AN0328",
-                    "external_id": "AN0328"
+                    "external_id": "AN0328",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceNames",
-                    "description": "Linux daemons to watch (sshd, smbd, nfsd, httpd/nginx, mysqld, postgres, redis)."
+                    "description": "Linux daemons to watch (sshd, smbd, nfsd, httpd/nginx, mysqld, postgres, redis).",
+                    "description_fa": "شیاطین لینوکس برای تماشا (sshd، smbd، nfsd، httpd/nginx، mysqld، postgres، redis)."
                 },
                 {
                     "field": "CoreDumpPaths",
-                    "description": "Paths indicating crash artifacts (/var/crash, /var/lib/systemd/coredump)."
+                    "description": "Paths indicating crash artifacts (/var/crash, /var/lib/systemd/coredump).",
+                    "description_fa": "مسیرهایی که مصنوعات خرابی را نشان می‌دهند (/var/crash، /var/lib/systemd/coredump)."
                 },
                 {
                     "field": "ShellSpawnAllowlist",
-                    "description": "Paths/users allowed to spawn shells from services (default: empty)."
+                    "description": "Paths/users allowed to spawn shells from services (default: empty).",
+                    "description_fa": "مسیرها/کاربران مجاز به ایجاد پوسته از سرویس‌ها (پیش‌فرض: خالی)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (default 10m)."
+                    "description": "Correlation window (default 10m).",
+                    "description_fa": "پنجره همبستگی (پیش‌فرض 10 متر)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0328",
+            "description_fa": "دسترسی شبکه ورودی به SSHD/SMB/NFS/پایگاه‌های داده یا دیمون‌های سفارشی را با خرابی/راه‌اندازی مجدد دیمون بعدی، تخلیه هسته، یا تولید پوسته‌ها/پوسته‌های معکوس از زمینه سرویس پیوند می‌دهد، که نشان‌دهنده بهره‌برداری از راه دور است."
         }
     ]
 }

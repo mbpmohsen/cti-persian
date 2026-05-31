@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0089#AN0244",
-                    "external_id": "AN0244"
+                    "external_id": "AN0244",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessName",
-                    "description": "Exclude known good applications (e.g. Xorg, GNOME Shell)"
+                    "description": "Exclude known good applications (e.g. Xorg, GNOME Shell)",
+                    "description_fa": "برنامه های خوب شناخته شده را حذف کنید (مانند Xorg، GNOME Shell)"
                 },
                 {
                     "field": "DevicePath",
-                    "description": "Typically /dev/input/event*, but tunable to match custom input buses"
+                    "description": "Typically /dev/input/event*, but tunable to match custom input buses",
+                    "description_fa": "معمولاً /dev/input/event*، اما برای مطابقت با گذرگاه‌های ورودی سفارشی قابل تنظیم است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0244",
+            "description_fa": "فرآیندهای غیر سیستمی را شناسایی می کند که به /dev/input/* دسترسی دارند یا سیستم های سیستم ptrace/evdev را که برای خواندن مستقیم بافرهای ضربه زدن به کلید استفاده می شوند، صادر می کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0146#AN0413",
-                    "external_id": "AN0413"
+                    "external_id": "AN0413",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandPattern",
-                    "description": "Focus on high-risk patterns in temporary directories or key system paths."
+                    "description": "Focus on high-risk patterns in temporary directories or key system paths.",
+                    "description_fa": "روی الگوهای پرخطر در دایرکتوری های موقت یا مسیرهای کلیدی سیستم تمرکز کنید."
                 },
                 {
                     "field": "EntropyChangeRate",
-                    "description": "Optional anomaly detection on overwritten files with high-entropy payloads."
+                    "description": "Optional anomaly detection on overwritten files with high-entropy payloads.",
+                    "description_fa": "تشخیص ناهنجاری اختیاری در فایل‌های بازنویسی شده با بارهای آنتروپی بالا."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0413",
+            "description_fa": "تخریب از طریق «rm -rf»، بازنویسی با «dd» یا «srm»، که اغلب توسط اسکریپت در /tmp یا /private/tmp اجرا می‌شود، ممکن است شامل بازنویسی فایل روی داده‌های تصویر سیاسی یا فریبنده نیز باشد."
         }
     ]
 }

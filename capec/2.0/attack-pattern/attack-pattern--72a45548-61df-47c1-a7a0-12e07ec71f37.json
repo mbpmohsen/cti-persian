@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-476",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/476.html"
+                    "url": "https://capec.mitre.org/data/definitions/476.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-290",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/290.html"
+                    "url": "http://cwe.mitre.org/data/definitions/290.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Eric Johanson, The state of homograph attacks, 2005--02---11, http://www.shmoo.com/idn/homograph.txt",
                     "external_id": "REF-414",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "اریک جوهانسون، وضعیت حملات هموگراف، 2005--02---11، http://www.shmoo.com/idn/homograph.txt",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--72a45548-61df-47c1-a7a0-12e07ec71f37",
@@ -41,11 +45,17 @@
                 "Recipient is using signature verification software that does not clearly indicate potential homographs in the signer identity.Recipient is using signature verification software that contains a parsing vulnerability, or allows control characters in the signer identity field, such that a signature is mistakenly displayed as valid and from a known or authoritative signer."
             ],
             "x_capec_skills_required": {
-                "High": "Attacker may be required to create malformed data blobs and know how to insert them in a location that the recipient will visit."
+                "High": "Attacker may be required to create malformed data blobs and know how to insert them in a location that the recipient will visit.",
+                "High_fa": "ممکن است از مهاجم خواسته شود که حباب های داده ناقص ایجاد کند و بداند چگونه آنها را در مکانی که گیرنده بازدید می کند وارد کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از ضعف در تجزیه یا نمایش کد نرم افزار گیرنده برای تولید یک لکه داده حاوی یک امضای ظاهراً معتبر سوء استفاده می کند، اما هویت امضاکننده به اشتباه نشان داده می شود، که می تواند منجر به دستکاری مهاجم نرم افزار گیرنده یا کاربر قربانی آن برای انجام اقدامات در معرض خطر شود.",
+            "name_fa": "جعل امضا با ارائه نادرست",
+            "x_capec_prerequisites_fa": [
+                "گیرنده از نرم‌افزار تأیید امضا استفاده می‌کند که به وضوح هموگراف‌های احتمالی را در هویت امضاکننده نشان نمی‌دهد. گیرنده از نرم‌افزار تأیید امضا استفاده می‌کند که حاوی آسیب‌پذیری تجزیه‌کننده است، یا به نویسه‌های کنترلی در قسمت هویت امضاکننده اجازه می‌دهد، به طوری که یک امضا به اشتباه به‌عنوان معتبر و از یک امضاکننده شناخته شده یا معتبر نمایش داده می‌شود."
+            ]
         }
     ],
     "spec_version": "2.0",

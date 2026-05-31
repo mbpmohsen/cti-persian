@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0354#AN1004",
-                    "external_id": "AN1004"
+                    "external_id": "AN1004",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 1004",
-            "description": "Unusual or unauthorized external remote access attempts (e.g., RDP, VPN, Citrix) \u2192 repeated failed logins followed by a successful session from uncommon geolocations or outside business hours \u2192 subsequent internal lateral movement or data exfiltration activities.",
+            "description": "Unusual or unauthorized external remote access attempts (e.g., RDP, VPN, Citrix) → repeated failed logins followed by a successful session from uncommon geolocations or outside business hours → subsequent internal lateral movement or data exfiltration activities.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -51,25 +52,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BusinessHours",
-                    "description": "Normal business hours for logon activity."
+                    "description": "Normal business hours for logon activity.",
+                    "description_fa": "ساعات کاری عادی برای فعالیت ورود به سیستم."
                 },
                 {
                     "field": "KnownRemoteIPs",
-                    "description": "List of approved external IPs or VPN endpoints."
+                    "description": "List of approved external IPs or VPN endpoints.",
+                    "description_fa": "لیست IP های خارجی یا نقاط پایانی VPN تایید شده."
                 },
                 {
                     "field": "FailedLogonThreshold",
-                    "description": "Number of failed logons before raising suspicion (e.g., >5)."
+                    "description": "Number of failed logons before raising suspicion (e.g., >5).",
+                    "description_fa": "تعداد لاگین های ناموفق قبل از ایجاد شک (به عنوان مثال، > 5)."
                 },
                 {
                     "field": "GeoIPWhitelist",
-                    "description": "Geographic regions allowed for remote access."
+                    "description": "Geographic regions allowed for remote access.",
+                    "description_fa": "مناطق جغرافیایی مجاز به دسترسی از راه دور."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time window to correlate failed attempts and success (e.g., 15m)."
+                    "description": "Time window to correlate failed attempts and success (e.g., 15m).",
+                    "description_fa": "پنجره زمانی برای ارتباط بین تلاش های ناموفق و موفقیت (مثلاً 15 متر)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1004",
+            "description_fa": "تلاش‌های غیرمعمول یا غیرمجاز برای دسترسی از راه دور خارجی (مانند RDP، VPN، Citrix) ← ورود ناموفق مکرر به دنبال یک جلسه موفقیت‌آمیز از مکان‌های جغرافیایی غیرمعمول یا خارج از ساعات کاری ← حرکت جانبی داخلی بعدی یا فعالیت‌های استخراج داده."
         }
     ]
 }

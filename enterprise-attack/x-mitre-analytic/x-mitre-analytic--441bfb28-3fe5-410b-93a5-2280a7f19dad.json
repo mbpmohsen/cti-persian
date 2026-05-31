@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0434#AN1208",
-                    "external_id": "AN1208"
+                    "external_id": "AN1208",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,26 +56,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PlistDirectoryList",
-                    "description": "Monitored directories (e.g., `/Library/LaunchAgents`, `~/Library/LaunchAgents`) for plist drops"
+                    "description": "Monitored directories (e.g., `/Library/LaunchAgents`, `~/Library/LaunchAgents`) for plist drops",
+                    "description_fa": "دایرکتوری های نظارت شده (به عنوان مثال، «/Library/LaunchAgents»، «~/Library/LaunchAgents») برای دراپ لیست"
                 },
                 {
                     "field": "PlistKeyMonitor",
-                    "description": "Monitored keys such as `RunAtLoad`, `KeepAlive`, or `ProgramArguments` for policy alignment"
+                    "description": "Monitored keys such as `RunAtLoad`, `KeepAlive`, or `ProgramArguments` for policy alignment",
+                    "description_fa": "کلیدهای نظارت شده مانند «RunAtLoad»، «KeepAlive» یا «ProgramArguments» برای تراز خط مشی"
                 },
                 {
                     "field": "ExecutablePathPattern",
-                    "description": "Patterns used to detect execution from non-standard or suspicious locations like `/tmp`, `/var`, or `/Users/Shared`"
+                    "description": "Patterns used to detect execution from non-standard or suspicious locations like `/tmp`, `/var`, or `/Users/Shared`",
+                    "description_fa": "الگوهای مورد استفاده برای تشخیص اجرا از مکان‌های غیر استاندارد یا مشکوک مانند «/tmp»، «/var» یا «/Users/Shared»"
                 },
                 {
                     "field": "UnsignedBinaryAlert",
-                    "description": "Raise alerts if the binary referenced in the Launch Agent is unsigned or unverified"
+                    "description": "Raise alerts if the binary referenced in the Launch Agent is unsigned or unverified",
+                    "description_fa": "اگر باینری ارجاع شده در Launch Agent بدون امضا یا تأیید نشده باشد، هشدارها را افزایش دهید"
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "List of users whose LaunchAgents are considered high-sensitivity (e.g., admins)"
+                    "description": "List of users whose LaunchAgents are considered high-sensitivity (e.g., admins)",
+                    "description_fa": "فهرست کاربرانی که LaunchAgent های آنها با حساسیت بالا در نظر گرفته می شود (به عنوان مثال، مدیران)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1208",
+            "description_fa": "ایجاد یا اصلاح Launch Agents در سطح کاربر را در فهرست‌های نظارت شده با استفاده از فایل‌های «.plist» با کلیدهای «ProgramArguments» یا «RunAtLoad» مشکوک تشخیص می‌دهد. فعالیت نوشتن فایل را با اجرای «launchctl» یا باینری های بدون علامتی که در هنگام ورود فراخوانی می شوند، مرتبط می کند."
         }
     ]
 }

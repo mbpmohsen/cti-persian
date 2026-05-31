@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0181#AN0511",
-                    "external_id": "AN0511"
+                    "external_id": "AN0511",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "xp_cmdshell_invocation_threshold",
-                    "description": "Adjust if legitimate procedures use xp_cmdshell often in environment"
+                    "description": "Adjust if legitimate procedures use xp_cmdshell often in environment",
+                    "description_fa": "اگر رویه‌های قانونی از xp_cmdshell اغلب در محیط استفاده می‌کنند، تنظیم کنید"
                 },
                 {
                     "field": "CLRAssemblyNameWhitelist",
-                    "description": "Organization-defined whitelist of legitimate CLR assemblies"
+                    "description": "Organization-defined whitelist of legitimate CLR assemblies",
+                    "description_fa": "لیست سفید تعریف شده توسط سازمان از مجامع قانونی CLR"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tune time window to correlate stored procedure creation with process execution"
+                    "description": "Tune time window to correlate stored procedure creation with process execution",
+                    "description_fa": "پنجره زمانی را تنظیم کنید تا ایجاد رویه ذخیره شده با اجرای فرآیند مرتبط شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0511",
+            "description_fa": "ایجاد یا اصلاح رویه های ذخیره شده با فراخوانی مجموعه های xp_cmdshell یا CLR برای اجرای دستور و تداوم."
         }
     ]
 }

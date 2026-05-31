@@ -9,37 +9,45 @@
                 {
                     "external_id": "CAPEC-22",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/22.html"
+                    "url": "https://capec.mitre.org/data/definitions/22.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-290",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/290.html"
+                    "url": "http://cwe.mitre.org/data/definitions/290.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-287",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/287.html"
+                    "url": "http://cwe.mitre.org/data/definitions/287.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--1fa1539d-4a13-4453-bf43-ad0987b2fbf5",
@@ -68,6 +76,23 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -94,11 +119,26 @@
                 "Ability to communicate synchronously or asynchronously with server"
             ],
             "x_capec_skills_required": {
-                "Medium": "The attacker must have fairly detailed knowledge of the syntax and semantics of client/server communications protocols and grammars"
+                "Medium": "The attacker must have fairly detailed knowledge of the syntax and semantics of client/server communications protocols and grammars",
+                "Medium_fa": "مهاجم باید دانش نسبتاً دقیقی از نحو و معنای پروتکل‌ها و گرامرهای ارتباطی مشتری/سرور داشته باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حمله ای از این نوع از آسیب پذیری ها در احراز هویت کانال ارتباطی مشتری/سرور و یکپارچگی داده ها سوء استفاده می کند. این اهرم اعتماد ضمنی را که یک سرور به مشتری می دهد، یا مهمتر از آن، چیزی که سرور معتقد است مشتری است، به کار می گیرد. مهاجم این نوع حمله را با برقراری ارتباط مستقیم با سروری که سرور معتقد است فقط با یک کلاینت معتبر ارتباط برقرار می کند، اجرا می کند. انواع مختلفی از این نوع حمله وجود دارد.",
+            "name_fa": "بهره برداری از اعتماد به مشتری",
+            "x_capec_example_instances_fa": [
+                "برنامه های کاربردی وب ممکن است از جاوا اسکریپت برای انجام اعتبار سنجی سمت سرویس گیرنده، رمزگذاری/قالب بندی درخواست و سایر عملکردهای امنیتی استفاده کنند که برخی از مزایای استفاده را فراهم می کند و برخی از رفت و آمدهای مشتری-سرور را حذف می کند. با این حال، وب سرور نمی‌تواند فرض کند که درخواست‌هایی که دریافت می‌کند مشمول آن اعتبارسنجی‌ها بوده‌اند، زیرا مهاجم می‌تواند از یک روش جایگزین برای ایجاد درخواست HTTP استفاده کند و داده‌هایی را ارسال کند که حاوی مقادیر مسموم طراحی شده برای جعل کاربر و/یا وادار کردن سرور وب به افشای اطلاعات است.",
+                "برنامه های کاربردی سبک وب 2.0 ممکن است به خصوص آسیب پذیر باشند زیرا تا حد زیادی به زیرساخت های موجود متکی هستند که مقیاس پذیری را بدون توانایی کنترل مشتریان فراهم می کند. مهاجمان آسیب‌پذیری‌هایی را شناسایی می‌کنند که یا فرض می‌کنند طرف کلاینت مسئول برخی از سرویس‌های امنیتی است (بدون توانایی لازم برای اطمینان از اجرای این بررسی‌ها) و/یا فقدان یک پیکربندی سخت‌شده و پیش‌فرض رد سرور که به مهاجم اجازه می‌دهد نقاط ضعف را به روش‌های غیرمنتظره بررسی کند. اعتبار سنجی سمت مشتری، قالب‌بندی درخواست و سایر خدمات ممکن است انجام شود، اما اینها کاملاً پیشرفت‌های قابلیت استفاده هستند نه پیشرفت‌های امنیتی.",
+                "بسیاری از برنامه های کاربردی وب از برنامه نویسی سمت کلاینت مانند جاوا اسکریپت برای اجرای احراز هویت، مجوز، وضعیت جلسه و سایر متغیرها استفاده می کنند، اما در پایان روز همه آنها درخواست هایی را به سرور ارسال می کنند. این بررسی‌های سمت مشتری ممکن است قابلیت استفاده و عملکرد را افزایش دهند، اما از نظر درخواست http فاقد یکپارچگی هستند. این امکان برای مهاجم وجود دارد که بدون استفاده از هیچ یک از بررسی‌های امنیتی اسکریپت مشتری، متغیرها را مستقیماً به سرور پست کند و الگوها را برای جعل هویت سایر کاربران یا جستجو برای اطلاعات بیشتر سفارشی کند.",
+                "بسیاری از سیستم‌های میان‌افزار پیام‌گرا مانند سری MQ به اطلاعاتی متکی هستند که همراه با درخواست پیام برای تصمیم‌گیری مجوز ارسال می‌شوند، به‌عنوان مثال، درخواست چه گروه یا نقشی باید ارسال شود. با این حال، اگر سرور پیام اطلاعات مجوز را در درخواست تأیید نکند یا نتواند تأیید کند، تصمیمات خط‌مشی سرور در مورد مجوز برای براندازی بی‌اهمیت است زیرا فرآیند مشتری می‌تواند به سادگی امتیاز را با ارسال اطلاعات گروه یا نقش بالا که سرور پیام می‌پذیرد و بر اساس آن عمل می‌کند، افزایش دهد."
+            ],
+            "x_capec_prerequisites_fa": [
+                "نرم افزار سرور باید به مقادیر فرمت شده و تایید شده در سمت مشتری تکیه کند و این بررسی ها را در سمت سرور تقویت نکند."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان برقراری ارتباط همزمان یا ناهمزمان با سرور"
+            ]
         }
     ],
     "type": "bundle"

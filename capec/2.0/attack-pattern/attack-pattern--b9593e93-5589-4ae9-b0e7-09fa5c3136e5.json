@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-222",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/222.html"
+                    "url": "https://capec.mitre.org/data/definitions/222.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1021",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1021.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1021.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Michal Zalewski, Browser Security Handbook, 2008, Google Inc.",
                     "external_id": "REF-84",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://code.google.com/archive/p/browsersec/wikis/Main.wiki"
+                    "url": "https://code.google.com/archive/p/browsersec/wikis/Main.wiki",
+                    "description_fa": "Michal Zalewski، کتابچه راهنمای امنیت مرورگر، 2008، Google Inc.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "M. Mahemoff, Explaining the \"Don't Click\" Clickjacking Tweetbomb, 2009--02---12, Software As She's Developed",
                     "external_id": "REF-85",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://softwareas.com/explaining-the-dont-click-clickjacking-tweetbomb"
+                    "url": "http://softwareas.com/explaining-the-dont-click-clickjacking-tweetbomb",
+                    "description_fa": "M. Mahemoff، توضیح بمب توییتی «کلیک نشوید»، 2009--02---12، نرم افزار همانطور که او توسعه یافته است",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--b9593e93-5589-4ae9-b0e7-09fa5c3136e5",
@@ -63,6 +69,29 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -81,11 +110,25 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "High": "Crafting the proper malicious site and luring the victim to this site is not a trivial task."
+                "High": "Crafting the proper malicious site and luring the victim to this site is not a trivial task.",
+                "High_fa": "ساختن سایت مخرب مناسب و جذب قربانی به این سایت کار بی اهمیتی نیست."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "در یک حمله همپوشانی iFrame، قربانی فریب داده می‌شود تا ناآگاهانه برخی از اقدامات را در یک سیستم آغاز کند، در حالی که با رابط کاربری سیستم به ظاهر کاملاً متفاوت تعامل دارد.",
+            "name_fa": "iFrame Overlay",
+            "x_capec_example_instances_fa": [
+                "مثال زیر یک حمله همپوشانی iFrame در دنیای واقعی است [2]. در این حمله، صفحه مخرب Twitter.com را روی یک IFRAME شفاف جاسازی می کند. فیلد پیام وضعیت با URL خود صفحه مخرب مقداردهی اولیه می شود. برای تحریک کلیک، که برای انتشار ورودی ضروری است، صفحه مخرب دکمه ای با عنوان \"کلیک نکنید\" را نمایش می دهد. این دکمه با دکمه نامرئی \"Update\" توییتر تراز شده است. هنگامی که کاربر کلیک را انجام داد، پیام وضعیت (یعنی پیوندی به خود صفحه مخرب) به نمایه توییتر او ارسال می شود."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>ایجاد صفحه همپوشانی iFrame: </b> دشمن یک صفحه همپوشانی iFrame مخرب ایجاد می‌کند. قابلیت‌های همپوشانی برای ایجاد یک صفحه هم‌پوشانی iFrame مخرب.</td></tr></tbody></table></ol></div><div><h3>استثمار</h3><ol><li> <p> <b>دشمن قربانی را فریب می‌دهد تا صفحه همپوشانی iFrame را بارگیری کند: </b>یک نوع از دشمن برای استفاده اشتباه از قربانی یا فریب دادن، استفاده از دشمن را فریب می‌دهد. بارگیری و تعامل با صفحه همپوشانی iFrame به گونه‌ای که احتمال بازدید قربانی از صفحه مخرب را افزایش می‌دهد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>با ارسال ایمیلی به قربانی با نشانی اینترنتی از سایت مخرب، قربانی را فریب دهید. دستکاری URL ها در سایت مورد اعتماد قربانی.</td></tr><tr><td>قربانی را از طریق یک حمله اسکریپت بین سایتی به سایت مخرب فریب دهید.</td></tr></tbody></table><li> <p> <b>قربانی را فریب دهید تا با صفحه همپوشانی iFrame به شیوه دلخواه تعامل داشته باشد: </b> کنترول های پنهان را کنترل می کند و در نتیجه با سیستم هدف به طور مخرب با سطح امتیاز قربانی تعامل برقرار می کند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>کنترل های کنش را بر روی عملکردهای بسیار رایج پنهان کنید.</td></tr><tr><td>پنهان کردن کنترل های کنش وسوسه انگیز بیش از بسیار روانشناختی. محتوا.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> هنگام ورود به سیستم هدف، قربانی از سایت مخرب دشمن بازدید می کند که یک رابط کاربری را نشان می دهد که قربانی می خواهد با آن تعامل داشته باشد. در واقع، صفحه همپوشانی iFrame دارای یک لایه شفاف در بالای رابط کاربری قابل مشاهده با کنترل‌های عملی است که حریف از قربانی می‌خواهد آن‌ها را اجرا کند. قربانی روی دکمه‌ها یا سایر عناصر رابط کاربری که در صفحه می‌بیند کلیک می‌کند که در واقع کنترل‌های عمل را در لایه پوشش شفاف فعال می‌کند. بسته به اینکه آن کنترل عمل چیست، ممکن است دشمن قربانی را فریب داده باشد تا برخی از عملکردهای بالقوه ممتاز (و نامطلوب ترین) را در سیستم هدفی که قربانی احراز هویت شده است را اجرا کند. مشکل اساسی در اینجا این است که بین چیزی که قربانی فکر می‌کند روی آن کلیک می‌کند و چیزی که واقعا روی آن کلیک می‌کند، دوگانگی وجود دارد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "قربانی از طریق یک UI مبتنی بر وب و نه یک کلاینت ضخیم با برنامه مورد نظر در ارتباط است. خط مشی های امنیتی مرورگر قربانی به iFrames اجازه می دهد. قربانی از یک مرورگر مدرن استفاده می‌کند که از عناصر رابط کاربری مانند دکمه‌های قابل کلیک پشتیبانی می‌کند (یعنی از مرورگر فقط متن قدیمی استفاده نمی‌کند). قربانی یک جلسه فعال با سیستم هدف دارد. پنجره تعامل سیستم هدف در مرورگر قربانی باز است و از توانایی شروع اقدامات حساس از طرف کاربر در سیستم هدف پشتیبانی می کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

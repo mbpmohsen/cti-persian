@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0692#AN1804",
-                    "external_id": "AN1804"
+                    "external_id": "AN1804",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.378Z",
             "name": "Analytic 1804",
-            "description": "Defender observes an app/package attempting to enumerate running processes by triggering restricted process visibility mechanisms (e.g., repeated queries for running tasks/services, rapid iteration over process identifiers, or access attempts against /proc entries) that are atypical for its declared function and occur without an associated user-facing diagnostic workflow. The detection relies on correlating (1) OS/API calls or shell/system utility execution indicative of process listing or /proc traversal, (2) app privilege context (root, debug build, device owner/profile owner, accessibility/IME status), (3) background execution state, and (4) optional follow-on behaviors consistent with automated discovery (short bursts of local IPC probes, network beacons immediately after enumeration, or rapid targeting of specific high-value package/process names). The analytic should describe what is observable: repeated enumeration signals + privilege context + timing relationship, not the adversary\u2019s intent.",
+            "description": "Defender observes an app/package attempting to enumerate running processes by triggering restricted process visibility mechanisms (e.g., repeated queries for running tasks/services, rapid iteration over process identifiers, or access attempts against /proc entries) that are atypical for its declared function and occur without an associated user-facing diagnostic workflow. The detection relies on correlating (1) OS/API calls or shell/system utility execution indicative of process listing or /proc traversal, (2) app privilege context (root, debug build, device owner/profile owner, accessibility/IME status), (3) background execution state, and (4) optional follow-on behaviors consistent with automated discovery (short bursts of local IPC probes, network beacons immediately after enumeration, or rapid targeting of specific high-value package/process names). The analytic should describe what is observable: repeated enumeration signals + privilege context + timing relationship, not the adversary’s intent.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,37 +53,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window for enumeration \u2192 follow-on activity (e.g., 60\u2013600s)."
+                    "description": "Correlation window for enumeration → follow-on activity (e.g., 60–600s).",
+                    "description_fa": "پنجره همبستگی برای شمارش → فعالیت های بعدی (به عنوان مثال، 60-600s)."
                 },
                 {
                     "field": "MinEnumerationSignals",
-                    "description": "Minimum count of process enumeration indicators to alert (tune by OS build and telemetry quality)."
+                    "description": "Minimum count of process enumeration indicators to alert (tune by OS build and telemetry quality).",
+                    "description_fa": "حداقل تعداد شاخص های شمارش فرآیند برای هشدار (تنظیم بر اساس ساخت سیستم عامل و کیفیت تله متری)."
                 },
                 {
                     "field": "ProcTraversalThreshold",
-                    "description": "How many distinct /proc paths opened within the window counts as enumeration (e.g., \u226550)."
+                    "description": "How many distinct /proc paths opened within the window counts as enumeration (e.g., ≥50).",
+                    "description_fa": "تعداد مسیرهای /proc مجزا که در پنجره باز می شوند به عنوان شمارش حساب می شوند (به عنوان مثال، ≥50)."
                 },
                 {
                     "field": "BackgroundOnly",
-                    "description": "If true, require background state to reduce legitimate in-app diagnostics noise."
+                    "description": "If true, require background state to reduce legitimate in-app diagnostics noise.",
+                    "description_fa": "اگر درست است، به وضعیت پس‌زمینه نیاز دارید تا نویز تشخیصی قانونی درون برنامه را کاهش دهید."
                 },
                 {
                     "field": "AllowlistedPackages",
-                    "description": "Legitimate security/diagnostic/MDM agents expected to inspect processes."
+                    "description": "Legitimate security/diagnostic/MDM agents expected to inspect processes.",
+                    "description_fa": "عوامل امنیتی/تشخیصی/MDM قانونی که انتظار می رود فرآیندها را بازرسی کنند."
                 },
                 {
                     "field": "HighValueProcessNames",
-                    "description": "Process/package names of interest (e.g., security agents, banking apps) used only as enrichment, not a signature."
+                    "description": "Process/package names of interest (e.g., security agents, banking apps) used only as enrichment, not a signature.",
+                    "description_fa": "نام‌های فرآیند/بسته مورد علاقه (به عنوان مثال، عوامل امنیتی، برنامه‌های بانکی) فقط به عنوان غنی‌سازی استفاده می‌شوند، نه امضا."
                 },
                 {
                     "field": "NetworkProbePorts",
-                    "description": "Ports considered a \u2018probe/beacon\u2019 after enumeration (53/80/443/etc.)."
+                    "description": "Ports considered a ‘probe/beacon’ after enumeration (53/80/443/etc.).",
+                    "description_fa": "پورت ها پس از شمارش (53/80/443/و غیره) یک \"کاوشگر/فانوس دریایی\" در نظر گرفته می شوند."
                 },
                 {
                     "field": "PrivilegeEscalationGate",
-                    "description": "If true, increase severity when enumeration co-occurs with root/debuggable/jailbreak-like posture."
+                    "description": "If true, increase severity when enumeration co-occurs with root/debuggable/jailbreak-like posture.",
+                    "description_fa": "اگر درست است، هنگامی که شمارش همزمان با وضعیت ریشه/اشکال‌زدایی/جیل‌بریک صورت می‌گیرد، شدت را افزایش دهید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1804",
+            "description_fa": "Defender برنامه/بسته ای را مشاهده می کند که سعی می کند فرآیندهای در حال اجرا را با راه اندازی مکانیسم های دید محدود فرآیند (به عنوان مثال، پرس و جوهای مکرر برای اجرای وظایف/سرویس ها، تکرار سریع روی شناسه های فرآیند، یا تلاش های دسترسی در برابر ورودی های /proc) که برای عملکرد اعلام شده آن غیر معمول هستند و بدون یک علامت گردش کار مرتبط با کاربر رخ می دهد، شمارش کند. تشخیص متکی به همبستگی (1) تماس‌های OS/API یا اجرای ابزار پوسته/سیستم است که نشان‌دهنده فهرست‌بندی فرآیند یا پیمایش /proc، (2) زمینه امتیاز برنامه (ریشه، ساخت اشکال‌زدایی، مالک دستگاه/مالک نمایه، دسترس‌پذیری/وضعیت IME)، (3) وضعیت اجرای پس‌زمینه (پیش‌زمینه رفتار سازگار با گزینه‌های burssh automated) و (4) پروب‌های IPC محلی، بیکن‌های شبکه بلافاصله پس از شمارش، یا هدف‌گیری سریع نام‌های بسته/فرآیند خاص با ارزش بالا). تحلیلگر باید آنچه را که قابل مشاهده است توصیف کند: سیگنال های شمارش مکرر + زمینه امتیاز + رابطه زمان بندی، نه قصد دشمن."
         }
     ]
 }

@@ -13,22 +13,28 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1446",
-                    "external_id": "T1446"
+                    "external_id": "T1446",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Xiao-KeyRaider",
                     "description": "Claud Xiao. (2015, August 30). KeyRaider: iOS Malware Steals Over 225,000 Apple Accounts to Create Free App Utopia. Retrieved December 12, 2016.",
-                    "url": "http://researchcenter.paloaltonetworks.com/2015/08/keyraider-ios-malware-steals-over-225000-apple-accounts-to-create-free-app-utopia/"
+                    "url": "http://researchcenter.paloaltonetworks.com/2015/08/keyraider-ios-malware-steals-over-225000-apple-accounts-to-create-free-app-utopia/",
+                    "source_name_fa": "Xiao-KeyRaider",
+                    "description_fa": "کلود شیائو. (2015، 30 اوت). KeyRaider: بدافزار iOS بیش از 225000 حساب اپل را برای ایجاد آرمان‌شهر برنامه رایگان می‌دزدد. بازبینی شده در 12 دسامبر 2016."
                 },
                 {
                     "source_name": "Android resetPassword",
                     "description": "Google. (n.d.). DevicePolicyManager. Retrieved October 1, 2019.",
-                    "url": "https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#resetPassword(java.lang.String,%20int)"
+                    "url": "https://developer.android.com/reference/android/app/admin/DevicePolicyManager.html#resetPassword(java.lang.String,%20int)",
+                    "source_name_fa": "آندروید تنظیم مجدد رمز عبور",
+                    "description_fa": "گوگل. (n.d.). DevicePolicyManager. بازیابی شده در 1 اکتبر 2019."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-28.html",
-                    "external_id": "APP-28"
+                    "external_id": "APP-28",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +42,7 @@
             ],
             "modified": "2025-10-24T17:49:09.025Z",
             "name": "Device Lockout",
-            "description": "An adversary may seek to lock the legitimate user out of the device, for example to inhibit user interaction or to obtain a ransom payment.\n\nOn Android versions prior to 7, apps can abuse Device Administrator access to reset the device lock passcode to prevent the user from unlocking the device. After Android 7, only device or profile owners (e.g. MDMs) can reset the device\u2019s passcode.(Citation: Android resetPassword)\n\nOn iOS devices, this technique does not work because mobile device management servers can only remove the screen lock passcode, they cannot set a new passcode. However, on jailbroken devices, malware has been discovered that can lock the user out of the device.(Citation: Xiao-KeyRaider)",
+            "description": "An adversary may seek to lock the legitimate user out of the device, for example to inhibit user interaction or to obtain a ransom payment.\n\nOn Android versions prior to 7, apps can abuse Device Administrator access to reset the device lock passcode to prevent the user from unlocking the device. After Android 7, only device or profile owners (e.g. MDMs) can reset the device’s passcode.(Citation: Android resetPassword)\n\nOn iOS devices, this technique does not work because mobile device management servers can only remove the screen lock passcode, they cannot set a new passcode. However, on jailbroken devices, malware has been discovered that can lock the user out of the device.(Citation: Xiao-KeyRaider)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -61,7 +67,9 @@
             "x_mitre_version": "2.0",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "قفل دستگاه",
+            "description_fa": "یک دشمن ممکن است به دنبال قفل کردن کاربر قانونی از دستگاه باشد، برای مثال برای جلوگیری از تعامل کاربر یا دریافت باج.\n\nدر نسخه‌های اندرویدی قبل از ۷، برنامه‌ها می‌توانند از دسترسی مدیر دستگاه برای بازنشانی رمز عبور قفل دستگاه سوء استفاده کنند تا کاربر نتواند قفل دستگاه را باز کند. پس از Android 7، فقط دارندگان دستگاه یا نمایه (مانند MDM) می‌توانند گذرواژه دستگاه را بازنشانی کنند.(Citation: Android resetPassword)\n\nدر دستگاه های iOS، این تکنیک کار نمی کند زیرا سرورهای مدیریت دستگاه تلفن همراه فقط می توانند رمز عبور قفل صفحه را حذف کنند، آنها نمی توانند رمز عبور جدیدی تنظیم کنند. با این حال، در دستگاه‌های جیلبریک، بدافزاری کشف شده است که می‌تواند کاربر را از دستگاه قفل کند.(Citation: Xiao-KeyRaider)"
         }
     ]
 }

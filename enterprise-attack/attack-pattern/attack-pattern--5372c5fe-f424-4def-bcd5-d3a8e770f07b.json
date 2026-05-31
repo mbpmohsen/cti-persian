@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1562/004",
                     "external_id": "T1562.004",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Broadcom ESXi Firewall",
                     "description": "Broadcom. (2025, March 24). Add Allowed IP Addresses for an ESXi Host by Using the VMware Host Client. Retrieved March 26, 2025.",
                     "url": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere/7-0/add-allowed-ip-addresses-for-an-esxi-host-by-using-the-vmware-host-client.html",
-                    "source_name_fa": "Broadcom ESXi Firewall",
-                    "description_fa": "Broadcom (2025, March 24) آدرس های IP مجاز برای یک میزبان ESXi را با استفاده از VMware Host Client اضافه کنید. Retrieved 26 مارس 2025"
+                    "source_name_fa": "فایروال Broadcom ESXi",
+                    "description_fa": "Broadcom. (2025، 24 مارس). با استفاده از VMware Host Client آدرس های IP مجاز را برای هاست ESXi اضافه کنید. بازبینی شده در 26 مارس 2025."
                 },
                 {
                     "source_name": "Huntress BlackCat",
                     "description": "Carvey, H. (2024, February 28). BlackCat Ransomware Affiliate TTPs. Retrieved March 27, 2024.",
                     "url": "https://www.huntress.com/blog/blackcat-ransomware-affiliate-ttps",
-                    "source_name_fa": "دانلود بازی Huntress Black گربه گربه گربه",
-                    "description_fa": "Carvey، H. (2024، 28 فوریه) BlackCat Ransomware وابسته به TTPs Retrieved 27 مارس 2024."
+                    "source_name_fa": "گربه سیاه شکارچی",
+                    "description_fa": "کاروی، اچ. (2024، 28 فوریه). TTP های وابسته به باج افزار BlackCat. بازبینی شده در 27 مارس 2024."
                 },
                 {
                     "source_name": "Trellix Rnasomhouse 2024",
                     "description": "Pham Duy Phuc, Max Kersten, Noël Keijzer, and Michaël Schrijver. (2024, February 14). RansomHouse am See. Retrieved March 26, 2025.",
                     "url": "https://www.trellix.com/en-au/blogs/research/ransomhouse-am-see/",
                     "source_name_fa": "Trellix Rnasomhouse 2024",
-                    "description_fa": "Pham Duy Phuc، Max Kersten، Noël Kijzer و Michaël Schrijver (2024، فوریه 14). خانه دیده می شود. Retrieved 26 مارس 2025"
+                    "description_fa": "فام دوی فوک، مکس کرستن، نوئل کیزر و میشائل شریور. (2024، 14 فوریه). RansomHouse am See. بازبینی شده در 26 مارس 2025."
                 },
                 {
                     "source_name": "change_rdp_port_conti",
                     "description": "The DFIR Report. (2022, March 1). \"Change RDP port\" #ContiLeaks. Retrieved September 12, 2024.",
                     "url": "https://x.com/TheDFIRReport/status/1498657772254240768",
-                    "source_name_fa": "تغییر_rdp_port_conti",
-                    "description_fa": "گزارش DFIR (2022، مارس 1) تغییر پورت RDP #ContiLeaks Retrieved 12 سپتامبر 2024"
+                    "source_name_fa": "change_rdp_port_conti",
+                    "description_fa": "گزارش DFIR (1 مارس 2022). \"تغییر پورت RDP\" #ContiLeaks. بازبینی شده در 12 سپتامبر 2024."
                 }
             ],
             "object_marking_refs": [
@@ -72,8 +72,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.3",
-            "name_fa": "سیستم های غیر قابل تغییر یا Modify System Firewall",
-            "description_fa": "مخالفان ممکن است فایروال های سیستم را غیرفعال یا اصلاح کنند تا از کنترل محدود کردن استفاده از شبکه جلوگیری کنند. تغییرات می تواند کل مکانیسم و همچنین اضافه کردن، حذف یا اصلاح قوانین خاص را خنثی کند. این می تواند راه های متعددی را بسته به سیستم عامل، از جمله از طریق خط فرمان، ویرایش کلید های Windows Registry و Windows Control Panel انجام دهد.\n\nاصلاح یا تخریب یک فایروال سیستم ممکن است ارتباطات دشمن C2، حرکت جانبی و / یا نفوذ داده را که در غیر این صورت مجاز نیست، فعال کند. به عنوان مثال، دشمنان ممکن است یک قانون فایروال جدید را برای یک پروتکل شناخته شده (مانند RDP) با استفاده از یک پورت غیر سنتی و به طور بالقوه کمتر امن (به عنوان مثال پورت غیر استاندارد) اضافه کنند ([CTI_PRESERVE_4]).\n\nمخالفان همچنین ممکن است تنظیمات شبکه میزبان را تغییر دهند که به طور غیر مستقیم فایروال های سیستم را دستکاری می کنند، مانند پهنای باند رابط یا آستانه اتصال شبکه. تنظیمات مربوط به فعال کردن سوء استفاده از سرویس های مختلف (Remote Services) ([CTI_PRESERVE_5] ممکن است به طور غیر مستقیم قوانین فایروال را تغییر دهد.\n\nدر ESXi، قوانین فایروال ممکن است به طور مستقیم از طریق رابط خط فرمان esxcli (به عنوان مثال، از طریق تنظیمات فایروال شبکه esxcli) یا از طریق رابط کاربری vCenter اصلاح شود. [CTI_PRESERVE_2 [CTI_SERVE_3_] (Citation: change_rdp_port_conti) (Citation: Huntress BlackCat) (Citation: Trellix Rnasomhouse 2024) (Citation: Broadcom ESXi Firewall) https://attack.mitre.org/techniques/T1571 https://attack.mitre.org/techniques/T1021"
+            "name_fa": "فایروال سیستم را غیرفعال یا تغییر دهید",
+            "description_fa": "دشمنان ممکن است فایروال های سیستم را غیرفعال یا تغییر دهند تا از کنترل های محدود کننده استفاده از شبکه عبور کنند. تغییرات می تواند کل مکانیسم را غیرفعال کند و همچنین قوانین خاصی را اضافه، حذف یا تغییر دهد. این کار را می توان به روش های مختلفی بسته به سیستم عامل انجام داد، از جمله از طریق خط فرمان، ویرایش کلیدهای رجیستری ویندوز و کنترل پنل ویندوز.\n\nتغییر یا غیرفعال کردن فایروال سیستم ممکن است ارتباطات C2، حرکت جانبی و/یا خروج داده‌ها را که در غیر این صورت مجاز نمی‌باشند، فعال کند. به عنوان مثال، دشمنان ممکن است یک قانون فایروال جدید برای یک پروتکل معروف (مانند RDP) با استفاده از یک پورت غیر سنتی و بالقوه کمتر دارای امنیت (به عنوان مثال [درگاه غیر استاندارد] (https://attack.mitre.org/techniques/T1571)) اضافه کنند.[[[CTI_PRESERVE_0]]\n\nهمچنین ممکن است دشمنان تنظیمات شبکه میزبان را که به‌طور غیرمستقیم فایروال‌های سیستم را دستکاری می‌کنند، مانند پهنای باند رابط یا آستانه‌های درخواست اتصال شبکه، تغییر دهند.\n\nدر ESXi، قوانین فایروال ممکن است مستقیماً از طریق رابط خط فرمان esxcli (مثلاً از طریق «مجموعه فایروال شبکه esxcli») یا از طریق رابط کاربری vCenter اصلاح شوند.(Citation: Trellix Rnasomhouse 2024)(Citation: Broadcom ESXi Firewall) (Citation: change_rdp_port_conti) (Citation: Huntress BlackCat) https://attack.mitre.org/techniques/T1021"
         }
     ]
 }

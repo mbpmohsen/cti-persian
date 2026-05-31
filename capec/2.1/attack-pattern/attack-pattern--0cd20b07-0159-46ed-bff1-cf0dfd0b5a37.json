@@ -9,41 +9,52 @@
                 {
                     "external_id": "CAPEC-682",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/682.html"
+                    "url": "https://capec.mitre.org/data/definitions/682.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-1277",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1277.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1277.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1310",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1310.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1310.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Alex Scroxton, Alarm bells ring, the IoT is listening, 2019--12---13, TechTarget",
                     "external_id": "REF-723",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.computerweekly.com/news/252475324/Alarm-bells-ring-the-IoT-is-listening"
+                    "url": "https://www.computerweekly.com/news/252475324/Alarm-bells-ring-the-IoT-is-listening",
+                    "description_fa": "الکس اسکراکستون، زنگ‌های هشدار به صدا در می‌آیند، اینترنت اشیا در حال گوش دادن است، 2019--12---13، TechTarget",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Matthew Hughes, Bad news: KeyWe Smart Lock is easily bypassed and can't be fixed, 2019--12---11, Situation Publishing",
                     "external_id": "REF-724",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.theregister.com/2019/12/11/f_secure_keywe/"
+                    "url": "https://www.theregister.com/2019/12/11/f_secure_keywe/",
+                    "description_fa": "متیو هیوز، خبر بد: KeyWe Smart Lock به راحتی دور زده می شود و قابل تعمیر نیست، 2019--12---11، انتشارات وضعیت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Brian Krebs, Zyxel Flaw Powers New Mirai IoT Botnet Strain, 2020--03---20, Krebs on Security",
                     "external_id": "REF-725",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://krebsonsecurity.com/2020/03/zxyel-flaw-powers-new-mirai-iot-botnet-strain/"
+                    "url": "https://krebsonsecurity.com/2020/03/zxyel-flaw-powers-new-mirai-iot-botnet-strain/",
+                    "description_fa": "برایان کربس، Zyxel Flaw Powers New Mirai IoT Botnet Strain، 2020-03---20، Krebs on Security",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Colin Schulz, Stefan Raff, Sebastian Kortmann, Nikolaus Obwegeser, Digital Age Organizations: Uncovering Over-the-Air Updates in the Smart Product Realm, 2021--12, International Conference on Information Systems (ICIS) 2021",
                     "external_id": "REF-726",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.researchgate.net/publication/356065917_Digital_Age_Organizations_Uncovering_Over-the-Air_Updates_in_the_Smart_Product_Realm"
+                    "url": "https://www.researchgate.net/publication/356065917_Digital_Age_Organizations_Uncovering_Over-the-Air_Updates_in_the_Smart_Product_Realm",
+                    "description_fa": "کالین شولز، استفان راف، سباستین کورتمن، نیکولاس اوبگسر، سازمان‌های عصر دیجیتال: کشف به‌روزرسانی‌های هوایی در قلمرو محصولات هوشمند، 2021--12، کنفرانس بین‌المللی سیستم‌های اطلاعات (ICIS) 2021",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--0cd20b07-0159-46ed-bff1-cf0dfd0b5a37",
@@ -70,6 +81,18 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -89,11 +112,25 @@
             ],
             "x_capec_skills_required": {
                 "High": "Ability to identify physical entry points such as debug interfaces if the device is not being accessed remotely",
-                "Medium": "Knowledge of various wireless protocols to enable remote access to vulnerable devices"
+                "Medium": "Knowledge of various wireless protocols to enable remote access to vulnerable devices",
+                "High_fa": "توانایی شناسایی نقاط ورودی فیزیکی مانند رابط های اشکال زدایی در صورت عدم دسترسی به دستگاه از راه دور",
+                "Medium_fa": "آشنایی با پروتکل های بی سیم مختلف برای فعال کردن دسترسی از راه دور به دستگاه های آسیب پذیر"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف ممکن است از کد آسیب‌پذیر (یعنی سیستم‌افزار یا ROM) که غیرقابل اصلاح است، سوء استفاده کند. دستگاه‌های غیرقابل وصله به این دلیل وجود دارند که سازندگان عمدا یا سهوا دستگاه‌هایی را طراحی می‌کنند که قادر به به‌روزرسانی نرم‌افزار خود نیستند. علاوه بر این، با دستگاه‌های قابل به‌روزرسانی، سازنده ممکن است تصمیم بگیرد از دستگاه پشتیبانی نکند و به‌روزرسانی نرم‌افزار خود را متوقف کند.",
+            "name_fa": "سوء استفاده از سفت‌افزار یا کد ROM با آسیب‌پذیری‌های غیرقابل اصلاح",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> یک شرکت اینترنت اشیا با مجموعه ای از محصولات هوشمند برای مصارف خانگی مانند دوربین های خانگی، جاروبرقی، و لامپ های هوشمند عرضه می شود. محصولات محبوب می شوند و میلیون ها مصرف کننده این دستگاه ها را در خانه های خود نصب می کنند. همه دستگاه‌ها از یک ماژول سفارشی برای رمزگذاری استفاده می‌کنند که روی یک تراشه ROM ذخیره می‌شود، که حافظه غیرقابل تغییر است و قابل تغییر نیست. یک دشمن متوجه می شود که یک آسیب پذیری در کد ماژول رمزگذاری وجود دارد که اجازه دور زدن احراز هویت را می دهد و به هر دستگاهی دسترسی پیدا می کند. سپس دشمن کد بات نت را ایجاد می کند که از راه دور بر روی دستگاه های آلوده دانلود می شود. این کد اینترنت را برای دستگاه های نزدیک از همان خط تولید اسکن می کند و از آسیب پذیری سوء استفاده می کند و کد بات نت را روی این دستگاه های جدید بارگذاری می کند. با گذشت زمان، دشمن اکنون دارای یک بات نت از دستگاه هایی است که می توانند فعالیت های مخربی مانند حملات DDoS را انجام دهند. پس از یافتن آسیب‌پذیری، اصلاح آن غیرممکن است زیرا کد آسیب‌پذیر به‌روزرسانی نمی‌شود.</xhtml:p>",
+                "<xhtml:p> تلفن‌های هوشمند قدیمی‌تر ممکن است قدیمی شوند و تولیدکنندگان ممکن است از ارائه به‌روزرسانی‌های امنیتی خودداری کنند زیرا بر مدل‌های جدیدتر تمرکز می‌کنند. اگر یک حریف آسیب‌پذیری را در یک گوشی هوشمند قدیمی کشف کند، این احتمال وجود دارد که برای کاهش آن یک به‌روزرسانی امنیتی ایجاد نشود. این باعث می شود هر کسی که از تلفن هوشمند قدیمی استفاده می کند آسیب پذیر شود.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین سفت‌افزار یا کد ROM آسیب‌پذیر: </b>یک حریف سعی می‌کند مدل‌های دستگاهی را پیدا کند که مشخص است سفت‌افزار یا کد ROM غیرقابل وصله دارند، یا در نظر گرفته می‌شود که «پشت‌افزار پایانی پشتیبانی نمی‌شود». حریف به دنبال آسیب‌پذیری‌هایی در میان‌افزار یا کد ROM دستگاه‌های شناسایی‌شده می‌گردد، یا به دنبال دستگاه‌هایی می‌گردد که آسیب‌پذیری‌های شناخته شده دارند</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>بسیاری از بات‌نت‌ها از اسکن بی‌سیم برای کشف دستگاه‌های مجاور که ممکن است گذرواژه‌های پیش‌فرض استفاده می‌شوند استفاده کنند. هنگامی که این دستگاه‌ها آلوده شدند، می‌توانند سایر دستگاه‌های مجاور و غیره را جستجو کنند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین طرح حمله: </b>یک دشمن دستگاه/مدل خاصی را شناسایی می‌کند که می‌خواهد به آن حمله کند. آنها همچنین دستگاه‌های مشابهی را بررسی می‌کنند تا مشخص کنند آیا سفت‌افزار یا کد ROM آسیب‌پذیر نیز وجود دارد یا خیر.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>حمله را انجام دهید: </b>یک دشمن از میان‌افزار آسیب‌پذیر یا کد ROM مورد نظر خود برای دستیابی به شناسه مورد نظر خود سوء استفاده می‌کند. هدف.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>نصب بدافزار بر روی دستگاهی برای استخدام آن برای یک بات‌نت.</td></tr><tr><td>نصب بدافزار بر روی دستگاه و استفاده از آن برای حمله باج‌افزار.</td></tr><astein <td> اطلاعات را ذخیره کنید. دستگاه.</td></tr><tr><td>دستگاه را طوری دستکاری کنید تا رفتارهای غیرمنتظره ای داشته باشد که به نفع دشمن باشد.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "هنگامی که یک آسیب‌پذیری در دستگاهی یافت می‌شود که ابزاری برای وصله ندارد، ممکن است این حمله علیه کل دسته دستگاه‌ها مورد استفاده قرار گیرد. دستگاه‌های سازنده یکسان اغلب از سیستم عامل مشابه یا یکسان استفاده می‌کنند که می‌تواند منجر به حملات گسترده شود. دستگاه هایی با این ماهیت هدف اصلی حملات بات نت هستند. به دلیل پیچیدگی‌های به‌روزرسانی سیستم‌افزار، زمانی که تولیدکنندگان دیگر به دستگاه دسترسی فیزیکی نداشته باشند، دستگاه‌های مصرف‌کننده اغلب هدف این حمله قرار می‌گیرند. هنگام سوء استفاده از یک آسیب پذیری یافت شده، دشمنان اغلب سعی می کنند به یک دستگاه دسترسی ریشه داشته باشند. این به آنها اجازه می دهد تا از دستگاه برای هر هدف مخربی استفاده کنند. برخی از اکسپلویت‌های مثال سرقت داده‌های دستگاه، استفاده از دستگاه برای حمله باج‌افزار، یا استخدام دستگاه برای یک بات‌نت است.",
+            "x_capec_prerequisites_fa": [
+                "آگاهی از سخت افزار مورد استفاده.",
+                "دسترسی به سخت افزار مورد استفاده، چه به صورت فیزیکی و چه از راه دور."
+            ]
         }
     ],
     "type": "bundle"

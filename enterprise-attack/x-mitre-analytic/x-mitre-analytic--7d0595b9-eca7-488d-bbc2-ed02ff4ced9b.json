@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0120#AN0334",
-                    "external_id": "AN0334"
+                    "external_id": "AN0334",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Account performing the operation (e.g., Domain Admins vs. local users)"
+                    "description": "Account performing the operation (e.g., Domain Admins vs. local users)",
+                    "description_fa": "حسابی که عملیات را انجام می دهد (به عنوان مثال، مدیران دامنه در مقابل کاربران محلی)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Alert only on actions outside of maintenance windows"
+                    "description": "Alert only on actions outside of maintenance windows",
+                    "description_fa": "هشدار فقط در مورد اقدامات خارج از پنجره های تعمیر و نگهداری"
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Detect suspicious process lineage (e.g., powershell.exe launching net.exe)"
+                    "description": "Detect suspicious process lineage (e.g., powershell.exe launching net.exe)",
+                    "description_fa": "شناسایی اصل و نسب فرآیند مشکوک (به عنوان مثال، powershell.exe راه اندازی net.exe)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0334",
+            "description_fa": "رویدادهای مرتبط با تغییر حساب کاربری (بازنشانی، غیرفعال کردن، حذف) با روندهای غیرعادی (به عنوان مثال، PowerShell یا net.exe از یک جلسه تعاملی)، به ویژه در خارج از پنجره های تغییر سرپرست فناوری اطلاعات یا توسط کاربران غیر سرپرست."
         }
     ]
 }

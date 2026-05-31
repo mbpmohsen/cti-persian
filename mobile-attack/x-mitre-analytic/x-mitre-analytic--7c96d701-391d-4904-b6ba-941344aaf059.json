@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0706#AN1828",
-                    "external_id": "AN1828"
+                    "external_id": "AN1828",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -72,37 +73,47 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedProtocolPortMappings",
-                    "description": "Approved protocol-to-port pairings vary by bundle, business workflow, proxy architecture, and enterprise policy."
+                    "description": "Approved protocol-to-port pairings vary by bundle, business workflow, proxy architecture, and enterprise policy.",
+                    "description_fa": "جفت‌های پروتکل به پورت تأیید شده بسته به بسته، گردش کار تجاری، معماری پروکسی و خط‌مشی سازمانی متفاوت است."
                 },
                 {
                     "field": "SupervisedRequired",
-                    "description": "Strongest bundle-governance and protocol-port baseline analytics depend on supervised iOS devices."
+                    "description": "Strongest bundle-governance and protocol-port baseline analytics depend on supervised iOS devices.",
+                    "description_fa": "قوی‌ترین مدیریت بسته‌ای و تجزیه و تحلیل‌های پایه درگاه پروتکل به دستگاه‌های iOS تحت نظارت بستگی دارد."
                 },
                 {
                     "field": "AllowedManagedApps",
-                    "description": "Approved managed bundle identities vary by organization and device profile."
+                    "description": "Approved managed bundle identities vary by organization and device profile.",
+                    "description_fa": "شناسه‌های دسته مدیریت‌شده تأییدشده براساس نمایه سازمان و دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedServiceClasses",
-                    "description": "Expected external service classes differ across managed app categories and enterprise mobile workflows."
+                    "description": "Expected external service classes differ across managed app categories and enterprise mobile workflows.",
+                    "description_fa": "کلاس‌های خدمات خارجی مورد انتظار در دسته‌های برنامه مدیریت‌شده و گردش‌های کاری تلفن همراه سازمانی متفاوت است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window linking non-standard-port sessions with lifecycle or local context signals."
+                    "description": "Correlation window linking non-standard-port sessions with lifecycle or local context signals.",
+                    "description_fa": "پنجره همبستگی که جلسات پورت غیر استاندارد را با چرخه حیات یا سیگنال های زمینه محلی مرتبط می کند."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close a session must be to user activity to be considered expected."
+                    "description": "Defines how close a session must be to user activity to be considered expected.",
+                    "description_fa": "تعیین می‌کند که یک جلسه چقدر باید به فعالیت کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "BeaconIntervalTolerance",
-                    "description": "Allowed recurrence interval for benign polling, sync, or persistent sessions differs by bundle type."
+                    "description": "Allowed recurrence interval for benign polling, sync, or persistent sessions differs by bundle type.",
+                    "description_fa": "فاصله مجاز تکرار برای جلسات نظرسنجی خوش خیم، همگام سازی یا مداوم بر اساس نوع بسته نرم افزاری متفاوت است."
                 },
                 {
                     "field": "EnterpriseExceptionList",
-                    "description": "Known enterprise proxies, relays, developer tooling, and security products may legitimately use uncommon ports."
+                    "description": "Known enterprise proxies, relays, developer tooling, and security products may legitimately use uncommon ports.",
+                    "description_fa": "پراکسی‌های سازمانی شناخته شده، رله‌ها، ابزار توسعه‌دهنده و محصولات امنیتی ممکن است به طور قانونی از پورت‌های غیر معمول استفاده کنند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1828",
+            "description_fa": "مدافع جلسات خروجی برنامه مدیریت شده یا دستگاه نظارت شده را که در آن شاخص های پروتکل مانند دست دادن TLS، معنای HTTP یا سایر رفتارهای لایه برنامه در پورت های مقصد خارج از خط پایه تایید شده برای آن پروتکل و نقش بسته مشاهده می شود، مرتبط می کند. قوی‌ترین شواهد iOS، تله‌متری شبکه است که جلسات مکرر یا مداوم را با استفاده از پروتکل‌های کاربردی قابل تشخیص روی پورت‌های غیرمعمول نشان می‌دهد، به‌ویژه در هنگام به‌روزرسانی پس‌زمینه، در حالی که دستگاه قفل است، یا بدون تعامل اخیر با کاربر. از آنجایی که انتساب زمان اجرای محلی مستقیم ضعیف‌تر از Android است، تجزیه و تحلیل اولیه iOS باید بر روی عدم تطابق پروتکل شبکه در مقابل پورت به‌علاوه زمینه برنامه مدیریت‌شده نظارت‌شده و غنی‌سازی وضعیت دستگاه باشد."
         }
     ]
 }

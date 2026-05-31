@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0694#AN1807",
-                    "external_id": "AN1807"
+                    "external_id": "AN1807",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.375Z",
             "name": "Analytic 1807",
-            "description": "Correlates (1) abnormal application or system resource resolution behavior (e.g., library loading, path resolution, or intent redirection), (2) execution of code or resources not aligned with the originating application\u2019s package identity or expected runtime context, and (3) follow-on execution or network activity originating from the hijacked flow. The defender observes a causal chain where execution is redirected from an expected code path to an alternate resource or payload, resulting in execution under a trusted context but with untrusted origin.",
+            "description": "Correlates (1) abnormal application or system resource resolution behavior (e.g., library loading, path resolution, or intent redirection), (2) execution of code or resources not aligned with the originating application’s package identity or expected runtime context, and (3) follow-on execution or network activity originating from the hijacked flow. The defender observes a causal chain where execution is redirected from an expected code path to an alternate resource or payload, resulting in execution under a trusted context but with untrusted origin.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,21 +53,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between abnormal resource loading and execution/network activity"
+                    "description": "Correlation window between abnormal resource loading and execution/network activity",
+                    "description_fa": "پنجره همبستگی بین بارگذاری غیرعادی منبع و اجرا/فعالیت شبکه"
                 },
                 {
                     "field": "AllowedLibraryPaths",
-                    "description": "Baseline of expected library/resource load paths per application"
+                    "description": "Baseline of expected library/resource load paths per application",
+                    "description_fa": "خط پایه مسیرهای بارگذاری کتابخانه/منبع مورد انتظار در هر برنامه"
                 },
                 {
                     "field": "TrustedSignatureList",
-                    "description": "Trusted signing identities for application components"
+                    "description": "Trusted signing identities for application components",
+                    "description_fa": "شناسه های امضای مورد اعتماد برای اجزای برنامه"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Applications allowed to dynamically load code or use external resources"
+                    "description": "Applications allowed to dynamically load code or use external resources",
+                    "description_fa": "برنامه ها اجازه بارگذاری پویا کد یا استفاده از منابع خارجی را دارند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1807",
+            "description_fa": "(1) رفتار تفکیک منابع برنامه یا سیستم غیرعادی (مانند بارگیری کتابخانه، وضوح مسیر، یا تغییر مسیر)، (2) اجرای کد یا منابعی که با هویت بسته برنامه اصلی یا زمینه زمان اجرا مورد انتظار همسو نیستند، و (3) اجرای بعدی یا فعالیت شبکه ناشی از جریان ربوده شده. مدافع یک زنجیره علّی را مشاهده می کند که در آن اجرا از یک مسیر کد مورد انتظار به یک منبع یا بار جایگزین هدایت می شود، که منجر به اجرا در یک زمینه قابل اعتماد اما با منشاء غیرقابل اعتماد می شود."
         }
     ]
 }

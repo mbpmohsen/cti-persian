@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0457#AN1258",
-                    "external_id": "AN1258"
+                    "external_id": "AN1258",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProtocolEntropyThreshold",
-                    "description": "ICMP/UDP packet content entropy filter to identify encoded payloads."
+                    "description": "ICMP/UDP packet content entropy filter to identify encoded payloads.",
+                    "description_fa": "فیلتر آنتروپی محتوای بسته ICMP/UDP برای شناسایی بارهای رمزگذاری شده."
                 },
                 {
                     "field": "SessionDurationThreshold",
-                    "description": "Long ICMP/UDP sessions beyond expected limits (e.g., >5min)."
+                    "description": "Long ICMP/UDP sessions beyond expected limits (e.g., >5min).",
+                    "description_fa": "جلسات طولانی ICMP/UDP فراتر از حد انتظار (به عنوان مثال، > 5 دقیقه)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1258",
+            "description_fa": "جفت‌های غیر استاندارد پورت/پروتکل یا ترافیک ICMP با آنتروپی پایین شبیه الگوهای تونل‌زنی (مانند پینگ‌های با اندازه ثابت با تاخیر)."
         }
     ]
 }

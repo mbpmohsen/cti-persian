@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0491#AN1353",
-                    "external_id": "AN1353"
+                    "external_id": "AN1353",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineRegex",
-                    "description": "Regex patterns for device enumeration utilities (e.g., 'Get-PnpDevice', 'wmic path Win32_USBController')"
+                    "description": "Regex patterns for device enumeration utilities (e.g., 'Get-PnpDevice', 'wmic path Win32_USBController')",
+                    "description_fa": "الگوهای Regex برای ابزارهای شمارش دستگاه (به عنوان مثال، \"Get-PnpDevice\"، \"wmic path Win32_USBController\")"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time threshold for grouping device discovery with follow-on access or manipulation"
+                    "description": "Time threshold for grouping device discovery with follow-on access or manipulation",
+                    "description_fa": "آستانه زمانی برای گروه بندی کشف دستگاه با دسترسی یا دستکاری بعدی"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filter privileged or service accounts known to legitimately execute enumeration scripts"
+                    "description": "Filter privileged or service accounts known to legitimately execute enumeration scripts",
+                    "description_fa": "حساب‌های دارای امتیاز یا خدماتی که به‌طور قانونی اسکریپت‌های شمارش را اجرا می‌کنند، فیلتر کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1353",
+            "description_fa": "شمارش مشکوک لوازم جانبی متصل شده از طریق WMI، PowerShell، یا تماس‌های API سطح پایین که به طور بالقوه با فعل و انفعالات دستگاه‌های قابل جابجایی زنجیره‌ای هستند."
         }
     ]
 }

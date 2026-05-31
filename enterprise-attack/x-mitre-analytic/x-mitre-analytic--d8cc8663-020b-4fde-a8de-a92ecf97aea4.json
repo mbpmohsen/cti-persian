@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0445#AN1232",
-                    "external_id": "AN1232"
+                    "external_id": "AN1232",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CLICommand",
-                    "description": "Custom proxy or port forwarding scripts executed from ESXi shell."
+                    "description": "Custom proxy or port forwarding scripts executed from ESXi shell.",
+                    "description_fa": "اسکریپت های سفارشی ارسال پروکسی یا پورت که از پوسته ESXi اجرا می شوند."
                 },
                 {
                     "field": "DestinationIP",
-                    "description": "Unusual outbound connections from ESXi host, particularly to internet."
+                    "description": "Unusual outbound connections from ESXi host, particularly to internet.",
+                    "description_fa": "اتصالات خروجی غیرمعمول از میزبان ESXi، به ویژه به اینترنت."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Root or elevated users initiating unexpected tunnels."
+                    "description": "Root or elevated users initiating unexpected tunnels.",
+                    "description_fa": "کاربران ریشه یا بالا که تونل های غیرمنتظره را راه اندازی می کنند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1232",
+            "description_fa": "استفاده مستقیم از «nc»، «socat»، یا اسکریپت‌های تونل معکوس که توسط زمینه‌های غیرعادی کاربر یا VIB‌های غیرمجاز شروع به اتصال از Hypervisor به سیستم‌های خارجی می‌کنند."
         }
     ]
 }

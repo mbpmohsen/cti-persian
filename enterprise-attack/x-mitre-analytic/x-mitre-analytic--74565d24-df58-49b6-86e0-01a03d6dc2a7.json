@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0096#AN0269",
-                    "external_id": "AN0269"
+                    "external_id": "AN0269",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VMAdminAccountName",
-                    "description": "Expected account name patterns for ESXi/vCenter admins."
+                    "description": "Expected account name patterns for ESXi/vCenter admins.",
+                    "description_fa": "الگوهای نام حساب مورد انتظار برای مدیران ESXi/vCenter."
                 },
                 {
                     "field": "NetworkAccessLocation",
-                    "description": "Expected IPs/subnets for legitimate ESXi access."
+                    "description": "Expected IPs/subnets for legitimate ESXi access.",
+                    "description_fa": "IP/زیر شبکه های مورد انتظار برای دسترسی قانونی ESXi."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0269",
+            "description_fa": "افزودن کاربران جدید یا تغییرات در مجوزهای نقش (به عنوان مثال، ReadOnly -> Admin) از طریق API یا vSphere Client، به ویژه از IP های غیر jumpbox."
         }
     ]
 }

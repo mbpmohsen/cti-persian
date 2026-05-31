@@ -9,55 +9,69 @@
                 {
                     "external_id": "CAPEC-62",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/62.html"
+                    "url": "https://capec.mitre.org/data/definitions/62.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-352",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/352.html"
+                    "url": "http://cwe.mitre.org/data/definitions/352.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-306",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/306.html"
+                    "url": "http://cwe.mitre.org/data/definitions/306.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-664",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/664.html"
+                    "url": "http://cwe.mitre.org/data/definitions/664.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-732",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/732.html"
+                    "url": "http://cwe.mitre.org/data/definitions/732.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1275",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1275.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1275.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Cross-Site Request Forgery",
                     "external_id": "09",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Cross-Site-Request-Forgery"
+                    "url": "http://projects.webappsec.org/Cross-Site-Request-Forgery",
+                    "description_fa": "جعل درخواست بین سایتی",
+                    "source_name_fa": "WASC"
                 },
                 {
                     "description": "Cross Site Request Forgery (CSRF)",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/csrf"
+                    "url": "https://owasp.org/www-community/attacks/csrf",
+                    "description_fa": "جعل درخواست متقابل سایت (CSRF)",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Thomas Schreiber, Session Riding: A Widespread Vulnerability in Today's Web Applications, SecureNet GmbH",
                     "external_id": "REF-62",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://crypto.stanford.edu/cs155old/cs155-spring08/papers/Session_Riding.pdf"
+                    "url": "https://crypto.stanford.edu/cs155old/cs155-spring08/papers/Session_Riding.pdf",
+                    "description_fa": "توماس شرایبر، Session Riding: یک آسیب پذیری گسترده در برنامه های کاربردی وب امروزی، SecureNet GmbH",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-602",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/05-Testing_for_Cross_Site_Request_Forgery.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/06-Session_Management_Testing/05-Testing_for_Cross_Site_Request_Forgery.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--0939f361-ea31-454b-ae3d-4af2411b756d",
@@ -87,6 +101,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -104,11 +131,21 @@
                 "All the attacker needs is the exact representation of requests to be made to the application and to be able to get the malicious link across to a victim."
             ],
             "x_capec_skills_required": {
-                "Medium": "The attacker needs to figure out the exact invocation of the targeted malicious action and then craft a link that performs the said action. Having the user click on such a link is often accomplished by sending an email or posting such a link to a bulletin board or the likes."
+                "Medium": "The attacker needs to figure out the exact invocation of the targeted malicious action and then craft a link that performs the said action. Having the user click on such a link is often accomplished by sending an email or posting such a link to a bulletin board or the likes.",
+                "Medium_fa": "مهاجم باید فراخوانی دقیق اقدام مخرب هدفمند را کشف کند و سپس پیوندی ایجاد کند که عمل مذکور را انجام دهد. کلیک کردن کاربر روی چنین پیوندی اغلب با ارسال یک ایمیل یا ارسال چنین پیوندی به تابلوی اعلانات یا موارد مشابه انجام می شود."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم پیوندهای وب مخرب ایجاد می کند و آنها را (از طریق صفحات وب، ایمیل و غیره) معمولاً به صورت هدفمند توزیع می کند، به این امید که کاربران را وادار کند روی پیوند کلیک کرده و اقدام مخرب را علیه برخی از برنامه های شخص ثالث انجام دهند. در صورت موفقیت آمیز بودن، اقدام تعبیه شده در پیوند مخرب توسط برنامه مورد نظر با سطح امتیاز کاربران پردازش و پذیرفته می شود. این نوع حمله از پایداری و اعتماد ضمنی که به کوکی‌های جلسه کاربر توسط بسیاری از برنامه‌های کاربردی وب امروزه اعمال می‌شود، استفاده می‌کند. در چنین معماری، هنگامی که کاربر به یک برنامه احراز هویت می‌شود و یک کوکی جلسه در سیستم کاربر ایجاد می‌شود، تمام تراکنش‌های بعدی برای آن جلسه با استفاده از آن کوکی احراز هویت می‌شوند، از جمله اقدامات بالقوه‌ای که توسط مهاجم آغاز شده و به سادگی «سوار کردن» کوکی جلسه موجود است.",
+            "name_fa": "جعل درخواست متقابل سایت",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>هنگامی که کاربر به حساب بانکی خود وارد شده است، مهاجم می تواند ایمیلی با محتوای بالقوه جالب ارسال کند و از کاربر بخواهد روی پیوندی در ایمیل کلیک کند.</xhtml:p>\n               <xhtml:p>پیوند به یک اسکریپت راه اندازی مهاجم اشاره می کند یا حاوی یک اسکریپت راه اندازی مهاجم است، احتمالاً حتی در یک iFrame، که از ارسال فرم کاربر واقعی برای انجام یک فعالیت مخرب، مانند انتقال وجه از حساب قربانی تقلید می کند.</xhtml:p>\n               <xhtml:p> مهاجم می‌تواند اسکریپت را در پیوند جاسازی کرده یا توسط آن هدف قرار دهد، به‌عنوان کاربر احراز هویت شده، هرگونه اقدام دلخواه را انجام دهد. هنگامی که این اسکریپت اجرا می‌شود، برنامه مورد نظر، اقدامات را بر اساس کوکی‌های جلسه موجود در قربانیان احراز هویت می‌کند و می‌پذیرد.</xhtml:p>همچنین ببینید: آسیب‌پذیری جعل درخواست بین‌سایتی (CSRF) در util.pl در @Mail WebMail 4.51 به مهاجمان راه دور اجازه می‌دهد تنظیمات دلخواه خود را تغییر دهند، و با استفاده از یک عملکرد دلخواه S به عنوان یک عملکرد دلخواه کاربر به عنوان یک عملکرد دلخواه انجام دهند. یک عنصر IMG در یک ایمیل HTML."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کاوش وب‌سایت هدف: </b>مهاجم ابتدا وب‌سایت مورد نظر را کاوش می‌کند تا بخش‌هایی از عملکردهای مورد علاقه خود را تعیین کند (مانند انتقال پول). مهاجم به یک حساب کاربری قانونی در وب سایت مورد نظر نیاز دارد. داشتن دو حساب کمک خواهد کرد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار اشکال‌زدایی برنامه‌های وب مانند WebScarab، Tamper Data یا TamperIE برای تجزیه و تحلیل اطلاعات رد و بدل شده بین مشتری و سرور استفاده کنید</td></tr><tr><td>از ابزار تبادل اطلاعات شبکه به عنوان ابزار Wireshark برای تجزیه و تحلیل اطلاعات کلاینت استفاده کنید. سرور</td></tr><tr><td>مشاهده منبع HTML صفحات وب که حاوی پیوندها یا دکمه‌هایی هستند که عملکردهای مورد علاقه را انجام می‌دهند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>یک پیوند ایجاد کنید که با کلیک کردن بر روی آن، عملکرد جالبی ایجاد کنید. برخی از عملکردهای جالب مانند انتقال پول، تغییر رمز عبور و غیره را اجرا کنید.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک درخواست GET حاوی تمام پارامترهای مورد نیاز ایجاد کنید (به عنوان مثال https://www.somebank.com/members/transfer.asp?to=012345678901&amt=10000)</td></tr><tr><tf فرم ارسال کنید <td>C method=\"POST\" action=\"https://www.somebank.com/members/transfer.asp\"><input type=\"hidden\" Name=\"to\" value=\"012345678901\"/><input type=\"hidden\" Name=\"amt\" value=\"10000\"/><input type=\"submit\" src=\"clickhere.jpg\"/></form></td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>متقاعد کردن کاربر به کلیک بر روی پیوند: </b>در نهایت، مهاجم باید کاربری را متقاعد کند که RF را برای کلیک بر روی پیوند CS هدف قرار داده است. حمله کنید.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک حمله فیشینگ را اجرا کنید و یک ایمیل به کاربر ارسال کنید تا او را متقاعد کند که روی یک پیوند کلیک کند.</td></tr><tr><td>یک حمله XSS ذخیره شده را در یک وب‌سایت اجرا کنید تا به طور دائم پیوند مخرب را در وب‌سایت جاسازی کنید. حمله XSS به وب‌سایتی که در آن یک شی XMLHTTPRequest به‌محض بازدید کاربر از صفحه، به‌طور خودکار حمله را اجرا می‌کند. این مرحله متقاعد کردن کاربر برای کلیک کردن بر روی یک پیوند را حذف می‌کند.</td></tr><tr><td>پیوند مخرب را در وب‌سایت خود مهاجم قرار دهید، جایی که کاربر ممکن است مجبور باشد روی پیوند کلیک کند، یا زمانی که کاربر XMLHTT را به طور خودکار مورد حمله قرار می‌دهد. سایت.</td></tr></tbody></table></ol></div>",
+            "x_capec_resources_required_fa": [
+                "تنها چیزی که مهاجم نیاز دارد نمایش دقیق درخواست هایی است که باید به برنامه ارائه شود و بتواند پیوند مخرب را به قربانی برساند."
+            ]
         }
     ],
     "spec_version": "2.0",

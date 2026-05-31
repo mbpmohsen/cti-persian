@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-503",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/503.html"
+                    "url": "https://capec.mitre.org/data/definitions/503.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-284",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/284.html"
+                    "url": "http://cwe.mitre.org/data/definitions/284.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Tongbo Luo, Hao Hao, Wenliang Du, Yifei Wang, Heng Yin, Attacks on WebView in the Android System, 2011, Annual Computer Security Applications Conference (ACSAC)",
                     "external_id": "REF-430",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.cis.syr.edu/~wedu/Research/paper/webview_acsac2011.pdf"
+                    "url": "http://www.cis.syr.edu/~wedu/Research/paper/webview_acsac2011.pdf",
+                    "description_fa": "Tongbo Luo، Hao Hao، Wenliang Du، Yifei Wang، Heng Yin، حملات به WebView در سیستم اندروید، 2011، کنفرانس سالانه برنامه های کاربردی امنیت رایانه (ACSAC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--c195a0a3-62fc-4def-9702-8938440cc9a7",
@@ -41,7 +45,12 @@
                 "This type of an attack requires the adversary to convince the user to load the malicious web page inside the target application. Once loaded, the malicious web page will have the same permissions as the target application and will have access to all registered interfaces. Both the permission and the interface must be in place for the functionality to be exposed."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف از طریق یک صفحه وب مخرب، با استفاده از واسط های ثبت شده از طریق addJavascriptInterface API WebView به عملکردهای خاص برنامه دسترسی پیدا می کند. هنگامی که یک رابط از طریق addJavascriptInterface در WebView ثبت می شود، جهانی می شود و تمام صفحات بارگذاری شده در WebView می توانند این رابط را فراخوانی کنند.",
+            "name_fa": "قرار گرفتن در معرض نمایش وب",
+            "x_capec_prerequisites_fa": [
+                "این نوع حمله مستلزم آن است که حریف کاربر را متقاعد کند که صفحه وب مخرب را در داخل برنامه هدف بارگذاری کند. پس از بارگیری، صفحه وب مخرب همان مجوزهای برنامه مورد نظر را خواهد داشت و به تمام رابط های ثبت شده دسترسی خواهد داشت. هم مجوز و هم رابط باید در محل باشند تا عملکرد در معرض دید قرار گیرد."
+            ]
         }
     ],
     "spec_version": "2.0",

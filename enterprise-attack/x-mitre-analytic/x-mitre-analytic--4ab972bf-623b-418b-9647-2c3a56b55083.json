@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0157#AN0444",
-                    "external_id": "AN0444"
+                    "external_id": "AN0444",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TGSRequestThreshold",
-                    "description": "Number of TGS requests per account within a defined window; higher than baseline may indicate Kerberoasting."
+                    "description": "Number of TGS requests per account within a defined window; higher than baseline may indicate Kerberoasting.",
+                    "description_fa": "تعداد درخواست های TGS در هر حساب در یک پنجره تعریف شده؛ بالاتر از سطح پایه ممکن است نشان دهنده Kerberoasting باشد."
                 },
                 {
                     "field": "AllowedEncryptionTypes",
-                    "description": "Permitted Kerberos encryption algorithms; RC4 (etype 0x17) usage in modern environments is suspicious."
+                    "description": "Permitted Kerberos encryption algorithms; RC4 (etype 0x17) usage in modern environments is suspicious.",
+                    "description_fa": "الگوریتم های مجاز رمزگذاری Kerberos؛ استفاده از RC4 (نوع 0x17) در محیط های مدرن مشکوک است."
                 },
                 {
                     "field": "ServiceAccountBaselines",
-                    "description": "Expected SPNs requested by specific accounts; anomalies may indicate adversarial targeting."
+                    "description": "Expected SPNs requested by specific accounts; anomalies may indicate adversarial targeting.",
+                    "description_fa": "SPN های مورد انتظار درخواست شده توسط حساب های خاص؛ ناهنجاری ها ممکن است نشان دهنده هدف گیری خصمانه باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for bursts of TGS requests; adjustable to reduce false positives."
+                    "description": "Correlation window for bursts of TGS requests; adjustable to reduce false positives.",
+                    "description_fa": "پنجره همبستگی برای انبوه درخواست های TGS. قابل تنظیم برای کاهش مثبت کاذب"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0444",
+            "description_fa": "تلاش‌های Kerberoasting را با نظارت بر درخواست‌های غیرعادی Kerberos TGS (شناسه رویداد 4769) با رمزگذاری RC4 (نوع 0x17)، حساب‌هایی که تعداد غیرمعمولی بلیط خدمات را در یک دوره کوتاه درخواست می‌کنند، یا حساب‌های خدماتی که خارج از خطوط پایه استفاده معمولی هدف‌گذاری شده‌اند، شناسایی می‌کند. همچنین فعالیت فرآیند مشکوک (به عنوان مثال، فراخوانی Mimikatz دسترسی LSASS) را با ناهنجاری‌های بلیط Kerberos مرتبط می‌کند."
         }
     ]
 }

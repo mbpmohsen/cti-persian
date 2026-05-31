@@ -9,37 +9,45 @@
                 {
                     "external_id": "CAPEC-384",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/384.html"
+                    "url": "https://capec.mitre.org/data/definitions/384.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-471",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/471.html"
+                    "url": "http://cwe.mitre.org/data/definitions/471.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-345",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/345.html"
+                    "url": "http://cwe.mitre.org/data/definitions/345.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-346",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/346.html"
+                    "url": "http://cwe.mitre.org/data/definitions/346.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-602",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/602.html"
+                    "url": "http://cwe.mitre.org/data/definitions/602.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-311",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/311.html"
+                    "url": "http://cwe.mitre.org/data/definitions/311.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Tom Stracener, Sean Barnum, So Many Ways [...]: Exploiting Facebook and YoVille, 2010, Defcon 18",
                     "external_id": "REF-327",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "تام استریسنر، شان بارنوم، راه های زیادی [...]: بهره برداری از فیس بوک و یوویل، 2010، دفکون 18",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--ea07b1ea-c1b0-4923-8d25-a8fc39da040a",
@@ -73,7 +81,15 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم داده های خروجی یا ورودی را از یک کلاینت در چارچوب برنامه دستکاری می کند تا محتوای پیام ها را تغییر دهد. انجام این حمله می تواند به مهاجم اجازه دهد تا امتیازات غیرمجاز را در برنامه به دست آورد یا حملاتی مانند فیشینگ، استراتژی های فریبنده برای گسترش بدافزار یا حملات سنتی برنامه های وب را انجام دهد. این تکنیک‌ها نیازمند استفاده از نرم‌افزار تخصصی است که به مهاجم اجازه می‌دهد تا ارتباطات دشمن در وسط (CAPEC-94) را بین مرورگر وب و سیستم راه دور انجام دهد. علیرغم استفاده از نرم افزار AiTH، حمله در واقع به سمت سرور هدایت می شود، زیرا مشتری یک گره در یک سری از کارگزاران محتوا است که اطلاعات را به چارچوب برنامه منتقل می کند. علاوه بر این، حمله \"دشمن در وسط\" در لایه شبکه درست نیست، بلکه یک حمله لایه برنامه است که علت اصلی آن اعتماد برنامه های کاربردی اصلی به یکپارچگی کد ارائه شده توسط مشتری است.",
+            "name_fa": "دستکاری پیام API برنامه از طریق Man-in-the-Middle",
+            "x_capec_prerequisites_fa": [
+                "نرم افزار هدفمند از APIهای چارچوب برنامه کاربردی استفاده می کند"
+            ],
+            "x_capec_resources_required_fa": [
+                "یک برنامه نرم افزاری که به کاربر اجازه می دهد تا ارتباط مستقیمی بین مشتری و سرور برقرار کند، مانند یک پروکسی man-in-the-middle."
+            ]
         }
     ],
     "type": "bundle"

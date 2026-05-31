@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0554#AN1533",
-                    "external_id": "AN1533"
+                    "external_id": "AN1533",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessContext",
-                    "description": "Limit to background processes or scripts with no GUI interaction."
+                    "description": "Limit to background processes or scripts with no GUI interaction.",
+                    "description_fa": "محدود به فرآیندهای پس‌زمینه یا اسکریپت‌ها بدون تعامل GUI."
                 },
                 {
                     "field": "PayloadType",
-                    "description": "Focus on specific sensitive file types (e.g., zip, docx, keychain db)."
+                    "description": "Focus on specific sensitive file types (e.g., zip, docx, keychain db).",
+                    "description_fa": "روی انواع فایل های حساس خاص (مانند zip، docx، keychain db) تمرکز کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1533",
+            "description_fa": "مشاهده دستورات «blueutil»/«networksetup» یا API های سطح پایین که بلوتوث را تغییر می دهند یا انتقال را آغاز می کنند، به خصوص اگر با فعالیت های اخیر خواندن فایل های بزرگ توسط فرآیندهای غیر GUI جفت شوند."
         }
     ]
 }

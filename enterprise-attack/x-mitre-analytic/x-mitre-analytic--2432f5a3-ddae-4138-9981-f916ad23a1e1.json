@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0300#AN0838",
-                    "external_id": "AN0838"
+                    "external_id": "AN0838",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0838",
-            "description": "Detect anomalous chains of memory allocation and execution inside the same process (e.g., VirtualAlloc \u2192 memcpy \u2192 VirtualProtect \u2192 CreateThread). Unlike process injection, reflective code loading does not perform cross-process memory writes \u2014 the suspicious activity occurs entirely within the process\u2019s own PID context.",
+            "description": "Detect anomalous chains of memory allocation and execution inside the same process (e.g., VirtualAlloc → memcpy → VirtualProtect → CreateThread). Unlike process injection, reflective code loading does not perform cross-process memory writes — the suspicious activity occurs entirely within the process’s own PID context.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -60,14 +61,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessWhitelist",
-                    "description": "Certain processes may legitimately use Assembly.Load(); defenders may whitelist known developer/admin tools."
+                    "description": "Certain processes may legitimately use Assembly.Load(); defenders may whitelist known developer/admin tools.",
+                    "description_fa": "برخی از فرآیندها ممکن است به طور قانونی از Assembly.Load(); مدافعان ممکن است ابزارهای توسعه دهنده/ادمین شناخته شده را در لیست سفید قرار دهند."
                 },
                 {
                     "field": "MemoryRegionPermissions",
-                    "description": "Detection logic can tune for RWX memory allocations; some legitimate tools may allocate with RW permissions only."
+                    "description": "Detection logic can tune for RWX memory allocations; some legitimate tools may allocate with RW permissions only.",
+                    "description_fa": "منطق تشخیص می تواند برای تخصیص حافظه RWX تنظیم شود. برخی از ابزارهای قانونی ممکن است فقط با مجوزهای RW تخصیص دهند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0838",
+            "description_fa": "زنجیره های غیرعادی تخصیص و اجرای حافظه را در داخل یک فرآیند شناسایی کنید (به عنوان مثال، VirtualAlloc → memcpy → VirtualProtect → CreateThread). برخلاف تزریق فرآیند، بارگذاری کد بازتابی، نوشتن حافظه متقاطع را انجام نمی دهد - فعالیت مشکوک کاملاً در زمینه PID خود فرآیند رخ می دهد."
         }
     ]
 }

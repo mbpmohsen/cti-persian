@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0331#AN0941",
-                    "external_id": "AN0941"
+                    "external_id": "AN0941",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow_PostMessage_to_LVM_SORTITEMS",
-                    "description": "Defines temporal distance between payload copy and execution trigger"
+                    "description": "Defines temporal distance between payload copy and execution trigger",
+                    "description_fa": "فاصله زمانی بین کپی محموله و ماشه اجرا را تعریف می کند"
                 },
                 {
                     "field": "TargetWindowClassName",
-                    "description": "Restrict detection to SysListView32 or similar GUI elements"
+                    "description": "Restrict detection to SysListView32 or similar GUI elements",
+                    "description_fa": "شناسایی را به SysListView32 یا عناصر رابط کاربری گرافیکی مشابه محدود کنید"
                 },
                 {
                     "field": "UserContextAnomalyThreshold",
-                    "description": "Adjusts detection sensitivity to users sending window messages across session boundaries"
+                    "description": "Adjusts detection sensitivity to users sending window messages across session boundaries",
+                    "description_fa": "حساسیت تشخیص را برای کاربرانی که پیام های پنجره را در سراسر مرزهای جلسه ارسال می کنند، تنظیم می کند"
                 },
                 {
                     "field": "InterprocessWindowMessagingFrequency",
-                    "description": "Raise alert when rate of message-passing to foreign GUI processes exceeds baseline"
+                    "description": "Raise alert when rate of message-passing to foreign GUI processes exceeds baseline",
+                    "description_fa": "هنگامی که نرخ ارسال پیام به فرآیندهای رابط کاربری گرافیکی خارجی از سطح پایه فراتر رفت، هشدار را افزایش دهید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0941",
+            "description_fa": "استفاده از تزریق مبتنی بر پیام را با نظارت بر دنباله‌های مربوط به FindWindow (EnumWindows یا EnumChildWindows)، VirtualAllocEx یا تماس‌های API مرتبط، همراه با PostMessage/SendMessage مشکوک (به عنوان مثال، استفاده از LVM_SewView3POSITIONs) LVM_SORTITEMS فراخوانی به جای WriteProcessMemory."
         }
     ]
 }

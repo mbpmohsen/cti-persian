@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0597#AN1641",
-                    "external_id": "AN1641"
+                    "external_id": "AN1641",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PasswordManagerBinaries",
-                    "description": "List of monitored binaries and file formats for password managers in use (e.g., KeePass, 1Password, Bitwarden, LastPass)."
+                    "description": "List of monitored binaries and file formats for password managers in use (e.g., KeePass, 1Password, Bitwarden, LastPass).",
+                    "description_fa": "فهرستی از باینری‌های نظارت شده و فرمت‌های فایل برای مدیریت رمز عبور در حال استفاده (به عنوان مثال، KeePass، 1Password، Bitwarden، LastPass)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window to correlate process creation, API access, and file reads indicative of credential extraction."
+                    "description": "Window to correlate process creation, API access, and file reads indicative of credential extraction.",
+                    "description_fa": "پنجره مربوط به ایجاد فرآیند، دسترسی API و خواندن فایل نشان دهنده استخراج اعتبار است."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Filter for administrative accounts vs. expected users of password managers."
+                    "description": "Filter for administrative accounts vs. expected users of password managers.",
+                    "description_fa": "فیلتر برای حساب های اداری در مقابل کاربران مورد انتظار مدیران رمز عبور."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1641",
+            "description_fa": "تشخیص دسترسی مشکوک به فرآیندهای مدیریت رمز عبور (KeePass، 1Password، LastPass، Bitwarden) از طریق تزریق غیرعادی فرآیند، خواندن حافظه، یا استفاده از خط فرمان از DLL های مرتبط با طاق. ایجاد فرآیند را با تماس‌های API سیستم‌عامل و دسترسی فایل به پایگاه‌های داده خزانه (kdbx، .opvault، .ldb.) مرتبط می‌کند."
         }
     ]
 }

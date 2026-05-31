@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0197#AN0570",
-                    "external_id": "AN0570"
+                    "external_id": "AN0570",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,26 +56,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TCCAllowList",
-                    "description": "Legitimate apps (Zoom, Teams, FaceTime) that are permitted to camera."
+                    "description": "Legitimate apps (Zoom, Teams, FaceTime) that are permitted to camera.",
+                    "description_fa": "برنامه های قانونی (Zoom، Teams، FaceTime) که مجاز به دوربین هستند."
                 },
                 {
                     "field": "VideoExtensions",
-                    "description": "Mov/mp4/mkv/yuv etc., tuned to environment workloads."
+                    "description": "Mov/mp4/mkv/yuv etc., tuned to environment workloads.",
+                    "description_fa": "Mov/mp4/mkv/yuv و غیره، با حجم کاری محیط تنظیم شده است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation between TCC grant \u2192 file write \u2192 network egress."
+                    "description": "Correlation between TCC grant → file write → network egress.",
+                    "description_fa": "همبستگی بین کمک هزینه TCC → نوشتن فایل → خروج از شبکه."
                 },
                 {
                     "field": "MinFileSizeMB",
-                    "description": "Reduce FP from thumbnails/snapshots."
+                    "description": "Reduce FP from thumbnails/snapshots.",
+                    "description_fa": "FP را از ریز عکسها/عکسهای فوری کاهش دهید."
                 },
                 {
                     "field": "LaunchAgentPaths",
-                    "description": "Allowed persistence paths to reduce false positives when correlating with persistence."
+                    "description": "Allowed persistence paths to reduce false positives when correlating with persistence.",
+                    "description_fa": "مسیرهای ماندگاری مجاز برای کاهش مثبت کاذب هنگام همبستگی با پایداری."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0570",
+            "description_fa": "یک فرآیند غیرفهرست حق دوربین TCC (kTCCServiceCamera) را دریافت می‌کند، دسته‌های دستگاه AppleCamera/AVFoundation را باز می‌کند، مصنوعات .mov/.mp4 را در مکان‌های غیرمعمول می‌نویسد، و/یا چراغ‌ها/حذف‌ها را بلافاصله بعد می‌نویسد."
         }
     ]
 }

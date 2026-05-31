@@ -9,54 +9,70 @@
                 {
                     "external_id": "CAPEC-578",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/578.html"
+                    "url": "https://capec.mitre.org/data/definitions/578.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-284",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/284.html"
+                    "url": "http://cwe.mitre.org/data/definitions/284.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Modify Authentication Process: Multi-Factor Authentication",
                     "external_id": "T1556.006",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1556/006"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1556/006",
+                    "description_fa": "اصلاح فرآیند احراز هویت: احراز هویت چند عاملی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Disable or Modify Tools",
                     "external_id": "T1562.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/001",
+                    "description_fa": "آسیب رساندن به دفاع: ابزارها را غیرفعال یا اصلاح کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Disable Windows Event Logging",
                     "external_id": "T1562.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/002",
+                    "description_fa": "Ipair Defenses: غیرفعال کردن گزارش رویدادهای ویندوز",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Disable or Modify System Firewall",
                     "external_id": "T1562.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/004",
+                    "description_fa": "آسیب رساندن به دفاع: فایروال سیستم را غیرفعال یا اصلاح کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Disable or Modify Cloud Firewall",
                     "external_id": "T1562.007",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/007"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/007",
+                    "description_fa": "آسیب رساندن به دفاع: فایروال ابری را غیرفعال یا اصلاح کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Disable Cloud Logs",
                     "external_id": "T1562.008",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/008"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/008",
+                    "description_fa": "نقص دفاع: غیرفعال کردن گزارش‌های ابری",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Impair Defenses: Safe Mode Boot",
                     "external_id": "T1562.009",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1562/009"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1562/009",
+                    "description_fa": "آسیب رساندن به دفاع: بوت حالت ایمن",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--a2f42e82-a184-4df7-a8bb-6fc34787d571",
@@ -73,6 +89,9 @@
             "x_capec_consequences": {
                 "Availability": [
                     "Hide Activities (By disabling certain security tools, the adversary can hide malicious activity and avoid detection.)"
+                ],
+                "Availability_fa": [
+                    "پنهان کردن فعالیت ها (با غیرفعال کردن ابزارهای امنیتی خاص، حریف می تواند فعالیت های مخرب را پنهان کند و از شناسایی جلوگیری کند.)"
                 ]
             },
             "x_capec_domains": [
@@ -87,7 +106,15 @@
             ],
             "x_capec_status": "Usable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از ضعف در کنترل دسترسی برای غیرفعال کردن ابزارهای امنیتی استفاده می کند تا شناسایی رخ ندهد. این می تواند به شکل کشتن فرآیندها، حذف کلیدهای رجیستری به طوری که ابزارها در زمان اجرا شروع نشوند، حذف فایل های گزارش یا روش های دیگر باشد.",
+            "name_fa": "غیر فعال کردن نرم افزارهای امنیتی",
+            "x_capec_prerequisites_fa": [
+                "دشمن باید توانایی تعامل با پیکربندی سیستم مورد نظر را داشته باشد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0431#AN1202",
-                    "external_id": "AN1202"
+                    "external_id": "AN1202",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SpoofScoreThreshold",
-                    "description": "Defines sensitivity to SPF/DKIM/DMARC failures; higher thresholds reduce false positives but may miss stealthier spoofing."
+                    "description": "Defines sensitivity to SPF/DKIM/DMARC failures; higher thresholds reduce false positives but may miss stealthier spoofing.",
+                    "description_fa": "حساسیت به خرابی های SPF/DKIM/DMARC را تعریف می کند. آستانه های بالاتر، مثبت های کاذب را کاهش می دهند، اما ممکن است جعل های مخفیانه را از دست بدهند."
                 },
                 {
                     "field": "MonitoredDomains",
-                    "description": "Specifies which domains to enforce strict validation against; enterprise-specific tuning may be required."
+                    "description": "Specifies which domains to enforce strict validation against; enterprise-specific tuning may be required.",
+                    "description_fa": "مشخص می‌کند که کدام دامنه‌ها باید اعتبارسنجی دقیق را علیه آنها اعمال کنند. تنظیم خاص سازمانی ممکن است مورد نیاز باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1202",
+            "description_fa": "ردیابی پیام‌های ایمیل و سرصفحه‌ها را برای بررسی‌های ناموفق SPF، DKIM یا DMARC که هویت فرستنده جعلی را نشان می‌دهند، نظارت کنید. دامنه‌های فرستنده غیرعادی یا مسیرهای برگشت نامتناسب را با احتمال جعل بالا مرتبط کنید."
         }
     ]
 }

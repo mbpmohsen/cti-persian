@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0091#AN0250",
-                    "external_id": "AN0250"
+                    "external_id": "AN0250",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "APILoadWithoutImport",
-                    "description": "Tunable logic to flag suspicious modules used without static IAT entries"
+                    "description": "Tunable logic to flag suspicious modules used without static IAT entries",
+                    "description_fa": "منطق قابل تنظیم برای پرچم گذاری ماژول های مشکوک مورد استفاده بدون ورودی های IAT ایستا"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlates module load to suspicious memory allocation or API lookup within timeframe"
+                    "description": "Correlates module load to suspicious memory allocation or API lookup within timeframe",
+                    "description_fa": "بار ماژول را با تخصیص حافظه مشکوک یا جستجوی API در بازه زمانی مرتبط می کند"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Used to detect obfuscated strings or hashed function names"
+                    "description": "Used to detect obfuscated strings or hashed function names",
+                    "description_fa": "برای شناسایی رشته های مبهم یا نام توابع هش شده استفاده می شود"
                 },
                 {
                     "field": "StackTraceFilter",
-                    "description": "Optional filtering of known safe modules or patterns from telemetry"
+                    "description": "Optional filtering of known safe modules or patterns from telemetry",
+                    "description_fa": "فیلتر اختیاری ماژول ها یا الگوهای ایمن شناخته شده از تله متری"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0250",
+            "description_fa": "زنجیره رفتاری شامل استفاده مشکوک از GetProcAddress و LoadLibrary به دنبال تخصیص حافظه و نقشه‌برداری دستی، اغلب با رشته‌های آنتروپی کم، استفاده غیرعادی از API بدون جداول وارد کردن ایستا، یا رفتارهای بارگذاری تاخیری ماژول جفت می‌شود."
         }
     ]
 }

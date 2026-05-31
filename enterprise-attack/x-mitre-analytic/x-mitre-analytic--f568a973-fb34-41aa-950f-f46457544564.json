@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0459#AN1261",
-                    "external_id": "AN1261"
+                    "external_id": "AN1261",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegistryAllowList",
-                    "description": "Defines trusted registries for image pulls/builds. Builds referencing unapproved registries may indicate adversary behavior."
+                    "description": "Defines trusted registries for image pulls/builds. Builds referencing unapproved registries may indicate adversary behavior.",
+                    "description_fa": "رجیستری های قابل اعتماد را برای کشیدن/ساخت تصویر تعریف می کند. ساختمان هایی که به ثبت های تایید نشده ارجاع می دهند ممکن است نشان دهنده رفتار دشمن باشد."
                 },
                 {
                     "field": "NewImageThreshold",
-                    "description": "Threshold for number of new custom images created in a given time window. Exceeding this threshold may indicate malicious builds."
+                    "description": "Threshold for number of new custom images created in a given time window. Exceeding this threshold may indicate malicious builds.",
+                    "description_fa": "آستانه برای تعداد تصاویر سفارشی جدید ایجاد شده در یک پنجره زمانی مشخص. فراتر از این آستانه ممکن است نشان دهنده ساخت های مخرب باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window (e.g., 5m) between suspicious build activity and subsequent network traffic anomalies."
+                    "description": "Defines correlation window (e.g., 5m) between suspicious build activity and subsequent network traffic anomalies.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، 5 متر) بین فعالیت ساخت مشکوک و ناهنجاری های ترافیک شبکه بعدی را تعریف می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1261",
+            "description_fa": "تشخیص فعالیت ساخت تصویر کانتینر به طور مستقیم روی میزبان با استفاده از Docker یا Kubernetes API. مدافعان ممکن است درخواست‌های ساخت Docker، دستورالعمل‌های Dockerfile غیرعادی (مانند دانلود کد از IPهای ناشناخته)، یا ایجاد تصاویر جدید و به دنبال آن استقرار فوری را مشاهده کنند. این زنجیره رفتار معمولاً شامل یک رویداد ایجاد تصویر غیرمنتظره است که با ارتباطات شبکه خروجی به مقاصد غیر استاندارد یا غیر قابل اعتماد مرتبط است."
         }
     ]
 }

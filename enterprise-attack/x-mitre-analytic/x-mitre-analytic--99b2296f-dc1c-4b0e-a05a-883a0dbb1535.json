@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0325#AN0922",
-                    "external_id": "AN0922"
+                    "external_id": "AN0922",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DestinationASN",
-                    "description": "Adjust for known benign but high-risk infrastructure (e.g., hosting providers like DigitalOcean, OVH, etc.)."
+                    "description": "Adjust for known benign but high-risk infrastructure (e.g., hosting providers like DigitalOcean, OVH, etc.).",
+                    "description_fa": "برای زیرساخت های شناخته شده خوش خیم اما پرخطر (به عنوان مثال، ارائه دهندگان میزبانی مانند DigitalOcean، OVH و غیره) تنظیم کنید."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Detect suspicious lineage\u2014proxy tools launched from script interpreters or LOLBins."
+                    "description": "Detect suspicious lineage—proxy tools launched from script interpreters or LOLBins.",
+                    "description_fa": "تشخیص اصل و نسب مشکوک - ابزارهای پراکسی که از مفسرهای اسکریپت یا LOLBins راه اندازی شده اند."
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Tune based on expected randomness in outbound request payloads."
+                    "description": "Tune based on expected randomness in outbound request payloads.",
+                    "description_fa": "بر اساس تصادفی بودن مورد انتظار در بارهای درخواستی خروجی تنظیم کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0922",
+            "description_fa": "فرآیند غیرمعمول (مثلاً «rundll32»، «mshta»، «wscript» یا بارهای سفارشی) اتصال شبکه را به IP/دامنه‌های خارجی که ترافیک C2 را پراکسی می‌کنند، اغلب از طریق پورت‌های غیرمعمول یا اتصالات HTTP/S با آنتروپی بالا آغاز می‌کند."
         }
     ]
 }

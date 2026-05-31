@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0050#AN0137",
-                    "external_id": "AN0137"
+                    "external_id": "AN0137",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AddInExtension",
-                    "description": "Malicious add-ins may have varying extensions (.wll, .xll, .dll, .vsto)"
+                    "description": "Malicious add-ins may have varying extensions (.wll, .xll, .dll, .vsto)",
+                    "description_fa": "افزونه های مخرب ممکن است پسوندهای مختلفی داشته باشند (wll، .xll، .dll، .vsto.)"
                 },
                 {
                     "field": "TrustedPath",
-                    "description": "Office trusted add-in paths may differ across enterprise configurations"
+                    "description": "Office trusted add-in paths may differ across enterprise configurations",
+                    "description_fa": "مسیرهای افزودنی مورد اعتماد Office ممکن است در پیکربندی‌های سازمانی متفاوت باشد"
                 },
                 {
                     "field": "RegistryPath",
-                    "description": "Registry keys used to load add-ins may be version- and app-specific"
+                    "description": "Registry keys used to load add-ins may be version- and app-specific",
+                    "description_fa": "کلیدهای رجیستری که برای بارگیری افزونه ها استفاده می شوند ممکن است مختص نسخه و برنامه باشند"
                 },
                 {
                     "field": "ChildProcessName",
-                    "description": "Office processes spawning mshta.exe, powershell.exe, or rundll32.exe are abnormal"
+                    "description": "Office processes spawning mshta.exe, powershell.exe, or rundll32.exe are abnormal",
+                    "description_fa": "فرآیندهای آفیس که mshta.exe، powershell.exe یا rundll32.exe ایجاد می‌کنند غیرعادی هستند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Add-in loading may occur only during Office launch windows"
+                    "description": "Add-in loading may occur only during Office launch windows",
+                    "description_fa": "بارگیری افزونه ممکن است فقط در طول پنجره های راه اندازی آفیس رخ دهد"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0137",
+            "description_fa": "یک دشمن یک افزونه آفیس مخرب (مانند WLL، XLL، COM) را در یک فهرست قابل اعتماد می‌نویسد یا رها می‌کند یا کلیدهای رجیستری را تغییر می‌دهد تا افزونه‌های مخرب در راه‌اندازی برنامه آفیس بارگیری شوند. پس از باز کردن ورد یا اکسل توسط کاربر، افزونه به طور خودکار بارگذاری می‌شود، و باعث اجرای بارگذاری می‌شود، که اغلب باعث ایجاد موتورهای برنامه‌نویسی یا فرآیندهای فرزند غیرعادی می‌شود."
         }
     ]
 }

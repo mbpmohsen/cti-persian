@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0497#AN1369",
-                    "external_id": "AN1369"
+                    "external_id": "AN1369",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessNameExclusions",
-                    "description": "List of expected administrative tools/processes to prevent false positives."
+                    "description": "List of expected administrative tools/processes to prevent false positives.",
+                    "description_fa": "فهرست ابزار/فرآیندهای اداری مورد انتظار برای جلوگیری از مثبت کاذب."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window linking process termination, registry edits, and service stoppage."
+                    "description": "Defines correlation window linking process termination, registry edits, and service stoppage.",
+                    "description_fa": "پنجره همبستگی پایان فرآیند، ویرایش های رجیستری و توقف سرویس را پیوند می دهد."
                 },
                 {
                     "field": "ServiceNames",
-                    "description": "Customizable list of security service names per enterprise deployment."
+                    "description": "Customizable list of security service names per enterprise deployment.",
+                    "description_fa": "لیست قابل تنظیم نام سرویس های امنیتی در هر استقرار سازمانی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1369",
+            "description_fa": "تشخیص رفتار دشمن که ابزارهای امنیتی را غیرفعال یا تغییر می‌دهد، از جمله از بین بردن فرآیندهای AV/EDR، توقف سرویس‌ها، تغییر کلیدهای رجیستری Sysmon یا دستکاری در لیست‌های محرومیت. مدافعان خاتمه فرآیند/سرویس، اصلاح رجیستری و عدم وجود غیرعادی تله متری مورد انتظار را مشاهده می کنند."
         }
     ]
 }

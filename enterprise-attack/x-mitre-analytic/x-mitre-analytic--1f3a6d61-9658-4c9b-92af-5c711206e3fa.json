@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0464#AN1281",
-                    "external_id": "AN1281"
+                    "external_id": "AN1281",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilenamePattern",
-                    "description": "Filter for filenames like *.nmconnection or profiles containing SSID names"
+                    "description": "Filter for filenames like *.nmconnection or profiles containing SSID names",
+                    "description_fa": "برای نام فایل هایی مانند *.nmconnection یا پروفایل های حاوی نام های SSID فیلتر کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Distinguish between root/admin script usage vs. non-privileged terminal access"
+                    "description": "Distinguish between root/admin script usage vs. non-privileged terminal access",
+                    "description_fa": "بین استفاده از اسکریپت root/admin در مقابل دسترسی ترمینال غیرمجاز تمایز قائل شوید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1281",
+            "description_fa": "دسترسی فایل به تنظیمات اتصال NetworkManager و تلاش برای خواندن اعتبارنامه PSK از `/etc/NetworkManager/system-connections/*`."
         }
     ]
 }

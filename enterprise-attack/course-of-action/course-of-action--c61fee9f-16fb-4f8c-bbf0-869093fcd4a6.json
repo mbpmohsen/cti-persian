@@ -13,21 +13,21 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/mitigations/T1134",
                     "external_id": "T1134",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Microsoft Create Token",
                     "description": "Brower, N., Lich, B. (2017, April 19). Create a token object. Retrieved December 19, 2017.",
                     "url": "https://docs.microsoft.com/windows/device-security/security-policy-settings/create-a-token-object",
-                    "source_name_fa": "Microsoft Create Token",
-                    "description_fa": "پاسخ، N.، Lich، B. (2017، 19 آوریل) یک شی توکن ایجاد کنید. Retrieved 19 دسامبر 2017"
+                    "source_name_fa": "مایکروسافت ایجاد توکن",
+                    "description_fa": "Brower, N., Lich, B. (2017, 19 آوریل). یک شی نشانه ایجاد کنید. بازبینی شده در 19 دسامبر 2017."
                 },
                 {
                     "source_name": "Microsoft Replace Process Token",
                     "description": "Brower, N., Lich, B. (2017, April 19). Replace a process level token. Retrieved December 19, 2017.",
                     "url": "https://docs.microsoft.com/windows/device-security/security-policy-settings/replace-a-process-level-token",
-                    "source_name_fa": "Microsoft جایگزین Process Token",
-                    "description_fa": "پاسخ، N.، Lich، B. (2017، 19 آوریل) یک توکن سطح فرآیند را جایگزین کنید. Retrieved 19 دسامبر 2017"
+                    "source_name_fa": "رمز فرآیند جایگزینی مایکروسافت",
+                    "description_fa": "Brower, N., Lich, B. (2017, 19 آوریل). یک نشانه سطح فرآیند را جایگزین کنید. بازبینی شده در 19 دسامبر 2017."
                 }
             ],
             "object_marking_refs": [
@@ -43,8 +43,8 @@
             ],
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.2.0",
-            "name_fa": "دسترسی به Token Manipulation Mitigation",
-            "description_fa": "توکن های دسترسی بخشی جدایی ناپذیر از سیستم امنیتی در ویندوز هستند و نمی توانند خاموش شوند. با این حال، یک مهاجم باید در حال حاضر دسترسی به سیستم محلی برای استفاده کامل از این تکنیک داشته باشد؛ مطمئن شوید که کاربران و حساب ها را به حداقل امتیازات مورد نیاز برای انجام کار خود محدود کنید.\n\nهر کاربر همچنین می تواند توکن های دسترسی را در صورتی که دارای اعتبار قانونی باشند، تقویت کند. دستورالعمل های کاهشی را برای جلوگیری از استفاده از [حساب های معتبر] دنبال کنید. اجازه محدود به طوری که کاربران و گروه های کاربر نمی توانند توکن ایجاد کنند. این تنظیمات باید فقط برای حساب سیستم محلی تعریف شود. GPO: computer Configuration > [Policies] > Windows Settings > تنظیمات امنیتی > سیاست های محلی > ارزیابی حقوق کاربران: ایجاد یک شی توکن [[ویرایش] همچنین تعریف کنید که چه کسی می تواند یک توکن سطح فرآیند را فقط به سرویس محلی و شبکه از طریق GPO ایجاد کند: پیکربندی کامپیوتر > تنظیمات ویندوز> تنظیمات امنیتی > سیاست های محلی > ارزیابی حقوق کاربران: جایگزین کردن یک توکن سطح فرآیند [[ویرایش]\n\nهمچنین فرصت هایی را برای افزایش امتیازات با محدود کردن فرصت های صعود خصوصی محدود کنید. (Citation: Microsoft Create Token) (Citation: Microsoft Replace Process Token) https://attack.mitre.org/techniques/T1078"
+            "name_fa": "دسترسی به کاهش دستکاری توکن",
+            "description_fa": "توکن های دسترسی بخشی جدایی ناپذیر از سیستم امنیتی ویندوز هستند و نمی توان آنها را خاموش کرد. با این حال، برای استفاده کامل از این تکنیک، مهاجم باید از قبل به سیستم محلی دسترسی در سطح مدیر داشته باشد. مطمئن شوید که کاربران و حساب‌ها را به حداقل امتیازاتی که برای انجام کارشان نیاز دارند محدود کنید.\n\nهر کاربر همچنین می تواند در صورت داشتن اعتبار قانونی، توکن های دسترسی را جعل کند. برای جلوگیری از استفاده دشمن از [حساب‌های معتبر](https://attack.mitre.org/techniques/T1078 دستورالعمل‌های کاهش را دنبال کنید. مجوزها را محدود کنید تا کاربران و گروه های کاربری نتوانند توکن ایجاد کنند. این تنظیم باید فقط برای حساب سیستم محلی تعریف شود. GPO: پیکربندی رایانه > [خط مشی ها] > تنظیمات ویندوز > تنظیمات امنیتی > سیاست های محلی > واگذاری حقوق کاربر: یک شی نشانه ایجاد کنید. (Citation: Microsoft Create Token) همچنین تعیین کنید چه کسی می‌تواند از طریق GPO یک نشانه سطح فرآیند فقط برای سرویس محلی و شبکه ایجاد کند: پیکربندی رایانه > [خط‌مشی‌ها] > تنظیمات ویندوز > تنظیمات امنیتی > سیاست‌های محلی > تخصیص حقوق کاربر: یک نشانه سطح فرآیند را جایگزین کنید. (Citation: Microsoft Replace Process Token)\n\nهمچنین با محدود کردن فرصت‌های افزایش امتیاز، فرصت‌های دشمنان را برای افزایش امتیازات محدود کنید."
         }
     ]
 }

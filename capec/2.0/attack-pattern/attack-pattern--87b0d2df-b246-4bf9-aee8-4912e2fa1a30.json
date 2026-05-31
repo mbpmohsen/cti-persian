@@ -9,52 +9,68 @@
                 {
                     "external_id": "CAPEC-169",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/169.html"
+                    "url": "https://capec.mitre.org/data/definitions/169.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Browser Bookmark Discovery",
                     "external_id": "T1217",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1217"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1217",
+                    "description_fa": "کشف نشانک مرورگر",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Gather Victim Host Information",
                     "external_id": "T1592",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1592"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1592",
+                    "description_fa": "اطلاعات میزبان قربانی را جمع آوری کنید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Active Scanning",
                     "external_id": "T1595",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1595"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1595",
+                    "description_fa": "اسکن فعال",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Manic Velocity, Footprinting And The Basics Of Hacking, Web Textfiles",
                     "external_id": "REF-31",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://web.textfiles.com/hacking/footprinting.txt"
+                    "url": "http://web.textfiles.com/hacking/footprinting.txt",
+                    "description_fa": "سرعت مانیک، ردپا و اصول هک، فایل های متنی وب",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Eddie Sutton, Footprint: What Is And How Do You Erase Them",
                     "external_id": "REF-32",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.infosecwriters.com/text_resources/pdf/Footprinting.pdf"
+                    "url": "http://www.infosecwriters.com/text_resources/pdf/Footprinting.pdf",
+                    "description_fa": "ادی ساتون، ردپا: چیست و چگونه آنها را پاک می کنید",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-34",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--87b0d2df-b246-4bf9-aee8-4912e2fa1a30",
@@ -68,6 +84,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -102,11 +121,25 @@
                 "The adversary requires a variety of tools to collect information about the target. These include port/network scanners and tools to analyze responses from applications to determine version and configuration information. Footprinting a system adequately may also take a few days if the attacker wishes the footprinting attempt to go undetected."
             ],
             "x_capec_skills_required": {
-                "Low": "The adversary knows how to send HTTP request, run the scan tool."
+                "Low": "The adversary knows how to send HTTP request, run the scan tool.",
+                "Low_fa": "حریف می داند که چگونه درخواست HTTP را ارسال کند، ابزار اسکن را اجرا کنید."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Very Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن درگیر فعالیت های کاوشگری و اکتشافی برای شناسایی اجزاء و ویژگی های هدف می شود.",
+            "name_fa": "رد پا",
+            "x_capec_example_instances_fa": [
+                "در این مثال اجازه دهید به وب سایت http://www.example.com نگاهی بیندازیم تا اطلاعات زیادی درباره آلیس به دست آوریم. از وب سایت متوجه می شویم که آلیس foobar.org را نیز اجرا می کند. www example.com را در پنجره Name Lookup در ابزاری تایپ می کنیم و نتیجه ما این آدرس IP است: 192.173.28.130 دامنه را در اعلان Name Lookup تایپ می کنیم و همان IP به ما داده می شود. به جرات می توان گفت نمونه و foobar.org در یک جعبه میزبانی می شوند. اما اگر بخواهیم یک جستجوی معکوس نام در IP انجام دهیم، کدام دامنه ظاهر می شود؟ www.example.com یا foobar.org؟ نه، نتیجه nijasvspirates.org است. بنابراین nijasvspirates.org نام جعبه میزبان 31337squirrel.org و foobar.org است. پس اکنون که IP را داریم، بیایید بررسی کنیم که آیا nijasvspirates بیدار است یا خیر. ما IP را در پنجره Ping تایپ می کنیم. فاصله بین بسته ها را روی 1 میلی ثانیه تنظیم می کنیم. تعداد ثانیه‌های منتظر ماندن تا پایان زمان پینگ را روی 5 تنظیم می‌کنیم. اندازه پینگ را روی 500 بایت تنظیم می‌کنیم و ده پینگ ارسال می‌کنیم. ده بسته ارسال شده و ده بسته دریافت شده است. nijasvspirates.org به ازای هر بسته ارسالی به طور متوسط ​​0.35 ثانیه پیامی را به رایانه من برگرداند. nijasvspirates زنده است. پنجره Whois را باز می کنیم و nijasvspirates.org را در درخواست Query و whois.networksolutions.com را در اعلان سرور تایپ می کنیم. این بدان معناست که ما از Network Solutions می‌خواهیم تا هر آنچه را که درباره nijasvspirates.org می‌دانند به ما بگوید. نتیجه این لیست اطلاعات لباسشویی است: ثبت‌کننده: FooBar (nijasvspirates -DOM) p.o.box 11111 SLC، UT 84151 نام دامنه ایالات متحده: nijasvspirates.ORG تماس اداری، تماس با صدور صورت‌حساب: Smith, John jsmith@anonymous.net 11UTBox. 84151 555-555-6103 تماس فنی: Johnson, Ken kj@fierymonkey.org fierymonkey p.o.box 11111 SLC, UT 84151 555-555-3849 آخرین به روز رسانی رکورد در 17 آگوست 2001. رکورد در 11 آگوست 2002 منقضی می شود. رکورد ایجاد شده در 11 آگوست 2000. آخرین به روز رسانی پایگاه داده در 12 دسامبر 2001 04:06:00 EST. سرورهای دامنه به ترتیب فهرست شده: NS1. fierymonkey.ORG 192.173.28.130 NS2. fierymonkey.ORG 64.192.168.80 سنگ بنای ردپا، Port Scanning است. بیایید nijasvspirates.org را پورت اسکن کنیم و ببینیم چه نوع سرویس هایی در آن جعبه اجرا می شوند. IP nijasvspirates را در اعلان میزبان پنجره Port Scan تایپ می کنیم. ما جستجو را از پورت شماره 1 شروع می کنیم و در پورت Sub7 پیش فرض، 27374 توقف می کنیم. نتایج ما عبارتند از: 21 TCP ftp 22 TCP ssh SSH-1.99-OpenSSH_2.30 25 TCP smtp 53 TCP دامنه 80 TCP pop3 111CP TCP از این طریق می دانیم که آلیس با استفاده از POP3، SUNRPC (SUN Remote Procedure Call) و ident، یک وب سایت و ایمیل را اجرا می کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3> کاوش</h3><ol><li> <p> <b>ردیابی درخواست: </b> مهاجم اطلاعات وب سایت و کد منبع وب سایت را بررسی می کند و از ابزارهای خودکار برای به دست آوردن هر چه بیشتر اطلاعات در مورد سیستم و سیستم استفاده می کند. سازمان.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>Open Source Footprinting: وب سایت را در مورد سازمان بررسی کنید و منبع HTML صفحه وب را مرور کنید تا نظرات را جستجو کنید.</td></tr><tr><td>شمارش شبکه: پرس و جوهای مختلف شبکه را انجام دهید (Query Query,Query Query,Organizationali,Regiinistra) Query) در بسیاری از پایگاه‌های داده whois یافت شده در اینترنت برای شناسایی نام‌های دامنه و شبکه‌های مرتبط.</td></tr><tr><td>بازجویی DNS: پس از جمع‌آوری اطلاعات اولیه، حمله می‌تواند شروع به پرس‌وجو از DNS کند.</td></tr><tr><td>تکنیک‌های دیگر: از پینگ‌سوئیپ، اسکن TCP، تکنیک‌های مختلف IOS برای اسکن اطلاعات بیشتر در مورد IDP استفاده کنید. شبکه.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> Footprinting یک اصطلاح کلی برای توصیف انواع تکنیک‌های جمع‌آوری اطلاعات است که اغلب توسط مهاجمان برای آماده‌سازی برای حمله استفاده می‌شود. این شامل استفاده از ابزارهایی برای یادگیری هرچه بیشتر در مورد ترکیب، پیکربندی و مکانیسم های امنیتی برنامه، سیستم یا شبکه مورد نظر است. اطلاعاتی که ممکن است در طول یک تلاش ردیابی جمع آوری شود می تواند شامل پورت های باز، برنامه ها و نسخه های آنها، توپولوژی شبکه و اطلاعات مشابه باشد. اگرچه اثر انگشت شبیه به انگشت نگاری است، اما هدف ردیابی به دست آوردن دیدی جامع تر از یک سیستم یا شبکه است، در حالی که اثر انگشت بیشتر برای یک برنامه یا سیستم عامل خاص هدف قرار می گیرد. در حالی که هدف قرار دادن ردپای آسیب‌رسان نیست (اگرچه برخی از فعالیت‌ها، مانند اسکن‌های شبکه، گاهی اوقات می‌توانند به طور ناخواسته باعث اختلال در برنامه‌های آسیب‌پذیر شوند)، اغلب ممکن است راه را برای حملات مخرب‌تر هموار کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "یک برنامه کاربردی باید اطلاعات قابل شناسایی در مورد سیستم یا برنامه را از طریق روش های داوطلبانه یا غیر ارادی منتشر کند. برخی از جزئیات شناسایی سیستم‌های اطلاعاتی به دلیل ساختار ذاتی و استانداردهای پروتکل آنها در شبکه‌های ارتباطی قابل مشاهده است (به عنوان مثال، اگر یک دشمن از sniffer برای بازرسی ترافیک استفاده کند). هر سیستم یا شبکه ای که قابل شناسایی باشد می تواند ردیابی شود. با این حال، برخی از گزینه‌های پیکربندی ممکن است اطلاعات مفیدی را که می‌توان در طول حمله ردپای جمع‌آوری کرد، محدود کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "دشمن برای جمع آوری اطلاعات در مورد هدف به ابزارهای مختلفی نیاز دارد. اینها شامل اسکنرهای پورت/شبکه ​​و ابزارهایی برای تجزیه و تحلیل پاسخ‌های برنامه‌ها برای تعیین نسخه و اطلاعات پیکربندی است. اگر مهاجم بخواهد تلاش برای ردیابی به اندازه کافی شناسایی نشود، ممکن است چند روز طول بکشد."
+            ]
         }
     ],
     "spec_version": "2.0",

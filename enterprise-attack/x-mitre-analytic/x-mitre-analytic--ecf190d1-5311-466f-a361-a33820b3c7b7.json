@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0374#AN1053",
-                    "external_id": "AN1053"
+                    "external_id": "AN1053",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RoleScope",
-                    "description": "Which IAM roles or privileges are considered sensitive when applied to functions"
+                    "description": "Which IAM roles or privileges are considered sensitive when applied to functions",
+                    "description_fa": "کدام نقش‌ها یا امتیازات IAM هنگام اعمال بر توابع حساس در نظر گرفته می‌شوند"
                 },
                 {
                     "field": "AllowedFunctions",
-                    "description": "Known baseline list of approved serverless functions to reduce false positives"
+                    "description": "Known baseline list of approved serverless functions to reduce false positives",
+                    "description_fa": "لیست پایه شناخته شده توابع بدون سرور تایید شده برای کاهش مثبت کاذب"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal threshold for correlating function creation with anomalous execution"
+                    "description": "Temporal threshold for correlating function creation with anomalous execution",
+                    "description_fa": "آستانه زمانی برای همبستگی ایجاد تابع با اجرای غیرعادی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1053",
+            "description_fa": "ایجاد یا اصلاح توابع بدون سرور (مانند AWS Lambda، GCP Cloud Functions، Azure Functions) را با تخصیص نقش غیرعادی IAM یا رویدادهای تشدید مجوزها مرتبط کنید. اجرای بعدی توابع جدید ایجاد شده را که اقدامات غیرمنتظره ای مانند ایجاد اتصالات شبکه خروجی، دسترسی به منابع حساس یا ایجاد اعتبار اضافی انجام می دهند، شناسایی کنید."
         }
     ]
 }

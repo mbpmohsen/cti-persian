@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0505#AN1394",
-                    "external_id": "AN1394"
+                    "external_id": "AN1394",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLineEntropyThreshold",
-                    "description": "Used to flag base64 or token-heavy command-line strings"
+                    "description": "Used to flag base64 or token-heavy command-line strings",
+                    "description_fa": "برای علامت گذاری رشته های خط فرمان base64 یا token-heavy استفاده می شود"
                 },
                 {
                     "field": "SuspiciousCharacterCount",
-                    "description": "Escape character and symbol frequency in command-line strings"
+                    "description": "Escape character and symbol frequency in command-line strings",
+                    "description_fa": "کاراکتر فرار و فرکانس نماد در رشته های خط فرمان"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window between command execution and follow-up child or file write behavior"
+                    "description": "Window between command execution and follow-up child or file write behavior",
+                    "description_fa": "پنجره ای بین اجرای دستور و پیگیری رفتار نوشتن فرزند یا فایل"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1394",
+            "description_fa": "تشخیص فعالیت خط فرمان که الگوهای مبهم نحوی را نشان می‌دهد، مانند نویسه‌های فرار بیش از حد، رمزگذاری base64، الحاق فرمان، یا طول فرمان و آنتروپی."
         }
     ]
 }

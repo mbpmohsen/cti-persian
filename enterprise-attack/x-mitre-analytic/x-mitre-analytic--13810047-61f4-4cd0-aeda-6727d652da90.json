@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0255#AN0705",
-                    "external_id": "AN0705"
+                    "external_id": "AN0705",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WhitelistedAdminTools",
-                    "description": "Expected log management scripts executed by administrators should be excluded from alerts."
+                    "description": "Expected log management scripts executed by administrators should be excluded from alerts.",
+                    "description_fa": "اسکریپت های مدیریت گزارش مورد انتظار اجرا شده توسط مدیران باید از هشدارها حذف شوند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate enumeration attempts with file export or network transfer within a defined timeframe."
+                    "description": "Correlate enumeration attempts with file export or network transfer within a defined timeframe.",
+                    "description_fa": "تلاش‌های شمارش را با صادرات فایل یا انتقال شبکه در یک بازه زمانی مشخص مرتبط کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0705",
+            "description_fa": "برای استفاده از ابزارهای بومی مانند wevtutil.exe یا cmdlet های PowerShell (Get-WinEvent، Get-EventLog) برای شمارش یا صادر کردن گزارش ها نظارت کنید. دسترسی غیرمعمول به کانال‌های رویدادهای امنیتی یا سیستم، به‌ویژه توسط کاربران یا فرآیندهای غیرمدیریت، باید با صادرات بعدی فایل یا فعالیت انتقال شبکه مرتبط باشد."
         }
     ]
 }

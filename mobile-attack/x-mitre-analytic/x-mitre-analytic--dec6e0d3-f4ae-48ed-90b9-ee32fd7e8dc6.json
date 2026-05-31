@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0610#AN1664",
-                    "external_id": "AN1664"
+                    "external_id": "AN1664",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -67,41 +68,52 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window used to evaluate recurring retrieval and absence of same-service writeback."
+                    "description": "Correlation window used to evaluate recurring retrieval and absence of same-service writeback.",
+                    "description_fa": "پنجره همبستگی برای ارزیابی بازیابی مکرر و عدم وجود بازنویسی همان سرویس استفاده می شود."
                 },
                 {
                     "field": "SupervisedRequired",
-                    "description": "Strongest app-governance and bundle-baseline analytics depend on supervised iOS devices."
+                    "description": "Strongest app-governance and bundle-baseline analytics depend on supervised iOS devices.",
+                    "description_fa": "قوی‌ترین مدیریت برنامه‌ها و تجزیه و تحلیل‌های پایه بسته به دستگاه‌های iOS تحت نظارت بستگی دارد."
                 },
                 {
                     "field": "AllowedManagedApps",
-                    "description": "Approved managed bundle identities vary by organization and device profile."
+                    "description": "Approved managed bundle identities vary by organization and device profile.",
+                    "description_fa": "شناسه‌های دسته مدیریت‌شده تأییدشده براساس نمایه سازمان و دستگاه متفاوت است."
                 },
                 {
                     "field": "AllowedServiceClasses",
-                    "description": "Some managed apps legitimately retrieve content from storage, collaboration, or messaging services."
+                    "description": "Some managed apps legitimately retrieve content from storage, collaboration, or messaging services.",
+                    "description_fa": "برخی از برنامه های مدیریت شده به طور قانونی محتوا را از فضای ذخیره سازی، همکاری یا سرویس های پیام بازیابی می کنند."
                 },
                 {
                     "field": "AllowedReadOnlyMappings",
-                    "description": "Defines which bundles are expected to retrieve without writeback, and in what context."
+                    "description": "Defines which bundles are expected to retrieve without writeback, and in what context.",
+                    "description_fa": "تعریف می‌کند که کدام بسته‌ها انتظار می‌رود بدون نوشتن بازیابی شوند و در چه زمینه‌ای."
                 },
                 {
                     "field": "BackgroundRefreshBaseline",
-                    "description": "Expected background retrieval behavior differs across managed app categories."
+                    "description": "Expected background retrieval behavior differs across managed app categories.",
+                    "description_fa": "رفتار بازیابی پس‌زمینه مورد انتظار در دسته‌های برنامه مدیریت‌شده متفاوت است."
                 },
                 {
                     "field": "RecentUserInteractionWindow",
-                    "description": "Defines how close retrieval must be to user activity to be considered expected."
+                    "description": "Defines how close retrieval must be to user activity to be considered expected.",
+                    "description_fa": "تعیین می کند که بازیابی چقدر باید به فعالیت کاربر نزدیک باشد تا مورد انتظار در نظر گرفته شود."
                 },
                 {
                     "field": "BeaconIntervalTolerance",
-                    "description": "Allowed recurrence interval for benign refresh, polling, or sync behavior differs by bundle type."
+                    "description": "Allowed recurrence interval for benign refresh, polling, or sync behavior differs by bundle type.",
+                    "description_fa": "فاصله مجاز تکرار برای رفتار تازه‌سازی، نظرسنجی یا همگام‌سازی خوش‌خیم بر اساس نوع بسته‌بندی متفاوت است."
                 },
                 {
                     "field": "InboundOutboundRatioThreshold",
-                    "description": "Expected ratio of inbound to outbound bytes for benign managed-app refresh behavior varies by workflow."
+                    "description": "Expected ratio of inbound to outbound bytes for benign managed-app refresh behavior varies by workflow.",
+                    "description_fa": "نسبت پیش‌بینی‌شده بایت‌های ورودی به خروجی برای رفتار خوش‌خیم به‌روزرسانی برنامه مدیریت‌شده براساس گردش کار متفاوت است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1664",
+            "description_fa": "مدافع ارتباطات مکرر مبتنی بر بازیابی را از یک دستگاه تحت نظارت یا برنامه مدیریت شده iOS به یک پلت فرم خدمات وب عمومی قانونی مرتبط می کند که در آن فعالیت عمدتاً ورودی باقی می ماند و در طول پنجره عملیاتی، بازنویسی متناظر با همان کلاس سرویس ایجاد نمی کند. قوی‌ترین شواهد iOS، ارتباطات مدیریت‌شده یا منتسب به دستگاه به پلتفرم‌های همکاری، اجتماعی، پیام‌رسانی، ذخیره‌سازی یا HTTPS عمومی است که در آن واکشی‌های ورودی یا محتوا در حین به‌روزرسانی پس‌زمینه تکرار می‌شوند، در حالی که دستگاه قفل است، یا بدون تعامل اخیر کاربر، و هیچ فعالیتی مشابه POST، آپلود، به‌روزرسانی، یا فعالیت سرویس کلاس عمومی ارسال پیام به آن مشاهده نمی‌شود. از آنجایی که دید زمان اجرای محلی مستقیم ضعیف‌تر از Android است، تجزیه و تحلیل اولیه بر روی جهت‌گیری شبکه به‌علاوه زمینه برنامه مدیریت‌شده و وضعیت دستگاه نظارت شده است."
         }
     ]
 }

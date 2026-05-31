@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0541#AN1494",
-                    "external_id": "AN1494"
+                    "external_id": "AN1494",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetProcNameRegex",
-                    "description": "Regex list of high-value processes attackers may inject into, such as `sshd`, `nginx`, or `sleep`"
+                    "description": "Regex list of high-value processes attackers may inject into, such as `sshd`, `nginx`, or `sleep`",
+                    "description_fa": "لیست Regex از فرآیندهای با ارزش بالا که مهاجمان ممکن است به آن تزریق کنند، مانند «sshd»، «nginx» یا «sleep»"
                 },
                 {
                     "field": "TimeWindowBetweenMapAccessAndMemWrite",
-                    "description": "Time span (e.g., <15s) between map read and memory write that may indicate enumeration-to-injection"
+                    "description": "Time span (e.g., <15s) between map read and memory write that may indicate enumeration-to-injection",
+                    "description_fa": "بازه زمانی (به عنوان مثال، کمتر از 15 ثانیه) بین خواندن نقشه و نوشتن حافظه که ممکن است شمارش تا تزریق را نشان دهد."
                 },
                 {
                     "field": "InvokerBinaryAllowlist",
-                    "description": "Allowlist of processes allowed to access /proc/[pid]/mem (e.g., gdb, strace)"
+                    "description": "Allowlist of processes allowed to access /proc/[pid]/mem (e.g., gdb, strace)",
+                    "description_fa": "لیست مجاز از فرآیندهای مجاز برای دسترسی به /proc/[pid]/mem (به عنوان مثال، gdb، strace)"
                 },
                 {
                     "field": "FileWriteThreshold",
-                    "description": "Alert if written bytes to /proc/[pid]/mem exceed a suspicious threshold (e.g., >4096 bytes)"
+                    "description": "Alert if written bytes to /proc/[pid]/mem exceed a suspicious threshold (e.g., >4096 bytes)",
+                    "description_fa": "هشدار در صورتی که بایت های نوشته شده در /proc/[pid]/mem از آستانه مشکوک فراتر رود (به عنوان مثال، بیش از 4096 بایت)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1494",
+            "description_fa": "رفتار حریف را در جایی که یک فرآیند با استفاده از فایل‌های /proc/[pid]/maps و /proc/[pid]/mem شمارش می‌کند و حافظه پردازش دیگری را تغییر می‌دهد، شناسایی می‌کند. این شامل شناسایی ابزارها از طریق نگاشت حافظه و بازنویسی حافظه فرآیند از طریق اصلاح فایل سطح پایین یا استفاده از dd است."
         }
     ]
 }

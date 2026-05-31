@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-481",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/481.html"
+                    "url": "https://capec.mitre.org/data/definitions/481.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-923",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/923.html"
+                    "url": "http://cwe.mitre.org/data/definitions/923.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Proxy:Domain Fronting",
                     "external_id": "T1090.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1090/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1090/004",
+                    "description_fa": "پروکسی: دامنه دامنه",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--4733a63a-db36-49fa-8eba-3d5eddfe7f87",
@@ -38,6 +42,10 @@
                 "Confidentiality": [
                     "Read Data",
                     "Modify Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -50,11 +58,18 @@
                 "If the purpose of the Domain Fronting is to hide redirected C2 traffic, the C2 server must have been created in the CDN."
             ],
             "x_capec_skills_required": {
-                "Medium": "The adversary must have some knowledge of how messages are routed."
+                "Medium": "The adversary must have some knowledge of how messages are routed.",
+                "Medium_fa": "حریف باید اطلاعاتی از نحوه ارسال پیام ها داشته باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمنان هنگام ارسال پیام می توانند مقاصد متناقضی را ارائه دهند. ترافیک در شبکه ها با استفاده از نام های دامنه در هدرهای مختلف موجود در سطوح مختلف مدل OSI هدایت می شود. در یک شبکه تحویل محتوا (CDN) ممکن است چندین دامنه در دسترس باشد، و اگر نام دامنه متناقضی وجود داشته باشد، امکان هدایت ترافیک به مقصد نامناسب وجود دارد. این تکنیک که Domain Fronting نامیده می‌شود، شامل استفاده از نام‌های دامنه مختلف در فیلد SNI هدر TLS و فیلد میزبان از هدر HTTP است. یک تکنیک جایگزین، به نام Domainless Fronting، مشابه است، اما فیلد SNI خالی است.",
+            "name_fa": "مقاصد متناقض در طرح‌های مسیریابی ترافیک",
+            "x_capec_prerequisites_fa": [
+                "یک حریف باید آگاه باشد که پیام آنها با استفاده از یک CDN هدایت می شود و هر دو دامنه متناقض از آن CDN ارائه می شوند.",
+                "اگر هدف Domain Fronting مخفی کردن ترافیک هدایت شده C2 ​​باشد، سرور C2 باید در CDN ایجاد شده باشد."
+            ]
         }
     ],
     "spec_version": "2.0",

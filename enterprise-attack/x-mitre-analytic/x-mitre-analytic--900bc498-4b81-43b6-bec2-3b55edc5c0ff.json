@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0425#AN1192",
-                    "external_id": "AN1192"
+                    "external_id": "AN1192",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RemoteIPRange",
-                    "description": "Filter to detect only external/public destinations"
+                    "description": "Filter to detect only external/public destinations",
+                    "description_fa": "فیلتر کنید تا فقط مقاصد خارجی/عمومی را شناسایی کنید"
                 },
                 {
                     "field": "VMContext",
-                    "description": "Exclude known backup or patch automation services"
+                    "description": "Exclude known backup or patch automation services",
+                    "description_fa": "خدمات اتوماسیون پشتیبان یا پچ شناخته شده را حذف کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1192",
+            "description_fa": "VMهای مهمان یا عوامل مدیریتی که ترافیک HTTP(S) را به سرویس‌های خارجی صادر می‌کنند را بدون مدیریت پچ معتبر یا توجیه پشتیبان شناسایی می‌کند."
         }
     ]
 }

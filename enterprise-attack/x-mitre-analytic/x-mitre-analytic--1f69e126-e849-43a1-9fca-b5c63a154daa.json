@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0563#AN1555",
-                    "external_id": "AN1555"
+                    "external_id": "AN1555",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredUsers",
-                    "description": "Specific accounts or groups where history logging must always be enforced."
+                    "description": "Specific accounts or groups where history logging must always be enforced.",
+                    "description_fa": "حساب‌ها یا گروه‌های خاصی که ثبت سابقه در آنها همیشه باید اجرا شود."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation period to detect unset/export of history variables during active shells."
+                    "description": "Correlation period to detect unset/export of history variables during active shells.",
+                    "description_fa": "دوره همبستگی برای شناسایی تنظیم نشده/صادرات متغیرهای سابقه در طول پوسته‌های فعال."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1555",
+            "description_fa": "تشخیص دستکاری متغیرهای محیطی (HISTFILE، HISTCONTROL، HISTFILESIZE) و عدم وجود تاریخچه bash مورد انتظار می نویسد. همبستگی متغیرهای تاریخچه تنظیم نشده یا صفر شده با جلسات پوسته فعال نشان دهنده فرار خصمانه است."
         }
     ]
 }

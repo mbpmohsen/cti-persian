@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0258#AN0713",
-                    "external_id": "AN0713"
+                    "external_id": "AN0713",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HookFilePathPatterns",
-                    "description": "Absolute or regex paths to Python startup files (.pth, customize.py); vary by distro or virtual environment location"
+                    "description": "Absolute or regex paths to Python startup files (.pth, customize.py); vary by distro or virtual environment location",
+                    "description_fa": "مسیرهای مطلق یا regex به فایل های راه اندازی پایتون (.pth، customize.py). بر اساس توزیع یا مکان محیط مجازی متفاوت است"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Restrict alerts to non-root users, service accounts, or interactive shell sessions"
+                    "description": "Restrict alerts to non-root users, service accounts, or interactive shell sessions",
+                    "description_fa": "هشدارها را به کاربران غیر روت، حساب‌های سرویس یا جلسات پوسته تعاملی محدود کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate file modification and Python execution within short time span (default: 2\u20135 minutes)"
+                    "description": "Correlate file modification and Python execution within short time span (default: 2–5 minutes)",
+                    "description_fa": "اصلاح فایل مرتبط و اجرای پایتون در بازه زمانی کوتاه (پیش‌فرض: 2 تا 5 دقیقه)"
                 },
                 {
                     "field": "InterpreterWhitelist",
-                    "description": "Filter out known legitimate Python executions tied to expected cron jobs or automation"
+                    "description": "Filter out known legitimate Python executions tied to expected cron jobs or automation",
+                    "description_fa": "اجراهای قانونی شناخته شده پایتون مرتبط با کارهای cron یا اتوماسیون مورد انتظار را فیلتر کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0713",
+            "description_fa": "Defender تغییرات غیرمجاز یا ایجاد فایل‌های هوک پایتون مانند «.pth»، «sitecustomize.py» یا «usercustomize.py» را در «سایت-بسته‌ها»، «بسته‌های دور» یا مسیرهای کاربر پایتون مشاهده می‌کند. این اغلب با اجرای مترجم غیرمنتظره بعدی (به عنوان مثال، اجرای python3 بدون تعامل کاربر)، تغییرات در رفتار مفسر (به عنوان مثال، واردات مخرب)، و اتصالات خروجی آغاز شده از پایتون مرتبط است. پیوندهای مدافع، اقدامات روی فایل‌های هوک را با اجرای فرآیند پایتون و/یا فرآیند فرزند یا فعالیت شبکه غیرعادی می‌نویسند/تغییر می‌دهند."
         }
     ]
 }

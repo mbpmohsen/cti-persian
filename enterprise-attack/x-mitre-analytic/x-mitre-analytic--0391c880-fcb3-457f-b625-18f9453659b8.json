@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0533#AN1473",
-                    "external_id": "AN1473"
+                    "external_id": "AN1473",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -60,26 +61,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time delta between PR creation and workflow execution to flag rapid attempts"
+                    "description": "Time delta between PR creation and workflow execution to flag rapid attempts",
+                    "description_fa": "دلتای زمانی بین ایجاد روابط عمومی و اجرای گردش کار برای پرچم‌گذاری تلاش‌های سریع"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Forked or external user accounts triggering workflows; may differ across orgs"
+                    "description": "Forked or external user accounts triggering workflows; may differ across orgs",
+                    "description_fa": "حساب‌های کاربری انشعابی یا خارجی که جریان‌های کاری را راه‌اندازی می‌کنند. ممکن است در ارگان ها متفاوت باشد"
                 },
                 {
                     "field": "TriggerTypeAllowlist",
-                    "description": "CI trigger types (e.g., `pull_request_target`) that should or shouldn't be used for forks"
+                    "description": "CI trigger types (e.g., `pull_request_target`) that should or shouldn't be used for forks",
+                    "description_fa": "انواع ماشه CI (به عنوان مثال، \"pull_request_target\") که باید یا نباید برای فورک ها استفاده شوند"
                 },
                 {
                     "field": "ArtifactEntropyThreshold",
-                    "description": "Entropy threshold for detecting encoded payloads in artifacts"
+                    "description": "Entropy threshold for detecting encoded payloads in artifacts",
+                    "description_fa": "آستانه آنتروپی برای تشخیص محموله های رمزگذاری شده در مصنوعات"
                 },
                 {
                     "field": "SecretAccessRateThreshold",
-                    "description": "Rate of secret access in a single workflow run that might indicate abuse"
+                    "description": "Rate of secret access in a single workflow run that might indicate abuse",
+                    "description_fa": "نرخ دسترسی مخفی در یک گردش کاری که ممکن است نشان دهنده سوء استفاده باشد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1473",
+            "description_fa": "اجرای غیرعادی گردش کار CI/CD را که از مخازن دوشاخه نشات می‌گیرد، با فراداده‌های درخواست کشش (PR) یا پیام‌های تعهد حاوی الگوهای مشکوک (مثلاً بارهای رمزگذاری‌شده)، همراه با استفاده از محرک‌های خط لوله ناامن مانند «pull_request_target» یا بیش‌ازحد API را شناسایی می‌کند. همبستگی با تولید مصنوع غیرمعمول یا استخراج مخفی از طریق URL های مقصد شبکه کدگذاری شده یا خارجی، رفتار مشکوک را تأیید می کند."
         }
     ]
 }

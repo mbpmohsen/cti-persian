@@ -9,32 +9,38 @@
                 {
                     "external_id": "CAPEC-102",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/102.html"
+                    "url": "https://capec.mitre.org/data/definitions/102.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-294",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/294.html"
+                    "url": "http://cwe.mitre.org/data/definitions/294.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-522",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/522.html"
+                    "url": "http://cwe.mitre.org/data/definitions/522.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-523",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/523.html"
+                    "url": "http://cwe.mitre.org/data/definitions/523.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-319",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/319.html"
+                    "url": "http://cwe.mitre.org/data/definitions/319.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-614",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/614.html"
+                    "url": "http://cwe.mitre.org/data/definitions/614.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--6a99b39b-b14a-4617-8aeb-bce85979f520",
@@ -65,6 +71,22 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -85,11 +107,27 @@
                 "A packet sniffing tool, such as wireshark, can be used to capture session information."
             ],
             "x_capec_skills_required": {
-                "Low": "Easy to use tools exist to automate this attack."
+                "Low": "Easy to use tools exist to automate this attack.",
+                "Low_fa": "ابزارهای آسان برای استفاده برای خودکار کردن این حمله وجود دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "Session sidejacking از یک کانال ارتباطی رمزگذاری نشده بین سیستم قربانی و هدف استفاده می کند. مهاجم ترافیک موجود در شبکه را شناسایی می کند و به دنبال نشانه های جلسه در ترافیک رمزگذاری نشده است. هنگامی که یک نشانه جلسه ضبط می شود، مهاجم با استفاده از نشانه سرقت شده با برنامه مورد نظر برای جعل هویت قربانی، اقدامات مخربی را انجام می دهد. این حمله یک روش خاص برای ربودن جلسه است که از یک نشانه جلسه معتبر برای دستیابی به دسترسی غیرمجاز به یک سیستم یا اطلاعات هدف سوء استفاده می کند. روش‌های دیگر برای انجام ربودن جلسه، ثابت کردن جلسه، اسکریپت بین سایتی، یا به خطر انداختن یک کاربر یا ماشین سرور و سرقت نشانه جلسه است.",
+            "name_fa": "جلسه جانبی",
+            "x_capec_example_instances_fa": [
+                "مهاجم و قربانی از یک هات اسپات عمومی WiFi استفاده می کنند. هنگامی که قربانی به هات اسپات متصل می شود، یک حساب ایمیل میزبان باز است. این حساب ایمیل از AJAX در سمت کلاینت استفاده می کند که به طور دوره ای به صورت ناهمزمان به سمت سرور متصل می شود و از جمله موارد دیگر، رمز نشست کاربر را به سرور منتقل می کند. قرار است ارتباط از طریق HTTPS انجام شود. با این حال، پیکربندی در هات اسپات عمومی در ابتدا اتصال HTTPS (یا هر اتصال دیگر) بین قربانی و سرورهای ایمیل میزبانی شده را ممنوع می کند زیرا قربانی ابتدا باید در هات اسپات ثبت نام کند. قربانی این کار را انجام می دهد، اما سرویس گیرنده ایمیل آنها قبلاً از اتصال بدون HTTPS استفاده می کند، زیرا بار اول از دسترسی به آن محروم شد. نشانه جلسه قربانی اکنون بدون رمزگذاری بین مرورگر قربانی و سرورهای ایمیل میزبانی شده جریان دارد. مهاجم از این فرصت برای گرفتن رمز جلسه و دسترسی به حساب ایمیل میزبان قربانی استفاده می کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تشخیص انتقال رمز جلسه محافظت نشده: </b> مهاجم در شبکه بی سیم بو می کشد تا ترافیک رمزگذاری نشده ای را که حاوی نشانه های جلسه است شناسایی کند. مهاجم از یک ابزار ردیابی شبکه مانند فرت یا همستر برای نظارت بر ترافیک بی‌سیم در نقطه اتصال WiFi استفاده می‌کند، در حالی که آن را برای شواهدی مبنی بر انتقال نشانه‌های جلسه به شکل رمزگذاری نشده یا رمزگذاری‌شده قابل تشخیص بررسی می‌کند. مهاجم دانش خود را در مورد نحوه تولید و انتقال نشانه‌های جلسه توسط سیستم‌های هدف مختلف به کار می‌گیرد تا نشانه‌های جلسه را شناسایی کند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>Capture session token: </b>از ابزار capture session token toffer از یک حمله‌کننده به جلسه استفاده می‌کند. ترافیک.</p></li><li> <p> <b>درج نشانه جلسه ضبط شده: </b> مهاجم تلاش می کند تا یک نشانه جلسه ضبط شده را در ارتباط با برنامه هدف قرار دهد تا قابلیت بهره برداری را تایید کند.</p></li></ol></div><div><h3>Exploit</h3><ol><li> </h3><ol><li> </b> اکسپلویت</h3><ol><li> <b>Exploit</h3><ol><li> <b>Exploit</h3><ol><li> <b>Exploit</h3><ol><li> <p> نشانه جلسه ضبط شده برای تعامل با برنامه هدف به شکلی مخرب و جعل هویت قربانی.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم و قربانی هر دو از یک شبکه WiFi استفاده می کنند.",
+                "قربانی یک جلسه فعال با سیستم هدف دارد.",
+                "قربانی از یک کانال امن برای برقراری ارتباط با سیستم هدف استفاده نمی کند (مانند SSL، VPN و غیره)",
+                "قربانی ارتباط خود را با یک سیستم هدف آغاز کرده است که نیاز به انتقال رمز جلسه دارد یا برنامه هدف از AJAX استفاده می کند و بنابراین به طور دوره ای با استفاده از نشانه جلسه به طور ناهمزمان به خانه زنگ می زند."
+            ],
+            "x_capec_resources_required_fa": [
+                "یک ابزار sniffing بسته، مانند wireshark، می تواند برای گرفتن اطلاعات جلسه استفاده شود."
+            ]
         }
     ],
     "type": "bundle"

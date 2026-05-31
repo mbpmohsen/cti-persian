@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0489#AN1351",
-                    "external_id": "AN1351"
+                    "external_id": "AN1351",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1351",
-            "description": "A process explicitly forges its parent using EXTENDED_STARTUPINFO + PROC_THREAD_ATTRIBUTE_PARENT_PROCESS (UpdateProcThreadAttribute \u2192 CreateProcess[A/W]/CreateProcessAsUserW) or other Native API paths, resulting in **mismatched/implausible lineage** across ETW EventHeader ProcessId, Security 4688 Creator Process ID/Name, and sysmon ParentProcessGuid. Often paired with privilege escalation when the chosen parent runs as SYSTEM.",
+            "description": "A process explicitly forges its parent using EXTENDED_STARTUPINFO + PROC_THREAD_ATTRIBUTE_PARENT_PROCESS (UpdateProcThreadAttribute → CreateProcess[A/W]/CreateProcessAsUserW) or other Native API paths, resulting in **mismatched/implausible lineage** across ETW EventHeader ProcessId, Security 4688 Creator Process ID/Name, and sysmon ParentProcessGuid. Often paired with privilege escalation when the chosen parent runs as SYSTEM.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between UpdateProcThreadAttribute/CreateProcess* and the resulting process (default 5\u201310 minutes)."
+                    "description": "Correlation window between UpdateProcThreadAttribute/CreateProcess* and the resulting process (default 5–10 minutes).",
+                    "description_fa": "پنجره همبستگی بین UpdateProcThreadAttribute/CreateProcess* و فرآیند حاصل (پیش‌فرض 5 تا 10 دقیقه)."
                 },
                 {
                     "field": "AllowedSpoofers",
-                    "description": "Legitimate binaries that commonly use StartupInfoEx/PPID assignment (e.g., consent.exe, svchost.exe during UAC)."
+                    "description": "Legitimate binaries that commonly use StartupInfoEx/PPID assignment (e.g., consent.exe, svchost.exe during UAC).",
+                    "description_fa": "باینری های قانونی که معمولاً از تخصیص StartupInfoEx/PPID استفاده می کنند (به عنوان مثال، consent.exe، svchost.exe در طول UAC)."
                 },
                 {
                     "field": "ParentPrivilegeDeltaThreshold",
-                    "description": "Minimum privilege/integrity gap between chosen parent and real caller to raise severity."
+                    "description": "Minimum privilege/integrity gap between chosen parent and real caller to raise severity.",
+                    "description_fa": "حداقل فاصله امتیاز/یکپارچگی بین والدین انتخابی و تماس گیرنده واقعی برای افزایش شدت."
                 },
                 {
                     "field": "LineageMismatchTolerance",
-                    "description": "Number of mismatched sources (0\u20133) before alerting to reduce noise."
+                    "description": "Number of mismatched sources (0–3) before alerting to reduce noise.",
+                    "description_fa": "تعداد منابع نامتناسب (0-3) قبل از هشدار برای کاهش نویز."
                 },
                 {
                     "field": "SensitiveParents",
-                    "description": "List of SYSTEM parents that, if spoofed, auto\u2011escalate severity (e.g., lsass.exe, services.exe, wininit.exe)."
+                    "description": "List of SYSTEM parents that, if spoofed, auto‑escalate severity (e.g., lsass.exe, services.exe, wininit.exe).",
+                    "description_fa": "فهرستی از والدین SYSTEM که در صورت جعل، شدت را به طور خودکار افزایش می دهند (مانند lsass.exe، services.exe، wininit.exe)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1351",
+            "description_fa": "یک فرآیند صراحتاً والد خود را با استفاده از EXTENDED_STARTUPINFO + PROC_THREAD_ATTRIBUTE_PARENT_PROCESS (UpdateProcThreadAttribute → CreateProcess[A/W]/CreateProcessAsUserW) یا سایر مسیرهای Native API جعل می‌کند، که منجر به ایجاد خط EvmpliblederW*aet در سراسر **aetW. ProcessId، Security 4688 Creator Process ID/Name، و sysmon ParentProcessGuid. هنگامی که والد انتخابی به عنوان SYSTEM اجرا می شود، اغلب با افزایش امتیاز جفت می شود."
         }
     ]
 }

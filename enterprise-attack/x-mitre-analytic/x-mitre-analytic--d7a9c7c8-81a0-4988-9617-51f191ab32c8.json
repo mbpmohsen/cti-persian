@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0549#AN1518",
-                    "external_id": "AN1518"
+                    "external_id": "AN1518",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessName",
-                    "description": "Processes reading key files (osascript, python, bash, etc.)"
+                    "description": "Processes reading key files (osascript, python, bash, etc.)",
+                    "description_fa": "فرآیند خواندن فایل های کلیدی (osascript، python، bash، و غیره)"
                 },
                 {
                     "field": "FileAccessPath",
-                    "description": "Private key and certificate paths like /Users/*/.ssh, /Library/Keychains/"
+                    "description": "Private key and certificate paths like /Users/*/.ssh, /Library/Keychains/",
+                    "description_fa": "مسیرهای کلید خصوصی و گواهی مانند /Users/*/.ssh، /Library/Keychains/"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1518",
+            "description_fa": "دسترسی به دایرکتوری های کلید خصوصی کاربر (به عنوان مثال، /Users/*/.ssh) از طریق ترمینال، موتورهای برنامه نویسی، یا فرآیندهای غیر پیش فرض."
         }
     ]
 }

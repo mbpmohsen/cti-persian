@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0183#AN0519",
-                    "external_id": "AN0519"
+                    "external_id": "AN0519",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DatastoreWhitelist",
-                    "description": "Known authorized paths for legitimate VM operations"
+                    "description": "Known authorized paths for legitimate VM operations",
+                    "description_fa": "مسیرهای مجاز شناخته شده برای عملیات قانونی VM"
                 },
                 {
                     "field": "TransferProtocol",
-                    "description": "Protocols allowed for intra-VM host transfers"
+                    "description": "Protocols allowed for intra-VM host transfers",
+                    "description_fa": "پروتکل های مجاز برای انتقال میزبان درون VM"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0519",
+            "description_fa": "انتقال جانبی را از طریق آپلود فایل های ذخیره سازی داده یا جلسات داخلی scp/ssh که منجر به فایل های VMX/VMDK یا اسکریپت جدید می شود، شناسایی کنید. ارتباط انتقال با اجرای VM یا تغییر در ذخیره‌گاه داده."
         }
     ]
 }

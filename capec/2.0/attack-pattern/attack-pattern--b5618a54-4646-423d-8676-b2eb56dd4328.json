@@ -9,17 +9,20 @@
                 {
                     "external_id": "CAPEC-215",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/215.html"
+                    "url": "https://capec.mitre.org/data/definitions/215.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-209",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/209.html"
+                    "url": "http://cwe.mitre.org/data/definitions/209.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-532",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/532.html"
+                    "url": "http://cwe.mitre.org/data/definitions/532.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--b5618a54-4646-423d-8676-b2eb56dd4328",
@@ -37,6 +40,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Other (Information Leakage)"
+                ],
+                "Confidentiality_fa": [
+                    "سایر موارد (نشت اطلاعات)"
                 ]
             },
             "x_capec_domains": [
@@ -57,11 +63,26 @@
                 "Fuzzing tools, which automatically generate and send message variants, are necessary for this attack. The attacker must have sufficient access to send messages to the target. The attacker must also have the ability to observe the target application's log and/or error messages in order to collect information about the target."
             ],
             "x_capec_skills_required": {
-                "Medium": "Although fuzzing parameters is not difficult, and often possible with automated fuzzing tools, interpreting the error conditions and modifying the parameters so as to move further in the process of mapping the application requires detailed knowledge of target platform, the languages and packages used as well as software design."
+                "Medium": "Although fuzzing parameters is not difficult, and often possible with automated fuzzing tools, interpreting the error conditions and modifying the parameters so as to move further in the process of mapping the application requires detailed knowledge of target platform, the languages and packages used as well as software design.",
+                "Medium_fa": "اگرچه فازی کردن پارامترها دشوار نیست و اغلب با ابزارهای خودکار فازی امکان پذیر است، اما تفسیر شرایط خطا و اصلاح پارامترها به منظور حرکت بیشتر در روند نقشه برداری برنامه نیاز به دانش دقیق پلت فرم هدف، زبان ها و بسته های مورد استفاده و همچنین طراحی نرم افزار دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم پیام‌های تصادفی، ناقص یا غیرمنتظره‌ای را به یک برنامه هدف ارسال می‌کند و گزارش گزارش یا پیام‌های خطای بازگشت‌شده برنامه را مشاهده می‌کند. مهاجم در ابتدا نمی‌داند که یک هدف چگونه به پیام‌های فردی پاسخ می‌دهد، اما با تلاش تعداد زیادی از انواع پیام‌ها ممکن است گونه‌ای را بیابد که رفتار مورد نظر او را تحریک می‌کند. در این حمله، هدف از fuzzing مشاهده گزارش و پیغام های خطای برنامه است، هرچند که fuzzing یک هدف نیز گاهی اوقات می تواند باعث وارد شدن هدف به حالت ناپایدار شده و باعث سقوط شود.",
+            "name_fa": "Fuzzing برای نقشه برداری برنامه",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>کد زیر یک پیام خطایی ایجاد می کند که نام مسیر کامل فایل پیکربندی را فاش می کند.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"bad\">$ConfigDir = \"/home/myprog/config\";$uname = GetUserInput(\"username\");ExitError(\"هکر بد!\") if ($uname !~ /^\\w+$/);$file = \"$ConfigDir/$uname.txt\";اگر $Error (!)Error (!)Error (!)-e وجود دارد\") }...</xhtml:div>\n               <xhtml:p>اگر این کد بر روی یک سرور، مانند یک برنامه وب، اجرا می شود، شخصی که درخواست می کند نباید بداند که نام مسیر کامل دایرکتوری پیکربندی چیست. با ارسال نام کاربری که فایل $ موجود را ایجاد نمی کند، مهاجم می تواند این نام مسیر را دریافت کند. سپس می توان از آن برای سوء استفاده از پیمایش مسیر یا پیوند نمادین زیر مشکلاتی که ممکن است در جای دیگری در برنامه وجود داشته باشد استفاده کرد.</xhtml:p>",
+                "<xhtml:p>در زبان‌هایی که از ردیابی‌های پشته‌ای استفاده می‌کنند، آشکار کردن آن‌ها می‌تواند اطلاعاتی را به دشمنان بدهد که به آنها اجازه می‌دهد توابع و مکان‌های فایل را برای یک برنامه نقشه‌برداری کنند. روش جاوا زیر یک ردیابی پشته را چاپ می کند که برنامه را در معرض این الگوی حمله قرار می دهد.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"bad\">public void httpGet(HttpServletRequest request, HttpServletResponse answer) {<xhtml:div style=\"margin-left:1em;\">{<xhtml:div style=\"margin-left:1em;\">processRequest();</xhtml:div>:div catch را امتحان کنید style=\"margin-left:1em;\">ex.printStackTrace(response.getWriter());</xhtml:div>\n                     <xhtml:div style=\"margin-left:1em;\">return;</xhtml:div>}</xhtml:div>}</xhtml:div>\n               <xhtml:p>اگر این کد بر روی یک سرور، مانند یک برنامه وب در حال اجرا است، دشمن می‌تواند باعث شود که استثنا از طریق fuzzing چاپ شود.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>مشاهده ارتباطات و ورودی‌ها: </b> دشمن فازی سیستم هدف را مشاهده می‌کند که به دنبال ورودی‌ها و ارتباطات بین ماژول‌ها، زیرسیستم‌ها یا سیستم ها.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>خرید شبکه. با استفاده از یک sniffer شبکه مانند wireshark، حریف ارتباطات داخل و خارج از سیستم هدف را مشاهده می‌کند.</td></tr><tr><td>بررسی اجرای API. دشمن با استفاده از ابزاری مانند ktrace، strace، APISpy یا ابزار اشکال زدایی دیگر، فراخوانی های سیستم و فراخوانی های API را که توسط سیستم هدف انجام می شود و ماهیت پارامترهای آنها را مشاهده می کند.</td></tr><tr><td>با استفاده از ابزارهای بازرسی وب (OWASP's TamperIE, TamperIE, Paperata, OWASP's TamperIE, Paperata, OWASP's TamperIE, Pamperos. و غیره)</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>ایجاد ورودی‌های فازی: </b>با توجه به یک ابزار فازی، یک ورودی یا پروتکل هدف، و محدودیت‌هایی در زمان، پیچیدگی، و فهرستی از انواع ورودی ایجاد کنید. اگرچه فازبندی تصادفی است، اما جامع نیست. پارامترهایی مانند طول، ترکیب، و تعداد تغییراتی که باید امتحان شوند، برای به دست آوردن مقرون به صرفه ترین تاثیر از فازر مهم هستند. ورودی های فازی ایجاد کنید که به موارد مرزی فیلدهای پروتکل، ورودی ها یا سایر محدودیت های ارتباطی حمله می کند. به عنوان مثال می توان به 0xff و 0x00 برای ورودی های تک بایتی اشاره کرد. در موقعیت‌های باینری، به هر بیت از یک فیلد جداگانه با روشن و خاموش نزدیک شوید (مثلاً 0x80). این تغییرات شامل بارهایی هستند که در صورت موفقیت آمیز بودن، می توانند منجر به سازش در سیستم شوند.</td></tr></tbody></table><li> <p> <b>نتیجه را مشاهده کنید: </b>خروجی های ورودی های وارد شده به سیستم توسط fuzzer ها را مشاهده کنید و ببینید آیا گزارش یا پیام خطای اطلاعاتی برای نقشه ارائه می شود یا خیر. برنامه</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Craft exploit payloads: </b>یک حریف معمولاً باید پارامترهای fuzzing را با توجه به پیام های خطای مشاهده شده تغییر دهد تا اطلاعات حساس مورد نظر را برای برنامه کاربردی بدست آورد. برای از بین بردن همبستگی، دشمن ممکن است آدرس‌های IP مبدا یا رشته‌های شناسایی مرورگر مشتری را تغییر دهد یا جلسه جدیدی را از جایی که حمله را مخفی نگه داشته است شروع کند. با پارامترهای کافی تکرار کنید تا زمانی که برنامه به اندازه کافی نقشه برداری شود.</td></tr><tr><td>اگر برنامه مقدار زیادی از پیام های مبهم را از همان دستگاه میزبان رد کند، دشمن باید با تغییر آدرس های IP یا سایر اعتبارنامه ها، حملات را پنهان کند.</td></tr></tbody></tablev></ol></di",
+            "x_capec_extended_description_fa": "<xhtml:p> با مشاهده گزارش‌ها و پیام‌های خطا، مهاجم می‌تواند جزئیات مربوط به پیکربندی برنامه هدف را بیاموزد و ممکن است بتواند هدف را وادار به افشای اطلاعات حساس کند. در برنامه‌هایی که یک stack trace را همراه با خطا برمی‌گردانند، این می‌تواند زنجیره‌ای از روش‌ها را که به نقطه‌ای که با خطا مواجه شده است، برشمرد. این نه تنها می تواند نام متدها را آشکار کند (که برخی از آنها ممکن است دارای نقاط ضعف شناخته شده باشند) بلکه احتمالاً مکان فایل های کلاس و کتابخانه ها و همچنین مقادیر پارامترها را نیز آشکار می کند. در برخی موارد، ردیابی پشته حتی ممکن است پیکربندی حساس یا اطلاعات کاربر را فاش کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید قبل از پردازش، پیام های دریافتی را به اندازه کافی پاک نکند."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزارهای Fuzzing که به طور خودکار انواع پیام را تولید و ارسال می کنند، برای این حمله ضروری هستند. مهاجم باید دسترسی کافی برای ارسال پیام به هدف داشته باشد. مهاجم همچنین باید توانایی مشاهده گزارش و/یا پیام های خطای برنامه هدف را داشته باشد تا بتواند اطلاعات مربوط به هدف را جمع آوری کند."
+            ]
         }
     ],
     "spec_version": "2.0",

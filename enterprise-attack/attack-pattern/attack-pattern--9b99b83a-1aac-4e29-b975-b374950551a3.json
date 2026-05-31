@@ -14,34 +14,34 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1015",
                     "external_id": "T1015",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "capec",
                     "url": "https://capec.mitre.org/data/definitions/558.html",
                     "external_id": "CAPEC-558",
-                    "source_name_fa": "کلاه"
+                    "source_name_fa": "capec"
                 },
                 {
                     "source_name": "FireEye Hikit Rootkit",
                     "description": "Glyer, C., Kazanciyan, R. (2012, August 20). The “Hikit” Rootkit: Advanced and Persistent Attack Techniques (Part 1). Retrieved June 6, 2016.",
                     "url": "https://www.fireeye.com/blog/threat-research/2012/08/hikit-rootkit-advanced-persistent-attack-techniques-part-1.html",
-                    "source_name_fa": "FireEye Hikit Rootkit",
-                    "description_fa": "Glyer، C.، کازسییان، R. (2012، 20 آگوست) \"Hikit\" Rootkit: تکنیک های پیشرفته و مداوم حمله (قسمت 1) Retrieved 6 ژوئن 2016"
+                    "source_name_fa": "روت کیت فایر آی هیکیت",
+                    "description_fa": "گلایر، سی، کازانجیان، ر. (2012، 20 اوت). Rootkit \"Hikit\": تکنیک های حمله پیشرفته و مداوم (قسمت 1). بازبینی شده در ۶ ژوئن ۲۰۱۶."
                 },
                 {
                     "source_name": "DEFCON2016 Sticky Keys",
                     "description": "Maldonado, D., McGuffin, T. (2016, August 6). Sticky Keys to the Kingdom. Retrieved July 5, 2017.",
                     "url": "https://www.slideshare.net/DennisMaldonado5/sticky-keys-to-the-kingdom",
-                    "source_name_fa": "DEFCON 2016 Sticky Keys",
-                    "description_fa": "Maldonado، D.، McGuffin، T. (2016، 6 آگوست) کلید های چسبنده به پادشاهی Retrieved 5 ژوئیه 2017"
+                    "source_name_fa": "کلیدهای چسبنده DEFCON2016",
+                    "description_fa": "Maldonado, D., McGuffin, T. (2016، 6 اوت). کلیدهای چسبنده به پادشاهی. بازبینی شده در ۵ جولای ۲۰۱۷."
                 },
                 {
                     "source_name": "Tilbury 2014",
                     "description": "Tilbury, C. (2014, August 28). Registry Analysis with CrowdResponse. Retrieved November 12, 2014.",
                     "url": "http://blog.crowdstrike.com/registry-analysis-with-crowdresponse/",
-                    "source_name_fa": "Tilbury 2014",
-                    "description_fa": "Tilbury، C. (2014، 28 آگوست) تحلیل ثبت نام با CrowdResponse Retrieved 12 نوامبر 2014"
+                    "source_name_fa": "تیلبری 2014",
+                    "description_fa": "Tilbury, C. (2014, 28 اوت). تجزیه و تحلیل رجیستری با CrowdResponse. بازبینی شده در 12 نوامبر 2014."
                 }
             ],
             "object_marking_refs": [
@@ -74,8 +74,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.1",
-            "name_fa": "قابلیت دسترسی",
-            "description_fa": "ویندوز شامل قابلیت های دسترسی است که ممکن است با یک ترکیب کلیدی قبل از اینکه یک کاربر وارد شده باشد (برای مثال، هنگامی که کاربر روی صفحه نمایش Windows Logon قرار دارد). یک دشمن می تواند نحوه راه اندازی این برنامه ها را تغییر دهد تا بدون ورود به سیستم، یک درب فرمان یا درب پشتی دریافت کند.\n\nدو برنامه دسترسی مشترک [CTI_PRESERVE_0] هستند، زمانی که کلید تغییر پنج بار فشار داده می شود و [CTI_PRESERVE] هنگامی که ترکیب کلید ویندوز + U فشرده می شود، راه اندازی می شود. برنامه sethc.exe اغلب به عنوان \"کلید های گرافیکی\" نامیده می شود و توسط دشمنان برای دسترسی بدون وقفه از طریق صفحه نمایش ورود دسکتاپ از راه دور استفاده می شود. [[ویرایش]\n\nبسته به نسخه ویندوز، یک دشمن ممکن است از این ویژگی ها به روش های مختلف به دلیل تقویت یکپارچگی کد استفاده کند. در نسخه های جدیدتر ویندوز، باینری جایگزین باید به صورت دیجیتالی برای سیستم های x64 امضا شود، باینری باید در [CTI_PRESERVE_2] اقامت داشته باشد و باید توسط ویندوز File یا منابع محافظت شود (WFP /WRP). [[ویرایش] روش دیژگر احتمالا به عنوان یک کار بالقوه کشف شده است زیرا نیازی به دودویی قابلیت دسترسی مربوطه ندارد. مثال هایی برای هر دو روش:\n\nبرای جایگزینی دودویی ساده در ویندوز XP و بعد و همچنین ویندوز سرور 2003 / R2 و بعد، به عنوان مثال، برنامه (به عنوان مثال، [CTI_PRESERVE_3] ممکن است با \"cmd.exe\" جایگزین شود (یا برنامه دیگری که دسترسی به درب پشتی را فراهم می کند). پس از آن، فشار دادن ترکیب کلیدی مناسب در صفحه کلید و یا زمانی که بر روی [Remote Desktop Protocol] متصل می شود ([[CTI_PRESERVE_14]) باعث می شود فایل جایگزین با امتیازات سیستم اجرا شود. [[ویرایش]\n\nبرای روش کنفدراسیون در ویندوز ویستا و بعد و همچنین ویندوز سرور 2008 و بعد، به عنوان مثال، یک کلید رجیستری ممکن است اصلاح شود که پیکربندی \"cmd.exe\" یا برنامه دیگری که دسترسی به درب پشتی را به عنوان \"debugger\" برای برنامه دسترسی (به عنوان مثال، \"utilman.exe\"). پس از اصلاح رجیستری، فشار دادن ترکیب کلیدی مناسب در صفحه نمایش ورود در حالی که در صفحه کلید یا هنگامی که به RDP متصل می شود، برنامه \"debugger\" را با امتیازات سیستم اجرا می کند. [[ویرایش]\n\nدیگر قابلیت های دسترسی وجود دارد که ممکن است به شیوه ای مشابه استفاده شود: [CTI_PRESERVE_13]\n\nصفحه کلید: [[ویرایش]\n * : :\n* روایت: [[ویرایش]\n· سوئیچ های نمایش: [CTI_PRESERVE_7]\nApp Switcher : [[ویرایش] <code>C:\\Windows\\System32\\sethc.exe</code> <code>C:\\Windows\\System32\\utilman.exe</code> <code>%systemdir%\\</code> <code>C:\\Windows\\System32\\utilman.exe</code> <code>C:\\Windows\\System32\\osk.exe</code> <code>C:\\Windows\\System32\\Magnify.exe</code> <code>C:\\Windows\\System32\\Narrator.exe</code> <code>C:\\Windows\\System32\\DisplaySwitch.exe</code> <code>C:\\Windows\\System32\\AtBroker.exe</code> (Citation: FireEye Hikit Rootkit) (Citation: DEFCON2016 Sticky Keys) (Citation: Tilbury 2014) (Citation: Tilbury 2014) (Citation: DEFCON2016 Sticky Keys) https://attack.mitre.org/techniques/T1076"
+            "name_fa": "ویژگی های دسترسی",
+            "description_fa": "Windows دارای ویژگی‌های دسترسی است که ممکن است قبل از ورود کاربر با یک کلید ترکیبی راه‌اندازی شود (مثلاً وقتی کاربر در صفحه ورود به سیستم ویندوز است). یک حریف می‌تواند نحوه راه‌اندازی این برنامه‌ها را تغییر دهد تا بدون وارد شدن به سیستم، یک خط فرمان یا درب پشتی دریافت کند.\n\nدو برنامه دسترسی رایج عبارتند از <code>C:\\Windows\\System32\\sethc.exe</code> که با فشار دادن کلید shift پنج بار راه اندازی می شود و <code>C:\\Windows\\System32\\utilman.exe</code>، که با فشار دادن کلید ترکیبی Windows + U راه اندازی می شود. برنامه sethc.exe اغلب به عنوان \"کلیدهای چسبنده\" نامیده می شود و توسط دشمنان برای دسترسی غیرقانونی از طریق صفحه ورود به سیستم دسکتاپ راه دور استفاده شده است. (Citation: FireEye Hikit Rootkit)\n\nبسته به نسخه ویندوز، دشمن ممکن است از این ویژگی‌ها به روش‌های مختلف به دلیل بهبود یکپارچگی کد استفاده کند. در نسخه های جدیدتر ویندوز، باینری جایگزین شده باید به صورت دیجیتالی برای سیستم های x64 امضا شود، باینری باید در <code>%systemdir%\\</code> باشد، و باید توسط Windows File یا Resource Protection (WFP/WRP) محافظت شود. [[CTI_PRESERVE_10]]] روش اشکال‌زدا احتمالاً به عنوان یک راه‌حل بالقوه کشف شده است، زیرا نیازی به جایگزینی باینری ویژگی دسترسی متناظر ندارد. مثال هایی برای هر دو روش:\n\nبرای جایگزینی ساده باینری در ویندوز XP و نسخه های جدیدتر و همچنین Windows Server 2003/R2 و نسخه های جدیدتر، برای مثال، برنامه (به عنوان مثال، <code>C:\\Windows\\System32\\utilman.exe</code>) ممکن است با \"cmd.exe\" (یا برنامه دیگری که دسترسی درب پشتی را فراهم می کند) جایگزین شود. متعاقبا، فشار دادن کلید ترکیبی مناسب در صفحه ورود به سیستم در حالی که روی صفحه کلید نشسته اید یا هنگام اتصال از طریق [پروتکل دسکتاپ از راه دور](https://attack.mitre.org/techniques/T1076) باعث می شود فایل جایگزین شده با امتیازات SYSTEM اجرا شود. (Citation: Tilbury 2014)\n\nبرای مثال، برای روش دیباگر در ویندوز ویستا و نسخه‌های جدیدتر و همچنین ویندوز سرور 2008 و نسخه‌های جدیدتر، ممکن است یک کلید رجیستری تغییر داده شود که «cmd.exe» یا برنامه دیگری را که دسترسی در پشتی را فراهم می‌کند، به‌عنوان «اشکال‌زدایی» برای برنامه دسترسی (مثلاً «utilman.exe») پیکربندی کند. پس از اصلاح رجیستری، فشار دادن کلید ترکیبی مناسب در صفحه ورود به سیستم در حالی که در صفحه کلید هستید یا زمانی که با RDP متصل هستید، باعث می شود که برنامه \"اشکال زدا\" با امتیازات SYSTEM اجرا شود. (Citation: Tilbury 2014)\n\nسایر ویژگی‌های دسترس‌پذیری وجود دارد که ممکن است به روشی مشابه مورد استفاده قرار گیرند: (Citation: DEFCON2016 Sticky Keys)\n\n* صفحه کلید روی صفحه: <code>C:\\Windows\\System32\\osk.exe</code>\n* ذره بین: <code>C:\\Windows\\System32\\Magnify.exe</code>\n* راوی: <code>C:\\Windows\\System32\\Narrator.exe</code>\n* تغییر دهنده نمایشگر: <code>C:\\Windows\\System32\\DisplaySwitch.exe</code>\n* تغییر دهنده برنامه: <code>C:\\Windows\\System32\\AtBroker.exe</code> (Citation: DEFCON2016 Sticky Keys)"
         }
     ]
 }

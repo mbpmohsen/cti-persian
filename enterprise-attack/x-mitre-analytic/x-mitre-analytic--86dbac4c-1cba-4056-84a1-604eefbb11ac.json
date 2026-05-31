@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0154#AN0441",
-                    "external_id": "AN0441"
+                    "external_id": "AN0441",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,21 +47,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust the user inactivity threshold that defines 'screensaver trigger window'; shorter timeouts may increase sensitivity."
+                    "description": "Adjust the user inactivity threshold that defines 'screensaver trigger window'; shorter timeouts may increase sensitivity.",
+                    "description_fa": "آستانه عدم فعالیت کاربر را که \"پنجره فعال محافظ صفحه\" را تعریف می کند، تنظیم کنید. تایم اوت های کوتاه تر ممکن است حساسیت را افزایش دهد."
                 },
                 {
                     "field": "SuspiciousPathRegex",
-                    "description": "Allow tuning based on expected paths for legitimate .scr files vs suspicious locations (e.g., user temp directories)."
+                    "description": "Allow tuning based on expected paths for legitimate .scr files vs suspicious locations (e.g., user temp directories).",
+                    "description_fa": "تنظیم بر اساس مسیرهای مورد انتظار برای فایل‌های .scr قانونی در مقابل مکان‌های مشکوک (مانند دایرکتوری‌های موقت کاربر) مجاز است."
                 },
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Allowlisting known legitimate initiators of .scr files (e.g., user32.dll context) to reduce false positives."
+                    "description": "Allowlisting known legitimate initiators of .scr files (e.g., user32.dll context) to reduce false positives.",
+                    "description_fa": "اجازه دادن به فهرست آغازگرهای قانونی شناخته شده فایل‌های .scr (به عنوان مثال، زمینه user32.dll) برای کاهش موارد مثبت نادرست."
                 },
                 {
                     "field": "RegistryEditorProcessName",
-                    "description": "Monitor for registry modification performed by unusual processes (e.g., powershell.exe, reg.exe)."
+                    "description": "Monitor for registry modification performed by unusual processes (e.g., powershell.exe, reg.exe).",
+                    "description_fa": "نظارت بر اصلاح رجیستری که توسط فرآیندهای غیرمعمول انجام می شود (مانند powershell.exe، reg.exe)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0441",
+            "description_fa": "اجرای غیرمعمول محافظ صفحه نمایش (scr.) با تغییرات اخیر رجیستری در مقادیر HKCU\\Control Panel\\Desktop مانند SCRNSAVE.exe، ScreenSaveTimeout و ScreenSaveActive مرتبط است. تشخیص روی مسیرهای تصویر PE تمرکز می‌کند که با محافظ‌های صفحه نمایش قانونی شناخته شده سازگار نیست و پس از مهلت زمانی عدم فعالیت کاربر فعال می‌شود."
         }
     ]
 }

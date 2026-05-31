@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0133#AN0377",
-                    "external_id": "AN0377"
+                    "external_id": "AN0377",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Helps scope tunnel launch context to non-interactive or suspicious parent processes."
+                    "description": "Helps scope tunnel launch context to non-interactive or suspicious parent processes.",
+                    "description_fa": "کمک می کند تا زمینه راه اندازی تونل را به فرآیندهای والد غیرتعاملی یا مشکوک گسترش دهد."
                 },
                 {
                     "field": "RemoteTunnelPersistence",
-                    "description": "Allows tracking of tunnel re-establishment across reboots for persistence."
+                    "description": "Allows tracking of tunnel re-establishment across reboots for persistence.",
+                    "description_fa": "امکان ردیابی راه اندازی مجدد تونل در سراسر راه اندازی مجدد برای تداوم."
                 },
                 {
                     "field": "RemoteFlag",
-                    "description": "May include values like --remote, -R, or embedded ssh arguments passed by IDEs"
+                    "description": "May include values like --remote, -R, or embedded ssh arguments passed by IDEs",
+                    "description_fa": "ممکن است شامل مقادیری مانند --remote، -R، یا آرگومان های ssh تعبیه شده توسط IDE ها باشد."
                 },
                 {
                     "field": "LaunchAgentPath",
-                    "description": "If the IDE uses persistence via LaunchAgents, defenders may choose where to monitor for tunnel auto-launching"
+                    "description": "If the IDE uses persistence via LaunchAgents, defenders may choose where to monitor for tunnel auto-launching",
+                    "description_fa": "اگر IDE از ماندگاری از طریق LaunchAgents استفاده کند، مدافعان می‌توانند مکان نظارت بر راه‌اندازی خودکار تونل را انتخاب کنند."
                 },
                 {
                     "field": "TunnelReconnectInterval",
-                    "description": "Frequency of retry attempts for tunnel reconnection can affect correlation window"
+                    "description": "Frequency of retry attempts for tunnel reconnection can affect correlation window",
+                    "description_fa": "فراوانی تلاش‌های مجدد برای اتصال مجدد تونل می‌تواند بر پنجره همبستگی تأثیر بگذارد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0377",
+            "description_fa": "تشخیص ایجاد پروفایل تونل JetBrains یا VSCode و به دنبال آن ارتباطات تونلی غیر معمول SSH یا مبتنی بر IDE به APIهای تونل توسعه‌یافته."
         }
     ]
 }

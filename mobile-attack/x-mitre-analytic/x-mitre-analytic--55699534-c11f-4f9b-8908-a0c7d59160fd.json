@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0601#AN1648",
-                    "external_id": "AN1648"
+                    "external_id": "AN1648",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -42,33 +43,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window for system-info collection burst \u2192 outbound transmission (e.g., 60\u2013900s)."
+                    "description": "Correlation window for system-info collection burst → outbound transmission (e.g., 60–900s).",
+                    "description_fa": "پنجره همبستگی برای جمع آوری اطلاعات سیستم → انتقال خروجی (به عنوان مثال، 60-900s)."
                 },
                 {
                     "field": "MinSystemInfoSignals",
-                    "description": "Minimum number of distinct system-attribute reads/queries within window to count as \u2018broad fingerprinting\u2019 (tune to telemetry fidelity)."
+                    "description": "Minimum number of distinct system-attribute reads/queries within window to count as ‘broad fingerprinting’ (tune to telemetry fidelity).",
+                    "description_fa": "حداقل تعداد خوانده‌ها/پرسش‌های مشخص ویژگی‌های سیستمی در پنجره به‌عنوان «اثرانگشت گسترده» (کوک برای وفاداری دورسنجی)."
                 },
                 {
                     "field": "DistinctAttributeThreshold",
-                    "description": "How many distinct attribute categories (build fields, cpu, locale, patch level, network identifiers) must be observed."
+                    "description": "How many distinct attribute categories (build fields, cpu, locale, patch level, network identifiers) must be observed.",
+                    "description_fa": "چند دسته مشخصه متمایز (فیلدهای ساخت، cpu، محلی، سطح پچ، شناسه شبکه) باید رعایت شود."
                 },
                 {
                     "field": "BackgroundOnly",
-                    "description": "If true, require the burst occurs while app is background to reduce noise from legitimate settings/about-device screens."
+                    "description": "If true, require the burst occurs while app is background to reduce noise from legitimate settings/about-device screens.",
+                    "description_fa": "اگر درست باشد، برای کاهش نویز از تنظیمات قانونی/صفحه‌های مربوط به دستگاه، نیاز به انفجار زمانی که برنامه در پس‌زمینه است رخ می‌دهد."
                 },
                 {
                     "field": "AllowlistedPackages",
-                    "description": "Legitimate device management, diagnostics, carrier services, and enterprise security apps expected to collect device inventory."
+                    "description": "Legitimate device management, diagnostics, carrier services, and enterprise security apps expected to collect device inventory.",
+                    "description_fa": "مدیریت قانونی دستگاه، تشخیص، خدمات شرکت مخابراتی و برنامه‌های امنیتی سازمانی که انتظار می‌رود موجودی دستگاه را جمع‌آوری کنند."
                 },
                 {
                     "field": "NewDomainWindowSeconds",
-                    "description": "Window for \u2018newly contacted domain\u2019 enrichment after fingerprinting burst."
+                    "description": "Window for ‘newly contacted domain’ enrichment after fingerprinting burst.",
+                    "description_fa": "پنجره‌ای برای غنی‌سازی «دامنه تازه تماس‌گرفته» پس از ترکیدن اثر انگشت."
                 },
                 {
                     "field": "SmallPostByteRange",
-                    "description": "Approximate payload size range used for \u2018fingerprint submit\u2019 heuristic (environment dependent)."
+                    "description": "Approximate payload size range used for ‘fingerprint submit’ heuristic (environment dependent).",
+                    "description_fa": "محدوده اندازه محموله تقریبی مورد استفاده برای اکتشافی «ارسال اثر انگشت» (وابسته به محیط)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1648",
+            "description_fa": "Defender فرآیند برنامه ای را که مجموعه ای از جستجوهای ویژگی های سیستم عامل/دستگاه (ساخت، سخت افزار، سطح SDK، ویژگی های سیستم) را انجام می دهد با انشعاب اجرای کوتاه مدت (دروازه ویژگی، بار ماژول، تغییرات گردش کار مجوز) و/یا ارتباطات خروجی فوری مرتبط می کند، که نشان دهنده ارزیابی محیطی است که برای شکل دادن به اقدامات بعدی استفاده می شود."
         }
     ]
 }

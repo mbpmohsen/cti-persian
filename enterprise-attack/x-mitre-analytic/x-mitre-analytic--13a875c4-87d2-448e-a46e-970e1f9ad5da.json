@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0388#AN1094",
-                    "external_id": "AN1094"
+                    "external_id": "AN1094",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -61,17 +62,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate registry tampering and elevation within a tunable time window (e.g., 30 seconds) to reduce noise from benign admin activity."
+                    "description": "Correlate registry tampering and elevation within a tunable time window (e.g., 30 seconds) to reduce noise from benign admin activity.",
+                    "description_fa": "دستکاری و افزایش رجیستری را در یک پنجره زمانی قابل تنظیم (مثلاً 30 ثانیه) به هم مرتبط کنید تا نویز ناشی از فعالیت های مدیر را کاهش دهید."
                 },
                 {
                     "field": "ElevatedProcessNameList",
-                    "description": "Tunable list of suspicious elevated binaries (e.g., sdclt.exe, eventvwr.exe, computerdefaults.exe) known to support UAC bypass."
+                    "description": "Tunable list of suspicious elevated binaries (e.g., sdclt.exe, eventvwr.exe, computerdefaults.exe) known to support UAC bypass.",
+                    "description_fa": "لیست قابل تنظیم از باینری های مشکوک بالا (مانند sdclt.exe، eventvwr.exe، computerdefaults.exe) شناخته شده برای پشتیبانی از بای پس UAC."
                 },
                 {
                     "field": "ParentProcessAnomalyThreshold",
-                    "description": "Define logic for parent-child mismatch (e.g., non-elevated process spawning auto-elevated one) to flag uncommon elevation paths."
+                    "description": "Define logic for parent-child mismatch (e.g., non-elevated process spawning auto-elevated one) to flag uncommon elevation paths.",
+                    "description_fa": "منطق عدم تطابق والد-کودک (به عنوان مثال، فرآیند غیربالا با افزایش خودکار) برای پرچم‌گذاری مسیرهای ارتفاع غیرمعمول."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1094",
+            "description_fa": "یک زنجیره رفتار چند رویدادی شامل تلاش‌های دور زدن UAC از طریق باینری‌های شناخته‌شده با افزایش خودکار (مانند eventvwr.exe، sdclt.exe)، تغییرات غیرمجاز رجیستری در کلیدهای مرتبط با UAC و اجرای فرآیند غیرعادی با امتیازات بالا، اما فاقد خط استاندارد والدین، شناسایی می‌کند. الگوهای مشکوک شامل فراخوانی اشیاء COM با ارتفاع خودکار یا دستکاری ورودی های رجیستری ایزوله Command بدون درخواست رضایت است."
         }
     ]
 }

@@ -9,59 +9,73 @@
                 {
                     "external_id": "CAPEC-17",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/17.html"
+                    "url": "https://capec.mitre.org/data/definitions/17.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-732",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/732.html"
+                    "url": "http://cwe.mitre.org/data/definitions/732.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-272",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/272.html"
+                    "url": "http://cwe.mitre.org/data/definitions/272.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-59",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/59.html"
+                    "url": "http://cwe.mitre.org/data/definitions/59.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-282",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/282.html"
+                    "url": "http://cwe.mitre.org/data/definitions/282.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-270",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/270.html"
+                    "url": "http://cwe.mitre.org/data/definitions/270.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Hijack Execution Flow: Executable Installer File Permissions Weakness",
                     "external_id": "T1574.005",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/005"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/005",
+                    "description_fa": "Hijack Execution Flow: ضعف مجوزهای فایل نصب کننده اجرایی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Hijack Execution Flow: Services File Permissions Weakness",
                     "external_id": "T1574.010",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1574/010"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1574/010",
+                    "description_fa": "جریان اجرای Hijack: ضعف مجوزهای فایل خدمات",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--9ad2c2eb-9939-4590-9683-2e789692d262",
@@ -101,6 +115,24 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -126,11 +158,24 @@
                 "Ability to communicate synchronously or asynchronously with server that publishes an over-privileged directory, program, or interface. Optionally, ability to capture output directly through synchronous communication or other method such as FTP."
             ],
             "x_capec_skills_required": {
-                "Low": "To identify and execute against an over-privileged system interface"
+                "Low": "To identify and execute against an over-privileged system interface",
+                "Low_fa": "برای شناسایی و اجرا در برابر یک رابط سیستم بیش از حد مجاز"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حمله ای از این نوع از پیکربندی یک سیستم سوء استفاده می کند که به دشمن اجازه می دهد یا مستقیماً به یک فایل اجرایی دسترسی داشته باشد، برای مثال از طریق دسترسی پوسته. یا در بدترین حالت ممکن به دشمن اجازه می دهد تا فایلی را آپلود کرده و سپس آن را اجرا کند. سرورهای وب، سرورهای ftp و سیستم‌های میان‌افزار پیام‌گرا که دارای نقاط ادغام زیادی هستند، آسیب‌پذیر هستند، زیرا هم برنامه‌نویسان و هم مدیران باید در رابطه با رابط‌ها و امتیازات صحیح برای هر رابط با هم هماهنگ باشند.",
+            "name_fa": "استفاده از فایل های مخرب",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک دایرکتوری روی سرور وب با مجوزهای زیر در نظر بگیرید</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">drwxrwxrwx 5 admin public 170 نوامبر 17 01:08 webroot</xhtml:div>\n               <xhtml:p>این می‌تواند به مهاجم اجازه دهد برنامه‌ها را هم اجرا کند و هم آپلود و اجرا کند. این یک آسیب‌پذیری می‌تواند توسط تهدیدی برای بررسی سیستم و شناسایی آسیب‌پذیری‌های اضافی برای سوء استفاده مورد سوء استفاده قرار گیرد.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین پیکربندی فایل/دایرکتوری: </b> دشمن به دنبال فایل‌ها یا دایرکتوری‌های نادرست در سیستمی می‌گردد که ممکن است به گروه بسیار وسیعی از فایل‌ها دسترسی اجرایی دهد. کاربران.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از طریق دسترسی پوسته به یک سیستم، از دستور \"ls -l\" برای مشاهده مجوزها برای فایل‌ها و دایرکتوری‌ها استفاده کنید. </b>اگر دشمن دایرکتوری را کشف کند که دارای مجوزهای اجرایی است، سعی می کند یک فایل مخرب را برای اجرا آپلود کند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک فایل مخرب را از طریق یک FTP پیکربندی نادرست آپلود کنید. سرور.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>اجرای فایل مخرب: </b>دشمن یا فایل مخرب آپلود شده را اجرا می‌کند یا فایل موجود را اجرا می‌کند که پیکربندی اشتباهی برای دسترسی به آن وجود دارد. حریف.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "پیکربندی سیستم باید به مهاجم اجازه دهد تا مستقیماً به فایل‌های اجرایی دسترسی داشته باشد یا فایل‌هایی را برای اجرا آپلود کند. این بدان معنی است که هر سیستم کنترل دسترسی که قرار است واسطه ارتباطات بین سوژه و شی باشد، به اشتباه تنظیم شده است یا محیطی خوش خیم را در نظر می گیرد."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان برقراری ارتباط همزمان یا ناهمزمان با سروری که یک فهرست، برنامه یا رابط دارای امتیاز بیش از حد را منتشر می کند. به صورت اختیاری، امکان گرفتن خروجی مستقیم از طریق ارتباط همزمان یا روش های دیگر مانند FTP."
+            ]
         }
     ],
     "type": "bundle"

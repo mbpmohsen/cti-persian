@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0468#AN1292",
-                    "external_id": "AN1292"
+                    "external_id": "AN1292",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BaselineDNS",
-                    "description": "Expected DNS server list; deviations may indicate spoofing."
+                    "description": "Expected DNS server list; deviations may indicate spoofing.",
+                    "description_fa": "لیست سرور DNS مورد انتظار. انحراف ممکن است نشان دهنده جعل باشد."
                 },
                 {
                     "field": "AlertSensitivity",
-                    "description": "Threshold for number of anomalous DHCP responses before alerting."
+                    "description": "Threshold for number of anomalous DHCP responses before alerting.",
+                    "description_fa": "آستانه برای تعداد پاسخ های غیرعادی DHCP قبل از هشدار."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1292",
+            "description_fa": "جعل DHCP را با نظارت بر گزارش‌های یکپارچه برای پارامترهای غیرمنتظره ACK/OFFER DHCP و ارتباط با ضبط بسته‌ها برای چندین سرور DHCP شناسایی می‌کند. تأکید رفتاری بر DNS ناسازگار و تخصیص دروازه است که ترافیک را تغییر مسیر می دهد."
         }
     ]
 }

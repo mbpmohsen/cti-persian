@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-498",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/498.html"
+                    "url": "https://capec.mitre.org/data/definitions/498.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-359",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/359.html"
+                    "url": "http://cwe.mitre.org/data/definitions/359.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Jonathan Zdziarksi, Hacking and Securing iOS Applications (First Edition), 2012, O'Reilly Media, Inc.",
                     "external_id": "REF-426",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "Jonathan Zdziarksi، هک و ایمن سازی برنامه های iOS (نسخه اول)، 2012، O'Reilly Media, Inc.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--1b75b059-c9ee-4c4d-b016-bafb20cce96b",
@@ -42,7 +46,13 @@
                 "This type of an attack requires physical access to a device to either excavate the image files (potentially by leveraging a Jailbreak) or view the screenshots through the multitasking switcher (by double tapping the home button on the device)."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن تصاویر اسکرین شات ایجاد شده توسط iOS را در تلاش برای به دست آوردن اطلاعات حساس بررسی می کند. این حمله اسکرین شات های موقت ایجاد شده توسط سیستم عامل زیرین را در حالی که برنامه در پس زمینه باز می ماند، هدف قرار می دهد.",
+            "name_fa": "اسکرین شات های iOS را بررسی کنید",
+            "x_capec_extended_description_fa": "این تصاویر توسط iOS برای کمک به انتقال بصری بین برنامه های باز و بهبود تجربه کاربر با یک دستگاه استفاده می شود. یک برنامه می تواند در معرض خطر باشد حتی اگر به درستی از اطلاعات حساس در حالت استراحت محافظت کند. اگر برنامه اطلاعات حساس را روی صفحه نمایش دهد، این امکان وجود دارد که iOS به طور ناخواسته آن اطلاعات را در یک فایل تصویری ثبت کند. دشمن می‌تواند این تصاویر را با دسترسی به فایل‌های تصویری یا با دستیابی فیزیکی به دستگاه و استفاده از رابط چندوظیفه‌ای بازیابی کند. این حمله با CAPEC-648 متفاوت است، که اسکرین شات های عمدی را که توسط کاربر نهایی آغاز شده و در حافظه دستگاه ذخیره می شود، هدف قرار می دهد.",
+            "x_capec_prerequisites_fa": [
+                "این نوع حمله نیاز به دسترسی فیزیکی به یک دستگاه دارد تا یا فایل های تصویری را استخراج کند (به طور بالقوه با استفاده از جیلبریک) یا اسکرین شات ها را از طریق سوئیچر چند وظیفه ای (با دو بار ضربه زدن روی دکمه هوم دستگاه) مشاهده کنید."
+            ]
         }
     ],
     "type": "bundle"

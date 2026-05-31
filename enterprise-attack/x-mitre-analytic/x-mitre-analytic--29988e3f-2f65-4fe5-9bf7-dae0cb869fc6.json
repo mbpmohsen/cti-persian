@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0126#AN0351",
-                    "external_id": "AN0351"
+                    "external_id": "AN0351",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcess",
-                    "description": "Track unusual parent process writing to SSH config (e.g., curl -> bash)"
+                    "description": "Track unusual parent process writing to SSH config (e.g., curl -> bash)",
+                    "description_fa": "ردیابی نوشتن فرآیند والد غیرمعمول در پیکربندی SSH (به عنوان مثال، curl -> bash)"
                 },
                 {
                     "field": "InteractiveSessionFlag",
-                    "description": "Flag whether shell session was interactive (normal) or spawned remotely (potential abuse)"
+                    "description": "Flag whether shell session was interactive (normal) or spawned remotely (potential abuse)",
+                    "description_fa": "پرچم‌گذاری کنید که آیا جلسه پوسته تعاملی (عادی) بوده یا از راه دور (سوء استفاده احتمالی) ایجاد شده است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0351",
+            "description_fa": "درج کلیدهای عمومی در authorized_keys با استفاده از bash/zsh یا ابزارهای ویرایشگر، مرتبط با اصل و نسب فرآیند مشکوک."
         }
     ]
 }

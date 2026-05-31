@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0098",
-                    "external_id": "DC0098"
+                    "external_id": "DC0098",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -38,7 +39,9 @@
                     "name": "AWS:CloudTrail",
                     "channel": "DeleteVolume"
                 }
-            ]
+            ],
+            "name_fa": "حذف حجم",
+            "description_fa": "حذف حجم ذخیره سازی بلوک مبتنی بر ابر یا در محل. این عمل فضای ذخیره‌سازی اختصاص‌یافته را برای همیشه حذف می‌کند و در صورت عدم پشتیبان‌گیری ممکن است منجر به از دست رفتن اطلاعات شود.\n\n*اقدامات جمع آوری داده ها:*\n\n- Cloud Logging و API ها\n    - سیاهههای مربوط به CloudTrail AWS\n        - `EventName: DeleteVolume` (حذف حجم را دنبال می کند)\n    - لاگ های مانیتور Azure\n        - \"نام عملیات: Microsoft.Compute/disks/delete\".\n        - `وضعیت: موفقیت آمیز | Failure` (پرچم گذاری تلاش های حذف غیرمجاز)\n    - گزارش های حسابرسی ابری Google\n        - `protoPayload.methodName: \"v1.compute.disks.delete\"`\n        - `authenticationInfo.principalEmail` (کاربر در حال حذف حجم را مشخص می کند)\n- ثبت سیستم و میزبان مبتنی بر\n    - گزارش‌های لینوکس و macOS:\n        - «/var/log/syslog» یا «/var/log/messages» برای عملکردهای جداسازی/حذف حجم\n    - گزارش رویدادهای ویندوز:\n        - شناسه رویداد 98 (حافظه کلاس ذخیره سازی)\n        - شناسه رویداد 225 (حذف صدا شناسایی شد)\n        - شناسه رویداد 12 (اعلان حذف دیسک)"
         }
     ]
 }

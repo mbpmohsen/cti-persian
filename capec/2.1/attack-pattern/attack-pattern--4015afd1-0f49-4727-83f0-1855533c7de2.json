@@ -9,34 +9,44 @@
                 {
                     "external_id": "CAPEC-305",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/305.html"
+                    "url": "https://capec.mitre.org/data/definitions/305.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Defense Advanced Research Projects Agency Information Processing Techniques Office, Information Sciences Institute University of Southern California, RFC793 - Transmission Control Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-128",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc793.html"
+                    "url": "http://www.faqs.org/rfcs/rfc793.html",
+                    "description_fa": "دفتر تکنیک های پردازش اطلاعات آژانس پروژه های تحقیقاتی پیشرفته دفاعی، موسسه علوم اطلاعات دانشگاه کالیفرنیای جنوبی، RFC793 - پروتکل کنترل انتقال، 1981-09، آژانس پروژه های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-34",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, The Art of Port Scanning (Volume: 7, Issue. 51), Phrack Magazine, 1997",
                     "external_id": "REF-130",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://phrack.org/issues/51/11.html"
+                    "url": "http://phrack.org/issues/51/11.html",
+                    "description_fa": "گوردون \"فئودور\" لیون، هنر اسکن بندر (جلد: 7، شماره 51)، مجله Phrack، 1997",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--4015afd1-0f49-4727-83f0-1855533c7de2",
@@ -64,6 +74,19 @@
                     "Other",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -80,7 +103,17 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن از بخش های TCP ACK برای جمع آوری اطلاعات در مورد فایروال یا پیکربندی ACL استفاده می کند. هدف از این نوع اسکن، کشف اطلاعات مربوط به تنظیمات فیلتر به جای وضعیت پورت است. این نوع اسکن به ندرت به تنهایی مفید است، اما هنگامی که با اسکن SYN ترکیب می شود، تصویر کامل تری از نوع قوانین فایروال موجود ارائه می دهد.",
+            "name_fa": "اسکن TCP ACK",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>آزمایش</h3><ol><li> <p>یک دشمن بسته‌های TCP را با مجموعه پرچم ACK ارسال می‌کند که با اتصال موجود به پورت‌های هدف مرتبط نیست.</p></li><li> <p>یک دشمن از پاسخ هدف برای تعیین وضعیت پورت استفاده می‌کند. اگر بسته RST دریافت شود، درگاه هدف بسته می شود یا ACK خارج از همگام سازی ارسال شده است. اگر پاسخی دریافت نشد، هدف احتمالاً از یک فایروال حالت دار استفاده می کند.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>وقتی یک قطعه TCP ACK به یک پورت بسته ارسال می‌شود، یا خارج از همگام‌سازی به یک درگاه گوش دادن ارسال می‌شود، رفتار مورد انتظار RFC 793 برای دستگاه این است که با RST پاسخ دهد. بازگرداندن RST ها در پاسخ به اسکن ACK به مهاجم اطلاعات مفیدی می دهد که می تواند برای پی بردن به نوع فایروال موجود استفاده شود. فایروال های حالت دار بسته های ACK خارج از همگام سازی را دور می اندازند که منجر به عدم پاسخ می شود. هنگامی که این اتفاق می افتد، پورت به عنوان فیلتر شده علامت گذاری می شود. هنگامی که RST ها در پاسخ دریافت می شوند، پورت ها به عنوان فیلتر نشده علامت گذاری می شوند، زیرا بسته های ACK رفتار مورد انتظار را از یک پورت درخواست می کنند. هنگامی که با تکنیک‌های SYN ترکیب می‌شود، مهاجم می‌تواند تصویر کامل‌تری از این که کدام نوع بسته‌ها به یک میزبان می‌رسند و در نتیجه مجموعه قوانین فایروال آن را ترسیم می‌کند، به دست آورد. اسکن ACK، هنگامی که با اسکن SYN ترکیب می شود، همچنین به حریف اجازه می دهد تا وضعیت یا غیر حالت یک دیوار آتش را تجزیه و تحلیل کند (توضیح داده شده در یادداشت ها). اسکن‌های TCP ACK تا حدودی سریع‌تر و مخفی‌تر از سایر انواع اسکن‌ها هستند، اما اغلب به تجزیه و تحلیل پیچیده‌ای توسط یک فرد با تجربه نیاز دارند. یک دشمن ماهر ممکن است از این روش برای ترسیم قوانین دیوار آتش استفاده کند، اما نتایج اسکن ACK برای یک تازه کار کمتر مفید خواهد بود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "دشمن نیاز به دسترسی منطقی به شبکه هدف دارد. اسکن ACK نیاز به استفاده از سوکت های خام دارد و بنابراین نمی توان آن را از برخی سیستم های ویندوز (مثلاً Windows XP SP 2) انجام داد. در یونیکس و لینوکس، دستکاری سوکت خام به امتیازات روت نیاز دارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "این حمله را می توان از طریق استفاده از نقشه نگار یا اسکنر شبکه یا از طریق برنامه نویسی سوکت خام در یک زبان برنامه نویسی به دست آورد. ابزارهای تزریق بسته نیز برای این منظور مفید هستند. بسته به روش مورد استفاده، ممکن است لازم باشد شبکه را بو کنید تا پاسخ را ببینید."
+            ]
         }
     ],
     "type": "bundle"

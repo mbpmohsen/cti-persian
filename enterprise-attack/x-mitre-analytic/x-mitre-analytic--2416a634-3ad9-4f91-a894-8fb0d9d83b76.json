@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0359#AN1021",
-                    "external_id": "AN1021"
+                    "external_id": "AN1021",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutablePath",
-                    "description": "Match known proxy tools, tuned for environment."
+                    "description": "Match known proxy tools, tuned for environment.",
+                    "description_fa": "ابزارهای پراکسی شناخته شده را که برای محیط تنظیم شده اند مطابقت دهید."
                 },
                 {
                     "field": "RelayCount",
-                    "description": "Detect outbound chaining behavior through >2 IPs in short succession."
+                    "description": "Detect outbound chaining behavior through >2 IPs in short succession.",
+                    "description_fa": "رفتار زنجیره‌ای خروجی را از طریق بیش از 2 IP به صورت متوالی تشخیص دهید."
                 },
                 {
                     "field": "ProtocolType",
-                    "description": "Allow filtering by ICMP, TCP/443, UDP for obfuscation channels."
+                    "description": "Allow filtering by ICMP, TCP/443, UDP for obfuscation channels.",
+                    "description_fa": "فیلتر کردن توسط ICMP، TCP/443، UDP برای کانال‌های مبهم‌سازی مجاز است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1021",
+            "description_fa": "ابزارهایی مانند «tor»، «nglite»، «proxychains»، «chisel» یا دیمون‌های سفارشی به طور مکرر جلسات خروجی را به چندین گره قبل از مقصد نهایی آغاز می‌کنند. این رفتار برای سرویس‌های لینوکس خارج از VPN، مانیتورینگ یا زمینه‌های رله CDN غیرعادی است."
         }
     ]
 }

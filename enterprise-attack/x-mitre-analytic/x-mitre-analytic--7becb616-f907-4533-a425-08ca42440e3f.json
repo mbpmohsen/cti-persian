@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0403#AN1131",
-                    "external_id": "AN1131"
+                    "external_id": "AN1131",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Detect mirror session creation followed by mirrored traffic within X seconds (e.g., 60s)"
+                    "description": "Detect mirror session creation followed by mirrored traffic within X seconds (e.g., 60s)",
+                    "description_fa": "تشخیص ایجاد جلسه آینه و به دنبال آن ترافیک آینه‌ای در عرض X ثانیه (مثلاً 60 ثانیه)"
                 },
                 {
                     "field": "MirrorDestinationCIDR",
-                    "description": "Define suspicious or external mirror targets (e.g., non-enterprise ranges)"
+                    "description": "Define suspicious or external mirror targets (e.g., non-enterprise ranges)",
+                    "description_fa": "اهداف آینه ای مشکوک یا خارجی را تعریف کنید (به عنوان مثال، محدوده های غیر سازمانی)"
                 },
                 {
                     "field": "UserIdentity",
-                    "description": "Flag traffic mirror activity by non-privileged or unexpected IAM roles"
+                    "description": "Flag traffic mirror activity by non-privileged or unexpected IAM roles",
+                    "description_fa": "پرچم‌گذاری فعالیت آینه‌ای ترافیک توسط نقش‌های غیرمجاز یا غیرمنتظره IAM"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1131",
+            "description_fa": "پیکربندی به خط‌مشی‌های TAP/mirror مجازی تغییر می‌کند که ترافیک را به مقصدهای تأیید نشده ارسال می‌کند. تشخیص، تماس‌های API هواپیمای مدیریتی را با مشاهده ترافیک آینه‌ای مرتبط می‌کند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0562#AN1554",
-                    "external_id": "AN1554"
+                    "external_id": "AN1554",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ESXiDiscoveryCommands",
-                    "description": "ESXi commands commonly used for hypervisor and VM reconnaissance"
+                    "description": "ESXi commands commonly used for hypervisor and VM reconnaissance",
+                    "description_fa": "دستورات ESXi که معمولاً برای شناسایی هایپروایزر و VM استفاده می شود"
                 },
                 {
                     "field": "VMInventoryEnumerationThreshold",
-                    "description": "Number of VM inventory queries within time window indicating reconnaissance activity"
+                    "description": "Number of VM inventory queries within time window indicating reconnaissance activity",
+                    "description_fa": "تعداد جستجوهای موجودی VM در پنجره زمانی که فعالیت شناسایی را نشان می دهد"
                 },
                 {
                     "field": "HypervisorEnvironmentBaseline",
-                    "description": "Normal hypervisor management activity patterns for distinguishing malicious reconnaissance"
+                    "description": "Normal hypervisor management activity patterns for distinguishing malicious reconnaissance",
+                    "description_fa": "الگوهای فعالیت مدیریت هایپروایزر عادی برای تشخیص شناسایی مخرب"
                 },
                 {
                     "field": "DatastoreAccessPatterns",
-                    "description": "Unusual datastore access patterns indicating environmental validation or target selection"
+                    "description": "Unusual datastore access patterns indicating environmental validation or target selection",
+                    "description_fa": "الگوهای دسترسی غیرمعمول به ذخیره‌گاه داده که اعتبارسنجی محیطی یا انتخاب هدف را نشان می‌دهد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1554",
+            "description_fa": "زنجیره رفتاری اعتبار سنجی محیطی Hypervisor ESXi: (1) موجودی ماشین مجازی و شمارش پیکربندی از طریق دستورات vim-cmd و esxcli، (2) کشف پیکربندی سخت افزار میزبان و شبکه برای اعتبار سنجی محیط هایپروایزور، (3) ذخیره سازی داده و پیکربندی ذخیره سازی شناسایی، (4) عضویت اعتبار انتخابی و نرم افزار cluster بر اساس ویژگی های زیرساخت مجازی سازی و اعتبار سنجی VM هدف"
         }
     ]
 }

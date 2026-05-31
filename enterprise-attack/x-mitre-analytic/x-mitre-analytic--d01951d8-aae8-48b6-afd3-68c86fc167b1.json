@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0049#AN0135",
-                    "external_id": "AN0135"
+                    "external_id": "AN0135",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilenameMatch",
-                    "description": "e.g., *com.apple.UTun*, *RemoteManagement* log files"
+                    "description": "e.g., *com.apple.UTun*, *RemoteManagement* log files",
+                    "description_fa": "به عنوان مثال، فایل های گزارش *com.apple.UTun*، *RemoteManagement*"
                 },
                 {
                     "field": "TimeDeltaFromLogin",
-                    "description": "Correlate deletion with recent SSH or GUI remote login session"
+                    "description": "Correlate deletion with recent SSH or GUI remote login session",
+                    "description_fa": "حذف را با جلسه ورود از راه دور اخیر SSH یا GUI مرتبط کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0135",
+            "description_fa": "حذف گزارش‌های ورود از راه دور یا اشتراک‌گذاری صفحه در Logging یکپارچه، حذف «com.apple.UTun» یا استفاده از ترمینال مشکوک از «rm»، «sudo pfctl -F all» برای پاک کردن تاریخچه وضعیت/پیکربندی شبکه را تشخیص می‌دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0360#AN1025",
-                    "external_id": "AN1025"
+                    "external_id": "AN1025",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Adjustable window to track chained discovery activity (e.g., 5-10 minutes)."
+                    "description": "Adjustable window to track chained discovery activity (e.g., 5-10 minutes).",
+                    "description_fa": "پنجره قابل تنظیم برای ردیابی فعالیت های کشف زنجیره ای (به عنوان مثال، 5-10 دقیقه)."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Tune to focus on non-admin users or service accounts performing enumeration."
+                    "description": "Tune to focus on non-admin users or service accounts performing enumeration.",
+                    "description_fa": "برای تمرکز روی کاربران غیر سرپرست یا حساب‌های خدماتی که شمارش را انجام می‌دهند، تنظیم کنید."
                 },
                 {
                     "field": "ProcessLineageDepth",
-                    "description": "How far back the parent-child process chain is correlated."
+                    "description": "How far back the parent-child process chain is correlated.",
+                    "description_fa": "تا چه اندازه زنجیره فرآیند والد-فرزند همبستگی دارد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1025",
+            "description_fa": "تشخیص شمارش گروه دامنه از طریق ابزارهای خط فرمان مانند 'net group/domain' یا cmdlets PowerShell، و به دنبال آن دسترسی مشکوک به تماس های API یا حافظه LSASS."
         }
     ]
 }

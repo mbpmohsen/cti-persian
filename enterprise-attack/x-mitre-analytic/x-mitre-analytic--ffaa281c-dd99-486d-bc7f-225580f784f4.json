@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0552#AN1527",
-                    "external_id": "AN1527"
+                    "external_id": "AN1527",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,25 +57,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceNamePattern",
-                    "description": "Regex for suspicious or uncommon service names (e.g., `svhostx`, `winhelp`, etc.)"
+                    "description": "Regex for suspicious or uncommon service names (e.g., `svhostx`, `winhelp`, etc.)",
+                    "description_fa": "Regex برای نام‌های سرویس مشکوک یا غیرمعمول (مانند «svhostx»، «winhelp» و غیره)"
                 },
                 {
                     "field": "ImagePathFilter",
-                    "description": "Flag services whose image path resides in uncommon directories (e.g., `C:\\Users\\`, `C:\\Temp\\`)"
+                    "description": "Flag services whose image path resides in uncommon directories (e.g., `C:\\Users\\`, `C:\\Temp\\`)",
+                    "description_fa": "پرچم‌گذاری سرویس‌هایی که مسیر تصویر آن‌ها در فهرست‌های غیرمعمول قرار دارد (مانند «C:\\Users»، «C:\\Temp»)"
                 },
                 {
                     "field": "DriverExtensionList",
-                    "description": "Watch for `.sys` files loaded by `sc`, Registry, or `ZwLoadDriver` APIs"
+                    "description": "Watch for `.sys` files loaded by `sc`, Registry, or `ZwLoadDriver` APIs",
+                    "description_fa": "مراقب فایل‌های «.sys» باشید که توسط APIهای «sc»، Registry یا «ZwLoadDriver» بارگیری شده‌اند."
                 },
                 {
                     "field": "StartupTypeChangeWindow",
-                    "description": "Temporal window to correlate Registry `Start` key changes with service creation"
+                    "description": "Temporal window to correlate Registry `Start` key changes with service creation",
+                    "description_fa": "پنجره زمانی برای مرتبط کردن تغییرات کلید «شروع» رجیستری با ایجاد سرویس"
                 },
                 {
                     "field": "UnsignedBinaryAlert",
-                    "description": "Raise alerts for unsigned binaries registered as services"
+                    "description": "Raise alerts for unsigned binaries registered as services",
+                    "description_fa": "برای باینری های بدون امضا که به عنوان خدمات ثبت شده اند، هشدارها را افزایش دهید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1527",
+            "description_fa": "ایجاد یا تغییر سرویس‌های ویندوز را از طریق ابزارهای خط فرمان (مانند `sc.exe`، \"powershell.exe\")، تغییرات کلید رجیستری در \"HKLM\\System\\CurrentControlSet\\Services\" و اجرای سرویس تحت SYSTEM با مسیرهای باینری بدون علامت یا غیرعادی تشخیص می‌دهد. تشدید امتیازات را از طریق نصب درایور یا استفاده از «CreateServiceW» تشخیص می‌دهد. تبار والدین-فرزند، رفتار راه‌اندازی و نام‌های نادر خدمات را به هم مرتبط می‌کند."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0920#AN2063",
-                    "external_id": "AN2063"
+                    "external_id": "AN2063",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -67,17 +68,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllocationSizeThreshold",
-                    "description": "To tune for atypical virtual memory allocations that might indicate non-rendering characters in dense files"
+                    "description": "To tune for atypical virtual memory allocations that might indicate non-rendering characters in dense files",
+                    "description_fa": "برای تنظیم تخصیص حافظه مجازی غیر معمول که ممکن است نشان دهنده نویسه های غیر رندر در فایل های متراکم باشد"
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Allows tuning for atypical processes from script execution (e.g., powershell.exe, wscript.exe, mshta.exe)"
+                    "description": "Allows tuning for atypical processes from script execution (e.g., powershell.exe, wscript.exe, mshta.exe)",
+                    "description_fa": "امکان تنظیم فرآیندهای غیر معمول از اجرای اسکریپت (مانند powershell.exe، wscript.exe، mshta.exe)"
                 },
                 {
                     "field": "UnicodeDensityThreshold",
-                    "description": "Tune for invisible characters, or atypical amounts of Unicode characters (U+...)"
+                    "description": "Tune for invisible characters, or atypical amounts of Unicode characters (U+...)",
+                    "description_fa": "برای کاراکترهای نامرئی یا مقادیر غیر معمول نویسه‌های یونیکد (U+...) تنظیم کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 2063",
+            "description_fa": "تشخیص اجرای اسکریپت‌ها یا فایل‌هایی را شناسایی می‌کند که از نظر بصری بی‌خطر به نظر می‌رسند (نسبت کاراکتر قابل چاپ پایین) اما منجر به رمزگشایی زمان اجرا، ارزیابی پویا و متعاقب فرآیند یا فعالیت شبکه می‌شوند. همبستگی اجرای اسکریپت را با چگالی غیرعادی یونیکد و رفتارهای بعدی مانند ایجاد فرآیند فرزند یا اتصالات خروجی پیوند می دهد."
         }
     ]
 }

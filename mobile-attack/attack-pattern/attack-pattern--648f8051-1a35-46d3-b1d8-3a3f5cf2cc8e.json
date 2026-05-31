@@ -13,32 +13,42 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1541",
-                    "external_id": "T1541"
+                    "external_id": "T1541",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Android-SensorsOverview",
                     "description": "Google. (n.d.). Sensors Overview. Retrieved November 19, 2019.",
-                    "url": "https://developer.android.com/guide/topics/sensors/sensors_overview#sensors-practices"
+                    "url": "https://developer.android.com/guide/topics/sensors/sensors_overview#sensors-practices",
+                    "source_name_fa": "Android-SensorsOverview",
+                    "description_fa": "گوگل. (n.d.). نمای کلی سنسورها بازبینی شده در 19 نوامبر 2019."
                 },
                 {
                     "source_name": "Android-ForegroundServices",
                     "description": "Google. (n.d.). Services overview. Retrieved November 19, 2019.",
-                    "url": "https://developer.android.com/guide/components/services.html#Foreground"
+                    "url": "https://developer.android.com/guide/components/services.html#Foreground",
+                    "source_name_fa": "Android-Foreground Services",
+                    "description_fa": "گوگل. (n.d.). نمای کلی خدمات بازبینی شده در 19 نوامبر 2019."
                 },
                 {
                     "source_name": "TrendMicro-Yellow Camera",
                     "description": "Song Wang. (2019, October 18). Fake Photo Beautification Apps on Google Play can Read SMS Verification Code to Trigger Wireless Application Protocol (WAP)/Carrier Billing. Retrieved November 19, 2019.",
-                    "url": "https://blog.trendmicro.com/trendlabs-security-intelligence/fake-photo-beautification-apps-on-google-play-can-read-sms-verification-code-to-trigger-wireless-application-protocol-wap-carrier-billing/"
+                    "url": "https://blog.trendmicro.com/trendlabs-security-intelligence/fake-photo-beautification-apps-on-google-play-can-read-sms-verification-code-to-trigger-wireless-application-protocol-wap-carrier-billing/",
+                    "source_name_fa": "دوربین میکرو زرد Trend",
+                    "description_fa": "آهنگ وانگ. (2019، 18 اکتبر). برنامه‌های زیباسازی عکس جعلی در Google Play می‌توانند کد تأیید پیامک را بخوانند تا پروتکل برنامه بی‌سیم (WAP)/صورت‌حساب شرکت مخابراتی را فعال کنند. بازبینی شده در 19 نوامبر 2019."
                 },
                 {
                     "source_name": "BlackHat Sutter Android Foreground 2019",
                     "description": "Thomas Sutter. (2019, December). Simple Spyware Androids Invisible Foreground Services and How to (Ab)use Them. Retrieved December 26, 2019.",
-                    "url": "https://i.blackhat.com/eu-19/Thursday/eu-19-Sutter-Simple-Spyware-Androids-Invisible-Foreground-Services-And-How-To-Abuse-Them.pdf"
+                    "url": "https://i.blackhat.com/eu-19/Thursday/eu-19-Sutter-Simple-Spyware-Androids-Invisible-Foreground-Services-And-How-To-Abuse-Them.pdf",
+                    "source_name_fa": "BlackHat Sutter Android Foreground 2019",
+                    "description_fa": "توماس ساتر. (2019، دسامبر). سرویس‌های پیش‌زمینه نامرئی Androids Simple Spyware و نحوه (سوء) استفاده از آنها. بازبینی شده در 26 دسامبر 2019."
                 },
                 {
                     "source_name": "NIST Mobile Threat Catalogue",
                     "url": "https://pages.nist.gov/mobile-threat-catalogue/application-threats/APP-19.html",
-                    "external_id": "APP-19"
+                    "external_id": "APP-19",
+                    "source_name_fa": "کاتالوگ تهدیدات موبایل NIST"
                 }
             ],
             "object_marking_refs": [
@@ -46,7 +56,7 @@
             ],
             "modified": "2026-05-12T15:12:00.636Z",
             "name": "Foreground Persistence",
-            "description": "Adversaries may abuse Android's `startForeground()` API method to maintain continuous sensor access. Beginning in Android 9, idle applications running in the background no longer have access to device sensors, such as the camera, microphone, and gyroscope.(Citation: Android-SensorsOverview) Applications can retain sensor access by running in the foreground, using Android\u2019s `startForeground()` API method. This informs the system that the user is actively interacting with the application, and it should not be killed. The only requirement to start a foreground service is showing a persistent notification to the user.(Citation: Android-ForegroundServices)\n\nMalicious applications may abuse the `startForeground()` API method to continue running in the foreground, while presenting a notification to the user pretending to be a genuine application. This would allow unhindered access to the device\u2019s sensors, assuming permission has been previously granted.(Citation: BlackHat Sutter Android Foreground 2019)\n\nMalicious applications may also abuse the `startForeground()` API to inform the Android system that the user is actively interacting with the application, thus preventing it from being killed by the low memory killer.(Citation: TrendMicro-Yellow Camera)",
+            "description": "Adversaries may abuse Android's `startForeground()` API method to maintain continuous sensor access. Beginning in Android 9, idle applications running in the background no longer have access to device sensors, such as the camera, microphone, and gyroscope.(Citation: Android-SensorsOverview) Applications can retain sensor access by running in the foreground, using Android’s `startForeground()` API method. This informs the system that the user is actively interacting with the application, and it should not be killed. The only requirement to start a foreground service is showing a persistent notification to the user.(Citation: Android-ForegroundServices)\n\nMalicious applications may abuse the `startForeground()` API method to continue running in the foreground, while presenting a notification to the user pretending to be a genuine application. This would allow unhindered access to the device’s sensors, assuming permission has been previously granted.(Citation: BlackHat Sutter Android Foreground 2019)\n\nMalicious applications may also abuse the `startForeground()` API to inform the Android system that the user is actively interacting with the application, thus preventing it from being killed by the low memory killer.(Citation: TrendMicro-Yellow Camera)",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -73,7 +83,9 @@
             "x_mitre_version": "2.1",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "ماندگاری پیش زمینه",
+            "description_fa": "ممکن است دشمنان از روش API «startForeground()» Android برای حفظ دسترسی مداوم حسگر سوء استفاده کنند. از Android 9، برنامه‌های غیرفعال که در پس‌زمینه اجرا می‌شوند، دیگر به حسگرهای دستگاه مانند دوربین، میکروفون و ژیروسکوپ دسترسی ندارند.(Citation: Android-SensorsOverview) برنامه‌ها می‌توانند با اجرای در پیش‌زمینه، با استفاده از روش API «startForeground()»، دسترسی حسگر را حفظ کنند. این به سیستم اطلاع می دهد که کاربر به طور فعال با برنامه در حال تعامل است و نباید از بین برود. تنها شرط لازم برای شروع یک سرویس پیش زمینه، نشان دادن یک اعلان مداوم به کاربر است.(Citation: Android-ForegroundServices)\n\nبرنامه‌های مخرب ممکن است از روش API «startForeground()» برای ادامه اجرا در پیش‌زمینه سوء استفاده کنند، در حالی که یک اعلان به کاربر ارائه می‌دهند که وانمود می‌کند یک برنامه واقعی است. این امکان دسترسی بدون مانع به حسگرهای دستگاه را فراهم می‌کند، با این فرض که مجوز قبلاً داده شده است.(Citation: BlackHat Sutter Android Foreground 2019)\n\nبرنامه‌های مخرب همچنین ممکن است از API «startForeground()» سوء استفاده کنند تا به سیستم Android اطلاع دهند که کاربر به طور فعال با برنامه تعامل دارد، بنابراین از کشته شدن آن توسط حافظه کم حافظه جلوگیری می‌کند.(Citation: TrendMicro-Yellow Camera)"
         }
     ]
 }

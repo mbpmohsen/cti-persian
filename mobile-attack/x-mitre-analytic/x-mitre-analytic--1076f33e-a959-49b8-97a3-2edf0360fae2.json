@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0665#AN1759",
-                    "external_id": "AN1759"
+                    "external_id": "AN1759",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,17 +48,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutableHashAllowList",
-                    "description": "Allowlist known benign unsigned binaries for reducing FP."
+                    "description": "Allowlist known benign unsigned binaries for reducing FP.",
+                    "description_fa": "باینری های خوش خیم بدون علامت شناخته شده را برای کاهش FP لیست کنید."
                 },
                 {
                     "field": "RWXThreshold",
-                    "description": "Adjustable threshold for RWX page allocation frequency or size."
+                    "description": "Adjustable threshold for RWX page allocation frequency or size.",
+                    "description_fa": "آستانه قابل تنظیم برای فرکانس یا اندازه تخصیص صفحه RWX."
                 },
                 {
                     "field": "JITContextDetection",
-                    "description": "May require tuning based on OS version and legitimate app usage (e.g., Safari JIT)."
+                    "description": "May require tuning based on OS version and legitimate app usage (e.g., Safari JIT).",
+                    "description_fa": "ممکن است نیاز به تنظیم بر اساس نسخه سیستم عامل و استفاده قانونی از برنامه (مانند Safari JIT) داشته باشد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1759",
+            "description_fa": "تلاش‌های فرار از جعبه ایمنی برنامه را از طریق اجرای باینری بدون علامت، تغییرات مجوز حافظه mmap (RWX) و نقض نمایه جعبه ایمنی مرتبط می‌کند. زنجیره تشخیص شامل برنامه‌هایی است که از JIT/JSC برای اجرای کد پوسته یا راه‌اندازی بهره‌برداری هسته از طریق IOKit ساخته‌شده یا سوء استفاده از پورت Mach استفاده می‌کنند."
         }
     ]
 }

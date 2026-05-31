@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0562#AN1551",
-                    "external_id": "AN1551"
+                    "external_id": "AN1551",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -86,29 +87,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DiscoveryTimeWindow",
-                    "description": "Maximum time window for correlating multiple discovery activities indicating reconnaissance phase - adjust based on normal system behavior (default: 300 seconds)"
+                    "description": "Maximum time window for correlating multiple discovery activities indicating reconnaissance phase - adjust based on normal system behavior (default: 300 seconds)",
+                    "description_fa": "حداکثر پنجره زمانی برای همبستگی چندین فعالیت اکتشافی که مرحله شناسایی را نشان می دهد - تنظیم بر اساس رفتار عادی سیستم (پیش فرض: 300 ثانیه)"
                 },
                 {
                     "field": "DiscoveryActivityThreshold",
-                    "description": "Minimum number of different discovery techniques within time window to trigger detection - balance between false positives and coverage (default: 4 activities)"
+                    "description": "Minimum number of different discovery techniques within time window to trigger detection - balance between false positives and coverage (default: 4 activities)",
+                    "description_fa": "حداقل تعداد تکنیک‌های کشف مختلف در بازه زمانی برای شروع شناسایی - تعادل بین موارد مثبت کاذب و پوشش (پیش‌فرض: 4 فعالیت)"
                 },
                 {
                     "field": "CryptographicLibraryWhitelist",
-                    "description": "Approved cryptographic libraries and modules for legitimate organizational use - maintain based on approved software inventory"
+                    "description": "Approved cryptographic libraries and modules for legitimate organizational use - maintain based on approved software inventory",
+                    "description_fa": "کتابخانه ها و ماژول های رمزنگاری تایید شده برای استفاده سازمانی قانونی - نگهداری بر اساس موجودی نرم افزار تایید شده"
                 },
                 {
                     "field": "WMIQueryComplexityThreshold",
-                    "description": "Complexity score for WMI queries indicating reconnaissance vs. legitimate administration - tune based on administrative patterns"
+                    "description": "Complexity score for WMI queries indicating reconnaissance vs. legitimate administration - tune based on administrative patterns",
+                    "description_fa": "امتیاز پیچیدگی برای جستارهای WMI که نشان دهنده شناسایی در مقابل مدیریت قانونی است - تنظیم بر اساس الگوهای اداری"
                 },
                 {
                     "field": "EnvironmentalArtifactList",
-                    "description": "Environment-specific values commonly targeted by guardrails (hostnames, domains, network shares) - customize for organizational environment"
+                    "description": "Environment-specific values commonly targeted by guardrails (hostnames, domains, network shares) - customize for organizational environment",
+                    "description_fa": "مقادیر خاص محیطی که معمولاً توسط نرده‌های محافظ (نام میزبان، دامنه، اشتراک‌های شبکه) مورد هدف قرار می‌گیرند - برای محیط سازمانی سفارشی کنید"
                 },
                 {
                     "field": "ExecutionDelayBaseline",
-                    "description": "Statistical baseline for normal delay between discovery and execution activities - establish through historical analysis"
+                    "description": "Statistical baseline for normal delay between discovery and execution activities - establish through historical analysis",
+                    "description_fa": "خط پایه آماری برای تاخیر عادی بین فعالیت های کشف و اجرا - از طریق تجزیه و تحلیل تاریخی ایجاد شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1551",
+            "description_fa": "زنجیره رفتاری اعتبارسنجی محیطی ویندوز: (1) شناسایی سریع سیستم از طریق جستارهای WMI، شمارش رجیستری، و کشف سهم شبکه، (2) مجموعه مصنوعات خاص محیط (نام میزبان، دامنه، آدرس‌های IP، نرم‌افزار نصب‌شده، شناسه‌های سخت‌افزار)، (3) عملیات رمزنگاری (مجموعه‌ای بر اساس مقدار execution executive)، مجموعه‌ای از مقادیر انتخابی محیطی مشروط به نتایج اعتبارسنجی محیطی، (5) همبستگی زمانی بین فعالیت‌های کشف و اجرای بعدی یا ارتباطات شبکه"
         }
     ]
 }

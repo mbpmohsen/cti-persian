@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/datacomponents/DC0051",
-                    "external_id": "DC0051"
+                    "external_id": "DC0051",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -86,7 +87,9 @@
                     "name": "NSM:Firewall",
                     "channel": "rule_modification: New or modified firewall rules related to wireless interfaces"
                 }
-            ]
+            ],
+            "name_fa": "اصلاح قانون فایروال",
+            "description_fa": "ایجاد، حذف یا تغییر قوانین فایروال برای اجازه یا مسدود کردن ترافیک شبکه خاص. نظارت بر تغییرات این قوانین برای شناسایی پیکربندی‌های نادرست، دسترسی غیرمجاز یا تلاش‌های مخرب برای دور زدن حفاظت‌های شبکه بسیار مهم است. مثال ها: \n\n- ایجاد قانون: افزودن یک قانون جدید برای اجازه دادن به ترافیک ورودی در پورت 3389 (RDP).\n- حذف قانون: حذف قاعده ای که ترافیک ورودی را از محدوده IP های نامعتبر مسدود می کند.\n- اصلاح قانون: تغییر یک قانون برای اجازه دادن به ترافیک از IP منبع \"هر\" به جای یک محدوده مورد اعتماد خاص.\n- فراداده گزارش حسابرسی: گزارش‌هایی که «قانون فایروال اصلاح شده توسط admin@domain.com» را نشان می‌دهند.\n- سناریوهای پلتفرم خاص\n    - Azure: تغییر قوانین در یک گروه امنیتی شبکه Azure (NSG).\n    - AWS: تغییر قوانین گروه امنیتی برای اجازه دادن به ترافیک.\n    - Windows: تغییرات ردیابی شده در گزارش رویدادهای امنیتی (EID 4950 یا 4951).\n\nاین مؤلفه داده را می توان از طریق اقدامات زیر جمع آوری کرد:\n\nهواپیمای کنترل ابر\n\n- Azure: لاگ های اصلاح قوانین را از لاگ های فعالیت فایروال Azure جمع آوری کنید.\n    - فرمان مثال: «سیاست دیوار آتش شبکه az rule-collection-group rule-collection list --policy-name <policy-name>».\n- AWS: از CloudTrail برای ردیابی اقدامات «AuthorizeSecurityGroupIngress» یا «RevokeSecurityGroupIngress» استفاده کنید.\n    مثال: «aws ec2 describe-security-groups».\n- Google Cloud: از دستورات gcloud برای استخراج قوانین فایروال استفاده کنید: `gcloud compute firewall-rules list --format=json`\n\nفایروال های مبتنی بر میزبان\n\n- ویندوز: \n    - رویدادها را از گزارش رویداد امنیتی ویندوز جمع آوری کنید (EID 4950: یک قانون اصلاح شده است).\n    - از PowerShell برای پیگیری تغییرات قوانین استفاده کنید: «Get-NetFirewallRule -PolicyStore PersistentStore»\n- لینوکس:\n    - نظارت بر اصلاحات قوانین iptables یا nftables: `iptables -L -v`\n    - از auditd برای نظارت در زمان واقعی استفاده کنید: `auditctl -w /etc/iptables.rules -p wa`\n- macOS: از pfctl برای نظارت بر تغییرات قوانین استفاده کنید: «sudo pfctl -sr».\n\nیکپارچه سازی SIEM\n\n- گزارش‌ها را از پلتفرم‌های ابری، سیستم‌های میزبان و لوازم شبکه برای نظارت متمرکز جمع‌آوری کنید.\n\nمانیتورینگ API\n\n- نظارت API برای اصلاح قوانین دیوار آتش."
         }
     ]
 }

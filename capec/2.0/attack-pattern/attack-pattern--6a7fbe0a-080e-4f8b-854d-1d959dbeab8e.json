@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-594",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/594.html"
+                    "url": "https://capec.mitre.org/data/definitions/594.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-940",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/940.html"
+                    "url": "http://cwe.mitre.org/data/definitions/940.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--6a7fbe0a-080e-4f8b-854d-1d959dbeab8e",
@@ -31,6 +33,12 @@
                 ],
                 "Integrity": [
                     "Other (An adversary's injection of additional content into a communication channel negatively impacts the integrity of that channel.)"
+                ],
+                "Availability_fa": [
+                    "اجرای غیرقابل اعتماد (تزریق محتوای خاص به یک اتصال می تواند باعث ایجاد اختلال در آن کانال ارتباطی شود و در نتیجه دسترسی به سرویس را رد کند.)"
+                ],
+                "Integrity_fa": [
+                    "سایر موارد (تزریق محتوای اضافی توسط دشمن به کانال ارتباطی بر یکپارچگی آن کانال تأثیر منفی می‌گذارد.)"
                 ]
             },
             "x_capec_domains": [
@@ -48,7 +56,16 @@
                 "A tool, such as a MITM Proxy, that is capable of generating and injecting custom inputs to be used in the attack."
             ],
             "x_capec_status": "Stable",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن ترافیک را به اتصال شبکه هدف تزریق می کند. بنابراین حریف می تواند ارتباط را کاهش داده یا مختل کند و به طور بالقوه محتوا را تغییر دهد. این یک حمله سیل نیست، زیرا دشمن بر روی منابع فرسوده تمرکز نمی کند. در عوض، حریف یک ورودی خاص ایجاد می کند تا سیستم را به روشی خاص تحت تأثیر قرار دهد.",
+            "name_fa": "تزریق ترافیک",
+            "x_capec_prerequisites_fa": [
+                "برنامه هدف باید از یک کانال ارتباطی باز استفاده کند.",
+                "کانالی که هدف در آن ارتباط برقرار می کند باید در برابر رهگیری آسیب پذیر باشد (به عنوان مثال، دشمن در حمله میانی - CAPEC-94)."
+            ],
+            "x_capec_resources_required_fa": [
+                "ابزاری مانند MITM Proxy که قادر به تولید و تزریق ورودی های سفارشی برای استفاده در حمله است."
+            ]
         }
     ],
     "spec_version": "2.0",

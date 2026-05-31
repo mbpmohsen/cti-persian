@@ -14,28 +14,28 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1675",
                     "external_id": "T1675",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023",
                     "description": "Alexander Marvi, Brad Slaybaugh, Ron Craft, and Rufus Brown. (2023, June 13). VMware ESXi Zero-Day Used by Chinese Espionage Actor to Perform Privileged Guest Operations on Compromised Hypervisors. Retrieved March 26, 2025.",
                     "url": "https://cloud.google.com/blog/topics/threat-intelligence/vmware-esxi-zero-day-bypass/",
                     "source_name_fa": "Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023",
-                    "description_fa": "Alexander Marvi، Brad Slaybaugh، Ron Craft و Rufus Brown (2023، 13 ژوئن) VMware ESXi Zero-Day توسط بازیگر چینی Espionage برای انجام عملیات مهمان خصوصی در Hypervisors Compromed استفاده می شود. Retrieved 26 مارس 2025"
+                    "description_fa": "الکساندر ماروی، برد اسلیباگ، ران کرافت و روفوس براون. (2023، 13 ژوئن). VMware ESXi Zero-Day توسط بازیگر جاسوسی چینی برای اجرای عملیات مهمان ممتاز بر روی Hypervisor های در معرض خطر استفاده می شود. بازبینی شده در 26 مارس 2025."
                 },
                 {
                     "source_name": "Broadcom Running Guest OS Operations",
                     "description": "Broadcom. (n.d.). Running Guest OS Operations. Retrieved March 28, 2025.",
                     "url": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/vsphere-sdks-tools/8-0/web-services-sdk-programming-guide/virtual-machine-guest-operations/running-guest-os-operations.html",
-                    "source_name_fa": "Broadcom اجرای عملیات سیستم عامل مهمان",
-                    "description_fa": "Broadcom (n.d.) اجرای عملیات سیستم عامل مهمان Retrieved 28 مارس 2025"
+                    "source_name_fa": "Broadcom در حال اجرای عملیات سیستم عامل مهمان",
+                    "description_fa": "Broadcom. (n.d.). اجرای عملیات سیستم عامل مهمان بازبینی شده در 28 مارس 2025."
                 },
                 {
                     "source_name": "Broadcom VMware Tools Services",
                     "description": "Broadcom. (n.d.). VMware Tools Services. Retrieved March 28, 2025.",
                     "url": "https://techdocs.broadcom.com/us/en/vmware-cis/vsphere/tools/12-4-0/vmware-tools-administration-12-4-0/introduction-to-vmware-tools/vmware-tools-service.html",
                     "source_name_fa": "Broadcom VMware Tools Services",
-                    "description_fa": "Broadcom (n.d.) VMware Tools Services Retrieved 28 مارس 2025"
+                    "description_fa": "Broadcom. (n.d.). خدمات ابزار VMware. بازبینی شده در 28 مارس 2025."
                 }
             ],
             "object_marking_refs": [
@@ -63,7 +63,7 @@
             "x_mitre_version": "1.0",
             "x_mitre_remote_support": false,
             "name_fa": "فرماندهی مدیریت ESXi",
-            "description_fa": "مخالفان ممکن است از خدمات مدیریت ESXi برای اجرای دستورات در دستگاه های مهمان میزبانی شده در محیط مجازی ESXi سوء استفاده کنند. خدمات پس زمینه مداوم در ESXi-hosted VM، مانند VMware Tools Daemon Service، اجازه می دهد تا مدیریت از راه دور از سرور ESXi. ابزار سرویس daemon به عنوان \"vmtoolsd.exe\" در سیستم عامل های ویندوز مهمان، \"vmware-tools-daemon\" در macOS و \"vmtoolsd\" در لینوکس اجرا می شود.\n\nعوامل ممکن است از ابزارهای مختلف برای اجرای دستورات در ESXi-hosted VMs استفاده کنند - به عنوان مثال، با استفاده از vSphere Web Services SDK به برنامه نویسی دستورات و اسکریپت ها از طریق API هایی مانند StartProgramInGuest، \\\"ListProcessesInGuest'، \\\" و \\\"filepest\\\" این امر ممکن است رفتارهایی را بر روی VM های مهمان (مانند File and Directory Discovery) انجام دهد ([[۵]] و یا [OSI_Predential Dumping] ([۲]) (Citation: Broadcom VMware Tools Services) (Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023) (Citation: Broadcom Running Guest OS Operations) https://attack.mitre.org/techniques/T1083 https://attack.mitre.org/techniques/T1005 https://attack.mitre.org/techniques/T1003"
+            "description_fa": "دشمنان ممکن است از خدمات مدیریت ESXi برای اجرای دستورات روی ماشین های مهمان که در یک محیط مجازی ESXi میزبانی می شوند سوء استفاده کنند. خدمات پس‌زمینه دائمی در ماشین‌های مجازی با میزبانی ESXi، مانند سرویس VMware Tools Daemon، امکان مدیریت از راه دور از سرور ESXi را فراهم می‌کند. سرویس Daemon ابزار به صورت «vmtoolsd.exe» در سیستم عامل‌های مهمان ویندوز، «vmware-tools-daemon» در macOS و «vmtoolsd» در لینوکس اجرا می‌شود.(Citation: Broadcom VMware Tools Services) \n\nدشمنان ممکن است از ابزارهای مختلفی برای اجرای دستورات در VM های میزبان ESXi استفاده کنند - به عنوان مثال، با استفاده از vSphere Web Services SDK برای اجرای برنامه نویسی دستورات و اسکریپت ها از طریق API هایی مانند «StartProgramInGuest»، «ListProcessesInGuest»، «List»، و «List» و «List» «InitiateFileTransferFromGuest».(Citation: Google Cloud Threat Intelligence VMWare ESXi Zero-Day 2023)(Citation: Broadcom Running Guest OS Operations) این ممکن است رفتارهای بعدی را در VMهای مهمان فعال کند، مانند [File and Directory Discovery]([[[CTI_PRESERVE_3]])، [[[CTI_PRESERVE_3]])، [Data from RESERVE_3]]، [TI]، [RE_] [پراکندگی اعتبار سیستم عامل](https://attack.mitre.org/techniques/T1003). https://attack.mitre.org/techniques/T1083 https://attack.mitre.org/techniques/T1005"
         }
     ]
 }

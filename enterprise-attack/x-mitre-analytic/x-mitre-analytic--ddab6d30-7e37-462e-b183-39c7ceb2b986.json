@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0080#AN0221",
-                    "external_id": "AN0221"
+                    "external_id": "AN0221",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0221",
-            "description": "Adversary targets macOS-hosted public services (e.g., nginx, node). Chain: suspicious inbound request \u2192 service crash/5xx \u2192 service spawns shell or writes file \u2192 new outbound connection.",
+            "description": "Adversary targets macOS-hosted public services (e.g., nginx, node). Chain: suspicious inbound request → service crash/5xx → service spawns shell or writes file → new outbound connection.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceList",
-                    "description": "Names/paths of public daemons on macOS (httpd, nginx, node, java)."
+                    "description": "Names/paths of public daemons on macOS (httpd, nginx, node, java).",
+                    "description_fa": "نام/مسیرهای شیاطین عمومی در macOS (httpd، nginx، node، java)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for request \u2192 exec \u2192 egress."
+                    "description": "Correlation window for request → exec → egress.",
+                    "description_fa": "پنجره همبستگی برای درخواست → exec → خروج."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0221",
+            "description_fa": "دشمن خدمات عمومی میزبان macOS (مانند nginx، node) را هدف قرار می دهد. زنجیره: درخواست ورودی مشکوک ← خرابی سرویس/5xx ← سرویس ایجاد پوسته یا نوشتن فایل → اتصال خروجی جدید."
         }
     ]
 }

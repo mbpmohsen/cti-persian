@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0027#AN0079",
-                    "external_id": "AN0079"
+                    "external_id": "AN0079",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "HeaderEncodingPattern",
-                    "description": "Base64, hex, or UTF-16 encoding in URI, cookie, or host"
+                    "description": "Base64, hex, or UTF-16 encoding in URI, cookie, or host",
+                    "description_fa": "کدگذاری Base64، hex یا UTF-16 در URI، کوکی یا میزبان"
                 },
                 {
                     "field": "TLSFingerprintMismatch",
-                    "description": "JA3 hash deviation from known clients"
+                    "description": "JA3 hash deviation from known clients",
+                    "description_fa": "انحراف هش JA3 از مشتریان شناخته شده"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0079",
+            "description_fa": "شناسایی سوء استفاده از پروتکل وب مانند هدرهای HTTP کدگذاری شده، درخواست های ارتقاء WebSocket با بارهای غیرعادی، یا ناهنجاری های دست دادن TLS که کانال های C2 تعبیه شده را پیشنهاد می کند."
         }
     ]
 }

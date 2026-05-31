@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0481#AN1323",
-                    "external_id": "AN1323"
+                    "external_id": "AN1323",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegistryPathScope",
-                    "description": "Defenders may tune specific monitored CLSIDs depending on known-good application behavior."
+                    "description": "Defenders may tune specific monitored CLSIDs depending on known-good application behavior.",
+                    "description_fa": "مدافعان ممکن است بسته به رفتار خوب برنامه کاربردی، CLSIDهای نظارت شده خاصی را تنظیم کنند."
                 },
                 {
                     "field": "BinaryPathAnomalyThreshold",
-                    "description": "May require tuning based on environment to distinguish rare-but-legit COM DLLs vs suspicious ones."
+                    "description": "May require tuning based on environment to distinguish rare-but-legit COM DLLs vs suspicious ones.",
+                    "description_fa": "ممکن است نیاز به تنظیم بر اساس محیط داشته باشد تا DLLهای COM کمیاب اما قانونی را از DLLهای مشکوک تشخیص دهد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlating registry changes to DLL load or process execution may require configurable time window."
+                    "description": "Correlating registry changes to DLL load or process execution may require configurable time window.",
+                    "description_fa": "مرتبط کردن تغییرات رجیستری با بار DLL یا اجرای فرآیند ممکن است به پنجره زمانی قابل تنظیم نیاز داشته باشد."
                 },
                 {
                     "field": "UserContextFilter",
-                    "description": "Tuning detection by isolating activity to specific user SIDs or admin-level activity may reduce false positives."
+                    "description": "Tuning detection by isolating activity to specific user SIDs or admin-level activity may reduce false positives.",
+                    "description_fa": "تشخیص تنظیم با جداسازی فعالیت به SIDهای کاربر خاص یا فعالیت در سطح سرپرست ممکن است مثبت کاذب را کاهش دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1323",
+            "description_fa": "تغییرات مشکوک رجیستری را با CLSIDهای شی COM شناخته شده با بارهای DLL بعدی یا مسیرهای اجرای باینری غیرمنتظره مرتبط کنید. محل قرارگیری ورودی های COM CLSID را در HKEY_CURRENT_USER\\Software\\Classes\\CLSID\\ نادیده گرفتن مسیرهای پیش فرض HKLM شناسایی کنید. پرچم گذاری بارهای غیرعادی DLL به تغییرات رجیستری COM ربوده شده بازمی گردد."
         }
     ]
 }

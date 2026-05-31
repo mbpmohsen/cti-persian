@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0067#AN0181",
-                    "external_id": "AN0181"
+                    "external_id": "AN0181",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "IgnoredSignals",
-                    "description": "Specific signals to monitor (e.g., SIGHUP, SIGINT) depending on environment baseline."
+                    "description": "Specific signals to monitor (e.g., SIGHUP, SIGINT) depending on environment baseline.",
+                    "description_fa": "سیگنال های خاص برای نظارت (به عنوان مثال، SIGHUP، SIGINT) بسته به خط پایه محیط."
                 },
                 {
                     "field": "ProcessLifetimeThreshold",
-                    "description": "Duration a process continues running after session logout, adjustable to reduce noise from benign long-lived jobs."
+                    "description": "Duration a process continues running after session logout, adjustable to reduce noise from benign long-lived jobs.",
+                    "description_fa": "مدت زمان اجرای یک فرآیند پس از خروج از جلسه، قابل تنظیم برای کاهش نویز ناشی از کارهای طولانی مدت."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0181",
+            "description_fa": "اجرای فرآیندها با استفاده از nohup یا تغییر مسیر پوسته برای نادیده گرفتن SIGHUP و ادامه اجرا پس از پایان جلسه. دیدگاه مدافع: همبستگی بین دستورات شامل nohup، jobs disposed یا پسوند «&» با ادامه اجرای فرآیند پس از خروج از ترمینال والد."
         }
     ]
 }

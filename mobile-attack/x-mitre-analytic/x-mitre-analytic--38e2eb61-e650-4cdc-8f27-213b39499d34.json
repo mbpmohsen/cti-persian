@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0674#AN1774",
-                    "external_id": "AN1774"
+                    "external_id": "AN1774",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.376Z",
             "name": "Analytic 1774",
-            "description": "OLD: \nApplication vetting services could look for `android.permission.READ_CALENDAR` or `android.permission.WRITE_CALENDAR` in an Android application\u2019s manifest, or `NSCalendarsUsageDescription` in an iOS application\u2019s `Info.plist` file. Most applications do not need calendar access, so extra scrutiny could be applied to those that request it. \nOn both Android and iOS, the user can manage which applications have permission to access calendar information through the device settings screen, revoke the permission if necessary. \n\nNEW:\nA defender observes an Android application requesting for `android.permission.READ_CALENDAR` or `android.permission.WRITE_CALENDAR`, which may also be listed in the application\u2019s Manifest.",
+            "description": "OLD: \nApplication vetting services could look for `android.permission.READ_CALENDAR` or `android.permission.WRITE_CALENDAR` in an Android application’s manifest, or `NSCalendarsUsageDescription` in an iOS application’s `Info.plist` file. Most applications do not need calendar access, so extra scrutiny could be applied to those that request it. \nOn both Android and iOS, the user can manage which applications have permission to access calendar information through the device settings screen, revoke the permission if necessary. \n\nNEW:\nA defender observes an Android application requesting for `android.permission.READ_CALENDAR` or `android.permission.WRITE_CALENDAR`, which may also be listed in the application’s Manifest.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "2.0",
@@ -43,7 +44,9 @@
                     "name": "android:MDMLog ",
                     "channel": "Application granted or retaining the READ_CALENDAR or WRITE_CALENDAR permissions. "
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1774",
+            "description_fa": "قدیمی: \nسرویس‌های بررسی برنامه می‌توانند «android.permission.READ_CALENDAR» یا «android.permission.WRITE_CALENDAR» را در مانیفست برنامه Android یا «NSCalendarsUsageDescription» را در فایل «Info.plist» برنامه iOS جستجو کنند. اکثر برنامه ها نیازی به دسترسی به تقویم ندارند، بنابراین می توان برای کسانی که آن را درخواست می کنند، بررسی دقیق بیشتری انجام داد. \nدر اندروید و iOS، کاربر می تواند مدیریت کند که کدام برنامه ها مجوز دسترسی به اطلاعات تقویم را از طریق صفحه تنظیمات دستگاه دارند، در صورت لزوم مجوز را لغو کند. \n\nجدید:\nیک مدافع برنامه Android را مشاهده می کند که درخواست «android.permission.READ_CALENDAR» یا «android.permission.WRITE_CALENDAR» را می دهد، که ممکن است در مانیفست برنامه نیز فهرست شده باشد."
         }
     ]
 }

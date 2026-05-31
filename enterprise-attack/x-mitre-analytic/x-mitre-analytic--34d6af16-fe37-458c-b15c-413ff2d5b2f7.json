@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0183#AN0518",
-                    "external_id": "AN0518"
+                    "external_id": "AN0518",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SyncApplications",
-                    "description": "Whitelisted apps like Dropbox or OneDrive if sanctioned"
+                    "description": "Whitelisted apps like Dropbox or OneDrive if sanctioned",
+                    "description_fa": "در صورت تحریم، برنامه هایی مانند Dropbox یا OneDrive در لیست سفید قرار می گیرند"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Adjust threshold for unusual filenames/hashes transferred internally"
+                    "description": "Adjust threshold for unusual filenames/hashes transferred internally",
+                    "description_fa": "آستانه را برای نام‌های فایل/هش‌های غیرعادی که به صورت داخلی منتقل می‌شوند، تنظیم کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0518",
+            "description_fa": "شناسایی استفاده غیرعادی از scp، rsync، curl، یا برنامه‌های همگام‌سازی شخص ثالث که فایل‌های اجرایی را به فهرست‌های کاربر منتقل می‌کنند. ایجاد فایل جدید را با رویدادهای اجرای فوری مرتبط کنید."
         }
     ]
 }

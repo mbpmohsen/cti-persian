@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0141#AN0396",
-                    "external_id": "AN0396"
+                    "external_id": "AN0396",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SleepDurationThreshold",
-                    "description": "Defines maximum allowable sleep duration in milliseconds before triggering anomaly detection."
+                    "description": "Defines maximum allowable sleep duration in milliseconds before triggering anomaly detection.",
+                    "description_fa": "حداکثر مدت زمان خواب مجاز را قبل از شروع تشخیص ناهنجاری در میلی ثانیه تعریف می کند."
                 },
                 {
                     "field": "TimeBetweenExecutionAndNextStage",
-                    "description": "Temporal window between initial process and next stage (e.g., lateral movement or persistence), used to correlate dormant activity."
+                    "description": "Temporal window between initial process and next stage (e.g., lateral movement or persistence), used to correlate dormant activity.",
+                    "description_fa": "پنجره زمانی بین فرآیند اولیه و مرحله بعدی (به عنوان مثال، حرکت جانبی یا تداوم)، که برای ارتباط بین فعالیت خفته استفاده می شود."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Whether the activity occurs in SYSTEM or user context may affect legitimacy scoring."
+                    "description": "Whether the activity occurs in SYSTEM or user context may affect legitimacy scoring.",
+                    "description_fa": "این که فعالیت در سیستم یا زمینه کاربر رخ دهد، ممکن است بر امتیازدهی قانونی تأثیر بگذارد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0396",
+            "description_fa": "ایجاد فرآیند شامل تاخیرهای مشکوک (به عنوان مثال، Sleep، حلقه های ping -n، WaitForSingleObject)، به دنبال آن دسترسی حساس به سیستم یا رفتارهای حرکت جانبی."
         }
     ]
 }

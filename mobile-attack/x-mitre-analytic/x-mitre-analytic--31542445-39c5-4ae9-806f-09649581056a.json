@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0642#AN1718",
-                    "external_id": "AN1718"
+                    "external_id": "AN1718",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,21 +48,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines correlation window between permission grant and privileged behavior"
+                    "description": "Defines correlation window between permission grant and privileged behavior",
+                    "description_fa": "پنجره همبستگی بین اعطای مجوز و رفتار ممتاز را تعریف می کند"
                 },
                 {
                     "field": "HighRiskPermissionSet",
-                    "description": "List of permissions or access types considered high-risk (Accessibility, Device Admin, overlay)"
+                    "description": "List of permissions or access types considered high-risk (Accessibility, Device Admin, overlay)",
+                    "description_fa": "فهرست مجوزها یا انواع دسترسی در نظر گرفته شده پرخطر (دسترس‌پذیری، سرپرست دستگاه، پوشش)"
                 },
                 {
                     "field": "UserInteractionThreshold",
-                    "description": "Defines acceptable proximity of user interaction to permission grant"
+                    "description": "Defines acceptable proximity of user interaction to permission grant",
+                    "description_fa": "نزدیکی قابل قبول تعامل کاربر با اعطای مجوز را تعریف می کند"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Baseline of legitimate apps expected to use high-risk permissions"
+                    "description": "Baseline of legitimate apps expected to use high-risk permissions",
+                    "description_fa": "پایه برنامه های قانونی مورد انتظار برای استفاده از مجوزهای پرخطر"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1718",
+            "description_fa": "ارتباط (1) تعامل برنامه با مکانیسم‌های کنترل ارتفاع (به عنوان مثال، سرویس دسترسی، مدیریت دستگاه، مجوزهای پوشش، جریان‌های نصب کننده بسته)، (2) انتقال سریع به وضعیت قابلیت بالا بدون الگوهای تعامل کاربر مورد انتظار، و (3) اقدامات ممتاز فوری مانند دسترسی حسگر، دستکاری رابط کاربری، یا کاربران پس‌زمینه. مدافع یک زنجیره علّی را مشاهده می‌کند که در آن یک برنامه از طریق سوء استفاده از جریان‌های رضایت کنترل‌شده توسط سیستم، امتیازات بالایی به دست می‌آورد و متعاقباً اقداماتی را انجام می‌دهد که با مجوزهای کاربر محور معمولی سازگار نیست."
         }
     ]
 }

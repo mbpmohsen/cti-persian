@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0240#AN0672",
-                    "external_id": "AN0672"
+                    "external_id": "AN0672",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PathExclusions",
-                    "description": "Exempt trusted automated services regularly accessing PKI stores."
+                    "description": "Exempt trusted automated services regularly accessing PKI stores.",
+                    "description_fa": "معافیت از خدمات خودکار مورد اعتماد که به طور منظم به فروشگاه های PKI دسترسی دارند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Differentiate root/system accounts versus user-level access to key material."
+                    "description": "Differentiate root/system accounts versus user-level access to key material.",
+                    "description_fa": "حساب‌های ریشه/سیستم را در مقابل دسترسی سطح کاربر به مواد کلیدی متمایز کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0672",
+            "description_fa": "برای دسترسی فایل به دایرکتوری های گواهی، دستورات فراخوانی ابزارهای OpenSSL یا PKCS#12 برای صادرات یا اصلاح گواهی ها، و فرآیندهای دسترسی به مسیرهای ذخیره سازی کلید حساس نظارت کنید."
         }
     ]
 }

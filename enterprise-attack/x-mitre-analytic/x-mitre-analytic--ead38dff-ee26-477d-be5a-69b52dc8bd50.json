@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0385#AN1086",
-                    "external_id": "AN1086"
+                    "external_id": "AN1086",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessCheck",
-                    "description": "Scope access to .bash_history only if parent is not Terminal.app or bash/zsh"
+                    "description": "Scope access to .bash_history only if parent is not Terminal.app or bash/zsh",
+                    "description_fa": "دسترسی دامنه به .bash_history فقط در صورتی که والد Terminal.app یا bash/zsh نباشد"
                 },
                 {
                     "field": "AccessFrequency",
-                    "description": "Raise priority if .bash_history is accessed multiple times in short window"
+                    "description": "Raise priority if .bash_history is accessed multiple times in short window",
+                    "description_fa": "اگر در پنجره کوتاه چندین بار به .bash_history دسترسی پیدا کرد، اولویت را افزایش دهید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1086",
+            "description_fa": "یک دستور پردازش یا ترمینال خارج از ابزارهای استاندارد پوسته فایل .bash_history کاربر را می خواند. در macOS، گزارش‌های یکپارچه یا ابزارهای تله‌متری مانند EndpointSecurity (ESF) ممکن است APIهای خوانده‌شده فایل یا نسل فرآیند ترمینال را مشاهده کنند که دسترسی غیر آغاز شده توسط کاربر را نشان می‌دهد."
         }
     ]
 }

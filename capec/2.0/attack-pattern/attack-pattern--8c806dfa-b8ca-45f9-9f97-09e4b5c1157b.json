@@ -9,34 +9,42 @@
                 {
                     "external_id": "CAPEC-668",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/668.html"
+                    "url": "https://capec.mitre.org/data/definitions/668.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-425",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/425.html"
+                    "url": "http://cwe.mitre.org/data/definitions/425.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Data Manipulation: Transmitted Data Manipulation",
                     "external_id": "T1565.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1565/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1565/002",
+                    "description_fa": "دستکاری داده ها: دستکاری داده های منتقل شده",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Jovi Umawing, Bluetooth vulnerability can be exploited in Key Negotiation of Bluetooth (KNOB) attacks, 2019--08---21, MalwareBytes",
                     "external_id": "REF-657",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://blog.malwarebytes.com/awareness/2019/08/bluetooth-vulnerability-can-be-exploited-in-key-negotiation-of-bluetooth-knob-attacks/"
+                    "url": "https://blog.malwarebytes.com/awareness/2019/08/bluetooth-vulnerability-can-be-exploited-in-key-negotiation-of-bluetooth-knob-attacks/",
+                    "description_fa": "Jovi Umawing، آسیب‌پذیری بلوتوث را می‌توان در حملات کلیدی مذاکرات بلوتوث (KNOB)، 2019--08---21، MalwareBytes مورد سوء استفاده قرار داد.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--8c806dfa-b8ca-45f9-9f97-09e4b5c1157b",
@@ -70,6 +78,19 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -87,11 +108,24 @@
                 "Bluetooth adapter, packet capturing capabilities."
             ],
             "x_capec_skills_required": {
-                "Medium": "Ability to modify packets."
+                "Medium": "Ability to modify packets.",
+                "Medium_fa": "امکان تغییر بسته ها"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف می‌تواند از نقصی در مذاکره کلید بلوتوث استفاده کند که به آنها اجازه می‌دهد اطلاعات ارسال شده بین دو دستگاه را که از طریق بلوتوث در ارتباط هستند رمزگشایی کنند. دشمن از یک دشمن در تنظیمات میانی استفاده می کند تا بسته های ارسال شده بین دو دستگاه را در طی فرآیند احراز هویت، به ویژه بیت های آنتروپی، اصلاح کند. آگاهی از تعداد بیت های آنتروپی به مهاجم این امکان را می دهد که به راحتی اطلاعات عبوری از خط ارتباطی را رمزگشایی کند.",
+            "name_fa": "مذاکره کلیدی حمله بلوتوث (KNOB)",
+            "x_capec_example_instances_fa": [
+                "با توجه به کاربران آلیس، باب و چارلی (چارلی مهاجم است)، آلیس و باب شروع به توافق بر سر یک کلید رمزگذاری هنگام اتصال می کنند. در حالی که آلیس پیامی به باب می فرستد مبنی بر اینکه باید از یک کلید رمزگذاری با 16 بایت آنتروپی استفاده شود، چارلی این را به 1 تغییر می دهد و درخواست را به باب ارسال می کند و به ارسال این بسته ها تا زمانی که احراز هویت موفقیت آمیز باشد ادامه می دهد."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کشف: </b>با استفاده از یک شخص ثابت در راه‌اندازی میانی، دستگاه‌های بلوتوث را جستجو کنید که فرآیند احراز هویت را آغاز می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها <trUcatrse</t ابزارها.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تغییر بیت های آنتروپی: </b>پس از دریافت بسته مذاکره کلیدی اولیه از استاد، حریف قبل از اینکه بیت های آنتروپی آسان را درخواست کند، اجازه می دهد که بیت های آنتروپی1 را تغییر دهد. ارسال شد.</p></li></ol></div><div><h3>بهره برداری</h3><ol><li> <p> <b>گرفتن و رمزگشایی داده ها: </b>هنگامی که آنتروپی رمزگذاری مشخص شد، دشمن می تواند داده ها را گرفته و سپس در دستگاه خود رمزگشایی کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "شخصی در راه اندازی شبکه Middle."
+            ],
+            "x_capec_resources_required_fa": [
+                "آداپتور بلوتوث، قابلیت ضبط بسته."
+            ]
         }
     ],
     "spec_version": "2.0",

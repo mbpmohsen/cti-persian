@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0325#AN0926",
-                    "external_id": "AN0926"
+                    "external_id": "AN0926",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FlowThreshold",
-                    "description": "Number of flows or bytes transferred per minute\u2014flag surges to unrecognized ASNs."
+                    "description": "Number of flows or bytes transferred per minute—flag surges to unrecognized ASNs.",
+                    "description_fa": "تعداد جریان‌ها یا بایت‌های انتقال‌یافته در دقیقه - نوسانات پرچم به ASN‌های ناشناس."
                 },
                 {
                     "field": "DestinationIPCategory",
-                    "description": "Proxy destination categories: CDN, TOR exit node, anonymous hosting."
+                    "description": "Proxy destination categories: CDN, TOR exit node, anonymous hosting.",
+                    "description_fa": "دسته های مقصد پراکسی: CDN، گره خروج TOR، میزبانی ناشناس."
                 },
                 {
                     "field": "ConfigChangeUser",
-                    "description": "Track if unexpected user or automation changed NAT/forwarding rules."
+                    "description": "Track if unexpected user or automation changed NAT/forwarding rules.",
+                    "description_fa": "اگر کاربر غیرمنتظره یا اتوماسیون قوانین NAT/Forwarding را تغییر داد، پیگیری کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0926",
+            "description_fa": "تغییرات در سیاست های NAT/دیوار آتش که امکان ارسال پورت خروجی از IP های داخلی به نقاط پایانی پروکسی مبتنی بر اینترنت را فراهم می کند. ورود به سیستم در جریان های خروجی به CDN، VPS یا ASN های غیرعادی با بسته های برگشتی کمی افزایش می یابد."
         }
     ]
 }

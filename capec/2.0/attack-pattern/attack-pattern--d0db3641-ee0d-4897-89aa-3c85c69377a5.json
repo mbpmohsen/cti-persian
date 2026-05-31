@@ -9,27 +9,32 @@
                 {
                     "external_id": "CAPEC-36",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/36.html"
+                    "url": "https://capec.mitre.org/data/definitions/36.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-306",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/306.html"
+                    "url": "http://cwe.mitre.org/data/definitions/306.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-695",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/695.html"
+                    "url": "http://cwe.mitre.org/data/definitions/695.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1242",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1242.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1242.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--d0db3641-ee0d-4897-89aa-3c85c69377a5",
@@ -53,6 +58,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -72,11 +87,25 @@
                 "None: No specialized resources are required to execute this type of attack. Web service digging tools may be helpful."
             ],
             "x_capec_skills_required": {
-                "Low": "A number of web service digging tools are available for free that help discover exposed web services and their interfaces. In the event that a web service is not listed, the attacker does not need to know much more in addition to the format of web service messages that they can sniff/monitor for."
+                "Low": "A number of web service digging tools are available for free that help discover exposed web services and their interfaces. In the event that a web service is not listed, the attacker does not need to know much more in addition to the format of web service messages that they can sniff/monitor for.",
+                "Low_fa": "تعدادی از ابزارهای جستجوی وب سرویس به صورت رایگان در دسترس هستند که به کشف سرویس های وب در معرض نمایش و رابط های آنها کمک می کنند. در صورتی که یک وب سرویس در لیست قرار نگرفته باشد، مهاجم نیازی به دانستن چیزهای بیشتری علاوه بر فرمت پیام‌های سرویس وب که می‌تواند آن را شنود/نظارت کند، ندارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف رابط‌ها یا عملکردهایی را جستجو می‌کند و آنها را فراخوانی می‌کند که طراحان سیستم هدف قصد نداشتند در دسترس عموم قرار گیرند. اگر واسط‌ها نتوانند درخواست‌ها را تأیید کنند، مهاجم ممکن است بتواند عملکردی را که برای آن مجاز نیستند فراخوانی کند.",
+            "name_fa": "استفاده از رابط های منتشر نشده یا عملکرد",
+            "x_capec_example_instances_fa": [
+                "تا حدی، خدمات گوگل (مانند نقشه های گوگل) همگی نمونه های شناخته شده ای هستند. فراخوانی این خدمات، یا گسترش آنها برای اهداف شخصی (شاید بسیار متفاوت) به آسانی دانستن وجود آنهاست. با این حال، استفاده عمومی بدون محدودیت آنها یک جنبه هدفمند از مدل کسب و کار گوگل است. با این حال، اکثر سازمان ها مدل کسب و کار یکسانی ندارند. سازمان‌هایی که خدمات منتشر می‌کنند معمولاً به این فکر می‌افتند که مهاجمان «نمی‌دانند سرویس‌ها وجود دارند» و «حتی اگر بدانند، نمی‌توانند به آنها دسترسی داشته باشند زیرا در شبکه محلی محلی نیستند». تمرین‌های ساده مدل‌سازی تهدید معمولاً بردارهای حمله ساده‌ای را آشکار می‌کنند که می‌توانند این فرضیات را باطل کنند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی سرویس‌ها: </b>یک سرویس مورد علاقه را با کاوش فهرست‌های رجیستری سرویس یا با اتصال به یک پورت شناخته‌شده یا برخی ابزارهای مشابه کشف کنید.</p></li><table><tbody><strarch</th> اینترنت برای سرویس‌های شناخته شده و منتشر شده.</td></tr><tr><td>از ابزارهای خودکار برای اسکن پورت‌های شناخته شده برای شناسایی سرویس‌های دارای اینترنت استفاده کنید.</td></tr><tr><td>کد را از تراشه تخلیه کنید و سپس مهندسی معکوس را برای تجزیه و تحلیل کد انجام دهید.</td></tr></tbody></table><li> <p> <b>خدمات در صورت لزوم، برای کاوش آن.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از اعتبارنامه‌های منتشر شده برای دسترسی به سیستم استفاده کنید.</td></tr><tr><td>اطلاعات منتشر نشده را برای دسترسی به سرویس پیدا کنید.</td></tr><tr><td>از سایر الگوهای حمله یا ضعف استفاده کنید. احراز هویت.</td></tr></tbody></table><li> <p> <b>همه واسط‌ها را شناسایی کنید: </b>با جستجو در رجیستری، رابط‌های در معرض دید را تعیین کنید و همچنین احتمالاً برای افشای رابط‌هایی که به‌صراحت فهرست نشده‌اند، این رابط‌ها را مشخص کنید.</p></li><table><tbody><tr><tr> رابط های در معرض نمایش را از طریق اسناد ارائه شده تعیین کنید.</td></tr><tr><td>برای هر سرویسی که پیدا شد، از پیام های خطای تماس های سرویس نامناسب برای تعیین واسط های معتبر استفاده کنید. در برخی موارد، سرویس‌ها به تماس‌های نامناسب با تماس‌های معتبر پاسخ می‌دهند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تلاش برای کشف توابع منتشر نشده: </b>با استفاده از ابزارهای دستی یا خودکار، یا با استفاده از ابزارهای دستی یا خودکار، عملکرد منتشر شده را لغو کنید. خدمات.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>با استفاده از روش حدس‌آمیز، از جمله استفاده از عباراتی مانند «تست»، «اشکال‌زدایی»، «حذف»، و غیره، تماس‌های دستی به سرویس را انجام دهید. ویژگی‌ها.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>Exploit توابع منتشر نشده: </b>با استفاده از اطلاعات تعیین‌شده از طریق آزمایش، از ویژگی‌های منتشر نشده بهره برداری کنید سرویس.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>ویژگی‌هایی را اجرا کنید که برای استفاده کاربران عمومی سیستم در نظر گرفته نشده‌اند.</td></tr><tr><td>فرمان‌های مخرب را به ویژگی‌هایی بسازید که قرار نیست توسط کاربران عمومی سیستم استفاده شوند و از نقص‌های امنیتی موجود در توابع استفاده می‌کنند.",
+            "x_capec_extended_description_fa": "دشمنان همچنین می‌توانند بیت‌های غیرمستند را در یک دستگاه سخت‌افزاری که معمولاً به عنوان «بیت مرغ» شناخته می‌شود، جستجو کنند. این بیت ها برای فعال/غیرفعال کردن عملکردهای خاص استفاده می شوند، اما منتشر نمی شوند. دشمنان می‌توانند سیستم‌افزار را معکوس کنند تا ویژگی‌های پنهان را شناسایی کرده و این بیت‌ها را در زمان اجرا تغییر دهند تا به رفتارهای مخرب دست یابند.",
+            "x_capec_prerequisites_fa": [
+                "معماری مورد حمله باید خدماتی را منتشر کند یا در غیر این صورت سرویس‌هایی را در دسترس قرار دهد که مشتریان می‌توانند به آن‌ها متصل شوند، یا به شکلی غیرقابل احراز هویت یا با به دست آوردن یک نشانه احراز هویت در جای دیگری. این سرویس نباید \"کشف\" باشد، اما در صورت عدم وجود، باید راهی برای کشف شدن توسط مهاجم داشته باشد. این ممکن است شامل گوش دادن در یک پورت شناخته شده باشد. در نهایت، احتمال بهره برداری به قابلیت کشف سرویس آسیب پذیر بستگی دارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. ابزارهای جستجوی وب سرویس ممکن است مفید باشد."
+            ]
         }
     ],
     "spec_version": "2.0",

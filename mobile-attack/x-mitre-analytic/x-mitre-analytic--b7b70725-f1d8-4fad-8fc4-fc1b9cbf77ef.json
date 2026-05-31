@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0713#AN1841",
-                    "external_id": "AN1841"
+                    "external_id": "AN1841",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,33 +53,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between managed app posture, local access activity, optional staging, and upload"
+                    "description": "Correlation window between managed app posture, local access activity, optional staging, and upload",
+                    "description_fa": "پنجره همبستگی بین وضعیت برنامه مدیریت شده، فعالیت دسترسی محلی، مرحله بندی اختیاری، و آپلود"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Managed apps expected to access local records such as enterprise sync, backup, or approved investigation tools"
+                    "description": "Managed apps expected to access local records such as enterprise sync, backup, or approved investigation tools",
+                    "description_fa": "برنامه‌های مدیریت‌شده انتظار می‌رود به سوابق محلی مانند همگام‌سازی سازمانی، پشتیبان‌گیری یا ابزارهای تحقیق تأیید شده دسترسی داشته باشند"
                 },
                 {
                     "field": "AllowedContainerPatterns",
-                    "description": "Expected app-container or local artifact locations for legitimate workflows"
+                    "description": "Expected app-container or local artifact locations for legitimate workflows",
+                    "description_fa": "کانتینر برنامه یا مکان‌های مصنوع محلی مورد انتظار برای گردش‌های کاری قانونی"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether local record access should happen only during active user interaction"
+                    "description": "Whether local record access should happen only during active user interaction",
+                    "description_fa": "آیا دسترسی به رکورد محلی باید فقط در طول تعامل فعال کاربر اتفاق بیفتد"
                 },
                 {
                     "field": "BurstReadThreshold",
-                    "description": "Minimum number of local file or record reads in a short interval required for alerting"
+                    "description": "Minimum number of local file or record reads in a short interval required for alerting",
+                    "description_fa": "حداقل تعداد خواندن فایل یا رکورد محلی در یک بازه زمانی کوتاه که برای هشدار لازم است"
                 },
                 {
                     "field": "SensitiveArtifactPatterns",
-                    "description": "Environment-specific list of high-value browser, messaging, token, or local record artifacts"
+                    "description": "Environment-specific list of high-value browser, messaging, token, or local record artifacts",
+                    "description_fa": "فهرست محیطی خاص از مرورگرها، پیام‌رسانی‌ها، نشانه‌ها یا مصنوعات رکورد محلی با ارزش بالا"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume consistent with recent local data collection"
+                    "description": "Minimum outbound volume consistent with recent local data collection",
+                    "description_fa": "حداقل حجم خروجی مطابق با جمع آوری داده های محلی اخیر"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1841",
+            "description_fa": "مدافع وضعیت برنامه دستگاه نظارت شده و بافت چرخه حیات را با مکرر فایل محلی یا اثرات دسترسی به پایگاه داده محلی مرتبط می کند، به ویژه زمانی که یک برنامه مدیریت شده داده های مرورگر، پیام رسانی، زنجیره کلید مجاور یا کانتینر برنامه را خارج از نقش مورد انتظار خود می خواند و سپس نتیجه را مرحله بندی یا آپلود می کند. از آنجایی که دید مستقیم دسترسی به سیستم محلی سطح پایین در iOS ضعیف‌تر است، تحلیل اولیه مبتنی بر اثر است: هویت برنامه مدیریت‌شده، دسترسی به فایل/پایگاه داده در جایی که برای حسگر تلفن همراه قابل مشاهده است، زمینه اجرای پس‌زمینه، و ارتباطات خروجی کوتاه‌مدت."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0075#AN0205",
-                    "external_id": "AN0205"
+                    "external_id": "AN0205",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Alert on unexpected users executing inter-host relay tools (e.g., `www-data`, `backup`)."
+                    "description": "Alert on unexpected users executing inter-host relay tools (e.g., `www-data`, `backup`).",
+                    "description_fa": "هشدار در مورد کاربران غیرمنتظره ای که ابزارهای رله بین میزبان را اجرا می کنند (به عنوان مثال، «www-data»، «پشتیبان گیری»)."
                 },
                 {
                     "field": "PortRange",
-                    "description": "Adjust to watch for commonly misused internal TCP/UDP ports."
+                    "description": "Adjust to watch for commonly misused internal TCP/UDP ports.",
+                    "description_fa": "برای مشاهده پورت‌های داخلی TCP/UDP که معمولاً مورد سوء استفاده قرار می‌گیرند، تنظیم کنید."
                 },
                 {
                     "field": "ProcessPattern",
-                    "description": "Shell pipelines or wrapped invocations like `bash -c 'socat ...'`"
+                    "description": "Shell pipelines or wrapped invocations like `bash -c 'socat ...'`",
+                    "description_fa": "خطوط لوله پوسته یا فراخوان‌های پیچیده مانند \"bash -c \"socat ...\"."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0205",
+            "description_fa": "«socat»، «ssh»، «iptables» یا «ncat» از فضای کاربر یا cron job برای ایجاد ارسال پورت، پوسته‌های معکوس یا تونل‌های بین میزبان بین سیستم‌های لینوکس در معرض خطر فراخوانی می‌شوند. رفتار معمولاً با فعالیت سوکت و ترافیک آنتروپی بالا همراه است."
         }
     ]
 }

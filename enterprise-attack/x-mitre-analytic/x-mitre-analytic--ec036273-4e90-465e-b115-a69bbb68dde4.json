@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0005#AN0012",
-                    "external_id": "AN0012"
+                    "external_id": "AN0012",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ImagePath",
-                    "description": "Filter by suspicious or non-standard directory paths"
+                    "description": "Filter by suspicious or non-standard directory paths",
+                    "description_fa": "فیلتر بر اساس مسیرهای فهرست مشکوک یا غیر استاندارد"
                 },
                 {
                     "field": "PEInternalNameMismatch",
-                    "description": "Enable tuning based on mismatch rules between metadata and disk filename"
+                    "description": "Enable tuning based on mismatch rules between metadata and disk filename",
+                    "description_fa": "تنظیم بر اساس قوانین عدم تطابق بین ابرداده و نام فایل دیسک را فعال کنید"
                 },
                 {
                     "field": "CommandLinePattern",
-                    "description": "Flag unusual or rare argument combinations for LOLBAS-like tools"
+                    "description": "Flag unusual or rare argument combinations for LOLBAS-like tools",
+                    "description_fa": "ترکیب‌های آرگومان غیرمعمول یا نادر را برای ابزارهای LOLBAS مانند پرچم‌گذاری کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0012",
+            "description_fa": "اجرای باینری ها در جایی که نام فایل روی دیسک با فراداده های PE مانند OriginalFilename یا InternalName مطابقت ندارد. اغلب با تغییر نام LOLBAS یا باینری های سیستم مانند rundll32، powershell یا psexec مشاهده می شود."
         }
     ]
 }

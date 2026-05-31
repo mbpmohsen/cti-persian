@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0318#AN0895",
-                    "external_id": "AN0895"
+                    "external_id": "AN0895",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,13 +52,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredDomains",
-                    "description": "List of external code repository domains to monitor (github.com, gitlab.com, bitbucket.org)."
+                    "description": "List of external code repository domains to monitor (github.com, gitlab.com, bitbucket.org).",
+                    "description_fa": "فهرست دامنه‌های مخزن کد خارجی برای نظارت (github.com، gitlab.com، bitbucket.org)."
                 },
                 {
                     "field": "ExfilVolumeThreshold",
-                    "description": "Threshold for outbound data volume per session to flag suspicious uploads."
+                    "description": "Threshold for outbound data volume per session to flag suspicious uploads.",
+                    "description_fa": "آستانه برای حجم داده های خروجی در هر جلسه برای پرچم گذاری بارگذاری های مشکوک."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0895",
+            "description_fa": "فرآیندهایی مانند PowerShell، Git یا curl که درخواست‌های HTTPS POST خروجی را به APIهای مخزن کد شناخته شده (مانند github.com، gitlab.com) بلافاصله پس از خواندن فایل‌های بزرگ آغاز می‌کنند. نمای مدافع: ارتباط بین دسترسی به فایل دایرکتوری های حساس (مانند اسناد، امور مالی) و آپلودهای غیرعادی داده در دامنه های مخزن."
         }
     ]
 }

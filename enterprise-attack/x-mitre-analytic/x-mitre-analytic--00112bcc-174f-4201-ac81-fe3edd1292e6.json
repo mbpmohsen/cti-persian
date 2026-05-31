@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0039#AN0110",
-                    "external_id": "AN0110"
+                    "external_id": "AN0110",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DomainReputationFeed",
-                    "description": "Whitelist/blacklist tuned with external threat intel sources"
+                    "description": "Whitelist/blacklist tuned with external threat intel sources",
+                    "description_fa": "لیست سفید/لیست سیاه تنظیم شده با منابع اطلاعاتی تهدید خارجی"
                 },
                 {
                     "field": "ProcessWhitelist",
-                    "description": "Known safe daemons that frequently query domains"
+                    "description": "Known safe daemons that frequently query domains",
+                    "description_fa": "شیاطین امن شناخته شده ای که اغلب دامنه ها را پرس و جو می کنند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0110",
+            "description_fa": "/var/log/audit/audit.log و گزارش‌های حل‌کننده DNS را برای جستجوهای ناموفق مکرر یا اتصال به نام‌های دامنه با آنتروپی بالا نظارت کنید. پرس و جوهای DNS مشکوک را با اصل و نسب فرآیند (مانند پایتون، bash یا دیمون های غیرعادی سیستم) مرتبط کنید."
         }
     ]
 }

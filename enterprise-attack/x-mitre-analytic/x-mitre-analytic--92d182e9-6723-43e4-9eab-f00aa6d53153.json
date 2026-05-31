@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0010#AN0025",
-                    "external_id": "AN0025"
+                    "external_id": "AN0025",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutablePathRegex",
-                    "description": "Regex defining suspicious binary/script paths triggered by cron/systemd"
+                    "description": "Regex defining suspicious binary/script paths triggered by cron/systemd",
+                    "description_fa": "Regex مسیرهای باینری/اسکریپت مشکوک را که توسط cron/systemd راه اندازی شده اند را تعریف می کند"
                 },
                 {
                     "field": "WatchTargetPaths",
-                    "description": "Paths monitored by auditd/inotify for suspicious event registration"
+                    "description": "Paths monitored by auditd/inotify for suspicious event registration",
+                    "description_fa": "مسیرهایی که برای ثبت رویداد مشکوک توسط حسابرسی شده/اطلاع رسانی می شوند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0025",
+            "description_fa": "تغییرات پیکربندی inotify یا ممیزی شده را شناسایی می کند که فایل های سیستم همراه با اجرای مفسرهای اسکریپت یا باینری ها توسط تایمرهای cron یا systemd را نظارت می کند."
         }
     ]
 }

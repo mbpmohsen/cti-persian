@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0236#AN0655",
-                    "external_id": "AN0655"
+                    "external_id": "AN0655",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-11-12T22:03:39.105Z",
             "name": "Analytic 0655",
-            "description": "Detection of spearphishing attachments by correlating suspicious email delivery with subsequent file creation and abnormal process execution (e.g., Office spawning PowerShell or CMD). Behavior chain includes inbound email metadata \u2192 attachment stored on disk \u2192 process execution \u2192 outbound network activity.",
+            "description": "Detection of spearphishing attachments by correlating suspicious email delivery with subsequent file creation and abnormal process execution (e.g., Office spawning PowerShell or CMD). Behavior chain includes inbound email metadata → attachment stored on disk → process execution → outbound network activity.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.0",
@@ -56,17 +57,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AttachmentExtensions",
-                    "description": "List of high-risk extensions to monitor (e.g., .exe, .js, .vbs, .docm, .xlsm)."
+                    "description": "List of high-risk extensions to monitor (e.g., .exe, .js, .vbs, .docm, .xlsm).",
+                    "description_fa": "فهرست برنامه‌های افزودنی پرخطر برای نظارت (به عنوان مثال، exe.، .js، .vbs، .docm، .xlsm)."
                 },
                 {
                     "field": "SuspiciousParentChildPairs",
-                    "description": "Process lineage patterns considered malicious (e.g., winword.exe \u2192 powershell.exe)."
+                    "description": "Process lineage patterns considered malicious (e.g., winword.exe → powershell.exe).",
+                    "description_fa": "الگوهای نسب فرآیند مخرب در نظر گرفته می شوند (به عنوان مثال، winword.exe → powershell.exe)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between email receipt, file creation, and process execution."
+                    "description": "Correlation window between email receipt, file creation, and process execution.",
+                    "description_fa": "پنجره همبستگی بین دریافت ایمیل، ایجاد فایل و اجرای فرآیند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0655",
+            "description_fa": "شناسایی پیوست‌های spearphishing از طریق ارتباط دادن تحویل ایمیل مشکوک با ایجاد فایل بعدی و اجرای غیرعادی فرآیند (به عنوان مثال، PowerShell یا CMD تخم‌ریزی Office). زنجیره رفتار شامل ابرداده ایمیل ورودی → پیوست ذخیره شده روی دیسک → اجرای فرآیند → فعالیت شبکه خروجی است."
         }
     ]
 }

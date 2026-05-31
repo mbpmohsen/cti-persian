@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1201",
                     "external_id": "T1201",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "AWS GetPasswordPolicy",
                     "description": "Amazon Web Services. (n.d.). AWS API GetAccountPasswordPolicy. Retrieved June 8, 2021.",
                     "url": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetAccountPasswordPolicy.html",
                     "source_name_fa": "AWS GetPasswordPolicy",
-                    "description_fa": "خدمات وب آمازون (n.d.) AWS API GetAccountPasswordPolicy Retrieved 8 ژوئن 2021."
+                    "description_fa": "خدمات وب آمازون (n.d.). AWS API GetAccountPasswordPolicy. بازبینی شده در ۸ ژوئن ۲۰۲۱."
                 },
                 {
                     "source_name": "Jamf User Password Policies",
                     "description": "Holland, J. (2016, January 25). User password policies on non AD machines. Retrieved April 5, 2018.",
                     "url": "https://www.jamf.com/jamf-nation/discussions/18574/user-password-policies-on-non-ad-machines",
-                    "source_name_fa": "سیستم های Password",
-                    "description_fa": "هلند، J. 2016، 25 ژانویه سیاست های رمز عبور کاربر در ماشین های غیر AD Retrieved 5 آوریل 2018"
+                    "source_name_fa": "سیاست های رمز عبور کاربر Jamf",
+                    "description_fa": "هالند، جی (2016، 25 ژانویه). سیاست های رمز عبور کاربر در ماشین های غیر AD. بازبینی شده در 5 آوریل 2018."
                 },
                 {
                     "source_name": "Superuser Linux Password Policies",
                     "description": "Matutiae, M. (2014, August 6). How to display password policy information for a user (Ubuntu)?. Retrieved April 5, 2018.",
                     "url": "https://superuser.com/questions/150675/how-to-display-password-policy-information-for-a-user-ubuntu",
-                    "source_name_fa": "Superuser Linux Password Policy",
-                    "description_fa": "Matutiae، M. (2014، 6 آگوست) چگونه اطلاعات سیاست رمز عبور را برای یک کاربر (Ubuntu) نمایش دهیم؟ Retrieved 5 آوریل 2018"
+                    "source_name_fa": "سیاست های رمز عبور لینوکس ابرکاربر",
+                    "description_fa": "Matutiae, M. (2014, 6 اوت). چگونه اطلاعات خط مشی رمز عبور یک کاربر (اوبونتو) را نمایش دهیم؟ بازبینی شده در 5 آوریل 2018."
                 },
                 {
                     "source_name": "US-CERT-TA18-106A",
                     "description": "US-CERT. (2018, April 20). Alert (TA18-106A) Russian State-Sponsored Cyber Actors Targeting Network Infrastructure Devices. Retrieved October 19, 2020.",
                     "url": "https://www.us-cert.gov/ncas/alerts/TA18-106A",
                     "source_name_fa": "US-CERT-TA18-106A",
-                    "description_fa": "US-CERT (2018، 20 آوریل) هشدار (TA18-106A) بازیگران سایبری دولتی روسیه که هدف قرار دادن دستگاه های زیرساخت شبکه هستند. Retrieved 19 اکتبر 2020"
+                    "description_fa": "US-CERT. (20 آوریل 2018). هشدار (TA18-106A) بازیگران سایبری تحت حمایت دولت روسیه که دستگاه‌های زیرساخت شبکه را هدف قرار می‌دهند. بازبینی شده در 19 اکتبر 2020."
                 }
             ],
             "object_marking_refs": [
@@ -81,8 +81,8 @@
                 "Office Suite"
             ],
             "x_mitre_version": "1.7",
-            "name_fa": "Password Policy Discovery",
-            "description_fa": "مخالفان ممکن است تلاش کنند تا به اطلاعات دقیق در مورد سیاست رمز عبور مورد استفاده در یک شبکه سازمانی یا محیط ابری دسترسی پیدا کنند. سیاست های رمز عبور راهی برای اجرای رمزهای عبور پیچیده است که حدس زدن یا شکستن آن از طریق [Brute Force] دشوار است. این اطلاعات ممکن است به دشمن کمک کند تا لیستی از کلمات عبور مشترک و راه اندازی فرهنگ لغت و / یا حملات brute force را ایجاد کند که به سیاست پایبند است (به عنوان مثال اگر حداقل طول رمز عبور باید 8 باشد، پس سعی نکنید کلمات عبور مانند \"pass123\" را راه اندازی کنید؛ نه چک کردن بیش از 3-4 کلمه عبور در حساب اگر قفل تنظیم شده است به 6 به عنوان حساب قفل نشده است).\n\nسیاست های رمز عبور را می توان در ویندوز، لینوکس و سیستم های macOS از طریق سیستم های مختلف پوسته فرمان مانند [CTI_PRESERVE_0] تنظیم و کشف کرد. [[ویرایش] [[ویرایش] [[ویرایش] و [[ویرایش] [[ویرایش] [[ویرایش] همچنین ممکن است از دستگاه های شبکه استفاده کند ([CTI_PRESERVE_13] در دستگاه های شبکه برای کشف اطلاعات سیاست رمز عبور (به عنوان مثال [CTI_PRESERVE_5] [[ویرایش]\n\nسیاست های رمز عبور را می توان در محیط های ابری با استفاده از API های موجود مانند [CTI_PRESERVE_7] در AWS [CTI_PRESERVE_11] کشف کرد. <code>net accounts (/domain)</code> <code>Get-ADDefaultDomainPasswordPolicy</code> <code>chage -l <username></code> <code>cat /etc/pam.d/common-password</code> <code>pwpolicy getaccountpolicies</code> <code>show aaa</code> <code>show aaa common-criteria policy all</code> <code>GetAccountPasswordPolicy</code> (Citation: Superuser Linux Password Policies) (Citation: Jamf User Password Policies) (Citation: US-CERT-TA18-106A) (Citation: AWS GetPasswordPolicy) https://attack.mitre.org/techniques/T1110 https://attack.mitre.org/techniques/T1059/008"
+            "name_fa": "کشف خط مشی رمز عبور",
+            "description_fa": "ممکن است دشمنان سعی کنند به اطلاعات دقیق در مورد خط مشی رمز عبور استفاده شده در یک شبکه سازمانی یا محیط ابری دسترسی پیدا کنند. خط‌مشی‌های گذرواژه راهی برای اعمال گذرواژه‌های پیچیده است که حدس زدن یا شکستن آن‌ها از طریق [Brute Force](https://attack.mitre.org/techniques/T1110 دشوار است). این اطلاعات ممکن است به دشمن کمک کند تا فهرستی از گذرواژه‌های رایج ایجاد کند و حملات فرهنگ لغت و/یا حملات brute force را اجرا کند که به این خط‌مشی پایبند باشد (مثلاً اگر حداقل طول گذرواژه باید 8 باشد، پس گذرواژه‌هایی مانند «pass123» را امتحان نکنید؛ اگر قفل روی 6 تنظیم شده باشد تا حساب‌ها را قفل نکنید، گذرواژه‌هایی مانند «pass123» را امتحان نکنید.\n\nخط‌مشی‌های گذرواژه را می‌توان در سیستم‌های Windows، Linux، و macOS از طریق ابزارهای مختلف پوسته فرمان مانند <code>net accounts (/domain)</code>، <code>Get-ADDefaultDomainPasswordPolicy</code>، <code>chage -l <username></code>، [[CTI_PRESERVE_3[RES_P]]، [[CTI_PRESERVE_3[VE_PRESERVE_3]، و [4]، [[CTI_PRESERVE_3][RES_P]]]، (Citation: Superuser Linux Password Policies) (Citation: Jamf User Password Policies). همچنین ممکن است دشمنان از [CLI دستگاه شبکه](https://attack.mitre.org/techniques/T1059/008) در دستگاه‌های شبکه برای کشف اطلاعات خط‌مشی گذرواژه (مانند <code>show aaa</code>، <code>show aaa common-criteria policy all</code>) استفاده کنند.[[[CTI_PRESERVE_10]]\n\nخط‌مشی‌های گذرواژه را می‌توان در محیط‌های ابری با استفاده از APIهای موجود مانند [[CTI_PRESERVE_7]]] در AWS (Citation: AWS GetPasswordPolicy) کشف کرد. <code>cat /etc/pam.d/common-password</code> <code>pwpolicy getaccountpolicies</code> <code>GetAccountPasswordPolicy</code> (Citation: US-CERT-TA18-106A)"
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0145#AN0406",
-                    "external_id": "AN0406"
+                    "external_id": "AN0406",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredCommands",
-                    "description": "List of admin tools and scripts allowed to legitimately modify firewall settings."
+                    "description": "List of admin tools and scripts allowed to legitimately modify firewall settings.",
+                    "description_fa": "فهرستی از ابزارها و اسکریپت‌های مدیریت مجاز به تغییر قانونی تنظیمات فایروال."
                 },
                 {
                     "field": "AlertThreshold",
-                    "description": "Number of firewall rule changes within a time window before triggering alert."
+                    "description": "Number of firewall rule changes within a time window before triggering alert.",
+                    "description_fa": "تعداد قوانین فایروال در یک پنجره زمانی قبل از شروع هشدار تغییر می کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0406",
+            "description_fa": "تشخیص دستکاری فایروال با نظارت بر فرآیندهای اجرای netsh، PowerShell Set-NetFirewallProfile یا sc stop mpssvc. تغییرات رجیستری تحت HKLM\\SYSTEM\\CurrentControlSet\\Services\\SharedAccess\\Parameters\\FirewallPolicy نیز نشان دهنده اقدامات متخاصم است."
         }
     ]
 }

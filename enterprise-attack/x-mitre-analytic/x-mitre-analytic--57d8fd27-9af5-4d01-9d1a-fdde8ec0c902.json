@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0215#AN0606",
-                    "external_id": "AN0606"
+                    "external_id": "AN0606",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SSEHeader",
-                    "description": "SSE-C headers indicate attacker-controlled encryption keys."
+                    "description": "SSE-C headers indicate attacker-controlled encryption keys.",
+                    "description_fa": "هدرهای SSE-C کلیدهای رمزگذاری کنترل شده توسط مهاجم را نشان می دهد."
                 },
                 {
                     "field": "AffectedBucket",
-                    "description": "Prioritize logs, backups, or shared document storage buckets."
+                    "description": "Prioritize logs, backups, or shared document storage buckets.",
+                    "description_fa": "گزارش‌ها، پشتیبان‌گیری‌ها یا سطل‌های ذخیره‌سازی اسناد مشترک را در اولویت قرار دهید."
                 },
                 {
                     "field": "UserAgent",
-                    "description": "Detect scripted automation vs console-based API behavior."
+                    "description": "Detect scripted automation vs console-based API behavior.",
+                    "description_fa": "تشخیص اتوماسیون اسکریپت شده در مقابل رفتار API مبتنی بر کنسول."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0606",
+            "description_fa": "رمزگذاری اشیاء ذخیره‌سازی ابری (مانند سطل‌های S3) از طریق رمزگذاری سمت سرور (SSE-C) یا با جایگزینی اشیا با انواع رمزگذاری‌شده. ممکن است شامل الگوهای API مانند PutObject با هدرهای SSE-C باشد."
         }
     ]
 }

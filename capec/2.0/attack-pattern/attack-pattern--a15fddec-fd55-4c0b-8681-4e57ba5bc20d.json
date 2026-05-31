@@ -9,28 +9,36 @@
                 {
                     "external_id": "CAPEC-320",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/320.html"
+                    "url": "https://capec.mitre.org/data/definitions/320.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Defense Advanced Research Projects Agency Information Processing Techniques Office, Information Sciences Institute University of Southern California, RFC793 - Transmission Control Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-128",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc793.html"
+                    "url": "http://www.faqs.org/rfcs/rfc793.html",
+                    "description_fa": "دفتر تکنیک های پردازش اطلاعات آژانس پروژه های تحقیقاتی پیشرفته دفاعی، موسسه علوم اطلاعات دانشگاه کالیفرنیای جنوبی، RFC793 - پروتکل کنترل انتقال، 1981-09، آژانس پروژه های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition,), 2008, Insecure.com LLC",
                     "external_id": "REF-212",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a15fddec-fd55-4c0b-8681-4e57ba5bc20d",
@@ -54,6 +62,16 @@
                 "Confidentiality": [
                     "Read Data",
                     "Bypass Protection Mechanism"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "مکانیسم حفاظت دور زدن"
                 ]
             },
             "x_capec_domains": [
@@ -69,7 +87,16 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این کاوشگر اثر انگشت سیستم عامل اجرای مهرهای زمانی TCP را توسط سرور راه دور بررسی می کند. همه سیستم عامل ها مهرهای زمانی را در هدر TCP پیاده سازی نمی کنند، اما وقتی از مهرهای زمانی استفاده می شود، این ابزار ابزاری برای حدس زدن سیستم عامل هدف در اختیار مهاجم قرار می دهد. مهاجم با بررسی هر سرویس TCP فعال به منظور دریافت پاسخی که حاوی مهر زمانی TCP است شروع می کند. سیستم عامل های مختلف با استفاده از فواصل زمانی مختلف، مقدار مهر زمانی را به روز می کنند. این نوع تحلیل زمانی دقیق‌تر است که پاسخ‌های مُهر زمانی متعدد دریافت و سپس تحلیل شوند. مهرهای زمانی TCP را می توان در قسمت TCP Options سربرگ TCP یافت.",
+            "name_fa": "TCP Timestamp Probe",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین وجود مهرهای زمانی.: </b> دشمن یک بسته کاوشگر را به میزبان راه دور ارسال می‌کند تا مشخص کند که مُهرهای زمانی وجود دارد یا خیر. <b>مقادیر مهر زمانی را ثبت و تجزیه و تحلیل کنید.: </b>اگر میزبان راه دور از مهر زمانی استفاده می‌کند، چندین مُهر زمانی دریافت کنید، آن‌ها را تجزیه و تحلیل کنید و با مقادیر شناخته شده مقایسه کنید.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>دشمن چندین درخواست ارسال می‌کند.><vers><s the timestamp تجزیه و تحلیل می‌کند. مهر زمانی را ارزش گذاری می کند و میانگین افزایش در هر ثانیه را در مُهرهای زمانی هدف تعیین می کند.</td></tr><tr><td>رقیب این نتیجه را با پایگاه داده ای از افزایش های مهر زمانی شناخته شده TCP برای یک تطابق احتمالی مقایسه می کند.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "توانایی نظارت و تعامل با ارتباطات شبکه. دسترسی به حداقل یک میزبان و امتیازات برای رابط با کارت رابط شبکه. سیستم عامل هدف باید از گزینه مهر زمانی TCP پشتیبانی کند تا اثر انگشت به دست آید."
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p> هر نوع کاوش فعالی که شامل هدرهای بسته غیراستاندارد باشد، نیاز به استفاده از سوکت های خام دارد که در سیستم عامل های خاصی (مثلاً Microsoft Windows XP SP 2) در دسترس نیست. دستکاری سوکت خام در یونیکس/لینوکس به امتیازات ریشه نیاز دارد.</xhtml:p>\n               <xhtml:p>ابزاری که قادر به ارسال و دریافت بسته ها از یک سیستم راه دور است.</xhtml:p>"
+            ]
         }
     ],
     "spec_version": "2.0",

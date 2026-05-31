@@ -9,17 +9,21 @@
                 {
                     "external_id": "CAPEC-291",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/291.html"
+                    "url": "https://capec.mitre.org/data/definitions/291.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--88933ba2-fe2a-4b71-ac08-2537c5903b2e",
@@ -37,6 +41,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -50,7 +57,15 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از یک پیکربندی نادرست DNS که اجازه انتقال ZONE را می دهد سوء استفاده می کند. برخی از سرورهای DNS خارجی فهرستی از آدرس IP و نام‌های میزبان معتبر را برمی‌گردانند. تحت شرایط خاص، حتی ممکن است بتوان داده های Zone را در مورد شبکه داخلی سازمان به دست آورد. هنگامی که مهاجم موفق شد، اطلاعات ارزشمندی در مورد توپولوژی سازمان هدف، از جمله اطلاعات مربوط به سرورهای خاص، نقش آنها در ساختار فناوری اطلاعات، و احتمالاً اطلاعاتی در مورد سیستم عامل های در حال اجرا بر روی شبکه، یاد می گیرد. این رفتار وابسته به پیکربندی است، بنابراین ممکن است نیاز به جستجوی چندین سرور DNS در حین تلاش برای یافتن یک سرور با انتقال ZONE مجاز باشد.",
+            "name_fa": "انتقالات منطقه DNS",
+            "x_capec_prerequisites_fa": [
+                "دسترسی به سرور DNS که امکان انتقال Zone را فراهم می کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "یک برنامه مشتری که قادر به تعامل با سرور DNS یا یک ابزار خط فرمان یا برنامه وب است که تعاملات DNS را خودکار می کند."
+            ]
         }
     ],
     "type": "bundle"

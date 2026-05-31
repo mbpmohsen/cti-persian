@@ -14,28 +14,28 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1546/009",
                     "external_id": "T1546.009",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Elastic Process Injection July 2017",
                     "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017.",
                     "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process",
-                    "source_name_fa": "Elastic Process injection جولای 2017",
-                    "description_fa": "حسینی، A. (2017، 18 ژوئیه) ده تکنیک تزریق فرایند: یک بررسی فنی از تکنیک های تزریق معمول و روندی. Retrieved 7 دسامبر 2017"
+                    "source_name_fa": "Elastic Process Injection جولای 2017",
+                    "description_fa": "حسینی، ع (۱۳۹۶، ۲۷ تیر). ده تکنیک تزریق فرآیند: بررسی فنی تکنیک های رایج و پرطرفدار فرآیند تزریق. بازبینی شده در 7 دسامبر 2017."
                 },
                 {
                     "source_name": "Sysinternals AppCertDlls Oct 2007",
                     "description": "Microsoft. (2007, October 24). Windows Sysinternals - AppCertDlls. Retrieved November 17, 2024.",
                     "url": "https://web.archive.org/web/20130401232752/https://forum.sysinternals.com/appcertdlls_topic12546.html",
-                    "source_name_fa": "Sysinternals AppCertDlls 2007",
-                    "description_fa": "مایکروسافت (2007، 24 اکتبر) ویندوز Sysinternals - AppCertDlls Retrieved ۱۷ نوامبر ۲۰۲۴"
+                    "source_name_fa": "Sysinternals AppCertDlls اکتبر 2007",
+                    "description_fa": "مایکروسافت. (2007، 24 اکتبر). Windows Sysinternals - AppCertDlls. بازبینی شده در 17 نوامبر 2024."
                 },
                 {
                     "source_name": "TechNet Autoruns",
                     "description": "Russinovich, M. (2016, January 4). Autoruns for Windows v13.51. Retrieved June 6, 2016.",
                     "url": "https://technet.microsoft.com/en-us/sysinternals/bb963902",
                     "source_name_fa": "TechNet Autoruns",
-                    "description_fa": "Russinovich، M. (2016، 4) Autoruns برای ویندوز v13.51 Retrieved ۶ ژوئن ۲۰۱۶"
+                    "description_fa": "روسینوویچ، ام (2016، 4 ژانویه). اجرای خودکار برای ویندوز 13.51. بازبینی شده در ۶ ژوئن ۲۰۱۶."
                 }
             ],
             "object_marking_refs": [
@@ -65,8 +65,8 @@
                 "Windows"
             ],
             "x_mitre_version": "1.1",
-            "name_fa": "AppCert DLLs",
-            "description_fa": "مخالفان ممکن است با اجرای محتوای مخرب که توسط DLL های AppCert بارگذاری شده اند، امتیازات پایداری و / یا ارتقاء را ایجاد کنند. کتابخانه های پویا لینک (DLLs) که در [CTI_PRESERVE_0] مشخص شده است. کلید ثبت شده تحت [CTI_PRESERVE] در هر فرایندی بارگذاری می شود که رابط برنامه نویسی کاربردی (API) را فراخوانی می کند. [[ویرایش]، [[ویرایش]، [[۱۰]]، [[۱۰]] [[۱۰]]]، [[۱۰]]]، یا [[۵] [[۱۰] [۵]. [[ویرایش]\n\nهمانند [Process injection] ([[I_PRESERVE_8])، این مقدار را می توان برای به دست آوردن امتیازات بالا با ایجاد DLL مخرب بارگذاری و اجرا در زمینه فرآیندهای جداگانه بر روی کامپیوتر مورد سوء استفاده قرار داد. Malicious AppCerts همچنین ممکن است با فعال شدن مداوم توسط فعالیت API ادامه دهد. <code>AppCertDLLs</code> <code>HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\</code> <code>CreateProcess</code> <code>CreateProcessAsUser</code> <code>CreateProcessWithLoginW</code> <code>CreateProcessWithTokenW</code> <code>WinExec</code> (Citation: Elastic Process Injection July 2017) https://attack.mitre.org/techniques/T1055"
+            "name_fa": "DLL های AppCert",
+            "description_fa": "دشمنان ممکن است با اجرای محتوای مخرب ایجاد شده توسط DLL های AppCert بارگذاری شده در فرآیندها، تداوم و/یا امتیازات را افزایش دهند. کتابخانه‌های پیوند پویا (DLL) که در کلید رجیستری <code>AppCertDLLs</code> در زیر <code>HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Control\\Session Manager\\</code> مشخص شده‌اند در هر فرآیندی بارگیری می‌شوند که توابع رابط برنامه‌نویسی برنامه‌نویسی کاربردی (API) را فراخوانی می‌کند که همه جا مورد استفاده قرار می‌گیرد [[P[CTI_PRESERVE_0],[ERVE_2] <code>CreateProcessWithLoginW</code>، <code>CreateProcessWithTokenW</code>، یا <code>WinExec</code>. (Citation: Elastic Process Injection July 2017)\n\nمشابه [Process Injection](https://attack.mitre.org/techniques/T1055)، می‌توان از این مقدار برای به دست آوردن امتیازات بالا با بارگیری و اجرای یک DLL مخرب در زمینه فرآیندهای جداگانه در رایانه سوء استفاده کرد. DLL های مخرب AppCert همچنین ممکن است با فعال شدن مداوم توسط فعالیت API پایداری ایجاد کنند. <code>CreateProcess</code> <code>CreateProcessAsUser</code>"
         }
     ]
 }

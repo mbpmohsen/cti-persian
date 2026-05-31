@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0288#AN0800",
-                    "external_id": "AN0800"
+                    "external_id": "AN0800",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "QuarantineBypassAllowList",
-                    "description": "Legitimate enterprise update tools or deployment frameworks that may strip quarantine flags"
+                    "description": "Legitimate enterprise update tools or deployment frameworks that may strip quarantine flags",
+                    "description_fa": "ابزارهای به‌روزرسانی قانونی سازمانی یا چارچوب‌های استقرار که ممکن است پرچم‌های قرنطینه را حذف کنند"
                 },
                 {
                     "field": "CertificateAuthorityList",
-                    "description": "Baseline trusted Apple Developer IDs and enterprise certs used for code signing"
+                    "description": "Baseline trusted Apple Developer IDs and enterprise certs used for code signing",
+                    "description_fa": "شناسه‌های برنامه‌نویس اپل و گواهی‌های سازمانی مورد اعتماد Baseline که برای امضای کد استفاده می‌شوند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation window for xattr modification followed by suspicious process execution"
+                    "description": "Time correlation window for xattr modification followed by suspicious process execution",
+                    "description_fa": "پنجره همبستگی زمانی برای اصلاح xattr به دنبال اجرای فرآیند مشکوک"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0800",
+            "description_fa": "حذف یا تغییر مشکوک ویژگی com.apple.quarantine extension، دستکاری مقادیر LSFileQuarantineEnabled در Info.plist، و اجرای فرآیند غیرمنتظره باینری های بدون امضا یا غیر محضری را به هم مرتبط می کند. همچنین خرابی های غیرعادی اعتبارسنجی اعتماد را در گزارش های یکپارچه و فعالیت های غیرعادی در ورودی های پایگاه داده QuarantineEvents نظارت می کند."
         }
     ]
 }

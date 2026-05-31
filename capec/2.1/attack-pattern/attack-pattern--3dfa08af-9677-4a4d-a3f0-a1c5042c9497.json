@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-577",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/577.html"
+                    "url": "https://capec.mitre.org/data/definitions/577.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "System Owner/User Discovery",
                     "external_id": "T1033",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1033"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1033",
+                    "description_fa": "کشف مالک/کاربر سیستم",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--3dfa08af-9677-4a4d-a3f0-a1c5042c9497",
@@ -48,6 +52,19 @@
                     "Other",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -60,7 +77,13 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک عملکرد سوء استفاده از دشمن به معنای شناسایی اطلاعات کاربران اصلی در سیستم هدف به یک کاربر مجاز است. آنها ممکن است این کار را انجام دهند، به عنوان مثال، با بررسی ورود به سیستم یا زمان تغییر فایل. با دانستن اینکه چه مالکانی از سیستم هدف استفاده می کنند، دشمن می تواند رفتار مخرب بیشتر و هدفمندتری را اطلاع دهد. یک دستور مثال ویندوز که ممکن است این کار را انجام دهد \"dir /A ntuser.dat\" است. که آخرین زمان اصلاح شده فایل ntuser.dat کاربر را هنگام اجرا در پوشه ریشه کاربر نمایش می دهد. این زمان مترادف با آخرین باری است که کاربر وارد شده است.",
+            "name_fa": "رد پای مالک",
+            "x_capec_prerequisites_fa": [
+                "برای انجام این حمله، دشمن باید از طریق ابزارهای فیزیکی یا منطقی به سیستم هدف دسترسی پیدا کرده باشد.",
+                "مجوزهای مدیر برای مشاهده پوشه اصلی سایر کاربران مورد نیاز است."
+            ]
         }
     ],
     "type": "bundle"

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0648#AN1729",
-                    "external_id": "AN1729"
+                    "external_id": "AN1729",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,33 +48,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between location access, region qualification, and guarded activity"
+                    "description": "Correlation window between location access, region qualification, and guarded activity",
+                    "description_fa": "پنجره همبستگی بین دسترسی به مکان، صلاحیت منطقه و فعالیت محافظت شده"
                 },
                 {
                     "field": "AuthorizationMode",
-                    "description": "Expected risk weighting for when-in-use versus always authorization and whether background behavior occurs under that mode"
+                    "description": "Expected risk weighting for when-in-use versus always authorization and whether background behavior occurs under that mode",
+                    "description_fa": "وزن‌دهی ریسک مورد انتظار برای زمان استفاده در مقابل مجوز همیشه و اینکه آیا رفتار پس‌زمینه تحت آن حالت رخ می‌دهد یا خیر"
                 },
                 {
                     "field": "RegionMatchThreshold",
-                    "description": "Defines geospatial or dwell-time threshold used to infer region-based activation"
+                    "description": "Defines geospatial or dwell-time threshold used to infer region-based activation",
+                    "description_fa": "آستانه مکانی یا زمانی ساکن را تعریف می کند که برای استنباط فعال سازی مبتنی بر منطقه استفاده می شود"
                 },
                 {
                     "field": "DormancyThreshold",
-                    "description": "Duration of inactivity or suppressed behavior before location-qualified activation"
+                    "description": "Duration of inactivity or suppressed behavior before location-qualified activation",
+                    "description_fa": "مدت زمان عدم فعالیت یا رفتار سرکوب شده قبل از فعال سازی واجد شرایط مکان"
                 },
                 {
                     "field": "ExpectedBackgroundModes",
-                    "description": "Baseline of apps legitimately using location-driven background execution or region monitoring"
+                    "description": "Baseline of apps legitimately using location-driven background execution or region monitoring",
+                    "description_fa": "خط پایه برنامه‌هایی که به طور قانونی از اجرای پس‌زمینه مبتنی بر مکان یا نظارت منطقه استفاده می‌کنند"
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Expected destinations for apps whose network activity legitimately depends on user location"
+                    "description": "Expected destinations for apps whose network activity legitimately depends on user location",
+                    "description_fa": "مقصدهای مورد انتظار برای برنامه هایی که فعالیت شبکه آنها به طور قانونی به مکان کاربر بستگی دارد"
                 },
                 {
                     "field": "UserInteractionThreshold",
-                    "description": "Acceptable recency of user interaction before post-location activation is considered suspicious"
+                    "description": "Acceptable recency of user interaction before post-location activation is considered suspicious",
+                    "description_fa": "تازگی قابل قبول تعامل کاربر قبل از فعال سازی پس از مکان مشکوک تلقی می شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1729",
+            "description_fa": "مرتبط است (1) داشتن برنامه و استفاده از مجوز مکان کافی برای ارزیابی مداوم جغرافیایی، (2) مکان یا رفتار نظارت بر منطقه مکرر با فعال سازی مشخصه محدود قابل مشاهده در خارج از منطقه هدف، و (3) شروع ناگهانی ارتباطات شبکه، اجرای پس زمینه، یا فعال سازی ویژگی تنها پس از رسیدن به زمینه موقعیت مکانی واجد شرایط. از آنجایی که دید مستقیم در هر پاسخ تماس geofence اغلب در iOS ضعیف‌تر است، مدافع بیشتر به ترکیب وضعیت مجوز مکان، دسترسی مکرر به مکان، انتقال وضعیت برنامه و رفتار پایین‌دستی که پس از تراز منطقه شروع می‌شود، متکی است."
         }
     ]
 }

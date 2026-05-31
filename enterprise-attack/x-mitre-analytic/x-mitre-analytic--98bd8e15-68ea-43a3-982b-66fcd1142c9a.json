@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0153#AN0436",
-                    "external_id": "AN0436"
+                    "external_id": "AN0436",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WebhookDomains",
-                    "description": "Domains to monitor such as discord.com/api/webhooks, slack.com/api, webhook.site."
+                    "description": "Domains to monitor such as discord.com/api/webhooks, slack.com/api, webhook.site.",
+                    "description_fa": "دامنه هایی برای نظارت مانند discord.com/api/webhooks، slack.com/api، webhook.site."
                 },
                 {
                     "field": "UploadSizeThreshold",
-                    "description": "Threshold for abnormal data sent via webhook requests."
+                    "description": "Threshold for abnormal data sent via webhook requests.",
+                    "description_fa": "آستانه برای داده های غیرعادی ارسال شده از طریق درخواست های webhook."
                 },
                 {
                     "field": "ApprovedApps",
-                    "description": "List of approved business apps using webhooks to reduce noise."
+                    "description": "List of approved business apps using webhooks to reduce noise.",
+                    "description_fa": "فهرست برنامه‌های تجاری تأیید شده با استفاده از هوک‌ها برای کاهش نویز."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0436",
+            "description_fa": "فرآیندهای غیرمعمول (مانند powershell.exe، wscript.exe، mshta.exe) ارسال داده ها به نقاط پایانی وب هوک (Discord، Slack، webhook.site) با استفاده از درخواست های HTTP POST/PUT. دیدگاه مدافع: دودمان فرآیند مشکوک و به دنبال آن ترافیک HTTPS خروجی به دامنه های وب هوک."
         }
     ]
 }

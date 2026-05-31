@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0564#AN1560",
-                    "external_id": "AN1560"
+                    "external_id": "AN1560",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousBinaryList",
-                    "description": "Common system utilities often hijacked (e.g., net.exe, cmd.exe, powershell.exe, python.exe)."
+                    "description": "Common system utilities often hijacked (e.g., net.exe, cmd.exe, powershell.exe, python.exe).",
+                    "description_fa": "ابزارهای معمول سیستم اغلب ربوده می شوند (مانند net.exe، cmd.exe، powershell.exe، python.exe)."
                 },
                 {
                     "field": "MonitoredDirectories",
-                    "description": "Directories where executables should not normally be written (e.g., application folders, user profile subdirs)."
+                    "description": "Directories where executables should not normally be written (e.g., application folders, user profile subdirs).",
+                    "description_fa": "دایرکتوری هایی که در آن فایل های اجرایی معمولا نباید نوشته شوند (به عنوان مثال، پوشه های برنامه، زیرشاخه های نمایه کاربر)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between file creation and subsequent process execution."
+                    "description": "Correlation window between file creation and subsequent process execution.",
+                    "description_fa": "پنجره همبستگی بین ایجاد فایل و اجرای فرآیند بعدی."
                 },
                 {
                     "field": "ParentProcessBaseline",
-                    "description": "Expected parent processes for critical system binaries, deviations may indicate hijacking."
+                    "description": "Expected parent processes for critical system binaries, deviations may indicate hijacking.",
+                    "description_fa": "فرآیندهای والد مورد انتظار برای باینری های سیستم حیاتی، انحرافات ممکن است نشان دهنده ربایش باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1560",
+            "description_fa": "فرآیندهای اجرای باینری‌های نام‌گذاری شده از ابزارهای قانونی سیستم (مانند net.exe، findstr.exe، python.exe) از دایرکتوری‌های غیراستاندارد یا برنامه خاص، همراه با ایجاد فایل یا رویدادهای اصلاح برای چنین باینری‌ها. Defender نوشته‌های فایل را در دایرکتوری‌های آسیب‌پذیر، مسیرهای اجرای فرآیند ناسازگار با مسیرهای سیستم پایه، و روابط غیرعادی والد-فرزند در اصل و نسب فرآیند، مرتبط می‌کند."
         }
     ]
 }

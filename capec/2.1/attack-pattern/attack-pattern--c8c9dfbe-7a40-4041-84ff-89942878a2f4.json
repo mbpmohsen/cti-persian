@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-270",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/270.html"
+                    "url": "https://capec.mitre.org/data/definitions/270.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-15",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/15.html"
+                    "url": "http://cwe.mitre.org/data/definitions/15.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Boot or Logon Autostart Execution: Registry Run Keys / Start Folder",
                     "external_id": "T1547.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1547/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1547/001",
+                    "description_fa": "بوت یا ورود به سیستم اجرا خودکار: کلیدهای اجرای رجیستری / پوشه شروع",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Boot or Logon Autostart Execution: Active",
                     "external_id": "T1547.014",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1547/014"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1547/014",
+                    "description_fa": "بوت یا ورود به سیستم شروع خودکار اجرا: فعال",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--c8c9dfbe-7a40-4041-84ff-89942878a2f4",
@@ -50,6 +56,10 @@
                 "Integrity": [
                     "Modify Data",
                     "Gain Privileges"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -66,7 +76,17 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن یک ورودی جدید به \"کلیدهای اجرا\" در رجیستری ویندوز اضافه می‌کند تا زمانی که کاربر وارد سیستم می‌شود، برنامه‌ای به انتخاب او اجرا می‌شود. به این ترتیب، دشمن می‌تواند فایل اجرایی خود را با سطح مجوزهای کاربر مجاز برای کار و اجرا در سیستم هدف دریافت کند. این حمله یک راه خوب برای دشمن برای اجرای جاسوس‌افزار دائمی بر روی دستگاه کاربر، مانند کی لاگر است.",
+            "name_fa": "تغییر کلیدهای اجرای رجیستری",
+            "x_capec_example_instances_fa": [
+                "یک حریف می‌تواند یک فایل اجرایی مخرب (RAT) را روی سیستم هدف قرار دهد و سپس آن را به گونه‌ای پیکربندی کند که وقتی کاربر وارد سیستم می‌شود، به طور خودکار اجرا شود تا پایداری در سیستم هدف حفظ شود.",
+                "از طریق اصلاح \"کلیدهای اجرا\" رجیستری، حریف می‌تواند یک فایل اجرایی مخرب را به عنوان یک برنامه قانونی بپوشاند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین سیستم هدف: </b>دشمن ابتدا باید سیستمی را که می خواهد هدف قرار دهد مشخص کند. این حمله فقط روی ویندوز کار می‌کند.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>دسترسی به سیستم: </b>دشمن باید به نحوی به سیستم دسترسی داشته باشد تا بتواند رجیستری ویندوز را تغییر دهد.</p></li><table><thni><str> دسترسی فیزیکی به یک سیستم یا از طریق گشت و گذار در یک رمز عبور یا دسترسی به سیستمی که قفل آن باز مانده است.</td></tr><tr><td>از راه‌های مختلف به سیستم دسترسی از راه دور به دست آورید.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><h3>Exploit</h3><ol><brydify</h3><ol><li>: رجیستری ویندوز را با افزودن یک ورودی جدید به \"کلیدهای اجرا\" که به برنامه مورد نظر ارجاع می دهد، تغییر دهید. این برنامه هر زمان که کاربر وارد سیستم شود اجرا می شود.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برای انجام این حمله، دشمن باید از طریق ابزارهای فیزیکی یا منطقی به سیستم هدف دسترسی پیدا کرده باشد."
+            ]
         }
     ],
     "type": "bundle"

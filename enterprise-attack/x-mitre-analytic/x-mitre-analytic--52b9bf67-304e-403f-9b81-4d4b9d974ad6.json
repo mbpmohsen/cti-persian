@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0559#AN1538",
-                    "external_id": "AN1538"
+                    "external_id": "AN1538",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Defines if user has appropriate privileges to initiate shutdown/reboot."
+                    "description": "Defines if user has appropriate privileges to initiate shutdown/reboot.",
+                    "description_fa": "تعیین می کند که آیا کاربر دارای امتیازات مناسب برای شروع خاموش کردن/راه اندازی مجدد است یا خیر."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Unexpected shutdowns during business hours may warrant increased scrutiny."
+                    "description": "Unexpected shutdowns during business hours may warrant increased scrutiny.",
+                    "description_fa": "خاموش شدن غیرمنتظره در ساعات کاری ممکن است مستلزم افزایش نظارت باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1538",
+            "description_fa": "اجرای فرآیند دستورات خاموش/راه‌اندازی مجدد (مانند shutdown.exe، راه‌اندازی مجدد رایانه) را با گزارش‌های تغییر وضعیت میزبان (شناسه رویداد 1074، 6006) و عدم وجود زمینه مدیریتی مرتبط (به عنوان مثال، کاربر در گروه Helpdesk نیست) مرتبط کنید."
         }
     ]
 }

@@ -9,34 +9,44 @@
                 {
                     "external_id": "CAPEC-302",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/302.html"
+                    "url": "https://capec.mitre.org/data/definitions/302.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-200",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/200.html"
+                    "url": "http://cwe.mitre.org/data/definitions/200.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Stuart McClure, Joel Scambray, George Kurtz, Hacking Exposed: Network Security Secrets & Solutions (6th Edition), 2009, McGraw Hill",
                     "external_id": "REF-33",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "استوارت مک کلور، جوئل اسکامبری، جورج کورتز، هک افشا شده: رازها و راه حل های امنیت شبکه (نسخه ششم)، 2009، مک گراو هیل",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Defense Advanced Research Projects Agency Information Processing Techniques Office, Information Sciences Institute University of Southern California, RFC793 - Transmission Control Protocol, 1981--09, Defense Advanced Research Projects Agency (DARPA)",
                     "external_id": "REF-128",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.faqs.org/rfcs/rfc793.html"
+                    "url": "http://www.faqs.org/rfcs/rfc793.html",
+                    "description_fa": "دفتر تکنیک های پردازش اطلاعات آژانس پروژه های تحقیقاتی پیشرفته دفاعی، موسسه علوم اطلاعات دانشگاه کالیفرنیای جنوبی، RFC793 - پروتکل کنترل انتقال، 1981-09، آژانس پروژه های تحقیقاتی پیشرفته دفاعی (دارپا)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, Nmap Network Scanning: The Official Nmap Project Guide to Network Discovery and Security Scanning (3rd \"Zero Day\" Edition), 2008, Insecure.com LLC, ISBN: 978-0-9799587-1-7",
                     "external_id": "REF-147",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "گوردون \"فئودور\" لیون، اسکن شبکه Nmap: راهنمای پروژه رسمی Nmap برای کشف شبکه و اسکن امنیتی (نسخه سوم \"روز صفر\")، 2008، Insecure.com LLC، ISBN: 978-0-9799587-1-7",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Gordon \"Fyodor\" Lyon, The Art of Port Scanning (Volume: 7, Issue. 51), Phrack Magazine, 1997",
                     "external_id": "REF-130",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://phrack.org/issues/51/11.html"
+                    "url": "http://phrack.org/issues/51/11.html",
+                    "description_fa": "گوردون \"فئودور\" لیون، هنر اسکن بندر (جلد: 7، شماره 51)، مجله Phrack، 1997",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--463e4ea5-f86f-4b87-af11-2fd96f2fab4f",
@@ -63,6 +73,19 @@
                     "Other",
                     "Bypass Protection Mechanism",
                     "Hide Activities"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
+                ],
+                "Confidentiality_fa": [
+                    "دیگر",
+                    "مکانیسم حفاظت دور زدن",
+                    "پنهان کردن فعالیت ها"
                 ]
             },
             "x_capec_domains": [
@@ -79,7 +102,17 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Low",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف از اسکن TCP FIN برای تعیین بسته بودن پورت ها در دستگاه هدف استفاده می کند. این نوع اسکن با ارسال بخش های TCP با بیت FIN تنظیم شده در هدر بسته انجام می شود. رفتار مورد انتظار RFC 793 این است که هر بخش TCP با یک پرچم خارج از ایالت ارسال شده به یک پورت باز کنار گذاشته می شود، در حالی که بخش هایی با پرچم های خارج از ایالت ارسال شده به پورت های بسته باید با یک RST در پاسخ مدیریت شوند. این رفتار باید به دشمن اجازه دهد تا با ارسال انواع خاصی از بسته های قانون شکن (غیر همگام یا غیر مجاز توسط TCB) پورت های بسته را اسکن کند و پورت های بسته را از طریق بسته های RST شناسایی کند.",
+            "name_fa": "اسکن TCP FIN",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>آزمایش</h3><ol><li> <p>یک دشمن بسته‌های TCP را با پرچم FIN ارسال می‌کند اما با اتصال موجود به پورت‌های هدف مرتبط نیست.</p></li><li> <p>یک دشمن از پاسخ هدف برای تعیین وضعیت پورت استفاده می‌کند. اگر پاسخی دریافت نشد پورت باز است. اگر بسته RST دریافت شود، درگاه بسته می‌شود.</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>علاوه بر سرعت نسبی آن در مقایسه با سایر انواع اسکن، مزیت اصلی اسکن TCP FIN توانایی آن در اسکن از طریق فایروال بدون حالت یا فیلترهای ACL است. چنین فیلترهایی به گونه‌ای پیکربندی شده‌اند که معمولاً با جلوگیری از بسته‌های SYN، دسترسی به پورت‌ها را مسدود می‌کنند، بنابراین هرگونه تلاش برای ایجاد اتصال را متوقف می‌کنند. بسته های FIN، مانند بسته های ACK خارج از ایالت، تمایل دارند بدون شناسایی از چنین دستگاه هایی عبور کنند. اسکن FIN هنوز نسبتاً پنهان است زیرا بسته ها تمایل دارند با نویز پس زمینه در پیوند شبکه ترکیب شوند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "اسکن FIN نیاز به استفاده از سوکت های خام دارد و بنابراین نمی توان آن را از برخی سیستم های ویندوز (مثلاً Windows XP SP 2) انجام داد. در یونیکس و لینوکس، دستکاری سوکت خام به امتیازات روت نیاز دارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "این الگوی حمله به توانایی ارسال قطعات TCP FIN به یک میزبان در طول شناسایی شبکه نیاز دارد. این را می توان از طریق استفاده از یک نقشه نگار یا اسکنر شبکه یا از طریق برنامه نویسی سوکت خام در یک زبان برنامه نویسی به دست آورد. ابزارهای تزریق بسته نیز برای این منظور مفید هستند. بسته به روش مورد استفاده، ممکن است لازم باشد شبکه را بو کنید تا پاسخ را ببینید."
+            ]
         }
     ],
     "spec_version": "2.0",

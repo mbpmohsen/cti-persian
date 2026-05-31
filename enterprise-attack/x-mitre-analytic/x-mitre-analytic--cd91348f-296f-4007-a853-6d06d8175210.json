@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0229#AN0641",
-                    "external_id": "AN0641"
+                    "external_id": "AN0641",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Match variations of Get-GlobalAddressList, Get-Recipient, and related cmdlets."
+                    "description": "Match variations of Get-GlobalAddressList, Get-Recipient, and related cmdlets.",
+                    "description_fa": "تغییرات Get-GlobalAddressList، Get-Recipient و cmdlet های مرتبط را مطابقت دهید."
                 },
                 {
                     "field": "HostRole",
-                    "description": "Suppress expected usage on Exchange servers or known IT admin consoles."
+                    "description": "Suppress expected usage on Exchange servers or known IT admin consoles.",
+                    "description_fa": "استفاده مورد انتظار در سرورهای Exchange یا کنسول‌های مدیریت فناوری اطلاعات شناخته شده را متوقف کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Detect bulk execution patterns in short intervals, often used during recon."
+                    "description": "Detect bulk execution patterns in short intervals, often used during recon.",
+                    "description_fa": "الگوهای اجرای انبوه را در فواصل زمانی کوتاه شناسایی کنید که اغلب در حین بازبینی استفاده می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0641",
+            "description_fa": "شمارش فهرست‌های آدرس سراسری یا ابرداده‌های حساب ایمیل از طریق cmdlet‌های PowerShell (مانند Get-GlobalAddressList) یا MAPI/RPC از سیستم‌های غیر سرپرست و غیر سرور پست الکترونیکی."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0297#AN0828",
-                    "external_id": "AN0828"
+                    "external_id": "AN0828",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetDevices",
-                    "description": "Define specific device paths to monitor (e.g., /dev/sda, /dev/nvme0n1)."
+                    "description": "Define specific device paths to monitor (e.g., /dev/sda, /dev/nvme0n1).",
+                    "description_fa": "مسیرهای دستگاه خاصی را برای نظارت تعریف کنید (به عنوان مثال /dev/sda، /dev/nvme0n1)."
                 },
                 {
                     "field": "OffsetThreshold",
-                    "description": "Focus on suspicious writes at disk offsets corresponding to MBR/partition structures."
+                    "description": "Focus on suspicious writes at disk offsets corresponding to MBR/partition structures.",
+                    "description_fa": "روی نوشته های مشکوک در افست دیسک مربوط به ساختارهای MBR/پارتیشن تمرکز کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0828",
+            "description_fa": "اجرای ابزارهای کمکی (dd، hdparm، sgdisk) یا باینری های سفارشی که تلاش می کنند ساختارهای بوت دیسک را بازنویسی کنند (بخش MBR/dev/sda یا جداول پارتیشن). تشخیص، اجرای پوسته را با syscalls که در بخش 0 یا بلوک‌های فراداده دیسک نوشته می‌شود، مرتبط می‌کند."
         }
     ]
 }

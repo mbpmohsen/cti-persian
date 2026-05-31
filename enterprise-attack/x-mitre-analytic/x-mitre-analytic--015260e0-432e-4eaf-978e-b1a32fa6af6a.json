@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0396#AN1112",
-                    "external_id": "AN1112"
+                    "external_id": "AN1112",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedApplications",
-                    "description": "Whitelist of applications (e.g., Safari, Mail) normally permitted to access Keychain"
+                    "description": "Whitelist of applications (e.g., Safari, Mail) normally permitted to access Keychain",
+                    "description_fa": "لیست سفید برنامه هایی (مانند Safari، Mail) که معمولاً مجاز به دسترسی به Keychain هستند."
                 },
                 {
                     "field": "AlertThreshold",
-                    "description": "Number of failed keychain unlock attempts before raising an alert"
+                    "description": "Number of failed keychain unlock attempts before raising an alert",
+                    "description_fa": "تعداد تلاش‌های شکست خورده برای باز کردن قفل زنجیره کلید قبل از اعلام هشدار"
                 },
                 {
                     "field": "ParentProcessContext",
-                    "description": "Legitimate parent-child process relationships for security tool invocations"
+                    "description": "Legitimate parent-child process relationships for security tool invocations",
+                    "description_fa": "روابط فرآیند مشروع والدین و فرزند برای فراخوانی ابزار امنیتی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1112",
+            "description_fa": "دسترسی مشکوک به فایل‌های macOS Keychain و APIها را شناسایی می‌کند. فرآیندهایی را مشاهده می‌کند که ابزار «امنیت» را احضار می‌کنند یا مستقیماً به پایگاه‌های داده Keychain دسترسی دارند، اینها را با اصل و نسب فرآیند والد غیرعادی یا زمینه کاربر غیرمنتظره مرتبط می‌کند. مانیتورها تلاش می‌کند تا فضای ذخیره‌سازی اعتبارنامه را فراتر از جریان‌های کاری نرم‌افزار برنامه خالی، باز کند، یا بخواند."
         }
     ]
 }

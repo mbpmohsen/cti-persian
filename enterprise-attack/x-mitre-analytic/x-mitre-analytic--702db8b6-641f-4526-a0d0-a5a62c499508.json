@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0901#AN2043",
-                    "external_id": "AN2043"
+                    "external_id": "AN2043",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -72,29 +73,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedAdminAccounts",
-                    "description": "Known administrators allowed to manage host firewall settings"
+                    "description": "Known administrators allowed to manage host firewall settings",
+                    "description_fa": "مدیران شناخته شده مجاز به مدیریت تنظیمات فایروال میزبان هستند"
                 },
                 {
                     "field": "MaintenanceWindow",
-                    "description": "Approved change windows where firewall modifications are expected"
+                    "description": "Approved change windows where firewall modifications are expected",
+                    "description_fa": "ویندوزهای تغییر تایید شده که در آن تغییرات فایروال مورد انتظار است"
                 },
                 {
                     "field": "ExposureCorrelationWindow",
-                    "description": "Time window to correlate firewall change with new connections/listeners"
+                    "description": "Time window to correlate firewall change with new connections/listeners",
+                    "description_fa": "پنجره زمانی برای ارتباط تغییر فایروال با اتصالات/شنوندگان جدید"
                 },
                 {
                     "field": "SensitivePorts",
-                    "description": "Ports of concern such as RDP, SMB, WinRM, SSH, custom admin ports"
+                    "description": "Ports of concern such as RDP, SMB, WinRM, SSH, custom admin ports",
+                    "description_fa": "پورت های نگران کننده مانند RDP، SMB، WinRM، SSH، پورت های مدیریت سفارشی"
                 },
                 {
                     "field": "AllowedManagementParents",
-                    "description": "Expected parent processes such as SCCM, Intune agent, GPO client"
+                    "description": "Expected parent processes such as SCCM, Intune agent, GPO client",
+                    "description_fa": "فرآیندهای والد مورد انتظار مانند SCCM، Intune agent، GPO Client"
                 },
                 {
                     "field": "RuleScopeThreshold",
-                    "description": "Detect widening from subnet/local scope to Any/0.0.0.0/0"
+                    "description": "Detect widening from subnet/local scope to Any/0.0.0.0/0",
+                    "description_fa": "گشاد شدن از زیرشبکه/حوزه محلی به Any/0.0.0.0/0 را تشخیص دهید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 2043",
+            "description_fa": "فرآیندها یا کاربرانی را که نمایه‌ها، خط‌مشی‌ها یا قوانین Windows Defender Firewall را تغییر می‌دهند و با تغییرات قابل اندازه‌گیری قرار گرفتن در معرض شبکه دنبال می‌شوند، شناسایی می‌کند. اجرای مدیریت فایروال، جهش رجیستری/خط مشی، تغییرات وضعیت سرویس، و متعاقب آن اتصال ورودی یا خروجی متناقض با مدیریت پایه است."
         }
     ]
 }

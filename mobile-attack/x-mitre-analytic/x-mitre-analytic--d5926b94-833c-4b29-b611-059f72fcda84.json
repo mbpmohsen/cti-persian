@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0650#AN1731",
-                    "external_id": "AN1731"
+                    "external_id": "AN1731",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -62,29 +63,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time correlation between symmetric encryption operations and outbound communication"
+                    "description": "Time correlation between symmetric encryption operations and outbound communication",
+                    "description_fa": "همبستگی زمانی بین عملیات رمزگذاری متقارن و ارتباطات خروجی"
                 },
                 {
                     "field": "EntropyThreshold",
-                    "description": "Threshold for detecting encrypted payloads based on entropy scoring"
+                    "description": "Threshold for detecting encrypted payloads based on entropy scoring",
+                    "description_fa": "آستانه برای تشخیص محموله های رمزگذاری شده بر اساس امتیاز دهی آنتروپی"
                 },
                 {
                     "field": "KeyReuseThreshold",
-                    "description": "Number of repeated uses of the same symmetric key within a defined interval"
+                    "description": "Number of repeated uses of the same symmetric key within a defined interval",
+                    "description_fa": "تعداد استفاده های مکرر از یک کلید متقارن در یک بازه زمانی مشخص"
                 },
                 {
                     "field": "AllowedCryptoApps",
-                    "description": "Apps expected to use symmetric encryption (e.g., messaging, VPN)"
+                    "description": "Apps expected to use symmetric encryption (e.g., messaging, VPN)",
+                    "description_fa": "برنامه‌هایی که انتظار می‌رود از رمزگذاری متقارن استفاده کنند (مانند پیام‌رسانی، VPN)"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether encryption activity should occur only during active user interaction"
+                    "description": "Whether encryption activity should occur only during active user interaction",
+                    "description_fa": "آیا فعالیت رمزگذاری باید فقط در طول تعامل فعال کاربر رخ دهد یا خیر"
                 },
                 {
                     "field": "BeaconIntervalVariance",
-                    "description": "Expected jitter vs periodic encrypted communication"
+                    "description": "Expected jitter vs periodic encrypted communication",
+                    "description_fa": "جیتر مورد انتظار در مقابل ارتباطات رمزگذاری شده دوره ای"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1731",
+            "description_fa": "یک برنامه کاربردی، عملیات رمزنگاری متقارن مکرر (مانند AES/RC4) را روی داده‌های جمع‌آوری‌شده یا مرحله‌بندی شده با استفاده از کلیدهای قابل دسترسی محلی یا قابل استفاده مجدد انجام می‌دهد و به دنبال آن ارتباطات خروجی ساختاریافته است. تشخیص، فراخوانی متقارن API کریپتو + الگوهای استفاده مجدد از کلید + مرحله‌بندی داده + زمینه اجرای پس‌زمینه + انتقال شبکه، به‌ویژه زمانی که با عملکرد برنامه مورد انتظار ناسازگار باشد، مرتبط می‌کند."
         }
     ]
 }

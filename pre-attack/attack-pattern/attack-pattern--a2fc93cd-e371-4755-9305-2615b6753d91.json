@@ -12,19 +12,26 @@
                 {
                     "external_id": "T1259",
                     "url": "https://attack.mitre.org/techniques/T1259",
-                    "source_name": "mitre-pre-attack"
+                    "source_name": "mitre-pre-attack",
+                    "source_name_fa": "میتر قبل از حمله"
                 },
                 {
                     "description": "Cliff Stoll. (1089). The Cuckoo's Egg. Retrieved August 8, 2017.",
-                    "source_name": "CuckoosEgg"
+                    "source_name": "CuckoosEgg",
+                    "description_fa": "کلیف استول. (1089). تخم فاخته. بازبینی شده در ۸ اوت ۲۰۱۷.",
+                    "source_name_fa": "تخم فاخته"
                 },
                 {
                     "description": "Wikipedia contributors. (2017, January 18). The Cuckoo's Egg. Retrieved March 5, 2017.",
-                    "source_name": "CuckoosEggWikipedia"
+                    "source_name": "CuckoosEggWikipedia",
+                    "description_fa": "مشارکت کنندگان ویکی پدیا (2017، 18 ژانویه). تخم فاخته. بازبینی شده در ۵ مارس ۲۰۱۷.",
+                    "source_name_fa": "فاخته تخم مرغ ویکی پدیا"
                 },
                 {
                     "description": "WBGH Nova. (1990, October 3). The KGB, the Computer and Me. Retrieved March 5, 2017.",
-                    "source_name": "KGBComputerMe"
+                    "source_name": "KGBComputerMe",
+                    "description_fa": "WBGH Nova. (1990، 3 اکتبر). KGB، کامپیوتر و من. بازبینی شده در ۵ مارس ۲۰۱۷.",
+                    "source_name_fa": "KGBComputerMe"
                 }
             ],
             "object_marking_refs": [
@@ -45,7 +52,11 @@
             "x_mitre_difficulty_for_adversary": "No",
             "x_mitre_detectable_by_common_defenses_explanation": "This is not easily performed remotely and therefore not a detectable event.  If the adversary can sniff traffic to deduce trust relations, this is a passive activity and not detectable.",
             "x_mitre_detectable_by_common_defenses": "No",
-            "x_mitre_deprecated": true
+            "x_mitre_deprecated": true,
+            "name_fa": "وابستگی های اعتماد شبکه خارجی را تعیین کنید",
+            "description_fa": "این شی منسوخ شده است زیرا محتوای آن در دامنه سازمانی ادغام شده است. لطفاً ماتریس [PRE](http://attack.mitre.org/matrices/enterprise/pre/) را برای جایگزینی آن ببینید. محتوای قبلی این صفحه [اینجا] (https://attack.mitre.org/versions/v7/techniques/T1259) حفظ شده است.\n\nتراست های شبکه ارتباطات بین شبکه های مختلف را با دسترسی ها و مجوزهای خاص امکان پذیر می کند. تراست های شبکه می تواند شامل اجرای تراست های دامنه یا استفاده از شبکه های خصوصی مجازی (VPN) باشد. (Citation: CuckoosEgg) (Citation: CuckoosEggWikipedia) (Citation: KGBComputerMe)",
+            "x_mitre_difficulty_for_adversary_explanation_fa": "تعیین روابط اعتماد زمانی که در یک شبکه داخلی است، امری بی اهمیت است.  ابزارهای ساده ای مانند مسیر ردیابی می توانند شواهدی از فایروال ها یا VPN ها و سپس میزبان ها در دو طرف دیوار آتش نشان دهند که نشان دهنده یک شبکه قابل اعتماد متفاوت است. ابزارهای خط فرمان Active Directory همچنین می توانند شبکه های قابل اعتماد جداگانه را شناسایی کنند.\n\nاگر کاملاً خارج از شبکه باشد، شنود ترافیک (در صورت امکان) می‌تواند پروتکل‌های ارتباطی را که می‌توان حدس زد که یک اتصال شبکه قابل اعتماد هستند را نیز آشکار کند (به عنوان مثال، IPsec، شاید SSL، و غیره) اگرچه این مستعد خطا است. \n\nبدون دسترسی دیگر، انجام این کار برای دشمن به طور کامل از نقطه نظر دوردست دشوار است.",
+            "x_mitre_detectable_by_common_defenses_explanation_fa": "این به راحتی از راه دور انجام نمی شود و بنابراین یک رویداد قابل تشخیص نیست.  اگر حریف بتواند برای استنباط روابط اعتماد، ترافیک را استشمام کند، این یک فعالیت منفعل است و قابل تشخیص نیست."
         }
     ]
 }

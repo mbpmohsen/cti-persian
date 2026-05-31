@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0182#AN0514",
-                    "external_id": "AN0514"
+                    "external_id": "AN0514",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0514",
-            "description": "CLI tools (smbclient -L, smbmap, rpcclient, nmblookup) or custom scripts enumerate SMB shares on many internal hosts \u2192 corresponding SMB connections (445/139) captured by Zeek/Netflow within a short window.",
+            "description": "CLI tools (smbclient -L, smbmap, rpcclient, nmblookup) or custom scripts enumerate SMB shares on many internal hosts → corresponding SMB connections (445/139) captured by Zeek/Netflow within a short window.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BurstHostThreshold",
-                    "description": "Minimum unique hosts to flag (e.g., \u22655)."
+                    "description": "Minimum unique hosts to flag (e.g., ≥5).",
+                    "description_fa": "حداقل میزبان‌های منحصربه‌فرد برای پرچم‌گذاری (به عنوان مثال، ≥5)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between tool exec and SMB fan-out (default 10m)."
+                    "description": "Correlation window between tool exec and SMB fan-out (default 10m).",
+                    "description_fa": "پنجره همبستگی بین ابزار exec و فن خروجی SMB (پیش‌فرض 10 متر)."
                 },
                 {
                     "field": "ApprovedInventoryHosts",
-                    "description": "IPs of vulnerability scanners or config mgmt systems."
+                    "description": "IPs of vulnerability scanners or config mgmt systems.",
+                    "description_fa": "IP اسکنرهای آسیب‌پذیری یا پیکربندی سیستم‌های mgmt."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0514",
+            "description_fa": "ابزارهای CLI (smbclient -L، smbmap، rpcclient، nmblookup) یا اسکریپت‌های سفارشی، اشتراک‌های SMB را در بسیاری از میزبان‌های داخلی → اتصالات SMB متناظر (445/139) که توسط Zeek/Netflow در یک پنجره کوتاه ضبط شده‌اند، برمی‌شمارند."
         }
     ]
 }

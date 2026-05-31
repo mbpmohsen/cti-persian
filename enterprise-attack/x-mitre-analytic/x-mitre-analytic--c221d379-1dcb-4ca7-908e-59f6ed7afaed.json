@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0450#AN1243",
-                    "external_id": "AN1243"
+                    "external_id": "AN1243",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Scope detection to non-root or unexpected users performing module-related activity"
+                    "description": "Scope detection to non-root or unexpected users performing module-related activity",
+                    "description_fa": "تشخیص دامنه برای کاربران غیر روت یا غیرمنتظره ای که فعالیت های مرتبط با ماژول را انجام می دهند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Limit alerts to module activity outside approved change windows"
+                    "description": "Limit alerts to module activity outside approved change windows",
+                    "description_fa": "محدود کردن هشدارها به فعالیت ماژول در خارج از پنجره های تغییر تایید شده"
                 },
                 {
                     "field": "FilePathRegex",
-                    "description": "Adjust regex pattern for directories to monitor depending on kernel version or distro"
+                    "description": "Adjust regex pattern for directories to monitor depending on kernel version or distro",
+                    "description_fa": "بسته به نسخه هسته یا توزیع، الگوی regex را برای دایرکتوری‌ها برای نظارت تنظیم کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1243",
+            "description_fa": "فعالیت بارگذاری/تخلیه بارگذاری ماژول هسته را از طریق modprobe، insmod، rmmod یا دستکاری مستقیم /lib/modules نظارت کنید. با نصب هدرهای هسته، دستورات کامپایل یا دانلود فایل‌های .ko ارتباط برقرار کنید. شناسایی ناهنجاری‌ها در بارگذاری ماژول بدون علامت یا تلاش‌های مکرر بارگذاری ماژول در کاربران غیر روت."
         }
     ]
 }

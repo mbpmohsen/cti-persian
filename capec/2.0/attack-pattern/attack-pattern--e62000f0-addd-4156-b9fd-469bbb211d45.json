@@ -9,52 +9,63 @@
                 {
                     "external_id": "CAPEC-8",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/8.html"
+                    "url": "https://capec.mitre.org/data/definitions/8.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-118",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/118.html"
+                    "url": "http://cwe.mitre.org/data/definitions/118.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-733",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/733.html"
+                    "url": "http://cwe.mitre.org/data/definitions/733.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--e62000f0-addd-4156-b9fd-469bbb211d45",
@@ -83,6 +94,18 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -100,11 +123,24 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a buffer overflow to inject malicious code into the stack of a software system or even the heap can require a higher skill level.",
-                "Low": "An adversary can simply overflow a buffer by inserting a long string into an adversary-modifiable injection vector. The result can be a DoS."
+                "Low": "An adversary can simply overflow a buffer by inserting a long string into an adversary-modifiable injection vector. The result can be a DoS.",
+                "High_fa": "بهره برداری از سرریز بافر برای تزریق کد مخرب به پشته یک سیستم نرم افزاری یا حتی پشته می تواند به سطح مهارت بالاتری نیاز داشته باشد.",
+                "Low_fa": "یک حریف به سادگی می تواند با وارد کردن یک رشته طولانی در یک بردار تزریق قابل تغییر، از یک بافر سرریز شود. نتیجه می تواند یک DoS باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله کتابخانه ها یا ماژول های کد مشترکی را که در برابر حملات سرریز بافر آسیب پذیر هستند هدف قرار می دهد. دشمنی که از کتابخانه‌های آسیب‌پذیر شناخته‌شده یا کدهای مشترک آگاهی دارد، می‌تواند به راحتی نرم‌افزارهایی را هدف قرار دهد که از این کتابخانه‌ها استفاده می‌کنند. بنابراین، تمام مشتریانی که از کتابخانه کد استفاده می کنند، توسط ارتباط آسیب پذیر می شوند. این تأثیر بسیار گسترده ای بر امنیت در سراسر یک سیستم دارد و معمولاً بیش از یک فرآیند نرم افزاری را تحت تأثیر قرار می دهد.",
+            "name_fa": "سرریز بافر در تماس API",
+            "x_capec_example_instances_fa": [
+                "<xhtml:b>مثال حمله: Libc در FreeBSD</xhtml:b>\n               <xhtml:p>سرریز بافر در ابزار FreeBSD setlocale (که در ماژول libc یافت می شود) بسیاری از برنامه ها را به یکباره در معرض خطر قرار می دهد.</xhtml:p>",
+                "<xhtml:b>Xtlib</xhtml:b>\n               <xhtml:p>سرریز بافر در کتابخانه Xt سیستم پنجره ای X به کاربران محلی اجازه می دهد تا دستورات را با امتیازات ریشه اجرا کنند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه هدف: </b>دشمن با دانش کتابخانه‌های آسیب‌پذیر یا ماژول‌های کد مشترک، برنامه یا برنامه هدفی را شناسایی می‌کند که از این موارد استفاده می‌کند. <p> <b>بردار تزریق را پیدا کنید: </b> دشمن تلاش می‌کند از API استفاده کند، و اگر بتواند مقدار زیادی داده را ارسال کند تا ببیند آیا حمله سرریز بافر واقعاً کار می‌کند یا نه. اگر خرابی وجود داشته باشد، به این معنی است که حمله سرریز بافر ممکن است.</td></tr></tbody></table><li> <p> <b>محتوای سرریز ساختنی: </b> دشمن محتوایی را که باید تزریق شود براساس دانش خود از آسیب‌پذیری و نتیجه دلخواه خود ایجاد می‌کند. اگر هدف این است که به سادگی باعث از کار افتادن نرم افزار شود، محتوا فقط باید از مقدار بیش از حد داده های تصادفی تشکیل شود. اگر قصد استفاده از سرریز برای اجرای کد دلخواه باشد، حریف مجموعه‌ای از محتوا را ایجاد می‌کند که نه تنها بافر مورد نظر را سرریز می‌کند، بلکه این کار را به‌گونه‌ای انجام می‌دهد که آدرس بازگشتی رونویسی شده با انتخاب یکی از دشمنان جایگزین شود که کدام نقاط به کد تزریق می‌شود. حریف.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>یک کد پوسته مخرب ایجاد کنید که وقتی اجرای برنامه به آن بازگردانده می‌شود، اجرا می‌شود.</td></tr><tr><td>از یک NOP-sled در محتوای سرریز استفاده کنید تا راحت‌تر به \"کد مخرب\" تبدیل شود. این کار به گونه‌ای انجام می‌شود که آدرس برگشتی دقیق لازم نباشد درست باشد، فقط در محدوده همه NOPها</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز کردن بافر: </b>با استفاده از API به‌عنوان بردار تزریقی که بردار تزریقی را به داخل جریان می‌دهد، بافر.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "میزبان هدف یک API را در معرض دید کاربر قرار می دهد.",
+                "یک یا چند توابع API که توسط میزبان هدف در معرض دید قرار می‌گیرند، دارای آسیب‌پذیری سرریز بافر هستند."
+            ]
         }
     ],
     "spec_version": "2.0",

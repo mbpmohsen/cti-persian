@@ -9,25 +9,32 @@
                 {
                     "external_id": "CAPEC-673",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/673.html"
+                    "url": "https://capec.mitre.org/data/definitions/673.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Supply Chain",
                     "external_id": "T1195.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/002",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین نرم افزار به خطر افتاده",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Defending Against Software Supply Chain Attacks, 2021--04, Cybersecurity and Infrastructure Security Agency (CISA)",
                     "external_id": "REF-658",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.cisa.gov/sites/default/files/publications/defending_against_software_supply_chain_attacks_508_1.pdf"
+                    "url": "https://www.cisa.gov/sites/default/files/publications/defending_against_software_supply_chain_attacks_508_1.pdf",
+                    "description_fa": "دفاع در برابر حملات زنجیره تامین نرم افزار، 04-2021، آژانس امنیت سایبری و امنیت زیرساخت (CISA)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Dr. Charles Clancy, Joe Ferraro, Robert A. Martin, Adam G. Pennington, Christopher L. Sledjeski, Dr. Craig J. Wiener, Deliver Uncompromised: Securing Critical Software Supply Chains, 2021--01, The MITRE Corporation",
                     "external_id": "REF-659",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.mitre.org/publications/technical-papers/deliver-uncompromised-securing-critical-software-supply-chains"
+                    "url": "https://www.mitre.org/publications/technical-papers/deliver-uncompromised-securing-critical-software-supply-chains",
+                    "description_fa": "دکتر چارلز کلنسی، جو فرارو، رابرت آ. مارتین، آدام جی. پنینگتون، کریستوفر ال. اسلجسکی، دکتر کریگ جی وینر، ارائه بدون خطر: امنیت زنجیره تامین نرم افزار حیاتی، 01-2021، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--a7061d3b-6f93-440d-8b0d-4078e80eef88",
@@ -60,6 +67,22 @@
                 "Integrity": [
                     "Read Data",
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "داده ها را اصلاح کنید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را بخوانید",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -74,11 +97,20 @@
                 "An adversary would need to have access to a targeted developer’s software development environment, including to their software build processes, where the adversary could ensure code maliciously tainted prior to a build process is included in software packages built."
             ],
             "x_capec_skills_required": {
-                "High": "The adversary must have the skills to infiltrate a developer’s software development/build environment and to implant malicious code in developmental software code, a build server, or a software repository containing dependency code, which would be referenced to be included during the software build process."
+                "High": "The adversary must have the skills to infiltrate a developer’s software development/build environment and to implant malicious code in developmental software code, a build server, or a software repository containing dependency code, which would be referenced to be included during the software build process.",
+                "High_fa": "حریف باید مهارت نفوذ به محیط توسعه/ساخت نرم‌افزار توسعه‌دهنده را داشته باشد و کدهای مخرب را در کد نرم‌افزار توسعه‌دهنده، یک سرور ساخت یا یک مخزن نرم‌افزار حاوی کد وابستگی قرار دهد، که باید در طول فرآیند ساخت نرم‌افزار گنجانده شود."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>نرم‌افزاری که توسط یک توسعه‌دهنده معتبر تولید می‌شود، به‌طور مخفیانه با کدهای مخرب آلوده می‌شود و سپس توسط توسعه‌دهنده ناآگاه به صورت دیجیتالی امضا می‌شود، جایی که نرم‌افزار قبل از امضا از طریق فرآیند توسعه یا ساخت نرم‌افزار به خطر افتاده، تغییر کرده است. گیرنده یا کاربر نرم افزار هیچ دلیلی برای این باور ندارد که این نرم افزار چیزی جز مشروع است و اقدام به استقرار آن در سیستم های سازمانی می کند.</xhtml:p>\n            <xhtml:p>این حمله با CAPEC-206 متفاوت است، زیرا توسعه‌دهنده به طور ناخواسته کدهای مخربی را امضا می‌کند که معتقدند قانونی هستند و از هرگونه تغییر مخرب آگاه نیستند.</xhtml:p>",
+            "name_fa": "امضای برنامه‌نویس نرم‌افزاری که به‌طور مخرب تغییر یافته است",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> دشمنی که به محیط ساخت یک سازمان نفوذ کرده است، به طور مخرب کدهایی را که قرار است در ساخت نرم افزار محصول گنجانده شود، از طریق گنجاندن وابستگی نرم افزار، بخشی از فرآیند ساخت نرم افزار، تغییر می دهد. هنگامی که محصول نرم افزاری ساخته شد، توسعه دهنده به صورت الکترونیکی محصول نهایی را با استفاده از کلید امضای خود امضا می کند. دریافت‌کننده محصول نرم‌افزار، یک کاربر/مشتری نهایی، معتقد است که نرم‌افزار منعکس‌کننده قصد توسعه‌دهنده با توجه به عملکرد است، غافل از قصد مخرب دشمن.</xhtml:p>"
+            ],
+            "x_capec_prerequisites_fa": [
+                "حریف باید به محیط توسعه نرم‌افزار توسعه‌دهنده هدف دسترسی داشته باشد، از جمله به فرآیندهای ساخت نرم‌افزار آنها، جایی که حریف می‌تواند اطمینان حاصل کند که کد به‌طور مخرب قبل از فرآیند ساخت در بسته‌های نرم‌افزاری ساخته شده گنجانده شده است."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0093#AN0257",
-                    "external_id": "AN0257"
+                    "external_id": "AN0257",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CLICommandBaseline",
-                    "description": "Expected command set per device role/user role combination"
+                    "description": "Expected command set per device role/user role combination",
+                    "description_fa": "مجموعه دستورات مورد انتظار برای هر ترکیب نقش دستگاه/نقش کاربر"
                 },
                 {
                     "field": "DeviceRoleSensitivity",
-                    "description": "Correlate access with core vs. edge vs. management plane sensitivity"
+                    "description": "Correlate access with core vs. edge vs. management plane sensitivity",
+                    "description_fa": "ارتباط دسترسی با حساسیت هسته در مقابل لبه در مقابل حساسیت صفحه مدیریت"
                 },
                 {
                     "field": "CommandFrequencyThreshold",
-                    "description": "Detect burst usage of `show` or `debug` commands by non-admin users"
+                    "description": "Detect burst usage of `show` or `debug` commands by non-admin users",
+                    "description_fa": "تشخیص استفاده ناگهانی از دستورات «نمایش» یا «اشکال‌زدایی» توسط کاربران غیر سرپرست"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0257",
+            "description_fa": "دشمن دستورات CLI مانند \"show users\"، \"show ssh\" یا تلاش برای حذف لیست کاربران AAA از روترها یا سوئیچ ها را اجرا می کند."
         }
     ]
 }

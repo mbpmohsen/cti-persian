@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0039#AN0109",
-                    "external_id": "AN0109"
+                    "external_id": "AN0109",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -47,13 +48,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EntropyThreshold",
-                    "description": "Adjust based on environment to differentiate DGAs from legitimate CDNs"
+                    "description": "Adjust based on environment to differentiate DGAs from legitimate CDNs",
+                    "description_fa": "بر اساس محیط تنظیم کنید تا DGA ها را از CDN های قانونی متمایز کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Interval for correlating bursts of DNS queries from the same process"
+                    "description": "Interval for correlating bursts of DNS queries from the same process",
+                    "description_fa": "فاصله زمانی برای همبستگی انفجارهای جستجوهای DNS از همان فرآیند"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0109",
+            "description_fa": "فعالیت‌های جستجوی DNS با فرکانس بالا یا غیرعادی را با فرآیندهایی که معمولاً درخواست‌های شبکه ایجاد نمی‌کنند (مانند برنامه‌های آفیس، ابزارهای کمکی سیستم) مرتبط کنید. جستجوی دامنه های شبه تصادفی یا با آنتروپی بالا که نشان دهنده الگوریتم های تولید دامنه (DGA) است را شناسایی کنید."
         }
     ]
 }

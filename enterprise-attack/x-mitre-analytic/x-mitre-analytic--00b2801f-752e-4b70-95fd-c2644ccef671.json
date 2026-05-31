@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0186#AN0534",
-                    "external_id": "AN0534"
+                    "external_id": "AN0534",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserAgentFilter",
-                    "description": "Filter for scripting agents (e.g., Python, PowerShell) which may vary by org."
+                    "description": "Filter for scripting agents (e.g., Python, PowerShell) which may vary by org.",
+                    "description_fa": "فیلتر برای عوامل اسکریپت نویسی (مانند پایتون، پاورشل) که ممکن است بسته به سازمان متفاوت باشد."
                 },
                 {
                     "field": "ExpectedClientIPList",
-                    "description": "Set of known internal or managed IPs to filter benign automation."
+                    "description": "Set of known internal or managed IPs to filter benign automation.",
+                    "description_fa": "مجموعه ای از IP های داخلی یا مدیریت شده شناخته شده برای فیلتر کردن اتوماسیون خوش خیم."
                 },
                 {
                     "field": "DeviceProperties",
-                    "description": "Expected managed device profiles used to detect unmanaged devices."
+                    "description": "Expected managed device profiles used to detect unmanaged devices.",
+                    "description_fa": "نمایه‌های دستگاه مدیریت‌شده مورد انتظار برای شناسایی دستگاه‌های مدیریت‌نشده استفاده می‌شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0534",
+            "description_fa": "ورودهای مشکوک به Graph API یا منابع حساس با استفاده از عوامل برنامه نویسی غیر مرورگر (مانند Python، PowerShell)، اغلب برای دسترسی برنامه‌ای به صندوق پستی یا محتوای OneDrive."
         }
     ]
 }

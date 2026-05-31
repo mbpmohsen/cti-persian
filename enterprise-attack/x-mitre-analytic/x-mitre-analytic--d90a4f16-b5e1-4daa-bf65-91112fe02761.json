@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0496#AN1367",
-                    "external_id": "AN1367"
+                    "external_id": "AN1367",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,21 +52,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Bind exec\u2192service\u2192egress events; extend for staged deployments."
+                    "description": "Bind exec→service→egress events; extend for staged deployments.",
+                    "description_fa": "اتصال exec → سرویس → رویدادهای خروج. گسترش برای استقرار مرحله ای."
                 },
                 {
                     "field": "DaemonAllowlist",
-                    "description": "Approved .service names/paths to avoid flagging corporate agents."
+                    "description": "Approved .service names/paths to avoid flagging corporate agents.",
+                    "description_fa": "نام‌ها/مسیرهای سرویس .تأیید شده برای جلوگیری از پرچم‌گذاری نمایندگان شرکت."
                 },
                 {
                     "field": "SuspiciousChildProcesses",
-                    "description": "Define shells/interpreters considered anomalous when spawned by GUI/agent parents."
+                    "description": "Define shells/interpreters considered anomalous when spawned by GUI/agent parents.",
+                    "description_fa": "پوسته‌ها/مفسرانی را تعریف کنید که وقتی توسط والدین رابط کاربری گرافیکی/عامل ایجاد می‌شوند، غیرعادی محسوب می‌شوند."
                 },
                 {
                     "field": "EgressHeuristics",
-                    "description": "Flow heuristics for long-lived, client-heavy connections post-install."
+                    "description": "Flow heuristics for long-lived, client-heavy connections post-install.",
+                    "description_fa": "اکتشافی جریان برای اتصالات طولانی مدت و با مشتری پس از نصب."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1367",
+            "description_fa": "دنباله ای از اجرای عامل RAT، پایداری سیستمی، و خروج خارجی طولانی مدت. پوسته های تعاملی اختیاری که از عامل ایجاد می شوند."
         }
     ]
 }

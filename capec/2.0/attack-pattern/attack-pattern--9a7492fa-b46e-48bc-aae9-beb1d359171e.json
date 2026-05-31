@@ -9,42 +9,54 @@
                 {
                     "external_id": "CAPEC-639",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/639.html"
+                    "url": "https://capec.mitre.org/data/definitions/639.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-552",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/552.html"
+                    "url": "http://cwe.mitre.org/data/definitions/552.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Data from Network Shared Drive",
                     "external_id": "T1039",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1039"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1039",
+                    "description_fa": "داده از درایو مشترک شبکه",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Unsecured Credentials: Credentials in Files",
                     "external_id": "T1552.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1552/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1552/001",
+                    "description_fa": "اعتبارنامه های ناامن: اعتبارنامه ها در فایل ها",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Unsecured Credentials: Bash History",
                     "external_id": "T1552.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1552/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1552/003",
+                    "description_fa": "اعتبارنامه های ناامن: تاریخچه Bash",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Unsecured Credentials: Private Keys",
                     "external_id": "T1552.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1552/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1552/004",
+                    "description_fa": "اعتبارنامه های ناامن: کلیدهای خصوصی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Unsecured Credentials: Group Policy Preferences",
                     "external_id": "T1552.006",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1552/006"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1552/006",
+                    "description_fa": "اعتبارنامه های ناامن: تنظیمات برگزیده خط مشی گروه",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--9a7492fa-b46e-48bc-aae9-beb1d359171e",
@@ -61,6 +73,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
                 ]
             },
             "x_capec_domains": [
@@ -75,7 +90,16 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن اطلاعات غیرمجاز را به دلیل محافظت نادرست فایل ها به دست می آورد. اگر برنامه ای اطلاعات حساس را در فایلی ذخیره کند که با کنترل دسترسی مناسب محافظت نشده باشد، آنگاه دشمن می تواند به فایل دسترسی پیدا کند و اطلاعات حساس را جستجو کند.",
+            "name_fa": "فایل های سیستم را بررسی کنید",
+            "x_capec_example_instances_fa": [
+                "دشمنان ممکن است سیستم‌های فایل محلی و اشتراک‌گذاری فایل‌های راه دور را برای فایل‌های حاوی گذرواژه جستجو کنند. اینها می‌توانند فایل‌هایی باشند که توسط کاربران برای ذخیره اطلاعات کاربری خود، ذخیره‌های اعتبار مشترک برای گروهی از افراد، فایل‌های پیکربندی حاوی رمزهای عبور برای یک سیستم یا سرویس، یا کد منبع/فایل‌های باینری حاوی رمزهای عبور تعبیه‌شده ایجاد شده‌اند.",
+                "دشمنان ممکن است اشتراک‌های شبکه را در رایانه‌هایی که به خطر انداخته‌اند جستجو کنند تا فایل‌های مورد علاقه خود را پیدا کنند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "یک دشمن به سیستم فایل یک سیستم دسترسی دارد."
+            ]
         }
     ],
     "spec_version": "2.0",

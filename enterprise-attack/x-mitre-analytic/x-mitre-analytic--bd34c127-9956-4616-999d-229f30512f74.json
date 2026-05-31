@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0151#AN0430",
-                    "external_id": "AN0430"
+                    "external_id": "AN0430",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -81,25 +82,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., 5\u201315 minutes) between time discovery and follow-on scheduling/conditional actions."
+                    "description": "Correlation window (e.g., 5–15 minutes) between time discovery and follow-on scheduling/conditional actions.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، 5 تا 15 دقیقه) بین کشف زمان و برنامه‌ریزی بعدی/اقدامات مشروط."
                 },
                 {
                     "field": "AllowedParents",
-                    "description": "Legitimate parent processes (e.g., corporate scripts, management agents) that frequently call time APIs."
+                    "description": "Legitimate parent processes (e.g., corporate scripts, management agents) that frequently call time APIs.",
+                    "description_fa": "فرآیندهای والد قانونی (به عنوان مثال، اسکریپت های شرکتی، عوامل مدیریت) که اغلب API های زمان را فراخوانی می کنند."
                 },
                 {
                     "field": "CommandlineKeywordList",
-                    "description": "Extend/restrict keyword list for time queries (e.g., custom PS functions, .NET calls)."
+                    "description": "Extend/restrict keyword list for time queries (e.g., custom PS functions, .NET calls).",
+                    "description_fa": "گسترش/محدود کردن فهرست کلمات کلیدی برای جستارهای زمانی (به عنوان مثال، توابع سفارشی PS، تماس‌های NET)."
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "Restrict to non-service, non-administrative, or newly created/rare users."
+                    "description": "Restrict to non-service, non-administrative, or newly created/rare users.",
+                    "description_fa": "محدود به کاربران غیر خدماتی، غیر اداری، یا تازه ایجاد شده/نادر."
                 },
                 {
                     "field": "ProcessPrevalenceThreshold",
-                    "description": "Frequency threshold to exclude common estate-wide benign usage."
+                    "description": "Frequency threshold to exclude common estate-wide benign usage.",
+                    "description_fa": "آستانه فرکانس برای حذف استفاده معمولی خوش خیم در کل دارایی."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0430",
+            "description_fa": "فرآیند/اسکریپت غیرقابل اعتماد یا غیرمعمول (cmd.exe، powershell.exe، w32tm.exe، net.exe، باینری های سفارشی) زمان/منطقه زمانی سیستم را پرس و جو می کند (به عنوان مثال، w32tm /tz، زمان خالص \\\\host، Get-TimeZone، GetTickCount API) و (به صورت اختیاری) توسط یک پنجره زمانی کوتاه شده یا به صورت شرطی اجرا می شود. (به عنوان مثال، schtasks /create، at.exe، PowerShell Start-Sleep با مقادیر بزرگ)."
         }
     ]
 }

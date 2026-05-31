@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0373#AN1052",
-                    "external_id": "AN1052"
+                    "external_id": "AN1052",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PowerShellCmdletFilter",
-                    "description": "Exchange cmdlets to include or exclude based on scope (e.g., Add-MailboxPermission, Set-MailboxFolderPermission)."
+                    "description": "Exchange cmdlets to include or exclude based on scope (e.g., Add-MailboxPermission, Set-MailboxFolderPermission).",
+                    "description_fa": "cmdlet ها را برای گنجاندن یا حذف بر اساس دامنه مبادله کنید (به عنوان مثال، Add-MailboxPermission، Set-MailboxFolderPermission)."
                 },
                 {
                     "field": "ExecutionParent",
-                    "description": "Flag suspicious script or interactive shell launch by non-admins."
+                    "description": "Flag suspicious script or interactive shell launch by non-admins.",
+                    "description_fa": "اسکریپت مشکوک یا راه‌اندازی پوسته تعاملی توسط غیر سرپرستان را پرچم‌گذاری کنید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Window in which Add-MailboxPermission is followed by anomalous usage (e.g., SendAs events)."
+                    "description": "Window in which Add-MailboxPermission is followed by anomalous usage (e.g., SendAs events).",
+                    "description_fa": "پنجره ای که در آن Add-MailboxPermission با استفاده غیرعادی دنبال می شود (به عنوان مثال، رویدادهای SendAs)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1052",
+            "description_fa": "اجرای دستورات PowerShell که مجوزهای صندوق پستی را با استفاده از cmdlet های Exchange (به عنوان مثال، Add-MailboxPermission)، که اغلب به BEC یا پایداری پس از سازش مرتبط است، تغییر می دهند."
         }
     ]
 }

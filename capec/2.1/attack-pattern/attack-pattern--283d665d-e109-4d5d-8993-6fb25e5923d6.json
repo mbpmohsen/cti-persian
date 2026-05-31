@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-251",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/251.html"
+                    "url": "https://capec.mitre.org/data/definitions/251.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Process Injection",
                     "external_id": "T1055",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1055"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1055",
+                    "description_fa": "تزریق فرآیند",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-613",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/07-Input_Validation_Testing/11.1-Testing_for_Local_File_Inclusion.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--283d665d-e109-4d5d-8993-6fb25e5923d6",
@@ -47,6 +53,12 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Through local code inclusion, the adversary compromises the integrity of the application.)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (یک مهاجم ممکن است از گنجاندن کد محلی برای چاپ داده های حساس در یک صفحه، مانند فایل های پیکربندی پنهان یا هش رمز عبور استفاده کند.)"
+                ],
+                "Integrity_fa": [
+                    "دستورات غیرمجاز را اجرا کنید (از طریق گنجاندن کد محلی، حریف یکپارچگی برنامه را به خطر می اندازد.)"
                 ]
             },
             "x_capec_domains": [
@@ -66,7 +78,16 @@
             ],
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم برنامه‌ای را مجبور می‌کند تا فایل‌های کد دلخواه را از ماشین محلی بارگیری کند. مهاجم می‌تواند از این برای بارگیری نسخه‌های قدیمی فایل‌های کتابخانه که دارای آسیب‌پذیری‌های شناخته شده هستند، برای بارگیری فایل‌هایی که مهاجم در طول حمله قبلی روی ماشین محلی قرار داده است، یا تغییر عملکرد برنامه مورد نظر به روش‌های غیرمنتظره استفاده کند.",
+            "name_fa": "گنجاندن کد محلی",
+            "x_capec_prerequisites_fa": [
+                "برنامه مورد نظر باید دارای یک اشکال باشد که به دشمن اجازه می دهد تا کنترل کند کدام فایل کد در مقطعی بارگذاری می شود.",
+                "برخی از انواع این حمله ممکن است نیاز داشته باشند که نسخه های قدیمی برخی از فایل های کد موجود و در مکان های قابل پیش بینی وجود داشته باشند."
+            ],
+            "x_capec_resources_required_fa": [
+                "حریف باید دسترسی کافی به برنامه هدف داشته باشد تا هویت یک فایل موجود در محلی را کنترل کند. مهاجم همچنین ممکن است نیاز داشته باشد که بتواند فایل‌های کد دلخواه را در ماشین هدف آپلود کند، اگرچه هر مکانی برای این فایل‌ها ممکن است قابل قبول باشد."
+            ]
         }
     ],
     "type": "bundle"

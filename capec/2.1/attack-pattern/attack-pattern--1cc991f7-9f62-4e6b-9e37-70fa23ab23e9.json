@@ -9,18 +9,22 @@
                 {
                     "external_id": "CAPEC-30",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/30.html"
+                    "url": "https://capec.mitre.org/data/definitions/30.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-270",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/270.html"
+                    "url": "http://cwe.mitre.org/data/definitions/270.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Process Injection: Thread Execution Hijacking",
                     "external_id": "T1055.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1055/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1055/003",
+                    "description_fa": "Process Injection: Thread Execution Hijacking",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--1cc991f7-9f62-4e6b-9e37-70fa23ab23e9",
@@ -51,6 +55,22 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -69,11 +89,25 @@
                 "\n               <xhtml:p>None: No specialized resources are required to execute this type of attack. The adversary needs to be able to latch onto a privileged thread.</xhtml:p>\n               <xhtml:p>The adversary does, however, need to be able to program, compile, and link to the victim binaries being executed so that it will turn control of a privileged thread over to the adversary's malicious code. This is the case even if the adversary conducts the attack remotely.</xhtml:p>\n            "
             ],
             "x_capec_skills_required": {
-                "High": "Hijacking a thread involves knowledge of how processes and threads function on the target platform, the design of the target application as well as the ability to identify the primitives to be used or manipulated to hijack the thread."
+                "High": "Hijacking a thread involves knowledge of how processes and threads function on the target platform, the design of the target application as well as the ability to identify the primitives to be used or manipulated to hijack the thread.",
+                "High_fa": "ربودن thread شامل دانش نحوه عملکرد فرآیندها و رشته ها بر روی پلت فرم هدف، طراحی برنامه هدف و همچنین توانایی شناسایی اولیه هایی است که باید برای ربودن نخ مورد استفاده قرار گیرند یا دستکاری شوند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن با تزریق کد مخرب به یک فرآیند در حال اجرا، یک رشته اجرایی ممتاز را ربوده است. با استفاده از یک رشته ممتاز برای انجام درخواست خود، دشمنان می توانند از شناسایی مبتنی بر فرآیند که حمله ای را که فرآیند جدیدی ایجاد می کند متوقف می کند، اجتناب کنند. این می تواند منجر به دسترسی دشمن به حافظه فرآیند شود و همچنین می تواند امتیازات بالاتری را فعال کند. رایج ترین راه برای انجام این حمله، تعلیق یک رشته موجود و دستکاری حافظه آن است.",
+            "name_fa": "ربودن یک رشته ممتاز اعدام",
+            "x_capec_example_instances_fa": [
+                "دشمن برنامه ای را هدف قرار می دهد که با استفاده از AWT جاوا نوشته شده است، با مدل رویداد 1.2.2. در این شرایط، هر رویداد AWTE که از سیستم عامل اصلی منشا می گیرد (مانند کلیک ماوس) یک رشته ممتاز (مثلاً یک تماس سیستم) را برمی گرداند. حریف می تواند انتخاب کند که رشته تولید شده توسط AWT را پس از مصرف رویداد برنگرداند، اما در عوض از امتیاز خود برای انجام عملیات ممتاز استفاده کند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تعیین رشته هدف: </b> دشمن رشته سیستم زیربنایی را که تحت کنترل کاربر است تعیین می کند</p></li></ol></div><div><h3>Ex to thread: </b>سپس حریف یک دسته فرآیند را به دست می‌آورد.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از فراخوانی API \"OpenThread\" در ویندوز در یک رشته شناخته‌شده استفاده کنید.</td></tr><tr><tr></td> و یک تابع عمومی را مسدود کنید. یک سیگنال معمولی بگیرید سپس thread آویزان می‌شود و حریف می‌تواند تلاش کند تا کنترلی برای آن پیدا کند.</td></tr></tbody></table><li> <p> <b>حافظه فرآیند را تغییر دهید: </b>هنگامی که حریف یک دسته به thread هدف داشته باشد، رشته را معلق می‌کند و حافظه را با استفاده از سیستم عامل اصلی تغییر می‌دهد. تماس‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>در ویندوز، از \"SuspendThread\" و سپس \"VirtualAllocEx\"، \"WriteProcessMemory\" و \"SetThreadContext\".</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>ازسرگیری اجرای رشته: </b>هنگامی که حافظه فرآیند برای اجرای کد مخرب تغییر داده شد، th از سر گرفته شد.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>در ویندوز، از \"ResumeThread\" استفاده کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه مورد نظر از یک مدل اجرای رشته‌ای استفاده می‌کند که رشته‌ها در سطح امتیاز بالاتری نسبت به کاربران عادی کار می‌کنند یا توانایی جابجایی به آن را دارند.",
+                "برای اجرای عملی این دسته از حملات، دشمن باید توانایی ربودن یک رشته ممتاز را داشته باشد. این توانایی شامل، اما نه محدود به، تغییر متغیرهای محیطی است که بر فرآیندی که رشته به آن تعلق دارد، یا فراخوانی فراخوان‌های سیستم عامل بومی که می‌توانند حافظه پردازش را تعلیق و تغییر دهند، تأثیر می‌گذارند. این مانع از حملات مبتنی بر شبکه نمی شود، اما شناسایی و اجرای آنها را از نظر مفهومی دشوارتر می کند."
+            ],
+            "x_capec_resources_required_fa": [
+                "<xhtml:p>هیچکدام: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. حریف باید بتواند به یک رشته ممتاز متصل شود.</xhtml:p>\n               <xhtml:p> با این حال، حریف باید بتواند برنامه‌نویسی، کامپایل و پیوند به باینری‌های قربانی در حال اجرا را داشته باشد تا کنترل یک رشته ممتاز را به کد مخرب حریف تبدیل کند. این مورد حتی اگر دشمن حمله را از راه دور انجام دهد نیز صادق است.</xhtml:p>"
+            ]
         }
     ],
     "type": "bundle"

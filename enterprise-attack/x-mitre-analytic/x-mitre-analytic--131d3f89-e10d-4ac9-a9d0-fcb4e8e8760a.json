@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0002#AN0004",
-                    "external_id": "AN0004"
+                    "external_id": "AN0004",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AppContextFilter",
-                    "description": "Applications not known to use pub/sub protocols"
+                    "description": "Applications not known to use pub/sub protocols",
+                    "description_fa": "برنامه‌هایی که از پروتکل‌های pub/sub استفاده نمی‌کنند"
                 },
                 {
                     "field": "URIPathRegex",
-                    "description": "Custom path patterns to message brokers over HTTPS"
+                    "description": "Custom path patterns to message brokers over HTTPS",
+                    "description_fa": "الگوهای مسیر سفارشی برای کارگزاران پیام از طریق HTTPS"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0004",
+            "description_fa": "باینری‌های osascript، curl یا سفارشی را که با کارگزاران XMPP/MQTT در مقاصد تایید نشده با بارهای رمزگذاری‌شده یا درخواست‌های مکرر مشابه POST به URI کارگزار در تعامل هستند، شناسایی می‌کند."
         }
     ]
 }

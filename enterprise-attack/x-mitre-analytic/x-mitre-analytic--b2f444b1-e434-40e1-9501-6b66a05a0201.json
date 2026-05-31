@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0215#AN0603",
-                    "external_id": "AN0603"
+                    "external_id": "AN0603",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "FilenamePattern",
-                    "description": "Look for creation of ransom note files (e.g., READ_ME.txt, HELP_DECRYPT.html)."
+                    "description": "Look for creation of ransom note files (e.g., READ_ME.txt, HELP_DECRYPT.html).",
+                    "description_fa": "به دنبال ایجاد فایل‌های یادداشت باج باشید (مانند READ_ME.txt، HELP_DECRYPT.html)."
                 },
                 {
                     "field": "SyscallBurstRate",
-                    "description": "High write/open/unlink activity in short intervals indicates encryption attempts."
+                    "description": "High write/open/unlink activity in short intervals indicates encryption attempts.",
+                    "description_fa": "فعالیت بالای نوشتن/باز کردن/لغو پیوند در فواصل زمانی کوتاه نشان دهنده تلاش برای رمزگذاری است."
                 },
                 {
                     "field": "DirectoryTargeted",
-                    "description": "Correlate activity in /home, /etc, /opt, or mounted volumes."
+                    "description": "Correlate activity in /home, /etc, /opt, or mounted volumes.",
+                    "description_fa": "فعالیت را در /home، /etc، /opt یا حجم های نصب شده مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0603",
+            "description_fa": "رمزگذاری از طریق ابزارهای سفارشی یا منبع باز (به عنوان مثال، openssl، gpg، aescrypt) که به صورت بازگشتی دایرکتوری های کاربر یا سیستم را هدف قرار می دهد. همچنین شامل بازنویسی داده‌های موجود و کاهش یادداشت‌های باج است."
         }
     ]
 }

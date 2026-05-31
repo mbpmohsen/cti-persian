@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0555#AN1534",
-                    "external_id": "AN1534"
+                    "external_id": "AN1534",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PathPrefix",
-                    "description": "Paths such as `/etc/emond.d/rules/` and `/private/var/db/emondClients` may vary slightly or be symlinked in some setups"
+                    "description": "Paths such as `/etc/emond.d/rules/` and `/private/var/db/emondClients` may vary slightly or be symlinked in some setups",
+                    "description_fa": "مسیرهایی مانند `/etc/emond.d/rules/` و `/private/var/db/emondClients` ممکن است کمی متفاوت باشند یا در برخی از تنظیمات به هم پیوند داشته باشند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "The time range for correlating rule file creation to emond execution may be tuned based on system performance and usage"
+                    "description": "The time range for correlating rule file creation to emond execution may be tuned based on system performance and usage",
+                    "description_fa": "محدوده زمانی ایجاد فایل قانون مرتبط با اجرای emond ممکن است بر اساس عملکرد و استفاده سیستم تنظیم شود."
                 },
                 {
                     "field": "ParentProcessFilter",
-                    "description": "Defenders may wish to restrict alerts to emond processes not spawned from trusted system update or provisioning tools"
+                    "description": "Defenders may wish to restrict alerts to emond processes not spawned from trusted system update or provisioning tools",
+                    "description_fa": "مدافعان ممکن است بخواهند هشدارها را به فرآیندهای emond محدود کنند که از به روز رسانی سیستم قابل اعتماد یا ابزارهای تدارک تولید نمی شوند."
                 },
                 {
                     "field": "CommandPatternList",
-                    "description": "List of known suspicious commands or binaries used by adversaries (e.g., reverse shells, persistence scripts)"
+                    "description": "List of known suspicious commands or binaries used by adversaries (e.g., reverse shells, persistence scripts)",
+                    "description_fa": "فهرستی از دستورات مشکوک یا باینری های استفاده شده توسط دشمنان (به عنوان مثال، پوسته های معکوس، اسکریپت های ماندگار)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1534",
+            "description_fa": "تشخیص بر شناسایی ایجاد یا اصلاح فایل های غیرمجاز در «/etc/emond.d/rules/» یا «/private/var/db/emondClients» تمرکز دارد، که نشان دهنده تلاش برای ثبت یک قانون emond مخرب است. با اجرای فرآیند «/sbin/emond» و هر دستور راه‌اندازی که فراخوانی می‌کند، به ویژه در هنگام بوت یا رویدادهای ورود به سیستم، ارتباط برقرار کنید. ناهنجاری ها ممکن است شامل قوانین ایجاد شده توسط کاربران غیر ریشه یا دستورات پوسته غیرمنتظره ای باشد که توسط emond اجرا می شوند."
         }
     ]
 }

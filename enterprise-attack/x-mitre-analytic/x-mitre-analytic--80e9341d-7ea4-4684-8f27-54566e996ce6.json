@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0067#AN0182",
-                    "external_id": "AN0182"
+                    "external_id": "AN0182",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,13 +47,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredCmdlets",
-                    "description": "List of PowerShell cmdlets where suppressed error handling is suspicious (e.g., Invoke-Expression, Invoke-WebRequest)."
+                    "description": "List of PowerShell cmdlets where suppressed error handling is suspicious (e.g., Invoke-Expression, Invoke-WebRequest).",
+                    "description_fa": "فهرست cmdlet های PowerShell که در آنها مدیریت خطای سرکوب شده مشکوک است (به عنوان مثال، Invoke-Expression، Invoke-WebRequest)."
                 },
                 {
                     "field": "ErrorActionThreshold",
-                    "description": "Frequency of suppressed error actions within time window that should trigger detection."
+                    "description": "Frequency of suppressed error actions within time window that should trigger detection.",
+                    "description_fa": "فراوانی اقدامات خطای سرکوب شده در پنجره زمانی که باید شناسایی را آغاز کند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0182",
+            "description_fa": "اجرای PowerShell یا اسکریپت با پارامترهایی که خطاها را سرکوب می کند یا وقفه های کاربر را نادیده می گیرد، مانند «-ErrorAction SilentlyContinue». دیدگاه مدافع: تشخیص مغایرت بین آرگومان های خطای سرکوب شده و ادامه رفتار اجرا."
         }
     ]
 }

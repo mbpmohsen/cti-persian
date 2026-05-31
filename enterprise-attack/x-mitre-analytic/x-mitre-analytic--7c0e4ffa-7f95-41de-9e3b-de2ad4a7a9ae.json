@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0132#AN0373",
-                    "external_id": "AN0373"
+                    "external_id": "AN0373",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "lockfile_path_regex",
-                    "description": "Detect patterns like /tmp/.lock*, /var/run/*lock used by malware."
+                    "description": "Detect patterns like /tmp/.lock*, /var/run/*lock used by malware.",
+                    "description_fa": "الگوهایی مانند /tmp/.lock*، /var/run/*lock که توسط بدافزار استفاده می شود را شناسایی کنید."
                 },
                 {
                     "field": "exit_code",
-                    "description": "Track specific exit codes (e.g., 1, 2) that signal lock acquisition failure."
+                    "description": "Track specific exit codes (e.g., 1, 2) that signal lock acquisition failure.",
+                    "description_fa": "کدهای خروجی خاص (مثلاً 1، 2) را ردیابی کنید که نشان دهنده عدم موفقیت در کسب قفل است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate lockfile access + early process termination within N seconds."
+                    "description": "Correlate lockfile access + early process termination within N seconds.",
+                    "description_fa": "ارتباط دسترسی به فایل قفل + خاتمه زودهنگام فرآیند در N ثانیه."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0373",
+            "description_fa": "قفل فایل از طریق open() + flock() یا lockf() در مسیر قابل پیش بینی (به عنوان مثال، /tmp/.lock123) و به دنبال خروج زودهنگام مشروط یا رفتار فرآیند واگرا به دست می آید."
         }
     ]
 }

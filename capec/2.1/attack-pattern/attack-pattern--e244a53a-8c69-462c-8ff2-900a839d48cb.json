@@ -9,62 +9,79 @@
                 {
                     "external_id": "CAPEC-141",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/141.html"
+                    "url": "https://capec.mitre.org/data/definitions/141.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-348",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/348.html"
+                    "url": "http://cwe.mitre.org/data/definitions/348.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-345",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/345.html"
+                    "url": "http://cwe.mitre.org/data/definitions/345.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-349",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/349.html"
+                    "url": "http://cwe.mitre.org/data/definitions/349.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-346",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/346.html"
+                    "url": "http://cwe.mitre.org/data/definitions/346.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Adversary-in-the-Middle: ARP Cache Poisoning",
                     "external_id": "T1557.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1557/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1557/002",
+                    "description_fa": "دشمن در وسط: مسمومیت حافظه پنهان ARP",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Cache Poisoning",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Cache_Poisoning"
+                    "url": "https://owasp.org/www-community/attacks/Cache_Poisoning",
+                    "description_fa": "مسمومیت کش",
+                    "source_name_fa": "حملات OWASP"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-22",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/DNS_cache_poisoning"
+                    "url": "http://en.wikipedia.org/wiki/DNS_cache_poisoning",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "DNS Threats and DNS Weaknesses, DNSSEC",
                     "external_id": "REF-23",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.dnssec.net/dns-threats.php"
+                    "url": "http://www.dnssec.net/dns-threats.php",
+                    "description_fa": "تهدیدات DNS و نقاط ضعف DNS، DNSSEC",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-24",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/ARP_spoofing"
+                    "url": "http://en.wikipedia.org/wiki/ARP_spoofing",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "OWASP Web Security Testing Guide, The Open Web Application Security Project (OWASP)",
                     "external_id": "REF-599",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses.html"
+                    "url": "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses.html",
+                    "description_fa": "راهنمای تست امنیت وب OWASP، پروژه امنیتی برنامه وب باز (OWASP)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--e244a53a-8c69-462c-8ff2-900a839d48cb",
@@ -102,11 +119,22 @@
                 "The targeted application must not be able to detect the illicit modification of the cache and must trust the cache value in its calculations."
             ],
             "x_capec_skills_required": {
-                "Medium": "To overwrite/modify targeted cache"
+                "Medium": "To overwrite/modify targeted cache",
+                "Medium_fa": "برای بازنویسی/تغییر کش هدفمند"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از عملکرد فناوری‌های کش سوء استفاده می‌کند تا باعث شود داده‌های خاصی ذخیره شود که به اهداف مهاجمان کمک می‌کند. این هر حمله ای را توصیف می کند که به موجب آن مهاجم مواد نادرست یا مضر را در حافظه پنهان قرار می دهد. کش مورد نظر می تواند کش یک برنامه (به عنوان مثال کش مرورگر وب) یا یک کش عمومی (مانند کش DNS یا ARP) باشد. تا زمانی که حافظه نهان به‌روزرسانی نشود، اکثر برنامه‌ها یا کلاینت‌ها مقدار حافظه پنهان خراب را معتبر می‌دانند. این می تواند منجر به طیف گسترده ای از سوء استفاده ها از جمله هدایت مرورگرهای وب به سمت سایت هایی شود که بدافزار نصب می کنند و محاسبات نادرست مکرر بر اساس مقدار نادرست.",
+            "name_fa": "مسمومیت کش",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> در این مثال، یک مهاجم درخواستی را به یک سرور DNS محلی برای جستجوی www.example .com ارسال می کند. آدرس IP مرتبط www.example.com 1.3.5.7 است.</xhtml:p>\n               <xhtml:p>DNS محلی معمولا آدرس های IP را در حافظه پنهان نگه می دارد و هر بار به DNS راه دور نمی رود. از آنجایی که رکورد محلی یافت نشد، سرور DNS سعی می کند برای پرس و جو به DNS راه دور متصل شود. با این حال، قبل از اینکه DNS راه دور آدرس IP مناسب 1.3.5.7 را برگرداند، مهاجم DNS محلی را با پاسخ های دستکاری شده با آدرس IP 2.4.6.8 پر می کند. نتیجه این است که 2.4.6.8 در کش DNS ذخیره می شود. در همین حال، 2.4.6.8 با یک وب سایت مخرب مرتبط است www.maliciousexampsle.com</xhtml:p>\n               <xhtml:p>وقتی کاربران به www.example.com متصل می شوند، DNS محلی آن را به www.maliciousexample.com هدایت می کند، این به عنوان بخشی از یک حمله Pharming عمل می کند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی و کاوش حافظه‌های پنهان: </b>از ابزارهایی برای شناسایی ترافیک و اسکن شبکه به منظور یافتن حافظه پنهان برنامه (مثلاً یک کش مرورگر وب) یا یک کش عمومی (به عنوان مثال، حافظه پنهان مرورگر وب) استفاده کنید. به دنبال نقطه مسمومیت در ورودی‌های جدول حافظه پنهان بگردید.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>ابزارهایی را اجرا کنید که ورودی‌های موجود در حافظه پنهان را بررسی می‌کنند.</td></tr></tbody></table></ol></div><div><h3><b><li>برای استفاده از داده‌های خاص <b><li></h3>از داده‌های خاص استفاده کنید. حافظه پنهان: </b>یک مهاجم درخواست جعلی را به هدف ارسال می‌کند و سپس پاسخ‌هایی را که حافظه پنهان را فریب می‌دهد تا پاسخ‌های مخرب را به خاطر بسپارد، که پاسخ‌های اشتباه پرس‌و‌جوها هستند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>شنود یا تغییر یک تراکنش به‌عنوان یک پرس و جوی bogues، یا ارسال یک پرس و جوی نادرست، شناسه).</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b> هدایت کاربران به وب‌سایت مخرب: </b>از آنجایی که مهاجم موفق می‌شود از آسیب‌پذیری سوء استفاده کند، می‌تواند داده‌های پاسخ مخرب قربانی را دستکاری و قرار دهد. پرس و جوها.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک جستار را رهگیری یا تغییر دهید، یا یک درخواست جعلی با اعتبار شناخته شده (مانند شناسه تراکنش) ارسال کنید.</td></tr><tr><td>دو حمله دشمن در وسط (CAPEC-9 رهگیری ارتباط امن) مهمانی ها.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید بتواند مقدار ذخیره شده در حافظه پنهان را برای مطابقت با مقدار مورد نظر تغییر دهد.",
+                "برنامه هدف نباید قادر به تشخیص اصلاح غیرقانونی حافظه پنهان باشد و باید به مقدار حافظه پنهان در محاسبات خود اعتماد کند."
+            ]
         }
     ],
     "type": "bundle"

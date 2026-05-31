@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0447#AN1235",
-                    "external_id": "AN1235"
+                    "external_id": "AN1235",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Attackers may use cmd.exe, wscript.exe, or renamed binaries to evade detection"
+                    "description": "Attackers may use cmd.exe, wscript.exe, or renamed binaries to evade detection",
+                    "description_fa": "مهاجمان ممکن است از cmd.exe، wscript.exe یا باینری های تغییر نام یافته برای فرار از شناسایی استفاده کنند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Define time threshold between process start and user creation event (e.g., 5s\u20132m)"
+                    "description": "Define time threshold between process start and user creation event (e.g., 5s–2m)",
+                    "description_fa": "تعیین آستانه زمانی بین شروع فرآیند و رویداد ایجاد کاربر (به عنوان مثال، 5 ثانیه تا 2 متر)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Correlate if process runs under SYSTEM, Administrator, or untrusted account"
+                    "description": "Correlate if process runs under SYSTEM, Administrator, or untrusted account",
+                    "description_fa": "اگر فرآیند تحت سیستم SYSTEM، Administrator یا حساب غیرقابل اعتماد اجرا می شود، ارتباط برقرار کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1235",
+            "description_fa": "Adversary از ابزارهای داخلی مانند 'net user /add'، PowerShell یا WMI برای ایجاد یک کاربر محلی استفاده می کند. دنباله: رویداد ایجاد حساب (4720) به دنبال ایجاد فرآیند یک فایل اجرایی مشکوک (به عنوان مثال powershell.exe یا net.exe) است."
         }
     ]
 }

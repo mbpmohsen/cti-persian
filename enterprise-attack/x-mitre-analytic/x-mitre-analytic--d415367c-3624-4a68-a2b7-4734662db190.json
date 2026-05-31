@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0207#AN0583",
-                    "external_id": "AN0583"
+                    "external_id": "AN0583",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,26 +46,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time between registry write and DLL load; tune based on reboot cycles or scheduled maintenance"
+                    "description": "Time between registry write and DLL load; tune based on reboot cycles or scheduled maintenance",
+                    "description_fa": "زمان بین نوشتن رجیستری و بارگذاری DLL. بر اساس چرخه های راه اندازی مجدد یا نگهداری برنامه ریزی شده تنظیم کنید"
                 },
                 {
                     "field": "ImageSignatureStatus",
-                    "description": "Allow listing of known signed LSASS-authenticated DLLs versus unknown/untrusted ones"
+                    "description": "Allow listing of known signed LSASS-authenticated DLLs versus unknown/untrusted ones",
+                    "description_fa": "اجازه فهرست کردن DLL های شناخته شده با امضای تأیید شده با LSASS در مقابل DLL های ناشناخته/غیر قابل اعتماد"
                 },
                 {
                     "field": "RegistryPathScope",
-                    "description": "Allow tuning for subkeys beyond just `Authentication Packages` (e.g., `Security Packages`, `Notification Packages`)"
+                    "description": "Allow tuning for subkeys beyond just `Authentication Packages` (e.g., `Security Packages`, `Notification Packages`)",
+                    "description_fa": "اجازه تنظیم برای کلیدهای فرعی فراتر از «بسته‌های احراز هویت» (به عنوان مثال، «بسته‌های امنیتی»، «بسته‌های اعلان»)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Correlate user responsible for registry edit; tune for expected administrative/service accounts"
+                    "description": "Correlate user responsible for registry edit; tune for expected administrative/service accounts",
+                    "description_fa": "مرتبط کردن کاربر مسئول ویرایش رجیستری. برای حساب‌های اداری/خدماتی مورد انتظار تنظیم کنید"
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "Validate process lineage for registry modification; expected tools like `reg.exe` or `powershell.exe`"
+                    "description": "Validate process lineage for registry modification; expected tools like `reg.exe` or `powershell.exe`",
+                    "description_fa": "اعتبار سنجی دودمان فرآیند برای اصلاح رجیستری. ابزارهای مورد انتظار مانند «reg.exe» یا «powershell.exe»."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0583",
+            "description_fa": "اصلاح رجیستری کلید بسته‌های احراز هویت LSA و به دنبال آن LSASS یک DLL غیر استاندارد یا بدون امضا را بارگیری می‌کند. این شامل دسترسی غیرمعمول نوشتن به «HKLM\\SYSTEM\\CurrentControlSet\\Control\\Lsa» است، به‌ویژه در بازه‌های زمانی غیر نصب. مرتبط با بارگیری DLL های «lsass.exe» که در خط پایه وجود ندارند یا دارای امضای معتبر نیستند."
         }
     ]
 }

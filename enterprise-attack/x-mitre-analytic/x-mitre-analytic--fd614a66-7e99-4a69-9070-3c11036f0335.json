@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0144#AN0405",
-                    "external_id": "AN0405"
+                    "external_id": "AN0405",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,21 +53,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TicketLifetimeThreshold",
-                    "description": "Kerberos TGT ticket lifetime exceeding default domain duration; tunable to environment-specific policies."
+                    "description": "Kerberos TGT ticket lifetime exceeding default domain duration; tunable to environment-specific policies.",
+                    "description_fa": "طول عمر بلیط Kerberos TGT بیش از مدت زمان پیش فرض دامنه. قابل تنظیم برای سیاست های محیطی خاص"
                 },
                 {
                     "field": "AllowedEncryptionTypes",
-                    "description": "Valid encryption algorithms for Kerberos tickets; anomalies (e.g., RC4) may indicate forgery."
+                    "description": "Valid encryption algorithms for Kerberos tickets; anomalies (e.g., RC4) may indicate forgery.",
+                    "description_fa": "الگوریتم های رمزگذاری معتبر برای بلیط های Kerberos. ناهنجاری ها (به عنوان مثال، RC4) ممکن است نشان دهنده جعل باشد."
                 },
                 {
                     "field": "PrivilegedAccountPatterns",
-                    "description": "Baseline of privileged accounts expected to perform Kerberos operations; deviations indicate suspicious activity."
+                    "description": "Baseline of privileged accounts expected to perform Kerberos operations; deviations indicate suspicious activity.",
+                    "description_fa": "پایه حساب‌های دارای امتیاز مورد انتظار برای انجام عملیات Kerberos؛ انحرافات نشان دهنده فعالیت مشکوک است."
                 },
                 {
                     "field": "ProcessAllowlist",
-                    "description": "Expected processes interacting with lsass.exe; deviations may indicate credential dumping."
+                    "description": "Expected processes interacting with lsass.exe; deviations may indicate credential dumping.",
+                    "description_fa": "فرآیندهای مورد انتظار در تعامل با lsass.exe. انحرافات ممکن است نشان دهنده دامپینگ اعتبار باشد."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0405",
+            "description_fa": "بلیط‌های طلایی Kerberos جعلی را با همبستگی طول عمر بلیط غیرعادی Kerberos، انواع رمزگذاری غیرمنتظره (مانند RC4 در دامنه‌های مدرن)، فیلدهای نادرست در رویدادهای ورود/خروج و درخواست‌های TGS بدون درخواست‌های قبلی TGT شناسایی می‌کند. همچنین الگوهای غیرعادی دسترسی مرتبط با امتیازات بالا در چندین سیستم را کنترل می کند."
         }
     ]
 }

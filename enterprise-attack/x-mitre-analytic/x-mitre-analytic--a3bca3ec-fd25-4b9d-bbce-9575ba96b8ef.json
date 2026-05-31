@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0354#AN1005",
-                    "external_id": "AN1005"
+                    "external_id": "AN1005",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1005",
-            "description": "Repeated SSH, VPN, or RDP gateway authentication attempts from external IPs \u2192 subsequent successful logon \u2192 remote shell or lateral movement activity (e.g., scp/sftp).",
+            "description": "Repeated SSH, VPN, or RDP gateway authentication attempts from external IPs → subsequent successful logon → remote shell or lateral movement activity (e.g., scp/sftp).",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "KnownSSHClients",
-                    "description": "Legitimate IPs or client fingerprints for SSH/VPN."
+                    "description": "Legitimate IPs or client fingerprints for SSH/VPN.",
+                    "description_fa": "IPهای قانونی یا اثر انگشت مشتری برای SSH/VPN."
                 },
                 {
                     "field": "FailedLogonThreshold",
-                    "description": "Number of failed SSH logins to trigger alert."
+                    "description": "Number of failed SSH logins to trigger alert.",
+                    "description_fa": "تعداد ورود ناموفق SSH برای راه اندازی هشدار."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for failed attempts and success."
+                    "description": "Correlation window for failed attempts and success.",
+                    "description_fa": "پنجره همبستگی برای تلاش های ناموفق و موفقیت."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1005",
+            "description_fa": "تلاش های مکرر برای احراز هویت دروازه SSH، VPN یا RDP از IP های خارجی → ورود موفقیت آمیز بعدی → پوسته راه دور یا فعالیت حرکت جانبی (مانند scp/sftp)."
         }
     ]
 }

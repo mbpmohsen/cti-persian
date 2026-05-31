@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0597#AN1642",
-                    "external_id": "AN1642"
+                    "external_id": "AN1642",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VaultFilePaths",
-                    "description": "Linux paths to monitor for vault database files (KeePassXC, pass, gnome-keyring)."
+                    "description": "Linux paths to monitor for vault database files (KeePassXC, pass, gnome-keyring).",
+                    "description_fa": "مسیرهای لینوکس برای نظارت بر فایل های پایگاه داده طاق (KeePassXC، پاس، gnome-keyring)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation interval to detect multiple suspicious access events."
+                    "description": "Correlation interval to detect multiple suspicious access events.",
+                    "description_fa": "فاصله همبستگی برای تشخیص چندین رویداد دسترسی مشکوک."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1642",
+            "description_fa": "دسترسی مشکوک به مخازن مدیریت رمز عبور (KeePassXC، gnome-keyring، pass) از طریق خراش دادن حافظه یا خواندن فایل غیرمجاز. اجرای دستور غیرعادی شامل gdb/strace متصل به فرآیندهای مدیریت رمز عبور را تشخیص می دهد."
         }
     ]
 }

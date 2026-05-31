@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0342#AN0968",
-                    "external_id": "AN0968"
+                    "external_id": "AN0968",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CHMPathRegex",
-                    "description": "Regex matching CHM file locations; tune to exclude trusted internal software help files"
+                    "description": "Regex matching CHM file locations; tune to exclude trusted internal software help files",
+                    "description_fa": "Regex مطابق با مکان های فایل CHM. تنظیم کنید تا فایل های راهنمای نرم افزار داخلی قابل اعتماد را حذف کنید"
                 },
                 {
                     "field": "ChildProcessList",
-                    "description": "List of suspicious children of hh.exe (powershell.exe, cmd.exe, mshta.exe, wscript.exe)"
+                    "description": "List of suspicious children of hh.exe (powershell.exe, cmd.exe, mshta.exe, wscript.exe)",
+                    "description_fa": "لیست فرزندان مشکوک hh.exe (powershell.exe، cmd.exe، mshta.exe، wscript.exe)"
                 },
                 {
                     "field": "NetworkDestinationAllowlist",
-                    "description": "Filter for legitimate update/help servers accessed by hh.exe"
+                    "description": "Filter for legitimate update/help servers accessed by hh.exe",
+                    "description_fa": "برای سرورهای به روز رسانی/راهنمای قانونی که توسط hh.exe قابل دسترسی هستند فیلتر کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold time between hh.exe execution and suspicious follow-on activity"
+                    "description": "Threshold time between hh.exe execution and suspicious follow-on activity",
+                    "description_fa": "زمان آستانه بین اجرای hh.exe و فعالیت مشکوک بعدی"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0968",
+            "description_fa": "اجرای hh.exe برای باز کردن یک فایل chm و به دنبال آن فرآیندهای فرزند مشکوک یا فراخوانی موتور اسکریپت (VBScript، JScript، mshta، powershell). رفتار شامل بارگیری یک فایل CHM از مکان‌های غیرقابل اعتماد، یا فرمان‌هایی که فوراً نشان‌دهنده اجرای بارگذاری است، می‌شود."
         }
     ]
 }

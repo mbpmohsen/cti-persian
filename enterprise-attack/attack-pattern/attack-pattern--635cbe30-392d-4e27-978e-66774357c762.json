@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1136/001",
                     "external_id": "T1136.001",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "cisco_username_cmd",
                     "description": "Cisco. (2023, March 6). username - Cisco IOS Security Command Reference: Commands S to Z. Retrieved July 13, 2022.",
                     "url": "https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/security/s1/sec-s1-cr-book/sec-cr-t2.html#wp1047035630",
                     "source_name_fa": "cisco_username_cmd",
-                    "description_fa": "سیسکو (2023, March 6 نام کاربری – Cisco IOS Security Command: Commands S to Z. Retrieved 13 ژوئیه 2022"
+                    "description_fa": "سیسکو (6 مارس 2023). نام کاربری - مرجع فرمان امنیتی سیسکو IOS: دستورات S تا Z. بازیابی شده در 13 جولای 2022."
                 },
                 {
                     "source_name": "Cyber Security News",
                     "description": "Kaaviya. (n.d.). SuperBlack Actors Exploiting Two Fortinet Vulnerabilities to Deploy Ransomware. Retrieved September 22, 2025.",
                     "url": "https://cybersecuritynews.com/superblack-actors-exploiting-two-fortinet-vulnerabilities/",
                     "source_name_fa": "اخبار امنیت سایبری",
-                    "description_fa": "کواوییا (n.d.) بازیگران سوپر سیاه دو آسیب پذیری Fortinet را به Deploy Ransomware تبدیل کردند. Retrieved 22 سپتامبر 2025"
+                    "description_fa": "کاویه. (n.d.). بازیگران SuperBlack از دو آسیب‌پذیری Fortinet برای استقرار باج‌افزار استفاده می‌کنند. بازبینی شده در 22 سپتامبر 2025."
                 },
                 {
                     "source_name": "Kubernetes Service Accounts Security",
                     "description": "Kubernetes. (n.d.). Service Accounts. Retrieved July 14, 2023.",
                     "url": "https://kubernetes.io/docs/concepts/security/service-accounts/",
-                    "source_name_fa": "حساب های امنیتی Kubernetes",
-                    "description_fa": "Kubernetes حساب های خدمات Retrieved 14 ژوئیه 2023."
+                    "source_name_fa": "امنیت حساب های سرویس Kubernetes",
+                    "description_fa": "کوبرنتیس (n.d.). حساب های خدماتی بازبینی شده در ۱۴ ژوئیه ۲۰۲۳."
                 },
                 {
                     "source_name": "Microsoft User Creation Event",
                     "description": "Lich, B., Miroshnikov, A. (2017, April 5). 4720(S): A user account was created. Retrieved June 30, 2017.",
                     "url": "https://docs.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4720",
-                    "source_name_fa": "Microsoft User Create Event",
-                    "description_fa": "لیچ، B.، Miroshnikov، A. (2017، آوریل 5) یک حساب کاربری ایجاد شد. Retrieved ۳۰ ژوئن ۲۰۱۷"
+                    "source_name_fa": "رویداد ایجاد کاربر مایکروسافت",
+                    "description_fa": "لیچ، بی، میروشنیکف، ا. (2017، 5 آوریل). 4720(S): یک حساب کاربری ایجاد شد. بازبینی شده در 30 ژوئن 2017."
                 }
             ],
             "object_marking_refs": [
@@ -77,7 +77,7 @@
             ],
             "x_mitre_version": "1.5",
             "name_fa": "حساب محلی",
-            "description_fa": "مخالفان ممکن است یک حساب محلی برای حفظ دسترسی به سیستم های قربانی ایجاد کنند. حساب های محلی کسانی هستند که توسط یک سازمان برای استفاده توسط کاربران، پشتیبانی از راه دور، خدمات یا برای مدیریت در یک سیستم یا خدمات واحد پیکربندی شده اند.\n\nبه عنوان مثال، با سطح کافی دسترسی، ویندوز [CTI_PRESERVE_0] می تواند برای ایجاد یک حساب محلی استفاده شود. در لینوکس، دستور \"useradd\" می تواند مورد استفاده قرار گیرد، در حالی که در سیستم های macOS، [CTI_PRESERVE] می تواند استفاده شود. حساب های محلی نیز ممکن است به دستگاه های شبکه اضافه شوند، اغلب از طریق مشترک [Network Device CLI] ([[CTI_PRESERVE_6]) دستوراتی مانند [CTI_PRESERVE_2]، به سرورهای ESXi از طریق حساب سیستم esxcli اضافه می شود، یا خوشه های Kubernetes با استفاده از ابزار CTpt_[2]\n\nمخالفان همچنین ممکن است حساب های محلی جدیدی را در کنسول های مدیریت فایروال شبکه ایجاد کنند – به عنوان مثال، با بهره برداری از یک سیستم مدیریت فایروال آسیب پذیر، بازیگران تهدید ممکن است قادر به ایجاد حساب های فوق العاده اداری باشند که می توانند برای اصلاح قوانین فایروال و به دست آوردن دسترسی بیشتر به شبکه استفاده شوند. [[ویرایش]\n\nچنین حساب هایی ممکن است برای ایجاد دسترسی ثانویه معتبر استفاده شود که نیازی به ابزارهای دسترسی از راه دور مداوم برای استقرار در سیستم ندارد. <code>net user /add</code> <code>dscl -create</code> <code>username</code> (Citation: cisco_username_cmd) (Citation: Kubernetes Service Accounts Security) (Citation: Cyber Security News) https://attack.mitre.org/techniques/T1059/008"
+            "description_fa": "دشمنان ممکن است یک حساب محلی برای حفظ دسترسی به سیستم های قربانی ایجاد کنند. حساب‌های محلی آنهایی هستند که توسط یک سازمان برای استفاده توسط کاربران، پشتیبانی از راه دور، خدمات یا برای مدیریت در یک سیستم یا سرویس واحد پیکربندی شده‌اند. \n\nبرای مثال، با سطح دسترسی کافی، می‌توان از فرمان <code>net user /add</code> ویندوز برای ایجاد یک حساب محلی استفاده کرد.  در لینوکس، می‌توان از فرمان «useradd» استفاده کرد، در حالی که در سیستم‌های macOS، می‌توان از فرمان <code>dscl -create</code> استفاده کرد. حساب‌های محلی نیز ممکن است به دستگاه‌های شبکه اضافه شوند، اغلب از طریق دستورات رایج [Network Device CLI](https://attack.mitre.org/techniques/T1059/008) مانند <code>username</code>، به سرورهای ESXi از طریق «افزودن حساب سیستم esxcli»، یا به خوشه‌های Kubernetes با استفاده از «kubectl». ابزار.(Citation: cisco_username_cmd)(Citation: Kubernetes Service Accounts Security)\n\nدشمنان همچنین ممکن است حساب‌های محلی جدیدی در کنسول‌های مدیریت فایروال شبکه ایجاد کنند - برای مثال، با بهره‌برداری از یک سیستم مدیریت فایروال آسیب‌پذیر، عوامل تهدید ممکن است بتوانند حساب‌های فوق‌ادمینی ایجاد کنند که می‌تواند برای اصلاح قوانین دیوار آتش و دسترسی بیشتر به شبکه استفاده شود.(Citation: Cyber Security News)\n\nچنین حساب‌هایی ممکن است برای ایجاد دسترسی ثانویه اعتباری استفاده شوند که نیازی به ابزارهای دسترسی از راه دور دائمی برای استقرار در سیستم ندارند."
         }
     ]
 }

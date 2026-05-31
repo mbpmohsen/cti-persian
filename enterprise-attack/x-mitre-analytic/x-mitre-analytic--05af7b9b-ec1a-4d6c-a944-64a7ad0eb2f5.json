@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0423#AN1187",
-                    "external_id": "AN1187"
+                    "external_id": "AN1187",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "IAM user, service account, or role performing snapshot creation. Tuned to allowlist known backup automation services."
+                    "description": "IAM user, service account, or role performing snapshot creation. Tuned to allowlist known backup automation services.",
+                    "description_fa": "کاربر IAM، حساب سرویس، یا نقش ایجاد عکس فوری. در لیست مجاز خدمات اتوماسیون پشتیبان شناخته شده تنظیم شده است."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Frequency of snapshot creation in a defined period. Adjusted for environments with frequent automated backups."
+                    "description": "Frequency of snapshot creation in a defined period. Adjusted for environments with frequent automated backups.",
+                    "description_fa": "فرکانس ایجاد عکس فوری در یک دوره تعریف شده. برای محیط هایی با پشتیبان گیری خودکار مکرر تنظیم شده است."
                 },
                 {
                     "field": "GeoLocation",
-                    "description": "Unusual regions or IPs from which snapshot creation API calls originate. Helps identify cross-region snapshot abuse."
+                    "description": "Unusual regions or IPs from which snapshot creation API calls originate. Helps identify cross-region snapshot abuse.",
+                    "description_fa": "مناطق یا IP های غیرمعمولی که فراخوان های API ایجاد عکس فوری از آنها منشا می گیرند. به شناسایی سوء استفاده از عکس فوری بین منطقه ای کمک می کند."
                 },
                 {
                     "field": "VolumeSensitivity",
-                    "description": "Tagging or classification of volumes being snapshotted. Tuned to prioritize alerts when sensitive volumes are copied."
+                    "description": "Tagging or classification of volumes being snapshotted. Tuned to prioritize alerts when sensitive volumes are copied.",
+                    "description_fa": "برچسب‌گذاری یا طبقه‌بندی حجم‌هایی که عکس‌برداری می‌شوند. برای اولویت بندی هشدارها هنگام کپی کردن حجم های حساس تنظیم شده است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1187",
+            "description_fa": "تشخیص بر ارتباط رویدادهای ایجاد عکس فوری با فعالیت‌های ایجاد و نصب نمونه بعدی تمرکز دارد. از منظر مدافع، توالی‌های مشکوک شامل ایجاد عکس فوری توسط کاربران IAM غیرمنتظره یا ایجاد شده جدید، عکس‌های فوری ایجاد شده از حجم‌های حساس بدون فعالیت کنترل تغییر قبلی، یا عکس‌های فوری بلافاصله پس از نصب در نمونه‌های غیرمجاز است. ارجاع متقابل با رفتار کاربر، موقعیت جغرافیایی IP و زمینه اتوماسیون به تمایز عملیات پشتیبان‌گیری خوش‌خیم از بهره‌برداری عکس فوری توسط دشمن کمک می‌کند."
         }
     ]
 }

@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-84",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/84.html"
+                    "url": "https://capec.mitre.org/data/definitions/84.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-707",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/707.html"
+                    "url": "http://cwe.mitre.org/data/definitions/707.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "XQuery Injection",
                     "external_id": "46",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/XQuery-Injection"
+                    "url": "http://projects.webappsec.org/XQuery-Injection",
+                    "description_fa": "XQuery Injection",
+                    "source_name_fa": "WASC"
                 }
             ],
             "id": "attack-pattern--65c33cb5-cbae-4a8f-9895-2b7dc6a0f9f5",
@@ -58,6 +63,24 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -72,11 +95,21 @@
                 "The XQL must execute unvalidated data"
             ],
             "x_capec_skills_required": {
-                "Low": "Basic understanding of XQuery"
+                "Low": "Basic understanding of XQuery",
+                "Low_fa": "درک اولیه XQuery"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله از XQuery برای بررسی و حمله به سیستم های سرور استفاده می کند. به روشی مشابه که SQL Injection به مهاجم اجازه می دهد تا از تماس های SQL به RDBMS سوء استفاده کند، XQuery Injection از داده های اعتبارسنجی نامناسبی استفاده می کند که به دستورات XQuery ارسال می شود تا دستوراتی را که روتین های XQuery به آن ها دسترسی دارند، عبور داده و اجرا کند. تزریق XQuery را می توان برای برشمردن عناصر در محیط قربانی، تزریق دستورات به میزبان محلی، یا اجرای پرس و جو به فایل های راه دور و منابع داده استفاده کرد.",
+            "name_fa": "XQuery Injection",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک مهاجم می تواند عبارات XQuery تعبیه شده در اسناد XML استاندارد را ارسال کند. مانند حملات تزریق SQL، مهاجم از طریق نقطه ورودی برنامه تونل می زند تا لایه دسترسی به منابع را هدف قرار دهد. رشته زیر نمونه‌ای از یک مهاجم است که به accounts.xml دسترسی دارد تا از ارائه‌دهنده خدمات درخواست کند همه نام‌های کاربری را بازگرداند.</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">doc(accounts.xml)//user[Name='*']</xhtml:div>\n               <xhtml:p>پیش‌بینی حملاتی که از طریق XQuery امکان‌پذیر است، دشوار است، اگر داده‌ها قبل از اجرای XQL تأیید نشده باشند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>برنامه را برای ورودی‌های قابل کنترل کاربر بررسی کنید: </b>با استفاده از یک مرورگر یا یک ابزار خودکار، مهاجم تمام پیوندها و اقدامات عمومی را در یک وب‌سایت دنبال می‌کند. آنها همه پیوندها، فرم‌ها، منابع دسترسی‌یافته و سایر نقاط ورودی بالقوه را برای برنامه وب ضبط می‌کنند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار spidering برای دنبال کردن و ضبط همه پیوندها و تجزیه و تحلیل صفحات وب برای یافتن نقاط ورودی استفاده کنید. به پیوندهایی که شامل پارامترهایی در URL می‌شوند، توجه ویژه داشته باشید.</td></tr><tr><td>از یک ابزار پراکسی برای ثبت تمام نقاط ورودی کاربر که در طول پیمایش دستی برنامه وب بازدید شده‌اند استفاده کنید.</td></tr><tr><td>از یک مرورگر برای کاوش دستی وب‌سایت و تجزیه و تحلیل نحوه ساخت آن استفاده کنید. افزونه‌های بسیاری از مرورگرها برای تسهیل تجزیه و تحلیل یا خودکارسازی کشف در دسترس هستند.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>تعیین ورودی قابل کنترل توسط کاربر مستعد تزریق: </b>مشخص کردن inputable injection. برای هر ورودی قابل کنترل توسط کاربر که مهاجم مشکوک است در برابر تزریق XQL آسیب پذیر است، سعی کنید کاراکترهایی را وارد کنید که معنای خاصی در XQL دارند. هدف ایجاد یک پرس و جوی XQL با نحو نامعتبر است.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از مرورگر وب برای تزریق ورودی از طریق فیلدهای متنی یا از طریق پارامترهای HTTP GET استفاده کنید.</td></tr><tr><td>از یک ابزار وب برنامه Tamper به عنوان Tamper Debugging,Carab.c استفاده کنید. برای تغییر پارامترهای HTTP POST، فیلدهای پنهان، فیلدهای غیر آزاد، و غیره.</td></tr><tr><td>از فایل‌های XML برای تزریق ورودی استفاده کنید.</td></tr><tr><td>از ابزارهای تزریق بسته در سطح شبکه مانند netcat برای تزریق ورودی استفاده کنید</td></mo><tr>مشتری اصلاح شده توسط مشتری inject input.</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>افشای اطلاعات: </b>مهاجم یک بار XQuery را ایجاد و تزریق می کند که توسط یک پرس و جوی XQL منجر به افشای نادرست می شود. اطلاعات.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>با استفاده از یکی از ورودی‌های آسیب‌پذیر شناسایی‌شده در مرحله آزمایش، بار مخرب XQuery را تزریق کنید. هدف بارگذاری دریافت اطلاعات در مورد ساختار پایگاه داده XML زیربنایی و/یا محتوای موجود در آن است.</td></tr></tbody></table><li> <p> <b>دستکاری داده ها در پایگاه داده XML: </b> مهاجم یک بار XQuery را ایجاد و تزریق می کند که توسط یک برنامه پرس و جوی اصلاح شده XQL انجام می شود که منجر به تغییر برنامه می شود. داده‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>با بهره‌گیری از یکی از ورودی‌های آسیب‌پذیر شناسایی‌شده در مرحله آزمایش، بار مخرب XQuery را تزریق کنید. payload سعی می‌کند داده‌ها را در پایگاه داده XML وارد یا جایگزین کند.</td></></t></t></tol/tol",
+            "x_capec_prerequisites_fa": [
+                "XQL باید داده های تایید نشده را اجرا کند"
+            ]
         }
     ],
     "type": "bundle"

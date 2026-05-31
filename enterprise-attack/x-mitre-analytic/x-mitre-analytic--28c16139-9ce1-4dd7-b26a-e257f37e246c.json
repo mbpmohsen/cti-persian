@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0348#AN0988",
-                    "external_id": "AN0988"
+                    "external_id": "AN0988",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,13 +57,17 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "DataVolumeThreshold",
-                    "description": "Set threshold for outbound transfer size exceeding typical C2 traffic (e.g., >1MB in <5min)."
+                    "description": "Set threshold for outbound transfer size exceeding typical C2 traffic (e.g., >1MB in <5min).",
+                    "description_fa": "آستانه را برای اندازه انتقال خروجی بیش از ترافیک معمولی C2 تنظیم کنید (به عنوان مثال، > 1 مگابایت در کمتر از 5 دقیقه)."
                 },
                 {
                     "field": "KnownBenignProcesses",
-                    "description": "List of approved processes that may exhibit high outbound traffic (e.g., updates)."
+                    "description": "List of approved processes that may exhibit high outbound traffic (e.g., updates).",
+                    "description_fa": "فهرستی از فرآیندهای تایید شده که ممکن است ترافیک خروجی بالایی از خود نشان دهند (به عنوان مثال، به روز رسانی)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0988",
+            "description_fa": "عدم تطابق حجم ترافیک خروجی مشکوک را از فرآیندهایی که معمولاً فعالیت شبکه ایجاد نمی‌کنند، به ویژه روی پروتکل‌های C2 مانند HTTPS، DNS، یا پورت‌های TCP/UDP سفارشی، پس از دسترسی به فایل یا داده، شناسایی می‌کند."
         }
     ]
 }

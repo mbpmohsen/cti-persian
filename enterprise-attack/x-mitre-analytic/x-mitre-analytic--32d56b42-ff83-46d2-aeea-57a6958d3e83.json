@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0006#AN0015",
-                    "external_id": "AN0015"
+                    "external_id": "AN0015",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0015",
-            "description": "From a defender\u2019s perspective, suspicious bridging is observed when network devices begin allowing traffic that contradicts existing segmentation or access policies. Observable behaviors include sudden modifications to ACLs or firewall rules, unusual cross-boundary traffic flows (e.g., east-west communications across separated VLANs), or simultaneous ingress/egress anomalies. Multi-event correlation is key: configuration changes on a router/firewall followed by unexpected traffic patterns, especially from unusual sources, is a strong indicator of compromise.",
+            "description": "From a defender’s perspective, suspicious bridging is observed when network devices begin allowing traffic that contradicts existing segmentation or access policies. Observable behaviors include sudden modifications to ACLs or firewall rules, unusual cross-boundary traffic flows (e.g., east-west communications across separated VLANs), or simultaneous ingress/egress anomalies. Multi-event correlation is key: configuration changes on a router/firewall followed by unexpected traffic patterns, especially from unusual sources, is a strong indicator of compromise.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -45,22 +46,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between configuration changes and abnormal traffic; tuned to match expected administrative change cycles."
+                    "description": "Correlation window between configuration changes and abnormal traffic; tuned to match expected administrative change cycles.",
+                    "description_fa": "پنجره همبستگی بین تغییرات پیکربندی و ترافیک غیرعادی. تنظیم شده تا با چرخه های تغییر اداری مورد انتظار مطابقت داشته باشد."
                 },
                 {
                     "field": "ApprovedChangeList",
-                    "description": "Known authorized ACL/firewall changes; suppresses noise from legitimate maintenance."
+                    "description": "Known authorized ACL/firewall changes; suppresses noise from legitimate maintenance.",
+                    "description_fa": "تغییرات مجاز ACL / فایروال شناخته شده؛ سر و صدای ناشی از تعمیر و نگهداری قانونی را سرکوب می کند."
                 },
                 {
                     "field": "GeoLocation",
-                    "description": "Geographic origin of new traffic patterns; helps distinguish benign remote offices from suspicious foreign access."
+                    "description": "Geographic origin of new traffic patterns; helps distinguish benign remote offices from suspicious foreign access.",
+                    "description_fa": "خاستگاه جغرافیایی الگوهای ترافیکی جدید؛ به تشخیص دفاتر راه دور خوش خیم از دسترسی مشکوک خارجی کمک می کند."
                 },
                 {
                     "field": "TrafficVolumeThreshold",
-                    "description": "Volume of cross-segment traffic; tuned to detect large-scale lateral flows without flagging small test connections."
+                    "description": "Volume of cross-segment traffic; tuned to detect large-scale lateral flows without flagging small test connections.",
+                    "description_fa": "حجم ترافیک مقطعی؛ تنظیم شده برای تشخیص جریان های جانبی در مقیاس بزرگ بدون علامت گذاری اتصالات آزمایشی کوچک."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0015",
+            "description_fa": "از دیدگاه مدافع، پل زدن مشکوک زمانی مشاهده می شود که دستگاه های شبکه شروع به اجازه دادن به ترافیکی می کنند که با خط مشی های تقسیم بندی یا دسترسی موجود در تضاد است. رفتارهای قابل مشاهده شامل تغییرات ناگهانی در ACL ها یا قوانین فایروال، جریان های ترافیکی غیرمعمول بین مرزی (به عنوان مثال، ارتباطات شرق-غرب در سراسر VLAN های جدا شده)، یا ناهنجاری های ورودی/خروجی همزمان است. همبستگی چند رویدادی کلیدی است: تغییرات پیکربندی روی روتر/دیوار آتش و به دنبال آن الگوهای ترافیکی غیرمنتظره، به ویژه از منابع غیرمعمول، یک شاخص قوی برای سازش است."
         }
     ]
 }

@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0713#AN1840",
-                    "external_id": "AN1840"
+                    "external_id": "AN1840",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,33 +53,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between permission state, local data reads, optional staging, and outbound transfer"
+                    "description": "Correlation window between permission state, local data reads, optional staging, and outbound transfer",
+                    "description_fa": "پنجره همبستگی بین وضعیت مجوز، خواندن داده های محلی، مرحله بندی اختیاری، و انتقال خروجی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to read local files or databases such as backup, sync, file manager, security, or media management apps"
+                    "description": "Apps legitimately expected to read local files or databases such as backup, sync, file manager, security, or media management apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود فایل‌ها یا پایگاه‌های داده محلی مانند پشتیبان‌گیری، همگام‌سازی، مدیر فایل، امنیت یا برنامه‌های مدیریت رسانه را بخوانند."
                 },
                 {
                     "field": "AllowedPathList",
-                    "description": "Expected local paths, storage roots, and database locations for legitimate app behavior"
+                    "description": "Expected local paths, storage roots, and database locations for legitimate app behavior",
+                    "description_fa": "مسیرهای محلی، ریشه های ذخیره سازی و مکان های پایگاه داده برای رفتار قانونی برنامه مورد انتظار است"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether sensitive local data access should happen only during active user-driven workflows"
+                    "description": "Whether sensitive local data access should happen only during active user-driven workflows",
+                    "description_fa": "اینکه آیا دسترسی به داده‌های محلی حساس باید فقط در جریان‌های کاری فعال کاربر محور اتفاق بیفتد"
                 },
                 {
                     "field": "BurstReadThreshold",
-                    "description": "Minimum number of file or record reads within a short interval required to indicate suspicious collection"
+                    "description": "Minimum number of file or record reads within a short interval required to indicate suspicious collection",
+                    "description_fa": "حداقل تعداد فایل یا رکورد خوانده شده در یک بازه زمانی کوتاه مورد نیاز برای نشان دادن مجموعه مشکوک"
                 },
                 {
                     "field": "SensitivePathPatterns",
-                    "description": "Environment-specific list of high-value local paths such as external media roots, app export folders, token stores, or browser data locations"
+                    "description": "Environment-specific list of high-value local paths such as external media roots, app export folders, token stores, or browser data locations",
+                    "description_fa": "فهرست مسیرهای محلی با ارزش بالا مانند ریشه‌های رسانه خارجی، پوشه‌های صادرات برنامه، فروشگاه‌های توکن یا مکان‌های داده مرورگر مخصوص محیط زیست"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum upload size expected if collection is followed by exfiltration"
+                    "description": "Minimum upload size expected if collection is followed by exfiltration",
+                    "description_fa": "حداقل اندازه آپلود مورد انتظار در صورتی که جمع‌آوری پس از برداشت انجام شود"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1840",
+            "description_fa": "مدافع دسترسی مرتبط با فضای ذخیره‌سازی یا امتیازی که به تازگی اعطا شده یا اخیراً اعمال شده است را با خواندن سریع فایل‌های محلی، پایگاه‌های داده محلی، یا سوابق محافظت شده از سیستم عامل یا مکان‌های ذخیره‌سازی خارجی مرتبط می‌کند، به‌ویژه زمانی که خواندن‌ها با نقش برنامه سازگار نیست، در پس‌زمینه یا زمینه دستگاه قفل شده اتفاق می‌افتد، یا توسط مرحله‌بندی داده انتقال موقت یا شبکه دنبال می‌شود. این تحلیل بر روی مشاهده‌پذیرهای خاص اندروید مانند دسترسی به حافظه خارجی، خواندن پایگاه داده خصوصی برنامه در جایی که حسگر قابل مشاهده است، و فعالیت شمارش/خواندن مکرر در برابر مسیرهای محلی مرتبط با رسانه، نشانه‌ها، حافظه‌های پنهان یا داده‌های برنامه صادر شده تأکید می‌کند."
         }
     ]
 }

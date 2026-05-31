@@ -9,24 +9,30 @@
                 {
                     "external_id": "CAPEC-227",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/227.html"
+                    "url": "https://capec.mitre.org/data/definitions/227.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-400",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/400.html"
+                    "url": "http://cwe.mitre.org/data/definitions/400.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Endpoint Denial of Service",
                     "external_id": "T1499",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1499"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1499",
+                    "description_fa": "انکار سرویس نقطه پایانی",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Denial of Service",
                     "external_id": "10",
                     "source_name": "WASC",
-                    "url": "http://projects.webappsec.org/Denial-of-Service"
+                    "url": "http://projects.webappsec.org/Denial-of-Service",
+                    "description_fa": "انکار خدمات",
+                    "source_name_fa": "WASC"
                 }
             ],
             "id": "attack-pattern--6e3dda09-c1da-4f44-a0b3-e0e3b6fe0601",
@@ -52,7 +58,16 @@
                 "To successfully execute this pattern of attack, a script or program is often required that is capable of continually engaging the target and maintaining sustained usage of a specific resource. Depending on the configuration of the target, it may or may not be necessary to involve a network or cluster of objects all capable of making parallel requests."
             ],
             "x_capec_status": "Draft",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف تلاش می کند با درگیر کردن مداوم یک منبع خاص در تلاش برای نگه داشتن منبع تا زمانی که ممکن است، دسترسی کاربران قانونی به یک منبع را از بین ببرد. هدف اصلی دشمن سقوط یا غرقاب شدن هدف نیست که مدافعان را آگاه کند. بلکه انجام مکرر اقدامات یا سوء استفاده از نقص های الگوریتمی است به طوری که یک منبع معین بسته شده و در دسترس یک کاربر قانونی قرار نمی گیرد. با ایجاد دقیق درخواست‌هایی که منبع را از طریق درخواست‌های به ظاهر خوش‌خیم درگیر نگه می‌دارد، کاربران قانونی دسترسی به منبع را محدود یا به طور کامل محروم می‌کنند.",
+            "name_fa": "تعامل پایدار با مشتری",
+            "x_capec_extended_description_fa": "<xhtml:p> میزان موفقیت حمله به توانایی دشمن در حفظ درخواست‌های منابع در طول زمان با حجمی فراتر از استفاده عادی توسط کاربران قانونی و همچنین سایر شرایط کاهش‌دهنده مانند توانایی هدف برای تغییر بار یا به دست آوردن منابع اضافی برای مقابله با تخلیه بستگی دارد. این حمله با حمله سیل متفاوت است زیرا کاملاً به حجم زیادی از درخواست ها وابسته نیست و با مواجهه با نشت منابع که تمایل دارند از محیط اطراف مورد نیاز برای عملکرد منبع سوء استفاده کنند متفاوت است. عامل کلیدی در حمله پایدار درخواست های مکرر هستند که پردازش آنها بیشتر از حد معمول طول می کشد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "این الگوی حمله به یک جنبه زمانی برای سرویس دهی یک درخواست معین نیاز دارد. در صورتی می توان به موفقیت دست یافت که حریف بتواند درخواست هایی را ارائه دهد که در مجموع برای تکمیل آنها زمان بیشتری نسبت به درخواست های مشروع کاربر در یک بازه زمانی مشابه صرف می شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "برای اجرای موفقیت آمیز این الگوی حمله، اغلب به یک اسکریپت یا برنامه نیاز است که بتواند به طور مداوم هدف را درگیر کند و استفاده پایدار از یک منبع خاص را حفظ کند. بسته به پیکربندی هدف، ممکن است نیاز باشد یا نباشد که شبکه یا خوشه ای از اشیاء را درگیر کند که همگی قادر به ایجاد درخواست های موازی هستند."
+            ]
         }
     ],
     "type": "bundle"

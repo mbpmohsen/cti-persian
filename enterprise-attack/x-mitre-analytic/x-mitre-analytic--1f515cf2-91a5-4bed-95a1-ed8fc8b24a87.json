@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0355#AN1008",
-                    "external_id": "AN1008"
+                    "external_id": "AN1008",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Defines the aggregation interval (e.g., 5 minutes, 1 hour) for detecting spikes in inbound email traffic."
+                    "description": "Defines the aggregation interval (e.g., 5 minutes, 1 hour) for detecting spikes in inbound email traffic.",
+                    "description_fa": "فاصله تجمعی (به عنوان مثال، 5 دقیقه، 1 ساعت) را برای تشخیص جهش در ترافیک ایمیل ورودی تعریف می کند."
                 },
                 {
                     "field": "RecipientThreshold",
-                    "description": "Defines maximum number of acceptable messages per user before triggering anomaly."
+                    "description": "Defines maximum number of acceptable messages per user before triggering anomaly.",
+                    "description_fa": "حداکثر تعداد پیام های قابل قبول برای هر کاربر را قبل از ایجاد ناهنجاری تعریف می کند."
                 },
                 {
                     "field": "AttachmentSizeThreshold",
-                    "description": "Defines the size threshold for repetitive attachments to be flagged."
+                    "description": "Defines the size threshold for repetitive attachments to be flagged.",
+                    "description_fa": "آستانه اندازه برای پیوست های تکراری که باید پرچم گذاری شوند را تعیین می کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1008",
+            "description_fa": "حجم غیرعادی بالای پیام‌های ایمیل ورودی یا پیوست‌های مکرر که در یک بازه زمانی کوتاه به یک صندوق پستی تحویل می‌شوند را شناسایی کنید. مدافعان باید به دنبال افزایش غیرعادی در تعداد پیام ها و رویدادهای ایجاد فایل پیوست مکرر مرتبط با کاربران هدف باشند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0337#AN0953",
-                    "external_id": "AN0953"
+                    "external_id": "AN0953",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 0953",
-            "description": "Defenders can detect suspicious reversion of cloud compute instances by monitoring for unusual snapshot restores, rollback actions, or ephemeral storage resets that occur outside expected administrative workflows. From a defender\u2019s perspective, relevant detection chains include: a snapshot restore triggered by a new or rarely used account, a sequence of snapshot creation immediately followed by a restore and instance start, or rollbacks performed from anomalous geographic or network locations. These patterns may indicate attempts to remove forensic evidence or re-establish a clean execution state for persistence.",
+            "description": "Defenders can detect suspicious reversion of cloud compute instances by monitoring for unusual snapshot restores, rollback actions, or ephemeral storage resets that occur outside expected administrative workflows. From a defender’s perspective, relevant detection chains include: a snapshot restore triggered by a new or rarely used account, a sequence of snapshot creation immediately followed by a restore and instance start, or rollbacks performed from anomalous geographic or network locations. These patterns may indicate attempts to remove forensic evidence or re-establish a clean execution state for persistence.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Identity of the user or service account performing rollback actions; tuned to exclude automation or approved workflows."
+                    "description": "Identity of the user or service account performing rollback actions; tuned to exclude automation or approved workflows.",
+                    "description_fa": "هویت کاربر یا حساب سرویسی که اقدامات بازگشت را انجام می دهد. تنظیم شده تا اتوماسیون یا گردش کار تایید شده را حذف کند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Threshold for correlating snapshot creation followed by reversion within minutes; tuned to environment activity norms."
+                    "description": "Threshold for correlating snapshot creation followed by reversion within minutes; tuned to environment activity norms.",
+                    "description_fa": "آستانه برای ایجاد عکس فوری مرتبط و پس از آن بازگشت در عرض چند دقیقه. هماهنگ با هنجارهای فعالیت محیطی"
                 },
                 {
                     "field": "GeoLocation",
-                    "description": "Region or source IP where the revert request originated; tuned to align with enterprise cloud geography."
+                    "description": "Region or source IP where the revert request originated; tuned to align with enterprise cloud geography.",
+                    "description_fa": "منطقه یا IP منبعی که درخواست بازگردانی از آنجا شروع شده است. تنظیم شده تا با جغرافیای ابری سازمانی هماهنگ شود."
                 },
                 {
                     "field": "ChangeTags",
-                    "description": "Use of administrative tags or headers to distinguish legitimate restores from malicious activity."
+                    "description": "Use of administrative tags or headers to distinguish legitimate restores from malicious activity.",
+                    "description_fa": "استفاده از برچسب ها یا هدرهای مدیریتی برای تشخیص بازیابی های قانونی از فعالیت های مخرب."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0953",
+            "description_fa": "مدافعان می‌توانند بازگشت مشکوک نمونه‌های محاسبات ابری را با نظارت بر بازیابی‌های عکس فوری غیرمعمول، اقدامات برگشتی، یا بازنشانی‌های ذخیره‌سازی زودگذر که خارج از جریان‌های کاری مورد انتظار مدیریتی رخ می‌دهند، شناسایی کنند. از دیدگاه مدافع، زنجیره‌های تشخیص مربوطه عبارتند از: بازیابی عکس فوری که توسط یک حساب جدید یا به ندرت استفاده می‌شود، دنباله‌ای از ایجاد عکس فوری بلافاصله پس از بازیابی و شروع نمونه، یا برگشت‌هایی که از مکان‌های جغرافیایی یا شبکه غیرعادی انجام می‌شوند. این الگوها ممکن است نشان‌دهنده تلاش‌هایی برای حذف شواهد پزشکی قانونی یا برقراری مجدد وضعیت اجرای پاک برای تداوم باشد."
         }
     ]
 }

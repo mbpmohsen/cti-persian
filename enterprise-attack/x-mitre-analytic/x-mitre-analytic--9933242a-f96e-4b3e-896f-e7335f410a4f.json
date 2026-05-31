@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0266#AN0738",
-                    "external_id": "AN0738"
+                    "external_id": "AN0738",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MailFolderPath",
-                    "description": "Common inbox file locations like /var/spool/mail/, /var/mail/"
+                    "description": "Common inbox file locations like /var/spool/mail/, /var/mail/",
+                    "description_fa": "مکان های رایج فایل صندوق ورودی مانند /var/spool/mail/، /var/mail/"
                 },
                 {
                     "field": "CommandPattern",
-                    "description": "Usage of mailx or echo piped to mail followed by deletion"
+                    "description": "Usage of mailx or echo piped to mail followed by deletion",
+                    "description_fa": "استفاده از mailx یا echo لوله شده به نامه و به دنبال آن حذف"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0738",
+            "description_fa": "استفاده از ابزارهای ایمیل مانند «mail» یا «mailx» را برای حذف محتوای صندوق پستی یا حذف فایل‌های صندوق ورودی در سطح فایل از «/var/spool/mail/» یا «/var/mail/» پس از جلسات مشکوک تشخیص می‌دهد."
         }
     ]
 }

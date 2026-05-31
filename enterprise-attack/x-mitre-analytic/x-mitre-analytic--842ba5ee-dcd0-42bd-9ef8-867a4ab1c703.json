@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0096#AN0265",
-                    "external_id": "AN0265"
+                    "external_id": "AN0265",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Time between suspicious process and account change (e.g., 5m)."
+                    "description": "Time between suspicious process and account change (e.g., 5m).",
+                    "description_fa": "زمان بین فرآیند مشکوک و تغییر حساب (به عنوان مثال، 5 متر)."
                 },
                 {
                     "field": "HighPrivilegeGroupList",
-                    "description": "Customize group list (e.g., Domain Admins, Enterprise Admins) to monitor."
+                    "description": "Customize group list (e.g., Domain Admins, Enterprise Admins) to monitor.",
+                    "description_fa": "لیست گروه را سفارشی کنید (به عنوان مثال، سرپرستان دامنه، مدیران سازمانی) برای نظارت."
                 },
                 {
                     "field": "SubjectTargetMismatch",
-                    "description": "Flag if account modifier != modified user (potential hijack)."
+                    "description": "Flag if account modifier != modified user (potential hijack).",
+                    "description_fa": "اگر تغییر دهنده حساب != کاربر تغییر یافته را علامت گذاری کنید (هک احتمالی)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0265",
+            "description_fa": "تغییرات ویژگی حساب (به عنوان مثال، مجموعه رمز عبور، عضویت در گروه، servicePrincipalName، ساعات ورود به سیستم) مرتبط با اصل و نسب فرآیند یا زمان‌بندی غیرمعمول است، که نشان‌دهنده افزایش یا تداوم امتیاز از طریق حساب‌های معتبر است."
         }
     ]
 }

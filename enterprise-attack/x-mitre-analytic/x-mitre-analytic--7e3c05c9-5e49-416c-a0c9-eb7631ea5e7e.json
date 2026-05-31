@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0117#AN0326",
-                    "external_id": "AN0326"
+                    "external_id": "AN0326",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PlistLabelSimilarity",
-                    "description": "Detect plists with labels that closely resemble legitimate ones (e.g., `com.apple.updates.plist`)"
+                    "description": "Detect plists with labels that closely resemble legitimate ones (e.g., `com.apple.updates.plist`)",
+                    "description_fa": "شناسایی فهرست‌ها با برچسب‌هایی که بسیار شبیه به موارد قانونی هستند (مثلاً «com.apple.updates.plist»)"
                 },
                 {
                     "field": "UnsignedBinaryExecution",
-                    "description": "Toggle sensitivity for unsigned binaries or scripts launched by daemons"
+                    "description": "Toggle sensitivity for unsigned binaries or scripts launched by daemons",
+                    "description_fa": "تغییر حساسیت برای باینری های بدون علامت یا اسکریپت های راه اندازی شده توسط دیمون ها"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Scope detection based on whether LaunchAgent ran in user or system context"
+                    "description": "Scope detection based on whether LaunchAgent ran in user or system context",
+                    "description_fa": "تشخیص محدوده بر اساس اینکه آیا LaunchAgent در زمینه کاربر یا سیستم اجرا می شود"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0326",
+            "description_fa": "ایجاد LaunchAgents یا LaunchDaemons با نام‌هایی شبیه به سرویس‌های سیستم شناخته شده اما کد یا اسکریپت‌های غیر امضا شده اپل را اجرا می‌کنند."
         }
     ]
 }

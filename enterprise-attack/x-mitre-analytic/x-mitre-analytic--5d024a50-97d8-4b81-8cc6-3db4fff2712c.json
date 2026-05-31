@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0093#AN0254",
-                    "external_id": "AN0254"
+                    "external_id": "AN0254",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,17 +47,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessContext",
-                    "description": "Identify if enumeration originates from non-interactive shell or system service"
+                    "description": "Identify if enumeration originates from non-interactive shell or system service",
+                    "description_fa": "مشخص کنید که آیا شمارش از خدمات پوسته یا سیستم غیرتعاملی سرچشمه می گیرد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Tune temporal grouping of enumeration + lateral movement attempts"
+                    "description": "Tune temporal grouping of enumeration + lateral movement attempts",
+                    "description_fa": "گروه بندی زمانی شمارش + تلاش های حرکت جانبی را تنظیم کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Flag unexpected users issuing enumeration commands (e.g., service accounts)"
+                    "description": "Flag unexpected users issuing enumeration commands (e.g., service accounts)",
+                    "description_fa": "پرچم‌گذاری کاربران غیرمنتظره‌ای که دستورات شمارش را صادر می‌کنند (مانند حساب‌های سرویس)"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0254",
+            "description_fa": "دشمن ابزارهای سیستم داخلی (مانند whoami، کاربر پرس و جو، کاربر شبکه) یا اسکریپت هایی را راه اندازی می کند که اطلاعات حساب کاربری را از طریق اجرای محلی یا پرس و جوهای API راه دور (مانند WMI، PowerShell) برمی شمارد."
         }
     ]
 }

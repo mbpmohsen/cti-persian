@@ -9,13 +9,16 @@
                 {
                     "external_id": "CAPEC-531",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/531.html"
+                    "url": "https://capec.mitre.org/data/definitions/531.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Hardware Supply Chain",
                     "external_id": "T1195.003",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/003",
+                    "description_fa": "مصالحه با زنجیره تامین: زنجیره تامین سخت افزار به خطر افتاد",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--fda936c1-236d-4460-a5a9-4555d9583b2e",
@@ -46,11 +49,20 @@
                 "Physical access to the system or the integration facility where hardware components are kept."
             ],
             "x_capec_skills_required": {
-                "High": "Able to develop and manufacture malicious system components that perform the same functions and processes as their non-malicious counterparts."
+                "High": "Able to develop and manufacture malicious system components that perform the same functions and processes as their non-malicious counterparts.",
+                "High_fa": "قادر به توسعه و ساخت اجزای سیستم مخربی است که عملکردها و فرآیندهای مشابهی را انجام می دهند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم یک مؤلفه سخت افزاری آزمایش شده و تأیید شده را جایگزین یک مؤلفه سخت افزاری با تغییر مخرب می کند. این نوع حمله مستقیماً بر روی سیستم انجام می‌شود و مهاجم را قادر می‌سازد تا باعث ایجاد اختلال یا مصالحه اضافی شود.",
+            "name_fa": "جایگزینی اجزای سخت افزاری",
+            "x_capec_example_instances_fa": [
+                "یک مهاجم به انبار کارتخوان های سازمان که به عنوان بخشی از یک سیستم امنیتی کلی گنجانده شده است، دسترسی دارد. با جایگزینی یک جزء سخت افزاری حیاتی در کارت خوان، مهاجم می تواند عملکرد کارت خوان را تغییر دهد تا به کارت عرضه شده توسط مهاجم اجازه عبور از یک ایست بازرسی امنیتی را بدهد. کارتخوان در انبار قرار می گیرد و بعداً در سیستم امنیتی قربانی استفاده می شود. سپس مهاجم می تواند به سراغ قربانی رفته و از کارت خود استفاده کند و یک ایست بازرسی امنیتی فیزیکی را دور بزند و برای فعالیت های مخرب بعدی به مکان قربانی دسترسی پیدا کند."
+            ],
+            "x_capec_prerequisites_fa": [
+                "دسترسی فیزیکی به سیستم یا تسهیلات یکپارچه سازی که در آن اجزای سخت افزاری نگهداری می شوند."
+            ]
         }
     ],
     "spec_version": "2.0",

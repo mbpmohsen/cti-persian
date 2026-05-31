@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0197#AN0568",
-                    "external_id": "AN0568"
+                    "external_id": "AN0568",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -66,29 +67,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window (e.g., 0\u201320 minutes) between device access, file creation, and egress."
+                    "description": "Correlation window (e.g., 0–20 minutes) between device access, file creation, and egress.",
+                    "description_fa": "پنجره همبستگی (به عنوان مثال، 0-20 دقیقه) بین دسترسی به دستگاه، ایجاد فایل، و خروج."
                 },
                 {
                     "field": "AllowedProcesses",
-                    "description": "Known legitimate camera consumers (e.g., Teams.exe, zoom.exe, obs64.exe) to suppress."
+                    "description": "Known legitimate camera consumers (e.g., Teams.exe, zoom.exe, obs64.exe) to suppress.",
+                    "description_fa": "مصرف کنندگان قانونی شناخته شده دوربین (به عنوان مثال، Teams.exe، zoom.exe، obs64.exe) برای سرکوب."
                 },
                 {
                     "field": "VideoExtensions",
-                    "description": "List of extensions to flag (.mp4, .avi, .mov, .yuv, .mkv, .h264) \u2013 tune for your estate."
+                    "description": "List of extensions to flag (.mp4, .avi, .mov, .yuv, .mkv, .h264) – tune for your estate.",
+                    "description_fa": "فهرست برنامه های افزودنی برای پرچم (.mp4، .avi، .mov، yuv.، mkv.h264.) - برای املاک خود تنظیم کنید."
                 },
                 {
                     "field": "RarePathRegex",
-                    "description": "Regex for unusual storage locations (e.g., %TEMP%\\*, C:\\Windows\\Tasks\\*, user profile hidden dirs)."
+                    "description": "Regex for unusual storage locations (e.g., %TEMP%\\*, C:\\Windows\\Tasks\\*, user profile hidden dirs).",
+                    "description_fa": "Regex برای مکان‌های ذخیره‌سازی غیرمعمول (به‌عنوان مثال، %TEMP%\\*، C:\\Windows\\Tasks\\*، فهرست‌های پنهان نمایه کاربر)."
                 },
                 {
                     "field": "MinFileSizeMB",
-                    "description": "Minimum size to reduce FP from thumbnails/snapshots."
+                    "description": "Minimum size to reduce FP from thumbnails/snapshots.",
+                    "description_fa": "حداقل اندازه برای کاهش FP از ریز عکسها / عکس های فوری."
                 },
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Service/agent parents permitted to broker camera access."
+                    "description": "Service/agent parents permitted to broker camera access.",
+                    "description_fa": "والدین خدمات/نماینده مجاز به واسطه دسترسی به دوربین هستند."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0568",
+            "description_fa": "یک فرآیند غیر استاندارد (یا فرآیند میزبان اسکریپت) کتابخانه‌های دوربین/فیلم‌برداری (مانند avicap32.dll، mf.dll، ksproxy.ax) را بارگیری می‌کند، سرور/دستگاه قاب دوربین را باز می‌کند، مصنوعات ویدیو/تصویر را می‌نویسد (مثلاً، mp4/.mp4/. بعد از"
         }
     ]
 }

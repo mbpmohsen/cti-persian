@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0705#AN1826",
-                    "external_id": "AN1826"
+                    "external_id": "AN1826",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.378Z",
             "name": "Analytic 1826",
-            "description": "Defender observes an app enabling or using input-capture surfaces (custom keyboard extension with Full Access, abnormal UI text entry interception, pasteboard polling adjacent to login screens), then persisting and/or exfiltrating captured input. Chain: capability/consent (TCC for keyboard Full Access or input privacy domains) \u2192 intercept behavior (keyboard extension active, repeated text field \u2018editingChanged\u2019/secure entry focus, background pasteboard reads) \u2192 local write \u2192 near-term egress.",
+            "description": "Defender observes an app enabling or using input-capture surfaces (custom keyboard extension with Full Access, abnormal UI text entry interception, pasteboard polling adjacent to login screens), then persisting and/or exfiltrating captured input. Chain: capability/consent (TCC for keyboard Full Access or input privacy domains) → intercept behavior (keyboard extension active, repeated text field ‘editingChanged’/secure entry focus, background pasteboard reads) → local write → near-term egress.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max time from intercept to persist/exfil (e.g., 5\u201360s)."
+                    "description": "Max time from intercept to persist/exfil (e.g., 5–60s).",
+                    "description_fa": "حداکثر زمان از رهگیری تا تداوم/اکسفیل (مثلاً 5 تا 60 ثانیه)."
                 },
                 {
                     "field": "MinKeyEventBurst",
-                    "description": "Minimum key/commit or editingChanged count to flag harvesting (e.g., \u226510)."
+                    "description": "Minimum key/commit or editingChanged count to flag harvesting (e.g., ≥10).",
+                    "description_fa": "حداقل کلید/تعهد یا ویرایش تعداد تغییر در برداشت پرچم (به عنوان مثال، ≥10)."
                 },
                 {
                     "field": "KeyboardFullAccessRequired",
-                    "description": "Require keyboard Full Access to escalate severity (true/false)."
+                    "description": "Require keyboard Full Access to escalate severity (true/false).",
+                    "description_fa": "نیاز به دسترسی کامل صفحه کلید برای تشدید شدت (درست/نادرست)."
                 },
                 {
                     "field": "PersistPathRegex",
-                    "description": "Regex for keylog/clipboard dump files."
+                    "description": "Regex for keylog/clipboard dump files.",
+                    "description_fa": "Regex برای فایل‌های روگرفت صفحه کلید/کلیپ‌بورد."
                 },
                 {
                     "field": "ExfilDomainAllowlist",
-                    "description": "Known-good enterprise/analytics endpoints."
+                    "description": "Known-good enterprise/analytics endpoints.",
+                    "description_fa": "نقاط پایانی سازمانی/تحلیلی خوب شناخته شده."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Foreground state, Focus modes, MDM policy."
+                    "description": "Foreground state, Focus modes, MDM policy.",
+                    "description_fa": "حالت پیش زمینه، حالت های فوکوس، خط مشی MDM."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1826",
+            "description_fa": "Defender مشاهده می‌کند که برنامه‌ای را فعال می‌کند یا از سطوح ضبط ورودی استفاده می‌کند (پسوند صفحه‌کلید سفارشی با دسترسی کامل، رهگیری غیرعادی ورودی متن UI، نظرسنجی مقوا در مجاورت صفحه‌های ورود به سیستم)، سپس ورودی ضبط‌شده را ادامه می‌دهد و/یا خارج می‌کند. زنجیره: قابلیت/رضایت (TCC برای دسترسی کامل صفحه‌کلید یا دامنه‌های حریم خصوصی ورودی) ← رفتار رهگیری (پسوند صفحه کلید فعال، فیلد متنی مکرر «ویرایش تغییر کرد»/فوکوس ورودی امن، خواندن مقوای پس‌زمینه) → نوشتن محلی → خروج کوتاه مدت."
         }
     ]
 }

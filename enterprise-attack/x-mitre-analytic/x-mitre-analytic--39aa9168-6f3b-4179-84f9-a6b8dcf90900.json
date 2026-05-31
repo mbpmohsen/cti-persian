@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0439#AN1217",
-                    "external_id": "AN1217"
+                    "external_id": "AN1217",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1217",
-            "description": "Detects binary movement or copying between untrusted and trusted paths (e.g., /tmp/ \u2192 /usr/bin/ or /etc/init.d/) that may indicate persistence attempts or cleanup of origin traces.",
+            "description": "Detects binary movement or copying between untrusted and trusted paths (e.g., /tmp/ → /usr/bin/ or /etc/init.d/) that may indicate persistence attempts or cleanup of origin traces.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RelocationPathPatterns",
-                    "description": "Match movement into known persistence or exclusion directories"
+                    "description": "Match movement into known persistence or exclusion directories",
+                    "description_fa": "حرکت را با فهرست‌های ماندگاری یا حذفی شناخته شده مطابقت دهید"
                 },
                 {
                     "field": "BinaryEntropyThreshold",
-                    "description": "Apply threshold to detect high-entropy relocations (e.g., packed malware)"
+                    "description": "Apply threshold to detect high-entropy relocations (e.g., packed malware)",
+                    "description_fa": "اعمال آستانه برای شناسایی جابجایی های با آنتروپی بالا (به عنوان مثال، بدافزارهای بسته بندی شده)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1217",
+            "description_fa": "حرکت باینری یا کپی را بین مسیرهای نامعتبر و مطمئن (مانند /tmp/ → /usr/bin/ یا /etc/init.d/) تشخیص می‌دهد که ممکن است نشان‌دهنده تلاش‌های مداوم یا پاکسازی ردپای مبدا باشد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0049#AN0134",
-                    "external_id": "AN0134"
+                    "external_id": "AN0134",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandMatchPattern",
-                    "description": "Commands like `> /var/log/auth.log`, `rm ~/.bash_history`, `iptables -F`"
+                    "description": "Commands like `> /var/log/auth.log`, `rm ~/.bash_history`, `iptables -F`",
+                    "description_fa": "دستوراتی مانند «> /var/log/auth.log»، «rm ~/.bash_history»، «iptables -F»"
                 },
                 {
                     "field": "LogPathFilter",
-                    "description": "Focus on /var/log/auth.log, /etc/ssh/, ~/.bash_history"
+                    "description": "Focus on /var/log/auth.log, /etc/ssh/, ~/.bash_history",
+                    "description_fa": "روی /var/log/auth.log، /etc/ssh/، ~/.bash_history تمرکز کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0134",
+            "description_fa": "حذف یا رونویسی گزارش‌ها/پیکربندی‌هایی را که SSH یا فعالیت‌های پراکسی را ذخیره می‌کنند، مانند /var/log/auth.log یا پاکسازی .bash_history سفارشی مرتبط با جلسات SSH یا تغییرات قوانین فایروال را تشخیص می‌دهد."
         }
     ]
 }

@@ -9,28 +9,34 @@
                 {
                     "external_id": "CAPEC-122",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/122.html"
+                    "url": "https://capec.mitre.org/data/definitions/122.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-269",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/269.html"
+                    "url": "http://cwe.mitre.org/data/definitions/269.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-732",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/732.html"
+                    "url": "http://cwe.mitre.org/data/definitions/732.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-1317",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/1317.html"
+                    "url": "http://cwe.mitre.org/data/definitions/1317.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Abuse Elevation Control Mechanism",
                     "external_id": "T1548",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1548"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1548",
+                    "description_fa": "مکانیسم کنترل ارتفاع سوء استفاده",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--fd669b7d-0e79-473c-9808-a860dfb0c871",
@@ -59,6 +65,20 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات",
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -85,11 +105,25 @@
                 "None: No specialized resources are required to execute this type of attack. The ability to access the target is required."
             ],
             "x_capec_skills_required": {
-                "Low": "Adversary can leverage privileged features they already have access to without additional effort or skill. Adversary is only required to have access to an account with improper priveleges."
+                "Low": "Adversary can leverage privileged features they already have access to without additional effort or skill. Adversary is only required to have access to an account with improper priveleges.",
+                "Low_fa": "دشمن می‌تواند از ویژگی‌های ممتازی که قبلاً به آنها دسترسی دارند، بدون تلاش یا مهارت اضافی استفاده کند. حریف فقط ملزم به دسترسی به حسابی با امتیازات نامناسب است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف می‌تواند از ویژگی‌های هدفی که باید برای کاربران یا مدیران ممتاز رزرو شده باشد، اما در معرض استفاده از حساب‌های پایین‌تر یا غیرمجاز قرار می‌گیرد، سوء استفاده کند. دسترسی به اطلاعات حساس و عملکرد باید کنترل شود تا اطمینان حاصل شود که فقط کاربران مجاز قادر به دسترسی به این منابع هستند.",
+            "name_fa": "سوء استفاده از امتیازات",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>مجوزهای نامناسب پیکربندی حساب به کاربران غیرمجاز در شبکه بیمارستان اجازه می‌دهد به سوابق پزشکی بیش از 3000 بیمار دسترسی داشته باشند. بنابراین یکپارچگی و محرمانه بودن داده ها علاوه بر نقض HIPAA به خطر می افتد.</xhtml:p>"
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p>اگر مکانیزم های کنترل دسترسی وجود نداشته باشد یا به اشتباه پیکربندی شده باشد، کاربر ممکن است بتواند به منابعی دسترسی داشته باشد که فقط برای کاربران سطح بالاتر در نظر گرفته شده است. ممکن است یک دشمن بتواند از این برای استفاده از یک حساب کمتر قابل اعتماد برای به دست آوردن اطلاعات و انجام فعالیت‌های رزرو شده برای حساب‌های قابل اعتمادتر استفاده کند.</xhtml:p>\n            <xhtml:p> این حمله با افزایش امتیاز و سایر حملات سرقت امتیاز متفاوت است، زیرا دشمن هرگز در واقع امتیازات خود را افزایش نمی دهد، بلکه می تواند از درجه کمتری از امتیاز برای دسترسی به منابعی استفاده کند که باید (اما نه) برای حساب های دارای امتیاز بالاتر رزرو شوند. به همین ترتیب، حریف از اعتماد سوء استفاده نمی‌کند یا سیستم‌ها را واژگون نمی‌کند - همه عملکردهای کنترلی طبق پیکربندی کار می‌کنند اما پیکربندی به اندازه کافی از منابع حساس در سطح مناسب محافظت نمی‌کند.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "هدف باید مکانیزم های کنترل دسترسی خود را به اشتباه پیکربندی کرده باشد، به طوری که اطلاعات حساس، که فقط باید برای کاربران قابل اعتمادتر قابل دسترسی باشد، برای کاربران کمتر قابل اعتماد باقی بماند.",
+                "حریف باید به هدف دسترسی داشته باشد، البته با حسابی که امتیاز کمتری نسبت به منابع مورد نظر دارد."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست. توانایی دسترسی به هدف مورد نیاز است."
+            ]
         }
     ],
     "type": "bundle"

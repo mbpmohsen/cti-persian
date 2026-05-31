@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0524#AN1450",
-                    "external_id": "AN1450"
+                    "external_id": "AN1450",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "PFAnchorPaths",
-                    "description": "Anchors or conf files monitored for change (/etc/pf.conf, /etc/pf.anchors/*)."
+                    "description": "Anchors or conf files monitored for change (/etc/pf.conf, /etc/pf.anchors/*).",
+                    "description_fa": "لنگرها یا فایل‌های conf برای تغییر نظارت می‌شوند (/etc/pf.conf، /etc/pf.anchors/*)."
                 },
                 {
                     "field": "DeveloperMode",
-                    "description": "Reduce noise on dev endpoints compiling or testing PF rules."
+                    "description": "Reduce noise on dev endpoints compiling or testing PF rules.",
+                    "description_fa": "کاهش نویز در نقاط پایانی برنامه نویس در حال کامپایل یا آزمایش قوانین PF."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1450",
+            "description_fa": "دنباله ضربه از راه دور به دنبال به روز رسانی قانون PF/socketfilterfw یا فرآیند پس زمینه گوش دادن در یک پورت جدید. سپس یک جلسه TCP موفق. همچنین بسته های جادویی WoL را در بخش محلی پرچم گذاری می کند."
         }
     ]
 }

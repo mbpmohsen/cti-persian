@@ -14,35 +14,35 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1055/004",
                     "external_id": "T1055.004",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "CyberBit Early Bird Apr 2018",
                     "description": "Gavriel, H. & Erbesfeld, B. (2018, April 11). New ‘Early Bird’ Code Injection Technique Discovered. Retrieved May 24, 2018.",
                     "url": "https://www.cyberbit.com/blog/endpoint-security/new-early-bird-code-injection-technique-discovered/",
-                    "source_name_fa": "CyberBit Early Bird 2018",
-                    "description_fa": "Gavriel، H. & Erbesfeld، B. (2018، 11 آوریل) تکنیک جدید “Early Bird” کشف شد. Retrieved ۲۴ مه ۲۰۱۸"
+                    "source_name_fa": "CyberBit Early Bird آوریل 2018",
+                    "description_fa": "Gavriel, H. & Erbesfeld, B. (2018، 11 آوریل). تکنیک جدید تزریق کد «Early Bird» کشف شد. بازبینی شده در ۲۴ مه ۲۰۱۸."
                 },
                 {
                     "source_name": "ENSIL AtomBombing Oct 2016",
                     "description": "Liberman, T. (2016, October 27). ATOMBOMBING: BRAND NEW CODE INJECTION FOR WINDOWS. Retrieved December 8, 2017.",
                     "url": "https://blog.ensilo.com/atombombing-brand-new-code-injection-for-windows",
-                    "source_name_fa": "ENSIL AtomBombing اکتبر 2016",
-                    "description_fa": "لیبرمن، T. 2016، 27 اکتبر دانلود زیرنویس فارسی فیلم ATIBOMBING: BRAND New CODE INJECTION FOR WINDOWS Retrieved 8 دسامبر 2017"
+                    "source_name_fa": "ENSIL Atom Bombing اکتبر 2016",
+                    "description_fa": "لیبرمن، تی (2016، 27 اکتبر). بمباران اتمی: تزریق کد کاملاً جدید برای ویندوز. بازبینی شده در ۸ دسامبر ۲۰۱۷."
                 },
                 {
                     "source_name": "Microsoft Atom Table",
                     "description": "Microsoft. (n.d.). About Atom Tables. Retrieved December 8, 2017.",
                     "url": "https://msdn.microsoft.com/library/windows/desktop/ms649053.aspx",
-                    "source_name_fa": "Microsoft Atom Table",
-                    "description_fa": "مایکروسافت (n.d.) درباره میزهای Atom Retrieved 8 دسامبر 2017"
+                    "source_name_fa": "جدول اتم مایکروسافت",
+                    "description_fa": "مایکروسافت. (n.d.). درباره جداول اتم بازبینی شده در ۸ دسامبر ۲۰۱۷."
                 },
                 {
                     "source_name": "Microsoft APC",
                     "description": "Microsoft. (n.d.). Asynchronous Procedure Calls. Retrieved December 8, 2017.",
                     "url": "https://msdn.microsoft.com/library/windows/desktop/ms681951.aspx",
-                    "source_name_fa": "Microsoft APC",
-                    "description_fa": "مایکروسافت (n.d.) asynchronous Method Calls Retrieved 8 دسامبر 2017"
+                    "source_name_fa": "مایکروسافت APC",
+                    "description_fa": "مایکروسافت. (n.d.). فراخوانی رویه ناهمزمان. بازبینی شده در ۸ دسامبر ۲۰۱۷."
                 }
             ],
             "object_marking_refs": [
@@ -72,8 +72,8 @@
                 "Windows"
             ],
             "x_mitre_version": "2.0",
-            "name_fa": "asynchronous Call",
-            "description_fa": "مخالفان ممکن است کد های مخرب را از طریق صف فرآیند ناهمزمان تزریق کنند تا از دفاع مبتنی بر فرآیند و همچنین احتمالا امتیازات بالا ببرند. تزریق APC یک روش برای اجرای کد خودسرانه در فضای آدرس یک فرآیند جداگانه زندگی است.\n\nتزریق APC معمولا با اتصال کد مخرب به APC Queue ([CTI_PRESERVE_3] از رشته فرآیند انجام می شود. عملکرد های APC در هنگام ورود به یک حالت قابل تغییر اجرا می شوند.[۱۰] دسته ای از فرایند قربانی موجود برای اولین بار با تماس های ویندوزی بومی مانند [CTI_PRESERVE_0] ایجاد شده است. در این مرحله [[ویرایش] می تواند برای استفاده از یک تابع (مانند [CTI_PRESERVE_2] استفاده شود.\n\nتغییراتی از تزریق APC، که به نام تزریق پرنده نامیده می شود، شامل ایجاد یک فرایند معلق است که در آن کد مخرب می تواند قبل از ورود فرآیند (و به طور بالقوه قلاب های ضد بدافزار بعدی) از طریق یک APC نوشته و اجرا شود. [[ویرایش] AtomBombing [CTI_PRESERVE_6] یک تنوع دیگر است که از APCs برای استفاده از کد مخرب که قبلا به جدول اتم جهانی نوشته شده است استفاده می کند. [[ویرایش]\n\nاجرای کد در زمینه فرآیند دیگر ممکن است اجازه دسترسی به حافظه، سیستم / منابع شبکه و احتمالا امتیازات بالا را بدهد. اعدام از طریق تزریق APC ممکن است از تشخیص محصولات امنیتی جلوگیری کند زیرا اعدام تحت یک فرآیند قانونی پوشیده شده است. <code>OpenThread</code> <code>QueueUserAPC</code> <code>LoadLibrayA</code> (Citation: Microsoft APC) (Citation: Microsoft APC) (Citation: CyberBit Early Bird Apr 2018) (Citation: ENSIL AtomBombing Oct 2016) (Citation: Microsoft Atom Table)"
+            "name_fa": "فراخوان رویه ناهمزمان",
+            "description_fa": "دشمنان ممکن است کدهای مخرب را از طریق صف فراخوانی رویه ناهمزمان (APC) به فرآیندها تزریق کنند تا از دفاع مبتنی بر فرآیند و همچنین احتمالاً افزایش امتیازات فرار کنند. تزریق APC روشی برای اجرای کد دلخواه در فضای آدرس یک فرآیند زنده جداگانه است. \n\nتزریق APC معمولاً با پیوست کردن کدهای مخرب به صف APC (Citation: Microsoft APC) رشته فرآیند انجام می‌شود. توابع APC در صف زمانی اجرا می شوند که رشته وارد یک حالت قابل تغییر می شود.(Citation: Microsoft APC) یک دسته برای یک فرآیند قربانی موجود ابتدا با فراخوانی های بومی Windows API مانند <code>OpenThread</code> ایجاد می شود. در این مرحله از [[CTI_PRESERVE_1]]] می‌توان برای فراخوانی یک تابع استفاده کرد (مانند [[CTI_PRESERVE_2]]] که به یک DLL مخرب اشاره می‌کند). \n\nگونه‌ای از تزریق APC که «تزریق اولیه پرنده» نامیده می‌شود، شامل ایجاد یک فرآیند معلق است که در آن کدهای مخرب می‌توانند قبل از نقطه ورود فرآیند (و احتمالاً قلاب‌های ضد بدافزار بعدی) از طریق APC نوشته و اجرا شوند. (Citation: CyberBit Early Bird Apr 2018) بمباران اتمی (Citation: ENSIL AtomBombing Oct 2016) یکی دیگر از تغییراتی است که از APCها برای فراخوانی کدهای مخربی که قبلاً در جدول اتم جهانی نوشته شده است استفاده می‌کند.(Citation: Microsoft Atom Table)\n\nاجرای کد در زمینه یک فرآیند دیگر ممکن است امکان دسترسی به حافظه فرآیند، منابع سیستم/شبکه و احتمالاً امتیازات بالاتر را فراهم کند. اجرای از طریق تزریق APC همچنین ممکن است از شناسایی محصولات امنیتی جلوگیری کند زیرا اجرا تحت یک فرآیند قانونی پنهان شده است. <code>QueueUserAPC</code> <code>LoadLibrayA</code>"
         }
     ]
 }

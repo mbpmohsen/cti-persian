@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0260#AN0722",
-                    "external_id": "AN0722"
+                    "external_id": "AN0722",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "GeoLocationAlerts",
-                    "description": "Trigger on logins from unusual or high-risk geographies."
+                    "description": "Trigger on logins from unusual or high-risk geographies.",
+                    "description_fa": "ماشه ورود به سیستم‌های جغرافیایی غیرعادی یا پرخطر."
                 },
                 {
                     "field": "TokenReplayThreshold",
-                    "description": "Detect multiple simultaneous uses of the same forged credential."
+                    "description": "Detect multiple simultaneous uses of the same forged credential.",
+                    "description_fa": "استفاده همزمان چندگانه از یک اعتبار جعلی را شناسایی کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0722",
+            "description_fa": "پلتفرم‌های SaaS ممکن است اعتبار جعلی را به‌عنوان کلیدهای API، توکن‌ها یا کوکی‌های جلسه غیرعادی نشان دهند که بدون احراز هویت مربوطه استفاده می‌شوند. الگوهای همبسته شامل جلسات معتبر همزمان از چندین جغرافیا، تماس‌های غیرمعمول API با توکن‌های جدید، یا دور زدن اجرای MFA مورد انتظار است."
         }
     ]
 }

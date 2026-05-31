@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0445#AN1230",
-                    "external_id": "AN1230"
+                    "external_id": "AN1230",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandLinePattern",
-                    "description": "Shell piping into tools like `socat`, `ncat`, or `openssl` for tunnel creation."
+                    "description": "Shell piping into tools like `socat`, `ncat`, or `openssl` for tunnel creation.",
+                    "description_fa": "لوله‌کشی پوسته به ابزارهایی مانند «socat»، «ncat» یا «openssl» برای ایجاد تونل."
                 },
                 {
                     "field": "OutboundPortRange",
-                    "description": "Flag connections made from internal systems to uncommon high ports externally."
+                    "description": "Flag connections made from internal systems to uncommon high ports externally.",
+                    "description_fa": "اتصالات ساخته شده از سیستم‌های داخلی به پورت‌های غیرمعمول بالای خارجی را علامت‌گذاری کنید."
                 },
                 {
                     "field": "ProcessUserContext",
-                    "description": "Capture low-privilege or unexpected users executing system-level network tools."
+                    "description": "Capture low-privilege or unexpected users executing system-level network tools.",
+                    "description_fa": "کاربران کم امتیاز یا غیرمنتظره ای را که ابزارهای شبکه در سطح سیستم را اجرا می کنند، جذب کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1230",
+            "description_fa": "ابزارهای فضای کاربر (به عنوان مثال، «socat»، «ncat»، «iptables»، «ssh») به روش‌های غیراستاندارد برای ایجاد پوسته‌های معکوس، ارسال پورت یا اتصالات بین میزبان استفاده می‌شوند. اغلب با مقاصد خروجی غیر معمول یا تونل های SSH زنجیر شده است."
         }
     ]
 }

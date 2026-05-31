@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0493#AN1359",
-                    "external_id": "AN1359"
+                    "external_id": "AN1359",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedAppleEventTargets",
-                    "description": "Whitelisted app-to-app Apple Event communications (e.g., Finder automation)."
+                    "description": "Whitelisted app-to-app Apple Event communications (e.g., Finder automation).",
+                    "description_fa": "ارتباطات برنامه به برنامه Apple Event در لیست سفید قرار گرفته است (به عنوان مثال، اتوماسیون Finder)."
                 },
                 {
                     "field": "MachPortBaseline",
-                    "description": "Baseline of Mach ports and XPC services normally used in the environment."
+                    "description": "Baseline of Mach ports and XPC services normally used in the environment.",
+                    "description_fa": "خط پایه پورت‌های Mach و سرویس‌های XPC که معمولاً در محیط استفاده می‌شوند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1359",
+            "description_fa": "استفاده غیرعادی از پورت های Mach، Apple Events یا سرویس های XPC برای اجرای بین فرآیند یا تزریق کد را تشخیص می دهد. تمرکز بر فرآیندهای غیرمنتظره برای ارسال رویدادهای اختصاصی اپل (به عنوان مثال، تزریق اسکریپت های اتوماسیون به برنامه های حساس به امنیت)."
         }
     ]
 }

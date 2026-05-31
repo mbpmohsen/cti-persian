@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0448#AN1241",
-                    "external_id": "AN1241"
+                    "external_id": "AN1241",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SuspiciousSharedObjectPathRegex",
-                    "description": "Regex to filter dynamic library paths outside of `/lib`, `/usr/lib`, etc. (e.g., `/tmp`, `/dev/shm`)"
+                    "description": "Regex to filter dynamic library paths outside of `/lib`, `/usr/lib`, etc. (e.g., `/tmp`, `/dev/shm`)",
+                    "description_fa": "Regex برای فیلتر کردن مسیرهای کتابخانه پویا خارج از «/lib»، «/usr/lib» و غیره (به عنوان مثال، «/tmp»، «/dev/shm»)"
                 },
                 {
                     "field": "TimeWindow_PtraceToMmap",
-                    "description": "Max delay allowed between ptrace attach and mmap/mprotect execution in target process"
+                    "description": "Max delay allowed between ptrace attach and mmap/mprotect execution in target process",
+                    "description_fa": "حداکثر تأخیر مجاز بین اتصال ptrace و اجرای mmap/mprotect در فرآیند هدف"
                 },
                 {
                     "field": "ExecMemoryProtectionThreshold",
-                    "description": "Flag when executable memory mappings deviate from normal runtime behavior"
+                    "description": "Flag when executable memory mappings deviate from normal runtime behavior",
+                    "description_fa": "زمانی که نگاشت حافظه اجرایی از رفتار زمان اجرا عادی منحرف می شود، پرچم گذاری کنید"
                 },
                 {
                     "field": "AnomalousParentProcessList",
-                    "description": "Parent processes unlikely to legitimately call ptrace (e.g., nginx, apache2, sshd)"
+                    "description": "Parent processes unlikely to legitimately call ptrace (e.g., nginx, apache2, sshd)",
+                    "description_fa": "فرآیندهای والد بعید است که به طور قانونی ptrace را فراخوانی کنند (به عنوان مثال، nginx، apache2، sshd)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1241",
+            "description_fa": "هدایت مجدد جریان اجرای syscall را از طریق اصلاح کدهای خرد VDSO یا ورودی های GOT برای بارگذاری و اجرای یک شی مشترک مخرب از طریق mmap و ptrace تشخیص می دهد."
         }
     ]
 }

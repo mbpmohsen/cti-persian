@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0794#AN1926",
-                    "external_id": "AN1926"
+                    "external_id": "AN1926",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -20,7 +21,7 @@
             ],
             "modified": "2025-10-21T15:10:28.402Z",
             "name": "Analytic 1926",
-            "description": "Monitor industrial process history data for events that correspond with command message functions, such as setpoint modification or changes to system status for key devices. This will not directly detect the technique\u2019s execution, but instead may provide additional evidence that the technique has been used and may complement other detections.\nMonitor for anomalous or unexpected commands that may result in changes to the process operation (e.g., discrete write, logic and device configuration, mode changes) observable via asset application logs.\nMonitor for new or unexpected connections to controllers, which could indicate an Unauthorized Command Message being sent via [Rogue Master](https://attack.mitre.org/techniques/T0848).\nMonitor for anomalous or unexpected commands that may result in changes to the process operation (e.g., discrete write, logic and device configuration, mode changes) observable via asset application logs.\nMonitor for unexpected ICS protocol command functions to controllers from existing master devices (including from new processes) or from new devices. The latter is like detection for [Rogue Master](https://attack.mitre.org/techniques/T0848) but requires ICS function level insight to determine if an unauthorized device is issuing commands (e.g., a historian).\n\nMonitoring for unexpected or problematic values below the function level will provide better insights into potentially malicious activity but at the cost of additional false positives depending on the underlying operational process.",
+            "description": "Monitor industrial process history data for events that correspond with command message functions, such as setpoint modification or changes to system status for key devices. This will not directly detect the technique’s execution, but instead may provide additional evidence that the technique has been used and may complement other detections.\nMonitor for anomalous or unexpected commands that may result in changes to the process operation (e.g., discrete write, logic and device configuration, mode changes) observable via asset application logs.\nMonitor for new or unexpected connections to controllers, which could indicate an Unauthorized Command Message being sent via [Rogue Master](https://attack.mitre.org/techniques/T0848).\nMonitor for anomalous or unexpected commands that may result in changes to the process operation (e.g., discrete write, logic and device configuration, mode changes) observable via asset application logs.\nMonitor for unexpected ICS protocol command functions to controllers from existing master devices (including from new processes) or from new devices. The latter is like detection for [Rogue Master](https://attack.mitre.org/techniques/T0848) but requires ICS function level insight to determine if an unauthorized device is issuing commands (e.g., a historian).\n\nMonitoring for unexpected or problematic values below the function level will provide better insights into potentially malicious activity but at the cost of additional false positives depending on the underlying operational process.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_version": "1.0",
             "x_mitre_attack_spec_version": "3.3.0",
@@ -57,7 +58,9 @@
                     "channel": "None"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1926",
+            "description_fa": "داده‌های تاریخچه فرآیند صنعتی را برای رویدادهایی که با عملکردهای پیام فرمان مطابقت دارند، مانند تغییر نقطه تنظیم یا تغییر وضعیت سیستم برای دستگاه‌های کلیدی، نظارت کنید. این به طور مستقیم اجرای تکنیک را تشخیص نمی دهد، اما در عوض ممکن است شواهد بیشتری مبنی بر استفاده از تکنیک ارائه دهد و ممکن است تشخیص های دیگر را تکمیل کند.\nکنترل دستورات غیرمنتظره یا غیرمنتظره که ممکن است منجر به تغییرات در عملیات فرآیند شوند (مانند نوشتن گسسته، پیکربندی منطق و دستگاه، تغییرات حالت) قابل مشاهده از طریق گزارش‌های برنامه دارایی.\nبرای اتصالات جدید یا غیرمنتظره به کنترل‌کننده‌ها، که می‌تواند نشان‌دهنده ارسال پیام فرمان غیرمجاز از طریق [Rogue Master] (https://attack.mitre.org/techniques/T0848) باشد، نظارت کنید.\nکنترل دستورات غیرمنتظره یا غیرمنتظره که ممکن است منجر به تغییرات در عملیات فرآیند شوند (مانند نوشتن گسسته، پیکربندی منطق و دستگاه، تغییرات حالت) قابل مشاهده از طریق گزارش‌های برنامه دارایی.\nعملکردهای فرمان پروتکل ICS غیرمنتظره را برای کنترل‌کننده‌ها از دستگاه‌های اصلی موجود (از جمله از فرآیندهای جدید) یا از دستگاه‌های جدید نظارت کنید. مورد دوم مانند تشخیص برای [Rogue Master] (https://attack.mitre.org/techniques/T0848) است، اما به بینش سطح عملکرد ICS نیاز دارد تا مشخص شود آیا یک دستگاه غیرمجاز دستورات را صادر می‌کند (مثلاً یک مورخ).\n\nنظارت بر مقادیر غیرمنتظره یا مشکل‌ساز زیر سطح عملکرد، بینش بهتری را در مورد فعالیت‌های مخرب بالقوه ارائه می‌کند، اما بسته به فرآیند عملیاتی زیربنایی، به بهای موارد مثبت کاذب اضافی می‌شود."
         }
     ]
 }

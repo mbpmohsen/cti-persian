@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0267#AN0742",
-                    "external_id": "AN0742"
+                    "external_id": "AN0742",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessPath",
-                    "description": "Location of resource-heavy binaries (e.g., /tmp/.xmr)"
+                    "description": "Location of resource-heavy binaries (e.g., /tmp/.xmr)",
+                    "description_fa": "محل قرارگیری باینری های با منابع سنگین (به عنوان مثال /tmp/.xmr)"
                 },
                 {
                     "field": "CPUThreshold",
-                    "description": "Acceptable baseline for CPU overuse"
+                    "description": "Acceptable baseline for CPU overuse",
+                    "description_fa": "پایه قابل قبول برای استفاده بیش از حد از CPU"
                 },
                 {
                     "field": "KnownMiningDomains",
-                    "description": "List of domains/IPs for known cryptomining services"
+                    "description": "List of domains/IPs for known cryptomining services",
+                    "description_fa": "فهرست دامنه ها/IP برای خدمات شناخته شده رمزنگاری"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0742",
+            "description_fa": "استفاده غیرعادی از CPU/حافظه توسط فرآیندهای غیرمجاز با اتصالات خروجی به استخرهای استخراج شناخته شده یا استفاده از cron jobs/script برای حفظ پایداری."
         }
     ]
 }

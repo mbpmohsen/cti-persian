@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0536#AN1477",
-                    "external_id": "AN1477"
+                    "external_id": "AN1477",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedSSIDRegex",
-                    "description": "Regex-based whitelist of corporate SSIDs; anomalous matches indicate suspicious activity."
+                    "description": "Regex-based whitelist of corporate SSIDs; anomalous matches indicate suspicious activity.",
+                    "description_fa": "لیست سفید مبتنی بر Regex از SSIDهای شرکتی؛ مسابقات غیرعادی نشان دهنده فعالیت مشکوک است."
                 },
                 {
                     "field": "RetryThreshold",
-                    "description": "Number of failed association attempts allowed before triggering detection."
+                    "description": "Number of failed association attempts allowed before triggering detection.",
+                    "description_fa": "تعداد تلاش‌های ارتباط ناموفق قبل از شروع شناسایی مجاز است."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1477",
+            "description_fa": "ارتباط‌های بی‌سیم غیرمجاز را با نظارت بر گزارش‌های wpa_supplicant، رویدادهای NetworkManager و تماس‌های سیستم مربوط به تغییرات وضعیت رابط شناسایی می‌کند. ناهنجاری ها شامل خرابی های مکرر ارتباط، SSID های جدید خارج از مقادیر پایه، و اتصالات AP سرکش است."
         }
     ]
 }

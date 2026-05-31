@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-58",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/58.html"
+                    "url": "https://capec.mitre.org/data/definitions/58.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-267",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/267.html"
+                    "url": "http://cwe.mitre.org/data/definitions/267.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-269",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/269.html"
+                    "url": "http://cwe.mitre.org/data/definitions/269.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Mark O'Neill, Security for REST Web Services, Vprde;",
                     "external_id": "REF-463",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.vordel.com/downloads/rsa_conf_2006.pdf"
+                    "url": "http://www.vordel.com/downloads/rsa_conf_2006.pdf",
+                    "description_fa": "مارک اونیل، امنیت برای خدمات وب REST، Vprde;",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--74bac7d9-693d-40d2-82bf-eb132f13bcaf",
@@ -52,6 +57,18 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -68,11 +85,21 @@
                 "The attacker needs to be able to identify HTTP Get URLs. The Get methods must be set to call applications that perform operations other than get such as update and delete."
             ],
             "x_capec_skills_required": {
-                "Low": "It is relatively straightforward to identify an HTTP Get method that changes state on the server side and executes against an over-privileged system interface"
+                "Low": "It is relatively straightforward to identify an HTTP Get method that changes state on the server side and executes against an over-privileged system interface",
+                "Low_fa": "شناسایی یک روش HTTP Get که حالت را در سمت سرور تغییر می‌دهد و در برابر یک رابط سیستم بیش از حد مجاز اجرا می‌شود، نسبتاً ساده است."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف یک روش مجوز سبک Rest HTTP (Get, Put, Delete) را شناسایی می کند که به آنها اجازه می دهد تا اقدامات مخرب مختلفی را بر روی داده های سرور انجام دهند به دلیل عدم وجود مکانیسم های کنترل دسترسی اجرا شده در سرویس برنامه کاربردی که پیام های HTTP را می پذیرد.",
+            "name_fa": "ارتفاع امتیاز آرامش بخش",
+            "x_capec_example_instances_fa": [
+                "روش HTTP Get برای بازیابی منابع و عدم تغییر وضعیت برنامه یا منابع در سمت سرور طراحی شده است. با این حال، توسعه‌دهندگان به راحتی می‌توانند برنامه‌هایی را که درخواست HTTP Get را می‌پذیرند، کدنویسی کنند که در واقع داده‌ها را روی سرور ایجاد، به‌روزرسانی یا حذف می‌کنند. هر دو Flickr (http://www.flickr.com/services/api/flickr.photosets.delete.html) و del.icio.us (http://del.icio.us/api/posts/delete) عملیات حذف را با استفاده از درخواست‌های استاندارد دریافت HTTP اجرا کرده‌اند. این روش‌های HTTP Get داده‌های سمت سرور را حذف می‌کنند، علی‌رغم اینکه از Get فراخوانی می‌شوند که قرار نیست حالت را تغییر دهد."
+            ],
+            "x_capec_extended_description_fa": "<xhtml:p>Rest از روش‌های استاندارد مجوزهای سبک HTTP (Get, Put, Delete) استفاده می‌کند، اما اینها لزوماً به طور کلی با برنامه‌های پایانی مرتبط نیستند. تفسیر دقیق روش‌های دریافت HTTP به این معنی است که این سرویس‌های HTTP Get نباید برای حذف اطلاعات روی سرور استفاده شوند، اما هیچ مکانیزم کنترل دسترسی برای پشتیبان‌گیری از این منطق وجود ندارد. این بدان معنی است که مگر اینکه سرویس ها به درستی ACL'd باشند و اجرای سرویس برنامه از این دستورالعمل ها پیروی کند، یک درخواست HTTP می تواند به راحتی حذف یا به روز رسانی را در سمت سرور اجرا کند. مهاجم یک URL دریافت HTTP مانند http://victimsite/updateOrder, را شناسایی می‌کند که به برنامه‌ای برای به‌روزرسانی سفارش‌ها در پایگاه داده یا منابع دیگر فراخوانی می‌کند. URL بی قدرت نیست، بنابراین درخواست می تواند چندین بار توسط مهاجم ارسال شود، علاوه بر این، مهاجم ممکن است بتواند از URL منتشر شده به عنوان یک متد Get که در واقع به روز رسانی را انجام می دهد (به جای صرفاً بازیابی داده) سوء استفاده کند. این ممکن است منجر به تغییر مخرب یا سهوی داده های روی سرور شود.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم باید بتواند URL های دریافت HTTP را شناسایی کند. متدهای دریافت باید برای فراخوانی برنامه‌هایی تنظیم شوند که عملیاتی غیر از دریافت را انجام می‌دهند، مانند به‌روزرسانی و حذف."
+            ]
         }
     ],
     "spec_version": "2.0",

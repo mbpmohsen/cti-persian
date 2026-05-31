@@ -9,54 +9,66 @@
                 {
                     "external_id": "CAPEC-127",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/127.html"
+                    "url": "https://capec.mitre.org/data/definitions/127.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-424",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/424.html"
+                    "url": "http://cwe.mitre.org/data/definitions/424.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-425",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/425.html"
+                    "url": "http://cwe.mitre.org/data/definitions/425.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-288",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/288.html"
+                    "url": "http://cwe.mitre.org/data/definitions/288.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-732",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/732.html"
+                    "url": "http://cwe.mitre.org/data/definitions/732.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-276",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/276.html"
+                    "url": "http://cwe.mitre.org/data/definitions/276.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "File and Directory Discovery",
                     "external_id": "T1083",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1083"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1083",
+                    "description_fa": "کشف فایل و دایرکتوری",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "WASC Threat Classification 2.0, 2010, The Web Application Security Consortium (WASC)",
                     "external_id": "REF-11",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://projects.webappsec.org/Directory-Indexing"
+                    "url": "http://projects.webappsec.org/Directory-Indexing",
+                    "description_fa": "WASC Threat Classification 2.0، 2010، کنسرسیوم امنیت برنامه های وب (WASC)",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--62c46d1c-f091-467e-a4b0-61927db31f38",
@@ -73,6 +85,9 @@
             "x_capec_consequences": {
                 "Confidentiality": [
                     "Read Data (Information Leakage)"
+                ],
+                "Confidentiality_fa": [
+                    "خواندن داده ها (نشت اطلاعات)"
                 ]
             },
             "x_capec_domains": [
@@ -94,11 +109,28 @@
             ],
             "x_capec_skills_required": {
                 "High": "To bypass the access control of the directory of listings",
-                "Low": "To issue the request to URL without given a specific file name"
+                "Low": "To issue the request to URL without given a specific file name",
+                "High_fa": "برای دور زدن کنترل دسترسی فهرست فهرست ها",
+                "Low_fa": "برای صدور درخواست به URL بدون ذکر نام فایل خاص"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Medium",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک حریف درخواستی را برای یک هدف ایجاد می‌کند که منجر به فهرست کردن/نمایه‌گذاری محتوای یک فهرست به عنوان خروجی توسط هدف می‌شود. یکی از روش‌های رایج برای راه‌اندازی محتویات دایرکتوری به عنوان خروجی، ساختن یک درخواست حاوی مسیری است که به جای نام فایل، به نام دایرکتوری ختم می‌شود، زیرا بسیاری از برنامه‌ها برای ارائه فهرستی از محتویات دایرکتوری هنگام دریافت چنین درخواستی پیکربندی شده‌اند. یک دشمن می تواند از این برای کاوش درخت دایرکتوری روی یک هدف و همچنین یادگیری نام فایل ها استفاده کند. این اغلب می‌تواند منجر به فاش شدن فایل‌های آزمایشی، فایل‌های پشتیبان، فایل‌های موقت، فایل‌های مخفی، فایل‌های پیکربندی، حساب‌های کاربری، محتویات اسکریپت، و همچنین قراردادهای نام‌گذاری شود، که همگی می‌توانند توسط مهاجم برای نصب حملات اضافی استفاده شوند.",
+            "name_fa": "نمایه سازی دایرکتوری",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> دشمن از فهرست دایرکتوری برای مشاهده فایل های حساس در برنامه استفاده می کند. این نمونه ای از دسترسی به فایل پشتیبان است. حمله درخواستی برای http://www.example.com/admin/ صادر می‌کند و محتوای فهرست‌بندی دایرکتوری پویا زیر را در پاسخ دریافت می‌کند: Index of /admin Name Last Modified Size Description backup/ 31-May-2007 08:18 - Apache/ 2.0.55 Server در www.example.com\n               <xhtml:p>برنامه هدف لینک مستقیمی به دایرکتوری \"پشتیبان گیری\" در صفحه وب معمولی html ندارد، با این حال مهاجم به دلیل ایندکس کردن محتوا از این فهرست مطلع شده است. سپس مشتری URL دایرکتوری پشتیبان را درخواست می کند و خروجی را دریافت می کند که یک فایل \"db_dump.php\" در آن وجود دارد. این داده های حساس نباید به صورت عمومی افشا شوند.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کشف دایرکتوری: </b>از یک روش، دستی، اسکریپت شده یا خودکار برای کشف دایرکتوری های روی سرور با درخواست دایرکتوری هایی که ممکن است وجود داشته باشند، استفاده کنید. در این مرحله، دشمن کمتر به این موضوع می‌پردازد که آیا می‌توان به فهرستی دسترسی پیدا کرد یا فهرست‌بندی کرد و بیشتر بر روی کشف اینکه چه دایرکتوری‌هایی روی هدف وجود دارد، تمرکز می‌کند. دایرکتوری‌هایی که معمولاً در آن نوع سرورها وجود دارند را شامل شود.</td></tr><tr><td>دایرکتوری‌های غیرمعمول یا بالقوه ایجاد شده توسط کاربر را که ممکن است وجود داشته باشند، جستجو کنید.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>ساختار فایل‌ها به صورت تکراری به دایرکتوری تبلیغات دسترسی پیدا کرد: دایرکتوری هایی که اجازه دسترسی را می دهند و ممکن است با استفاده از روش های دستی یا خودکار سعی کنند ACL های سطح سرور یا برنامه را دور بزنند</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از ابزار اسکنر برای افزودن پویا دایرکتوری ها/فایل ها برای گنجاندن اسکن آنها بر اساس داده های به دست آمده در کاوش های اولیه استفاده کنید. پایان دادن به URL به اسلش '/'.</td></tr><tr><td>با استفاده از روش‌هایی که با افزودن داده‌ها به درخواست دایرکتوری، با برخی از انواع سرورها کار می‌کنند، سعی کنید ACLها را در فهرست‌ها دور بزنید. به عنوان مثال، اضافه کردن یک بایت Null به انتهای درخواست که ممکن است باعث شود ACL از کار بیفتد و اجازه دسترسی را بدهد.</td></tr><tr><td>به طور متوالی لیستی از فایل های پایه مشترک را به هر دایرکتوری کشف شده درخواست کنید.</td></tr><tr><td>برای فهرست کردن محتویات دایرکتوری برای دایرکتوری هایی که محتوای آنها \"/\" آشکار نمی شود، چندین تکنیک fuzzing را امتحان کنید. درخواست</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>خواندن دایرکتوری ها یا فایل هایی که برای مشاهده عمومی در نظر گرفته نشده اند.: </b>دشمن سعی می کند به دایرکتوری های کشف شده دسترسی پیدا کند که اجازه دسترسی را می دهد و ممکن است سعی کند با استفاده از سرور یا ACL دستی در سطح برنامه، از آن عبور کند. روش‌ها</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>برای فهرست کردن محتویات دایرکتوری برای فهرست‌هایی که محتویات خود را با درخواست \"/\" آشکار نمی‌کنند، تکنیک‌های بهره‌برداری متعددی را امتحان کنید</td></tr><tr><td>از سایر سوء استفاده‌های شناخته‌شده برای بالا بردن امتیازات کافی استفاده کنید.><tr><lt با ارسال درخواستی با URL که به علامت \"/\" ختم می‌شود.</td></tr><tr><td>از طریق URL مستقیم به فایل‌ها دسترسی پیدا کنید و محتویات را ضبط کنید.</td></tr><tr><td>با استفاده از روش‌هایی که با اضافه کردن داده‌ها به درخواست دایرکتوری بر روی برخی از انواع سرورها کار می‌کنند، سعی کنید ACL را در فهرست‌ها دور بزنید. به عنوان مثال، اضافه کردن یک بایت تهی به انتهای درخواست که ممکن است باعث از کار افتادن ACL شود و اجازه دسترسی را بدهد.</td></tr><tr><td>به طور متوالی لیستی از فایل های پایه مشترک را به هر دایرکتوری کشف شده درخواست کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "هدف باید برای بازگرداندن فهرستی از محتوای دایرکتوری هنگامی که درخواستی دریافت می کند که به نام دایرکتوری ختم می شود به جای نام فایل، به اشتباه پیکربندی شود.",
+                "دشمن باید بتواند مسیری را که از هدف درخواست می شود کنترل کند.",
+                "مدیر باید به درستی یک ACL را پیکربندی نکرده باشد یا یک ACL بیش از حد مجاز را با یک فهرست خاص مرتبط کرده باشد.",
+                "نسخه سرور یا سطح وصله نباید ذاتاً مانع از کار کردن حملات لیست فهرست راهنماهای شناخته شده شود."
+            ],
+            "x_capec_resources_required_fa": [
+                "امکان ارسال درخواست های HTTP به یک برنامه تحت وب."
+            ]
         }
     ],
     "spec_version": "2.0",

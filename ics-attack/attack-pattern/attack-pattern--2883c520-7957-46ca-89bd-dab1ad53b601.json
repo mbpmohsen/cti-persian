@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T0858",
-                    "external_id": "T0858"
+                    "external_id": "T0858",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Machine Information Systems 2007",
                     "description": "Machine Information Systems 2007 How PLCs Work Retrieved. 2021/01/28 ",
-                    "url": "http://www.machine-information-systems.com/How_PLCs_Work.html"
+                    "url": "http://www.machine-information-systems.com/How_PLCs_Work.html",
+                    "source_name_fa": "سیستم های اطلاعات ماشین 2007",
+                    "description_fa": "سیستم های اطلاعات ماشین 2007 نحوه کار PLC ها بازیابی شد. 2021/01/28"
                 },
                 {
                     "source_name": "N.A. October 2017",
                     "description": "N.A. 2017, October What are the different operating modes in PLC? Retrieved. 2021/01/28 ",
-                    "url": "https://forumautomation.com/t/what-are-the-different-operating-modes-in-plc/2489"
+                    "url": "https://forumautomation.com/t/what-are-the-different-operating-modes-in-plc/2489",
+                    "source_name_fa": "N.A. اکتبر 2017",
+                    "description_fa": "N.A. 2017، اکتبر حالت های مختلف عملکرد در PLC چیست؟ بازیابی شد. 2021/01/28"
                 },
                 {
                     "source_name": "Omron",
                     "description": "Omron Machine Information Systems 2007 How PLCs Work Retrieved. 2021/01/28  PLC Different Operating Modes Retrieved. 2021/01/28 ",
-                    "url": "https://www.omron-ap.com/service_support/FAQ/FAQ00002/index.asp#:~:text=In%20PROGRAM%20mode%2C%20the%20CPU,can%20be%20created%20or%20modified."
+                    "url": "https://www.omron-ap.com/service_support/FAQ/FAQ00002/index.asp#:~:text=In%20PROGRAM%20mode%2C%20the%20CPU,can%20be%20created%20or%20modified.",
+                    "source_name_fa": "امرون",
+                    "description_fa": "سیستم های اطلاعات ماشین Omron 2007 نحوه کار PLC ها بازیابی شد. 2021/01/28 PLC حالت های مختلف عملیاتی بازیابی شد. 2021/01/28"
                 },
                 {
                     "source_name": "PLCgurus 2021",
                     "description": "PLCgurus 2021 PLC Basics  Modes Of Operation Retrieved. 2021/01/28 ",
-                    "url": "https://www.plcgurus.net/plc-basics/"
+                    "url": "https://www.plcgurus.net/plc-basics/",
+                    "source_name_fa": "PLCgurus 2021",
+                    "description_fa": "PLCgurus 2021 PLC Basics Modes Of Operation Retrieved. 2021/01/28"
                 }
             ],
             "object_marking_refs": [
@@ -62,7 +71,9 @@
             "x_mitre_platforms": [
                 "None"
             ],
-            "x_mitre_version": "1.0"
+            "x_mitre_version": "1.0",
+            "name_fa": "تغییر حالت عملیات",
+            "description_fa": "دشمنان ممکن است حالت عملکرد یک کنترلر را برای دسترسی بیشتر به عملکردهای مهندسی مانند دانلود برنامه تغییر دهند.   کنترلرهای قابل برنامه ریزی معمولاً چندین حالت کار دارند که وضعیت برنامه کاربر را کنترل می کنند و دسترسی به API کنترلرها را کنترل می کنند. حالت های عملیاتی را می توان به صورت فیزیکی با استفاده از یک کلید کلید روی صفحه کنترل انتخاب کرد، اما ممکن است با تماس با API کنترلر نیز انتخاب شود. حالت‌های عملیاتی و مکانیسم‌هایی که توسط آن‌ها انتخاب می‌شوند، اغلب بر اساس فروشنده و خط تولید متفاوت است. برخی از حالت های عملیاتی که معمولاً اجرا می شوند در زیر توضیح داده شده اند:  \n\n* برنامه - این حالت باید قبل از ایجاد تغییرات در یک برنامه دستگاه فعال باشد. این امکان آپلود و دانلود برنامه را بین دستگاه و ایستگاه کاری مهندسی فراهم می کند. اغلب منطق PLC ها متوقف می شود و همه خروجی ها ممکن است به اجبار خاموش شوند. (Citation: N.A. October 2017)  \n* Run - اجرای برنامه دستگاه ها در این حالت انجام می شود. ورودی و خروجی (مقادیر، نقاط، تگ‌ها، عناصر و غیره) بر اساس منطق برنامه نظارت و استفاده می‌شوند. [آپلود برنامه](https://attack.mitre.org/techniques/T0845) و [بارگیری برنامه](https://attack.mitre.org/techniques/T0843) در این حالت غیرفعال هستند. (Citation: Omron) (Citation: Machine Information Systems 2007) (Citation: N.A. October 2017) (Citation: PLCgurus 2021)   \n* از راه دور - امکان تغییرات از راه دور در حالت عملکرد PLC ها را فراهم می کند. (Citation: PLCgurus 2021)    \n* توقف - PLC و برنامه متوقف می شود، در حالی که در این حالت، خروجی ها به اجبار خاموش می شوند. (Citation: Machine Information Systems 2007)   \n* تنظیم مجدد - شرایط روی PLC به حالت اولیه خود بازنشانی می شود. تنظیم مجدد گرم ممکن است مقداری از حافظه را حفظ کند، در حالی که تنظیم مجدد سرد، تمام ورودی/خروجی و ثبت داده ها را بازنشانی می کند. (Citation: Machine Information Systems 2007)   \n* حالت تست / مانیتور - مشابه حالت اجرا، ورودی/خروجی پردازش می‌شود، اگرچه این حالت امکان نظارت، تنظیم نیرو، تنظیم مجدد، و به طور کلی تنظیم یا اشکال زدایی سیستم را فراهم می‌کند. اغلب حالت مانیتور ممکن است به عنوان آزمایشی برای مقداردهی اولیه استفاده شود. (Citation: Omron)"
         }
     ]
 }

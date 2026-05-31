@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0540#AN1489",
-                    "external_id": "AN1489"
+                    "external_id": "AN1489",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "Image",
-                    "description": "The executable name of the miner or wrapper\u2014can vary across campaigns."
+                    "description": "The executable name of the miner or wrapper—can vary across campaigns.",
+                    "description_fa": "نام اجرایی ماینر یا بسته بندی — می تواند در کمپین ها متفاوت باشد."
                 },
                 {
                     "field": "DestinationIP",
-                    "description": "May differ depending on the mining pool or proxy server."
+                    "description": "May differ depending on the mining pool or proxy server.",
+                    "description_fa": "ممکن است بسته به استخر استخراج یا سرور پراکسی متفاوت باشد."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Useful for filtering known-good automation vs malicious task runners."
+                    "description": "Useful for filtering known-good automation vs malicious task runners.",
+                    "description_fa": "مفید برای فیلتر کردن اتوماسیون خوب شناخته شده در مقابل اجرای کارهای مخرب."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1489",
+            "description_fa": "اجرای پایدار فرآیندهای فشرده منابع (به عنوان مثال، استخراج کنندگان ارزهای دیجیتال)، که اغلب از طریق وظایف برنامه ریزی شده، WMI یا PowerShell راه اندازی می شوند. این فرآیندها اغلب اتصالات خارجی دائمی ایجاد می‌کنند و سعی می‌کنند با استفاده از باینری‌های مخفی‌شده یا تغییر نام‌دهی از شناسایی فرار کنند."
         }
     ]
 }

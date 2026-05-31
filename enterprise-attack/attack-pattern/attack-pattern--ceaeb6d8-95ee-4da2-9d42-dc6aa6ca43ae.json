@@ -14,42 +14,42 @@
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1556/009",
                     "external_id": "T1556.009",
-                    "source_name_fa": "حمله mitre"
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "AWS IAM Conditions",
                     "description": "AWS. (n.d.). IAM JSON policy elements: Condition. Retrieved January 2, 2024.",
                     "url": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_condition.html",
                     "source_name_fa": "شرایط AWS IAM",
-                    "description_fa": "AWS (n.d.) عناصر سیاست گذاری IAM JSON: Condition Retrieved 2, 2024."
+                    "description_fa": "AWS. (n.d.). عناصر خط مشی IAM JSON: شرط. بازبینی شده در 2 ژانویه 2024."
                 },
                 {
                     "source_name": "GCP IAM Conditions",
                     "description": "Google Cloud. (n.d.). Overview of IAM Conditions. Retrieved January 2, 2024.",
                     "url": "https://cloud.google.com/iam/docs/conditions-overview",
-                    "source_name_fa": "شرایط GCP IAM",
-                    "description_fa": "Google Cloud بررسی شرایط IAM Retrieved 2, 2024."
+                    "source_name_fa": "شرایط IAM GCP",
+                    "description_fa": "Google Cloud. (n.d.). مروری بر شرایط IAM. بازبینی شده در 2 ژانویه 2024."
                 },
                 {
                     "source_name": "JumpCloud Conditional Access Policies",
                     "description": "JumpCloud. (n.d.). Get Started: Conditional Access Policies. Retrieved January 2, 2024.",
                     "url": "https://jumpcloud.com/support/get-started-conditional-access-policies",
-                    "source_name_fa": "JumpCloud Conditional Access Policy",
-                    "description_fa": "JumpCloud شروع کنید: سیاست های دسترسی مشروط Retrieved 2, 2024."
+                    "source_name_fa": "سیاست های دسترسی مشروط JumpCloud",
+                    "description_fa": "جامپ کلود. (n.d.). شروع کنید: سیاست های دسترسی مشروط. بازبینی شده در 2 ژانویه 2024."
                 },
                 {
                     "source_name": "Microsoft Conditional Access",
                     "description": "Microsoft. (2023, November 15). What is Conditional Access?. Retrieved January 2, 2024.",
                     "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/overview",
-                    "source_name_fa": "Microsoft Conditional Access",
-                    "description_fa": "مایکروسافت (2023، 15 نوامبر) دسترسی مشروط چیست؟ Retrieved 2, 2024."
+                    "source_name_fa": "دسترسی مشروط مایکروسافت",
+                    "description_fa": "مایکروسافت. (2023، 15 نوامبر). دسترسی مشروط چیست؟ بازبینی شده در 2 ژانویه 2024."
                 },
                 {
                     "source_name": "Okta Conditional Access Policies",
                     "description": "Okta. (2023, November 30). Conditional Access Based on Device Security Posture. Retrieved January 2, 2024.",
                     "url": "https://support.okta.com/help/s/article/Conditional-access-based-on-device-security-posture?language=en_US",
-                    "source_name_fa": "Okta Conditional Access Policy",
-                    "description_fa": "Okta. (2023، 30 نوامبر) دسترسی مشروط بر امنیت دستگاه Retrieved 2, 2024."
+                    "source_name_fa": "سیاست های دسترسی مشروط Okta",
+                    "description_fa": "اوکتا. (2023، 30 نوامبر). دسترسی مشروط بر اساس وضعیت امنیتی دستگاه. بازبینی شده در 2 ژانویه 2024."
                 }
             ],
             "object_marking_refs": [
@@ -89,7 +89,7 @@
             ],
             "x_mitre_version": "2.0",
             "name_fa": "سیاست های دسترسی مشروط",
-            "description_fa": "مخالفان ممکن است سیاست های دسترسی مشروط را غیرفعال یا اصلاح کنند تا دسترسی مداوم به حساب های به خطر افتاده را فعال کنند. سیاست های دسترسی مشروط تأییدهای اضافی مورد استفاده توسط ارائه دهندگان هویت و سیستم های مدیریت دسترسی برای تعیین اینکه آیا کاربر باید به یک منبع دسترسی داشته باشد.\n\nبه عنوان مثال، در Entra ID، Okta و JumpCloud، کاربران می توانند از دسترسی به برنامه های کاربردی بر اساس آدرس IP خود، وضعیت ثبت نام دستگاه و استفاده از احراز هویت چند عاملی محروم شوند.[۱۰] [CTI_PRESERVE_0] [CTI_PRESERVE] در برخی موارد، ارائه دهندگان هویت نیز ممکن است از استفاده از معیارهای مبتنی بر ریسک برای انکار نشانه ها بر اساس شاخص های مختلف حمایت کنند. در AWS و GCP، سیاست های IAM می تواند شامل ویژگی های \"شرایط\" باشد که محدودیت های خودسرانه مانند IP منبع را تأیید می کند، تاریخ درخواست و ماهیت منابع یا مناطق درخواست شده است. [[ویرایش] این اقدامات به جلوگیری از اعتبارهای به خطر افتاده در نتیجه دسترسی غیر مجاز به داده ها یا منابع، و همچنین محدود کردن مجوز کاربر به تنها کسانی که نیاز دارند، کمک می کند.\n\nبا اصلاح سیاست های دسترسی مشروط، مانند اضافه کردن دامنه های IP قابل اعتماد، حذف [Multi-Factor Authentication] ([CTI_PRESERVE_5] الزامات و یا اجازه دادن به اضافی [مناطق ابر پشتیبانی نشده] ([[CTI_PRESERVE_6])، دشمنان ممکن است قادر به جلوگیری از دسترسی مداوم و اقدامات دفاعی باشند. (Citation: Microsoft Conditional Access) (Citation: JumpCloud Conditional Access Policies) (Citation: Okta Conditional Access Policies) (Citation: AWS IAM Conditions) (Citation: GCP IAM Conditions) https://attack.mitre.org/techniques/T1556/006 https://attack.mitre.org/techniques/T1535"
+            "description_fa": "دشمنان ممکن است خط‌مشی‌های دسترسی مشروط را غیرفعال یا تغییر دهند تا دسترسی دائمی به حساب‌های در معرض خطر را فعال کنند. خط‌مشی‌های دسترسی مشروط، تأییدیه‌های اضافی هستند که توسط ارائه‌دهندگان هویت و سیستم‌های مدیریت هویت و دسترسی برای تعیین اینکه آیا کاربر باید به یک منبع دسترسی داشته باشد یا خیر، استفاده می‌شود.\n\nبرای مثال، در Entra ID، Okta، و JumpCloud، کاربران می‌توانند بر اساس آدرس IP، وضعیت ثبت‌نام دستگاه و استفاده از احراز هویت چندعاملی، از دسترسی به برنامه‌ها محروم شوند. برای رد ورود به سیستم بر اساس شاخص های مختلف. در AWS و GCP، خط‌مشی‌های IAM می‌توانند حاوی ویژگی‌های «شرایط» باشند که محدودیت‌های دلخواه مانند IP منبع، تاریخ درخواست، و ماهیت منابع یا مناطق درخواست‌شده را تأیید می‌کنند. مجوز فقط برای موارد مورد نیاز \n\nبا تغییر خط‌مشی‌های دسترسی مشروط، مانند افزودن محدوده‌های IP مورد اعتماد اضافی، حذف الزامات [تأیید هویت چند عاملی](https://attack.mitre.org/techniques/T1556/006)، یا اجازه دادن به [مناطق ابری استفاده نشده/پشتیبانی‌نشده]([[[CTI_PRESERVE_6]6]) اضافی، برای جلوگیری از دسترسی به حساب‌ها و دشمنان اقدامات (Citation: Microsoft Conditional Access) (Citation: JumpCloud Conditional Access Policies) (Citation: Okta Conditional Access Policies) (Citation: AWS IAM Conditions) (Citation: GCP IAM Conditions) https://attack.mitre.org/techniques/T1535"
         }
     ]
 }

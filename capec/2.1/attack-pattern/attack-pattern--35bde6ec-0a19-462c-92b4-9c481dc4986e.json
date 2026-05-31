@@ -9,23 +9,28 @@
                 {
                     "external_id": "CAPEC-470",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/470.html"
+                    "url": "https://capec.mitre.org/data/definitions/470.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-250",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/250.html"
+                    "url": "http://cwe.mitre.org/data/definitions/250.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-89",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/89.html"
+                    "url": "http://cwe.mitre.org/data/definitions/89.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Bernardo Damele Assump ção Guimarães, Advanced SQL Injection to Operating System Full Control, 2009--04---10",
                     "external_id": "REF-408",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.blackhat.com/presentations/bh-europe-09/Guimaraes/Blackhat-europe-09-Damele-SQLInjection-whitepaper.pdf"
+                    "url": "http://www.blackhat.com/presentations/bh-europe-09/Guimaraes/Blackhat-europe-09-Damele-SQLInjection-whitepaper.pdf",
+                    "description_fa": "Bernardo Damele Assump ção Guimarães، تزریق پیشرفته SQL به کنترل کامل سیستم عامل، 2009--04---10",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--35bde6ec-0a19-462c-92b4-9c481dc4986e",
@@ -48,11 +53,18 @@
                 "A vulnerable DBMS is usedA SQL injection exists that gives an attacker access to the database or an attacker has access to the DBMS via other means"
             ],
             "x_capec_skills_required": {
-                "High": "Low level knowledge of the various facilities available in different DBMS systems for interacting with the file system and operating system"
+                "High": "Low level knowledge of the various facilities available in different DBMS systems for interacting with the file system and operating system",
+                "High_fa": "دانش سطح پایین از امکانات مختلف موجود در سیستم های مختلف DBMS برای تعامل با سیستم فایل و سیستم عامل"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم می تواند از دسترسی به دست آمده به پایگاه داده برای خواندن/نوشتن داده ها در سیستم فایل استفاده کند، سیستم عامل را به خطر بیندازد، یک تونل برای دسترسی به ماشین میزبان ایجاد کند و از این دسترسی برای حمله بالقوه به ماشین های دیگر در همان شبکه ماشین پایگاه داده استفاده کند. به طور سنتی حملات تزریق SQL به عنوان راهی برای دسترسی خواندن غیرمجاز به داده‌های ذخیره‌شده در پایگاه داده، تغییر داده‌های پایگاه داده، حذف داده‌ها و غیره در نظر گرفته می‌شود. با این حال، تقریباً هر سیستم مدیریت پایگاه داده (DBMS) دارای امکاناتی است که در صورت به خطر افتادن به مهاجم اجازه دسترسی کامل به سیستم فایل، سیستم عامل و دسترسی کامل به میزبانی که پایگاه داده را اجرا می‌کند، می‌دهد. سپس مهاجم می تواند از این دسترسی ممتاز برای راه اندازی حملات بعدی استفاده کند. این امکانات شامل رها کردن در پوسته فرمان، ایجاد توابع تعریف شده توسط کاربر است که می تواند کتابخانه های سطح سیستم موجود در ماشین میزبان، رویه های ذخیره شده و غیره را فراخوانی کند.",
+            "name_fa": "گسترش کنترل بر روی سیستم عامل از پایگاه داده",
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> دشمن یک سیستم مدیریت پایگاه داده را شناسایی می‌کند که روی ماشینی اجرا می‌شود که می‌خواهد کنترل آن را به دست آورد، یا روی شبکه‌ای که می‌خواهد به صورت جانبی از طریق آن حرکت کند. تزریق SQL و تعیین می کند که آیا امکان تزریق وجود دارد یا خیر.</p></li><li> <p>وقتی دشمن تشخیص داد که تزریق SQL امکان پذیر است، باید اطمینان حاصل کند که الزامات حمله برآورده شده است. اینها یک کاربر جلسه دارای امتیاز بالا و پشتیبانی از پرس و جو دسته ای هستند. این کار به روش‌های مشابهی برای کشف امکان تزریق SQL انجام می‌شود.</p></li><li> <p>اگر الزامات برآورده شوند، بر اساس سیستم مدیریت پایگاه داده‌ای که در حال اجرا است، حریف توابع تعریف‌شده توسط کاربر (UDF) را پیدا کرده یا ایجاد می‌کند که می‌توانند به عنوان DLL بارگیری شوند. نمونه ای از یک DLL را می توان در https://github.com/rapid7/metasploit-framework/tree/master/data/exploits/mysql</p></li><li> پیدا کرد <p>برای بارگیری DLL، دشمن ابتدا باید مسیر دایرکتوری افزونه را پیدا کند. دستور دستیابی به این امر بر اساس نوع DBMS متفاوت است، اما برای MySQL، این امر را می توان با اجرای دستور \"select @@plugin_dir\"</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p>سپس DLL به دایرکتوری پلاگین که قبلاً یافت شده منتقل می‌شود تا بتوان تابع پلاگین را که قبلاً پیدا شده است منتقل کرد. این را می توان به روش های مختلفی انجام داد؛ بارگیری از یک اشتراک شبکه، نوشتن کل رشته کدگذاری شده هگزا در یک فایل در فهرست پلاگین، یا بارگیری DLL در یک جدول و سپس در یک فایل. مثال استفاده از MySQL برای بارگذاری رشته هگز به شرح زیر است. 0x4d5a9000... را در فایل dump \"{plugin directory}\\\\udf.dll\" انتخاب کنید؛</p></li><li> <p>وقتی DLL در فهرست پلاگین قرار گرفت، دستوری برای بارگیری UDF ها اجرا می شود. یک مثال از این در MySQL \"ایجاد تابع sys_eval برمی‌گرداند رشته نام 'udf.dll';\" تابع sys_eval مختص به مثال DLL ذکر شده در بالا است.</p></li><li> <p>هنگامی که حریف تابع(های) مورد نظر را بارگذاری کرد، از آنها برای اجرای دستورات دلخواه در سیستم در معرض خطر استفاده می کند. این کار از طریق یک دستور انتخاب ساده به UDF بارگذاری شده انجام می شود. به عنوان مثال: \"select sys_eval('dir');\". از آنجا که پیش نیاز این حمله این است که کاربر جلسه پایگاه داده یک کاربر فوق العاده باشد، این بدان معناست که حریف قادر خواهد بود دستوراتی را با امتیازات بالا اجرا کند.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "یک DBMS آسیب‌پذیر استفاده می‌شود، تزریق SQL وجود دارد که به مهاجم اجازه دسترسی به پایگاه داده را می‌دهد یا مهاجم از طریق ابزارهای دیگر به DBMS دسترسی دارد."
+            ]
         }
     ],
     "type": "bundle"

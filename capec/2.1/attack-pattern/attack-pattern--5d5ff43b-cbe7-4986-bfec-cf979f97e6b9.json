@@ -9,57 +9,69 @@
                 {
                     "external_id": "CAPEC-45",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/45.html"
+                    "url": "https://capec.mitre.org/data/definitions/45.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-120",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/120.html"
+                    "url": "http://cwe.mitre.org/data/definitions/120.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-285",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/285.html"
+                    "url": "http://cwe.mitre.org/data/definitions/285.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-302",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/302.html"
+                    "url": "http://cwe.mitre.org/data/definitions/302.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-118",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/118.html"
+                    "url": "http://cwe.mitre.org/data/definitions/118.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-680",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/680.html"
+                    "url": "http://cwe.mitre.org/data/definitions/680.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "G. Hoglund, G. McGraw, Exploiting Software: How to Break Code, 2004--02, Addison-Wesley",
                     "external_id": "REF-1",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "G. Hoglund، G. McGraw، نرم افزار بهره برداری: چگونه کد را بشکنیم، 2004--02، Addison-Wesley",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--5d5ff43b-cbe7-4986-bfec-cf979f97e6b9",
@@ -86,6 +98,18 @@
                 "Integrity": [
                     "Execute Unauthorized Commands (Run Arbitrary Code)",
                     "Modify Data"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -102,11 +126,23 @@
             ],
             "x_capec_skills_required": {
                 "High": "Exploiting a buffer overflow to inject malicious code into the stack of a software system or even the heap can require a higher skill level.",
-                "Low": "An adversary can simply overflow a buffer by inserting a long string into an adversary-modifiable injection vector. The result can be a DoS."
+                "Low": "An adversary can simply overflow a buffer by inserting a long string into an adversary-modifiable injection vector. The result can be a DoS.",
+                "High_fa": "بهره برداری از سرریز بافر برای تزریق کد مخرب به پشته یک سیستم نرم افزاری یا حتی پشته می تواند به سطح مهارت بالاتری نیاز داشته باشد.",
+                "Low_fa": "یک حریف به سادگی می تواند با وارد کردن یک رشته طولانی در یک بردار تزریق قابل تغییر، از یک بافر سرریز شود. نتیجه می تواند یک DoS باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این نوع حمله از استفاده از پیوندهای نمادین برای ایجاد سرریز بافر استفاده می کند. یک حریف می‌تواند سعی کند یک فایل پیوند نمادین را ایجاد یا دستکاری کند، به طوری که محتوای آن منجر به داده‌های خارج از محدوده شود. هنگامی که نرم افزار هدف فایل پیوند نمادین را پردازش می کند، به طور بالقوه می تواند بافرهای داخلی را با بررسی ناکافی مرزها سرریز کند.",
+            "name_fa": "سرریز بافر از طریق پیوندهای نمادین",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>سرور EFTP دارای یک سرریز بافر است که اگر دشمن یک فایل .lnk (پیوند) حاوی بیش از 1744 بایت آپلود کند، می تواند مورد سوء استفاده قرار گیرد. این یک مثال کلاسیک از سرریز بافر غیر مستقیم است. ابتدا حریف مقداری محتوا (فایل پیوند) را آپلود می کند و سپس دشمن باعث می شود مشتری مصرف کننده داده مورد سوء استفاده قرار گیرد. در این مثال، دستور ls برای به خطر انداختن نرم افزار سرور مورد سوء استفاده قرار می گیرد.</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>شناسایی برنامه هدف: </b>دشمن برنامه یا برنامه هدفی را شناسایی می‌کند که ممکن است در فایل‌های خاصی در حافظه بارگذاری شود.</p></li></ol></div><div><h3>Experiction <p><b><ndolli> بردار: </b> دشمن یک بردار تزریق را شناسایی می کند تا محتوای بیش از حد را به بافر برنامه مورد نظر تحویل دهد.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>دشمن یک پیوند نمادین ایجاد یا تغییر می دهد که به آن فایل هایی اشاره می کند که حاوی مقدار زیادی داده هستند. اگر ایجاد یک پیوند نمادین به یکی از آن فایل‌ها باعث رفتار متفاوت در برنامه شود، یک بردار تزریق شناسایی شده است.</td></tr></tbody></table><li> <p> <b>محتوای فایل سرریز کاردستی: </b>دشمن محتوایی را که باید تزریق شود ایجاد می‌کند. اگر هدف این است که به سادگی باعث از کار افتادن نرم افزار شود، محتوا فقط باید از مقدار بیش از حد داده های تصادفی تشکیل شود. اگر قصد استفاده از سرریز برای اجرای کد دلخواه باشد، حریف محموله را به گونه‌ای طراحی می‌کند که آدرس بازگشتی رونویسی شده با یکی از گزینه‌های دشمن جایگزین می‌شود. آن را.</td></tr><tr><td>از یک سورتمه NOP در محتوای سرریز استفاده کنید تا راحت‌تر به کد مخرب \"اسلاید\" کنید. این کار به این دلیل انجام می شود که آدرس برگشتی دقیق لازم نباشد درست باشد، فقط در محدوده همه NOP ها</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>سرریز کردن بافر: </b>با استفاده از منبع فایلی که به طور خاص ساخته شده است، یک فایل مخرب برای محتوای نمادین ایجاد می کند. فایل، باعث حمله هدفمند سرریز بافر می شود.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "حریف می تواند پیوند نمادین را روی میزبان هدف ایجاد کند.",
+                "میزبان هدف در حین مصرف داده ها از منابع، بررسی مرز درستی را انجام نمی دهد."
+            ]
         }
     ],
     "type": "bundle"

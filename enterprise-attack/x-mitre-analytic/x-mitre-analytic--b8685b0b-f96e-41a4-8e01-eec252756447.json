@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0565#AN1561",
-                    "external_id": "AN1561"
+                    "external_id": "AN1561",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessAllowList",
-                    "description": "Defines trusted processes allowed to query registry language keys or APIs. Unexpected parent-child process chains may indicate adversary use."
+                    "description": "Defines trusted processes allowed to query registry language keys or APIs. Unexpected parent-child process chains may indicate adversary use.",
+                    "description_fa": "فرآیندهای قابل اعتمادی را تعریف می کند که مجاز به پرس و جو از کلیدهای زبان رجیستری یا APIها هستند. زنجیره‌های فرآیندی والد-فرزند غیرمنتظره ممکن است نشان‌دهنده استفاده دشمن باشد."
                 },
                 {
                     "field": "QueryThreshold",
-                    "description": "Frequency threshold for language registry or API calls within a set time window."
+                    "description": "Frequency threshold for language registry or API calls within a set time window.",
+                    "description_fa": "آستانه فرکانس برای تماس‌های رجیستری زبان یا API در یک پنجره زمانی تعیین‌شده."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1561",
+            "description_fa": "دسترسی رجیستری به کلیدهای زبان سیستم (به عنوان مثال، HKLM\\SYSTEM\\CurrentControlSet\\Control\\Nls\\Language) یا فرآیندهای مشکوک با فراخوانی APIهای مرتبط با زبان (مانند GetUserDefaultUILanguage، GetSystemDefaultUILanguage، GetSystemDefaultUILanguage، GetListKeyboardLay). قابلیت مشاهده Defender بر روی فرآیندهای غیرعادی یا غیر استانداردی که این پرس‌وجوها را صادر می‌کنند، تمرکز می‌کند، به ویژه زمانی که توسط باینری‌ها یا اسکریپت‌های ناشناخته اجرا می‌شوند."
         }
     ]
 }

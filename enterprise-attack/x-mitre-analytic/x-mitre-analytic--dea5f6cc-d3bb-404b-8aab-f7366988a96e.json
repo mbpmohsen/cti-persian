@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0566#AN1564",
-                    "external_id": "AN1564"
+                    "external_id": "AN1564",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -46,21 +47,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TemplateURLPatterns",
-                    "description": "Can be tuned to flag known bad domains or external resources in template fields."
+                    "description": "Can be tuned to flag known bad domains or external resources in template fields.",
+                    "description_fa": "می توان آن را تنظیم کرد تا دامنه های نامناسب شناخته شده یا منابع خارجی را در فیلدهای الگو علامت گذاری کند."
                 },
                 {
                     "field": "ParentProcess",
-                    "description": "May be environment-specific; typically Word, Excel, PowerPoint."
+                    "description": "May be environment-specific; typically Word, Excel, PowerPoint.",
+                    "description_fa": "ممکن است خاص محیط باشد. معمولا ورد، اکسل، پاورپوینت."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window for process + network activity."
+                    "description": "Correlation window for process + network activity.",
+                    "description_fa": "پنجره همبستگی برای فرآیند + فعالیت شبکه."
                 },
                 {
                     "field": "ChildProcessAnomalyThreshold",
-                    "description": "Trigger when document-spawned child process deviates from expected profile."
+                    "description": "Trigger when document-spawned child process deviates from expected profile.",
+                    "description_fa": "هنگامی که فرآیند فرزند ایجاد شده توسط سند از نمایه مورد انتظار منحرف می شود، فعال می شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1564",
+            "description_fa": "شناسایی فرآیندهای نمایشگر آفیس یا اسناد (مانند winword.exe) که اتصالات شبکه به الگوهای راه دور یا اجرای اسکریپت‌ها را به دلیل ارجاعات الگوی دستکاری شده (مثلاً تعبیه‌شده در فایل‌های .docx، rtf. یا .dotm) آغاز می‌کنند، و به دنبال آن ایجاد فرآیند فرزند مشکوک (مثلاً Shell)."
         }
     ]
 }

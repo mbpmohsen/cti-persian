@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0636#AN1710",
-                    "external_id": "AN1710"
+                    "external_id": "AN1710",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -21,7 +22,7 @@
             ],
             "modified": "2026-05-12T16:30:18.380Z",
             "name": "Analytic 1710",
-            "description": "Defender observes an app (package/UID) repeatedly querying device networking context APIs (Wi-Fi scan results/current SSID/BSSID, Bluetooth device discovery, or cellular tower lists) at a rate or timing inconsistent with the app\u2019s normal UX, often while backgrounded. Correlate API calls with permission usage (fine location, nearby devices/Bluetooth) and concurrent connectivity probes (DNS lookups/ARP/port reachability) to distinguish automated discovery from user-initiated settings checks. The detection is based on observed API execution + permission use + rate/sequence, not the specific API method name.",
+            "description": "Defender observes an app (package/UID) repeatedly querying device networking context APIs (Wi-Fi scan results/current SSID/BSSID, Bluetooth device discovery, or cellular tower lists) at a rate or timing inconsistent with the app’s normal UX, often while backgrounded. Correlate API calls with permission usage (fine location, nearby devices/Bluetooth) and concurrent connectivity probes (DNS lookups/ARP/port reachability) to distinguish automated discovery from user-initiated settings checks. The detection is based on observed API execution + permission use + rate/sequence, not the specific API method name.",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
             "x_mitre_version": "1.1",
@@ -62,33 +63,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window to link scan/enumeration API usage with subsequent probes (e.g., 30\u2013300s)."
+                    "description": "Correlation window to link scan/enumeration API usage with subsequent probes (e.g., 30–300s).",
+                    "description_fa": "پنجره همبستگی برای پیوند استفاده از API اسکن/شماری با کاوشگرهای بعدی (به عنوان مثال، 30-300s)."
                 },
                 {
                     "field": "MinScanCalls",
-                    "description": "Minimum number of scan/enumeration calls per window before flagging (e.g., \u22653 Wi-Fi scans / 5 min)."
+                    "description": "Minimum number of scan/enumeration calls per window before flagging (e.g., ≥3 Wi-Fi scans / 5 min).",
+                    "description_fa": "حداقل تعداد تماس‌های اسکن/شمارش در هر پنجره قبل از پرچم‌گذاری (به عنوان مثال، ≥3 اسکن Wi-Fi / 5 دقیقه)."
                 },
                 {
                     "field": "MinUniqueTargets",
-                    "description": "For Bluetooth/cell, minimum unique devices/towers observed per window (helps avoid single-device noise)."
+                    "description": "For Bluetooth/cell, minimum unique devices/towers observed per window (helps avoid single-device noise).",
+                    "description_fa": "برای بلوتوث/سلول، حداقل دستگاه‌ها/برج‌های منحصربه‌فرد مشاهده شده در هر پنجره (به جلوگیری از نویز تک دستگاهی کمک می‌کند)."
                 },
                 {
                     "field": "BackgroundOnly",
-                    "description": "Require app to be backgrounded during discovery to suppress legitimate UI-driven network selection."
+                    "description": "Require app to be backgrounded during discovery to suppress legitimate UI-driven network selection.",
+                    "description_fa": "برای جلوگیری از انتخاب شبکه مبتنی بر UI قانونی، باید برنامه در هنگام کشف پس‌زمینه باشد."
                 },
                 {
                     "field": "AllowlistedPackages",
-                    "description": "Packages expected to scan (system settings, Wi-Fi managers, MDM, enterprise connectivity tools)."
+                    "description": "Packages expected to scan (system settings, Wi-Fi managers, MDM, enterprise connectivity tools).",
+                    "description_fa": "بسته‌هایی که انتظار می‌رود اسکن شوند (تنظیمات سیستم، مدیران Wi-Fi، MDM، ابزارهای اتصال سازمانی)."
                 },
                 {
                     "field": "LocationPermissionRequired",
-                    "description": "If true, require AppOps noteOp for fine location/nearby devices to reduce false positives."
+                    "description": "If true, require AppOps noteOp for fine location/nearby devices to reduce false positives.",
+                    "description_fa": "اگر درست است، به AppOps noteOp برای موقعیت مکانی خوب/دستگاه‌های نزدیک نیاز دارید تا مثبت کاذب کاهش یابد."
                 },
                 {
                     "field": "LocalProbeCIDRs",
-                    "description": "CIDR ranges considered 'local discovery' targets (e.g., 192.168.0.0/16, 10.0.0.0/8)."
+                    "description": "CIDR ranges considered 'local discovery' targets (e.g., 192.168.0.0/16, 10.0.0.0/8).",
+                    "description_fa": "محدوده‌های CIDR اهداف «اکتشاف محلی» در نظر گرفته می‌شوند (به عنوان مثال، 192.168.0.0/16، 10.0.0.0/8)."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1710",
+            "description_fa": "Defender مشاهده می کند که یک برنامه (بسته/UID) به طور مکرر از APIهای زمینه شبکه دستگاه (نتایج اسکن Wi-Fi/ SSID/BSSID فعلی، کشف دستگاه بلوتوث، یا لیست برج های تلفن همراه) با نرخ یا زمان متناقض با UX معمولی برنامه، اغلب در پس‌زمینه سؤال می‌کند. تماس‌های API را با استفاده از مجوز (موقعیت مکانی خوب، دستگاه‌های نزدیک/بلوتوث) و پروب‌های اتصال همزمان (جستجوهای DNS/ARP/دسترسی پورت) مرتبط کنید تا کشف خودکار را از بررسی‌های تنظیمات آغاز شده توسط کاربر متمایز کنید. تشخیص بر اساس اجرای API مشاهده شده + استفاده از مجوز + نرخ/توالی است، نه نام روش API خاص."
         }
     ]
 }

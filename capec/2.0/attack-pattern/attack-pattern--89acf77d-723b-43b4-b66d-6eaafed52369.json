@@ -9,32 +9,38 @@
                 {
                     "external_id": "CAPEC-108",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/108.html"
+                    "url": "https://capec.mitre.org/data/definitions/108.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-89",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/89.html"
+                    "url": "http://cwe.mitre.org/data/definitions/89.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-78",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/78.html"
+                    "url": "http://cwe.mitre.org/data/definitions/78.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-114",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/114.html"
+                    "url": "http://cwe.mitre.org/data/definitions/114.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--89acf77d-723b-43b4-b66d-6eaafed52369",
@@ -70,6 +76,25 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "کسب امتیازات",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -89,11 +114,26 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "High": "The attacker most likely has to be familiar with the internal functionality of the system to launch this attack. Without that knowledge, there are not many feedback mechanisms to give an attacker the indication of how to perform command injection or whether the attack is succeeding."
+                "High": "The attacker most likely has to be familiar with the internal functionality of the system to launch this attack. Without that knowledge, there are not many feedback mechanisms to give an attacker the indication of how to perform command injection or whether the attack is succeeding.",
+                "High_fa": "به احتمال زیاد مهاجم برای انجام این حمله باید با عملکرد داخلی سیستم آشنا باشد. بدون این دانش، مکانیسم‌های بازخورد زیادی وجود ندارد که به مهاجم نشان دهد که چگونه تزریق فرمان را انجام دهد یا اینکه آیا حمله موفق است یا خیر."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک مهاجم از روش های استاندارد تزریق SQL برای تزریق داده ها به خط فرمان برای اجرا استفاده می کند. این می تواند مستقیماً از طریق استفاده نادرست از دستورالعمل هایی مانند MSSQL_xp_cmdshell یا به طور غیرمستقیم از طریق تزریق داده ها به پایگاه داده انجام شود که به عنوان دستورات پوسته تفسیر می شوند. مدتی بعد، یک برنامه پشتیبان نادرست (یا می تواند بخشی از عملکرد همان برنامه باشد) داده های تزریق شده ذخیره شده در پایگاه داده را واکشی می کند و از این داده ها به عنوان آرگومان های خط فرمان بدون انجام اعتبارسنجی مناسب استفاده می کند. داده های مخرب با ایجاد دستورات جدید برای اجرا در میزبان از آن صفحه داده فرار می کنند.",
+            "name_fa": "اجرای خط فرمان از طریق تزریق SQL",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>آسیب‌پذیری تزریق SQL در Cacti 0.8.6i و نسخه‌های قبلی، وقتی register_argc_argv فعال است، به مهاجمان راه دور اجازه می‌دهد تا دستورات دلخواه SQL را از طریق آرگومان‌های (1) دوم یا (2) سوم به cmd.php اجرا کنند. توجه: این مشکل می تواند برای اجرای دستورات دلخواه مورد استفاده قرار گیرد زیرا نتایج پرس و جوی SQL بعداً در آرایه polling_items و تابع popen (CVE-2006-6799) استفاده می شود.</xhtml:p>\n               <xhtml:p>مرجع: https://www.cve.org/CVERecord?id=CVE-2006-6799</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کاوش برای آسیب‌پذیری SQL Injection: </b>مهاجم دستور SQL را به ورودی‌های داده قابل کنترل توسط کاربر تزریق می‌کند تا اجرای فیلتر نشده از SQL را جستجو کند. پرس و جو.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>دستیابی به اجرای دستور دلخواه از طریق SQL Injection با دستور MSSQL_xp_cmdshell: </b>مهاجم از یک SQL Injection با استفاده از حمله کد تزریقی SQL برای تزریق sheellcut استفاده می کند. دستورالعمل.</p></li><li> <p> <b>تزریق داده‌های مخرب در پایگاه داده: </b>از تزریق SQL برای تزریق داده‌ها در پایگاه داده استفاده کنید که بعداً در صورت استفاده به عنوان آرگومان خط فرمان، می‌توان از آن برای دستیابی به تزریق فرمان استفاده کرد</p></li><li> <p> <b> اجرای خط فرمان lenge باعث می‌شود که خط فرمان اجرای خط فرمان با </b> دستورات حمله‌کننده خط فرمان تزریق شده: محتوای پایگاه داده قبلاً به عنوان آرگومان تزریق شده است.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "برنامه به درستی داده ها را قبل از ذخیره در پایگاه داده اعتبار سنجی نمی کند",
+                "برنامه Backend به طور ضمنی به داده های ذخیره شده در پایگاه داده اعتماد می کند",
+                "داده های مخرب در باطن به عنوان آرگومان خط فرمان استفاده می شود"
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

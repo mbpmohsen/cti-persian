@@ -9,42 +9,51 @@
                 {
                     "external_id": "CAPEC-7",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/7.html"
+                    "url": "https://capec.mitre.org/data/definitions/7.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-89",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/89.html"
+                    "url": "http://cwe.mitre.org/data/definitions/89.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-209",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/209.html"
+                    "url": "http://cwe.mitre.org/data/definitions/209.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-74",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/74.html"
+                    "url": "http://cwe.mitre.org/data/definitions/74.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-20",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/20.html"
+                    "url": "http://cwe.mitre.org/data/definitions/20.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-697",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/697.html"
+                    "url": "http://cwe.mitre.org/data/definitions/697.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-707",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/707.html"
+                    "url": "http://cwe.mitre.org/data/definitions/707.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Blind SQL Injection",
                     "source_name": "OWASP Attacks",
-                    "url": "https://owasp.org/www-community/attacks/Blind_SQL_Injection"
+                    "url": "https://owasp.org/www-community/attacks/Blind_SQL_Injection",
+                    "description_fa": "Blind SQL Injection",
+                    "source_name_fa": "حملات OWASP"
                 }
             ],
             "id": "attack-pattern--9116da7f-a60e-4186-b42a-218f1b0eb269",
@@ -69,6 +78,17 @@
                 "Integrity": [
                     "Modify Data",
                     "Execute Unauthorized Commands (Run Arbitrary Code)"
+                ],
+                "Availability_fa": [
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)"
                 ]
             },
             "x_capec_domains": [
@@ -88,11 +108,26 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "Medium": "Determining the database type and version, as well as the right number and type of parameters to the query being injected in the absence of error messages requires greater skill than reverse-engineering database error messages."
+                "Medium": "Determining the database type and version, as well as the right number and type of parameters to the query being injected in the absence of error messages requires greater skill than reverse-engineering database error messages.",
+                "Medium_fa": "تعیین نوع و نسخه پایگاه داده، و همچنین تعداد و نوع پارامترهای مناسب به پرس و جو در صورت عدم وجود پیام های خطا، به مهارت بیشتری نسبت به پیام های خطای مهندسی معکوس پایگاه داده نیاز دارد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "Blind SQL Injection ناشی از کاهش ناکافی برای تزریق SQL است. اگرچه سرکوب کردن پیام های خطای پایگاه داده به عنوان بهترین روش در نظر گرفته می شود، اما سرکوب به تنهایی برای جلوگیری از تزریق SQL کافی نیست. Blind SQL Injection شکلی از SQL Injection است که بر کمبود پیام های خطا غلبه می کند. بدون پیام‌های خطایی که تزریق SQL را تسهیل می‌کند، حریف رشته‌های ورودی می‌سازد که هدف را از طریق عبارات ساده Boolean SQL بررسی می‌کند. حریف می تواند تعیین کند که آیا نحو و ساختار تزریق بر اساس اینکه آیا کوئری اجرا شده است یا خیر، موفق بوده است. با اعمال مکرر، حریف تعیین می کند که چگونه و کجا هدف در برابر تزریق SQL آسیب پذیر است.",
+            "name_fa": "Blind SQL Injection",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>یک حریف ممکن است سعی کند چیزی مانند \"نام کاربری\" و 1=1; --\" را در یک فیلد ورودی وارد کند. اگر نتیجه مشابه زمانی باشد که حریف \"نام کاربری\" را در فیلد وارد کرده است، آنگاه دشمن می داند که برنامه در برابر تزریق SQL آسیب پذیر است. سپس حریف می تواند سوالات بله/خیر را از سرور پایگاه داده بپرسد تا اطلاعات را از آن استخراج کند. به عنوان مثال، دشمن می‌تواند نام جدول‌ها را با استفاده از انواع پرس‌و‌جوهای زیر از یک پایگاه داده استخراج کند:</xhtml:p>\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\"username' AND ascii(lower(substring((SELECT TOP 1 name FROM sysobjects WHERE xtype='U'), 1, 1))) > 108\".</xhtml:div>\n               <xhtml:p>اگر کوئری بالا به درستی اجرا شود، آنگاه حریف می داند که اولین کاراکتر در نام جدول در پایگاه داده، حرفی بین m و z است. اگر اینطور نیست، پس حریف می داند که کاراکتر باید بین a و l باشد (البته با فرض اینکه نام جدول فقط شامل کاراکترهای الفبایی باشد). با انجام جستجوی دودویی در تمام موقعیت های کاراکتر، حریف می تواند نام تمام جدول ها را در پایگاه داده تعیین کند. متعاقباً، دشمن ممکن است یک حمله واقعی را اجرا کند و چیزی شبیه به:</xhtml:p> ارسال کند.\n               <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\"username'; DROP TABLE معاملات؛ --</xhtml:div>",
+                "در برنامه PHP TimeSheet 1.1، یک دشمن می تواند با موفقیت هش نام کاربری و رمز عبور را از پایگاه داده با استفاده از Blind SQL Injection بازیابی کند. اگر حریف از ساختار مسیر محلی آگاه باشد، دشمن همچنین می تواند از راه دور کد دلخواه را اجرا کند و خروجی پرس و جوهای تزریق شده را در مسیر محلی بنویسد. Blind SQL Injection ممکن است زیرا برنامه به درستی متغیر $_POST['username'] را در فایل login.php پاکسازی نمی‌کند. همچنین ببینید: CVE-2006-4705"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>[فرضی‌سازی پرس‌و‌جوهای SQL در برنامه]<xhtml:p>فرضیه‌های ایجاد شده در مورد پرس‌وجوهای SQL در برنامه. به عنوان مثال، دشمن ممکن است فرض کند که ورودی آنها مستقیماً به یک پرس و جو ارسال می شود که به نظر می رسد:</xhtml:p>\n                  <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\"SELECT * FROM orders WHERE ordernum = _____\"یا\"SELECT * FROM orders WHERE ordernum IN (_____)\"یا\"SELECT * FROM orders WHERE ordernum in (_____) ORDER BY _____\"</xhtml:div>\n                  <xhtml:p>البته، احتمالات بسیار دیگری نیز وجود دارد.</xhtml:p>\n               </p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>انواع پرس‌و‌جوهای SQL را تحقیق کنید و تعیین کنید کدام‌ها می‌توانند در مکان‌های مختلف یک برنامه مورد استفاده قرار گیرند.</td></tr></tbody></table><li> <p>[تعیین نحوه تزریق اطلاعات به پرس‌وجوها]<inxhtml که تزریق بر منطق آنها تأثیر نمی گذارد. به عنوان مثال، موارد زیر تزریق‌های ممکن برای آن درخواست‌ها هستند:</xhtml:p>\n                  <xhtml:div style=\"margin-left:1em;\" class=\"informative\">\"5' OR 1=1; --\"and\"5) OR 1=1; --\"and\"ordernum DESC; --\"</xhtml:div>\n               </p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>شکل‌هایی را به جستارهای SQL اضافه کنید تا منطق پرس و جو تغییر نکند.</td></tr><tr><td>در مواردی که سرور پیام‌های خطای واضحی را ارائه نمی‌کند، به جستارهای SQL اضافه کنید. SQL Server یا BENCHMARK(1000000000,MD5(1) در MySQL اگر بتوان این موارد را به پرس و جوها تزریق کرد، پس مدت زمانی که سرور برای پاسخ دادن نیاز دارد نشان می دهد که آیا پرس و جو قابل تزریق است یا خیر.</td></tr></tbody></table></ol></3hExol>. <b>تعیین ورودی قابل کنترل توسط کاربر برای تزریق: </b>تعیین ورودی قابل کنترل توسط کاربر برای هر ورودی قابل کنترل که دشمن مشکوک به تزریق SQL است، سعی کنید مقادیر تعیین شده در مرحله قبلی را وارد کنید موفقیت آمیز.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>از مرورگر وب برای تزریق ورودی از طریق فیلدهای متنی یا از طریق پارامترهای HTTP GET استفاده کنید.</td></tr><tr><td>از ابزار اشکال زدایی برنامه وب مانند Tamper Data، TamperIE، WebScarabden، و غیره استفاده کنید. فیلدهای غیر آزاد و غیره.</td></tr><tr><td>از ابزارهای تزریق بسته در سطح شبکه مانند netcat برای تزریق ورودی استفاده کنید</td></tr><tr><td>از کلاینت اصلاح شده (تغییر شده توسط مهندسی معکوس) برای تزریق ورودی استفاده کنید.</td></tr></tbody></table><li></td></tr></tbody></table><li> نوع پایگاه داده، مانند MS SQL Server یا Oracle یا MySQL، با استفاده از شرایط منطقی به عنوان بخشی از جستارهای تزریق شده</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>سعی کنید رشته ای حاوی char(0x31)=char(0x31 اینچ SQL) را تزریق کنید. فقط)</td></tr><tr><td>یک رشته حاوی 0x313D31 را تزریق کنید (این فقط 1=1 در MySQL ارزیابی می شود)</td></tr><tr><td>دیگر دستورات ویژه پایگاه داده را در فیلدهای ورودی مستعد تزریق SQL تزریق کنید (یعنی اینکه آیا حریف یک پاسخ معمولی از سرور دریافت کرده است یا خیر).</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>استخراج اطلاعات در مورد طرح پایگاه داده: </b> استخراج اطلاعات در مورد طرح پایگاه داده با پاسخ دادن به پرسش های پایگاه داده در مورد بله. طرحواره.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>به طور خودکار طرحواره پایگاه داده را با استفاده از ابزاری مانند Absinthe استخراج کنید.</td></tr><tr><td>به صورت دستی تزریق SQLbody را برای استخراج اطلاعات مورد نظر در مورد طرح پایگاه داده انجام دهید. آسیب‌پذیری SQL Injection: </b>از اطلاعات به‌دست‌آمده در مراحل قبلی برای تزریق موفقیت‌آمیز پایگاه داده به منظور دور زدن بررسی‌ها یا اصلاح، اضافه کردن، بازیابی یا حذف داده‌ها از پایگاه داده استفاده کنید</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>استفاده از اطلاعات مربوط به نحوه تزریق اطلاعات SQL به عنوان well execuit اطلاعات در مورد دستورات داده‌ها. حملاتی مانند انداختن جداول، درج رکوردها و غیره.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "پرس و جوهای SQL که توسط برنامه برای ذخیره، بازیابی یا اصلاح داده ها استفاده می شود.",
+                "ورودی قابل کنترل توسط کاربر که به‌عنوان بخشی از جستارهای SQL توسط برنامه به درستی تأیید نشده است."
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

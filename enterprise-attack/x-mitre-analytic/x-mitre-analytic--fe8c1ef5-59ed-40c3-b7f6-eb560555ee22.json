@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0402#AN1127",
-                    "external_id": "AN1127"
+                    "external_id": "AN1127",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "EnumerationRateThreshold",
-                    "description": "Rate of API calls used to enumerate services; tuned to reduce noise from automated inventory tools."
+                    "description": "Rate of API calls used to enumerate services; tuned to reduce noise from automated inventory tools.",
+                    "description_fa": "نرخ تماس های API مورد استفاده برای شمارش خدمات؛ تنظیم شده برای کاهش نویز از ابزارهای موجودی خودکار."
                 },
                 {
                     "field": "UserAgentFilter",
-                    "description": "Expected user agents for cloud management tools; deviations may indicate adversarial tools."
+                    "description": "Expected user agents for cloud management tools; deviations may indicate adversarial tools.",
+                    "description_fa": "عوامل کاربر مورد انتظار برای ابزارهای مدیریت ابری؛ انحرافات ممکن است ابزارهای متخاصم را نشان دهد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1127",
+            "description_fa": "شمارش غیرمعمول خدمات و منابع از طریق APIهای ابری مانند AWS CLI «describe-*»، پرسش‌های مدیریت منابع Azure، یا فهرست‌های پروژه GCP. دیدگاه Defender شامل تماس‌های API غیرعادی، حجم غیرمنتظره شمارش سرویس و ارتباط کشف با جلسات اخیراً به خطر افتاده است."
         }
     ]
 }

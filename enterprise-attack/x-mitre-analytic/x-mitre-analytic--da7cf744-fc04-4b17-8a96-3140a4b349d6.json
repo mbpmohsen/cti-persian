@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0300#AN0840",
-                    "external_id": "AN0840"
+                    "external_id": "AN0840",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApplicationScope",
-                    "description": "Developer tools may legitimately call dlopen/dlsym; narrow scope to production workloads."
+                    "description": "Developer tools may legitimately call dlopen/dlsym; narrow scope to production workloads.",
+                    "description_fa": "ابزارهای توسعه دهنده ممکن است به طور قانونی dlopen/dlsym را فراخوانی کنند. محدوده باریکی برای بارهای کاری تولید."
                 },
                 {
                     "field": "ExecutionTimeWindow",
-                    "description": "Correlate suspicious loads with subsequent process activity in a defined window."
+                    "description": "Correlate suspicious loads with subsequent process activity in a defined window.",
+                    "description_fa": "بارهای مشکوک را با فعالیت فرآیند بعدی در یک پنجره تعریف شده مرتبط کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0840",
+            "description_fa": "فراخوانی های مشکوک به dlopen()، dlsym()، یا mmap با پرچم های RWX در فرآیندهایی که معمولاً بارگذاری ماژول پویا را انجام نمی دهند. نظارت بر مناطق حافظه ناشناس اجرا شده توسط فرآیندهای کاربر."
         }
     ]
 }

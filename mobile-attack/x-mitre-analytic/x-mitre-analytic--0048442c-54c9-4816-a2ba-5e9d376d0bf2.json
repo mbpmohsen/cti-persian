@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0682#AN1789",
-                    "external_id": "AN1789"
+                    "external_id": "AN1789",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,29 +53,37 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Correlation window between enumeration API calls and path bursts (e.g., 30\u2013300s)."
+                    "description": "Correlation window between enumeration API calls and path bursts (e.g., 30–300s).",
+                    "description_fa": "پنجره همبستگی بین فراخوانی های API شمارش و انفجارهای مسیر (به عنوان مثال، 30-300s)."
                 },
                 {
                     "field": "MinDistinctPaths",
-                    "description": "Minimum number of unique paths to flag discovery (e.g., \u226540)."
+                    "description": "Minimum number of unique paths to flag discovery (e.g., ≥40).",
+                    "description_fa": "حداقل تعداد مسیرهای منحصر به فرد برای کشف پرچم (به عنوان مثال، ≥40)."
                 },
                 {
                     "field": "TargetPathRegex",
-                    "description": "Enterprise-relevant containers/providers to include/exclude."
+                    "description": "Enterprise-relevant containers/providers to include/exclude.",
+                    "description_fa": "ظروف/ارائه‌دهندگان مرتبط با شرکت برای گنجاندن/حذف."
                 },
                 {
                     "field": "RequireBackgroundState",
-                    "description": "Set true to require background discovery for higher confidence."
+                    "description": "Set true to require background discovery for higher confidence.",
+                    "description_fa": "درست را تنظیم کنید تا برای اطمینان بیشتر به کشف پس‌زمینه نیاز باشد."
                 },
                 {
                     "field": "AllowlistedBundles",
-                    "description": "Legitimate backup/DLP/file-management apps to suppress."
+                    "description": "Legitimate backup/DLP/file-management apps to suppress.",
+                    "description_fa": "پشتیبان‌گیری قانونی/DLP/برنامه‌های مدیریت فایل برای سرکوب."
                 },
                 {
                     "field": "ManagedProfileScope",
-                    "description": "Limit to managed devices/profiles."
+                    "description": "Limit to managed devices/profiles.",
+                    "description_fa": "محدود به دستگاه ها/نمایه های مدیریت شده."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1789",
+            "description_fa": "Defender یک برنامه (بسته/فرآیند) را مشاهده می‌کند که فهرست‌های دایرکتوری با دامنه وسیع یا خواندن فراداده را از طریق FileProvider/NSFileManager در برابر کانتینرهای قابل مشاهده توسط کاربر (مکان‌های برنامه Files، iCloud/On-My-iPhone) یا ارائه‌دهندگان خارجی، با پیمایش سریع در بسیاری از پوشه‌ها در حالی که برنامه مربوطه بدون پس‌زمینه فعالیت می‌کند، مشاهده می‌کند. Unifiedlogs: FileIO). سیگنال‌های اختیاری شامل کتابخانه عکس یا شمارش انبوه انتخابگر اسناد بدون اشاره کاربر اخیر است. با بسته نرم افزاری/فرآیند/نمایه و حجم مسیر در یک پنجره محدود ارتباط برقرار کنید."
         }
     ]
 }

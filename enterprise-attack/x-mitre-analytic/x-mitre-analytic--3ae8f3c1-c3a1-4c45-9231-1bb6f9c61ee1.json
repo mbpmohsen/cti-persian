@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0330#AN0938",
-                    "external_id": "AN0938"
+                    "external_id": "AN0938",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ScriptLocation",
-                    "description": "Path to postinstall script varies depending on .pkg packaging and user temp directories."
+                    "description": "Path to postinstall script varies depending on .pkg packaging and user temp directories.",
+                    "description_fa": "مسیر اسکریپت postinstall بسته به بسته بندی .pkg و دایرکتوری های موقت کاربر متفاوت است."
                 },
                 {
                     "field": "ParentProcessName",
-                    "description": "Installers may vary (e.g., /usr/sbin/installer, Jamf, Munki)."
+                    "description": "Installers may vary (e.g., /usr/sbin/installer, Jamf, Munki).",
+                    "description_fa": "نصب کننده ها ممکن است متفاوت باشند (به عنوان مثال، /usr/sbin/installer، Jamf، Munki)."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0938",
+            "description_fa": "همبستگی رویداد نصب بسته با اجرای اسکریپت های پس از نصب حاوی باینری های ناشناخته یا استفاده غیرعادی از CLI. به دنبال اجرای «/usr/sbin/installer» و به دنبال پردازش‌های فرزند منشاء اسکریپت پست نصب باشید."
         }
     ]
 }

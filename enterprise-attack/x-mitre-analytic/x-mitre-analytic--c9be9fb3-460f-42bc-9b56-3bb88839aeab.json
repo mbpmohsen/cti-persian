@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0308#AN0861",
-                    "external_id": "AN0861"
+                    "external_id": "AN0861",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -82,21 +83,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ChangeWindow",
-                    "description": "Approved maintenance or deployment windows. Helps reduce false positives by distinguishing scheduled activity."
+                    "description": "Approved maintenance or deployment windows. Helps reduce false positives by distinguishing scheduled activity.",
+                    "description_fa": "ویندوزهای نگهداری یا استقرار تایید شده با تشخیص فعالیت برنامه ریزی شده به کاهش مثبت کاذب کمک می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "IAM user, role, or service account performing the operation. Tunable to allowlist known automation services."
+                    "description": "IAM user, role, or service account performing the operation. Tunable to allowlist known automation services.",
+                    "description_fa": "کاربر، نقش یا حساب سرویس IAM که عملیات را انجام می دهد. قابل تنظیم در لیست مجاز خدمات اتوماسیون شناخته شده."
                 },
                 {
                     "field": "RateThreshold",
-                    "description": "Number of infrastructure changes (e.g., snapshot creations) in a defined period. Adjusted based on workload scale."
+                    "description": "Number of infrastructure changes (e.g., snapshot creations) in a defined period. Adjusted based on workload scale.",
+                    "description_fa": "تعداد تغییرات زیرساخت (به عنوان مثال، ایجاد عکس فوری) در یک دوره تعریف شده. بر اساس مقیاس حجم کار تنظیم شده است."
                 },
                 {
                     "field": "GeoLocation",
-                    "description": "Region or source IP where changes originate. Useful for tuning alerts to account for multi-region deployments."
+                    "description": "Region or source IP where changes originate. Useful for tuning alerts to account for multi-region deployments.",
+                    "description_fa": "منطقه یا IP منبع که در آن تغییرات منشا می گیرند. برای تنظیم هشدارها برای محاسبه استقرار چند منطقه مفید است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0861",
+            "description_fa": "تشخیص بر شناسایی تغییرات غیرمجاز یا غیرعادی در اجزای زیرساخت محاسباتی تمرکز دارد. دیدگاه مدافع: نظارت بر ایجاد، حذف، یا اصلاح نمونه‌ها، حجم‌ها و عکس‌های فوری خارج از پنجره‌های مدیریت تغییر تأییدشده. فعالیت های غیرعادی مانند ایجاد سریع عکس فوری و به دنبال آن نصب نمونه های جدید، یا تغییرات زیرساختی مکرر توسط حساب های به ندرت استفاده می شود. پرچم‌گذاری فعالیت مرتبط با موقعیت جغرافیایی غیرمعمول، سرویس گیرنده API یا اسکریپت اتوماسیون مشکوک است."
         }
     ]
 }

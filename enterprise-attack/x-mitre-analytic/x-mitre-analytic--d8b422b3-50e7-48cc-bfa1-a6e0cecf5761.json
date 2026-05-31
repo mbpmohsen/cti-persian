@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0345#AN0977",
-                    "external_id": "AN0977"
+                    "external_id": "AN0977",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedBinaries",
-                    "description": "Specify binaries frequently targeted for privilege escalation"
+                    "description": "Specify binaries frequently targeted for privilege escalation",
+                    "description_fa": "باینری هایی را که اغلب برای افزایش امتیاز هدف قرار می گیرند مشخص کنید"
                 },
                 {
                     "field": "ExecutionParent",
-                    "description": "Which applications should never be allowed to spawn elevated processes"
+                    "description": "Which applications should never be allowed to spawn elevated processes",
+                    "description_fa": "کدام برنامه ها هرگز نباید اجازه ایجاد فرآیندهای بالا را داشته باشند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0977",
+            "description_fa": "اجرای «/usr/libexec/security_authtrampoline» یا استفاده از AuthorizationExecuteWithPrivileges API را شناسایی کنید و خط و نسب فرآیند را برای راه اندازی غیرمعمول برنامه های رابط کاربری گرافیکی با امتیازات افزایش یافته نظارت کنید."
         }
     ]
 }

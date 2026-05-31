@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0316#AN0882",
-                    "external_id": "AN0882"
+                    "external_id": "AN0882",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessWhitelist",
-                    "description": "Backup, forensics, or imaging tools may perform legitimate raw disk access \u2014 requires tuning per environment."
+                    "description": "Backup, forensics, or imaging tools may perform legitimate raw disk access — requires tuning per environment.",
+                    "description_fa": "ابزارهای پشتیبان‌گیری، پزشکی قانونی یا تصویربرداری ممکن است دسترسی به دیسک خام قانونی را انجام دهند - نیاز به تنظیم در هر محیط دارد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation threshold for process execution, driver load, and raw disk writes."
+                    "description": "Correlation threshold for process execution, driver load, and raw disk writes.",
+                    "description_fa": "آستانه همبستگی برای اجرای فرآیند، بار راننده و نوشتن دیسک خام."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0882",
+            "description_fa": "فرآیندهای تلاش برای دسترسی به دیسک خام از طریق مسیرهای \\\\.\\PhysicalDrive، ورودی/خروجی غیرعادی فایل به بخش‌های MBR/boot یا بارگیری درایورهای شخص ثالث (مانند RawDisk) که بازنویسی دیسک را فعال می‌کنند. ایجاد فرآیند، استفاده از امتیاز، و رویدادهای تغییر دیسک را در یک پنجره زمانی کوتاه به هم مرتبط کنید."
         }
     ]
 }

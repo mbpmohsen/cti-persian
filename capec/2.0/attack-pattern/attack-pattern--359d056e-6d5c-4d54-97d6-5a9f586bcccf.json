@@ -9,28 +9,34 @@
                 {
                     "external_id": "CAPEC-57",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/57.html"
+                    "url": "https://capec.mitre.org/data/definitions/57.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-300",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/300.html"
+                    "url": "http://cwe.mitre.org/data/definitions/300.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-287",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/287.html"
+                    "url": "http://cwe.mitre.org/data/definitions/287.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Network Sniffing",
                     "external_id": "T1040",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1040"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1040",
+                    "description_fa": "استشمام شبکه",
+                    "source_name_fa": "حمله کنید"
                 }
             ],
             "id": "attack-pattern--359d056e-6d5c-4d54-97d6-5a9f586bcccf",
@@ -53,6 +59,15 @@
                 ],
                 "Confidentiality": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -70,11 +85,23 @@
                 "The adversary must be able to insert a listener actively (proxying the communication) or passively (sniffing the communication) in the client-server communication path."
             ],
             "x_capec_skills_required": {
-                "Low": "To insert a network sniffer or other listener into the communication stream"
+                "Low": "To insert a network sniffer or other listener into the communication stream",
+                "Low_fa": "برای وارد کردن یک sniffer شبکه یا شنونده دیگر در جریان ارتباط"
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله از اعتماد برنامه های کاربردی به سبک REST (Representational State Transfer) به منابع و محیط سیستم برای به دست آوردن داده های حساس پس از پایان SSL استفاده می کند.",
+            "name_fa": "استفاده از اعتماد REST در منبع سیستم برای به دست آوردن داده های حساس",
+            "x_capec_example_instances_fa": [
+                "ارائه دهنده خدمات Rest از SSL برای محافظت از ارتباطات بین درخواست کننده سرویس (مشتری) با ارائه دهنده خدمات استفاده می کند. در موردی که SSL قبل از رسیدن ارتباطات به وب سرور خاتمه می یابد، در مراکز داده سازمانی بسیار متداول است که SSL را در روتر، فایروال، load balancer، پراکسی یا دستگاه دیگر خاتمه دهند، سپس دشمن می تواند یک sniffer را در جریان ارتباط قرار دهد و تمام نشانه های احراز هویت (مانند نام کاربری ترکیبی، رمز عبور، رمز عبور، و غیره) را جمع آوری کند. درخواست کننده سرویس Rest و ارائه دهنده سرویس هیچ راهی برای تشخیص این حمله ندارند."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>یک برنامه به سبک REST که از SSL استفاده می کند پیدا کنید: </b> دشمن ابتدا باید برنامه ای به سبک REST پیدا کند که از SSL برای هدف گیری استفاده می کند. از آنجایی که انجام این حمله از داخل یک شبکه سرور آسان‌تر است، این احتمال وجود دارد که یک حریف از نحوه عملکرد سرویس‌ها اطلاعات داخلی داشته باشد.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>یک شنونده را وارد کنید تا ارتباط کلاینت-سرور را شناسایی کند: </b>در جایی که شنونده‌ای که SSL باید عبارتی را وارد می‌کند، وجود داشته باشد. اگر اعتقاد بر این باشد که اطلاعات حساسی به عنوان پاسخ به مشتری ارسال می شود، می توان آن را در سمت کلاینت قرار داد، اگرچه اغلب شنونده در سمت سرور قرار می گیرد تا اطلاعات احراز هویت مشتری را گوش کند. شبکه و گرفتن ترافیک پس از پایان SSL</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>اطلاعات ارسال شده به صورت واضح را جمع آوری کنید: </b>اگر توسعه دهندگان داده های ارسال شده در هش یا رمزگذاری شده را در داده های sniffed هش نکرده باشند، این درخواست sniffed آگهی می تواند پاک شود. معمولاً، آنها اکنون یک نام کاربری یا رمز عبور دارند که می توانند از آن برای ارسال درخواست به وب سرویس فقط به عنوان یک کاربر مجاز استفاده کنند</p></li></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p> فرض برنامه های Rest این است که از زیرساخت های موجود برای ارائه عملکرد خدمات وب استفاده می کنند. یک مثال از این یک برنامه Rest است که از روش های HTTP Get استفاده می کند و یک پاسخ HTTP را با یک سند XML دریافت می کند. این سرویس‌های وب سبک Rest در زیرساخت‌های موجود مانند سرورهای وب Apache و IIS بدون نیاز به پشته SOAP مستقر شده‌اند.</xhtml:p>\n            <xhtml:p> متأسفانه از نقطه نظر امنیتی، اغلب هیچ مکانیزم امنیتی هویتی قابل اجرا وجود ندارد، بنابراین توسعه دهندگان Rest اغلب برای ارائه امنیت به SSL بازمی گردند. در مراکز داده بزرگ، SSL معمولاً در لبه شبکه خاتمه می یابد - در فایروال، متعادل کننده بار یا روتر. هنگامی که SSL خاتمه می یابد، درخواست HTTP روشن می شود (مگر اینکه توسعه دهندگان مقادیر را هش یا رمزگذاری کرده باشند، اما این نادر است). حریف می‌تواند از یک sniffer مانند Wireshark برای گرفتن عکس از اعتبارنامه‌ها، مانند نام کاربری و رمز عبور که پس از پایان SSL پاک می‌شوند، استفاده کند. هنگامی که حریف این اعتبارنامه ها را جمع آوری کرد، می تواند درخواست هایی را به ارائه دهنده خدمات وب ارسال کند، همانطور که کاربر مجاز انجام می دهد. معمولاً یک احراز هویت در سمت مشتری وجود ندارد، فراتر از آنچه در خود درخواست ارسال می‌شود، بنابراین هنگامی که این مورد به خطر افتاد، معمولاً برای به خطر انداختن طرح تأیید اعتبار سرویس کافی است.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "فرصت رهگیری باید فراتر از نقطه ای که SSL خاتمه می یابد وجود داشته باشد.",
+                "حریف باید بتواند یک شنونده را به صورت فعال (پراکسی کردن ارتباط) یا غیرفعال (استشمام کردن ارتباط) در مسیر ارتباطی مشتری-سرور قرار دهد."
+            ]
         }
     ],
     "spec_version": "2.0",

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0109#AN0306",
-                    "external_id": "AN0306"
+                    "external_id": "AN0306",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredDirectories",
-                    "description": "Set of directories where plist modifications are considered suspicious (e.g., ~/Library/LaunchAgents, /Library/LaunchDaemons)"
+                    "description": "Set of directories where plist modifications are considered suspicious (e.g., ~/Library/LaunchAgents, /Library/LaunchDaemons)",
+                    "description_fa": "مجموعه ای از دایرکتوری ها که در آن تغییرات plist مشکوک تلقی می شوند (به عنوان مثال، ~/Library/LaunchAgents، /Library/LaunchDaemons)"
                 },
                 {
                     "field": "SuspiciousKeys",
-                    "description": "List of plist keys associated with evasion or persistence (e.g., LSUIElement, LSEnvironment, ProgramArguments)"
+                    "description": "List of plist keys associated with evasion or persistence (e.g., LSUIElement, LSEnvironment, ProgramArguments)",
+                    "description_fa": "فهرست کلیدهای فهرست مرتبط با فرار یا تداوم (به عنوان مثال، LSUIElement، LSEnvironment، ProgramArguments)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Temporal correlation window to link plist file modifications with subsequent suspicious process launches"
+                    "description": "Temporal correlation window to link plist file modifications with subsequent suspicious process launches",
+                    "description_fa": "پنجره همبستگی زمانی برای پیوند اصلاحات فایل plist با راه اندازی فرآیند مشکوک بعدی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0306",
+            "description_fa": "برای تغییرات غیرمنتظره فایل‌های plist در فهرست‌های ماندگار یا پیکربندی (مانند ~/Library/LaunchAgents، ~/Library/Preferences، /Library/LaunchDaemons) نظارت کنید. تشخیص اینکه چه زمانی تغییرات با اجرای باینری های جدید یا غیرمنتظره انجام می شود. ردیابی استفاده از ابزارهای کمکی مانند پیش فرض ها، plutil یا ویرایشگرهای متنی که در فایل های Info.plist تغییراتی ایجاد می کنند. تغییرات فایل را با راه‌اندازی فرآیند یا شروع سرویس بعدی که به فهرست تغییر یافته ارجاع می‌دهند، مرتبط کنید."
         }
     ]
 }

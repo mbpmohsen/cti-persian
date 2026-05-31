@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0127#AN0359",
-                    "external_id": "AN0359"
+                    "external_id": "AN0359",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ServiceNameBaseline",
-                    "description": "Tune based on default service names vs. suspicious new entries"
+                    "description": "Tune based on default service names vs. suspicious new entries",
+                    "description_fa": "تنظیم بر اساس نام سرویس های پیش فرض در مقابل ورودی های مشکوک جدید"
                 },
                 {
                     "field": "ScriptFilePath",
-                    "description": "Watch for new binaries/scripts in boot or cron folders"
+                    "description": "Watch for new binaries/scripts in boot or cron folders",
+                    "description_fa": "به دنبال باینری ها/اسکریپت های جدید در پوشه های بوت یا cron باشید"
                 },
                 {
                     "field": "ExecutionContext",
-                    "description": "Determine if execution happens at boot or scheduled interval"
+                    "description": "Determine if execution happens at boot or scheduled interval",
+                    "description_fa": "تعیین کنید که آیا اجرا در بازه زمانی بوت یا زمان‌بندی شده اتفاق می‌افتد"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0359",
+            "description_fa": "دشمن اسکریپت‌ها یا باینری‌ها را با نام‌های گمراه‌کننده در /etc/rc.local.d یا /var/spool/cron قرار می‌دهد، یا سرویس‌هایی را با نام‌هایی با صدای قانونی که در ساخت‌های پیش‌فرض ESXi وجود ندارد، ثبت می‌کند."
         }
     ]
 }

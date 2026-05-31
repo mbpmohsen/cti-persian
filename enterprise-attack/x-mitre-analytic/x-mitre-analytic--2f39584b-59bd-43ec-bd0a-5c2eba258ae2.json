@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0272#AN0758",
-                    "external_id": "AN0758"
+                    "external_id": "AN0758",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BaselineChecksums",
-                    "description": "Trusted baseline cryptographic hashes for OS images, used to detect unauthorized modifications."
+                    "description": "Trusted baseline cryptographic hashes for OS images, used to detect unauthorized modifications.",
+                    "description_fa": "هش های رمزنگاری پایه پایه قابل اعتماد برای تصاویر سیستم عامل، که برای شناسایی تغییرات غیرمجاز استفاده می شود."
                 },
                 {
                     "field": "AuthFailureThreshold",
-                    "description": "Threshold for correlating unusual authentication successes following failed attempts or unknown account use."
+                    "description": "Threshold for correlating unusual authentication successes following failed attempts or unknown account use.",
+                    "description_fa": "آستانه برای همبستگی موفقیت های غیرمعمول احراز هویت پس از تلاش های ناموفق یا استفاده ناشناخته از حساب."
                 },
                 {
                     "field": "VerificationInterval",
-                    "description": "Frequency of runtime OS image and memory integrity checks."
+                    "description": "Frequency of runtime OS image and memory integrity checks.",
+                    "description_fa": "فرکانس بررسی تصویر سیستم عامل و یکپارچگی حافظه در زمان اجرا."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0758",
+            "description_fa": "اصلاحات غیرمجاز احراز هویت دستگاه شبکه را با مرتبط کردن تغییرات فایل تصویر سیستم عامل، عدم تطابق جمع کنترلی، یا خرابی های راستی آزمایی حافظه با رویدادهای احراز هویت غیرعادی تشخیص می دهد. تمرکز روی رفتارهایی است که در آن تصاویر وصله‌شده رمزهای عبور رمزگذاری شده را معرفی می‌کنند یا احراز هویت بومی را دور می‌زنند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0513#AN1418",
-                    "external_id": "AN1418"
+                    "external_id": "AN1418",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "filepath",
-                    "description": "SSSD and Quest cache paths differ by deployment and OS variant."
+                    "description": "SSSD and Quest cache paths differ by deployment and OS variant.",
+                    "description_fa": "مسیرهای حافظه پنهان SSSD و Quest بر اساس استقرار و نوع سیستم عامل متفاوت است."
                 },
                 {
                     "field": "CommandLine",
-                    "description": "Tunable to capture specific tools (e.g., tdbdump, cat) or scripts accessing cache files."
+                    "description": "Tunable to capture specific tools (e.g., tdbdump, cat) or scripts accessing cache files.",
+                    "description_fa": "قابل تنظیم برای ضبط ابزارهای خاص (مانند tdbdump، cat) یا اسکریپت هایی که به فایل های کش دسترسی دارند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time between elevation and file access can be adjusted to account for legitimate system behavior."
+                    "description": "Time between elevation and file access can be adjusted to account for legitimate system behavior.",
+                    "description_fa": "زمان بین ارتفاع و دسترسی به فایل را می توان برای در نظر گرفتن رفتار قانونی سیستم تنظیم کرد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1418",
+            "description_fa": "با استفاده از tdbdump یا سایر الگوهای دسترسی به فایل، که نیاز به دسترسی sudo/root دارند، دسترسی به پایگاه‌های اطلاعاتی حافظه پنهان SSSD یا Quest VAS را تشخیص می‌دهد."
         }
     ]
 }

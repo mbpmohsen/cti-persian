@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0159#AN0446",
-                    "external_id": "AN0446"
+                    "external_id": "AN0446",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -41,17 +42,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "VendorID",
-                    "description": "Device vendor strings may need tuning to include additional remote hardware sources."
+                    "description": "Device vendor strings may need tuning to include additional remote hardware sources.",
+                    "description_fa": "رشته‌های فروشنده دستگاه ممکن است نیاز به تنظیم داشته باشند تا منابع سخت‌افزاری از راه دور اضافی را شامل شود."
                 },
                 {
                     "field": "SerialNumber",
-                    "description": "Serial numbers for known implants can vary per campaign and may need expansion."
+                    "description": "Serial numbers for known implants can vary per campaign and may need expansion.",
+                    "description_fa": "شماره سریال برای ایمپلنت های شناخته شده می تواند در هر کمپین متفاوت باشد و ممکن است نیاز به گسترش داشته باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Adjust the detection window for peripheral enumeration based on environment and operating hours."
+                    "description": "Adjust the detection window for peripheral enumeration based on environment and operating hours.",
+                    "description_fa": "پنجره تشخیص را برای شمارش محیطی بر اساس محیط و ساعات کار تنظیم کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0446",
+            "description_fa": "تشخیص سخت افزار دسترسی از راه دور مبتنی بر USB (به عنوان مثال، TinyPilot، PiKVM) متصل به میزبان از طریق درایو یا شمارش محیطی، فعال کردن شناسه های فروشنده یا اعلامیه های غیرعادی EDID."
         }
     ]
 }

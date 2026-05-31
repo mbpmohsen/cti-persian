@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0465#AN1286",
-                    "external_id": "AN1286"
+                    "external_id": "AN1286",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AccountName",
-                    "description": "If 'vpxuser' is replaced or configured differently, detection logic must reflect the change."
+                    "description": "If 'vpxuser' is replaced or configured differently, detection logic must reflect the change.",
+                    "description_fa": "اگر 'vpxuser' جایگزین یا پیکربندی متفاوتی شود، منطق تشخیص باید تغییر را منعکس کند."
                 },
                 {
                     "field": "IPRange",
-                    "description": "Legitimate vCenter IP ranges may be whitelisted to avoid false positives."
+                    "description": "Legitimate vCenter IP ranges may be whitelisted to avoid false positives.",
+                    "description_fa": "محدوده‌های IP قانونی vCenter ممکن است برای جلوگیری از مثبت کاذب در لیست سفید قرار بگیرند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1286",
+            "description_fa": "سوء استفاده از حساب‌های دارای امتیاز ایجاد شده توسط سیستم یا پیش‌فرض مانند ورود به هاست‌های ESXi «root» یا «vpxuser»."
         }
     ]
 }

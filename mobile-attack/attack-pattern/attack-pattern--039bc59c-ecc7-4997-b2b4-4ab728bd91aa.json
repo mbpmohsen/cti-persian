@@ -13,22 +13,29 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1540",
-                    "external_id": "T1540"
+                    "external_id": "T1540",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Fadeev Code Injection Aug 2018",
                     "description": "Alexandr Fadeev. (2018, August 26). Shared Library Injection on Android 8.0. Retrieved October 30, 2019.",
-                    "url": "https://fadeevab.com/shared-library-injection-on-android-8/"
+                    "url": "https://fadeevab.com/shared-library-injection-on-android-8/",
+                    "source_name_fa": "Fadeev Code Injection آگوست 2018",
+                    "description_fa": "الکساندر فادیف. (26 آگوست 2018). تزریق کتابخانه مشترک در اندروید 8.0. بازبینی شده در 30 اکتبر 2019."
                 },
                 {
                     "source_name": "Google Triada June 2019",
                     "description": "Lukasz Siewierski. (2019, June 6). PHA Family Highlights: Triada. Retrieved July 16, 2019.",
-                    "url": "https://security.googleblog.com/2019/06/pha-family-highlights-triada.html"
+                    "url": "https://security.googleblog.com/2019/06/pha-family-highlights-triada.html",
+                    "source_name_fa": "Google Triada ژوئن 2019",
+                    "description_fa": "لوکاس سیویرسکی (2019، 6 ژوئن). نکات مهم خانواده PHA: Triada. بازبینی شده در 16 جولای 2019."
                 },
                 {
                     "source_name": "Shunix Code Injection Mar 2016",
                     "description": "Shunix . (2016, March 22). Shared Library Injection in Android. Retrieved October 30, 2019.",
-                    "url": "https://shunix.com/shared-library-injection-in-android/"
+                    "url": "https://shunix.com/shared-library-injection-in-android/",
+                    "source_name_fa": "Shunix Code Injection مارس 2016",
+                    "description_fa": "شونیکس . (22 مارس 2016). تزریق کتابخانه مشترک در اندروید. بازبینی شده در 30 اکتبر 2019."
                 }
             ],
             "object_marking_refs": [
@@ -36,7 +43,7 @@
             ],
             "modified": "2025-10-24T17:48:20.267Z",
             "name": "Code Injection",
-            "description": "Adversaries may use code injection attacks to implant arbitrary code into the address space of a running application. Code is then executed or interpreted by that application. Adversaries utilizing this technique may exploit capabilities to load code in at runtime through dynamic libraries.\n\nWith root access, `ptrace` can be used to target specific applications and load shared libraries into its process memory.(Citation: Shunix Code Injection Mar 2016)(Citation: Fadeev Code Injection Aug 2018) By injecting code, an adversary may be able to gain access to higher permissions held by the targeted application by executing as the targeted application. In addition, the adversary may be able to evade detection or enable persistent access to a system under the guise of the application\u2019s process.(Citation: Google Triada June 2019)\n",
+            "description": "Adversaries may use code injection attacks to implant arbitrary code into the address space of a running application. Code is then executed or interpreted by that application. Adversaries utilizing this technique may exploit capabilities to load code in at runtime through dynamic libraries.\n\nWith root access, `ptrace` can be used to target specific applications and load shared libraries into its process memory.(Citation: Shunix Code Injection Mar 2016)(Citation: Fadeev Code Injection Aug 2018) By injecting code, an adversary may be able to gain access to higher permissions held by the targeted application by executing as the targeted application. In addition, the adversary may be able to evade detection or enable persistent access to a system under the guise of the application’s process.(Citation: Google Triada June 2019)\n",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -65,7 +72,9 @@
             "x_mitre_version": "1.0",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "تزریق کد",
+            "description_fa": "دشمنان ممکن است از حملات تزریق کد برای کاشت کد دلخواه در فضای آدرس یک برنامه کاربردی در حال اجرا استفاده کنند. سپس کد توسط آن برنامه اجرا یا تفسیر می شود. دشمنانی که از این تکنیک استفاده می کنند ممکن است از قابلیت ها برای بارگذاری کد در زمان اجرا از طریق کتابخانه های پویا سوء استفاده کنند.\n\nبا دسترسی ریشه، «ptrace» می‌تواند برای هدف‌گیری برنامه‌های خاص و بارگیری کتابخانه‌های به اشتراک گذاشته شده در حافظه پردازش آن استفاده شود. علاوه بر این، دشمن ممکن است بتواند از شناسایی فرار کند یا دسترسی مداوم به یک سیستم را تحت پوشش فرآیند برنامه فعال کند.(Citation: Google Triada June 2019) (Citation: Shunix Code Injection Mar 2016) (Citation: Fadeev Code Injection Aug 2018)"
         }
     ]
 }

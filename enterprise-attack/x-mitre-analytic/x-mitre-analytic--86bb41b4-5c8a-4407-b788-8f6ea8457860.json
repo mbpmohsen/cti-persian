@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0199#AN0575",
-                    "external_id": "AN0575"
+                    "external_id": "AN0575",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Adjust sensitivity depending on whether the command is executed by admin or non-admin users."
+                    "description": "Adjust sensitivity depending on whether the command is executed by admin or non-admin users.",
+                    "description_fa": "بسته به اینکه دستور توسط کاربران ادمین یا غیر ادمین اجرا شود، حساسیت را تنظیم کنید."
                 },
                 {
                     "field": "ExecutionTimeWindow",
-                    "description": "Restrict alerts to unusual times when VM management is not expected."
+                    "description": "Restrict alerts to unusual times when VM management is not expected.",
+                    "description_fa": "هشدارها را به زمان‌های غیرمعمولی که مدیریت VM انتظار نمی‌رود محدود کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0575",
+            "description_fa": "تلاش‌های شمارش ماشین مجازی را با استفاده از ابزارهای مجازی‌سازی مانند VirtualBox («VBoxManage») یا Parallels CLI شناسایی می‌کند. Defender فراخوانی غیرعادی دستورات لیست VM را مشاهده می کند که با کاربران غیر سرپرست یا فرآیندهای والد غیرعادی مرتبط است."
         }
     ]
 }

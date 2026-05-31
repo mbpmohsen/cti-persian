@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0213#AN0597",
-                    "external_id": "AN0597"
+                    "external_id": "AN0597",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ProcessNetworkBaseline",
-                    "description": "Whitelist of typical binaries expected to generate outbound connections (e.g., wget, curl)"
+                    "description": "Whitelist of typical binaries expected to generate outbound connections (e.g., wget, curl)",
+                    "description_fa": "لیست سفید از باینری های معمولی که انتظار می رود اتصالات خروجی ایجاد کنند (مانند wget، curl)"
                 },
                 {
                     "field": "PayloadLengthVariance",
-                    "description": "Deviation threshold to consider data 'fixed size' (e.g., \u00b15% size delta)"
+                    "description": "Deviation threshold to consider data 'fixed size' (e.g., ±5% size delta)",
+                    "description_fa": "آستانه انحراف برای در نظر گرفتن \"اندازه ثابت\" داده ها (به عنوان مثال، اندازه دلتا ± 5٪)"
                 },
                 {
                     "field": "RepeatFrequencyThreshold",
-                    "description": "Number of observed transfers per minute/hour that signals anomalous repetition"
+                    "description": "Number of observed transfers per minute/hour that signals anomalous repetition",
+                    "description_fa": "تعداد انتقال مشاهده شده در دقیقه/ساعت که نشان دهنده تکرار غیرعادی است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0597",
+            "description_fa": "اتصالات خروجی از فرآیندهای غیر شبکه به طور مکرر محموله هایی با اندازه مشابه در بازه های زمانی یکسان ارسال می کنند."
         }
     ]
 }

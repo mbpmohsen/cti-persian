@@ -13,7 +13,9 @@
                 {
                     "source_name": "Executable Installers are Vulnerable",
                     "description": "Stefan Kanthak. (2015, December 8). Executable installers are vulnerable^WEVIL (case 7): 7z*.exe allows remote code execution with escalation of privilege. Retrieved December 4, 2014.",
-                    "url": "https://seclists.org/fulldisclosure/2015/Dec/34"
+                    "url": "https://seclists.org/fulldisclosure/2015/Dec/34",
+                    "source_name_fa": "نصب کننده های اجرایی آسیب پذیر هستند",
+                    "description_fa": "استفان کانتاک. (2015، 8 دسامبر). نصب‌کننده‌های اجرایی آسیب‌پذیر هستند^WEVIL (مورد 7): 7z*.exe امکان اجرای کد از راه دور با افزایش امتیاز را می‌دهد. بازبینی شده در 4 دسامبر 2014."
                 }
             ],
             "object_marking_refs": [
@@ -26,7 +28,8 @@
             "target_ref": "attack-pattern--9e8b28c9-35fe-48ac-a14d-e6cc032dcbcd",
             "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
             "x_mitre_deprecated": false,
-            "x_mitre_attack_spec_version": "3.3.0"
+            "x_mitre_attack_spec_version": "3.3.0",
+            "description_fa": "ارتفاع امتیاز UAC را برای کاربران استاندارد خاموش کنید <code>[HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System]</code>برای رد خودکار درخواست‌های ارتفاع، اضافه کنید: <code>\"ConsentPromptBehaviorUser\"=dword:00000000</code>. با افزودن <code>\"EnableInstallerDetection\"=dword:00000001</code>، شناسایی نصب‌کننده را برای همه کاربران فعال کنید. این یک رمز عبور برای نصب و همچنین ثبت تلاش را درخواست می کند. برای غیرفعال کردن تشخیص نصب‌کننده، به جای آن، <code>\"EnableInstallerDetection\"=dword:00000000</code> را اضافه کنید. این ممکن است از افزایش بالقوه امتیازات از طریق بهره‌برداری در طول فرآیند شناسایی UAC نصب‌کننده جلوگیری کند، اما به روند نصب اجازه می‌دهد بدون ورود به سیستم ادامه یابد.(Citation: Executable Installers are Vulnerable)"
         }
     ]
 }

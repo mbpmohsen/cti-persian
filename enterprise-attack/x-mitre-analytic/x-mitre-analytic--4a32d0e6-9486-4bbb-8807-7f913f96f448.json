@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0516#AN1430",
-                    "external_id": "AN1430"
+                    "external_id": "AN1430",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,18 +41,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "LaunchAgentName",
-                    "description": "Monitor for specific plist agents frequently abused for persistence or payload execution."
+                    "description": "Monitor for specific plist agents frequently abused for persistence or payload execution.",
+                    "description_fa": "نظارت بر عوامل plist خاص که اغلب برای تداوم یا اجرای بار مورد سوء استفاده قرار می گیرند."
                 },
                 {
                     "field": "ScriptName",
-                    "description": "Path or script name pattern (e.g., hidden files, /tmp locations)."
+                    "description": "Path or script name pattern (e.g., hidden files, /tmp locations).",
+                    "description_fa": "الگوی نام مسیر یا اسکریپت (به عنوان مثال، فایل های مخفی، مکان های /tmp)."
                 },
                 {
                     "field": "TerminalAppUsage",
-                    "description": "Adjust based on whether Terminal.app use is common or restricted in user policy."
+                    "description": "Adjust based on whether Terminal.app use is common or restricted in user policy.",
+                    "description_fa": "براساس معمول یا محدود بودن استفاده از Terminal.app در خط‌مشی کاربر، تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1430",
+            "description_fa": "راه‌اندازی مفسرهای خط فرمان را از طریق Terminal، Automator یا «osascript» مخفی تشخیص می‌دهد، به‌ویژه زمانی که نسل فرآیند والد از برنامه‌های آغاز شده توسط کاربر منحرف می‌شود."
         }
     ]
 }

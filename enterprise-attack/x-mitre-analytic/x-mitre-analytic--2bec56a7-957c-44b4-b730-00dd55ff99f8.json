@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0430#AN1200",
-                    "external_id": "AN1200"
+                    "external_id": "AN1200",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedApplications",
-                    "description": "Whitelist of legitimate processes accessing the Keychain"
+                    "description": "Whitelist of legitimate processes accessing the Keychain",
+                    "description_fa": "لیست سفید فرآیندهای قانونی دسترسی به Keychain"
                 },
                 {
                     "field": "AlertThreshold",
-                    "description": "Number of failed access attempts before raising an alert"
+                    "description": "Number of failed access attempts before raising an alert",
+                    "description_fa": "تعداد تلاش‌های دسترسی ناموفق قبل از اعلام هشدار"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1200",
+            "description_fa": "دسترسی به پایگاه داده Keychain و فراخوان های مشکوک امنیت و ابزارهای osascript را نظارت می کند. اجرای فرآیند را با تلاش برای تخلیه یا باز کردن قفل داده های Keychain مرتبط می کند."
         }
     ]
 }

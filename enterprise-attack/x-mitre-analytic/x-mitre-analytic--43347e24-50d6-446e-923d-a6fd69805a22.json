@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0135#AN0381",
-                    "external_id": "AN0381"
+                    "external_id": "AN0381",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Monitor non-mail client users initiating SMTP/IMAP"
+                    "description": "Monitor non-mail client users initiating SMTP/IMAP",
+                    "description_fa": "کاربران غیر ایمیلی را که SMTP/IMAP را شروع می کنند، نظارت کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Look for execution of mail commands during off-hours"
+                    "description": "Look for execution of mail commands during off-hours",
+                    "description_fa": "به دنبال اجرای دستورات پستی در ساعات غیرفعال باشید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0381",
+            "description_fa": "رفتار ارسال ایمیل را از طریق ترمینال، AppleScript یا Automator تشخیص می‌دهد که با SMTP یا IMAP ارتباط برقرار می‌کند، معمولاً با استفاده از curl یا APIهای مرتبط با نامه در زمینه‌های غیرمجاز."
         }
     ]
 }

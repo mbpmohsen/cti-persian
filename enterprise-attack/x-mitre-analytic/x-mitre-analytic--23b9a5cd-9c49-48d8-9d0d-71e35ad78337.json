@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0393#AN1106",
-                    "external_id": "AN1106"
+                    "external_id": "AN1106",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "userEmailFilter",
-                    "description": "Tune based on legitimate service accounts allowed to impersonate user accounts."
+                    "description": "Tune based on legitimate service accounts allowed to impersonate user accounts.",
+                    "description_fa": "تنظیم بر اساس حساب های خدمات قانونی مجاز به جعل هویت حساب های کاربر."
                 },
                 {
                     "field": "delegatedScope",
-                    "description": "Limit delegated access to specific scopes relevant to business functions."
+                    "description": "Limit delegated access to specific scopes relevant to business functions.",
+                    "description_fa": "دسترسی تفویض شده به حوزه های خاص مرتبط با عملکردهای تجاری را محدود کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1106",
+            "description_fa": "ایجاد رمز یا تفویض اختیار در جایی که کاربر جعل هویت یک حساب سرویس دارای امتیاز بالاتر است یا اقدامات تفویض اختیار در سطح دامنه را انجام می‌دهد، مانند جعل هویت ServiceAccountTokenCreator یا Workspace GCP."
         }
     ]
 }

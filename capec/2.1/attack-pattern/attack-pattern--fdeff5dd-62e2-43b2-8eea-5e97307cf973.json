@@ -9,44 +9,54 @@
                 {
                     "external_id": "CAPEC-27",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/27.html"
+                    "url": "https://capec.mitre.org/data/definitions/27.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-367",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/367.html"
+                    "url": "http://cwe.mitre.org/data/definitions/367.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-61",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/61.html"
+                    "url": "http://cwe.mitre.org/data/definitions/61.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-662",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/662.html"
+                    "url": "http://cwe.mitre.org/data/definitions/662.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-689",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/689.html"
+                    "url": "http://cwe.mitre.org/data/definitions/689.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-667",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/667.html"
+                    "url": "http://cwe.mitre.org/data/definitions/667.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Wikipedia, The Wikimedia Foundation, Inc",
                     "external_id": "REF-115",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://en.wikipedia.org/wiki/Symlink_race"
+                    "url": "http://en.wikipedia.org/wiki/Symlink_race",
+                    "description_fa": "ویکی پدیا، بنیاد ویکی مدیا، شرکت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "mkstemp (IEEE Std 1003.1, 2004 Edition), The Open Group Base Specifications Issue 6",
                     "external_id": "REF-116",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.opengroup.org/onlinepubs/009695399/functions/mkstemp.html"
+                    "url": "http://www.opengroup.org/onlinepubs/009695399/functions/mkstemp.html",
+                    "description_fa": "mkstemp (IEEE Std 1003.1، 2004 Edition)، The Open Group Base Specifications Issue 6",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--fdeff5dd-62e2-43b2-8eea-5e97307cf973",
@@ -76,6 +86,21 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "کسب امتیازات"
+                ],
+                "Availability_fa": [
+                    "مصرف منابع (انکار خدمات)"
+                ],
+                "Confidentiality_fa": [
+                    "کسب امتیازات"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -95,11 +120,26 @@
                 "The target host does insecure temporary file creation."
             ],
             "x_capec_skills_required": {
-                "Medium": "This attack is sophisticated because the attacker has to overcome a few challenges such as creating symlinks on the target host during a precise timing, inserting malicious data in the temporary file and have knowledge about the temporary files created (file name and function which creates them)."
+                "Medium": "This attack is sophisticated because the attacker has to overcome a few challenges such as creating symlinks on the target host during a precise timing, inserting malicious data in the temporary file and have knowledge about the temporary files created (file name and function which creates them).",
+                "Medium_fa": "این حمله پیچیده است زیرا مهاجم باید بر چند چالش مانند ایجاد پیوندهای نمادین در میزبان هدف در یک زمان بندی دقیق، درج داده های مخرب در فایل موقت و داشتن دانش در مورد فایل های موقت ایجاد شده (نام فایل و عملکردی که آنها را ایجاد می کند) غلبه کند."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "این حمله استفاده از پیوندهای نمادین (Symlinks) را برای نوشتن در فایل های حساس به کار می گیرد. یک مهاجم می تواند پیوند Symlink را به فایل هدفی که در غیر این صورت در دسترس آنها نیست ایجاد کند. هنگامی که برنامه ممتاز سعی می کند یک فایل موقت با همان نام پیوند Symlink ایجاد کند، در واقع در فایل هدفی که توسط پیوند Symlink مهاجمان به آن اشاره شده است، می نویسد. اگر مهاجم بتواند محتوای مخرب را در فایل موقت وارد کند، با استفاده از Symlink در فایل حساس می‌نویسد. مسابقه به این دلیل رخ می دهد که سیستم بررسی می کند که آیا فایل موقت وجود دارد یا خیر، سپس فایل را ایجاد می کند. مهاجم معمولاً Symlink را در فاصله زمانی بین بررسی و ایجاد فایل موقت ایجاد می کند.",
+            "name_fa": "استفاده از شرایط مسابقه از طریق پیوندهای نمادین",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p> در این مثال ساده لوحانه، برنامه Unix foo setuid است. عملکرد آن بازیابی اطلاعات برای حساب های مشخص شده توسط کاربر است. برای «کارآمدی»، حساب‌های درخواستی را قبل از انجام درخواست‌ها در یک فایل موقت (/tmp/foo) مرتب می‌کند.</xhtml:p>\n               <xhtml:p> دایرکتوری /tmp قابل نوشتن در جهان است. کاربر مخرب یک پیوند نمادین به فایل /.rhosts با نام /tmp/foo ایجاد می کند. سپس، آنها foo را با \"user\" به عنوان حساب درخواستی فراخوانی می کنند. برنامه فایل (موقت) /tmp/foo را ایجاد می کند (واقعاً /.rhosts را ایجاد می کند) و حساب درخواستی (به عنوان مثال \"گذرواژه کاربر\")) را در آن قرار می دهد. فایل موقت را حذف می کند (صرفاً پیوند نمادین را حذف می کند).</xhtml:p>\n               <xhtml:p>اکنون /.rhosts حاوی + + است، که عبارتی است که لازم است هر کسی بتواند از rlogin برای ورود به رایانه به عنوان ابرکاربر استفاده کند.</xhtml:p>\n               <xhtml:p>[REF-115]</xhtml:p>",
+                "ابزار GNU \"ed\" (قبل از 0.3) به کاربران محلی اجازه می دهد تا فایل های دلخواه را از طریق یک حمله Symlink به فایل های موقت، احتمالاً در تابع open_sbuf، بازنویسی کنند. همچنین ببینید: CVE-2006-6939",
+                "OpenmosixCollector و OpenMosixView در OpenMosixView 1.5 به کاربران محلی اجازه می دهند تا فایل های دلخواه را از طریق یک حمله symlink روی (1) فایل های موقت در فهرست openmosixcollector یا (2) nodes.tmp بازنویسی یا حذف کنند. همچنین ببینید: CVE-2005-0894",
+                "محصول Setuid امکان خواندن فایل را با جایگزین کردن فایل در حال ویرایش با یک پیوند نمادین به فایل مورد نظر می‌دهد و در صورت شکست تجزیه، نتیجه را در پیام‌های خطا نشان می‌دهد. همچنین ببینید: CVE-2000-0972"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تأیید کنید که پلتفرم میزبان هدف از پیوندهای نمادین پشتیبانی می‌کند.: </b>این الگوی حمله فقط در پلتفرم‌هایی که پیوندهای نمادین را پشتیبانی می‌کنند قابل اجرا است. از پیوندهای نمادین پشتیبانی می‌کند.</td></tr><tr><td>یک پیوند نمادین ایجاد کنید و اطمینان حاصل کنید که همانطور که انتظار می‌رود در پلتفرم داده شده کار می‌کند.</td></tr></tbody></table><li> <p> <b>بررسی رفتار ورودی/خروجی فایل برنامه: </b>رفتار فایل‌های ورودی/خروجی را تجزیه و تحلیل کنید، و برای تعیین محل ذخیره‌سازی فایل‌ها، عملکرد ورودی/خروجی فایل را تجزیه و تحلیل کنید. فایل‌ها.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>از ابزار ردیابی هسته مانند ktrace برای نظارت بر رفتار برنامه‌ها استفاده کنید.</td></tr><tr><td>از ابزار اشکال‌زدایی مانند File Monitor برای نظارت بر فایل سیستم فایل برنامه استفاده کنید>< یا زمانی که فایل سیستم فایل ورودی/خروجی را مشاهده می‌کند</ttrtd فایل‌های موقت ایجاد، اصلاح و حذف می‌شوند.</td></tr><tr><td>تجزیه و تحلیل کد منبع برای سیستم‌های منبع باز مانند لینوکس، آپاچی، و غیره به سیستم فایل میزبان هدف.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>فایلی ایجاد کنید که در فهرست هدف وجود ندارد (مثلاً \"touch temp.txt\" در سیستم‌های یونیکس مانند)</td></tr><tr><td>در پلتفرم‌هایی که فایلی را هدف قرار می‌دهد تا بین برنامه‌نویسی تفاوت ایجاد کند، آن را تغییر دهید. برای تغییر آن.</td></tr><tr><td>مجوزهای موجود در فهرست هدف را تأیید کنید</td></tr></tbody></table></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>فایل را با یک پیوند نمادین به یک فایل سیستمی حساس جایگزین کنید.: </b>اگر کاربر زمان دسترسی به آن را دارد بررسی کند. آن) و زمانی که برنامه واقعاً فایل را باز می کند، مهاجم فایل را با یک پیوند نمادین به یک فایل حساس سیستم جایگزین می کند.</p></li><table><tbody><tr><th>تکنیک ها</th></tr><tr><td>یک حلقه بی نهایت حاوی دستوراتی مانند \"rm -f tempfile.dat; ln -sshat.filec\" ایجاد کنید. منتظر نمونه ای باشید که مراحل زیر به ترتیب داده شده انجام می شود: (1) برنامه اطمینان می دهد که tempfile.dat وجود دارد و کاربر به آن دسترسی دارد، (2) \"rm -f tempfile.dat؛ ln -s /etc/shadow tempfile.dat\"، و (3) برنامه tempfile.dat را برای نوشتن به صورت متناوب باز می کند، و برای نوشتن /inadver / inadver را باز می کند. در عوض.</td></tr><tr><td>از تکنیک های دیگر با ابزارهای اشکال زدایی برای جایگزینی فایل بین زمانی که برنامه فایل را بررسی می کند و زمانی که برنامه آن را باز می کند، استفاده کنید.</td></tr></tbody></table></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "مهاجم می تواند پیوندهای Symlink را در میزبان هدف ایجاد کند.",
+                "داده های آلوده از مهاجم استفاده می شود و در فایل های موقت کپی می شود.",
+                "میزبان هدف ایجاد فایل موقت ناامن می کند."
+            ]
         }
     ],
     "type": "bundle"

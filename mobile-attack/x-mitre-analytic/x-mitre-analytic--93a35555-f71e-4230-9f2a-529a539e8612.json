@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0646#AN1726",
-                    "external_id": "AN1726"
+                    "external_id": "AN1726",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,25 +58,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between app lifecycle event and network-side inspection failure or opaque TLS session"
+                    "description": "Correlation window between app lifecycle event and network-side inspection failure or opaque TLS session",
+                    "description_fa": "پنجره همبستگی بین رویداد چرخه عمر برنامه و شکست بازرسی سمت شبکه یا جلسه TLS غیرشفاف"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Managed apps expected to use certificate or public-key pinning for legitimate purposes"
+                    "description": "Managed apps expected to use certificate or public-key pinning for legitimate purposes",
+                    "description_fa": "برنامه های مدیریت شده انتظار می رود از پین کردن گواهی یا کلید عمومی برای اهداف قانونی استفاده کنند"
                 },
                 {
                     "field": "AllowedDestinationList",
-                    "description": "Approved endpoints expected for legitimate pinned sessions"
+                    "description": "Approved endpoints expected for legitimate pinned sessions",
+                    "description_fa": "نقاط پایانی تأیید شده مورد انتظار برای جلسات پین شده قانونی"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether the app is expected to perform network establishment only during user-driven workflows"
+                    "description": "Whether the app is expected to perform network establishment only during user-driven workflows",
+                    "description_fa": "اینکه آیا انتظار می‌رود برنامه فقط در طول گردش‌های کاری کاربر محور، شبکه را ایجاد کند یا خیر"
                 },
                 {
                     "field": "InspectionFailureThreshold",
-                    "description": "Number of repeated TLS-inspection failures needed before escalating confidence"
+                    "description": "Number of repeated TLS-inspection failures needed before escalating confidence",
+                    "description_fa": "تعداد خطاهای مکرر بازرسی TLS که قبل از افزایش اطمینان لازم است"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1726",
+            "description_fa": "مدافع وضعیت عملکرد دستگاه نظارت شده و زمینه اجرای پس‌زمینه را با شواهدی در سمت شبکه مرتبط می‌کند که نشان می‌دهد برنامه بازرسی سازمانی را رد می‌کند یا رفتار اعتماد گواهی/کلید عمومی را در طول ایجاد TLS انجام می‌دهد. از آنجایی که قابلیت مشاهده مستقیم پین در سطح برنامه در iOS ضعیف‌تر است، تجزیه و تحلیل عمدتاً به اثرات صفحه کنترل شبکه متصل می‌شود: رد مکرر دست دادن TLS تحت بازرسی سازمانی، الگوهای دور زدن بازرسی خاص مقصد، یا رفتار جلسات رمزگذاری شده مبهم برنامه به نقطه پایانی که با برنامه خط پایه سازگار نیست. اطمینان بیشتر از هویت برنامه مدیریت‌شده، زمینه اجرای پس‌زمینه و وضعیت خط‌مشی دستگاه تحت نظارت حاصل می‌شود."
         }
     ]
 }

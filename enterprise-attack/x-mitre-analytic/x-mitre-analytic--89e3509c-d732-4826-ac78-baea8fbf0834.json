@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0121#AN0340",
-                    "external_id": "AN0340"
+                    "external_id": "AN0340",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate file and process activity within a defined interval post-login (e.g., 0\u20135 minutes)"
+                    "description": "Correlate file and process activity within a defined interval post-login (e.g., 0–5 minutes)",
+                    "description_fa": "مرتبط کردن فایل و فعالیت فرآیند در یک بازه زمانی مشخص پس از ورود به سیستم (به عنوان مثال، 0-5 دقیقه)"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Distinguish between system users, interactive users, and daemon contexts"
+                    "description": "Distinguish between system users, interactive users, and daemon contexts",
+                    "description_fa": "بین کاربران سیستم، کاربران تعاملی و زمینه های شبح تمایز قائل شوید"
                 },
                 {
                     "field": "ExecutableAllowlist",
-                    "description": "Define known-good login items to suppress false positives"
+                    "description": "Define known-good login items to suppress false positives",
+                    "description_fa": "موارد ورود شناخته شده خوب را برای سرکوب موارد مثبت کاذب تعریف کنید"
                 },
                 {
                     "field": "PathRegexExclusion",
-                    "description": "Exclude common enterprise paths (e.g., Jamf, MDM-managed apps)"
+                    "description": "Exclude common enterprise paths (e.g., Jamf, MDM-managed apps)",
+                    "description_fa": "مسیرهای سازمانی رایج (مانند Jamf، برنامه‌های مدیریت‌شده با MDM) را حذف کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0340",
+            "description_fa": "ایجاد یا اصلاح موارد ورود با استفاده از AppleScript یا Service Management Framework. تشخیص روی ایجاد/تغییر فایل «backgrounditems.btm»، فایل‌های اجرایی جدید در «Contents/Library/LoginItems/»، استفاده از «SMLoginItemSetEnabled» API یا فرآیندهای مشکوکی که پس از ورود به سیستم بدون تعامل کاربر راه‌اندازی می‌شوند، تمرکز دارد. محور رفتاری شامل AppleEvents غیرعادی، جفت‌های فرآیند مشکوک والد-فرزند، و زنجیره‌های اجرایی با ورود به سیستم است."
         }
     ]
 }

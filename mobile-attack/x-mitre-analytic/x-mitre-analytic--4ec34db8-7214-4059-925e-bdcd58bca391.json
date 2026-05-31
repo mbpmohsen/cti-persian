@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0717#AN1847",
-                    "external_id": "AN1847"
+                    "external_id": "AN1847",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -57,33 +58,42 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between native library load, JNI/native execution, and follow-on behavior"
+                    "description": "Correlation window between native library load, JNI/native execution, and follow-on behavior",
+                    "description_fa": "پنجره همبستگی بین بار کتابخانه بومی، اجرای JNI/Native و رفتار بعدی"
                 },
                 {
                     "field": "AllowedAppList",
-                    "description": "Apps legitimately expected to use native code, such as games, media, enterprise VPN, security tools, or performance-intensive apps"
+                    "description": "Apps legitimately expected to use native code, such as games, media, enterprise VPN, security tools, or performance-intensive apps",
+                    "description_fa": "برنامه‌هایی که به طور قانونی انتظار می‌رود از کدهای بومی استفاده کنند، مانند بازی‌ها، رسانه‌ها، VPN سازمانی، ابزارهای امنیتی، یا برنامه‌های فشرده عملکرد"
                 },
                 {
                     "field": "AllowedLibraryPatterns",
-                    "description": "Expected native library names, paths, signing attributes, or packaging patterns for approved applications"
+                    "description": "Expected native library names, paths, signing attributes, or packaging patterns for approved applications",
+                    "description_fa": "نام‌های کتابخانه بومی، مسیرها، ویژگی‌های امضا، یا الگوهای بسته‌بندی مورد انتظار برای برنامه‌های کاربردی تأیید شده"
                 },
                 {
                     "field": "ForegroundStateRequired",
-                    "description": "Whether native execution should only occur during active user-driven workflows for a given app role"
+                    "description": "Whether native execution should only occur during active user-driven workflows for a given app role",
+                    "description_fa": "آیا اجرای بومی باید فقط در طول گردش‌های کاری فعال کاربر محور برای یک نقش برنامه مشخص رخ دهد یا خیر"
                 },
                 {
                     "field": "LibraryPathPatterns",
-                    "description": "Environment-specific list of suspicious temporary, extracted, or dynamically staged native library locations"
+                    "description": "Environment-specific list of suspicious temporary, extracted, or dynamically staged native library locations",
+                    "description_fa": "فهرست محیطی خاص از مکان‌های کتابخانه بومی موقت، استخراج‌شده یا مرحله‌بندی پویا مشکوک"
                 },
                 {
                     "field": "PostLoadBehaviorThreshold",
-                    "description": "Minimum number or severity of suspicious actions after native load required to elevate confidence"
+                    "description": "Minimum number or severity of suspicious actions after native load required to elevate confidence",
+                    "description_fa": "حداقل تعداد یا شدت اقدامات مشکوک پس از بار بومی مورد نیاز برای بالا بردن اطمینان"
                 },
                 {
                     "field": "UplinkBytesThreshold",
-                    "description": "Minimum outbound volume after native execution to treat network activity as meaningful follow-on behavior"
+                    "description": "Minimum outbound volume after native execution to treat network activity as meaningful follow-on behavior",
+                    "description_fa": "حداقل حجم خروجی پس از اجرای بومی برای تلقی فعالیت شبکه به عنوان رفتار پیگیری معنادار"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1847",
+            "description_fa": "مدافع بارگذاری برنامه یا فراخوانی کتابخانه های بومی را از طریق مسیرهای اجرا با پشتوانه JNI یا NDK با فعالیت های سطح پایین بعدی مانند ایجاد رشته بومی، دسترسی حسگر، عملیات فایل یا ارتباطات شبکه خروجی که با نقش اعلام شده برنامه یا تعامل اخیر کاربر ناسازگار است، مرتبط می کند. این تحلیل، اثرات صفحه کنترل قابل مشاهده مدافع را اولویت بندی می کند: بار کتابخانه بومی یا استفاده از پل JNI، انتقال به بافت اجرایی بومی، و رفتار فوری پس از بارگذاری که از حالت پس زمینه، وضعیت دستگاه قفل شده، یا دسته های برنامه غیر پایه رخ می دهد."
         }
     ]
 }

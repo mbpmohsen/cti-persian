@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0297#AN0827",
-                    "external_id": "AN0827"
+                    "external_id": "AN0827",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SectorRange",
-                    "description": "Specify which sectors are considered critical (MBR, partition table) to reduce noise."
+                    "description": "Specify which sectors are considered critical (MBR, partition table) to reduce noise.",
+                    "description_fa": "مشخص کنید کدام بخش ها برای کاهش نویز حیاتی در نظر گرفته می شوند (MBR، جدول پارتیشن)."
                 },
                 {
                     "field": "ProcessWhitelist",
-                    "description": "Exclude legitimate low-level disk management or imaging tools used by administrators."
+                    "description": "Exclude legitimate low-level disk management or imaging tools used by administrators.",
+                    "description_fa": "مدیریت قانونی سطح پایین دیسک یا ابزارهای تصویربرداری مورد استفاده توسط مدیران را حذف کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0827",
+            "description_fa": "فرآیندهای تلاش برای دسترسی به دیسک خام برای بازنویسی ساختارهای حساس مانند MBR یا جدول پارتیشن با استفاده از نماد \\\\.\\PhysicalDrive. تشخیص متکی بر ایجاد فرآیند مرتبط، افزایش امتیازات، و نوشتن بخش خام در گزارش‌های Sysmon و Security است."
         }
     ]
 }

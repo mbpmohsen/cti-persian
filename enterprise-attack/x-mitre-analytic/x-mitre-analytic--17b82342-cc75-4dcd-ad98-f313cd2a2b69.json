@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0118#AN0329",
-                    "external_id": "AN0329"
+                    "external_id": "AN0329",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ESXiServicePorts",
-                    "description": "427, 443, 902, 5989; modify per version/hardening."
+                    "description": "427, 443, 902, 5989; modify per version/hardening.",
+                    "description_fa": "427, 443, 902, 5989; تغییر در هر نسخه/سخت شدن."
                 },
                 {
                     "field": "MgmtCIDRs",
-                    "description": "Legit management networks for vCenter/ESXi."
+                    "description": "Legit management networks for vCenter/ESXi.",
+                    "description_fa": "شبکه های مدیریت قانونی برای vCenter/ESXi."
                 },
                 {
                     "field": "RestartKeywords",
-                    "description": "Crash/restart patterns to match in logs."
+                    "description": "Crash/restart patterns to match in logs.",
+                    "description_fa": "خرابی/راه‌اندازی مجدد الگوها برای مطابقت در گزارش‌ها."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0329",
+            "description_fa": "ESXi/vCenter را با همبستگی تلاش‌ها برای دستیابی به نقاط پایانی قابل بهره‌برداری شناخته شده شناسایی می‌کند (OpenSLP 427، CIM 5989، Hostd/Vpxa HTTPS 443، ESXi SOAP) با خرابی‌های vmkernel/hostd، اتصال مجدد غیرمنتظره از restartsound/v میزبان/vCenter ESXi به دارایی های داخلی."
         }
     ]
 }

@@ -9,12 +9,14 @@
                 {
                     "external_id": "CAPEC-123",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/123.html"
+                    "url": "https://capec.mitre.org/data/definitions/123.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-119",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/119.html"
+                    "url": "http://cwe.mitre.org/data/definitions/119.html",
+                    "source_name_fa": "cwe"
                 }
             ],
             "id": "attack-pattern--476ca631-2695-43f8-82f6-83c06a07ae36",
@@ -33,6 +35,14 @@
                     "Execute Unauthorized Commands (If constructed properly, a buffer manipulation attack can be used to contol the execution of the application leading to any number of negative consequenses.)",
                     "Modify Data (If constructed properly, a buffer manipulation attack can be used to contol the execution of the application leading to any number of negative consequenses.)",
                     "Read Data (If constructed properly, a buffer manipulation attack can be used to contol the execution of the application leading to any number of negative consequenses.)"
+                ],
+                "Availability_fa": [
+                    "اجرای غیر قابل اعتماد (حمله دستکاری بافر اغلب منجر به از کار افتادن برنامه به دلیل خرابی حافظه می شود.)"
+                ],
+                "Confidentiality_fa": [
+                    "اجرای دستورات غیرمجاز (اگر به درستی ساخته شود، می توان از یک حمله دستکاری بافر برای کنترل اجرای برنامه استفاده کرد که منجر به هر تعداد پیامد منفی می شود.)",
+                    "اصلاح داده ها (اگر به درستی ساخته شود، می توان از یک حمله دستکاری بافر برای کنترل اجرای برنامه استفاده کرد که منجر به هر تعداد پیامد منفی می شود.)",
+                    "خواندن داده ها (اگر به درستی ساخته شود، می توان از یک حمله دستکاری بافر برای کنترل اجرای برنامه استفاده کرد که منجر به هر تعداد پیامد منفی می شود.)"
                 ]
             },
             "x_capec_domains": [
@@ -48,7 +58,12 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "حریف در تلاش برای خواندن یا تغییر داده‌هایی که نباید به آنها دسترسی داشته باشند، تعامل یک برنامه با یک بافر را دستکاری می‌کند. حملات بافر از این جهت متمایز می شوند که این خود فضای بافر است که هدف حمله است نه هر کدی که مسئول تفسیر محتوای بافر است. تقریباً در تمام حملات بافر، محتوایی که در بافر قرار می گیرد، بی اهمیت است. در عوض، بیشتر حملات بافر شامل بازیابی یا ارائه ورودی بیشتر از آنچه در بافر اختصاص داده شده ذخیره می شود، منجر به خواندن یا بازنویسی حافظه برنامه ناخواسته دیگر می شود.",
+            "name_fa": "دستکاری بافر",
+            "x_capec_prerequisites_fa": [
+                "حریف باید یک ابزار برنامه‌ریزی شده برای تعامل با یک بافر، مانند کد C آسیب‌پذیر را شناسایی کند و بتواند ورودی این تعامل را ارائه دهد."
+            ]
         }
     ],
     "spec_version": "2.0",

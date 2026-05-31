@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0195#AN0562",
-                    "external_id": "AN0562"
+                    "external_id": "AN0562",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -40,14 +41,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "SSHSessionOrigin",
-                    "description": "Detection may vary based on internal vs remote terminal usage"
+                    "description": "Detection may vary based on internal vs remote terminal usage",
+                    "description_fa": "تشخیص ممکن است بر اساس استفاده از ترمینال داخلی در مقابل استفاده از راه دور متفاوت باشد"
                 },
                 {
                     "field": "esxcliCommandDepth",
-                    "description": "Distinguish between benign status checks and deep enumeration chains"
+                    "description": "Distinguish between benign status checks and deep enumeration chains",
+                    "description_fa": "بین بررسی های وضعیت خوش خیم و زنجیره های شمارش عمیق تمایز قائل شوید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0562",
+            "description_fa": "استفاده از دستورات «شبکه esxcli» (مثلاً «لیست nic شبکه esxcli»، «واسط IP شبکه esxcli ipv4 get») از طریق SSH یا میزبان برای شمارش آداپتور و اطلاعات IP."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0430#AN1199",
-                    "external_id": "AN1199"
+                    "external_id": "AN1199",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredFiles",
-                    "description": "Paths to password storage files (e.g., /etc/shadow, ~/.local/share/keyrings/)"
+                    "description": "Paths to password storage files (e.g., /etc/shadow, ~/.local/share/keyrings/)",
+                    "description_fa": "مسیرهای فایل های ذخیره رمز عبور (به عنوان مثال، /etc/shadow، ~/.local/share/keyrings/)"
                 },
                 {
                     "field": "SuspiciousCommands",
-                    "description": "Process or command-line keywords that indicate password extraction attempts"
+                    "description": "Process or command-line keywords that indicate password extraction attempts",
+                    "description_fa": "کلمات کلیدی خط فرمان یا پردازش که نشان دهنده تلاش برای استخراج رمز عبور است"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1199",
+            "description_fa": "دسترسی به فایل‌های ذخیره رمز عبور شناخته شده (به عنوان مثال، /etc/shadow، کلید گنوم، KWallet، پایگاه‌های اطلاعاتی اعتبار مرورگر) را تشخیص می‌دهد. تلاش‌های خواندن غیرعادی فرآیند و فراخوان‌های API مشکوک را که تلاش می‌کنند اعتبارنامه‌های ذخیره‌شده را استخراج کنند، نظارت می‌کند."
         }
     ]
 }

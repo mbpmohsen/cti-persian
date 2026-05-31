@@ -9,36 +9,46 @@
                 {
                     "external_id": "CAPEC-206",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/206.html"
+                    "url": "https://capec.mitre.org/data/definitions/206.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-732",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/732.html"
+                    "url": "http://cwe.mitre.org/data/definitions/732.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Subvert Trust Controls:Code Signing",
                     "external_id": "T1553.002",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1553/002"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1553/002",
+                    "description_fa": "براندازی کنترل های اعتماد: امضای کد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Nicolas Falliere, Liam O Murchu, Eric Chien, W32.Stuxnet Dossier, 2010--11, Symantec",
                     "external_id": "REF-699",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.wired.com/images_blogs/threatlevel/2010/11/w32_stuxnet_dossier.pdf"
+                    "url": "https://www.wired.com/images_blogs/threatlevel/2010/11/w32_stuxnet_dossier.pdf",
+                    "description_fa": "Nicolas Falliere, Liam O Murchu, Eric Chien, W32.Stuxnet Dossier, 2010--11, Symantec",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Cristin Goodwin, Joram Borenstein,  Guarding against supply chain attacks—Part 3: How software becomes compromised, 2020--03---11, Microsoft",
                     "external_id": "REF-700",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.microsoft.com/security/blog/2020/03/11/guarding-against-supply-chain-attacks-part-3-how-software-becomes-compromised/"
+                    "url": "https://www.microsoft.com/security/blog/2020/03/11/guarding-against-supply-chain-attacks-part-3-how-software-becomes-compromised/",
+                    "description_fa": "کریستین گودوین، جورام بورنشتاین، محافظت در برابر حملات زنجیره تامین - قسمت 3: چگونه نرم افزار در معرض خطر قرار می گیرد، 2020--03---11، مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Operation Wilted Tulip: Exposing a cyber espionage apparatus, 2017--07, ClearSky cyber security and Trend Micro",
                     "external_id": "REF-714",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.clearskysec.com/wp-content/uploads/2017/07/Operation_Wilted_Tulip.pdf"
+                    "url": "https://www.clearskysec.com/wp-content/uploads/2017/07/Operation_Wilted_Tulip.pdf",
+                    "description_fa": "Operation Wilted Tulip: افشای یک دستگاه جاسوسی سایبری، 07-2017، امنیت سایبری ClearSky و Trend Micro",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--3c71639a-ebbd-43a4-8d0d-8a0e4cf9ade3",
@@ -70,7 +80,20 @@
             ],
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "دشمن اعتبار مورد استفاده برای امضای کد را از یک محیط تولید استخراج می کند و سپس از این اعتبارنامه ها برای امضای محتوای مخرب با کلید توسعه دهنده استفاده می کند. بسیاری از توسعه دهندگان از کلیدهای امضا برای امضای کد یا هش کد استفاده می کنند. هنگامی که کاربران یا برنامه‌ها صحت امضاها را تأیید می‌کنند، به این باور می‌رسند که کد از طرف صاحب کلید امضا آمده است و از زمانی که امضا اعمال شده است، کد تغییر نکرده است. اگر حریف اعتبارنامه امضا را استخراج کرده باشد، می‌تواند از آن اعتبارنامه‌ها برای امضای بسته‌های کد خود استفاده کند. کاربران یا ابزارهایی که امضاهای ضمیمه شده به کد را تأیید می‌کنند، احتمالاً تصور می‌کنند که کد از سوی توسعه‌دهنده قانونی آمده است و کد را نصب یا اجرا می‌کنند، و به طور مؤثر به دشمن اجازه می‌دهد تا کد دلخواه را روی رایانه قربانی اجرا کند. این با CAPEC-673 متفاوت است، زیرا دشمن در حال انجام امضای کد است.",
+            "name_fa": "امضای کد مخرب",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در حادثه معروف بدافزار استاکس‌نت، دو گواهی دیجیتال به منظور امضای درایورهای دستگاه مخرب با اعتبارنامه‌های قانونی به خطر افتادند. این امضا باعث شد که بدافزار به عنوان مورد اعتماد سیستمی که روی آن اجرا می شد ظاهر شود، که نصب بدافزار در حالت هسته را تسهیل می کرد. این بیشتر منجر به عدم شناسایی استاکس نت برای مدت زمان قابل توجهی شد. [REF-699]</xhtml:p>",
+                "<xhtml:p>گروه جاسوسی سایبری CyberKittens از یک گواهی دزدیده شده از AI Squared استفاده کرد که به آنها اجازه می داد از یک فایل اجرایی امضا شده در Operation Wilted Tulip استفاده کنند. این در نهایت به فایل اجرایی اجازه داد تا به عنوان مورد اعتماد روی سیستم اجرا شود و به یک مرحله‌ی Crowd Strike اجازه می‌دهد در حافظه سیستم بارگذاری شود. [REF-714]</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p>دشمن ابتدا سعی می‌کند یک گواهی دیجیتال به‌منظور امضای بدافزار یا ابزارهای خود دریافت کند. این گواهی ممکن است دزدیده شود، توسط دشمن ایجاد شود، یا به طور معمول از طریق یک مرجع گواهی به دست آید.</p></li><li> <p>بر اساس نوع گواهی به دست آمده، حریف هدفی را برای حمله خود ایجاد می کند. این یا یک حمله گسترده یا هدفمند است. اگر دشمنی قادر به سرقت گواهینامه از یک سازمان هدف بود، می توانست با تظاهر به داشتن کد قانونی امضا شده توسط آنها، این سازمان را هدف قرار دهد. در موارد دیگر، حریف به سادگی بدافزار خود را امضا می‌کند و به عنوان نرم‌افزار قانونی ظاهر می‌شود که هر کاربر ممکن است به آن اعتماد کند. این رویکرد گسترده‌تر است</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> دشمن بدافزار خود را ایجاد می‌کند و آن را با گواهی دیجیتال به‌دست‌آمده امضا می‌کند. سپس دشمن از طریق دانلود از منبع مورد نظر یا آزمایش محلی، معتبر بودن کدی را که امضا کرده است بررسی می‌کند.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p>پس از امضای بدافزار، سپس در مکان مورد نظر مستقر می‌شود. آنها منتظر می مانند تا یک کاربر قابل اعتماد بدافزار آنها را اجرا کند و فکر می کند که این نرم افزار قانونی است. این بدافزار بر اساس انگیزه دشمن می‌تواند کارهای مختلفی انجام دهد.</p></li></ol></div>",
+            "x_capec_prerequisites_fa": [
+                "توسعه‌دهنده هدف باید از یک کلید امضا برای امضای بسته‌های کد استفاده کند. (توجه داشته باشید که انجام ندادن این کار یک دفاع نیست - فقط به این معنی است که دشمن نیازی به سرقت کلید امضا قبل از جعل بسته‌های کد به نام توسعه‌دهنده ندارد.)"
+            ],
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "type": "bundle"

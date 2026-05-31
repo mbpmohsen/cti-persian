@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0108#AN0303",
-                    "external_id": "AN0303"
+                    "external_id": "AN0303",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Tune duration of multi-stage encoding + transfer operations to account for script variability"
+                    "description": "Tune duration of multi-stage encoding + transfer operations to account for script variability",
+                    "description_fa": "مدت زمان رمزگذاری چند مرحله ای + عملیات انتقال را برای محاسبه تنوع اسکریپت تنظیم کنید"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Apply user allow/block list depending on which users normally perform CLI encoding"
+                    "description": "Apply user allow/block list depending on which users normally perform CLI encoding",
+                    "description_fa": "بسته به اینکه کدام کاربران معمولاً کدگذاری CLI را انجام می دهند، لیست مجوز/مسدود کاربر را اعمال کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0303",
+            "description_fa": "اسکریپت‌ها یا فرآیندهای سفارشی، ترافیک خروجی را با استفاده از gzip، Base64 یا hex قبل از exfiltration از طریق curl، wget یا سوکت‌های سفارشی رمزگذاری می‌کنند. رمزگذاری معمولاً قبل یا در طول اتصالات خروجی از دیمون های غیر شبکه ای انجام می شود."
         }
     ]
 }

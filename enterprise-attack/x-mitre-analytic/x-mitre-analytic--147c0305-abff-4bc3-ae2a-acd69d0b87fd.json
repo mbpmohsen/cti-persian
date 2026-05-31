@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0242#AN0676",
-                    "external_id": "AN0676"
+                    "external_id": "AN0676",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AllowedDBClients",
-                    "description": "List of user or automation accounts expected to use database clients"
+                    "description": "List of user or automation accounts expected to use database clients",
+                    "description_fa": "فهرستی از حساب های کاربری یا اتوماسیون مورد انتظار برای استفاده از سرویس گیرندگان پایگاه داده"
                 },
                 {
                     "field": "DumpFilePattern",
-                    "description": "Filename patterns used to identify data dumps (e.g., *.sql, backup_*.csv)"
+                    "description": "Filename patterns used to identify data dumps (e.g., *.sql, backup_*.csv)",
+                    "description_fa": "الگوهای نام فایل مورد استفاده برای شناسایی داده های خالی (مانند *.sql، backup_*.csv)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time threshold for correlating execution, file write, and outbound transfer"
+                    "description": "Time threshold for correlating execution, file write, and outbound transfer",
+                    "description_fa": "آستانه زمانی برای همبستگی اجرا، نوشتن فایل و انتقال خروجی"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0676",
+            "description_fa": "دسترسی غیرمعمول به خط فرمان پایگاه داده (به عنوان مثال، «psql»، «mysql»، «mongo») از سوی کاربران غیر سرپرست، که خارج از پنجره‌های اتوماسیون معمولی یا بدون زمینه سرویس شناخته شده رخ می‌دهد. اغلب داده ها به فایل های .sql/.csv یا انتقال داده های خروجی منتقل می شوند. Defender ابزارهای CLI را می بیند که به صورت تعاملی یا توسط فرآیندهای والد غیرمعمول راه اندازی شده اند، فایل ها در نام فایل های dump مانند و اتصالات خارجی کمی بعد می نویسند."
         }
     ]
 }

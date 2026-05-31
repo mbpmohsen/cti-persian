@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0576#AN1592",
-                    "external_id": "AN1592"
+                    "external_id": "AN1592",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": ".forwardPath",
-                    "description": "User-based home directories; tune for specific user patterns."
+                    "description": "User-based home directories; tune for specific user patterns.",
+                    "description_fa": "دایرکتوری های خانگی مبتنی بر کاربر. برای الگوهای کاربر خاص تنظیم کنید."
                 },
                 {
                     "field": "ExecContext",
-                    "description": "Expected email client behavior may trigger similar file edits."
+                    "description": "Expected email client behavior may trigger similar file edits.",
+                    "description_fa": "رفتار مشتری ایمیل مورد انتظار ممکن است باعث ویرایش فایل مشابه شود."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1592",
+            "description_fa": "اصلاح فایل فیلترهای پیام Thunderbird یا اجرای ابزارهای CLI (به عنوان مثال، فرمیل/پروکمیل) که رفتار .forward را تغییر می دهد."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0297#AN0830",
-                    "external_id": "AN0830"
+                    "external_id": "AN0830",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "CommandPatterns",
-                    "description": "Expand detection to cover vendor-specific destructive commands."
+                    "description": "Expand detection to cover vendor-specific destructive commands.",
+                    "description_fa": "تشخیص را برای پوشش دستورات مخرب خاص فروشنده گسترش دهید."
                 },
                 {
                     "field": "PrivilegedUsers",
-                    "description": "Whitelist authorized maintenance sessions to reduce false positives."
+                    "description": "Whitelist authorized maintenance sessions to reduce false positives.",
+                    "description_fa": "برای کاهش موارد مثبت کاذب، جلسات تعمیر و نگهداری مجاز را در لیست سفید قرار دهید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0830",
+            "description_fa": "اجرای دستورات مخرب CLI مانند format flash:، فرمت دیسک، یا دستورات مشابه فروشنده خاص که ساختارهای سیستم فایل را پاک می کند. شناسایی گزارش‌های AAA را که دسترسی ممتاز را با دستورات فرمت/پاک کردن فوری نشان می‌دهند، مرتبط می‌کند."
         }
     ]
 }

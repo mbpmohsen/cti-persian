@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0336#AN0949",
-                    "external_id": "AN0949"
+                    "external_id": "AN0949",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "MonitoredPaths",
-                    "description": "Define critical directories (e.g., C:\\Windows\\System32, Program Files) for binary integrity checks"
+                    "description": "Define critical directories (e.g., C:\\Windows\\System32, Program Files) for binary integrity checks",
+                    "description_fa": "دایرکتوری های مهم (مانند C:\\Windows\\System32، Program Files) را برای بررسی یکپارچگی باینری تعریف کنید."
                 },
                 {
                     "field": "SignatureValidation",
-                    "description": "Adjust enforcement level of digital signature verification based on enterprise risk appetite"
+                    "description": "Adjust enforcement level of digital signature verification based on enterprise risk appetite",
+                    "description_fa": "سطح اجرای تأیید امضای دیجیتال را بر اساس ریسک ریسک سازمانی تنظیم کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate file modification with subsequent process execution within a defined time window"
+                    "description": "Correlate file modification with subsequent process execution within a defined time window",
+                    "description_fa": "اصلاح فایل را با اجرای فرآیند بعدی در یک پنجره زمانی تعریف شده مرتبط کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0949",
+            "description_fa": "مانیتور برای تغییرات غیرمنتظره سیستم یا برنامه های کاربردی باینری، به ویژه فایل های اجرایی امضا شده. رویدادهای نوشتن فایل را با اجرای فرآیند بدون امضا یا امضای غیرعادی بعدی مرتبط می‌کند و باینری‌های دستکاری شده خارج از چرخه‌های وصله معمولی را بررسی می‌کند."
         }
     ]
 }

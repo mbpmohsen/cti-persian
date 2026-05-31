@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0122#AN0341",
-                    "external_id": "AN0341"
+                    "external_id": "AN0341",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -56,21 +57,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "RegistryPathScope",
-                    "description": "May need to be tuned to only monitor `W32Time\\TimeProviders` subkey path for performance optimization"
+                    "description": "May need to be tuned to only monitor `W32Time\\TimeProviders` subkey path for performance optimization",
+                    "description_fa": "ممکن است برای بهینه‌سازی عملکرد فقط باید روی مسیر کلید فرعی «W32Time\\TimeProviders» تنظیم شود"
                 },
                 {
                     "field": "UserContext",
-                    "description": "Should focus on activity from administrative or SYSTEM accounts"
+                    "description": "Should focus on activity from administrative or SYSTEM accounts",
+                    "description_fa": "باید روی فعالیت از حساب های اداری یا سیستمی تمرکز کند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Controls correlation window between registry modification and DLL drop"
+                    "description": "Controls correlation window between registry modification and DLL drop",
+                    "description_fa": "پنجره همبستگی بین اصلاح رجیستری و افت DLL را کنترل می کند"
                 },
                 {
                     "field": "DllPathEntropyThreshold",
-                    "description": "Used for anomaly scoring on DLL path patterns (e.g., random names or temp directories)"
+                    "description": "Used for anomaly scoring on DLL path patterns (e.g., random names or temp directories)",
+                    "description_fa": "برای امتیازدهی غیرعادی در الگوهای مسیر DLL (به عنوان مثال، نام‌های تصادفی یا دایرکتوری‌های موقت) استفاده می‌شود."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0341",
+            "description_fa": "همبستگی رفتاری ایجاد کلید رجیستری ممتاز تحت مسیر W32Time TimeProviders همراه با یک DLL جدید نوشته شده روی دیسک و فعالیت فرآیند بالقوه توسط LocalService. نشان دهنده سوء استفاده از ارائه دهندگان زمان برای تداوم است."
         }
     ]
 }

@@ -9,41 +9,52 @@
                 {
                     "external_id": "CAPEC-698",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/698.html"
+                    "url": "https://capec.mitre.org/data/definitions/698.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-507",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/507.html"
+                    "url": "http://cwe.mitre.org/data/definitions/507.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "external_id": "CWE-829",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/829.html"
+                    "url": "http://cwe.mitre.org/data/definitions/829.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "Browser Extensions",
                     "external_id": "T1176",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1176"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1176",
+                    "description_fa": "برنامه های افزودنی مرورگر",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Server Software Component: IIS Components",
                     "external_id": "T1505.004",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1505/004"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1505/004",
+                    "description_fa": "مؤلفه نرم افزار سرور: مؤلفه های IIS",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Robert Falcone, OilRig uses RGDoor IIS Backdoor on Targets in the Middle East, 2018--01---25, Palo Alto Networks",
                     "external_id": "REF-740",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://unit42.paloaltonetworks.com/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/"
+                    "url": "https://unit42.paloaltonetworks.com/unit42-oilrig-uses-rgdoor-iis-backdoor-targets-middle-east/",
+                    "description_fa": "رابرت فالکون، OilRig از درب پشتی RGDoor IIS بر روی اهداف در خاورمیانه استفاده می کند، 2018--01---25، شبکه های پالو آلتو",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "ASERT Team, STOLEN PENCIL Campaign Targets Academia, 2018--12---05, NETSCOUT",
                     "external_id": "REF-741",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.netscout.com/blog/asert/stolen-pencil-campaign-targets-academia"
+                    "url": "https://www.netscout.com/blog/asert/stolen-pencil-campaign-targets-academia",
+                    "description_fa": "تیم ASERT، کمپین مداد دزدیده شده دانشگاه را هدف می گیرد، 2018--12---05، NETSCOUT",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--260a8cb6-a7df-4dc5-a057-8a00aa69de7e",
@@ -74,6 +85,22 @@
                 ],
                 "Integrity": [
                     "Modify Data"
+                ],
+                "Access_Control_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "اجرای دستورات غیرمجاز",
+                    "تغییر منطق اجرا",
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "داده ها را اصلاح کنید"
                 ]
             },
             "x_capec_domains": [
@@ -91,11 +118,24 @@
                 "If the adversary intends to install the malicious extension themself, they must first compromise the target machine via some other means."
             ],
             "x_capec_skills_required": {
-                "Medium": "Optional: Ability to exploit target system(s) via other means in order to gain entry."
+                "Medium": "Optional: Ability to exploit target system(s) via other means in order to gain entry.",
+                "Medium_fa": "اختیاری: امکان بهره برداری از سیستم(های) هدف از طریق ابزارهای دیگر به منظور ورود."
             },
             "x_capec_status": "Stable",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "<xhtml:p>یک حریف مستقیماً کاربر را نصب یا فریب می دهد تا یک برنامه افزودنی مخرب را در نرم افزارهای قابل اعتماد موجود نصب کند، با هدف دستیابی به انواع تأثیرات فنی منفی.</xhtml:p>",
+            "name_fa": "برنامه افزودنی مخرب را نصب کنید",
+            "x_capec_example_instances_fa": [
+                "<xhtml:p>در ژانویه 2018، واحد 42 پالو آلتو گزارش داد که یک برنامه افزودنی مخرب سرویس اطلاعات اینترنتی (IIS) که آنها را RGDoor نامیدند برای ایجاد یک درب پشتی در چندین سازمان دولتی خاورمیانه و همچنین یک موسسه مالی و یک موسسه آموزشی استفاده شده است. این بدافزار به همراه پوسته وب TwoFace استفاده می‌شد و به دشمنان اجازه می‌داد فایل‌ها را آپلود/دانلود کنند و دستورات غیرمجاز را اجرا کنند. [REF-740]</xhtml:p>",
+                "<xhtml:p>در دسامبر 2018، گزارش شد که APT Kimusky مستقر در کره شمالی (همچنین به عنوان Velvet Chollima شناخته می‌شود) سازمان‌های آکادمیک قانونی متعددی را در ایالات متحده که بسیاری از آنها در مهندسی پزشکی متخصص هستند، با یک برنامه افزودنی مخرب Google Chrome آلوده کرده است. این حمله که \"عملیات مداد دزدیده شده\" نامیده شد، مستلزم انجام حملات فیشینگ نیزه ای برای فریب قربانیان برای نصب یک PDF خوان مخرب به نام \"Auto Font Manager\" بود. پس از نصب، این بدافزار به دشمنان اجازه می‌دهد کوکی‌ها و رمزهای عبور سایت و همچنین ایمیل‌های برخی از حساب‌های در معرض خطر را ارسال کنند. [REF-741]</xhtml:p>"
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>تشخیص هدف(ها): </b>دشمن ابتدا باید نرم افزار هدفی را شناسایی کند که اجازه می دهد افزونه ها/افزونه ها و آنها مایل به سوء استفاده از آن هستند، مانند مرورگر وب یا برنامه دسکتاپ. برای افزایش فضای حمله، اغلب این نرم افزار محبوب با پایگاه کاربر بزرگ است.</p></li></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>ایجاد برنامه افزودنی مخرب: </b>پس از شناسایی یک هدف مناسب، حریف با شناسایی یک هدف مناسب، یک نرم افزار مخرب ایجاد می کند که می تواند توسط برنامه افزودنی/افزونه ای مخرب نصب شود. این بدافزار ممکن است برای اجرا بر روی سیستم‌عامل‌های خاص هدف قرار گیرد یا سیستم‌عامل ناشناس باشد.</p></li></ol></div><div><h3>Exploit</h3><ol><li> <p> <b>نصب برنامه‌های افزودنی مخرب: </b>افزونه/افزونه مخرب توسط نرم‌افزار مخرب نصب می‌شود، نرم‌افزار مخربی که منجر به ایجاد نرم‌افزارهای مخرب فنی می‌شود و در نتیجه نرم‌افزارهای مخربی اجرا می‌شود. تأثیرات.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>نصب شده توسط دشمن: پس از به خطر انداختن سیستم هدف، دشمن به سادگی افزونه/افزونه مخرب را خودش نصب می‌کند. مانند مهندسی اجتماعی، یا ممکن است بدافزار را در یک سایت میزبان افزونه/افزونه معتبر آپلود کرده و منتظر بمانید تا قربانیان ناآگاه مؤلفه مخرب را نصب کنند.</td></tr></tbody></table></ol></div>",
+            "x_capec_extended_description_fa": "<xhtml:p>بسیاری از برنامه‌های کاربردی نرم‌افزاری به کاربران اجازه می‌دهند افزونه‌ها/افزونه‌های نرم‌افزار شخص ثالث را نصب کنند که ویژگی‌ها و عملکردهای اضافی را ارائه می‌کنند. دشمنان می توانند از این رفتار برای نصب بدافزار بر روی یک سیستم با سهولت نسبی استفاده کنند. این ممکن است مستلزم به خطر انداختن سیستم و سپس نصب برنامه افزودنی مخرب توسط دشمن باشد. یک رویکرد جایگزین مستلزم پنهان کردن پسوند مخرب به عنوان یک پسوند مشروع است. سپس حریف کاربران را متقاعد می‌کند که مؤلفه‌های مخرب را از طریق ابزارهایی مانند مهندسی اجتماعی نصب کنند یا به سادگی منتظر می‌مانند تا قربانیان ناآگاهانه این بدافزار را روی سیستم‌های خود نصب کنند. پس از نصب برنامه افزودنی مخرب، دشمن می‌تواند به انواع اثرات فنی منفی مانند به دست آوردن اطلاعات حساس، اجرای دستورات غیرمجاز، مشاهده/تغییر ترافیک شبکه و موارد دیگر دست یابد.</xhtml:p>",
+            "x_capec_prerequisites_fa": [
+                "حریف باید بدافزار را بر اساس نوع نرم افزار و سیستم(هایی) که قصد بهره برداری از آنها را دارد ایجاد کند.",
+                "اگر حریف قصد دارد خودش برنامه افزودنی مخرب را نصب کند، ابتدا باید ماشین هدف را از طریق روش‌های دیگری به خطر بیاندازد."
+            ]
         }
     ],
     "type": "bundle"

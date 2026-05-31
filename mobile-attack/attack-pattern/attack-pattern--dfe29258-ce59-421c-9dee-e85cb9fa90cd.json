@@ -13,27 +13,36 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/techniques/T1461",
-                    "external_id": "T1461"
+                    "external_id": "T1461",
+                    "source_name_fa": "حمله میتره"
                 },
                 {
                     "source_name": "Wired-AndroidBypass",
                     "description": "Andy Greenberg. (2015, September 15). Hack Brief: Emergency Number Hack Bypasses Android Lock Screens. Retrieved December 23, 2016.",
-                    "url": "https://www.wired.com/2015/09/hack-brief-new-emergency-number-hack-easily-bypasses-android-lock-screens/"
+                    "url": "https://www.wired.com/2015/09/hack-brief-new-emergency-number-hack-easily-bypasses-android-lock-screens/",
+                    "source_name_fa": "Wired-AndroidBypass",
+                    "description_fa": "اندی گرینبرگ. (2015، 15 سپتامبر). هک خلاصه: هک شماره اضطراری صفحه‌های قفل اندروید را دور می‌زند. بازبینی شده در ۲۳ دسامبر ۲۰۱۶."
                 },
                 {
                     "source_name": "Kaspersky-iOSBypass",
                     "description": "Chris Brook. (2016, November 17). iOS 10 Passcode Bypass Can Access Photos, Contacts. Retrieved December 23, 2016.",
-                    "url": "https://threatpost.com/ios-10-passcode-bypass-can-access-photos-contacts/122033/"
+                    "url": "https://threatpost.com/ios-10-passcode-bypass-can-access-photos-contacts/122033/",
+                    "source_name_fa": "Kaspersky-iOSBypass",
+                    "description_fa": "کریس بروک (2016، 17 نوامبر). iOS 10 Passcode Bypass می‌تواند به عکس‌ها، مخاطبین دسترسی پیدا کند. بازبینی شده در ۲۳ دسامبر ۲۰۱۶."
                 },
                 {
                     "source_name": "TheSun-FaceID",
-                    "description": "Sean Keach. (2018, February 15). Brit mates BREAK Apple\u2019s face unlock and vow to never buy iPhone again. Retrieved September 18, 2018.",
-                    "url": "https://www.thesun.co.uk/tech/5584082/iphone-x-face-unlock-tricked-broken/"
+                    "description": "Sean Keach. (2018, February 15). Brit mates BREAK Apple’s face unlock and vow to never buy iPhone again. Retrieved September 18, 2018.",
+                    "url": "https://www.thesun.co.uk/tech/5584082/iphone-x-face-unlock-tricked-broken/",
+                    "source_name_fa": "TheSun-FaceID",
+                    "description_fa": "شان کیچ. (2018، 15 فوریه). همتای بریتانیایی قفل چهره اپل را باز می‌کنند و قول می‌دهند که دیگر آیفون نخرند. بازبینی شده در 18 سپتامبر 2018."
                 },
                 {
                     "source_name": "SRLabs-Fingerprint",
                     "description": "SRLabs. (n.d.). Fingerprints are not fit for secure device unlocking. Retrieved December 23, 2016.",
-                    "url": "https://srlabs.de/bites/spoofing-fingerprints/"
+                    "url": "https://srlabs.de/bites/spoofing-fingerprints/",
+                    "source_name_fa": "SRLabs-Fingerprint",
+                    "description_fa": "SRLabs. (n.d.). اثر انگشت برای باز کردن ایمن قفل دستگاه مناسب نیست. بازبینی شده در ۲۳ دسامبر ۲۰۱۶."
                 }
             ],
             "object_marking_refs": [
@@ -41,7 +50,7 @@
             ],
             "modified": "2026-05-12T15:12:00.722Z",
             "name": "Lockscreen Bypass",
-            "description": "An adversary with physical access to a mobile device may seek to bypass the device\u2019s lockscreen. Several methods exist to accomplish this, including:\n\n* Biometric spoofing: If biometric authentication is used, an adversary could attempt to spoof a mobile device\u2019s biometric authentication mechanism. Both iOS and Android partly mitigate this attack by requiring the device\u2019s passcode rather than biometrics to unlock the device after every device restart, and after a set or random amount of time.(Citation: SRLabs-Fingerprint)(Citation: TheSun-FaceID)\n* Unlock code bypass: An adversary could attempt to brute-force or otherwise guess the lockscreen passcode (typically a PIN or password), including physically observing (\u201cshoulder surfing\u201d) the device owner\u2019s use of the lockscreen passcode. Mobile OS vendors partly mitigate this by implementing incremental backoff timers after a set number of failed unlock attempts, as well as a configurable full device wipe after several failed unlock attempts.\n* Vulnerability exploit: Techniques have been periodically demonstrated that exploit mobile devices to bypass the lockscreen. The vulnerabilities are generally patched by the device or OS vendor once disclosed.(Citation: Wired-AndroidBypass)(Citation: Kaspersky-iOSBypass)\n",
+            "description": "An adversary with physical access to a mobile device may seek to bypass the device’s lockscreen. Several methods exist to accomplish this, including:\n\n* Biometric spoofing: If biometric authentication is used, an adversary could attempt to spoof a mobile device’s biometric authentication mechanism. Both iOS and Android partly mitigate this attack by requiring the device’s passcode rather than biometrics to unlock the device after every device restart, and after a set or random amount of time.(Citation: SRLabs-Fingerprint)(Citation: TheSun-FaceID)\n* Unlock code bypass: An adversary could attempt to brute-force or otherwise guess the lockscreen passcode (typically a PIN or password), including physically observing (“shoulder surfing”) the device owner’s use of the lockscreen passcode. Mobile OS vendors partly mitigate this by implementing incremental backoff timers after a set number of failed unlock attempts, as well as a configurable full device wipe after several failed unlock attempts.\n* Vulnerability exploit: Techniques have been periodically demonstrated that exploit mobile devices to bypass the lockscreen. The vulnerabilities are generally patched by the device or OS vendor once disclosed.(Citation: Wired-AndroidBypass)(Citation: Kaspersky-iOSBypass)\n",
             "kill_chain_phases": [
                 {
                     "kill_chain_name": "mitre-mobile-attack",
@@ -62,7 +71,9 @@
             "x_mitre_version": "1.3",
             "x_mitre_tactic_type": [
                 "Post-Adversary Device Access"
-            ]
+            ],
+            "name_fa": "دور زدن صفحه قفل",
+            "description_fa": "یک دشمن با دسترسی فیزیکی به دستگاه تلفن همراه ممکن است به دنبال دور زدن صفحه قفل دستگاه باشد. چندین روش برای انجام این کار وجود دارد، از جمله:\n\n* جعل بیومتریک: اگر از احراز هویت بیومتریک استفاده شود، دشمن می‌تواند مکانیزم احراز هویت بیومتریک دستگاه تلفن همراه را جعل کند. هم iOS و هم Android تا حدی این حمله را با نیاز به رمز عبور دستگاه به جای بیومتریک برای باز کردن قفل دستگاه پس از هر بار راه‌اندازی مجدد دستگاه، و پس از مدت زمان مشخص یا تصادفی کاهش می‌دهند.(Citation: SRLabs-Fingerprint)[[[CTI_PRESERVE_1]]\n* بازکردن قفل کد: یک دشمن می‌تواند رمز عبور صفحه قفل (معمولاً یک پین یا رمز عبور) را به زور یا به شکلی دیگر حدس بزند، از جمله مشاهده فیزیکی (\"گردش روی شانه\") استفاده صاحب دستگاه از رمز عبور صفحه قفل. فروشندگان سیستم عامل موبایل تا حدی این مشکل را با اجرای تایمرهای عقب نشینی افزایشی پس از تعدادی تلاش برای باز کردن قفل ناموفق، و همچنین پاک کردن کامل دستگاه قابل تنظیم پس از چندین بار باز کردن قفل ناموفق، کاهش می دهند.\n* سوء استفاده از آسیب پذیری: تکنیک هایی به صورت دوره ای نشان داده شده است که از دستگاه های تلفن همراه برای دور زدن صفحه قفل سوء استفاده می کنند. آسیب‌پذیری‌ها معمولاً پس از فاش شدن توسط دستگاه یا فروشنده سیستم‌عامل اصلاح می‌شوند.(Citation: Wired-AndroidBypass)(Citation: Kaspersky-iOSBypass) (Citation: TheSun-FaceID)"
         }
     ]
 }

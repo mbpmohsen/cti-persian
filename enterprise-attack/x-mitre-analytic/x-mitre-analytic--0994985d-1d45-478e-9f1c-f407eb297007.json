@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0052#AN0142",
-                    "external_id": "AN0142"
+                    "external_id": "AN0142",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "timestamp_timeout_threshold",
-                    "description": "Tune the valid sudo session duration to reduce false positives"
+                    "description": "Tune the valid sudo session duration to reduce false positives",
+                    "description_fa": "مدت زمان جلسه sudo معتبر را تنظیم کنید تا مثبت کاذب را کاهش دهید"
                 },
                 {
                     "field": "command_allowlist",
-                    "description": "Filter benign sudo usage (e.g., approved admin scripts)"
+                    "description": "Filter benign sudo usage (e.g., approved admin scripts)",
+                    "description_fa": "استفاده از sudo خوش خیم را فیلتر کنید (به عنوان مثال، اسکریپت های مدیریت تایید شده)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0142",
+            "description_fa": "اجرای دستورات مربوط به 'sudo' را با شناسه کاربر موثر بالا (euid=0) مرتبط کنید، به خصوص زمانی که tty_tickets غیرفعال است یا timestamp_timeout فعالانه مورد سوء استفاده قرار می گیرد."
         }
     ]
 }

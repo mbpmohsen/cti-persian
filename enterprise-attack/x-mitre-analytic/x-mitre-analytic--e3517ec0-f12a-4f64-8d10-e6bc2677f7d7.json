@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0133#AN0375",
-                    "external_id": "AN0375"
+                    "external_id": "AN0375",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Used to define the temporal proximity between tunnel profile creation and outbound connection."
+                    "description": "Used to define the temporal proximity between tunnel profile creation and outbound connection.",
+                    "description_fa": "برای تعیین فاصله زمانی بین ایجاد نمایه تونل و اتصال خروجی استفاده می شود."
                 },
                 {
                     "field": "TunnelDomainPatterns",
-                    "description": "Domain patterns for tunnel endpoints may change with IDE versions or organizations."
+                    "description": "Domain patterns for tunnel endpoints may change with IDE versions or organizations.",
+                    "description_fa": "الگوهای دامنه برای نقاط پایانی تونل ممکن است با نسخه‌های IDE یا سازمان‌ها تغییر کند."
                 },
                 {
                     "field": "AuthorizedUserList",
-                    "description": "Helps filter tunnel usage from trusted developer accounts."
+                    "description": "Helps filter tunnel usage from trusted developer accounts.",
+                    "description_fa": "به فیلتر کردن استفاده از تونل از حساب‌های توسعه‌دهنده مورد اعتماد کمک می‌کند."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0375",
+            "description_fa": "شناسایی ایجاد پروفایل های تونل زنی VSCode یا JetBrains CLI و به دنبال آن دسترسی از راه دور مداوم از طریق تونل های یکپارچه با IDE، که احتمالاً از طریق حساب های GitHub یا JetBrains احراز هویت می شوند."
         }
     ]
 }

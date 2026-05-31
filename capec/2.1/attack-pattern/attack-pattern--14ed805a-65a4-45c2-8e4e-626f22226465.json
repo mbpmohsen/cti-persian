@@ -9,37 +9,48 @@
                 {
                     "external_id": "CAPEC-670",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/670.html"
+                    "url": "https://capec.mitre.org/data/definitions/670.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "description": "Trusted Developer Utilities Proxy Execution",
                     "external_id": "T1127",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1127"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1127",
+                    "description_fa": "اجرای پروکسی ابزارهای توسعه‌دهنده مورد اعتماد",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
                     "external_id": "T1195.001",
                     "source_name": "ATTACK",
-                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001"
+                    "url": "https://attack.mitre.org/wiki/Technique/T1195/001",
+                    "description_fa": "مصالحه با زنجیره تامین: وابستگی های نرم افزاری و ابزارهای توسعه را به خطر بیاندازید",
+                    "source_name_fa": "حمله کنید"
                 },
                 {
                     "description": "Melinda Reed, John F. Miller, Paul Popick, Supply Chain Attack Patterns: Framework and Catalog, 2014--08, Office of the Assistant Secretary of Defense for Research and Engineering",
                     "external_id": "REF-660",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://docplayer.net/13041016-Supply-chain-attack-patterns-framework-and-catalog.html"
+                    "url": "https://docplayer.net/13041016-Supply-chain-attack-patterns-framework-and-catalog.html",
+                    "description_fa": "ملیندا رید، جان اف. میلر، پل پوپیک، الگوهای حمله زنجیره تامین: چارچوب و کاتالوگ، 08-2014، دفتر دستیار وزیر دفاع در امور تحقیقات و مهندسی",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "John F. Miller, Supply Chain Attack Framework and Attack Patterns, 2013, The MITRE Corporation",
                     "external_id": "REF-439",
                     "source_name": "reference_from_CAPEC",
-                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf"
+                    "url": "http://www.mitre.org/sites/default/files/publications/supply-chain-attack-framework-14-0228.pdf",
+                    "description_fa": "جان اف. میلر، چارچوب حمله زنجیره تامین و الگوهای حمله، 2013، شرکت MITER",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Highly Evasive Attacker Leverages SolarWinds Supply Chain to Compromise Multiple Global Victims With SUNBURST Backdoor, 2020--12---13, Schneier on Security",
                     "external_id": "REF-667",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html"
+                    "url": "https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html",
+                    "description_fa": "مهاجم بسیار گریزان از زنجیره تامین SolarWinds برای به خطر انداختن چندین قربانی جهانی با SUNBURST Backdoor، 2020--12---13، Schneier در مورد امنیت استفاده می کند.",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--14ed805a-65a4-45c2-8e4e-626f22226465",
@@ -67,6 +78,16 @@
                 ],
                 "Integrity": [
                     "Execute Unauthorized Commands"
+                ],
+                "Access_Control_fa": [
+                    "کسب امتیازات"
+                ],
+                "Confidentiality_fa": [
+                    "داده ها را اصلاح کنید",
+                    "داده ها را بخوانید"
+                ],
+                "Integrity_fa": [
+                    "اجرای دستورات غیرمجاز"
                 ]
             },
             "x_capec_domains": [
@@ -81,11 +102,20 @@
                 "An adversary would need to have access to a targeted developer’s development environment and in particular to tools used to design, create, test and manage software, where the adversary could ensure malicious code is included in software packages built through alteration or substitution of tools in the environment used in the development of software."
             ],
             "x_capec_skills_required": {
-                "High": "Ability to leverage common delivery mechanisms (e.g., email attachments, removable media) to infiltrate a development environment to gain access to software development tools for the purpose of malware insertion into an existing tool or replacement of an existing tool with a maliciously altered copy."
+                "High": "Ability to leverage common delivery mechanisms (e.g., email attachments, removable media) to infiltrate a development environment to gain access to software development tools for the purpose of malware insertion into an existing tool or replacement of an existing tool with a maliciously altered copy.",
+                "High_fa": "امکان استفاده از مکانیسم‌های تحویل رایج (مانند پیوست‌های ایمیل، رسانه‌های قابل جابجایی) برای نفوذ به یک محیط توسعه برای دسترسی به ابزارهای توسعه نرم‌افزار به منظور درج بدافزار در ابزار موجود یا جایگزینی ابزار موجود با یک کپی تغییر یافته به‌طور مخرب."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "یک دشمن با توانایی تغییر ابزارهای مورد استفاده در یک محیط توسعه باعث می شود نرم افزار با ابزارهای اصلاح شده به طور مخرب توسعه یابد. چنین ابزارهایی عبارتند از ابزارهای مدیریت نیازمندی ها و پایگاه داده، ابزارهای طراحی نرم افزار، ابزارهای مدیریت پیکربندی، کامپایلرها، ابزارهای ساخت سیستم و ابزارهای تست عملکرد نرم افزار و تست بار. پس از استقرار نرم‌افزار، حریف اقدامات مخربی را انجام می‌دهد، از جمله آلودگی به بدافزار سایر سیستم‌ها برای پشتیبانی از خطرات بیشتر.",
+            "name_fa": "ابزارهای توسعه نرم افزار به طور مخرب تغییر کرده است",
+            "x_capec_example_instances_fa": [
+                "یک حریف با دسترسی به ابزارهای ساخت نرم افزار در داخل یک IDE محیط توسعه یکپارچه، اسکریپتی را که برای دانلود وابستگی ها از مخزن کد وابسته استفاده می شود، تغییر می دهد، جایی که اسکریپت تغییر کرده است تا شامل کدهای مخربی شود که توسط دشمن در مخزن کاشته شده است."
+            ],
+            "x_capec_prerequisites_fa": [
+                "یک حریف باید به محیط توسعه یک توسعه‌دهنده هدفمند و به ویژه به ابزارهای مورد استفاده برای طراحی، ایجاد، آزمایش و مدیریت نرم‌افزار دسترسی داشته باشد، جایی که دشمن می‌تواند از گنجاندن کدهای مخرب در بسته‌های نرم‌افزاری ساخته شده از طریق تغییر یا جایگزینی ابزارها در محیط مورد استفاده در توسعه نرم‌افزار اطمینان حاصل کند."
+            ]
         }
     ],
     "type": "bundle"

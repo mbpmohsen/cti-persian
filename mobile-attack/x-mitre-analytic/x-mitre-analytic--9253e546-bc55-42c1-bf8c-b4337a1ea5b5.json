@@ -13,7 +13,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0656#AN1743",
-                    "external_id": "AN1743"
+                    "external_id": "AN1743",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -52,25 +53,32 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindowSeconds",
-                    "description": "Max seconds between redirect handling and token access (e.g., 30\u2013180)."
+                    "description": "Max seconds between redirect handling and token access (e.g., 30–180).",
+                    "description_fa": "حداکثر ثانیه بین مدیریت تغییر مسیر و دسترسی توکن (مثلاً 30-180)."
                 },
                 {
                     "field": "RedirectUriAllowlist",
-                    "description": "Approved redirect URI patterns per app (HTTPS/app-scheme)."
+                    "description": "Approved redirect URI patterns per app (HTTPS/app-scheme).",
+                    "description_fa": "الگوهای تغییر مسیر URI تأیید شده در هر برنامه (HTTPS/برنامه-طرح)."
                 },
                 {
                     "field": "TrustedHandlerPackages",
-                    "description": "Expected package names allowed to handle the redirect."
+                    "description": "Expected package names allowed to handle the redirect.",
+                    "description_fa": "نام بسته های مورد انتظار مجاز به مدیریت تغییر مسیر هستند."
                 },
                 {
                     "field": "TokenFileRegex",
-                    "description": "Environment-specific token cache filenames/paths."
+                    "description": "Environment-specific token cache filenames/paths.",
+                    "description_fa": "نام‌ها/مسیرهای فایل کش رمزی خاص محیطی."
                 },
                 {
                     "field": "WorkProfileScope",
-                    "description": "Restrict to enterprise work profile to reduce personal-app noise."
+                    "description": "Restrict to enterprise work profile to reduce personal-app noise.",
+                    "description_fa": "برای کاهش نویز برنامه شخصی، به نمایه کاری سازمانی محدود کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1743",
+            "description_fa": "Defender یک تغییر مسیر OAuth/OIDC (ACTION_VIEW) را مشاهده می‌کند که به یک بسته کنترل‌کننده غیرمجاز (logcat:IntentResolver) حل می‌شود، و پس از آن در یک پنجره کوتاه، همان بسته از طریق AccountManager/Keystore به مواد توکن دسترسی پیدا می‌کند یا حافظه پنهان توکن برنامه را در /data/data/<pkg>/(logcata_pkg>/(sharedacata) می‌خواند. logcat:Keystore، logcat:FileIO). با بسته/UID/نمایه و نزدیکی زمانی برای نشان دادن کسب توکن مرتبط باشید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0060#AN0166",
-                    "external_id": "AN0166"
+                    "external_id": "AN0166",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,14 +51,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ToolName",
-                    "description": "Match on curl, wget, rsync, etc. based on environment"
+                    "description": "Match on curl, wget, rsync, etc. based on environment",
+                    "description_fa": "مطابق با curl، wget، rsync و غیره بر اساس محیط"
                 },
                 {
                     "field": "DownloadExtension",
-                    "description": "Tunable filter to limit to suspicious file types (.sh, .bin, .elf)"
+                    "description": "Tunable filter to limit to suspicious file types (.sh, .bin, .elf)",
+                    "description_fa": "فیلتر قابل تنظیم برای محدود کردن به انواع فایل های مشکوک (sh، .bin، .elf)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0166",
+            "description_fa": "ابزارهای مبتنی بر پوسته (curl، wget، scp) اتصال به دامنه های خارجی را آغاز می کنند و سپس فایل های اجرایی روی دیسک ایجاد می کنند."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0067#AN0183",
-                    "external_id": "AN0183"
+                    "external_id": "AN0183",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "WatchedShells",
-                    "description": "Shells or interpreters where nohup/disown usage is suspicious, configurable to environment."
+                    "description": "Shells or interpreters where nohup/disown usage is suspicious, configurable to environment.",
+                    "description_fa": "پوسته‌ها یا مفسرهایی که استفاده از nohup/disown مشکوک است، قابل تنظیم برای محیط است."
                 },
                 {
                     "field": "PersistenceCorrelationWindow",
-                    "description": "Time window to correlate process continuation after logout with suspicious commands."
+                    "description": "Time window to correlate process continuation after logout with suspicious commands.",
+                    "description_fa": "پنجره زمانی برای ارتباط ادامه فرآیند پس از خروج از سیستم با دستورات مشکوک."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0183",
+            "description_fa": "استفاده از ساختارهای nohup، disown یا AppleScript برای سرکوب وقفه های فرآیند. دیدگاه مدافع: دستورات حاوی nohup یا کارهای پس‌زمینه پنهان («osascript» با اجرای مداوم) که با فرآیندهای بازمانده از خروج کاربر مرتبط است."
         }
     ]
 }

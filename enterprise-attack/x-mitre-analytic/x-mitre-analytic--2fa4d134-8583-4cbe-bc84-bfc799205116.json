@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0558#AN1537",
-                    "external_id": "AN1537"
+                    "external_id": "AN1537",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Helps scope detection to off-hours or change control gaps."
+                    "description": "Helps scope detection to off-hours or change control gaps.",
+                    "description_fa": "به تشخیص محدوده در ساعات غیرفعال یا تغییر شکاف های کنترل کمک می کند."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Environment-specific users may run these commands as part of normal ops."
+                    "description": "Environment-specific users may run these commands as part of normal ops.",
+                    "description_fa": "کاربران محیطی خاص ممکن است این دستورات را به عنوان بخشی از عملیات عادی اجرا کنند."
                 },
                 {
                     "field": "CommandPattern",
-                    "description": "CLI commands vary by adversary intent (e.g., 'stop', 'reboot', 'firewall set')"
+                    "description": "CLI commands vary by adversary intent (e.g., 'stop', 'reboot', 'firewall set')",
+                    "description_fa": "دستورات CLI بر اساس هدف دشمن متفاوت است (به عنوان مثال، \"توقف\"، \"راه‌اندازی مجدد\"، \"تعیین دیوار آتش\")"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1537",
+            "description_fa": "استفاده مشکوک از ابزارهای CLI بومی ESXi مانند esxcli و vim-cmd توسط کاربران غیرمجاز یا خارج از پنجره‌های نگهداری مورد انتظار را تشخیص می‌دهد. تمرکز روی اقداماتی مانند توقف ماشین های مجازی، پیکربندی مجدد تنظیمات شبکه/دیوار آتش، و فعال کردن SSH یا ورود به سیستم است."
         }
     ]
 }

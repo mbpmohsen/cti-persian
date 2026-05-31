@@ -13,7 +13,9 @@
             ],
             "spec_version": "2.1",
             "type": "course-of-action",
-            "x_capec_version": "3.7"
+            "x_capec_version": "3.7",
+            "description_fa": "<xhtml:p>کد باید برای استفاده نادرست از فراخوانی تابع Syslog بررسی شود. می توان از بررسی کد دستی یا خودکار استفاده کرد. بازبینی کننده باید اطمینان حاصل کند که تمام توابع رشته فرمت یک رشته ایستا ارسال می شود که توسط کاربر قابل کنترل نیست و تعداد مناسب آرگومان ها همیشه به آن تابع نیز ارسال می شود. در صورت امکان، از عملگر %n در رشته های قالب استفاده نکنید. کد زیر استفاده صحیح از Syslog():</xhtml:p> را نشان می دهد\n               <xhtml:div style=\"margin-left:10px;\" class=\"good\">syslog(LOG_ERR، \"%s\"، cmdBuf);</xhtml:div>\n               <xhtml:p>کد زیر استفاده آسیب پذیری از Syslog() را نشان می دهد:</xhtml:p>\n               <xhtml:div style=\"margin-left:10px;\" class=\"bad\">syslog(LOG_ERR، cmdBuf);<xhtml:div>\n                     <xhtml:i>// بافر cmdBuff داده های ارائه شده توسط کاربر را می گیرد.</xhtml:i>\n                  </xhtml:div>\n               </xhtml:div>",
+            "name_fa": "coa-67-0"
         }
     ],
     "type": "bundle"

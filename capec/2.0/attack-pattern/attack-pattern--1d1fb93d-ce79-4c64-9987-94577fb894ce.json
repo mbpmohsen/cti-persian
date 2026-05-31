@@ -9,23 +9,29 @@
                 {
                     "external_id": "CAPEC-237",
                     "source_name": "capec",
-                    "url": "https://capec.mitre.org/data/definitions/237.html"
+                    "url": "https://capec.mitre.org/data/definitions/237.html",
+                    "source_name_fa": "capec"
                 },
                 {
                     "external_id": "CWE-693",
                     "source_name": "cwe",
-                    "url": "http://cwe.mitre.org/data/definitions/693.html"
+                    "url": "http://cwe.mitre.org/data/definitions/693.html",
+                    "source_name_fa": "cwe"
                 },
                 {
                     "description": "J. Cappos, J. Rasley, J. Samuel, I. Beschastnikh, C. Barsan, A. Krishnamurthy, T. Anderson, Retaining Sandbox Containment Despite Bugs in Privileged Memory-Safe Code, The 17th ACM Conference on Computer and Communications Security (CCS '10), 2010",
                     "external_id": "REF-91",
-                    "source_name": "reference_from_CAPEC"
+                    "source_name": "reference_from_CAPEC",
+                    "description_fa": "J. Cappos، J. Rasley، J. Samuel، I. Beschastnikh، C. Barsan، A. Krishnamurthy، T. Anderson، Retaining Sandbox Containment با وجود اشکالات در کد امنیتی ممتاز حافظه، هفدهمین کنفرانس ACM در مورد امنیت رایانه و ارتباطات (CCS '10)،",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 },
                 {
                     "description": "Malware Protection Center: Threat Research and Response, 2007, Microsoft Corporation",
                     "external_id": "REF-92",
                     "source_name": "reference_from_CAPEC",
-                    "url": "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Exploit%3AJava%2FByteVerify.C"
+                    "url": "https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Exploit%3AJava%2FByteVerify.C",
+                    "description_fa": "مرکز حفاظت از بدافزار: تحقیق و پاسخ تهدید، 2007، شرکت مایکروسافت",
+                    "source_name_fa": "مرجع_از_CAPEC"
                 }
             ],
             "id": "attack-pattern--1d1fb93d-ce79-4c64-9987-94577fb894ce",
@@ -56,6 +62,23 @@
                 ],
                 "Non-Repudiation": [
                     "Gain Privileges"
+                ],
+                "Access_Control_fa": [
+                    "مکانیسم حفاظت دور زدن"
+                ],
+                "Accountability_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authentication_fa": [
+                    "کسب امتیازات"
+                ],
+                "Authorization_fa": [
+                    "مکانیسم حفاظت دور زدن",
+                    "اجرای دستورات غیرمجاز (اجرای کد دلخواه)",
+                    "کسب امتیازات"
+                ],
+                "Non-Repudiation_fa": [
+                    "کسب امتیازات"
                 ]
             },
             "x_capec_domains": [
@@ -70,11 +93,21 @@
                 "None: No specialized resources are required to execute this type of attack."
             ],
             "x_capec_skills_required": {
-                "High": "The attacker must have a good knowledge of the platform specific mechanisms of signing and verifying code. Most code signing and verification schemes are based on use of cryptography, the attacker needs to have an understand of these cryptographic operations in good detail."
+                "High": "The attacker must have a good knowledge of the platform specific mechanisms of signing and verifying code. Most code signing and verification schemes are based on use of cryptography, the attacker needs to have an understand of these cryptographic operations in good detail.",
+                "High_fa": "مهاجم باید دانش خوبی از مکانیسم‌های خاص پلتفرم امضا و تأیید کد داشته باشد. اکثر طرح‌های امضا و تأیید کد مبتنی بر استفاده از رمزنگاری هستند، مهاجم باید درک دقیقی از این عملیات رمزنگاری داشته باشد."
             },
             "x_capec_status": "Draft",
             "x_capec_typical_severity": "Very High",
-            "x_capec_version": "3.9"
+            "x_capec_version": "3.9",
+            "description_fa": "مهاجم ممکن است کد مخرب زبان دیگری را ارسال کند تا به امتیازاتی دسترسی پیدا کند که عمداً توسط sandbox در معرض دید قرار نگرفته‌اند، بنابراین از sandbox فرار می‌کنند. به عنوان مثال، کد جاوا به دلیل محدودیت‌هایی که توسط Byte code Verifier و JVM روی آن اعمال می‌شود، نمی‌تواند عملیات ناامن، مانند تغییر مکان‌های حافظه دلخواه را انجام دهد. در صورت مجاز بودن، کد جاوا می‌تواند مستقیماً با کد C اصلی تماس بگیرد، که ممکن است عملیات ناامنی را انجام دهد، مانند تماس‌های سیستمی و تغییر مکان‌های حافظه دلخواه از طرف آن‌ها. برای ارائه ایزوله، جاوا کد غیرقابل اعتماد را با دسترسی بدون واسطه به کد بومی C ارائه نمی دهد. درعوض، کد سندباکس معمولاً مجاز به فراخوانی زیرمجموعه ای از کد بومی از قبل موجود است که بخشی از کتابخانه های استاندارد است.",
+            "name_fa": "فرار از Sandbox با فراخوانی کد به زبانی دیگر",
+            "x_capec_example_instances_fa": [
+                "Exploit: Java/ByteVerify.C شناسایی کد مخربی است که تلاش می کند از یک آسیب پذیری در ماشین مجازی مایکروسافت (VM) سوء استفاده کند. VM برنامه های جاوا را قادر می سازد تا روی پلتفرم های ویندوز اجرا شوند. Microsoft Java VM در اکثر نسخه های ویندوز و اینترنت اکسپلورر گنجانده شده است. در برخی از نسخه‌های مایکروسافت VM، یک آسیب‌پذیری به دلیل نقصی در نحوه بررسی کد ByteCode Verifier هنگام بارگیری اولیه توسط مایکروسافت VM وجود دارد. ByteCode Verifier یک فرآیند سطح پایین در ماشین مجازی مایکروسافت است که مسئول بررسی اعتبار کد - یا کد بایت - است که در ابتدا در ماشین مجازی مایکروسافت بارگذاری می شود. Java/ByteVerify.C سعی می کند فایلی به نام \"msits.exe\" را که در همان فهرست مجازی اپلت جاوا قرار دارد، در پوشه سیستم ویندوز و با نام فایل تصادفی دانلود کند. سپس سعی می کند این فایل خاص را اجرا کند. این نقص مهاجمان را قادر می‌سازد تا کد دلخواه خود را مانند نوشتن، دانلود و اجرای بدافزارهای اضافی روی دستگاه کاربر اجرا کنند. این آسیب‌پذیری توسط به‌روزرسانی MS03-011 که در سال 2003 منتشر شد، برطرف شده است."
+            ],
+            "x_capec_execution_flow_fa": "<h2> جریان اجرا </h2><div><h3>کاوش</h3><ol><li> <p> <b>کاوش: </b>مهاجم برنامه هدف را بررسی می‌کند تا ببیند آیا فراخوانی کد زبان دیگری در جعبه ایمنی مجاز است یا نه. زبان دیگری در جعبه ایمنی مجاز است.</td></tr></tbody></table><li> <p> <b>تجزیه و تحلیل: </b>مهاجم برنامه هدف را تجزیه و تحلیل می‌کند تا لیستی از نقاط ضعف کد متقاطع را در کتابخانه‌های استاندارد sandbox دریافت کند. در کتابخانه‌های استاندارد sandbox.</td></tr></tbody></table></ol></div><div><h3>آزمایش</h3><ol><li> <p> <b>نقاط ضعف امنیتی قابل بهره‌برداری را تأیید کنید: </b>مهاجم سعی می‌کند کد مخرب زبان دیگری را ایجاد کند که توسط ضعف‌های امنیتی استاندارد یافت شده است تا به تأیید اکسپلورر برسد. فاز.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td>مهاجم سعی می‌کند با فراخوانی کد مخرب زبان دیگری که توسط sandbox مجاز است، نقاط ضعف امنیتی را کشف کند. کتابخانه‌های استاندارد: </b>مهاجم کدهای مخرب زبان دیگری را فراخوانی می‌کند تا از ضعف‌های امنیتی موجود در کتابخانه‌های استاندارد تأیید شده در مرحله آزمایش سوء استفاده کند. مهاجم می‌تواند به امتیازاتی دسترسی پیدا کند که عمداً توسط sandbox در معرض دید قرار نگرفته‌اند، بنابراین از جعبه ایمنی می‌گریزند.</p></li><table><tbody><tr><th>تکنیک‌ها</th></tr><tr><td> مهاجم کد مخرب زبان دیگری را برای سوء استفاده از ضعف‌های امنیتی در کتابخانه‌های استاندارد فراخوانی می‌کند.",
+            "x_capec_resources_required_fa": [
+                "هیچ: برای اجرای این نوع حمله به هیچ منبع تخصصی نیاز نیست."
+            ]
         }
     ],
     "spec_version": "2.0",

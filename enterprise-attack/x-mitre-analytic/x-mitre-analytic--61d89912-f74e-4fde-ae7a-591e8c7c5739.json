@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0069#AN0185",
-                    "external_id": "AN0185"
+                    "external_id": "AN0185",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -76,21 +77,27 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedDeviceVIDPID",
-                    "description": "Vendor/Product IDs that are approved (e.g., keyboards, mice). Unknown/rare VID:PID raise risk."
+                    "description": "Vendor/Product IDs that are approved (e.g., keyboards, mice). Unknown/rare VID:PID raise risk.",
+                    "description_fa": "شناسه‌های فروشنده/محصول مورد تأیید (مانند صفحه‌کلید، ماوس). ناشناخته/نادر VID: خطر افزایش PID."
                 },
                 {
                     "field": "ExpectedBusTypes",
-                    "description": "Allow-listed bus types for server classes (e.g., USB disabled on DCs)."
+                    "description": "Allow-listed bus types for server classes (e.g., USB disabled on DCs).",
+                    "description_fa": "انواع گذرگاه‌های فهرست‌شده مجاز برای کلاس‌های سرور (مثلاً USB در دستگاه‌های DC غیرفعال است)."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlation window between device recognition and follow-on process/mount/network activity (e.g., 10m\u201360m)."
+                    "description": "Correlation window between device recognition and follow-on process/mount/network activity (e.g., 10m–60m).",
+                    "description_fa": "پنجره همبستگی بین شناسایی دستگاه و فرآیند/نصب/فعالیت شبکه بعدی (مثلاً 10-60 متر)."
                 },
                 {
                     "field": "TrustedMACs",
-                    "description": "Known NIC/USB-NIC MAC addresses allowed by policy."
+                    "description": "Known NIC/USB-NIC MAC addresses allowed by policy.",
+                    "description_fa": "آدرس‌های MAC NIC/USB-NIC شناخته شده توسط خط‌مشی مجاز است."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0185",
+            "description_fa": "زنجیره: (1) یک دستگاه خارجی جدید توسط ویندوز شناسایی می شود (USB/Thunderbolt/PCIe) یا یک دستگاه بلوک جدید ظاهر می شود. (2) در یک پنجره کوتاه، همان کاربر/جلسه فرآیندها را ایجاد می کند یا سیستم عامل حجم جدیدی را نصب می کند. (3) فعالیت های بعدی اختیاری مانند تزریق ضربه کلید HID، بار درایور DMA، یا رابط شبکه جدید MAC روی DHCP. EID 6416 / Kernel-PnP امنیتی را با متادیتاهای sysmon و DHCP/شبکه ​​مرتبط کنید."
         }
     ]
 }

@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0147#AN0417",
-                    "external_id": "AN0417"
+                    "external_id": "AN0417",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,26 +51,33 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TimeWindow",
-                    "description": "Define threshold period over which request spikes are measured. E.g., 10 min or 1 hour windows."
+                    "description": "Define threshold period over which request spikes are measured. E.g., 10 min or 1 hour windows.",
+                    "description_fa": "دوره آستانه ای را که در آن افزایش درخواست اندازه گیری می شود، تعریف کنید. به عنوان مثال، 10 دقیقه یا 1 ساعت پنجره."
                 },
                 {
                     "field": "UserContext",
-                    "description": "Alert only if role/user is outside expected automation identity list."
+                    "description": "Alert only if role/user is outside expected automation identity list.",
+                    "description_fa": "هشدار فقط در صورتی که نقش/کاربر خارج از فهرست هویت اتوماسیون مورد انتظار باشد."
                 },
                 {
                     "field": "RequestVolumeThreshold",
-                    "description": "Customize the number of emails/SMS or API calls considered anomalous."
+                    "description": "Customize the number of emails/SMS or API calls considered anomalous.",
+                    "description_fa": "تعداد ایمیل‌ها/پیامک‌ها یا تماس‌های API غیرعادی در نظر گرفته شده را سفارشی کنید."
                 },
                 {
                     "field": "GeoVelocityThreshold",
-                    "description": "Tune geolocation jump logic (e.g., login from US, then use service in Asia within minutes)."
+                    "description": "Tune geolocation jump logic (e.g., login from US, then use service in Asia within minutes).",
+                    "description_fa": "منطق پرش موقعیت جغرافیایی را تنظیم کنید (به عنوان مثال، از ایالات متحده وارد شوید، سپس در عرض چند دقیقه از سرویس در آسیا استفاده کنید)."
                 },
                 {
                     "field": "ModelUsageQuotaSpike",
-                    "description": "Set maximum allowable deviation from past 7-day average OpenAI/GPT token usage."
+                    "description": "Set maximum allowable deviation from past 7-day average OpenAI/GPT token usage.",
+                    "description_fa": "حداکثر انحراف مجاز را از میانگین ۷ روز گذشته استفاده از رمز OpenAI/GPT تنظیم کنید."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0417",
+            "description_fa": "دشمن به سرویس‌های میزبان ابری مانند AWS SES، SNS یا OpenAI API دسترسی پیدا می‌کند، خط‌مشی‌های استفاده را فعال یا تغییر می‌دهد، و اقدامات پرمصرف منابع (مانند ایمیل/SMS یا درخواست‌های LLM) را اغلب از مناطق غیرمجاز یا تحت شرایط هویت غیرعادی آغاز می‌کند."
         }
     ]
 }

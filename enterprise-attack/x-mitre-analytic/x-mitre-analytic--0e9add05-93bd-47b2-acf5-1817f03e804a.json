@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0445#AN1229",
-                    "external_id": "AN1229"
+                    "external_id": "AN1229",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ParentProcessName",
-                    "description": "Legitimate system processes that may rarely spawn network-capable child processes (e.g., `rundll32`, `svchost`)."
+                    "description": "Legitimate system processes that may rarely spawn network-capable child processes (e.g., `rundll32`, `svchost`).",
+                    "description_fa": "فرآیندهای سیستم قانونی که به ندرت ممکن است فرآیندهای فرزند با قابلیت شبکه را ایجاد کنند (مانند «rundll32»، «svchost»)."
                 },
                 {
                     "field": "DestinationPort",
-                    "description": "Watch for high-numbered ports or well-known proxy ports like 1080, 8080, 4444."
+                    "description": "Watch for high-numbered ports or well-known proxy ports like 1080, 8080, 4444.",
+                    "description_fa": "مراقب پورت های با شماره بالا یا پورت های پراکسی معروف مانند 1080، 8080، 4444 باشید."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Capture unusual spikes in outbound connections over a short period."
+                    "description": "Capture unusual spikes in outbound connections over a short period.",
+                    "description_fa": "میخ های غیرمعمول در اتصالات خروجی را در مدت کوتاهی ثبت کنید."
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 1229",
+            "description_fa": "ایجاد فرآیند مشکوک (مانند «rundll32»، «svchost»، «powershell» یا «netsh») و به دنبال آن ایجاد اتصال شبکه به میزبان‌های داخلی یا نقاط پایانی خارجی غیرمعمول در پورت‌های بالا یا غیر استاندارد."
         }
     ]
 }

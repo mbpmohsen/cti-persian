@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0233#AN0647",
-                    "external_id": "AN0647"
+                    "external_id": "AN0647",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedAdminIPs",
-                    "description": "Known trusted IP addresses permitted to execute configuration dump commands."
+                    "description": "Known trusted IP addresses permitted to execute configuration dump commands.",
+                    "description_fa": "آدرس های IP قابل اعتماد شناخته شده مجاز به اجرای دستورات dump پیکربندی هستند."
                 },
                 {
                     "field": "NormalConfigExportRate",
-                    "description": "Baseline frequency of legitimate configuration exports; anomalies above threshold may indicate malicious activity."
+                    "description": "Baseline frequency of legitimate configuration exports; anomalies above threshold may indicate malicious activity.",
+                    "description_fa": "فرکانس پایه صادرات پیکربندی قانونی؛ ناهنجاری های بالاتر از آستانه ممکن است نشان دهنده فعالیت مخرب باشد."
                 },
                 {
                     "field": "AllowedTransferProtocols",
-                    "description": "Expected transfer methods (e.g., SCP vs. TFTP). Unexpected use of weak protocols may indicate exfiltration."
+                    "description": "Expected transfer methods (e.g., SCP vs. TFTP). Unexpected use of weak protocols may indicate exfiltration.",
+                    "description_fa": "روش های انتقال مورد انتظار (به عنوان مثال، SCP در مقابل TFTP). استفاده غیرمنتظره از پروتکل های ضعیف ممکن است نشان دهنده اکسفیلتراسیون باشد."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Normal maintenance windows for authorized configuration exports; activity outside these windows may be suspicious."
+                    "description": "Normal maintenance windows for authorized configuration exports; activity outside these windows may be suspicious.",
+                    "description_fa": "پنجره های تعمیر و نگهداری معمولی برای صادرات پیکربندی مجاز؛ فعالیت خارج از این پنجره ها ممکن است مشکوک باشد."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0647",
+            "description_fa": "مدافعان ممکن است تلاش‌های دشمن را برای جمع‌آوری یا صادر کردن پیکربندی‌های کامل دستگاه با شناسایی پرس‌وجوهای SNMP غیرمعمول، فعالیت Smart Install (SMI) یا دستورات CLI/API که درخواست حذف پیکربندی در حال اجرا یا راه‌اندازی می‌کنند، مشاهده کنند. رفتارهای مرتبط شامل درخواست‌های خواندن با حجم بالا برای OID‌های حساس، استفاده مکرر از «show running-config» یا دستورات معادل از IP‌های غیرقابل اعتماد، یا انتقال‌های غیرمنتظره TFTP/SCP/FTP حاوی فایل‌های پیکربندی است. این رفتارها اغلب به ترتیب ظاهر می شوند: احراز هویت غیرعادی یا افزایش امتیاز، به دنبال آن بازیابی پیکربندی انبوه و انتقال خروجی."
         }
     ]
 }

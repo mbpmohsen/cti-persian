@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0180#AN0510",
-                    "external_id": "AN0510"
+                    "external_id": "AN0510",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TargetPathRegex",
-                    "description": "Tunable regex to flag suspicious shortcut target paths (e.g., temp folder, base64 in target, unusual executable names)"
+                    "description": "Tunable regex to flag suspicious shortcut target paths (e.g., temp folder, base64 in target, unusual executable names)",
+                    "description_fa": "Regex قابل تنظیم برای پرچم‌گذاری مسیرهای هدف میانبر مشکوک (مانند پوشه موقت، base64 در هدف، نام‌های اجرایی غیرمعمول)"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Time window used to correlate shortcut creation with process execution (e.g., 5-minute window)"
+                    "description": "Time window used to correlate shortcut creation with process execution (e.g., 5-minute window)",
+                    "description_fa": "پنجره زمانی مورد استفاده برای ارتباط ایجاد میانبر با اجرای فرآیند (به عنوان مثال، پنجره 5 دقیقه ای)"
                 },
                 {
                     "field": "UserContextScope",
-                    "description": "Filter for expected administrative installs versus end-user initiated shortcut creation"
+                    "description": "Filter for expected administrative installs versus end-user initiated shortcut creation",
+                    "description_fa": "فیلتر برای نصب های اداری مورد انتظار در مقابل ایجاد میانبر توسط کاربر نهایی"
                 },
                 {
                     "field": "ZoneIdentifierThreshold",
-                    "description": "Configurable value to filter LNK files tagged with external source markers (e.g., ZoneId=3 for Internet)"
+                    "description": "Configurable value to filter LNK files tagged with external source markers (e.g., ZoneId=3 for Internet)",
+                    "description_fa": "مقدار قابل تنظیم برای فیلتر کردن فایل های LNK برچسب گذاری شده با نشانگرهای منبع خارجی (به عنوان مثال، ZoneId=3 برای اینترنت)"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0510",
+            "description_fa": "تشخیص، ایجاد یا اصلاح فایل‌های «.lnk» (میانبر) را در مکان‌های شروع خودکار با اصل و نسب فرآیند والد-فرزند غیرعادی یا باینری‌های بدون علامت مرتبط می‌کند. مدافعان باید رویدادهای ایجاد/تغییر LNK را خارج از نصب نرم افزارهای شناخته شده، رویدادهای وصله یا به روز رسانی سیستم عامل تماشا کنند. پرچم‌گذاری اهداف میان‌بر که به مکان‌های مشکوک یا باینری‌های ناشناخته اشاره می‌کنند، به‌ویژه آن‌هایی که توسط مفسرهای اسکریپت نوشته شده‌اند یا از زنجیره‌های تحویل فیشینگ ایجاد شده‌اند."
         }
     ]
 }

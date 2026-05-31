@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0037#AN0106",
-                    "external_id": "AN0106"
+                    "external_id": "AN0106",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "BrowserCredentialFiles",
-                    "description": "Paths of web browser credential databases to monitor"
+                    "description": "Paths of web browser credential databases to monitor",
+                    "description_fa": "مسیرهای پایگاه داده اعتبار مرورگر وب برای نظارت"
                 },
                 {
                     "field": "AllowedDebuggers",
-                    "description": "List of expected debugging tools for dev/test environments"
+                    "description": "List of expected debugging tools for dev/test environments",
+                    "description_fa": "فهرست ابزارهای اشکال زدایی مورد انتظار برای محیط های توسعه دهنده/تست"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0106",
+            "description_fa": "تلاش‌ها برای دسترسی به فروشگاه‌های اعتبار مرورگر (مانند فایرفاکس «logins.json»، Chrome SQLite DB) یا فرآیندها (مانند gnome-keyring-daemon) را شناسایی می‌کند. خواندن فایل های غیرمجاز و بازرسی حافظه فرآیندهای مرورگر را با استفاده از ptrace یا gdb مشاهده می کند."
         }
     ]
 }

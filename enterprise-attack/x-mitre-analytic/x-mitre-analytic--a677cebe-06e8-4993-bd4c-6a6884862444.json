@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0315#AN0881",
-                    "external_id": "AN0881"
+                    "external_id": "AN0881",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,14 +46,18 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "TrustedLocationBypass",
-                    "description": "DLL may be placed in location trusted by Office configuration or signed to evade alerts"
+                    "description": "DLL may be placed in location trusted by Office configuration or signed to evade alerts",
+                    "description_fa": "DLL ممکن است در مکان مورد اعتماد پیکربندی Office قرار داده شود یا برای فرار از هشدارها امضا شده باشد"
                 },
                 {
                     "field": "AuditPolicyScope",
-                    "description": "Only specific tenants or users may have Office auditing enabled at granular DLL load level"
+                    "description": "Only specific tenants or users may have Office auditing enabled at granular DLL load level",
+                    "description_fa": "فقط مستاجران یا کاربران خاصی ممکن است حسابرسی Office را در سطح بار DLL گرانول فعال کنند"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0881",
+            "description_fa": "برنامه Office یک DLL غیر استاندارد را در هنگام راه‌اندازی به‌طور خودکار بارگیری می‌کند که از طریق کلید رجیستری تست آفیس فعال می‌شود، اغلب بدون بنرهای هشدار دهنده ماکرو. مکانیسم پایداری DLL، دفاع های کلان سنتی را دور می زند."
         }
     ]
 }

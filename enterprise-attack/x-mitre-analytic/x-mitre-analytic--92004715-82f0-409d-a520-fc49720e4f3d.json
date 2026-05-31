@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0582#AN1603",
-                    "external_id": "AN1603"
+                    "external_id": "AN1603",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,18 +51,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ApprovedTFTPServers",
-                    "description": "Whitelist of TFTP servers authorized for netbooting in the environment"
+                    "description": "Whitelist of TFTP servers authorized for netbooting in the environment",
+                    "description_fa": "لیست سفید سرورهای TFTP مجاز برای راه اندازی شبکه در محیط"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Detection correlation window between config change, TFTP activity, and system reboot"
+                    "description": "Detection correlation window between config change, TFTP activity, and system reboot",
+                    "description_fa": "پنجره همبستگی تشخیص بین تغییر پیکربندی، فعالیت TFTP و راه اندازی مجدد سیستم"
                 },
                 {
                     "field": "BaselineBootImageHash",
-                    "description": "Expected system image hashes to validate integrity of boot images loaded via TFTP"
+                    "description": "Expected system image hashes to validate integrity of boot images loaded via TFTP",
+                    "description_fa": "هش تصویر سیستم مورد انتظار برای تأیید صحت تصاویر بوت بارگیری شده از طریق TFTP"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1603",
+            "description_fa": "تشخیص تغییرات غیرمجاز در تنظیمات بوت که به سرورهای TFTP اشاره می‌کنند، بارگذاری سیستم‌افزار غیرمعمول در هنگام راه‌اندازی شبکه یا ترافیک مشکوک TFTP. همبستگی تغییرات پیکربندی راه‌اندازی، گزارش‌های تاریخچه فرمان، و هش‌های غیرمنتظره تصویر سیستم، پوشش شناسایی را برای دشمنانی که تلاش می‌کنند از طریق تصاویر بوت مخرب TFTP ادامه پیدا کنند، فراهم می‌کند."
         }
     ]
 }

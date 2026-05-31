@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0005#AN0014",
-                    "external_id": "AN0014"
+                    "external_id": "AN0014",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -51,17 +52,22 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "ExecutionPath",
-                    "description": "Path anomalies such as execution from /dev/shm, /tmp, or user home directories"
+                    "description": "Path anomalies such as execution from /dev/shm, /tmp, or user home directories",
+                    "description_fa": "ناهنجاری‌های مسیر مانند اجرا از /dev/shm، /tmp یا دایرکتوری‌های خانه کاربر"
                 },
                 {
                     "field": "ParentProcessContext",
-                    "description": "Unusual lineage such as scripts invoking renamed tools"
+                    "description": "Unusual lineage such as scripts invoking renamed tools",
+                    "description_fa": "تبار غیرمعمول مانند اسکریپت هایی که ابزارهای تغییر نام یافته را فراخوانی می کنند"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate between file rename and immediate execution"
+                    "description": "Correlate between file rename and immediate execution",
+                    "description_fa": "بین تغییر نام فایل و اجرای فوری ارتباط برقرار کنید"
                 }
-            ]
+            ],
+            "name_fa": "تحلیلی 0014",
+            "description_fa": "اجرای ابزارهای رایج تغییر نام یافته (مانند «bash»، «nc»، «python»، «sh») از دایرکتوری‌های غیرمعمول یا با نام‌هایی که برای فریب مدافعان یا EDR‌ها طراحی شده‌اند."
         }
     ]
 }

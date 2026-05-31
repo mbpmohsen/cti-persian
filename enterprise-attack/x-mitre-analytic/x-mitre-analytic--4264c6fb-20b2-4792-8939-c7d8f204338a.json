@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0319#AN0900",
-                    "external_id": "AN0900"
+                    "external_id": "AN0900",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -45,18 +46,23 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "Region",
-                    "description": "Alert when creation happens in unexpected regions"
+                    "description": "Alert when creation happens in unexpected regions",
+                    "description_fa": "هشدار زمانی که ایجاد در مناطق غیرمنتظره اتفاق می افتد"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Chain CreateUser \u2192 AttachPolicy \u2192 AccessKey within short timeframe"
+                    "description": "Chain CreateUser → AttachPolicy → AccessKey within short timeframe",
+                    "description_fa": "Chain CreateUser → AttachPolicy → AccessKey در بازه زمانی کوتاه"
                 },
                 {
                     "field": "UserAgent",
-                    "description": "Monitor API calls from non-console or automation tools"
+                    "description": "Monitor API calls from non-console or automation tools",
+                    "description_fa": "تماس‌های API را از ابزارهای غیر کنسولی یا خودکار نظارت کنید"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0900",
+            "description_fa": "دشمنان از ابر API، CLI یا کنسول برای ایجاد کاربران یا نقش‌های IAM استفاده می‌کنند. CreateUser اولیه با پیوست خط مشی/نقش دنبال می شود. تشخیص زنجیره‌های زمانی شامل IAM:CreateUser، AttachUserPolicy و تولید اعتبار، به‌ویژه از اتوماسیون یا محدوده‌های IP خارجی را نظارت می‌کند."
         }
     ]
 }

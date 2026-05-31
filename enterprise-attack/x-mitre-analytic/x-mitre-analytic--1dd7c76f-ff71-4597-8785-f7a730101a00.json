@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0494#AN1360",
-                    "external_id": "AN1360"
+                    "external_id": "AN1360",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -50,22 +51,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "AuthorizedAdminAccounts",
-                    "description": "Defines trusted administrator accounts allowed to modify encryption hardware settings; deviations trigger alerts."
+                    "description": "Defines trusted administrator accounts allowed to modify encryption hardware settings; deviations trigger alerts.",
+                    "description_fa": "حساب‌های سرپرست مورد اعتماد را تعریف می‌کند که مجاز به تغییر تنظیمات سخت‌افزار رمزگذاری هستند. انحرافات هشدارها را آغاز می کنند."
                 },
                 {
                     "field": "BaselineThroughput",
-                    "description": "Expected performance metrics with hardware acceleration enabled; drops may indicate tampering."
+                    "description": "Expected performance metrics with hardware acceleration enabled; drops may indicate tampering.",
+                    "description_fa": "معیارهای عملکرد مورد انتظار با فعال کردن شتاب سخت افزاری؛ قطرات ممکن است نشان دهنده دستکاری باشد."
                 },
                 {
                     "field": "ApprovedFirmwareVersions",
-                    "description": "Whitelist of vendor-signed firmware versions; unexpected updates could signal malicious modification."
+                    "description": "Whitelist of vendor-signed firmware versions; unexpected updates could signal malicious modification.",
+                    "description_fa": "لیست سفید نسخه های سیستم عامل امضا شده توسط فروشنده؛ به‌روزرسانی‌های غیرمنتظره می‌توانند نشان دهنده تغییرات مخرب باشند."
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Period of correlation between configuration change and observed traffic downgrade; tunable to reduce false positives."
+                    "description": "Period of correlation between configuration change and observed traffic downgrade; tunable to reduce false positives.",
+                    "description_fa": "دوره همبستگی بین تغییر پیکربندی و کاهش ترافیک مشاهده شده. قابل تنظیم برای کاهش مثبت کاذب."
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 1360",
+            "description_fa": "مدافعان ممکن است تلاش‌هایی را برای غیرفعال کردن سخت‌افزار رمزنگاری اختصاصی در دستگاه‌های شبکه مشاهده کنند، که اغلب از طریق دستورات غیرعادی CLI، به‌روزرسانی‌های غیرمنتظره سفت‌افزار یا پیکربندی، و عملکرد رمزگذاری کاهش یافته قابل مشاهده است. نشانگرهای مشکوک شامل دستوراتی هستند که تنظیمات شتاب سخت‌افزاری را تغییر می‌دهند (مانند غیرفعال کردن AES-NI یا موتورهای رمزنگاری)، اصلاح فایل‌های تصویری سیستم، یا گزارش‌هایی که رمزگذاری مجدد از سخت‌افزار به نرم‌افزار را نشان می‌دهند. تجزیه و تحلیل ترافیک شبکه همچنین ممکن است کاهش ناگهانی در توان عملیاتی یا رفتار مذاکره رمزی را نشان دهد که مطابق با عدم وجود شتاب سخت افزاری است."
         }
     ]
 }

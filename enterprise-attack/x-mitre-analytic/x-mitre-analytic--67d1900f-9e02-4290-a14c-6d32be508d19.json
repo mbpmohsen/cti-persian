@@ -12,7 +12,8 @@
                 {
                     "source_name": "mitre-attack",
                     "url": "https://attack.mitre.org/detectionstrategies/DET0125#AN0349",
-                    "external_id": "AN0349"
+                    "external_id": "AN0349",
+                    "source_name_fa": "حمله میتره"
                 }
             ],
             "object_marking_refs": [
@@ -55,22 +56,28 @@
             "x_mitre_mutable_elements": [
                 {
                     "field": "UserContext",
-                    "description": "Restrict to targeted users or unexpected users writing to plist"
+                    "description": "Restrict to targeted users or unexpected users writing to plist",
+                    "description_fa": "محدود به کاربران هدف یا کاربران غیرمنتظره ای که در plist می نویسند"
                 },
                 {
                     "field": "FilePathPattern",
-                    "description": "Allow tuning for alternative persistence paths or directory redirection"
+                    "description": "Allow tuning for alternative persistence paths or directory redirection",
+                    "description_fa": "تنظیم مسیرهای ماندگاری جایگزین یا تغییر مسیر دایرکتوری را مجاز کنید"
                 },
                 {
                     "field": "TimeWindow",
-                    "description": "Correlate plist write and process execution within logon window"
+                    "description": "Correlate plist write and process execution within logon window",
+                    "description_fa": "همبستگی نوشتن plist و اجرای پردازش در پنجره ورود به سیستم"
                 },
                 {
                     "field": "BinaryAnomalyScore",
-                    "description": "Optional scoring of launched binary based on code signing, entropy, and known safe apps"
+                    "description": "Optional scoring of launched binary based on code signing, entropy, and known safe apps",
+                    "description_fa": "امتیازدهی اختیاری باینری راه اندازی شده بر اساس امضای کد، آنتروپی و برنامه های ایمن شناخته شده"
                 }
             ],
-            "x_mitre_deprecated": false
+            "x_mitre_deprecated": false,
+            "name_fa": "تحلیلی 0349",
+            "description_fa": "تغییر غیرمعمول یا ایجاد فایل‌های plist مربوط به پنجره ورود به سیستم در '~/Library/Preferences/ByHost' مرتبط با مسیرهای برنامه غیرمجاز و اجرای پس از ورود."
         }
     ]
 }
