@@ -76,9 +76,70 @@ PROTECT_PATTERNS = [
     re.compile(r"\b(?:TA|T|S|G|M|DS|D|C)\d{3,5}(?:\.\d{3})?\b"),
 ]
 
+PROTECTED_TOKEN_RE = re.compile(r"\[\[\[CTI_PRESERVE_(\d+)]]]")
+CORRUPTED_PLACEHOLDER_RE = re.compile(r"CTI[_\s-]*PRESERVE|\[\[\s*ویرایش|\[\[\[")
+
 
 class TranslationError(RuntimeError):
     """Raised when translation fails after retries."""
+
+
+class ProtectedTokenError(TranslationError):
+    """Raised when a translation drops or changes protected placeholders."""
+
+
+class Glossary:
+    def __init__(self, terms: Sequence[dict[str, Any]], protected_terms: Sequence[str]) -> None:
+        self.terms = list(terms)
+        self.protected_terms = list(protected_terms)
+
+    @classmethod
+    def from_path(cls, path: Path) -> "Glossary":
+        if not path.exists():
+            return cls([], [])
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        terms = payload.get("terms", [])
+        protected_terms = payload.get("protected_terms", [])
+        if not isinstance(terms, list) or not isinstance(protected_terms, list):
+            raise TranslationError(f"Invalid glossary structure: {path}")
+        return cls(
+            terms=[term for term in terms if isinstance(term, dict)],
+            protected_terms=[term for term in protected_terms if isinstance(term, str)],
+        )
+
+    def apply(
+        self,
+        text: str,
+        protected: dict[str, str],
+        token_prefix: str = "CTI_PRESERVE",
+    ) -> str:
+        updated = text
+
+        def next_token(value: str) -> str:
+            token = f"[[[{token_prefix}_{len(protected)}]]]"
+            protected[token] = value
+            return token
+
+        protected_terms = sorted(self.protected_terms, key=len, reverse=True)
+        for term in protected_terms:
+            pattern = re.compile(rf"(?<![A-Za-z0-9_]){re.escape(term)}(?![A-Za-z0-9_])")
+            updated = pattern.sub(lambda match: next_token(match.group(0)), updated)
+
+        for term in self.terms:
+            source = term.get("source")
+            target = term.get("target")
+            if not isinstance(source, str) or not isinstance(target, str) or not source or not target:
+                continue
+            whole_word = bool(term.get("whole_word", True))
+            flags = 0 if term.get("case_sensitive", False) else re.IGNORECASE
+            if whole_word:
+                pattern_text = rf"(?<![A-Za-z0-9_]){re.escape(source)}(?![A-Za-z0-9_])"
+            else:
+                pattern_text = re.escape(source)
+            pattern = re.compile(pattern_text, flags)
+            updated = pattern.sub(lambda _match, value=target: next_token(value), updated)
+
+        return updated
 
 
 class SQLiteTranslationCache:
@@ -480,7 +541,7 @@ def should_translate_text(text: str) -> bool:
     return True
 
 
-def protect_text(text: str) -> tuple[str, dict[str, str]]:
+def protect_text(text: str, glossary: Glossary | None = None) -> tuple[str, dict[str, str]]:
     protected: dict[str, str] = {}
     updated = text
 
@@ -491,20 +552,45 @@ def protect_text(text: str) -> tuple[str, dict[str, str]]:
 
     for pattern in PROTECT_PATTERNS:
         updated = pattern.sub(replacer, updated)
+    if glossary is not None:
+        updated = glossary.apply(updated, protected)
     return updated, protected
 
 
-def restore_text(text: str, protected: dict[str, str]) -> str:
-    restored = text
-    missing: list[str] = []
-    for token, original in protected.items():
-        if token in restored:
-            restored = restored.replace(token, original)
-            continue
-        if original not in restored:
-            missing.append(original)
+def validate_protected_tokens(text: str, protected: dict[str, str]) -> None:
+    seen = set(PROTECTED_TOKEN_RE.findall(text))
+    expected = {token.removeprefix("[[[CTI_PRESERVE_").removesuffix("]]]") for token in protected}
+    missing = sorted(expected - seen, key=int)
     if missing:
-        restored = restored.rstrip() + " " + " ".join(missing)
+        missing_tokens = ", ".join(f"[[[CTI_PRESERVE_{idx}]]]" for idx in missing[:10])
+        raise ProtectedTokenError(f"translation dropped protected token(s): {missing_tokens}")
+
+
+def count_protected_fragments(text: str) -> list[int]:
+    return [len(pattern.findall(text)) for pattern in PROTECT_PATTERNS]
+
+
+def validate_protected_fragment_counts(source: str, translated: str) -> None:
+    if CORRUPTED_PLACEHOLDER_RE.search(translated):
+        raise ProtectedTokenError("translated text contains corrupted protected placeholder text")
+    source_counts = count_protected_fragments(source)
+    translated_counts = count_protected_fragments(translated)
+    if source_counts != translated_counts:
+        details = ", ".join(
+            f"{pattern.pattern}: {src}!={dst}"
+            for pattern, src, dst in zip(PROTECT_PATTERNS, source_counts, translated_counts)
+            if src != dst
+        )
+        raise ProtectedTokenError(f"protected fragment count mismatch after restore: {details}")
+
+
+def restore_text(text: str, protected: dict[str, str], source_text: str | None = None) -> str:
+    validate_protected_tokens(text, protected)
+    restored = text
+    for token, original in protected.items():
+        restored = restored.replace(token, original)
+    if source_text is not None:
+        validate_protected_fragment_counts(source_text, restored)
     return restored
 
 
@@ -576,6 +662,18 @@ def has_existing_suffix_translation(
         return bool(translated) and translated != source
 
     return False
+
+
+def strip_suffix_fields(node: Any, suffix: str) -> None:
+    if isinstance(node, dict):
+        for key in list(node):
+            if isinstance(key, str) and key.endswith(suffix):
+                del node[key]
+            else:
+                strip_suffix_fields(node[key], suffix)
+    elif isinstance(node, list):
+        for item in node:
+            strip_suffix_fields(item, suffix)
 
 
 def ensure_parent(path: Path) -> None:
@@ -662,6 +760,14 @@ def parse_args() -> argparse.Namespace:
         help=(
             "Optional provider names to reuse cached translations from "
             "(e.g. google_public google_cloud)."
+        ),
+    )
+    parser.add_argument(
+        "--glossary",
+        default="data/glossary_fa.json",
+        help=(
+            "Editable Persian glossary JSON. Existing path is applied before "
+            "machine translation through protected placeholders (default: data/glossary_fa.json)."
         ),
     )
     parser.add_argument(
@@ -782,6 +888,16 @@ def parse_args() -> argparse.Namespace:
             "skip files that already contain *_fa values."
         ),
     )
+    parser.add_argument(
+        "--cache-only",
+        action="store_true",
+        help="Use only cached translations and do not call a machine translation provider.",
+    )
+    parser.add_argument(
+        "--strip-existing-suffixes",
+        action="store_true",
+        help="Remove existing *_fa fields from source JSON before applying suffix translations.",
+    )
     return parser.parse_args()
 
 
@@ -829,6 +945,7 @@ def main() -> int:
 
     matcher = PathMatcher(args.paths)
     cache = SQLiteTranslationCache(Path(args.cache_db).resolve())
+    glossary = Glossary.from_path((source_root / args.glossary).resolve())
 
     try:
         files = collect_files(source_root, args.datasets)
@@ -845,9 +962,16 @@ def main() -> int:
             print(f"[info] output root: {output_root}")
         print(f"[info] files to process: {len(files)}")
         print(f"[info] provider: {translator.name}")
+        if args.cache_only:
+            print("[info] cache-only: enabled")
         if args.cache_provider_fallbacks:
             print(f"[info] cache fallbacks: {', '.join(args.cache_provider_fallbacks)}")
         print(f"[info] mode: {args.mode}")
+        if glossary.terms or glossary.protected_terms:
+            print(
+                f"[info] glossary: {args.glossary} "
+                f"({len(glossary.terms)} terms, {len(glossary.protected_terms)} protected terms)"
+            )
 
         translated_text_count = 0
         cache_hit_count = 0
@@ -855,6 +979,7 @@ def main() -> int:
         failed_file_count = 0
         skipped_file_count = 0
         failed_translation_count = 0
+        rejected_cache_count = 0
         memory_cache: dict[str, str] = {}
         start_time = time.time()
         last_progress_print = start_time
@@ -878,6 +1003,7 @@ def main() -> int:
                 f"cache hits: {cache_hit_count}",
                 f"translated strings: {translated_text_count}",
                 f"translation errors: {failed_translation_count}",
+                f"rejected cache: {rejected_cache_count}",
                 f"rate: {rate:.2f} files/s",
             ]
             if current_file:
@@ -903,6 +1029,8 @@ def main() -> int:
                 failed_file_count += 1
                 print(f"[warn] skip invalid JSON {rel_path}: {exc}", file=sys.stderr)
                 continue
+            if args.strip_existing_suffixes:
+                strip_suffix_fields(data, args.fa_suffix)
 
             targets = [
                 (container, key, target_path, value, parent, parent_key)
@@ -939,7 +1067,7 @@ def main() -> int:
             for _, _, _, source_value, _, _ in targets:
                 if source_value in unique_prepared:
                     continue
-                masked, protected = protect_text(source_value)
+                masked, protected = protect_text(source_value, glossary=glossary)
                 unique_prepared[source_value] = (masked, protected)
 
             translation_results: dict[str, str] = {}
@@ -947,6 +1075,7 @@ def main() -> int:
             promoted_pairs: list[tuple[str, str]] = []
             for source_value, (_, _) in unique_prepared.items():
                 cached = memory_cache.get(source_value)
+                should_promote_cached = False
                 if cached is None:
                     cached = cache.get(
                         provider=translator.name,
@@ -965,12 +1094,20 @@ def main() -> int:
                             source_text=source_value,
                         )
                         if cached is not None:
-                            promoted_pairs.append((source_value, cached))
+                            should_promote_cached = True
                             break
+                if cached is not None:
+                    try:
+                        validate_protected_fragment_counts(source_value, cached)
+                    except ProtectedTokenError:
+                        rejected_cache_count += 1
+                        cached = None
                 if cached is not None:
                     translation_results[source_value] = cached
                     cache_hit_count += 1
                     memory_cache[source_value] = cached
+                    if should_promote_cached:
+                        promoted_pairs.append((source_value, cached))
                 else:
                     missing_sources.append(source_value)
 
@@ -982,7 +1119,9 @@ def main() -> int:
                     pairs=promoted_pairs,
                 )
 
-            if missing_sources and not args.dry_run:
+            if missing_sources and args.cache_only:
+                failed_translation_count += len(missing_sources)
+            elif missing_sources and not args.dry_run:
                 translated_pairs: list[tuple[str, str]] = []
 
                 if isinstance(translator, GoogleCloudTranslator):
@@ -1012,7 +1151,19 @@ def main() -> int:
 
                         for source_value, translated_masked in zip(batch, translated_batch):
                             protected = unique_prepared[source_value][1]
-                            translated = restore_text(translated_masked, protected)
+                            try:
+                                translated = restore_text(
+                                    translated_masked,
+                                    protected,
+                                    source_text=source_value,
+                                )
+                            except ProtectedTokenError as exc:
+                                failed_translation_count += 1
+                                print(
+                                    f"[warn] rejected translation with protected-token mismatch in {rel_path}: {exc}",
+                                    file=sys.stderr,
+                                )
+                                continue
                             translation_results[source_value] = translated
                             translated_pairs.append((source_value, translated))
                         if args.progress_seconds > 0 and time.time() - last_progress_print >= args.progress_seconds:
@@ -1033,7 +1184,11 @@ def main() -> int:
                             jitter_seconds=args.jitter,
                         )
                         protected = unique_prepared[source_value][1]
-                        return source_value, restore_text(translated_masked, protected)
+                        return source_value, restore_text(
+                            translated_masked,
+                            protected,
+                            source_text=source_value,
+                        )
 
                     with concurrent.futures.ThreadPoolExecutor(
                         max_workers=max(1, args.workers)
@@ -1069,7 +1224,11 @@ def main() -> int:
                         masked = unique_prepared[source_value][0]
                         translated_masked = translator.translate_text(masked)
                         protected = unique_prepared[source_value][1]
-                        return source_value, restore_text(translated_masked, protected)
+                        return source_value, restore_text(
+                            translated_masked,
+                            protected,
+                            source_text=source_value,
+                        )
 
                     with concurrent.futures.ThreadPoolExecutor(
                         max_workers=max(1, args.workers)
@@ -1184,6 +1343,7 @@ def main() -> int:
         print(f"cache hits: {cache_hit_count}")
         print(f"skipped existing files: {skipped_file_count}")
         print(f"failed translations: {failed_translation_count}")
+        print(f"rejected cache hits: {rejected_cache_count}")
         print(f"failed files: {failed_file_count}")
         return 0
     finally:
