@@ -16,6 +16,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from translate_cti_to_persian import (  # noqa: E402
+    CORRUPTED_PLACEHOLDER_RE,
     DEFAULT_DATASETS,
     DEFAULT_TRANSLATABLE_PATHS,
     PROTECT_PATTERNS,
@@ -23,10 +24,11 @@ from translate_cti_to_persian import (  # noqa: E402
     PathMatcher,
     should_translate_text,
 )
+from fa_text import is_severe, load_glossary_payload, load_term_rules, quality_issues  # noqa: E402
 
 
 PERSIAN_RE = re.compile(r"[\u0600-\u06FF]")
-CORRUPTED_PLACEHOLDER_RE = re.compile(r"CTI[_\s-]*PRESERVE|\[\[\s*ویرایش|\[\[\[")
+DEFAULT_KEEP_ENGLISH_NAME_TYPES = ["intrusion-set", "malware", "tool", "campaign"]
 URL_RE = re.compile(r"https?://[^\s)]+", re.IGNORECASE)
 ATTACK_ID_RE = re.compile(r"\b(?:TA|T|S|G|M|DS|D|C)\d{3,5}(?:\.\d{3})?\b")
 MARKERS = {
@@ -167,6 +169,19 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-nonpersian-fa", type=int, default=1_000_000)
     parser.add_argument("--max-identical-fa", type=int, default=1_000_000)
     parser.add_argument("--min-coverage", type=float, default=0.0, help="Minimum overall named-object coverage percentage.")
+    parser.add_argument("--glossary", default="data/glossary_fa.json", help="Glossary with fa_fixes/check rules.")
+    parser.add_argument(
+        "--max-severe-quality",
+        type=int,
+        default=1_000_000,
+        help="Fail when more fields than this show hallucination/repetition/wiki markup/length-ratio issues.",
+    )
+    parser.add_argument(
+        "--keep-english-name-types",
+        nargs="*",
+        default=DEFAULT_KEEP_ENGLISH_NAME_TYPES,
+        help="Object types whose name_fa intentionally equals the English name (counted as healthy).",
+    )
     parser.add_argument("--examples", type=int, default=20)
     parser.add_argument("--json-output", default="", help="Optional path for machine-readable report JSON.")
     return parser.parse_args()
@@ -177,6 +192,9 @@ def main() -> int:
     source_root = Path(args.source_root).resolve()
     translated_root = Path(args.translated_root).resolve()
     matcher = PathMatcher(args.paths)
+    rules = load_term_rules(load_glossary_payload(source_root / args.glossary))
+    keep_english_types = set(args.keep_english_name_types)
+    quality_counts: Counter[str] = Counter()
 
     named_status = Counter()
     field_counts = Counter()
@@ -223,6 +241,9 @@ def main() -> int:
                 elif isinstance(name_fa, str) and name_fa.strip() and name_fa.strip() != source_name.strip() and has_persian(name_fa):
                     named_status["healthy"] += 1
                     coverage[coverage_key]["translated"] += 1
+                elif obj_type in keep_english_types and isinstance(name_fa, str) and name_fa.strip() == source_name.strip():
+                    named_status["healthy"] += 1
+                    coverage[coverage_key]["translated"] += 1
                 else:
                     named_status["untranslated"] += 1
                     coverage[coverage_key]["untranslated"] += 1
@@ -253,7 +274,8 @@ def main() -> int:
                 if candidate is None and isinstance(translated_value, str) and translated_value != source_value:
                     candidate = translated_value
 
-                if isinstance(fa_value, str):
+                kept_english = label.endswith(".name") and label.count(".") == 2 and obj_type in keep_english_types
+                if isinstance(fa_value, str) and not kept_english:
                     if fa_value.strip() == source_value.strip():
                         field_counts["identical_fa"] += 1
                         if len(examples["identical_fa"]) < args.examples:
@@ -272,6 +294,23 @@ def main() -> int:
                             examples["leftover_placeholders"].append(
                                 {"file": str(rel_path), "id": obj_id, "path": label, "value": candidate[:160]}
                             )
+                    issues = quality_issues(source_value, candidate, rules)
+                    for issue in issues:
+                        quality_counts[issue] += 1
+                        bucket = f"quality_{issue.split(':')[0]}"
+                        if len(examples[bucket]) < args.examples:
+                            examples[bucket].append(
+                                {
+                                    "file": str(rel_path),
+                                    "id": obj_id,
+                                    "path": label,
+                                    "issue": issue,
+                                    "source": source_value[:160],
+                                    "value": candidate[:200],
+                                }
+                            )
+                    if is_severe(issues):
+                        field_counts["severe_quality"] += 1
                     source_markers = marker_counts(source_value)
                     candidate_markers = marker_counts(candidate)
                     for marker_name, source_count in source_markers.items():
@@ -315,6 +354,11 @@ def main() -> int:
     print(f"  *_fa identical to source: {field_counts['identical_fa']}")
     print(f"  marker mismatches:       {field_counts['marker_mismatches']}")
     print(f"  leftover placeholders:   {field_counts['leftover_placeholders']}")
+    print(f"  severe quality issues:   {field_counts['severe_quality']}")
+    print("")
+    print("Translation quality (see docs/TRANSLATION_PIPELINE.md)")
+    for issue, count in sorted(quality_counts.items(), key=lambda kv: (-kv[1], kv[0])):
+        print(f"  {issue:40} {count}")
     print("")
     print("Coverage by dataset/type")
     for (dataset, obj_type), counts in sorted(coverage.items()):
@@ -334,6 +378,12 @@ def main() -> int:
         "leftover_placeholders",
         "nonpersian_fa",
         "identical_fa",
+        "quality_hallucination",
+        "quality_wiki_markup",
+        "quality_repetition",
+        "quality_length_ratio",
+        "quality_mostly_english",
+        "quality_glossary_miss",
     ]:
         if examples[name]:
             print("")
@@ -345,6 +395,7 @@ def main() -> int:
         "named_status": dict(named_status),
         "coverage_percent": coverage_percent,
         "field_counts": dict(field_counts),
+        "quality_counts": dict(quality_counts),
         "coverage": [
             {
                 "dataset": dataset,
@@ -370,6 +421,7 @@ def main() -> int:
     failed |= field_counts["nonpersian_fa"] > args.max_nonpersian_fa
     failed |= field_counts["identical_fa"] > args.max_identical_fa
     failed |= coverage_percent < args.min_coverage
+    failed |= field_counts["severe_quality"] > args.max_severe_quality
     return 1 if failed else 0
 
 

@@ -27,7 +27,19 @@ import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
-from typing import Any, Iterator, Sequence
+from typing import Any, Callable, Iterator, Sequence
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from fa_text import (  # noqa: E402
+    is_severe,
+    load_glossary_payload,
+    load_term_rules,
+    postprocess,
+    quality_issues,
+)
 
 
 DEFAULT_DATASETS = [
@@ -42,7 +54,8 @@ DEFAULT_DATASETS = [
 DEFAULT_TRANSLATABLE_PATHS = [
     "objects[].name",
     "objects[].description",
-    "objects[].external_references[].source_name",
+    # external_references[].source_name is a citation key matched by
+    # "(Citation: <source_name>)" in descriptions; it must stay English.
     "objects[].external_references[].description",
     "objects[].x_mitre_detection",
     "objects[].x_mitre_mutable_elements[].description",
@@ -76,8 +89,73 @@ PROTECT_PATTERNS = [
     re.compile(r"\b(?:TA|T|S|G|M|DS|D|C)\d{3,5}(?:\.\d{3})?\b"),
 ]
 
-PROTECTED_TOKEN_RE = re.compile(r"\[\[\[CTI_PRESERVE_(\d+)]]]")
-CORRUPTED_PLACEHOLDER_RE = re.compile(r"CTI[_\s-]*PRESERVE|\[\[\s*ویرایش|\[\[\[")
+# Extra spans that are masked before MT but are NOT part of the fragment-count
+# validation above (so existing cache entries are not mass-rejected). MT engines
+# routinely mangle these: markdown links (link text + URL), registry keys,
+# file-system paths and file names.
+MARKDOWN_LINK_RE = re.compile(r"\[[^\]\n]+\]\([^)\s]+\)")
+EXTRA_MASK_PATTERNS = [
+    re.compile(r"\b(?:HKLM|HKCU|HKCR|HKU|HKCC|HKEY_[A-Z_]+)\\[^\s,;)\"'<]*"),
+    re.compile(r"(?:\b[A-Za-z]:|%[A-Za-z_]+%)\\[^\s,;)\"'<]*"),
+    re.compile(r"(?<![\w/~])(?:~|/(?:etc|usr|var|tmp|bin|sbin|Library|System|Users|home|dev|proc|opt|private|Applications))/[^\s,;)\"'<]*"),
+    re.compile(
+        r"(?<![\w.-])[\w-]+(?:\.[\w-]+)*\.(?:exe|dll|sys|ps1|psm1|bat|cmd|vbs|vbe|js|jse|hta|lnk|msi|scr|cpl|ocx|"
+        r"plist|sh|py|so|dylib|apk|ipa|jar|docm|xlsm|dotm|iso|img|vhdx?|chm|wsf|reg|inf)\b",
+        re.IGNORECASE,
+    ),
+]
+
+CORRUPTED_PLACEHOLDER_RE = re.compile(
+    r"CTI[_\s-]*PRESERVE|\[\[\s*ویرایش|\[\[\s*رده|\[\[\[|ZQX[A-J]+|<\s*x\s+id\s*="
+)
+
+GLOSSARY_STRATEGIES = ("post", "placeholder", "inline")
+
+
+class PlaceholderStyle:
+    """How protected spans are represented in the text sent to MT.
+
+    legacy: [[[CTI_PRESERVE_3]]]  - looks like wiki markup; Google often rewrites
+            it as [[رده:...]] and then hallucinates encyclopedia/religious text.
+    caps:   ZQXD                  - an acronym-like Latin token (digits as A-J),
+            no brackets and no digits for MT to localize.
+    tag:    <x id="3"/>           - XML-ish tag; best with Cloud API format=html.
+    """
+
+    DIGITS = "ABCDEFGHIJ"
+
+    def __init__(self, name: str) -> None:
+        if name not in ("legacy", "caps", "tag"):
+            raise ValueError(f"unknown placeholder style: {name}")
+        self.name = name
+        if name == "legacy":
+            self.regex = re.compile(r"\[\[\[\s*CTI_PRESERVE_(\d+)\s*]]]")
+        elif name == "caps":
+            self.regex = re.compile(r"ZQX([A-J]+)", re.IGNORECASE)
+        else:
+            self.regex = re.compile(r"<\s*x\s+id\s*=\s*[\"'«»]?\s*([0-9۰-۹٠-٩]+)\s*[\"'«»]?\s*/?\s*>")
+
+    def token(self, idx: int) -> str:
+        if self.name == "legacy":
+            return f"[[[CTI_PRESERVE_{idx}]]]"
+        if self.name == "caps":
+            return "ZQX" + "".join(self.DIGITS[int(ch)] for ch in str(idx))
+        return f'<x id="{idx}"/>'
+
+    def parse_index(self, match: re.Match[str]) -> int:
+        raw = match.group(1)
+        if self.name == "caps":
+            return int("".join(str(self.DIGITS.index(ch)) for ch in raw.upper()))
+        raw = raw.translate(str.maketrans("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩", "01234567890123456789"))
+        return int(raw)
+
+    def canonicalize(self, text: str) -> str:
+        """Rewrite slightly mangled tokens (spaces, Persian digits) to canonical form."""
+        return self.regex.sub(lambda m: self.token(self.parse_index(m)), text)
+
+
+LEGACY_STYLE = PlaceholderStyle("legacy")
+PROTECTED_TOKEN_RE = LEGACY_STYLE.regex  # backward compatible name
 
 
 class TranslationError(RuntimeError):
@@ -88,10 +166,88 @@ class ProtectedTokenError(TranslationError):
     """Raised when a translation drops or changes protected placeholders."""
 
 
+class QualityError(TranslationError):
+    """Raised when a translation shows hallucination / repetition / broken markup."""
+
+
+class SegmentMismatch(TranslationError):
+    """Raised when MT does not return the same number of lines that were sent."""
+
+
+def _word_alternation(words: Sequence[str], flags: int = 0) -> re.Pattern[str] | None:
+    words = sorted({w for w in words if w}, key=len, reverse=True)
+    if not words:
+        return None
+    body = "|".join(re.escape(w) for w in words)
+    return re.compile(rf"(?<![A-Za-z0-9_])(?:{body})(?![A-Za-z0-9_])", flags)
+
+
 class Glossary:
-    def __init__(self, terms: Sequence[dict[str, Any]], protected_terms: Sequence[str]) -> None:
+    def __init__(
+        self,
+        terms: Sequence[dict[str, Any]],
+        protected_terms: Sequence[str],
+        payload: dict[str, Any] | None = None,
+    ) -> None:
         self.terms = list(terms)
         self.protected_terms = list(protected_terms)
+        self.payload = payload or {"terms": self.terms, "protected_terms": self.protected_terms}
+        self.rules = load_term_rules(self.payload)
+        self._compile()
+
+    _TOKEN_RE = re.compile(r"[\w.+#-]+")
+
+    def _compile(self) -> None:
+        # Index protected terms by their first token so each text only runs the
+        # handful of patterns whose first word actually occurs in it.
+        self._protected_index: dict[str, list[str]] = {}
+        for term in self.protected_terms:
+            tokens = self._TOKEN_RE.findall(term)
+            if tokens:
+                self._protected_index.setdefault(tokens[0].rstrip("."), []).append(term)
+        self._pattern_cache: dict[tuple[str, ...], re.Pattern[str] | None] = {}
+        # Only plain glossary entries (no fa_fixes) are used for pre-MT
+        # substitution; fa_fixes entries are post-edit rules.
+        self._term_patterns: list[tuple[re.Pattern[str], str]] = []
+        for term in self.terms:
+            source = term.get("source")
+            target = term.get("target")
+            if not isinstance(source, str) or not isinstance(target, str) or not source or not target:
+                continue
+            if "fa_fixes" in term and not term.get("inline", False):
+                continue
+            whole_word = bool(term.get("whole_word", True))
+            flags = 0 if term.get("case_sensitive", False) else re.IGNORECASE
+            if whole_word:
+                pattern_text = rf"(?<![A-Za-z0-9_]){re.escape(source)}(?![A-Za-z0-9_])"
+            else:
+                pattern_text = re.escape(source)
+            self._term_patterns.append((re.compile(pattern_text, flags), target))
+        # Longest source first so "Intrusion Set" wins over "Set".
+        self._term_patterns.sort(key=lambda item: -len(item[0].pattern))
+
+    def _protected_pattern_for(self, text: str) -> re.Pattern[str] | None:
+        present: set[str] = set()
+        for token in self._TOKEN_RE.findall(text):
+            present.add(token)
+            present.add(token.rstrip("."))
+        candidates = tuple(
+            sorted({term for tok in present for term in self._protected_index.get(tok, ())}, key=len, reverse=True)
+        )
+        if not candidates:
+            return None
+        if candidates not in self._pattern_cache:
+            if len(self._pattern_cache) > 50_000:
+                self._pattern_cache.clear()
+            self._pattern_cache[candidates] = _word_alternation(candidates)
+        return self._pattern_cache[candidates]
+
+    def add_protected_terms(self, extra: Sequence[str]) -> int:
+        before = len(self.protected_terms)
+        known = set(self.protected_terms)
+        self.protected_terms.extend(term for term in extra if term not in known)
+        self._compile()
+        return len(self.protected_terms) - before
 
     @classmethod
     def from_path(cls, path: Path) -> "Glossary":
@@ -105,6 +261,7 @@ class Glossary:
         return cls(
             terms=[term for term in terms if isinstance(term, dict)],
             protected_terms=[term for term in protected_terms if isinstance(term, str)],
+            payload=payload,
         )
 
     def apply(
@@ -112,34 +269,250 @@ class Glossary:
         text: str,
         protected: dict[str, str],
         token_prefix: str = "CTI_PRESERVE",
+        strategy: str = "placeholder",
+        style: PlaceholderStyle | None = None,
     ) -> str:
+        style = style or LEGACY_STYLE
         updated = text
 
         def next_token(value: str) -> str:
-            token = f"[[[{token_prefix}_{len(protected)}]]]"
+            if style is LEGACY_STYLE and token_prefix != "CTI_PRESERVE":
+                token = f"[[[{token_prefix}_{len(protected)}]]]"
+            else:
+                token = style.token(len(protected))
             protected[token] = value
             return token
 
-        protected_terms = sorted(self.protected_terms, key=len, reverse=True)
-        for term in protected_terms:
-            pattern = re.compile(rf"(?<![A-Za-z0-9_]){re.escape(term)}(?![A-Za-z0-9_])")
-            updated = pattern.sub(lambda match: next_token(match.group(0)), updated)
+        protected_re = self._protected_pattern_for(updated)
+        if protected_re is not None:
+            updated = protected_re.sub(lambda match: next_token(match.group(0)), updated)
 
-        for term in self.terms:
-            source = term.get("source")
-            target = term.get("target")
-            if not isinstance(source, str) or not isinstance(target, str) or not source or not target:
-                continue
-            whole_word = bool(term.get("whole_word", True))
-            flags = 0 if term.get("case_sensitive", False) else re.IGNORECASE
-            if whole_word:
-                pattern_text = rf"(?<![A-Za-z0-9_]){re.escape(source)}(?![A-Za-z0-9_])"
+        if strategy == "post":
+            return updated
+        for pattern, target in self._term_patterns:
+            if strategy == "inline":
+                updated = pattern.sub(lambda _match, value=target: value, updated)
             else:
-                pattern_text = re.escape(source)
-            pattern = re.compile(pattern_text, flags)
-            updated = pattern.sub(lambda _match, value=target: next_token(value), updated)
-
+                updated = pattern.sub(lambda _match, value=target: next_token(value), updated)
         return updated
+
+
+class NameOverrides:
+    """Human/LLM-reviewed translations of object names (data/overrides_fa.json).
+
+    - names[type][English] = Persian: exact name translations, highest priority
+      (above the MT cache), never post-edited.
+    - templates: regex patterns for generated names, e.g.
+      "Detection of <technique name>"; a template applies only when every
+      captured group named t* can itself be translated from the names table
+      (so no half-English results).
+    - "Parent: Sub" combinations are resolved part by part.
+    The flattened table is also used to localize the visible text of ATT&CK
+    markdown links inside descriptions.
+    """
+
+    def __init__(self, payload: dict[str, Any] | None = None) -> None:
+        payload = payload or {}
+        self.by_type: dict[str, dict[str, str]] = {
+            t: {k: v for k, v in names.items() if isinstance(v, str) and v.strip()}
+            for t, names in (payload.get("names") or {}).items()
+            if isinstance(names, dict)
+        }
+        self.flat: dict[str, str] = {}
+        for names in self.by_type.values():
+            for en, fa in names.items():
+                self.flat.setdefault(en, fa)
+        self.templates: list[tuple[set[str], re.Pattern[str], str]] = []
+        for tpl in payload.get("templates") or []:
+            if isinstance(tpl, dict) and tpl.get("pattern") and tpl.get("target"):
+                self.templates.append((set(tpl.get("types") or []), re.compile(tpl["pattern"]), tpl["target"]))
+        self.localize_links = bool(payload.get("localize_link_text", True))
+        # paragraphs[English paragraph] = Persian paragraph (descriptions are
+        # split on blank lines; only matching paragraphs are replaced).
+        self.paragraphs: dict[str, str] = {
+            k: v for k, v in (payload.get("paragraphs") or {}).items() if isinstance(v, str) and v.strip()
+        }
+
+    @classmethod
+    def from_path(cls, path: Path) -> "NameOverrides":
+        if not path.exists():
+            return cls()
+        return cls(json.loads(path.read_text(encoding="utf-8")))
+
+    def __bool__(self) -> bool:
+        return bool(self.flat or self.templates or self.paragraphs)
+
+    _PARA_SPLIT = re.compile(r"(\n\s*\n)")
+
+    def apply_paragraphs(self, source: str, translated: str | None) -> str | None:
+        """Replace MT paragraphs with reviewed ones where available.
+
+        Works when MT kept the paragraph structure (same number of blank-line
+        separated blocks) or when every source paragraph has an override.
+        Returns None when nothing can be produced.
+        """
+        if not self.paragraphs:
+            return translated
+        src_parts = self._PARA_SPLIT.split(source)
+        src_paras = src_parts[0::2]
+        if not any(p.strip() in self.paragraphs for p in src_paras):
+            return translated
+        if all(p.strip() in self.paragraphs or not p.strip() for p in src_paras):
+            return "".join(self.paragraphs.get(part.strip(), part) if i % 2 == 0 else part for i, part in enumerate(src_parts))
+        if translated is None:
+            return None
+        fa_parts = self._PARA_SPLIT.split(translated)
+        if len(fa_parts) != len(src_parts):
+            return translated
+        replaced = False
+        for i in range(0, len(src_parts), 2):
+            key = src_parts[i].strip()
+            if key in self.paragraphs:
+                lead = fa_parts[i][: len(fa_parts[i]) - len(fa_parts[i].lstrip())]
+                fa_parts[i] = lead + self.paragraphs[key]
+                replaced = True
+        if replaced:
+            # MT output sometimes moves citations/URLs/code it lost mid-text to the very
+            # end. Once the paragraphs they came from are replaced by reviewed
+            # text, that tail duplicates them; keep only what is still missing
+            # relative to the whole source text.
+            for i in range(0, len(src_parts), 2):
+                if src_parts[i].strip() not in self.paragraphs:
+                    self._trim_marker_tail(fa_parts, i, source)
+        return "".join(fa_parts)
+
+    _TOKEN_PATTERN = r"\(Citation:[^)]*\)|https?://[^\s)\]]+|<code>.*?</code>|`[^`\n]+`"
+    _TAIL_RE = re.compile(r"(?:\s*(?:" + _TOKEN_PATTERN + r"))+\s*$")
+    _TOKEN_RE = re.compile(_TOKEN_PATTERN)
+
+    @classmethod
+    def _trim_marker_tail(cls, fa_parts: list[str], i: int, source: str) -> None:
+        m = cls._TAIL_RE.search(fa_parts[i])
+        if not m:
+            return
+        head = fa_parts[i][: m.start()]
+        tail = m.group(0)
+        first_sep = tail[: len(tail) - len(tail.lstrip())]
+        trailing_ws = tail[len(tail.rstrip()):]
+        before = "".join(fa_parts[:i])
+        after = "".join(fa_parts[i + 1 :])
+        kept: list[str] = []
+        for token in cls._TOKEN_RE.findall(tail):
+            current = before + head + " ".join(kept) + after
+            if current.count(token) < source.count(token):
+                kept.append(token)
+        fa_parts[i] = head + (first_sep + " ".join(kept) if kept else "") + trailing_ws
+
+    def lookup_name(self, name: str) -> str | None:
+        name = name.strip()
+        if name in self.flat:
+            return self.flat[name]
+        if ": " in name:
+            parts = [part.strip() for part in name.split(": ")]
+            translated = [self.flat.get(part) for part in parts]
+            if all(translated):
+                return ": ".join(translated)  # type: ignore[arg-type]
+        return None
+
+    def for_object(self, obj_type: str, name: str) -> str | None:
+        exact = self.by_type.get(obj_type, {}).get(name)
+        if exact:
+            return exact
+        for types, pattern, target in self.templates:
+            if types and obj_type not in types:
+                continue
+            m = pattern.match(name)
+            if not m:
+                continue
+            values: dict[str, str] = {}
+            ok = True
+            for group, value in m.groupdict().items():
+                if group.startswith("t"):
+                    fa = self.lookup_name(value)
+                    if fa is None:
+                        ok = False
+                        break
+                    values[group] = fa
+                else:
+                    values[group] = value
+            if ok:
+                return target.format(**values)
+        return None
+
+    def link_map(self) -> "_LinkMap":
+        return _LinkMap(self)
+
+
+class _LinkMap(dict):
+    """dict-like view used by fa_text.postprocess for markdown link text."""
+
+    def __init__(self, overrides: NameOverrides) -> None:
+        super().__init__()
+        self._o = overrides
+
+    def __contains__(self, key: object) -> bool:
+        return isinstance(key, str) and self._o.lookup_name(key) is not None
+
+    def __getitem__(self, key: str) -> str:
+        value = self._o.lookup_name(key)
+        if value is None:
+            raise KeyError(key)
+        return value
+
+    def __bool__(self) -> bool:
+        return bool(self._o.flat)
+
+
+def build_stix_name_terms(
+    source_root: Path,
+    datasets: Sequence[str],
+    types: Sequence[str] = ("intrusion-set", "malware", "tool", "campaign"),
+    common_word_threshold: int = 15,
+    exclude: Sequence[str] = (),
+) -> list[str]:
+    """Names and aliases of groups/software/campaigns, to keep them in English.
+
+    Single-word names that also occur as ordinary lowercase words in the corpus
+    (e.g. the tools "at", "ping", "net") are skipped, because masking them would
+    also mask the ordinary word.
+    """
+    bundles: list[Path] = []
+    for dataset in datasets:
+        root = source_root / dataset
+        if (root / f"{dataset}.json").exists():
+            bundles.append(root / f"{dataset}.json")
+        bundles.extend(sorted(root.glob("*/stix-capec.json")))
+    names: set[str] = set()
+    lowercase_counts: dict[str, int] = {}
+    word_re = re.compile(r"[a-z][a-z0-9-]+")
+    for bundle in bundles:
+        try:
+            objects = json.loads(bundle.read_text(encoding="utf-8")).get("objects", [])
+        except Exception:  # noqa: BLE001
+            continue
+        for obj in objects:
+            if not isinstance(obj, dict):
+                continue
+            desc = obj.get("description")
+            if isinstance(desc, str):
+                for word in word_re.findall(desc):
+                    lowercase_counts[word] = lowercase_counts.get(word, 0) + 1
+            if obj.get("type") not in types:
+                continue
+            for value in [obj.get("name"), *(obj.get("aliases") or []), *(obj.get("x_mitre_aliases") or [])]:
+                if isinstance(value, str) and len(value.strip()) >= 3:
+                    names.add(value.strip())
+    excluded = set(exclude)
+    result = []
+    for name in names:
+        if name in excluded:
+            continue
+        if " " not in name and lowercase_counts.get(name.lower(), 0) >= common_word_threshold:
+            continue
+        if not re.search(r"[A-Za-z]", name):
+            continue
+        result.append(name)
+    return sorted(result, key=len, reverse=True)
 
 
 class SQLiteTranslationCache:
@@ -541,29 +914,60 @@ def should_translate_text(text: str) -> bool:
     return True
 
 
-def protect_text(text: str, glossary: Glossary | None = None) -> tuple[str, dict[str, str]]:
+CAPS_STYLE = PlaceholderStyle("caps")
+TAG_STYLE = PlaceholderStyle("tag")
+STYLES = {"legacy": LEGACY_STYLE, "caps": CAPS_STYLE, "tag": TAG_STYLE}
+
+
+def _detect_style(protected: dict[str, str]) -> PlaceholderStyle:
+    first = next(iter(protected), "")
+    if first.startswith("ZQX"):
+        return CAPS_STYLE
+    if first.startswith("<x"):
+        return TAG_STYLE
+    return LEGACY_STYLE
+
+
+def protect_text(
+    text: str,
+    glossary: Glossary | None = None,
+    strategy: str = "placeholder",
+    style: PlaceholderStyle | None = None,
+    mask_extras: bool = False,
+) -> tuple[str, dict[str, str]]:
+    style = style or LEGACY_STYLE
     protected: dict[str, str] = {}
     updated = text
 
     def replacer(match: re.Match[str]) -> str:
-        token = f"[[[CTI_PRESERVE_{len(protected)}]]]"
+        token = style.token(len(protected))
         protected[token] = match.group(0)
         return token
 
-    for pattern in PROTECT_PATTERNS:
+    patterns: list[re.Pattern[str]] = list(PROTECT_PATTERNS[:2])  # code, citations
+    if mask_extras:
+        patterns.append(MARKDOWN_LINK_RE)  # whole link before its URL
+    patterns.extend(PROTECT_PATTERNS[2:])
+    if mask_extras:
+        patterns.extend(EXTRA_MASK_PATTERNS)
+    for pattern in patterns:
         updated = pattern.sub(replacer, updated)
     if glossary is not None:
-        updated = glossary.apply(updated, protected)
+        updated = glossary.apply(updated, protected, strategy=strategy, style=style)
     return updated, protected
 
 
-def validate_protected_tokens(text: str, protected: dict[str, str]) -> None:
-    seen = set(PROTECTED_TOKEN_RE.findall(text))
-    expected = {token.removeprefix("[[[CTI_PRESERVE_").removesuffix("]]]") for token in protected}
-    missing = sorted(expected - seen, key=int)
+def validate_protected_tokens(
+    text: str,
+    protected: dict[str, str],
+    style: PlaceholderStyle | None = None,
+) -> None:
+    style = style or _detect_style(protected)
+    canonical = style.canonicalize(text)
+    seen = {m.group(0) for m in style.regex.finditer(canonical)}
+    missing = [token for token in protected if token not in seen]
     if missing:
-        missing_tokens = ", ".join(f"[[[CTI_PRESERVE_{idx}]]]" for idx in missing[:10])
-        raise ProtectedTokenError(f"translation dropped protected token(s): {missing_tokens}")
+        raise ProtectedTokenError(f"translation dropped protected token(s): {', '.join(missing[:10])}")
 
 
 def count_protected_fragments(text: str) -> list[int]:
@@ -584,14 +988,151 @@ def validate_protected_fragment_counts(source: str, translated: str) -> None:
         raise ProtectedTokenError(f"protected fragment count mismatch after restore: {details}")
 
 
-def restore_text(text: str, protected: dict[str, str], source_text: str | None = None) -> str:
-    validate_protected_tokens(text, protected)
-    restored = text
-    for token, original in protected.items():
-        restored = restored.replace(token, original)
+def restore_text(
+    text: str,
+    protected: dict[str, str],
+    source_text: str | None = None,
+    style: PlaceholderStyle | None = None,
+) -> str:
+    style = style or _detect_style(protected)
+    canonical = style.canonicalize(text)
+    validate_protected_tokens(canonical, protected, style=style)
+    # Regex-based replacement: plain str.replace would corrupt ZQXBA (10) when
+    # replacing ZQXB (1) first.
+    restored = style.regex.sub(
+        lambda m: protected.get(style.token(style.parse_index(m)), m.group(0)),
+        canonical,
+    )
     if source_text is not None:
         validate_protected_fragment_counts(source_text, restored)
     return restored
+
+
+# ---------------------------------------------------------------------------
+# Segmented translation: peel citation runs off sentence ends
+# ---------------------------------------------------------------------------
+#
+# ATT&CK text looks like "Sentence one.(Citation: A)(Citation: B) Sentence two."
+# Sending those placeholders through MT is what corrupts them. Instead, every
+# run of placeholders that follows sentence-final punctuation is removed, the
+# remaining sentence "cores" are sent as one request (one core per line), and
+# the placeholders are put back in their original positions afterwards.
+
+_SENTENCE_END = r"[.!?:;؟؛]"
+
+
+def plan_segments(
+    masked: str,
+    style: PlaceholderStyle,
+) -> tuple[str, Callable[[str], str]] | None:
+    token_body = style.regex.pattern
+    edge_re = re.compile(rf"(?<={_SENTENCE_END})(?:[ \t]*(?:{token_body}))+")
+    pieces: list[tuple[bool, str]] = []  # (send_to_mt, text)
+    peeled = False
+    for para_idx, para in enumerate(re.split(r"(\n+)", masked)):
+        if para_idx % 2 == 1:  # newline separator
+            pieces.append((False, para))
+            continue
+        pos = 0
+        chunks: list[tuple[bool, str]] = []
+        for m in edge_re.finditer(para):
+            chunks.append((True, para[pos : m.start()]))
+            chunks.append((False, m.group(0)))
+            pos = m.end()
+            peeled = True
+        chunks.append((True, para[pos:]))
+        for send, chunk in chunks:
+            if not send:
+                pieces.append((False, chunk))
+                continue
+            lead = chunk[: len(chunk) - len(chunk.lstrip())]
+            trail = chunk[len(chunk.rstrip()) :]
+            core = chunk.strip()
+            if lead:
+                pieces.append((False, lead))
+            if core:
+                has_words = bool(re.search(r"[A-Za-z]", style.regex.sub(" ", core)))
+                pieces.append((has_words, core))
+            if trail and core:
+                pieces.append((False, trail))
+    cores = [text for send, text in pieces if send]
+    if not peeled and len(cores) <= 1:
+        return None
+    if not cores:
+        return None
+    payload = "\n".join(cores)
+
+    def rebuild(translated: str) -> str:
+        lines = translated.replace("\r\n", "\n").split("\n")
+        if len(lines) != len(cores):
+            lines = [line for line in lines if line.strip()]
+        if len(lines) != len(cores):
+            raise SegmentMismatch(f"expected {len(cores)} lines, got {len(lines)}")
+        it = iter(lines)
+        return "".join(next(it).strip() if send else text for send, text in pieces)
+
+    return payload, rebuild
+
+
+def translate_masked(
+    call: Callable[[str], str],
+    masked: str,
+    style: PlaceholderStyle,
+    enabled: bool = True,
+) -> str:
+    plan = plan_segments(masked, style) if enabled else None
+    if plan is None:
+        return call(masked)
+    payload, rebuild = plan
+    try:
+        return rebuild(call(payload))
+    except SegmentMismatch:
+        return call(masked)
+
+
+def translate_masked_batch(
+    batch_call: Callable[[Sequence[str]], list[str]],
+    masked_list: Sequence[str],
+    style: PlaceholderStyle,
+    enabled: bool = True,
+) -> list[str]:
+    plans = [plan_segments(m, style) if enabled else None for m in masked_list]
+    payloads = [plan[0] if plan else masked for plan, masked in zip(plans, masked_list)]
+    outputs = batch_call(payloads)
+    results: list[str] = [""] * len(masked_list)
+    retry: list[int] = []
+    for idx, (plan, out) in enumerate(zip(plans, outputs)):
+        if plan is None:
+            results[idx] = out
+            continue
+        try:
+            results[idx] = plan[1](out)
+        except SegmentMismatch:
+            retry.append(idx)
+    if retry:
+        for idx, out in zip(retry, batch_call([masked_list[i] for i in retry])):
+            results[idx] = out
+    return results
+
+
+class SegmentingTranslator:
+    """Wraps a provider so every call goes through translate_masked()."""
+
+    def __init__(self, inner: Any, style: PlaceholderStyle, enabled: bool = True) -> None:
+        self.inner = inner
+        self.style = style
+        self.enabled = enabled
+        self.name = inner.name
+
+    def translate_text(self, text: str) -> str:
+        return translate_masked(self.inner.translate_text, text, self.style, self.enabled)
+
+    def translate_batch(self, texts: Sequence[str]) -> list[str]:
+        return translate_masked_batch(self.inner.translate_batch, texts, self.style, self.enabled)
+
+    def _reset_translator(self) -> None:
+        if hasattr(self.inner, "_reset_translator"):
+            self.inner._reset_translator()
 
 
 def chunked(items: Sequence[str], size: int) -> Iterator[Sequence[str]]:
@@ -898,6 +1439,86 @@ def parse_args() -> argparse.Namespace:
         action="store_true",
         help="Remove existing *_fa fields from source JSON before applying suffix translations.",
     )
+    quality = parser.add_argument_group("translation quality")
+    quality.add_argument(
+        "--glossary-strategy",
+        choices=GLOSSARY_STRATEGIES,
+        default="post",
+        help=(
+            "post (default): send plain English to MT and enforce the glossary afterwards "
+            "with source-conditional fa_fixes (no extra placeholders). "
+            "placeholder: legacy behaviour, glossary terms become placeholders carrying the "
+            "Persian target. inline: glossary targets are written into the English text "
+            "before MT. Protected terms are masked in every strategy."
+        ),
+    )
+    quality.add_argument(
+        "--placeholder-style",
+        choices=sorted(STYLES),
+        default="tag",
+        help=(
+            "Token format for protected spans (default: tag). A/B test on 120 ATT&CK "
+            "descriptions with google_public (2026-10-21): legacy 56.7%% restored intact, "
+            "caps 99.2%%, tag 100%%. Re-run scripts/ab_test_placeholders.py when switching provider."
+        ),
+    )
+    quality.add_argument(
+        "--segment",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Peel citation placeholders off sentence ends and send one sentence per line (default: on).",
+    )
+    quality.add_argument(
+        "--mask-extras",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Also mask markdown links, registry keys, paths and file names (default: on).",
+    )
+    quality.add_argument(
+        "--auto-protect-names",
+        action=argparse.BooleanOptionalAction,
+        default=None,
+        help=(
+            "Keep names/aliases of groups, software and campaigns in English "
+            "(default: glossary auto_protect_stix_names.enabled)."
+        ),
+    )
+    quality.add_argument(
+        "--postprocess",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Apply Persian normalization and glossary fa_fixes to every output value (default: on).",
+    )
+    quality.add_argument(
+        "--quality-gate",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help=(
+            "Reject cached and fresh translations with hallucination, degenerate repetition, "
+            "wiki markup or abnormal length ratio (default: on)."
+        ),
+    )
+    quality.add_argument(
+        "--overrides",
+        default="data/overrides_fa.json",
+        help=(
+            "Reviewed name translations and name templates; they take priority over MT and "
+            "the cache, and also localize ATT&CK link text (default: data/overrides_fa.json)."
+        ),
+    )
+    quality.add_argument(
+        "--link-names",
+        default="",
+        help=(
+            "Optional JSON object {English name: Persian name} used to localize the visible "
+            "text of ATT&CK markdown links in the output."
+        ),
+    )
+    quality.add_argument(
+        "--quality-report",
+        default="",
+        help="Optional JSONL path; one line per rejected translation with its issue codes.",
+    )
     return parser.parse_args()
 
 
@@ -946,6 +1567,62 @@ def main() -> int:
     matcher = PathMatcher(args.paths)
     cache = SQLiteTranslationCache(Path(args.cache_db).resolve())
     glossary = Glossary.from_path((source_root / args.glossary).resolve())
+    style = STYLES[args.placeholder_style]
+    mt = SegmentingTranslator(translator, style, enabled=args.segment)
+
+    auto_cfg = glossary.payload.get("auto_protect_stix_names", {}) if isinstance(glossary.payload, dict) else {}
+    auto_cfg = auto_cfg if isinstance(auto_cfg, dict) else {}
+    auto_protect = args.auto_protect_names if args.auto_protect_names is not None else bool(auto_cfg.get("enabled", False))
+    name_types = set(auto_cfg.get("types", ["intrusion-set", "malware", "tool", "campaign"]))
+    if auto_protect:
+        added = glossary.add_protected_terms(
+            build_stix_name_terms(
+                source_root,
+                args.datasets,
+                sorted(name_types),
+                exclude=auto_cfg.get("exclude", []),
+            )
+        )
+        print(f"[info] auto-protected STIX names: {added}")
+
+    overrides = NameOverrides.from_path((source_root / args.overrides).resolve())
+    if overrides:
+        print(f"[info] name overrides: {len(overrides.flat)} names, {len(overrides.templates)} templates")
+    link_text_map: dict[str, str] = {}
+    if args.link_names:
+        link_text_map = json.loads(Path(args.link_names).read_text(encoding="utf-8"))
+    elif overrides and overrides.localize_links:
+        link_text_map = overrides.link_map()
+    quality_report = open(args.quality_report, "a", encoding="utf-8") if args.quality_report else None
+
+    finalize_memo: dict[tuple[str, str], str] = {}
+    quality_memo: dict[tuple[str, str], list[str]] = {}
+
+    def finalize(source_value: str, translated_value: str) -> str:
+        if not args.postprocess:
+            return translated_value
+        key = (source_value, translated_value)
+        if key not in finalize_memo:
+            finalize_memo[key] = postprocess(source_value, translated_value, glossary.rules, link_text_map or None)
+        return finalize_memo[key]
+
+    def check_quality(source_value: str, translated_value: str, origin: str) -> None:
+        if not args.quality_gate:
+            return
+        key = (source_value, translated_value)
+        if key not in quality_memo:
+            quality_memo[key] = quality_issues(source_value, finalize(source_value, translated_value), glossary.rules)
+        issues = quality_memo[key]
+        if is_severe(issues):
+            if quality_report is not None:
+                quality_report.write(
+                    json.dumps(
+                        {"origin": origin, "issues": issues, "source": source_value[:300], "fa": translated_value[:300]},
+                        ensure_ascii=False,
+                    )
+                    + "\n"
+                )
+            raise QualityError(f"low-quality translation rejected ({', '.join(issues)})")
 
     try:
         files = collect_files(source_root, args.datasets)
@@ -972,6 +1649,11 @@ def main() -> int:
                 f"[info] glossary: {args.glossary} "
                 f"({len(glossary.terms)} terms, {len(glossary.protected_terms)} protected terms)"
             )
+        print(
+            f"[info] glossary strategy: {args.glossary_strategy} | placeholder style: {style.name} | "
+            f"segment: {args.segment} | mask extras: {args.mask_extras} | postprocess: {args.postprocess} | "
+            f"quality gate: {args.quality_gate}"
+        )
 
         translated_text_count = 0
         cache_hit_count = 0
@@ -1039,6 +1721,22 @@ def main() -> int:
                 )
                 if should_translate_text(value)
             ]
+            # Fixed values that never go to MT:
+            #  - names of groups/software/campaigns stay English by policy;
+            #  - reviewed name overrides (data/overrides_fa.json).
+            fixed_values: dict[int, str] = {}
+            for target in targets:
+                if target[2] != "objects[].name" or not isinstance(target[0], dict):
+                    continue
+                obj_type = str(target[0].get("type", ""))
+                if auto_protect and obj_type in name_types:
+                    fixed_values[id(target)] = target[3]
+                elif overrides:
+                    override = overrides.for_object(obj_type, target[3])
+                    if override:
+                        fixed_values[id(target)] = override
+            mt_targets = [target for target in targets if id(target) not in fixed_values]
+
             if not targets:
                 if not args.dry_run:
                     ensure_parent(dst_path)
@@ -1063,17 +1761,13 @@ def main() -> int:
                     maybe_print_progress(idx, str(rel_path))
                     continue
 
+            unique_sources = list(dict.fromkeys(target[3] for target in mt_targets))
             unique_prepared: dict[str, tuple[str, dict[str, str]]] = {}
-            for _, _, _, source_value, _, _ in targets:
-                if source_value in unique_prepared:
-                    continue
-                masked, protected = protect_text(source_value, glossary=glossary)
-                unique_prepared[source_value] = (masked, protected)
 
             translation_results: dict[str, str] = {}
             missing_sources: list[str] = []
             promoted_pairs: list[tuple[str, str]] = []
-            for source_value, (_, _) in unique_prepared.items():
+            for source_value in unique_sources:
                 cached = memory_cache.get(source_value)
                 should_promote_cached = False
                 if cached is None:
@@ -1099,7 +1793,8 @@ def main() -> int:
                 if cached is not None:
                     try:
                         validate_protected_fragment_counts(source_value, cached)
-                    except ProtectedTokenError:
+                        check_quality(source_value, cached, "cache")
+                    except (ProtectedTokenError, QualityError):
                         rejected_cache_count += 1
                         cached = None
                 if cached is not None:
@@ -1110,6 +1805,14 @@ def main() -> int:
                         promoted_pairs.append((source_value, cached))
                 else:
                     missing_sources.append(source_value)
+                    # Mask only what actually goes to MT.
+                    unique_prepared[source_value] = protect_text(
+                        source_value,
+                        glossary=glossary,
+                        strategy=args.glossary_strategy,
+                        style=style,
+                        mask_extras=args.mask_extras,
+                    )
 
             if promoted_pairs:
                 cache.put_many(
@@ -1133,7 +1836,7 @@ def main() -> int:
                         backoff = args.backoff
                         for attempt in range(1, args.max_retries + 1):
                             try:
-                                translated_batch = translator.translate_batch(masked_batch)
+                                translated_batch = mt.translate_batch(masked_batch)
                                 break
                             except Exception as exc:  # noqa: BLE001
                                 last_error = exc
@@ -1156,8 +1859,10 @@ def main() -> int:
                                     translated_masked,
                                     protected,
                                     source_text=source_value,
+                                    style=style,
                                 )
-                            except ProtectedTokenError as exc:
+                                check_quality(source_value, translated, "fresh")
+                            except (ProtectedTokenError, QualityError) as exc:
                                 failed_translation_count += 1
                                 print(
                                     f"[warn] rejected translation with protected-token mismatch in {rel_path}: {exc}",
@@ -1177,18 +1882,21 @@ def main() -> int:
                     def run_one(source_value: str) -> tuple[str, str]:
                         masked = unique_prepared[source_value][0]
                         translated_masked = translate_with_retries(
-                            translator=translator,
+                            translator=mt,
                             text=masked,
                             max_retries=args.max_retries,
                             initial_backoff=args.backoff,
                             jitter_seconds=args.jitter,
                         )
                         protected = unique_prepared[source_value][1]
-                        return source_value, restore_text(
+                        restored = restore_text(
                             translated_masked,
                             protected,
                             source_text=source_value,
+                            style=style,
                         )
+                        check_quality(source_value, restored, "fresh")
+                        return source_value, restored
 
                     with concurrent.futures.ThreadPoolExecutor(
                         max_workers=max(1, args.workers)
@@ -1222,13 +1930,16 @@ def main() -> int:
                     # Offline translation can also benefit from thread-level parallelism.
                     def run_offline(source_value: str) -> tuple[str, str]:
                         masked = unique_prepared[source_value][0]
-                        translated_masked = translator.translate_text(masked)
+                        translated_masked = mt.translate_text(masked)
                         protected = unique_prepared[source_value][1]
-                        return source_value, restore_text(
+                        restored = restore_text(
                             translated_masked,
                             protected,
                             source_text=source_value,
+                            style=style,
                         )
+                        check_quality(source_value, restored, "fresh")
+                        return source_value, restored
 
                     with concurrent.futures.ThreadPoolExecutor(
                         max_workers=max(1, args.workers)
@@ -1275,10 +1986,18 @@ def main() -> int:
 
             file_changed = False
             overlay_entries: list[dict[str, str]] = []
-            for container, key, target_path, source_value, parent, parent_key in targets:
-                translated_value = translation_results.get(source_value)
-                if not translated_value:
-                    continue
+            for target in targets:
+                container, key, target_path, source_value, parent, parent_key = target
+                if id(target) in fixed_values:
+                    translated_value = fixed_values[id(target)]
+                else:
+                    translated_value = translation_results.get(source_value)
+                    if translated_value:
+                        translated_value = finalize(source_value, translated_value)
+                    if overrides and overrides.paragraphs:
+                        translated_value = overrides.apply_paragraphs(source_value, translated_value or None)
+                    if not translated_value:
+                        continue
 
                 translated_text_count += 1
                 if args.mode == "replace":
@@ -1348,6 +2067,8 @@ def main() -> int:
         return 0
     finally:
         cache.close()
+        if quality_report is not None:
+            quality_report.close()
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "description": "Editable Persian glossary for MITRE ATT&CK / CAPEC translation. Terms are applied through protected placeholders before machine translation.",
+  "version": 2,
+  "description": "Editable Persian glossary for MITRE ATT&CK / CAPEC translation. 'terms' with only source/target are glossary entries (used by --glossary-strategy placeholder|inline). 'fa_fixes' are applied AFTER machine translation, only when the English source matches 'match' (or source) and not 'unless_source': each key is a known wrong MT rendering, value is the correct Persian. 'check': true makes validate_translations.py report outputs that miss the target. fa_fixes were derived from the existing parallel EN/FA data (see scripts/mine_glossary_candidates.py).",
   "terms": [
     {
       "source": "Adversary",
@@ -124,7 +124,7 @@
     },
     {
       "source": "Data Component",
-      "target": "مولفه داده",
+      "target": "مؤلفه داده",
       "whole_word": true,
       "case_sensitive": false
     },
@@ -136,9 +136,10 @@
     },
     {
       "source": "Analytic",
-      "target": "تحلیل‌گر",
+      "target": "تحلیل تشخیصی",
       "whole_word": true,
-      "case_sensitive": false
+      "case_sensitive": false,
+      "note": "قبلاً «تحلیل‌گر» بود که معنای analyst می‌دهد"
     },
     {
       "source": "Procedure",
@@ -160,7 +161,7 @@
     },
     {
       "source": "Privilege Escalation",
-      "target": "ارتقای دسترسی",
+      "target": "ارتقای سطح دسترسی",
       "whole_word": true,
       "case_sensitive": false
     },
@@ -229,6 +230,565 @@
       "target": "توسعه منابع",
       "whole_word": true,
       "case_sensitive": false
+    },
+    {
+      "source": "Discovery",
+      "target": "کشف",
+      "whole_word": true,
+      "case_sensitive": false
+    },
+    {
+      "source": "adversary",
+      "target": "مهاجم",
+      "match": "\\badversar(?:y|ies)\\b",
+      "fa_fixes": {
+        "دشمنان": "مهاجمان",
+        "دشمن": "مهاجم",
+        "مخالفان": "مهاجمان",
+        "حریفان": "مهاجمان",
+        "حریف": "مهاجم",
+        "دشمنانی": "مهاجمانی",
+        "مخالفانی": "مهاجمانی",
+        "دشمنانش": "مهاجمانش",
+        "دشمنی": "مهاجمی",
+        "متخاصمان": "مهاجمان",
+        "متخاصم": "مهاجم"
+      },
+      "check": true,
+      "note": "Google: دشمن/مخالف/حریف"
+    },
+    {
+      "source": "adversary (criminal)",
+      "target": "مهاجمان",
+      "match": "\\badversar(?:y|ies)\\b",
+      "unless_source": "criminal",
+      "fa_fixes": {
+        "مجرمان": "مهاجمان"
+      }
+    },
+    {
+      "source": "persistence",
+      "target": "ماندگاری",
+      "match": "\\bpersistence\\b",
+      "fa_fixes": {
+        "پایداری": "ماندگاری",
+        "پایدار": "ماندگار",
+        "تداوم": "ماندگاری",
+        "پشتکار": "ماندگاری"
+      },
+      "check": true,
+      "note": "Google: پایداری",
+      "accept": [
+        "ماندگار"
+      ]
+    },
+    {
+      "source": "persistent",
+      "target": "ماندگار",
+      "match": "\\bpersistent(?:ly)?\\b",
+      "fa_fixes": {
+        "پایداری": "ماندگاری",
+        "پایدار": "ماندگار"
+      }
+    },
+    {
+      "source": "privilege",
+      "target": "سطح دسترسی",
+      "match": "\\bprivileg(?:e|es|ed)\\b",
+      "fa_fixes": {
+        "افزایش امتیازات": "ارتقای سطح دسترسی",
+        "افزایش امتیاز": "ارتقای سطح دسترسی",
+        "تشدید امتیاز": "ارتقای سطح دسترسی",
+        "ارتقای امتیاز": "ارتقای سطح دسترسی",
+        "ارتقای امتیازات": "ارتقای سطح دسترسی",
+        "امتیازات بالا": "سطح دسترسی بالا",
+        "امتیازات بالاتر": "سطح دسترسی بالاتر",
+        "امتیازات مدیریتی": "دسترسی مدیریتی",
+        "امتیازات مدیر": "دسترسی مدیر",
+        "حداقل امتیاز": "حداقل سطح دسترسی",
+        "دارای امتیاز": "دارای دسترسی ممتاز",
+        "امتیازات": "سطح دسترسی",
+        "امتیاز": "سطح دسترسی"
+      },
+      "note": "Google: امتیاز/امتیازات"
+    },
+    {
+      "source": "payload",
+      "target": "محموله",
+      "match": "\\bpayloads?\\b",
+      "fa_fixes": {
+        "بارهای مخرب": "محموله‌های مخرب",
+        "بار مخرب": "محموله مخرب",
+        "بارهای اضافی": "محموله‌های اضافی",
+        "بار اضافی": "محموله اضافی",
+        "بارهای": "محموله‌های",
+        "پیلود": "محموله",
+        "پی‌لود": "محموله",
+        "حجم بار": "حجم محموله"
+      },
+      "note": "Google: بار/بارهای"
+    },
+    {
+      "source": "exfiltration",
+      "target": "برون‌بری",
+      "match": "\\bexfiltrat\\w*",
+      "unless_source": "\\bextract",
+      "fa_fixes": {
+        "استخراج": "برون‌بری",
+        "اکسفیلتراسیون": "برون‌بری",
+        "نفوذ به خارج": "برون‌بری"
+      },
+      "check": true,
+      "note": "Google: استخراج (= extract)",
+      "accept": [
+        "خروج داده",
+        "نشت داده"
+      ]
+    },
+    {
+      "source": "compromised",
+      "target": "نفوذشده",
+      "match": "\\bcompromised\\b",
+      "fa_fixes": {
+        "میزبان‌های در معرض خطر": "میزبان‌های نفوذشده",
+        "میزبان در معرض خطر": "میزبان نفوذشده",
+        "سیستم‌های در معرض خطر": "سیستم‌های نفوذشده",
+        "سیستم در معرض خطر": "سیستم نفوذشده",
+        "ماشین‌های در معرض خطر": "دستگاه‌های نفوذشده",
+        "ماشین در معرض خطر": "دستگاه نفوذشده",
+        "دستگاه‌های در معرض خطر": "دستگاه‌های نفوذشده",
+        "دستگاه در معرض خطر": "دستگاه نفوذشده",
+        "شبکه‌های در معرض خطر": "شبکه‌های نفوذشده",
+        "شبکه در معرض خطر": "شبکه نفوذشده",
+        "حساب‌های در معرض خطر": "حساب‌های نفوذشده",
+        "حساب در معرض خطر": "حساب نفوذشده",
+        "سرورهای در معرض خطر": "سرورهای نفوذشده",
+        "سرور در معرض خطر": "سرور نفوذشده",
+        "محیط در معرض خطر": "محیط نفوذشده",
+        "وب‌سایت‌های در معرض خطر": "وب‌سایت‌های نفوذشده",
+        "به خطر افتاده": "نفوذشده",
+        "در معرض خطر قرار گرفته": "نفوذشده"
+      },
+      "note": "Google: در معرض خطر (= at risk)"
+    },
+    {
+      "source": "compromise (noun)",
+      "target": "نفوذ",
+      "match": "\\bcompromise\\b",
+      "fa_fixes": {
+        "سازش": "نفوذ"
+      },
+      "note": "Google: سازش (= agreement)"
+    },
+    {
+      "source": "credential",
+      "target": "اعتبارنامه",
+      "match": "\\bcredentials?\\b",
+      "unless_source": "\\bcredit",
+      "fa_fixes": {
+        "تخلیه اعتبار": "تخلیه اعتبارنامه",
+        "اعتبارات": "اعتبارنامه‌ها",
+        "اعتبار": "اعتبارنامه"
+      },
+      "note": "Google: اعتبار (= credit)"
+    },
+    {
+      "source": "denial of service",
+      "target": "منع سرویس",
+      "match": "denial[- ]of[- ]service|\\bDoS\\b",
+      "fa_fixes": {
+        "انکار سرویس": "منع سرویس",
+        "انکار خدمات": "منع سرویس",
+        "رد سرویس": "منع سرویس",
+        "رد خدمات": "منع سرویس",
+        "انکار شبکه خدمات مالی": "منع سرویس شبکه",
+        "انکار وضعیت سرویس": "وضعیت منع سرویس",
+        "انکار وضعیت": "وضعیت منع سرویس",
+        "انکار": "منع"
+      },
+      "check": true
+    },
+    {
+      "source": "encode",
+      "target": "کدگذاری",
+      "match": "\\bencod(?:e|ed|es|ing)\\b|base64",
+      "unless_source": "\\bencrypt",
+      "fa_fixes": {
+        "رمزگذاری": "کدگذاری"
+      },
+      "note": "encoding ≠ encryption"
+    },
+    {
+      "source": "decode",
+      "target": "کدگشایی",
+      "match": "\\bdecod(?:e|ed|es|ing)\\b",
+      "unless_source": "\\bdecrypt",
+      "fa_fixes": {
+        "رمزگشایی": "کدگشایی"
+      }
+    },
+    {
+      "source": "search order",
+      "target": "ترتیب جستجو",
+      "match": "search[- ]order",
+      "fa_fixes": {
+        "ربودن سفارش جستجوی": "ربایش ترتیب جستجوی",
+        "ربودن سفارش جستجو": "ربایش ترتیب جستجو",
+        "سفارش جستجوی": "ترتیب جستجوی",
+        "سفارش جستجو": "ترتیب جستجو"
+      },
+      "note": "Google: سفارش (= purchase order)"
+    },
+    {
+      "source": "load order",
+      "target": "ترتیب بارگذاری",
+      "match": "load[- ]order",
+      "fa_fixes": {
+        "سفارش بارگذاری": "ترتیب بارگذاری",
+        "سفارش بارگیری": "ترتیب بارگذاری"
+      }
+    },
+    {
+      "source": "API call",
+      "target": "فراخوانی",
+      "match": "\\b(?:API|system|function|native|syscall)s?\\s+calls?\\b",
+      "unless_source": "phone|voice|video call",
+      "fa_fixes": {
+        "تماس‌های": "فراخوانی‌های",
+        "تماس‌ها": "فراخوانی‌ها",
+        "تماس": "فراخوانی"
+      },
+      "note": "Google: تماس (= phone call)"
+    },
+    {
+      "source": "artifact",
+      "target": "آثار",
+      "match": "\\bartifacts?\\b",
+      "fa_fixes": {
+        "مصنوعات": "آثار",
+        "مصنوع": "اثر"
+      },
+      "note": "Google: مصنوعات"
+    },
+    {
+      "source": "driver",
+      "target": "درایور",
+      "match": "\\bdrivers?\\b",
+      "fa_fixes": {
+        "رانندگان": "درایورها",
+        "راننده‌ها": "درایورها",
+        "راننده": "درایور"
+      }
+    },
+    {
+      "source": "dropper",
+      "target": "دراپر",
+      "match": "\\bdroppers?\\b",
+      "fa_fixes": {
+        "قطره‌چکان‌ها": "دراپرها",
+        "قطره‌چکان": "دراپر"
+      }
+    },
+    {
+      "source": "beacon",
+      "target": "بیکن",
+      "match": "\\bbeacon\\w*",
+      "fa_fixes": {
+        "چراغ‌ها": "بیکن‌ها",
+        "چراغ": "بیکن",
+        "فانوس": "بیکن"
+      }
+    },
+    {
+      "source": "process hollowing",
+      "target": "تهی‌سازی فرآیند",
+      "match": "\\bhollowing\\b",
+      "fa_fixes": {
+        "حفره‌سازی": "تهی‌سازی",
+        "حفره": "تهی‌سازی"
+      }
+    },
+    {
+      "source": "sandbox",
+      "target": "سندباکس",
+      "match": "\\bsandbox\\w*",
+      "fa_fixes": {
+        "جعبه‌های ایمنی": "سندباکس‌ها",
+        "جعبه‌های شنی": "سندباکس‌ها",
+        "جعبه ایمنی": "سندباکس",
+        "جعبه شنی": "سندباکس",
+        "جعبه‌شنی": "سندباکس"
+      }
+    },
+    {
+      "source": "shellcode",
+      "target": "شل‌کد",
+      "match": "\\bshellcode\\b",
+      "fa_fixes": {
+        "کدهای پوسته": "شل‌کدها",
+        "کد پوسته": "شل‌کد",
+        "کد شل": "شل‌کد"
+      }
+    },
+    {
+      "source": "shell",
+      "target": "شل",
+      "match": "\\b(?:web ?shells?|reverse shells?|shell|shells)\\b",
+      "unless_source": "shell compan",
+      "fa_fixes": {
+        "پوسته‌های وب": "وب‌شل‌ها",
+        "پوسته وب": "وب‌شل",
+        "پوسته‌های معکوس": "شل‌های معکوس",
+        "پوسته معکوس": "شل معکوس",
+        "دستورات پوسته": "دستورات شل",
+        "اسکریپت‌های پوسته": "اسکریپت‌های شل",
+        "اسکریپت پوسته": "اسکریپت شل",
+        "پوسته‌ها": "شل‌ها",
+        "پوسته": "شل"
+      },
+      "note": "practitioner usage: شل / وب‌شل"
+    },
+    {
+      "source": "registry hive",
+      "target": "Hive",
+      "match": "\\bhives?\\b",
+      "fa_fixes": {
+        "کندوهای": "Hiveهای",
+        "کندوی": "Hive",
+        "کندو": "Hive"
+      }
+    },
+    {
+      "source": "benign",
+      "target": "بی‌خطر",
+      "match": "\\bbenign\\b",
+      "fa_fixes": {
+        "خوش‌خیم": "بی‌خطر"
+      }
+    },
+    {
+      "source": "legitimate",
+      "target": "مشروع",
+      "match": "\\blegitimate(?:ly)?\\b",
+      "unless_source": "\\blegal|\\blaw\\b|\\blawful",
+      "fa_fixes": {
+        "قانونی": "مشروع"
+      },
+      "note": "Google: قانونی (= legal)"
+    },
+    {
+      "source": "exploit",
+      "target": "بهره‌برداری",
+      "match": "\\bexploit(?:s|ed|ing|ation)?\\b",
+      "unless_source": "\\babus|\\bmisus",
+      "fa_fixes": {
+        "سوءاستفاده": "بهره‌برداری"
+      },
+      "note": "exploit vulnerability = بهره‌برداری از آسیب‌پذیری؛ abuse = سوءاستفاده"
+    },
+    {
+      "source": "session",
+      "target": "نشست",
+      "match": "\\bsessions?\\b",
+      "unless_source": "\\bmeeting",
+      "fa_fixes": {
+        "جلسات": "نشست‌ها",
+        "جلسه‌ها": "نشست‌ها",
+        "جلسه": "نشست"
+      }
+    },
+    {
+      "source": "token",
+      "target": "توکن",
+      "match": "\\btokens?\\b",
+      "unless_source": "\\bindicator|\\bsign of",
+      "fa_fixes": {
+        "نشانه‌های دسترسی": "توکن‌های دسترسی",
+        "نشانه دسترسی": "توکن دسترسی",
+        "نشانه‌ها": "توکن‌ها",
+        "نشانه‌های": "توکن‌های",
+        "نشانه": "توکن"
+      }
+    },
+    {
+      "source": "proxy",
+      "target": "پروکسی",
+      "match": "\\bprox(?:y|ies)\\b",
+      "fa_fixes": {
+        "پراکسی‌ها": "پروکسی‌ها",
+        "پراکسی": "پروکسی"
+      }
+    },
+    {
+      "source": "proxy execution",
+      "target": "اجرای غیرمستقیم",
+      "match": "proxy execution|binary proxy",
+      "fa_fixes": {
+        "اجرای پروکسی": "اجرای غیرمستقیم"
+      }
+    },
+    {
+      "source": "firmware",
+      "target": "میان‌افزار",
+      "match": "\\bfirmware\\b",
+      "fa_fixes": {
+        "سفت‌افزار": "میان‌افزار"
+      }
+    },
+    {
+      "source": "defense evasion",
+      "target": "فرار از دفاع",
+      "match": "defen[cs]e evasion",
+      "fa_fixes": {
+        "فرار دفاعی": "فرار از دفاع"
+      }
+    },
+    {
+      "source": "scheduled task",
+      "target": "وظیفه زمان‌بندی‌شده",
+      "match": "scheduled tasks?",
+      "fa_fixes": {
+        "کارهای زمان‌بندی‌شده": "وظایف زمان‌بندی‌شده",
+        "کارهای زمان‌بندی شده": "وظایف زمان‌بندی‌شده",
+        "کار زمان‌بندی‌شده": "وظیفه زمان‌بندی‌شده",
+        "کار زمان‌بندی شده": "وظیفه زمان‌بندی‌شده",
+        "کارهای برنامه‌ریزی‌شده": "وظایف زمان‌بندی‌شده",
+        "کار برنامه‌ریزی‌شده": "وظیفه زمان‌بندی‌شده"
+      }
+    },
+    {
+      "source": "hooking",
+      "target": "هوک",
+      "match": "\\bhook(?:s|ing|ed)?\\b",
+      "fa_fixes": {
+        "قلاب‌ها": "هوک‌ها",
+        "قلاب": "هوک"
+      }
+    },
+    {
+      "source": "masquerading",
+      "target": "جعل ظاهر",
+      "match": "\\bmasquerad\\w*",
+      "fa_fixes": {
+        "بالماسکه": "جعل ظاهر",
+        "نقاب‌زنی": "جعل ظاهر"
+      }
+    },
+    {
+      "source": "spearphishing",
+      "target": "فیشینگ هدفمند",
+      "match": "spear[- ]?phishing",
+      "fa_fixes": {
+        "فیشینگ نیزه‌ای": "فیشینگ هدفمند",
+        "فیشینگ نیزه": "فیشینگ هدفمند",
+        "نیزه‌فیشینگ": "فیشینگ هدفمند"
+      }
+    },
+    {
+      "source": "brute force",
+      "target": "جست‌وجوی فراگیر",
+      "match": "brute[- ]?forc\\w*",
+      "fa_fixes": {
+        "نیروی بی‌رحم": "جست‌وجوی فراگیر",
+        "نیروی وحشیانه": "جست‌وجوی فراگیر",
+        "زور وحشیانه": "جست‌وجوی فراگیر",
+        "نیروی brute": "جست‌وجوی فراگیر"
+      }
+    },
+    {
+      "source": "wiper",
+      "target": "وایپر",
+      "match": "\\bwipers?\\b",
+      "fa_fixes": {
+        "برف پاک کن": "وایپر",
+        "برف‌پاک‌کن": "وایپر",
+        "پاک‌کن‌ها": "وایپرها",
+        "پاک‌کن": "وایپر"
+      }
+    },
+    {
+      "source": "watering hole",
+      "target": "آبشخور",
+      "match": "watering hole",
+      "fa_fixes": {
+        "سوراخ آبیاری": "آبشخور",
+        "چاله آب": "آبشخور",
+        "گودال آب": "آبشخور"
+      }
+    },
+    {
+      "source": "living off the land",
+      "target": "استفاده از ابزارهای بومی سیستم",
+      "match": "living off the land",
+      "fa_fixes": {
+        "زندگی خارج از زمین": "استفاده از ابزارهای بومی سیستم",
+        "زندگی از زمین": "استفاده از ابزارهای بومی سیستم"
+      }
+    },
+    {
+      "source": "victim machine",
+      "target": "دستگاه قربانی",
+      "match": "\\bmachines?\\b",
+      "unless_source": "virtual machine",
+      "fa_fixes": {
+        "ماشین‌های قربانی": "دستگاه‌های قربانی",
+        "ماشین قربانی": "دستگاه قربانی",
+        "ماشین آلوده": "دستگاه آلوده",
+        "ماشین‌های آلوده": "دستگاه‌های آلوده"
+      }
+    },
+    {
+      "source": "implant",
+      "target": "ایمپلنت",
+      "match": "\\bimplants?\\b",
+      "fa_fixes": {}
+    },
+    {
+      "source": "client",
+      "target": "کلاینت",
+      "match": "\\bclients?\\b",
+      "unless_source": "customer|clients of",
+      "fa_fixes": {
+        "مشتریان": "کلاینت‌ها",
+        "مشتری‌ها": "کلاینت‌ها",
+        "مشتری": "کلاینت"
+      },
+      "note": "Google: مشتری (= customer); A/B 2026-10-21"
+    },
+    {
+      "source": "air-gapped",
+      "target": "ایزوله از شبکه",
+      "match": "air[- ]?gap\\w*",
+      "fa_fixes": {
+        "با شکاف هوا": "ایزوله از شبکه",
+        "با شکاف هوایی": "ایزوله از شبکه",
+        "دارای شکاف هوایی": "ایزوله از شبکه",
+        "شکاف هوایی": "ایزوله از شبکه",
+        "شکاف هوا": "ایزوله از شبکه"
+      },
+      "note": "Google: شکاف هوا; A/B 2026-10-21"
+    },
+    {
+      "source": "mailbox rule",
+      "target": "قاعده",
+      "match": "\\b(?:inbox|mailbox|outlook|transport|mail|email)\\s+rules?\\b|\\bOutlook rule",
+      "fa_fixes": {
+        "قوانین": "قواعد",
+        "قانون": "قاعده"
+      },
+      "note": "Outlook/inbox rule = قاعده، نه قانون (law); A/B 2026-10-21"
+    },
+    {
+      "source": "offensive",
+      "target": "تهاجمی",
+      "match": "\\boffensive\\b",
+      "fa_fixes": {
+        "توهین‌آمیزی": "تهاجمی",
+        "توهین‌آمیز": "تهاجمی",
+        "توهین آمیز": "تهاجمی",
+        "اهانت‌آمیز": "تهاجمی"
+      },
+      "note": "Google: offensive security → امنیتی توهین‌آمیز; run 2026-10-22"
     }
   ],
   "protected_terms": [
@@ -270,6 +830,70 @@
     "Empire",
     "APT28",
     "APT29",
-    "FIN7"
-  ]
+    "FIN7",
+    "C2",
+    "DLL",
+    "DLLs",
+    "API",
+    "APIs",
+    "UAC",
+    "LSASS",
+    "NTLM",
+    "WMI",
+    "DCOM",
+    "VBScript",
+    "JavaScript",
+    "AppleScript",
+    "Python",
+    "Group Policy",
+    "Task Scheduler",
+    "Volume Shadow Copy",
+    "Attack Surface Reduction",
+    "Windows Defender",
+    "Microsoft Defender",
+    "Office 365",
+    "Microsoft 365",
+    "Azure AD",
+    "Entra ID",
+    "AWS",
+    "Google Workspace",
+    "SharePoint",
+    "Exchange Server",
+    "Outlook",
+    "Internet Explorer",
+    "Visual Basic",
+    ".NET",
+    "Registry Run Keys",
+    "Startup Folder",
+    "Living off the Land",
+    "Brute Ratel C4",
+    "Sliver",
+    "Impacket",
+    "PsExec",
+    "AdFind",
+    "BloodHound",
+    "Rubeus",
+    "ngrok",
+    "Tor"
+  ],
+  "auto_protect_stix_names": {
+    "enabled": true,
+    "types": [
+      "intrusion-set",
+      "malware",
+      "tool",
+      "campaign"
+    ],
+    "note": "Names/aliases of groups, software and campaigns are masked so MT keeps them in English (e.g. Sandworm Team was rendered «تیم کرم شنی»). Single-word names that are common English words are skipped; see translate_cti_to_persian.py:build_stix_name_terms. 'exclude' lists names that are also ordinary words/places; references to them are usually markdown links, which are masked anyway.",
+    "exclude": [
+      "Expand",
+      "Cuba",
+      "Play",
+      "Responder",
+      "Tick",
+      "Snake",
+      "Mantis",
+      "Proton"
+    ]
+  }
 }

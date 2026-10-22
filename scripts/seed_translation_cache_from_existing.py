@@ -23,6 +23,7 @@ from translate_cti_to_persian import (  # noqa: E402
     should_translate_text,
     validate_protected_fragment_counts,
 )
+from fa_text import is_severe, quality_issues  # noqa: E402
 
 
 PERSIAN_RE = re.compile(r"[\u0600-\u06FF]")
@@ -130,6 +131,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--target-lang", default="fa")
     parser.add_argument("--fa-suffix", default="_fa")
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--quality-gate",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Skip candidates with hallucination/repetition/wiki markup/length-ratio issues (default: on).",
+    )
     return parser.parse_args()
 
 
@@ -140,6 +147,7 @@ def main() -> int:
     matcher = PathMatcher(args.paths)
     pairs: dict[str, str] = {}
     skipped = 0
+    skipped_quality = 0
 
     for src_path in collect_files(source_root, args.datasets):
         rel_path = src_path.relative_to(source_root)
@@ -179,12 +187,16 @@ def main() -> int:
                     except ProtectedTokenError:
                         skipped += 1
                         continue
+                    if args.quality_gate and is_severe(quality_issues(source_value, candidate)):
+                        skipped_quality += 1
+                        continue
                     pairs[source_value] = candidate
                 else:
                     skipped += 1
 
     print(f"candidate cache pairs: {len(pairs)}")
-    print(f"skipped non-Persian/identical candidates: {skipped}")
+    print(f"skipped non-Persian/identical/marker-mismatch candidates: {skipped}")
+    print(f"skipped low-quality candidates (hallucination/repetition/...): {skipped_quality}")
     if not args.dry_run:
         cache = SQLiteTranslationCache(Path(args.cache_db).resolve())
         try:
